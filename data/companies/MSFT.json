@@ -1,0 +1,318 @@
+{
+  "_errors": {
+    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+  },
+  "cik": null,
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 2.32,
+      "debt_to_equity": 1.6,
+      "interest_coverage": 3.29
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 2.09,
+      "fcf_to_net_income": 1.0
+    },
+    "growth": {
+      "eps_growth_yoy_pct": 16.75,
+      "revenue_cagr_3yr_pct": -3.54,
+      "revenue_growth_yoy_pct": 23.1
+    },
+    "profitability": {
+      "gross_margin_pct": 48.37,
+      "roe_pct": -2.58,
+      "trend": "declining"
+    },
+    "valuation": {
+      "dcf_fair_value": 279.5,
+      "dcf_upside_pct": 9.54,
+      "ev_ebitda": 15.04,
+      "pe_ttm": 21.75
+    }
+  },
+  "industry": null,
+  "last_updated": "2026-09-16T01:18:23Z",
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "metrics": {
+    "current_ratio": 2.32,
+    "dcf_upside_pct": 9.54,
+    "debt_to_equity": 1.6,
+    "earnings_surprise_pct": -6.49,
+    "eps_growth_yoy_pct": 16.75,
+    "ev_ebitda": 15.04,
+    "fcf_margin_pct": 2.09,
+    "fcf_to_net_income": 1.0,
+    "gross_margin_pct": 48.37,
+    "interest_coverage": 3.29,
+    "margin_trend_score": 20,
+    "pe_ttm": 21.75,
+    "price_vs_ma200_pct": -0.97,
+    "price_vs_ma50_pct": -6.17,
+    "return_1m_pct": 11.47,
+    "return_3m_pct": 3.81,
+    "revenue_cagr_3yr_pct": -3.54,
+    "revenue_growth_yoy_pct": 23.1,
+    "roe_pct": -2.58,
+    "rsi_distance_from_neutral": 14.25
+  },
+  "name": "Microsoft Corporation",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "9.54",
+          "text": "Modeled fair value implies a +9.5% gap to the current price.",
+          "tier": "critical"
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "23.1",
+          "text": "Revenue grew +23.1% year over year.",
+          "tier": "important"
+        },
+        {
+          "source_metric": "roe_pct",
+          "source_value": "-2.58",
+          "text": "Return on equity stands at -2.6%.",
+          "tier": "important"
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "current_ratio",
+          "source_value": "2.32",
+          "text": "Current ratio is 2.32.",
+          "tier": "minor"
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "rsi_distance_from_neutral",
+          "source_value": "14.25",
+          "text": "14-day RSI sits 14 points from neutral.",
+          "tier": "noise"
+        }
+      ]
+    },
+    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 46 driven by growth, margins, and balance-sheet health.",
+    "one_line_summary": "Microsoft Corporation: Neutral short-term, Neutral long-term outlook on current fundamentals.",
+    "short_term_narrative": "Short-term positioning is neutral, with momentum and technicals contributing a base score of 55 before a +1-point macro adjustment."
+  },
+  "price": {
+    "as_of": "2026-09-12",
+    "close": 255.16,
+    "return_1m_pct": 11.47,
+    "return_3m_pct": 3.81
+  },
+  "scores": {
+    "long_term": {
+      "base_score": 45.8,
+      "final_score": 46.8,
+      "macro_adjustment": 1,
+      "subscores": [
+        {
+          "key": "valuation",
+          "label": "Valuation",
+          "raw_metrics": [
+            {
+              "metric": "pe_ttm",
+              "raw_value": 21.75,
+              "score": 60.833333333333336
+            },
+            {
+              "metric": "ev_ebitda",
+              "raw_value": 15.04,
+              "score": 58.58823529411765
+            },
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": 9.54,
+              "score": 69.08
+            }
+          ],
+          "score": 62.8,
+          "weight_pct": 25
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "raw_metrics": [
+            {
+              "metric": "revenue_growth_yoy_pct",
+              "raw_value": 23.1,
+              "score": 93.66666666666667
+            },
+            {
+              "metric": "revenue_cagr_3yr_pct",
+              "raw_value": -3.54,
+              "score": 5.84
+            },
+            {
+              "metric": "eps_growth_yoy_pct",
+              "raw_value": 16.75,
+              "score": 66.875
+            }
+          ],
+          "score": 55.5,
+          "weight_pct": 25
+        },
+        {
+          "key": "profitability",
+          "label": "Profitability & Margin Trend",
+          "raw_metrics": [
+            {
+              "metric": "gross_margin_pct",
+              "raw_value": 48.37,
+              "score": 70.925
+            },
+            {
+              "metric": "roe_pct",
+              "raw_value": -2.58,
+              "score": 0.0
+            },
+            {
+              "metric": "margin_trend_score",
+              "raw_value": 20,
+              "score": 20.0
+            }
+          ],
+          "score": 30.3,
+          "weight_pct": 20
+        },
+        {
+          "key": "balance_sheet",
+          "label": "Balance Sheet Health",
+          "raw_metrics": [
+            {
+              "metric": "debt_to_equity",
+              "raw_value": 1.6,
+              "score": 20.0
+            },
+            {
+              "metric": "current_ratio",
+              "raw_value": 2.32,
+              "score": 90.99999999999999
+            },
+            {
+              "metric": "interest_coverage",
+              "raw_value": 3.29,
+              "score": 7.166666666666667
+            }
+          ],
+          "score": 39.4,
+          "weight_pct": 15
+        },
+        {
+          "key": "cash_flow",
+          "label": "Cash Generation Quality",
+          "raw_metrics": [
+            {
+              "metric": "fcf_margin_pct",
+              "raw_value": 2.09,
+              "score": 6.966666666666667
+            },
+            {
+              "metric": "fcf_to_net_income",
+              "raw_value": 1.0,
+              "score": 50.0
+            }
+          ],
+          "score": 28.5,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    },
+    "short_term": {
+      "base_score": 54.7,
+      "final_score": 55.7,
+      "macro_adjustment": 1,
+      "subscores": [
+        {
+          "key": "momentum",
+          "label": "Price Momentum",
+          "raw_metrics": [
+            {
+              "metric": "return_1m_pct",
+              "raw_value": 11.47,
+              "score": 100.0
+            },
+            {
+              "metric": "return_3m_pct",
+              "raw_value": 3.81,
+              "score": 59.52499999999999
+            }
+          ],
+          "score": 79.8,
+          "weight_pct": 30
+        },
+        {
+          "key": "technical",
+          "label": "Technical Positioning",
+          "raw_metrics": [
+            {
+              "metric": "price_vs_ma50_pct",
+              "raw_value": -6.17,
+              "score": 19.15
+            },
+            {
+              "metric": "price_vs_ma200_pct",
+              "raw_value": -0.97,
+              "score": 46.76666666666666
+            },
+            {
+              "metric": "rsi_distance_from_neutral",
+              "raw_value": 14.25,
+              "score": 64.375
+            }
+          ],
+          "score": 43.4,
+          "weight_pct": 20
+        },
+        {
+          "key": "earnings_direction",
+          "label": "Earnings/Guidance Direction",
+          "raw_metrics": [
+            {
+              "metric": "earnings_surprise_pct",
+              "raw_value": -6.49,
+              "score": 17.549999999999997
+            }
+          ],
+          "score": 17.5,
+          "weight_pct": 20
+        },
+        {
+          "key": "valuation_extension",
+          "label": "Valuation Extension",
+          "raw_metrics": [
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": 9.54,
+              "score": 69.08
+            }
+          ],
+          "score": 69.1,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    }
+  },
+  "sector": "Technology",
+  "sources": {
+    "sec_companyfacts_url": null,
+    "sec_filings": []
+  },
+  "ticker": "MSFT"
+}

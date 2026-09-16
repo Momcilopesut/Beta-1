@@ -1,0 +1,318 @@
+{
+  "_errors": {
+    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+  },
+  "cik": null,
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.71,
+      "debt_to_equity": 0.58,
+      "interest_coverage": 14.56
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 11.92,
+      "fcf_to_net_income": 1.51
+    },
+    "growth": {
+      "eps_growth_yoy_pct": -0.53,
+      "revenue_cagr_3yr_pct": 3.54,
+      "revenue_growth_yoy_pct": 12.35
+    },
+    "profitability": {
+      "gross_margin_pct": 49.48,
+      "roe_pct": 7.57,
+      "trend": "declining"
+    },
+    "valuation": {
+      "dcf_fair_value": 32.39,
+      "dcf_upside_pct": -27.62,
+      "ev_ebitda": 20.46,
+      "pe_ttm": 11.95
+    }
+  },
+  "industry": null,
+  "last_updated": "2026-09-16T01:18:23Z",
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "metrics": {
+    "current_ratio": 0.71,
+    "dcf_upside_pct": -27.62,
+    "debt_to_equity": 0.58,
+    "earnings_surprise_pct": 1.26,
+    "eps_growth_yoy_pct": -0.53,
+    "ev_ebitda": 20.46,
+    "fcf_margin_pct": 11.92,
+    "fcf_to_net_income": 1.51,
+    "gross_margin_pct": 49.48,
+    "interest_coverage": 14.56,
+    "margin_trend_score": 20,
+    "pe_ttm": 11.95,
+    "price_vs_ma200_pct": 15.9,
+    "price_vs_ma50_pct": -2.31,
+    "return_1m_pct": -12.96,
+    "return_3m_pct": 18.09,
+    "revenue_cagr_3yr_pct": 3.54,
+    "revenue_growth_yoy_pct": 12.35,
+    "roe_pct": 7.57,
+    "rsi_distance_from_neutral": 19.94
+  },
+  "name": "Visa Inc.",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-27.62",
+          "text": "Modeled fair value implies a -27.6% gap to the current price.",
+          "tier": "critical"
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "12.35",
+          "text": "Revenue grew +12.3% year over year.",
+          "tier": "important"
+        },
+        {
+          "source_metric": "roe_pct",
+          "source_value": "7.57",
+          "text": "Return on equity stands at 7.6%.",
+          "tier": "important"
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "current_ratio",
+          "source_value": "0.71",
+          "text": "Current ratio is 0.71.",
+          "tier": "minor"
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "rsi_distance_from_neutral",
+          "source_value": "19.94",
+          "text": "14-day RSI sits 20 points from neutral.",
+          "tier": "noise"
+        }
+      ]
+    },
+    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 46 driven by growth, margins, and balance-sheet health.",
+    "one_line_summary": "Visa Inc.: Neutral short-term, Neutral long-term outlook on current fundamentals.",
+    "short_term_narrative": "Short-term positioning is neutral, with momentum and technicals contributing a base score of 45 before a +1-point macro adjustment."
+  },
+  "price": {
+    "as_of": "2026-09-12",
+    "close": 44.75,
+    "return_1m_pct": -12.96,
+    "return_3m_pct": 18.09
+  },
+  "scores": {
+    "long_term": {
+      "base_score": 45.6,
+      "final_score": 46.6,
+      "macro_adjustment": 1,
+      "subscores": [
+        {
+          "key": "valuation",
+          "label": "Valuation",
+          "raw_metrics": [
+            {
+              "metric": "pe_ttm",
+              "raw_value": 11.95,
+              "score": 93.5
+            },
+            {
+              "metric": "ev_ebitda",
+              "raw_value": 20.46,
+              "score": 26.705882352941174
+            },
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -27.62,
+              "score": 0.0
+            }
+          ],
+          "score": 40.1,
+          "weight_pct": 25
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "raw_metrics": [
+            {
+              "metric": "revenue_growth_yoy_pct",
+              "raw_value": 12.35,
+              "score": 57.833333333333336
+            },
+            {
+              "metric": "revenue_cagr_3yr_pct",
+              "raw_value": 3.54,
+              "score": 34.16
+            },
+            {
+              "metric": "eps_growth_yoy_pct",
+              "raw_value": -0.53,
+              "score": 23.675
+            }
+          ],
+          "score": 38.6,
+          "weight_pct": 25
+        },
+        {
+          "key": "profitability",
+          "label": "Profitability & Margin Trend",
+          "raw_metrics": [
+            {
+              "metric": "gross_margin_pct",
+              "raw_value": 49.48,
+              "score": 73.69999999999999
+            },
+            {
+              "metric": "roe_pct",
+              "raw_value": 7.57,
+              "score": 25.233333333333334
+            },
+            {
+              "metric": "margin_trend_score",
+              "raw_value": 20,
+              "score": 20.0
+            }
+          ],
+          "score": 39.6,
+          "weight_pct": 20
+        },
+        {
+          "key": "balance_sheet",
+          "label": "Balance Sheet Health",
+          "raw_metrics": [
+            {
+              "metric": "debt_to_equity",
+              "raw_value": 0.58,
+              "score": 71.0
+            },
+            {
+              "metric": "current_ratio",
+              "raw_value": 0.71,
+              "score": 10.499999999999998
+            },
+            {
+              "metric": "interest_coverage",
+              "raw_value": 14.56,
+              "score": 69.77777777777779
+            }
+          ],
+          "score": 50.4,
+          "weight_pct": 15
+        },
+        {
+          "key": "cash_flow",
+          "label": "Cash Generation Quality",
+          "raw_metrics": [
+            {
+              "metric": "fcf_margin_pct",
+              "raw_value": 11.92,
+              "score": 39.733333333333334
+            },
+            {
+              "metric": "fcf_to_net_income",
+              "raw_value": 1.51,
+              "score": 100.0
+            }
+          ],
+          "score": 69.9,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    },
+    "short_term": {
+      "base_score": 44.8,
+      "final_score": 45.8,
+      "macro_adjustment": 1,
+      "subscores": [
+        {
+          "key": "momentum",
+          "label": "Price Momentum",
+          "raw_metrics": [
+            {
+              "metric": "return_1m_pct",
+              "raw_value": -12.96,
+              "score": 0.0
+            },
+            {
+              "metric": "return_3m_pct",
+              "raw_value": 18.09,
+              "score": 95.22500000000001
+            }
+          ],
+          "score": 47.6,
+          "weight_pct": 30
+        },
+        {
+          "key": "technical",
+          "label": "Technical Positioning",
+          "raw_metrics": [
+            {
+              "metric": "price_vs_ma50_pct",
+              "raw_value": -2.31,
+              "score": 38.449999999999996
+            },
+            {
+              "metric": "price_vs_ma200_pct",
+              "raw_value": 15.9,
+              "score": 100.0
+            },
+            {
+              "metric": "rsi_distance_from_neutral",
+              "raw_value": 19.94,
+              "score": 50.14999999999999
+            }
+          ],
+          "score": 62.9,
+          "weight_pct": 20
+        },
+        {
+          "key": "earnings_direction",
+          "label": "Earnings/Guidance Direction",
+          "raw_metrics": [
+            {
+              "metric": "earnings_surprise_pct",
+              "raw_value": 1.26,
+              "score": 56.3
+            }
+          ],
+          "score": 56.3,
+          "weight_pct": 20
+        },
+        {
+          "key": "valuation_extension",
+          "label": "Valuation Extension",
+          "raw_metrics": [
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -27.62,
+              "score": 0.0
+            }
+          ],
+          "score": 0.0,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    }
+  },
+  "sector": "Financial Services",
+  "sources": {
+    "sec_companyfacts_url": null,
+    "sec_filings": []
+  },
+  "ticker": "V"
+}

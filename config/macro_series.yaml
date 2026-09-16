@@ -1,0 +1,51 @@
+# FRED series pulled each run, and the rule thresholds used by
+# pipeline/scoring/macro_regime.py to classify the current macro regime.
+# See https://fred.stlouisfed.org/series/<id> for each series' definition.
+
+series:
+  - id: DGS1MO
+    label: 1-Month Treasury Yield
+    unit: percent
+  - id: DGS3MO
+    label: 3-Month Treasury Yield
+    unit: percent
+  - id: DGS2
+    label: 2-Year Treasury Yield
+    unit: percent
+  - id: DGS10
+    label: 10-Year Treasury Yield
+    unit: percent
+  - id: DGS30
+    label: 30-Year Treasury Yield
+    unit: percent
+  - id: T10Y2Y
+    label: 10Y-2Y Treasury Spread
+    unit: percent
+  - id: CPIAUCSL
+    label: CPI (All Urban Consumers)
+    unit: index (1982-84=100)
+  - id: UNRATE
+    label: Unemployment Rate
+    unit: percent
+  - id: FEDFUNDS
+    label: Effective Federal Funds Rate
+    unit: percent
+  - id: GDPC1
+    label: Real GDP
+    unit: billions of chained 2017 dollars
+
+# Regime classification thresholds (all rule-based, no ML).
+# Evaluated in pipeline/scoring/macro_regime.py, in this priority order:
+#   1. Restrictive/Late-cycle: yield curve inverted AND fed funds not cutting
+#      AND CPI YoY above target
+#   2. Contractionary Risk: yield curve inverted AND unemployment rising
+#   3. Easing/Recovery: fed funds trending down over the trend window
+#   4. Neutral/Expansion: fallback when none of the above match
+regime_rules:
+  cpi_target_yoy_pct: 2.0
+  fed_funds_trend_lookback_obs: 3      # compare latest vs. N observations back
+  fed_funds_hike_threshold_pct: 0.15   # rise over lookback counted as "hiking/holding high"
+  fed_funds_cut_threshold_pct: -0.15   # drop over lookback counted as "cutting"
+  unemployment_trend_lookback_obs: 3
+  unemployment_rising_threshold_pct: 0.2
+  yield_curve_series: T10Y2Y

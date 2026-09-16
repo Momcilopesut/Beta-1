@@ -1,0 +1,318 @@
+{
+  "_errors": {
+    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+  },
+  "cik": null,
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.67,
+      "debt_to_equity": 1.78,
+      "interest_coverage": 15.03
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 15.52,
+      "fcf_to_net_income": 1.51
+    },
+    "growth": {
+      "eps_growth_yoy_pct": 11.9,
+      "revenue_cagr_3yr_pct": 6.83,
+      "revenue_growth_yoy_pct": 2.26
+    },
+    "profitability": {
+      "gross_margin_pct": 32.22,
+      "roe_pct": 34.35,
+      "trend": "declining"
+    },
+    "valuation": {
+      "dcf_fair_value": 471.84,
+      "dcf_upside_pct": -9.06,
+      "ev_ebitda": 11.37,
+      "pe_ttm": 11.48
+    }
+  },
+  "industry": null,
+  "last_updated": "2026-09-16T01:18:23Z",
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "low"
+    }
+  },
+  "metrics": {
+    "current_ratio": 1.67,
+    "dcf_upside_pct": -9.06,
+    "debt_to_equity": 1.78,
+    "earnings_surprise_pct": -5.88,
+    "eps_growth_yoy_pct": 11.9,
+    "ev_ebitda": 11.37,
+    "fcf_margin_pct": 15.52,
+    "fcf_to_net_income": 1.51,
+    "gross_margin_pct": 32.22,
+    "interest_coverage": 15.03,
+    "margin_trend_score": 20,
+    "pe_ttm": 11.48,
+    "price_vs_ma200_pct": 1.35,
+    "price_vs_ma50_pct": -9.6,
+    "return_1m_pct": 3.63,
+    "return_3m_pct": 3.15,
+    "revenue_cagr_3yr_pct": 6.83,
+    "revenue_growth_yoy_pct": 2.26,
+    "roe_pct": 34.35,
+    "rsi_distance_from_neutral": 17.71
+  },
+  "name": "UnitedHealth Group Incorporated",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-9.06",
+          "text": "Modeled fair value implies a -9.1% gap to the current price.",
+          "tier": "critical"
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "2.26",
+          "text": "Revenue grew +2.3% year over year.",
+          "tier": "important"
+        },
+        {
+          "source_metric": "roe_pct",
+          "source_value": "34.35",
+          "text": "Return on equity stands at 34.4%.",
+          "tier": "important"
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "current_ratio",
+          "source_value": "1.67",
+          "text": "Current ratio is 1.67.",
+          "tier": "minor"
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "rsi_distance_from_neutral",
+          "source_value": "17.71",
+          "text": "14-day RSI sits 18 points from neutral.",
+          "tier": "noise"
+        }
+      ]
+    },
+    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 56 driven by growth, margins, and balance-sheet health.",
+    "one_line_summary": "UnitedHealth Group Incorporated: Neutral short-term, Neutral long-term outlook on current fundamentals.",
+    "short_term_narrative": "Short-term positioning is neutral, with momentum and technicals contributing a base score of 42 before a +0-point macro adjustment."
+  },
+  "price": {
+    "as_of": "2026-09-12",
+    "close": 518.85,
+    "return_1m_pct": 3.63,
+    "return_3m_pct": 3.15
+  },
+  "scores": {
+    "long_term": {
+      "base_score": 56.3,
+      "final_score": 56.3,
+      "macro_adjustment": 0,
+      "subscores": [
+        {
+          "key": "valuation",
+          "label": "Valuation",
+          "raw_metrics": [
+            {
+              "metric": "pe_ttm",
+              "raw_value": 11.48,
+              "score": 95.06666666666666
+            },
+            {
+              "metric": "ev_ebitda",
+              "raw_value": 11.37,
+              "score": 80.1764705882353
+            },
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -9.06,
+              "score": 31.879999999999995
+            }
+          ],
+          "score": 69.0,
+          "weight_pct": 25
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "raw_metrics": [
+            {
+              "metric": "revenue_growth_yoy_pct",
+              "raw_value": 2.26,
+              "score": 24.2
+            },
+            {
+              "metric": "revenue_cagr_3yr_pct",
+              "raw_value": 6.83,
+              "score": 47.32
+            },
+            {
+              "metric": "eps_growth_yoy_pct",
+              "raw_value": 11.9,
+              "score": 54.75
+            }
+          ],
+          "score": 42.1,
+          "weight_pct": 25
+        },
+        {
+          "key": "profitability",
+          "label": "Profitability & Margin Trend",
+          "raw_metrics": [
+            {
+              "metric": "gross_margin_pct",
+              "raw_value": 32.22,
+              "score": 30.55
+            },
+            {
+              "metric": "roe_pct",
+              "raw_value": 34.35,
+              "score": 100.0
+            },
+            {
+              "metric": "margin_trend_score",
+              "raw_value": 20,
+              "score": 20.0
+            }
+          ],
+          "score": 50.2,
+          "weight_pct": 20
+        },
+        {
+          "key": "balance_sheet",
+          "label": "Balance Sheet Health",
+          "raw_metrics": [
+            {
+              "metric": "debt_to_equity",
+              "raw_value": 1.78,
+              "score": 11.0
+            },
+            {
+              "metric": "current_ratio",
+              "raw_value": 1.67,
+              "score": 58.5
+            },
+            {
+              "metric": "interest_coverage",
+              "raw_value": 15.03,
+              "score": 72.38888888888889
+            }
+          ],
+          "score": 47.3,
+          "weight_pct": 15
+        },
+        {
+          "key": "cash_flow",
+          "label": "Cash Generation Quality",
+          "raw_metrics": [
+            {
+              "metric": "fcf_margin_pct",
+              "raw_value": 15.52,
+              "score": 51.733333333333334
+            },
+            {
+              "metric": "fcf_to_net_income",
+              "raw_value": 1.51,
+              "score": 100.0
+            }
+          ],
+          "score": 75.9,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    },
+    "short_term": {
+      "base_score": 41.5,
+      "final_score": 41.5,
+      "macro_adjustment": 0,
+      "subscores": [
+        {
+          "key": "momentum",
+          "label": "Price Momentum",
+          "raw_metrics": [
+            {
+              "metric": "return_1m_pct",
+              "raw_value": 3.63,
+              "score": 68.15
+            },
+            {
+              "metric": "return_3m_pct",
+              "raw_value": 3.15,
+              "score": 57.875
+            }
+          ],
+          "score": 63.0,
+          "weight_pct": 30
+        },
+        {
+          "key": "technical",
+          "label": "Technical Positioning",
+          "raw_metrics": [
+            {
+              "metric": "price_vs_ma50_pct",
+              "raw_value": -9.6,
+              "score": 2.0000000000000018
+            },
+            {
+              "metric": "price_vs_ma200_pct",
+              "raw_value": 1.35,
+              "score": 54.50000000000001
+            },
+            {
+              "metric": "rsi_distance_from_neutral",
+              "raw_value": 17.71,
+              "score": 55.724999999999994
+            }
+          ],
+          "score": 37.4,
+          "weight_pct": 20
+        },
+        {
+          "key": "earnings_direction",
+          "label": "Earnings/Guidance Direction",
+          "raw_metrics": [
+            {
+              "metric": "earnings_surprise_pct",
+              "raw_value": -5.88,
+              "score": 20.6
+            }
+          ],
+          "score": 20.6,
+          "weight_pct": 20
+        },
+        {
+          "key": "valuation_extension",
+          "label": "Valuation Extension",
+          "raw_metrics": [
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -9.06,
+              "score": 31.879999999999995
+            }
+          ],
+          "score": 31.9,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    }
+  },
+  "sector": "Healthcare",
+  "sources": {
+    "sec_companyfacts_url": null,
+    "sec_filings": []
+  },
+  "ticker": "UNH"
+}

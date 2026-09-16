@@ -1,0 +1,84 @@
+# Scoring configuration for pipeline/scoring/*.py.
+# Every number here is hand-tunable without touching code. Component weights
+# (in percent) must sum to <= 100 per bucket; any leftover is treated as a
+# "missing data" reserve that falls back to a neutral (50) contribution so a
+# single missing metric doesn't crash or wildly skew the final score.
+#
+# Each threshold band maps a raw metric value to a 0-100 score via linear
+# interpolation, clamped at the ends:
+#   higher_better: low -> 0, high -> 100
+#   lower_better:  low -> 100, high -> 0
+
+short_term:
+  components:
+    momentum:
+      label: Price Momentum
+      weight: 30
+      metrics: [return_1m_pct, return_3m_pct]
+    technical:
+      label: Technical Positioning
+      weight: 20
+      metrics: [price_vs_ma50_pct, price_vs_ma200_pct, rsi_distance_from_neutral]
+    earnings_direction:
+      label: Earnings/Guidance Direction
+      weight: 20
+      metrics: [earnings_surprise_pct]
+    valuation_extension:
+      label: Valuation Extension
+      weight: 15
+      metrics: [dcf_upside_pct]
+
+long_term:
+  components:
+    valuation:
+      label: Valuation
+      weight: 25
+      metrics: [pe_ttm, ev_ebitda, dcf_upside_pct]
+    growth:
+      label: Growth
+      weight: 25
+      metrics: [revenue_growth_yoy_pct, revenue_cagr_3yr_pct, eps_growth_yoy_pct]
+    profitability:
+      label: Profitability & Margin Trend
+      weight: 20
+      metrics: [gross_margin_pct, roe_pct, margin_trend_score]
+    balance_sheet:
+      label: Balance Sheet Health
+      weight: 15
+      metrics: [debt_to_equity, current_ratio, interest_coverage]
+    cash_flow:
+      label: Cash Generation Quality
+      weight: 15
+      metrics: [fcf_margin_pct, fcf_to_net_income]
+
+# metric_key: {low, high, direction}
+thresholds:
+  return_1m_pct: {low: -10, high: 10, direction: higher_better}
+  return_3m_pct: {low: -20, high: 20, direction: higher_better}
+  price_vs_ma50_pct: {low: -10, high: 10, direction: higher_better}
+  price_vs_ma200_pct: {low: -15, high: 15, direction: higher_better}
+  rsi_distance_from_neutral: {low: 0, high: 40, direction: lower_better}
+  earnings_surprise_pct: {low: -10, high: 10, direction: higher_better}
+  dcf_upside_pct: {low: -25, high: 25, direction: higher_better}
+  pe_ttm: {low: 10, high: 40, direction: lower_better}
+  ev_ebitda: {low: 8, high: 25, direction: lower_better}
+  revenue_growth_yoy_pct: {low: -5, high: 25, direction: higher_better}
+  revenue_cagr_3yr_pct: {low: -5, high: 20, direction: higher_better}
+  eps_growth_yoy_pct: {low: -10, high: 30, direction: higher_better}
+  gross_margin_pct: {low: 20, high: 60, direction: higher_better}
+  roe_pct: {low: 0, high: 30, direction: higher_better}
+  margin_trend_score: {low: 0, high: 100, direction: higher_better}
+  debt_to_equity: {low: 0, high: 2, direction: lower_better}
+  current_ratio: {low: 0.5, high: 2.5, direction: higher_better}
+  interest_coverage: {low: 2, high: 20, direction: higher_better}
+  fcf_margin_pct: {low: 0, high: 30, direction: higher_better}
+  fcf_to_net_income: {low: 0.5, high: 1.5, direction: higher_better}
+
+verdict_bands:
+  - {min: 75, label: Strong}
+  - {min: 60, label: Favorable}
+  - {min: 40, label: Neutral}
+  - {min: 25, label: Cautious}
+  - {min: 0, label: Weak}
+
+neutral_score: 50

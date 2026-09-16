@@ -1,0 +1,318 @@
+{
+  "_errors": {
+    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+  },
+  "cik": null,
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 2.61,
+      "debt_to_equity": 1.05,
+      "interest_coverage": 12.15
+    },
+    "cash_flow": {
+      "fcf_margin_pct": -2.9,
+      "fcf_to_net_income": 0.96
+    },
+    "growth": {
+      "eps_growth_yoy_pct": -9.32,
+      "revenue_cagr_3yr_pct": 14.86,
+      "revenue_growth_yoy_pct": -5.89
+    },
+    "profitability": {
+      "gross_margin_pct": 32.74,
+      "roe_pct": -2.99,
+      "trend": "declining"
+    },
+    "valuation": {
+      "dcf_fair_value": 74.35,
+      "dcf_upside_pct": -0.8,
+      "ev_ebitda": 10.79,
+      "pe_ttm": 15.84
+    }
+  },
+  "industry": null,
+  "last_updated": "2026-09-16T01:18:23Z",
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "metrics": {
+    "current_ratio": 2.61,
+    "dcf_upside_pct": -0.8,
+    "debt_to_equity": 1.05,
+    "earnings_surprise_pct": 2.59,
+    "eps_growth_yoy_pct": -9.32,
+    "ev_ebitda": 10.79,
+    "fcf_margin_pct": -2.9,
+    "fcf_to_net_income": 0.96,
+    "gross_margin_pct": 32.74,
+    "interest_coverage": 12.15,
+    "margin_trend_score": 20,
+    "pe_ttm": 15.84,
+    "price_vs_ma200_pct": 8.3,
+    "price_vs_ma50_pct": 4.72,
+    "return_1m_pct": 8.55,
+    "return_3m_pct": -10.74,
+    "revenue_cagr_3yr_pct": 14.86,
+    "revenue_growth_yoy_pct": -5.89,
+    "roe_pct": -2.99,
+    "rsi_distance_from_neutral": 27.42
+  },
+  "name": "JPMorgan Chase & Co.",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-0.8",
+          "text": "Modeled fair value implies a -0.8% gap to the current price.",
+          "tier": "critical"
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "-5.89",
+          "text": "Revenue grew -5.9% year over year.",
+          "tier": "important"
+        },
+        {
+          "source_metric": "roe_pct",
+          "source_value": "-2.99",
+          "text": "Return on equity stands at -3.0%.",
+          "tier": "important"
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "current_ratio",
+          "source_value": "2.61",
+          "text": "Current ratio is 2.61.",
+          "tier": "minor"
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "rsi_distance_from_neutral",
+          "source_value": "27.42",
+          "text": "14-day RSI sits 27 points from neutral.",
+          "tier": "noise"
+        }
+      ]
+    },
+    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 42 driven by growth, margins, and balance-sheet health.",
+    "one_line_summary": "JPMorgan Chase & Co.: Neutral short-term, Neutral long-term outlook on current fundamentals.",
+    "short_term_narrative": "Short-term positioning is neutral, with momentum and technicals contributing a base score of 58 before a +1-point macro adjustment."
+  },
+  "price": {
+    "as_of": "2026-09-12",
+    "close": 74.95,
+    "return_1m_pct": 8.55,
+    "return_3m_pct": -10.74
+  },
+  "scores": {
+    "long_term": {
+      "base_score": 41.6,
+      "final_score": 42.6,
+      "macro_adjustment": 1,
+      "subscores": [
+        {
+          "key": "valuation",
+          "label": "Valuation",
+          "raw_metrics": [
+            {
+              "metric": "pe_ttm",
+              "raw_value": 15.84,
+              "score": 80.53333333333333
+            },
+            {
+              "metric": "ev_ebitda",
+              "raw_value": 10.79,
+              "score": 83.58823529411765
+            },
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -0.8,
+              "score": 48.4
+            }
+          ],
+          "score": 70.8,
+          "weight_pct": 25
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "raw_metrics": [
+            {
+              "metric": "revenue_growth_yoy_pct",
+              "raw_value": -5.89,
+              "score": 0.0
+            },
+            {
+              "metric": "revenue_cagr_3yr_pct",
+              "raw_value": 14.86,
+              "score": 79.44
+            },
+            {
+              "metric": "eps_growth_yoy_pct",
+              "raw_value": -9.32,
+              "score": 1.6999999999999995
+            }
+          ],
+          "score": 27.0,
+          "weight_pct": 25
+        },
+        {
+          "key": "profitability",
+          "label": "Profitability & Margin Trend",
+          "raw_metrics": [
+            {
+              "metric": "gross_margin_pct",
+              "raw_value": 32.74,
+              "score": 31.850000000000005
+            },
+            {
+              "metric": "roe_pct",
+              "raw_value": -2.99,
+              "score": 0.0
+            },
+            {
+              "metric": "margin_trend_score",
+              "raw_value": 20,
+              "score": 20.0
+            }
+          ],
+          "score": 17.3,
+          "weight_pct": 20
+        },
+        {
+          "key": "balance_sheet",
+          "label": "Balance Sheet Health",
+          "raw_metrics": [
+            {
+              "metric": "debt_to_equity",
+              "raw_value": 1.05,
+              "score": 47.5
+            },
+            {
+              "metric": "current_ratio",
+              "raw_value": 2.61,
+              "score": 100.0
+            },
+            {
+              "metric": "interest_coverage",
+              "raw_value": 12.15,
+              "score": 56.388888888888886
+            }
+          ],
+          "score": 68.0,
+          "weight_pct": 15
+        },
+        {
+          "key": "cash_flow",
+          "label": "Cash Generation Quality",
+          "raw_metrics": [
+            {
+              "metric": "fcf_margin_pct",
+              "raw_value": -2.9,
+              "score": 0.0
+            },
+            {
+              "metric": "fcf_to_net_income",
+              "raw_value": 0.96,
+              "score": 46.0
+            }
+          ],
+          "score": 23.0,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    },
+    "short_term": {
+      "base_score": 58.1,
+      "final_score": 59.1,
+      "macro_adjustment": 1,
+      "subscores": [
+        {
+          "key": "momentum",
+          "label": "Price Momentum",
+          "raw_metrics": [
+            {
+              "metric": "return_1m_pct",
+              "raw_value": 8.55,
+              "score": 92.75
+            },
+            {
+              "metric": "return_3m_pct",
+              "raw_value": -10.74,
+              "score": 23.15
+            }
+          ],
+          "score": 58.0,
+          "weight_pct": 30
+        },
+        {
+          "key": "technical",
+          "label": "Technical Positioning",
+          "raw_metrics": [
+            {
+              "metric": "price_vs_ma50_pct",
+              "raw_value": 4.72,
+              "score": 73.6
+            },
+            {
+              "metric": "price_vs_ma200_pct",
+              "raw_value": 8.3,
+              "score": 77.66666666666667
+            },
+            {
+              "metric": "rsi_distance_from_neutral",
+              "raw_value": 27.42,
+              "score": 31.450000000000003
+            }
+          ],
+          "score": 60.9,
+          "weight_pct": 20
+        },
+        {
+          "key": "earnings_direction",
+          "label": "Earnings/Guidance Direction",
+          "raw_metrics": [
+            {
+              "metric": "earnings_surprise_pct",
+              "raw_value": 2.59,
+              "score": 62.949999999999996
+            }
+          ],
+          "score": 62.9,
+          "weight_pct": 20
+        },
+        {
+          "key": "valuation_extension",
+          "label": "Valuation Extension",
+          "raw_metrics": [
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -0.8,
+              "score": 48.4
+            }
+          ],
+          "score": 48.4,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    }
+  },
+  "sector": "Financial Services",
+  "sources": {
+    "sec_companyfacts_url": null,
+    "sec_filings": []
+  },
+  "ticker": "JPM"
+}

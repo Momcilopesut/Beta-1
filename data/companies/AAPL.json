@@ -1,0 +1,318 @@
+{
+  "_errors": {
+    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+  },
+  "cik": null,
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.57,
+      "debt_to_equity": 1.89,
+      "interest_coverage": 6.0
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 19.75,
+      "fcf_to_net_income": 0.58
+    },
+    "growth": {
+      "eps_growth_yoy_pct": 15.77,
+      "revenue_cagr_3yr_pct": -3.08,
+      "revenue_growth_yoy_pct": -0.07
+    },
+    "profitability": {
+      "gross_margin_pct": 28.76,
+      "roe_pct": 31.22,
+      "trend": "declining"
+    },
+    "valuation": {
+      "dcf_fair_value": 369.2,
+      "dcf_upside_pct": -9.71,
+      "ev_ebitda": 11.06,
+      "pe_ttm": 30.18
+    }
+  },
+  "industry": null,
+  "last_updated": "2026-09-16T01:18:23Z",
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "metrics": {
+    "current_ratio": 0.57,
+    "dcf_upside_pct": -9.71,
+    "debt_to_equity": 1.89,
+    "earnings_surprise_pct": -4.4,
+    "eps_growth_yoy_pct": 15.77,
+    "ev_ebitda": 11.06,
+    "fcf_margin_pct": 19.75,
+    "fcf_to_net_income": 0.58,
+    "gross_margin_pct": 28.76,
+    "interest_coverage": 6.0,
+    "margin_trend_score": 20,
+    "pe_ttm": 30.18,
+    "price_vs_ma200_pct": 0.63,
+    "price_vs_ma50_pct": -1.49,
+    "return_1m_pct": 14.85,
+    "return_3m_pct": 7.49,
+    "revenue_cagr_3yr_pct": -3.08,
+    "revenue_growth_yoy_pct": -0.07,
+    "roe_pct": 31.22,
+    "rsi_distance_from_neutral": 4.24
+  },
+  "name": "Apple Inc.",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-9.71",
+          "text": "Modeled fair value implies a -9.7% gap to the current price.",
+          "tier": "critical"
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "-0.07",
+          "text": "Revenue grew -0.1% year over year.",
+          "tier": "important"
+        },
+        {
+          "source_metric": "roe_pct",
+          "source_value": "31.22",
+          "text": "Return on equity stands at 31.2%.",
+          "tier": "important"
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "current_ratio",
+          "source_value": "0.57",
+          "text": "Current ratio is 0.57.",
+          "tier": "minor"
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "rsi_distance_from_neutral",
+          "source_value": "4.24",
+          "text": "14-day RSI sits 4 points from neutral.",
+          "tier": "noise"
+        }
+      ]
+    },
+    "long_term_narrative": "Longer-term fundamentals point to a cautious outlook, with a base score of 36 driven by growth, margins, and balance-sheet health.",
+    "one_line_summary": "Apple Inc.: Neutral short-term, Cautious long-term outlook on current fundamentals.",
+    "short_term_narrative": "Short-term positioning is neutral, with momentum and technicals contributing a base score of 56 before a +1-point macro adjustment."
+  },
+  "price": {
+    "as_of": "2026-09-12",
+    "close": 408.91,
+    "return_1m_pct": 14.85,
+    "return_3m_pct": 7.49
+  },
+  "scores": {
+    "long_term": {
+      "base_score": 36.0,
+      "final_score": 37.0,
+      "macro_adjustment": 1,
+      "subscores": [
+        {
+          "key": "valuation",
+          "label": "Valuation",
+          "raw_metrics": [
+            {
+              "metric": "pe_ttm",
+              "raw_value": 30.18,
+              "score": 32.733333333333334
+            },
+            {
+              "metric": "ev_ebitda",
+              "raw_value": 11.06,
+              "score": 82.0
+            },
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -9.71,
+              "score": 30.579999999999995
+            }
+          ],
+          "score": 48.4,
+          "weight_pct": 25
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "raw_metrics": [
+            {
+              "metric": "revenue_growth_yoy_pct",
+              "raw_value": -0.07,
+              "score": 16.433333333333334
+            },
+            {
+              "metric": "revenue_cagr_3yr_pct",
+              "raw_value": -3.08,
+              "score": 7.68
+            },
+            {
+              "metric": "eps_growth_yoy_pct",
+              "raw_value": 15.77,
+              "score": 64.425
+            }
+          ],
+          "score": 29.5,
+          "weight_pct": 25
+        },
+        {
+          "key": "profitability",
+          "label": "Profitability & Margin Trend",
+          "raw_metrics": [
+            {
+              "metric": "gross_margin_pct",
+              "raw_value": 28.76,
+              "score": 21.900000000000002
+            },
+            {
+              "metric": "roe_pct",
+              "raw_value": 31.22,
+              "score": 100.0
+            },
+            {
+              "metric": "margin_trend_score",
+              "raw_value": 20,
+              "score": 20.0
+            }
+          ],
+          "score": 47.3,
+          "weight_pct": 20
+        },
+        {
+          "key": "balance_sheet",
+          "label": "Balance Sheet Health",
+          "raw_metrics": [
+            {
+              "metric": "debt_to_equity",
+              "raw_value": 1.89,
+              "score": 5.5
+            },
+            {
+              "metric": "current_ratio",
+              "raw_value": 0.57,
+              "score": 3.4999999999999973
+            },
+            {
+              "metric": "interest_coverage",
+              "raw_value": 6.0,
+              "score": 22.22222222222222
+            }
+          ],
+          "score": 10.4,
+          "weight_pct": 15
+        },
+        {
+          "key": "cash_flow",
+          "label": "Cash Generation Quality",
+          "raw_metrics": [
+            {
+              "metric": "fcf_margin_pct",
+              "raw_value": 19.75,
+              "score": 65.83333333333333
+            },
+            {
+              "metric": "fcf_to_net_income",
+              "raw_value": 0.58,
+              "score": 7.9999999999999964
+            }
+          ],
+          "score": 36.9,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Cautious"
+    },
+    "short_term": {
+      "base_score": 56.2,
+      "final_score": 57.2,
+      "macro_adjustment": 1,
+      "subscores": [
+        {
+          "key": "momentum",
+          "label": "Price Momentum",
+          "raw_metrics": [
+            {
+              "metric": "return_1m_pct",
+              "raw_value": 14.85,
+              "score": 100.0
+            },
+            {
+              "metric": "return_3m_pct",
+              "raw_value": 7.49,
+              "score": 68.72500000000001
+            }
+          ],
+          "score": 84.4,
+          "weight_pct": 30
+        },
+        {
+          "key": "technical",
+          "label": "Technical Positioning",
+          "raw_metrics": [
+            {
+              "metric": "price_vs_ma50_pct",
+              "raw_value": -1.49,
+              "score": 42.55
+            },
+            {
+              "metric": "price_vs_ma200_pct",
+              "raw_value": 0.63,
+              "score": 52.1
+            },
+            {
+              "metric": "rsi_distance_from_neutral",
+              "raw_value": 4.24,
+              "score": 89.4
+            }
+          ],
+          "score": 61.4,
+          "weight_pct": 20
+        },
+        {
+          "key": "earnings_direction",
+          "label": "Earnings/Guidance Direction",
+          "raw_metrics": [
+            {
+              "metric": "earnings_surprise_pct",
+              "raw_value": -4.4,
+              "score": 27.999999999999996
+            }
+          ],
+          "score": 28.0,
+          "weight_pct": 20
+        },
+        {
+          "key": "valuation_extension",
+          "label": "Valuation Extension",
+          "raw_metrics": [
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -9.71,
+              "score": 30.579999999999995
+            }
+          ],
+          "score": 30.6,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    }
+  },
+  "sector": "Technology",
+  "sources": {
+    "sec_companyfacts_url": null,
+    "sec_filings": []
+  },
+  "ticker": "AAPL"
+}

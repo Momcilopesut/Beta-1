@@ -1,0 +1,52 @@
+# Companies tracked by the scheduled pipeline.
+# Fully user-editable: add/remove tickers here, then re-run the pipeline
+# (locally with --dry-run, or via the "Run workflow" button on refresh-data.yml).
+# Sector is a display fallback; the pipeline prefers the sector reported by FMP's
+# /profile endpoint when available and only falls back to this value if that call fails.
+
+companies:
+  - ticker: AAPL
+    name: Apple Inc.
+    sector: Technology
+  - ticker: MSFT
+    name: Microsoft Corporation
+    sector: Technology
+  - ticker: NVDA
+    name: NVIDIA Corporation
+    sector: Technology
+  - ticker: JPM
+    name: JPMorgan Chase & Co.
+    sector: Financial Services
+  - ticker: V
+    name: Visa Inc.
+    sector: Financial Services
+  - ticker: UNH
+    name: UnitedHealth Group Incorporated
+    sector: Healthcare
+  - ticker: JNJ
+    name: Johnson & Johnson
+    sector: Healthcare
+  - ticker: PG
+    name: Procter & Gamble Co.
+    sector: Consumer Defensive
+  - ticker: KO
+    name: The Coca-Cola Company
+    sector: Consumer Defensive
+  - ticker: AMZN
+    name: Amazon.com Inc.
+    sector: Consumer Cyclical
+  - ticker: HD
+    name: The Home Depot Inc.
+    sector: Consumer Cyclical
+  - ticker: XOM
+    name: Exxon Mobil Corporation
+    sector: Energy
+  - ticker: CAT
+    name: Caterpillar Inc.
+    sector: Industrials
+  - ticker: NEE
+    name: NextEra Energy Inc.
+    sector: Utilities
+  - ticker: PLD
+    name: Prologis Inc.
+    sector: Real Estate

@@ -1,0 +1,318 @@
+{
+  "_errors": {
+    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+  },
+  "cik": null,
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.64,
+      "debt_to_equity": 2.11,
+      "interest_coverage": 2.05
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 4.22,
+      "fcf_to_net_income": 1.4
+    },
+    "growth": {
+      "eps_growth_yoy_pct": -7.31,
+      "revenue_cagr_3yr_pct": 15.79,
+      "revenue_growth_yoy_pct": 19.03
+    },
+    "profitability": {
+      "gross_margin_pct": 37.98,
+      "roe_pct": 2.04,
+      "trend": "stable"
+    },
+    "valuation": {
+      "dcf_fair_value": 91.41,
+      "dcf_upside_pct": -15.36,
+      "ev_ebitda": 6.12,
+      "pe_ttm": 32.62
+    }
+  },
+  "industry": null,
+  "last_updated": "2026-09-16T01:18:23Z",
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "high"
+    }
+  },
+  "metrics": {
+    "current_ratio": 1.64,
+    "dcf_upside_pct": -15.36,
+    "debt_to_equity": 2.11,
+    "earnings_surprise_pct": -0.09,
+    "eps_growth_yoy_pct": -7.31,
+    "ev_ebitda": 6.12,
+    "fcf_margin_pct": 4.22,
+    "fcf_to_net_income": 1.4,
+    "gross_margin_pct": 37.98,
+    "interest_coverage": 2.05,
+    "margin_trend_score": 60,
+    "pe_ttm": 32.62,
+    "price_vs_ma200_pct": -11.0,
+    "price_vs_ma50_pct": 3.11,
+    "return_1m_pct": -12.82,
+    "return_3m_pct": -4.28,
+    "revenue_cagr_3yr_pct": 15.79,
+    "revenue_growth_yoy_pct": 19.03,
+    "roe_pct": 2.04,
+    "rsi_distance_from_neutral": 24.37
+  },
+  "name": "NextEra Energy Inc.",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-15.36",
+          "text": "Modeled fair value implies a -15.4% gap to the current price.",
+          "tier": "critical"
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "19.03",
+          "text": "Revenue grew +19.0% year over year.",
+          "tier": "important"
+        },
+        {
+          "source_metric": "roe_pct",
+          "source_value": "2.04",
+          "text": "Return on equity stands at 2.0%.",
+          "tier": "important"
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "current_ratio",
+          "source_value": "1.64",
+          "text": "Current ratio is 1.64.",
+          "tier": "minor"
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "rsi_distance_from_neutral",
+          "source_value": "24.37",
+          "text": "14-day RSI sits 24 points from neutral.",
+          "tier": "noise"
+        }
+      ]
+    },
+    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 44 driven by growth, margins, and balance-sheet health.",
+    "one_line_summary": "NextEra Energy Inc.: Cautious short-term, Neutral long-term outlook on current fundamentals.",
+    "short_term_narrative": "Short-term positioning is cautious, with momentum and technicals contributing a base score of 31 before a +0-point macro adjustment."
+  },
+  "price": {
+    "as_of": "2026-09-12",
+    "close": 108.0,
+    "return_1m_pct": -12.82,
+    "return_3m_pct": -4.28
+  },
+  "scores": {
+    "long_term": {
+      "base_score": 44.3,
+      "final_score": 44.3,
+      "macro_adjustment": 0,
+      "subscores": [
+        {
+          "key": "valuation",
+          "label": "Valuation",
+          "raw_metrics": [
+            {
+              "metric": "pe_ttm",
+              "raw_value": 32.62,
+              "score": 24.60000000000001
+            },
+            {
+              "metric": "ev_ebitda",
+              "raw_value": 6.12,
+              "score": 100.0
+            },
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -15.36,
+              "score": 19.28
+            }
+          ],
+          "score": 48.0,
+          "weight_pct": 25
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "raw_metrics": [
+            {
+              "metric": "revenue_growth_yoy_pct",
+              "raw_value": 19.03,
+              "score": 80.10000000000001
+            },
+            {
+              "metric": "revenue_cagr_3yr_pct",
+              "raw_value": 15.79,
+              "score": 83.16
+            },
+            {
+              "metric": "eps_growth_yoy_pct",
+              "raw_value": -7.31,
+              "score": 6.7250000000000005
+            }
+          ],
+          "score": 56.7,
+          "weight_pct": 25
+        },
+        {
+          "key": "profitability",
+          "label": "Profitability & Margin Trend",
+          "raw_metrics": [
+            {
+              "metric": "gross_margin_pct",
+              "raw_value": 37.98,
+              "score": 44.94999999999999
+            },
+            {
+              "metric": "roe_pct",
+              "raw_value": 2.04,
+              "score": 6.800000000000001
+            },
+            {
+              "metric": "margin_trend_score",
+              "raw_value": 60,
+              "score": 60.0
+            }
+          ],
+          "score": 37.2,
+          "weight_pct": 20
+        },
+        {
+          "key": "balance_sheet",
+          "label": "Balance Sheet Health",
+          "raw_metrics": [
+            {
+              "metric": "debt_to_equity",
+              "raw_value": 2.11,
+              "score": 0.0
+            },
+            {
+              "metric": "current_ratio",
+              "raw_value": 1.64,
+              "score": 56.99999999999999
+            },
+            {
+              "metric": "interest_coverage",
+              "raw_value": 2.05,
+              "score": 0.2777777777777768
+            }
+          ],
+          "score": 19.1,
+          "weight_pct": 15
+        },
+        {
+          "key": "cash_flow",
+          "label": "Cash Generation Quality",
+          "raw_metrics": [
+            {
+              "metric": "fcf_margin_pct",
+              "raw_value": 4.22,
+              "score": 14.066666666666666
+            },
+            {
+              "metric": "fcf_to_net_income",
+              "raw_value": 1.4,
+              "score": 89.99999999999999
+            }
+          ],
+          "score": 52.0,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    },
+    "short_term": {
+      "base_score": 31.2,
+      "final_score": 31.2,
+      "macro_adjustment": 0,
+      "subscores": [
+        {
+          "key": "momentum",
+          "label": "Price Momentum",
+          "raw_metrics": [
+            {
+              "metric": "return_1m_pct",
+              "raw_value": -12.82,
+              "score": 0.0
+            },
+            {
+              "metric": "return_3m_pct",
+              "raw_value": -4.28,
+              "score": 39.3
+            }
+          ],
+          "score": 19.6,
+          "weight_pct": 30
+        },
+        {
+          "key": "technical",
+          "label": "Technical Positioning",
+          "raw_metrics": [
+            {
+              "metric": "price_vs_ma50_pct",
+              "raw_value": 3.11,
+              "score": 65.55
+            },
+            {
+              "metric": "price_vs_ma200_pct",
+              "raw_value": -11.0,
+              "score": 13.333333333333334
+            },
+            {
+              "metric": "rsi_distance_from_neutral",
+              "raw_value": 24.37,
+              "score": 39.074999999999996
+            }
+          ],
+          "score": 39.3,
+          "weight_pct": 20
+        },
+        {
+          "key": "earnings_direction",
+          "label": "Earnings/Guidance Direction",
+          "raw_metrics": [
+            {
+              "metric": "earnings_surprise_pct",
+              "raw_value": -0.09,
+              "score": 49.55
+            }
+          ],
+          "score": 49.5,
+          "weight_pct": 20
+        },
+        {
+          "key": "valuation_extension",
+          "label": "Valuation Extension",
+          "raw_metrics": [
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -15.36,
+              "score": 19.28
+            }
+          ],
+          "score": 19.3,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Cautious"
+    }
+  },
+  "sector": "Utilities",
+  "sources": {
+    "sec_companyfacts_url": null,
+    "sec_filings": []
+  },
+  "ticker": "NEE"
+}

@@ -1,0 +1,93 @@
+name: Refresh watchlist data
+
+on:
+  schedule:
+    # Saturday 11:00 UTC - after Friday's US market close, so end-of-day
+    # data is final. Fundamentals don't move week to week, so weekly stays
+    # well inside every free-tier API's rate limits for a ~15-ticker
+    # watchlist. Change the cron below to refresh more often if desired.
+    - cron: "0 11 * * 6"
+  workflow_dispatch:
+    inputs:
+      tickers:
+        description: "Comma-separated tickers to run (default: full watchlist)"
+        required: false
+      dry_run:
+        description: "Write to data/.dry-run instead of committing/deploying"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SEC_EDGAR_USER_AGENT: ${{ vars.SEC_EDGAR_USER_AGENT }}
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.tickers }}" ]; then
+            ARGS="$ARGS --tickers ${{ github.event.inputs.tickers }}"
+          fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          python -m pipeline.main $ARGS
+
+      - name: Commit updated data
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "Automated data refresh $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
+
+      - name: Prepare Pages content
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          mkdir -p _site
+          cp -r site/. _site/
+          cp -r data _site/data
+
+      - name: Upload Pages artifact
+        if: github.event.inputs.dry_run != 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        if: github.event.inputs.dry_run != 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4

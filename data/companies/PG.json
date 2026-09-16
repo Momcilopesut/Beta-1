@@ -1,0 +1,318 @@
+{
+  "_errors": {
+    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+  },
+  "cik": null,
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.5,
+      "debt_to_equity": 2.14,
+      "interest_coverage": 8.51
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 20.24,
+      "fcf_to_net_income": 1.17
+    },
+    "growth": {
+      "eps_growth_yoy_pct": -10.16,
+      "revenue_cagr_3yr_pct": 6.6,
+      "revenue_growth_yoy_pct": 11.89
+    },
+    "profitability": {
+      "gross_margin_pct": 35.14,
+      "roe_pct": 32.32,
+      "trend": "stable"
+    },
+    "valuation": {
+      "dcf_fair_value": 345.65,
+      "dcf_upside_pct": -21.06,
+      "ev_ebitda": 14.12,
+      "pe_ttm": 10.3
+    }
+  },
+  "industry": null,
+  "last_updated": "2026-09-16T01:18:23Z",
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "low"
+    }
+  },
+  "metrics": {
+    "current_ratio": 0.5,
+    "dcf_upside_pct": -21.06,
+    "debt_to_equity": 2.14,
+    "earnings_surprise_pct": 3.06,
+    "eps_growth_yoy_pct": -10.16,
+    "ev_ebitda": 14.12,
+    "fcf_margin_pct": 20.24,
+    "fcf_to_net_income": 1.17,
+    "gross_margin_pct": 35.14,
+    "interest_coverage": 8.51,
+    "margin_trend_score": 60,
+    "pe_ttm": 10.3,
+    "price_vs_ma200_pct": -13.97,
+    "price_vs_ma50_pct": 1.46,
+    "return_1m_pct": -1.74,
+    "return_3m_pct": 10.28,
+    "revenue_cagr_3yr_pct": 6.6,
+    "revenue_growth_yoy_pct": 11.89,
+    "roe_pct": 32.32,
+    "rsi_distance_from_neutral": 33.08
+  },
+  "name": "Procter & Gamble Co.",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-21.06",
+          "text": "Modeled fair value implies a -21.1% gap to the current price.",
+          "tier": "critical"
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "11.89",
+          "text": "Revenue grew +11.9% year over year.",
+          "tier": "important"
+        },
+        {
+          "source_metric": "roe_pct",
+          "source_value": "32.32",
+          "text": "Return on equity stands at 32.3%.",
+          "tier": "important"
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "current_ratio",
+          "source_value": "0.5",
+          "text": "Current ratio is 0.50.",
+          "tier": "minor"
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "rsi_distance_from_neutral",
+          "source_value": "33.08",
+          "text": "14-day RSI sits 33 points from neutral.",
+          "tier": "noise"
+        }
+      ]
+    },
+    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 48 driven by growth, margins, and balance-sheet health.",
+    "one_line_summary": "Procter & Gamble Co.: Neutral short-term, Neutral long-term outlook on current fundamentals.",
+    "short_term_narrative": "Short-term positioning is neutral, with momentum and technicals contributing a base score of 44 before a +0-point macro adjustment."
+  },
+  "price": {
+    "as_of": "2026-09-12",
+    "close": 437.86,
+    "return_1m_pct": -1.74,
+    "return_3m_pct": 10.28
+  },
+  "scores": {
+    "long_term": {
+      "base_score": 47.9,
+      "final_score": 47.9,
+      "macro_adjustment": 0,
+      "subscores": [
+        {
+          "key": "valuation",
+          "label": "Valuation",
+          "raw_metrics": [
+            {
+              "metric": "pe_ttm",
+              "raw_value": 10.3,
+              "score": 99.0
+            },
+            {
+              "metric": "ev_ebitda",
+              "raw_value": 14.12,
+              "score": 64.0
+            },
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -21.06,
+              "score": 7.880000000000003
+            }
+          ],
+          "score": 57.0,
+          "weight_pct": 25
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "raw_metrics": [
+            {
+              "metric": "revenue_growth_yoy_pct",
+              "raw_value": 11.89,
+              "score": 56.300000000000004
+            },
+            {
+              "metric": "revenue_cagr_3yr_pct",
+              "raw_value": 6.6,
+              "score": 46.4
+            },
+            {
+              "metric": "eps_growth_yoy_pct",
+              "raw_value": -10.16,
+              "score": 0.0
+            }
+          ],
+          "score": 34.2,
+          "weight_pct": 25
+        },
+        {
+          "key": "profitability",
+          "label": "Profitability & Margin Trend",
+          "raw_metrics": [
+            {
+              "metric": "gross_margin_pct",
+              "raw_value": 35.14,
+              "score": 37.85
+            },
+            {
+              "metric": "roe_pct",
+              "raw_value": 32.32,
+              "score": 100.0
+            },
+            {
+              "metric": "margin_trend_score",
+              "raw_value": 60,
+              "score": 60.0
+            }
+          ],
+          "score": 66.0,
+          "weight_pct": 20
+        },
+        {
+          "key": "balance_sheet",
+          "label": "Balance Sheet Health",
+          "raw_metrics": [
+            {
+              "metric": "debt_to_equity",
+              "raw_value": 2.14,
+              "score": 0.0
+            },
+            {
+              "metric": "current_ratio",
+              "raw_value": 0.5,
+              "score": 0.0
+            },
+            {
+              "metric": "interest_coverage",
+              "raw_value": 8.51,
+              "score": 36.166666666666664
+            }
+          ],
+          "score": 12.1,
+          "weight_pct": 15
+        },
+        {
+          "key": "cash_flow",
+          "label": "Cash Generation Quality",
+          "raw_metrics": [
+            {
+              "metric": "fcf_margin_pct",
+              "raw_value": 20.24,
+              "score": 67.46666666666667
+            },
+            {
+              "metric": "fcf_to_net_income",
+              "raw_value": 1.17,
+              "score": 67.0
+            }
+          ],
+          "score": 67.2,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    },
+    "short_term": {
+      "base_score": 43.5,
+      "final_score": 43.5,
+      "macro_adjustment": 0,
+      "subscores": [
+        {
+          "key": "momentum",
+          "label": "Price Momentum",
+          "raw_metrics": [
+            {
+              "metric": "return_1m_pct",
+              "raw_value": -1.74,
+              "score": 41.3
+            },
+            {
+              "metric": "return_3m_pct",
+              "raw_value": 10.28,
+              "score": 75.7
+            }
+          ],
+          "score": 58.5,
+          "weight_pct": 30
+        },
+        {
+          "key": "technical",
+          "label": "Technical Positioning",
+          "raw_metrics": [
+            {
+              "metric": "price_vs_ma50_pct",
+              "raw_value": 1.46,
+              "score": 57.300000000000004
+            },
+            {
+              "metric": "price_vs_ma200_pct",
+              "raw_value": -13.97,
+              "score": 3.4333333333333313
+            },
+            {
+              "metric": "rsi_distance_from_neutral",
+              "raw_value": 33.08,
+              "score": 17.30000000000001
+            }
+          ],
+          "score": 26.0,
+          "weight_pct": 20
+        },
+        {
+          "key": "earnings_direction",
+          "label": "Earnings/Guidance Direction",
+          "raw_metrics": [
+            {
+              "metric": "earnings_surprise_pct",
+              "raw_value": 3.06,
+              "score": 65.3
+            }
+          ],
+          "score": 65.3,
+          "weight_pct": 20
+        },
+        {
+          "key": "valuation_extension",
+          "label": "Valuation Extension",
+          "raw_metrics": [
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -21.06,
+              "score": 7.880000000000003
+            }
+          ],
+          "score": 7.9,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    }
+  },
+  "sector": "Consumer Defensive",
+  "sources": {
+    "sec_companyfacts_url": null,
+    "sec_filings": []
+  },
+  "ticker": "PG"
+}

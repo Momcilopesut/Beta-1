@@ -1,0 +1,318 @@
+{
+  "_errors": {
+    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+  },
+  "cik": null,
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 2.35,
+      "debt_to_equity": 1.9,
+      "interest_coverage": 6.6
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 24.13,
+      "fcf_to_net_income": 0.44
+    },
+    "growth": {
+      "eps_growth_yoy_pct": 2.62,
+      "revenue_cagr_3yr_pct": 14.89,
+      "revenue_growth_yoy_pct": -7.11
+    },
+    "profitability": {
+      "gross_margin_pct": 61.75,
+      "roe_pct": 27.09,
+      "trend": "declining"
+    },
+    "valuation": {
+      "dcf_fair_value": 614.41,
+      "dcf_upside_pct": 28.57,
+      "ev_ebitda": 25.39,
+      "pe_ttm": 38.19
+    }
+  },
+  "industry": null,
+  "last_updated": "2026-09-16T01:18:23Z",
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "low"
+    }
+  },
+  "metrics": {
+    "current_ratio": 2.35,
+    "dcf_upside_pct": 28.57,
+    "debt_to_equity": 1.9,
+    "earnings_surprise_pct": 5.83,
+    "eps_growth_yoy_pct": 2.62,
+    "ev_ebitda": 25.39,
+    "fcf_margin_pct": 24.13,
+    "fcf_to_net_income": 0.44,
+    "gross_margin_pct": 61.75,
+    "interest_coverage": 6.6,
+    "margin_trend_score": 20,
+    "pe_ttm": 38.19,
+    "price_vs_ma200_pct": -12.44,
+    "price_vs_ma50_pct": 2.9,
+    "return_1m_pct": 11.52,
+    "return_3m_pct": -4.68,
+    "revenue_cagr_3yr_pct": 14.89,
+    "revenue_growth_yoy_pct": -7.11,
+    "roe_pct": 27.09,
+    "rsi_distance_from_neutral": 32.55
+  },
+  "name": "The Coca-Cola Company",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "28.57",
+          "text": "Modeled fair value implies a +28.6% gap to the current price.",
+          "tier": "critical"
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "-7.11",
+          "text": "Revenue grew -7.1% year over year.",
+          "tier": "important"
+        },
+        {
+          "source_metric": "roe_pct",
+          "source_value": "27.09",
+          "text": "Return on equity stands at 27.1%.",
+          "tier": "important"
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "current_ratio",
+          "source_value": "2.35",
+          "text": "Current ratio is 2.35.",
+          "tier": "minor"
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "rsi_distance_from_neutral",
+          "source_value": "32.55",
+          "text": "14-day RSI sits 33 points from neutral.",
+          "tier": "noise"
+        }
+      ]
+    },
+    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 44 driven by growth, margins, and balance-sheet health.",
+    "one_line_summary": "The Coca-Cola Company: Favorable short-term, Neutral long-term outlook on current fundamentals.",
+    "short_term_narrative": "Short-term positioning is favorable, with momentum and technicals contributing a base score of 68 before a +0-point macro adjustment."
+  },
+  "price": {
+    "as_of": "2026-09-12",
+    "close": 477.88,
+    "return_1m_pct": 11.52,
+    "return_3m_pct": -4.68
+  },
+  "scores": {
+    "long_term": {
+      "base_score": 44.3,
+      "final_score": 44.3,
+      "macro_adjustment": 0,
+      "subscores": [
+        {
+          "key": "valuation",
+          "label": "Valuation",
+          "raw_metrics": [
+            {
+              "metric": "pe_ttm",
+              "raw_value": 38.19,
+              "score": 6.033333333333346
+            },
+            {
+              "metric": "ev_ebitda",
+              "raw_value": 25.39,
+              "score": 0.0
+            },
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": 28.57,
+              "score": 100.0
+            }
+          ],
+          "score": 35.3,
+          "weight_pct": 25
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "raw_metrics": [
+            {
+              "metric": "revenue_growth_yoy_pct",
+              "raw_value": -7.11,
+              "score": 0.0
+            },
+            {
+              "metric": "revenue_cagr_3yr_pct",
+              "raw_value": 14.89,
+              "score": 79.56
+            },
+            {
+              "metric": "eps_growth_yoy_pct",
+              "raw_value": 2.62,
+              "score": 31.55
+            }
+          ],
+          "score": 37.0,
+          "weight_pct": 25
+        },
+        {
+          "key": "profitability",
+          "label": "Profitability & Margin Trend",
+          "raw_metrics": [
+            {
+              "metric": "gross_margin_pct",
+              "raw_value": 61.75,
+              "score": 100.0
+            },
+            {
+              "metric": "roe_pct",
+              "raw_value": 27.09,
+              "score": 90.3
+            },
+            {
+              "metric": "margin_trend_score",
+              "raw_value": 20,
+              "score": 20.0
+            }
+          ],
+          "score": 70.1,
+          "weight_pct": 20
+        },
+        {
+          "key": "balance_sheet",
+          "label": "Balance Sheet Health",
+          "raw_metrics": [
+            {
+              "metric": "debt_to_equity",
+              "raw_value": 1.9,
+              "score": 5.0
+            },
+            {
+              "metric": "current_ratio",
+              "raw_value": 2.35,
+              "score": 92.5
+            },
+            {
+              "metric": "interest_coverage",
+              "raw_value": 6.6,
+              "score": 25.555555555555554
+            }
+          ],
+          "score": 41.0,
+          "weight_pct": 15
+        },
+        {
+          "key": "cash_flow",
+          "label": "Cash Generation Quality",
+          "raw_metrics": [
+            {
+              "metric": "fcf_margin_pct",
+              "raw_value": 24.13,
+              "score": 80.43333333333334
+            },
+            {
+              "metric": "fcf_to_net_income",
+              "raw_value": 0.44,
+              "score": 0.0
+            }
+          ],
+          "score": 40.2,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    },
+    "short_term": {
+      "base_score": 67.9,
+      "final_score": 67.9,
+      "macro_adjustment": 0,
+      "subscores": [
+        {
+          "key": "momentum",
+          "label": "Price Momentum",
+          "raw_metrics": [
+            {
+              "metric": "return_1m_pct",
+              "raw_value": 11.52,
+              "score": 100.0
+            },
+            {
+              "metric": "return_3m_pct",
+              "raw_value": -4.68,
+              "score": 38.3
+            }
+          ],
+          "score": 69.2,
+          "weight_pct": 30
+        },
+        {
+          "key": "technical",
+          "label": "Technical Positioning",
+          "raw_metrics": [
+            {
+              "metric": "price_vs_ma50_pct",
+              "raw_value": 2.9,
+              "score": 64.5
+            },
+            {
+              "metric": "price_vs_ma200_pct",
+              "raw_value": -12.44,
+              "score": 8.533333333333335
+            },
+            {
+              "metric": "rsi_distance_from_neutral",
+              "raw_value": 32.55,
+              "score": 18.625
+            }
+          ],
+          "score": 30.6,
+          "weight_pct": 20
+        },
+        {
+          "key": "earnings_direction",
+          "label": "Earnings/Guidance Direction",
+          "raw_metrics": [
+            {
+              "metric": "earnings_surprise_pct",
+              "raw_value": 5.83,
+              "score": 79.14999999999999
+            }
+          ],
+          "score": 79.1,
+          "weight_pct": 20
+        },
+        {
+          "key": "valuation_extension",
+          "label": "Valuation Extension",
+          "raw_metrics": [
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": 28.57,
+              "score": 100.0
+            }
+          ],
+          "score": 100.0,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Favorable"
+    }
+  },
+  "sector": "Consumer Defensive",
+  "sources": {
+    "sec_companyfacts_url": null,
+    "sec_filings": []
+  },
+  "ticker": "KO"
+}

@@ -1,0 +1,318 @@
+{
+  "_errors": {
+    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+  },
+  "cik": null,
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.69,
+      "debt_to_equity": 2.16,
+      "interest_coverage": 20.72
+    },
+    "cash_flow": {
+      "fcf_margin_pct": -0.73,
+      "fcf_to_net_income": 1.56
+    },
+    "growth": {
+      "eps_growth_yoy_pct": 0.28,
+      "revenue_cagr_3yr_pct": 21.11,
+      "revenue_growth_yoy_pct": 23.12
+    },
+    "profitability": {
+      "gross_margin_pct": 48.15,
+      "roe_pct": 10.99,
+      "trend": "declining"
+    },
+    "valuation": {
+      "dcf_fair_value": 240.04,
+      "dcf_upside_pct": -28.58,
+      "ev_ebitda": 13.22,
+      "pe_ttm": 15.95
+    }
+  },
+  "industry": null,
+  "last_updated": "2026-09-16T01:18:23Z",
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "metrics": {
+    "current_ratio": 1.69,
+    "dcf_upside_pct": -28.58,
+    "debt_to_equity": 2.16,
+    "earnings_surprise_pct": -4.36,
+    "eps_growth_yoy_pct": 0.28,
+    "ev_ebitda": 13.22,
+    "fcf_margin_pct": -0.73,
+    "fcf_to_net_income": 1.56,
+    "gross_margin_pct": 48.15,
+    "interest_coverage": 20.72,
+    "margin_trend_score": 20,
+    "pe_ttm": 15.95,
+    "price_vs_ma200_pct": -7.01,
+    "price_vs_ma50_pct": -0.95,
+    "return_1m_pct": -8.33,
+    "return_3m_pct": 15.83,
+    "revenue_cagr_3yr_pct": 21.11,
+    "revenue_growth_yoy_pct": 23.12,
+    "roe_pct": 10.99,
+    "rsi_distance_from_neutral": 27.84
+  },
+  "name": "Amazon.com Inc.",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-28.58",
+          "text": "Modeled fair value implies a -28.6% gap to the current price.",
+          "tier": "critical"
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "23.12",
+          "text": "Revenue grew +23.1% year over year.",
+          "tier": "important"
+        },
+        {
+          "source_metric": "roe_pct",
+          "source_value": "10.99",
+          "text": "Return on equity stands at 11.0%.",
+          "tier": "important"
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "current_ratio",
+          "source_value": "1.69",
+          "text": "Current ratio is 1.69.",
+          "tier": "minor"
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "rsi_distance_from_neutral",
+          "source_value": "27.84",
+          "text": "14-day RSI sits 28 points from neutral.",
+          "tier": "noise"
+        }
+      ]
+    },
+    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 55 driven by growth, margins, and balance-sheet health.",
+    "one_line_summary": "Amazon.com Inc.: Cautious short-term, Neutral long-term outlook on current fundamentals.",
+    "short_term_narrative": "Short-term positioning is cautious, with momentum and technicals contributing a base score of 32 before a +2-point macro adjustment."
+  },
+  "price": {
+    "as_of": "2026-09-12",
+    "close": 336.1,
+    "return_1m_pct": -8.33,
+    "return_3m_pct": 15.83
+  },
+  "scores": {
+    "long_term": {
+      "base_score": 54.7,
+      "final_score": 56.7,
+      "macro_adjustment": 2,
+      "subscores": [
+        {
+          "key": "valuation",
+          "label": "Valuation",
+          "raw_metrics": [
+            {
+              "metric": "pe_ttm",
+              "raw_value": 15.95,
+              "score": 80.16666666666667
+            },
+            {
+              "metric": "ev_ebitda",
+              "raw_value": 13.22,
+              "score": 69.29411764705881
+            },
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -28.58,
+              "score": 0.0
+            }
+          ],
+          "score": 49.8,
+          "weight_pct": 25
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "raw_metrics": [
+            {
+              "metric": "revenue_growth_yoy_pct",
+              "raw_value": 23.12,
+              "score": 93.73333333333333
+            },
+            {
+              "metric": "revenue_cagr_3yr_pct",
+              "raw_value": 21.11,
+              "score": 100.0
+            },
+            {
+              "metric": "eps_growth_yoy_pct",
+              "raw_value": 0.28,
+              "score": 25.7
+            }
+          ],
+          "score": 73.1,
+          "weight_pct": 25
+        },
+        {
+          "key": "profitability",
+          "label": "Profitability & Margin Trend",
+          "raw_metrics": [
+            {
+              "metric": "gross_margin_pct",
+              "raw_value": 48.15,
+              "score": 70.375
+            },
+            {
+              "metric": "roe_pct",
+              "raw_value": 10.99,
+              "score": 36.63333333333333
+            },
+            {
+              "metric": "margin_trend_score",
+              "raw_value": 20,
+              "score": 20.0
+            }
+          ],
+          "score": 42.3,
+          "weight_pct": 20
+        },
+        {
+          "key": "balance_sheet",
+          "label": "Balance Sheet Health",
+          "raw_metrics": [
+            {
+              "metric": "debt_to_equity",
+              "raw_value": 2.16,
+              "score": 0.0
+            },
+            {
+              "metric": "current_ratio",
+              "raw_value": 1.69,
+              "score": 59.5
+            },
+            {
+              "metric": "interest_coverage",
+              "raw_value": 20.72,
+              "score": 100.0
+            }
+          ],
+          "score": 53.2,
+          "weight_pct": 15
+        },
+        {
+          "key": "cash_flow",
+          "label": "Cash Generation Quality",
+          "raw_metrics": [
+            {
+              "metric": "fcf_margin_pct",
+              "raw_value": -0.73,
+              "score": 0.0
+            },
+            {
+              "metric": "fcf_to_net_income",
+              "raw_value": 1.56,
+              "score": 100.0
+            }
+          ],
+          "score": 50.0,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    },
+    "short_term": {
+      "base_score": 31.9,
+      "final_score": 33.9,
+      "macro_adjustment": 2,
+      "subscores": [
+        {
+          "key": "momentum",
+          "label": "Price Momentum",
+          "raw_metrics": [
+            {
+              "metric": "return_1m_pct",
+              "raw_value": -8.33,
+              "score": 8.35
+            },
+            {
+              "metric": "return_3m_pct",
+              "raw_value": 15.83,
+              "score": 89.57499999999999
+            }
+          ],
+          "score": 49.0,
+          "weight_pct": 30
+        },
+        {
+          "key": "technical",
+          "label": "Technical Positioning",
+          "raw_metrics": [
+            {
+              "metric": "price_vs_ma50_pct",
+              "raw_value": -0.95,
+              "score": 45.25
+            },
+            {
+              "metric": "price_vs_ma200_pct",
+              "raw_value": -7.01,
+              "score": 26.633333333333336
+            },
+            {
+              "metric": "rsi_distance_from_neutral",
+              "raw_value": 27.84,
+              "score": 30.400000000000006
+            }
+          ],
+          "score": 34.1,
+          "weight_pct": 20
+        },
+        {
+          "key": "earnings_direction",
+          "label": "Earnings/Guidance Direction",
+          "raw_metrics": [
+            {
+              "metric": "earnings_surprise_pct",
+              "raw_value": -4.36,
+              "score": 28.199999999999996
+            }
+          ],
+          "score": 28.2,
+          "weight_pct": 20
+        },
+        {
+          "key": "valuation_extension",
+          "label": "Valuation Extension",
+          "raw_metrics": [
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": -28.58,
+              "score": 0.0
+            }
+          ],
+          "score": 0.0,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Cautious"
+    }
+  },
+  "sector": "Consumer Cyclical",
+  "sources": {
+    "sec_companyfacts_url": null,
+    "sec_filings": []
+  },
+  "ticker": "AMZN"
+}

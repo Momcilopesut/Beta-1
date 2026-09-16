@@ -1,0 +1,318 @@
+{
+  "_errors": {
+    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+  },
+  "cik": null,
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 2.66,
+      "debt_to_equity": 1.51,
+      "interest_coverage": 16.48
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 2.29,
+      "fcf_to_net_income": 0.86
+    },
+    "growth": {
+      "eps_growth_yoy_pct": 7.19,
+      "revenue_cagr_3yr_pct": -3.8,
+      "revenue_growth_yoy_pct": -1.16
+    },
+    "profitability": {
+      "gross_margin_pct": 42.44,
+      "roe_pct": 27.26,
+      "trend": "improving"
+    },
+    "valuation": {
+      "dcf_fair_value": 657.63,
+      "dcf_upside_pct": 29.05,
+      "ev_ebitda": 25.79,
+      "pe_ttm": 13.16
+    }
+  },
+  "industry": null,
+  "last_updated": "2026-09-16T01:18:23Z",
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "metrics": {
+    "current_ratio": 2.66,
+    "dcf_upside_pct": 29.05,
+    "debt_to_equity": 1.51,
+    "earnings_surprise_pct": -1.02,
+    "eps_growth_yoy_pct": 7.19,
+    "ev_ebitda": 25.79,
+    "fcf_margin_pct": 2.29,
+    "fcf_to_net_income": 0.86,
+    "gross_margin_pct": 42.44,
+    "interest_coverage": 16.48,
+    "margin_trend_score": 100,
+    "pe_ttm": 13.16,
+    "price_vs_ma200_pct": -5.56,
+    "price_vs_ma50_pct": 2.32,
+    "return_1m_pct": 14.51,
+    "return_3m_pct": -23.09,
+    "revenue_cagr_3yr_pct": -3.8,
+    "revenue_growth_yoy_pct": -1.16,
+    "roe_pct": 27.26,
+    "rsi_distance_from_neutral": 27.52
+  },
+  "name": "The Home Depot Inc.",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "29.05",
+          "text": "Modeled fair value implies a +29.1% gap to the current price.",
+          "tier": "critical"
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "-1.16",
+          "text": "Revenue grew -1.2% year over year.",
+          "tier": "important"
+        },
+        {
+          "source_metric": "roe_pct",
+          "source_value": "27.26",
+          "text": "Return on equity stands at 27.3%.",
+          "tier": "important"
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "current_ratio",
+          "source_value": "2.66",
+          "text": "Current ratio is 2.66.",
+          "tier": "minor"
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "rsi_distance_from_neutral",
+          "source_value": "27.52",
+          "text": "14-day RSI sits 28 points from neutral.",
+          "tier": "noise"
+        }
+      ]
+    },
+    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 51 driven by growth, margins, and balance-sheet health.",
+    "one_line_summary": "The Home Depot Inc.: Neutral short-term, Neutral long-term outlook on current fundamentals.",
+    "short_term_narrative": "Short-term positioning is neutral, with momentum and technicals contributing a base score of 56 before a +2-point macro adjustment."
+  },
+  "price": {
+    "as_of": "2026-09-12",
+    "close": 509.59,
+    "return_1m_pct": 14.51,
+    "return_3m_pct": -23.09
+  },
+  "scores": {
+    "long_term": {
+      "base_score": 50.8,
+      "final_score": 52.8,
+      "macro_adjustment": 2,
+      "subscores": [
+        {
+          "key": "valuation",
+          "label": "Valuation",
+          "raw_metrics": [
+            {
+              "metric": "pe_ttm",
+              "raw_value": 13.16,
+              "score": 89.46666666666667
+            },
+            {
+              "metric": "ev_ebitda",
+              "raw_value": 25.79,
+              "score": 0.0
+            },
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": 29.05,
+              "score": 100.0
+            }
+          ],
+          "score": 63.2,
+          "weight_pct": 25
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "raw_metrics": [
+            {
+              "metric": "revenue_growth_yoy_pct",
+              "raw_value": -1.16,
+              "score": 12.8
+            },
+            {
+              "metric": "revenue_cagr_3yr_pct",
+              "raw_value": -3.8,
+              "score": 4.800000000000001
+            },
+            {
+              "metric": "eps_growth_yoy_pct",
+              "raw_value": 7.19,
+              "score": 42.975
+            }
+          ],
+          "score": 20.2,
+          "weight_pct": 25
+        },
+        {
+          "key": "profitability",
+          "label": "Profitability & Margin Trend",
+          "raw_metrics": [
+            {
+              "metric": "gross_margin_pct",
+              "raw_value": 42.44,
+              "score": 56.099999999999994
+            },
+            {
+              "metric": "roe_pct",
+              "raw_value": 27.26,
+              "score": 90.86666666666667
+            },
+            {
+              "metric": "margin_trend_score",
+              "raw_value": 100,
+              "score": 100.0
+            }
+          ],
+          "score": 82.3,
+          "weight_pct": 20
+        },
+        {
+          "key": "balance_sheet",
+          "label": "Balance Sheet Health",
+          "raw_metrics": [
+            {
+              "metric": "debt_to_equity",
+              "raw_value": 1.51,
+              "score": 24.5
+            },
+            {
+              "metric": "current_ratio",
+              "raw_value": 2.66,
+              "score": 100.0
+            },
+            {
+              "metric": "interest_coverage",
+              "raw_value": 16.48,
+              "score": 80.44444444444446
+            }
+          ],
+          "score": 68.3,
+          "weight_pct": 15
+        },
+        {
+          "key": "cash_flow",
+          "label": "Cash Generation Quality",
+          "raw_metrics": [
+            {
+              "metric": "fcf_margin_pct",
+              "raw_value": 2.29,
+              "score": 7.633333333333334
+            },
+            {
+              "metric": "fcf_to_net_income",
+              "raw_value": 0.86,
+              "score": 36.0
+            }
+          ],
+          "score": 21.8,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    },
+    "short_term": {
+      "base_score": 55.6,
+      "final_score": 57.6,
+      "macro_adjustment": 2,
+      "subscores": [
+        {
+          "key": "momentum",
+          "label": "Price Momentum",
+          "raw_metrics": [
+            {
+              "metric": "return_1m_pct",
+              "raw_value": 14.51,
+              "score": 100.0
+            },
+            {
+              "metric": "return_3m_pct",
+              "raw_value": -23.09,
+              "score": 0.0
+            }
+          ],
+          "score": 50.0,
+          "weight_pct": 30
+        },
+        {
+          "key": "technical",
+          "label": "Technical Positioning",
+          "raw_metrics": [
+            {
+              "metric": "price_vs_ma50_pct",
+              "raw_value": 2.32,
+              "score": 61.6
+            },
+            {
+              "metric": "price_vs_ma200_pct",
+              "raw_value": -5.56,
+              "score": 31.466666666666672
+            },
+            {
+              "metric": "rsi_distance_from_neutral",
+              "raw_value": 27.52,
+              "score": 31.200000000000003
+            }
+          ],
+          "score": 41.4,
+          "weight_pct": 20
+        },
+        {
+          "key": "earnings_direction",
+          "label": "Earnings/Guidance Direction",
+          "raw_metrics": [
+            {
+              "metric": "earnings_surprise_pct",
+              "raw_value": -1.02,
+              "score": 44.9
+            }
+          ],
+          "score": 44.9,
+          "weight_pct": 20
+        },
+        {
+          "key": "valuation_extension",
+          "label": "Valuation Extension",
+          "raw_metrics": [
+            {
+              "metric": "dcf_upside_pct",
+              "raw_value": 29.05,
+              "score": 100.0
+            }
+          ],
+          "score": 100.0,
+          "weight_pct": 15
+        }
+      ],
+      "verdict": "Neutral"
+    }
+  },
+  "sector": "Consumer Cyclical",
+  "sources": {
+    "sec_companyfacts_url": null,
+    "sec_filings": []
+  },
+  "ticker": "HD"
+}

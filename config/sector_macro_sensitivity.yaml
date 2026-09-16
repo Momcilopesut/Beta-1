@@ -1,0 +1,65 @@
+# Sector -> macro-sensitivity mapping, and the regime x sensitivity -> score
+# adjustment lookup used by pipeline/scoring/macro_regime.py.
+#
+# Final macro delta for a company = clamp(rate_component + cyclicality_component),
+# clamped to +/-15 for short-term and +/-10 for long-term (see macro_regime.py).
+# Everything is an explicit table here rather than a formula so it's easy to
+# see and hand-tune why a given sector got nudged up or down.
+
+sectors:
+  Technology: {rate_sensitivity: high, cyclicality: medium}
+  Financial Services: {rate_sensitivity: high, cyclicality: medium}
+  Real Estate: {rate_sensitivity: high, cyclicality: medium}
+  Utilities: {rate_sensitivity: high, cyclicality: low}
+  Communication Services: {rate_sensitivity: medium, cyclicality: medium}
+  Consumer Cyclical: {rate_sensitivity: medium, cyclicality: high}
+  Industrials: {rate_sensitivity: medium, cyclicality: high}
+  Basic Materials: {rate_sensitivity: medium, cyclicality: high}
+  Energy: {rate_sensitivity: medium, cyclicality: high}
+  Healthcare: {rate_sensitivity: low, cyclicality: low}
+  Consumer Defensive: {rate_sensitivity: low, cyclicality: low}
+
+default_sector: {rate_sensitivity: medium, cyclicality: medium}
+
+# deltas are {short, long} score-point adjustments
+adjustments:
+  Restrictive/Late-cycle:
+    rate_sensitivity:
+      high: {short: -10, long: -8}
+      medium: {short: -4, long: -3}
+      low: {short: 2, long: 1}
+    cyclicality:
+      high: {short: -4, long: -3}
+      medium: {short: -1, long: -1}
+      low: {short: 1, long: 1}
+  Contractionary Risk:
+    rate_sensitivity:
+      high: {short: -6, long: -4}
+      medium: {short: -3, long: -2}
+      low: {short: 1, long: 1}
+    cyclicality:
+      high: {short: -9, long: -7}
+      medium: {short: -4, long: -3}
+      low: {short: 3, long: 2}
+  Neutral/Expansion:
+    rate_sensitivity:
+      high: {short: 0, long: 0}
+      medium: {short: 0, long: 0}
+      low: {short: 0, long: 0}
+    cyclicality:
+      high: {short: 2, long: 2}
+      medium: {short: 1, long: 1}
+      low: {short: 0, long: 0}
+  Easing/Recovery:
+    rate_sensitivity:
+      high: {short: 8, long: 6}
+      medium: {short: 4, long: 3}
+      low: {short: -1, long: -1}
+    cyclicality:
+      high: {short: 6, long: 5}
+      medium: {short: 3, long: 2}
+      low: {short: 0, long: 0}
+
+clamp:
+  short: 15
+  long: 10
