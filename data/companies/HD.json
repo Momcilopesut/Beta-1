@@ -6,6 +6,7 @@
     "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
     "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
     "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
+    "profile": "Failed to fetch https://financialmodelingprep.com/stable/profile after 3 attempts",
     "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
     "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
   },
@@ -37,8 +38,8 @@
       "pe_ttm": null
     }
   },
-  "industry": "Home Improvement",
-  "last_updated": "2026-09-16T02:00:26Z",
+  "industry": null,
+  "last_updated": "2026-09-16T02:42:47Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -58,22 +59,22 @@
         {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "-7.17%",
-          "text": "Home Depot's year-over-year revenue growth stands at -7.17%, indicating a meaningful contraction in sales compared to the prior period."
+          "text": "Home Depot's revenue declined approximately 7.2% year-over-year, indicating a significant contraction in top-line sales."
         }
       ],
       "important": [
         {
           "source_metric": "margin_trend_score",
           "source_value": "60",
-          "text": "The margin trend score of 60 (on what appears to be a 0-100 scale) suggests a moderately positive trajectory in profitability metrics, which partially offsets the revenue decline."
+          "text": "The margin trend score of 60 suggests margins are trending moderately positive to stable, neither showing strong expansion nor severe compression."
         }
       ],
       "minor": [],
       "noise": []
     },
-    "long_term_narrative": "The long-term score of 48.5 sits just below neutral, indicating the underlying data does not strongly support either an improving or worsening structural trajectory. The negative revenue growth rate of -7.17% raises questions about sustained demand, which weighs on the long-term outlook. The margin trend score of 60, however, indicates some resilience in profitability metrics over time, partially balancing the growth concern. Together these two data points produce a roughly even, inconclusive long-term signal.",
-    "one_line_summary": "HD shows a year-over-year revenue decline alongside a moderately positive margin trend, with both short- and long-term scores near neutral.",
-    "short_term_narrative": "The short-term score of 52 reflects a neutral outlook, balancing a notable year-over-year revenue contraction against a margin trend that remains moderately favorable. The revenue growth figure of -7.17% signals reduced top-line momentum in the most recent period, which tempers the neutral rating. Meanwhile, the margin trend score of 60 suggests cost or pricing dynamics have not deteriorated in tandem with sales, providing some offsetting stability. Overall, the data points to a mixed near-term picture rather than a clear directional signal."
+    "long_term_narrative": "The long-term score of 48.5 (Neutral) is shaped by the same two data points: a sizeable year-over-year revenue contraction of roughly -7.2% raises questions about sustained top-line momentum, while a margin trend score of 60 indicates profitability metrics are not yet showing severe deterioration. This combination results in a balanced, non-directional long-term assessment based on the available data.",
+    "one_line_summary": "HD shows a notable revenue decline y/y alongside a moderate margin trend score, with short- and long-term outlooks scored neutral.",
+    "short_term_narrative": "The short-term score of 52 (Neutral) reflects a mixed picture: revenue growth of about -7.2% year-over-year signals a meaningful pullback in sales, while a margin trend score of 60 suggests margins have been holding up reasonably well despite the sales pressure. Together these offset each other, keeping the near-term outlook balanced rather than clearly positive or negative. No additional short-term metrics were provided to further refine this view."
   },
   "price": {
     "as_of": null,

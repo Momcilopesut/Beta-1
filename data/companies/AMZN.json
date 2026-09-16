@@ -1,37 +1,45 @@
 {
   "_errors": {
-    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts",
+    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts",
+    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts",
+    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
+    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
+    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
+    "profile": "Failed to fetch https://financialmodelingprep.com/stable/profile after 3 attempts",
+    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
+    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
   },
-  "cik": null,
+  "cik": "0001018724",
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.69,
-      "debt_to_equity": 2.16,
-      "interest_coverage": 20.72
+      "current_ratio": null,
+      "debt_to_equity": null,
+      "interest_coverage": null
     },
     "cash_flow": {
-      "fcf_margin_pct": -0.73,
-      "fcf_to_net_income": 1.56
+      "fcf_margin_pct": null,
+      "fcf_to_net_income": null
     },
     "growth": {
-      "eps_growth_yoy_pct": 0.28,
-      "revenue_cagr_3yr_pct": 21.11,
-      "revenue_growth_yoy_pct": 23.12
+      "eps_growth_yoy_pct": null,
+      "revenue_cagr_3yr_pct": null,
+      "revenue_growth_yoy_pct": null
     },
     "profitability": {
-      "gross_margin_pct": 48.15,
-      "roe_pct": 10.99,
-      "trend": "declining"
+      "gross_margin_pct": null,
+      "roe_pct": null,
+      "trend": "stable"
     },
     "valuation": {
-      "dcf_fair_value": 240.04,
-      "dcf_upside_pct": -28.58,
-      "ev_ebitda": 13.22,
-      "pe_ttm": 15.95
+      "dcf_fair_value": null,
+      "dcf_upside_pct": null,
+      "ev_ebitda": null,
+      "pe_ttm": null
     }
   },
   "industry": null,
-  "last_updated": "2026-09-16T01:18:23Z",
+  "last_updated": "2026-09-16T02:41:49Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -40,84 +48,49 @@
     }
   },
   "metrics": {
-    "current_ratio": 1.69,
-    "dcf_upside_pct": -28.58,
-    "debt_to_equity": 2.16,
-    "earnings_surprise_pct": -4.36,
-    "eps_growth_yoy_pct": 0.28,
-    "ev_ebitda": 13.22,
-    "fcf_margin_pct": -0.73,
-    "fcf_to_net_income": 1.56,
-    "gross_margin_pct": 48.15,
-    "interest_coverage": 20.72,
-    "margin_trend_score": 20,
-    "pe_ttm": 15.95,
-    "price_vs_ma200_pct": -7.01,
-    "price_vs_ma50_pct": -0.95,
-    "return_1m_pct": -8.33,
-    "return_3m_pct": 15.83,
-    "revenue_cagr_3yr_pct": 21.11,
-    "revenue_growth_yoy_pct": 23.12,
-    "roe_pct": 10.99,
-    "rsi_distance_from_neutral": 27.84
+    "margin_trend_score": 60
   },
   "name": "Amazon.com Inc.",
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-28.58",
-          "text": "Modeled fair value implies a -28.6% gap to the current price.",
-          "tier": "critical"
-        }
-      ],
+      "critical": [],
       "important": [
         {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "23.12",
-          "text": "Revenue grew +23.1% year over year.",
-          "tier": "important"
-        },
-        {
-          "source_metric": "roe_pct",
-          "source_value": "10.99",
-          "text": "Return on equity stands at 11.0%.",
-          "tier": "important"
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "The margin trend score of 60 indicates a moderately positive trajectory in profit margins, neither showing strong acceleration nor material deterioration."
         }
       ],
       "minor": [
         {
-          "source_metric": "current_ratio",
-          "source_value": "1.69",
-          "text": "Current ratio is 1.69.",
-          "tier": "minor"
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "As the only metric provided, the margin trend score of 60 offers limited scope on its own to fully characterize the company's overall financial health or valuation."
         }
       ],
       "noise": [
         {
-          "source_metric": "rsi_distance_from_neutral",
-          "source_value": "27.84",
-          "text": "14-day RSI sits 28 points from neutral.",
-          "tier": "noise"
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "A margin trend score of 60 does not signal balance-sheet distress or a severe margin decline, so concerns framed around 'collapsing margins' are not supported by this data point."
         }
       ]
     },
-    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 55 driven by growth, margins, and balance-sheet health.",
-    "one_line_summary": "Amazon.com Inc.: Cautious short-term, Neutral long-term outlook on current fundamentals.",
-    "short_term_narrative": "Short-term positioning is cautious, with momentum and technicals contributing a base score of 32 before a +2-point macro adjustment."
+    "long_term_narrative": "The long-term score of 52.7 also falls into 'Neutral' territory, suggesting the available data does not currently support a strong long-term bullish or bearish case. The margin trend score of 60 is the sole quantitative input shown here, indicating a moderate, steady improvement in margins over time rather than rapid expansion or deterioration. With medium rate sensitivity and high cyclicality noted for the sector, longer-run performance may still be influenced by macro rate cycles and economic swings not fully captured in this single metric.",
+    "one_line_summary": "AMZN's short- and long-term outlook scores are both neutral, supported mainly by a moderate margin-trend reading of 60.",
+    "short_term_narrative": "The short-term score of 52.0 lands squarely in a 'Neutral' verdict range, reflecting a balanced mix of positive and negative signals rather than a clear directional lean. The only underlying metric provided, the margin trend score of 60, points to a modestly positive but not strongly accelerating trajectory in profitability. Given the macro backdrop is described as 'Neutral/Expansion' with high cyclicality, near-term results could still be sensitive to shifts in economic conditions even though the current data does not show acute stress."
   },
   "price": {
-    "as_of": "2026-09-12",
-    "close": 336.1,
-    "return_1m_pct": -8.33,
-    "return_3m_pct": 15.83
+    "as_of": null,
+    "close": null,
+    "return_1m_pct": null,
+    "return_3m_pct": null
   },
   "scores": {
     "long_term": {
-      "base_score": 54.7,
-      "final_score": 56.7,
+      "base_score": 50.7,
+      "final_score": 52.7,
       "macro_adjustment": 2,
       "subscores": [
         {
@@ -126,21 +99,21 @@
           "raw_metrics": [
             {
               "metric": "pe_ttm",
-              "raw_value": 15.95,
-              "score": 80.16666666666667
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "ev_ebitda",
-              "raw_value": 13.22,
-              "score": 69.29411764705881
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -28.58,
-              "score": 0.0
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 49.8,
+          "score": 50.0,
           "weight_pct": 25
         },
         {
@@ -149,21 +122,21 @@
           "raw_metrics": [
             {
               "metric": "revenue_growth_yoy_pct",
-              "raw_value": 23.12,
-              "score": 93.73333333333333
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "revenue_cagr_3yr_pct",
-              "raw_value": 21.11,
-              "score": 100.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "eps_growth_yoy_pct",
-              "raw_value": 0.28,
-              "score": 25.7
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 73.1,
+          "score": 50.0,
           "weight_pct": 25
         },
         {
@@ -172,21 +145,21 @@
           "raw_metrics": [
             {
               "metric": "gross_margin_pct",
-              "raw_value": 48.15,
-              "score": 70.375
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "roe_pct",
-              "raw_value": 10.99,
-              "score": 36.63333333333333
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "margin_trend_score",
-              "raw_value": 20,
-              "score": 20.0
+              "raw_value": 60,
+              "score": 60.0
             }
           ],
-          "score": 42.3,
+          "score": 53.3,
           "weight_pct": 20
         },
         {
@@ -195,21 +168,21 @@
           "raw_metrics": [
             {
               "metric": "debt_to_equity",
-              "raw_value": 2.16,
-              "score": 0.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "current_ratio",
-              "raw_value": 1.69,
-              "score": 59.5
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "interest_coverage",
-              "raw_value": 20.72,
-              "score": 100.0
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 53.2,
+          "score": 50.0,
           "weight_pct": 15
         },
         {
@@ -218,13 +191,13 @@
           "raw_metrics": [
             {
               "metric": "fcf_margin_pct",
-              "raw_value": -0.73,
-              "score": 0.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "fcf_to_net_income",
-              "raw_value": 1.56,
-              "score": 100.0
+              "raw_value": null,
+              "score": null
             }
           ],
           "score": 50.0,
@@ -234,8 +207,8 @@
       "verdict": "Neutral"
     },
     "short_term": {
-      "base_score": 31.9,
-      "final_score": 33.9,
+      "base_score": 50.0,
+      "final_score": 52.0,
       "macro_adjustment": 2,
       "subscores": [
         {
@@ -244,16 +217,16 @@
           "raw_metrics": [
             {
               "metric": "return_1m_pct",
-              "raw_value": -8.33,
-              "score": 8.35
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "return_3m_pct",
-              "raw_value": 15.83,
-              "score": 89.57499999999999
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 49.0,
+          "score": 50.0,
           "weight_pct": 30
         },
         {
@@ -262,21 +235,21 @@
           "raw_metrics": [
             {
               "metric": "price_vs_ma50_pct",
-              "raw_value": -0.95,
-              "score": 45.25
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "price_vs_ma200_pct",
-              "raw_value": -7.01,
-              "score": 26.633333333333336
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "rsi_distance_from_neutral",
-              "raw_value": 27.84,
-              "score": 30.400000000000006
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 34.1,
+          "score": 50.0,
           "weight_pct": 20
         },
         {
@@ -285,11 +258,11 @@
           "raw_metrics": [
             {
               "metric": "earnings_surprise_pct",
-              "raw_value": -4.36,
-              "score": 28.199999999999996
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 28.2,
+          "score": 50.0,
           "weight_pct": 20
         },
         {
@@ -298,21 +271,47 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -28.58,
-              "score": 0.0
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 0.0,
+          "score": 50.0,
           "weight_pct": 15
         }
       ],
-      "verdict": "Cautious"
+      "verdict": "Neutral"
     }
   },
   "sector": "Consumer Cyclical",
   "sources": {
-    "sec_companyfacts_url": null,
-    "sec_filings": []
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+    "sec_filings": [
+      {
+        "filed": "2026-07-31",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+      },
+      {
+        "filed": "2026-04-30",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm"
+      },
+      {
+        "filed": "2026-02-06",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm"
+      },
+      {
+        "filed": "2025-10-31",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000123/amzn-20250930.htm"
+      },
+      {
+        "filed": "2025-08-01",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000086/amzn-20250630.htm"
+      }
+    ]
   },
   "ticker": "AMZN"
 }

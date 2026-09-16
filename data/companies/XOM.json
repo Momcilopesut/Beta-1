@@ -1,37 +1,45 @@
 {
   "_errors": {
-    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts",
+    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts",
+    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts",
+    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
+    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
+    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
+    "profile": "Failed to fetch https://financialmodelingprep.com/stable/profile after 3 attempts",
+    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
+    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
   },
-  "cik": null,
+  "cik": "0002115436",
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.37,
-      "debt_to_equity": 1.25,
-      "interest_coverage": 18.51
+      "current_ratio": null,
+      "debt_to_equity": null,
+      "interest_coverage": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 6.24,
-      "fcf_to_net_income": 0.57
+      "fcf_margin_pct": null,
+      "fcf_to_net_income": null
     },
     "growth": {
-      "eps_growth_yoy_pct": 4.68,
-      "revenue_cagr_3yr_pct": 12.95,
-      "revenue_growth_yoy_pct": -1.09
+      "eps_growth_yoy_pct": null,
+      "revenue_cagr_3yr_pct": null,
+      "revenue_growth_yoy_pct": null
     },
     "profitability": {
-      "gross_margin_pct": 53.16,
-      "roe_pct": 1.96,
-      "trend": "improving"
+      "gross_margin_pct": null,
+      "roe_pct": null,
+      "trend": "stable"
     },
     "valuation": {
-      "dcf_fair_value": 312.96,
-      "dcf_upside_pct": -10.43,
-      "ev_ebitda": 18.2,
-      "pe_ttm": 34.1
+      "dcf_fair_value": null,
+      "dcf_upside_pct": null,
+      "ev_ebitda": null,
+      "pe_ttm": null
     }
   },
   "industry": null,
-  "last_updated": "2026-09-16T01:18:23Z",
+  "last_updated": "2026-09-16T02:43:38Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -40,84 +48,49 @@
     }
   },
   "metrics": {
-    "current_ratio": 1.37,
-    "dcf_upside_pct": -10.43,
-    "debt_to_equity": 1.25,
-    "earnings_surprise_pct": 2.67,
-    "eps_growth_yoy_pct": 4.68,
-    "ev_ebitda": 18.2,
-    "fcf_margin_pct": 6.24,
-    "fcf_to_net_income": 0.57,
-    "gross_margin_pct": 53.16,
-    "interest_coverage": 18.51,
-    "margin_trend_score": 100,
-    "pe_ttm": 34.1,
-    "price_vs_ma200_pct": 14.4,
-    "price_vs_ma50_pct": -9.01,
-    "return_1m_pct": 3.69,
-    "return_3m_pct": 8.17,
-    "revenue_cagr_3yr_pct": 12.95,
-    "revenue_growth_yoy_pct": -1.09,
-    "roe_pct": 1.96,
-    "rsi_distance_from_neutral": 17.75
+    "margin_trend_score": 60
   },
   "name": "Exxon Mobil Corporation",
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-10.43",
-          "text": "Modeled fair value implies a -10.4% gap to the current price.",
-          "tier": "critical"
-        }
-      ],
+      "critical": [],
       "important": [
         {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "-1.09",
-          "text": "Revenue grew -1.1% year over year.",
-          "tier": "important"
-        },
-        {
-          "source_metric": "roe_pct",
-          "source_value": "1.96",
-          "text": "Return on equity stands at 2.0%.",
-          "tier": "important"
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "XOM's margin trend score is 60, indicating a moderately positive trend in margins rather than strong expansion or contraction."
         }
       ],
       "minor": [
         {
-          "source_metric": "current_ratio",
-          "source_value": "1.37",
-          "text": "Current ratio is 1.37.",
-          "tier": "minor"
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "A margin trend score of 60 is not extreme in either direction, so it does not by itself signal balance-sheet distress or a major valuation gap."
         }
       ],
       "noise": [
         {
-          "source_metric": "rsi_distance_from_neutral",
-          "source_value": "17.75",
-          "text": "14-day RSI sits 18 points from neutral.",
-          "tier": "noise"
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "Because the margin trend score of 60 sits close to a neutral midpoint, it is often over-interpreted as a strong bullish signal when the data actually shows only mild positive momentum."
         }
       ]
     },
-    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 41 driven by growth, margins, and balance-sheet health.",
-    "one_line_summary": "Exxon Mobil Corporation: Neutral short-term, Neutral long-term outlook on current fundamentals.",
-    "short_term_narrative": "Short-term positioning is neutral, with momentum and technicals contributing a base score of 57 before a +2-point macro adjustment."
+    "long_term_narrative": "The long-term composite score of 52.7 is also labeled Neutral, suggesting the underlying data does not currently support a strong long-term bullish or bearish case. The margin trend score of 60 provides some support for a steady, moderate profitability trajectory over time, but it is the only granular metric available to assess durability. As a result, the long-term outlook implied by this data is best described as balanced rather than distinctly favorable or unfavorable.",
+    "one_line_summary": "XOM's short- and long-term composite scores are both near neutral, with the only detailed metric provided showing a moderate margin trend.",
+    "short_term_narrative": "The short-term composite score for XOM is 52.0, which the model classifies as Neutral, indicating the data does not point to a clear near-term tilt in either direction. The one available underlying metric, a margin trend score of 60, reflects a moderately positive profitability trend rather than sharp expansion or deterioration. Together these figures suggest a balanced near-term picture without a strong directional signal in the data provided."
   },
   "price": {
-    "as_of": "2026-09-12",
-    "close": 349.4,
-    "return_1m_pct": 3.69,
-    "return_3m_pct": 8.17
+    "as_of": null,
+    "close": null,
+    "return_1m_pct": null,
+    "return_3m_pct": null
   },
   "scores": {
     "long_term": {
-      "base_score": 40.9,
-      "final_score": 42.9,
+      "base_score": 50.7,
+      "final_score": 52.7,
       "macro_adjustment": 2,
       "subscores": [
         {
@@ -126,21 +99,21 @@
           "raw_metrics": [
             {
               "metric": "pe_ttm",
-              "raw_value": 34.1,
-              "score": 19.66666666666667
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "ev_ebitda",
-              "raw_value": 18.2,
-              "score": 40.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -10.43,
-              "score": 29.14
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 29.6,
+          "score": 50.0,
           "weight_pct": 25
         },
         {
@@ -149,21 +122,21 @@
           "raw_metrics": [
             {
               "metric": "revenue_growth_yoy_pct",
-              "raw_value": -1.09,
-              "score": 13.033333333333333
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "revenue_cagr_3yr_pct",
-              "raw_value": 12.95,
-              "score": 71.8
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "eps_growth_yoy_pct",
-              "raw_value": 4.68,
-              "score": 36.7
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 40.5,
+          "score": 50.0,
           "weight_pct": 25
         },
         {
@@ -172,21 +145,21 @@
           "raw_metrics": [
             {
               "metric": "gross_margin_pct",
-              "raw_value": 53.16,
-              "score": 82.89999999999999
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "roe_pct",
-              "raw_value": 1.96,
-              "score": 6.533333333333332
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "margin_trend_score",
-              "raw_value": 100,
-              "score": 100.0
+              "raw_value": 60,
+              "score": 60.0
             }
           ],
-          "score": 63.1,
+          "score": 53.3,
           "weight_pct": 20
         },
         {
@@ -195,21 +168,21 @@
           "raw_metrics": [
             {
               "metric": "debt_to_equity",
-              "raw_value": 1.25,
-              "score": 37.5
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "current_ratio",
-              "raw_value": 1.37,
-              "score": 43.50000000000001
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "interest_coverage",
-              "raw_value": 18.51,
-              "score": 91.72222222222223
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 57.6,
+          "score": 50.0,
           "weight_pct": 15
         },
         {
@@ -218,24 +191,24 @@
           "raw_metrics": [
             {
               "metric": "fcf_margin_pct",
-              "raw_value": 6.24,
-              "score": 20.8
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "fcf_to_net_income",
-              "raw_value": 0.57,
-              "score": 6.999999999999995
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 13.9,
+          "score": 50.0,
           "weight_pct": 15
         }
       ],
       "verdict": "Neutral"
     },
     "short_term": {
-      "base_score": 57.0,
-      "final_score": 59.0,
+      "base_score": 50.0,
+      "final_score": 52.0,
       "macro_adjustment": 2,
       "subscores": [
         {
@@ -244,16 +217,16 @@
           "raw_metrics": [
             {
               "metric": "return_1m_pct",
-              "raw_value": 3.69,
-              "score": 68.45
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "return_3m_pct",
-              "raw_value": 8.17,
-              "score": 70.42500000000001
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 69.4,
+          "score": 50.0,
           "weight_pct": 30
         },
         {
@@ -262,21 +235,21 @@
           "raw_metrics": [
             {
               "metric": "price_vs_ma50_pct",
-              "raw_value": -9.01,
-              "score": 4.950000000000001
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "price_vs_ma200_pct",
-              "raw_value": 14.4,
-              "score": 98.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "rsi_distance_from_neutral",
-              "raw_value": 17.75,
-              "score": 55.625
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 52.9,
+          "score": 50.0,
           "weight_pct": 20
         },
         {
@@ -285,11 +258,11 @@
           "raw_metrics": [
             {
               "metric": "earnings_surprise_pct",
-              "raw_value": 2.67,
-              "score": 63.349999999999994
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 63.3,
+          "score": 50.0,
           "weight_pct": 20
         },
         {
@@ -298,11 +271,11 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -10.43,
-              "score": 29.14
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 29.1,
+          "score": 50.0,
           "weight_pct": 15
         }
       ],
@@ -311,8 +284,14 @@
   },
   "sector": "Energy",
   "sources": {
-    "sec_companyfacts_url": null,
-    "sec_filings": []
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0002115436.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-03",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/2115436/000003408826000093/xom-20260630.htm"
+      }
+    ]
   },
   "ticker": "XOM"
 }

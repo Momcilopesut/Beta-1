@@ -6,6 +6,7 @@
     "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
     "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
     "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
+    "profile": "Failed to fetch https://financialmodelingprep.com/stable/profile after 3 attempts",
     "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
     "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
   },
@@ -37,8 +38,8 @@
       "pe_ttm": null
     }
   },
-  "industry": "Regulated Electric",
-  "last_updated": "2026-09-16T02:01:55Z",
+  "industry": null,
+  "last_updated": "2026-09-16T02:45:35Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -58,28 +59,22 @@
         {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "-76.33%",
-          "text": "NextEra's reported revenue fell approximately 76.33% year-over-year, a very large decline in this metric."
+          "text": "Reported year-over-year revenue growth is -76.33%, an extremely large decline that, if reflective of core operations, would be thesis-defining."
         }
       ],
       "important": [
         {
           "source_metric": "margin_trend_score",
           "source_value": "60",
-          "text": "The margin trend score of 60 indicates margins have been relatively stable to modestly favorable over the period measured."
+          "text": "Margin trend score is 60, indicating a moderately positive trend in margins that partially offsets concerns raised by the revenue figure."
         }
       ],
       "minor": [],
-      "noise": [
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "-76.33%",
-          "text": "A revenue decline of this magnitude (-76.33%) is unusually large and may reflect a reporting or calculation anomaly rather than a proportional collapse in core operations; this figure should be interpreted cautiously rather than taken at face value."
-        }
-      ]
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 46.5 (Neutral) is shaped by the same underlying metrics: the extreme revenue growth contraction of -76.33% weighs on the outlook, but the margin trend score of 60 suggests cost or pricing discipline has not deteriorated in tandem. The net effect is a score that sits close to the midpoint, indicating no strong long-term directional signal from the available data alone.",
-    "one_line_summary": "NEE shows a steep reported revenue drop alongside a stable margin trend, with both short- and long-term scores near neutral.",
-    "short_term_narrative": "The short-term score of 50 (Neutral) reflects mixed signals in the underlying data: revenue growth of -76.33% year-over-year is a sharp decline, while the margin trend score of 60 points to margins that have held up or modestly improved. Together these offsetting signals result in a balanced, non-directional short-term score rather than a clear positive or negative read."
+    "long_term_narrative": "The long-term score of 46.5 also lands in neutral territory. Given NextEra's high rate sensitivity and low cyclicality per the macro context, the neutral score does not indicate strong structural tailwinds or headwinds from the metrics provided. The margin trend score of 60 offers some support to the long-term picture, while the large revenue growth drop introduces uncertainty about the durability of underlying business trends. No fair-value or balance-sheet metrics are present to further define the long-term thesis.",
+    "one_line_summary": "NEE shows a sharp reported revenue decline yet a moderate margin trend score, with neutral short- and long-term composite scores.",
+    "short_term_narrative": "The short-term score of 50.0 reflects a neutral outlook based on available data. Revenue growth year-over-year is reported at -76.33%, a steep decline that stands out in the metrics. Margin trend score sits at 60, suggesting margins are holding up moderately despite the revenue figure. Together these produce a balanced, non-directional short-term score."
   },
   "price": {
     "as_of": null,

@@ -6,6 +6,7 @@
     "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
     "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
     "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
+    "profile": "Failed to fetch https://financialmodelingprep.com/stable/profile after 3 attempts",
     "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
     "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
   },
@@ -37,8 +38,8 @@
       "pe_ttm": null
     }
   },
-  "industry": "REIT - Industrial",
-  "last_updated": "2026-09-16T02:02:46Z",
+  "industry": null,
+  "last_updated": "2026-09-16T02:46:22Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -58,28 +59,22 @@
         {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "-74.37%",
-          "text": "Reported year-over-year revenue growth stands at -74.37%, indicating a very large decline in top-line figures compared to the prior period."
+          "text": "Reported year-over-year revenue growth is -74.37%, a very large decline that would typically be a major red flag for a real estate operator if it reflects a genuine drop in top-line business activity."
         }
       ],
-      "important": [
-        {
-          "source_metric": "margin_trend_score",
-          "source_value": "60",
-          "text": "The margin trend score of 60 (on the scale used in this dataset) suggests a moderately positive trend in margins, neither signaling strong expansion nor significant deterioration."
-        }
-      ],
+      "important": [],
       "minor": [],
       "noise": [
         {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "-74.37%",
-          "text": "A revenue swing of this magnitude (-74.37% YoY) is unusually large and may reflect a base-period distortion or reporting anomaly rather than a straightforward operational collapse; readers should treat the raw percentage with caution until context for the comparison period is known."
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "The margin_trend_score is 60, a composite/index-style figure without a stated scale or benchmark, so its practical meaning for near-term profitability is unclear from the payload alone."
         }
       ]
     },
-    "long_term_narrative": "The long-term score of 47.5 (Neutral) is shaped by the same underlying inputs, with the large revenue growth swing raising questions about the durability of top-line trends over time. A margin trend score of 60 indicates the company has not shown outright margin deterioration, which tempers concern from the revenue figure alone. Given PLD's high rate sensitivity as a real estate company, sustained macro conditions could influence how these trends evolve, though the payload does not provide additional metrics to confirm a longer-term trajectory.",
-    "one_line_summary": "PLD shows a sharp reported revenue decline alongside a moderate margin trend score, with short- and long-term outlooks scored Neutral.",
-    "short_term_narrative": "The short-term score of 51 (Neutral) reflects mixed signals: a steep reported revenue growth figure of -74.37% year-over-year is offset by a margin trend score of 60, suggesting cost or pricing discipline even as top-line comparisons look weak. In a Neutral/Expansion macro regime with high rate sensitivity, near-term performance appears balanced rather than clearly positive or negative based on the available data. No fundamental data beyond these two metrics is available to further clarify near-term direction."
+    "long_term_narrative": "The long-term score of 47.5 (Neutral) indicates a balanced, non-directional read on the company's extended outlook. The margin_trend_score of 60 is a mid-to-upper range value on whatever scale underlies it, but without a defined benchmark it does not clearly signal strength or weakness. Combined with the revenue growth figure, the data presents a mixed picture that the composite score treats as roughly neutral.",
+    "one_line_summary": "PLD shows neutral short- and long-term scores amid a sharp reported revenue decline and a middling margin-trend reading.",
+    "short_term_narrative": "The short-term score of 51 (Neutral) suggests no strong directional signal in near-term data. This sits against a reported year-over-year revenue growth figure of -74.37%, a metric that stands out sharply within the payload. Despite that steep decline, the overall short-term composite lands in neutral territory, implying other unspecified inputs to the score offset this figure's severity."
   },
   "price": {
     "as_of": null,
