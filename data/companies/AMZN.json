@@ -39,7 +39,7 @@
     }
   },
   "industry": null,
-  "last_updated": "2026-09-16T02:41:49Z",
+  "last_updated": "2026-09-16T12:30:17Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -59,27 +59,15 @@
         {
           "source_metric": "margin_trend_score",
           "source_value": "60",
-          "text": "The margin trend score of 60 indicates a moderately positive trajectory in profit margins, neither showing strong acceleration nor material deterioration."
+          "text": "The margin trend score is 60, indicating a moderately positive trajectory in the company's margins according to the underlying model."
         }
       ],
-      "minor": [
-        {
-          "source_metric": "margin_trend_score",
-          "source_value": "60",
-          "text": "As the only metric provided, the margin trend score of 60 offers limited scope on its own to fully characterize the company's overall financial health or valuation."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "margin_trend_score",
-          "source_value": "60",
-          "text": "A margin trend score of 60 does not signal balance-sheet distress or a severe margin decline, so concerns framed around 'collapsing margins' are not supported by this data point."
-        }
-      ]
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 52.7 also falls into 'Neutral' territory, suggesting the available data does not currently support a strong long-term bullish or bearish case. The margin trend score of 60 is the sole quantitative input shown here, indicating a moderate, steady improvement in margins over time rather than rapid expansion or deterioration. With medium rate sensitivity and high cyclicality noted for the sector, longer-run performance may still be influenced by macro rate cycles and economic swings not fully captured in this single metric.",
-    "one_line_summary": "AMZN's short- and long-term outlook scores are both neutral, supported mainly by a moderate margin-trend reading of 60.",
-    "short_term_narrative": "The short-term score of 52.0 lands squarely in a 'Neutral' verdict range, reflecting a balanced mix of positive and negative signals rather than a clear directional lean. The only underlying metric provided, the margin trend score of 60, points to a modestly positive but not strongly accelerating trajectory in profitability. Given the macro backdrop is described as 'Neutral/Expansion' with high cyclicality, near-term results could still be sensitive to shifts in economic conditions even though the current data does not show acute stress."
+    "long_term_narrative": "The long-term score of 52.7 is also classified as neutral, indicating the model finds a balanced set of considerations over a longer horizon. The margin trend score of 60 offers some support for gradually improving profitability, which can matter more over longer periods, but it is the only metric provided to substantiate this view. Without additional fundamental or valuation metrics in the payload, the long-term picture remains data-limited and inconclusive.",
+    "one_line_summary": "AMZN shows a neutral short- and long-term score profile, with a moderately positive margin trend metric as the only available data point.",
+    "short_term_narrative": "The short-term score of 52.0 sits right at the neutral midpoint, suggesting no strong directional signal from the underlying model. The only supporting metric available, a margin trend score of 60, points to a moderately improving margin trajectory, which is a mildly constructive input rather than a decisive one. Given the neutral verdict, the data does not indicate a clear near-term tilt in either direction."
   },
   "price": {
     "as_of": null,

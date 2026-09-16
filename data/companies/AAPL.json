@@ -39,7 +39,7 @@
     }
   },
   "industry": null,
-  "last_updated": "2026-09-16T02:34:10Z",
+  "last_updated": "2026-09-16T12:23:11Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -59,22 +59,34 @@
         {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "-76.32%",
-          "text": "Year-over-year revenue growth is reported at -76.32%, a very large decline that would typically signal severe top-line deterioration."
+          "text": "Revenue growth year-over-year is reported at -76.32%, indicating a sharp contraction in top-line performance versus the prior comparison period."
         }
       ],
       "important": [
         {
           "source_metric": "margin_trend_score",
           "source_value": "60",
-          "text": "The margin trend score of 60 (on what appears to be a 0-100 scale) suggests a moderately positive or stable margin trajectory, which partially offsets the steep revenue decline in the composite scoring."
+          "text": "The margin trend score of 60 suggests a modestly positive trend in margin performance, leaning toward stability or slight improvement rather than deterioration."
         }
       ],
-      "minor": [],
-      "noise": []
+      "minor": [
+        {
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "A margin trend score of 60 sits near the midpoint of a 0-100 scale, indicating the signal is neither strongly bullish nor strongly bearish on its own."
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "-76.32%",
+          "text": "A revenue growth figure this extreme (-76.32% YoY) is unusual and may reflect a distorted comparison base rather than a typical ongoing operating trend; this specific number should be treated with caution rather than taken at face value."
+        }
+      ]
     },
-    "long_term_narrative": "The long-term score of 47.5 is also close to neutral, indicating no strong directional conviction from the underlying data. The extreme revenue_growth_yoy_pct reading of -76.32% is the most striking figure in the dataset and, if sustained, would represent a severe deterioration in the company's growth trajectory. At the same time, the margin_trend_score of 60 implies the cost/margin side of the business has not deteriorated to the same degree, tempering the overall long-term picture into a neutral zone rather than a clearly negative one.",
-    "one_line_summary": "AAPL data show a sharp YoY revenue drop and a moderate margin trend, yielding neutral short- and long-term scores.",
-    "short_term_narrative": "The short-term score of 51 sits almost exactly at neutral, reflecting a mix of conflicting signals. A -76.32% year-over-year revenue growth figure points to a steep decline in reported sales, which would normally weigh heavily on near-term outlook. However, a margin_trend_score of 60 suggests margins have been holding up or trending moderately positive, which appears to offset some of the negative growth signal in the composite score."
+    "long_term_narrative": "The long-term score of 47.5 (Neutral) is derived from the same two data points. A -76.32% year-over-year revenue growth figure raises questions about the durability of top-line performance over a longer horizon, while a margin trend score of 60 offers a partially offsetting, moderately constructive signal on operating efficiency. Neither metric is extreme enough in the positive direction to push the long-term view out of neutral territory.",
+    "one_line_summary": "AAPL scores Neutral on both short- and long-term models; metrics show a steep YoY revenue growth decline offset by a moderate margin trend.",
+    "short_term_narrative": "The short-term score of 51 (Neutral) reflects two competing signals in the data. Revenue growth year-over-year is reported at -76.32%, a sharp contraction that would normally pull sentiment lower, while the margin trend score of 60 points to a moderately stable to improving cost/margin picture. Combined, these offsetting signals produce a balanced, non-directional short-term read rather than a clearly positive or negative one."
   },
   "price": {
     "as_of": null,

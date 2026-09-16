@@ -39,7 +39,7 @@
     }
   },
   "industry": null,
-  "last_updated": "2026-09-16T02:40:20Z",
+  "last_updated": "2026-09-16T12:28:55Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -60,26 +60,32 @@
         {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "3.26%",
-          "text": "Revenue grew approximately 3.26% year-over-year, reflecting modest top-line expansion."
+          "text": "Revenue grew approximately 3.26% year-over-year, indicating modest but positive top-line expansion."
         },
         {
           "source_metric": "margin_trend_score",
           "source_value": "60",
-          "text": "The margin trend score of 60 (on whatever scale is used) suggests a moderately positive to stable margin trajectory, not a sign of severe deterioration."
+          "text": "The margin trend score of 60 (on what appears to be a 0-100 scale) suggests a moderately favorable trend in margins, though not an extreme one."
         }
       ],
-      "minor": [],
-      "noise": [
+      "minor": [
         {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "3.26%",
-          "text": "Revenue growth near 3.26% is a mid-single-digit-adjacent figure often discussed as a growth signal, but at this magnitude it does not by itself indicate a decision-relevant acceleration or deceleration."
+          "text": "Revenue growth near 3.26% is relatively low in absolute terms, which is typical for a low-cyclicality consumer defensive company and should not be mistaken for a high-growth signal."
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "A margin trend score of 60 is only moderately above a neutral midpoint, so it should not be over-interpreted as a strong margin expansion signal on its own."
         }
       ]
     },
-    "long_term_narrative": "The long-term score of 48.8 is also neutral, indicating the data does not point to a strong structural improvement or deterioration over time. Revenue growth near 3.26% is steady but not high, which is consistent with a mature, low-cyclicality business rather than a high-growth profile. The margin trend score of 60 provides some support that profitability is not eroding, but it is not strong enough to shift the long-term picture out of neutral territory.",
+    "long_term_narrative": "The long-term score of 48.8 also carries a Neutral verdict, indicating balanced considerations over a longer horizon. Revenue growth near 3.26% is consistent with a mature, low-cyclicality consumer defensive company rather than a high-growth profile. The margin trend score of 60 suggests some durability in profitability trends, but the overall neutral scores imply no strong long-term thesis emerges purely from these two metrics.",
     "one_line_summary": "PG shows modest revenue growth and a moderate margin trend score, with neutral short- and long-term composite scores.",
-    "short_term_narrative": "The short-term score sits at 50.0, a neutral reading that does not lean bullish or bearish. This aligns with revenue growth of about 3.26% year-over-year, which is a modest but positive expansion pace. The margin trend score of 60 suggests margins are trending in a reasonably stable to positive direction, supporting the neutral near-term outlook rather than signaling stress or acceleration."
+    "short_term_narrative": "The short-term score of 50.0 reflects a Neutral verdict, suggesting no strong directional signal from the underlying data. Revenue growth of about 3.26% year-over-year indicates steady but unspectacular top-line expansion. A margin trend score of 60 points to a moderately positive trajectory in margins, which may offer some support to near-term performance without being a decisive factor."
   },
   "price": {
     "as_of": null,

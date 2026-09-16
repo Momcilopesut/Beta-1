@@ -1,37 +1,45 @@
 {
   "_errors": {
-    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts",
+    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts",
+    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts",
+    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
+    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
+    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
+    "profile": "Failed to fetch https://financialmodelingprep.com/stable/profile after 3 attempts",
+    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
+    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
   },
-  "cik": null,
+  "cik": "0000789019",
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.32,
-      "debt_to_equity": 1.6,
-      "interest_coverage": 3.29
+      "current_ratio": null,
+      "debt_to_equity": null,
+      "interest_coverage": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 2.09,
-      "fcf_to_net_income": 1.0
+      "fcf_margin_pct": null,
+      "fcf_to_net_income": null
     },
     "growth": {
-      "eps_growth_yoy_pct": 16.75,
-      "revenue_cagr_3yr_pct": -3.54,
-      "revenue_growth_yoy_pct": 23.1
+      "eps_growth_yoy_pct": null,
+      "revenue_cagr_3yr_pct": null,
+      "revenue_growth_yoy_pct": -74.3310287433583
     },
     "profitability": {
-      "gross_margin_pct": 48.37,
-      "roe_pct": -2.58,
-      "trend": "declining"
+      "gross_margin_pct": null,
+      "roe_pct": null,
+      "trend": "stable"
     },
     "valuation": {
-      "dcf_fair_value": 279.5,
-      "dcf_upside_pct": 9.54,
-      "ev_ebitda": 15.04,
-      "pe_ttm": 21.75
+      "dcf_fair_value": null,
+      "dcf_upside_pct": null,
+      "ev_ebitda": null,
+      "pe_ttm": null
     }
   },
   "industry": null,
-  "last_updated": "2026-09-16T01:18:23Z",
+  "last_updated": "2026-09-16T12:24:09Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -40,26 +48,8 @@
     }
   },
   "metrics": {
-    "current_ratio": 2.32,
-    "dcf_upside_pct": 9.54,
-    "debt_to_equity": 1.6,
-    "earnings_surprise_pct": -6.49,
-    "eps_growth_yoy_pct": 16.75,
-    "ev_ebitda": 15.04,
-    "fcf_margin_pct": 2.09,
-    "fcf_to_net_income": 1.0,
-    "gross_margin_pct": 48.37,
-    "interest_coverage": 3.29,
-    "margin_trend_score": 20,
-    "pe_ttm": 21.75,
-    "price_vs_ma200_pct": -0.97,
-    "price_vs_ma50_pct": -6.17,
-    "return_1m_pct": 11.47,
-    "return_3m_pct": 3.81,
-    "revenue_cagr_3yr_pct": -3.54,
-    "revenue_growth_yoy_pct": 23.1,
-    "roe_pct": -2.58,
-    "rsi_distance_from_neutral": 14.25
+    "margin_trend_score": 60,
+    "revenue_growth_yoy_pct": -74.3310287433583
   },
   "name": "Microsoft Corporation",
   "narrative": {
@@ -67,57 +57,41 @@
     "facts": {
       "critical": [
         {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "9.54",
-          "text": "Modeled fair value implies a +9.5% gap to the current price.",
-          "tier": "critical"
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "-74.33%",
+          "text": "Reported year-over-year revenue growth of approximately -74.33%, representing a severe contraction versus the comparison period."
         }
       ],
       "important": [
         {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "23.1",
-          "text": "Revenue grew +23.1% year over year.",
-          "tier": "important"
-        },
-        {
-          "source_metric": "roe_pct",
-          "source_value": "-2.58",
-          "text": "Return on equity stands at -2.6%.",
-          "tier": "important"
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "A margin trend score of 60 indicates a moderately positive direction in profitability trends, a supportive but not decisive factor for the long-term outlook."
         }
       ],
-      "minor": [
-        {
-          "source_metric": "current_ratio",
-          "source_value": "2.32",
-          "text": "Current ratio is 2.32.",
-          "tier": "minor"
-        }
-      ],
+      "minor": [],
       "noise": [
         {
-          "source_metric": "rsi_distance_from_neutral",
-          "source_value": "14.25",
-          "text": "14-day RSI sits 14 points from neutral.",
-          "tier": "noise"
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "-74.33%",
+          "text": "Despite this steep negative revenue growth figure, the overall short-term score remains Neutral (51.0), suggesting this single data point should not be overweighted as a standalone thesis driver \u2014 it may reflect a base-comparison anomaly rather than an ongoing operational trend."
         }
       ]
     },
-    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 46 driven by growth, margins, and balance-sheet health.",
-    "one_line_summary": "Microsoft Corporation: Neutral short-term, Neutral long-term outlook on current fundamentals.",
-    "short_term_narrative": "Short-term positioning is neutral, with momentum and technicals contributing a base score of 55 before a +1-point macro adjustment."
+    "long_term_narrative": "The long-term score of 47.5 is also Neutral, sitting just below the midpoint, indicating no strong structural tilt in either direction. The margin_trend_score of 60 points to a moderately favorable trajectory in profitability trends, which is a mildly supportive input for the long-term outlook. Combined with a Neutral/Expansion macro regime and medium cyclicality noted in the payload, the long-term picture is one of balanced, unremarkable positioning rather than clear strength or weakness. No durable competitive or balance-sheet distress signal is present in the available metrics.",
+    "one_line_summary": "MSFT's short- and long-term model scores are neutral, even as reported revenue growth shows a sharp year-over-year decline.",
+    "short_term_narrative": "The short-term score of 51.0 lands in Neutral territory, reflecting mixed signals rather than a clear directional bias. This is notable given that the reported revenue_growth_yoy_pct figure shows a steep year-over-year contraction of about -74.3%, a number that would typically be considered a red flag on its own. The fact that the overall short-term score remains neutral despite this suggests the model is weighing other unspecified inputs alongside this metric, or that this particular growth figure may reflect a one-off comparison base rather than an ongoing trend. Readers should not treat the revenue growth figure in isolation as fully predictive of near-term direction."
   },
   "price": {
-    "as_of": "2026-09-12",
-    "close": 255.16,
-    "return_1m_pct": 11.47,
-    "return_3m_pct": 3.81
+    "as_of": null,
+    "close": null,
+    "return_1m_pct": null,
+    "return_3m_pct": null
   },
   "scores": {
     "long_term": {
-      "base_score": 45.8,
-      "final_score": 46.8,
+      "base_score": 46.5,
+      "final_score": 47.5,
       "macro_adjustment": 1,
       "subscores": [
         {
@@ -126,21 +100,21 @@
           "raw_metrics": [
             {
               "metric": "pe_ttm",
-              "raw_value": 21.75,
-              "score": 60.833333333333336
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "ev_ebitda",
-              "raw_value": 15.04,
-              "score": 58.58823529411765
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": 9.54,
-              "score": 69.08
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 62.8,
+          "score": 50.0,
           "weight_pct": 25
         },
         {
@@ -149,21 +123,21 @@
           "raw_metrics": [
             {
               "metric": "revenue_growth_yoy_pct",
-              "raw_value": 23.1,
-              "score": 93.66666666666667
+              "raw_value": -74.3310287433583,
+              "score": 0.0
             },
             {
               "metric": "revenue_cagr_3yr_pct",
-              "raw_value": -3.54,
-              "score": 5.84
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "eps_growth_yoy_pct",
-              "raw_value": 16.75,
-              "score": 66.875
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 55.5,
+          "score": 33.3,
           "weight_pct": 25
         },
         {
@@ -172,21 +146,21 @@
           "raw_metrics": [
             {
               "metric": "gross_margin_pct",
-              "raw_value": 48.37,
-              "score": 70.925
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "roe_pct",
-              "raw_value": -2.58,
-              "score": 0.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "margin_trend_score",
-              "raw_value": 20,
-              "score": 20.0
+              "raw_value": 60,
+              "score": 60.0
             }
           ],
-          "score": 30.3,
+          "score": 53.3,
           "weight_pct": 20
         },
         {
@@ -195,21 +169,21 @@
           "raw_metrics": [
             {
               "metric": "debt_to_equity",
-              "raw_value": 1.6,
-              "score": 20.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "current_ratio",
-              "raw_value": 2.32,
-              "score": 90.99999999999999
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "interest_coverage",
-              "raw_value": 3.29,
-              "score": 7.166666666666667
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 39.4,
+          "score": 50.0,
           "weight_pct": 15
         },
         {
@@ -218,24 +192,24 @@
           "raw_metrics": [
             {
               "metric": "fcf_margin_pct",
-              "raw_value": 2.09,
-              "score": 6.966666666666667
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "fcf_to_net_income",
-              "raw_value": 1.0,
-              "score": 50.0
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 28.5,
+          "score": 50.0,
           "weight_pct": 15
         }
       ],
       "verdict": "Neutral"
     },
     "short_term": {
-      "base_score": 54.7,
-      "final_score": 55.7,
+      "base_score": 50.0,
+      "final_score": 51.0,
       "macro_adjustment": 1,
       "subscores": [
         {
@@ -244,16 +218,16 @@
           "raw_metrics": [
             {
               "metric": "return_1m_pct",
-              "raw_value": 11.47,
-              "score": 100.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "return_3m_pct",
-              "raw_value": 3.81,
-              "score": 59.52499999999999
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 79.8,
+          "score": 50.0,
           "weight_pct": 30
         },
         {
@@ -262,21 +236,21 @@
           "raw_metrics": [
             {
               "metric": "price_vs_ma50_pct",
-              "raw_value": -6.17,
-              "score": 19.15
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "price_vs_ma200_pct",
-              "raw_value": -0.97,
-              "score": 46.76666666666666
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "rsi_distance_from_neutral",
-              "raw_value": 14.25,
-              "score": 64.375
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 43.4,
+          "score": 50.0,
           "weight_pct": 20
         },
         {
@@ -285,11 +259,11 @@
           "raw_metrics": [
             {
               "metric": "earnings_surprise_pct",
-              "raw_value": -6.49,
-              "score": 17.549999999999997
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 17.5,
+          "score": 50.0,
           "weight_pct": 20
         },
         {
@@ -298,11 +272,11 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": 9.54,
-              "score": 69.08
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 69.1,
+          "score": 50.0,
           "weight_pct": 15
         }
       ],
@@ -311,8 +285,34 @@
   },
   "sector": "Technology",
   "sources": {
-    "sec_companyfacts_url": null,
-    "sec_filings": []
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+    "sec_filings": [
+      {
+        "filed": "2026-07-29",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm"
+      },
+      {
+        "filed": "2026-04-29",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm"
+      },
+      {
+        "filed": "2026-01-28",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526027207/msft-20251231.htm"
+      },
+      {
+        "filed": "2025-10-29",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312525256321/msft-20250930.htm"
+      },
+      {
+        "filed": "2025-07-30",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm"
+      }
+    ]
   },
   "ticker": "MSFT"
 }
