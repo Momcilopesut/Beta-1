@@ -1,37 +1,44 @@
 {
   "_errors": {
-    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts",
+    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts",
+    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts",
+    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
+    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
+    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
+    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
+    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
   },
-  "cik": null,
+  "cik": "0000753308",
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.64,
-      "debt_to_equity": 2.11,
-      "interest_coverage": 2.05
+      "current_ratio": null,
+      "debt_to_equity": null,
+      "interest_coverage": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 4.22,
-      "fcf_to_net_income": 1.4
+      "fcf_margin_pct": null,
+      "fcf_to_net_income": null
     },
     "growth": {
-      "eps_growth_yoy_pct": -7.31,
-      "revenue_cagr_3yr_pct": 15.79,
-      "revenue_growth_yoy_pct": 19.03
+      "eps_growth_yoy_pct": null,
+      "revenue_cagr_3yr_pct": null,
+      "revenue_growth_yoy_pct": -76.32575757575758
     },
     "profitability": {
-      "gross_margin_pct": 37.98,
-      "roe_pct": 2.04,
+      "gross_margin_pct": null,
+      "roe_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "dcf_fair_value": 91.41,
-      "dcf_upside_pct": -15.36,
-      "ev_ebitda": 6.12,
-      "pe_ttm": 32.62
+      "dcf_fair_value": null,
+      "dcf_upside_pct": null,
+      "ev_ebitda": null,
+      "pe_ttm": null
     }
   },
-  "industry": null,
-  "last_updated": "2026-09-16T01:18:23Z",
+  "industry": "Regulated Electric",
+  "last_updated": "2026-09-16T02:01:55Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -40,26 +47,8 @@
     }
   },
   "metrics": {
-    "current_ratio": 1.64,
-    "dcf_upside_pct": -15.36,
-    "debt_to_equity": 2.11,
-    "earnings_surprise_pct": -0.09,
-    "eps_growth_yoy_pct": -7.31,
-    "ev_ebitda": 6.12,
-    "fcf_margin_pct": 4.22,
-    "fcf_to_net_income": 1.4,
-    "gross_margin_pct": 37.98,
-    "interest_coverage": 2.05,
     "margin_trend_score": 60,
-    "pe_ttm": 32.62,
-    "price_vs_ma200_pct": -11.0,
-    "price_vs_ma50_pct": 3.11,
-    "return_1m_pct": -12.82,
-    "return_3m_pct": -4.28,
-    "revenue_cagr_3yr_pct": 15.79,
-    "revenue_growth_yoy_pct": 19.03,
-    "roe_pct": 2.04,
-    "rsi_distance_from_neutral": 24.37
+    "revenue_growth_yoy_pct": -76.32575757575758
   },
   "name": "NextEra Energy Inc.",
   "narrative": {
@@ -67,57 +56,41 @@
     "facts": {
       "critical": [
         {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-15.36",
-          "text": "Modeled fair value implies a -15.4% gap to the current price.",
-          "tier": "critical"
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "-76.33%",
+          "text": "NextEra's reported revenue fell approximately 76.33% year-over-year, a very large decline in this metric."
         }
       ],
       "important": [
         {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "19.03",
-          "text": "Revenue grew +19.0% year over year.",
-          "tier": "important"
-        },
-        {
-          "source_metric": "roe_pct",
-          "source_value": "2.04",
-          "text": "Return on equity stands at 2.0%.",
-          "tier": "important"
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "The margin trend score of 60 indicates margins have been relatively stable to modestly favorable over the period measured."
         }
       ],
-      "minor": [
-        {
-          "source_metric": "current_ratio",
-          "source_value": "1.64",
-          "text": "Current ratio is 1.64.",
-          "tier": "minor"
-        }
-      ],
+      "minor": [],
       "noise": [
         {
-          "source_metric": "rsi_distance_from_neutral",
-          "source_value": "24.37",
-          "text": "14-day RSI sits 24 points from neutral.",
-          "tier": "noise"
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "-76.33%",
+          "text": "A revenue decline of this magnitude (-76.33%) is unusually large and may reflect a reporting or calculation anomaly rather than a proportional collapse in core operations; this figure should be interpreted cautiously rather than taken at face value."
         }
       ]
     },
-    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 44 driven by growth, margins, and balance-sheet health.",
-    "one_line_summary": "NextEra Energy Inc.: Cautious short-term, Neutral long-term outlook on current fundamentals.",
-    "short_term_narrative": "Short-term positioning is cautious, with momentum and technicals contributing a base score of 31 before a +0-point macro adjustment."
+    "long_term_narrative": "The long-term score of 46.5 (Neutral) is shaped by the same underlying metrics: the extreme revenue growth contraction of -76.33% weighs on the outlook, but the margin trend score of 60 suggests cost or pricing discipline has not deteriorated in tandem. The net effect is a score that sits close to the midpoint, indicating no strong long-term directional signal from the available data alone.",
+    "one_line_summary": "NEE shows a steep reported revenue drop alongside a stable margin trend, with both short- and long-term scores near neutral.",
+    "short_term_narrative": "The short-term score of 50 (Neutral) reflects mixed signals in the underlying data: revenue growth of -76.33% year-over-year is a sharp decline, while the margin trend score of 60 points to margins that have held up or modestly improved. Together these offsetting signals result in a balanced, non-directional short-term score rather than a clear positive or negative read."
   },
   "price": {
-    "as_of": "2026-09-12",
-    "close": 108.0,
-    "return_1m_pct": -12.82,
-    "return_3m_pct": -4.28
+    "as_of": null,
+    "close": null,
+    "return_1m_pct": null,
+    "return_3m_pct": null
   },
   "scores": {
     "long_term": {
-      "base_score": 44.3,
-      "final_score": 44.3,
+      "base_score": 46.5,
+      "final_score": 46.5,
       "macro_adjustment": 0,
       "subscores": [
         {
@@ -126,21 +99,21 @@
           "raw_metrics": [
             {
               "metric": "pe_ttm",
-              "raw_value": 32.62,
-              "score": 24.60000000000001
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "ev_ebitda",
-              "raw_value": 6.12,
-              "score": 100.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -15.36,
-              "score": 19.28
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 48.0,
+          "score": 50.0,
           "weight_pct": 25
         },
         {
@@ -149,21 +122,21 @@
           "raw_metrics": [
             {
               "metric": "revenue_growth_yoy_pct",
-              "raw_value": 19.03,
-              "score": 80.10000000000001
+              "raw_value": -76.32575757575758,
+              "score": 0.0
             },
             {
               "metric": "revenue_cagr_3yr_pct",
-              "raw_value": 15.79,
-              "score": 83.16
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "eps_growth_yoy_pct",
-              "raw_value": -7.31,
-              "score": 6.7250000000000005
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 56.7,
+          "score": 33.3,
           "weight_pct": 25
         },
         {
@@ -172,13 +145,13 @@
           "raw_metrics": [
             {
               "metric": "gross_margin_pct",
-              "raw_value": 37.98,
-              "score": 44.94999999999999
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "roe_pct",
-              "raw_value": 2.04,
-              "score": 6.800000000000001
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "margin_trend_score",
@@ -186,7 +159,7 @@
               "score": 60.0
             }
           ],
-          "score": 37.2,
+          "score": 53.3,
           "weight_pct": 20
         },
         {
@@ -195,21 +168,21 @@
           "raw_metrics": [
             {
               "metric": "debt_to_equity",
-              "raw_value": 2.11,
-              "score": 0.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "current_ratio",
-              "raw_value": 1.64,
-              "score": 56.99999999999999
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "interest_coverage",
-              "raw_value": 2.05,
-              "score": 0.2777777777777768
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 19.1,
+          "score": 50.0,
           "weight_pct": 15
         },
         {
@@ -218,24 +191,24 @@
           "raw_metrics": [
             {
               "metric": "fcf_margin_pct",
-              "raw_value": 4.22,
-              "score": 14.066666666666666
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "fcf_to_net_income",
-              "raw_value": 1.4,
-              "score": 89.99999999999999
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 52.0,
+          "score": 50.0,
           "weight_pct": 15
         }
       ],
       "verdict": "Neutral"
     },
     "short_term": {
-      "base_score": 31.2,
-      "final_score": 31.2,
+      "base_score": 50.0,
+      "final_score": 50.0,
       "macro_adjustment": 0,
       "subscores": [
         {
@@ -244,16 +217,16 @@
           "raw_metrics": [
             {
               "metric": "return_1m_pct",
-              "raw_value": -12.82,
-              "score": 0.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "return_3m_pct",
-              "raw_value": -4.28,
-              "score": 39.3
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 19.6,
+          "score": 50.0,
           "weight_pct": 30
         },
         {
@@ -262,21 +235,21 @@
           "raw_metrics": [
             {
               "metric": "price_vs_ma50_pct",
-              "raw_value": 3.11,
-              "score": 65.55
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "price_vs_ma200_pct",
-              "raw_value": -11.0,
-              "score": 13.333333333333334
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "rsi_distance_from_neutral",
-              "raw_value": 24.37,
-              "score": 39.074999999999996
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 39.3,
+          "score": 50.0,
           "weight_pct": 20
         },
         {
@@ -285,11 +258,11 @@
           "raw_metrics": [
             {
               "metric": "earnings_surprise_pct",
-              "raw_value": -0.09,
-              "score": 49.55
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 49.5,
+          "score": 50.0,
           "weight_pct": 20
         },
         {
@@ -298,21 +271,47 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -15.36,
-              "score": 19.28
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 19.3,
+          "score": 50.0,
           "weight_pct": 15
         }
       ],
-      "verdict": "Cautious"
+      "verdict": "Neutral"
     }
   },
   "sector": "Utilities",
   "sources": {
-    "sec_companyfacts_url": null,
-    "sec_filings": []
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000753308.json",
+    "sec_filings": [
+      {
+        "filed": "2026-07-24",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000060/nee-20260630.htm"
+      },
+      {
+        "filed": "2026-04-23",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000031/nee-20260331.htm"
+      },
+      {
+        "filed": "2026-02-13",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm"
+      },
+      {
+        "filed": "2025-10-28",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330825000056/nee-20250930.htm"
+      },
+      {
+        "filed": "2025-07-23",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330825000040/nee-20250630.htm"
+      }
+    ]
   },
   "ticker": "NEE"
 }

@@ -1,13 +1,12 @@
 {
-  "generated_at": "2026-09-16T01:18:23Z",
+  "generated_at": "2026-09-16T01:58:32Z",
   "narrative_warnings": 0,
-  "note": "Placeholder demo data for local preview only. Run `python -m pipeline.main` with real API keys configured to replace it with live data.",
-  "pipeline_version": "sample-data",
+  "pipeline_version": "1.0.0",
   "sources_status": {
-    "anthropic": "sample",
-    "fmp": "sample",
-    "fred": "sample",
-    "sec_edgar": "sample"
+    "anthropic": "ok",
+    "fmp": "degraded",
+    "fred": "ok",
+    "sec_edgar": "ok"
   },
   "watchlist_size": 15
 }

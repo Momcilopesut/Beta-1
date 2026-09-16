@@ -1,37 +1,44 @@
 {
   "_errors": {
-    "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
+    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts",
+    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts",
+    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts",
+    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
+    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
+    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
+    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
+    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
   },
-  "cik": null,
+  "cik": "0000080424",
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.5,
-      "debt_to_equity": 2.14,
-      "interest_coverage": 8.51
+      "current_ratio": null,
+      "debt_to_equity": null,
+      "interest_coverage": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 20.24,
-      "fcf_to_net_income": 1.17
+      "fcf_margin_pct": null,
+      "fcf_to_net_income": null
     },
     "growth": {
-      "eps_growth_yoy_pct": -10.16,
-      "revenue_cagr_3yr_pct": 6.6,
-      "revenue_growth_yoy_pct": 11.89
+      "eps_growth_yoy_pct": null,
+      "revenue_cagr_3yr_pct": null,
+      "revenue_growth_yoy_pct": 3.260405296378909
     },
     "profitability": {
-      "gross_margin_pct": 35.14,
-      "roe_pct": 32.32,
+      "gross_margin_pct": null,
+      "roe_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "dcf_fair_value": 345.65,
-      "dcf_upside_pct": -21.06,
-      "ev_ebitda": 14.12,
-      "pe_ttm": 10.3
+      "dcf_fair_value": null,
+      "dcf_upside_pct": null,
+      "ev_ebitda": null,
+      "pe_ttm": null
     }
   },
-  "industry": null,
-  "last_updated": "2026-09-16T01:18:23Z",
+  "industry": "Household & Personal Products",
+  "last_updated": "2026-09-16T01:59:28Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -40,84 +47,55 @@
     }
   },
   "metrics": {
-    "current_ratio": 0.5,
-    "dcf_upside_pct": -21.06,
-    "debt_to_equity": 2.14,
-    "earnings_surprise_pct": 3.06,
-    "eps_growth_yoy_pct": -10.16,
-    "ev_ebitda": 14.12,
-    "fcf_margin_pct": 20.24,
-    "fcf_to_net_income": 1.17,
-    "gross_margin_pct": 35.14,
-    "interest_coverage": 8.51,
     "margin_trend_score": 60,
-    "pe_ttm": 10.3,
-    "price_vs_ma200_pct": -13.97,
-    "price_vs_ma50_pct": 1.46,
-    "return_1m_pct": -1.74,
-    "return_3m_pct": 10.28,
-    "revenue_cagr_3yr_pct": 6.6,
-    "revenue_growth_yoy_pct": 11.89,
-    "roe_pct": 32.32,
-    "rsi_distance_from_neutral": 33.08
+    "revenue_growth_yoy_pct": 3.260405296378909
   },
   "name": "Procter & Gamble Co.",
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-21.06",
-          "text": "Modeled fair value implies a -21.1% gap to the current price.",
-          "tier": "critical"
-        }
-      ],
+      "critical": [],
       "important": [
         {
           "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "11.89",
-          "text": "Revenue grew +11.9% year over year.",
-          "tier": "important"
+          "source_value": "3.26%",
+          "text": "Revenue grew about 3.26% year-over-year, indicating modest top-line expansion rather than rapid growth."
         },
         {
-          "source_metric": "roe_pct",
-          "source_value": "32.32",
-          "text": "Return on equity stands at 32.3%.",
-          "tier": "important"
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "The margin trend score of 60 (on whatever scale is used) suggests a moderately positive but not strongly improving margin trajectory."
         }
       ],
       "minor": [
         {
-          "source_metric": "current_ratio",
-          "source_value": "0.5",
-          "text": "Current ratio is 0.50.",
-          "tier": "minor"
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "A margin trend score of 60 is roughly mid-range, meaning it does not signal either significant margin expansion or margin distress."
         }
       ],
       "noise": [
         {
-          "source_metric": "rsi_distance_from_neutral",
-          "source_value": "33.08",
-          "text": "14-day RSI sits 33 points from neutral.",
-          "tier": "noise"
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "3.26%",
+          "text": "A ~3.26% revenue growth rate, while sometimes highlighted as a growth catalyst, is modest enough that it should not be treated as a major decision-driving data point on its own."
         }
       ]
     },
-    "long_term_narrative": "Longer-term fundamentals point to a neutral outlook, with a base score of 48 driven by growth, margins, and balance-sheet health.",
-    "one_line_summary": "Procter & Gamble Co.: Neutral short-term, Neutral long-term outlook on current fundamentals.",
-    "short_term_narrative": "Short-term positioning is neutral, with momentum and technicals contributing a base score of 44 before a +0-point macro adjustment."
+    "long_term_narrative": "The long-term score of 48.8, also labeled Neutral, is consistent with the same underlying data: revenue growth near 3.26% is steady but unremarkable, and a margin trend score of 60 points to gradual rather than transformative margin improvement. Neither metric shows the kind of acceleration or deterioration that would push the long-term picture toward a more decisive verdict. As a result, the data supports a steady-state characterization rather than a strong growth or decline trajectory.",
+    "one_line_summary": "PG shows modest revenue growth and a moderately positive margin trend, with both short- and long-term scores landing in neutral territory.",
+    "short_term_narrative": "The short-term score of 50.0 reflects a neutral outlook, driven mainly by revenue growth of about 3.26% year-over-year, which is modest rather than dramatic. The margin trend score of 60 suggests margins are moving in a mildly favorable direction but not sharply improving. Together these inputs balance out to a neutral near-term read with no strong signal in either direction."
   },
   "price": {
-    "as_of": "2026-09-12",
-    "close": 437.86,
-    "return_1m_pct": -1.74,
-    "return_3m_pct": 10.28
+    "as_of": null,
+    "close": null,
+    "return_1m_pct": null,
+    "return_3m_pct": null
   },
   "scores": {
     "long_term": {
-      "base_score": 47.9,
-      "final_score": 47.9,
+      "base_score": 48.8,
+      "final_score": 48.8,
       "macro_adjustment": 0,
       "subscores": [
         {
@@ -126,21 +104,21 @@
           "raw_metrics": [
             {
               "metric": "pe_ttm",
-              "raw_value": 10.3,
-              "score": 99.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "ev_ebitda",
-              "raw_value": 14.12,
-              "score": 64.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -21.06,
-              "score": 7.880000000000003
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 57.0,
+          "score": 50.0,
           "weight_pct": 25
         },
         {
@@ -149,21 +127,21 @@
           "raw_metrics": [
             {
               "metric": "revenue_growth_yoy_pct",
-              "raw_value": 11.89,
-              "score": 56.300000000000004
+              "raw_value": 3.260405296378909,
+              "score": 27.534684321263033
             },
             {
               "metric": "revenue_cagr_3yr_pct",
-              "raw_value": 6.6,
-              "score": 46.4
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "eps_growth_yoy_pct",
-              "raw_value": -10.16,
-              "score": 0.0
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 34.2,
+          "score": 42.5,
           "weight_pct": 25
         },
         {
@@ -172,13 +150,13 @@
           "raw_metrics": [
             {
               "metric": "gross_margin_pct",
-              "raw_value": 35.14,
-              "score": 37.85
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "roe_pct",
-              "raw_value": 32.32,
-              "score": 100.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "margin_trend_score",
@@ -186,7 +164,7 @@
               "score": 60.0
             }
           ],
-          "score": 66.0,
+          "score": 53.3,
           "weight_pct": 20
         },
         {
@@ -195,21 +173,21 @@
           "raw_metrics": [
             {
               "metric": "debt_to_equity",
-              "raw_value": 2.14,
-              "score": 0.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "current_ratio",
-              "raw_value": 0.5,
-              "score": 0.0
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "interest_coverage",
-              "raw_value": 8.51,
-              "score": 36.166666666666664
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 12.1,
+          "score": 50.0,
           "weight_pct": 15
         },
         {
@@ -218,24 +196,24 @@
           "raw_metrics": [
             {
               "metric": "fcf_margin_pct",
-              "raw_value": 20.24,
-              "score": 67.46666666666667
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "fcf_to_net_income",
-              "raw_value": 1.17,
-              "score": 67.0
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 67.2,
+          "score": 50.0,
           "weight_pct": 15
         }
       ],
       "verdict": "Neutral"
     },
     "short_term": {
-      "base_score": 43.5,
-      "final_score": 43.5,
+      "base_score": 50.0,
+      "final_score": 50.0,
       "macro_adjustment": 0,
       "subscores": [
         {
@@ -244,16 +222,16 @@
           "raw_metrics": [
             {
               "metric": "return_1m_pct",
-              "raw_value": -1.74,
-              "score": 41.3
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "return_3m_pct",
-              "raw_value": 10.28,
-              "score": 75.7
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 58.5,
+          "score": 50.0,
           "weight_pct": 30
         },
         {
@@ -262,21 +240,21 @@
           "raw_metrics": [
             {
               "metric": "price_vs_ma50_pct",
-              "raw_value": 1.46,
-              "score": 57.300000000000004
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "price_vs_ma200_pct",
-              "raw_value": -13.97,
-              "score": 3.4333333333333313
+              "raw_value": null,
+              "score": null
             },
             {
               "metric": "rsi_distance_from_neutral",
-              "raw_value": 33.08,
-              "score": 17.30000000000001
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 26.0,
+          "score": 50.0,
           "weight_pct": 20
         },
         {
@@ -285,11 +263,11 @@
           "raw_metrics": [
             {
               "metric": "earnings_surprise_pct",
-              "raw_value": 3.06,
-              "score": 65.3
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 65.3,
+          "score": 50.0,
           "weight_pct": 20
         },
         {
@@ -298,11 +276,11 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -21.06,
-              "score": 7.880000000000003
+              "raw_value": null,
+              "score": null
             }
           ],
-          "score": 7.9,
+          "score": 50.0,
           "weight_pct": 15
         }
       ],
@@ -311,8 +289,34 @@
   },
   "sector": "Consumer Defensive",
   "sources": {
-    "sec_companyfacts_url": null,
-    "sec_filings": []
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000080424.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-04",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm"
+      },
+      {
+        "filed": "2026-04-24",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000060/pg-20260331.htm"
+      },
+      {
+        "filed": "2026-01-23",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000011/pg-20251231.htm"
+      },
+      {
+        "filed": "2025-10-24",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042425000245/pg-20250930.htm"
+      },
+      {
+        "filed": "2025-08-04",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042425000076/pg-20250630.htm"
+      }
+    ]
   },
   "ticker": "PG"
 }
