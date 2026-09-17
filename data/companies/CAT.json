@@ -1,14 +1,13 @@
 {
   "_errors": {
-    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts",
-    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts",
-    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts",
-    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
-    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
-    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
-    "profile": "Failed to fetch https://financialmodelingprep.com/stable/profile after 3 attempts",
-    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
-    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
+    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/balance-sheet-statement?symbol=CAT&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=5",
+    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/cash-flow-statement?symbol=CAT&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=5",
+    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/discounted-cash-flow?symbol=CAT&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/historical-price-eod/full?symbol=CAT&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/income-statement?symbol=CAT&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=5",
+    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/key-metrics-ttm?symbol=CAT&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/quote?symbol=CAT&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/ratios-ttm?symbol=CAT&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
   },
   "cik": "0000018230",
   "fundamentals": {
@@ -38,8 +37,8 @@
       "pe_ttm": null
     }
   },
-  "industry": null,
-  "last_updated": "2026-09-16T12:32:38Z",
+  "industry": "Agricultural - Machinery",
+  "last_updated": "2026-09-17T17:27:59Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -60,21 +59,20 @@
         {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "4.29%",
-          "text": "Caterpillar's revenue grew approximately 4.29% year-over-year, indicating modest top-line expansion rather than rapid growth or contraction."
-        }
-      ],
-      "minor": [
+          "text": "Caterpillar's revenue grew approximately 4.29% year-over-year, indicating moderate top-line expansion rather than rapid growth or contraction."
+        },
         {
           "source_metric": "margin_trend_score",
           "source_value": "60",
-          "text": "The margin trend score of 60 (on whatever scale used) sits near the middle of the range, suggesting margins are neither meaningfully improving nor deteriorating at this time."
+          "text": "The margin trend score of 60 suggests a moderately positive trajectory in profitability trends, neither showing significant deterioration nor exceptional improvement."
         }
       ],
+      "minor": [],
       "noise": []
     },
-    "long_term_narrative": "The long-term score of 51.1 is also neutral, consistent with the same underlying growth and margin data used for the short-term view. A revenue growth rate near 4.3% is moderate for a highly cyclical industrial business, and a margin trend score of 60 indicates neither sustained margin expansion nor contraction based on the available metrics. Given the company's high cyclicality and medium rate sensitivity noted in the macro context, these modest trend readings do not by themselves signal a structural shift in the long-term trajectory.",
-    "one_line_summary": "CAT shows modest 4.3% revenue growth and a neutral margin trend, with both short- and long-term scores landing in neutral territory.",
-    "short_term_narrative": "Caterpillar's short-term score of 52 reflects a neutral outlook, supported by year-over-year revenue growth of about 4.29% and a margin trend score of 60, which sits in the middle of the range rather than showing strong improvement or deterioration. These figures suggest steady but unspectacular operating momentum in the near term. No data in the payload points to acute balance-sheet stress or a sharp earnings inflection that would push the near-term picture out of neutral."
+    "long_term_narrative": "The long-term score of 51.1 (Neutral) is consistent with the same underlying data: revenue growth near 4.3% suggests moderate expansion rather than rapid scaling, while a margin trend score of 60 points to a moderately positive but not exceptional profitability trajectory. Together these metrics imply a steady, unremarkable long-term trend rather than a strong structural improvement or decline.",
+    "one_line_summary": "CAT shows modest revenue growth and steady margins, with neutral short- and long-term scores reflecting a balanced outlook.",
+    "short_term_narrative": "Caterpillar's short-term score of 52 (Neutral) reflects modest year-over-year revenue growth of about 4.3% and a margin trend score of 60, suggesting neither strong acceleration nor deterioration in near-term performance. These figures indicate the company is maintaining relatively stable operating conditions without a clear directional catalyst in the immediate term."
   },
   "price": {
     "as_of": null,

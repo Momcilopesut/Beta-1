@@ -1,14 +1,13 @@
 {
   "_errors": {
-    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts",
-    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts",
-    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts",
-    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
-    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
-    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
-    "profile": "Failed to fetch https://financialmodelingprep.com/stable/profile after 3 attempts",
-    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
-    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
+    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/balance-sheet-statement?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=5",
+    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/cash-flow-statement?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=5",
+    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/discounted-cash-flow?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/historical-price-eod/full?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/income-statement?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=5",
+    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/key-metrics-ttm?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/quote?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/ratios-ttm?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
   },
   "cik": "0000080424",
   "fundamentals": {
@@ -38,8 +37,8 @@
       "pe_ttm": null
     }
   },
-  "industry": null,
-  "last_updated": "2026-09-16T12:28:55Z",
+  "industry": "Household & Personal Products",
+  "last_updated": "2026-09-17T17:26:23Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -60,32 +59,37 @@
         {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "3.26%",
-          "text": "Revenue grew approximately 3.26% year-over-year, indicating modest but positive top-line expansion."
+          "text": "Revenue grew approximately 3.26% year-over-year, indicating modest top-line expansion rather than rapid growth or contraction."
         },
         {
           "source_metric": "margin_trend_score",
           "source_value": "60",
-          "text": "The margin trend score of 60 (on what appears to be a 0-100 scale) suggests a moderately favorable trend in margins, though not an extreme one."
+          "text": "The margin trend score of 60 (on presumably a 0-100 scale) suggests margins are trending moderately positively, not showing severe deterioration."
         }
       ],
       "minor": [
         {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "3.26%",
-          "text": "Revenue growth near 3.26% is relatively low in absolute terms, which is typical for a low-cyclicality consumer defensive company and should not be mistaken for a high-growth signal."
+          "text": "The short-term composite score is 50.0, corresponding to a Neutral verdict, meaning no strong near-term directional signal is indicated by the model."
+        },
+        {
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "The long-term composite score is 48.8, also Neutral, suggesting the modeled long-term outlook is balanced rather than skewed toward growth or decline."
         }
       ],
       "noise": [
         {
-          "source_metric": "margin_trend_score",
-          "source_value": "60",
-          "text": "A margin trend score of 60 is only moderately above a neutral midpoint, so it should not be over-interpreted as a strong margin expansion signal on its own."
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "3.26%",
+          "text": "Revenue growth near 3.26% is a modest figure that, on its own, does not indicate a distressed or hyper-growth scenario, making it a low-impact data point for extreme thesis positioning."
         }
       ]
     },
-    "long_term_narrative": "The long-term score of 48.8 also carries a Neutral verdict, indicating balanced considerations over a longer horizon. Revenue growth near 3.26% is consistent with a mature, low-cyclicality consumer defensive company rather than a high-growth profile. The margin trend score of 60 suggests some durability in profitability trends, but the overall neutral scores imply no strong long-term thesis emerges purely from these two metrics.",
-    "one_line_summary": "PG shows modest revenue growth and a moderate margin trend score, with neutral short- and long-term composite scores.",
-    "short_term_narrative": "The short-term score of 50.0 reflects a Neutral verdict, suggesting no strong directional signal from the underlying data. Revenue growth of about 3.26% year-over-year indicates steady but unspectacular top-line expansion. A margin trend score of 60 points to a moderately positive trajectory in margins, which may offer some support to near-term performance without being a decisive factor."
+    "long_term_narrative": "The long-term score of 48.8, also Neutral, is grounded in the same underlying fundamentals: single-digit revenue growth near 3.26% and a margin trend score of 60. Neither metric indicates significant structural deterioration or acceleration, which supports a steady-state outlook rather than a strong growth or decline trajectory. The macro context of low rate sensitivity and low cyclicality further suggests the company's fundamentals are not being materially amplified or dragged by external economic conditions based on the data provided.",
+    "one_line_summary": "PG shows modest revenue growth and a moderate margin trend, with neutral short- and long-term composite scores.",
+    "short_term_narrative": "The short-term score of 50.0 reflects a Neutral verdict, consistent with revenue growth of about 3.26% year-over-year, a modest but positive pace of expansion. The margin trend score of 60 suggests margins are trending in a reasonably stable to favorable direction, neither signaling deterioration nor a strong upside surprise. Together these data points point to a company performing in line with expectations rather than showing a clear near-term catalyst in either direction."
   },
   "price": {
     "as_of": null,

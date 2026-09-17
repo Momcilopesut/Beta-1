@@ -1,14 +1,13 @@
 {
   "_errors": {
-    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts",
-    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts",
-    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts",
-    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
-    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
-    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
-    "profile": "Failed to fetch https://financialmodelingprep.com/stable/profile after 3 attempts",
-    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
-    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
+    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/balance-sheet-statement?symbol=NEE&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=5",
+    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/cash-flow-statement?symbol=NEE&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=5",
+    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/discounted-cash-flow?symbol=NEE&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/historical-price-eod/full?symbol=NEE&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/income-statement?symbol=NEE&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=5",
+    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/key-metrics-ttm?symbol=NEE&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/quote?symbol=NEE&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/ratios-ttm?symbol=NEE&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
   },
   "cik": "0000753308",
   "fundamentals": {
@@ -38,8 +37,8 @@
       "pe_ttm": null
     }
   },
-  "industry": null,
-  "last_updated": "2026-09-16T12:33:29Z",
+  "industry": "Regulated Electric",
+  "last_updated": "2026-09-17T17:28:42Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -59,22 +58,34 @@
         {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "-76.33%",
-          "text": "Revenue declined 76.33% year-over-year, a very large drop that raises significant questions about the company's growth trajectory."
+          "text": "NextEra Energy's revenue fell approximately 76.33% year-over-year, a very large contraction that stands out as the most significant data point in this dataset."
         }
       ],
       "important": [
         {
           "source_metric": "margin_trend_score",
           "source_value": "60",
-          "text": "The margin trend score of 60 (on what appears to be a 0-100 scale) suggests margins are trending at a moderate, middling level rather than sharply improving or deteriorating."
+          "text": "The margin trend score of 60 indicates a moderately positive trajectory in margins, which partially offsets concerns raised by the steep revenue decline."
         }
       ],
-      "minor": [],
-      "noise": []
+      "minor": [
+        {
+          "source_metric": "margin_trend_score",
+          "source_value": "60",
+          "text": "A margin trend score of 60 is only modestly above a neutral midpoint, so it should not be read as evidence of strong margin expansion, just mild stability."
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "-76.33%",
+          "text": "Taken alone, the revenue growth figure does not indicate whether the decline is a one-off event or an ongoing pattern, since no additional trend data on revenue is provided."
+        }
+      ]
     },
-    "long_term_narrative": "The long-term score of 46.5 (Neutral) is shaped by the same underlying metrics: the steep revenue decline raises questions about growth durability, while a margin trend score of 60 indicates profitability trends are not deteriorating severely. Macro context shows NEE operates in a Neutral/Expansion regime with high rate sensitivity and low cyclicality, factors that can influence a utility's long-term positioning but are not quantified as performance metrics themselves.",
-    "one_line_summary": "NEE shows a large YoY revenue decline alongside a moderate margin trend score; short- and long-term scores are neutral.",
-    "short_term_narrative": "The short-term score of 50.0 (Neutral) reflects a mixed picture: revenue fell sharply year-over-year (-76.33%), which is a significant negative data point, while the margin trend score of 60 suggests margins are holding at a moderate level. These offsetting signals keep the near-term outlook balanced rather than clearly positive or negative based on the available metrics."
+    "long_term_narrative": "The long-term score of 46.5 (Neutral, slightly below the midpoint) is weighed down primarily by the magnitude of the revenue contraction, which raises questions about the durability of the top line over time. The margin trend score of 60 offers a partial counterbalance, indicating operational efficiency has not collapsed alongside revenue. Together these produce a mixed, non-directional long-term picture based solely on the two available metrics.",
+    "one_line_summary": "NEE shows a sharp revenue contraction alongside a modestly positive margin trend; both short- and long-term outlook scores read neutral.",
+    "short_term_narrative": "The short-term score of 50 (Neutral) reflects two offsetting signals: a steep 76.3% year-over-year revenue decline, which on its own would be a major red flag, balanced against a margin trend score of 60 suggesting profitability has not deteriorated in step with revenue. This tension keeps the near-term read balanced rather than clearly positive or negative. No directional bias toward improvement or further decline is implied by the current metrics."
   },
   "price": {
     "as_of": null,
