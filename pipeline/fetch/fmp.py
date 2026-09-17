@@ -6,6 +6,7 @@ the account's free tier shouldn't take down every other metric.
 """
 
 import os
+from concurrent.futures import ThreadPoolExecutor
 from typing import Any
 
 from pipeline.fetch import cache
@@ -45,6 +46,14 @@ def _get(endpoint: str, ticker: str, **params: Any) -> Any:
 def fetch_company(ticker: str) -> dict:
     """Fetch all FMP data needed for one ticker.
 
+    The 9 endpoint calls are independent, so they run concurrently rather
+    than one-at-a-time - on a degraded account (see module docstring; each
+    failing call retries 3x with backoff before giving up) that's the
+    difference between ~30-80s and ~single-call-latency per ticker, which
+    matters for the on-demand lookup endpoint (api/lookup.py) far more than
+    for the batch pipeline, though both benefit. pipeline.utils.http's
+    per-host rate limiting is lock-protected so this stays polite to FMP.
+
     Returns {<call_name>: <payload or None>, "_errors": {<call_name>: str}}.
     """
     calls = {
@@ -61,12 +70,18 @@ def fetch_company(ticker: str) -> dict:
 
     result: dict[str, Any] = {}
     errors: dict[str, str] = {}
-    for name, call in calls.items():
+
+    def run(name: str, call) -> None:
         try:
             result[name] = call()
         except Exception as exc:  # noqa: BLE001 - deliberately broad, see module docstring
             errors[name] = str(exc)
             result[name] = None
+
+    with ThreadPoolExecutor(max_workers=len(calls)) as pool:
+        futures = [pool.submit(run, name, call) for name, call in calls.items()]
+        for future in futures:
+            future.result()
 
     result["_errors"] = errors
     return result

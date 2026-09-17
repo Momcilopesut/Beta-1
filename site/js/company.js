@@ -1,4 +1,11 @@
-import { fetchJSON, verdictClass, formatNumber, escapeHtml, renderDisclaimerFooter } from "./shared.js";
+import {
+  fetchJSON,
+  verdictClass,
+  formatNumber,
+  escapeHtml,
+  renderDisclaimerFooter,
+  lookupTicker,
+} from "./shared.js";
 
 function tickerFromQuery() {
   return new URLSearchParams(window.location.search).get("ticker");
@@ -19,15 +26,47 @@ async function main() {
   try {
     const doc = await fetchJSON(`../data/companies/${encodeURIComponent(ticker)}.json`);
     content.innerHTML = render(doc);
-  } catch (err) {
-    const safeTicker = escapeHtml(ticker);
-    content.innerHTML = `<p class="error">Could not load data for ${safeTicker} (${escapeHtml(err.message)}).</p>`;
+  } catch {
+    renderNotTracked(content, ticker);
   }
   renderDisclaimerFooter();
 }
 
+function renderNotTracked(content, ticker) {
+  const safeTicker = escapeHtml(ticker);
+  content.innerHTML = `
+    <section class="not-tracked">
+      <p class="error">${safeTicker} isn't in the tracked watchlist.</p>
+      <p class="meta">You can run a live, on-demand analysis instead — the same scoring, checklists,
+      and AI narrative as the tracked companies, computed fresh right now via a separate lookup
+      service. This spends real API budget per lookup, so it only runs when you ask.</p>
+      <button id="run-live-lookup" class="live-lookup-button">Run live analysis for ${safeTicker}</button>
+    </section>
+  `;
+  document.getElementById("run-live-lookup").addEventListener("click", () => runLiveLookup(content, ticker));
+}
+
+async function runLiveLookup(content, ticker) {
+  const safeTicker = escapeHtml(ticker);
+  content.innerHTML = `<p class="status">Analyzing ${safeTicker} live&hellip; this can take up to a minute.</p>`;
+  try {
+    const doc = await lookupTicker(ticker);
+    content.innerHTML = render(doc);
+  } catch (err) {
+    content.innerHTML = `
+      <p class="error">Live analysis failed for ${safeTicker}: ${escapeHtml(err.message)}</p>
+      <button id="run-live-lookup" class="live-lookup-button">Try again</button>
+    `;
+    document.getElementById("run-live-lookup").addEventListener("click", () => runLiveLookup(content, ticker));
+  }
+}
+
 function render(doc) {
+  const onDemandBanner = doc.on_demand
+    ? `<p class="on-demand-banner">Live on-demand analysis — not part of the tracked watchlist, computed just now.</p>`
+    : "";
   return `
+    ${onDemandBanner}
     <section class="detail-header">
       <h2>${escapeHtml(doc.name)} <span class="ticker-tag">${escapeHtml(doc.ticker)}</span></h2>
       <p class="meta">${escapeHtml(doc.sector || "—")} · ${escapeHtml(doc.industry || "—")} · Updated ${escapeHtml(doc.last_updated)}</p>

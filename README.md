@@ -40,7 +40,12 @@ config/watchlist.yaml  →  pipeline (fetch → score → AI narrative)  →  da
   business-cycle/sector-rotation theory (which sectors have historically led/lagged in
   this phase) — textbook reference, explicitly not a prediction.
 - **Site**: plain HTML/CSS/JS, no framework, no build step — reads the generated JSON
-  directly. The dashboard groups companies by GICS-style sector.
+  directly. The dashboard groups companies by GICS-style sector and has a search box
+  (instant filter of tracked companies; Enter jumps to any ticker).
+- **On-demand lookup** (`api/lookup.py`, optional): a search for a ticker outside the
+  tracked watchlist offers a live, on-demand run through the exact same pipeline code,
+  via a small backend deployed separately (see "On-demand lookup deployment" below).
+  The static site works fully without this — it's an opt-in extra.
 
 ## Local development
 
@@ -133,3 +138,36 @@ redirects there automatically).
 
 `.github/workflows/tests.yml` runs `pytest` on every push/PR — no secrets or network
 required.
+
+## On-demand lookup deployment (optional)
+
+Searching a ticker that isn't tracked offers a live analysis via `api/lookup.py`, a
+small Flask app deployed as a [Vercel](https://vercel.com) Python serverless function
+— GitHub Pages can't run server code, so this needs separate hosting. Skipping this
+section is fine; the rest of the site works without it, and an untracked search will
+just say live lookup isn't configured.
+
+**Why a separate deployment, and why it's gated:** every live lookup spends real FMP/
+Anthropic API budget (it runs the full pipeline for one ticker, right then). Left
+open with no key, anyone who finds the URL could run up your usage. Set
+`SEARCH_API_KEY` to require a shared secret; if you leave it unset, the endpoint is
+open to anyone with the URL — only reasonable for a private deployment you don't share.
+
+**Setup:**
+
+1. Create a free [Vercel](https://vercel.com) account and import this repository as a
+   new project (Vercel auto-detects `api/lookup.py` as a Python serverless function
+   and `vercel.json` for its config — no build settings to change).
+2. In the Vercel project's **Settings → Environment Variables**, add the same keys as
+   the GitHub Actions secrets (these are separate stores — copy the values over):
+   `FMP_API_KEY`, `FRED_API_KEY`, `ANTHROPIC_API_KEY`, `SEC_EDGAR_USER_AGENT`, plus a
+   new `SEARCH_API_KEY` (any string you choose — this is the shared secret from above).
+3. Deploy. Note the resulting URL (e.g. `https://your-project.vercel.app`).
+4. On the live site, search for a ticker that isn't tracked and click "Run live
+   analysis" — the first time, it'll prompt for the Vercel URL and your
+   `SEARCH_API_KEY` value, then remember both in the browser's local storage (per
+   browser/device — visitors without the key just get a 401 from the API).
+
+Local dev: `python api/lookup.py` runs a dev server at `http://localhost:5328`; point
+`lookupApiBase` (see `site/js/shared.js`) at that instead of a Vercel URL to test
+end-to-end without deploying.

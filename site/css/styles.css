@@ -58,6 +58,55 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
 
 .status { color: var(--muted); font-size: 0.9rem; }
 
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.search-form input {
+  flex: 1;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--fg);
+  font-size: 0.9rem;
+}
+.search-form input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.search-form button {
+  padding: 0.55rem 1.1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.search-form button:hover { opacity: 0.9; }
+
+.not-tracked { max-width: 520px; }
+.live-lookup-button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.live-lookup-button:hover { opacity: 0.9; }
+
+.on-demand-banner {
+  background: rgba(217, 119, 6, 0.12);
+  color: var(--cautious);
+  border: 1px solid var(--cautious);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
 .sector-group { margin-bottom: 2rem; }
 .sector-heading {
   font-size: 1.05rem;

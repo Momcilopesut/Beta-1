@@ -1,12 +1,14 @@
 """Minimal HTTP GET helper with per-host rate limiting and retry/backoff.
 
-This is a scheduled batch job hitting a handful of hosts a few hundred times
-per run, not a high-throughput service — a plain function with a small
-in-memory "last call per host" map is enough; no session pooling or async
-needed.
+Used both by the sequential batch pipeline and by the on-demand lookup
+endpoint (api/lookup.py), which fires a single ticker's per-source fetches
+concurrently across threads to keep latency down - so the rate-limit
+bookkeeping below is lock-protected even though nothing in the batch
+pipeline itself needs that.
 """
 
 import logging
+import threading
 import time
 from collections import defaultdict
 from typing import Any
@@ -16,10 +18,25 @@ import requests
 logger = logging.getLogger(__name__)
 
 _last_request_at: dict[str, float] = defaultdict(float)
+_rate_limit_lock = threading.Lock()
 
 
 class HttpError(Exception):
     """Raised when a request fails after all retries are exhausted."""
+
+
+def _reserve_slot(host_key: str, min_interval_seconds: float) -> float:
+    """Atomically claims the next available call slot for this host_key and
+    returns how long the caller should sleep before proceeding. Slots are
+    scheduled min_interval_seconds apart regardless of how long any given
+    request takes, which - unlike timing spacing off when the previous
+    request *finished* - stays correct when multiple threads reserve slots
+    for the same host_key concurrently (see api/lookup.py)."""
+    with _rate_limit_lock:
+        now = time.monotonic()
+        earliest = max(now, _last_request_at[host_key] + min_interval_seconds)
+        _last_request_at[host_key] = earliest
+        return max(0.0, earliest - now)
 
 
 def _get_with_retry(
@@ -33,8 +50,7 @@ def _get_with_retry(
     max_retries: int,
 ) -> requests.Response:
     if host_key and min_interval_seconds > 0:
-        elapsed = time.monotonic() - _last_request_at[host_key]
-        wait = min_interval_seconds - elapsed
+        wait = _reserve_slot(host_key, min_interval_seconds)
         if wait > 0:
             time.sleep(wait)
 
@@ -42,8 +58,6 @@ def _get_with_retry(
     for attempt in range(max_retries):
         try:
             response = requests.get(url, params=params, headers=headers, timeout=timeout)
-            if host_key:
-                _last_request_at[host_key] = time.monotonic()
             if response.status_code == 429 or response.status_code >= 500:
                 raise HttpError(f"HTTP {response.status_code} from {url}")
             response.raise_for_status()

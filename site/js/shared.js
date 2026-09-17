@@ -50,3 +50,70 @@ export function renderError(container, message) {
   container.innerHTML = `<p class="error"></p>`;
   container.querySelector(".error").textContent = message;
 }
+
+// --- On-demand lookup config (api/lookup.py, deployed separately to
+// Vercel - see README "On-demand lookup"). Stored per-browser in
+// localStorage, never sent anywhere but the configured API itself. ---
+
+const LOOKUP_BASE_KEY = "lookupApiBase";
+const LOOKUP_SEARCH_KEY = "lookupSearchKey";
+
+function safeLocalStorage() {
+  try {
+    return window.localStorage;
+  } catch {
+    return null; // private browsing / blocked storage - lookup config just won't persist
+  }
+}
+
+export function getLookupConfig() {
+  const storage = safeLocalStorage();
+  if (!storage) return { apiBase: null, searchKey: null };
+  return {
+    apiBase: storage.getItem(LOOKUP_BASE_KEY),
+    searchKey: storage.getItem(LOOKUP_SEARCH_KEY),
+  };
+}
+
+export function setLookupConfig(apiBase, searchKey) {
+  const storage = safeLocalStorage();
+  if (!storage) return;
+  if (apiBase) storage.setItem(LOOKUP_BASE_KEY, apiBase.replace(/\/+$/, ""));
+  if (searchKey) storage.setItem(LOOKUP_SEARCH_KEY, searchKey);
+}
+
+// Prompts once (native prompt() - deliberately minimal, this is a
+// single-user personal tool) if no API base is configured yet. Returns the
+// config, possibly still incomplete if the user cancels.
+export function ensureLookupConfig() {
+  let { apiBase, searchKey } = getLookupConfig();
+  if (!apiBase) {
+    apiBase = window.prompt(
+      "Live ticker lookup isn't configured yet.\n\nEnter your deployed lookup API base URL " +
+        "(e.g. https://your-project.vercel.app):"
+    );
+    if (apiBase) {
+      searchKey = window.prompt("Enter your search key (leave blank if the API has none configured):") || "";
+      setLookupConfig(apiBase, searchKey);
+    }
+  }
+  return getLookupConfig();
+}
+
+export async function lookupTicker(ticker, { skipAi = false } = {}) {
+  const { apiBase, searchKey } = ensureLookupConfig();
+  if (!apiBase) {
+    throw new Error("Live lookup isn't configured.");
+  }
+  const url = new URL("/api/lookup", apiBase);
+  url.searchParams.set("ticker", ticker);
+  if (skipAi) url.searchParams.set("ai", "0");
+
+  const headers = searchKey ? { "X-Search-Key": searchKey } : {};
+  const res = await fetch(url, { headers });
+  const body = await res.json().catch(() => null);
+  if (!res.ok) {
+    throw new Error((body && body.error) || `Live lookup returned ${res.status}`);
+  }
+  return body;
+}
