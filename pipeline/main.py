@@ -23,7 +23,7 @@ import logging
 import sys
 
 from pipeline.build import writer
-from pipeline.fetch import fmp, fred, sec_edgar
+from pipeline.fetch import fmp, fred, sec_edgar, stooq
 from pipeline.narrative.anthropic_client import NarrativeError, generate_narrative
 from pipeline.narrative.grounding import enforce_grounding
 from pipeline.narrative.prompts import DISCLAIMER
@@ -35,7 +35,7 @@ from pipeline.utils.paths import DATA_DIR
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
-PIPELINE_VERSION = "1.1.0"
+PIPELINE_VERSION = "1.2.0"
 
 EMPTY_FACT_TIERS = {"critical": [], "important": [], "minor": [], "noise": []}
 
@@ -105,7 +105,16 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
     fmp_data = fmp.fetch_company(ticker)
     sec_data = sec_edgar.fetch_company(ticker)
 
-    built = build_metrics(ticker, fmp_data, sec_data)
+    stooq_prices: list[dict] = []
+    stooq_error: str | None = None
+    if not fmp_data.get("historical_prices") and not fmp_data.get("quote"):
+        try:
+            stooq_prices = stooq.fetch_daily_prices(ticker)
+        except stooq.StooqError as exc:
+            stooq_error = str(exc)
+            logger.warning("Stooq fallback failed for %s: %s", ticker, exc)
+
+    built = build_metrics(ticker, fmp_data, sec_data, stooq_prices)
     metrics, display, profile, raw = built["metrics"], built["display"], built["profile"], built["raw"]
 
     name = company_cfg.get("name") or profile.get("name") or ticker
@@ -122,6 +131,8 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
         f"https://data.sec.gov/api/xbrl/companyfacts/CIK{sec_data['cik']}.json" if sec_data.get("cik") else None
     )
     errors = {**fmp_data.get("_errors", {}), **{f"sec_{k}": v for k, v in sec_data.get("_errors", {}).items()}}
+    if stooq_error:
+        errors["stooq"] = stooq_error
 
     return {
         "ticker": ticker,
@@ -285,6 +296,7 @@ def run_full(args) -> int:
     sources_status = {
         "fmp": "ok",
         "sec_edgar": "ok",
+        "stooq": "ok",
         "fred": "ok",
         "anthropic": "skipped" if args.skip_ai else "ok",
     }
@@ -306,6 +318,7 @@ def run_full(args) -> int:
     states = []
     fmp_error_count = 0
     sec_error_count = 0
+    stooq_error_count = 0
     for company_cfg in companies:
         try:
             state = fetch_and_score_company(company_cfg, regime_info)
@@ -314,10 +327,12 @@ def run_full(args) -> int:
             continue
 
         errs = state["errors"]
-        if any(not k.startswith("sec_") for k in errs):
+        if any(not k.startswith("sec_") and k != "stooq" for k in errs):
             fmp_error_count += 1
         if any(k.startswith("sec_") for k in errs):
             sec_error_count += 1
+        if "stooq" in errs:
+            stooq_error_count += 1
         states.append(state)
 
     # Phase 2: cross-company signals.
@@ -336,6 +351,8 @@ def run_full(args) -> int:
         sources_status["fmp"] = "degraded"
     if sec_error_count:
         sources_status["sec_edgar"] = "degraded"
+    if stooq_error_count:
+        sources_status["stooq"] = "degraded"
 
     writer.write_watchlist(out_dir, summaries, generated_at)
     writer.write_meta(

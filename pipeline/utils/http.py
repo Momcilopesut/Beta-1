@@ -1,4 +1,4 @@
-"""Minimal HTTP GET-JSON helper with per-host rate limiting and retry/backoff.
+"""Minimal HTTP GET helper with per-host rate limiting and retry/backoff.
 
 This is a scheduled batch job hitting a handful of hosts a few hundred times
 per run, not a high-throughput service — a plain function with a small
@@ -22,6 +22,42 @@ class HttpError(Exception):
     """Raised when a request fails after all retries are exhausted."""
 
 
+def _get_with_retry(
+    url: str,
+    *,
+    params: dict | None,
+    headers: dict | None,
+    host_key: str | None,
+    min_interval_seconds: float,
+    timeout: float,
+    max_retries: int,
+) -> requests.Response:
+    if host_key and min_interval_seconds > 0:
+        elapsed = time.monotonic() - _last_request_at[host_key]
+        wait = min_interval_seconds - elapsed
+        if wait > 0:
+            time.sleep(wait)
+
+    last_exc: Exception | None = None
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url, params=params, headers=headers, timeout=timeout)
+            if host_key:
+                _last_request_at[host_key] = time.monotonic()
+            if response.status_code == 429 or response.status_code >= 500:
+                raise HttpError(f"HTTP {response.status_code} from {url}")
+            response.raise_for_status()
+            return response
+        except (requests.RequestException, HttpError) as exc:
+            last_exc = exc
+            if attempt < max_retries - 1:
+                backoff = 2**attempt
+                logger.warning("Request to %s failed (%s); retrying in %ss", url, exc, backoff)
+                time.sleep(backoff)
+
+    raise HttpError(f"Failed to fetch {url} after {max_retries} attempts: {last_exc}") from last_exc
+
+
 def get_json(
     url: str,
     *,
@@ -38,27 +74,37 @@ def get_json(
     rate budget; `min_interval_seconds` is then enforced between consecutive
     calls under that key, regardless of which specific URL is requested.
     """
-    if host_key and min_interval_seconds > 0:
-        elapsed = time.monotonic() - _last_request_at[host_key]
-        wait = min_interval_seconds - elapsed
-        if wait > 0:
-            time.sleep(wait)
+    response = _get_with_retry(
+        url,
+        params=params,
+        headers=headers,
+        host_key=host_key,
+        min_interval_seconds=min_interval_seconds,
+        timeout=timeout,
+        max_retries=max_retries,
+    )
+    return response.json()
 
-    last_exc: Exception | None = None
-    for attempt in range(max_retries):
-        try:
-            response = requests.get(url, params=params, headers=headers, timeout=timeout)
-            if host_key:
-                _last_request_at[host_key] = time.monotonic()
-            if response.status_code == 429 or response.status_code >= 500:
-                raise HttpError(f"HTTP {response.status_code} from {url}")
-            response.raise_for_status()
-            return response.json()
-        except (requests.RequestException, HttpError) as exc:
-            last_exc = exc
-            if attempt < max_retries - 1:
-                backoff = 2**attempt
-                logger.warning("Request to %s failed (%s); retrying in %ss", url, exc, backoff)
-                time.sleep(backoff)
 
-    raise HttpError(f"Failed to fetch {url} after {max_retries} attempts: {last_exc}") from last_exc
+def get_text(
+    url: str,
+    *,
+    params: dict | None = None,
+    headers: dict | None = None,
+    host_key: str | None = None,
+    min_interval_seconds: float = 0.0,
+    timeout: float = 15.0,
+    max_retries: int = 3,
+) -> str:
+    """GET a URL and return the raw response body as text (e.g. CSV). Same
+    retry/backoff/rate-limit behavior as get_json."""
+    response = _get_with_retry(
+        url,
+        params=params,
+        headers=headers,
+        host_key=host_key,
+        min_interval_seconds=min_interval_seconds,
+        timeout=timeout,
+        max_retries=max_retries,
+    )
+    return response.text

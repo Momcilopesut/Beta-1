@@ -93,11 +93,14 @@ def graham_defensive_checklist(metrics: dict, profile: dict, raw: dict) -> dict:
 
     # 4. Dividend record (proxy: currently pays a dividend - not Graham's
     # original 20-year uninterrupted record, which this data can't check).
+    # Sign convention varies by source (FMP reports a cash outflow as
+    # negative; XBRL "Payments" concepts report a positive magnitude), so
+    # this checks magnitude, not sign.
     dividends_paid = _get(cashflow_stmts[0], "dividendsPaid") if cashflow_stmts else None
     if dividends_paid is None:
         criteria.append(_criterion("Dividend record", None, "Dividend data unavailable"))
     else:
-        passed = dividends_paid < 0
+        passed = abs(dividends_paid) > 0
         criteria.append(
             _criterion(
                 "Currently pays a dividend (proxy for Graham's 20yr record, unverifiable here)",

@@ -18,8 +18,6 @@ endpoints (this account is on a limited plan; see pipeline/fetch/fmp.py).
 import math
 from typing import Any
 
-from pipeline.fetch.sec_edgar import xbrl_concept
-
 _MARGIN_TREND_SCORE = {"improving": 100, "stable": 60, "declining": 20}
 
 
@@ -93,6 +91,13 @@ def _returns_from_history(historical: list[dict]) -> dict:
     ma50, ma200, rsi = moving_avg(50), moving_avg(200), rsi_14()
     window = closes[-252:] if len(closes) >= 252 else closes
 
+    # Derived directly from whichever price source supplied `rows` (FMP or
+    # the Stooq fallback), so a volume-vs-own-average signal is available
+    # either way rather than only when FMP's `quote` endpoint works.
+    volumes = [h.get("volume") for h in rows if h.get("volume") is not None]
+    latest_volume = volumes[-1] if volumes else None
+    avg_volume = sum(volumes) / len(volumes) if len(volumes) >= 20 else None
+
     return {
         "close": latest,
         "as_of": latest_date,
@@ -104,6 +109,8 @@ def _returns_from_history(historical: list[dict]) -> dict:
         "rsi_distance_from_neutral": abs(rsi - 50) if rsi is not None else None,
         "high_52w": max(window),
         "low_52w": min(window),
+        "volume": latest_volume,
+        "avg_volume": avg_volume,
     }
 
 
@@ -117,24 +124,6 @@ def _growth(statements: list[dict], *field_candidates: str) -> dict:
     if len(values) >= 4 and values[3] and (values[0] / values[3]) > 0:
         cagr = ((values[0] / values[3]) ** (1 / 3) - 1) * 100
     return {"yoy_pct": yoy, "cagr_3yr_pct": cagr}
-
-
-def _revenue_yoy_fallback(company_facts: dict | None) -> float | None:
-    """SEC XBRL fallback for revenue YoY growth if FMP's income statement is
-    unavailable."""
-    if not company_facts:
-        return None
-    facts = sorted(
-        (
-            f
-            for f in xbrl_concept(company_facts, "us-gaap", "Revenues")
-            if f.get("form") == "10-K" and f.get("fp") == "FY"
-        ),
-        key=lambda f: f.get("end", ""),
-    )
-    if len(facts) < 2 or not facts[-2]["val"]:
-        return None
-    return (facts[-1]["val"] - facts[-2]["val"]) / abs(facts[-2]["val"]) * 100
 
 
 def _margin_trend(statements: list[dict]) -> str:
@@ -203,99 +192,147 @@ def _roic_pct(
     return nopat / invested_capital * 100
 
 
-def build_metrics(ticker: str, fmp_data: dict, sec_data: dict) -> dict:
+def build_metrics(
+    ticker: str, fmp_data: dict, sec_data: dict, stooq_prices: list[dict] | None = None
+) -> dict:
     """Returns {"metrics": {...flat, scoring-ready...}, "display": {...grouped
-    for output JSON...}, "profile": {name, sector, industry, cik}}."""
+    for output JSON...}, "profile": {name, sector, industry, cik}}.
+
+    Falls back to free sources when FMP's own endpoint failed outright
+    (empty/None) rather than just being missing one field: SEC XBRL company
+    facts (already fetched for filing links, see pipeline/fetch/sec_edgar.py)
+    for statements, and Stooq (pipeline/fetch/stooq.py, called by the
+    pipeline only when FMP's price data is missing) for price/volume
+    history. Every downstream calculation below is source-agnostic - it
+    just reads whichever statement/price rows ended up populated.
+    """
     profile = _first_row(fmp_data.get("profile"))
     quote = _first_row(fmp_data.get("quote"))
     ratios = _first_row(fmp_data.get("ratios_ttm"))
     key_metrics = _first_row(fmp_data.get("key_metrics_ttm"))
     dcf = _first_row(fmp_data.get("dcf"))
-    income_stmts = fmp_data.get("income_statement") or []
-    balance_stmts = fmp_data.get("balance_sheet") or []
-    cashflow_stmts = fmp_data.get("cash_flow") or []
-    historical = _historical_rows(fmp_data.get("historical_prices"))
-    company_facts = sec_data.get("company_facts")
+
+    xbrl = sec_data.get("xbrl_fundamentals") or {}
+    income_stmts = fmp_data.get("income_statement") or xbrl.get("income_stmts") or []
+    balance_stmts = fmp_data.get("balance_sheet") or xbrl.get("balance_stmts") or []
+    cashflow_stmts = fmp_data.get("cash_flow") or xbrl.get("cashflow_stmts") or []
+    historical = _historical_rows(fmp_data.get("historical_prices")) or (stooq_prices or [])
 
     price_data = _returns_from_history(historical)
     if not price_data:
         price_data = {"close": _first_of(quote, "price"), "as_of": None}
 
+    price = price_data.get("close")
+    balance0 = balance_stmts[0] if balance_stmts else {}
+    income0 = income_stmts[0] if income_stmts else {}
+
     pe_ttm = _first_of(ratios, "priceToEarningsRatioTTM", "peRatioTTM")
-    ev_ebitda = _first_of(key_metrics, "evToEBITDATTM", "enterpriseValueOverEBITDATTM")
     fair_value = _first_of(dcf, "dcf", "equityValuePerShare")
-    price_for_dcf = _first_of(dcf, "Stock Price", "stockPrice") or price_data.get("close")
+    price_for_dcf = _first_of(dcf, "Stock Price", "stockPrice") or price
     dcf_upside_pct = (
         (fair_value - price_for_dcf) / price_for_dcf * 100 if fair_value and price_for_dcf else None
     )
 
     revenue_growth = _growth(income_stmts, "revenue")
-    if revenue_growth["yoy_pct"] is None:
-        revenue_growth["yoy_pct"] = _revenue_yoy_fallback(company_facts)
     eps_growth = _growth(income_stmts, "epsdiluted", "eps")
 
     gross_margin_pct = None
     net_income = None
     revenue = None
     if income_stmts:
-        revenue = _first_of(income_stmts[0], "revenue")
-        gross_profit = _first_of(income_stmts[0], "grossProfit")
-        net_income = _first_of(income_stmts[0], "netIncome")
+        revenue = _first_of(income0, "revenue")
+        gross_profit = _first_of(income0, "grossProfit")
+        net_income = _first_of(income0, "netIncome")
         if revenue and gross_profit is not None:
             gross_margin_pct = gross_profit / revenue * 100
 
-    roe_pct = _pct(_first_of(key_metrics, "roeTTM", "returnOnEquityTTM"))
     margin_trend = _margin_trend(income_stmts)
 
+    total_equity = _first_of(balance0, "totalStockholdersEquity")
+    total_debt = _first_of(balance0, "totalDebt")
+    current_assets = _first_of(balance0, "totalCurrentAssets")
+    current_liabilities = _first_of(balance0, "totalCurrentLiabilities")
+    cash = _first_of(balance0, "cashAndCashEquivalents")
+
+    roe_pct = _pct(_first_of(key_metrics, "roeTTM", "returnOnEquityTTM"))
+    if roe_pct is None and net_income is not None and total_equity:
+        roe_pct = net_income / total_equity * 100
+
     debt_to_equity = _first_of(ratios, "debtToEquityRatioTTM", "debtEquityRatioTTM")
+    if debt_to_equity is None and total_debt is not None and total_equity:
+        debt_to_equity = total_debt / total_equity
+
     current_ratio = _first_of(ratios, "currentRatioTTM")
+    if current_ratio is None and current_assets is not None and current_liabilities:
+        current_ratio = current_assets / current_liabilities
+
     interest_coverage = _first_of(ratios, "interestCoverageTTM", "interestCoverageRatioTTM")
+    if interest_coverage is None:
+        operating_income_0 = _first_of(income0, "operatingIncome")
+        interest_expense = _first_of(income0, "interestExpense")
+        if operating_income_0 is not None and interest_expense:
+            interest_coverage = operating_income_0 / abs(interest_expense)
 
     fcf_margin_pct = None
     fcf_to_net_income = None
     if cashflow_stmts:
         fcf = _first_of(cashflow_stmts[0], "freeCashFlow")
+        if fcf is None:
+            ocf = _first_of(cashflow_stmts[0], "operatingCashFlow")
+            capex0 = _first_of(cashflow_stmts[0], "capitalExpenditure")
+            if ocf is not None and capex0 is not None:
+                fcf = ocf - abs(capex0)
         if fcf is not None and revenue:
             fcf_margin_pct = fcf / revenue * 100
         if fcf is not None and net_income:
             fcf_to_net_income = fcf / net_income
 
+    ev_ebitda = _first_of(key_metrics, "evToEBITDATTM", "enterpriseValueOverEBITDATTM")
+
     # --- Value-investing metrics (Graham / Buffett) ---
-    shares_outstanding = _first_of(quote, "sharesOutstanding") or _first_of(
-        key_metrics, "sharesOutstandingTTM"
+    shares_outstanding = (
+        _first_of(quote, "sharesOutstanding")
+        or _first_of(key_metrics, "sharesOutstandingTTM")
+        or sec_data.get("shares_outstanding")
     )
     market_cap = _first_of(quote, "marketCap") or _first_of(profile, "mktCap")
-    price = price_data.get("close")
     if market_cap is None and price and shares_outstanding:
         market_cap = price * shares_outstanding
     if shares_outstanding is None and market_cap and price:
         shares_outstanding = market_cap / price
 
+    if ev_ebitda is None and market_cap and total_debt is not None and cash is not None:
+        d_and_a_0 = _first_of(cashflow_stmts[0], "depreciationAndAmortization") if cashflow_stmts else None
+        operating_income_0 = _first_of(income0, "operatingIncome")
+        if operating_income_0 is not None and d_and_a_0 is not None:
+            ebitda = operating_income_0 + d_and_a_0
+            enterprise_value = market_cap + total_debt - cash
+            if ebitda > 0:
+                ev_ebitda = enterprise_value / ebitda
+
     book_value_per_share = _first_of(ratios, "bookValuePerShareTTM") or _first_of(
         key_metrics, "bookValuePerShareTTM"
     )
-    balance0 = balance_stmts[0] if balance_stmts else {}
-    if book_value_per_share is None and shares_outstanding:
-        equity = _first_of(balance0, "totalStockholdersEquity")
-        if equity is not None:
-            book_value_per_share = equity / shares_outstanding
+    if book_value_per_share is None and shares_outstanding and total_equity is not None:
+        book_value_per_share = total_equity / shares_outstanding
 
     pb_ratio = _first_of(ratios, "priceToBookRatioTTM")
     if pb_ratio is None and price and book_value_per_share:
         pb_ratio = price / book_value_per_share
 
-    eps_ttm = _first_of(quote, "eps") or _first_of(income_stmts[0] if income_stmts else {}, "epsdiluted", "eps")
+    eps_ttm = _first_of(quote, "eps") or _first_of(income0, "epsdiluted", "eps")
+    if pe_ttm is None and price and eps_ttm and eps_ttm > 0:
+        pe_ttm = price / eps_ttm
+
     graham_number = _graham_number(eps_ttm, book_value_per_share)
     graham_upside_pct = (graham_number - price) / price * 100 if graham_number and price else None
     graham_multiple = pe_ttm * pb_ratio if pe_ttm is not None and pb_ratio is not None else None
 
     ncav_margin_pct = None
-    if balance0 and shares_outstanding and price:
-        current_assets = _first_of(balance0, "totalCurrentAssets")
-        total_liabilities = _first_of(balance0, "totalLiabilities")
-        if current_assets is not None and total_liabilities is not None:
-            ncav_per_share = (current_assets - total_liabilities) / shares_outstanding
-            ncav_margin_pct = (ncav_per_share - price) / price * 100
+    total_liabilities = _first_of(balance0, "totalLiabilities")
+    if shares_outstanding and price and current_assets is not None and total_liabilities is not None:
+        ncav_per_share = (current_assets - total_liabilities) / shares_outstanding
+        ncav_margin_pct = (ncav_per_share - price) / price * 100
 
     owner_earnings_yield_pct = None
     if cashflow_stmts and market_cap:
@@ -305,22 +342,22 @@ def build_metrics(ticker: str, fmp_data: dict, sec_data: dict) -> dict:
         if owner_earnings is not None:
             owner_earnings_yield_pct = owner_earnings / market_cap * 100
 
-    roic_pct = None
-    if income_stmts and balance0:
-        roic_pct = _roic_pct(
-            operating_income=_first_of(income_stmts[0], "operatingIncome"),
-            income_tax_expense=_first_of(income_stmts[0], "incomeTaxExpense"),
-            income_before_tax=_first_of(income_stmts[0], "incomeBeforeTax"),
-            total_debt=_first_of(balance0, "totalDebt"),
-            total_equity=_first_of(balance0, "totalStockholdersEquity"),
-            cash=_first_of(balance0, "cashAndCashEquivalents"),
-        )
+    roic_pct = _roic_pct(
+        operating_income=_first_of(income0, "operatingIncome"),
+        income_tax_expense=_first_of(income0, "incomeTaxExpense"),
+        income_before_tax=_first_of(income0, "incomeBeforeTax"),
+        total_debt=total_debt,
+        total_equity=total_equity,
+        cash=cash,
+    )
 
     # --- Volume: a supply/demand signal from our own price data, not
     # speculation about *why* - unusual volume relative to the stock's own
-    # average suggests unusual accumulation/distribution interest. ---
-    volume = _first_of(quote, "volume")
-    avg_volume = _first_of(quote, "avgVolume")
+    # average suggests unusual accumulation/distribution interest. Falls
+    # back to volume derived from the price history itself (works for both
+    # FMP and Stooq rows) when FMP's `quote` endpoint didn't supply it. ---
+    volume = _first_of(quote, "volume") or price_data.get("volume")
+    avg_volume = _first_of(quote, "avgVolume") or price_data.get("avg_volume")
     volume_vs_avg_ratio = volume / avg_volume if volume is not None and avg_volume else None
 
     metrics = {
@@ -403,10 +440,16 @@ def build_metrics(ticker: str, fmp_data: dict, sec_data: dict) -> dict:
         },
     }
 
+    # SEC's SIC description (e.g. "Motor Vehicles & Passenger Car Bodies")
+    # is not the same taxonomy as FMP's GICS-style sector, so it's only used
+    # as an "industry" fallback, purely for display. "sector" is left None
+    # here when FMP's profile call fails - pipeline/main.py then falls back
+    # to the watchlist's own hand-set sector, which matches the scoring
+    # config's sector table; a SIC string wouldn't.
     profile_out = {
         "name": _first_of(profile, "companyName") or ticker,
         "sector": _first_of(profile, "sector"),
-        "industry": _first_of(profile, "industry"),
+        "industry": _first_of(profile, "industry") or sec_data.get("sic_description"),
         "cik": sec_data.get("cik"),
         "market_cap": market_cap,
     }

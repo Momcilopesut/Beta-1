@@ -90,6 +90,134 @@ def latest_annual_value(
     return annual[-1]["val"]
 
 
+# XBRL concept candidates per FMP-shaped field, tried in order until one has
+# annual (10-K, fp=="FY") data. Field names deliberately match what
+# pipeline.scoring.fundamentals already reads from FMP's own statement
+# responses, so a synthesized row is a drop-in substitute for a real one.
+_INCOME_CONCEPTS: dict[str, tuple[str, ...]] = {
+    "revenue": ("Revenues", "RevenueFromContractWithCustomerExcludingAssessedTax"),
+    "grossProfit": ("GrossProfit",),
+    "netIncome": ("NetIncomeLoss",),
+    "epsdiluted": ("EarningsPerShareDiluted",),
+    "operatingIncome": ("OperatingIncomeLoss",),
+    "incomeBeforeTax": (
+        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+    ),
+    "incomeTaxExpense": ("IncomeTaxExpenseBenefit",),
+    "weightedAverageShsOutDil": ("WeightedAverageNumberOfDilutedSharesOutstanding",),
+    "interestExpense": ("InterestExpense", "InterestExpenseDebt"),
+}
+# Per-share and share-count concepts are reported under different XBRL
+# units ("USD/shares", "shares") than the dollar-amount concepts above
+# ("USD"); anything not listed here defaults to USD in _annual_facts_by_end.
+_INCOME_UNIT_OVERRIDES: dict[str, str] = {
+    "epsdiluted": "USD/shares",
+    "weightedAverageShsOutDil": "shares",
+}
+_BALANCE_CONCEPTS: dict[str, tuple[str, ...]] = {
+    "totalAssets": ("Assets",),
+    "totalCurrentAssets": ("AssetsCurrent",),
+    "totalCurrentLiabilities": ("LiabilitiesCurrent",),
+    "totalLiabilities": ("Liabilities",),
+    "totalStockholdersEquity": (
+        "StockholdersEquity",
+        "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+    ),
+    "cashAndCashEquivalents": (
+        "CashAndCashEquivalentsAtCarryingValue",
+        "CashAndCashEquivalentsAtCarryingValueIncludingDiscontinuedOperations",
+    ),
+}
+_LONG_TERM_DEBT_CONCEPTS = ("LongTermDebtNoncurrent",)
+_CURRENT_DEBT_CONCEPTS = ("DebtCurrent", "LongTermDebtCurrent")
+_CASHFLOW_CONCEPTS: dict[str, tuple[str, ...]] = {
+    "operatingCashFlow": ("NetCashProvidedByUsedInOperatingActivities",),
+    "depreciationAndAmortization": (
+        "DepreciationDepletionAndAmortization",
+        "DepreciationAmortizationAndAccretionNet",
+        "DepreciationAndAmortization",
+    ),
+    "capitalExpenditure": ("PaymentsToAcquirePropertyPlantAndEquipment",),
+    "dividendsPaid": ("PaymentsOfDividendsCommonStock", "PaymentsOfDividends"),
+}
+
+
+def _annual_facts_by_end(company_facts: dict, tags: tuple[str, ...], unit: str = "USD") -> dict[str, float]:
+    """First candidate tag with any 10-K/FY data wins. Returns {fiscal_year_end: value},
+    keeping the most-recently-filed value if a figure was restated."""
+    for tag in tags:
+        facts = xbrl_concept(company_facts, "us-gaap", tag, unit)
+        annual = [f for f in facts if f.get("form") == "10-K" and f.get("fp") == "FY" and f.get("end")]
+        if annual:
+            annual.sort(key=lambda f: f.get("filed", ""))
+            return {f["end"]: f["val"] for f in annual}
+    return {}
+
+
+def _rows_from_fields(by_field: dict[str, dict[str, float]], years: int) -> list[dict]:
+    all_ends = sorted({end for values in by_field.values() for end in values}, reverse=True)
+    rows = []
+    for end in all_ends[:years]:
+        row: dict[str, Any] = {"date": end}
+        for field, values in by_field.items():
+            if end in values:
+                row[field] = values[end]
+        rows.append(row)
+    return rows
+
+
+def xbrl_fundamentals(company_facts: dict | None, years: int = 3) -> dict:
+    """Synthesizes FMP-shaped annual statement rows (most-recent-first) from
+    XBRL company facts - a free fallback for when FMP's own statement
+    endpoints are unavailable (plan-gated or erroring). Every downstream
+    metric computation in pipeline.scoring.fundamentals reads these same
+    field names regardless of which source populated them."""
+    if not company_facts:
+        return {"income_stmts": [], "balance_stmts": [], "cashflow_stmts": []}
+
+    income_by_field = {
+        field: _annual_facts_by_end(company_facts, tags, unit=_INCOME_UNIT_OVERRIDES.get(field, "USD"))
+        for field, tags in _INCOME_CONCEPTS.items()
+    }
+    balance_by_field = {field: _annual_facts_by_end(company_facts, tags) for field, tags in _BALANCE_CONCEPTS.items()}
+    cashflow_by_field = {
+        field: _annual_facts_by_end(company_facts, tags) for field, tags in _CASHFLOW_CONCEPTS.items()
+    }
+
+    long_term_debt = _annual_facts_by_end(company_facts, _LONG_TERM_DEBT_CONCEPTS)
+    current_debt = _annual_facts_by_end(company_facts, _CURRENT_DEBT_CONCEPTS)
+    debt_ends = set(long_term_debt) | set(current_debt)
+    if debt_ends:
+        balance_by_field["totalDebt"] = {
+            end: long_term_debt.get(end, 0) + current_debt.get(end, 0) for end in debt_ends
+        }
+
+    return {
+        "income_stmts": _rows_from_fields(income_by_field, years),
+        "balance_stmts": _rows_from_fields(balance_by_field, years),
+        "cashflow_stmts": _rows_from_fields(cashflow_by_field, years),
+    }
+
+
+def latest_shares_outstanding(company_facts: dict | None) -> float | None:
+    """Most recent EntityCommonStockSharesOutstanding cover-page fact (from
+    the dei taxonomy) - appears on every 10-K/10-Q, so it's more current
+    than an annual-only concept."""
+    if not company_facts:
+        return None
+    facts = []
+    try:
+        facts = company_facts["facts"]["dei"]["EntityCommonStockSharesOutstanding"]["units"]["shares"]
+    except KeyError:
+        return None
+    dated = [f for f in facts if f.get("end")]
+    if not dated:
+        return None
+    dated.sort(key=lambda f: f["end"])
+    return dated[-1]["val"]
+
+
 def fetch_company(ticker: str) -> dict[str, Any]:
     """Fetch submissions + company facts for one ticker.
 
@@ -122,5 +250,8 @@ def fetch_company(ticker: str) -> dict[str, Any]:
         "cik": cik,
         "submissions": submissions,
         "company_facts": company_facts,
+        "xbrl_fundamentals": xbrl_fundamentals(company_facts),
+        "shares_outstanding": latest_shares_outstanding(company_facts),
+        "sic_description": (submissions or {}).get("sicDescription"),
         "_errors": errors,
     }
