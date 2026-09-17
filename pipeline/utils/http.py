@@ -61,4 +61,4 @@ def get_json(
                 logger.warning("Request to %s failed (%s); retrying in %ss", url, exc, backoff)
                 time.sleep(backoff)
 
-    raise HttpError(f"Failed to fetch {url} after {max_retries} attempts") from last_exc
+    raise HttpError(f"Failed to fetch {url} after {max_retries} attempts: {last_exc}") from last_exc
