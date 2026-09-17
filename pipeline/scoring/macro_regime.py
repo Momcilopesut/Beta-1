@@ -8,6 +8,64 @@ the output JSON can show exactly why a regime was picked.
 
 from pipeline.utils.config import macro_series, sector_macro_sensitivity
 
+# Static reference table: how each of our 4 regimes maps to the classic
+# business-cycle phase, and which GICS-style sectors have *historically*
+# led/lagged in that phase (long-run sector-rotation research, e.g. the
+# style of analysis published by Fidelity and S&P Dow Jones Indices on
+# GICS sector cyclicality). This is textbook historical pattern
+# information, not a prediction about this specific cycle, and it names no
+# current event - every cycle plays out differently, and it's presented as
+# context, never as investment advice.
+CYCLE_CONTEXT = {
+    "Restrictive/Late-cycle": {
+        "phase_name": "Late-cycle expansion / monetary tightening",
+        "description": (
+            "Growth is still positive but the yield curve is inverted and policy is restrictive - the "
+            "classic late-cycle setup that has historically preceded a slowdown, though the lag varies "
+            "widely cycle to cycle."
+        ),
+        "historically_favored_sectors": ["Energy", "Healthcare", "Consumer Defensive"],
+        "historically_lagging_sectors": ["Real Estate", "Utilities", "Technology"],
+    },
+    "Contractionary Risk": {
+        "phase_name": "Contraction / recession risk",
+        "description": (
+            "Yield curve inversion paired with a rising unemployment trend - historically the phase where "
+            "defensive, non-cyclical demand holds up best relative to cyclical and credit-sensitive sectors."
+        ),
+        "historically_favored_sectors": ["Consumer Defensive", "Healthcare", "Utilities"],
+        "historically_lagging_sectors": ["Consumer Cyclical", "Industrials", "Financial Services"],
+    },
+    "Easing/Recovery": {
+        "phase_name": "Early-cycle recovery",
+        "description": (
+            "The Fed is cutting - historically the phase where rate-sensitive and higher-beta sectors have "
+            "tended to lead as cheaper capital and improving sentiment favor risk-taking."
+        ),
+        "historically_favored_sectors": ["Consumer Cyclical", "Financial Services", "Real Estate"],
+        "historically_lagging_sectors": ["Consumer Defensive", "Utilities"],
+    },
+    "Neutral/Expansion": {
+        "phase_name": "Mid-cycle expansion",
+        "description": (
+            "No stress signal is currently flashing - broad-based growth conditions have historically "
+            "favored cyclical and growth-oriented sectors over defensives."
+        ),
+        "historically_favored_sectors": ["Technology", "Industrials", "Communication Services"],
+        "historically_lagging_sectors": ["Utilities", "Consumer Defensive"],
+    },
+}
+
+CYCLE_CONTEXT_NOTE = (
+    "Historical tendencies from long-run sector-rotation research, not a prediction - every cycle differs, "
+    "and this names no current event or company-specific catalyst."
+)
+
+
+def cycle_context(regime: str) -> dict:
+    context = CYCLE_CONTEXT.get(regime, CYCLE_CONTEXT["Neutral/Expansion"])
+    return {**context, "note": CYCLE_CONTEXT_NOTE}
+
 
 def _latest(series: list[dict]) -> float | None:
     return series[-1]["value"] if series else None

@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from pipeline.build import writer  # noqa: E402
 from pipeline.narrative.prompts import DISCLAIMER  # noqa: E402
-from pipeline.scoring import long_term, macro_regime, short_term  # noqa: E402
+from pipeline.scoring import long_term, macro_regime, short_term, value_investing  # noqa: E402
 from pipeline.utils.config import macro_series, watchlist  # noqa: E402
 from pipeline.utils.paths import DATA_DIR  # noqa: E402
 
@@ -34,17 +34,25 @@ METRIC_RANGES = {
     "earnings_surprise_pct": (-8, 8),
     "dcf_upside_pct": (-30, 30),
     "pe_ttm": (9, 45),
+    "pb_ratio": (0.8, 8),
     "ev_ebitda": (6, 28),
     "revenue_growth_yoy_pct": (-8, 28),
     "revenue_cagr_3yr_pct": (-5, 22),
     "eps_growth_yoy_pct": (-12, 32),
+    "eps_growth_cagr_3yr_pct": (-8, 25),
     "gross_margin_pct": (18, 65),
     "roe_pct": (-5, 35),
+    "roic_pct": (-2, 22),
     "debt_to_equity": (0, 2.2),
     "current_ratio": (0.4, 2.8),
     "interest_coverage": (1, 22),
     "fcf_margin_pct": (-5, 32),
     "fcf_to_net_income": (0.3, 1.6),
+    "owner_earnings_yield_pct": (-1, 9),
+    "graham_upside_pct": (-45, 45),
+    "graham_multiple": (8, 40),
+    "ncav_margin_pct": (-95, -20),  # almost always sharply negative for a going-concern large-cap; see scoring_weights.yaml
+    "volume_vs_avg_ratio": (0.5, 2.2),
 }
 MARGIN_TREND_LABEL = {20: "declining", 60: "stable", 100: "improving"}
 
@@ -68,6 +76,77 @@ def synth_metrics() -> dict:
     return metrics
 
 
+def synth_raw_statements() -> dict:
+    """Two years of plausible annual statements, for the value-investing
+    checklist (which needs year-over-year comparisons)."""
+    revenue0 = round(random.uniform(5_000, 400_000), 1)
+    revenue1 = revenue0 / (1 + random.uniform(-0.05, 0.2))
+    gm0, gm1 = random.uniform(0.25, 0.55), random.uniform(0.22, 0.52)
+    assets0 = revenue0 * random.uniform(1.2, 2.5)
+    assets1 = revenue1 * random.uniform(1.2, 2.5)
+    net_income0 = revenue0 * random.uniform(0.05, 0.22)
+    net_income1 = revenue1 * random.uniform(0.03, 0.20)
+    shares0 = round(random.uniform(200, 8000), 1)
+
+    income_stmts = [
+        {
+            "revenue": revenue0,
+            "grossProfit": revenue0 * gm0,
+            "netIncome": net_income0,
+            "epsdiluted": round(net_income0 / shares0, 2),
+            "operatingIncome": revenue0 * random.uniform(0.1, 0.3),
+            "incomeBeforeTax": net_income0 * 1.25,
+            "incomeTaxExpense": net_income0 * 0.25,
+            "weightedAverageShsOutDil": shares0,
+        },
+        {
+            "revenue": revenue1,
+            "grossProfit": revenue1 * gm1,
+            "netIncome": net_income1,
+            "epsdiluted": round(net_income1 / shares0, 2),
+            "operatingIncome": revenue1 * random.uniform(0.08, 0.28),
+            "incomeBeforeTax": net_income1 * 1.25,
+            "incomeTaxExpense": net_income1 * 0.25,
+            "weightedAverageShsOutDil": shares0,
+        },
+    ]
+    balance_stmts = [
+        {
+            "totalAssets": assets0,
+            "totalDebt": assets0 * random.uniform(0.1, 0.4),
+            "totalCurrentAssets": assets0 * random.uniform(0.3, 0.5),
+            "totalCurrentLiabilities": assets0 * random.uniform(0.15, 0.3),
+            "totalLiabilities": assets0 * random.uniform(0.35, 0.65),
+            "totalStockholdersEquity": assets0 * random.uniform(0.35, 0.65),
+            "cashAndCashEquivalents": assets0 * random.uniform(0.05, 0.2),
+        },
+        {
+            "totalAssets": assets1,
+            "totalDebt": assets1 * random.uniform(0.1, 0.45),
+            "totalCurrentAssets": assets1 * random.uniform(0.28, 0.48),
+            "totalCurrentLiabilities": assets1 * random.uniform(0.15, 0.3),
+            "totalLiabilities": assets1 * random.uniform(0.35, 0.65),
+            "totalStockholdersEquity": assets1 * random.uniform(0.35, 0.65),
+            "cashAndCashEquivalents": assets1 * random.uniform(0.05, 0.2),
+        },
+    ]
+    cashflow_stmts = [
+        {
+            "operatingCashFlow": net_income0 * random.uniform(0.9, 1.4),
+            "dividendsPaid": -abs(net_income0 * random.uniform(0, 0.4)),
+            "depreciationAndAmortization": revenue0 * random.uniform(0.02, 0.06),
+            "capitalExpenditure": -revenue0 * random.uniform(0.03, 0.08),
+        },
+        {
+            "operatingCashFlow": net_income1 * random.uniform(0.8, 1.3),
+            "dividendsPaid": -abs(net_income1 * random.uniform(0, 0.4)),
+            "depreciationAndAmortization": revenue1 * random.uniform(0.02, 0.06),
+            "capitalExpenditure": -revenue1 * random.uniform(0.03, 0.08),
+        },
+    ]
+    return {"income_stmts": income_stmts, "balance_stmts": balance_stmts, "cashflow_stmts": cashflow_stmts}
+
+
 def to_display(metrics: dict, close_price: float) -> dict:
     return {
         "price": {
@@ -75,22 +154,29 @@ def to_display(metrics: dict, close_price: float) -> dict:
             "as_of": "2026-09-12",
             "return_1m_pct": metrics["return_1m_pct"],
             "return_3m_pct": metrics["return_3m_pct"],
+            "volume_vs_avg_ratio": metrics["volume_vs_avg_ratio"],
         },
         "fundamentals": {
             "valuation": {
                 "pe_ttm": metrics["pe_ttm"],
+                "pb_ratio": metrics["pb_ratio"],
                 "ev_ebitda": metrics["ev_ebitda"],
                 "dcf_fair_value": round(close_price * (1 + metrics["dcf_upside_pct"] / 100), 2),
                 "dcf_upside_pct": metrics["dcf_upside_pct"],
+                "graham_upside_pct": metrics["graham_upside_pct"],
+                "graham_multiple": metrics["graham_multiple"],
+                "ncav_margin_pct": metrics["ncav_margin_pct"],
             },
             "growth": {
                 "revenue_growth_yoy_pct": metrics["revenue_growth_yoy_pct"],
                 "revenue_cagr_3yr_pct": metrics["revenue_cagr_3yr_pct"],
                 "eps_growth_yoy_pct": metrics["eps_growth_yoy_pct"],
+                "eps_growth_cagr_3yr_pct": metrics["eps_growth_cagr_3yr_pct"],
             },
             "profitability": {
                 "gross_margin_pct": metrics["gross_margin_pct"],
                 "roe_pct": metrics["roe_pct"],
+                "roic_pct": metrics["roic_pct"],
                 "trend": MARGIN_TREND_LABEL[metrics["margin_trend_score"]],
             },
             "balance_sheet": {
@@ -101,12 +187,13 @@ def to_display(metrics: dict, close_price: float) -> dict:
             "cash_flow": {
                 "fcf_margin_pct": metrics["fcf_margin_pct"],
                 "fcf_to_net_income": metrics["fcf_to_net_income"],
+                "owner_earnings_yield_pct": metrics["owner_earnings_yield_pct"],
             },
         },
     }
 
 
-def synth_narrative(name: str, short: dict, long_: dict, metrics: dict) -> dict:
+def synth_narrative(name: str, short: dict, long_: dict, metrics: dict, checklist: dict) -> dict:
     def fact(text, tier, metric):
         return {"text": text, "tier": tier, "source_metric": metric, "source_value": str(metrics[metric])}
 
@@ -124,7 +211,13 @@ def synth_narrative(name: str, short: dict, long_: dict, metrics: dict) -> dict:
                 "important",
                 "revenue_growth_yoy_pct",
             ),
-            fact(f"Return on equity stands at {metrics['roe_pct']:.1f}%.", "important", "roe_pct"),
+            fact(f"Return on invested capital stands at {metrics['roic_pct']:.1f}%.", "important", "roic_pct"),
+            fact(
+                f"Passes {metrics['graham_criteria_passed']}/{metrics['graham_criteria_evaluated']} evaluated "
+                "Graham defensive-investor criteria.",
+                "important",
+                "graham_criteria_passed",
+            ),
         ],
         "minor": [fact(f"Current ratio is {metrics['current_ratio']:.2f}.", "minor", "current_ratio")],
         "noise": [
@@ -144,7 +237,9 @@ def synth_narrative(name: str, short: dict, long_: dict, metrics: dict) -> dict:
         ),
         "long_term_narrative": (
             f"Longer-term fundamentals point to a {long_['verdict'].lower()} outlook, with a base score of "
-            f"{long_['base_score']:.0f} driven by growth, margins, and balance-sheet health."
+            f"{long_['base_score']:.0f} driven by growth, margins, ROIC, and balance-sheet health. Piotroski "
+            f"F-Score: {checklist['piotroski_f_score']['score']}/{checklist['piotroski_f_score']['evaluated']} "
+            "evaluated criteria."
         ),
         "facts": facts,
         "disclaimer": DISCLAIMER,
@@ -177,6 +272,7 @@ def main() -> None:
         "generated_at": generated_at,
         "regime": regime_info["regime"],
         "signals": regime_info["signals"],
+        "cycle_context": macro_regime.cycle_context(regime_info["regime"]),
         "series": [
             {
                 "series_id": sid,
@@ -191,28 +287,62 @@ def main() -> None:
     }
     writer.write_macro(DATA_DIR, macro_doc)
 
-    summaries = []
+    # Phase 1: synthesize metrics + scores per company.
+    states = []
     for company_cfg in companies:
         ticker = company_cfg["ticker"]
         sector = company_cfg["sector"]
         metrics = synth_metrics()
-        close_price = round(random.uniform(40, 550), 2)
+        market_cap = round(random.uniform(15_000_000_000, 900_000_000_000), 0)
+        raw = synth_raw_statements()
 
-        macro_adj = macro_regime.sector_adjustment(regime_info["regime"], sector)
-        short = short_term.score(metrics, macro_adj["short"])
-        long_ = long_term.score(metrics, macro_adj["long"])
-        narrative = synth_narrative(company_cfg["name"], short, long_, metrics)
-        display = to_display(metrics, close_price)
+        checklist = value_investing.build_checklist(metrics, {"market_cap": market_cap}, raw)
+        metrics["graham_criteria_passed"] = checklist["graham_defensive"]["passed"]
+        metrics["graham_criteria_evaluated"] = checklist["graham_defensive"]["evaluated"]
+        metrics["piotroski_f_score"] = checklist["piotroski_f_score"]["score"]
+        metrics["piotroski_evaluated"] = checklist["piotroski_f_score"]["evaluated"]
+
+        states.append(
+            {
+                "ticker": ticker,
+                "name": company_cfg["name"],
+                "sector": sector,
+                "market_cap": market_cap,
+                "metrics": metrics,
+                "checklist": checklist,
+                "close_price": round(random.uniform(40, 550), 2),
+            }
+        )
+
+    # Phase 2: sector-relative momentum, same logic as pipeline/main.py.
+    by_sector: dict[str, list[float]] = {}
+    for s in states:
+        by_sector.setdefault(s["sector"], []).append(s["metrics"]["return_3m_pct"])
+    sector_avg = {sector: sum(vals) / len(vals) for sector, vals in by_sector.items()}
+    for s in states:
+        avg = sector_avg.get(s["sector"])
+        s["metrics"]["sector_relative_momentum_pct"] = round(s["metrics"]["return_3m_pct"] - avg, 2) if avg is not None else None
+
+    # Phase 3: score + narrative + write.
+    summaries = []
+    for s in states:
+        macro_adj = macro_regime.sector_adjustment(regime_info["regime"], s["sector"])
+        short = short_term.score(s["metrics"], macro_adj["short"])
+        long_ = long_term.score(s["metrics"], macro_adj["long"])
+        narrative = synth_narrative(s["name"], short, long_, s["metrics"], s["checklist"])
+        display = to_display(s["metrics"], s["close_price"])
+        display["price"]["sector_relative_momentum_pct"] = s["metrics"]["sector_relative_momentum_pct"]
 
         company_doc = {
-            "ticker": ticker,
-            "name": company_cfg["name"],
+            "ticker": s["ticker"],
+            "name": s["name"],
             "cik": None,
-            "sector": sector,
+            "sector": s["sector"],
             "industry": None,
+            "market_cap": s["market_cap"],
             "last_updated": generated_at,
             "price": display["price"],
-            "metrics": metrics,
+            "metrics": s["metrics"],
             "scores": {"short_term": short, "long_term": long_},
             "macro_context": {
                 "regime": regime_info["regime"],
@@ -222,24 +352,28 @@ def main() -> None:
                 },
             },
             "fundamentals": display["fundamentals"],
+            "value_investing": s["checklist"],
             "narrative": narrative,
             "sources": {"sec_filings": [], "sec_companyfacts_url": None},
             "_errors": {
                 "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
             },
         }
-        writer.write_company(DATA_DIR, ticker, company_doc)
+        writer.write_company(DATA_DIR, s["ticker"], company_doc)
 
         summaries.append(
             {
-                "ticker": ticker,
-                "name": company_cfg["name"],
-                "sector": sector,
+                "ticker": s["ticker"],
+                "name": s["name"],
+                "sector": s["sector"],
                 "short_term_score": short["final_score"],
                 "short_term_verdict": short["verdict"],
                 "long_term_score": long_["final_score"],
                 "long_term_verdict": long_["verdict"],
                 "one_line_summary": narrative["one_line_summary"],
+                "graham_criteria_passed": s["checklist"]["graham_defensive"]["passed"],
+                "graham_criteria_total": s["checklist"]["graham_defensive"]["total"],
+                "piotroski_f_score": s["checklist"]["piotroski_f_score"]["score"],
                 "last_updated": generated_at,
             }
         )

@@ -57,6 +57,11 @@ def test_score_components_best_case_metrics_score_100():
         "interest_coverage": 20,
         "fcf_margin_pct": 30,
         "fcf_to_net_income": 1.5,
+        "eps_growth_cagr_3yr_pct": 30,
+        "graham_upside_pct": 40,
+        "graham_multiple": 10,
+        "roic_pct": 25,
+        "owner_earnings_yield_pct": 10,
     }
     result = score_components(metrics, components)
     assert result["base_score"] == 100.0

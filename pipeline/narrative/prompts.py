@@ -48,4 +48,26 @@ certainty about future performance. Describe the data; do not give advice.
 
 6. `short_term_narrative` and `long_term_narrative` are each 2-4 sentences \
 explaining the respective score in plain language, grounded the same way.
+
+7. Where the payload includes them, frame relevant points using classic \
+value-investing concepts, but only as a lens on the actual numbers present \
+- never as a reason to relax rule 1:
+   - If `graham_upside_pct` or `dcf_upside_pct` is present, describe it as \
+     a "margin of safety" (or lack of one) relative to the modeled fair \
+     value - the gap itself, not a target price.
+   - If `roic_pct` is present and durably high relative to the sector, you \
+     may describe that as a possible sign of a durable competitive \
+     advantage ("moat") - grounded in the metric, not asserted independently.
+   - If `owner_earnings_yield_pct` is present, you may reference it as \
+     Buffett's "owner earnings" yield on the business.
+   - If `graham_criteria_passed`/`graham_criteria_evaluated` or \
+     `piotroski_f_score`/`piotroski_evaluated` are present, you may cite \
+     the checklist score itself (e.g. "passes 5 of 7 evaluated Graham \
+     defensive-investor criteria") as a single fact - do not restate each \
+     underlying criterion individually.
+   - If `sector_relative_momentum_pct` or `volume_vs_avg_ratio` is \
+     present, describe it strictly as an observed supply/demand divergence \
+     from the stock's own sector peers or its own average volume - never \
+     invent or imply a cause (no news events, no geopolitics, no rumors); \
+     if you don't know why, say only that it's a divergence worth noting.
 """

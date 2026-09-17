@@ -27,8 +27,20 @@ config/watchlist.yaml  →  pipeline (fetch → score → AI narrative)  →  da
   produces a one-line summary plus facts tiered Critical → Important → Minor → Noise.
   Every fact must cite a real metric key from the payload; facts that don't are
   dropped in code (`pipeline/narrative/grounding.py`), not just discouraged by prompt.
+- **Value-investing checklists** (`pipeline/scoring/value_investing.py`): Graham's
+  Defensive Investor criteria and the Piotroski F-Score, computed from the same fetched
+  statements — no extra API calls. Buffett/Munger-style metrics (owner earnings yield,
+  ROIC as a moat proxy, the Graham Number/margin of safety) feed into the long-term
+  score's existing components (see `config/scoring_weights.yaml`).
+- **Supply/demand signal**: each company's 3-month return vs. the average of its sector
+  peers in the watchlist, plus volume vs. its own average — reported as an observed
+  divergence, never a claimed cause (no news/geopolitics feed is wired in, deliberately,
+  to avoid a financial tool inventing plausible-sounding but unverifiable claims).
+- **Economic-cycle context**: the macro page frames the current regime against classic
+  business-cycle/sector-rotation theory (which sectors have historically led/lagged in
+  this phase) — textbook reference, explicitly not a prediction.
 - **Site**: plain HTML/CSS/JS, no framework, no build step — reads the generated JSON
-  directly.
+  directly. The dashboard groups companies by GICS-style sector.
 
 ## Local development
 
@@ -63,6 +75,18 @@ Preview the site:
 `data/` currently holds synthetic sample data (see `scripts/generate_sample_data.py`)
 so the site is browsable before you've run the pipeline for real — running
 `python -m pipeline.main` with real API keys overwrites it.
+
+## Data source limits
+
+FMP's free tier does not cover every `/stable/` endpoint this pipeline calls — in
+practice, calls beyond a fairly small daily allowance return `402 Payment Required`
+rather than data. When that happens the affected metrics show as missing (never
+fabricated) and `data/meta.json`'s `sources_status.fmp` reads `"degraded"`; per-company
+`_errors` now include the real HTTP status (e.g. `401`, `402`) so you can tell an
+invalid-key problem from a plan-limit problem at a glance. Two options if you're
+consistently hitting this: upgrade the FMP plan, or trim `config/watchlist.yaml` so a
+full run uses fewer calls. SEC EDGAR's XBRL data is used as a fallback for some
+fundamentals regardless.
 
 ## Configuration
 

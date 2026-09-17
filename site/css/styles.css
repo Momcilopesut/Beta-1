@@ -58,10 +58,28 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
 
 .status { color: var(--muted); font-size: 0.9rem; }
 
+.sector-group { margin-bottom: 2rem; }
+.sector-heading {
+  font-size: 1.05rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.35rem;
+  margin-bottom: 1rem;
+}
+.sector-count { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1rem;
+}
+
+.mini-badges { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+.mini-badge {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  background: var(--border);
+  color: var(--fg);
 }
 .card {
   display: block;
@@ -137,6 +155,41 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 .subscore-table th { color: var(--muted); font-weight: 600; }
 
 .sources ul { padding-left: 1.25rem; }
+
+.attribution { font-size: 0.75rem; color: var(--muted); font-weight: 400; }
+
+.checklist-columns { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.checklist-card {
+  flex: 1;
+  min-width: 260px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.checklist-card h4 { margin: 0 0 0.5rem; font-size: 0.95rem; }
+.checklist-score { font-size: 0.75rem; color: var(--muted); font-weight: 400; }
+.checklist-note { font-size: 0.8rem; color: var(--muted); margin: 0.25rem 0 0.5rem; }
+.checklist { list-style: none; padding: 0; margin: 0; font-size: 0.85rem; }
+.checklist li { display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+.checklist li:last-child { border-bottom: none; }
+.checklist-text { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.checklist-label { font-weight: 500; }
+.checklist-detail { font-size: 0.75rem; color: var(--muted); }
+.check-pass { color: var(--strong); font-weight: 700; }
+.check-fail { color: var(--weak); font-weight: 700; }
+.check-unknown { color: var(--muted); font-weight: 700; }
+
+.supply-demand ul { padding-left: 1.25rem; font-size: 0.9rem; }
+
+.cycle-context {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.cycle-context h3 { margin-top: 0; }
 
 .series-grid {
   display: grid;

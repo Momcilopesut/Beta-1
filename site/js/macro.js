@@ -18,7 +18,23 @@ function render(doc) {
       <h2>Current Macro Regime: <span class="regime-tag">${escapeHtml(doc.regime)}</span></h2>
       <p class="meta">Updated ${escapeHtml(doc.generated_at)}</p>
     </section>
+    ${renderCycleContext(doc.cycle_context)}
     <section class="series-grid">${seriesHtml}</section>
+  `;
+}
+
+function renderCycleContext(cycle) {
+  if (!cycle) return "";
+  const favored = (cycle.historically_favored_sectors || []).map(escapeHtml).join(", ");
+  const lagging = (cycle.historically_lagging_sectors || []).map(escapeHtml).join(", ");
+  return `
+    <section class="cycle-context">
+      <h3>Business-Cycle Context: ${escapeHtml(cycle.phase_name)}</h3>
+      <p>${escapeHtml(cycle.description)}</p>
+      <p><strong>Historically favored sectors:</strong> ${favored || "—"}</p>
+      <p><strong>Historically lagging sectors:</strong> ${lagging || "—"}</p>
+      <p class="meta">${escapeHtml(cycle.note)}</p>
+    </section>
   `;
 }
 

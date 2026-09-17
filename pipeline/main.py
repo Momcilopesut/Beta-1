@@ -6,6 +6,15 @@ Usage:
   python -m pipeline.main --dry-run                # write to data/ locally, no commit (commit is CI's job)
   python -m pipeline.main --skip-ai                 # fetch + score only, no Anthropic spend
   python -m pipeline.main --ai-only --tickers AAPL  # re-run just the narrative step for already-scored companies
+
+Runs in three phases so cross-company signals (currently: sector-relative
+momentum) are available before any narrative is generated:
+  1. fetch_and_score_company() for every ticker - fetch, quantitative
+     scoring, and the Graham/Piotroski checklists.
+  2. apply_sector_relative_momentum() - a pure in-memory pass over the
+     collected results.
+  3. finalize_company() for every ticker - AI narrative + final JSON
+     assembly + write.
 """
 
 import argparse
@@ -18,7 +27,7 @@ from pipeline.fetch import fmp, fred, sec_edgar
 from pipeline.narrative.anthropic_client import NarrativeError, generate_narrative
 from pipeline.narrative.grounding import enforce_grounding
 from pipeline.narrative.prompts import DISCLAIMER
-from pipeline.scoring import long_term, macro_regime, short_term
+from pipeline.scoring import long_term, macro_regime, short_term, value_investing
 from pipeline.scoring.fundamentals import build_metrics
 from pipeline.utils.config import macro_series, watchlist
 from pipeline.utils.paths import DATA_DIR
@@ -26,7 +35,7 @@ from pipeline.utils.paths import DATA_DIR
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
-PIPELINE_VERSION = "1.0.0"
+PIPELINE_VERSION = "1.1.0"
 
 EMPTY_FACT_TIERS = {"critical": [], "important": [], "minor": [], "noise": []}
 
@@ -82,7 +91,74 @@ def build_macro_doc(macro_data: dict, regime_info: dict, generated_at: str) -> d
         "regime": regime_info["regime"],
         "signals": regime_info["signals"],
         "series": series_out,
+        "cycle_context": macro_regime.cycle_context(regime_info["regime"]),
     }
+
+
+def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
+    """Fetch + score one company. Does not generate its narrative yet -
+    narratives happen after apply_sector_relative_momentum() so they can
+    cite that cross-company signal too."""
+    ticker = company_cfg["ticker"]
+    logger.info("Processing %s", ticker)
+
+    fmp_data = fmp.fetch_company(ticker)
+    sec_data = sec_edgar.fetch_company(ticker)
+
+    built = build_metrics(ticker, fmp_data, sec_data)
+    metrics, display, profile, raw = built["metrics"], built["display"], built["profile"], built["raw"]
+
+    name = company_cfg.get("name") or profile.get("name") or ticker
+    sector = profile.get("sector") or company_cfg.get("sector")
+
+    checklist = value_investing.build_checklist(metrics, profile, raw)
+    metrics["graham_criteria_passed"] = checklist["graham_defensive"]["passed"]
+    metrics["graham_criteria_evaluated"] = checklist["graham_defensive"]["evaluated"]
+    metrics["piotroski_f_score"] = checklist["piotroski_f_score"]["score"]
+    metrics["piotroski_evaluated"] = checklist["piotroski_f_score"]["evaluated"]
+
+    recent_filings = sec_edgar.recent_filings(sec_data["submissions"]) if sec_data.get("submissions") else []
+    companyfacts_url = (
+        f"https://data.sec.gov/api/xbrl/companyfacts/CIK{sec_data['cik']}.json" if sec_data.get("cik") else None
+    )
+    errors = {**fmp_data.get("_errors", {}), **{f"sec_{k}": v for k, v in sec_data.get("_errors", {}).items()}}
+
+    return {
+        "ticker": ticker,
+        "name": name,
+        "sector": sector,
+        "profile": profile,
+        "metrics": metrics,
+        "display": display,
+        "checklist": checklist,
+        "recent_filings": recent_filings,
+        "companyfacts_url": companyfacts_url,
+        "errors": errors,
+    }
+
+
+def apply_sector_relative_momentum(states: list[dict]) -> None:
+    """Mutates each state's metrics/display in place, adding
+    sector_relative_momentum_pct: this company's 3-month return minus the
+    average 3-month return of the other tracked companies in the same
+    sector. A relative-strength (supply/demand) signal derived purely from
+    our own price data - it notes *that* a stock is diverging from its
+    peers, not a claimed *reason* why."""
+    by_sector: dict[str, list[float]] = {}
+    for state in states:
+        r = state["metrics"].get("return_3m_pct")
+        if r is not None:
+            by_sector.setdefault(state["sector"], []).append(r)
+
+    sector_avg = {sector: sum(vals) / len(vals) for sector, vals in by_sector.items()}
+
+    for state in states:
+        r = state["metrics"].get("return_3m_pct")
+        avg = sector_avg.get(state["sector"])
+        relative = (r - avg) if r is not None and avg is not None else None
+        state["metrics"]["sector_relative_momentum_pct"] = relative
+        state["display"]["price"]["sector_relative_momentum_pct"] = relative
+        state["display"]["price"]["sector_avg_return_3m_pct"] = sector_avg.get(state["sector"])
 
 
 def _narrative_payload(ticker: str, name: str, sector: str | None, metrics: dict, short: dict, long: dict, regime_info: dict, macro_adj: dict) -> dict:
@@ -131,28 +207,14 @@ def _run_narrative(ticker: str, payload: dict) -> tuple[dict, int]:
     return narrative_out, dropped
 
 
-def process_company(company_cfg: dict, regime_info: dict, skip_ai: bool) -> tuple[dict, dict, int]:
+def finalize_company(state: dict, regime_info: dict, skip_ai: bool) -> tuple[dict, dict, int]:
     """Returns (company_doc, watchlist_summary, narrative_warnings)."""
-    ticker = company_cfg["ticker"]
-    logger.info("Processing %s", ticker)
-
-    fmp_data = fmp.fetch_company(ticker)
-    sec_data = sec_edgar.fetch_company(ticker)
-
-    built = build_metrics(ticker, fmp_data, sec_data)
-    metrics, display, profile = built["metrics"], built["display"], built["profile"]
-
-    name = company_cfg.get("name") or profile.get("name") or ticker
-    sector = profile.get("sector") or company_cfg.get("sector")
+    ticker, name, sector = state["ticker"], state["name"], state["sector"]
+    metrics, display, profile = state["metrics"], state["display"], state["profile"]
 
     macro_adj = macro_regime.sector_adjustment(regime_info["regime"], sector)
     short = short_term.score(metrics, macro_adj["short"])
     long = long_term.score(metrics, macro_adj["long"])
-
-    recent_filings = sec_edgar.recent_filings(sec_data["submissions"]) if sec_data.get("submissions") else []
-    companyfacts_url = (
-        f"https://data.sec.gov/api/xbrl/companyfacts/CIK{sec_data['cik']}.json" if sec_data.get("cik") else None
-    )
 
     generated_at = writer.now_iso()
     clean_metrics = {k: v for k, v in metrics.items() if v is not None}
@@ -170,14 +232,13 @@ def process_company(company_cfg: dict, regime_info: dict, skip_ai: bool) -> tupl
         payload = _narrative_payload(ticker, name, sector, metrics, short, long, regime_info, macro_adj)
         narrative_out, narrative_warnings = _run_narrative(ticker, payload)
 
-    errors = {**fmp_data.get("_errors", {}), **{f"sec_{k}": v for k, v in sec_data.get("_errors", {}).items()}}
-
     company_doc = {
         "ticker": ticker,
         "name": name,
         "cik": profile.get("cik"),
         "sector": sector,
         "industry": profile.get("industry"),
+        "market_cap": profile.get("market_cap"),
         "last_updated": generated_at,
         "price": display["price"],
         "metrics": clean_metrics,
@@ -190,9 +251,10 @@ def process_company(company_cfg: dict, regime_info: dict, skip_ai: bool) -> tupl
             },
         },
         "fundamentals": display["fundamentals"],
+        "value_investing": state["checklist"],
         "narrative": narrative_out,
-        "sources": {"sec_filings": recent_filings, "sec_companyfacts_url": companyfacts_url},
-        "_errors": errors,
+        "sources": {"sec_filings": state["recent_filings"], "sec_companyfacts_url": state["companyfacts_url"]},
+        "_errors": state["errors"],
     }
 
     summary = {
@@ -204,6 +266,9 @@ def process_company(company_cfg: dict, regime_info: dict, skip_ai: bool) -> tupl
         "long_term_score": long["final_score"],
         "long_term_verdict": long["verdict"],
         "one_line_summary": narrative_out["one_line_summary"],
+        "graham_criteria_passed": state["checklist"]["graham_defensive"]["passed"],
+        "graham_criteria_total": state["checklist"]["graham_defensive"]["total"],
+        "piotroski_f_score": state["checklist"]["piotroski_f_score"]["score"],
         "last_updated": generated_at,
     }
 
@@ -237,26 +302,34 @@ def run_full(args) -> int:
     macro_doc = build_macro_doc(macro_data, regime_info, generated_at)
     writer.write_macro(out_dir, macro_doc)
 
-    summaries = []
-    total_narrative_warnings = 0
+    # Phase 1: fetch + score every company (no narrative yet).
+    states = []
     fmp_error_count = 0
     sec_error_count = 0
-
     for company_cfg in companies:
         try:
-            company_doc, summary, warnings = process_company(company_cfg, regime_info, args.skip_ai)
+            state = fetch_and_score_company(company_cfg, regime_info)
         except Exception:
             logger.exception("Failed to process %s entirely, skipping", company_cfg["ticker"])
             continue
 
-        total_narrative_warnings += warnings
-        errs = company_doc["_errors"]
+        errs = state["errors"]
         if any(not k.startswith("sec_") for k in errs):
             fmp_error_count += 1
         if any(k.startswith("sec_") for k in errs):
             sec_error_count += 1
+        states.append(state)
 
-        writer.write_company(out_dir, company_cfg["ticker"], company_doc)
+    # Phase 2: cross-company signals.
+    apply_sector_relative_momentum(states)
+
+    # Phase 3: narrative + final assembly + write.
+    summaries = []
+    total_narrative_warnings = 0
+    for state in states:
+        company_doc, summary, warnings = finalize_company(state, regime_info, args.skip_ai)
+        total_narrative_warnings += warnings
+        writer.write_company(out_dir, state["ticker"], company_doc)
         summaries.append(summary)
 
     if fmp_error_count:

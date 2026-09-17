@@ -33,15 +33,19 @@ long_term:
     valuation:
       label: Valuation
       weight: 25
-      metrics: [pe_ttm, ev_ebitda, dcf_upside_pct]
+      # graham_upside_pct/graham_multiple: Benjamin Graham's fair-value and
+      # combined P/E x P/B checks, alongside the existing DCF-based measures.
+      metrics: [pe_ttm, ev_ebitda, dcf_upside_pct, graham_upside_pct, graham_multiple]
     growth:
       label: Growth
       weight: 25
-      metrics: [revenue_growth_yoy_pct, revenue_cagr_3yr_pct, eps_growth_yoy_pct]
+      metrics: [revenue_growth_yoy_pct, revenue_cagr_3yr_pct, eps_growth_yoy_pct, eps_growth_cagr_3yr_pct]
     profitability:
       label: Profitability & Margin Trend
       weight: 20
-      metrics: [gross_margin_pct, roe_pct, margin_trend_score]
+      # roic_pct: Buffett/Munger's preferred capital-efficiency measure -
+      # a durably high ROIC is their standard proxy for a moat.
+      metrics: [gross_margin_pct, roe_pct, margin_trend_score, roic_pct]
     balance_sheet:
       label: Balance Sheet Health
       weight: 15
@@ -49,7 +53,22 @@ long_term:
     cash_flow:
       label: Cash Generation Quality
       weight: 15
-      metrics: [fcf_margin_pct, fcf_to_net_income]
+      # owner_earnings_yield_pct: Buffett's "owner earnings" (net income +
+      # D&A - capex) as a yield on market cap.
+      metrics: [fcf_margin_pct, fcf_to_net_income, owner_earnings_yield_pct]
+
+# Deliberately NOT fed into the weighted score above (each is exposed in the
+# output JSON and available to the AI narrative, but scoring them directly
+# would be misleading):
+#   ncav_margin_pct     - Graham's ultra-conservative "net-net" test is
+#                         almost always sharply negative for a normal,
+#                         going-concern large-cap; that's expected, not a
+#                         quality signal, so it's informational only (a rare
+#                         positive value is itself the interesting fact).
+#   volume_vs_avg_ratio - elevated volume is directionally ambiguous (can
+#                         mean accumulation or panic selling); it's a
+#                         supply/demand observation for the narrative to
+#                         note, not a "higher/lower is better" score input.
 
 # metric_key: {low, high, direction}
 thresholds:
@@ -73,6 +92,16 @@ thresholds:
   interest_coverage: {low: 2, high: 20, direction: higher_better}
   fcf_margin_pct: {low: 0, high: 30, direction: higher_better}
   fcf_to_net_income: {low: 0.5, high: 1.5, direction: higher_better}
+  eps_growth_cagr_3yr_pct: {low: -10, high: 30, direction: higher_better}
+  # Graham Number margin of safety (mirrors dcf_upside_pct's shape; wider
+  # band since the Graham Number is more volatile for low-book-value names).
+  graham_upside_pct: {low: -40, high: 40, direction: higher_better}
+  # P/E x P/B; Graham's own combined ceiling was 22.5.
+  graham_multiple: {low: 10, high: 35, direction: lower_better}
+  # Buffett/Munger's capital-efficiency threshold; a sustained >15% ROIC is
+  # their common heuristic for a likely moat.
+  roic_pct: {low: 0, high: 25, direction: higher_better}
+  owner_earnings_yield_pct: {low: 0, high: 10, direction: higher_better}
 
 verdict_bands:
   - {min: 75, label: Strong}

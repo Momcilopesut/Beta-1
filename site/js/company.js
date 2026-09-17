@@ -59,6 +59,10 @@ function render(doc) {
       ${renderSubscoreTable("Long-Term", doc.scores.long_term)}
     </section>
 
+    ${renderValueInvesting(doc.value_investing)}
+
+    ${renderSupplyDemand(doc.price)}
+
     <section class="macro">
       <h3>Macro Context</h3>
       <p>Regime: <strong>${escapeHtml(doc.macro_context.regime)}</strong></p>
@@ -110,6 +114,81 @@ function renderFactTier(label, facts, expanded) {
       <summary>${label} (${facts.length})</summary>
       <ul>${items}</ul>
     </details>
+  `;
+}
+
+function renderChecklistIcon(passed) {
+  if (passed === true) return '<span class="check-pass" title="Passed">✓</span>';
+  if (passed === false) return '<span class="check-fail" title="Failed">✗</span>';
+  return '<span class="check-unknown" title="Not enough data to evaluate">?</span>';
+}
+
+function renderValueInvesting(valueInvesting) {
+  if (!valueInvesting) return "";
+  const graham = valueInvesting.graham_defensive;
+  const piotroski = valueInvesting.piotroski_f_score;
+
+  const grahamRows = (graham?.criteria || [])
+    .map(
+      (c) =>
+        `<li>${renderChecklistIcon(c.passed)}<span class="checklist-text"><span class="checklist-label">${escapeHtml(c.criterion)}</span><span class="checklist-detail">${escapeHtml(c.detail)}</span></span></li>`
+    )
+    .join("");
+
+  const piotroskiRows = (piotroski?.criteria || [])
+    .map(
+      (c) =>
+        `<li>${renderChecklistIcon(c.passed)}<span class="checklist-text"><span class="checklist-label">${escapeHtml(c.criterion)}</span></span></li>`
+    )
+    .join("");
+
+  const piotroskiNote = piotroski?.note
+    ? `<p class="checklist-note">${escapeHtml(piotroski.note)}</p>`
+    : "";
+
+  return `
+    <section class="value-investing">
+      <h3>Value Investing Checklist <span class="attribution">(Graham / Buffett / Munger frameworks)</span></h3>
+      <div class="checklist-columns">
+        <div class="checklist-card">
+          <h4>Graham Defensive Investor ${graham ? `<span class="checklist-score">${graham.passed}/${graham.evaluated} evaluated</span>` : ""}</h4>
+          <ul class="checklist">${grahamRows}</ul>
+        </div>
+        <div class="checklist-card">
+          <h4>Piotroski F-Score ${piotroski ? `<span class="checklist-score">${piotroski.score}/${piotroski.evaluated} evaluated (max 9)</span>` : ""}</h4>
+          ${piotroskiNote}
+          <ul class="checklist">${piotroskiRows}</ul>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function renderSupplyDemand(price) {
+  if (!price) return "";
+  const relMomentum = price.sector_relative_momentum_pct;
+  const volumeRatio = price.volume_vs_avg_ratio;
+  if (relMomentum === null && volumeRatio === null && relMomentum === undefined && volumeRatio === undefined) {
+    return "";
+  }
+  return `
+    <section class="supply-demand">
+      <h3>Supply &amp; Demand Signals</h3>
+      <p class="meta">Observed divergences from the stock's own sector peers and its own average volume - a
+      description of what the price/volume data shows, not a claim about why.</p>
+      <ul>
+        ${
+          relMomentum !== null && relMomentum !== undefined
+            ? `<li>3-month return is ${formatNumber(Math.abs(relMomentum), { decimals: 1, suffix: "pp" })} ${relMomentum >= 0 ? "above" : "below"} the average of its sector peers in this watchlist.</li>`
+            : ""
+        }
+        ${
+          volumeRatio !== null && volumeRatio !== undefined
+            ? `<li>Recent volume is running at ${formatNumber(volumeRatio, { decimals: 2, suffix: "×" })} its own average.</li>`
+            : ""
+        }
+      </ul>
+    </section>
   `;
 }
 

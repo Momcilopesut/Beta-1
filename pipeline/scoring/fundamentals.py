@@ -7,8 +7,15 @@ a live account before relying on this in production. Any metric that can't
 be resolved from any candidate key, or whose source call failed upstream, is
 left as None here — pipeline.scoring.thresholds treats a missing metric as
 neutral rather than failing the run.
+
+Also computes the classic value-investing metrics associated with Benjamin
+Graham and Warren Buffett (Graham Number, Graham multiple, net current asset
+value, owner earnings, return on invested capital) - all derived from fields
+already present in the existing FMP calls, deliberately adding no new
+endpoints (this account is on a limited plan; see pipeline/fetch/fmp.py).
 """
 
+import math
 from typing import Any
 
 from pipeline.fetch.sec_edgar import xbrl_concept
@@ -35,6 +42,18 @@ def _pct(fraction: float | None) -> float | None:
     """FMP *TTM ratio fields (e.g. roeTTM) are decimal fractions; convert to
     percentage points."""
     return None if fraction is None else fraction * 100
+
+
+def _historical_rows(historical_prices: Any) -> list[dict]:
+    """FMP's /stable/historical-price-eod/full has returned a bare list of
+    {date, close, ...} rows directly in practice, not the older
+    {"symbol":..., "historical": [...]} wrapper this originally assumed.
+    Accept either shape (or a missing/failed fetch) instead of crashing."""
+    if isinstance(historical_prices, list):
+        return historical_prices
+    if isinstance(historical_prices, dict):
+        return historical_prices.get("historical") or []
+    return []
 
 
 def _returns_from_history(historical: list[dict]) -> dict:
@@ -136,6 +155,54 @@ def _margin_trend(statements: list[dict]) -> str:
     return "stable"
 
 
+def _graham_number(eps: float | None, book_value_per_share: float | None) -> float | None:
+    """sqrt(22.5 x EPS x BVPS) - Graham's quick fair-value estimate. 22.5 is
+    Graham's own combined ceiling (P/E <= 15 x P/B <= 1.5). Undefined (None)
+    if either input is missing or non-positive - a negative product has no
+    real square root and isn't meaningful here anyway."""
+    if eps is None or book_value_per_share is None or eps <= 0 or book_value_per_share <= 0:
+        return None
+    return math.sqrt(22.5 * eps * book_value_per_share)
+
+
+def _owner_earnings(net_income: float | None, d_and_a: float | None, capex: float | None) -> float | None:
+    """Buffett's simplified owner earnings: net income + depreciation &
+    amortization - capital expenditures (working-capital changes omitted,
+    as in the commonly-used simplified form). capex's sign varies by
+    source, so its magnitude is always subtracted regardless of sign."""
+    if net_income is None or d_and_a is None or capex is None:
+        return None
+    return net_income + d_and_a - abs(capex)
+
+
+def _roic_pct(
+    operating_income: float | None,
+    income_tax_expense: float | None,
+    income_before_tax: float | None,
+    total_debt: float | None,
+    total_equity: float | None,
+    cash: float | None,
+) -> float | None:
+    """Return on invested capital: NOPAT / (debt + equity - cash), as a
+    percentage. NOPAT = operating income x (1 - effective tax rate).
+    None if pretax income isn't positive (effective tax rate is not
+    meaningful for a loss-making period) or invested capital isn't
+    positive."""
+    if operating_income is None or income_before_tax is None or not income_before_tax > 0:
+        return None
+    if income_tax_expense is None:
+        return None
+    tax_rate = income_tax_expense / income_before_tax
+    tax_rate = min(max(tax_rate, 0.0), 1.0)
+    nopat = operating_income * (1 - tax_rate)
+    if total_debt is None or total_equity is None or cash is None:
+        return None
+    invested_capital = total_debt + total_equity - cash
+    if invested_capital <= 0:
+        return None
+    return nopat / invested_capital * 100
+
+
 def build_metrics(ticker: str, fmp_data: dict, sec_data: dict) -> dict:
     """Returns {"metrics": {...flat, scoring-ready...}, "display": {...grouped
     for output JSON...}, "profile": {name, sector, industry, cik}}."""
@@ -145,8 +212,9 @@ def build_metrics(ticker: str, fmp_data: dict, sec_data: dict) -> dict:
     key_metrics = _first_row(fmp_data.get("key_metrics_ttm"))
     dcf = _first_row(fmp_data.get("dcf"))
     income_stmts = fmp_data.get("income_statement") or []
+    balance_stmts = fmp_data.get("balance_sheet") or []
     cashflow_stmts = fmp_data.get("cash_flow") or []
-    historical = (fmp_data.get("historical_prices") or {}).get("historical") or []
+    historical = _historical_rows(fmp_data.get("historical_prices"))
     company_facts = sec_data.get("company_facts")
 
     price_data = _returns_from_history(historical)
@@ -192,6 +260,69 @@ def build_metrics(ticker: str, fmp_data: dict, sec_data: dict) -> dict:
         if fcf is not None and net_income:
             fcf_to_net_income = fcf / net_income
 
+    # --- Value-investing metrics (Graham / Buffett) ---
+    shares_outstanding = _first_of(quote, "sharesOutstanding") or _first_of(
+        key_metrics, "sharesOutstandingTTM"
+    )
+    market_cap = _first_of(quote, "marketCap") or _first_of(profile, "mktCap")
+    price = price_data.get("close")
+    if market_cap is None and price and shares_outstanding:
+        market_cap = price * shares_outstanding
+    if shares_outstanding is None and market_cap and price:
+        shares_outstanding = market_cap / price
+
+    book_value_per_share = _first_of(ratios, "bookValuePerShareTTM") or _first_of(
+        key_metrics, "bookValuePerShareTTM"
+    )
+    balance0 = balance_stmts[0] if balance_stmts else {}
+    if book_value_per_share is None and shares_outstanding:
+        equity = _first_of(balance0, "totalStockholdersEquity")
+        if equity is not None:
+            book_value_per_share = equity / shares_outstanding
+
+    pb_ratio = _first_of(ratios, "priceToBookRatioTTM")
+    if pb_ratio is None and price and book_value_per_share:
+        pb_ratio = price / book_value_per_share
+
+    eps_ttm = _first_of(quote, "eps") or _first_of(income_stmts[0] if income_stmts else {}, "epsdiluted", "eps")
+    graham_number = _graham_number(eps_ttm, book_value_per_share)
+    graham_upside_pct = (graham_number - price) / price * 100 if graham_number and price else None
+    graham_multiple = pe_ttm * pb_ratio if pe_ttm is not None and pb_ratio is not None else None
+
+    ncav_margin_pct = None
+    if balance0 and shares_outstanding and price:
+        current_assets = _first_of(balance0, "totalCurrentAssets")
+        total_liabilities = _first_of(balance0, "totalLiabilities")
+        if current_assets is not None and total_liabilities is not None:
+            ncav_per_share = (current_assets - total_liabilities) / shares_outstanding
+            ncav_margin_pct = (ncav_per_share - price) / price * 100
+
+    owner_earnings_yield_pct = None
+    if cashflow_stmts and market_cap:
+        d_and_a = _first_of(cashflow_stmts[0], "depreciationAndAmortization")
+        capex = _first_of(cashflow_stmts[0], "capitalExpenditure")
+        owner_earnings = _owner_earnings(net_income, d_and_a, capex)
+        if owner_earnings is not None:
+            owner_earnings_yield_pct = owner_earnings / market_cap * 100
+
+    roic_pct = None
+    if income_stmts and balance0:
+        roic_pct = _roic_pct(
+            operating_income=_first_of(income_stmts[0], "operatingIncome"),
+            income_tax_expense=_first_of(income_stmts[0], "incomeTaxExpense"),
+            income_before_tax=_first_of(income_stmts[0], "incomeBeforeTax"),
+            total_debt=_first_of(balance0, "totalDebt"),
+            total_equity=_first_of(balance0, "totalStockholdersEquity"),
+            cash=_first_of(balance0, "cashAndCashEquivalents"),
+        )
+
+    # --- Volume: a supply/demand signal from our own price data, not
+    # speculation about *why* - unusual volume relative to the stock's own
+    # average suggests unusual accumulation/distribution interest. ---
+    volume = _first_of(quote, "volume")
+    avg_volume = _first_of(quote, "avgVolume")
+    volume_vs_avg_ratio = volume / avg_volume if volume is not None and avg_volume else None
+
     metrics = {
         "return_1m_pct": price_data.get("return_1m_pct"),
         "return_3m_pct": price_data.get("return_3m_pct"),
@@ -205,6 +336,7 @@ def build_metrics(ticker: str, fmp_data: dict, sec_data: dict) -> dict:
         "revenue_growth_yoy_pct": revenue_growth["yoy_pct"],
         "revenue_cagr_3yr_pct": revenue_growth["cagr_3yr_pct"],
         "eps_growth_yoy_pct": eps_growth["yoy_pct"],
+        "eps_growth_cagr_3yr_pct": eps_growth["cagr_3yr_pct"],
         "gross_margin_pct": gross_margin_pct,
         "roe_pct": roe_pct,
         "margin_trend_score": _MARGIN_TREND_SCORE[margin_trend],
@@ -213,6 +345,15 @@ def build_metrics(ticker: str, fmp_data: dict, sec_data: dict) -> dict:
         "interest_coverage": interest_coverage,
         "fcf_margin_pct": fcf_margin_pct,
         "fcf_to_net_income": fcf_to_net_income,
+        "pb_ratio": pb_ratio,
+        "graham_upside_pct": graham_upside_pct,
+        "graham_multiple": graham_multiple,
+        "roic_pct": roic_pct,
+        "owner_earnings_yield_pct": owner_earnings_yield_pct,
+        "volume_vs_avg_ratio": volume_vs_avg_ratio,
+        # informational only, not fed into the weighted score - see
+        # config/scoring_weights.yaml comment on ncav_margin_pct
+        "ncav_margin_pct": ncav_margin_pct,
     }
 
     display = {
@@ -221,22 +362,32 @@ def build_metrics(ticker: str, fmp_data: dict, sec_data: dict) -> dict:
             "as_of": price_data.get("as_of"),
             "return_1m_pct": price_data.get("return_1m_pct"),
             "return_3m_pct": price_data.get("return_3m_pct"),
+            "volume": volume,
+            "avg_volume": avg_volume,
+            "volume_vs_avg_ratio": volume_vs_avg_ratio,
         },
         "fundamentals": {
             "valuation": {
                 "pe_ttm": pe_ttm,
+                "pb_ratio": pb_ratio,
                 "ev_ebitda": ev_ebitda,
                 "dcf_fair_value": fair_value,
                 "dcf_upside_pct": dcf_upside_pct,
+                "graham_number": graham_number,
+                "graham_upside_pct": graham_upside_pct,
+                "graham_multiple": graham_multiple,
+                "ncav_margin_pct": ncav_margin_pct,
             },
             "growth": {
                 "revenue_growth_yoy_pct": revenue_growth["yoy_pct"],
                 "revenue_cagr_3yr_pct": revenue_growth["cagr_3yr_pct"],
                 "eps_growth_yoy_pct": eps_growth["yoy_pct"],
+                "eps_growth_cagr_3yr_pct": eps_growth["cagr_3yr_pct"],
             },
             "profitability": {
                 "gross_margin_pct": gross_margin_pct,
                 "roe_pct": roe_pct,
+                "roic_pct": roic_pct,
                 "trend": margin_trend,
             },
             "balance_sheet": {
@@ -247,6 +398,7 @@ def build_metrics(ticker: str, fmp_data: dict, sec_data: dict) -> dict:
             "cash_flow": {
                 "fcf_margin_pct": fcf_margin_pct,
                 "fcf_to_net_income": fcf_to_net_income,
+                "owner_earnings_yield_pct": owner_earnings_yield_pct,
             },
         },
     }
@@ -256,6 +408,12 @@ def build_metrics(ticker: str, fmp_data: dict, sec_data: dict) -> dict:
         "sector": _first_of(profile, "sector"),
         "industry": _first_of(profile, "industry"),
         "cik": sec_data.get("cik"),
+        "market_cap": market_cap,
     }
 
-    return {"metrics": metrics, "display": display, "profile": profile_out}
+    return {
+        "metrics": metrics,
+        "display": display,
+        "profile": profile_out,
+        "raw": {"income_stmts": income_stmts, "balance_stmts": balance_stmts, "cashflow_stmts": cashflow_stmts},
+    }
