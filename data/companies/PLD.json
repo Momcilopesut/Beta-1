@@ -1,45 +1,43 @@
 {
-  "_errors": {
-    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts",
-    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts",
-    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts",
-    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
-    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
-    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
-    "profile": "Failed to fetch https://financialmodelingprep.com/stable/profile after 3 attempts",
-    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
-    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
-  },
+  "_errors": {},
   "cik": "0001045609",
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": null,
-      "debt_to_equity": null,
-      "interest_coverage": null
+      "current_ratio": 0.6977452900375469,
+      "debt_to_equity": 0.6782986555303994,
+      "interest_coverage": 3.365663036392954
     },
     "cash_flow": {
-      "fcf_margin_pct": null,
-      "fcf_to_net_income": null
+      "fcf_margin_pct": 56.97794810018103,
+      "fcf_to_net_income": 1.4684634629689302,
+      "owner_earnings_yield_pct": 4.798032478418679
     },
     "growth": {
-      "eps_growth_yoy_pct": null,
-      "revenue_cagr_3yr_pct": null,
-      "revenue_growth_yoy_pct": -74.3722474089396
+      "eps_growth_cagr_3yr_pct": -4.894264952843653,
+      "eps_growth_yoy_pct": -11.414392059553359,
+      "revenue_cagr_3yr_pct": 13.741104437395911,
+      "revenue_growth_yoy_pct": 7.175627712119938
     },
     "profitability": {
-      "gross_margin_pct": null,
-      "roe_pct": null,
-      "trend": "stable"
+      "gross_margin_pct": 59.597819235148705,
+      "roe_pct": 7.900607573036433,
+      "roic_pct": 3.84072533518525,
+      "trend": "declining"
     },
     "valuation": {
-      "dcf_fair_value": null,
-      "dcf_upside_pct": null,
-      "ev_ebitda": null,
-      "pe_ttm": null
+      "dcf_fair_value": 92.41676111763034,
+      "dcf_upside_pct": -31.17095321543879,
+      "ev_ebitda": 19.21190757293361,
+      "graham_multiple": 70.17253718910861,
+      "graham_number": 70.73333334014724,
+      "graham_upside_pct": -47.542766730831175,
+      "ncav_margin_pct": -131.51636491026528,
+      "pb_ratio": 2.3418601108794777,
+      "pe_ttm": 29.964444444444442
     }
   },
-  "industry": null,
-  "last_updated": "2026-09-16T12:34:10Z",
+  "industry": "REIT - Industrial",
+  "last_updated": "2026-09-18T22:38:43Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -47,45 +45,69 @@
       "rate_sensitivity": "high"
     }
   },
+  "market_cap": 125815967840,
   "metrics": {
-    "margin_trend_score": 60,
-    "revenue_growth_yoy_pct": -74.3722474089396
+    "current_ratio": 0.6977452900375469,
+    "dcf_upside_pct": -31.17095321543879,
+    "debt_to_equity": 0.6782986555303994,
+    "eps_growth_cagr_3yr_pct": -4.894264952843653,
+    "eps_growth_yoy_pct": -11.414392059553359,
+    "ev_ebitda": 19.21190757293361,
+    "fcf_margin_pct": 56.97794810018103,
+    "fcf_to_net_income": 1.4684634629689302,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 70.17253718910861,
+    "graham_upside_pct": -47.542766730831175,
+    "gross_margin_pct": 59.597819235148705,
+    "interest_coverage": 3.365663036392954,
+    "margin_trend_score": 20,
+    "ncav_margin_pct": -131.51636491026528,
+    "owner_earnings_yield_pct": 4.798032478418679,
+    "pb_ratio": 2.3418601108794777,
+    "pe_ttm": 29.964444444444442,
+    "piotroski_evaluated": 9,
+    "piotroski_f_score": 4,
+    "price_vs_ma200_pct": -2.1083654006359,
+    "price_vs_ma50_pct": -4.585608305665708,
+    "return_1m_pct": -4.571832979476296,
+    "return_3m_pct": -4.055784829941646,
+    "revenue_cagr_3yr_pct": 13.741104437395911,
+    "revenue_growth_yoy_pct": 7.175627712119938,
+    "roe_pct": 7.900607573036433,
+    "roic_pct": 3.84072533518525,
+    "rsi_distance_from_neutral": 15.820734341252702,
+    "sector_relative_momentum_pct": 0.0,
+    "volume_vs_avg_ratio": 2.108470764004173
   },
   "name": "Prologis Inc.",
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "-74.37%",
-          "text": "Revenue growth year-over-year was -74.37%, representing a severe contraction in reported top-line results."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "margin_trend_score",
-          "source_value": "60",
-          "text": "The margin trend score stands at 60 (on a 0-100 scale), indicating a moderately positive margin trajectory that partially offsets the revenue decline."
-        }
-      ],
+      "critical": [],
+      "important": [],
       "minor": [],
       "noise": []
     },
-    "long_term_narrative": "The long-term score of 47.5 (Neutral) is shaped by the same underlying data: a dramatic year-over-year revenue decline of 74.4% raises questions about the durability of growth, while a margin trend score of 60 suggests the company has so far preserved some operational efficiency. Because only these two metrics are available, the long-term view remains balanced between concern over growth trajectory and reassurance from margin stability, without leaning decisively in either direction.",
-    "one_line_summary": "PLD shows a sharp revenue decline but a stable margin trend, resulting in a neutral overall outlook.",
-    "short_term_narrative": "The short-term score of 51 (Neutral) reflects mixed signals: revenue fell 74.4% year-over-year, a stark contraction that would normally weigh heavily on sentiment, but the margin trend score of 60 indicates that profitability trends have remained relatively steady despite the top-line drop. This balance between severe revenue weakness and stable margins is what keeps the near-term outlook at a neutral level rather than clearly negative."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
-    "as_of": null,
-    "close": null,
-    "return_1m_pct": null,
-    "return_3m_pct": null
+    "as_of": "2026-09-18",
+    "avg_volume": 3623869.5505976095,
+    "close": 134.84,
+    "return_1m_pct": -4.571832979476296,
+    "return_3m_pct": -4.055784829941646,
+    "sector_avg_return_3m_pct": -4.055784829941646,
+    "sector_relative_momentum_pct": 0.0,
+    "volume": 7640823,
+    "volume_vs_avg_ratio": 2.108470764004173
   },
   "scores": {
     "long_term": {
-      "base_score": 46.5,
-      "final_score": 47.5,
+      "base_score": 35.8,
+      "final_score": 36.8,
       "macro_adjustment": 1,
       "subscores": [
         {
@@ -94,21 +116,31 @@
           "raw_metrics": [
             {
               "metric": "pe_ttm",
-              "raw_value": null,
-              "score": null
+              "raw_value": 29.964444444444442,
+              "score": 33.451851851851856
             },
             {
               "metric": "ev_ebitda",
-              "raw_value": null,
-              "score": null
+              "raw_value": 19.21190757293361,
+              "score": 34.04760251215522
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -31.17095321543879,
+              "score": 0.0
+            },
+            {
+              "metric": "graham_upside_pct",
+              "raw_value": -47.542766730831175,
+              "score": 0.0
+            },
+            {
+              "metric": "graham_multiple",
+              "raw_value": 70.17253718910861,
+              "score": 0.0
             }
           ],
-          "score": 50.0,
+          "score": 13.5,
           "weight_pct": 25
         },
         {
@@ -117,21 +149,26 @@
           "raw_metrics": [
             {
               "metric": "revenue_growth_yoy_pct",
-              "raw_value": -74.3722474089396,
-              "score": 0.0
+              "raw_value": 7.175627712119938,
+              "score": 40.585425707066456
             },
             {
               "metric": "revenue_cagr_3yr_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 13.741104437395911,
+              "score": 74.96441774958365
             },
             {
               "metric": "eps_growth_yoy_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -11.414392059553359,
+              "score": 0.0
+            },
+            {
+              "metric": "eps_growth_cagr_3yr_pct",
+              "raw_value": -4.894264952843653,
+              "score": 12.76433761789087
             }
           ],
-          "score": 33.3,
+          "score": 32.1,
           "weight_pct": 25
         },
         {
@@ -140,21 +177,26 @@
           "raw_metrics": [
             {
               "metric": "gross_margin_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 59.597819235148705,
+              "score": 98.99454808787176
             },
             {
               "metric": "roe_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 7.900607573036433,
+              "score": 26.33535857678811
             },
             {
               "metric": "margin_trend_score",
-              "raw_value": 60,
-              "score": 60.0
+              "raw_value": 20,
+              "score": 20.0
+            },
+            {
+              "metric": "roic_pct",
+              "raw_value": 3.84072533518525,
+              "score": 15.362901340741
             }
           ],
-          "score": 53.3,
+          "score": 40.2,
           "weight_pct": 20
         },
         {
@@ -163,21 +205,21 @@
           "raw_metrics": [
             {
               "metric": "debt_to_equity",
-              "raw_value": null,
-              "score": null
+              "raw_value": 0.6782986555303994,
+              "score": 66.08506722348002
             },
             {
               "metric": "current_ratio",
-              "raw_value": null,
-              "score": null
+              "raw_value": 0.6977452900375469,
+              "score": 9.887264501877347
             },
             {
               "metric": "interest_coverage",
-              "raw_value": null,
-              "score": null
+              "raw_value": 3.365663036392954,
+              "score": 7.587016868849744
             }
           ],
-          "score": 50.0,
+          "score": 27.9,
           "weight_pct": 15
         },
         {
@@ -186,24 +228,29 @@
           "raw_metrics": [
             {
               "metric": "fcf_margin_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 56.97794810018103,
+              "score": 100.0
             },
             {
               "metric": "fcf_to_net_income",
-              "raw_value": null,
-              "score": null
+              "raw_value": 1.4684634629689302,
+              "score": 96.84634629689302
+            },
+            {
+              "metric": "owner_earnings_yield_pct",
+              "raw_value": 4.798032478418679,
+              "score": 47.98032478418679
             }
           ],
-          "score": 50.0,
+          "score": 81.6,
           "weight_pct": 15
         }
       ],
-      "verdict": "Neutral"
+      "verdict": "Cautious"
     },
     "short_term": {
-      "base_score": 50.0,
-      "final_score": 51.0,
+      "base_score": 33.8,
+      "final_score": 34.8,
       "macro_adjustment": 1,
       "subscores": [
         {
@@ -212,16 +259,16 @@
           "raw_metrics": [
             {
               "metric": "return_1m_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -4.571832979476296,
+              "score": 27.14083510261852
             },
             {
               "metric": "return_3m_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -4.055784829941646,
+              "score": 39.860537925145884
             }
           ],
-          "score": 50.0,
+          "score": 33.5,
           "weight_pct": 30
         },
         {
@@ -230,21 +277,21 @@
           "raw_metrics": [
             {
               "metric": "price_vs_ma50_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -4.585608305665708,
+              "score": 27.071958471671458
             },
             {
               "metric": "price_vs_ma200_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -2.1083654006359,
+              "score": 42.972115331213665
             },
             {
               "metric": "rsi_distance_from_neutral",
-              "raw_value": null,
-              "score": null
+              "raw_value": 15.820734341252702,
+              "score": 60.448164146868244
             }
           ],
-          "score": 50.0,
+          "score": 43.5,
           "weight_pct": 20
         },
         {
@@ -266,15 +313,15 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -31.17095321543879,
+              "score": 0.0
             }
           ],
-          "score": 50.0,
+          "score": 0.0,
           "weight_pct": 15
         }
       ],
-      "verdict": "Neutral"
+      "verdict": "Cautious"
     }
   },
   "sector": "Real Estate",
@@ -308,5 +355,92 @@
       }
     ]
   },
-  "ticker": "PLD"
+  "ticker": "PLD",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $125.8B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.70, debt $35.0B vs working capital $-4.6B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr, Graham's 33%/10yr pace)",
+          "detail": "EPS 3yr CAGR -4.9%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 30.0",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 70.2",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 2,
+      "total": 7
+    },
+    "piotroski_f_score": {
+      "criteria": [
+        {
+          "criterion": "Positive net income",
+          "passed": true
+        },
+        {
+          "criterion": "Positive operating cash flow",
+          "passed": true
+        },
+        {
+          "criterion": "ROA improving year over year",
+          "passed": false
+        },
+        {
+          "criterion": "Operating cash flow exceeds net income (earnings quality)",
+          "passed": true
+        },
+        {
+          "criterion": "Leverage decreasing year over year",
+          "passed": false
+        },
+        {
+          "criterion": "Current ratio improving year over year",
+          "passed": false
+        },
+        {
+          "criterion": "No new shares issued (no dilution)",
+          "passed": false
+        },
+        {
+          "criterion": "Gross margin improving year over year",
+          "passed": false
+        },
+        {
+          "criterion": "Asset turnover improving year over year",
+          "passed": true
+        }
+      ],
+      "evaluated": 9,
+      "max": 9,
+      "score": 4
+    }
+  }
 }

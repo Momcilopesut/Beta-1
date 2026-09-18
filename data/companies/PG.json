@@ -1,44 +1,43 @@
 {
-  "_errors": {
-    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/balance-sheet-statement?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=5",
-    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/cash-flow-statement?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=5",
-    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/discounted-cash-flow?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
-    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/historical-price-eod/full?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
-    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/income-statement?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=5",
-    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/key-metrics-ttm?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
-    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/quote?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
-    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/ratios-ttm?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
-  },
+  "_errors": {},
   "cik": "0000080424",
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": null,
-      "debt_to_equity": null,
-      "interest_coverage": null
+      "current_ratio": 0.6773143122964801,
+      "debt_to_equity": 0.6449153946714293,
+      "interest_coverage": 22.517673888255416
     },
     "cash_flow": {
-      "fcf_margin_pct": null,
-      "fcf_to_net_income": null
+      "fcf_margin_pct": 18.284079419064252,
+      "fcf_to_net_income": 0.9917113299264614,
+      "owner_earnings_yield_pct": 4.253614302618504
     },
     "growth": {
-      "eps_growth_yoy_pct": null,
-      "revenue_cagr_3yr_pct": null,
+      "eps_growth_cagr_3yr_pct": 3.6028479444773165,
+      "eps_growth_yoy_pct": 1.199400299850076,
+      "revenue_cagr_3yr_pct": 2.002569409339938,
       "revenue_growth_yoy_pct": 3.260405296378909
     },
     "profitability": {
-      "gross_margin_pct": null,
-      "roe_pct": null,
+      "gross_margin_pct": 50.175797407849984,
+      "roe_pct": 29.83539955468165,
+      "roic_pct": 19.70610846801103,
       "trend": "stable"
     },
     "valuation": {
-      "dcf_fair_value": null,
-      "dcf_upside_pct": null,
-      "ev_ebitda": null,
-      "pe_ttm": null
+      "dcf_fair_value": 200.7959575592358,
+      "dcf_upside_pct": 37.23069816787576,
+      "ev_ebitda": 17.54742024070763,
+      "graham_multiple": 141.50397420360923,
+      "graham_number": 58.35192022913423,
+      "graham_upside_pct": -60.13940827301438,
+      "ncav_margin_pct": -113.51911489960959,
+      "pb_ratio": 6.527159093001417,
+      "pe_ttm": 21.679259259259258
     }
   },
   "industry": "Household & Personal Products",
-  "last_updated": "2026-09-17T17:26:23Z",
+  "last_updated": "2026-09-18T22:35:14Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -46,61 +45,133 @@
       "rate_sensitivity": "low"
     }
   },
+  "market_cap": 347868869796,
   "metrics": {
+    "current_ratio": 0.6773143122964801,
+    "dcf_upside_pct": 37.23069816787576,
+    "debt_to_equity": 0.6449153946714293,
+    "eps_growth_cagr_3yr_pct": 3.6028479444773165,
+    "eps_growth_yoy_pct": 1.199400299850076,
+    "ev_ebitda": 17.54742024070763,
+    "fcf_margin_pct": 18.284079419064252,
+    "fcf_to_net_income": 0.9917113299264614,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 141.50397420360923,
+    "graham_upside_pct": -60.13940827301438,
+    "gross_margin_pct": 50.175797407849984,
+    "interest_coverage": 22.517673888255416,
     "margin_trend_score": 60,
-    "revenue_growth_yoy_pct": 3.260405296378909
+    "ncav_margin_pct": -113.51911489960959,
+    "owner_earnings_yield_pct": 4.253614302618504,
+    "pb_ratio": 6.527159093001417,
+    "pe_ttm": 21.679259259259258,
+    "piotroski_evaluated": 9,
+    "piotroski_f_score": 6,
+    "price_vs_ma200_pct": -0.7253848764730041,
+    "price_vs_ma50_pct": 0.1851910150192057,
+    "return_1m_pct": 1.3921595788890364,
+    "return_3m_pct": -2.653278361484246,
+    "revenue_cagr_3yr_pct": 2.002569409339938,
+    "revenue_growth_yoy_pct": 3.260405296378909,
+    "roe_pct": 29.83539955468165,
+    "roic_pct": 19.70610846801103,
+    "rsi_distance_from_neutral": 8.740790354989876,
+    "sector_relative_momentum_pct": -6.906687045712522,
+    "volume_vs_avg_ratio": 1.6440894451929533
   },
   "name": "Procter & Gamble Co.",
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [],
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "37.23%",
+          "text": "A discounted cash flow model estimates a 37.23% margin of safety (upside) relative to the current price."
+        },
+        {
+          "source_metric": "graham_upside_pct",
+          "source_value": "-60.14%",
+          "text": "A Graham-style valuation model estimates the stock trades about 60.14% above its calculated fair value, implying no margin of safety by that measure."
+        },
+        {
+          "source_metric": "current_ratio",
+          "source_value": "0.68",
+          "text": "The current ratio is 0.68, meaning current liabilities exceed current assets, a potential liquidity consideration."
+        }
+      ],
       "important": [
+        {
+          "source_metric": "roic_pct",
+          "source_value": "19.71%",
+          "text": "Return on invested capital is 19.71%, a level that can be a sign of a durable competitive advantage if sustained relative to peers."
+        },
+        {
+          "source_metric": "pb_ratio",
+          "source_value": "6.53x",
+          "text": "The stock trades at 6.53 times book value, a high multiple relative to net asset value."
+        },
+        {
+          "source_metric": "owner_earnings_yield_pct",
+          "source_value": "4.25%",
+          "text": "Owner earnings yield (Buffett's measure) is 4.25%."
+        },
+        {
+          "source_metric": "graham_criteria_passed",
+          "source_value": "3",
+          "text": "PG passes 3 of 6 evaluated Graham defensive-investor criteria."
+        },
+        {
+          "source_metric": "piotroski_f_score",
+          "source_value": "6",
+          "text": "The Piotroski F-Score is 6 out of 9 evaluated criteria, indicating moderate financial strength."
+        },
         {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "3.26%",
-          "text": "Revenue grew approximately 3.26% year-over-year, indicating modest top-line expansion rather than rapid growth or contraction."
-        },
-        {
-          "source_metric": "margin_trend_score",
-          "source_value": "60",
-          "text": "The margin trend score of 60 (on presumably a 0-100 scale) suggests margins are trending moderately positively, not showing severe deterioration."
+          "text": "Year-over-year revenue growth is 3.26%, a modest pace of expansion."
         }
       ],
       "minor": [
         {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "3.26%",
-          "text": "The short-term composite score is 50.0, corresponding to a Neutral verdict, meaning no strong near-term directional signal is indicated by the model."
-        },
-        {
-          "source_metric": "margin_trend_score",
-          "source_value": "60",
-          "text": "The long-term composite score is 48.8, also Neutral, suggesting the modeled long-term outlook is balanced rather than skewed toward growth or decline."
+          "source_metric": "interest_coverage",
+          "source_value": "22.52x",
+          "text": "Interest coverage is 22.52x, indicating a strong ability to service debt from earnings."
         }
       ],
       "noise": [
         {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "3.26%",
-          "text": "Revenue growth near 3.26% is a modest figure that, on its own, does not indicate a distressed or hyper-growth scenario, making it a low-impact data point for extreme thesis positioning."
+          "source_metric": "sector_relative_momentum_pct",
+          "source_value": "-6.91%",
+          "text": "The stock has underperformed its sector by about 6.91% recently; this is a supply/demand divergence with no identified cause in this data and should be treated as noise rather than a thesis driver."
+        },
+        {
+          "source_metric": "volume_vs_avg_ratio",
+          "source_value": "1.64x",
+          "text": "Trading volume has been about 1.64x its average recently; this divergence from typical volume has no identified cause here and is noted as low decision-relevance."
         }
       ]
     },
-    "long_term_narrative": "The long-term score of 48.8, also Neutral, is grounded in the same underlying fundamentals: single-digit revenue growth near 3.26% and a margin trend score of 60. Neither metric indicates significant structural deterioration or acceleration, which supports a steady-state outlook rather than a strong growth or decline trajectory. The macro context of low rate sensitivity and low cyclicality further suggests the company's fundamentals are not being materially amplified or dragged by external economic conditions based on the data provided.",
-    "one_line_summary": "PG shows modest revenue growth and a moderate margin trend, with neutral short- and long-term composite scores.",
-    "short_term_narrative": "The short-term score of 50.0 reflects a Neutral verdict, consistent with revenue growth of about 3.26% year-over-year, a modest but positive pace of expansion. The margin trend score of 60 suggests margins are trending in a reasonably stable to favorable direction, neither signaling deterioration nor a strong upside surprise. Together these data points point to a company performing in line with expectations rather than showing a clear near-term catalyst in either direction."
+    "long_term_narrative": "The long-term score of 49.7 (Neutral) reflects a mixed fundamental picture. Revenue and EPS growth have been modest (3.26% and 1.20% year-over-year, respectively), while ROIC of 19.71% and an owner earnings yield of 4.25% point to a profitable core business. However, valuation signals conflict: the DCF model implies a 37.23% margin of safety, while the Graham model implies the stock trades about 60% above its estimated fair value, and the price-to-book ratio of 6.53 is elevated. The company also passes only 3 of 6 evaluated Graham defensive-investor criteria and scores 6 of 9 on the Piotroski F-Score, indicating moderate but not exceptional financial strength.",
+    "one_line_summary": "PG: modest growth, high ROIC and strong margins, but valuation models diverge sharply (DCF upside vs Graham downside).",
+    "short_term_narrative": "The short-term score of 61 (Favorable) reflects recent price action: PG is up 1.39% over the past month and trading essentially flat versus its 50-day moving average (+0.19%). RSI sits about 8.7 points from neutral, suggesting the stock is not in an extreme overbought or oversold state. Volume has run about 1.64x its average and the stock has underperformed its sector by roughly 6.9% recently, both of which are worth watching as divergences without a known cause in this data."
   },
   "price": {
-    "as_of": null,
-    "close": null,
-    "return_1m_pct": null,
-    "return_3m_pct": null
+    "as_of": "2026-09-18",
+    "avg_volume": 7527869.627888447,
+    "close": 146.39,
+    "return_1m_pct": 1.3921595788890364,
+    "return_3m_pct": -2.653278361484246,
+    "sector_avg_return_3m_pct": 4.253408684228276,
+    "sector_relative_momentum_pct": -6.906687045712522,
+    "volume": 12376491,
+    "volume_vs_avg_ratio": 1.6440894451929533
   },
   "scores": {
     "long_term": {
-      "base_score": 48.8,
-      "final_score": 48.8,
+      "base_score": 49.7,
+      "final_score": 49.7,
       "macro_adjustment": 0,
       "subscores": [
         {
@@ -109,21 +180,31 @@
           "raw_metrics": [
             {
               "metric": "pe_ttm",
-              "raw_value": null,
-              "score": null
+              "raw_value": 21.679259259259258,
+              "score": 61.06913580246914
             },
             {
               "metric": "ev_ebitda",
-              "raw_value": null,
-              "score": null
+              "raw_value": 17.54742024070763,
+              "score": 43.8387044664257
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 37.23069816787576,
+              "score": 100.0
+            },
+            {
+              "metric": "graham_upside_pct",
+              "raw_value": -60.13940827301438,
+              "score": 0.0
+            },
+            {
+              "metric": "graham_multiple",
+              "raw_value": 141.50397420360923,
+              "score": 0.0
             }
           ],
-          "score": 50.0,
+          "score": 41.0,
           "weight_pct": 25
         },
         {
@@ -137,16 +218,21 @@
             },
             {
               "metric": "revenue_cagr_3yr_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 2.002569409339938,
+              "score": 28.010277637359753
             },
             {
               "metric": "eps_growth_yoy_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 1.199400299850076,
+              "score": 27.998500749625187
+            },
+            {
+              "metric": "eps_growth_cagr_3yr_pct",
+              "raw_value": 3.6028479444773165,
+              "score": 34.00711986119329
             }
           ],
-          "score": 42.5,
+          "score": 29.4,
           "weight_pct": 25
         },
         {
@@ -155,21 +241,26 @@
           "raw_metrics": [
             {
               "metric": "gross_margin_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 50.175797407849984,
+              "score": 75.43949351962496
             },
             {
               "metric": "roe_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 29.83539955468165,
+              "score": 99.45133184893884
             },
             {
               "metric": "margin_trend_score",
               "raw_value": 60,
               "score": 60.0
+            },
+            {
+              "metric": "roic_pct",
+              "raw_value": 19.70610846801103,
+              "score": 78.82443387204412
             }
           ],
-          "score": 53.3,
+          "score": 78.4,
           "weight_pct": 20
         },
         {
@@ -178,21 +269,21 @@
           "raw_metrics": [
             {
               "metric": "debt_to_equity",
-              "raw_value": null,
-              "score": null
+              "raw_value": 0.6449153946714293,
+              "score": 67.75423026642854
             },
             {
               "metric": "current_ratio",
-              "raw_value": null,
-              "score": null
+              "raw_value": 0.6773143122964801,
+              "score": 8.865715614824005
             },
             {
               "metric": "interest_coverage",
-              "raw_value": null,
-              "score": null
+              "raw_value": 22.517673888255416,
+              "score": 100.0
             }
           ],
-          "score": 50.0,
+          "score": 58.9,
           "weight_pct": 15
         },
         {
@@ -201,24 +292,29 @@
           "raw_metrics": [
             {
               "metric": "fcf_margin_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 18.284079419064252,
+              "score": 60.94693139688084
             },
             {
               "metric": "fcf_to_net_income",
-              "raw_value": null,
-              "score": null
+              "raw_value": 0.9917113299264614,
+              "score": 49.171132992646136
+            },
+            {
+              "metric": "owner_earnings_yield_pct",
+              "raw_value": 4.253614302618504,
+              "score": 42.536143026185044
             }
           ],
-          "score": 50.0,
+          "score": 50.9,
           "weight_pct": 15
         }
       ],
       "verdict": "Neutral"
     },
     "short_term": {
-      "base_score": 50.0,
-      "final_score": 50.0,
+      "base_score": 61.0,
+      "final_score": 61.0,
       "macro_adjustment": 0,
       "subscores": [
         {
@@ -227,16 +323,16 @@
           "raw_metrics": [
             {
               "metric": "return_1m_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 1.3921595788890364,
+              "score": 56.96079789444518
             },
             {
               "metric": "return_3m_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -2.653278361484246,
+              "score": 43.36680409628938
             }
           ],
-          "score": 50.0,
+          "score": 50.2,
           "weight_pct": 30
         },
         {
@@ -245,21 +341,21 @@
           "raw_metrics": [
             {
               "metric": "price_vs_ma50_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 0.1851910150192057,
+              "score": 50.92595507509603
             },
             {
               "metric": "price_vs_ma200_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -0.7253848764730041,
+              "score": 47.582050411756654
             },
             {
               "metric": "rsi_distance_from_neutral",
-              "raw_value": null,
-              "score": null
+              "raw_value": 8.740790354989876,
+              "score": 78.1480241125253
             }
           ],
-          "score": 50.0,
+          "score": 58.9,
           "weight_pct": 20
         },
         {
@@ -281,15 +377,15 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 37.23069816787576,
+              "score": 100.0
             }
           ],
-          "score": 50.0,
+          "score": 100.0,
           "weight_pct": 15
         }
       ],
-      "verdict": "Neutral"
+      "verdict": "Favorable"
     }
   },
   "sector": "Consumer Defensive",
@@ -323,5 +419,92 @@
       }
     ]
   },
-  "ticker": "PG"
+  "ticker": "PG",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $347.9B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.68, debt $35.0B vs working capital $-12.5B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr, Graham's 33%/10yr pace)",
+          "detail": "EPS 3yr CAGR 3.6%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 21.7",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 141.5",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 3,
+      "total": 7
+    },
+    "piotroski_f_score": {
+      "criteria": [
+        {
+          "criterion": "Positive net income",
+          "passed": true
+        },
+        {
+          "criterion": "Positive operating cash flow",
+          "passed": true
+        },
+        {
+          "criterion": "ROA improving year over year",
+          "passed": false
+        },
+        {
+          "criterion": "Operating cash flow exceeds net income (earnings quality)",
+          "passed": true
+        },
+        {
+          "criterion": "Leverage decreasing year over year",
+          "passed": true
+        },
+        {
+          "criterion": "Current ratio improving year over year",
+          "passed": false
+        },
+        {
+          "criterion": "No new shares issued (no dilution)",
+          "passed": true
+        },
+        {
+          "criterion": "Gross margin improving year over year",
+          "passed": false
+        },
+        {
+          "criterion": "Asset turnover improving year over year",
+          "passed": true
+        }
+      ],
+      "evaluated": 9,
+      "max": 9,
+      "score": 6
+    }
+  }
 }

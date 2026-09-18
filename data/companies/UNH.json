@@ -1,45 +1,43 @@
 {
-  "_errors": {
-    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts",
-    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts",
-    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts",
-    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
-    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
-    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
-    "profile": "Failed to fetch https://financialmodelingprep.com/stable/profile after 3 attempts",
-    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
-    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
-  },
+  "_errors": {},
   "cik": "0000731766",
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": null,
-      "debt_to_equity": null,
-      "interest_coverage": null
+      "current_ratio": 0.7767841173314255,
+      "debt_to_equity": 0.7448474813859234,
+      "interest_coverage": 5.566512583461736
     },
     "cash_flow": {
-      "fcf_margin_pct": null,
-      "fcf_to_net_income": null
+      "fcf_margin_pct": 3.5916410280471975,
+      "fcf_to_net_income": 1.3333609820836099,
+      "owner_earnings_yield_pct": 3.738171668136153
     },
     "growth": {
-      "eps_growth_yoy_pct": null,
-      "revenue_cagr_3yr_pct": null,
+      "eps_growth_cagr_3yr_pct": -14.99625722899529,
+      "eps_growth_yoy_pct": -15.409207161125321,
+      "revenue_cagr_3yr_pct": 11.352161443193465,
       "revenue_growth_yoy_pct": 11.814039242726306
     },
     "profitability": {
-      "gross_margin_pct": null,
-      "roe_pct": null,
-      "trend": "stable"
+      "gross_margin_pct": 18.52616479767275,
+      "roe_pct": 14.625671564502557,
+      "roic_pct": 11.155625129499317,
+      "trend": "declining"
     },
     "valuation": {
-      "dcf_fair_value": null,
-      "dcf_upside_pct": null,
-      "ev_ebitda": null,
-      "pe_ttm": null
+      "dcf_fair_value": 260.25255784512274,
+      "dcf_upside_pct": -30.370934573367915,
+      "ev_ebitda": 15.022420753328419,
+      "graham_multiple": 84.06558254500443,
+      "graham_number": 185.39611518465358,
+      "graham_upside_pct": -50.81026394676211,
+      "ncav_margin_pct": -134.67330392707134,
+      "pb_ratio": 3.468569578554958,
+      "pe_ttm": 24.236383512314323
     }
   },
-  "industry": null,
-  "last_updated": "2026-09-16T12:27:24Z",
+  "industry": "Medical - Healthcare Plans",
+  "last_updated": "2026-09-18T22:34:23Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -47,44 +45,132 @@
       "rate_sensitivity": "low"
     }
   },
+  "market_cap": 342279625868,
   "metrics": {
-    "margin_trend_score": 60,
-    "revenue_growth_yoy_pct": 11.814039242726306
+    "current_ratio": 0.7767841173314255,
+    "dcf_upside_pct": -30.370934573367915,
+    "debt_to_equity": 0.7448474813859234,
+    "eps_growth_cagr_3yr_pct": -14.99625722899529,
+    "eps_growth_yoy_pct": -15.409207161125321,
+    "ev_ebitda": 15.022420753328419,
+    "fcf_margin_pct": 3.5916410280471975,
+    "fcf_to_net_income": 1.3333609820836099,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 84.06558254500443,
+    "graham_upside_pct": -50.81026394676211,
+    "gross_margin_pct": 18.52616479767275,
+    "interest_coverage": 5.566512583461736,
+    "margin_trend_score": 20,
+    "ncav_margin_pct": -134.67330392707134,
+    "owner_earnings_yield_pct": 3.738171668136153,
+    "pb_ratio": 3.468569578554958,
+    "pe_ttm": 24.236383512314323,
+    "piotroski_evaluated": 9,
+    "piotroski_f_score": 6,
+    "price_vs_ma200_pct": 6.372019840681861,
+    "price_vs_ma50_pct": -6.784062523186509,
+    "return_1m_pct": -3.0133038264584124,
+    "return_3m_pct": -6.000598563447726,
+    "revenue_cagr_3yr_pct": 11.352161443193465,
+    "revenue_growth_yoy_pct": 11.814039242726306,
+    "roe_pct": 14.625671564502557,
+    "roic_pct": 11.155625129499317,
+    "rsi_distance_from_neutral": 13.64563849685429,
+    "sector_relative_momentum_pct": -12.107528144633804,
+    "volume_vs_avg_ratio": 1.5181189068307308
   },
   "name": "UnitedHealth Group Incorporated",
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [],
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-30.37%",
+          "text": "The DCF-based fair value estimate implies the stock trades roughly 30% above modeled fair value, a negative margin of safety by this measure."
+        },
+        {
+          "source_metric": "graham_upside_pct",
+          "source_value": "-50.81%",
+          "text": "The Graham-style fair value estimate implies an even larger gap, about 51% above modeled fair value, a substantial negative margin of safety."
+        },
+        {
+          "source_metric": "eps_growth_yoy_pct",
+          "source_value": "-15.41%",
+          "text": "Earnings per share fell about 15% year-over-year, a sharp profitability decline."
+        },
+        {
+          "source_metric": "eps_growth_cagr_3yr_pct",
+          "source_value": "-14.996%",
+          "text": "On a 3-year annualized basis, EPS has also declined about 15%, showing this is not a single-year blip."
+        },
+        {
+          "source_metric": "current_ratio",
+          "source_value": "0.78",
+          "text": "The current ratio of 0.78 is below 1, meaning current liabilities exceed current assets, a liquidity concern."
+        }
+      ],
       "important": [
         {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "11.81%",
-          "text": "UnitedHealth Group's revenue grew 11.81% year-over-year, indicating continued top-line expansion."
+          "text": "Revenue grew about 11.8% year-over-year, showing the top line is still expanding even as earnings shrink."
         },
         {
           "source_metric": "margin_trend_score",
-          "source_value": "60",
-          "text": "The margin trend score of 60 (on presumably a 0-100 scale) suggests a moderately positive but not exceptional trend in profit margins."
+          "source_value": "20",
+          "text": "The margin trend score of 20 (on presumably a 0-100 scale) points to deteriorating profitability margins over the measured period."
+        },
+        {
+          "source_metric": "debt_to_equity",
+          "source_value": "0.74",
+          "text": "Debt-to-equity stands at 0.74, indicating a moderate but non-trivial level of leverage on the balance sheet."
+        },
+        {
+          "source_metric": "roic_pct",
+          "source_value": "11.16%",
+          "text": "Return on invested capital of 11.16% is moderate; it does not by itself signal an unusually durable competitive advantage."
+        },
+        {
+          "source_metric": "piotroski_f_score",
+          "source_value": "6 of 9 evaluated",
+          "text": "The company scores 6 out of 9 on evaluated Piotroski F-Score criteria, suggesting mixed but not weak fundamental quality."
+        },
+        {
+          "source_metric": "graham_criteria_passed",
+          "source_value": "2 of 6 evaluated",
+          "text": "The company passes only 2 of 6 evaluated Graham defensive-investor criteria, indicating it fails most classic defensive-value screens."
         }
       ],
-      "minor": [],
+      "minor": [
+        {
+          "source_metric": "sector_relative_momentum_pct",
+          "source_value": "-12.11%",
+          "text": "Momentum relative to the healthcare sector is negative at about -12%, a divergence from peers whose cause is not identified in this data."
+        }
+      ],
       "noise": []
     },
-    "long_term_narrative": "The long-term score of 51.2 similarly indicates a neutral stance, grounded in the same revenue growth and margin trend figures used for the short-term assessment. A margin trend score of 60 suggests moderate stability in profitability trends over time, while 11.8% revenue growth points to continued top-line expansion. Given the company's low cyclicality and low rate sensitivity, the long-term trajectory implied by this data appears steady rather than volatile, though the payload does not provide additional metrics to characterize durability further.",
-    "one_line_summary": "UNH shows steady double-digit revenue growth and a moderate margin trend score, with neutral short- and long-term composite scores.",
-    "short_term_narrative": "The short-term score of 50.0 reflects a neutral outlook, balancing an 11.8% year-over-year revenue growth rate against a margin trend score of 60, which suggests margins are neither sharply improving nor deteriorating. The macro backdrop is described as Neutral/Expansion, and UnitedHealth's low rate sensitivity and low cyclicality mean broader economic swings are less likely to materially shift near-term performance based on the available data. Overall, the data points to a stable but unremarkable near-term picture."
+    "long_term_narrative": "The long-term score of 30.3 ('Cautious') is driven largely by valuation-model outputs showing the stock priced well above what discounted cash flow (-30.37% upside) and Graham-style (-50.81% upside) approaches would suggest as fair value, i.e., a negative margin of safety on both measures. Compounding this, EPS has fallen -15.41% year-over-year and -14.996% on a 3-year CAGR basis even as revenue has grown +11.81% year-over-year, indicating margin pressure rather than a top-line problem. Return on invested capital of 11.16% is moderate rather than exceptional, so the data does not strongly support a durable-moat interpretation at this time.",
+    "one_line_summary": "UNH's own models show a sizable gap below estimated fair value and shrinking EPS despite revenue growth, with weak short-term liquidity.",
+    "short_term_narrative": "The short-term score of 36.1 ('Cautious') reflects a stock trading below its 50-day moving average (-6.78%) but still above its 200-day average (+6.37%), a mixed technical picture. Momentum versus the healthcare sector is negative (-12.11%), and trading volume is running about 1.52x its average, both of which are supply/demand divergences worth noting without a stated cause. These technical signals point to near-term uncertainty rather than a clear directional read."
   },
   "price": {
-    "as_of": null,
-    "close": null,
-    "return_1m_pct": null,
-    "return_3m_pct": null
+    "as_of": "2026-09-18",
+    "avg_volume": 5640731.408764941,
+    "close": 376.9,
+    "return_1m_pct": -3.0133038264584124,
+    "return_3m_pct": -6.000598563447726,
+    "sector_avg_return_3m_pct": 6.106929581186077,
+    "sector_relative_momentum_pct": -12.107528144633804,
+    "volume": 8563301,
+    "volume_vs_avg_ratio": 1.5181189068307308
   },
   "scores": {
     "long_term": {
-      "base_score": 51.2,
-      "final_score": 51.2,
+      "base_score": 30.3,
+      "final_score": 30.3,
       "macro_adjustment": 0,
       "subscores": [
         {
@@ -93,21 +179,31 @@
           "raw_metrics": [
             {
               "metric": "pe_ttm",
-              "raw_value": null,
-              "score": null
+              "raw_value": 24.236383512314323,
+              "score": 52.545388292285594
             },
             {
               "metric": "ev_ebitda",
-              "raw_value": null,
-              "score": null
+              "raw_value": 15.022420753328419,
+              "score": 58.69164262747989
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -30.370934573367915,
+              "score": 0.0
+            },
+            {
+              "metric": "graham_upside_pct",
+              "raw_value": -50.81026394676211,
+              "score": 0.0
+            },
+            {
+              "metric": "graham_multiple",
+              "raw_value": 84.06558254500443,
+              "score": 0.0
             }
           ],
-          "score": 50.0,
+          "score": 22.2,
           "weight_pct": 25
         },
         {
@@ -121,16 +217,21 @@
             },
             {
               "metric": "revenue_cagr_3yr_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 11.352161443193465,
+              "score": 65.40864577277387
             },
             {
               "metric": "eps_growth_yoy_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -15.409207161125321,
+              "score": 0.0
+            },
+            {
+              "metric": "eps_growth_cagr_3yr_pct",
+              "raw_value": -14.99625722899529,
+              "score": 0.0
             }
           ],
-          "score": 52.0,
+          "score": 30.4,
           "weight_pct": 25
         },
         {
@@ -139,21 +240,26 @@
           "raw_metrics": [
             {
               "metric": "gross_margin_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 18.52616479767275,
+              "score": 0.0
             },
             {
               "metric": "roe_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 14.625671564502557,
+              "score": 48.75223854834186
             },
             {
               "metric": "margin_trend_score",
-              "raw_value": 60,
-              "score": 60.0
+              "raw_value": 20,
+              "score": 20.0
+            },
+            {
+              "metric": "roic_pct",
+              "raw_value": 11.155625129499317,
+              "score": 44.62250051799727
             }
           ],
-          "score": 53.3,
+          "score": 28.3,
           "weight_pct": 20
         },
         {
@@ -162,21 +268,21 @@
           "raw_metrics": [
             {
               "metric": "debt_to_equity",
-              "raw_value": null,
-              "score": null
+              "raw_value": 0.7448474813859234,
+              "score": 62.75762593070383
             },
             {
               "metric": "current_ratio",
-              "raw_value": null,
-              "score": null
+              "raw_value": 0.7767841173314255,
+              "score": 13.839205866571275
             },
             {
               "metric": "interest_coverage",
-              "raw_value": null,
-              "score": null
+              "raw_value": 5.566512583461736,
+              "score": 19.813958797009647
             }
           ],
-          "score": 50.0,
+          "score": 32.1,
           "weight_pct": 15
         },
         {
@@ -185,24 +291,29 @@
           "raw_metrics": [
             {
               "metric": "fcf_margin_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 3.5916410280471975,
+              "score": 11.972136760157325
             },
             {
               "metric": "fcf_to_net_income",
-              "raw_value": null,
-              "score": null
+              "raw_value": 1.3333609820836099,
+              "score": 83.336098208361
+            },
+            {
+              "metric": "owner_earnings_yield_pct",
+              "raw_value": 3.738171668136153,
+              "score": 37.38171668136153
             }
           ],
-          "score": 50.0,
+          "score": 44.2,
           "weight_pct": 15
         }
       ],
-      "verdict": "Neutral"
+      "verdict": "Cautious"
     },
     "short_term": {
-      "base_score": 50.0,
-      "final_score": 50.0,
+      "base_score": 36.1,
+      "final_score": 36.1,
       "macro_adjustment": 0,
       "subscores": [
         {
@@ -211,16 +322,16 @@
           "raw_metrics": [
             {
               "metric": "return_1m_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -3.0133038264584124,
+              "score": 34.93348086770794
             },
             {
               "metric": "return_3m_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -6.000598563447726,
+              "score": 34.99850359138069
             }
           ],
-          "score": 50.0,
+          "score": 35.0,
           "weight_pct": 30
         },
         {
@@ -229,21 +340,21 @@
           "raw_metrics": [
             {
               "metric": "price_vs_ma50_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -6.784062523186509,
+              "score": 16.079687384067455
             },
             {
               "metric": "price_vs_ma200_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 6.372019840681861,
+              "score": 71.24006613560621
             },
             {
               "metric": "rsi_distance_from_neutral",
-              "raw_value": null,
-              "score": null
+              "raw_value": 13.64563849685429,
+              "score": 65.88590375786427
             }
           ],
-          "score": 50.0,
+          "score": 51.1,
           "weight_pct": 20
         },
         {
@@ -265,15 +376,15 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -30.370934573367915,
+              "score": 0.0
             }
           ],
-          "score": 50.0,
+          "score": 0.0,
           "weight_pct": 15
         }
       ],
-      "verdict": "Neutral"
+      "verdict": "Cautious"
     }
   },
   "sector": "Healthcare",
@@ -307,5 +418,92 @@
       }
     ]
   },
-  "ticker": "UNH"
+  "ticker": "UNH",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $342.3B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.78, debt $78.4B vs working capital $-24.3B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr, Graham's 33%/10yr pace)",
+          "detail": "EPS 3yr CAGR -15.0%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 24.2",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 84.1",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 2,
+      "total": 7
+    },
+    "piotroski_f_score": {
+      "criteria": [
+        {
+          "criterion": "Positive net income",
+          "passed": true
+        },
+        {
+          "criterion": "Positive operating cash flow",
+          "passed": true
+        },
+        {
+          "criterion": "ROA improving year over year",
+          "passed": false
+        },
+        {
+          "criterion": "Operating cash flow exceeds net income (earnings quality)",
+          "passed": true
+        },
+        {
+          "criterion": "Leverage decreasing year over year",
+          "passed": true
+        },
+        {
+          "criterion": "Current ratio improving year over year",
+          "passed": false
+        },
+        {
+          "criterion": "No new shares issued (no dilution)",
+          "passed": true
+        },
+        {
+          "criterion": "Gross margin improving year over year",
+          "passed": false
+        },
+        {
+          "criterion": "Asset turnover improving year over year",
+          "passed": true
+        }
+      ],
+      "evaluated": 9,
+      "max": 9,
+      "score": 6
+    }
+  }
 }

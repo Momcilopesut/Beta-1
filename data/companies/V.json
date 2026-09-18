@@ -1,45 +1,43 @@
 {
-  "_errors": {
-    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts",
-    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts",
-    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts",
-    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts",
-    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts",
-    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts",
-    "profile": "Failed to fetch https://financialmodelingprep.com/stable/profile after 3 attempts",
-    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts",
-    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts"
-  },
+  "_errors": {},
   "cik": "0001403161",
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": null,
-      "debt_to_equity": null,
-      "interest_coverage": null
+      "current_ratio": 0.9852226141672228,
+      "debt_to_equity": 0.6782079708908977,
+      "interest_coverage": 23.192439862542955
     },
     "cash_flow": {
-      "fcf_margin_pct": null,
-      "fcf_to_net_income": null
+      "fcf_margin_pct": 53.9425,
+      "fcf_to_net_income": 1.0757303818925117,
+      "owner_earnings_yield_pct": 2.878937379012355
     },
     "growth": {
-      "eps_growth_yoy_pct": null,
-      "revenue_cagr_3yr_pct": null,
-      "revenue_growth_yoy_pct": -4.922313617965792
+      "eps_growth_cagr_3yr_pct": 13.390749500628862,
+      "eps_growth_yoy_pct": 4.928131416837787,
+      "revenue_cagr_3yr_pct": 10.921242130254294,
+      "revenue_growth_yoy_pct": 11.339976618604911
     },
     "profitability": {
-      "gross_margin_pct": null,
-      "roe_pct": null,
+      "gross_margin_pct": 80.3625,
+      "roe_pct": 61.256058295204205,
+      "roic_pct": 46.34065670016888,
       "trend": "stable"
     },
     "valuation": {
-      "dcf_fair_value": null,
-      "dcf_upside_pct": null,
-      "ev_ebitda": null,
-      "pe_ttm": null
+      "dcf_fair_value": 205.20360887807067,
+      "dcf_upside_pct": -44.48555110970926,
+      "ev_ebitda": 24.026181089387585,
+      "graham_multiple": 626.8297371466505,
+      "graham_number": 65.01949718324255,
+      "graham_upside_pct": -82.34557083188723,
+      "ncav_margin_pct": -113.85858951346664,
+      "pb_ratio": 20.03254502217295,
+      "pe_ttm": 31.290569243840274
     }
   },
-  "industry": null,
-  "last_updated": "2026-09-16T12:26:44Z",
+  "industry": "Financial - Credit Services",
+  "last_updated": "2026-09-18T22:33:30Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -47,9 +45,40 @@
       "rate_sensitivity": "high"
     }
   },
+  "market_cap": 687614817339,
   "metrics": {
+    "current_ratio": 0.9852226141672228,
+    "dcf_upside_pct": -44.48555110970926,
+    "debt_to_equity": 0.6782079708908977,
+    "eps_growth_cagr_3yr_pct": 13.390749500628862,
+    "eps_growth_yoy_pct": 4.928131416837787,
+    "ev_ebitda": 24.026181089387585,
+    "fcf_margin_pct": 53.9425,
+    "fcf_to_net_income": 1.0757303818925117,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 626.8297371466505,
+    "graham_upside_pct": -82.34557083188723,
+    "gross_margin_pct": 80.3625,
+    "interest_coverage": 23.192439862542955,
     "margin_trend_score": 60,
-    "revenue_growth_yoy_pct": -4.922313617965792
+    "ncav_margin_pct": -113.85858951346664,
+    "owner_earnings_yield_pct": 2.878937379012355,
+    "pb_ratio": 20.03254502217295,
+    "pe_ttm": 31.290569243840274,
+    "piotroski_evaluated": 9,
+    "piotroski_f_score": 5,
+    "price_vs_ma200_pct": 9.62943470992508,
+    "price_vs_ma50_pct": 0.32951909173031935,
+    "return_1m_pct": 0.7523116485199978,
+    "return_3m_pct": 12.544309986554214,
+    "revenue_cagr_3yr_pct": 10.921242130254294,
+    "revenue_growth_yoy_pct": 11.339976618604911,
+    "roe_pct": 61.256058295204205,
+    "roic_pct": 46.34065670016888,
+    "rsi_distance_from_neutral": 15.736580751950811,
+    "sector_relative_momentum_pct": 2.5131610814635685,
+    "volume_vs_avg_ratio": 2.7808524276924764
   },
   "name": "Visa Inc.",
   "narrative": {
@@ -57,35 +86,92 @@
     "facts": {
       "critical": [
         {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "-4.92%",
-          "text": "Visa's revenue grew at a rate of approximately -4.92% year-over-year, indicating a decline in reported revenue compared to the prior year."
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-44.49%",
+          "text": "Visa's price appears roughly 44% above what the discounted cash flow model estimates as fair value, indicating no margin of safety by this measure."
+        },
+        {
+          "source_metric": "graham_upside_pct",
+          "source_value": "-82.35%",
+          "text": "By the Graham fair-value model, the stock trades about 82% above estimated intrinsic value, an unusually large gap with no margin of safety."
+        },
+        {
+          "source_metric": "roic_pct",
+          "source_value": "46.34%",
+          "text": "Visa's return on invested capital of about 46% is very high, which can point to a durable competitive advantage, or moat, in its payments network business."
         }
       ],
       "important": [
         {
-          "source_metric": "margin_trend_score",
-          "source_value": "60",
-          "text": "Visa's margin trend score stands at 60, suggesting a moderately positive trend in margins."
+          "source_metric": "roe_pct",
+          "source_value": "61.26%",
+          "text": "Return on equity of roughly 61% reflects an extremely profitable use of shareholder capital."
+        },
+        {
+          "source_metric": "pe_ttm",
+          "source_value": "31.29",
+          "text": "The stock trades at a trailing P/E of about 31x, a valuation multiple well above typical market averages."
+        },
+        {
+          "source_metric": "ev_ebitda",
+          "source_value": "24.03",
+          "text": "EV/EBITDA of about 24x also points to a rich valuation relative to earnings before interest, taxes, depreciation, and amortization."
+        },
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "11.34%",
+          "text": "Revenue grew about 11.3% year-over-year, broadly in line with the multi-year growth trend."
+        },
+        {
+          "source_metric": "eps_growth_yoy_pct",
+          "source_value": "4.93%",
+          "text": "EPS growth of about 4.9% year-over-year is notably slower than the multi-year trend, suggesting recent earnings-growth deceleration."
+        },
+        {
+          "source_metric": "eps_growth_cagr_3yr_pct",
+          "source_value": "13.39%",
+          "text": "The 3-year EPS CAGR of about 13.4% is well above the latest year's growth, underscoring the deceleration seen in the most recent figure."
+        },
+        {
+          "source_metric": "fcf_margin_pct",
+          "source_value": "53.94%",
+          "text": "Free cash flow margin of nearly 54% shows the business converts a large share of revenue into cash."
         }
       ],
-      "minor": [],
-      "noise": []
+      "minor": [
+        {
+          "source_metric": "graham_criteria_passed",
+          "source_value": "3 of 6 evaluated",
+          "text": "Visa passes 3 of 6 evaluated Graham defensive-investor criteria, a mixed result on this classic checklist."
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "volume_vs_avg_ratio",
+          "source_value": "2.78x average",
+          "text": "Trading volume is running about 2.78 times its average - a supply/demand divergence worth noting, though the data does not indicate why."
+        }
+      ]
     },
-    "long_term_narrative": "The long-term score of 47.5 also carries a Neutral verdict, placing it just below the midpoint. The negative revenue growth figure raises questions about sustained top-line expansion over a longer horizon. However, the margin trend score of 60 suggests underlying profitability mechanics remain reasonably stable, tempering concern from the growth figure alone. No other long-term fundamental metrics are provided to further clarify the trajectory.",
-    "one_line_summary": "Visa shows negative year-over-year revenue growth alongside a moderate margin trend, with neutral short- and long-term scores.",
-    "short_term_narrative": "The short-term score of 51.0 reflects a Neutral verdict, suggesting no strong directional signal in the near term. This is consistent with a revenue growth rate of about -4.92% year-over-year, indicating a recent contraction in top-line results. The margin trend score of 60 points to a moderately favorable cost or pricing dynamic that partially offsets the revenue decline. Together these produce a balanced, non-extreme short-term picture."
+    "long_term_narrative": "Visa's long-term score of 52.9 is also Neutral, weighing a highly profitable core business - 46.34% ROIC, 61.26% ROE, and a 53.94% free cash flow margin - against a valuation that looks stretched relative to modeled fair value, with DCF upside of -44.49% and Graham upside of -82.35% implying little to no margin of safety at current prices. Revenue grew 11.34% year-over-year and the 3-year EPS CAGR is 13.39%, but the latest year's EPS growth of 4.93% is notably slower, hinting at some deceleration. A Piotroski score of 5 of 9 evaluated criteria and passing only 3 of 6 Graham defensive-investor criteria round out a mixed fundamental-quality picture consistent with the Neutral long-term read.",
+    "one_line_summary": "Visa shows strong profitability and moat-like ROIC, but its price sits far above modeled fair value with mixed growth trends.",
+    "short_term_narrative": "Visa's short-term score of 51.9 lands in Neutral territory, reflecting mixed momentum signals: the price is only 0.33% above its 50-day average but 9.63% above its 200-day average, while the 3-month return of 12.54% far outpaces the 1-month return of 0.75%. Trading volume running about 2.78x its average marks a notable divergence from the stock's own norm, and sector-relative momentum of 2.51% shows only a slight edge versus peers. None of these readings point to a strong directional bias in either direction."
   },
   "price": {
-    "as_of": null,
-    "close": null,
-    "return_1m_pct": null,
-    "return_3m_pct": null
+    "as_of": "2026-09-18",
+    "avg_volume": 7035265.447808765,
+    "close": 368.29,
+    "return_1m_pct": 0.7523116485199978,
+    "return_3m_pct": 12.544309986554214,
+    "sector_avg_return_3m_pct": 10.031148905090646,
+    "sector_relative_momentum_pct": 2.5131610814635685,
+    "volume": 19564035,
+    "volume_vs_avg_ratio": 2.7808524276924764
   },
   "scores": {
     "long_term": {
-      "base_score": 46.5,
-      "final_score": 47.5,
+      "base_score": 51.9,
+      "final_score": 52.9,
       "macro_adjustment": 1,
       "subscores": [
         {
@@ -94,21 +180,31 @@
           "raw_metrics": [
             {
               "metric": "pe_ttm",
-              "raw_value": null,
-              "score": null
+              "raw_value": 31.290569243840274,
+              "score": 29.031435853865744
             },
             {
               "metric": "ev_ebitda",
-              "raw_value": null,
-              "score": null
+              "raw_value": 24.026181089387585,
+              "score": 5.728346533014204
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -44.48555110970926,
+              "score": 0.0
+            },
+            {
+              "metric": "graham_upside_pct",
+              "raw_value": -82.34557083188723,
+              "score": 0.0
+            },
+            {
+              "metric": "graham_multiple",
+              "raw_value": 626.8297371466505,
+              "score": 0.0
             }
           ],
-          "score": 50.0,
+          "score": 7.0,
           "weight_pct": 25
         },
         {
@@ -117,21 +213,26 @@
           "raw_metrics": [
             {
               "metric": "revenue_growth_yoy_pct",
-              "raw_value": -4.922313617965792,
-              "score": 0.2589546067806925
+              "raw_value": 11.339976618604911,
+              "score": 54.46658872868304
             },
             {
               "metric": "revenue_cagr_3yr_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 10.921242130254294,
+              "score": 63.68496852101717
             },
             {
               "metric": "eps_growth_yoy_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 4.928131416837787,
+              "score": 37.320328542094465
+            },
+            {
+              "metric": "eps_growth_cagr_3yr_pct",
+              "raw_value": 13.390749500628862,
+              "score": 58.47687375157216
             }
           ],
-          "score": 33.4,
+          "score": 53.5,
           "weight_pct": 25
         },
         {
@@ -140,21 +241,26 @@
           "raw_metrics": [
             {
               "metric": "gross_margin_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 80.3625,
+              "score": 100.0
             },
             {
               "metric": "roe_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 61.256058295204205,
+              "score": 100.0
             },
             {
               "metric": "margin_trend_score",
               "raw_value": 60,
               "score": 60.0
+            },
+            {
+              "metric": "roic_pct",
+              "raw_value": 46.34065670016888,
+              "score": 100.0
             }
           ],
-          "score": 53.3,
+          "score": 90.0,
           "weight_pct": 20
         },
         {
@@ -163,21 +269,21 @@
           "raw_metrics": [
             {
               "metric": "debt_to_equity",
-              "raw_value": null,
-              "score": null
+              "raw_value": 0.6782079708908977,
+              "score": 66.08960145545512
             },
             {
               "metric": "current_ratio",
-              "raw_value": null,
-              "score": null
+              "raw_value": 0.9852226141672228,
+              "score": 24.26113070836114
             },
             {
               "metric": "interest_coverage",
-              "raw_value": null,
-              "score": null
+              "raw_value": 23.192439862542955,
+              "score": 100.0
             }
           ],
-          "score": 50.0,
+          "score": 63.5,
           "weight_pct": 15
         },
         {
@@ -186,24 +292,29 @@
           "raw_metrics": [
             {
               "metric": "fcf_margin_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 53.9425,
+              "score": 100.0
             },
             {
               "metric": "fcf_to_net_income",
-              "raw_value": null,
-              "score": null
+              "raw_value": 1.0757303818925117,
+              "score": 57.57303818925117
+            },
+            {
+              "metric": "owner_earnings_yield_pct",
+              "raw_value": 2.878937379012355,
+              "score": 28.789373790123552
             }
           ],
-          "score": 50.0,
+          "score": 62.1,
           "weight_pct": 15
         }
       ],
       "verdict": "Neutral"
     },
     "short_term": {
-      "base_score": 50.0,
-      "final_score": 51.0,
+      "base_score": 50.9,
+      "final_score": 51.9,
       "macro_adjustment": 1,
       "subscores": [
         {
@@ -212,16 +323,16 @@
           "raw_metrics": [
             {
               "metric": "return_1m_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 0.7523116485199978,
+              "score": 53.76155824259998
             },
             {
               "metric": "return_3m_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 12.544309986554214,
+              "score": 81.36077496638553
             }
           ],
-          "score": 50.0,
+          "score": 67.6,
           "weight_pct": 30
         },
         {
@@ -230,21 +341,21 @@
           "raw_metrics": [
             {
               "metric": "price_vs_ma50_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 0.32951909173031935,
+              "score": 51.647595458651594
             },
             {
               "metric": "price_vs_ma200_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": 9.62943470992508,
+              "score": 82.09811569975027
             },
             {
               "metric": "rsi_distance_from_neutral",
-              "raw_value": null,
-              "score": null
+              "raw_value": 15.736580751950811,
+              "score": 60.65854812012297
             }
           ],
-          "score": 50.0,
+          "score": 64.8,
           "weight_pct": 20
         },
         {
@@ -266,11 +377,11 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": null,
-              "score": null
+              "raw_value": -44.48555110970926,
+              "score": 0.0
             }
           ],
-          "score": 50.0,
+          "score": 0.0,
           "weight_pct": 15
         }
       ],
@@ -308,5 +419,92 @@
       }
     ]
   },
-  "ticker": "V"
+  "ticker": "V",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $687.6B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.99, debt $25.2B vs working capital $2.7B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr, Graham's 33%/10yr pace)",
+          "detail": "EPS 3yr CAGR 13.4%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 31.3",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 626.8",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 3,
+      "total": 7
+    },
+    "piotroski_f_score": {
+      "criteria": [
+        {
+          "criterion": "Positive net income",
+          "passed": true
+        },
+        {
+          "criterion": "Positive operating cash flow",
+          "passed": true
+        },
+        {
+          "criterion": "ROA improving year over year",
+          "passed": false
+        },
+        {
+          "criterion": "Operating cash flow exceeds net income (earnings quality)",
+          "passed": true
+        },
+        {
+          "criterion": "Leverage decreasing year over year",
+          "passed": false
+        },
+        {
+          "criterion": "Current ratio improving year over year",
+          "passed": false
+        },
+        {
+          "criterion": "No new shares issued (no dilution)",
+          "passed": true
+        },
+        {
+          "criterion": "Gross margin improving year over year",
+          "passed": false
+        },
+        {
+          "criterion": "Asset turnover improving year over year",
+          "passed": true
+        }
+      ],
+      "evaluated": 9,
+      "max": 9,
+      "score": 5
+    }
+  }
 }
