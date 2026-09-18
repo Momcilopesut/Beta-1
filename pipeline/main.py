@@ -342,7 +342,11 @@ def run_full(args) -> int:
     summaries = []
     total_narrative_warnings = 0
     for state in states:
-        company_doc, summary, warnings = finalize_company(state, regime_info, args.skip_ai)
+        try:
+            company_doc, summary, warnings = finalize_company(state, regime_info, args.skip_ai)
+        except Exception:
+            logger.exception("Failed to finalize %s entirely, skipping", state["ticker"])
+            continue
         total_narrative_warnings += warnings
         writer.write_company(out_dir, state["ticker"], company_doc)
         summaries.append(summary)

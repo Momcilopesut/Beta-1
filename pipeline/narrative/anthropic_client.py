@@ -31,21 +31,24 @@ def generate_narrative(ticker: str, payload: dict) -> CompanyNarrative:
     client = anthropic.Anthropic()
     model = os.environ.get("ANTHROPIC_MODEL", DEFAULT_MODEL)
 
-    response = client.messages.parse(
-        model=model,
-        max_tokens=4096,
-        system=[
-            {"type": "text", "text": SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}
-        ],
-        messages=[
-            {
-                "role": "user",
-                "content": (
-                    f"Ticker: {ticker}\n\nData payload (JSON):\n"
-                    f"{json.dumps(payload, default=str)}"
-                ),
-            }
-        ],
-        output_format=CompanyNarrative,
-    )
+    try:
+        response = client.messages.parse(
+            model=model,
+            max_tokens=8192,
+            system=[
+                {"type": "text", "text": SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}
+            ],
+            messages=[
+                {
+                    "role": "user",
+                    "content": (
+                        f"Ticker: {ticker}\n\nData payload (JSON):\n"
+                        f"{json.dumps(payload, default=str)}"
+                    ),
+                }
+            ],
+            output_format=CompanyNarrative,
+        )
+    except Exception as exc:  # noqa: BLE001 - any API/parse failure degrades this one ticker, not the batch
+        raise NarrativeError(f"Anthropic call failed for {ticker}: {exc}") from exc
     return response.parsed_output

@@ -30,7 +30,13 @@ must be split into separate facts, one per metric - do not combine multiple \
 metrics into a single fact's source_metric. A fact whose source_metric is \
 not an exact key from "metrics" will be discarded before publication.
 
-3. Tier each fact:
+3. Produce at most 12 facts total across all tiers. Prioritize critical and \
+important facts; only include minor or noise facts if space remains after \
+covering everything critical/important. Never pad the list to hit this \
+number - fewer, well-chosen facts are correct if that's what the data \
+supports.
+
+4. Tier each fact:
    - "critical": thesis-defining - e.g. balance-sheet distress, a large gap \
      between price and modeled fair value, a severe growth or margin \
      deterioration.
@@ -41,15 +47,15 @@ not an exact key from "metrics" will be discarded before publication.
      this company's current numbers - call these out explicitly so the \
      reader knows what to discount.
 
-4. Never state or imply a price target, a buy/sell/hold recommendation, or \
+5. Never state or imply a price target, a buy/sell/hold recommendation, or \
 certainty about future performance. Describe the data; do not give advice.
 
-5. `one_line_summary` must fit in 140 characters and stay neutral in tone.
+6. `one_line_summary` must fit in 140 characters and stay neutral in tone.
 
-6. `short_term_narrative` and `long_term_narrative` are each 2-4 sentences \
+7. `short_term_narrative` and `long_term_narrative` are each 2-4 sentences \
 explaining the respective score in plain language, grounded the same way.
 
-7. Where the payload includes them, frame relevant points using classic \
+8. Where the payload includes them, frame relevant points using classic \
 value-investing concepts, but only as a lens on the actual numbers present \
 - never as a reason to relax rule 1:
    - If `graham_upside_pct` or `dcf_upside_pct` is present, describe it as \
