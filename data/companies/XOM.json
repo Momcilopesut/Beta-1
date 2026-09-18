@@ -1,9 +1,12 @@
 {
-  "_errors": {},
+  "_errors": {
+    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=XOM&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
+  },
   "cik": "0002115436",
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 1.1346729708431835,
+      "debt_to_ebitda": 0.7264520865662178,
       "debt_to_equity": 0.16334335723648702,
       "interest_coverage": 59.57010785824345
     },
@@ -14,9 +17,14 @@
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -20.351593235352716,
+      "eps_growth_cagr_5yr_pct": null,
       "eps_growth_yoy_pct": -14.540816326530608,
       "revenue_cagr_3yr_pct": -6.688991546295975,
+      "revenue_cagr_5yr_pct": 12.647066121522933,
       "revenue_growth_yoy_pct": -4.522368657644725
+    },
+    "ownership": {
+      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 21.68320958305676,
@@ -37,7 +45,17 @@
     }
   },
   "industry": "Oil & Gas Integrated",
-  "last_updated": "2026-09-18T22:37:28Z",
+  "last_updated": "2026-09-18T23:13:10Z",
+  "layered_analysis": {
+    "flags": [
+      "Fails the quant screen - below threshold on more metrics than it passes.",
+      "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
+    ],
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": false,
+    "valuation_gate_pass": false
+  },
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -49,6 +67,7 @@
   "metrics": {
     "current_ratio": 1.1346729708431835,
     "dcf_upside_pct": -28.312095413096177,
+    "debt_to_ebitda": 0.7264520865662178,
     "debt_to_equity": 0.16334335723648702,
     "eps_growth_cagr_3yr_pct": -20.351593235352716,
     "eps_growth_yoy_pct": -14.540816326530608,
@@ -56,7 +75,7 @@
     "fcf_margin_pct": 7.289791759929609,
     "fcf_to_net_income": 0.8186104562473998,
     "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 2,
+    "graham_criteria_passed": 1,
     "graham_multiple": 55.14590828979689,
     "graham_upside_pct": -39.92072621868763,
     "gross_margin_pct": 21.68320958305676,
@@ -73,6 +92,7 @@
     "return_1m_pct": -0.9649814893487911,
     "return_3m_pct": 18.409404252231337,
     "revenue_cagr_3yr_pct": -6.688991546295975,
+    "revenue_cagr_5yr_pct": 12.647066121522933,
     "revenue_growth_yoy_pct": -4.522368657644725,
     "roe_pct": 12.675533129278287,
     "roic_pct": 8.375707222988943,
@@ -84,14 +104,78 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-28.31%",
+          "text": "The stock's price sits about 28.3% above its DCF-modeled fair value, indicating a negative margin of safety by this measure."
+        },
+        {
+          "source_metric": "graham_upside_pct",
+          "source_value": "-39.92%",
+          "text": "The stock's price sits about 39.9% above its Graham-formula fair value, indicating a substantial negative margin of safety by this measure."
+        },
+        {
+          "source_metric": "eps_growth_cagr_3yr_pct",
+          "source_value": "-20.35%",
+          "text": "Earnings per share have contracted at a -20.4% compound annual rate over the past 3 years, a severe deterioration trend."
+        },
+        {
+          "source_metric": "piotroski_f_score",
+          "source_value": "3 of 9 evaluated",
+          "text": "The company scores only 3 out of 9 on the Piotroski financial-strength checklist, signaling weak fundamental quality by this framework."
+        },
+        {
+          "source_metric": "graham_criteria_passed",
+          "source_value": "1 of 6 evaluated",
+          "text": "The company passes only 1 of 6 evaluated Graham defensive-investor criteria."
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "revenue_cagr_3yr_pct",
+          "source_value": "-6.69%",
+          "text": "Revenue has declined at a -6.7% compound annual rate over the past 3 years."
+        },
+        {
+          "source_metric": "eps_growth_yoy_pct",
+          "source_value": "-14.54%",
+          "text": "Earnings per share fell -14.5% year-over-year."
+        },
+        {
+          "source_metric": "debt_to_equity",
+          "source_value": "0.163",
+          "text": "Debt-to-equity stands at a low 0.16, indicating limited balance-sheet leverage."
+        },
+        {
+          "source_metric": "interest_coverage",
+          "source_value": "59.57x",
+          "text": "Interest coverage of 59.6x indicates the company can comfortably service its debt obligations from operating earnings."
+        },
+        {
+          "source_metric": "owner_earnings_yield_pct",
+          "source_value": "3.92%",
+          "text": "Owner earnings yield, a Buffett-style measure of cash return on the business, stands at 3.9%."
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "price_vs_ma200_pct",
+          "source_value": "11.08%",
+          "text": "The stock trades about 11.1% above its 200-day moving average, a longer-term price trend indicator."
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "volume_vs_avg_ratio",
+          "source_value": "1.92x average",
+          "text": "Trading volume has run at about 1.92x its average level, a volume divergence noted here without an identified cause; treat as context rather than a decision driver."
+        }
+      ]
     },
-    "long_term_narrative": null,
-    "one_line_summary": null,
-    "short_term_narrative": null
+    "long_term_narrative": "The long-term score of 30.7 (Cautious) is driven by weakening growth trends: 3-year revenue CAGR of -6.7%, year-over-year EPS decline of -14.5%, and a 3-year EPS CAGR of -20.4%. Valuation models point to a negative margin of safety, with the DCF-implied gap at -28.3% and the Graham-implied gap at -39.9%, meaning the current price sits above both modeled fair-value estimates. The company passes only 1 of 6 evaluated Graham defensive-investor criteria and scores 3 of 9 on the Piotroski checklist, indicating limited fundamental strength by these frameworks, even though leverage remains low (debt-to-equity of 0.16) and interest coverage is very high (59.6x).",
+    "one_line_summary": "XOM shows mixed short-term price momentum but long-term fundamentals show declining growth and a modeled valuation gap versus current price.",
+    "short_term_narrative": "The short-term score of 56.5 (Neutral) reflects a stock trading modestly above both its 50-day (+3.4%) and 200-day (+11.1%) moving averages, with a strong 3-month return of 18.4% offset by a slightly negative 1-month return of -1.0%. RSI distance from neutral (10.5) suggests momentum is not at an extreme in either direction. Volume has run at nearly double its average (1.92x), a supply/demand divergence worth noting, while momentum relative to the energy sector itself is flat (0.0%), suggesting no unusual sector-relative strength or weakness."
   },
   "price": {
     "as_of": "2026-09-18",
@@ -103,6 +187,54 @@
     "sector_relative_momentum_pct": 0.0,
     "volume": 36291933,
     "volume_vs_avg_ratio": 1.9204132277886
+  },
+  "qualitative": null,
+  "quant_score": {
+    "evaluated": 5,
+    "gate_pass": false,
+    "informational": {
+      "insider_ownership_pct": null,
+      "margin_trend_score": 20
+    },
+    "metrics": {
+      "debt_to_ebitda": {
+        "higher_is_better": false,
+        "label": "Debt / EBITDA",
+        "pass": true,
+        "threshold": 3.0,
+        "value": 0.7264520865662178
+      },
+      "eps_growth_cagr_pct": {
+        "higher_is_better": true,
+        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
+        "pass": false,
+        "threshold": 5.0,
+        "value": -20.351593235352716
+      },
+      "fcf_margin_pct": {
+        "higher_is_better": true,
+        "label": "Free cash flow margin",
+        "pass": false,
+        "threshold": 10.0,
+        "value": 7.289791759929609
+      },
+      "revenue_cagr_pct": {
+        "higher_is_better": true,
+        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 12.647066121522933
+      },
+      "roic_pct": {
+        "higher_is_better": true,
+        "label": "Return on invested capital",
+        "pass": false,
+        "threshold": 12.0,
+        "value": 8.375707222988943
+      }
+    },
+    "passed": 2,
+    "quant_score_pct": 40.0
   },
   "scores": {
     "long_term": {
@@ -335,7 +467,32 @@
       }
     ]
   },
+  "thesis": null,
   "ticker": "XOM",
+  "valuation": {
+    "dcf": {
+      "assumptions": {
+        "base_fcf": 23612000000,
+        "discount_rate_pct": 9.0,
+        "growth_rate_pct": 12.647066121522933,
+        "growth_rate_source": "trailing_5yr_revenue_cagr",
+        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
+        "projection_years": 5,
+        "terminal_growth_rate_pct": 2.5
+      },
+      "intrinsic_value_per_share": 138.47520879376526,
+      "margin_of_safety_pct": -15.139595052233574
+    },
+    "margin_of_safety_pct": -15.139595052233574,
+    "relative": {
+      "ev_ebitda": 9.8583081489732,
+      "ev_ebitda_vs_sector_median_pct": 0.0,
+      "pe_ttm": 21.001287001287004,
+      "pe_vs_sector_median_pct": 0.0,
+      "sector_median_ev_ebitda": 9.8583081489732,
+      "sector_median_pe_ttm": 21.001287001287004
+    }
+  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [
@@ -351,8 +508,8 @@
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
-          "passed": true
+          "detail": "Positive in 5/6 available years (Graham's original window was 10 years)",
+          "passed": false
         },
         {
           "criterion": "Dividend record",
@@ -376,7 +533,7 @@
         }
       ],
       "evaluated": 6,
-      "passed": 2,
+      "passed": 1,
       "total": 7
     },
     "piotroski_f_score": {

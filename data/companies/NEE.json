@@ -1,9 +1,12 @@
 {
-  "_errors": {},
+  "_errors": {
+    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=NEE&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
+  },
   "cik": "0000753308",
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 0.5338234279008767,
+      "debt_to_ebitda": 6.282044543722488,
       "debt_to_equity": 1.929016559885166,
       "interest_coverage": 2.4363791631084544
     },
@@ -14,9 +17,14 @@
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 16.33518937905172,
+      "eps_growth_cagr_5yr_pct": 17.30819301253137,
       "eps_growth_yoy_pct": -2.071005917159759,
       "revenue_cagr_3yr_pct": 9.44981688531663,
+      "revenue_cagr_5yr_pct": 8.830513470144453,
       "revenue_growth_yoy_pct": 11.000686785440148
+    },
+    "ownership": {
+      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 62.80026204687728,
@@ -37,7 +45,16 @@
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-09-18T22:38:11Z",
+  "last_updated": "2026-09-18T23:14:36Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
+    ],
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": true,
+    "valuation_gate_pass": false
+  },
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -49,8 +66,10 @@
   "metrics": {
     "current_ratio": 0.5338234279008767,
     "dcf_upside_pct": 51.37449334836287,
+    "debt_to_ebitda": 6.282044543722488,
     "debt_to_equity": 1.929016559885166,
     "eps_growth_cagr_3yr_pct": 16.33518937905172,
+    "eps_growth_cagr_5yr_pct": 17.30819301253137,
     "eps_growth_yoy_pct": -2.071005917159759,
     "ev_ebitda": 15.545682141622414,
     "fcf_margin_pct": 11.686562818459747,
@@ -73,6 +92,7 @@
     "return_1m_pct": -6.332208124781746,
     "return_3m_pct": -7.239193083573488,
     "revenue_cagr_3yr_pct": 9.44981688531663,
+    "revenue_cagr_5yr_pct": 8.830513470144453,
     "revenue_growth_yoy_pct": 11.000686785440148,
     "roe_pct": 16.820342140844815,
     "roic_pct": 5.61679611979785,
@@ -86,76 +106,75 @@
     "facts": {
       "critical": [
         {
-          "source_metric": "current_ratio",
-          "source_value": "0.53",
-          "text": "Current ratio of 0.53 indicates current liabilities exceed current assets, a potential liquidity constraint."
-        },
-        {
-          "source_metric": "interest_coverage",
-          "source_value": "2.44x",
-          "text": "Interest coverage of 2.44x is on the thinner side, meaning operating earnings cover interest expense by a limited margin."
-        },
-        {
-          "source_metric": "debt_to_equity",
-          "source_value": "1.93",
-          "text": "Debt-to-equity of 1.93 shows the company relies heavily on debt relative to equity in its capital structure."
+          "source_metric": "dcf_upside_pct",
+          "source_value": "51.37%",
+          "text": "A discounted-cash-flow model implies the stock trades at a 51.4% discount to modeled fair value, a potential margin of safety by that measure."
         },
         {
           "source_metric": "graham_upside_pct",
           "source_value": "-38.74%",
-          "text": "The Graham valuation model implies a -38.7% gap versus its fair-value estimate, indicating no margin of safety and a price above that model's fair value."
+          "text": "A Graham-style valuation implies the stock trades about 38.7% above that more conservative modeled fair value, the opposite signal from the DCF-based estimate."
+        },
+        {
+          "source_metric": "debt_to_ebitda",
+          "source_value": "6.28x",
+          "text": "Debt stands at roughly 6.3 times EBITDA, a high leverage level relative to earnings before interest, taxes, depreciation and amortization."
+        },
+        {
+          "source_metric": "current_ratio",
+          "source_value": "0.53",
+          "text": "The current ratio is 0.53, meaning short-term liabilities exceed short-term liquid assets."
         }
       ],
       "important": [
         {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "51.37%",
-          "text": "The DCF model implies a 51.4% margin of safety versus its modeled fair value, in contrast to the Graham model's reading."
+          "source_metric": "debt_to_equity",
+          "source_value": "1.93",
+          "text": "Debt-to-equity is about 1.93, indicating debt roughly double the size of shareholder equity."
+        },
+        {
+          "source_metric": "interest_coverage",
+          "source_value": "2.44x",
+          "text": "Interest coverage of about 2.4x indicates operating earnings cover interest expense only modestly."
         },
         {
           "source_metric": "eps_growth_yoy_pct",
           "source_value": "-2.07%",
-          "text": "Year-over-year EPS growth is negative at -2.1%, despite positive revenue growth over the same period."
+          "text": "EPS declined about 2.1% year-over-year, contrasting with the revenue growth seen over the same period."
         },
         {
-          "source_metric": "roic_pct",
-          "source_value": "5.62%",
-          "text": "Return on invested capital of 5.6% is modest and does not, by itself, suggest a durable competitive advantage."
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "11.0%",
+          "text": "Revenue grew about 11.0% year-over-year."
+        },
+        {
+          "source_metric": "price_vs_ma200_pct",
+          "source_value": "-8.22%",
+          "text": "The stock trades about 8.2% below its 200-day moving average."
         },
         {
           "source_metric": "piotroski_f_score",
           "source_value": "5 of 9",
-          "text": "The company scores 5 of 9 evaluated Piotroski F-Score criteria, a mid-range reading on this financial-strength checklist."
+          "text": "The company scores 5 out of 9 evaluated Piotroski financial-strength criteria."
         },
+        {
+          "source_metric": "owner_earnings_yield_pct",
+          "source_value": "2.68%",
+          "text": "Owner earnings yield is about 2.7%, a modest cash-generation yield on the business by Buffett's owner-earnings framework."
+        }
+      ],
+      "minor": [
         {
           "source_metric": "graham_criteria_passed",
           "source_value": "3 of 6",
           "text": "The company passes 3 of 6 evaluated Graham defensive-investor criteria."
         }
       ],
-      "minor": [
-        {
-          "source_metric": "price_vs_ma200_pct",
-          "source_value": "-8.22%",
-          "text": "Price is 8.2% below its 200-day moving average, indicating the stock is trading below its longer-term trend."
-        },
-        {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "2.14x average",
-          "text": "Trading volume is running at about 2.1x its average level, a divergence from typical activity with no indicated cause in the data."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "0.0%",
-          "text": "Momentum relative to the utilities sector is flat at 0.0%, meaning there is no notable divergence from sector peers worth reading into."
-        }
-      ]
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 39.4 (Cautious) is weighed down by balance-sheet metrics: a current ratio of 0.53 points to limited near-term liquidity, interest coverage of 2.44x is thin, and debt-to-equity of 1.93 reflects a highly leveraged capital structure. Valuation signals conflict - the DCF framework implies a 51.4% margin of safety versus modeled fair value, while the Graham framework implies a -38.7% gap, meaning the stock trades above that model's fair value estimate; this divergence is noted rather than resolved. A return on invested capital of 5.6% does not, on its own, point to a durable competitive advantage, and the company passes only 3 of 6 evaluated Graham defensive-investor criteria while scoring 5 of 9 on the Piotroski checklist, indicating mixed fundamental quality overall.",
-    "one_line_summary": "NEE shows weak short-term price momentum, a highly leveraged balance sheet, and conflicting valuation signals between DCF and Graham models.",
-    "short_term_narrative": "Over the past month and quarter, NEE's price fell 6.3% and 7.2% respectively, and now trades 5.9% below its 50-day average and 8.2% below its 200-day average, indicating a downtrend relative to its own recent trading history. Volume has been running at about 2.1x its average level, a divergence from typical trading activity whose underlying cause is not indicated in the available data. Momentum relative to the utilities sector shows no divergence (0.0%), suggesting this price action is not distinct from sector peers. These combined signals produce a Neutral short-term score of 47.9."
+    "long_term_narrative": "The long-term Cautious score is shaped by conflicting valuation signals: a discounted-cash-flow model shows a sizable 51.4% gap to modeled fair value, while a Graham-style valuation suggests the stock is about 38.7% above that more conservative fair-value estimate. Balance-sheet metrics show debt roughly 6.3x EBITDA, a current ratio of 0.53 (below 1), and interest coverage of only about 2.4x, all pointing to a more leveraged, less liquid financial position. Profitability checks are mixed too - a Piotroski score of 5 out of 9 evaluated criteria and passing 3 of 6 Graham defensive-investor criteria - alongside EPS that declined year-over-year even as revenue grew, tempering the growth picture.",
+    "one_line_summary": "NEE: Neutral short-term (47.9) and Cautious long-term (39.4) scores reflect mixed valuation signals and elevated leverage.",
+    "short_term_narrative": "Over the past month and quarter the stock has declined roughly 6-7%, and it now trades about 5.9% below its 50-day average and 8.2% below its 200-day average, consistent with the short-term score's Neutral-to-soft reading. Momentum relative to the RSI midpoint is only modestly stretched, and volume has run more than double its average, a supply/demand divergence worth noting though its cause isn't indicated in the data. Together these point to recent price weakness without an extreme technical signal in either direction."
   },
   "price": {
     "as_of": "2026-09-18",
@@ -167,6 +186,54 @@
     "sector_relative_momentum_pct": 0.0,
     "volume": 21557428,
     "volume_vs_avg_ratio": 2.1355678399631643
+  },
+  "qualitative": null,
+  "quant_score": {
+    "evaluated": 5,
+    "gate_pass": true,
+    "informational": {
+      "insider_ownership_pct": null,
+      "margin_trend_score": 60
+    },
+    "metrics": {
+      "debt_to_ebitda": {
+        "higher_is_better": false,
+        "label": "Debt / EBITDA",
+        "pass": false,
+        "threshold": 3.0,
+        "value": 6.282044543722488
+      },
+      "eps_growth_cagr_pct": {
+        "higher_is_better": true,
+        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 17.30819301253137
+      },
+      "fcf_margin_pct": {
+        "higher_is_better": true,
+        "label": "Free cash flow margin",
+        "pass": true,
+        "threshold": 10.0,
+        "value": 11.686562818459747
+      },
+      "revenue_cagr_pct": {
+        "higher_is_better": true,
+        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 8.830513470144453
+      },
+      "roic_pct": {
+        "higher_is_better": true,
+        "label": "Return on invested capital",
+        "pass": false,
+        "threshold": 12.0,
+        "value": 5.61679611979785
+      }
+    },
+    "passed": 3,
+    "quant_score_pct": 60.0
   },
   "scores": {
     "long_term": {
@@ -419,7 +486,32 @@
       }
     ]
   },
+  "thesis": null,
   "ticker": "NEE",
+  "valuation": {
+    "dcf": {
+      "assumptions": {
+        "base_fcf": 3211000000,
+        "discount_rate_pct": 9.0,
+        "growth_rate_pct": 8.830513470144453,
+        "growth_rate_source": "trailing_5yr_revenue_cagr",
+        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
+        "projection_years": 5,
+        "terminal_growth_rate_pct": 2.5
+      },
+      "intrinsic_value_per_share": 31.756342328237984,
+      "margin_of_safety_pct": -60.53642061856843
+    },
+    "margin_of_safety_pct": -60.53642061856843,
+    "relative": {
+      "ev_ebitda": 15.545682141622414,
+      "ev_ebitda_vs_sector_median_pct": 0.0,
+      "pe_ttm": 18.002237136465325,
+      "pe_vs_sector_median_pct": 0.0,
+      "sector_median_ev_ebitda": 15.545682141622414,
+      "sector_median_pe_ttm": 18.002237136465325
+    }
+  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [
@@ -435,7 +527,7 @@
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
+          "detail": "Positive in 6/6 available years (Graham's original window was 10 years)",
           "passed": true
         },
         {

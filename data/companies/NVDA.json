@@ -1,9 +1,12 @@
 {
-  "_errors": {},
+  "_errors": {
+    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=NVDA&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
+  },
   "cik": "0001045810",
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 4.588949069016016,
+      "debt_to_ebitda": 0.08565638369736546,
       "debt_to_equity": 0.1697061803444782,
       "interest_coverage": 426.7365010799136
     },
@@ -14,9 +17,14 @@
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 201.43346886540917,
+      "eps_growth_cagr_5yr_pct": 93.87190727651753,
       "eps_growth_yoy_pct": 65.99326599326596,
       "revenue_cagr_3yr_pct": 100.04509499443964,
+      "revenue_cagr_5yr_pct": 66.89858183148777,
       "revenue_growth_yoy_pct": 65.4735357900948
+    },
+    "ownership": {
+      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 71.06808435754708,
@@ -37,7 +45,16 @@
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-18T22:32:45Z",
+  "last_updated": "2026-09-18T23:06:44Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
+    ],
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": true,
+    "valuation_gate_pass": false
+  },
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -49,8 +66,10 @@
   "metrics": {
     "current_ratio": 4.588949069016016,
     "dcf_upside_pct": 4.214808840113797,
+    "debt_to_ebitda": 0.08565638369736546,
     "debt_to_equity": 0.1697061803444782,
     "eps_growth_cagr_3yr_pct": 201.43346886540917,
+    "eps_growth_cagr_5yr_pct": 93.87190727651753,
     "eps_growth_yoy_pct": 65.99326599326596,
     "ev_ebitda": 23.10989001442223,
     "fcf_margin_pct": 44.770258129648326,
@@ -73,6 +92,7 @@
     "return_1m_pct": 2.1649200220628826,
     "return_3m_pct": 5.496226683753388,
     "revenue_cagr_3yr_pct": 100.04509499443964,
+    "revenue_cagr_5yr_pct": 66.89858183148777,
     "revenue_growth_yoy_pct": 65.4735357900948,
     "roe_pct": 110.11463673627841,
     "roic_pct": 70.00404426549008,
@@ -84,78 +104,14 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "4.21%",
-          "text": "The DCF-based margin of safety is small, at only about 4.2% upside to modeled fair value."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-85.42%",
-          "text": "The Graham-style valuation implies a deeply negative margin of safety, roughly -85% versus modeled fair value."
-        },
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "65.47%",
-          "text": "Revenue grew about 65% year-over-year, indicating rapid top-line expansion."
-        },
-        {
-          "source_metric": "roic_pct",
-          "source_value": "70.00%",
-          "text": "Return on invested capital is roughly 70%, a level that may point to a durable competitive moat if sustained."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "roe_pct",
-          "source_value": "110.11%",
-          "text": "Return on equity stands at approximately 110%, reflecting very high profitability relative to shareholder equity."
-        },
-        {
-          "source_metric": "fcf_margin_pct",
-          "source_value": "44.77%",
-          "text": "Free cash flow margin is about 44.8%, showing substantial cash generation relative to revenue."
-        },
-        {
-          "source_metric": "debt_to_equity",
-          "source_value": "0.17",
-          "text": "Debt-to-equity is low at approximately 0.17, indicating limited balance-sheet leverage."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "4 of 6",
-          "text": "The company passes 4 of 6 evaluated Graham defensive-investor criteria."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "4 of 9",
-          "text": "The Piotroski F-Score is 4 out of 9 evaluated criteria, a middling financial-strength reading."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "owner_earnings_yield_pct",
-          "source_value": "2.17%",
-          "text": "The owner earnings yield is about 2.17%, a relatively low cash return on the business at current valuation."
-        },
-        {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "0.51x average",
-          "text": "Trading volume is running at about 51% of its average, a supply/demand divergence worth noting without a known cause."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "-10.65%",
-          "text": "Momentum relative to sector peers is negative, about -10.6%, a divergence from peer performance whose cause isn't indicated by this data."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 69.7 (Favorable) is grounded in exceptional revenue and EPS growth, very high margins, and a return on invested capital near 70%, suggesting a potentially durable competitive advantage. At the same time, the DCF model shows minimal margin of safety and the Graham-style valuation shows a large negative margin of safety, meaning the current price already assumes a great deal of continued success.",
-    "one_line_summary": "NVDA shows strong growth, high profitability, and low debt, but trades far above modeled fair-value estimates by most value metrics.",
-    "short_term_narrative": "The short-term score of 64.4 (Favorable) reflects price sitting above both its 50-day and 200-day moving averages, with modest 1-month and 3-month returns. However, trading volume is running below its own average and momentum relative to sector peers is negative, signaling a divergence in supply/demand that is worth watching without a clear explanation from this data alone."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",
@@ -167,6 +123,54 @@
     "sector_relative_momentum_pct": -10.648888390564597,
     "volume": 188794542,
     "volume_vs_avg_ratio": 0.5126029550923042
+  },
+  "qualitative": null,
+  "quant_score": {
+    "evaluated": 5,
+    "gate_pass": true,
+    "informational": {
+      "insider_ownership_pct": null,
+      "margin_trend_score": 20
+    },
+    "metrics": {
+      "debt_to_ebitda": {
+        "higher_is_better": false,
+        "label": "Debt / EBITDA",
+        "pass": true,
+        "threshold": 3.0,
+        "value": 0.08565638369736546
+      },
+      "eps_growth_cagr_pct": {
+        "higher_is_better": true,
+        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 93.87190727651753
+      },
+      "fcf_margin_pct": {
+        "higher_is_better": true,
+        "label": "Free cash flow margin",
+        "pass": true,
+        "threshold": 10.0,
+        "value": 44.770258129648326
+      },
+      "revenue_cagr_pct": {
+        "higher_is_better": true,
+        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 66.89858183148777
+      },
+      "roic_pct": {
+        "higher_is_better": true,
+        "label": "Return on invested capital",
+        "pass": true,
+        "threshold": 12.0,
+        "value": 70.00404426549008
+      }
+    },
+    "passed": 5,
+    "quant_score_pct": 100.0
   },
   "scores": {
     "long_term": {
@@ -419,7 +423,32 @@
       }
     ]
   },
+  "thesis": null,
   "ticker": "NVDA",
+  "valuation": {
+    "dcf": {
+      "assumptions": {
+        "base_fcf": 96676000000,
+        "discount_rate_pct": 9.0,
+        "growth_rate_pct": 20.0,
+        "growth_rate_source": "trailing_5yr_revenue_cagr",
+        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
+        "projection_years": 5,
+        "terminal_growth_rate_pct": 2.5
+      },
+      "intrinsic_value_per_share": 129.31351727945847,
+      "margin_of_safety_pct": -41.82142561773588
+    },
+    "margin_of_safety_pct": -41.82142561773588,
+    "relative": {
+      "ev_ebitda": 23.10989001442223,
+      "ev_ebitda_vs_sector_median_pct": 0.0,
+      "pe_ttm": 27.95849056603773,
+      "pe_vs_sector_median_pct": 0.0,
+      "sector_median_ev_ebitda": 23.10989001442223,
+      "sector_median_pe_ttm": 27.95849056603773
+    }
+  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [
@@ -435,7 +464,7 @@
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
+          "detail": "Positive in 6/6 available years (Graham's original window was 10 years)",
           "passed": true
         },
         {

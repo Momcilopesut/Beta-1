@@ -1,9 +1,12 @@
 {
-  "_errors": {},
+  "_errors": {
+    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=V&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
+  },
   "cik": "0001403161",
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 0.9852226141672228,
+      "debt_to_ebitda": 0.9982945982390735,
       "debt_to_equity": 0.6782079708908977,
       "interest_coverage": 23.192439862542955
     },
@@ -14,9 +17,14 @@
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 13.390749500628862,
+      "eps_growth_cagr_5yr_pct": 15.83797667311304,
       "eps_growth_yoy_pct": 4.928131416837787,
       "revenue_cagr_3yr_pct": 10.921242130254294,
+      "revenue_cagr_5yr_pct": 12.859367600424232,
       "revenue_growth_yoy_pct": 11.339976618604911
+    },
+    "ownership": {
+      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 80.3625,
@@ -37,7 +45,14 @@
     }
   },
   "industry": "Financial - Credit Services",
-  "last_updated": "2026-09-18T22:33:30Z",
+  "last_updated": "2026-09-18T23:08:23Z",
+  "layered_analysis": {
+    "flags": [],
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": true,
+    "valuation_gate_pass": true
+  },
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -49,8 +64,10 @@
   "metrics": {
     "current_ratio": 0.9852226141672228,
     "dcf_upside_pct": -44.48555110970926,
+    "debt_to_ebitda": 0.9982945982390735,
     "debt_to_equity": 0.6782079708908977,
     "eps_growth_cagr_3yr_pct": 13.390749500628862,
+    "eps_growth_cagr_5yr_pct": 15.83797667311304,
     "eps_growth_yoy_pct": 4.928131416837787,
     "ev_ebitda": 24.026181089387585,
     "fcf_margin_pct": 53.9425,
@@ -73,6 +90,7 @@
     "return_1m_pct": 0.7523116485199978,
     "return_3m_pct": 12.544309986554214,
     "revenue_cagr_3yr_pct": 10.921242130254294,
+    "revenue_cagr_5yr_pct": 12.859367600424232,
     "revenue_growth_yoy_pct": 11.339976618604911,
     "roe_pct": 61.256058295204205,
     "roic_pct": 46.34065670016888,
@@ -88,74 +106,74 @@
         {
           "source_metric": "dcf_upside_pct",
           "source_value": "-44.49%",
-          "text": "Visa's price appears roughly 44% above what the discounted cash flow model estimates as fair value, indicating no margin of safety by this measure."
+          "text": "The stock's price implies roughly 44.5% less upside than its DCF-modeled fair value, meaning there is currently no margin of safety by this measure."
         },
         {
           "source_metric": "graham_upside_pct",
           "source_value": "-82.35%",
-          "text": "By the Graham fair-value model, the stock trades about 82% above estimated intrinsic value, an unusually large gap with no margin of safety."
-        },
-        {
-          "source_metric": "roic_pct",
-          "source_value": "46.34%",
-          "text": "Visa's return on invested capital of about 46% is very high, which can point to a durable competitive advantage, or moat, in its payments network business."
+          "text": "Versus a classic Graham valuation approach, the current price implies about 82.3% less value than the model's fair value estimate, a very large gap."
         }
       ],
       "important": [
         {
-          "source_metric": "roe_pct",
-          "source_value": "61.26%",
-          "text": "Return on equity of roughly 61% reflects an extremely profitable use of shareholder capital."
+          "source_metric": "roic_pct",
+          "source_value": "46.34%",
+          "text": "Return on invested capital is very high at 46.3%, a level that can indicate a durable competitive advantage if sustained."
         },
         {
           "source_metric": "pe_ttm",
           "source_value": "31.29",
-          "text": "The stock trades at a trailing P/E of about 31x, a valuation multiple well above typical market averages."
+          "text": "The stock trades at a trailing P/E of about 31.3x, a premium multiple relative to typical market averages."
         },
         {
           "source_metric": "ev_ebitda",
           "source_value": "24.03",
-          "text": "EV/EBITDA of about 24x also points to a rich valuation relative to earnings before interest, taxes, depreciation, and amortization."
+          "text": "Enterprise value to EBITDA stands at about 24.0x, also indicating a rich valuation on an operating cash-flow basis."
         },
         {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "11.34%",
-          "text": "Revenue grew about 11.3% year-over-year, broadly in line with the multi-year growth trend."
+          "source_metric": "piotroski_f_score",
+          "source_value": "5 of 9 evaluated",
+          "text": "Visa scores 5 out of 9 evaluated Piotroski criteria, a middling fundamental-quality checklist result."
         },
         {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "4.93%",
-          "text": "EPS growth of about 4.9% year-over-year is notably slower than the multi-year trend, suggesting recent earnings-growth deceleration."
+          "source_metric": "graham_criteria_passed",
+          "source_value": "3 of 6 evaluated",
+          "text": "The company passes 3 of 6 evaluated Graham defensive-investor criteria."
         },
         {
-          "source_metric": "eps_growth_cagr_3yr_pct",
-          "source_value": "13.39%",
-          "text": "The 3-year EPS CAGR of about 13.4% is well above the latest year's growth, underscoring the deceleration seen in the most recent figure."
+          "source_metric": "current_ratio",
+          "source_value": "0.99",
+          "text": "The current ratio is just under 1 (0.985), indicating current liabilities slightly exceed current assets."
         },
         {
-          "source_metric": "fcf_margin_pct",
-          "source_value": "53.94%",
-          "text": "Free cash flow margin of nearly 54% shows the business converts a large share of revenue into cash."
+          "source_metric": "owner_earnings_yield_pct",
+          "source_value": "2.88%",
+          "text": "Owner earnings yield is about 2.9%, a modest cash-based return on the business as defined by this metric."
         }
       ],
       "minor": [
         {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "3 of 6 evaluated",
-          "text": "Visa passes 3 of 6 evaluated Graham defensive-investor criteria, a mixed result on this classic checklist."
+          "source_metric": "debt_to_equity",
+          "source_value": "0.68",
+          "text": "Debt to equity is moderate at roughly 0.68, suggesting manageable leverage relative to equity."
+        },
+        {
+          "source_metric": "volume_vs_avg_ratio",
+          "source_value": "2.78x average",
+          "text": "Trading volume is running about 2.78 times its average, a divergence from the stock's own typical volume with no identified cause in this data."
         }
       ],
       "noise": [
         {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "2.78x average",
-          "text": "Trading volume is running about 2.78 times its average - a supply/demand divergence worth noting, though the data does not indicate why."
+          "source_metric": "sector_relative_momentum_pct",
+          "source_value": "2.51%",
+          "text": "Momentum relative to the sector is only modestly positive (+2.5%), a small divergence rather than a strong signal."
         }
       ]
     },
-    "long_term_narrative": "Visa's long-term score of 52.9 is also Neutral, weighing a highly profitable core business - 46.34% ROIC, 61.26% ROE, and a 53.94% free cash flow margin - against a valuation that looks stretched relative to modeled fair value, with DCF upside of -44.49% and Graham upside of -82.35% implying little to no margin of safety at current prices. Revenue grew 11.34% year-over-year and the 3-year EPS CAGR is 13.39%, but the latest year's EPS growth of 4.93% is notably slower, hinting at some deceleration. A Piotroski score of 5 of 9 evaluated criteria and passing only 3 of 6 Graham defensive-investor criteria round out a mixed fundamental-quality picture consistent with the Neutral long-term read.",
-    "one_line_summary": "Visa shows strong profitability and moat-like ROIC, but its price sits far above modeled fair value with mixed growth trends.",
-    "short_term_narrative": "Visa's short-term score of 51.9 lands in Neutral territory, reflecting mixed momentum signals: the price is only 0.33% above its 50-day average but 9.63% above its 200-day average, while the 3-month return of 12.54% far outpaces the 1-month return of 0.75%. Trading volume running about 2.78x its average marks a notable divergence from the stock's own norm, and sector-relative momentum of 2.51% shows only a slight edge versus peers. None of these readings point to a strong directional bias in either direction."
+    "long_term_narrative": "The long-term score of 52.9 balances strong underlying business quality against a stretched valuation. Visa shows very high returns on capital (ROIC of 46.3%) and durable revenue growth (11.3% YoY, ~12.9% 5yr CAGR), consistent with a potential competitive moat, alongside high gross margins (80.4%) and free cash flow conversion. However, both the DCF (-44.5%) and Graham (-82.3%) models imply the current price sits well above their estimated fair values, leaving no modeled margin of safety, and the company passes only 3 of 6 evaluated Graham defensive criteria and 5 of 9 Piotroski checklist items.",
+    "one_line_summary": "Visa shows strong profitability and moat-like returns, but current price offers little to no margin of safety versus modeled fair value.",
+    "short_term_narrative": "Visa's short-term score of 51.9 reflects a mixed but largely neutral technical picture. The stock is trading only slightly above its 50-day average (+0.33%) but is more meaningfully above its 200-day average (+9.63%), suggesting a longer-term uptrend intact within a near-term consolidation. Volume is running well above its own average (2.78x), a supply/demand divergence worth noting without a known cause, and momentum is modestly ahead of the sector (+2.51%)."
   },
   "price": {
     "as_of": "2026-09-18",
@@ -167,6 +185,54 @@
     "sector_relative_momentum_pct": 2.5131610814635685,
     "volume": 19564035,
     "volume_vs_avg_ratio": 2.7808524276924764
+  },
+  "qualitative": null,
+  "quant_score": {
+    "evaluated": 5,
+    "gate_pass": true,
+    "informational": {
+      "insider_ownership_pct": null,
+      "margin_trend_score": 60
+    },
+    "metrics": {
+      "debt_to_ebitda": {
+        "higher_is_better": false,
+        "label": "Debt / EBITDA",
+        "pass": true,
+        "threshold": 3.0,
+        "value": 0.9982945982390735
+      },
+      "eps_growth_cagr_pct": {
+        "higher_is_better": true,
+        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 15.83797667311304
+      },
+      "fcf_margin_pct": {
+        "higher_is_better": true,
+        "label": "Free cash flow margin",
+        "pass": true,
+        "threshold": 10.0,
+        "value": 53.9425
+      },
+      "revenue_cagr_pct": {
+        "higher_is_better": true,
+        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 12.859367600424232
+      },
+      "roic_pct": {
+        "higher_is_better": true,
+        "label": "Return on invested capital",
+        "pass": true,
+        "threshold": 12.0,
+        "value": 46.34065670016888
+      }
+    },
+    "passed": 5,
+    "quant_score_pct": 100.0
   },
   "scores": {
     "long_term": {
@@ -419,7 +485,32 @@
       }
     ]
   },
+  "thesis": null,
   "ticker": "V",
+  "valuation": {
+    "dcf": {
+      "assumptions": {
+        "base_fcf": 21577000000,
+        "discount_rate_pct": 9.0,
+        "growth_rate_pct": 12.859367600424232,
+        "growth_rate_source": "trailing_5yr_revenue_cagr",
+        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
+        "projection_years": 5,
+        "terminal_growth_rate_pct": 2.5
+      },
+      "intrinsic_value_per_share": 1118.3260136442968,
+      "margin_of_safety_pct": 203.65364621474836
+    },
+    "margin_of_safety_pct": 203.65364621474836,
+    "relative": {
+      "ev_ebitda": 24.026181089387585,
+      "ev_ebitda_vs_sector_median_pct": 9.09697776208278,
+      "pe_ttm": 31.290569243840274,
+      "pe_vs_sector_median_pct": 35.09537143677335,
+      "sector_median_ev_ebitda": 22.022774216333982,
+      "sector_median_pe_ttm": 23.161836642556423
+    }
+  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [
@@ -435,7 +526,7 @@
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
+          "detail": "Positive in 6/6 available years (Graham's original window was 10 years)",
           "passed": true
         },
         {

@@ -1,9 +1,12 @@
 {
-  "_errors": {},
+  "_errors": {
+    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=MSFT&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
+  },
   "cik": "0000789019",
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 1.2303272619576484,
+      "debt_to_ebitda": 0.6647449824793183,
       "debt_to_equity": 0.29116655778763845,
       "interest_coverage": 50.880694854146185
     },
@@ -14,9 +17,14 @@
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 22.801049954679552,
+      "eps_growth_cagr_5yr_pct": 17.258219443464775,
       "eps_growth_yoy_pct": 31.386861313868618,
       "revenue_cagr_3yr_pct": 16.12397915820203,
+      "revenue_cagr_5yr_pct": 14.571907380953132,
       "revenue_growth_yoy_pct": 17.78868679984666
+    },
+    "ownership": {
+      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 67.94409337058032,
@@ -37,7 +45,16 @@
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-18T22:32:23Z",
+  "last_updated": "2026-09-18T23:05:57Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
+    ],
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": true,
+    "valuation_gate_pass": false
+  },
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -49,8 +66,10 @@
   "metrics": {
     "current_ratio": 1.2303272619576484,
     "dcf_upside_pct": -42.75340959899284,
+    "debt_to_ebitda": 0.6647449824793183,
     "debt_to_equity": 0.29116655778763845,
     "eps_growth_cagr_3yr_pct": 22.801049954679552,
+    "eps_growth_cagr_5yr_pct": 17.258219443464775,
     "eps_growth_yoy_pct": 31.386861313868618,
     "ev_ebitda": 18.188509866566438,
     "fcf_margin_pct": 20.18659651216403,
@@ -73,6 +92,7 @@
     "return_1m_pct": 1.9553591707790405,
     "return_3m_pct": 30.147601476014763,
     "revenue_cagr_3yr_pct": 16.12397915820203,
+    "revenue_cagr_5yr_pct": 14.571907380953132,
     "revenue_growth_yoy_pct": 17.78868679984666,
     "roe_pct": 33.2150207517826,
     "roic_pct": 22.739568631871947,
@@ -84,14 +104,73 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-42.75%",
+          "text": "The stock's price implies a -42.75% margin of safety versus its modeled discounted cash flow fair value, meaning it trades well above that estimate."
+        },
+        {
+          "source_metric": "graham_upside_pct",
+          "source_value": "-68.55%",
+          "text": "Under the Graham valuation framework, the stock shows a -68.55% margin of safety, indicating a substantial premium to that model's fair value estimate."
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "roic_pct",
+          "source_value": "22.74%",
+          "text": "Return on invested capital stands at 22.74%, a level that can indicate a durable competitive advantage if sustained over time."
+        },
+        {
+          "source_metric": "owner_earnings_yield_pct",
+          "source_value": "1.54%",
+          "text": "The owner earnings yield is 1.54%, a relatively low return on the business's cash-generating power at the current price."
+        },
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "17.79%",
+          "text": "Revenue grew 17.79% year-over-year, indicating continued top-line expansion."
+        },
+        {
+          "source_metric": "eps_growth_yoy_pct",
+          "source_value": "31.39%",
+          "text": "EPS grew 31.39% year-over-year, a notably strong pace of earnings growth."
+        },
+        {
+          "source_metric": "piotroski_f_score",
+          "source_value": "6 of 9 evaluated",
+          "text": "The company scores 6 on the Piotroski F-Score out of 9 criteria evaluated, reflecting moderate-to-solid fundamental financial health."
+        },
+        {
+          "source_metric": "graham_criteria_passed",
+          "source_value": "3 of 6 evaluated",
+          "text": "The company passes 3 of 6 evaluated Graham defensive-investor criteria."
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "debt_to_equity",
+          "source_value": "0.29",
+          "text": "Debt to equity is low at 0.29, indicating limited reliance on leverage in the capital structure."
+        },
+        {
+          "source_metric": "interest_coverage",
+          "source_value": "50.88x",
+          "text": "Interest coverage is very high at 50.88x, suggesting ample capacity to service debt obligations from earnings."
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "sector_relative_momentum_pct",
+          "source_value": "14.00%",
+          "text": "The stock has outperformed its sector by 14.00 percentage points on a relative momentum basis; this divergence from peers is noted without an identifiable cause in the data."
+        }
+      ]
     },
-    "long_term_narrative": null,
-    "one_line_summary": null,
-    "short_term_narrative": null
+    "long_term_narrative": "The long-term score of 57.3 ('Neutral') balances strong operating metrics against valuation concerns. Revenue and EPS grew 17.8% and 31.4% year-over-year respectively, and a 22.7% ROIC suggests the business may possess a durable competitive advantage. However, the DCF model shows a -42.8% margin of safety and the Graham model shows -68.5%, meaning the current price is well above both fair-value estimates, while the owner earnings yield of just 1.5% is modest relative to the cost of capital.",
+    "one_line_summary": "MSFT shows strong momentum and profitability, but current price sits far above both DCF and Graham fair-value estimates.",
+    "short_term_narrative": "The short-term score of 60.7 ('Favorable') reflects a stock trading 6.3% above its 50-day moving average and 14.4% above its 200-day moving average, alongside a strong 30.1% three-month return. RSI distance from neutral of 11.1 suggests momentum without extreme overbought conditions. Volume has run about 1.46x the recent average, and the stock has outperformed its sector by roughly 14 percentage points, both signs of elevated but not extreme trading interest."
   },
   "price": {
     "as_of": "2026-09-18",
@@ -103,6 +182,54 @@
     "sector_relative_momentum_pct": 14.002486401696778,
     "volume": 39356144,
     "volume_vs_avg_ratio": 1.4646284292442837
+  },
+  "qualitative": null,
+  "quant_score": {
+    "evaluated": 5,
+    "gate_pass": true,
+    "informational": {
+      "insider_ownership_pct": null,
+      "margin_trend_score": 20
+    },
+    "metrics": {
+      "debt_to_ebitda": {
+        "higher_is_better": false,
+        "label": "Debt / EBITDA",
+        "pass": true,
+        "threshold": 3.0,
+        "value": 0.6647449824793183
+      },
+      "eps_growth_cagr_pct": {
+        "higher_is_better": true,
+        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 17.258219443464775
+      },
+      "fcf_margin_pct": {
+        "higher_is_better": true,
+        "label": "Free cash flow margin",
+        "pass": true,
+        "threshold": 10.0,
+        "value": 20.18659651216403
+      },
+      "revenue_cagr_pct": {
+        "higher_is_better": true,
+        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 14.571907380953132
+      },
+      "roic_pct": {
+        "higher_is_better": true,
+        "label": "Return on invested capital",
+        "pass": true,
+        "threshold": 12.0,
+        "value": 22.739568631871947
+      }
+    },
+    "passed": 5,
+    "quant_score_pct": 100.0
   },
   "scores": {
     "long_term": {
@@ -355,7 +482,32 @@
       }
     ]
   },
+  "thesis": null,
   "ticker": "MSFT",
+  "valuation": {
+    "dcf": {
+      "assumptions": {
+        "base_fcf": 66987000000,
+        "discount_rate_pct": 9.0,
+        "growth_rate_pct": 14.571907380953132,
+        "growth_rate_source": "trailing_5yr_revenue_cagr",
+        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
+        "projection_years": 5,
+        "terminal_growth_rate_pct": 2.5
+      },
+      "intrinsic_value_per_share": 235.04148583432115,
+      "margin_of_safety_pct": -52.39955327588781
+    },
+    "margin_of_safety_pct": -52.39955327588781,
+    "relative": {
+      "ev_ebitda": 18.188509866566438,
+      "ev_ebitda_vs_sector_median_pct": -21.29555850237495,
+      "pe_ttm": 27.43222222222222,
+      "pe_vs_sector_median_pct": -1.8823203011352536,
+      "sector_median_ev_ebitda": 23.10989001442223,
+      "sector_median_pe_ttm": 27.95849056603773
+    }
+  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [
@@ -371,7 +523,7 @@
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
+          "detail": "Positive in 6/6 available years (Graham's original window was 10 years)",
           "passed": true
         },
         {

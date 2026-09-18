@@ -1,9 +1,12 @@
 {
-  "_errors": {},
+  "_errors": {
+    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=UNH&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
+  },
   "cik": "0000731766",
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 0.7767841173314255,
+      "debt_to_ebitda": 3.3607288317256163,
       "debt_to_equity": 0.7448474813859234,
       "interest_coverage": 5.566512583461736
     },
@@ -14,9 +17,14 @@
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -14.99625722899529,
+      "eps_growth_cagr_5yr_pct": -4.064114449809441,
       "eps_growth_yoy_pct": -15.409207161125321,
       "revenue_cagr_3yr_pct": 11.352161443193465,
+      "revenue_cagr_5yr_pct": 11.721651214881778,
       "revenue_growth_yoy_pct": 11.814039242726306
+    },
+    "ownership": {
+      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 18.52616479767275,
@@ -37,7 +45,17 @@
     }
   },
   "industry": "Medical - Healthcare Plans",
-  "last_updated": "2026-09-18T22:34:23Z",
+  "last_updated": "2026-09-18T23:09:01Z",
+  "layered_analysis": {
+    "flags": [
+      "Fails the quant screen - below threshold on more metrics than it passes.",
+      "Positive but thin margin of safety (below the 15% convention) by this pipeline's DCF estimate."
+    ],
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": false,
+    "valuation_gate_pass": false
+  },
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -49,8 +67,10 @@
   "metrics": {
     "current_ratio": 0.7767841173314255,
     "dcf_upside_pct": -30.370934573367915,
+    "debt_to_ebitda": 3.3607288317256163,
     "debt_to_equity": 0.7448474813859234,
     "eps_growth_cagr_3yr_pct": -14.99625722899529,
+    "eps_growth_cagr_5yr_pct": -4.064114449809441,
     "eps_growth_yoy_pct": -15.409207161125321,
     "ev_ebitda": 15.022420753328419,
     "fcf_margin_pct": 3.5916410280471975,
@@ -73,6 +93,7 @@
     "return_1m_pct": -3.0133038264584124,
     "return_3m_pct": -6.000598563447726,
     "revenue_cagr_3yr_pct": 11.352161443193465,
+    "revenue_cagr_5yr_pct": 11.721651214881778,
     "revenue_growth_yoy_pct": 11.814039242726306,
     "roe_pct": 14.625671564502557,
     "roic_pct": 11.155625129499317,
@@ -84,77 +105,14 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-30.37%",
-          "text": "The DCF-based fair value estimate implies the stock trades roughly 30% above modeled fair value, a negative margin of safety by this measure."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-50.81%",
-          "text": "The Graham-style fair value estimate implies an even larger gap, about 51% above modeled fair value, a substantial negative margin of safety."
-        },
-        {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "-15.41%",
-          "text": "Earnings per share fell about 15% year-over-year, a sharp profitability decline."
-        },
-        {
-          "source_metric": "eps_growth_cagr_3yr_pct",
-          "source_value": "-14.996%",
-          "text": "On a 3-year annualized basis, EPS has also declined about 15%, showing this is not a single-year blip."
-        },
-        {
-          "source_metric": "current_ratio",
-          "source_value": "0.78",
-          "text": "The current ratio of 0.78 is below 1, meaning current liabilities exceed current assets, a liquidity concern."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "11.81%",
-          "text": "Revenue grew about 11.8% year-over-year, showing the top line is still expanding even as earnings shrink."
-        },
-        {
-          "source_metric": "margin_trend_score",
-          "source_value": "20",
-          "text": "The margin trend score of 20 (on presumably a 0-100 scale) points to deteriorating profitability margins over the measured period."
-        },
-        {
-          "source_metric": "debt_to_equity",
-          "source_value": "0.74",
-          "text": "Debt-to-equity stands at 0.74, indicating a moderate but non-trivial level of leverage on the balance sheet."
-        },
-        {
-          "source_metric": "roic_pct",
-          "source_value": "11.16%",
-          "text": "Return on invested capital of 11.16% is moderate; it does not by itself signal an unusually durable competitive advantage."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "6 of 9 evaluated",
-          "text": "The company scores 6 out of 9 on evaluated Piotroski F-Score criteria, suggesting mixed but not weak fundamental quality."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "2 of 6 evaluated",
-          "text": "The company passes only 2 of 6 evaluated Graham defensive-investor criteria, indicating it fails most classic defensive-value screens."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "-12.11%",
-          "text": "Momentum relative to the healthcare sector is negative at about -12%, a divergence from peers whose cause is not identified in this data."
-        }
-      ],
+      "critical": [],
+      "important": [],
+      "minor": [],
       "noise": []
     },
-    "long_term_narrative": "The long-term score of 30.3 ('Cautious') is driven largely by valuation-model outputs showing the stock priced well above what discounted cash flow (-30.37% upside) and Graham-style (-50.81% upside) approaches would suggest as fair value, i.e., a negative margin of safety on both measures. Compounding this, EPS has fallen -15.41% year-over-year and -14.996% on a 3-year CAGR basis even as revenue has grown +11.81% year-over-year, indicating margin pressure rather than a top-line problem. Return on invested capital of 11.16% is moderate rather than exceptional, so the data does not strongly support a durable-moat interpretation at this time.",
-    "one_line_summary": "UNH's own models show a sizable gap below estimated fair value and shrinking EPS despite revenue growth, with weak short-term liquidity.",
-    "short_term_narrative": "The short-term score of 36.1 ('Cautious') reflects a stock trading below its 50-day moving average (-6.78%) but still above its 200-day average (+6.37%), a mixed technical picture. Momentum versus the healthcare sector is negative (-12.11%), and trading volume is running about 1.52x its average, both of which are supply/demand divergences worth noting without a stated cause. These technical signals point to near-term uncertainty rather than a clear directional read."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",
@@ -166,6 +124,54 @@
     "sector_relative_momentum_pct": -12.107528144633804,
     "volume": 8563301,
     "volume_vs_avg_ratio": 1.5181189068307308
+  },
+  "qualitative": null,
+  "quant_score": {
+    "evaluated": 5,
+    "gate_pass": false,
+    "informational": {
+      "insider_ownership_pct": null,
+      "margin_trend_score": 20
+    },
+    "metrics": {
+      "debt_to_ebitda": {
+        "higher_is_better": false,
+        "label": "Debt / EBITDA",
+        "pass": false,
+        "threshold": 3.0,
+        "value": 3.3607288317256163
+      },
+      "eps_growth_cagr_pct": {
+        "higher_is_better": true,
+        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
+        "pass": false,
+        "threshold": 5.0,
+        "value": -4.064114449809441
+      },
+      "fcf_margin_pct": {
+        "higher_is_better": true,
+        "label": "Free cash flow margin",
+        "pass": false,
+        "threshold": 10.0,
+        "value": 3.5916410280471975
+      },
+      "revenue_cagr_pct": {
+        "higher_is_better": true,
+        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 11.721651214881778
+      },
+      "roic_pct": {
+        "higher_is_better": true,
+        "label": "Return on invested capital",
+        "pass": false,
+        "threshold": 12.0,
+        "value": 11.155625129499317
+      }
+    },
+    "passed": 1,
+    "quant_score_pct": 20.0
   },
   "scores": {
     "long_term": {
@@ -418,7 +424,32 @@
       }
     ]
   },
+  "thesis": null,
   "ticker": "UNH",
+  "valuation": {
+    "dcf": {
+      "assumptions": {
+        "base_fcf": 16075000000,
+        "discount_rate_pct": 9.0,
+        "growth_rate_pct": 11.721651214881778,
+        "growth_rate_source": "trailing_5yr_revenue_cagr",
+        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
+        "projection_years": 5,
+        "terminal_growth_rate_pct": 2.5
+      },
+      "intrinsic_value_per_share": 415.95389836276325,
+      "margin_of_safety_pct": 10.361872741513208
+    },
+    "margin_of_safety_pct": 10.361872741513208,
+    "relative": {
+      "ev_ebitda": 15.022420753328419,
+      "ev_ebitda_vs_sector_median_pct": -14.54691023477901,
+      "pe_ttm": 24.236383512314323,
+      "pe_vs_sector_median_pct": -12.581508475434298,
+      "sector_median_ev_ebitda": 17.57972800585904,
+      "sector_median_pe_ttm": 27.724550137660053
+    }
+  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [
@@ -434,7 +465,7 @@
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
+          "detail": "Positive in 6/6 available years (Graham's original window was 10 years)",
           "passed": true
         },
         {

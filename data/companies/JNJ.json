@@ -1,9 +1,12 @@
 {
-  "_errors": {},
+  "_errors": {
+    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=JNJ&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
+  },
   "cik": "0000200406",
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 1.0888787685581565,
+      "debt_to_ebitda": 1.4481706395963625,
       "debt_to_equity": 0.5770910075202128,
       "interest_coverage": 25.944664031620555
     },
@@ -14,9 +17,14 @@
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 17.32347997082837,
+      "eps_growth_cagr_5yr_pct": 14.55993034701839,
       "eps_growth_yoy_pct": 88.86986301369862,
       "revenue_cagr_3yr_pct": 5.599284954178807,
+      "revenue_cagr_5yr_pct": 2.665503872479502,
       "revenue_growth_yoy_pct": 6.048119251078011
+    },
+    "ownership": {
+      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 67.8787171021201,
@@ -37,7 +45,16 @@
     }
   },
   "industry": "Drug Manufacturers - General",
-  "last_updated": "2026-09-18T22:34:47Z",
+  "last_updated": "2026-09-18T23:09:25Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
+    ],
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": true,
+    "valuation_gate_pass": false
+  },
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -49,8 +66,10 @@
   "metrics": {
     "current_ratio": 1.0888787685581565,
     "dcf_upside_pct": 5.411728359624258,
+    "debt_to_ebitda": 1.4481706395963625,
     "debt_to_equity": 0.5770910075202128,
     "eps_growth_cagr_3yr_pct": 17.32347997082837,
+    "eps_growth_cagr_5yr_pct": 14.55993034701839,
     "eps_growth_yoy_pct": 88.86986301369862,
     "ev_ebitda": 20.13703525838966,
     "fcf_margin_pct": 20.91238202414192,
@@ -73,6 +92,7 @@
     "return_1m_pct": -1.2508686587908326,
     "return_3m_pct": 18.21445772581988,
     "revenue_cagr_3yr_pct": 5.599284954178807,
+    "revenue_cagr_5yr_pct": 2.665503872479502,
     "revenue_growth_yoy_pct": 6.048119251078011,
     "roe_pct": 25.73506474441706,
     "roic_pct": 19.183663574911403,
@@ -84,14 +104,78 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
+      "critical": [
+        {
+          "source_metric": "graham_upside_pct",
+          "source_value": "-65.57%",
+          "text": "The Graham valuation model shows the stock priced about 65.57% above its modeled fair value, indicating no margin of safety by this framework."
+        },
+        {
+          "source_metric": "graham_multiple",
+          "source_value": "242.00",
+          "text": "The Graham multiple stands at 242.0, an extremely elevated reading in this classic value-investing framework."
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "5.41%",
+          "text": "A separate DCF model shows a modest 5.41% upside to modeled fair value, a much smaller margin of safety than the Graham model implies."
+        },
+        {
+          "source_metric": "roic_pct",
+          "source_value": "19.18%",
+          "text": "Return on invested capital of 19.18% is a relatively high figure that may point to a durable competitive advantage, viewed through this single metric."
+        },
+        {
+          "source_metric": "owner_earnings_yield_pct",
+          "source_value": "4.53%",
+          "text": "The owner earnings yield of 4.53% offers a Buffett-style read on cash generation relative to the business's value."
+        },
+        {
+          "source_metric": "piotroski_f_score",
+          "source_value": "4 of 9 evaluated",
+          "text": "The company scores 4 out of 9 evaluated Piotroski F-Score criteria, a middling financial-strength checklist result."
+        },
+        {
+          "source_metric": "graham_criteria_passed",
+          "source_value": "3 of 6 evaluated",
+          "text": "The company passes 3 of 6 evaluated Graham defensive-investor criteria."
+        },
+        {
+          "source_metric": "eps_growth_yoy_pct",
+          "source_value": "88.87%",
+          "text": "EPS grew 88.87% year-over-year, a very large jump in per-share earnings."
+        },
+        {
+          "source_metric": "debt_to_equity",
+          "source_value": "0.58",
+          "text": "Debt-to-equity of 0.58 suggests a moderate, not distressed, leverage position."
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "current_ratio",
+          "source_value": "1.09",
+          "text": "The current ratio of 1.09 is only modestly above 1, a level worth watching for short-term liquidity flexibility."
+        },
+        {
+          "source_metric": "price_vs_ma200_pct",
+          "source_value": "13.13%",
+          "text": "Price is 13.13% above its 200-day moving average, reflecting an established longer-term uptrend in the data."
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "volume_vs_avg_ratio",
+          "source_value": "1.90x average",
+          "text": "Trading volume has run about 1.9x its average recently, a divergence from typical activity; the data does not indicate why."
+        }
+      ]
     },
-    "long_term_narrative": null,
-    "one_line_summary": null,
-    "short_term_narrative": null
+    "long_term_narrative": "The long-term score of 54.5 ('Neutral') reflects a mixed picture: return on invested capital of 19.18% and an owner earnings yield of 4.53% point to a profitable underlying business, but valuation checklists are weak, with only 3 of 6 Graham defensive-investor criteria passed and a Piotroski F-Score of 4 out of 9 evaluated items. The Graham valuation model shows a -65.57% gap versus modeled fair value (a very high Graham multiple of 242), while a separate DCF model shows a smaller 5.41% upside, illustrating how differently these two value-investing frameworks assess the current price. Revenue grew 6.05% year-over-year and EPS jumped 88.87% year-over-year, though the balance sheet carries a current ratio near 1.09, a level worth watching for near-term liquidity flexibility.",
+    "one_line_summary": "JNJ shows favorable short-term momentum (66.6) but a neutral long-term score (54.5), with mixed valuation signals across models.",
+    "short_term_narrative": "The short-term score of 66.6 ('Favorable') is supported by price action sitting 2.55% above its 50-day average and 13.13% above its 200-day average, indicating an established uptrend. The stock's momentum is also running about 12.11% above its sector peers, a supply/demand divergence worth noting though its cause isn't specified in this data. Trading volume has been roughly 1.9x its average, another divergence from typical activity levels without a stated cause. RSI readings sit only modestly away from neutral, suggesting the stock is not in an extreme overbought or oversold state."
   },
   "price": {
     "as_of": "2026-09-18",
@@ -103,6 +187,54 @@
     "sector_relative_momentum_pct": 12.107528144633804,
     "volume": 16090017,
     "volume_vs_avg_ratio": 1.9037570874529046
+  },
+  "qualitative": null,
+  "quant_score": {
+    "evaluated": 5,
+    "gate_pass": true,
+    "informational": {
+      "insider_ownership_pct": null,
+      "margin_trend_score": 60
+    },
+    "metrics": {
+      "debt_to_ebitda": {
+        "higher_is_better": false,
+        "label": "Debt / EBITDA",
+        "pass": true,
+        "threshold": 3.0,
+        "value": 1.4481706395963625
+      },
+      "eps_growth_cagr_pct": {
+        "higher_is_better": true,
+        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 14.55993034701839
+      },
+      "fcf_margin_pct": {
+        "higher_is_better": true,
+        "label": "Free cash flow margin",
+        "pass": true,
+        "threshold": 10.0,
+        "value": 20.91238202414192
+      },
+      "revenue_cagr_pct": {
+        "higher_is_better": true,
+        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
+        "pass": false,
+        "threshold": 5.0,
+        "value": 2.665503872479502
+      },
+      "roic_pct": {
+        "higher_is_better": true,
+        "label": "Return on invested capital",
+        "pass": true,
+        "threshold": 12.0,
+        "value": 19.183663574911403
+      }
+    },
+    "passed": 4,
+    "quant_score_pct": 80.0
   },
   "scores": {
     "long_term": {
@@ -355,7 +487,32 @@
       }
     ]
   },
+  "thesis": null,
   "ticker": "JNJ",
+  "valuation": {
+    "dcf": {
+      "assumptions": {
+        "base_fcf": 19698000000,
+        "discount_rate_pct": 9.0,
+        "growth_rate_pct": 2.665503872479502,
+        "growth_rate_source": "trailing_5yr_revenue_cagr",
+        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
+        "projection_years": 5,
+        "terminal_growth_rate_pct": 2.5
+      },
+      "intrinsic_value_per_share": 129.82083578367258,
+      "margin_of_safety_pct": -51.91642809597668
+    },
+    "margin_of_safety_pct": -51.91642809597668,
+    "relative": {
+      "ev_ebitda": 20.13703525838966,
+      "ev_ebitda_vs_sector_median_pct": 14.54691023477901,
+      "pe_ttm": 31.21271676300578,
+      "pe_vs_sector_median_pct": 12.581508475434283,
+      "sector_median_ev_ebitda": 17.57972800585904,
+      "sector_median_pe_ttm": 27.724550137660053
+    }
+  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [
@@ -371,7 +528,7 @@
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
+          "detail": "Positive in 6/6 available years (Graham's original window was 10 years)",
           "passed": true
         },
         {

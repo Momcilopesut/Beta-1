@@ -1,9 +1,12 @@
 {
-  "_errors": {},
+  "_errors": {
+    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
+  },
   "cik": "0000080424",
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 0.6773143122964801,
+      "debt_to_ebitda": 1.5289855072463767,
       "debt_to_equity": 0.6449153946714293,
       "interest_coverage": 22.517673888255416
     },
@@ -14,9 +17,14 @@
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 3.6028479444773165,
+      "eps_growth_cagr_5yr_pct": 3.4756829064733097,
       "eps_growth_yoy_pct": 1.199400299850076,
       "revenue_cagr_3yr_pct": 2.002569409339938,
+      "revenue_cagr_5yr_pct": 2.716052126592894,
       "revenue_growth_yoy_pct": 3.260405296378909
+    },
+    "ownership": {
+      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 50.175797407849984,
@@ -37,7 +45,16 @@
     }
   },
   "industry": "Household & Personal Products",
-  "last_updated": "2026-09-18T22:35:14Z",
+  "last_updated": "2026-09-18T23:10:16Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
+    ],
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": true,
+    "valuation_gate_pass": false
+  },
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -49,8 +66,10 @@
   "metrics": {
     "current_ratio": 0.6773143122964801,
     "dcf_upside_pct": 37.23069816787576,
+    "debt_to_ebitda": 1.5289855072463767,
     "debt_to_equity": 0.6449153946714293,
     "eps_growth_cagr_3yr_pct": 3.6028479444773165,
+    "eps_growth_cagr_5yr_pct": 3.4756829064733097,
     "eps_growth_yoy_pct": 1.199400299850076,
     "ev_ebitda": 17.54742024070763,
     "fcf_margin_pct": 18.284079419064252,
@@ -73,12 +92,13 @@
     "return_1m_pct": 1.3921595788890364,
     "return_3m_pct": -2.653278361484246,
     "revenue_cagr_3yr_pct": 2.002569409339938,
+    "revenue_cagr_5yr_pct": 2.716052126592894,
     "revenue_growth_yoy_pct": 3.260405296378909,
     "roe_pct": 29.83539955468165,
     "roic_pct": 19.70610846801103,
     "rsi_distance_from_neutral": 8.740790354989876,
     "sector_relative_momentum_pct": -6.906687045712522,
-    "volume_vs_avg_ratio": 1.6440894451929533
+    "volume_vs_avg_ratio": 1.644086104283302
   },
   "name": "Procter & Gamble Co.",
   "narrative": {
@@ -88,85 +108,133 @@
         {
           "source_metric": "dcf_upside_pct",
           "source_value": "37.23%",
-          "text": "A discounted cash flow model estimates a 37.23% margin of safety (upside) relative to the current price."
+          "text": "The DCF-based model estimates roughly a 37% margin of safety, with the modeled fair value above the current price."
         },
         {
           "source_metric": "graham_upside_pct",
           "source_value": "-60.14%",
-          "text": "A Graham-style valuation model estimates the stock trades about 60.14% above its calculated fair value, implying no margin of safety by that measure."
+          "text": "The Graham-based valuation model implies the current price is about 60% above its estimated fair value, indicating no margin of safety by that framework."
         },
         {
           "source_metric": "current_ratio",
           "source_value": "0.68",
-          "text": "The current ratio is 0.68, meaning current liabilities exceed current assets, a potential liquidity consideration."
+          "text": "The current ratio is below 1, meaning current liabilities exceed current assets, a potential liquidity concern."
         }
       ],
       "important": [
         {
           "source_metric": "roic_pct",
           "source_value": "19.71%",
-          "text": "Return on invested capital is 19.71%, a level that can be a sign of a durable competitive advantage if sustained relative to peers."
-        },
-        {
-          "source_metric": "pb_ratio",
-          "source_value": "6.53x",
-          "text": "The stock trades at 6.53 times book value, a high multiple relative to net asset value."
+          "text": "Return on invested capital is notably high at 19.71%, which can be a sign of a durable competitive advantage if sustained."
         },
         {
           "source_metric": "owner_earnings_yield_pct",
           "source_value": "4.25%",
-          "text": "Owner earnings yield (Buffett's measure) is 4.25%."
+          "text": "The owner earnings yield on the business is 4.25%, a Buffett-style measure of cash generation relative to price."
         },
         {
           "source_metric": "graham_criteria_passed",
-          "source_value": "3",
-          "text": "PG passes 3 of 6 evaluated Graham defensive-investor criteria."
+          "source_value": "3 of 6 evaluated",
+          "text": "The stock passes 3 of 6 evaluated Graham defensive-investor criteria."
         },
         {
           "source_metric": "piotroski_f_score",
-          "source_value": "6",
-          "text": "The Piotroski F-Score is 6 out of 9 evaluated criteria, indicating moderate financial strength."
+          "source_value": "6 of 9 evaluated",
+          "text": "The Piotroski F-Score is 6 out of 9 evaluated criteria, a mid-range fundamental quality reading."
         },
         {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "3.26%",
-          "text": "Year-over-year revenue growth is 3.26%, a modest pace of expansion."
+          "source_metric": "pb_ratio",
+          "source_value": "6.53",
+          "text": "Price-to-book ratio is elevated at 6.53x, indicating the market values the business well above its accounting net worth."
         }
       ],
       "minor": [
         {
+          "source_metric": "debt_to_ebitda",
+          "source_value": "1.53x",
+          "text": "Debt relative to EBITDA is modest at 1.53x, suggesting manageable leverage."
+        },
+        {
           "source_metric": "interest_coverage",
           "source_value": "22.52x",
-          "text": "Interest coverage is 22.52x, indicating a strong ability to service debt from earnings."
+          "text": "Interest coverage is very high at 22.5x, indicating earnings comfortably cover interest expense."
+        },
+        {
+          "source_metric": "sector_relative_momentum_pct",
+          "source_value": "-6.91%",
+          "text": "The stock's momentum is running about 6.9 percentage points behind its sector peers, a divergence without a known specific cause."
         }
       ],
       "noise": [
         {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "-6.91%",
-          "text": "The stock has underperformed its sector by about 6.91% recently; this is a supply/demand divergence with no identified cause in this data and should be treated as noise rather than a thesis driver."
-        },
-        {
           "source_metric": "volume_vs_avg_ratio",
-          "source_value": "1.64x",
-          "text": "Trading volume has been about 1.64x its average recently; this divergence from typical volume has no identified cause here and is noted as low decision-relevance."
+          "source_value": "1.64x average",
+          "text": "Trading volume is about 1.64x its average, a volume divergence that is commonly discussed but not inherently decision-relevant on its own."
         }
       ]
     },
-    "long_term_narrative": "The long-term score of 49.7 (Neutral) reflects a mixed fundamental picture. Revenue and EPS growth have been modest (3.26% and 1.20% year-over-year, respectively), while ROIC of 19.71% and an owner earnings yield of 4.25% point to a profitable core business. However, valuation signals conflict: the DCF model implies a 37.23% margin of safety, while the Graham model implies the stock trades about 60% above its estimated fair value, and the price-to-book ratio of 6.53 is elevated. The company also passes only 3 of 6 evaluated Graham defensive-investor criteria and scores 6 of 9 on the Piotroski F-Score, indicating moderate but not exceptional financial strength.",
-    "one_line_summary": "PG: modest growth, high ROIC and strong margins, but valuation models diverge sharply (DCF upside vs Graham downside).",
-    "short_term_narrative": "The short-term score of 61 (Favorable) reflects recent price action: PG is up 1.39% over the past month and trading essentially flat versus its 50-day moving average (+0.19%). RSI sits about 8.7 points from neutral, suggesting the stock is not in an extreme overbought or oversold state. Volume has run about 1.64x its average and the stock has underperformed its sector by roughly 6.9% recently, both of which are worth watching as divergences without a known cause in this data."
+    "long_term_narrative": "Longer-term fundamentals show slow but steady growth, with revenue up 3.26% year-over-year and a 5-year revenue CAGR of only 2.72%, while EPS growth has been similarly modest. Profitability metrics are strong, with a 19.71% ROIC and 29.84% ROE, but valuation checks are mixed: the DCF model implies a positive margin of safety of roughly 37% versus price, while the Graham model implies price is about 60% above its estimated fair value, and the Graham multiple is very elevated. The company passes 3 of 6 evaluated Graham defensive-investor criteria and 6 of 9 evaluated Piotroski criteria, consistent with a Neutral long-term score.",
+    "one_line_summary": "PG shows solid profitability and a favorable short-term technical read, but valuation signals are mixed and long-term growth remains modest.",
+    "short_term_narrative": "Short-term price action is mildly constructive: PG trades about 0.19% above its 50-day moving average and is up 1.39% over the past month, though it sits slightly below its 200-day average and is down 2.65% over three months. RSI is only modestly away from neutral, suggesting no extreme overbought or oversold condition. Trading volume has run about 1.64x its average and the stock's momentum is running about 6.9 percentage points behind its sector, both of which are supply/demand divergences worth noting without a known cause."
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 7527869.627888447,
+    "avg_volume": 7527884.925099602,
     "close": 146.39,
     "return_1m_pct": 1.3921595788890364,
     "return_3m_pct": -2.653278361484246,
     "sector_avg_return_3m_pct": 4.253408684228276,
     "sector_relative_momentum_pct": -6.906687045712522,
     "volume": 12376491,
-    "volume_vs_avg_ratio": 1.6440894451929533
+    "volume_vs_avg_ratio": 1.644086104283302
+  },
+  "qualitative": null,
+  "quant_score": {
+    "evaluated": 5,
+    "gate_pass": true,
+    "informational": {
+      "insider_ownership_pct": null,
+      "margin_trend_score": 60
+    },
+    "metrics": {
+      "debt_to_ebitda": {
+        "higher_is_better": false,
+        "label": "Debt / EBITDA",
+        "pass": true,
+        "threshold": 3.0,
+        "value": 1.5289855072463767
+      },
+      "eps_growth_cagr_pct": {
+        "higher_is_better": true,
+        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
+        "pass": false,
+        "threshold": 5.0,
+        "value": 3.4756829064733097
+      },
+      "fcf_margin_pct": {
+        "higher_is_better": true,
+        "label": "Free cash flow margin",
+        "pass": true,
+        "threshold": 10.0,
+        "value": 18.284079419064252
+      },
+      "revenue_cagr_pct": {
+        "higher_is_better": true,
+        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
+        "pass": false,
+        "threshold": 5.0,
+        "value": 2.716052126592894
+      },
+      "roic_pct": {
+        "higher_is_better": true,
+        "label": "Return on invested capital",
+        "pass": true,
+        "threshold": 12.0,
+        "value": 19.70610846801103
+      }
+    },
+    "passed": 3,
+    "quant_score_pct": 60.0
   },
   "scores": {
     "long_term": {
@@ -419,7 +487,32 @@
       }
     ]
   },
+  "thesis": null,
   "ticker": "PG",
+  "valuation": {
+    "dcf": {
+      "assumptions": {
+        "base_fcf": 15913000000,
+        "discount_rate_pct": 9.0,
+        "growth_rate_pct": 2.716052126592894,
+        "growth_rate_source": "trailing_5yr_revenue_cagr",
+        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
+        "projection_years": 5,
+        "terminal_growth_rate_pct": 2.5
+      },
+      "intrinsic_value_per_share": 108.96960824723102,
+      "margin_of_safety_pct": -25.56212292695469
+    },
+    "margin_of_safety_pct": -25.56212292695469,
+    "relative": {
+      "ev_ebitda": 17.54742024070763,
+      "ev_ebitda_vs_sector_median_pct": -8.222537779469251,
+      "pe_ttm": 21.679259259259258,
+      "pe_vs_sector_median_pct": -10.008646949737589,
+      "sector_median_ev_ebitda": 19.11953089152017,
+      "sector_median_pe_ttm": 24.09038038038038
+    }
+  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [
@@ -435,7 +528,7 @@
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
+          "detail": "Positive in 6/6 available years (Graham's original window was 10 years)",
           "passed": true
         },
         {

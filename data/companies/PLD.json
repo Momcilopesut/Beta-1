@@ -1,9 +1,12 @@
 {
-  "_errors": {},
+  "_errors": {
+    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=PLD&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
+  },
   "cik": "0001045609",
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 0.6977452900375469,
+      "debt_to_ebitda": 5.68589722888346,
       "debt_to_equity": 0.6782986555303994,
       "interest_coverage": 3.365663036392954
     },
@@ -14,9 +17,14 @@
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -4.894264952843653,
+      "eps_growth_cagr_5yr_pct": 12.626450694567382,
       "eps_growth_yoy_pct": -11.414392059553359,
       "revenue_cagr_3yr_pct": 13.741104437395911,
+      "revenue_cagr_5yr_pct": 14.642906074406925,
       "revenue_growth_yoy_pct": 7.175627712119938
+    },
+    "ownership": {
+      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 59.597819235148705,
@@ -37,7 +45,16 @@
     }
   },
   "industry": "REIT - Industrial",
-  "last_updated": "2026-09-18T22:38:43Z",
+  "last_updated": "2026-09-18T23:15:25Z",
+  "layered_analysis": {
+    "flags": [
+      "Positive but thin margin of safety (below the 15% convention) by this pipeline's DCF estimate."
+    ],
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": true,
+    "valuation_gate_pass": false
+  },
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -49,8 +66,10 @@
   "metrics": {
     "current_ratio": 0.6977452900375469,
     "dcf_upside_pct": -31.17095321543879,
+    "debt_to_ebitda": 5.68589722888346,
     "debt_to_equity": 0.6782986555303994,
     "eps_growth_cagr_3yr_pct": -4.894264952843653,
+    "eps_growth_cagr_5yr_pct": 12.626450694567382,
     "eps_growth_yoy_pct": -11.414392059553359,
     "ev_ebitda": 19.21190757293361,
     "fcf_margin_pct": 56.97794810018103,
@@ -73,6 +92,7 @@
     "return_1m_pct": -4.571832979476296,
     "return_3m_pct": -4.055784829941646,
     "revenue_cagr_3yr_pct": 13.741104437395911,
+    "revenue_cagr_5yr_pct": 14.642906074406925,
     "revenue_growth_yoy_pct": 7.175627712119938,
     "roe_pct": 7.900607573036433,
     "roic_pct": 3.84072533518525,
@@ -103,6 +123,54 @@
     "sector_relative_momentum_pct": 0.0,
     "volume": 7640823,
     "volume_vs_avg_ratio": 2.108470764004173
+  },
+  "qualitative": null,
+  "quant_score": {
+    "evaluated": 5,
+    "gate_pass": true,
+    "informational": {
+      "insider_ownership_pct": null,
+      "margin_trend_score": 20
+    },
+    "metrics": {
+      "debt_to_ebitda": {
+        "higher_is_better": false,
+        "label": "Debt / EBITDA",
+        "pass": false,
+        "threshold": 3.0,
+        "value": 5.68589722888346
+      },
+      "eps_growth_cagr_pct": {
+        "higher_is_better": true,
+        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 12.626450694567382
+      },
+      "fcf_margin_pct": {
+        "higher_is_better": true,
+        "label": "Free cash flow margin",
+        "pass": true,
+        "threshold": 10.0,
+        "value": 56.97794810018103
+      },
+      "revenue_cagr_pct": {
+        "higher_is_better": true,
+        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
+        "pass": true,
+        "threshold": 5.0,
+        "value": 14.642906074406925
+      },
+      "roic_pct": {
+        "higher_is_better": true,
+        "label": "Return on invested capital",
+        "pass": false,
+        "threshold": 12.0,
+        "value": 3.84072533518525
+      }
+    },
+    "passed": 3,
+    "quant_score_pct": 60.0
   },
   "scores": {
     "long_term": {
@@ -355,7 +423,32 @@
       }
     ]
   },
+  "thesis": null,
   "ticker": "PLD",
+  "valuation": {
+    "dcf": {
+      "assumptions": {
+        "base_fcf": 5008434000,
+        "discount_rate_pct": 9.0,
+        "growth_rate_pct": 14.642906074406925,
+        "growth_rate_source": "trailing_5yr_revenue_cagr",
+        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
+        "projection_years": 5,
+        "terminal_growth_rate_pct": 2.5
+      },
+      "intrinsic_value_per_share": 140.35956104132742,
+      "margin_of_safety_pct": 4.093415189355844
+    },
+    "margin_of_safety_pct": 4.093415189355844,
+    "relative": {
+      "ev_ebitda": 19.21190757293361,
+      "ev_ebitda_vs_sector_median_pct": 0.0,
+      "pe_ttm": 29.964444444444442,
+      "pe_vs_sector_median_pct": 0.0,
+      "sector_median_ev_ebitda": 19.21190757293361,
+      "sector_median_pe_ttm": 29.964444444444442
+    }
+  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [
@@ -371,7 +464,7 @@
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/5 available years (Graham's original window was 10 years)",
+          "detail": "Positive in 6/6 available years (Graham's original window was 10 years)",
           "passed": true
         },
         {
