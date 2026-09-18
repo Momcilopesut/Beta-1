@@ -32,6 +32,10 @@ config/watchlist.yaml  →  pipeline (fetch → score → AI narrative)  →  da
   statements — no extra API calls. Buffett/Munger-style metrics (owner earnings yield,
   ROIC as a moat proxy, the Graham Number/margin of safety) feed into the long-term
   score's existing components (see `config/scoring_weights.yaml`).
+- **Layered analysis** (quant screen → qualitative → valuation → thesis, see
+  "Layered analysis" below): a deeper, opt-in-by-passing-the-quant-screen pass per
+  company that reads the company's own 10-K text — the one place in this pipeline an
+  AI call isn't grounded solely in pre-computed metrics.
 - **Supply/demand signal**: each company's 3-month return vs. the average of its sector
   peers in the watchlist, plus volume vs. its own average — reported as an observed
   divergence, never a claimed cause (no news/geopolitics feed is wired in, deliberately,
@@ -108,6 +112,61 @@ itself is working. If you still want fuller coverage: upgrade the FMP plan, trim
 `config/watchlist.yaml` to use fewer calls per run, or swap in a different primary
 provider (e.g. Finnhub's free tier) in `pipeline/fetch/`.
 
+## Layered analysis
+
+A deeper pass per company, deliberately kept as four separate layers rather than one
+blended score — a great quant score with a broken moat should get flagged, not
+averaged away, and a great business at a bad price still isn't a buy. Every company
+detail page shows all four, plus an `overall` synthesis and a `flags` list explaining
+any disagreement between them.
+
+1. **Quant screen** (`pipeline/scoring/quant_score.py`) — a fast, deterministic
+   pass/fail filter: ROIC, FCF margin, revenue/EPS growth (5yr CAGR, falling back to
+   3yr), and debt/EBITDA against thresholds in `config/quant_score_thresholds.yaml`.
+   No API calls, no AI. This gates layers 2 and 4 below — they only run for a company
+   that already clears this bar (deliberate cost control, not just a display filter).
+2. **Qualitative** (`pipeline/narrative/qualitative_client.py`) — Claude reads
+   excerpts from the company's own most recent 10-K (Business, Risk Factors, and
+   Management's Discussion and Analysis, extracted by
+   `pipeline/fetch/filing_text.py`) plus the quant scorecard, and classifies the
+   moat (network effects / cost advantage / intangible assets / switching costs /
+   efficient scale / none — the classic Buffett/Munger/Morningstar categories),
+   assesses management's capital allocation, and lists any red flags the filing
+   itself raises. **This is the one place in the whole pipeline where an AI call
+   reads raw text instead of only pre-computed metrics.** Every other narrative call
+   grounds each fact by requiring a real metric key
+   (`pipeline/narrative/grounding.py` drops anything that doesn't resolve) — that
+   mechanical check doesn't exist for free-form filing prose, so this layer's
+   grounding is prompt discipline only, not code-verified. `qualitative.extraction_confidence`
+   tells you whether the filing-text extraction itself found a clean Item 7 section
+   match or fell back to a raw document prefix, so you know how much to trust it.
+   Results are cached by 10-K URL under `data/qualitative_cache/` — since a 10-K only
+   changes once a year, a weekly refresh skips both the filing fetch and the two
+   Claude calls entirely once a company already has a current-filing assessment.
+3. **Valuation** (`pipeline/scoring/valuation.py`) — a Damodaran-style 2-stage DCF
+   with every assumption computed and logged, never hidden behind a single
+   "fair value" number: growth rate from the company's own trailing revenue CAGR
+   (clamped to -10%/+20% so one outlier year can't compound forever), a fixed 9%
+   discount rate and 2.5% terminal growth rate (documented as a deliberate
+   simplification — this pipeline has no reliable beta/cost-of-debt source for a
+   real CAPM/WACC build), for 5 years then a Gordon-growth terminal value. Expect
+   this to show *no* margin of safety for expensive, high-growth names — that's the
+   conservative model doing its job, not a bug. Cross-checked against P/E and
+   EV/EBITDA vs. the median of the company's sector peers in this watchlist (FMP's
+   own black-box DCF and the Graham Number remain available separately as further
+   cross-checks, unchanged from before this feature).
+4. **Thesis + falsification** (also `pipeline/narrative/qualitative_client.py`) — a
+   second Claude call synthesizes layers 1-3 into a one-paragraph thesis and a list
+   of specific, checkable conditions that would prove it wrong — the discipline step
+   most screening tools skip. Grounded in the other three layers' own output, not in
+   new information.
+
+`pipeline/scoring/aggregation.py` combines the three gates (quant pass/fail,
+qualitative moat present/absent, valuation margin of safety ≥ 15%) into the `overall`
+summary and `flags` — e.g. a company that passes the quant screen but shows no moat
+gets flagged explicitly rather than its strong quant score quietly winning out in an
+average.
+
 ## Configuration
 
 - `config/watchlist.yaml` — tracked tickers. Edit freely.
@@ -116,6 +175,9 @@ provider (e.g. Finnhub's free tier) in `pipeline/fetch/`.
   each macro regime.
 - `config/macro_series.yaml` — which FRED series are pulled and the regime
   classification thresholds.
+- `config/quant_score_thresholds.yaml` — pass/fail thresholds for the quant screen
+  (layer 1 above) and the fraction of evaluated metrics that must pass to gate the
+  deeper layers.
 
 ## Deployment
 

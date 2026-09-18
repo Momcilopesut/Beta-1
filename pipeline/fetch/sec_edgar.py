@@ -19,7 +19,10 @@ _RATE = {"host_key": "sec_edgar", "min_interval_seconds": 0.15}
 _ticker_cik_map: dict[str, dict] | None = None
 
 
-def _headers() -> dict:
+def edgar_headers() -> dict:
+    """Public so pipeline/fetch/filing_text.py (which fetches raw filing
+    documents from the same Archives host, not the XBRL API) can reuse the
+    same User-Agent instead of duplicating the env var lookup."""
     ua = os.environ.get("SEC_EDGAR_USER_AGENT", "Beta1-Watchlist/1.0 (unset-contact)")
     return {"User-Agent": ua}
 
@@ -27,7 +30,7 @@ def _headers() -> dict:
 def _load_ticker_map() -> dict[str, dict]:
     global _ticker_cik_map
     if _ticker_cik_map is None:
-        raw = get_json(f"{SEC_BASE}/files/company_tickers.json", headers=_headers(), **_RATE)
+        raw = get_json(f"{SEC_BASE}/files/company_tickers.json", headers=edgar_headers(), **_RATE)
         _ticker_cik_map = {row["ticker"].upper(): row for row in raw.values()}
     return _ticker_cik_map
 
@@ -40,12 +43,12 @@ def cik_for_ticker(ticker: str) -> str | None:
 
 
 def fetch_submissions(cik: str) -> dict:
-    return get_json(f"{SEC_DATA_BASE}/submissions/CIK{cik}.json", headers=_headers(), **_RATE)
+    return get_json(f"{SEC_DATA_BASE}/submissions/CIK{cik}.json", headers=edgar_headers(), **_RATE)
 
 
 def fetch_company_facts(cik: str) -> dict:
     return get_json(
-        f"{SEC_DATA_BASE}/api/xbrl/companyfacts/CIK{cik}.json", headers=_headers(), **_RATE
+        f"{SEC_DATA_BASE}/api/xbrl/companyfacts/CIK{cik}.json", headers=edgar_headers(), **_RATE
     )
 
 
@@ -167,7 +170,7 @@ def _rows_from_fields(by_field: dict[str, dict[str, float]], years: int) -> list
     return rows
 
 
-def xbrl_fundamentals(company_facts: dict | None, years: int = 3) -> dict:
+def xbrl_fundamentals(company_facts: dict | None, years: int = 6) -> dict:
     """Synthesizes FMP-shaped annual statement rows (most-recent-first) from
     XBRL company facts - a free fallback for when FMP's own statement
     endpoints are unavailable (plan-gated or erroring). Every downstream

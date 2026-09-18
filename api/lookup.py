@@ -18,6 +18,7 @@ URL can run it up).
 import logging
 import os
 import sys
+import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -86,7 +87,13 @@ def lookup():
         # No watchlist peer group exists for a solo ad-hoc lookup.
         state["metrics"]["sector_relative_momentum_pct"] = None
         state["display"]["price"]["sector_relative_momentum_pct"] = None
-        company_doc, _summary, _warnings = finalize_company(state, regime_info, skip_ai)
+        state["sector_medians"] = {"pe_ttm": None, "ev_ebitda": None}
+        # skip_qualitative=True: the qualitative layer's filing fetch + two
+        # extra Claude calls risk this function's 60s timeout (vercel.json)
+        # for a single request - see finalize_company's docstring.
+        company_doc, _summary, _warnings, _qual_failed = finalize_company(
+            state, regime_info, skip_ai, Path(tempfile.gettempdir()), skip_qualitative=True
+        )
     except Exception as exc:  # noqa: BLE001
         logger.exception("Lookup failed for %s", ticker)
         return _error(f"Analysis failed for {ticker}: {exc}", 502)

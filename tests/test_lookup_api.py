@@ -24,7 +24,7 @@ def client():
 def _mock_pipeline():
     return (
         patch("lookup.fetch_and_score_company", return_value={"metrics": {}, "display": {"price": {}}}),
-        patch("lookup.finalize_company", return_value=({"ticker": "MSFT"}, {}, 0)),
+        patch("lookup.finalize_company", return_value=({"ticker": "MSFT"}, {}, 0, False)),
         patch("lookup._regime", return_value={"regime": "Neutral/Expansion", "signals": {}}),
     )
 

@@ -98,6 +98,8 @@ function render(doc) {
       ${renderSubscoreTable("Long-Term", doc.scores.long_term)}
     </section>
 
+    ${renderLayeredAnalysis(doc)}
+
     ${renderValueInvesting(doc.value_investing)}
 
     ${renderSupplyDemand(doc.price)}
@@ -227,6 +229,128 @@ function renderSupplyDemand(price) {
             : ""
         }
       </ul>
+    </section>
+  `;
+}
+
+function gateLabel(pass) {
+  if (pass === true) return "Pass";
+  if (pass === false) return "Fail";
+  return "Not evaluated";
+}
+
+function gateClass(pass) {
+  if (pass === true) return "gate-pass";
+  if (pass === false) return "gate-fail";
+  return "gate-unknown";
+}
+
+function renderQuantScorecard(quantScore) {
+  if (!quantScore) return "";
+  const rows = Object.entries(quantScore.metrics || {})
+    .map(([key, m]) => {
+      const comparator = m.higher_is_better ? "&ge;" : "&le;";
+      return `<li>${renderChecklistIcon(m.pass)}<span class="checklist-text"><span class="checklist-label">${escapeHtml(m.label)}</span><span class="checklist-detail">${m.value === null ? "no data" : formatNumber(m.value, { decimals: 1 })} (threshold ${comparator} ${m.threshold})</span></span></li>`;
+    })
+    .join("");
+  return `
+    <div class="layered-card">
+      <h4>Quant Screen <span class="layered-gate ${gateClass(quantScore.gate_pass)}">${gateLabel(quantScore.gate_pass)}</span></h4>
+      <p class="checklist-note">${quantScore.evaluated ? `${quantScore.passed}/${quantScore.evaluated} evaluated metrics pass (${formatNumber(quantScore.quant_score_pct, { decimals: 0, suffix: "%" })})` : "Not enough data to evaluate."}</p>
+      <ul class="checklist">${rows}</ul>
+      <p class="meta">A fast, deterministic filter — no AI, no news. Gates whether the qualitative/thesis layers below ran at all.</p>
+    </div>
+  `;
+}
+
+const MOAT_LABELS = {
+  network_effects: "Network effects",
+  cost_advantage: "Cost advantage",
+  intangible_assets: "Intangible assets (brand/patents/licenses)",
+  switching_costs: "Switching costs",
+  efficient_scale: "Efficient scale",
+  none: "None identified",
+};
+
+function renderQualitative(qualitative) {
+  if (!qualitative) {
+    return `
+      <div class="layered-card">
+        <h4>Qualitative (10-K) <span class="layered-gate gate-unknown">Not run</span></h4>
+        <p class="meta">Only runs for companies that pass the quant screen (cost control — this layer reads real
+        filing text and spends extra AI budget per company).</p>
+      </div>
+    `;
+  }
+  const redFlags = (qualitative.red_flags || [])
+    .map((f) => `<li>${escapeHtml(f)}</li>`)
+    .join("");
+  return `
+    <div class="layered-card">
+      <h4>Qualitative (10-K) <span class="layered-gate ${gateClass(qualitative.moat_present)}">${qualitative.moat_present ? "Moat found" : "No moat found"}</span></h4>
+      <p><strong>${escapeHtml(MOAT_LABELS[qualitative.moat_type] || qualitative.moat_type)}</strong></p>
+      <p>${escapeHtml(qualitative.moat_explanation)}</p>
+      <p class="checklist-label">Management &amp; capital allocation</p>
+      <p>${escapeHtml(qualitative.management_assessment)}</p>
+      ${redFlags ? `<p class="checklist-label">Red flags from the filing</p><ul>${redFlags}</ul>` : `<p class="meta">No red flags called out in the excerpts.</p>`}
+      <p class="meta">Grounded in this company's own 10-K text (extraction: ${escapeHtml(qualitative.extraction_confidence)}) —
+      unlike the rest of this page, these claims are prompt-grounded, not code-verified against a fixed metric list.</p>
+    </div>
+  `;
+}
+
+function renderValuationSection(valuationData) {
+  if (!valuationData) return "";
+  const dcf = valuationData.dcf || {};
+  const a = dcf.assumptions || {};
+  const rel = valuationData.relative || {};
+  return `
+    <div class="layered-card">
+      <h4>Valuation <span class="layered-gate ${gateClass(valuationData.margin_of_safety_pct !== null && valuationData.margin_of_safety_pct !== undefined ? valuationData.margin_of_safety_pct >= 15 : null)}">${
+        dcf.margin_of_safety_pct === null || dcf.margin_of_safety_pct === undefined
+          ? "Not evaluated"
+          : formatNumber(dcf.margin_of_safety_pct, { decimals: 0, suffix: "% margin of safety" })
+      }</span></h4>
+      <p class="checklist-label">DCF (this pipeline's own, not FMP's)</p>
+      <p class="meta">Growth ${formatNumber(a.growth_rate_pct, { decimals: 1, suffix: "%" })}/yr (${escapeHtml(a.growth_rate_source || "")}) for ${a.projection_years} years,
+      then ${formatNumber(a.terminal_growth_rate_pct, { decimals: 1, suffix: "%" })} terminal growth, discounted at ${formatNumber(a.discount_rate_pct, { decimals: 1, suffix: "%" })}.</p>
+      <p>Intrinsic value/share: ${dcf.intrinsic_value_per_share === null || dcf.intrinsic_value_per_share === undefined ? "—" : formatNumber(dcf.intrinsic_value_per_share, { decimals: 2, suffix: "" })}</p>
+      <p class="meta">${escapeHtml(a.note || "")}</p>
+      <p class="checklist-label">Relative multiples vs. sector median (this watchlist)</p>
+      <p class="meta">P/E ${rel.pe_ttm === null || rel.pe_ttm === undefined ? "—" : formatNumber(rel.pe_ttm, { decimals: 1 })} vs. median ${rel.sector_median_pe_ttm === null || rel.sector_median_pe_ttm === undefined ? "—" : formatNumber(rel.sector_median_pe_ttm, { decimals: 1 })} ·
+      EV/EBITDA ${rel.ev_ebitda === null || rel.ev_ebitda === undefined ? "—" : formatNumber(rel.ev_ebitda, { decimals: 1 })} vs. median ${rel.sector_median_ev_ebitda === null || rel.sector_median_ev_ebitda === undefined ? "—" : formatNumber(rel.sector_median_ev_ebitda, { decimals: 1 })}</p>
+    </div>
+  `;
+}
+
+function renderThesis(thesis) {
+  if (!thesis) return "";
+  const criteria = (thesis.falsification_criteria || []).map((c) => `<li>${escapeHtml(c)}</li>`).join("");
+  return `
+    <div class="thesis-block">
+      <h4>Thesis</h4>
+      <p>${escapeHtml(thesis.thesis)}</p>
+      <h5>What would prove this wrong</h5>
+      <ul>${criteria}</ul>
+    </div>
+  `;
+}
+
+function renderLayeredAnalysis(doc) {
+  const layered = doc.layered_analysis;
+  if (!layered && !doc.quant_score) return "";
+  const flags = (layered?.flags || []).map((f) => `<li>${escapeHtml(f)}</li>`).join("");
+  return `
+    <section class="layered-analysis">
+      <h3>Layered Analysis <span class="attribution">(quant screen, qualitative moat read, and valuation stay separate — never averaged into one number)</span></h3>
+      ${layered ? `<p class="layered-overall">${escapeHtml(layered.overall)}</p>` : ""}
+      ${flags ? `<ul class="layered-flags">${flags}</ul>` : ""}
+      <div class="layered-columns">
+        ${renderQuantScorecard(doc.quant_score)}
+        ${renderQualitative(doc.qualitative)}
+        ${renderValuationSection(doc.valuation)}
+      </div>
+      ${renderThesis(doc.thesis)}
     </section>
   `;
 }

@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from pipeline.build import writer  # noqa: E402
 from pipeline.narrative.prompts import DISCLAIMER  # noqa: E402
-from pipeline.scoring import long_term, macro_regime, short_term, value_investing  # noqa: E402
+from pipeline.scoring import aggregation, long_term, macro_regime, quant_score, short_term, valuation, value_investing  # noqa: E402
 from pipeline.utils.config import macro_series, watchlist  # noqa: E402
 from pipeline.utils.paths import DATA_DIR  # noqa: E402
 
@@ -38,12 +38,16 @@ METRIC_RANGES = {
     "ev_ebitda": (6, 28),
     "revenue_growth_yoy_pct": (-8, 28),
     "revenue_cagr_3yr_pct": (-5, 22),
+    "revenue_cagr_5yr_pct": (-5, 20),
     "eps_growth_yoy_pct": (-12, 32),
     "eps_growth_cagr_3yr_pct": (-8, 25),
+    "eps_growth_cagr_5yr_pct": (-8, 22),
     "gross_margin_pct": (18, 65),
     "roe_pct": (-5, 35),
     "roic_pct": (-2, 22),
     "debt_to_equity": (0, 2.2),
+    "debt_to_ebitda": (0, 4.5),
+    "insider_ownership_pct": (0.001, 3.5),
     "current_ratio": (0.4, 2.8),
     "interest_coverage": (1, 22),
     "fcf_margin_pct": (-5, 32),
@@ -76,17 +80,22 @@ def synth_metrics() -> dict:
     return metrics
 
 
-def synth_raw_statements() -> dict:
+def synth_raw_statements(market_cap: float, close_price: float) -> dict:
     """Two years of plausible annual statements, for the value-investing
-    checklist (which needs year-over-year comparisons)."""
-    revenue0 = round(random.uniform(5_000, 400_000), 1)
+    checklist (needs year-over-year comparisons) and the DCF (needs a real
+    FCF dollar figure). Scaled off market_cap/close_price - a large-cap's
+    revenue should be the same order of magnitude as its market cap, and
+    its share count should roughly match market_cap/close_price - so the
+    DCF's per-share intrinsic value lands somewhere plausible instead of a
+    unit mismatch collapsing it to ~$0."""
+    shares0 = market_cap / close_price
+    revenue0 = market_cap * random.uniform(0.3, 1.2)  # plausible P/S range
     revenue1 = revenue0 / (1 + random.uniform(-0.05, 0.2))
     gm0, gm1 = random.uniform(0.25, 0.55), random.uniform(0.22, 0.52)
     assets0 = revenue0 * random.uniform(1.2, 2.5)
     assets1 = revenue1 * random.uniform(1.2, 2.5)
     net_income0 = revenue0 * random.uniform(0.05, 0.22)
     net_income1 = revenue1 * random.uniform(0.03, 0.20)
-    shares0 = round(random.uniform(200, 8000), 1)
 
     income_stmts = [
         {
@@ -246,6 +255,44 @@ def synth_narrative(name: str, short: dict, long_: dict, metrics: dict, checklis
     }
 
 
+_SAMPLE_MOAT_TYPES = ["network_effects", "cost_advantage", "intangible_assets", "switching_costs", "efficient_scale"]
+
+
+def synth_qualitative_and_thesis(name: str, quant_scorecard: dict, valuation_out: dict) -> tuple[dict | None, dict | None]:
+    """Only synthesized when the quant gate passes, matching the real
+    pipeline's cost-gated behavior (pipeline/main.py's
+    _run_qualitative_and_thesis) - this is placeholder text, clearly
+    labeled, not a real reading of any filing."""
+    if not quant_scorecard.get("gate_pass"):
+        return None, None
+
+    moat_present = random.random() < 0.7
+    moat_type = random.choice(_SAMPLE_MOAT_TYPES) if moat_present else "none"
+    qualitative = {
+        "moat_present": moat_present,
+        "moat_type": moat_type,
+        "moat_explanation": (
+            f"[Sample data] Placeholder moat read for {name} - a real run reads this company's actual 10-K."
+        ),
+        "management_assessment": "[Sample data] Placeholder capital-allocation read - a real run reads this company's actual 10-K.",
+        "red_flags": ["[Sample data] Placeholder red flag."] if random.random() < 0.3 else [],
+        "extraction_confidence": "section_match",
+    }
+    margin = valuation_out.get("margin_of_safety_pct")
+    thesis = {
+        "thesis": (
+            f"[Sample data] Placeholder thesis for {name}, combining the quant screen, this placeholder "
+            f"moat read, and a valuation showing {margin:+.0f}% margin of safety by this pipeline's DCF - "
+            "a real run generates this from the actual company data."
+        ),
+        "falsification_criteria": [
+            "[Sample data] Placeholder falsification criterion A.",
+            "[Sample data] Placeholder falsification criterion B.",
+        ],
+    }
+    return qualitative, thesis
+
+
 def synth_macro_data() -> dict:
     end_date = datetime(2026, 9, 12, tzinfo=timezone.utc)
     out = {}
@@ -294,7 +341,8 @@ def main() -> None:
         sector = company_cfg["sector"]
         metrics = synth_metrics()
         market_cap = round(random.uniform(15_000_000_000, 900_000_000_000), 0)
-        raw = synth_raw_statements()
+        close_price = round(random.uniform(40, 550), 2)
+        raw = synth_raw_statements(market_cap, close_price)
 
         checklist = value_investing.build_checklist(metrics, {"market_cap": market_cap}, raw)
         metrics["graham_criteria_passed"] = checklist["graham_defensive"]["passed"]
@@ -310,18 +358,34 @@ def main() -> None:
                 "market_cap": market_cap,
                 "metrics": metrics,
                 "checklist": checklist,
-                "close_price": round(random.uniform(40, 550), 2),
+                "raw": raw,
+                "close_price": close_price,
             }
         )
 
-    # Phase 2: sector-relative momentum, same logic as pipeline/main.py.
+    # Phase 2: sector-relative momentum + sector median multiples, same
+    # logic as pipeline/main.py's apply_sector_relative_momentum/apply_sector_medians.
     by_sector: dict[str, list[float]] = {}
+    by_sector_pe: dict[str, list[float]] = {}
+    by_sector_ev: dict[str, list[float]] = {}
     for s in states:
         by_sector.setdefault(s["sector"], []).append(s["metrics"]["return_3m_pct"])
+        by_sector_pe.setdefault(s["sector"], []).append(s["metrics"]["pe_ttm"])
+        by_sector_ev.setdefault(s["sector"], []).append(s["metrics"]["ev_ebitda"])
     sector_avg = {sector: sum(vals) / len(vals) for sector, vals in by_sector.items()}
+
+    def median(values):
+        ordered = sorted(values)
+        mid = len(ordered) // 2
+        return ordered[mid] if len(ordered) % 2 else (ordered[mid - 1] + ordered[mid]) / 2
+
     for s in states:
         avg = sector_avg.get(s["sector"])
         s["metrics"]["sector_relative_momentum_pct"] = round(s["metrics"]["return_3m_pct"] - avg, 2) if avg is not None else None
+        s["sector_medians"] = {
+            "pe_ttm": median(by_sector_pe.get(s["sector"], [])),
+            "ev_ebitda": median(by_sector_ev.get(s["sector"], [])),
+        }
 
     # Phase 3: score + narrative + write.
     summaries = []
@@ -332,6 +396,14 @@ def main() -> None:
         narrative = synth_narrative(s["name"], short, long_, s["metrics"], s["checklist"])
         display = to_display(s["metrics"], s["close_price"])
         display["price"]["sector_relative_momentum_pct"] = s["metrics"]["sector_relative_momentum_pct"]
+
+        quant_scorecard = quant_score.build_quant_scorecard(s["metrics"])
+        shares_outstanding = s["market_cap"] / s["close_price"]
+        valuation_out = valuation.build_valuation(
+            s["metrics"], s["raw"], shares_outstanding, s["close_price"], s["sector_medians"]
+        )
+        qualitative_out, thesis_out = synth_qualitative_and_thesis(s["name"], quant_scorecard, valuation_out)
+        layered_analysis = aggregation.build_layered_analysis(quant_scorecard, qualitative_out, valuation_out)
 
         company_doc = {
             "ticker": s["ticker"],
@@ -354,6 +426,11 @@ def main() -> None:
             "fundamentals": display["fundamentals"],
             "value_investing": s["checklist"],
             "narrative": narrative,
+            "quant_score": quant_scorecard,
+            "qualitative": qualitative_out,
+            "valuation": valuation_out,
+            "thesis": thesis_out,
+            "layered_analysis": layered_analysis,
             "sources": {"sec_filings": [], "sec_companyfacts_url": None},
             "_errors": {
                 "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
@@ -374,6 +451,9 @@ def main() -> None:
                 "graham_criteria_passed": s["checklist"]["graham_defensive"]["passed"],
                 "graham_criteria_total": s["checklist"]["graham_defensive"]["total"],
                 "piotroski_f_score": s["checklist"]["piotroski_f_score"]["score"],
+                "quant_gate_pass": layered_analysis["quant_gate_pass"],
+                "qualitative_moat_present": layered_analysis["qualitative_moat_present"],
+                "valuation_gate_pass": layered_analysis["valuation_gate_pass"],
                 "last_updated": generated_at,
             }
         )

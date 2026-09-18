@@ -114,16 +114,26 @@ def _returns_from_history(historical: list[dict]) -> dict:
     }
 
 
+def _cagr(latest: float, base: float, periods: int) -> float | None:
+    if not base or (latest / base) <= 0:
+        return None
+    return ((latest / base) ** (1 / periods) - 1) * 100
+
+
 def _growth(statements: list[dict], *field_candidates: str) -> dict:
-    """statements: annual statements, most-recent-first (FMP convention)."""
+    """statements: annual statements, most-recent-first (FMP convention).
+    cagr_5yr_pct needs 6 annual statements (this year + 5 years back) -
+    fmp.py requests limit=6 and sec_edgar.xbrl_fundamentals defaults to
+    years=6 for exactly this; either source may still return fewer, in
+    which case it's left None rather than computed over a shorter window
+    silently mislabeled "5yr"."""
     values = [v for row in statements if (v := _first_of(row, *field_candidates)) is not None]
     if len(values) < 2:
-        return {"yoy_pct": None, "cagr_3yr_pct": None}
+        return {"yoy_pct": None, "cagr_3yr_pct": None, "cagr_5yr_pct": None}
     yoy = (values[0] - values[1]) / abs(values[1]) * 100 if values[1] else None
-    cagr = None
-    if len(values) >= 4 and values[3] and (values[0] / values[3]) > 0:
-        cagr = ((values[0] / values[3]) ** (1 / 3) - 1) * 100
-    return {"yoy_pct": yoy, "cagr_3yr_pct": cagr}
+    cagr_3yr = _cagr(values[0], values[3], 3) if len(values) >= 4 else None
+    cagr_5yr = _cagr(values[0], values[5], 5) if len(values) >= 6 else None
+    return {"yoy_pct": yoy, "cagr_3yr_pct": cagr_3yr, "cagr_5yr_pct": cagr_5yr}
 
 
 def _margin_trend(statements: list[dict]) -> str:
@@ -211,6 +221,7 @@ def build_metrics(
     ratios = _first_row(fmp_data.get("ratios_ttm"))
     key_metrics = _first_row(fmp_data.get("key_metrics_ttm"))
     dcf = _first_row(fmp_data.get("dcf"))
+    insider_row = _first_row(fmp_data.get("insider_ownership"))
 
     xbrl = sec_data.get("xbrl_fundamentals") or {}
     income_stmts = fmp_data.get("income_statement") or xbrl.get("income_stmts") or []
@@ -273,21 +284,30 @@ def build_metrics(
         if operating_income_0 is not None and interest_expense:
             interest_coverage = operating_income_0 / abs(interest_expense)
 
+    fcf_ttm = None
     fcf_margin_pct = None
     fcf_to_net_income = None
     if cashflow_stmts:
-        fcf = _first_of(cashflow_stmts[0], "freeCashFlow")
-        if fcf is None:
+        fcf_ttm = _first_of(cashflow_stmts[0], "freeCashFlow")
+        if fcf_ttm is None:
             ocf = _first_of(cashflow_stmts[0], "operatingCashFlow")
             capex0 = _first_of(cashflow_stmts[0], "capitalExpenditure")
             if ocf is not None and capex0 is not None:
-                fcf = ocf - abs(capex0)
-        if fcf is not None and revenue:
-            fcf_margin_pct = fcf / revenue * 100
-        if fcf is not None and net_income:
-            fcf_to_net_income = fcf / net_income
+                fcf_ttm = ocf - abs(capex0)
+        if fcf_ttm is not None and revenue:
+            fcf_margin_pct = fcf_ttm / revenue * 100
+        if fcf_ttm is not None and net_income:
+            fcf_to_net_income = fcf_ttm / net_income
 
     ev_ebitda = _first_of(key_metrics, "evToEBITDATTM", "enterpriseValueOverEBITDATTM")
+
+    ebitda_0 = None
+    if income_stmts:
+        operating_income_for_ebitda = _first_of(income0, "operatingIncome")
+        d_and_a_for_ebitda = _first_of(cashflow_stmts[0], "depreciationAndAmortization") if cashflow_stmts else None
+        if operating_income_for_ebitda is not None and d_and_a_for_ebitda is not None:
+            ebitda_0 = operating_income_for_ebitda + d_and_a_for_ebitda
+    debt_to_ebitda = total_debt / ebitda_0 if total_debt is not None and ebitda_0 and ebitda_0 > 0 else None
 
     # --- Value-investing metrics (Graham / Buffett) ---
     shares_outstanding = (
@@ -360,6 +380,20 @@ def build_metrics(
     avg_volume = _first_of(quote, "avgVolume") or price_data.get("avg_volume")
     volume_vs_avg_ratio = volume / avg_volume if volume is not None and avg_volume else None
 
+    # Best-effort - see pipeline/fetch/fmp.py's insider_ownership call.
+    # FMP *TTM-style ratio fields are fractions (see _pct above); an
+    # ownership-percent field may come back either as a fraction or an
+    # already-scaled percentage depending on the endpoint, so this is only
+    # trusted when it parses into a sane 0-100 range.
+    insider_ownership_raw = _first_of(
+        insider_row, "insiderOwnershipPercent", "insiderOwnership", "ownershipPercent"
+    )
+    insider_ownership_pct = None
+    if insider_ownership_raw is not None:
+        insider_ownership_pct = insider_ownership_raw * 100 if insider_ownership_raw <= 1 else insider_ownership_raw
+        if not (0 <= insider_ownership_pct <= 100):
+            insider_ownership_pct = None
+
     metrics = {
         "return_1m_pct": price_data.get("return_1m_pct"),
         "return_3m_pct": price_data.get("return_3m_pct"),
@@ -372,12 +406,15 @@ def build_metrics(
         "ev_ebitda": ev_ebitda,
         "revenue_growth_yoy_pct": revenue_growth["yoy_pct"],
         "revenue_cagr_3yr_pct": revenue_growth["cagr_3yr_pct"],
+        "revenue_cagr_5yr_pct": revenue_growth["cagr_5yr_pct"],
         "eps_growth_yoy_pct": eps_growth["yoy_pct"],
         "eps_growth_cagr_3yr_pct": eps_growth["cagr_3yr_pct"],
+        "eps_growth_cagr_5yr_pct": eps_growth["cagr_5yr_pct"],
         "gross_margin_pct": gross_margin_pct,
         "roe_pct": roe_pct,
         "margin_trend_score": _MARGIN_TREND_SCORE[margin_trend],
         "debt_to_equity": debt_to_equity,
+        "debt_to_ebitda": debt_to_ebitda,
         "current_ratio": current_ratio,
         "interest_coverage": interest_coverage,
         "fcf_margin_pct": fcf_margin_pct,
@@ -388,6 +425,7 @@ def build_metrics(
         "roic_pct": roic_pct,
         "owner_earnings_yield_pct": owner_earnings_yield_pct,
         "volume_vs_avg_ratio": volume_vs_avg_ratio,
+        "insider_ownership_pct": insider_ownership_pct,
         # informational only, not fed into the weighted score - see
         # config/scoring_weights.yaml comment on ncav_margin_pct
         "ncav_margin_pct": ncav_margin_pct,
@@ -418,8 +456,10 @@ def build_metrics(
             "growth": {
                 "revenue_growth_yoy_pct": revenue_growth["yoy_pct"],
                 "revenue_cagr_3yr_pct": revenue_growth["cagr_3yr_pct"],
+                "revenue_cagr_5yr_pct": revenue_growth["cagr_5yr_pct"],
                 "eps_growth_yoy_pct": eps_growth["yoy_pct"],
                 "eps_growth_cagr_3yr_pct": eps_growth["cagr_3yr_pct"],
+                "eps_growth_cagr_5yr_pct": eps_growth["cagr_5yr_pct"],
             },
             "profitability": {
                 "gross_margin_pct": gross_margin_pct,
@@ -429,8 +469,12 @@ def build_metrics(
             },
             "balance_sheet": {
                 "debt_to_equity": debt_to_equity,
+                "debt_to_ebitda": debt_to_ebitda,
                 "current_ratio": current_ratio,
                 "interest_coverage": interest_coverage,
+            },
+            "ownership": {
+                "insider_ownership_pct": insider_ownership_pct,
             },
             "cash_flow": {
                 "fcf_margin_pct": fcf_margin_pct,
@@ -452,6 +496,7 @@ def build_metrics(
         "industry": _first_of(profile, "industry") or sec_data.get("sic_description"),
         "cik": sec_data.get("cik"),
         "market_cap": market_cap,
+        "shares_outstanding": shares_outstanding,
     }
 
     return {

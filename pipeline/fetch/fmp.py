@@ -46,7 +46,7 @@ def _get(endpoint: str, ticker: str, **params: Any) -> Any:
 def fetch_company(ticker: str) -> dict:
     """Fetch all FMP data needed for one ticker.
 
-    The 9 endpoint calls are independent, so they run concurrently rather
+    The 10 endpoint calls are independent, so they run concurrently rather
     than one-at-a-time - on a degraded account (see module docstring; each
     failing call retries 3x with backoff before giving up) that's the
     difference between ~30-80s and ~single-call-latency per ticker, which
@@ -62,10 +62,16 @@ def fetch_company(ticker: str) -> dict:
         "historical_prices": lambda: _get("historical-price-eod/full", ticker),
         "ratios_ttm": lambda: _get("ratios-ttm", ticker),
         "key_metrics_ttm": lambda: _get("key-metrics-ttm", ticker),
-        "income_statement": lambda: _get("income-statement", ticker, limit=5),
-        "balance_sheet": lambda: _get("balance-sheet-statement", ticker, limit=5),
-        "cash_flow": lambda: _get("cash-flow-statement", ticker, limit=5),
+        "income_statement": lambda: _get("income-statement", ticker, limit=6),
+        "balance_sheet": lambda: _get("balance-sheet-statement", ticker, limit=6),
+        "cash_flow": lambda: _get("cash-flow-statement", ticker, limit=6),
         "dcf": lambda: _get("discounted-cash-flow", ticker),
+        # Best-effort: exact endpoint/response shape for insider ownership
+        # varies by FMP plan tier and hasn't been confirmed against a live
+        # account (see module docstring) - a 402/404 here degrades this one
+        # field to None via the same per-call error handling as everything
+        # else, it never blocks the other 8 calls.
+        "insider_ownership": lambda: _get("insider-ownership-percent", ticker),
     }
 
     result: dict[str, Any] = {}

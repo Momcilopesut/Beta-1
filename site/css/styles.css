@@ -231,6 +231,59 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 
 .supply-demand ul { padding-left: 1.25rem; font-size: 0.9rem; }
 
+.layered-analysis { margin-bottom: 2rem; }
+.layered-overall {
+  font-weight: 600;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  margin: 0.75rem 0;
+}
+.layered-flags {
+  font-size: 0.85rem;
+  color: var(--cautious);
+  padding-left: 1.25rem;
+  margin: 0 0 1rem;
+}
+.layered-columns { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.layered-card {
+  flex: 1;
+  min-width: 280px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.layered-card h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.layered-gate {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+.gate-pass { background: rgba(21, 128, 61, 0.15); color: var(--strong); }
+.gate-fail { background: rgba(220, 38, 38, 0.15); color: var(--weak); }
+.gate-unknown { background: rgba(107, 114, 128, 0.15); color: var(--neutral); }
+
+.thesis-block {
+  margin-top: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+.thesis-block h4 { margin-top: 0; }
+.thesis-block h5 { margin-bottom: 0.4rem; font-size: 0.85rem; color: var(--muted); }
+.thesis-block ul { padding-left: 1.25rem; font-size: 0.9rem; }
+
 .cycle-context {
   background: var(--card-bg);
   border: 1px solid var(--border);

@@ -1,0 +1,48 @@
+# Layer 2 (quant screen) pass/fail thresholds - a fast, deterministic
+# filter, deliberately separate from the weighted short/long-term scores in
+# scoring_weights.yaml. Those scores rank *how good*; this gate answers a
+# narrower question first: does the company clear a baseline quality bar at
+# all, before spending the expensive qualitative/valuation layers on it.
+#
+# Each metric: higher_is_better (or lower_is_better) + a pass threshold.
+# A metric with no data for a company is excluded from that company's
+# evaluated/passed count entirely (never counted as a fail) - same
+# "missing means neutral, not penalized" principle as scoring_weights.yaml.
+
+metrics:
+  roic_pct:
+    label: "Return on invested capital"
+    higher_is_better: true
+    threshold: 12.0
+    rationale: "Comfortably above a typical cost of capital - Munger/Buffett's moat proxy."
+  fcf_margin_pct:
+    label: "Free cash flow margin"
+    higher_is_better: true
+    threshold: 10.0
+    rationale: "Cash generation, not just accounting profit."
+  revenue_cagr_pct:
+    label: "Revenue growth (5yr CAGR, falls back to 3yr)"
+    higher_is_better: true
+    threshold: 5.0
+    rationale: "Durable top-line growth, not one good year."
+  eps_growth_cagr_pct:
+    label: "EPS growth (5yr CAGR, falls back to 3yr)"
+    higher_is_better: true
+    threshold: 5.0
+    rationale: "Growth reaching the bottom line, not diluted away."
+  debt_to_ebitda:
+    label: "Debt / EBITDA"
+    higher_is_better: false
+    threshold: 3.0
+    rationale: "Balance-sheet discipline - a Graham-style safety check."
+
+# Evaluated-but-not-gating: shown in the scorecard for context, never
+# counted toward passed/evaluated. Insider ownership is often near-zero for
+# mega-caps by nature of their size, not a quality signal at that scale -
+# same reasoning already applied to ncav_margin_pct in scoring_weights.yaml.
+informational_metrics:
+  - insider_ownership_pct
+  - margin_trend_score
+
+# Fraction of evaluated metrics that must pass for the overall gate to pass.
+gate_pass_fraction: 0.6

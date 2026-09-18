@@ -103,6 +103,7 @@ function renderCard(company) {
     company.piotroski_f_score !== undefined && company.piotroski_f_score !== null
       ? `<span class="mini-badge" title="Piotroski F-Score">F-Score ${company.piotroski_f_score}/9</span>`
       : "";
+  const layeredBadge = renderLayeredBadge(company);
   return `
     <a class="card" href="company.html?ticker=${encodeURIComponent(company.ticker)}">
       <div class="card-header">
@@ -117,10 +118,21 @@ function renderCard(company) {
           Long-term: ${escapeHtml(company.long_term_verdict)} (${formatNumber(company.long_term_score, { decimals: 0 })})
         </span>
       </div>
-      <div class="mini-badges">${grahamBadge}${piotroskiBadge}</div>
+      <div class="mini-badges">${grahamBadge}${piotroskiBadge}${layeredBadge}</div>
       <p class="summary">${escapeHtml(company.one_line_summary) || "No AI summary available yet."}</p>
     </a>
   `;
+}
+
+function renderLayeredBadge(company) {
+  const { quant_gate_pass: quant, qualitative_moat_present: moat, valuation_gate_pass: value } = company;
+  if (quant === undefined && moat === undefined && value === undefined) return "";
+  const parts = [];
+  if (quant === true) parts.push("quant");
+  if (moat === true) parts.push("moat");
+  if (value === true) parts.push("value");
+  if (!parts.length) return `<span class="mini-badge" title="Layered analysis: no gates passed yet">layered: —</span>`;
+  return `<span class="mini-badge" title="Layered analysis gates passed">${escapeHtml(parts.join(" + "))} ✓</span>`;
 }
 
 main();

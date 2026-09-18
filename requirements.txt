@@ -2,6 +2,10 @@ requests>=2.31
 PyYAML>=6.0
 anthropic>=0.40
 pydantic>=2.7
+# HTML->text extraction for 10-K/10-Q filing text (pipeline/fetch/filing_text.py) -
+# only used by the qualitative layer, uses the pure-Python html.parser backend
+# so no compiled lxml/lxml-html-clean dependency is required.
+beautifulsoup4>=4.12
 # flask is only needed by api/lookup.py (the on-demand lookup endpoint,
 # deployed to Vercel) - not by the batch pipeline itself.
 flask>=3.0
