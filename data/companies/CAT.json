@@ -1,7 +1,5 @@
 {
-  "_errors": {
-    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=CAT&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
-  },
+  "_errors": {},
   "cik": "0000018230",
   "fundamentals": {
     "balance_sheet": {
@@ -19,12 +17,10 @@
       "eps_growth_cagr_3yr_pct": 14.080425802972375,
       "eps_growth_cagr_5yr_pct": 27.956408301107906,
       "eps_growth_yoy_pct": -14.749661705006778,
+      "r_and_d_to_revenue_pct": 3.178031928272352,
       "revenue_cagr_3yr_pct": 4.38323160905727,
       "revenue_cagr_5yr_pct": 10.115402157081043,
       "revenue_growth_yoy_pct": 4.289527689055532
-    },
-    "ownership": {
-      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 32.34106141531906,
@@ -35,17 +31,19 @@
     "valuation": {
       "dcf_fair_value": 170.37677020193462,
       "dcf_upside_pct": -78.73214702260209,
+      "earnings_yield_pct": 2.761078802259384,
       "ev_ebitda": 23.62278626767038,
       "graham_multiple": 665.6270856079346,
       "graham_number": 133.84069998072064,
       "graham_upside_pct": -83.45582763931314,
       "ncav_margin_pct": -106.66411402662972,
       "pb_ratio": 19.203866769786025,
-      "pe_ttm": 34.66109682947729
+      "pe_ttm": 34.66109682947729,
+      "peg_ratio": 2.4616511826055953
     }
   },
   "industry": "Agricultural - Machinery",
-  "last_updated": "2026-09-18T23:13:32Z",
+  "last_updated": "2026-09-18T23:41:39Z",
   "layered_analysis": {
     "flags": [
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
@@ -53,7 +51,12 @@
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "quant_gate_pass": true,
+    "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
+  },
+  "lynch_category": {
+    "category": "cyclical",
+    "reasoning": "Industrials - earnings here typically track the economic cycle rather than compound steadily."
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -68,6 +71,7 @@
     "dcf_upside_pct": -78.73214702260209,
     "debt_to_ebitda": 3.2163004750593824,
     "debt_to_equity": 2.3277133281773654,
+    "earnings_yield_pct": 2.761078802259384,
     "eps_growth_cagr_3yr_pct": 14.080425802972375,
     "eps_growth_cagr_5yr_pct": 27.956408301107906,
     "eps_growth_yoy_pct": -14.749661705006778,
@@ -80,15 +84,20 @@
     "graham_upside_pct": -83.45582763931314,
     "gross_margin_pct": 32.34106141531906,
     "interest_coverage": 11.97804208600183,
+    "magic_formula_earnings_yield_rank": 12,
+    "magic_formula_rank": 12,
+    "magic_formula_roic_rank": 9,
     "margin_trend_score": 20,
     "ncav_margin_pct": -106.66411402662972,
     "owner_earnings_yield_pct": 1.8379140333195383,
     "pb_ratio": 19.203866769786025,
     "pe_ttm": 34.66109682947729,
+    "peg_ratio": 2.4616511826055953,
     "piotroski_evaluated": 9,
     "piotroski_f_score": 5,
     "price_vs_ma200_pct": 3.1729847191141443,
     "price_vs_ma50_pct": -3.707715380769869,
+    "r_and_d_to_revenue_pct": 3.178031928272352,
     "return_1m_pct": -0.8772897139006272,
     "return_3m_pct": -17.937351646345178,
     "revenue_cagr_3yr_pct": 4.38323160905727,
@@ -104,78 +113,14 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-78.7%",
-          "text": "The stock's price implies roughly a 78.7% premium to its DCF-modeled fair value, i.e., a large negative margin of safety by this model."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-83.5%",
-          "text": "Versus a Graham-style fair value estimate, the price implies about an 83.5% premium, again indicating no margin of safety by this measure."
-        },
-        {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "-14.7%",
-          "text": "Year-over-year EPS declined about 14.7%, a notable earnings contraction in the most recent period."
-        },
-        {
-          "source_metric": "margin_trend_score",
-          "source_value": "20",
-          "text": "The margin trend score of 20 (on a scale where higher indicates improving margins) points to recent margin deterioration."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "debt_to_equity",
-          "source_value": "2.33x",
-          "text": "Debt-to-equity stands at 2.33x, indicating a leverage-heavy balance sheet relative to shareholder equity."
-        },
-        {
-          "source_metric": "pe_ttm",
-          "source_value": "34.7x",
-          "text": "The trailing P/E ratio of 34.7x is elevated relative to typical market averages."
-        },
-        {
-          "source_metric": "pb_ratio",
-          "source_value": "19.2x",
-          "text": "The price-to-book ratio of 19.2x is very high, suggesting the market is pricing in substantial value beyond stated book assets."
-        },
-        {
-          "source_metric": "roic_pct",
-          "source_value": "15.6%",
-          "text": "Return on invested capital of 15.6% is a data point that, if durable, can be associated with a competitive advantage ('moat'), though sector context isn't provided here."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "3 of 6 evaluated",
-          "text": "The company passes 3 of 6 evaluated Graham defensive-investor criteria."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "5 of 9 evaluated",
-          "text": "The Piotroski F-Score is 5 out of 9 evaluated criteria, a middling financial-strength checklist result."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "return_3m_pct",
-          "source_value": "-17.9%",
-          "text": "The stock is down about 17.9% over the trailing three months."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "1.59x average",
-          "text": "Trading volume has been running about 1.59 times its recent average, an observed supply/demand divergence whose cause is not indicated by this data and shouldn't be over-interpreted."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 31.4 ('Cautious') is driven largely by valuation: the modeled DCF and Graham fair-value estimates both imply the current price sits far above intrinsic value (roughly 79% and 83% above those models, respectively), leaving little apparent margin of safety. Leverage is elevated (debt-to-equity of 2.33x) and the margin trend score of 20 points to recent margin deterioration, even though EPS has grown strongly on a 3- and 5-year CAGR basis. A mid-teens ROIC of 15.6% is a data point some investors associate with a durable competitive advantage, but it is weighed against the stretched multiples and checklist scores (passing only 3 of 6 Graham defensive criteria and 5 of 9 Piotroski criteria).",
-    "one_line_summary": "CAT shows stretched valuation multiples and a large gap versus modeled fair value, alongside softer recent earnings and price momentum.",
-    "short_term_narrative": "The short-term score of 37.2 ('Cautious') reflects recent price weakness, with the stock down about 17.9% over three months and trading roughly 3.7% below its 50-day moving average, even though it remains modestly above its 200-day average. Trading volume has also run about 1.6 times its recent average, a divergence from typical activity levels without a clear driver evident in the data. Together these signal weakening near-term price momentum rather than an outright trend reversal."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",
@@ -193,7 +138,6 @@
     "evaluated": 5,
     "gate_pass": true,
     "informational": {
-      "insider_ownership_pct": null,
       "margin_trend_score": 20
     },
     "metrics": {

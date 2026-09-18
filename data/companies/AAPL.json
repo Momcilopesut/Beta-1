@@ -1,7 +1,5 @@
 {
-  "_errors": {
-    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=AAPL&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
-  },
+  "_errors": {},
   "cik": "0000320193",
   "fundamentals": {
     "balance_sheet": {
@@ -19,12 +17,10 @@
       "eps_growth_cagr_3yr_pct": 6.791224750372327,
       "eps_growth_cagr_5yr_pct": 17.74182545699563,
       "eps_growth_yoy_pct": 22.585924713584284,
+      "r_and_d_to_revenue_pct": 8.302075398703867,
       "revenue_cagr_3yr_pct": 1.8125357434793932,
       "revenue_cagr_5yr_pct": 8.677354924090741,
       "revenue_growth_yoy_pct": 6.425511782832739
-    },
-    "ownership": {
-      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 46.90516410716045,
@@ -35,17 +31,19 @@
     "valuation": {
       "dcf_fair_value": 137.77020783728028,
       "dcf_upside_pct": -58.8542990316782,
+      "earnings_yield_pct": 2.653938415377797,
       "ev_ebitda": 29.566990564675994,
       "graham_multiple": 1762.4521378776124,
       "graham_number": 35.117915084899316,
       "graham_upside_pct": -89.55228182997669,
       "ncav_margin_pct": -102.8039920513542,
       "pb_ratio": 45.93187376255581,
-      "pe_ttm": 38.37100456621005
+      "pe_ttm": 38.37100456621005,
+      "peg_ratio": 5.650086100317379
     }
   },
   "industry": "Consumer Electronics",
-  "last_updated": "2026-09-18T23:05:18Z",
+  "last_updated": "2026-09-18T23:27:57Z",
   "layered_analysis": {
     "flags": [
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
@@ -53,7 +51,12 @@
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "quant_gate_pass": true,
+    "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
+  },
+  "lynch_category": {
+    "category": "slow_grower",
+    "reasoning": "Large ($4937B) with EPS growing just 6.8%/yr - Lynch's 'slow grower' territory."
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -68,6 +71,7 @@
     "dcf_upside_pct": -58.8542990316782,
     "debt_to_ebitda": 0.7763630585569403,
     "debt_to_equity": 0.7841052827380952,
+    "earnings_yield_pct": 2.653938415377797,
     "eps_growth_cagr_3yr_pct": 6.791224750372327,
     "eps_growth_cagr_5yr_pct": 17.74182545699563,
     "eps_growth_yoy_pct": 22.585924713584284,
@@ -80,15 +84,20 @@
     "graham_upside_pct": -89.55228182997669,
     "gross_margin_pct": 46.90516410716045,
     "interest_coverage": 0,
+    "magic_formula_earnings_yield_rank": 13,
+    "magic_formula_rank": 5,
+    "magic_formula_roic_rank": 1,
     "margin_trend_score": 100,
     "ncav_margin_pct": -102.8039920513542,
     "owner_earnings_yield_pct": 2.248250469746161,
     "pb_ratio": 45.93187376255581,
     "pe_ttm": 38.37100456621005,
+    "peg_ratio": 5.650086100317379,
     "piotroski_evaluated": 9,
     "piotroski_f_score": 8,
     "price_vs_ma200_pct": 17.38782492021326,
     "price_vs_ma50_pct": 4.993968305334315,
+    "r_and_d_to_revenue_pct": 8.302075398703867,
     "return_1m_pct": 6.091594861597706,
     "return_3m_pct": 12.7915170631858,
     "revenue_cagr_3yr_pct": 1.8125357434793932,
@@ -104,78 +113,14 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-58.85%",
-          "text": "The current price implies roughly 58.85% downside to the model's discounted cash flow fair-value estimate, indicating no margin of safety by this measure."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-89.55%",
-          "text": "Versus a Graham-style fair-value estimate, the stock appears about 89.55% above that value, indicating a large gap and no margin of safety under this framework."
-        },
-        {
-          "source_metric": "pb_ratio",
-          "source_value": "45.93",
-          "text": "The stock trades at a price-to-book ratio of 45.93x, a very high multiple of net asset value."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "roic_pct",
-          "source_value": "74.77%",
-          "text": "Return on invested capital stands at 74.77%, a level that can indicate a durable competitive advantage if sustained."
-        },
-        {
-          "source_metric": "ncav_margin_pct",
-          "source_value": "-102.80%",
-          "text": "Net current asset value margin is -102.80%, meaning current assets net of all liabilities do not cover the market price, offering no net-net cushion."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "3 of 6 evaluated",
-          "text": "The company passes 3 of 6 evaluated Graham defensive-investor criteria."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "8 of 9 evaluated",
-          "text": "The company scores 8 out of 9 evaluated Piotroski F-Score criteria, indicating strong fundamental health markers."
-        },
-        {
-          "source_metric": "revenue_cagr_3yr_pct",
-          "source_value": "1.81%",
-          "text": "Three-year revenue growth CAGR is 1.81%, notably slower than the 5-year CAGR of 8.68%."
-        },
-        {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "22.59%",
-          "text": "Earnings per share grew 22.59% year over year."
-        },
-        {
-          "source_metric": "owner_earnings_yield_pct",
-          "source_value": "2.25%",
-          "text": "Owner earnings yield is 2.25%, a relatively modest cash return on the business at the current price."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "current_ratio",
-          "source_value": "1.00",
-          "text": "The current ratio is 1.00, just at the level typically considered a minimum for short-term liquidity coverage."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "-3.35%",
-          "text": "The stock's momentum trails its sector peers by about 3.35% over the measured period; the data does not indicate why, so this divergence should be noted but not over-interpreted."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 42.7 ('Neutral') reflects a tension between business quality and valuation. Return on invested capital of 74.77% and a Piotroski F-Score of 8 out of 9 evaluated criteria point to strong current profitability and financial health, while EPS grew 22.59% year over year. Yet the stock trades at a price-to-book of 45.93x and a trailing P/E of 38.37x, and both discounted cash flow (-58.85%) and Graham (-89.55%) models suggest the current price sits well above their estimated fair values, leaving no apparent margin of safety by either measure. Three-year revenue growth has also slowed to a 1.81% CAGR, below the faster 5-year pace.",
-    "one_line_summary": "AAPL shows strong short-term price momentum but trades far above modeled fair-value estimates, giving a neutral long-term score.",
-    "short_term_narrative": "Apple's short-term score of 60 ('Favorable') is supported by broad-based price strength: the stock is up 6.09% over one month and 12.79% over three months, and trades 4.99% above its 50-day moving average and 17.39% above its 200-day moving average. Volume has run about 1.35x its recent average, indicating heightened trading activity. However, the stock's momentum is running about 3.35% below its sector peers over the same period, a divergence worth noting even as the stock's own trend remains upward."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",
@@ -193,7 +138,6 @@
     "evaluated": 5,
     "gate_pass": true,
     "informational": {
-      "insider_ownership_pct": null,
       "margin_trend_score": 100
     },
     "metrics": {

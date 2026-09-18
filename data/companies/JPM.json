@@ -1,7 +1,5 @@
 {
-  "_errors": {
-    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=JPM&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
-  },
+  "_errors": {},
   "cik": "0000019617",
   "fundamentals": {
     "balance_sheet": {
@@ -19,12 +17,10 @@
       "eps_growth_cagr_3yr_pct": 18.412674089532754,
       "eps_growth_cagr_5yr_pct": 17.71061673420389,
       "eps_growth_yoy_pct": 1.515917129863571,
+      "r_and_d_to_revenue_pct": 0.0,
       "revenue_cagr_3yr_pct": 22.061699039625115,
       "revenue_cagr_5yr_pct": 16.592001654027676,
       "revenue_growth_yoy_pct": 3.307372160612137
-    },
-    "ownership": {
-      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 59.914207581904954,
@@ -35,17 +31,19 @@
     "valuation": {
       "dcf_fair_value": 708.0603482504553,
       "dcf_upside_pct": 104.15199038446943,
+      "earnings_yield_pct": 4.726285406053129,
       "ev_ebitda": 20.01936734328038,
       "graham_multiple": 39.13302127687474,
       "graham_number": 246.41268232022387,
       "graham_upside_pct": -29.52993327416597,
       "ncav_margin_pct": -335.06759399036457,
       "pb_ratio": 2.6031231586927857,
-      "pe_ttm": 15.033104041272573
+      "pe_ttm": 15.033104041272573,
+      "peg_ratio": 0.8164541428460192
     }
   },
   "industry": "Banks - Diversified",
-  "last_updated": "2026-09-18T23:07:25Z",
+  "last_updated": "2026-09-18T23:31:53Z",
   "layered_analysis": {
     "flags": [
       "Fails the quant screen - below threshold on more metrics than it passes."
@@ -53,7 +51,12 @@
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "quant_gate_pass": false,
+    "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
+  },
+  "lynch_category": {
+    "category": "stalwart",
+    "reasoning": "Moderate, steady EPS growth (18.4%/yr) - Lynch's 'stalwart' territory."
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -68,6 +71,7 @@
     "dcf_upside_pct": 104.15199038446943,
     "debt_to_ebitda": 11.574850152304215,
     "debt_to_equity": 3.3045317914137287,
+    "earnings_yield_pct": 4.726285406053129,
     "eps_growth_cagr_3yr_pct": 18.412674089532754,
     "eps_growth_cagr_5yr_pct": 17.71061673420389,
     "eps_growth_yoy_pct": 1.515917129863571,
@@ -80,15 +84,20 @@
     "graham_upside_pct": -29.52993327416597,
     "gross_margin_pct": 59.914207581904954,
     "interest_coverage": 0.8541496986479883,
+    "magic_formula_earnings_yield_rank": 5,
+    "magic_formula_rank": 11,
+    "magic_formula_roic_rank": 13,
     "margin_trend_score": 20,
     "ncav_margin_pct": -335.06759399036457,
     "owner_earnings_yield_pct": 7.030194077979271,
     "pb_ratio": 2.6031231586927857,
     "pe_ttm": 15.033104041272573,
+    "peg_ratio": 0.8164541428460192,
     "piotroski_evaluated": 9,
     "piotroski_f_score": 3,
     "price_vs_ma200_pct": 9.088963489499104,
     "price_vs_ma50_pct": -0.9991534517368386,
+    "r_and_d_to_revenue_pct": 0.0,
     "return_1m_pct": -2.124503162962541,
     "return_3m_pct": 7.517987823627078,
     "revenue_cagr_3yr_pct": 22.061699039625115,
@@ -107,75 +116,75 @@
       "critical": [
         {
           "source_metric": "dcf_upside_pct",
-          "source_value": "+104.15%",
-          "text": "The discounted cash flow model implies the stock trades roughly 104% below its estimated fair value, a very large modeled margin of safety if the model's assumptions hold."
+          "source_value": "104.15%",
+          "text": "The discounted cash flow model implies a substantial modeled margin of safety, with the stock appearing to trade well below its estimated fair value."
         },
         {
           "source_metric": "graham_upside_pct",
           "source_value": "-29.53%",
-          "text": "The Graham valuation model shows a -29.53% gap versus its estimated fair value, indicating no margin of safety by that classic measure and directly conflicting with the DCF-based reading."
-        },
-        {
-          "source_metric": "interest_coverage",
-          "source_value": "0.85x",
-          "text": "Interest coverage is just 0.85x, meaning earnings before interest do not fully cover interest expense as measured here\u2014a potential balance-sheet stress signal worth scrutinizing."
+          "text": "In contrast, the Graham valuation model shows no margin of safety, implying the shares trade roughly 30% above their Graham-derived fair value."
         }
       ],
       "important": [
         {
-          "source_metric": "debt_to_ebitda",
-          "source_value": "11.57x",
-          "text": "Debt to EBITDA is elevated at 11.57x, reflecting a highly leveraged balance sheet as measured by this metric."
-        },
-        {
           "source_metric": "piotroski_f_score",
           "source_value": "3 of 9 evaluated",
-          "text": "The company passes only 3 of 9 evaluated Piotroski F-Score criteria, a weak reading on this fundamental-quality checklist."
+          "text": "The Piotroski F-Score checklist finds only 3 of 9 evaluated financial-strength criteria met, a comparatively weak reading."
         },
         {
           "source_metric": "graham_criteria_passed",
           "source_value": "3 of 6 evaluated",
-          "text": "JPMorgan passes 3 of 6 evaluated Graham defensive-investor criteria, a middling score on this classic checklist."
+          "text": "The stock passes 3 of 6 evaluated Graham defensive-investor criteria."
         },
         {
           "source_metric": "roic_pct",
           "source_value": "5.93%",
-          "text": "Return on invested capital is 5.93%, a modest level that does not on its own point to a durable competitive advantage."
+          "text": "Return on invested capital sits at roughly 5.9%, a level that does not on its own indicate a durable competitive advantage."
         },
         {
           "source_metric": "owner_earnings_yield_pct",
           "source_value": "7.03%",
-          "text": "The owner earnings yield\u2014Buffett's preferred measure of cash generation relative to price\u2014is 7.03%."
+          "text": "The owner earnings yield - cash generated relative to price, in Buffett's framing - is about 7.0%."
         },
         {
           "source_metric": "margin_trend_score",
-          "source_value": "20",
-          "text": "The margin trend score is low at 20, suggesting margins have been trending unfavorably."
+          "source_value": "20 (model scale)",
+          "text": "The margin trend score is low, pointing to weakening profitability trends."
+        },
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "3.31%",
+          "text": "Year-over-year revenue growth has slowed sharply to about 3.3%, well below the multi-year historical pace."
         }
       ],
       "minor": [
         {
+          "source_metric": "eps_growth_yoy_pct",
+          "source_value": "1.52%",
+          "text": "EPS growth over the past year was just 1.5%, also well below its longer-term trend."
+        },
+        {
           "source_metric": "sector_relative_momentum_pct",
           "source_value": "-2.51%",
-          "text": "The stock's momentum is running about 2.51% below its sector peers, a supply/demand divergence worth noting, though the data does not indicate its cause."
+          "text": "The stock's momentum is running about 2.5 percentage points below its sector peers, a divergence worth noting though no cause is discernible from this data."
         },
         {
           "source_metric": "volume_vs_avg_ratio",
           "source_value": "1.73x average",
-          "text": "Trading volume is running at 1.73x its own average, an unusual level of activity relative to the stock's historical norm, though the reason isn't indicated in this data."
+          "text": "Trading volume is running about 73% above its average, another supply/demand divergence not explained by this dataset."
         }
       ],
       "noise": [
         {
-          "source_metric": "fcf_margin_pct",
-          "source_value": "-52.83%",
-          "text": "Free cash flow margin is deeply negative at -52.83%; this metric is commonly cited but may be less decision-relevant for a large financial institution, whose reported cash flows are dominated by deposit and loan balance-sheet movements rather than typical operating cash flow."
+          "source_metric": "interest_coverage",
+          "source_value": "0.85x",
+          "text": "Interest coverage is reported at below 1x, a figure that would flag distress for a typical industrial company but is not a standard solvency gauge for a bank given its balance-sheet structure - worth discounting as a decision driver here."
         }
       ]
     },
-    "long_term_narrative": "The long-term score of 41 ('Neutral') reflects a sharp disagreement between valuation models: the DCF implies a 104.15% margin of safety versus fair value, while the Graham model implies a -29.53% gap, meaning no margin of safety by that measure. Fundamental quality checks are middling, with only 3 of 9 evaluated Piotroski criteria and 3 of 6 evaluated Graham defensive-investor criteria passed, while a 5.93% return on invested capital and a low margin trend score of 20 point to unremarkable capital efficiency and a softening margin trajectory. Multi-year growth has been strong (3-year revenue CAGR of 22.06%), but the most recent year-over-year growth has slowed markedly (3.31% revenue, 1.52% EPS).",
-    "one_line_summary": "JPM: DCF model implies deep undervaluation while the Graham model shows none; leverage is elevated and quality checklist scores are mixed.",
-    "short_term_narrative": "The short-term score of 65 ('Favorable') reflects mixed price signals: JPM is up 7.52% over three months and sits 9.09% above its 200-day moving average, though it is slightly below its 50-day average and down 2.12% over the past month. Momentum is running about 2.51% below the sector average, and trading volume is elevated at 1.73x its own historical average. Both of these divergences are worth noting, but the data does not indicate why they are occurring."
+    "long_term_narrative": "The long-term score of 41 is neutral, reflecting mixed fundamental signals: the DCF model implies a large modeled margin of safety, yet the Graham model suggests the shares already trade above their Graham-derived fair value, and the stock passes only about half of the evaluated Graham defensive criteria along with a low Piotroski score of 3 of 9. Revenue and EPS growth have decelerated sharply from their three- and five-year trends, the margin trend score is weak, and return on invested capital of roughly 5.9% offers limited support for a durable-moat narrative.",
+    "one_line_summary": "JPMorgan: favorable short-term technicals, neutral long-term fundamentals; DCF and Graham valuation models disagree on fair value.",
+    "short_term_narrative": "JPMorgan's short-term score of 65 reflects a broadly favorable technical setup: the stock trades about 9% above its 200-day moving average despite sitting slightly below its 50-day average, and three-month returns of roughly 7.5% outpace the past month's modest 2.1% pullback. Trading volume running about 73% above its average signals heightened interest, though momentum has lagged the sector by roughly 2.5 percentage points recently."
   },
   "price": {
     "as_of": "2026-09-18",
@@ -193,7 +202,6 @@
     "evaluated": 5,
     "gate_pass": false,
     "informational": {
-      "insider_ownership_pct": null,
       "margin_trend_score": 20
     },
     "metrics": {

@@ -1,0 +1,90 @@
+{
+  "filing_url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm",
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "fisher_checklist": [
+      {
+        "assessment": "unknown",
+        "criterion": "Sufficient market potential for years of growth",
+        "evidence": "The Business section excerpt provided is dominated by regulatory and risk-factor language rather than a description of market size or growth runway; no explicit discussion of long-term category growth potential is present in these excerpts."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Management's commitment to new products/R&D",
+        "evidence": "R&D is mentioned only in passing as one of the business processes supported by information systems; no R&D spending figures, product pipeline detail, or innovation commitment are provided in the excerpts or scorecard."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Effective sales/distribution effort",
+        "evidence": "The filing describes an incidence-based concentrate pricing model with bottling partners, wholesalers, distributors and retailers as the mechanism for growing sales and aligning incentives across the distribution network."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Worthwhile profit margin",
+        "evidence": "Scorecard shows FCF margin of 11.05% above the 10% threshold and ROIC of 16.35% well above the 12% threshold, both passing metrics indicative of healthy profitability."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Steps to sustain or improve margin",
+        "evidence": "The informational margin_trend_score of 100 in the scorecard suggests a favorable margin trajectory, though the filing excerpts themselves do not narrate specific margin-improvement initiatives."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Outstanding labor/personnel relations",
+        "evidence": "The provided excerpts do not discuss labor relations, unionization, employee turnover, or workforce satisfaction."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Depth of management beyond the top executive",
+        "evidence": "The excerpts refer to 'management' collectively in the context of accounting judgments and risk oversight but do not describe the depth or bench strength of the leadership team."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Cost analysis and accounting controls",
+        "evidence": "The filing describes a detailed, multi-factor impairment testing methodology (discount rates, growth rates, market approaches) for goodwill, trademarks and equity investments, and a structured revenue recognition process, indicating meaningful accounting rigor, though this is more about estimate discipline than operating cost control."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "A unique aspect giving a real competitive edge",
+        "evidence": "The company's portfolio of owned trademarks (e.g., the BodyArmor brand valued at $2,440 million even after impairment) combined with its incidence-based bottler pricing model represent assets and arrangements not readily replicable by competitors, per the excerpts."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Long-range profit outlook over short-range",
+        "evidence": "The filing states the company has 'established and publicly announced certain long-term growth objectives' based on evaluation of growth prospects across its beverage portfolio."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Equity financing that would dilute current shareholders",
+        "evidence": "Neither the excerpts nor the scorecard provide share count trends or discussion of equity issuance versus internal funding for growth."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Management talks candidly about problems, not just successes",
+        "evidence": "The Risk Factors section includes specific, quantified disclosures such as the $760 million and $960 million BodyArmor trademark impairments and detailed explanations of cybersecurity, regulatory and currency risks rather than only generic boilerplate."
+      }
+    ],
+    "management_assessment": "The excerpts show management stating it maintains debt levels 'considered prudent based on cash flows, interest coverage ratio and percentage of debt to capital' and using debt financing to lower cost of capital, plus a stated practice of publicly announcing long-term growth objectives. However, the provided sections do not discuss buybacks, dividend policy, or broader M&A strategy in any detail; the only concrete capital-allocation event described is the BodyArmor acquisition, which subsequently required a $760 million and then a $960 million impairment charge tied to revised growth and competitive assumptions, suggesting an acquisition that underperformed initial projections. The scorecard shows debt/EBITDA (3.19x) modestly above the stated 3.0x threshold, which is consistent with the company's own description of carrying meaningful debt.",
+    "moat_explanation": "The excerpts repeatedly center on the value and vulnerability of Coca-Cola's trademarks (e.g., the BodyArmor trademark carried at $2,440 million after impairment charges) and describe a global network of bottling partners operating under an incidence-based concentrate pricing model, both of which point to brand/intangible-asset strength as the primary competitive asset described. The filing does not describe cost-structure advantages, network effects, or switching-cost mechanics in any detail, so intangible assets (brand/trademarks) is the best-supported category from this text.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Debt/EBITDA of 3.19x exceeds the scorecard's 3.0x threshold, indicating somewhat elevated leverage",
+      "BodyArmor trademark required a $760 million impairment in 2024 and an additional $960 million impairment in 2025 due to revised growth and competitive assumptions, suggesting the acquisition has underperformed original expectations",
+      "Company's financial results and credit costs are partly tied to the financial health and credit ratings of third-party bottling partners",
+      "Extensive and evolving regulatory compliance burden across environmental, trade sanctions, anti-corruption, and data privacy laws in many jurisdictions, explicitly described as a source of higher costs",
+      "Explicit acknowledgment that the company's information systems are 'a target of attacks' and that cybersecurity incidents could have a material adverse effect in the future",
+      "Approximately $28.8 billion of 2025 net operating revenue came from outside the U.S., creating material foreign currency translation exposure"
+    ]
+  },
+  "thesis": {
+    "falsification_criteria": [
+      "If KO's debt/EBITDA ratio moves back below the 3.0x quant threshold (e.g., via debt paydown or EBITDA growth), the leverage concern underlying the failed quant metric would be resolved.",
+      "If the DCF-implied margin of safety turns positive at prevailing prices - through a decline in share price, upward revision of base FCF, or higher sustainable growth assumptions - the current 'overvalued' valuation conclusion would no longer hold.",
+      "If KO's P/E and EV/EBITDA multiples fall to or below the sector median (currently +10% and +8% premiums respectively), the relative-valuation premium cited in the thesis would be falsified.",
+      "If further trademark or goodwill impairments beyond BodyArmor's $760M/$960M occur, that would reinforce (not falsify) the capital-allocation red flag, whereas a sustained multi-year run without additional material impairments and demonstrated organic FCF/ROIC growth above current levels (16.35% ROIC, 11.05% FCF margin) would undercut the 'moat plus mispriced execution' framing.",
+      "If bottling-partner credit or financial distress materially impairs KO's reported results, that would validate the counterparty-risk red flag identified in the qualitative review; absence of such impact over multiple reporting periods would weaken that specific concern."
+    ],
+    "thesis": "KO's quant scorecard is solid (80%, 4/5 metrics passing) with strong ROIC (16.4%), FCF margin (11.0%), and durable mid-single-to-double-digit growth, though debt/EBITDA at 3.19x sits just above the 3.0x threshold. The qualitative layer supports a genuine intangible-asset moat centered on trademarks and an incidence-based bottler distribution network, with management showing candor about problems (e.g., disclosing BodyArmor impairments) but also revealing that the BodyArmor acquisition required $760M and then $960M in impairment charges, a concrete example of capital allocation underperforming expectations. Despite the quality signals, the valuation layer is the dominant conflict here: the simplified DCF implies a deeply negative margin of safety (-72.5%), and on relative multiples KO trades at a modest premium to sector medians on both P/E (+10%) and EV/EBITDA (+8%), suggesting the market is already pricing in much of the quality the other two layers identify. This is a case of a business with real moat characteristics and healthy fundamentals priced, by this DCF's assumptions, well above an estimated intrinsic value - a good company that this valuation framework does not currently treat as cheap."
+  }
+}

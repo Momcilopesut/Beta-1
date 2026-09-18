@@ -1,7 +1,5 @@
 {
-  "_errors": {
-    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=HD&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
-  },
+  "_errors": {},
   "cik": "0000354950",
   "fundamentals": {
     "balance_sheet": {
@@ -19,12 +17,10 @@
       "eps_growth_cagr_3yr_pct": -5.182280331321687,
       "eps_growth_cagr_5yr_pct": 3.560331274993689,
       "eps_growth_yoy_pct": -4.61229946524065,
+      "r_and_d_to_revenue_pct": 0.0,
       "revenue_cagr_3yr_pct": 1.5185146415588768,
       "revenue_cagr_5yr_pct": 4.506334520303379,
       "revenue_growth_yoy_pct": 3.240467921310982
-    },
-    "ownership": {
-      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 33.31552133492831,
@@ -35,17 +31,19 @@
     "valuation": {
       "dcf_fair_value": 268.01638280355303,
       "dcf_upside_pct": -10.714776866029375,
+      "earnings_yield_pct": 5.753613824337727,
       "ev_ebitda": 15.036469063767509,
       "graham_multiple": 375.90261604273473,
       "graham_number": 73.2632808775972,
       "graham_upside_pct": -75.57727819268045,
       "ncav_margin_pct": -119.34297606141173,
       "pb_ratio": 17.944281157850394,
-      "pe_ttm": 20.94832402234637
+      "pe_ttm": 20.94832402234637,
+      "peg_ratio": null
     }
   },
   "industry": "Home Improvement",
-  "last_updated": "2026-09-18T23:12:39Z",
+  "last_updated": "2026-09-18T23:40:58Z",
   "layered_analysis": {
     "flags": [
       "Fails the quant screen - below threshold on more metrics than it passes.",
@@ -54,7 +52,12 @@
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "quant_gate_pass": false,
+    "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
+  },
+  "lynch_category": {
+    "category": "turnaround",
+    "reasoning": "Negative EPS growth (-5.2%/yr) - either an ongoing decline or, if this marks a trough, a Lynch-style turnaround candidate; this pipeline can't distinguish the two from data alone, unlike Lynch's own on-the-ground research."
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -69,6 +72,7 @@
     "dcf_upside_pct": -10.714776866029375,
     "debt_to_ebitda": 2.612850345847827,
     "debt_to_equity": 3.765240416440994,
+    "earnings_yield_pct": 5.753613824337727,
     "eps_growth_cagr_3yr_pct": -5.182280331321687,
     "eps_growth_cagr_5yr_pct": 3.560331274993689,
     "eps_growth_yoy_pct": -4.61229946524065,
@@ -81,6 +85,9 @@
     "graham_upside_pct": -75.57727819268045,
     "gross_margin_pct": 33.31552133492831,
     "interest_coverage": 8.70115894039735,
+    "magic_formula_earnings_yield_rank": 1,
+    "magic_formula_rank": 1,
+    "magic_formula_roic_rank": 5,
     "margin_trend_score": 60,
     "ncav_margin_pct": -119.34297606141173,
     "owner_earnings_yield_pct": 4.880394599257769,
@@ -90,6 +97,7 @@
     "piotroski_f_score": 4,
     "price_vs_ma200_pct": -12.333638335198321,
     "price_vs_ma50_pct": -9.557622871145997,
+    "r_and_d_to_revenue_pct": 0.0,
     "return_1m_pct": -12.872494917223348,
     "return_3m_pct": -10.260859159985628,
     "revenue_cagr_3yr_pct": 1.5185146415588768,
@@ -105,14 +113,78 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
+      "critical": [
+        {
+          "source_metric": "graham_upside_pct",
+          "source_value": "-75.58%",
+          "text": "The stock's price implies roughly a 75.6% shortfall versus the Graham fair-value model, indicating no margin of safety by this measure."
+        },
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-10.71%",
+          "text": "The DCF model implies the current price is about 10.7% above modeled fair value, indicating a negative margin of safety."
+        },
+        {
+          "source_metric": "debt_to_equity",
+          "source_value": "3.77",
+          "text": "Debt-to-equity stands at 3.77x, indicating a heavily leveraged balance sheet relative to shareholder equity."
+        },
+        {
+          "source_metric": "price_vs_ma200_pct",
+          "source_value": "-12.33%",
+          "text": "The stock trades about 12.3% below its 200-day moving average, reflecting a sustained downtrend."
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "return_1m_pct",
+          "source_value": "-12.87%",
+          "text": "Shares fell approximately 12.9% over the trailing one-month period."
+        },
+        {
+          "source_metric": "roic_pct",
+          "source_value": "20.71%",
+          "text": "Return on invested capital of 20.7% is notably high, which can be read as a possible sign of a durable competitive advantage."
+        },
+        {
+          "source_metric": "eps_growth_yoy_pct",
+          "source_value": "-4.61%",
+          "text": "Trailing twelve-month EPS growth is negative at about -4.6%, pointing to recent earnings deterioration."
+        },
+        {
+          "source_metric": "piotroski_f_score",
+          "source_value": "4 of 9 evaluated",
+          "text": "The Piotroski F-Score is 4 out of 9 evaluated criteria, indicating middling fundamental financial strength."
+        },
+        {
+          "source_metric": "graham_criteria_passed",
+          "source_value": "2 of 6 evaluated",
+          "text": "The company passes only 2 of 6 evaluated Graham defensive-investor criteria."
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "current_ratio",
+          "source_value": "1.08",
+          "text": "The current ratio of 1.08 suggests limited short-term liquidity cushion."
+        },
+        {
+          "source_metric": "sector_relative_momentum_pct",
+          "source_value": "-7.04%",
+          "text": "Momentum relative to sector peers is down about 7 percentage points, a divergence worth noting without a known cause."
+        }
+      ],
+      "noise": [
+        {
+          "source_metric": "volume_vs_avg_ratio",
+          "source_value": "2.15x average",
+          "text": "Trading volume is running at roughly 2.15x its average, an unusual supply/demand divergence that is commonly discussed but whose cause is not identifiable from this data."
+        }
+      ]
     },
-    "long_term_narrative": null,
-    "one_line_summary": null,
-    "short_term_narrative": null
+    "long_term_narrative": "The long-term score of 37.3 ('Cautious') is shaped by a large negative margin of safety versus both the Graham (-75.6%) and DCF (-10.7%) fair-value estimates, meaning the current price sits well above what these models imply intrinsic value to be. Earnings have contracted on a trailing and 3-year basis even as revenue grew modestly, and the Piotroski score of 4 out of 9 and Graham defensive checklist score of 2 out of 6 both point to fundamental softness. A high ROIC of 20.7% stands out as a potential sign of durable competitive advantage, but this is offset by elevated debt-to-equity of 3.77x and a current ratio near 1.0, indicating limited balance-sheet cushion.",
+    "one_line_summary": "HD shows negative margins of safety on Graham and DCF models, high leverage, and recent price weakness, tempered by strong ROIC.",
+    "short_term_narrative": "The short-term score of 25.5 ('Cautious') reflects a stock trading well below its 50- and 200-day moving averages, a steep one-month decline of nearly 13%, and momentum that lags its sector by about 7 percentage points. Trading volume running more than double its average signals unusual supply/demand activity, though the payload gives no indication of why. Together these price-action metrics point to notable near-term weakness without implying a future direction."
   },
   "price": {
     "as_of": "2026-09-18",
@@ -130,7 +202,6 @@
     "evaluated": 5,
     "gate_pass": false,
     "informational": {
-      "insider_ownership_pct": null,
       "margin_trend_score": 60
     },
     "metrics": {

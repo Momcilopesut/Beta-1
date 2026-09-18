@@ -1,7 +1,5 @@
 {
-  "_errors": {
-    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=PLD&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
-  },
+  "_errors": {},
   "cik": "0001045609",
   "fundamentals": {
     "balance_sheet": {
@@ -19,12 +17,10 @@
       "eps_growth_cagr_3yr_pct": -4.894264952843653,
       "eps_growth_cagr_5yr_pct": 12.626450694567382,
       "eps_growth_yoy_pct": -11.414392059553359,
+      "r_and_d_to_revenue_pct": 0.0,
       "revenue_cagr_3yr_pct": 13.741104437395911,
       "revenue_cagr_5yr_pct": 14.642906074406925,
       "revenue_growth_yoy_pct": 7.175627712119938
-    },
-    "ownership": {
-      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 59.597819235148705,
@@ -35,25 +31,32 @@
     "valuation": {
       "dcf_fair_value": 92.41676111763034,
       "dcf_upside_pct": -31.17095321543879,
+      "earnings_yield_pct": 2.214094735991091,
       "ev_ebitda": 19.21190757293361,
       "graham_multiple": 70.17253718910861,
       "graham_number": 70.73333334014724,
       "graham_upside_pct": -47.542766730831175,
       "ncav_margin_pct": -131.51636491026528,
       "pb_ratio": 2.3418601108794777,
-      "pe_ttm": 29.964444444444442
+      "pe_ttm": 29.964444444444442,
+      "peg_ratio": null
     }
   },
   "industry": "REIT - Industrial",
-  "last_updated": "2026-09-18T23:15:25Z",
+  "last_updated": "2026-09-18T23:44:13Z",
   "layered_analysis": {
     "flags": [
-      "Positive but thin margin of safety (below the 15% convention) by this pipeline's DCF estimate."
+      "Positive but thin margin of safety - 4% is below the 15% this company's uncertainty calls for (Klarman: margin of safety should scale with risk, not stay flat - see required_margin_of_safety_pct)."
     ],
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "quant_gate_pass": true,
+    "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
+  },
+  "lynch_category": {
+    "category": "turnaround",
+    "reasoning": "Negative EPS growth (-4.9%/yr) - either an ongoing decline or, if this marks a trough, a Lynch-style turnaround candidate; this pipeline can't distinguish the two from data alone, unlike Lynch's own on-the-ground research."
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -68,6 +71,7 @@
     "dcf_upside_pct": -31.17095321543879,
     "debt_to_ebitda": 5.68589722888346,
     "debt_to_equity": 0.6782986555303994,
+    "earnings_yield_pct": 2.214094735991091,
     "eps_growth_cagr_3yr_pct": -4.894264952843653,
     "eps_growth_cagr_5yr_pct": 12.626450694567382,
     "eps_growth_yoy_pct": -11.414392059553359,
@@ -80,6 +84,9 @@
     "graham_upside_pct": -47.542766730831175,
     "gross_margin_pct": 59.597819235148705,
     "interest_coverage": 3.365663036392954,
+    "magic_formula_earnings_yield_rank": 15,
+    "magic_formula_rank": 15,
+    "magic_formula_roic_rank": 15,
     "margin_trend_score": 20,
     "ncav_margin_pct": -131.51636491026528,
     "owner_earnings_yield_pct": 4.798032478418679,
@@ -89,6 +96,7 @@
     "piotroski_f_score": 4,
     "price_vs_ma200_pct": -2.1083654006359,
     "price_vs_ma50_pct": -4.585608305665708,
+    "r_and_d_to_revenue_pct": 0.0,
     "return_1m_pct": -4.571832979476296,
     "return_3m_pct": -4.055784829941646,
     "revenue_cagr_3yr_pct": 13.741104437395911,
@@ -129,7 +137,6 @@
     "evaluated": 5,
     "gate_pass": true,
     "informational": {
-      "insider_ownership_pct": null,
       "margin_trend_score": 20
     },
     "metrics": {

@@ -1,7 +1,5 @@
 {
-  "_errors": {
-    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=NVDA&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
-  },
+  "_errors": {},
   "cik": "0001045810",
   "fundamentals": {
     "balance_sheet": {
@@ -19,12 +17,10 @@
       "eps_growth_cagr_3yr_pct": 201.43346886540917,
       "eps_growth_cagr_5yr_pct": 93.87190727651753,
       "eps_growth_yoy_pct": 65.99326599326596,
+      "r_and_d_to_revenue_pct": 8.565884652076058,
       "revenue_cagr_3yr_pct": 100.04509499443964,
       "revenue_cagr_5yr_pct": 66.89858183148777,
       "revenue_growth_yoy_pct": 65.4735357900948
-    },
-    "ownership": {
-      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 71.06808435754708,
@@ -35,25 +31,33 @@
     "valuation": {
       "dcf_fair_value": 229.4080586997425,
       "dcf_upside_pct": 4.214808840113797,
+      "earnings_yield_pct": 2.4215658207087762,
       "ev_ebitda": 23.10989001442223,
       "graham_multiple": 656.4857464161621,
       "graham_number": 32.404054452119475,
       "graham_upside_pct": -85.42130991491452,
       "ncav_margin_pct": -98.5794444235983,
       "pb_ratio": 23.480729221255633,
-      "pe_ttm": 27.95849056603773
+      "pe_ttm": 27.95849056603773,
+      "peg_ratio": 0.13879764233578593
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-18T23:06:44Z",
+  "last_updated": "2026-09-18T23:30:24Z",
   "layered_analysis": {
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
     ],
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "quant_gate_pass": true,
+    "required_margin_of_safety_pct": 30.0,
     "valuation_gate_pass": false
+  },
+  "lynch_category": {
+    "category": "fast_grower",
+    "reasoning": "EPS growing 201.4%/yr - Lynch's 'fast grower' territory (roughly 20%+)."
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -68,6 +72,7 @@
     "dcf_upside_pct": 4.214808840113797,
     "debt_to_ebitda": 0.08565638369736546,
     "debt_to_equity": 0.1697061803444782,
+    "earnings_yield_pct": 2.4215658207087762,
     "eps_growth_cagr_3yr_pct": 201.43346886540917,
     "eps_growth_cagr_5yr_pct": 93.87190727651753,
     "eps_growth_yoy_pct": 65.99326599326596,
@@ -80,15 +85,20 @@
     "graham_upside_pct": -85.42130991491452,
     "gross_margin_pct": 71.06808435754708,
     "interest_coverage": 426.7365010799136,
+    "magic_formula_earnings_yield_rank": 14,
+    "magic_formula_rank": 9,
+    "magic_formula_roic_rank": 2,
     "margin_trend_score": 20,
     "ncav_margin_pct": -98.5794444235983,
     "owner_earnings_yield_pct": 2.170814394594688,
     "pb_ratio": 23.480729221255633,
     "pe_ttm": 27.95849056603773,
+    "peg_ratio": 0.13879764233578593,
     "piotroski_evaluated": 9,
     "piotroski_f_score": 4,
     "price_vs_ma200_pct": 12.043589477974281,
     "price_vs_ma50_pct": 3.7323484197233006,
+    "r_and_d_to_revenue_pct": 8.565884652076058,
     "return_1m_pct": 2.1649200220628826,
     "return_3m_pct": 5.496226683753388,
     "revenue_cagr_3yr_pct": 100.04509499443964,
@@ -104,14 +114,77 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [],
-      "important": [],
+      "critical": [
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "65.47%",
+          "text": "Revenue grew 65.47% year-over-year, indicating very strong top-line expansion."
+        },
+        {
+          "source_metric": "roic_pct",
+          "source_value": "70.00%",
+          "text": "Return on invested capital stands at 70.00%, a level that may reflect a durable competitive advantage (moat) if it proves sustainable over time."
+        },
+        {
+          "source_metric": "graham_upside_pct",
+          "source_value": "-85.42%",
+          "text": "The Graham fair-value model shows a -85.42% gap versus the current price, meaning the stock trades far above its classic Graham-derived valuation with no margin of safety by this measure."
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "roe_pct",
+          "source_value": "110.11%",
+          "text": "Return on equity is 110.11%, an exceptionally high level of profitability relative to shareholder equity."
+        },
+        {
+          "source_metric": "eps_growth_yoy_pct",
+          "source_value": "65.99%",
+          "text": "EPS grew 65.99% year-over-year, mirroring the strong revenue growth trend."
+        },
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "4.21%",
+          "text": "A discounted cash flow model shows only a 4.21% upside to estimated fair value, indicating a thin margin of safety by this method."
+        },
+        {
+          "source_metric": "gross_margin_pct",
+          "source_value": "71.07%",
+          "text": "Gross margin is 71.07%, indicating strong pricing power on each dollar of revenue."
+        },
+        {
+          "source_metric": "peg_ratio",
+          "source_value": "0.14",
+          "text": "The PEG ratio is 0.14, a very low reading suggesting the stock's earnings multiple is modest relative to its growth rate."
+        },
+        {
+          "source_metric": "piotroski_f_score",
+          "source_value": "4",
+          "text": "The Piotroski F-Score is 4 out of 9 evaluated criteria, a middling reading on this financial-strength checklist."
+        },
+        {
+          "source_metric": "graham_criteria_passed",
+          "source_value": "4",
+          "text": "The stock passes 4 of 6 evaluated Graham defensive-investor criteria."
+        },
+        {
+          "source_metric": "sector_relative_momentum_pct",
+          "source_value": "-10.65%",
+          "text": "Sector-relative momentum is -10.65%, meaning the stock has recently underperformed its sector peers\u2014a divergence worth noting without an implied cause."
+        }
+      ],
       "minor": [],
-      "noise": []
+      "noise": [
+        {
+          "source_metric": "volume_vs_avg_ratio",
+          "source_value": "0.51x",
+          "text": "Trading volume is running at 0.51x its average, a metric commonly discussed but not, on its own, decision-relevant given this company's current fundamentals."
+        }
+      ]
     },
-    "long_term_narrative": null,
-    "one_line_summary": null,
-    "short_term_narrative": null
+    "long_term_narrative": "The long-term score of 69.7 ('Favorable') is underpinned by strong fundamentals: 65.47% revenue growth and 65.99% EPS growth year-over-year, a 71.07% gross margin, and a 70.00% return on invested capital that may point to a durable competitive advantage if sustained. The balance sheet is conservative, with debt-to-equity of 0.17 and interest coverage of 426.74x, indicating minimal financial distress risk. Valuation models present a mixed picture: a discounted cash flow analysis suggests only a 4.21% margin of safety, while the Graham fair-value model shows a -85.42% gap, meaning the stock trades well above what that classic value framework would consider fairly priced despite its high growth and quality metrics.",
+    "one_line_summary": "NVDA shows exceptional growth and returns on capital, but DCF and Graham valuation models show thin-to-negative margins of safety.",
+    "short_term_narrative": "The short-term score of 64.4 ('Favorable') reflects a stock trading 3.73% above its 50-day moving average and 12.04% above its 200-day moving average, with 1-month and 3-month returns of 2.16% and 5.50% respectively. RSI sits 4.70 points from neutral, suggesting momentum is not stretched in either direction. However, sector-relative momentum is negative at -10.65%, and volume is running at 0.51x its average\u2014both are divergences from peer and historical trading patterns worth noting without an implied cause."
   },
   "price": {
     "as_of": "2026-09-18",
@@ -124,12 +197,87 @@
     "volume": 188794542,
     "volume_vs_avg_ratio": 0.5126029550923042
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "fisher_checklist": [
+      {
+        "assessment": "yes",
+        "criterion": "Sufficient market potential for years of growth",
+        "evidence": "The Business section describes four large and growing markets (Data Center, Gaming, Professional Visualization, Automotive) and frames NVIDIA as central to a broad AI infrastructure buildout across industries, with new platforms (Rubin) still in development for future shipment."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Management's commitment to new products/R&D",
+        "evidence": "Over $76.7 billion cumulative R&D since inception, R&D expense grew 43% year-over-year to $18.5 billion in fiscal 2026, and the filing describes a one-year product cadence (Blackwell, Blackwell Ultra, Rubin) with continued architecture innovation."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Effective sales/distribution effort",
+        "evidence": "The excerpts describe distribution through OEMs, ODMs, system integrators, distributors, and direct relationships with all major cloud providers, plus an ecosystem of 7.5 million CUDA developers and partnerships with universities and startups via the Inception program."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Worthwhile profit margin",
+        "evidence": "Gross margin was 71.1% in fiscal 2026 (down from 75.0%), operating margin was 60.4% of revenue, and the scorecard shows an ROIC of 70.0% and FCF margin of 44.8%, all indicating strong profitability."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Steps to sustain or improve margin",
+        "evidence": "The filing explains margin decline was due to product transition (Hopper to Blackwell) and the H20 charge, but does not lay out specific forward-looking steps management is taking to sustain or improve margins beyond noting expected increased capital expenditures."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Outstanding labor/personnel relations",
+        "evidence": "The excerpts do not discuss labor relations, unionization, employee turnover, or workplace culture beyond noting compensation and benefits expense increases tied to employee growth."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Depth of management beyond the top executive",
+        "evidence": "The excerpts reference the CEO and CFO in certifications and Item 9B trading arrangements but provide no substantive discussion of management bench strength or succession; detailed executive information is deferred to the proxy statement."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Cost analysis and accounting controls",
+        "evidence": "The MD&A describes detailed critical accounting estimates for inventory provisions, excess purchase commitments, and specific quantified impacts (2.6% unfavorable gross margin impact from inventory provisions in fiscal 2026), plus management's conclusion that internal controls over financial reporting were effective, audited by PwC."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "A unique aspect giving a real competitive edge",
+        "evidence": "The excerpts describe 'extreme co-design' data-center-scale architecture connecting hundreds of thousands of GPUs as a single computer, plus the CUDA software platform underlying all GPUs, described as foundational and broadly adopted across 6,000 applications and 7.5 million developers."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Long-range profit outlook over short-range",
+        "evidence": "Management discusses multi-year platform roadmaps (Blackwell, Blackwell Ultra, Rubin commencing production in second half of fiscal 2027), long-term infrastructure investments ($17.5 billion in startups, multi-year land/power guarantees), and expected increased capital expenditures in fiscal 2027 to support future growth."
+      },
+      {
+        "assessment": "no",
+        "criterion": "Equity financing that would dilute current shareholders",
+        "evidence": "The filing describes an additional $60.0 billion share repurchase authorization approved in August 2025 and increased share repurchases in financing activities during fiscal 2026, indicating capital return to shareholders rather than dilutive equity issuance."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Management talks candidly about problems, not just successes",
+        "evidence": "The filing specifically discloses the $4.5 billion H20 charge tied to export license requirements, resulting revenue and margin impacts, ongoing uncertainty about China shipments and tariffs, and acknowledges supply chain concentration in Asia and product transition risks."
+      }
+    ],
+    "management_assessment": "The excerpts show substantial capital allocation activity: $6.1 billion in capital expenditures in fiscal 2026 (up from $3.4 billion), $17.5 billion invested in private companies/infrastructure funds and startups, $3.5 billion in land/power/shell guarantees, and an additional $60.0 billion share repurchase authorization approved in August 2025, alongside higher share repurchases in financing activities. R&D spending grew 43% year-over-year, indicating continued reinvestment in the technology roadmap (Blackwell, Rubin platforms). However, the excerpts also disclose a $4.5 billion charge tied to H20 export-license issues and note gross margin compression from 75.0% to 71.1%, suggesting some execution and demand-forecasting risk amid rapid product transitions; the filing does not provide detail on dividend policy or debt reduction strategy beyond noting $8.5 billion in senior notes outstanding with no stated repayment plan.",
+    "moat_explanation": "The excerpts describe a deeply entrenched full-stack platform (CUDA, GPUs, networking, software libraries, AI models) with over $76.7 billion in cumulative R&D investment, 7.5 million CUDA developers, and support for 6,000 applications, giving NVIDIA a proprietary technology/ecosystem position that is difficult to replicate. The scale of the developer ecosystem and integration across hardware/software layers also suggest switching-cost and network-effect dynamics, but the excerpts most directly emphasize proprietary technology, patents/architecture leadership, and ecosystem breadth as the basis of competitive advantage, which best fits intangible assets (technology leadership plus a large software/developer ecosystem).",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "High customer concentration: one direct customer represented 22% of total revenue and another 14% in fiscal 2026, with indirect customers also individually representing 10% or more of revenue.",
+      "$4.5 billion charge in Q1 fiscal 2026 due to U.S. government export licensing requirements for H20 products to China, with ongoing uncertainty about future China shipments and a 25% tariff on H200 imports under new licensing.",
+      "Gross margin declined from 75.0% to 71.1% year-over-year, partly due to product transition costs and the H20-related charge.",
+      "Reliance on a concentrated, mainly Asia-based supply chain, with the company only beginning to expand into the U.S. and Latin America.",
+      "Unrecognized tax benefits of $4.0 billion and an ongoing IRS examination for fiscal years 2023 and 2024 create tax-related uncertainty.",
+      "$17.5 billion invested in illiquid, non-marketable private company and infrastructure fund stakes, many in early-stage startups that 'may not become profitable in the near term, or at all.'"
+    ]
+  },
   "quant_score": {
     "evaluated": 5,
     "gate_pass": true,
     "informational": {
-      "insider_ownership_pct": null,
       "margin_trend_score": 20
     },
     "metrics": {
@@ -423,7 +571,17 @@
       }
     ]
   },
-  "thesis": null,
+  "thesis": {
+    "falsification_criteria": [
+      "NVDA's revenue growth decelerates well below the 20% figure used in the DCF projection (e.g., falls toward high single digits) without a corresponding drop in share price, widening the negative margin of safety further",
+      "Gross margin continues declining below the current 71.1% level for multiple consecutive quarters, undermining the 'worthwhile profit margin' Fisher criterion and the FCF-margin quant metric",
+      "The customer concentration risk materializes as one of the two customers (22% or 14% of revenue) is lost or materially reduces purchases, directly impacting the revenue base underlying both the quant score and DCF",
+      "Additional export-control charges or an outright loss of China-related revenue (beyond the disclosed $4.5B H20 charge) recur, adding to identified red flags and further pressuring margins",
+      "The stock price falls toward or below the DCF's calculated intrinsic value of approximately $129/share, which would close or reverse the current negative margin of safety",
+      "A competing GPU/AI architecture or software ecosystem meaningfully erodes CUDA's developer lock-in (e.g., major cloud providers or large customers shifting workloads off CUDA), weakening the intangible-asset moat thesis"
+    ],
+    "thesis": "NVDA clears every quant screen at an elite level (100% pass rate, 70% ROIC, 44.8% FCF margin, ~67% revenue CAGR, near-zero leverage), and the qualitative layer supports this with a well-documented intangible-asset moat built on CUDA's 7.5 million-developer ecosystem, $76.7B of cumulative R&D, and 'extreme co-design' data-center-scale architecture that the Fisher checklist rates favorably across most dimensions. However, the filing also surfaces real cracks in the story - gross margin compression from 75.0% to 71.1%, a $4.5B China export-related charge, customer concentration (one buyer at 22% of revenue), and $17.5B parked in illiquid early-stage startup stakes - none of which are severe enough to negate the moat but do temper the qualitative picture. The critical conflict is valuation: the DCF, even using an aggressive 20% five-year growth assumption on a $96.7B FCF base, implies an intrinsic value meaningfully below the current price (a -41.8% margin of safety), while the relative multiples (P/E ~28x, EV/EBITDA ~23x) sit exactly at sector medians, offering no cheapness to offset the DCF gap. In short, this is a case of a highly capable business with a credible moat priced for continued near-flawless execution, where the quant and qualitative layers argue for quality while the valuation layer argues the price already assumes that quality and then some."
+  },
   "ticker": "NVDA",
   "valuation": {
     "dcf": {

@@ -1,0 +1,91 @@
+{
+  "filing_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "fisher_checklist": [
+      {
+        "assessment": "unknown",
+        "criterion": "Sufficient market potential for years of growth",
+        "evidence": "The Business section describes daily-use product categories sold in ~180 countries with stated targets of organic sales growth 'above market growth rates,' but the scorecard shows revenue 5yr CAGR of only 2.7%, below the 5% threshold, suggesting the described market opportunity has not translated into strong top-line growth."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Management's commitment to new products/R&D",
+        "evidence": "The filing states the company invests in 'research and development and consumer insights to invent new categories or products' and calls innovation 'P&G's lifeblood,' though no specific R&D-to-revenue figure is provided in the excerpts."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Effective sales/distribution effort",
+        "evidence": "The Business section describes multiple distribution channels including mass merchandisers, digital/social commerce, grocery, club stores, specialty stores, and direct-to-consumer, indicating a broad, diversified go-to-market approach."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Worthwhile profit margin",
+        "evidence": "Scorecard shows ROIC of 19.7% and FCF margin of 18.3%, both passing thresholds; MD&A reports operating income of $19.7 billion on $87.0 billion net sales (~22.7% operating margin)."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Steps to sustain or improve margin",
+        "evidence": "MD&A describes an ongoing productivity/restructuring plan targeting cost of goods sold, marketing, overhead, and capital spending, explicitly aimed at improving cost structure while investing in growth."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Outstanding labor/personnel relations",
+        "evidence": "The excerpts discuss compensation/benefits programs generically and cite 'labor disputes or controversies' as a supply-chain risk factor, but provide no substantive assessment of actual labor relations quality."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Depth of management beyond the top executive",
+        "evidence": "The filing notes a 'develop-from-within model for staffing most of our senior leadership positions,' implying an internal leadership pipeline rather than reliance on a single executive, though no specific bench details are given."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Cost analysis and accounting controls",
+        "evidence": "Management describes driving 'productivity improvements across all elements of the statement of earnings and balance sheet, including cost of goods sold, marketing and promotional spending, overhead costs and capital spending,' indicating specific cost-control discipline rather than boilerplate language."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "A unique aspect giving a real competitive edge",
+        "evidence": "Specific market share leadership figures are cited, e.g., more than 60% global blades/razors share and over 35% fabric care share, alongside owned patents covering product formulation and manufacturing processes."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Long-range profit outlook over short-range",
+        "evidence": "Management states that 'while periods of significant macroeconomic pressures may cause short-term results to deviate from the long-term growth algorithm, we intend to maintain a disciplined approach to investing in our business,' emphasizing a multi-year growth algorithm over quarterly results."
+      },
+      {
+        "assessment": "no",
+        "criterion": "Equity financing that would dilute current shareholders",
+        "evidence": "Diluted EPS increased partly due to 'a reduction in shares outstanding,' indicating share buybacks rather than dilutive equity issuance funding growth."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Management talks candidly about problems, not just successes",
+        "evidence": "Risk factors and MD&A cite specific, non-generic issues such as the Argentina liquidation and $801 million charge, the $1.3 billion Gillette impairment, Russia/Ukraine and Middle East conflict impacts, and named restructuring headcount reductions rather than only boilerplate language."
+      }
+    ],
+    "management_assessment": "The filing describes an active but disciplined capital allocation posture: ongoing share repurchases and dividends referenced as objectives contingent on cash flow, a reduction in diluted share count that increased EPS (suggesting buybacks rather than dilutive issuance), a multi-year restructuring/productivity plan (up to 7,000 non-manufacturing role reductions, $1.5-2.0B in restructuring costs) aimed at cost structure and reinvestment, and portfolio moves such as the Glad joint venture dissolution and the pending $3.8B Thorne acquisition. Debt/EBITDA of ~1.5x (per the scorecard) is well below the risk threshold, suggesting conservative balance-sheet management, though the excerpts don't provide granular detail on debt maturity strategy or how acquisition financing will be structured.",
+    "moat_explanation": "The excerpts describe a portfolio of long-established, leading brands (Tide, Pampers, Gillette, Crest, Always, etc.) that hold leadership or top-two market share positions in most categories in which P&G competes (e.g., >50% grooming/razors share, >35% fabric care, ~30% oral care, baby care and feminine care), supported by owned patents covering product formulation/processes and trademarks the company explicitly credits as contributing to its success. This brand and IP strength, rather than network effects, scale-driven cost leadership, or switching costs, is the most directly supported durable advantage in the text.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Customer concentration: Walmart represents ~16% of total sales and the top ten customers account for ~42-43% of net sales",
+      "Argentina operations substantially liquidated in fiscal 2024 with $801 million after-tax restructuring charge tied to macroeconomic/fiscal conditions",
+      "$1.3 billion pre-tax non-cash impairment on the Gillette indefinite-lived intangible asset due to higher discount rates and currency weakening",
+      "Organic sales declined low single digits in the Baby, Feminine & Family Care segment in fiscal 2026",
+      "Operating income declined 3% year-over-year as net sales growth was offset by lower operating margin",
+      "Exposure to geopolitical conflicts (Russia/Ukraine, Middle East) and tariff/trade policy volatility explicitly acknowledged as impacting results"
+    ]
+  },
+  "thesis": {
+    "falsification_criteria": [
+      "If P&G's 5-year revenue or EPS CAGR rises persistently above 5%, the DCF's slow-growth assumption (and its negative margin of safety) would need to be revisited, potentially strengthening the valuation case.",
+      "If ROIC falls materially below the 12% threshold or FCF margin drops below 10% in subsequent filings, the quant-supported quality thesis would be undermined.",
+      "If Debt/EBITDA rises above the 3.0x threshold used here, the 'conservative balance sheet' argument supporting management quality would no longer hold.",
+      "If further brand-specific impairments (beyond the $1.3B Gillette charge) or continued market-share erosion occur in core categories (razors, fabric care, oral care), the intangible-asset moat claim would weaken.",
+      "If the stock's price falls enough (or FCF/growth assumptions improve enough) to flip the DCF margin of safety from negative to positive, the valuation objection to the thesis would be resolved.",
+      "If customer concentration risk materializes, e.g. a significant pullback from Walmart or the top-ten customers (currently ~42-43% of net sales), that would validate a flagged red flag as an actual earnings risk."
+    ],
+    "thesis": "P&G's quant profile shows a genuinely high-quality operating business \n(19.7% ROIC, 18.3% FCF margin, conservative leverage at 1.5x debt/EBITDA) but a growth problem, with 5-year revenue and EPS CAGRs of roughly 2.7% and 3.5%, both below the 5% bar, so the quant scorecard only passes 3 of 5 checks. The qualitative layer corroborates a real moat, grounded in category-leading brands (e.g., >60% global blade/razor share, >35% fabric care share) and owned patents/trademarks the 10-K explicitly credits, alongside disciplined buyback-driven capital allocation and candid disclosure of problems like the Argentina liquidation charge and Gillette impairment. Where the picture turns cautious is valuation: the DCF, built on that same sluggish ~2.7% growth assumption, implies an intrinsic value below the current price, producing a negative margin of safety of about -25.6%, even though relative multiples (P/E and EV/EBITDA both roughly 8-10% below sector medians) suggest the stock isn't expensive versus peers. In short, this looks like a durable, well-run business whose moat is well-documented, but the DCF layer indicates the current price does not leave a margin of safety under the model's slow-growth assumptions, so the case for a bargain is not supported even though the case for quality largely is."
+  }
+}

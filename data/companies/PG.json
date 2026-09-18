@@ -1,7 +1,5 @@
 {
-  "_errors": {
-    "insider_ownership": "Failed to fetch https://financialmodelingprep.com/stable/insider-ownership-percent after 3 attempts: 404 Client Error: Not Found for url: https://financialmodelingprep.com/stable/insider-ownership-percent?symbol=PG&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU"
-  },
+  "_errors": {},
   "cik": "0000080424",
   "fundamentals": {
     "balance_sheet": {
@@ -19,12 +17,10 @@
       "eps_growth_cagr_3yr_pct": 3.6028479444773165,
       "eps_growth_cagr_5yr_pct": 3.4756829064733097,
       "eps_growth_yoy_pct": 1.199400299850076,
+      "r_and_d_to_revenue_pct": 0.0,
       "revenue_cagr_3yr_pct": 2.002569409339938,
       "revenue_cagr_5yr_pct": 2.716052126592894,
       "revenue_growth_yoy_pct": 3.260405296378909
-    },
-    "ownership": {
-      "insider_ownership_pct": null
     },
     "profitability": {
       "gross_margin_pct": 50.175797407849984,
@@ -35,25 +31,33 @@
     "valuation": {
       "dcf_fair_value": 200.7959575592358,
       "dcf_upside_pct": 37.23069816787576,
+      "earnings_yield_pct": 5.295039024851016,
       "ev_ebitda": 17.54742024070763,
       "graham_multiple": 141.50397420360923,
       "graham_number": 58.35192022913423,
       "graham_upside_pct": -60.13940827301438,
       "ncav_margin_pct": -113.51911489960959,
       "pb_ratio": 6.527159093001417,
-      "pe_ttm": 21.679259259259258
+      "pe_ttm": 21.679259259259258,
+      "peg_ratio": 6.017256235443036
     }
   },
   "industry": "Household & Personal Products",
-  "last_updated": "2026-09-18T23:10:16Z",
+  "last_updated": "2026-09-18T23:36:57Z",
   "layered_analysis": {
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
     ],
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "quant_gate_pass": true,
+    "required_margin_of_safety_pct": 30.0,
     "valuation_gate_pass": false
+  },
+  "lynch_category": {
+    "category": "slow_grower",
+    "reasoning": "Large ($348B) with EPS growing just 3.6%/yr - Lynch's 'slow grower' territory."
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -68,6 +72,7 @@
     "dcf_upside_pct": 37.23069816787576,
     "debt_to_ebitda": 1.5289855072463767,
     "debt_to_equity": 0.6449153946714293,
+    "earnings_yield_pct": 5.295039024851016,
     "eps_growth_cagr_3yr_pct": 3.6028479444773165,
     "eps_growth_cagr_5yr_pct": 3.4756829064733097,
     "eps_growth_yoy_pct": 1.199400299850076,
@@ -80,15 +85,20 @@
     "graham_upside_pct": -60.13940827301438,
     "gross_margin_pct": 50.175797407849984,
     "interest_coverage": 22.517673888255416,
+    "magic_formula_earnings_yield_rank": 2,
+    "magic_formula_rank": 2,
+    "magic_formula_roic_rank": 6,
     "margin_trend_score": 60,
     "ncav_margin_pct": -113.51911489960959,
     "owner_earnings_yield_pct": 4.253614302618504,
     "pb_ratio": 6.527159093001417,
     "pe_ttm": 21.679259259259258,
+    "peg_ratio": 6.017256235443036,
     "piotroski_evaluated": 9,
     "piotroski_f_score": 6,
     "price_vs_ma200_pct": -0.7253848764730041,
     "price_vs_ma50_pct": 0.1851910150192057,
+    "r_and_d_to_revenue_pct": 0.0,
     "return_1m_pct": 1.3921595788890364,
     "return_3m_pct": -2.653278361484246,
     "revenue_cagr_3yr_pct": 2.002569409339938,
@@ -104,78 +114,14 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "37.23%",
-          "text": "The DCF-based model estimates roughly a 37% margin of safety, with the modeled fair value above the current price."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-60.14%",
-          "text": "The Graham-based valuation model implies the current price is about 60% above its estimated fair value, indicating no margin of safety by that framework."
-        },
-        {
-          "source_metric": "current_ratio",
-          "source_value": "0.68",
-          "text": "The current ratio is below 1, meaning current liabilities exceed current assets, a potential liquidity concern."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "roic_pct",
-          "source_value": "19.71%",
-          "text": "Return on invested capital is notably high at 19.71%, which can be a sign of a durable competitive advantage if sustained."
-        },
-        {
-          "source_metric": "owner_earnings_yield_pct",
-          "source_value": "4.25%",
-          "text": "The owner earnings yield on the business is 4.25%, a Buffett-style measure of cash generation relative to price."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "3 of 6 evaluated",
-          "text": "The stock passes 3 of 6 evaluated Graham defensive-investor criteria."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "6 of 9 evaluated",
-          "text": "The Piotroski F-Score is 6 out of 9 evaluated criteria, a mid-range fundamental quality reading."
-        },
-        {
-          "source_metric": "pb_ratio",
-          "source_value": "6.53",
-          "text": "Price-to-book ratio is elevated at 6.53x, indicating the market values the business well above its accounting net worth."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "debt_to_ebitda",
-          "source_value": "1.53x",
-          "text": "Debt relative to EBITDA is modest at 1.53x, suggesting manageable leverage."
-        },
-        {
-          "source_metric": "interest_coverage",
-          "source_value": "22.52x",
-          "text": "Interest coverage is very high at 22.5x, indicating earnings comfortably cover interest expense."
-        },
-        {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "-6.91%",
-          "text": "The stock's momentum is running about 6.9 percentage points behind its sector peers, a divergence without a known specific cause."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "1.64x average",
-          "text": "Trading volume is about 1.64x its average, a volume divergence that is commonly discussed but not inherently decision-relevant on its own."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "Longer-term fundamentals show slow but steady growth, with revenue up 3.26% year-over-year and a 5-year revenue CAGR of only 2.72%, while EPS growth has been similarly modest. Profitability metrics are strong, with a 19.71% ROIC and 29.84% ROE, but valuation checks are mixed: the DCF model implies a positive margin of safety of roughly 37% versus price, while the Graham model implies price is about 60% above its estimated fair value, and the Graham multiple is very elevated. The company passes 3 of 6 evaluated Graham defensive-investor criteria and 6 of 9 evaluated Piotroski criteria, consistent with a Neutral long-term score.",
-    "one_line_summary": "PG shows solid profitability and a favorable short-term technical read, but valuation signals are mixed and long-term growth remains modest.",
-    "short_term_narrative": "Short-term price action is mildly constructive: PG trades about 0.19% above its 50-day moving average and is up 1.39% over the past month, though it sits slightly below its 200-day average and is down 2.65% over three months. RSI is only modestly away from neutral, suggesting no extreme overbought or oversold condition. Trading volume has run about 1.64x its average and the stock's momentum is running about 6.9 percentage points behind its sector, both of which are supply/demand divergences worth noting without a known cause."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",
@@ -188,12 +134,87 @@
     "volume": 12376491,
     "volume_vs_avg_ratio": 1.644086104283302
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "fisher_checklist": [
+      {
+        "assessment": "unknown",
+        "criterion": "Sufficient market potential for years of growth",
+        "evidence": "The Business section describes daily-use product categories sold in ~180 countries with stated targets of organic sales growth 'above market growth rates,' but the scorecard shows revenue 5yr CAGR of only 2.7%, below the 5% threshold, suggesting the described market opportunity has not translated into strong top-line growth."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Management's commitment to new products/R&D",
+        "evidence": "The filing states the company invests in 'research and development and consumer insights to invent new categories or products' and calls innovation 'P&G's lifeblood,' though no specific R&D-to-revenue figure is provided in the excerpts."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Effective sales/distribution effort",
+        "evidence": "The Business section describes multiple distribution channels including mass merchandisers, digital/social commerce, grocery, club stores, specialty stores, and direct-to-consumer, indicating a broad, diversified go-to-market approach."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Worthwhile profit margin",
+        "evidence": "Scorecard shows ROIC of 19.7% and FCF margin of 18.3%, both passing thresholds; MD&A reports operating income of $19.7 billion on $87.0 billion net sales (~22.7% operating margin)."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Steps to sustain or improve margin",
+        "evidence": "MD&A describes an ongoing productivity/restructuring plan targeting cost of goods sold, marketing, overhead, and capital spending, explicitly aimed at improving cost structure while investing in growth."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Outstanding labor/personnel relations",
+        "evidence": "The excerpts discuss compensation/benefits programs generically and cite 'labor disputes or controversies' as a supply-chain risk factor, but provide no substantive assessment of actual labor relations quality."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Depth of management beyond the top executive",
+        "evidence": "The filing notes a 'develop-from-within model for staffing most of our senior leadership positions,' implying an internal leadership pipeline rather than reliance on a single executive, though no specific bench details are given."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Cost analysis and accounting controls",
+        "evidence": "Management describes driving 'productivity improvements across all elements of the statement of earnings and balance sheet, including cost of goods sold, marketing and promotional spending, overhead costs and capital spending,' indicating specific cost-control discipline rather than boilerplate language."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "A unique aspect giving a real competitive edge",
+        "evidence": "Specific market share leadership figures are cited, e.g., more than 60% global blades/razors share and over 35% fabric care share, alongside owned patents covering product formulation and manufacturing processes."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Long-range profit outlook over short-range",
+        "evidence": "Management states that 'while periods of significant macroeconomic pressures may cause short-term results to deviate from the long-term growth algorithm, we intend to maintain a disciplined approach to investing in our business,' emphasizing a multi-year growth algorithm over quarterly results."
+      },
+      {
+        "assessment": "no",
+        "criterion": "Equity financing that would dilute current shareholders",
+        "evidence": "Diluted EPS increased partly due to 'a reduction in shares outstanding,' indicating share buybacks rather than dilutive equity issuance funding growth."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Management talks candidly about problems, not just successes",
+        "evidence": "Risk factors and MD&A cite specific, non-generic issues such as the Argentina liquidation and $801 million charge, the $1.3 billion Gillette impairment, Russia/Ukraine and Middle East conflict impacts, and named restructuring headcount reductions rather than only boilerplate language."
+      }
+    ],
+    "management_assessment": "The filing describes an active but disciplined capital allocation posture: ongoing share repurchases and dividends referenced as objectives contingent on cash flow, a reduction in diluted share count that increased EPS (suggesting buybacks rather than dilutive issuance), a multi-year restructuring/productivity plan (up to 7,000 non-manufacturing role reductions, $1.5-2.0B in restructuring costs) aimed at cost structure and reinvestment, and portfolio moves such as the Glad joint venture dissolution and the pending $3.8B Thorne acquisition. Debt/EBITDA of ~1.5x (per the scorecard) is well below the risk threshold, suggesting conservative balance-sheet management, though the excerpts don't provide granular detail on debt maturity strategy or how acquisition financing will be structured.",
+    "moat_explanation": "The excerpts describe a portfolio of long-established, leading brands (Tide, Pampers, Gillette, Crest, Always, etc.) that hold leadership or top-two market share positions in most categories in which P&G competes (e.g., >50% grooming/razors share, >35% fabric care, ~30% oral care, baby care and feminine care), supported by owned patents covering product formulation/processes and trademarks the company explicitly credits as contributing to its success. This brand and IP strength, rather than network effects, scale-driven cost leadership, or switching costs, is the most directly supported durable advantage in the text.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Customer concentration: Walmart represents ~16% of total sales and the top ten customers account for ~42-43% of net sales",
+      "Argentina operations substantially liquidated in fiscal 2024 with $801 million after-tax restructuring charge tied to macroeconomic/fiscal conditions",
+      "$1.3 billion pre-tax non-cash impairment on the Gillette indefinite-lived intangible asset due to higher discount rates and currency weakening",
+      "Organic sales declined low single digits in the Baby, Feminine & Family Care segment in fiscal 2026",
+      "Operating income declined 3% year-over-year as net sales growth was offset by lower operating margin",
+      "Exposure to geopolitical conflicts (Russia/Ukraine, Middle East) and tariff/trade policy volatility explicitly acknowledged as impacting results"
+    ]
+  },
   "quant_score": {
     "evaluated": 5,
     "gate_pass": true,
     "informational": {
-      "insider_ownership_pct": null,
       "margin_trend_score": 60
     },
     "metrics": {
@@ -487,7 +508,17 @@
       }
     ]
   },
-  "thesis": null,
+  "thesis": {
+    "falsification_criteria": [
+      "If P&G's 5-year revenue or EPS CAGR rises persistently above 5%, the DCF's slow-growth assumption (and its negative margin of safety) would need to be revisited, potentially strengthening the valuation case.",
+      "If ROIC falls materially below the 12% threshold or FCF margin drops below 10% in subsequent filings, the quant-supported quality thesis would be undermined.",
+      "If Debt/EBITDA rises above the 3.0x threshold used here, the 'conservative balance sheet' argument supporting management quality would no longer hold.",
+      "If further brand-specific impairments (beyond the $1.3B Gillette charge) or continued market-share erosion occur in core categories (razors, fabric care, oral care), the intangible-asset moat claim would weaken.",
+      "If the stock's price falls enough (or FCF/growth assumptions improve enough) to flip the DCF margin of safety from negative to positive, the valuation objection to the thesis would be resolved.",
+      "If customer concentration risk materializes, e.g. a significant pullback from Walmart or the top-ten customers (currently ~42-43% of net sales), that would validate a flagged red flag as an actual earnings risk."
+    ],
+    "thesis": "P&G's quant profile shows a genuinely high-quality operating business \n(19.7% ROIC, 18.3% FCF margin, conservative leverage at 1.5x debt/EBITDA) but a growth problem, with 5-year revenue and EPS CAGRs of roughly 2.7% and 3.5%, both below the 5% bar, so the quant scorecard only passes 3 of 5 checks. The qualitative layer corroborates a real moat, grounded in category-leading brands (e.g., >60% global blade/razor share, >35% fabric care share) and owned patents/trademarks the 10-K explicitly credits, alongside disciplined buyback-driven capital allocation and candid disclosure of problems like the Argentina liquidation charge and Gillette impairment. Where the picture turns cautious is valuation: the DCF, built on that same sluggish ~2.7% growth assumption, implies an intrinsic value below the current price, producing a negative margin of safety of about -25.6%, even though relative multiples (P/E and EV/EBITDA both roughly 8-10% below sector medians) suggest the stock isn't expensive versus peers. In short, this looks like a durable, well-run business whose moat is well-documented, but the DCF layer indicates the current price does not leave a margin of safety under the model's slow-growth assumptions, so the case for a bargain is not supported even though the case for quality largely is."
+  },
   "ticker": "PG",
   "valuation": {
     "dcf": {
