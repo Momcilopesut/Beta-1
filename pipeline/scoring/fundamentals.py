@@ -221,7 +221,6 @@ def build_metrics(
     ratios = _first_row(fmp_data.get("ratios_ttm"))
     key_metrics = _first_row(fmp_data.get("key_metrics_ttm"))
     dcf = _first_row(fmp_data.get("dcf"))
-    insider_row = _first_row(fmp_data.get("insider_ownership"))
 
     xbrl = sec_data.get("xbrl_fundamentals") or {}
     income_stmts = fmp_data.get("income_statement") or xbrl.get("income_stmts") or []
@@ -410,20 +409,6 @@ def build_metrics(
     avg_volume = _first_of(quote, "avgVolume") or price_data.get("avg_volume")
     volume_vs_avg_ratio = volume / avg_volume if volume is not None and avg_volume else None
 
-    # Best-effort - see pipeline/fetch/fmp.py's insider_ownership call.
-    # FMP *TTM-style ratio fields are fractions (see _pct above); an
-    # ownership-percent field may come back either as a fraction or an
-    # already-scaled percentage depending on the endpoint, so this is only
-    # trusted when it parses into a sane 0-100 range.
-    insider_ownership_raw = _first_of(
-        insider_row, "insiderOwnershipPercent", "insiderOwnership", "ownershipPercent"
-    )
-    insider_ownership_pct = None
-    if insider_ownership_raw is not None:
-        insider_ownership_pct = insider_ownership_raw * 100 if insider_ownership_raw <= 1 else insider_ownership_raw
-        if not (0 <= insider_ownership_pct <= 100):
-            insider_ownership_pct = None
-
     metrics = {
         "return_1m_pct": price_data.get("return_1m_pct"),
         "return_3m_pct": price_data.get("return_3m_pct"),
@@ -455,7 +440,6 @@ def build_metrics(
         "roic_pct": roic_pct,
         "owner_earnings_yield_pct": owner_earnings_yield_pct,
         "volume_vs_avg_ratio": volume_vs_avg_ratio,
-        "insider_ownership_pct": insider_ownership_pct,
         "earnings_yield_pct": earnings_yield_pct,
         "peg_ratio": peg_ratio,
         "r_and_d_to_revenue_pct": r_and_d_to_revenue_pct,
@@ -508,9 +492,6 @@ def build_metrics(
                 "debt_to_ebitda": debt_to_ebitda,
                 "current_ratio": current_ratio,
                 "interest_coverage": interest_coverage,
-            },
-            "ownership": {
-                "insider_ownership_pct": insider_ownership_pct,
             },
             "cash_flow": {
                 "fcf_margin_pct": fcf_margin_pct,

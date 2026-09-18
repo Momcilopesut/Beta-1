@@ -21,21 +21,32 @@ MoatType = Literal[
 
 
 class FisherCriterion(BaseModel):
-    criterion: str = Field(max_length=120)
+    criterion: str = Field(max_length=150)
     assessment: Literal["yes", "no", "unknown"]
-    evidence: str = Field(max_length=220)
+    evidence: str = Field(max_length=350)
 
 
 class QualitativeAssessment(BaseModel):
     moat_present: bool
     moat_type: MoatType
-    moat_explanation: str = Field(max_length=700)
-    management_assessment: str = Field(max_length=700)
+    # A real production run showed this cap being hit constantly: Anthropic's
+    # structured-output support does NOT enforce Field(max_length=...) on a
+    # string during generation (only type/structure/enum constraints are
+    # actually constrained at sampling time) - pydantic only checks it
+    # AFTER the fact, so a too-tight cap doesn't truncate the model's
+    # output, it just rejects an otherwise complete, valid response as an
+    # error. A normal, non-runaway "1-3 sentences" or "2-4 sentences"
+    # response citing specific filing details routinely runs past 700
+    # characters. These limits are a loose backstop against pathological
+    # output, not a token-budget control - max_tokens in
+    # qualitative_client.py is what actually bounds generation length.
+    moat_explanation: str = Field(max_length=1500)
+    management_assessment: str = Field(max_length=1500)
     red_flags: list[str] = Field(max_length=6)
     fisher_checklist: list[FisherCriterion] = Field(max_length=12)
     extraction_confidence: Literal["section_match", "whole_document_fallback"]
 
 
 class ThesisAndFalsification(BaseModel):
-    thesis: str = Field(max_length=900)
+    thesis: str = Field(max_length=1800)  # see QualitativeAssessment's comment on why this is generous
     falsification_criteria: list[str] = Field(min_length=2, max_length=6)

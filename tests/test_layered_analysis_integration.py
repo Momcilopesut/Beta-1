@@ -84,7 +84,6 @@ def _empty_fmp_data() -> dict:
         "balance_sheet": None,
         "cash_flow": None,
         "dcf": None,
-        "insider_ownership": None,
         "_errors": {},
     }
 

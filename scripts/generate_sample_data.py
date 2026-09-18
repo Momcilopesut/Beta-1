@@ -56,7 +56,6 @@ METRIC_RANGES = {
     "roic_pct": (-2, 22),
     "debt_to_equity": (0, 2.2),
     "debt_to_ebitda": (0, 4.5),
-    "insider_ownership_pct": (0.001, 3.5),
     "earnings_yield_pct": (2, 12),
     "peg_ratio": (0.5, 3.5),
     "r_and_d_to_revenue_pct": (0, 22),

@@ -53,7 +53,7 @@ def test_gate_fails_below_pass_fraction():
 
 
 def test_informational_metrics_never_counted():
-    metrics = {"insider_ownership_pct": 0.01, "margin_trend_score": 100}
+    metrics = {"margin_trend_score": 100}
     result = build_quant_scorecard(metrics)
     assert result["evaluated"] == 0
-    assert result["informational"]["insider_ownership_pct"] == 0.01
+    assert result["informational"]["margin_trend_score"] == 100

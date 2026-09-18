@@ -37,11 +37,8 @@ metrics:
     rationale: "Balance-sheet discipline - a Graham-style safety check."
 
 # Evaluated-but-not-gating: shown in the scorecard for context, never
-# counted toward passed/evaluated. Insider ownership is often near-zero for
-# mega-caps by nature of their size, not a quality signal at that scale -
-# same reasoning already applied to ncav_margin_pct in scoring_weights.yaml.
+# counted toward passed/evaluated.
 informational_metrics:
-  - insider_ownership_pct
   - margin_trend_score
 
 # Fraction of evaluated metrics that must pass for the overall gate to pass.
