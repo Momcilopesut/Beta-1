@@ -110,6 +110,7 @@ _INCOME_CONCEPTS: dict[str, tuple[str, ...]] = {
     "incomeTaxExpense": ("IncomeTaxExpenseBenefit",),
     "weightedAverageShsOutDil": ("WeightedAverageNumberOfDilutedSharesOutstanding",),
     "interestExpense": ("InterestExpense", "InterestExpenseDebt"),
+    "researchAndDevelopmentExpenses": ("ResearchAndDevelopmentExpense",),
 }
 # Per-share and share-count concepts are reported under different XBRL
 # units ("USD/shares", "shares") than the dollar-amount concepts above

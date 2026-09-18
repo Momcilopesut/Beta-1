@@ -119,6 +119,10 @@ def _mocked_qualitative() -> QualitativeAssessment:
         moat_explanation="Excerpts describe high customer switching costs.",
         management_assessment="Excerpts describe disciplined capital allocation.",
         red_flags=["Customer concentration mentioned in risk factors."],
+        fisher_checklist=[
+            {"criterion": "Sufficient market potential for years of growth", "assessment": "yes", "evidence": "Business section describes a large addressable market."},
+            {"criterion": "Outstanding labor/personnel relations", "assessment": "unknown", "evidence": "Excerpts don't discuss labor relations."},
+        ],
         extraction_confidence="section_match",
     )
 
@@ -166,6 +170,10 @@ def test_full_layered_pipeline_wiring(
     assert company_doc["quant_score"]["evaluated"] >= 1
     assert company_doc["valuation"]["dcf"]["assumptions"]["discount_rate_pct"] == 9.0
     assert company_doc["qualitative"]["moat_present"] is True
+    assert len(company_doc["qualitative"]["fisher_checklist"]) == 2
+    assert company_doc["lynch_category"]["category"] in (
+        "fast_grower", "stalwart", "slow_grower", "cyclical", "turnaround", "asset_play", None
+    )
     assert company_doc["thesis"]["falsification_criteria"]
     assert company_doc["layered_analysis"]["quant_gate_pass"] in (True, False)
     assert summary["quant_gate_pass"] == company_doc["layered_analysis"]["quant_gate_pass"]

@@ -321,14 +321,35 @@ def build_metrics(
     if shares_outstanding is None and market_cap and price:
         shares_outstanding = market_cap / price
 
-    if ev_ebitda is None and market_cap and total_debt is not None and cash is not None:
+    enterprise_value = (
+        market_cap + total_debt - cash
+        if market_cap is not None and total_debt is not None and cash is not None
+        else None
+    )
+
+    if ev_ebitda is None and enterprise_value is not None:
         d_and_a_0 = _first_of(cashflow_stmts[0], "depreciationAndAmortization") if cashflow_stmts else None
         operating_income_0 = _first_of(income0, "operatingIncome")
         if operating_income_0 is not None and d_and_a_0 is not None:
             ebitda = operating_income_0 + d_and_a_0
-            enterprise_value = market_cap + total_debt - cash
             if ebitda > 0:
                 ev_ebitda = enterprise_value / ebitda
+
+    # Greenblatt's earnings yield: EBIT / enterprise value (EBIT approximated
+    # as operating income - close enough for this pipeline's purposes, and
+    # consistent with how operating income already stands in for EBIT in
+    # the ev_ebitda fallback above).
+    operating_income_0 = _first_of(income0, "operatingIncome") if income_stmts else None
+    earnings_yield_pct = (
+        operating_income_0 / enterprise_value * 100
+        if operating_income_0 is not None and enterprise_value and enterprise_value > 0
+        else None
+    )
+
+    # Fisher's R&D commitment - a company under-investing in its own future
+    # relative to revenue is a concern his framework flags explicitly.
+    r_and_d_0 = _first_of(income0, "researchAndDevelopmentExpenses", "researchAndDevelopment") if income_stmts else None
+    r_and_d_to_revenue_pct = r_and_d_0 / revenue * 100 if r_and_d_0 is not None and revenue else None
 
     book_value_per_share = _first_of(ratios, "bookValuePerShareTTM") or _first_of(
         key_metrics, "bookValuePerShareTTM"
@@ -347,6 +368,15 @@ def build_metrics(
     graham_number = _graham_number(eps_ttm, book_value_per_share)
     graham_upside_pct = (graham_number - price) / price * 100 if graham_number and price else None
     graham_multiple = pe_ttm * pb_ratio if pe_ttm is not None and pb_ratio is not None else None
+
+    # Lynch's PEG ratio: P/E divided by the growth rate (as a plain number,
+    # not a percentage) - prefers the 3yr EPS CAGR (a steadier trailing
+    # growth figure than one noisy year-over-year print), falling back to
+    # YoY growth when that's all that's available. Undefined (None) for a
+    # non-positive P/E or non-positive growth rate - PEG isn't meaningful
+    # for a loss-making or shrinking company.
+    peg_growth_pct = eps_growth["cagr_3yr_pct"] if eps_growth["cagr_3yr_pct"] is not None else eps_growth["yoy_pct"]
+    peg_ratio = pe_ttm / peg_growth_pct if pe_ttm is not None and pe_ttm > 0 and peg_growth_pct and peg_growth_pct > 0 else None
 
     ncav_margin_pct = None
     total_liabilities = _first_of(balance0, "totalLiabilities")
@@ -426,6 +456,9 @@ def build_metrics(
         "owner_earnings_yield_pct": owner_earnings_yield_pct,
         "volume_vs_avg_ratio": volume_vs_avg_ratio,
         "insider_ownership_pct": insider_ownership_pct,
+        "earnings_yield_pct": earnings_yield_pct,
+        "peg_ratio": peg_ratio,
+        "r_and_d_to_revenue_pct": r_and_d_to_revenue_pct,
         # informational only, not fed into the weighted score - see
         # config/scoring_weights.yaml comment on ncav_margin_pct
         "ncav_margin_pct": ncav_margin_pct,
@@ -452,6 +485,8 @@ def build_metrics(
                 "graham_upside_pct": graham_upside_pct,
                 "graham_multiple": graham_multiple,
                 "ncav_margin_pct": ncav_margin_pct,
+                "earnings_yield_pct": earnings_yield_pct,
+                "peg_ratio": peg_ratio,
             },
             "growth": {
                 "revenue_growth_yoy_pct": revenue_growth["yoy_pct"],
@@ -460,6 +495,7 @@ def build_metrics(
                 "eps_growth_yoy_pct": eps_growth["yoy_pct"],
                 "eps_growth_cagr_3yr_pct": eps_growth["cagr_3yr_pct"],
                 "eps_growth_cagr_5yr_pct": eps_growth["cagr_5yr_pct"],
+                "r_and_d_to_revenue_pct": r_and_d_to_revenue_pct,
             },
             "profitability": {
                 "gross_margin_pct": gross_margin_pct,

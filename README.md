@@ -162,10 +162,35 @@ any disagreement between them.
    new information.
 
 `pipeline/scoring/aggregation.py` combines the three gates (quant pass/fail,
-qualitative moat present/absent, valuation margin of safety ≥ 15%) into the `overall`
-summary and `flags` — e.g. a company that passes the quant screen but shows no moat
-gets flagged explicitly rather than its strong quant score quietly winning out in an
-average.
+qualitative moat present/absent, valuation margin of safety above a required
+threshold) into the `overall` summary and `flags` — e.g. a company that passes the
+quant screen but shows no moat gets flagged explicitly rather than its strong quant
+score quietly winning out in an average. The required margin of safety isn't a flat
+number: it starts at the classic 15% convention and scales up with actual
+uncertainty (thin quant data coverage, filing-stated red flags, a filing-text
+extraction that fell back to a raw document prefix instead of a clean section
+match) — Klarman's point that margin of safety is a risk-management concept, not a
+fixed number every company gets held to equally. See `required_margin_of_safety_pct`
+in the output.
+
+### Which frameworks became which filters
+
+This project draws on ten value-investing thinkers. Rather than list them as
+inspiration, here's exactly what each one turned into in the code — and, just as
+importantly, what didn't become a filter and why:
+
+| Thinker | Framework | Where it lives |
+|---|---|---|
+| **Benjamin Graham** | Defensive Investor checklist, Graham Number, NCAV, P/E×P/B ≤ 22.5 | `pipeline/scoring/value_investing.py` |
+| **Warren Buffett** | Owner earnings, moat classification, "wonderful company at a fair price" | Owner earnings in `fundamentals.py`; moat in the qualitative layer; "wonderful company at a fair price" is literally the quant gate + valuation gate combination in `aggregation.py` |
+| **Charlie Munger** | ROIC as a moat proxy; "invert, always invert" | ROIC in `fundamentals.py`; inversion is the falsification-criteria field in the thesis layer — asking what would prove the thesis wrong *is* inversion applied to a stock |
+| **Philip Fisher** | 15-point checklist; "scuttlebutt" qualitative research | An adapted ~12-item checklist in the qualitative layer's `fisher_checklist` field, assessed from the 10-K text this pipeline already reads. True scuttlebutt (talking to customers/competitors) has no equivalent here — that gap is stated in the prompt itself (`qualitative_prompts.py`), and items it can't support from the filing come back `"unknown"` rather than a guess |
+| **Peter Lynch** | PEG ratio; six-way growth categorization | `peg_ratio` in `fundamentals.py`; `pipeline/scoring/lynch_category.py` classifies each company as fast grower / stalwart / slow grower / cyclical / turnaround / asset play. Can't reliably tell a genuine turnaround from ordinary decline without Lynch's own on-the-ground judgment — the code says so in both places rather than pretending confidence it doesn't have |
+| **Joel Greenblatt** | Magic Formula (return on capital + earnings yield, ranked) | `earnings_yield_pct` (EBIT/EV) in `fundamentals.py`; `apply_magic_formula_rank()` in `pipeline/main.py` ranks the whole watchlist by combined ROIC + earnings-yield rank, same pattern as the sector-median computation |
+| **Aswath Damodaran** | Explicit-assumption DCF, narrative-to-numbers discipline | The whole valuation layer (`pipeline/scoring/valuation.py`) |
+| **Seth Klarman** | Margin of safety as risk management, not just a valuation number | The risk-scaled `required_margin_of_safety_pct` in `aggregation.py`, described above |
+| **Howard Marks** | Risk, cycles, second-level thinking | Cycle awareness: `macro_regime.py`'s `cycle_context` (already existed). Second-level thinking deliberately did **not** become a new field — this pipeline's AI layers are built to never speculate about market consensus or psychology beyond what's in the given data/text, and a "what does the market believe vs. what's true" field would cross that line into exactly the kind of unverifiable narrative-building this project has refused before (see the earlier decision against a live geopolitics feed). The existing thesis layer already surfaces disagreement *between this pipeline's own layers* (quant vs. qualitative vs. valuation), which is as far as this can go without speculating |
+| **James O'Shaughnessy** | Factor-based backtesting (*What Works on Wall Street*) | Not implemented. Backtesting needs long-run historical return data across many stocks to validate which factors actually predicted performance — real infrastructure (historical storage, a backtest engine) this pipeline doesn't have and wasn't asked to build. His broader methodology — combining several factors into one score rather than trusting any single metric — is already what `quant_score.py` does; that's the connection without the unbuilt validation machinery behind it |
 
 ## Configuration
 

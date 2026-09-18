@@ -17,6 +17,7 @@ def test_generate_qualitative_assessment_overwrites_extraction_confidence(mock_a
             moat_explanation="x",
             management_assessment="y",
             red_flags=[],
+            fisher_checklist=[],
             extraction_confidence="section_match",  # model's own guess - must be overwritten
         )
     )
@@ -48,7 +49,7 @@ def test_generate_thesis_wraps_failures(mock_anthropic_cls):
 
     qualitative = QualitativeAssessment(
         moat_present=True, moat_type="cost_advantage", moat_explanation="x",
-        management_assessment="y", red_flags=[], extraction_confidence="section_match",
+        management_assessment="y", red_flags=[], fisher_checklist=[], extraction_confidence="section_match",
     )
     with pytest.raises(QualitativeError):
         generate_thesis("AAPL", {"gate_pass": True}, qualitative, {"margin_of_safety_pct": 10.0})
@@ -70,7 +71,7 @@ def test_generate_thesis_returns_parsed_output(mock_anthropic_cls):
 
     qualitative = QualitativeAssessment(
         moat_present=True, moat_type="cost_advantage", moat_explanation="x",
-        management_assessment="y", red_flags=[], extraction_confidence="section_match",
+        management_assessment="y", red_flags=[], fisher_checklist=[], extraction_confidence="section_match",
     )
     result = generate_thesis("AAPL", {"gate_pass": True}, qualitative, {"margin_of_safety_pct": 10.0})
     assert result.thesis == "A thesis."

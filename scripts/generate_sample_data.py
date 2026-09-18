@@ -19,7 +19,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from pipeline.build import writer  # noqa: E402
 from pipeline.narrative.prompts import DISCLAIMER  # noqa: E402
-from pipeline.scoring import aggregation, long_term, macro_regime, quant_score, short_term, valuation, value_investing  # noqa: E402
+from pipeline.scoring import (  # noqa: E402
+    aggregation,
+    long_term,
+    lynch_category,
+    macro_regime,
+    quant_score,
+    short_term,
+    valuation,
+    value_investing,
+)
 from pipeline.utils.config import macro_series, watchlist  # noqa: E402
 from pipeline.utils.paths import DATA_DIR  # noqa: E402
 
@@ -48,6 +57,9 @@ METRIC_RANGES = {
     "debt_to_equity": (0, 2.2),
     "debt_to_ebitda": (0, 4.5),
     "insider_ownership_pct": (0.001, 3.5),
+    "earnings_yield_pct": (2, 12),
+    "peg_ratio": (0.5, 3.5),
+    "r_and_d_to_revenue_pct": (0, 22),
     "current_ratio": (0.4, 2.8),
     "interest_coverage": (1, 22),
     "fcf_margin_pct": (-5, 32),
@@ -276,13 +288,26 @@ def synth_qualitative_and_thesis(name: str, quant_scorecard: dict, valuation_out
         ),
         "management_assessment": "[Sample data] Placeholder capital-allocation read - a real run reads this company's actual 10-K.",
         "red_flags": ["[Sample data] Placeholder red flag."] if random.random() < 0.3 else [],
+        "fisher_checklist": [
+            {
+                "criterion": "Sufficient market potential for years of growth",
+                "assessment": random.choice(["yes", "no", "unknown"]),
+                "evidence": "[Sample data] Placeholder evidence - a real run cites this company's actual 10-K text.",
+            },
+            {
+                "criterion": "Management talks candidly about problems, not just successes",
+                "assessment": random.choice(["yes", "no", "unknown"]),
+                "evidence": "[Sample data] Placeholder evidence - a real run cites this company's actual 10-K text.",
+            },
+        ],
         "extraction_confidence": "section_match",
     }
     margin = valuation_out.get("margin_of_safety_pct")
+    margin_text = f"{margin:+.0f}% margin of safety" if margin is not None else "an unevaluated margin of safety"
     thesis = {
         "thesis": (
             f"[Sample data] Placeholder thesis for {name}, combining the quant screen, this placeholder "
-            f"moat read, and a valuation showing {margin:+.0f}% margin of safety by this pipeline's DCF - "
+            f"moat read, and a valuation showing {margin_text} by this pipeline's DCF - "
             "a real run generates this from the actual company data."
         ),
         "falsification_criteria": [
@@ -387,6 +412,21 @@ def main() -> None:
             "ev_ebitda": median(by_sector_ev.get(s["sector"], [])),
         }
 
+    # Greenblatt's Magic Formula rank, same logic as pipeline/main.py's apply_magic_formula_rank.
+    roic_rank = {
+        s["ticker"]: i + 1 for i, s in enumerate(sorted(states, key=lambda s: s["metrics"]["roic_pct"], reverse=True))
+    }
+    ey_rank = {
+        s["ticker"]: i + 1
+        for i, s in enumerate(sorted(states, key=lambda s: s["metrics"]["earnings_yield_pct"], reverse=True))
+    }
+    combined_rank = {t: roic_rank[t] + ey_rank[t] for t in roic_rank}
+    overall_rank = {t: i + 1 for i, t in enumerate(sorted(combined_rank, key=lambda t: combined_rank[t]))}
+    for s in states:
+        s["metrics"]["magic_formula_rank"] = overall_rank.get(s["ticker"])
+        s["metrics"]["magic_formula_roic_rank"] = roic_rank.get(s["ticker"])
+        s["metrics"]["magic_formula_earnings_yield_rank"] = ey_rank.get(s["ticker"])
+
     # Phase 3: score + narrative + write.
     summaries = []
     for s in states:
@@ -398,6 +438,7 @@ def main() -> None:
         display["price"]["sector_relative_momentum_pct"] = s["metrics"]["sector_relative_momentum_pct"]
 
         quant_scorecard = quant_score.build_quant_scorecard(s["metrics"])
+        lynch = lynch_category.classify(s["metrics"], s["sector"], s["market_cap"])
         shares_outstanding = s["market_cap"] / s["close_price"]
         valuation_out = valuation.build_valuation(
             s["metrics"], s["raw"], shares_outstanding, s["close_price"], s["sector_medians"]
@@ -426,6 +467,7 @@ def main() -> None:
             "fundamentals": display["fundamentals"],
             "value_investing": s["checklist"],
             "narrative": narrative,
+            "lynch_category": lynch,
             "quant_score": quant_scorecard,
             "qualitative": qualitative_out,
             "valuation": valuation_out,

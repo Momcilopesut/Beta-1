@@ -45,7 +45,11 @@ def generate_qualitative_assessment(ticker: str, sections: dict, quant_scorecard
     try:
         response = client.messages.parse(
             model=model,
-            max_tokens=2048,
+            # 4096 not 2048: the fisher_checklist field (up to 12 items) can
+            # push this well past the smaller cap - see the crash this
+            # pipeline hit earlier from an underestimated output budget
+            # (pipeline/narrative/anthropic_client.py's max_tokens history).
+            max_tokens=4096,
             system=[{"type": "text", "text": QUALITATIVE_SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}],
             messages=[
                 {

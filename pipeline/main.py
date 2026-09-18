@@ -28,7 +28,16 @@ from pipeline.narrative.anthropic_client import NarrativeError, generate_narrati
 from pipeline.narrative.grounding import enforce_grounding
 from pipeline.narrative.prompts import DISCLAIMER
 from pipeline.narrative.qualitative_client import QualitativeError, generate_qualitative_assessment, generate_thesis
-from pipeline.scoring import aggregation, long_term, macro_regime, quant_score, short_term, valuation, value_investing
+from pipeline.scoring import (
+    aggregation,
+    long_term,
+    lynch_category,
+    macro_regime,
+    quant_score,
+    short_term,
+    valuation,
+    value_investing,
+)
 from pipeline.scoring.fundamentals import build_metrics
 from pipeline.utils.config import macro_series, watchlist
 from pipeline.utils.paths import DATA_DIR
@@ -140,6 +149,7 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
     # already clear this bar (deliberate cost control, not just a display filter).
     quant_scorecard = quant_score.build_quant_scorecard(metrics)
     latest_10k = next((f for f in recent_filings if f["form"] == "10-K"), None)
+    lynch = lynch_category.classify(metrics, sector, profile.get("market_cap"))
 
     return {
         "ticker": ticker,
@@ -150,6 +160,7 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
         "display": display,
         "checklist": checklist,
         "quant_scorecard": quant_scorecard,
+        "lynch_category": lynch,
         "latest_10k": latest_10k,
         "raw": raw,
         "recent_filings": recent_filings,
@@ -180,6 +191,36 @@ def apply_sector_relative_momentum(states: list[dict]) -> None:
         state["metrics"]["sector_relative_momentum_pct"] = relative
         state["display"]["price"]["sector_relative_momentum_pct"] = relative
         state["display"]["price"]["sector_avg_return_3m_pct"] = sector_avg.get(state["sector"])
+
+
+def apply_magic_formula_rank(states: list[dict]) -> None:
+    """Greenblatt's Magic Formula: rank the whole watchlist (not per-sector -
+    the formula is explicitly meant to work across sectors) by return on
+    capital (roic_pct stands in for Greenblatt's own ROC definition) and by
+    earnings yield (earnings_yield_pct = EBIT/EV), then combine the two
+    ranks - lower combined rank is better, matching Greenblatt's own method.
+    A company missing either input is left unranked (None) rather than
+    penalized with a worst-case rank."""
+    eligible = [
+        s for s in states if s["metrics"].get("roic_pct") is not None and s["metrics"].get("earnings_yield_pct") is not None
+    ]
+
+    roic_rank = {
+        s["ticker"]: i + 1
+        for i, s in enumerate(sorted(eligible, key=lambda s: s["metrics"]["roic_pct"], reverse=True))
+    }
+    earnings_yield_rank = {
+        s["ticker"]: i + 1
+        for i, s in enumerate(sorted(eligible, key=lambda s: s["metrics"]["earnings_yield_pct"], reverse=True))
+    }
+    combined_rank = {t: roic_rank[t] + earnings_yield_rank[t] for t in roic_rank}
+    overall_rank = {t: i + 1 for i, t in enumerate(sorted(combined_rank, key=lambda t: combined_rank[t]))}
+
+    for state in states:
+        ticker = state["ticker"]
+        state["metrics"]["magic_formula_rank"] = overall_rank.get(ticker)
+        state["metrics"]["magic_formula_roic_rank"] = roic_rank.get(ticker)
+        state["metrics"]["magic_formula_earnings_yield_rank"] = earnings_yield_rank.get(ticker)
 
 
 def _median(values: list[float]) -> float | None:
@@ -359,6 +400,7 @@ def finalize_company(
         "fundamentals": display["fundamentals"],
         "value_investing": state["checklist"],
         "narrative": narrative_out,
+        "lynch_category": state["lynch_category"],
         "quant_score": quant_scorecard,
         "qualitative": qualitative_out,
         "valuation": valuation_out,
@@ -441,6 +483,7 @@ def run_full(args) -> int:
     # Phase 2: cross-company signals.
     apply_sector_relative_momentum(states)
     apply_sector_medians(states)
+    apply_magic_formula_rank(states)
 
     # Phase 3: narrative + qualitative/thesis + final assembly + write.
     summaries = []

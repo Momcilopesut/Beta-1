@@ -20,12 +20,19 @@ MoatType = Literal[
 ]
 
 
+class FisherCriterion(BaseModel):
+    criterion: str = Field(max_length=120)
+    assessment: Literal["yes", "no", "unknown"]
+    evidence: str = Field(max_length=220)
+
+
 class QualitativeAssessment(BaseModel):
     moat_present: bool
     moat_type: MoatType
     moat_explanation: str = Field(max_length=700)
     management_assessment: str = Field(max_length=700)
     red_flags: list[str] = Field(max_length=6)
+    fisher_checklist: list[FisherCriterion] = Field(max_length=12)
     extraction_confidence: Literal["section_match", "whole_document_fallback"]
 
 

@@ -285,6 +285,12 @@ function renderQualitative(qualitative) {
   const redFlags = (qualitative.red_flags || [])
     .map((f) => `<li>${escapeHtml(f)}</li>`)
     .join("");
+  const fisherRows = (qualitative.fisher_checklist || [])
+    .map((c) => {
+      const passed = c.assessment === "yes" ? true : c.assessment === "no" ? false : null;
+      return `<li>${renderChecklistIcon(passed)}<span class="checklist-text"><span class="checklist-label">${escapeHtml(c.criterion)}</span><span class="checklist-detail">${escapeHtml(c.evidence)}</span></span></li>`;
+    })
+    .join("");
   return `
     <div class="layered-card">
       <h4>Qualitative (10-K) <span class="layered-gate ${gateClass(qualitative.moat_present)}">${qualitative.moat_present ? "Moat found" : "No moat found"}</span></h4>
@@ -293,32 +299,39 @@ function renderQualitative(qualitative) {
       <p class="checklist-label">Management &amp; capital allocation</p>
       <p>${escapeHtml(qualitative.management_assessment)}</p>
       ${redFlags ? `<p class="checklist-label">Red flags from the filing</p><ul>${redFlags}</ul>` : `<p class="meta">No red flags called out in the excerpts.</p>`}
+      ${fisherRows ? `<p class="checklist-label">Fisher's checklist <span class="attribution">(adapted — see README)</span></p><ul class="checklist">${fisherRows}</ul>` : ""}
       <p class="meta">Grounded in this company's own 10-K text (extraction: ${escapeHtml(qualitative.extraction_confidence)}) —
       unlike the rest of this page, these claims are prompt-grounded, not code-verified against a fixed metric list.</p>
     </div>
   `;
 }
 
-function renderValuationSection(valuationData) {
+function renderValuationSection(valuationData, layered, metrics) {
   if (!valuationData) return "";
   const dcf = valuationData.dcf || {};
   const a = dcf.assumptions || {};
   const rel = valuationData.relative || {};
+  const requiredMoS = layered?.required_margin_of_safety_pct;
+  const gateLabelText =
+    dcf.margin_of_safety_pct === null || dcf.margin_of_safety_pct === undefined
+      ? "Not evaluated"
+      : formatNumber(dcf.margin_of_safety_pct, { decimals: 0, suffix: "% margin of safety" });
+  const fmt = (v, decimals = 1) => (v === null || v === undefined ? "—" : formatNumber(v, { decimals }));
   return `
     <div class="layered-card">
-      <h4>Valuation <span class="layered-gate ${gateClass(valuationData.margin_of_safety_pct !== null && valuationData.margin_of_safety_pct !== undefined ? valuationData.margin_of_safety_pct >= 15 : null)}">${
-        dcf.margin_of_safety_pct === null || dcf.margin_of_safety_pct === undefined
-          ? "Not evaluated"
-          : formatNumber(dcf.margin_of_safety_pct, { decimals: 0, suffix: "% margin of safety" })
-      }</span></h4>
+      <h4>Valuation <span class="layered-gate ${gateClass(layered ? layered.valuation_gate_pass : null)}">${gateLabelText}</span></h4>
       <p class="checklist-label">DCF (this pipeline's own, not FMP's)</p>
       <p class="meta">Growth ${formatNumber(a.growth_rate_pct, { decimals: 1, suffix: "%" })}/yr (${escapeHtml(a.growth_rate_source || "")}) for ${a.projection_years} years,
       then ${formatNumber(a.terminal_growth_rate_pct, { decimals: 1, suffix: "%" })} terminal growth, discounted at ${formatNumber(a.discount_rate_pct, { decimals: 1, suffix: "%" })}.</p>
       <p>Intrinsic value/share: ${dcf.intrinsic_value_per_share === null || dcf.intrinsic_value_per_share === undefined ? "—" : formatNumber(dcf.intrinsic_value_per_share, { decimals: 2, suffix: "" })}</p>
+      ${requiredMoS !== undefined && requiredMoS !== null ? `<p class="meta">Required margin of safety for this company: ${formatNumber(requiredMoS, { decimals: 0, suffix: "%" })} (Klarman: scales up with red flags / thin data, not a flat number — see README).</p>` : ""}
       <p class="meta">${escapeHtml(a.note || "")}</p>
       <p class="checklist-label">Relative multiples vs. sector median (this watchlist)</p>
-      <p class="meta">P/E ${rel.pe_ttm === null || rel.pe_ttm === undefined ? "—" : formatNumber(rel.pe_ttm, { decimals: 1 })} vs. median ${rel.sector_median_pe_ttm === null || rel.sector_median_pe_ttm === undefined ? "—" : formatNumber(rel.sector_median_pe_ttm, { decimals: 1 })} ·
-      EV/EBITDA ${rel.ev_ebitda === null || rel.ev_ebitda === undefined ? "—" : formatNumber(rel.ev_ebitda, { decimals: 1 })} vs. median ${rel.sector_median_ev_ebitda === null || rel.sector_median_ev_ebitda === undefined ? "—" : formatNumber(rel.sector_median_ev_ebitda, { decimals: 1 })}</p>
+      <p class="meta">P/E ${fmt(rel.pe_ttm)} vs. median ${fmt(rel.sector_median_pe_ttm)} ·
+      EV/EBITDA ${fmt(rel.ev_ebitda)} vs. median ${fmt(rel.sector_median_ev_ebitda)}</p>
+      <p class="checklist-label">Greenblatt &amp; Lynch quick reads</p>
+      <p class="meta">Earnings yield (EBIT/EV) ${fmt(metrics?.earnings_yield_pct)}% · PEG ratio ${fmt(metrics?.peg_ratio, 2)}
+      ${metrics?.magic_formula_rank ? ` · Magic Formula rank #${metrics.magic_formula_rank} in this watchlist (ROIC #${metrics.magic_formula_roic_rank}, earnings yield #${metrics.magic_formula_earnings_yield_rank})` : ""}</p>
     </div>
   `;
 }
@@ -336,6 +349,20 @@ function renderThesis(thesis) {
   `;
 }
 
+const LYNCH_LABELS = {
+  fast_grower: "Fast grower",
+  stalwart: "Stalwart",
+  slow_grower: "Slow grower",
+  cyclical: "Cyclical",
+  turnaround: "Turnaround",
+  asset_play: "Asset play",
+};
+
+function renderLynchCategory(lynch) {
+  if (!lynch || !lynch.category) return "";
+  return `<p class="layered-overall">Lynch category: <strong>${escapeHtml(LYNCH_LABELS[lynch.category] || lynch.category)}</strong> — ${escapeHtml(lynch.reasoning)}</p>`;
+}
+
 function renderLayeredAnalysis(doc) {
   const layered = doc.layered_analysis;
   if (!layered && !doc.quant_score) return "";
@@ -344,11 +371,12 @@ function renderLayeredAnalysis(doc) {
     <section class="layered-analysis">
       <h3>Layered Analysis <span class="attribution">(quant screen, qualitative moat read, and valuation stay separate — never averaged into one number)</span></h3>
       ${layered ? `<p class="layered-overall">${escapeHtml(layered.overall)}</p>` : ""}
+      ${renderLynchCategory(doc.lynch_category)}
       ${flags ? `<ul class="layered-flags">${flags}</ul>` : ""}
       <div class="layered-columns">
         ${renderQuantScorecard(doc.quant_score)}
         ${renderQualitative(doc.qualitative)}
-        ${renderValuationSection(doc.valuation)}
+        ${renderValuationSection(doc.valuation, layered, doc.metrics)}
       </div>
       ${renderThesis(doc.thesis)}
     </section>

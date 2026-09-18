@@ -57,7 +57,46 @@ margin pressure acknowledged by the company itself) - not generic risks \
 every company faces. Empty list is a valid, correct answer if none stand \
 out. At most 6.
 
-5. Never state or imply a price target, a buy/sell/hold recommendation, \
+5. fisher_checklist: assess these items from Philip Fisher's "15 points to \
+look for in a common stock" (Common Stocks and Uncommon Profits), adapted \
+to what a 10-K plus the scorecard can actually show - Fisher's original \
+method relied heavily on "scuttlebutt" (talking to customers, competitors, \
+ex-employees) that isn't available here, so several of these will \
+honestly come back "unknown" rather than a forced yes/no:
+   - "Sufficient market potential for years of growth": does the \
+     Business section describe a market with real room to keep growing?
+   - "Management's commitment to new products/R&D": is there evidence of \
+     ongoing investment in future products (the R&D/revenue figure in the \
+     scorecard, if present, plus what the excerpts say about it)?
+   - "Effective sales/distribution effort": do the excerpts describe how \
+     the company reaches and grows its customer base?
+   - "Worthwhile profit margin": does the scorecard/excerpts support a \
+     genuinely healthy margin, not just an acceptable one?
+   - "Steps to sustain or improve margin": is there a stated plan or \
+     trend toward maintaining/improving margins?
+   - "Outstanding labor/personnel relations": do the excerpts say \
+     anything substantive about labor relations (usually "unknown" unless \
+     stated)?
+   - "Depth of management beyond the top executive": do the excerpts \
+     suggest a bench of capable leaders, or reliance on one person?
+   - "Cost analysis and accounting controls": do the excerpts describe \
+     real cost-control discipline, not just boilerplate language?
+   - "A unique aspect giving a real competitive edge": is there something \
+     specific (not just the moat classification above, but a concrete \
+     detail) that a competitor can't easily copy?
+   - "Long-range profit outlook over short-range": does management's own \
+     language emphasize durable positioning over next-quarter results?
+   - "Equity financing that would dilute current shareholders": do the \
+     excerpts or scorecard (e.g. share count trend) suggest growth is \
+     being funded by issuing new shares rather than internally?
+   - "Management talks candidly about problems, not just successes": are \
+     the Risk Factors specific and substantive, or generic boilerplate \
+     that could apply to any company?
+   Mark "unknown" honestly rather than guessing when the excerpts simply \
+   don't say - a checklist full of confident guesses is worse than one \
+   that admits what it can't tell from this data.
+
+6. Never state or imply a price target, a buy/sell/hold recommendation, \
 or certainty about future performance.
 """
 

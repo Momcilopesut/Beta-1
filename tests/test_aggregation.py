@@ -3,12 +3,13 @@ from pipeline.scoring.aggregation import build_layered_analysis
 
 def test_all_layers_align():
     result = build_layered_analysis(
-        {"gate_pass": True}, {"moat_present": True, "red_flags": []}, {"margin_of_safety_pct": 25.0}
+        {"gate_pass": True, "evaluated": 5}, {"moat_present": True, "red_flags": []}, {"margin_of_safety_pct": 25.0}
     )
     assert result == {
         "quant_gate_pass": True,
         "qualitative_moat_present": True,
         "valuation_gate_pass": True,
+        "required_margin_of_safety_pct": 15.0,
         "overall": (
             "All three layers align: passes the quant screen, a moat was identified, and a margin of "
             "safety exists."
@@ -73,3 +74,51 @@ def test_qualitative_none_when_layer_was_skipped_not_run():
     result = build_layered_analysis({"gate_pass": True}, None, {"margin_of_safety_pct": 25.0})
     assert result["qualitative_moat_present"] is None
     assert result["overall"].startswith("Incomplete")
+
+
+# --- Klarman: margin of safety should scale with actual uncertainty ---
+
+
+def test_required_margin_of_safety_bumped_by_thin_quant_coverage():
+    thin = build_layered_analysis(
+        {"gate_pass": True, "evaluated": 1}, {"moat_present": True, "red_flags": []}, {"margin_of_safety_pct": 20.0}
+    )
+    full = build_layered_analysis(
+        {"gate_pass": True, "evaluated": 5}, {"moat_present": True, "red_flags": []}, {"margin_of_safety_pct": 20.0}
+    )
+    assert thin["required_margin_of_safety_pct"] > full["required_margin_of_safety_pct"]
+    # 20% clears the base 15% requirement but not the thin-coverage-bumped one.
+    assert full["valuation_gate_pass"] is True
+    assert thin["valuation_gate_pass"] is False
+
+
+def test_required_margin_of_safety_bumped_by_red_flags_and_capped():
+    one_flag = build_layered_analysis(
+        {"gate_pass": True, "evaluated": 5}, {"moat_present": True, "red_flags": ["a"]}, {"margin_of_safety_pct": 20.0}
+    )
+    many_flags = build_layered_analysis(
+        {"gate_pass": True, "evaluated": 5},
+        {"moat_present": True, "red_flags": ["a", "b", "c", "d", "e"]},
+        {"margin_of_safety_pct": 20.0},
+    )
+    assert one_flag["required_margin_of_safety_pct"] == 20.0  # 15 base + 5 for one flag
+    assert many_flags["required_margin_of_safety_pct"] == 30.0  # capped at +15 regardless of flag count
+
+
+def test_required_margin_of_safety_bumped_by_fallback_extraction():
+    clean = build_layered_analysis(
+        {"gate_pass": True, "evaluated": 5},
+        {"moat_present": True, "red_flags": [], "extraction_confidence": "section_match"},
+        {"margin_of_safety_pct": 20.0},
+    )
+    fallback = build_layered_analysis(
+        {"gate_pass": True, "evaluated": 5},
+        {"moat_present": True, "red_flags": [], "extraction_confidence": "whole_document_fallback"},
+        {"margin_of_safety_pct": 20.0},
+    )
+    assert fallback["required_margin_of_safety_pct"] == clean["required_margin_of_safety_pct"] + 5.0
+
+
+def test_required_margin_of_safety_defaults_to_base_without_qualitative():
+    result = build_layered_analysis({"gate_pass": True, "evaluated": 5}, None, {"margin_of_safety_pct": 20.0})
+    assert result["required_margin_of_safety_pct"] == 15.0
