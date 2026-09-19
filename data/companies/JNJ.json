@@ -5,72 +5,54 @@
     "balance_sheet": {
       "current_ratio": 1.0888787685581565,
       "debt_to_ebitda": 1.4481706395963625,
-      "debt_to_equity": 0.5770910075202128,
-      "interest_coverage": 25.944664031620555
+      "debt_to_equity": 0.5770910075202128
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 34.822343346584155,
+      "shareholders_equity": 81544000000,
+      "total_assets": 199210000000,
+      "total_liabilities": 117666000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 20.91238202414192,
-      "fcf_to_net_income": 0.7348903148783764,
-      "owner_earnings_yield_pct": 4.530095928585831
+      "fcf_margin_pct": 20.91238202414192
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 17.32347997082837,
-      "eps_growth_cagr_5yr_pct": 14.55993034701839,
-      "eps_growth_yoy_pct": 88.86986301369862,
-      "r_and_d_to_revenue_pct": 15.56909749132101,
-      "revenue_cagr_3yr_pct": 5.599284954178807,
-      "revenue_cagr_5yr_pct": 2.665503872479502,
-      "revenue_growth_yoy_pct": 6.048119251078011
+      "eps_growth_cagr_3yr_pct": 17.32347997082837
     },
     "profitability": {
-      "gross_margin_pct": 67.8787171021201,
-      "roe_pct": 25.73506474441706,
-      "roic_pct": 19.183663574911403,
       "trend": "stable"
     },
     "valuation": {
-      "dcf_fair_value": 278.27048178306444,
-      "dcf_upside_pct": 3.0669586959014894,
-      "earnings_yield_pct": 3.7703694000465915,
-      "ev_ebitda": 20.13703525838966,
       "graham_multiple": 242.00043456378145,
       "graham_number": 92.96254654450104,
       "graham_upside_pct": -65.56815195210895,
       "ncav_margin_pct": -109.53540934663721,
       "pb_ratio": 7.753264043026444,
-      "pe_ttm": 31.21271676300578,
-      "peg_ratio": 1.8017578925000055
+      "pe_ttm": 31.21271676300578
     }
   },
   "industry": "Drug Manufacturers - General",
-  "last_updated": "2026-09-19T12:19:10Z",
+  "last_updated": "2026-09-19T13:15:26Z",
   "layered_analysis": {
-    "conviction_score": 37.6,
+    "conviction_score": 26.0,
     "conviction_score_breakdown": {
-      "base_score": 65.1,
+      "base_score": 47.2,
       "components": {
-        "fisher_pct": 80.0,
         "graham_pct": 50.0,
-        "piotroski_pct": 44.4,
-        "quant_score_pct": 80.0
+        "piotroski_pct": 44.4
       },
-      "moat_multiplier": 1.05,
+      "moat_multiplier": 1.0,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
+      "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "quant_gate_pass": true,
-    "required_margin_of_safety_pct": 30.0,
+    "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
-  },
-  "lynch_category": {
-    "category": "stalwart",
-    "reasoning": "Moderate, steady EPS growth (17.3%/yr) - Lynch's 'stalwart' territory."
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -81,47 +63,25 @@
   },
   "market_cap": 650648473336,
   "metrics": {
+    "book_value_per_share": 34.822343346584155,
     "current_ratio": 1.0888787685581565,
-    "dcf_upside_pct": 3.0669586959014894,
     "debt_to_ebitda": 1.4481706395963625,
     "debt_to_equity": 0.5770910075202128,
-    "earnings_yield_pct": 3.7703694000465915,
     "eps_growth_cagr_3yr_pct": 17.32347997082837,
-    "eps_growth_cagr_5yr_pct": 14.55993034701839,
-    "eps_growth_yoy_pct": 88.86986301369862,
-    "ev_ebitda": 20.13703525838966,
     "fcf_margin_pct": 20.91238202414192,
-    "fcf_to_net_income": 0.7348903148783764,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
     "graham_multiple": 242.00043456378145,
     "graham_upside_pct": -65.56815195210895,
-    "gross_margin_pct": 67.8787171021201,
-    "interest_coverage": 25.944664031620555,
-    "magic_formula_earnings_yield_rank": 7,
-    "magic_formula_rank": 6,
-    "magic_formula_roic_rank": 7,
     "margin_trend_score": 60,
     "ncav_margin_pct": -109.53540934663721,
-    "owner_earnings_yield_pct": 4.530095928585831,
     "pb_ratio": 7.753264043026444,
     "pe_ttm": 31.21271676300578,
-    "peg_ratio": 1.8017578925000055,
     "piotroski_evaluated": 9,
     "piotroski_f_score": 4,
-    "price_vs_ma200_pct": 13.127864571712417,
-    "price_vs_ma50_pct": 2.5460467794411064,
-    "r_and_d_to_revenue_pct": 15.56909749132101,
-    "return_1m_pct": -1.2508686587908326,
-    "return_3m_pct": 18.21445772581988,
-    "revenue_cagr_3yr_pct": 5.599284954178807,
-    "revenue_cagr_5yr_pct": 2.665503872479502,
-    "revenue_growth_yoy_pct": 6.048119251078011,
-    "roe_pct": 25.73506474441706,
-    "roic_pct": 19.183663574911403,
-    "rsi_distance_from_neutral": 3.000923361034147,
-    "sector_relative_momentum_pct": 12.107528144633804,
-    "volume_vs_avg_ratio": 1.903667461731043
+    "shareholders_equity": 81544000000,
+    "total_assets": 199210000000,
+    "total_liabilities": 117666000000
   },
   "name": "Johnson & Johnson",
   "narrative": {
@@ -132,105 +92,28 @@
       "minor": [],
       "noise": []
     },
-    "long_term_narrative": null,
-    "one_line_summary": null,
-    "short_term_narrative": null
+    "narrative": null,
+    "one_line_summary": null
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 8452115.363346614,
-    "close": 269.99,
-    "return_1m_pct": -1.2508686587908326,
-    "return_3m_pct": 18.21445772581988,
-    "sector_avg_return_3m_pct": 6.106929581186077,
-    "sector_relative_momentum_pct": 12.107528144633804,
-    "volume": 16090017,
-    "volume_vs_avg_ratio": 1.903667461731043
+    "close": 269.99
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "fisher_checklist": [
-      {
-        "assessment": "unknown",
-        "criterion": "Sufficient market potential for years of growth",
-        "evidence": "The excerpts discuss regulatory and competitive dynamics extensively but do not describe overall market size or growth runway for JNJ's segments; the Business section provided is dominated by risk factors rather than market opportunity description."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Management's commitment to new products/R&D",
-        "evidence": "The filing states the Company pursues product development through 'internal research and development as well as through collaborations, acquisitions, joint ventures and licensing,' and notes new products from the past five years accounted for approximately 25% of 2025 sales."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Effective sales/distribution effort",
-        "evidence": "The excerpts describe international revenue mix (43% of sales outside the U.S.) but do not detail sales or distribution strategy or effectiveness."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Worthwhile profit margin",
-        "evidence": "The scorecard shows FCF margin of 20.9%, well above the 10% threshold, and ROIC of 19.2% versus a 12% threshold, both passing comfortably."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Steps to sustain or improve margin",
-        "evidence": "The excerpts mention cost reduction programs and productivity improvements specifically in high-inflation countries, but no broader company-wide margin improvement plan is described; margin_trend_score of 60 is informational only with no explanatory text."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Outstanding labor/personnel relations",
-        "evidence": "The provided excerpts contain no discussion of labor relations, employee satisfaction, or workforce matters."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Depth of management beyond the top executive",
-        "evidence": "Only the CIO and CISO are named with tenure details in the cybersecurity governance section; no broader executive bench strength is discussed elsewhere in the excerpts."
-      },
-      {
-        "assessment": "no",
-        "criterion": "Cost analysis and accounting controls",
-        "evidence": "The excerpts do not describe specific cost accounting systems or controls beyond generic mention of 'cost reduction programs' in inflationary markets; this is not substantive cost-control disclosure."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "A unique aspect giving a real competitive edge",
-        "evidence": "The Company's patent portfolio and regulatory approval barriers, combined with a captive insurance structure to manage extensive litigation exposure, are specific structural features described in the filing that are not easily replicated by competitors."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Long-range profit outlook over short-range",
-        "evidence": "The excerpts are risk-factor and governance oriented and do not include forward-looking management commentary emphasizing long-term versus short-term profit priorities."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Equity financing that would dilute current shareholders",
-        "evidence": "No discussion of share issuance or equity financing appears in the excerpts, and the scorecard does not provide share count trend data."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Management talks candidly about problems, not just successes",
-        "evidence": "The Risk Factors section discusses specific, substantive issues such as talc litigation, patent challenges from biosimilars, highly inflationary economies by name (Argentina, Turkey, Venezuela, Egypt), and named geopolitical conflicts (Russia-Ukraine, Middle East, U.S.-China tensions) rather than only generic boilerplate."
-      }
-    ],
-    "management_assessment": "The excerpts provide limited direct discussion of capital allocation such as buybacks or dividends. They do note that the Company pursues product development 'through internal research and development as well as through collaborations, acquisitions, joint ventures and licensing or other arrangements with third parties,' indicating an active but diversified approach to funding innovation rather than relying solely on organic R&D. The scorecard's low debt-to-EBITDA (1.45x, well under the 3.0x threshold) suggests conservative balance-sheet management, but the excerpts themselves do not discuss debt strategy, share buybacks, or dividend policy explicitly.",
-    "moat_explanation": "The excerpts emphasize that JNJ 'owns or licenses a significant number of patents and other proprietary rights relating to its products and manufacturing processes' that are 'essential to the Company's businesses,' and describe extensive regulatory approval requirements (FDA, cGMP) that create barriers to entry for pharmaceutical and device competitors. New products introduced in the past five years accounted for ~25% of 2025 sales, suggesting patent-protected innovation is a meaningful revenue driver, though the filing also acknowledges patent challenges from generic/biosimilar competitors as a recurring risk.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Ongoing talc-related product liability litigation (JOHNSON'S Baby Powder), described as potentially requiring payments 'in excess of accruals' and involving joint-and-several liability exposure",
-      "Company does not purchase third-party product liability insurance, relying instead on a wholly owned captive insurer with limits",
-      "Patent challenges from generic and biosimilar manufacturers that could cause loss of 'a major portion of revenues for the referenced product in a very short period of time'",
-      "Significant regulatory scrutiny and government investigations (FDA, Medicaid Rebate Program, false claims acts) with risk of civil/criminal penalties or program debarment",
-      "Exposure to highly inflationary economies (Argentina, Turkey, Venezuela, Egypt) that may produce operating losses despite mitigation efforts",
-      "Geopolitical risks including Russia-Ukraine war and U.S.-China tensions cited as current, ongoing impacts to business and supply chain"
-    ]
-  },
+  "qualitative": null,
   "quant_score": {
-    "evaluated": 5,
+    "evaluated": 3,
     "gate_pass": true,
     "informational": {
       "margin_trend_score": 60
     },
     "metrics": {
+      "current_ratio": {
+        "higher_is_better": true,
+        "label": "Current ratio (current assets / current liabilities)",
+        "pass": false,
+        "threshold": 1.5,
+        "value": 1.0888787685581565
+      },
       "debt_to_ebitda": {
         "higher_is_better": false,
         "label": "Debt / EBITDA",
@@ -238,257 +121,16 @@
         "threshold": 3.0,
         "value": 1.4481706395963625
       },
-      "eps_growth_cagr_pct": {
-        "higher_is_better": true,
-        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
-        "pass": true,
-        "threshold": 5.0,
-        "value": 14.55993034701839
-      },
       "fcf_margin_pct": {
         "higher_is_better": true,
         "label": "Free cash flow margin",
         "pass": true,
         "threshold": 10.0,
         "value": 20.91238202414192
-      },
-      "revenue_cagr_pct": {
-        "higher_is_better": true,
-        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
-        "pass": false,
-        "threshold": 5.0,
-        "value": 2.665503872479502
-      },
-      "roic_pct": {
-        "higher_is_better": true,
-        "label": "Return on invested capital",
-        "pass": true,
-        "threshold": 12.0,
-        "value": 19.183663574911403
       }
     },
-    "passed": 4,
-    "quant_score_pct": 80.0
-  },
-  "scores": {
-    "long_term": {
-      "base_score": 54.3,
-      "final_score": 54.3,
-      "macro_adjustment": 0,
-      "subscores": [
-        {
-          "key": "valuation",
-          "label": "Valuation",
-          "raw_metrics": [
-            {
-              "metric": "pe_ttm",
-              "raw_value": 31.21271676300578,
-              "score": 29.290944123314063
-            },
-            {
-              "metric": "ev_ebitda",
-              "raw_value": 20.13703525838966,
-              "score": 28.60567495064906
-            },
-            {
-              "metric": "dcf_upside_pct",
-              "raw_value": 3.0669586959014894,
-              "score": 56.13391739180298
-            },
-            {
-              "metric": "graham_upside_pct",
-              "raw_value": -65.56815195210895,
-              "score": 0.0
-            },
-            {
-              "metric": "graham_multiple",
-              "raw_value": 242.00043456378145,
-              "score": 0.0
-            }
-          ],
-          "score": 22.8,
-          "weight_pct": 25
-        },
-        {
-          "key": "growth",
-          "label": "Growth",
-          "raw_metrics": [
-            {
-              "metric": "revenue_growth_yoy_pct",
-              "raw_value": 6.048119251078011,
-              "score": 36.82706417026003
-            },
-            {
-              "metric": "revenue_cagr_3yr_pct",
-              "raw_value": 5.599284954178807,
-              "score": 42.397139816715224
-            },
-            {
-              "metric": "eps_growth_yoy_pct",
-              "raw_value": 88.86986301369862,
-              "score": 100.0
-            },
-            {
-              "metric": "eps_growth_cagr_3yr_pct",
-              "raw_value": 17.32347997082837,
-              "score": 68.30869992707093
-            }
-          ],
-          "score": 61.9,
-          "weight_pct": 25
-        },
-        {
-          "key": "profitability",
-          "label": "Profitability & Margin Trend",
-          "raw_metrics": [
-            {
-              "metric": "gross_margin_pct",
-              "raw_value": 67.8787171021201,
-              "score": 100.0
-            },
-            {
-              "metric": "roe_pct",
-              "raw_value": 25.73506474441706,
-              "score": 85.78354914805686
-            },
-            {
-              "metric": "margin_trend_score",
-              "raw_value": 60,
-              "score": 60.0
-            },
-            {
-              "metric": "roic_pct",
-              "raw_value": 19.183663574911403,
-              "score": 76.73465429964561
-            }
-          ],
-          "score": 80.6,
-          "weight_pct": 20
-        },
-        {
-          "key": "balance_sheet",
-          "label": "Balance Sheet Health",
-          "raw_metrics": [
-            {
-              "metric": "debt_to_equity",
-              "raw_value": 0.5770910075202128,
-              "score": 71.14544962398936
-            },
-            {
-              "metric": "current_ratio",
-              "raw_value": 1.0888787685581565,
-              "score": 29.443938427907824
-            },
-            {
-              "metric": "interest_coverage",
-              "raw_value": 25.944664031620555,
-              "score": 100.0
-            }
-          ],
-          "score": 66.9,
-          "weight_pct": 15
-        },
-        {
-          "key": "cash_flow",
-          "label": "Cash Generation Quality",
-          "raw_metrics": [
-            {
-              "metric": "fcf_margin_pct",
-              "raw_value": 20.91238202414192,
-              "score": 69.70794008047307
-            },
-            {
-              "metric": "fcf_to_net_income",
-              "raw_value": 0.7348903148783764,
-              "score": 23.489031487837643
-            },
-            {
-              "metric": "owner_earnings_yield_pct",
-              "raw_value": 4.530095928585831,
-              "score": 45.300959285858305
-            }
-          ],
-          "score": 46.2,
-          "weight_pct": 15
-        }
-      ],
-      "verdict": "Neutral"
-    },
-    "short_term": {
-      "base_score": 65.8,
-      "final_score": 65.8,
-      "macro_adjustment": 0,
-      "subscores": [
-        {
-          "key": "momentum",
-          "label": "Price Momentum",
-          "raw_metrics": [
-            {
-              "metric": "return_1m_pct",
-              "raw_value": -1.2508686587908326,
-              "score": 43.745656706045835
-            },
-            {
-              "metric": "return_3m_pct",
-              "raw_value": 18.21445772581988,
-              "score": 95.53614431454972
-            }
-          ],
-          "score": 69.6,
-          "weight_pct": 30
-        },
-        {
-          "key": "technical",
-          "label": "Technical Positioning",
-          "raw_metrics": [
-            {
-              "metric": "price_vs_ma50_pct",
-              "raw_value": 2.5460467794411064,
-              "score": 62.73023389720554
-            },
-            {
-              "metric": "price_vs_ma200_pct",
-              "raw_value": 13.127864571712417,
-              "score": 93.75954857237471
-            },
-            {
-              "metric": "rsi_distance_from_neutral",
-              "raw_value": 3.000923361034147,
-              "score": 92.49769159741463
-            }
-          ],
-          "score": 83.0,
-          "weight_pct": 20
-        },
-        {
-          "key": "earnings_direction",
-          "label": "Earnings/Guidance Direction",
-          "raw_metrics": [
-            {
-              "metric": "earnings_surprise_pct",
-              "raw_value": null,
-              "score": null
-            }
-          ],
-          "score": 50.0,
-          "weight_pct": 20
-        },
-        {
-          "key": "valuation_extension",
-          "label": "Valuation Extension",
-          "raw_metrics": [
-            {
-              "metric": "dcf_upside_pct",
-              "raw_value": 3.0669586959014894,
-              "score": 56.13391739180298
-            }
-          ],
-          "score": 56.1,
-          "weight_pct": 15
-        }
-      ],
-      "verdict": "Favorable"
-    }
+    "passed": 2,
+    "quant_score_pct": 66.66666666666666
   },
   "sector": "Healthcare",
   "sources": {
@@ -521,42 +163,7 @@
       }
     ]
   },
-  "thesis": {
-    "falsification_criteria": [
-      "If JNJ's trailing revenue CAGR rises persistently above the 5% quant threshold without a corresponding drop in margins, the growth weakness cited in this thesis would no longer hold",
-      "If the DCF margin of safety turns positive (i.e., intrinsic value estimate rises above or price falls below the ~$130/share estimate) using consistent methodology, the 'overvalued relative to intrinsic value' claim would be falsified",
-      "If JNJ's P/E and EV/EBITDA multiples fall to or below the sector medians (currently ~27.7x P/E and ~17.6x EV/EBITDA) without a comparable decline in fundamentals, the relative-valuation premium claim would no longer apply",
-      "If a material adverse judgment or settlement in the talc litigation exceeds JNJ's accruals and captive insurance limits in a way that impairs the balance sheet or ROIC materially below the 12% threshold, the moat/quality assessment would be undermined",
-      "If a major patented product loses a significant portion of revenue rapidly to biosimilar or generic competition as the filing warns, and this causes ROIC or FCF margin to drop below their respective 12% and 10% thresholds, the moat argument would weaken",
-      "If debt/EBITDA rises materially above the 3.0x threshold used in the quant screen, the conservative balance-sheet management referenced in the qualitative assessment would be contradicted"
-    ],
-    "thesis": "The quant scorecard shows a strong, efficient business (80% pass rate, ROIC ~19%, FCF margin ~21%, low leverage at 1.45x debt/EBITDA), and the 10-K excerpts corroborate a durable moat rooted in patents and regulatory barriers to entry, with new products from the past five years contributing roughly 25% of sales - though the filing also flags substantive risks including ongoing talc litigation with joint-and-several liability exposure, reliance on a captive insurer rather than third-party coverage, and recurring biosimilar/generic patent challenges. The one weak spot in the quant layer is slow top-line growth (2.7% revenue CAGR versus a 5% threshold), which tempers the growth side of the quality picture despite strong EPS growth. Critically, the valuation layer conflicts with the quality-and-moat narrative: the simplified DCF implies the stock trades roughly 52% above its estimated intrinsic value (a negative margin of safety), and relative multiples (P/E ~31.2x vs. sector median ~27.7x; EV/EBITDA ~20.1x vs. sector median ~17.6x) also show a premium to peers. Taken together, this is a case of a fundamentally sound, moat-protected company whose quantitative and qualitative strengths appear to already be priced in or exceeded by the current valuation, meaning the layers point in different directions - quality and moat on one side, price on the other."
-  },
   "ticker": "JNJ",
-  "valuation": {
-    "dcf": {
-      "assumptions": {
-        "base_fcf": 19698000000,
-        "discount_rate_pct": 9.0,
-        "growth_rate_pct": 2.665503872479502,
-        "growth_rate_source": "trailing_5yr_revenue_cagr",
-        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
-        "projection_years": 5,
-        "terminal_growth_rate_pct": 2.5
-      },
-      "intrinsic_value_per_share": 129.82083578367258,
-      "margin_of_safety_pct": -51.91642809597668
-    },
-    "margin_of_safety_pct": -51.91642809597668,
-    "relative": {
-      "ev_ebitda": 20.13703525838966,
-      "ev_ebitda_vs_sector_median_pct": 14.54691023477901,
-      "pe_ttm": 31.21271676300578,
-      "pe_vs_sector_median_pct": 12.581508475434283,
-      "sector_median_ev_ebitda": 17.57972800585904,
-      "sector_median_pe_ttm": 27.724550137660053
-    }
-  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [

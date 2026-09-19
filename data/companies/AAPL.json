@@ -5,72 +5,54 @@
     "balance_sheet": {
       "current_ratio": 1.0032948046555858,
       "debt_to_ebitda": 0.7763630585569403,
-      "debt_to_equity": 0.7841052827380952,
-      "interest_coverage": 0
+      "debt_to_equity": 0.7841052827380952
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 7.318011926480932,
+      "shareholders_equity": 73733000000,
+      "total_assets": 359241000000,
+      "total_liabilities": 285508000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 23.732882225869314,
-      "fcf_to_net_income": 0.8817694848674226,
-      "owner_earnings_yield_pct": 2.248250469746161
+      "fcf_margin_pct": 23.732882225869314
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 6.791224750372327,
-      "eps_growth_cagr_5yr_pct": 17.74182545699563,
-      "eps_growth_yoy_pct": 22.585924713584284,
-      "r_and_d_to_revenue_pct": 8.302075398703867,
-      "revenue_cagr_3yr_pct": 1.8125357434793932,
-      "revenue_cagr_5yr_pct": 8.677354924090741,
-      "revenue_growth_yoy_pct": 6.425511782832739
+      "eps_growth_cagr_3yr_pct": 6.791224750372327
     },
     "profitability": {
-      "gross_margin_pct": 46.90516410716045,
-      "roe_pct": 137.18365457766524,
-      "roic_pct": 74.76620225102731,
       "trend": "improving"
     },
     "valuation": {
-      "dcf_fair_value": 135.7988742024617,
-      "dcf_upside_pct": -59.59929961548755,
-      "earnings_yield_pct": 2.653938415377797,
-      "ev_ebitda": 29.566990564675994,
       "graham_multiple": 1762.4521378776124,
       "graham_number": 35.117915084899316,
       "graham_upside_pct": -89.55228182997669,
       "ncav_margin_pct": -102.8039920513542,
       "pb_ratio": 45.93187376255581,
-      "pe_ttm": 38.37100456621005,
-      "peg_ratio": 5.650086100317379
+      "pe_ttm": 38.37100456621005
     }
   },
   "industry": "Consumer Electronics",
-  "last_updated": "2026-09-19T12:19:09Z",
+  "last_updated": "2026-09-19T13:15:06Z",
   "layered_analysis": {
-    "conviction_score": 46.8,
+    "conviction_score": 38.2,
     "conviction_score_breakdown": {
-      "base_score": 81.0,
+      "base_score": 69.4,
       "components": {
-        "fisher_pct": 75.0,
         "graham_pct": 50.0,
-        "piotroski_pct": 88.9,
-        "quant_score_pct": 100.0
+        "piotroski_pct": 88.9
       },
-      "moat_multiplier": 1.05,
+      "moat_multiplier": 1.0,
       "valuation_multiplier": 0.55
     },
-    "conviction_verdict": "Neutral",
+    "conviction_verdict": "Cautious",
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
+      "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "quant_gate_pass": true,
-    "required_margin_of_safety_pct": 30.0,
+    "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
-  },
-  "lynch_category": {
-    "category": "slow_grower",
-    "reasoning": "Large ($4937B) with EPS growing just 6.8%/yr - Lynch's 'slow grower' territory."
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -81,47 +63,25 @@
   },
   "market_cap": 4936860972280,
   "metrics": {
+    "book_value_per_share": 7.318011926480932,
     "current_ratio": 1.0032948046555858,
-    "dcf_upside_pct": -59.59929961548755,
     "debt_to_ebitda": 0.7763630585569403,
     "debt_to_equity": 0.7841052827380952,
-    "earnings_yield_pct": 2.653938415377797,
     "eps_growth_cagr_3yr_pct": 6.791224750372327,
-    "eps_growth_cagr_5yr_pct": 17.74182545699563,
-    "eps_growth_yoy_pct": 22.585924713584284,
-    "ev_ebitda": 29.566990564675994,
     "fcf_margin_pct": 23.732882225869314,
-    "fcf_to_net_income": 0.8817694848674226,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
     "graham_multiple": 1762.4521378776124,
     "graham_upside_pct": -89.55228182997669,
-    "gross_margin_pct": 46.90516410716045,
-    "interest_coverage": 0,
-    "magic_formula_earnings_yield_rank": 13,
-    "magic_formula_rank": 5,
-    "magic_formula_roic_rank": 1,
     "margin_trend_score": 100,
     "ncav_margin_pct": -102.8039920513542,
-    "owner_earnings_yield_pct": 2.248250469746161,
     "pb_ratio": 45.93187376255581,
     "pe_ttm": 38.37100456621005,
-    "peg_ratio": 5.650086100317379,
     "piotroski_evaluated": 9,
     "piotroski_f_score": 8,
-    "price_vs_ma200_pct": 17.38782492021326,
-    "price_vs_ma50_pct": 4.993968305334315,
-    "r_and_d_to_revenue_pct": 8.302075398703867,
-    "return_1m_pct": 6.091594861597706,
-    "return_3m_pct": 12.7915170631858,
-    "revenue_cagr_3yr_pct": 1.8125357434793932,
-    "revenue_cagr_5yr_pct": 8.677354924090741,
-    "revenue_growth_yoy_pct": 6.425511782832739,
-    "roe_pct": 137.18365457766524,
-    "roic_pct": 74.76620225102731,
-    "rsi_distance_from_neutral": 15.375257346060266,
-    "sector_relative_momentum_pct": -3.353598011132185,
-    "volume_vs_avg_ratio": 1.349553392822326
+    "shareholders_equity": 73733000000,
+    "total_assets": 359241000000,
+    "total_liabilities": 285508000000
   },
   "name": "Apple Inc.",
   "narrative": {
@@ -132,105 +92,28 @@
       "minor": [],
       "noise": []
     },
-    "long_term_narrative": null,
-    "one_line_summary": null,
-    "short_term_narrative": null
+    "narrative": null,
+    "one_line_summary": null
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 63903399.04940239,
-    "close": 336.13,
-    "return_1m_pct": 6.091594861597706,
-    "return_3m_pct": 12.7915170631858,
-    "sector_avg_return_3m_pct": 16.145115074317985,
-    "sector_relative_momentum_pct": -3.353598011132185,
-    "volume": 86241049,
-    "volume_vs_avg_ratio": 1.349553392822326
+    "close": 336.13
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "fisher_checklist": [
-      {
-        "assessment": "yes",
-        "criterion": "Sufficient market potential for years of growth",
-        "evidence": "Services net sales grew 14% in 2025 driven by advertising, App Store and cloud services, and the Company states it is 'focused on expanding its market opportunities' across all product/service lines, though it also notes some markets have experienced 'little to no growth or contracted overall.'"
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Management's commitment to new products/R&D",
-        "evidence": "R&D expense rose 10% to $34.55 billion (8% of net sales) in 2025, attributed to headcount and infrastructure growth, alongside numerous new product introductions across iPhone, Mac, iPad, Watch and software platforms."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Effective sales/distribution effort",
-        "evidence": "The Company sells through direct channels (40% of net sales via retail/online stores and direct sales force) and indirect channels (60% via carriers and resellers), covering consumer, business, education, enterprise and government markets."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Worthwhile profit margin",
-        "evidence": "Total gross margin was 46.9% in 2025 (Services at 75.4%), and the scorecard shows ROIC of 74.8% and FCF margin of 23.7%, both well above the stated thresholds."
-      },
-      {
-        "assessment": "no",
-        "criterion": "Steps to sustain or improve margin",
-        "evidence": "Management states 'the Company believes, in general, gross margins will be subject to volatility and downward pressure,' citing tariff costs and competitive pricing pressure, without describing a specific offsetting margin-improvement plan beyond a favorable mix shift toward Services."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Outstanding labor/personnel relations",
-        "evidence": "The Human Capital section describes culture, benefits, training (Apple University) and employee surveys, but provides no specific data on labor relations, turnover, or disputes."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Depth of management beyond the top executive",
-        "evidence": "The excerpts do not discuss the executive team, succession planning, or bench strength beyond aggregate references to 'management' and 'the Board.'"
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Cost analysis and accounting controls",
-        "evidence": "The MD&A references 'favorable costs' affecting product margins and standard critical accounting estimate disclosures (uncertain tax positions, contingencies), but does not describe specific cost-control systems or accounting controls."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "A unique aspect giving a real competitive edge",
-        "evidence": "The Company notes it 'designs and develops nearly the entire solution for its products, including the hardware, operating system, numerous software applications and related services,' and uses custom, often single-sourced components not commonly used by competitors."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Long-range profit outlook over short-range",
-        "evidence": "The excerpts focus on year-over-year comparisons (2025 vs 2024) and near-term risks such as tariffs, without explicit multi-year strategic profit guidance."
-      },
-      {
-        "assessment": "no",
-        "criterion": "Equity financing that would dilute current shareholders",
-        "evidence": "The Company repurchased $89.3 billion of common stock in 2025 and announced a new $100 billion buyback program, indicating share count reduction rather than dilutive equity issuance."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Management talks candidly about problems, not just successes",
-        "evidence": "Risk Factors specifically discuss newly imposed U.S. tariffs, a Section 232 investigation into semiconductor imports, Greater China sales declines, single-source component dependence, and acknowledged downward margin pressure rather than generic boilerplate."
-      }
-    ],
-    "management_assessment": "The excerpts show disciplined capital return: $89.3 billion in share repurchases and $15.4 billion in dividends during 2025, a newly authorized $100 billion buyback program, and a stated intent to raise the dividend annually, funded from a large cash/marketable securities balance ($132.4 billion) rather than new equity issuance. Debt levels are described (notes, commercial paper) but the scorecard's low debt/EBITDA (0.78x) and continued buybacks suggest conservative leverage management. R&D spending grew 10% year-over-year, indicating continued reinvestment, but the filing does not discuss M&A activity or provide detail on management depth beyond aggregate financial figures.",
-    "moat_explanation": "The filing describes an integrated hardware-OS-services ecosystem ('the Company designs and develops nearly the entire solution... hardware, operating system, numerous software applications and related services') combined with AppleCare, cloud services, and a growing high-margin Services business (75.4% gross margin, 14% growth) that monetizes an installed base, both of which create real friction for customers to leave. The Company also cites its IP portfolio and brand/reputation as competitive factors, though it explicitly acknowledges having only minority market share and facing aggressive price competition, so the moat is best characterized as ecosystem/switching-cost driven rather than outright market dominance.",
-    "moat_present": true,
-    "moat_type": "switching_costs",
-    "red_flags": [
-      "Greater China net sales declined 4% in 2025 due to lower iPhone sales, indicating regional demand weakness",
-      "New U.S. tariffs and retaliatory measures from other countries create uncertain, material cost and supply-chain impacts as explicitly described",
-      "Reliance on single or limited-source suppliers for certain critical components, which the Company says exacerbates business-interruption risk",
-      "Company explicitly states it has only a 'minority market share' in smartphones, PCs, tablets and wearables amid aggressive price-based competition",
-      "Management states it believes gross margins will be 'subject to volatility and downward pressure' going forward",
-      "Regulatory investigations/litigation risk that could force the Company to modify products or share IP with competitors"
-    ]
-  },
+  "qualitative": null,
   "quant_score": {
-    "evaluated": 5,
+    "evaluated": 3,
     "gate_pass": true,
     "informational": {
       "margin_trend_score": 100
     },
     "metrics": {
+      "current_ratio": {
+        "higher_is_better": true,
+        "label": "Current ratio (current assets / current liabilities)",
+        "pass": false,
+        "threshold": 1.5,
+        "value": 1.0032948046555858
+      },
       "debt_to_ebitda": {
         "higher_is_better": false,
         "label": "Debt / EBITDA",
@@ -238,257 +121,16 @@
         "threshold": 3.0,
         "value": 0.7763630585569403
       },
-      "eps_growth_cagr_pct": {
-        "higher_is_better": true,
-        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
-        "pass": true,
-        "threshold": 5.0,
-        "value": 17.74182545699563
-      },
       "fcf_margin_pct": {
         "higher_is_better": true,
         "label": "Free cash flow margin",
         "pass": true,
         "threshold": 10.0,
         "value": 23.732882225869314
-      },
-      "revenue_cagr_pct": {
-        "higher_is_better": true,
-        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
-        "pass": true,
-        "threshold": 5.0,
-        "value": 8.677354924090741
-      },
-      "roic_pct": {
-        "higher_is_better": true,
-        "label": "Return on invested capital",
-        "pass": true,
-        "threshold": 12.0,
-        "value": 74.76620225102731
       }
     },
-    "passed": 5,
-    "quant_score_pct": 100.0
-  },
-  "scores": {
-    "long_term": {
-      "base_score": 41.7,
-      "final_score": 42.7,
-      "macro_adjustment": 1,
-      "subscores": [
-        {
-          "key": "valuation",
-          "label": "Valuation",
-          "raw_metrics": [
-            {
-              "metric": "pe_ttm",
-              "raw_value": 38.37100456621005,
-              "score": 5.4299847792998435
-            },
-            {
-              "metric": "ev_ebitda",
-              "raw_value": 29.566990564675994,
-              "score": 0.0
-            },
-            {
-              "metric": "dcf_upside_pct",
-              "raw_value": -59.59929961548755,
-              "score": 0.0
-            },
-            {
-              "metric": "graham_upside_pct",
-              "raw_value": -89.55228182997669,
-              "score": 0.0
-            },
-            {
-              "metric": "graham_multiple",
-              "raw_value": 1762.4521378776124,
-              "score": 0.0
-            }
-          ],
-          "score": 1.1,
-          "weight_pct": 25
-        },
-        {
-          "key": "growth",
-          "label": "Growth",
-          "raw_metrics": [
-            {
-              "metric": "revenue_growth_yoy_pct",
-              "raw_value": 6.425511782832739,
-              "score": 38.08503927610913
-            },
-            {
-              "metric": "revenue_cagr_3yr_pct",
-              "raw_value": 1.8125357434793932,
-              "score": 27.250142973917573
-            },
-            {
-              "metric": "eps_growth_yoy_pct",
-              "raw_value": 22.585924713584284,
-              "score": 81.46481178396071
-            },
-            {
-              "metric": "eps_growth_cagr_3yr_pct",
-              "raw_value": 6.791224750372327,
-              "score": 41.97806187593082
-            }
-          ],
-          "score": 47.2,
-          "weight_pct": 25
-        },
-        {
-          "key": "profitability",
-          "label": "Profitability & Margin Trend",
-          "raw_metrics": [
-            {
-              "metric": "gross_margin_pct",
-              "raw_value": 46.90516410716045,
-              "score": 67.26291026790113
-            },
-            {
-              "metric": "roe_pct",
-              "raw_value": 137.18365457766524,
-              "score": 100.0
-            },
-            {
-              "metric": "margin_trend_score",
-              "raw_value": 100,
-              "score": 100.0
-            },
-            {
-              "metric": "roic_pct",
-              "raw_value": 74.76620225102731,
-              "score": 100.0
-            }
-          ],
-          "score": 91.8,
-          "weight_pct": 20
-        },
-        {
-          "key": "balance_sheet",
-          "label": "Balance Sheet Health",
-          "raw_metrics": [
-            {
-              "metric": "debt_to_equity",
-              "raw_value": 0.7841052827380952,
-              "score": 60.79473586309524
-            },
-            {
-              "metric": "current_ratio",
-              "raw_value": 1.0032948046555858,
-              "score": 25.16474023277929
-            },
-            {
-              "metric": "interest_coverage",
-              "raw_value": 0,
-              "score": 0.0
-            }
-          ],
-          "score": 28.7,
-          "weight_pct": 15
-        },
-        {
-          "key": "cash_flow",
-          "label": "Cash Generation Quality",
-          "raw_metrics": [
-            {
-              "metric": "fcf_margin_pct",
-              "raw_value": 23.732882225869314,
-              "score": 79.10960741956437
-            },
-            {
-              "metric": "fcf_to_net_income",
-              "raw_value": 0.8817694848674226,
-              "score": 38.176948486742255
-            },
-            {
-              "metric": "owner_earnings_yield_pct",
-              "raw_value": 2.248250469746161,
-              "score": 22.48250469746161
-            }
-          ],
-          "score": 46.6,
-          "weight_pct": 15
-        }
-      ],
-      "verdict": "Neutral"
-    },
-    "short_term": {
-      "base_score": 59.0,
-      "final_score": 60.0,
-      "macro_adjustment": 1,
-      "subscores": [
-        {
-          "key": "momentum",
-          "label": "Price Momentum",
-          "raw_metrics": [
-            {
-              "metric": "return_1m_pct",
-              "raw_value": 6.091594861597706,
-              "score": 80.45797430798854
-            },
-            {
-              "metric": "return_3m_pct",
-              "raw_value": 12.7915170631858,
-              "score": 81.9787926579645
-            }
-          ],
-          "score": 81.2,
-          "weight_pct": 30
-        },
-        {
-          "key": "technical",
-          "label": "Technical Positioning",
-          "raw_metrics": [
-            {
-              "metric": "price_vs_ma50_pct",
-              "raw_value": 4.993968305334315,
-              "score": 74.96984152667157
-            },
-            {
-              "metric": "price_vs_ma200_pct",
-              "raw_value": 17.38782492021326,
-              "score": 100.0
-            },
-            {
-              "metric": "rsi_distance_from_neutral",
-              "raw_value": 15.375257346060266,
-              "score": 61.561856634849335
-            }
-          ],
-          "score": 78.8,
-          "weight_pct": 20
-        },
-        {
-          "key": "earnings_direction",
-          "label": "Earnings/Guidance Direction",
-          "raw_metrics": [
-            {
-              "metric": "earnings_surprise_pct",
-              "raw_value": null,
-              "score": null
-            }
-          ],
-          "score": 50.0,
-          "weight_pct": 20
-        },
-        {
-          "key": "valuation_extension",
-          "label": "Valuation Extension",
-          "raw_metrics": [
-            {
-              "metric": "dcf_upside_pct",
-              "raw_value": -59.59929961548755,
-              "score": 0.0
-            }
-          ],
-          "score": 0.0,
-          "weight_pct": 15
-        }
-      ],
-      "verdict": "Favorable"
-    }
+    "passed": 2,
+    "quant_score_pct": 66.66666666666666
   },
   "sector": "Technology",
   "sources": {
@@ -521,42 +163,7 @@
       }
     ]
   },
-  "thesis": {
-    "falsification_criteria": [
-      "The DCF's negative margin of safety would need to reverse toward positive territory - through a material price decline, upward revision to the 8.7% revenue growth or 9% discount rate assumptions, or materially higher base FCF than the $98.8B used - before valuation would no longer be the binding objection.",
-      "If P/E (currently 38.4x) or EV/EBITDA (currently 29.6x) converge toward or below sector medians (27.96x P/E, 23.1x EV/EBITDA) without a corresponding earnings decline, the relative-valuation gap this thesis flags would close.",
-      "If gross margin materially deteriorates beyond management's flagged 'volatility and downward pressure' (e.g., a multi-point drop in the 46.9% total gross margin) without Services mix offsetting it, the quant scorecard's FCF-margin and ROIC strength could erode.",
-      "If Greater China net sales decline extends or deepens beyond the reported 4% 2025 drop, or iPhone/hardware market share erosion accelerates, the moat's revenue-growth support would weaken.",
-      "If ROIC or FCF margin drop below the scorecard's pass thresholds (12% and 10% respectively) in a subsequent filing, the quant gate-pass basis for this thesis would no longer hold.",
-      "If tariff or supply-chain disruptions materially impair single/limited-source component availability as the filing warns, causing margin or revenue shortfalls beyond what's currently priced into the DCF's growth assumption, that would falsify the moat's resilience as described."
-    ],
-    "thesis": "AAPL clears every quant screen at a near-perfect level (100% score, 74.8% ROIC, 23.7% FCF margin, low leverage at 0.78x debt/EBITDA), and the qualitative layer supports this with a real ecosystem/switching-cost moat built on integrated hardware-OS-services, a high-margin and growing Services segment, and disciplined capital return via buybacks and dividends. However, the valuation layer sharply conflicts with this strong operating picture: the DCF estimates an intrinsic value of about $139/share against the current price, implying a deeply negative margin of safety (-58.7%), and relative multiples confirm the stock trades well above sector medians (P/E 37% higher, EV/EBITDA 28% higher). Management itself flags that gross margins face structural downward pressure from tariffs and competition, with no explicit offsetting plan beyond Services mix shift, while regional weakness in Greater China and minority market share in core hardware categories temper the growth narrative. Taken together, this is a case of a well-documented quality business priced, by this DCF's assumptions, well above what its projected cash flows justify - a great business at a price the model does not consider cheap."
-  },
   "ticker": "AAPL",
-  "valuation": {
-    "dcf": {
-      "assumptions": {
-        "base_fcf": 98767000000,
-        "discount_rate_pct": 9.0,
-        "growth_rate_pct": 8.677354924090741,
-        "growth_rate_source": "trailing_5yr_revenue_cagr",
-        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
-        "projection_years": 5,
-        "terminal_growth_rate_pct": 2.5
-      },
-      "intrinsic_value_per_share": 138.68758375135442,
-      "margin_of_safety_pct": -58.739897137609134
-    },
-    "margin_of_safety_pct": -58.739897137609134,
-    "relative": {
-      "ev_ebitda": 29.566990564675994,
-      "ev_ebitda_vs_sector_median_pct": 27.940853661458657,
-      "pe_ttm": 38.37100456621005,
-      "pe_vs_sector_median_pct": 37.24276164186347,
-      "sector_median_ev_ebitda": 23.10989001442223,
-      "sector_median_pe_ttm": 27.95849056603773
-    }
-  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [

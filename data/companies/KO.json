@@ -5,72 +5,55 @@
     "balance_sheet": {
       "current_ratio": 1.3046031746031745,
       "debt_to_ebitda": 3.1875506346205777,
-      "debt_to_equity": 1.204508990318119,
-      "interest_coverage": 9.485312899106003
+      "debt_to_equity": 1.204508990318119
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 8.906322640632265,
+      "shareholders_equity": 32169000000,
+      "total_assets": 104816000000,
+      "total_liabilities": 70541000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 11.046911829123298,
-      "fcf_to_net_income": 0.40405889982452126,
-      "owner_earnings_yield_pct": 3.172241715739802
+      "fcf_margin_pct": 11.046911829123298
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 11.504497834166227,
-      "eps_growth_cagr_5yr_pct": 11.12338617639914,
-      "eps_growth_yoy_pct": 23.481781376518203,
-      "r_and_d_to_revenue_pct": 0.0,
-      "revenue_cagr_3yr_pct": 3.689014114187783,
-      "revenue_cagr_5yr_pct": 7.746156826284567,
-      "revenue_growth_yoy_pct": 1.8699135164998617
+      "eps_growth_cagr_3yr_pct": 11.504497834166227
     },
     "profitability": {
-      "gross_margin_pct": 61.62574831563797,
-      "roe_pct": 42.99131374860172,
-      "roic_pct": 16.351301107377473,
       "trend": "improving"
     },
     "valuation": {
-      "dcf_fair_value": 74.53452864446646,
-      "dcf_upside_pct": -15.541610601171147,
-      "earnings_yield_pct": 3.303060134952919,
-      "ev_ebitda": 20.69164154233271,
       "graham_multiple": 278.3218477813914,
       "graham_number": 24.722386438476953,
       "graham_upside_pct": -71.98596437566351,
       "ncav_margin_pct": -110.4023219660811,
       "pb_ratio": 10.502116182572614,
-      "pe_ttm": 26.501501501501508,
-      "peg_ratio": 2.3035774254132986
+      "pe_ttm": 26.501501501501508
     }
   },
   "industry": "Beverages - Non-Alcoholic",
-  "last_updated": "2026-09-19T12:19:11Z",
+  "last_updated": "2026-09-19T13:15:33Z",
   "layered_analysis": {
-    "conviction_score": 45.3,
+    "conviction_score": 35.1,
     "conviction_score_breakdown": {
-      "base_score": 78.4,
+      "base_score": 63.9,
       "components": {
-        "fisher_pct": 100.0,
         "graham_pct": 50.0,
-        "piotroski_pct": 77.8,
-        "quant_score_pct": 80.0
+        "piotroski_pct": 77.8
       },
-      "moat_multiplier": 1.05,
+      "moat_multiplier": 1.0,
       "valuation_multiplier": 0.55
     },
-    "conviction_verdict": "Neutral",
+    "conviction_verdict": "Cautious",
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
+      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
+      "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
-    "quant_gate_pass": true,
-    "required_margin_of_safety_pct": 30.0,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": false,
+    "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
-  },
-  "lynch_category": {
-    "category": "stalwart",
-    "reasoning": "Moderate, steady EPS growth (11.5%/yr) - Lynch's 'stalwart' territory."
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -81,47 +64,25 @@
   },
   "market_cap": 379699943426,
   "metrics": {
+    "book_value_per_share": 8.906322640632265,
     "current_ratio": 1.3046031746031745,
-    "dcf_upside_pct": -15.541610601171147,
     "debt_to_ebitda": 3.1875506346205777,
     "debt_to_equity": 1.204508990318119,
-    "earnings_yield_pct": 3.303060134952919,
     "eps_growth_cagr_3yr_pct": 11.504497834166227,
-    "eps_growth_cagr_5yr_pct": 11.12338617639914,
-    "eps_growth_yoy_pct": 23.481781376518203,
-    "ev_ebitda": 20.69164154233271,
     "fcf_margin_pct": 11.046911829123298,
-    "fcf_to_net_income": 0.40405889982452126,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
     "graham_multiple": 278.3218477813914,
     "graham_upside_pct": -71.98596437566351,
-    "gross_margin_pct": 61.62574831563797,
-    "interest_coverage": 9.485312899106003,
-    "magic_formula_earnings_yield_rank": 9,
-    "magic_formula_rank": 10,
-    "magic_formula_roic_rank": 8,
     "margin_trend_score": 100,
     "ncav_margin_pct": -110.4023219660811,
-    "owner_earnings_yield_pct": 3.172241715739802,
     "pb_ratio": 10.502116182572614,
     "pe_ttm": 26.501501501501508,
-    "peg_ratio": 2.3035774254132986,
     "piotroski_evaluated": 9,
     "piotroski_f_score": 7,
-    "price_vs_ma200_pct": 11.47046916752084,
-    "price_vs_ma50_pct": 1.3775864208025714,
-    "r_and_d_to_revenue_pct": 0.0,
-    "return_1m_pct": -2.3242944106253396,
-    "return_3m_pct": 11.160095729940798,
-    "revenue_cagr_3yr_pct": 3.689014114187783,
-    "revenue_cagr_5yr_pct": 7.746156826284567,
-    "revenue_growth_yoy_pct": 1.8699135164998617,
-    "roe_pct": 42.99131374860172,
-    "roic_pct": 16.351301107377473,
-    "rsi_distance_from_neutral": 8.845671267252179,
-    "sector_relative_momentum_pct": 6.906687045712522,
-    "volume_vs_avg_ratio": 1.794781650977028
+    "shareholders_equity": 32169000000,
+    "total_assets": 104816000000,
+    "total_liabilities": 70541000000
   },
   "name": "The Coca-Cola Company",
   "narrative": {
@@ -132,105 +93,28 @@
       "minor": [],
       "noise": []
     },
-    "long_term_narrative": null,
-    "one_line_summary": null,
-    "short_term_narrative": null
+    "narrative": null,
+    "one_line_summary": null
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 15447488.548207171,
-    "close": 88.25,
-    "return_1m_pct": -2.3242944106253396,
-    "return_3m_pct": 11.160095729940798,
-    "sector_avg_return_3m_pct": 4.253408684228276,
-    "sector_relative_momentum_pct": 6.906687045712522,
-    "volume": 27724869,
-    "volume_vs_avg_ratio": 1.794781650977028
+    "close": 88.25
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "fisher_checklist": [
-      {
-        "assessment": "unknown",
-        "criterion": "Sufficient market potential for years of growth",
-        "evidence": "The Business section excerpt provided is dominated by regulatory and risk-factor language rather than a description of market size or growth runway; no explicit discussion of long-term category growth potential is present in these excerpts."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Management's commitment to new products/R&D",
-        "evidence": "R&D is mentioned only in passing as one of the business processes supported by information systems; no R&D spending figures, product pipeline detail, or innovation commitment are provided in the excerpts or scorecard."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Effective sales/distribution effort",
-        "evidence": "The filing describes an incidence-based concentrate pricing model with bottling partners, wholesalers, distributors and retailers as the mechanism for growing sales and aligning incentives across the distribution network."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Worthwhile profit margin",
-        "evidence": "Scorecard shows FCF margin of 11.05% above the 10% threshold and ROIC of 16.35% well above the 12% threshold, both passing metrics indicative of healthy profitability."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Steps to sustain or improve margin",
-        "evidence": "The informational margin_trend_score of 100 in the scorecard suggests a favorable margin trajectory, though the filing excerpts themselves do not narrate specific margin-improvement initiatives."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Outstanding labor/personnel relations",
-        "evidence": "The provided excerpts do not discuss labor relations, unionization, employee turnover, or workforce satisfaction."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Depth of management beyond the top executive",
-        "evidence": "The excerpts refer to 'management' collectively in the context of accounting judgments and risk oversight but do not describe the depth or bench strength of the leadership team."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Cost analysis and accounting controls",
-        "evidence": "The filing describes a detailed, multi-factor impairment testing methodology (discount rates, growth rates, market approaches) for goodwill, trademarks and equity investments, and a structured revenue recognition process, indicating meaningful accounting rigor, though this is more about estimate discipline than operating cost control."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "A unique aspect giving a real competitive edge",
-        "evidence": "The company's portfolio of owned trademarks (e.g., the BodyArmor brand valued at $2,440 million even after impairment) combined with its incidence-based bottler pricing model represent assets and arrangements not readily replicable by competitors, per the excerpts."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Long-range profit outlook over short-range",
-        "evidence": "The filing states the company has 'established and publicly announced certain long-term growth objectives' based on evaluation of growth prospects across its beverage portfolio."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Equity financing that would dilute current shareholders",
-        "evidence": "Neither the excerpts nor the scorecard provide share count trends or discussion of equity issuance versus internal funding for growth."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Management talks candidly about problems, not just successes",
-        "evidence": "The Risk Factors section includes specific, quantified disclosures such as the $760 million and $960 million BodyArmor trademark impairments and detailed explanations of cybersecurity, regulatory and currency risks rather than only generic boilerplate."
-      }
-    ],
-    "management_assessment": "The excerpts show management stating it maintains debt levels 'considered prudent based on cash flows, interest coverage ratio and percentage of debt to capital' and using debt financing to lower cost of capital, plus a stated practice of publicly announcing long-term growth objectives. However, the provided sections do not discuss buybacks, dividend policy, or broader M&A strategy in any detail; the only concrete capital-allocation event described is the BodyArmor acquisition, which subsequently required a $760 million and then a $960 million impairment charge tied to revised growth and competitive assumptions, suggesting an acquisition that underperformed initial projections. The scorecard shows debt/EBITDA (3.19x) modestly above the stated 3.0x threshold, which is consistent with the company's own description of carrying meaningful debt.",
-    "moat_explanation": "The excerpts repeatedly center on the value and vulnerability of Coca-Cola's trademarks (e.g., the BodyArmor trademark carried at $2,440 million after impairment charges) and describe a global network of bottling partners operating under an incidence-based concentrate pricing model, both of which point to brand/intangible-asset strength as the primary competitive asset described. The filing does not describe cost-structure advantages, network effects, or switching-cost mechanics in any detail, so intangible assets (brand/trademarks) is the best-supported category from this text.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Debt/EBITDA of 3.19x exceeds the scorecard's 3.0x threshold, indicating somewhat elevated leverage",
-      "BodyArmor trademark required a $760 million impairment in 2024 and an additional $960 million impairment in 2025 due to revised growth and competitive assumptions, suggesting the acquisition has underperformed original expectations",
-      "Company's financial results and credit costs are partly tied to the financial health and credit ratings of third-party bottling partners",
-      "Extensive and evolving regulatory compliance burden across environmental, trade sanctions, anti-corruption, and data privacy laws in many jurisdictions, explicitly described as a source of higher costs",
-      "Explicit acknowledgment that the company's information systems are 'a target of attacks' and that cybersecurity incidents could have a material adverse effect in the future",
-      "Approximately $28.8 billion of 2025 net operating revenue came from outside the U.S., creating material foreign currency translation exposure"
-    ]
-  },
+  "qualitative": null,
   "quant_score": {
-    "evaluated": 5,
-    "gate_pass": true,
+    "evaluated": 3,
+    "gate_pass": false,
     "informational": {
       "margin_trend_score": 100
     },
     "metrics": {
+      "current_ratio": {
+        "higher_is_better": true,
+        "label": "Current ratio (current assets / current liabilities)",
+        "pass": false,
+        "threshold": 1.5,
+        "value": 1.3046031746031745
+      },
       "debt_to_ebitda": {
         "higher_is_better": false,
         "label": "Debt / EBITDA",
@@ -238,257 +122,16 @@
         "threshold": 3.0,
         "value": 3.1875506346205777
       },
-      "eps_growth_cagr_pct": {
-        "higher_is_better": true,
-        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
-        "pass": true,
-        "threshold": 5.0,
-        "value": 11.12338617639914
-      },
       "fcf_margin_pct": {
         "higher_is_better": true,
         "label": "Free cash flow margin",
         "pass": true,
         "threshold": 10.0,
         "value": 11.046911829123298
-      },
-      "revenue_cagr_pct": {
-        "higher_is_better": true,
-        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
-        "pass": true,
-        "threshold": 5.0,
-        "value": 7.746156826284567
-      },
-      "roic_pct": {
-        "higher_is_better": true,
-        "label": "Return on invested capital",
-        "pass": true,
-        "threshold": 12.0,
-        "value": 16.351301107377473
       }
     },
-    "passed": 4,
-    "quant_score_pct": 80.0
-  },
-  "scores": {
-    "long_term": {
-      "base_score": 44.4,
-      "final_score": 44.4,
-      "macro_adjustment": 0,
-      "subscores": [
-        {
-          "key": "valuation",
-          "label": "Valuation",
-          "raw_metrics": [
-            {
-              "metric": "pe_ttm",
-              "raw_value": 26.501501501501508,
-              "score": 44.994994994994975
-            },
-            {
-              "metric": "ev_ebitda",
-              "raw_value": 20.69164154233271,
-              "score": 25.34328504510171
-            },
-            {
-              "metric": "dcf_upside_pct",
-              "raw_value": -15.541610601171147,
-              "score": 18.916778797657706
-            },
-            {
-              "metric": "graham_upside_pct",
-              "raw_value": -71.98596437566351,
-              "score": 0.0
-            },
-            {
-              "metric": "graham_multiple",
-              "raw_value": 278.3218477813914,
-              "score": 0.0
-            }
-          ],
-          "score": 17.9,
-          "weight_pct": 25
-        },
-        {
-          "key": "growth",
-          "label": "Growth",
-          "raw_metrics": [
-            {
-              "metric": "revenue_growth_yoy_pct",
-              "raw_value": 1.8699135164998617,
-              "score": 22.899711721666208
-            },
-            {
-              "metric": "revenue_cagr_3yr_pct",
-              "raw_value": 3.689014114187783,
-              "score": 34.75605645675113
-            },
-            {
-              "metric": "eps_growth_yoy_pct",
-              "raw_value": 23.481781376518203,
-              "score": 83.7044534412955
-            },
-            {
-              "metric": "eps_growth_cagr_3yr_pct",
-              "raw_value": 11.504497834166227,
-              "score": 53.76124458541557
-            }
-          ],
-          "score": 48.8,
-          "weight_pct": 25
-        },
-        {
-          "key": "profitability",
-          "label": "Profitability & Margin Trend",
-          "raw_metrics": [
-            {
-              "metric": "gross_margin_pct",
-              "raw_value": 61.62574831563797,
-              "score": 100.0
-            },
-            {
-              "metric": "roe_pct",
-              "raw_value": 42.99131374860172,
-              "score": 100.0
-            },
-            {
-              "metric": "margin_trend_score",
-              "raw_value": 100,
-              "score": 100.0
-            },
-            {
-              "metric": "roic_pct",
-              "raw_value": 16.351301107377473,
-              "score": 65.4052044295099
-            }
-          ],
-          "score": 91.4,
-          "weight_pct": 20
-        },
-        {
-          "key": "balance_sheet",
-          "label": "Balance Sheet Health",
-          "raw_metrics": [
-            {
-              "metric": "debt_to_equity",
-              "raw_value": 1.204508990318119,
-              "score": 39.77455048409405
-            },
-            {
-              "metric": "current_ratio",
-              "raw_value": 1.3046031746031745,
-              "score": 40.23015873015873
-            },
-            {
-              "metric": "interest_coverage",
-              "raw_value": 9.485312899106003,
-              "score": 41.58507166170001
-            }
-          ],
-          "score": 40.5,
-          "weight_pct": 15
-        },
-        {
-          "key": "cash_flow",
-          "label": "Cash Generation Quality",
-          "raw_metrics": [
-            {
-              "metric": "fcf_margin_pct",
-              "raw_value": 11.046911829123298,
-              "score": 36.823039430410994
-            },
-            {
-              "metric": "fcf_to_net_income",
-              "raw_value": 0.40405889982452126,
-              "score": 0.0
-            },
-            {
-              "metric": "owner_earnings_yield_pct",
-              "raw_value": 3.172241715739802,
-              "score": 31.72241715739802
-            }
-          ],
-          "score": 22.8,
-          "weight_pct": 15
-        }
-      ],
-      "verdict": "Neutral"
-    },
-    "short_term": {
-      "base_score": 53.1,
-      "final_score": 53.1,
-      "macro_adjustment": 0,
-      "subscores": [
-        {
-          "key": "momentum",
-          "label": "Price Momentum",
-          "raw_metrics": [
-            {
-              "metric": "return_1m_pct",
-              "raw_value": -2.3242944106253396,
-              "score": 38.3785279468733
-            },
-            {
-              "metric": "return_3m_pct",
-              "raw_value": 11.160095729940798,
-              "score": 77.900239324852
-            }
-          ],
-          "score": 58.1,
-          "weight_pct": 30
-        },
-        {
-          "key": "technical",
-          "label": "Technical Positioning",
-          "raw_metrics": [
-            {
-              "metric": "price_vs_ma50_pct",
-              "raw_value": 1.3775864208025714,
-              "score": 56.88793210401286
-            },
-            {
-              "metric": "price_vs_ma200_pct",
-              "raw_value": 11.47046916752084,
-              "score": 88.23489722506946
-            },
-            {
-              "metric": "rsi_distance_from_neutral",
-              "raw_value": 8.845671267252179,
-              "score": 77.88582183186955
-            }
-          ],
-          "score": 74.3,
-          "weight_pct": 20
-        },
-        {
-          "key": "earnings_direction",
-          "label": "Earnings/Guidance Direction",
-          "raw_metrics": [
-            {
-              "metric": "earnings_surprise_pct",
-              "raw_value": null,
-              "score": null
-            }
-          ],
-          "score": 50.0,
-          "weight_pct": 20
-        },
-        {
-          "key": "valuation_extension",
-          "label": "Valuation Extension",
-          "raw_metrics": [
-            {
-              "metric": "dcf_upside_pct",
-              "raw_value": -15.541610601171147,
-              "score": 18.916778797657706
-            }
-          ],
-          "score": 18.9,
-          "weight_pct": 15
-        }
-      ],
-      "verdict": "Neutral"
-    }
+    "passed": 1,
+    "quant_score_pct": 33.33333333333333
   },
   "sector": "Consumer Defensive",
   "sources": {
@@ -521,41 +164,7 @@
       }
     ]
   },
-  "thesis": {
-    "falsification_criteria": [
-      "If KO's debt/EBITDA ratio moves back below the 3.0x quant threshold (e.g., via debt paydown or EBITDA growth), the leverage concern underlying the failed quant metric would be resolved.",
-      "If the DCF-implied margin of safety turns positive at prevailing prices - through a decline in share price, upward revision of base FCF, or higher sustainable growth assumptions - the current 'overvalued' valuation conclusion would no longer hold.",
-      "If KO's P/E and EV/EBITDA multiples fall to or below the sector median (currently +10% and +8% premiums respectively), the relative-valuation premium cited in the thesis would be falsified.",
-      "If further trademark or goodwill impairments beyond BodyArmor's $760M/$960M occur, that would reinforce (not falsify) the capital-allocation red flag, whereas a sustained multi-year run without additional material impairments and demonstrated organic FCF/ROIC growth above current levels (16.35% ROIC, 11.05% FCF margin) would undercut the 'moat plus mispriced execution' framing.",
-      "If bottling-partner credit or financial distress materially impairs KO's reported results, that would validate the counterparty-risk red flag identified in the qualitative review; absence of such impact over multiple reporting periods would weaken that specific concern."
-    ],
-    "thesis": "KO's quant scorecard is solid (80%, 4/5 metrics passing) with strong ROIC (16.4%), FCF margin (11.0%), and durable mid-single-to-double-digit growth, though debt/EBITDA at 3.19x sits just above the 3.0x threshold. The qualitative layer supports a genuine intangible-asset moat centered on trademarks and an incidence-based bottler distribution network, with management showing candor about problems (e.g., disclosing BodyArmor impairments) but also revealing that the BodyArmor acquisition required $760M and then $960M in impairment charges, a concrete example of capital allocation underperforming expectations. Despite the quality signals, the valuation layer is the dominant conflict here: the simplified DCF implies a deeply negative margin of safety (-72.5%), and on relative multiples KO trades at a modest premium to sector medians on both P/E (+10%) and EV/EBITDA (+8%), suggesting the market is already pricing in much of the quality the other two layers identify. This is a case of a business with real moat characteristics and healthy fundamentals priced, by this DCF's assumptions, well above an estimated intrinsic value - a good company that this valuation framework does not currently treat as cheap."
-  },
   "ticker": "KO",
-  "valuation": {
-    "dcf": {
-      "assumptions": {
-        "base_fcf": 5296000000,
-        "discount_rate_pct": 9.0,
-        "growth_rate_pct": 7.746156826284567,
-        "growth_rate_source": "trailing_5yr_revenue_cagr",
-        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
-        "projection_years": 5,
-        "terminal_growth_rate_pct": 2.5
-      },
-      "intrinsic_value_per_share": 24.265018183701756,
-      "margin_of_safety_pct": -72.50422868702351
-    },
-    "margin_of_safety_pct": -72.50422868702351,
-    "relative": {
-      "ev_ebitda": 20.69164154233271,
-      "ev_ebitda_vs_sector_median_pct": 8.222537779469251,
-      "pe_ttm": 26.501501501501508,
-      "pe_vs_sector_median_pct": 10.008646949737603,
-      "sector_median_ev_ebitda": 19.11953089152017,
-      "sector_median_pe_ttm": 24.09038038038038
-    }
-  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [

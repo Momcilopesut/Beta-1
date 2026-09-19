@@ -5,71 +5,55 @@
     "balance_sheet": {
       "current_ratio": 0.7767841173314255,
       "debt_to_ebitda": 3.3607288317256163,
-      "debt_to_equity": 0.7448474813859234,
-      "interest_coverage": 5.566512583461736
+      "debt_to_equity": 0.7448474813859234
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 115.46726975917139,
+      "shareholders_equity": 94110000000,
+      "total_assets": 309581000000,
+      "total_liabilities": 207883000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 3.5916410280471975,
-      "fcf_to_net_income": 1.3333609820836099,
-      "owner_earnings_yield_pct": 3.738171668136153
+      "fcf_margin_pct": 3.5916410280471975
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -14.99625722899529,
-      "eps_growth_cagr_5yr_pct": -4.064114449809441,
-      "eps_growth_yoy_pct": -15.409207161125321,
-      "r_and_d_to_revenue_pct": 0.0,
-      "revenue_cagr_3yr_pct": 11.352161443193465,
-      "revenue_cagr_5yr_pct": 11.721651214881778,
-      "revenue_growth_yoy_pct": 11.814039242726306
+      "eps_growth_cagr_3yr_pct": -14.99625722899529
     },
     "profitability": {
-      "gross_margin_pct": 18.52616479767275,
-      "roe_pct": 14.625671564502557,
-      "roic_pct": 11.155625129499317,
       "trend": "declining"
     },
     "valuation": {
-      "dcf_fair_value": 258.58395604997105,
-      "dcf_upside_pct": -31.39189279650542,
-      "earnings_yield_pct": 4.785219907706948,
-      "ev_ebitda": 15.022420753328419,
       "graham_multiple": 84.06558254500443,
       "graham_number": 185.39611518465358,
       "graham_upside_pct": -50.81026394676211,
       "ncav_margin_pct": -134.67330392707134,
       "pb_ratio": 3.468569578554958,
-      "pe_ttm": 24.236383512314323,
-      "peg_ratio": null
+      "pe_ttm": 24.236383512314323
     }
   },
   "industry": "Medical - Healthcare Plans",
-  "last_updated": "2026-09-19T12:19:10Z",
+  "last_updated": "2026-09-19T13:15:24Z",
   "layered_analysis": {
-    "conviction_score": 21.5,
+    "conviction_score": 27.5,
     "conviction_score_breakdown": {
-      "base_score": 39.1,
+      "base_score": 50.0,
       "components": {
         "graham_pct": 33.3,
-        "piotroski_pct": 66.7,
-        "quant_score_pct": 20.0
+        "piotroski_pct": 66.7
       },
       "moat_multiplier": 1.0,
       "valuation_multiplier": 0.55
     },
-    "conviction_verdict": "Weak",
+    "conviction_verdict": "Cautious",
     "flags": [
-      "Fails the quant screen - below threshold on more metrics than it passes.",
-      "Positive but thin margin of safety - 10% is below the 15% this company's uncertainty calls for (Klarman: margin of safety should scale with risk, not stay flat - see required_margin_of_safety_pct)."
+      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
+      "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
-  },
-  "lynch_category": {
-    "category": "turnaround",
-    "reasoning": "Negative EPS growth (-15.0%/yr) - either an ongoing decline or, if this marks a trough, a Lynch-style turnaround candidate; this pipeline can't distinguish the two from data alone, unlike Lynch's own on-the-ground research."
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -80,46 +64,25 @@
   },
   "market_cap": 342279625868,
   "metrics": {
+    "book_value_per_share": 115.46726975917139,
     "current_ratio": 0.7767841173314255,
-    "dcf_upside_pct": -31.39189279650542,
     "debt_to_ebitda": 3.3607288317256163,
     "debt_to_equity": 0.7448474813859234,
-    "earnings_yield_pct": 4.785219907706948,
     "eps_growth_cagr_3yr_pct": -14.99625722899529,
-    "eps_growth_cagr_5yr_pct": -4.064114449809441,
-    "eps_growth_yoy_pct": -15.409207161125321,
-    "ev_ebitda": 15.022420753328419,
     "fcf_margin_pct": 3.5916410280471975,
-    "fcf_to_net_income": 1.3333609820836099,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
     "graham_multiple": 84.06558254500443,
     "graham_upside_pct": -50.81026394676211,
-    "gross_margin_pct": 18.52616479767275,
-    "interest_coverage": 5.566512583461736,
-    "magic_formula_earnings_yield_rank": 4,
-    "magic_formula_rank": 7,
-    "magic_formula_roic_rank": 11,
     "margin_trend_score": 20,
     "ncav_margin_pct": -134.67330392707134,
-    "owner_earnings_yield_pct": 3.738171668136153,
     "pb_ratio": 3.468569578554958,
     "pe_ttm": 24.236383512314323,
     "piotroski_evaluated": 9,
     "piotroski_f_score": 6,
-    "price_vs_ma200_pct": 6.372019840681861,
-    "price_vs_ma50_pct": -6.784062523186509,
-    "r_and_d_to_revenue_pct": 0.0,
-    "return_1m_pct": -3.0133038264584124,
-    "return_3m_pct": -6.000598563447726,
-    "revenue_cagr_3yr_pct": 11.352161443193465,
-    "revenue_cagr_5yr_pct": 11.721651214881778,
-    "revenue_growth_yoy_pct": 11.814039242726306,
-    "roe_pct": 14.625671564502557,
-    "roic_pct": 11.155625129499317,
-    "rsi_distance_from_neutral": 13.64563849685429,
-    "sector_relative_momentum_pct": -12.107528144633804,
-    "volume_vs_avg_ratio": 1.5180073127433344
+    "shareholders_equity": 94110000000,
+    "total_assets": 309581000000,
+    "total_liabilities": 207883000000
   },
   "name": "UnitedHealth Group Incorporated",
   "narrative": {
@@ -130,29 +93,28 @@
       "minor": [],
       "noise": []
     },
-    "long_term_narrative": null,
-    "one_line_summary": null,
-    "short_term_narrative": null
+    "narrative": null,
+    "one_line_summary": null
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 5641146.078884462,
-    "close": 376.9,
-    "return_1m_pct": -3.0133038264584124,
-    "return_3m_pct": -6.000598563447726,
-    "sector_avg_return_3m_pct": 6.106929581186077,
-    "sector_relative_momentum_pct": -12.107528144633804,
-    "volume": 8563301,
-    "volume_vs_avg_ratio": 1.5180073127433344
+    "close": 376.9
   },
   "qualitative": null,
   "quant_score": {
-    "evaluated": 5,
+    "evaluated": 3,
     "gate_pass": false,
     "informational": {
       "margin_trend_score": 20
     },
     "metrics": {
+      "current_ratio": {
+        "higher_is_better": true,
+        "label": "Current ratio (current assets / current liabilities)",
+        "pass": false,
+        "threshold": 1.5,
+        "value": 0.7767841173314255
+      },
       "debt_to_ebitda": {
         "higher_is_better": false,
         "label": "Debt / EBITDA",
@@ -160,257 +122,16 @@
         "threshold": 3.0,
         "value": 3.3607288317256163
       },
-      "eps_growth_cagr_pct": {
-        "higher_is_better": true,
-        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
-        "pass": false,
-        "threshold": 5.0,
-        "value": -4.064114449809441
-      },
       "fcf_margin_pct": {
         "higher_is_better": true,
         "label": "Free cash flow margin",
         "pass": false,
         "threshold": 10.0,
         "value": 3.5916410280471975
-      },
-      "revenue_cagr_pct": {
-        "higher_is_better": true,
-        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
-        "pass": true,
-        "threshold": 5.0,
-        "value": 11.721651214881778
-      },
-      "roic_pct": {
-        "higher_is_better": true,
-        "label": "Return on invested capital",
-        "pass": false,
-        "threshold": 12.0,
-        "value": 11.155625129499317
       }
     },
-    "passed": 1,
-    "quant_score_pct": 20.0
-  },
-  "scores": {
-    "long_term": {
-      "base_score": 30.3,
-      "final_score": 30.3,
-      "macro_adjustment": 0,
-      "subscores": [
-        {
-          "key": "valuation",
-          "label": "Valuation",
-          "raw_metrics": [
-            {
-              "metric": "pe_ttm",
-              "raw_value": 24.236383512314323,
-              "score": 52.545388292285594
-            },
-            {
-              "metric": "ev_ebitda",
-              "raw_value": 15.022420753328419,
-              "score": 58.69164262747989
-            },
-            {
-              "metric": "dcf_upside_pct",
-              "raw_value": -31.39189279650542,
-              "score": 0.0
-            },
-            {
-              "metric": "graham_upside_pct",
-              "raw_value": -50.81026394676211,
-              "score": 0.0
-            },
-            {
-              "metric": "graham_multiple",
-              "raw_value": 84.06558254500443,
-              "score": 0.0
-            }
-          ],
-          "score": 22.2,
-          "weight_pct": 25
-        },
-        {
-          "key": "growth",
-          "label": "Growth",
-          "raw_metrics": [
-            {
-              "metric": "revenue_growth_yoy_pct",
-              "raw_value": 11.814039242726306,
-              "score": 56.04679747575435
-            },
-            {
-              "metric": "revenue_cagr_3yr_pct",
-              "raw_value": 11.352161443193465,
-              "score": 65.40864577277387
-            },
-            {
-              "metric": "eps_growth_yoy_pct",
-              "raw_value": -15.409207161125321,
-              "score": 0.0
-            },
-            {
-              "metric": "eps_growth_cagr_3yr_pct",
-              "raw_value": -14.99625722899529,
-              "score": 0.0
-            }
-          ],
-          "score": 30.4,
-          "weight_pct": 25
-        },
-        {
-          "key": "profitability",
-          "label": "Profitability & Margin Trend",
-          "raw_metrics": [
-            {
-              "metric": "gross_margin_pct",
-              "raw_value": 18.52616479767275,
-              "score": 0.0
-            },
-            {
-              "metric": "roe_pct",
-              "raw_value": 14.625671564502557,
-              "score": 48.75223854834186
-            },
-            {
-              "metric": "margin_trend_score",
-              "raw_value": 20,
-              "score": 20.0
-            },
-            {
-              "metric": "roic_pct",
-              "raw_value": 11.155625129499317,
-              "score": 44.62250051799727
-            }
-          ],
-          "score": 28.3,
-          "weight_pct": 20
-        },
-        {
-          "key": "balance_sheet",
-          "label": "Balance Sheet Health",
-          "raw_metrics": [
-            {
-              "metric": "debt_to_equity",
-              "raw_value": 0.7448474813859234,
-              "score": 62.75762593070383
-            },
-            {
-              "metric": "current_ratio",
-              "raw_value": 0.7767841173314255,
-              "score": 13.839205866571275
-            },
-            {
-              "metric": "interest_coverage",
-              "raw_value": 5.566512583461736,
-              "score": 19.813958797009647
-            }
-          ],
-          "score": 32.1,
-          "weight_pct": 15
-        },
-        {
-          "key": "cash_flow",
-          "label": "Cash Generation Quality",
-          "raw_metrics": [
-            {
-              "metric": "fcf_margin_pct",
-              "raw_value": 3.5916410280471975,
-              "score": 11.972136760157325
-            },
-            {
-              "metric": "fcf_to_net_income",
-              "raw_value": 1.3333609820836099,
-              "score": 83.336098208361
-            },
-            {
-              "metric": "owner_earnings_yield_pct",
-              "raw_value": 3.738171668136153,
-              "score": 37.38171668136153
-            }
-          ],
-          "score": 44.2,
-          "weight_pct": 15
-        }
-      ],
-      "verdict": "Cautious"
-    },
-    "short_term": {
-      "base_score": 36.1,
-      "final_score": 36.1,
-      "macro_adjustment": 0,
-      "subscores": [
-        {
-          "key": "momentum",
-          "label": "Price Momentum",
-          "raw_metrics": [
-            {
-              "metric": "return_1m_pct",
-              "raw_value": -3.0133038264584124,
-              "score": 34.93348086770794
-            },
-            {
-              "metric": "return_3m_pct",
-              "raw_value": -6.000598563447726,
-              "score": 34.99850359138069
-            }
-          ],
-          "score": 35.0,
-          "weight_pct": 30
-        },
-        {
-          "key": "technical",
-          "label": "Technical Positioning",
-          "raw_metrics": [
-            {
-              "metric": "price_vs_ma50_pct",
-              "raw_value": -6.784062523186509,
-              "score": 16.079687384067455
-            },
-            {
-              "metric": "price_vs_ma200_pct",
-              "raw_value": 6.372019840681861,
-              "score": 71.24006613560621
-            },
-            {
-              "metric": "rsi_distance_from_neutral",
-              "raw_value": 13.64563849685429,
-              "score": 65.88590375786427
-            }
-          ],
-          "score": 51.1,
-          "weight_pct": 20
-        },
-        {
-          "key": "earnings_direction",
-          "label": "Earnings/Guidance Direction",
-          "raw_metrics": [
-            {
-              "metric": "earnings_surprise_pct",
-              "raw_value": null,
-              "score": null
-            }
-          ],
-          "score": 50.0,
-          "weight_pct": 20
-        },
-        {
-          "key": "valuation_extension",
-          "label": "Valuation Extension",
-          "raw_metrics": [
-            {
-              "metric": "dcf_upside_pct",
-              "raw_value": -31.39189279650542,
-              "score": 0.0
-            }
-          ],
-          "score": 0.0,
-          "weight_pct": 15
-        }
-      ],
-      "verdict": "Cautious"
-    }
+    "passed": 0,
+    "quant_score_pct": 0.0
   },
   "sector": "Healthcare",
   "sources": {
@@ -443,32 +164,7 @@
       }
     ]
   },
-  "thesis": null,
   "ticker": "UNH",
-  "valuation": {
-    "dcf": {
-      "assumptions": {
-        "base_fcf": 16075000000,
-        "discount_rate_pct": 9.0,
-        "growth_rate_pct": 11.721651214881778,
-        "growth_rate_source": "trailing_5yr_revenue_cagr",
-        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
-        "projection_years": 5,
-        "terminal_growth_rate_pct": 2.5
-      },
-      "intrinsic_value_per_share": 415.95389836276325,
-      "margin_of_safety_pct": 10.361872741513208
-    },
-    "margin_of_safety_pct": 10.361872741513208,
-    "relative": {
-      "ev_ebitda": 15.022420753328419,
-      "ev_ebitda_vs_sector_median_pct": -14.54691023477901,
-      "pe_ttm": 24.236383512314323,
-      "pe_vs_sector_median_pct": -12.581508475434298,
-      "sector_median_ev_ebitda": 17.57972800585904,
-      "sector_median_pe_ttm": 27.724550137660053
-    }
-  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [

@@ -5,72 +5,54 @@
     "balance_sheet": {
       "current_ratio": 0.6773143122964801,
       "debt_to_ebitda": 1.5289855072463767,
-      "debt_to_equity": 0.6449153946714293,
-      "interest_coverage": 22.517673888255416
+      "debt_to_equity": 0.6449153946714293
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 22.41940144478844,
+      "shareholders_equity": 54311000000,
+      "total_assets": 126521000000,
+      "total_liabilities": 72210000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 18.284079419064252,
-      "fcf_to_net_income": 0.9917113299264614,
-      "owner_earnings_yield_pct": 4.253614302618504
+      "fcf_margin_pct": 18.284079419064252
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 3.6028479444773165,
-      "eps_growth_cagr_5yr_pct": 3.4756829064733097,
-      "eps_growth_yoy_pct": 1.199400299850076,
-      "r_and_d_to_revenue_pct": 0.0,
-      "revenue_cagr_3yr_pct": 2.002569409339938,
-      "revenue_cagr_5yr_pct": 2.716052126592894,
-      "revenue_growth_yoy_pct": 3.260405296378909
+      "eps_growth_cagr_3yr_pct": 3.6028479444773165
     },
     "profitability": {
-      "gross_margin_pct": 50.175797407849984,
-      "roe_pct": 29.83539955468165,
-      "roic_pct": 19.70610846801103,
       "trend": "stable"
     },
     "valuation": {
-      "dcf_fair_value": 195.88985272305726,
-      "dcf_upside_pct": 33.86397835313305,
-      "earnings_yield_pct": 5.295039024851016,
-      "ev_ebitda": 17.54742024070763,
       "graham_multiple": 141.50397420360923,
       "graham_number": 58.35192022913423,
       "graham_upside_pct": -60.13940827301438,
       "ncav_margin_pct": -113.51911489960959,
       "pb_ratio": 6.527159093001417,
-      "pe_ttm": 21.679259259259258,
-      "peg_ratio": 6.017256235443036
+      "pe_ttm": 21.679259259259258
     }
   },
   "industry": "Household & Personal Products",
-  "last_updated": "2026-09-19T12:19:10Z",
+  "last_updated": "2026-09-19T13:15:30Z",
   "layered_analysis": {
-    "conviction_score": 38.8,
+    "conviction_score": 32.1,
     "conviction_score_breakdown": {
-      "base_score": 67.2,
+      "base_score": 58.3,
       "components": {
-        "fisher_pct": 90.0,
         "graham_pct": 50.0,
-        "piotroski_pct": 66.7,
-        "quant_score_pct": 60.0
+        "piotroski_pct": 66.7
       },
-      "moat_multiplier": 1.05,
+      "moat_multiplier": 1.0,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
+      "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "quant_gate_pass": true,
-    "required_margin_of_safety_pct": 30.0,
+    "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
-  },
-  "lynch_category": {
-    "category": "slow_grower",
-    "reasoning": "Large ($348B) with EPS growing just 3.6%/yr - Lynch's 'slow grower' territory."
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -81,47 +63,25 @@
   },
   "market_cap": 347868869796,
   "metrics": {
+    "book_value_per_share": 22.41940144478844,
     "current_ratio": 0.6773143122964801,
-    "dcf_upside_pct": 33.86397835313305,
     "debt_to_ebitda": 1.5289855072463767,
     "debt_to_equity": 0.6449153946714293,
-    "earnings_yield_pct": 5.295039024851016,
     "eps_growth_cagr_3yr_pct": 3.6028479444773165,
-    "eps_growth_cagr_5yr_pct": 3.4756829064733097,
-    "eps_growth_yoy_pct": 1.199400299850076,
-    "ev_ebitda": 17.54742024070763,
     "fcf_margin_pct": 18.284079419064252,
-    "fcf_to_net_income": 0.9917113299264614,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
     "graham_multiple": 141.50397420360923,
     "graham_upside_pct": -60.13940827301438,
-    "gross_margin_pct": 50.175797407849984,
-    "interest_coverage": 22.517673888255416,
-    "magic_formula_earnings_yield_rank": 2,
-    "magic_formula_rank": 2,
-    "magic_formula_roic_rank": 6,
     "margin_trend_score": 60,
     "ncav_margin_pct": -113.51911489960959,
-    "owner_earnings_yield_pct": 4.253614302618504,
     "pb_ratio": 6.527159093001417,
     "pe_ttm": 21.679259259259258,
-    "peg_ratio": 6.017256235443036,
     "piotroski_evaluated": 9,
     "piotroski_f_score": 6,
-    "price_vs_ma200_pct": -0.7253848764730041,
-    "price_vs_ma50_pct": 0.1851910150192057,
-    "r_and_d_to_revenue_pct": 0.0,
-    "return_1m_pct": 1.3921595788890364,
-    "return_3m_pct": -2.653278361484246,
-    "revenue_cagr_3yr_pct": 2.002569409339938,
-    "revenue_cagr_5yr_pct": 2.716052126592894,
-    "revenue_growth_yoy_pct": 3.260405296378909,
-    "roe_pct": 29.83539955468165,
-    "roic_pct": 19.70610846801103,
-    "rsi_distance_from_neutral": 8.740790354989876,
-    "sector_relative_momentum_pct": -6.906687045712522,
-    "volume_vs_avg_ratio": 1.6440860896653293
+    "shareholders_equity": 54311000000,
+    "total_assets": 126521000000,
+    "total_liabilities": 72210000000
   },
   "name": "Procter & Gamble Co.",
   "narrative": {
@@ -132,105 +92,28 @@
       "minor": [],
       "noise": []
     },
-    "long_term_narrative": null,
-    "one_line_summary": null,
-    "short_term_narrative": null
+    "narrative": null,
+    "one_line_summary": null
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 7527884.992031872,
-    "close": 146.39,
-    "return_1m_pct": 1.3921595788890364,
-    "return_3m_pct": -2.653278361484246,
-    "sector_avg_return_3m_pct": 4.253408684228276,
-    "sector_relative_momentum_pct": -6.906687045712522,
-    "volume": 12376491,
-    "volume_vs_avg_ratio": 1.6440860896653293
+    "close": 146.39
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "fisher_checklist": [
-      {
-        "assessment": "unknown",
-        "criterion": "Sufficient market potential for years of growth",
-        "evidence": "The Business section describes daily-use product categories sold in ~180 countries with stated targets of organic sales growth 'above market growth rates,' but the scorecard shows revenue 5yr CAGR of only 2.7%, below the 5% threshold, suggesting the described market opportunity has not translated into strong top-line growth."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Management's commitment to new products/R&D",
-        "evidence": "The filing states the company invests in 'research and development and consumer insights to invent new categories or products' and calls innovation 'P&G's lifeblood,' though no specific R&D-to-revenue figure is provided in the excerpts."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Effective sales/distribution effort",
-        "evidence": "The Business section describes multiple distribution channels including mass merchandisers, digital/social commerce, grocery, club stores, specialty stores, and direct-to-consumer, indicating a broad, diversified go-to-market approach."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Worthwhile profit margin",
-        "evidence": "Scorecard shows ROIC of 19.7% and FCF margin of 18.3%, both passing thresholds; MD&A reports operating income of $19.7 billion on $87.0 billion net sales (~22.7% operating margin)."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Steps to sustain or improve margin",
-        "evidence": "MD&A describes an ongoing productivity/restructuring plan targeting cost of goods sold, marketing, overhead, and capital spending, explicitly aimed at improving cost structure while investing in growth."
-      },
-      {
-        "assessment": "unknown",
-        "criterion": "Outstanding labor/personnel relations",
-        "evidence": "The excerpts discuss compensation/benefits programs generically and cite 'labor disputes or controversies' as a supply-chain risk factor, but provide no substantive assessment of actual labor relations quality."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Depth of management beyond the top executive",
-        "evidence": "The filing notes a 'develop-from-within model for staffing most of our senior leadership positions,' implying an internal leadership pipeline rather than reliance on a single executive, though no specific bench details are given."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Cost analysis and accounting controls",
-        "evidence": "Management describes driving 'productivity improvements across all elements of the statement of earnings and balance sheet, including cost of goods sold, marketing and promotional spending, overhead costs and capital spending,' indicating specific cost-control discipline rather than boilerplate language."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "A unique aspect giving a real competitive edge",
-        "evidence": "Specific market share leadership figures are cited, e.g., more than 60% global blades/razors share and over 35% fabric care share, alongside owned patents covering product formulation and manufacturing processes."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Long-range profit outlook over short-range",
-        "evidence": "Management states that 'while periods of significant macroeconomic pressures may cause short-term results to deviate from the long-term growth algorithm, we intend to maintain a disciplined approach to investing in our business,' emphasizing a multi-year growth algorithm over quarterly results."
-      },
-      {
-        "assessment": "no",
-        "criterion": "Equity financing that would dilute current shareholders",
-        "evidence": "Diluted EPS increased partly due to 'a reduction in shares outstanding,' indicating share buybacks rather than dilutive equity issuance funding growth."
-      },
-      {
-        "assessment": "yes",
-        "criterion": "Management talks candidly about problems, not just successes",
-        "evidence": "Risk factors and MD&A cite specific, non-generic issues such as the Argentina liquidation and $801 million charge, the $1.3 billion Gillette impairment, Russia/Ukraine and Middle East conflict impacts, and named restructuring headcount reductions rather than only boilerplate language."
-      }
-    ],
-    "management_assessment": "The filing describes an active but disciplined capital allocation posture: ongoing share repurchases and dividends referenced as objectives contingent on cash flow, a reduction in diluted share count that increased EPS (suggesting buybacks rather than dilutive issuance), a multi-year restructuring/productivity plan (up to 7,000 non-manufacturing role reductions, $1.5-2.0B in restructuring costs) aimed at cost structure and reinvestment, and portfolio moves such as the Glad joint venture dissolution and the pending $3.8B Thorne acquisition. Debt/EBITDA of ~1.5x (per the scorecard) is well below the risk threshold, suggesting conservative balance-sheet management, though the excerpts don't provide granular detail on debt maturity strategy or how acquisition financing will be structured.",
-    "moat_explanation": "The excerpts describe a portfolio of long-established, leading brands (Tide, Pampers, Gillette, Crest, Always, etc.) that hold leadership or top-two market share positions in most categories in which P&G competes (e.g., >50% grooming/razors share, >35% fabric care, ~30% oral care, baby care and feminine care), supported by owned patents covering product formulation/processes and trademarks the company explicitly credits as contributing to its success. This brand and IP strength, rather than network effects, scale-driven cost leadership, or switching costs, is the most directly supported durable advantage in the text.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Customer concentration: Walmart represents ~16% of total sales and the top ten customers account for ~42-43% of net sales",
-      "Argentina operations substantially liquidated in fiscal 2024 with $801 million after-tax restructuring charge tied to macroeconomic/fiscal conditions",
-      "$1.3 billion pre-tax non-cash impairment on the Gillette indefinite-lived intangible asset due to higher discount rates and currency weakening",
-      "Organic sales declined low single digits in the Baby, Feminine & Family Care segment in fiscal 2026",
-      "Operating income declined 3% year-over-year as net sales growth was offset by lower operating margin",
-      "Exposure to geopolitical conflicts (Russia/Ukraine, Middle East) and tariff/trade policy volatility explicitly acknowledged as impacting results"
-    ]
-  },
+  "qualitative": null,
   "quant_score": {
-    "evaluated": 5,
+    "evaluated": 3,
     "gate_pass": true,
     "informational": {
       "margin_trend_score": 60
     },
     "metrics": {
+      "current_ratio": {
+        "higher_is_better": true,
+        "label": "Current ratio (current assets / current liabilities)",
+        "pass": false,
+        "threshold": 1.5,
+        "value": 0.6773143122964801
+      },
       "debt_to_ebitda": {
         "higher_is_better": false,
         "label": "Debt / EBITDA",
@@ -238,257 +121,16 @@
         "threshold": 3.0,
         "value": 1.5289855072463767
       },
-      "eps_growth_cagr_pct": {
-        "higher_is_better": true,
-        "label": "EPS growth (5yr CAGR, falls back to 3yr)",
-        "pass": false,
-        "threshold": 5.0,
-        "value": 3.4756829064733097
-      },
       "fcf_margin_pct": {
         "higher_is_better": true,
         "label": "Free cash flow margin",
         "pass": true,
         "threshold": 10.0,
         "value": 18.284079419064252
-      },
-      "revenue_cagr_pct": {
-        "higher_is_better": true,
-        "label": "Revenue growth (5yr CAGR, falls back to 3yr)",
-        "pass": false,
-        "threshold": 5.0,
-        "value": 2.716052126592894
-      },
-      "roic_pct": {
-        "higher_is_better": true,
-        "label": "Return on invested capital",
-        "pass": true,
-        "threshold": 12.0,
-        "value": 19.70610846801103
       }
     },
-    "passed": 3,
-    "quant_score_pct": 60.0
-  },
-  "scores": {
-    "long_term": {
-      "base_score": 49.7,
-      "final_score": 49.7,
-      "macro_adjustment": 0,
-      "subscores": [
-        {
-          "key": "valuation",
-          "label": "Valuation",
-          "raw_metrics": [
-            {
-              "metric": "pe_ttm",
-              "raw_value": 21.679259259259258,
-              "score": 61.06913580246914
-            },
-            {
-              "metric": "ev_ebitda",
-              "raw_value": 17.54742024070763,
-              "score": 43.8387044664257
-            },
-            {
-              "metric": "dcf_upside_pct",
-              "raw_value": 33.86397835313305,
-              "score": 100.0
-            },
-            {
-              "metric": "graham_upside_pct",
-              "raw_value": -60.13940827301438,
-              "score": 0.0
-            },
-            {
-              "metric": "graham_multiple",
-              "raw_value": 141.50397420360923,
-              "score": 0.0
-            }
-          ],
-          "score": 41.0,
-          "weight_pct": 25
-        },
-        {
-          "key": "growth",
-          "label": "Growth",
-          "raw_metrics": [
-            {
-              "metric": "revenue_growth_yoy_pct",
-              "raw_value": 3.260405296378909,
-              "score": 27.534684321263033
-            },
-            {
-              "metric": "revenue_cagr_3yr_pct",
-              "raw_value": 2.002569409339938,
-              "score": 28.010277637359753
-            },
-            {
-              "metric": "eps_growth_yoy_pct",
-              "raw_value": 1.199400299850076,
-              "score": 27.998500749625187
-            },
-            {
-              "metric": "eps_growth_cagr_3yr_pct",
-              "raw_value": 3.6028479444773165,
-              "score": 34.00711986119329
-            }
-          ],
-          "score": 29.4,
-          "weight_pct": 25
-        },
-        {
-          "key": "profitability",
-          "label": "Profitability & Margin Trend",
-          "raw_metrics": [
-            {
-              "metric": "gross_margin_pct",
-              "raw_value": 50.175797407849984,
-              "score": 75.43949351962496
-            },
-            {
-              "metric": "roe_pct",
-              "raw_value": 29.83539955468165,
-              "score": 99.45133184893884
-            },
-            {
-              "metric": "margin_trend_score",
-              "raw_value": 60,
-              "score": 60.0
-            },
-            {
-              "metric": "roic_pct",
-              "raw_value": 19.70610846801103,
-              "score": 78.82443387204412
-            }
-          ],
-          "score": 78.4,
-          "weight_pct": 20
-        },
-        {
-          "key": "balance_sheet",
-          "label": "Balance Sheet Health",
-          "raw_metrics": [
-            {
-              "metric": "debt_to_equity",
-              "raw_value": 0.6449153946714293,
-              "score": 67.75423026642854
-            },
-            {
-              "metric": "current_ratio",
-              "raw_value": 0.6773143122964801,
-              "score": 8.865715614824005
-            },
-            {
-              "metric": "interest_coverage",
-              "raw_value": 22.517673888255416,
-              "score": 100.0
-            }
-          ],
-          "score": 58.9,
-          "weight_pct": 15
-        },
-        {
-          "key": "cash_flow",
-          "label": "Cash Generation Quality",
-          "raw_metrics": [
-            {
-              "metric": "fcf_margin_pct",
-              "raw_value": 18.284079419064252,
-              "score": 60.94693139688084
-            },
-            {
-              "metric": "fcf_to_net_income",
-              "raw_value": 0.9917113299264614,
-              "score": 49.171132992646136
-            },
-            {
-              "metric": "owner_earnings_yield_pct",
-              "raw_value": 4.253614302618504,
-              "score": 42.536143026185044
-            }
-          ],
-          "score": 50.9,
-          "weight_pct": 15
-        }
-      ],
-      "verdict": "Neutral"
-    },
-    "short_term": {
-      "base_score": 61.0,
-      "final_score": 61.0,
-      "macro_adjustment": 0,
-      "subscores": [
-        {
-          "key": "momentum",
-          "label": "Price Momentum",
-          "raw_metrics": [
-            {
-              "metric": "return_1m_pct",
-              "raw_value": 1.3921595788890364,
-              "score": 56.96079789444518
-            },
-            {
-              "metric": "return_3m_pct",
-              "raw_value": -2.653278361484246,
-              "score": 43.36680409628938
-            }
-          ],
-          "score": 50.2,
-          "weight_pct": 30
-        },
-        {
-          "key": "technical",
-          "label": "Technical Positioning",
-          "raw_metrics": [
-            {
-              "metric": "price_vs_ma50_pct",
-              "raw_value": 0.1851910150192057,
-              "score": 50.92595507509603
-            },
-            {
-              "metric": "price_vs_ma200_pct",
-              "raw_value": -0.7253848764730041,
-              "score": 47.582050411756654
-            },
-            {
-              "metric": "rsi_distance_from_neutral",
-              "raw_value": 8.740790354989876,
-              "score": 78.1480241125253
-            }
-          ],
-          "score": 58.9,
-          "weight_pct": 20
-        },
-        {
-          "key": "earnings_direction",
-          "label": "Earnings/Guidance Direction",
-          "raw_metrics": [
-            {
-              "metric": "earnings_surprise_pct",
-              "raw_value": null,
-              "score": null
-            }
-          ],
-          "score": 50.0,
-          "weight_pct": 20
-        },
-        {
-          "key": "valuation_extension",
-          "label": "Valuation Extension",
-          "raw_metrics": [
-            {
-              "metric": "dcf_upside_pct",
-              "raw_value": 33.86397835313305,
-              "score": 100.0
-            }
-          ],
-          "score": 100.0,
-          "weight_pct": 15
-        }
-      ],
-      "verdict": "Favorable"
-    }
+    "passed": 2,
+    "quant_score_pct": 66.66666666666666
   },
   "sector": "Consumer Defensive",
   "sources": {
@@ -521,42 +163,7 @@
       }
     ]
   },
-  "thesis": {
-    "falsification_criteria": [
-      "If P&G's 5-year revenue or EPS CAGR rises persistently above 5%, the DCF's slow-growth assumption (and its negative margin of safety) would need to be revisited, potentially strengthening the valuation case.",
-      "If ROIC falls materially below the 12% threshold or FCF margin drops below 10% in subsequent filings, the quant-supported quality thesis would be undermined.",
-      "If Debt/EBITDA rises above the 3.0x threshold used here, the 'conservative balance sheet' argument supporting management quality would no longer hold.",
-      "If further brand-specific impairments (beyond the $1.3B Gillette charge) or continued market-share erosion occur in core categories (razors, fabric care, oral care), the intangible-asset moat claim would weaken.",
-      "If the stock's price falls enough (or FCF/growth assumptions improve enough) to flip the DCF margin of safety from negative to positive, the valuation objection to the thesis would be resolved.",
-      "If customer concentration risk materializes, e.g. a significant pullback from Walmart or the top-ten customers (currently ~42-43% of net sales), that would validate a flagged red flag as an actual earnings risk."
-    ],
-    "thesis": "P&G's quant profile shows a genuinely high-quality operating business \n(19.7% ROIC, 18.3% FCF margin, conservative leverage at 1.5x debt/EBITDA) but a growth problem, with 5-year revenue and EPS CAGRs of roughly 2.7% and 3.5%, both below the 5% bar, so the quant scorecard only passes 3 of 5 checks. The qualitative layer corroborates a real moat, grounded in category-leading brands (e.g., >60% global blade/razor share, >35% fabric care share) and owned patents/trademarks the 10-K explicitly credits, alongside disciplined buyback-driven capital allocation and candid disclosure of problems like the Argentina liquidation charge and Gillette impairment. Where the picture turns cautious is valuation: the DCF, built on that same sluggish ~2.7% growth assumption, implies an intrinsic value below the current price, producing a negative margin of safety of about -25.6%, even though relative multiples (P/E and EV/EBITDA both roughly 8-10% below sector medians) suggest the stock isn't expensive versus peers. In short, this looks like a durable, well-run business whose moat is well-documented, but the DCF layer indicates the current price does not leave a margin of safety under the model's slow-growth assumptions, so the case for a bargain is not supported even though the case for quality largely is."
-  },
   "ticker": "PG",
-  "valuation": {
-    "dcf": {
-      "assumptions": {
-        "base_fcf": 15913000000,
-        "discount_rate_pct": 9.0,
-        "growth_rate_pct": 2.716052126592894,
-        "growth_rate_source": "trailing_5yr_revenue_cagr",
-        "note": "Simplified 2-stage DCF: flat growth_rate_pct for projection_years, then a Gordon-growth terminal value at terminal_growth_rate_pct, discounted at a single fixed discount_rate_pct (not a full CAPM/WACC build). Treats free cash flow as equity-available cash flow directly. A deliberately transparent estimate, not a precise fair value.",
-        "projection_years": 5,
-        "terminal_growth_rate_pct": 2.5
-      },
-      "intrinsic_value_per_share": 108.96960824723102,
-      "margin_of_safety_pct": -25.56212292695469
-    },
-    "margin_of_safety_pct": -25.56212292695469,
-    "relative": {
-      "ev_ebitda": 17.54742024070763,
-      "ev_ebitda_vs_sector_median_pct": -8.222537779469251,
-      "pe_ttm": 21.679259259259258,
-      "pe_vs_sector_median_pct": -10.008646949737589,
-      "sector_median_ev_ebitda": 19.11953089152017,
-      "sector_median_pe_ttm": 24.09038038038038
-    }
-  },
   "value_investing": {
     "graham_defensive": {
       "criteria": [
