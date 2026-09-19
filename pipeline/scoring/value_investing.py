@@ -1,9 +1,9 @@
 """Classic value-investing checklists: Benjamin Graham's Defensive Investor
 criteria (from "The Intelligent Investor") and the Piotroski F-Score (a
 quantitative quality screen built on the same balance-sheet-driven
-tradition). Both are explicit pass/fail checklists, distinct from the
-continuous 0-100 scoring engine in short_term.py/long_term.py - they're
-rendered as their own checklist on the company detail page.
+tradition). Both are explicit pass/fail checklists, and together form the
+Conviction Score's two components (see pipeline/scoring/aggregation.py) -
+they're also rendered as their own checklist on the company detail page.
 
 Every criterion is computed from data already fetched (income/balance/cash
 flow statements, quote) - no new API calls. A criterion is `passed: None`

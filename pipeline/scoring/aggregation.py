@@ -1,19 +1,19 @@
-"""Combines layers 2-4 into one place WITHOUT averaging them into a single
-score - each sub-score stays visible (quant_gate_pass, qualitative_moat_present,
+"""Combines the quant gate, qualitative moat read, and Graham Number
+valuation gate into one place WITHOUT averaging them into a single score -
+each sub-score stays visible (quant_gate_pass, qualitative_moat_present,
 valuation_gate_pass) precisely so a reader can see *why* something ranked
 the way it did, not just a blended number that hides a broken moat behind
-a strong quant score. See README's layered-analysis section for the
+a strong balance sheet. See README's layered-analysis section for the
 reasoning; this module is a pure function over the other layers' already-
 computed output, no new data or API calls.
 
 Also computes the Conviction Score (see build_conviction_score) - a single
 0-100 number per stock, config-driven via config/conviction_score.yaml.
 This DOES produce one number, but not via a naive average: it's a weighted
-base from the pass-rate checklists (quant screen, Graham, Piotroski,
-Fisher), then the moat read and the valuation gate each multiply that base
-rather than blending into it - the same gate/multiplier/final-gate design
-as the rest of this module, just expressed as a number instead of only a
-verdict and flags.
+base from two basic checklists (Graham, Piotroski), then the moat read and
+the valuation gate each multiply that base rather than blending into it -
+the same gate/multiplier/final-gate design as the rest of this module, just
+expressed as a number instead of only a verdict and flags.
 """
 
 from pipeline.scoring.thresholds import verdict_for
@@ -22,8 +22,9 @@ from pipeline.utils.config import conviction_score_config
 # Classic value-investing convention: a "margin of safety" means a real
 # discount to estimated intrinsic value, not just trading below it by any
 # amount - 15% is a commonly-cited (not universal) baseline in that
-# tradition. Compared against pipeline.scoring.valuation's own conservative
-# DCF, not FMP's separate dcf_upside_pct.
+# tradition. Compared against the Graham Number (metrics["graham_upside_pct"]
+# - sqrt(22.5 x EPS x book value per share), a plain assets-and-earnings
+# formula, not a growth projection).
 _BASE_MARGIN_OF_SAFETY_THRESHOLD_PCT = 15.0
 
 # Klarman's point about margin of safety is that it's a risk-management
@@ -31,7 +32,7 @@ _BASE_MARGIN_OF_SAFETY_THRESHOLD_PCT = 15.0
 # demand a bigger discount, not the same flat one as a well-covered,
 # clean-filing company. These are deliberately modest, documented bumps on
 # top of the base threshold, not a precise risk model.
-_THIN_QUANT_COVERAGE_THRESHOLD = 3  # fewer than this many evaluated quant metrics
+_THIN_QUANT_COVERAGE_THRESHOLD = 2  # fewer than this many evaluated quant metrics (of 3)
 _THIN_QUANT_COVERAGE_BUMP_PCT = 10.0
 _RED_FLAG_BUMP_PCT = 5.0
 _RED_FLAG_BUMP_CAP_PCT = 15.0
@@ -51,17 +52,12 @@ def _required_margin_of_safety_pct(quant_scorecard: dict, qualitative: dict | No
     return required
 
 
-def _checklist_pass_rate_components(
-    quant_scorecard: dict, qualitative: dict | None, value_investing_checklist: dict | None
-) -> dict[str, float]:
-    """Every pass-rate checklist this pipeline computes, as a 0-100 number,
-    included only when it actually has data - a checklist the pipeline
+def _checklist_pass_rate_components(value_investing_checklist: dict | None) -> dict[str, float]:
+    """The two basic checklists this pipeline computes, as 0-100 numbers,
+    included only when they actually have data - a checklist the pipeline
     couldn't evaluate (e.g. Piotroski needs 2 years of statements) is left
     out entirely rather than counted as a failure."""
     components: dict[str, float] = {}
-
-    if quant_scorecard.get("quant_score_pct") is not None:
-        components["quant_score_pct"] = quant_scorecard["quant_score_pct"]
 
     checklist = value_investing_checklist or {}
     graham = checklist.get("graham_defensive") or {}
@@ -72,27 +68,20 @@ def _checklist_pass_rate_components(
     if piotroski.get("evaluated"):
         components["piotroski_pct"] = piotroski["score"] / piotroski["evaluated"] * 100
 
-    fisher_items = (qualitative or {}).get("fisher_checklist") or []
-    decided = [c for c in fisher_items if c.get("assessment") in ("yes", "no")]
-    if decided:
-        components["fisher_pct"] = sum(1 for c in decided if c["assessment"] == "yes") / len(decided) * 100
-
     return components
 
 
 def build_conviction_score(
-    quant_scorecard: dict,
-    qualitative: dict | None,
     value_investing_checklist: dict | None,
     moat_present: bool | None,
     valuation_gate: bool | None,
 ) -> dict:
     """Returns {"score": float|None, "verdict": str|None, "score_breakdown": dict|None}.
-    None across the board when none of the pass-rate checklists have any
-    data at all - there's nothing to score, not a score of 0."""
+    None across the board when neither checklist has any data at all -
+    there's nothing to score, not a score of 0."""
     cfg = conviction_score_config()
     weights = cfg["component_weights"]
-    components = _checklist_pass_rate_components(quant_scorecard, qualitative, value_investing_checklist)
+    components = _checklist_pass_rate_components(value_investing_checklist)
 
     if not components:
         return {"score": None, "verdict": None, "score_breakdown": None}
@@ -133,7 +122,7 @@ def build_conviction_score(
 def build_layered_analysis(
     quant_scorecard: dict,
     qualitative: dict | None,
-    valuation: dict,
+    metrics: dict,
     value_investing_checklist: dict | None = None,
 ) -> dict:
     flags: list[str] = []
@@ -141,12 +130,12 @@ def build_layered_analysis(
     quant_gate = quant_scorecard.get("gate_pass")
     moat_present = qualitative.get("moat_present") if qualitative else None
     red_flags = (qualitative.get("red_flags") if qualitative else None) or []
-    margin_of_safety = valuation.get("margin_of_safety_pct")
+    margin_of_safety = metrics.get("graham_upside_pct")
     required_margin_of_safety_pct = _required_margin_of_safety_pct(quant_scorecard, qualitative)
     valuation_gate = margin_of_safety >= required_margin_of_safety_pct if margin_of_safety is not None else None
 
     if quant_gate is False:
-        flags.append("Fails the quant screen - below threshold on more metrics than it passes.")
+        flags.append("Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.")
     if quant_gate and moat_present is False:
         flags.append(
             "Passes the quant screen, but the qualitative layer found no durable moat in the filing "
@@ -161,9 +150,8 @@ def build_layered_analysis(
         flags.append(f"{len(red_flags)} red flag(s) from the filing text - see qualitative.red_flags.")
     if margin_of_safety is not None and margin_of_safety < 0:
         flags.append(
-            "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure "
-            "(expected for expensive, high-growth names against a deliberately conservative model - see "
-            "valuation.dcf.assumptions.note)."
+            "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - "
+            "no margin of safety by that measure."
         )
     elif valuation_gate is False:
         flags.append(
@@ -179,7 +167,7 @@ def build_layered_analysis(
     else:
         overall = "Layers disagree - see flags for specifics."
 
-    conviction = build_conviction_score(quant_scorecard, qualitative, value_investing_checklist, moat_present, valuation_gate)
+    conviction = build_conviction_score(value_investing_checklist, moat_present, valuation_gate)
 
     return {
         "quant_gate_pass": quant_gate,

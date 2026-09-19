@@ -1,9 +1,9 @@
-"""Persists Layer 3 (qualitative) + Layer 5 (thesis) AI output, keyed by the
-URL of the 10-K it was generated from. 10-Ks are filed annually; this
-pipeline runs weekly - without this cache, every scheduled refresh would
-re-fetch the same filing text and re-spend two Claude calls per qualifying
-company for an answer that can't have changed. A cache hit (same filing
-URL as last time) skips both entirely.
+"""Persists Layer 3 (qualitative) AI output, keyed by the URL of the 10-K it
+was generated from. 10-Ks are filed annually; this pipeline runs weekly -
+without this cache, every scheduled refresh would re-fetch the same filing
+text and re-spend a Claude call per qualifying company for an answer that
+can't have changed. A cache hit (same filing URL as last time) skips it
+entirely.
 
 Lives under data/qualitative_cache/, passed the same base_dir
 (writer.output_dir(dry_run)) as the rest of data/ - so it's committed
@@ -29,12 +29,12 @@ def read(base_dir: Path, ticker: str) -> dict | None:
         return json.load(f)
 
 
-def write(base_dir: Path, ticker: str, filing_url: str, qualitative: dict, thesis: dict) -> None:
+def write(base_dir: Path, ticker: str, filing_url: str, qualitative: dict) -> None:
     path = _path(base_dir, ticker)
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(
-            {"filing_url": filing_url, "qualitative": qualitative, "thesis": thesis},
+            {"filing_url": filing_url, "qualitative": qualitative},
             f,
             indent=2,
             sort_keys=True,

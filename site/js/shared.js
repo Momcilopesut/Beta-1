@@ -18,8 +18,14 @@ export function verdictClass(verdict) {
   return VERDICT_CLASSES[verdict] || "verdict-neutral";
 }
 
-export function formatNumber(value, { decimals = 1, suffix = "" } = {}) {
+export function formatNumber(value, { decimals = 1, suffix = "", compact = false } = {}) {
   if (value === null || value === undefined || Number.isNaN(value)) return "—";
+  if (compact) {
+    // For big dollar figures (total assets, liabilities, ...) - "$264.9B"
+    // reads at a glance; the raw digit string doesn't, especially for
+    // someone new to this ("think of this as software for an 11 year old").
+    return `${new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 }).format(Number(value))}${suffix}`;
+  }
   return `${Number(value).toFixed(decimals)}${suffix}`;
 }
 

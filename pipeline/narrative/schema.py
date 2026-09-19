@@ -21,6 +21,5 @@ class CompanyNarrative(BaseModel):
     # generation, so a tight cap just rejects an otherwise-valid response
     # that slightly overshot the target instead of catching a real problem.
     one_line_summary: str = Field(max_length=200)
-    short_term_narrative: str
-    long_term_narrative: str
+    narrative: str
     facts: list[TieredFact]

@@ -1,25 +1,11 @@
 """Layer 2: a fast, deterministic quant screen - pure function, no API
-calls, no LLM. Distinct from the weighted short/long-term scores in
-pipeline/scoring/short_term.py and long_term.py: those rank "how good",
-this answers a narrower yes/no question first (does the company clear a
-baseline quality bar) so the expensive layers (qualitative filing-text
-reasoning, per company.html) only run on names worth the spend. See
-config/quant_score_thresholds.yaml for the thresholds themselves.
+calls, no LLM. A narrow yes/no question (does the company clear a baseline
+balance-sheet/cash-flow safety bar) so the expensive qualitative layer only
+runs on names worth the spend. See config/quant_score_thresholds.yaml for
+the thresholds themselves.
 """
 
 from pipeline.utils.config import quant_score_thresholds
-
-
-def _metric_value(metrics: dict, key: str) -> float | None:
-    if key == "revenue_cagr_pct":
-        return metrics.get("revenue_cagr_5yr_pct") if metrics.get("revenue_cagr_5yr_pct") is not None else metrics.get("revenue_cagr_3yr_pct")
-    if key == "eps_growth_cagr_pct":
-        return (
-            metrics.get("eps_growth_cagr_5yr_pct")
-            if metrics.get("eps_growth_cagr_5yr_pct") is not None
-            else metrics.get("eps_growth_cagr_3yr_pct")
-        )
-    return metrics.get(key)
 
 
 def build_quant_scorecard(metrics: dict) -> dict:
@@ -32,7 +18,7 @@ def build_quant_scorecard(metrics: dict) -> dict:
     passed = 0
 
     for key, spec in config["metrics"].items():
-        value = _metric_value(metrics, key)
+        value = metrics.get(key)
         if value is None:
             results[key] = {
                 "value": None,

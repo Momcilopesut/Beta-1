@@ -1,8 +1,8 @@
-"""Direct, fully-controlled tests for the metrics added this session:
-Greenblatt's earnings yield (EBIT/EV), Fisher's R&D/revenue, Lynch's PEG
-ratio, and debt/EBITDA - using a fully-populated synthetic FMP payload
-(not the fallback-tolerant fixtures in test_scoring.py) so every input is
-known and the expected output is exact, not just "not None"."""
+"""Direct, fully-controlled tests for the balance-sheet-first metrics this
+pipeline centers on - the raw assets/liabilities/equity figures and
+debt/EBITDA - using a fully-populated synthetic FMP payload (not the
+fallback-tolerant fixtures in test_scoring.py) so every input is known and
+the expected output is exact, not just "not None"."""
 
 import pytest
 
@@ -10,16 +10,14 @@ from pipeline.scoring.fundamentals import build_metrics
 
 
 def _fmp_data() -> dict:
-    # market_cap = 50B, total_debt = 10B, cash = 5B -> enterprise_value = 55B
-    # operating_income (EBIT proxy) = 5.5B -> earnings_yield_pct = 5.5/55*100 = 10.0%
-    # revenue = 20B, R&D = 2B -> r_and_d_to_revenue_pct = 10.0%
-    # d_and_a = 1B -> ebitda = 5.5B + 1B = 6.5B -> debt_to_ebitda = 10/6.5
-    # epsdiluted 1.331 (latest) vs 1.0 (3 periods back) -> exact 10% 3yr CAGR
-    # pe_ttm fixed at 20.0 via ratios_ttm -> peg_ratio = 20.0 / 10.0 = 2.0
+    # total_debt = 10B, d_and_a = 1B, operating_income = 5.5B ->
+    # ebitda = 6.5B -> debt_to_ebitda = 10/6.5
+    # total_assets = 100B, total_liabilities = 40B -> shareholders_equity = 60B
+    # shares_outstanding = 1B -> book_value_per_share = 60.0
+    # current_assets = 30B, current_liabilities = 15B -> current_ratio = 2.0
     income_row = {
         "revenue": 20_000_000_000,
         "operatingIncome": 5_500_000_000,
-        "researchAndDevelopmentExpenses": 2_000_000_000,
         "grossProfit": 8_000_000_000,
         "netIncome": 4_000_000_000,
     }
@@ -36,40 +34,49 @@ def _fmp_data() -> dict:
         "ratios_ttm": [{"priceToEarningsRatioTTM": 20.0}],
         "key_metrics_ttm": [],
         "income_statement": income_stmts,
-        "balance_sheet": [{"totalDebt": 10_000_000_000, "cashAndCashEquivalents": 5_000_000_000}],
-        "cash_flow": [{"depreciationAndAmortization": 1_000_000_000}],
-        "dcf": [],
+        "balance_sheet": [
+            {
+                "totalAssets": 100_000_000_000,
+                "totalLiabilities": 40_000_000_000,
+                "totalStockholdersEquity": 60_000_000_000,
+                "totalDebt": 10_000_000_000,
+                "cashAndCashEquivalents": 5_000_000_000,
+                "totalCurrentAssets": 30_000_000_000,
+                "totalCurrentLiabilities": 15_000_000_000,
+            }
+        ],
+        "cash_flow": [{"depreciationAndAmortization": 1_000_000_000, "freeCashFlow": 3_000_000_000}],
     }
 
 
-def test_earnings_yield_and_rd_and_peg_and_debt_to_ebitda():
+def test_balance_sheet_basics_are_exact():
     metrics = build_metrics("TEST", _fmp_data(), {"cik": None, "submissions": None, "company_facts": None})["metrics"]
 
-    assert metrics["earnings_yield_pct"] == pytest.approx(10.0)
-    assert metrics["r_and_d_to_revenue_pct"] == pytest.approx(10.0)
-    assert metrics["eps_growth_cagr_3yr_pct"] == pytest.approx(10.0)
-    assert metrics["peg_ratio"] == pytest.approx(2.0)
+    assert metrics["total_assets"] == 100_000_000_000
+    assert metrics["total_liabilities"] == 40_000_000_000
+    assert metrics["shareholders_equity"] == 60_000_000_000
+    assert metrics["book_value_per_share"] == pytest.approx(60.0)
+    assert metrics["current_ratio"] == pytest.approx(2.0)
     assert metrics["debt_to_ebitda"] == pytest.approx(10_000_000_000 / 6_500_000_000)
+    assert metrics["eps_growth_cagr_3yr_pct"] == pytest.approx(10.0)
+    assert metrics["fcf_margin_pct"] == pytest.approx(3_000_000_000 / 20_000_000_000 * 100)
 
 
-def test_earnings_yield_none_without_enterprise_value_inputs():
+def test_ncav_margin_reflects_current_assets_minus_all_liabilities():
+    metrics = build_metrics("TEST", _fmp_data(), {"cik": None, "submissions": None, "company_facts": None})["metrics"]
+
+    # (current_assets - total_liabilities) / shares = (30B - 40B) / 1B = -10/share.
+    # Against a $50 price: (-10 - 50) / 50 * 100 = -120% - typically sharply
+    # negative for a normal going-concern company; that's expected, not a bug.
+    assert metrics["ncav_margin_pct"] == pytest.approx(-120.0)
+
+
+def test_balance_sheet_basics_none_without_balance_sheet_data():
     fmp_data = _fmp_data()
-    fmp_data["balance_sheet"] = []  # no total_debt/cash -> no enterprise_value
+    fmp_data["balance_sheet"] = []
     metrics = build_metrics("TEST", fmp_data, {"cik": None, "submissions": None, "company_facts": None})["metrics"]
-    assert metrics["earnings_yield_pct"] is None
 
-
-def test_peg_none_for_negative_growth():
-    fmp_data = _fmp_data()
-    fmp_data["income_statement"][3]["epsdiluted"] = 2.0  # makes 3yr growth negative
-    metrics = build_metrics("TEST", fmp_data, {"cik": None, "submissions": None, "company_facts": None})["metrics"]
-    assert metrics["eps_growth_cagr_3yr_pct"] < 0
-    assert metrics["peg_ratio"] is None
-
-
-def test_r_and_d_to_revenue_none_when_not_reported():
-    fmp_data = _fmp_data()
-    for row in fmp_data["income_statement"]:
-        row.pop("researchAndDevelopmentExpenses")
-    metrics = build_metrics("TEST", fmp_data, {"cik": None, "submissions": None, "company_facts": None})["metrics"]
-    assert metrics["r_and_d_to_revenue_pct"] is None
+    assert metrics["total_assets"] is None
+    assert metrics["total_liabilities"] is None
+    assert metrics["shareholders_equity"] is None
+    assert metrics["ncav_margin_pct"] is None

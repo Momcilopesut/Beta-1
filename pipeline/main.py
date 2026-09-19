@@ -7,13 +7,10 @@ Usage:
   python -m pipeline.main --skip-ai                 # fetch + score only, no Anthropic spend
   python -m pipeline.main --ai-only --tickers AAPL  # re-run just the narrative step for already-scored companies
 
-Runs in three phases so cross-company signals (currently: sector-relative
-momentum) are available before any narrative is generated:
-  1. fetch_and_score_company() for every ticker - fetch, quantitative
-     scoring, and the Graham/Piotroski checklists.
-  2. apply_sector_relative_momentum() - a pure in-memory pass over the
-     collected results.
-  3. finalize_company() for every ticker - AI narrative + final JSON
+Two phases:
+  1. fetch_and_score_company() for every ticker - fetch, balance-sheet-first
+     quantitative scoring, and the Graham/Piotroski checklists.
+  2. finalize_company() for every ticker - AI narrative + final JSON
      assembly + write.
 """
 
@@ -28,17 +25,8 @@ from pipeline.fetch import filing_text, fmp, fred, sec_edgar, stooq
 from pipeline.narrative.anthropic_client import NarrativeError, generate_narrative
 from pipeline.narrative.grounding import enforce_grounding
 from pipeline.narrative.prompts import DISCLAIMER
-from pipeline.narrative.qualitative_client import QualitativeError, generate_qualitative_assessment, generate_thesis
-from pipeline.scoring import (
-    aggregation,
-    long_term,
-    lynch_category,
-    macro_regime,
-    quant_score,
-    short_term,
-    valuation,
-    value_investing,
-)
+from pipeline.narrative.qualitative_client import QualitativeError, generate_qualitative_assessment
+from pipeline.scoring import aggregation, macro_regime, quant_score, value_investing
 from pipeline.scoring.fundamentals import build_metrics
 from pipeline.utils.config import macro_series, watchlist
 from pipeline.utils.paths import DATA_DIR
@@ -46,7 +34,7 @@ from pipeline.utils.paths import DATA_DIR
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
-PIPELINE_VERSION = "1.3.0"
+PIPELINE_VERSION = "2.0.0"
 
 EMPTY_FACT_TIERS = {"critical": [], "important": [], "minor": [], "noise": []}
 
@@ -107,9 +95,7 @@ def build_macro_doc(macro_data: dict, regime_info: dict, generated_at: str) -> d
 
 
 def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
-    """Fetch + score one company. Does not generate its narrative yet -
-    narratives happen after apply_sector_relative_momentum() so they can
-    cite that cross-company signal too."""
+    """Fetch + score one company."""
     ticker = company_cfg["ticker"]
     logger.info("Processing %s", ticker)
 
@@ -146,11 +132,10 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
         errors["stooq"] = stooq_error
 
     # Layer 2 (quant screen, pure function - see pipeline/scoring/quant_score.py).
-    # Gates layers 3/5 below: the expensive AI calls only run on names that
+    # Gates layer 3 below: the expensive AI call only runs on names that
     # already clear this bar (deliberate cost control, not just a display filter).
     quant_scorecard = quant_score.build_quant_scorecard(metrics)
     latest_10k = next((f for f in recent_filings if f["form"] == "10-K"), None)
-    lynch = lynch_category.classify(metrics, sector, profile.get("market_cap"))
 
     return {
         "ticker": ticker,
@@ -161,7 +146,6 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
         "display": display,
         "checklist": checklist,
         "quant_scorecard": quant_scorecard,
-        "lynch_category": lynch,
         "latest_10k": latest_10k,
         "raw": raw,
         "recent_filings": recent_filings,
@@ -170,101 +154,15 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
     }
 
 
-def apply_sector_relative_momentum(states: list[dict]) -> None:
-    """Mutates each state's metrics/display in place, adding
-    sector_relative_momentum_pct: this company's 3-month return minus the
-    average 3-month return of the other tracked companies in the same
-    sector. A relative-strength (supply/demand) signal derived purely from
-    our own price data - it notes *that* a stock is diverging from its
-    peers, not a claimed *reason* why."""
-    by_sector: dict[str, list[float]] = {}
-    for state in states:
-        r = state["metrics"].get("return_3m_pct")
-        if r is not None:
-            by_sector.setdefault(state["sector"], []).append(r)
-
-    sector_avg = {sector: sum(vals) / len(vals) for sector, vals in by_sector.items()}
-
-    for state in states:
-        r = state["metrics"].get("return_3m_pct")
-        avg = sector_avg.get(state["sector"])
-        relative = (r - avg) if r is not None and avg is not None else None
-        state["metrics"]["sector_relative_momentum_pct"] = relative
-        state["display"]["price"]["sector_relative_momentum_pct"] = relative
-        state["display"]["price"]["sector_avg_return_3m_pct"] = sector_avg.get(state["sector"])
-
-
-def apply_magic_formula_rank(states: list[dict]) -> None:
-    """Greenblatt's Magic Formula: rank the whole watchlist (not per-sector -
-    the formula is explicitly meant to work across sectors) by return on
-    capital (roic_pct stands in for Greenblatt's own ROC definition) and by
-    earnings yield (earnings_yield_pct = EBIT/EV), then combine the two
-    ranks - lower combined rank is better, matching Greenblatt's own method.
-    A company missing either input is left unranked (None) rather than
-    penalized with a worst-case rank."""
-    eligible = [
-        s for s in states if s["metrics"].get("roic_pct") is not None and s["metrics"].get("earnings_yield_pct") is not None
-    ]
-
-    roic_rank = {
-        s["ticker"]: i + 1
-        for i, s in enumerate(sorted(eligible, key=lambda s: s["metrics"]["roic_pct"], reverse=True))
-    }
-    earnings_yield_rank = {
-        s["ticker"]: i + 1
-        for i, s in enumerate(sorted(eligible, key=lambda s: s["metrics"]["earnings_yield_pct"], reverse=True))
-    }
-    combined_rank = {t: roic_rank[t] + earnings_yield_rank[t] for t in roic_rank}
-    overall_rank = {t: i + 1 for i, t in enumerate(sorted(combined_rank, key=lambda t: combined_rank[t]))}
-
-    for state in states:
-        ticker = state["ticker"]
-        state["metrics"]["magic_formula_rank"] = overall_rank.get(ticker)
-        state["metrics"]["magic_formula_roic_rank"] = roic_rank.get(ticker)
-        state["metrics"]["magic_formula_earnings_yield_rank"] = earnings_yield_rank.get(ticker)
-
-
-def _median(values: list[float]) -> float | None:
-    if not values:
-        return None
-    ordered = sorted(values)
-    mid = len(ordered) // 2
-    if len(ordered) % 2:
-        return ordered[mid]
-    return (ordered[mid - 1] + ordered[mid]) / 2
-
-
-def apply_sector_medians(states: list[dict]) -> None:
-    """Mutates each state in place, adding sector_medians: {"pe_ttm", "ev_ebitda"}
-    computed from the OTHER tracked companies in the same sector this run -
-    Layer 4's relative-multiple cross-check (pipeline.scoring.valuation)."""
-    by_sector_pe: dict[str, list[float]] = {}
-    by_sector_ev: dict[str, list[float]] = {}
-    for state in states:
-        pe = state["metrics"].get("pe_ttm")
-        if pe is not None:
-            by_sector_pe.setdefault(state["sector"], []).append(pe)
-        ev = state["metrics"].get("ev_ebitda")
-        if ev is not None:
-            by_sector_ev.setdefault(state["sector"], []).append(ev)
-
-    for state in states:
-        state["sector_medians"] = {
-            "pe_ttm": _median(by_sector_pe.get(state["sector"], [])),
-            "ev_ebitda": _median(by_sector_ev.get(state["sector"], [])),
-        }
-
-
-def _narrative_payload(ticker: str, name: str, sector: str | None, metrics: dict, short: dict, long: dict, regime_info: dict, macro_adj: dict) -> dict:
+def _narrative_payload(
+    ticker: str, name: str, sector: str | None, metrics: dict, quant_scorecard: dict, regime_info: dict, macro_adj: dict
+) -> dict:
     return {
         "ticker": ticker,
         "name": name,
         "sector": sector,
         "metrics": {k: v for k, v in metrics.items() if v is not None},
-        "scores": {
-            "short_term": {"final_score": short["final_score"], "verdict": short["verdict"]},
-            "long_term": {"final_score": long["final_score"], "verdict": long["verdict"]},
-        },
+        "quant_gate_pass": quant_scorecard.get("gate_pass"),
         "macro": {
             "regime": regime_info["regime"],
             "rate_sensitivity": macro_adj["rate_sensitivity"],
@@ -279,8 +177,7 @@ def _run_narrative(ticker: str, payload: dict) -> tuple[dict, int]:
     the Anthropic call fails, rather than aborting the ticker."""
     narrative_out = {
         "one_line_summary": None,
-        "short_term_narrative": None,
-        "long_term_narrative": None,
+        "narrative": None,
         "facts": {k: [] for k in EMPTY_FACT_TIERS},
         "disclaimer": DISCLAIMER,
     }
@@ -292,8 +189,7 @@ def _run_narrative(ticker: str, payload: dict) -> tuple[dict, int]:
 
     grounded, dropped = enforce_grounding(narrative, payload["metrics"])
     narrative_out["one_line_summary"] = grounded.one_line_summary
-    narrative_out["short_term_narrative"] = grounded.short_term_narrative
-    narrative_out["long_term_narrative"] = grounded.long_term_narrative
+    narrative_out["narrative"] = grounded.narrative
     for fact in grounded.facts:
         narrative_out["facts"][fact.tier].append(
             {"text": fact.text, "source_metric": fact.source_metric, "source_value": fact.source_value}
@@ -301,34 +197,31 @@ def _run_narrative(ticker: str, payload: dict) -> tuple[dict, int]:
     return narrative_out, dropped
 
 
-def _run_qualitative_and_thesis(
-    state: dict, quant_scorecard: dict, valuation_out: dict, out_dir
-) -> tuple[dict | None, dict | None, bool]:
-    """Layers 3 + 5. Only runs when quant_scorecard's gate passed (deliberate
+def _run_qualitative(state: dict, quant_scorecard: dict, out_dir) -> tuple[dict | None, bool]:
+    """Layer 3. Only runs when quant_scorecard's gate passed (deliberate
     cost control - see fetch_and_score_company's comment) and there's a
-    10-K to read. Returns (qualitative, thesis, failed) - failed is True
-    only when the layer was attempted and errored, never for a deliberate
-    skip (gate not passed, no 10-K found), so callers can distinguish
-    "nothing to do here" from "something broke"."""
+    10-K to read. Returns (qualitative, failed) - failed is True only when
+    the layer was attempted and errored, never for a deliberate skip (gate
+    not passed, no 10-K found), so callers can distinguish "nothing to do
+    here" from "something broke"."""
     ticker, latest_10k = state["ticker"], state.get("latest_10k")
     if not quant_scorecard.get("gate_pass") or not latest_10k:
-        return None, None, False
+        return None, False
 
     cached = qualitative_cache.read(out_dir, ticker)
     if cached and cached.get("filing_url") == latest_10k["url"]:
-        return cached["qualitative"], cached["thesis"], False
+        return cached["qualitative"], False
 
     try:
         sections = filing_text.fetch_filing_sections(latest_10k["url"])
         qualitative = generate_qualitative_assessment(ticker, sections, quant_scorecard)
-        thesis = generate_thesis(ticker, quant_scorecard, qualitative, valuation_out)
     except (filing_text.FilingTextError, QualitativeError) as exc:
-        logger.warning("Qualitative/thesis layer skipped for %s: %s", ticker, exc)
-        return None, None, True
+        logger.warning("Qualitative layer skipped for %s: %s", ticker, exc)
+        return None, True
 
-    qualitative_dict, thesis_dict = qualitative.model_dump(), thesis.model_dump()
-    qualitative_cache.write(out_dir, ticker, latest_10k["url"], qualitative_dict, thesis_dict)
-    return qualitative_dict, thesis_dict, False
+    qualitative_dict = qualitative.model_dump()
+    qualitative_cache.write(out_dir, ticker, latest_10k["url"], qualitative_dict)
+    return qualitative_dict, False
 
 
 def finalize_company(
@@ -336,13 +229,13 @@ def finalize_company(
 ) -> tuple[dict, dict, int, bool]:
     """Returns (company_doc, watchlist_summary, narrative_warnings, qualitative_failed).
 
-    The narrative call and the qualitative/thesis calls are independent (
-    neither reads the other's output) and run concurrently to cut wall-clock
-    time - this matters most for api/lookup.py's on-demand endpoint, which
-    has a hard Vercel function timeout for a single request, but also just
-    makes the batch pipeline faster.
+    The narrative call and the qualitative call are independent (neither
+    reads the other's output) and run concurrently to cut wall-clock time -
+    this matters most for api/lookup.py's on-demand endpoint, which has a
+    hard Vercel function timeout for a single request, but also just makes
+    the batch pipeline faster.
 
-    skip_qualitative: available for a caller that wants to skip layers 3/5
+    skip_qualitative: available for a caller that wants to skip layer 3
     entirely (e.g. if a deployment's Vercel timeout is too tight even with
     the concurrency above) - unused by default; both callers currently run
     the full analysis.
@@ -351,15 +244,10 @@ def finalize_company(
     metrics, display, profile = state["metrics"], state["display"], state["profile"]
 
     macro_adj = macro_regime.sector_adjustment(regime_info["regime"], sector)
-    short = short_term.score(metrics, macro_adj["short"])
-    long = long_term.score(metrics, macro_adj["long"])
 
     generated_at = writer.now_iso()
     clean_metrics = {k: v for k, v in metrics.items() if v is not None}
 
-    valuation_out = valuation.build_valuation(
-        metrics, state["raw"], profile.get("shares_outstanding"), display["price"].get("close"), state.get("sector_medians")
-    )
     quant_scorecard = state["quant_scorecard"]
 
     narrative_warnings = 0
@@ -367,29 +255,24 @@ def finalize_company(
     if skip_ai:
         narrative_out = {
             "one_line_summary": None,
-            "short_term_narrative": None,
-            "long_term_narrative": None,
+            "narrative": None,
             "facts": {k: [] for k in EMPTY_FACT_TIERS},
             "disclaimer": DISCLAIMER,
         }
-        qualitative_out, thesis_out = None, None
+        qualitative_out = None
     else:
-        payload = _narrative_payload(ticker, name, sector, metrics, short, long, regime_info, macro_adj)
+        payload = _narrative_payload(ticker, name, sector, metrics, quant_scorecard, regime_info, macro_adj)
         if skip_qualitative:
             narrative_out, narrative_warnings = _run_narrative(ticker, payload)
-            qualitative_out, thesis_out = None, None
+            qualitative_out = None
         else:
             with ThreadPoolExecutor(max_workers=2) as pool:
                 narrative_future = pool.submit(_run_narrative, ticker, payload)
-                qualitative_future = pool.submit(
-                    _run_qualitative_and_thesis, state, quant_scorecard, valuation_out, out_dir
-                )
+                qualitative_future = pool.submit(_run_qualitative, state, quant_scorecard, out_dir)
                 narrative_out, narrative_warnings = narrative_future.result()
-                qualitative_out, thesis_out, qualitative_failed = qualitative_future.result()
+                qualitative_out, qualitative_failed = qualitative_future.result()
 
-    layered_analysis = aggregation.build_layered_analysis(
-        quant_scorecard, qualitative_out, valuation_out, state["checklist"]
-    )
+    layered_analysis = aggregation.build_layered_analysis(quant_scorecard, qualitative_out, metrics, state["checklist"])
 
     company_doc = {
         "ticker": ticker,
@@ -401,7 +284,6 @@ def finalize_company(
         "last_updated": generated_at,
         "price": display["price"],
         "metrics": clean_metrics,
-        "scores": {"short_term": short, "long_term": long},
         "macro_context": {
             "regime": regime_info["regime"],
             "sector_sensitivity": {
@@ -412,11 +294,8 @@ def finalize_company(
         "fundamentals": display["fundamentals"],
         "value_investing": state["checklist"],
         "narrative": narrative_out,
-        "lynch_category": state["lynch_category"],
         "quant_score": quant_scorecard,
         "qualitative": qualitative_out,
-        "valuation": valuation_out,
-        "thesis": thesis_out,
         "layered_analysis": layered_analysis,
         "sources": {"sec_filings": state["recent_filings"], "sec_companyfacts_url": state["companyfacts_url"]},
         "_errors": state["errors"],
@@ -426,11 +305,8 @@ def finalize_company(
         "ticker": ticker,
         "name": name,
         "sector": sector,
-        "short_term_score": short["final_score"],
-        "short_term_verdict": short["verdict"],
-        "long_term_score": long["final_score"],
-        "long_term_verdict": long["verdict"],
         "one_line_summary": narrative_out["one_line_summary"],
+        "book_value_per_share": metrics.get("book_value_per_share"),
         "graham_criteria_passed": state["checklist"]["graham_defensive"]["passed"],
         "graham_criteria_total": state["checklist"]["graham_defensive"]["total"],
         "piotroski_f_score": state["checklist"]["piotroski_f_score"]["score"],
@@ -473,11 +349,15 @@ def run_full(args) -> int:
     macro_doc = build_macro_doc(macro_data, regime_info, generated_at)
     writer.write_macro(out_dir, macro_doc)
 
-    # Phase 1: fetch + score every company (no narrative yet).
-    states = []
+    # Phase 1: fetch + score every company, then finalize (narrative +
+    # qualitative + write) - no cross-company signals left to compute in
+    # between, so this is a single pass per company rather than two.
+    summaries = []
     fmp_error_count = 0
     sec_error_count = 0
     stooq_error_count = 0
+    total_narrative_warnings = 0
+    total_qualitative_skipped = 0
     for company_cfg in companies:
         try:
             state = fetch_and_score_company(company_cfg, regime_info)
@@ -492,18 +372,7 @@ def run_full(args) -> int:
             sec_error_count += 1
         if "stooq" in errs:
             stooq_error_count += 1
-        states.append(state)
 
-    # Phase 2: cross-company signals.
-    apply_sector_relative_momentum(states)
-    apply_sector_medians(states)
-    apply_magic_formula_rank(states)
-
-    # Phase 3: narrative + qualitative/thesis + final assembly + write.
-    summaries = []
-    total_narrative_warnings = 0
-    total_qualitative_skipped = 0
-    for state in states:
         try:
             company_doc, summary, warnings, qual_skipped = finalize_company(state, regime_info, args.skip_ai, out_dir)
         except Exception:
@@ -560,16 +429,7 @@ def run_ai_only(args) -> int:
             "name": company_doc.get("name", ticker),
             "sector": company_doc.get("sector"),
             "metrics": company_doc.get("metrics", {}),
-            "scores": {
-                "short_term": {
-                    "final_score": company_doc["scores"]["short_term"]["final_score"],
-                    "verdict": company_doc["scores"]["short_term"]["verdict"],
-                },
-                "long_term": {
-                    "final_score": company_doc["scores"]["long_term"]["final_score"],
-                    "verdict": company_doc["scores"]["long_term"]["verdict"],
-                },
-            },
+            "quant_gate_pass": company_doc.get("quant_score", {}).get("gate_pass"),
             "macro": company_doc.get("macro_context", {}),
         }
 

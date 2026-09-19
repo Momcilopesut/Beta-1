@@ -84,16 +84,11 @@ def lookup():
     try:
         regime_info = _regime()
         state = fetch_and_score_company({"ticker": ticker}, regime_info)
-        # No watchlist peer group exists for a solo ad-hoc lookup.
-        state["metrics"]["sector_relative_momentum_pct"] = None
-        state["display"]["price"]["sector_relative_momentum_pct"] = None
-        state["sector_medians"] = {"pe_ttm": None, "ev_ebitda": None}
-        # Full parity with the batch pipeline - narrative and
-        # qualitative/thesis run concurrently (see finalize_company's
-        # docstring) to fit this function's timeout (vercel.json's
-        # maxDuration - see README's "On-demand lookup deployment" section
-        # for raising it if you have Vercel headroom for it, e.g. Fluid
-        # Compute or a Pro plan).
+        # Full parity with the batch pipeline - narrative and qualitative
+        # run concurrently (see finalize_company's docstring) to fit this
+        # function's timeout (vercel.json's maxDuration - see README's
+        # "On-demand lookup deployment" section for raising it if you have
+        # Vercel headroom for it, e.g. Fluid Compute or a Pro plan).
         company_doc, _summary, _warnings, _qual_failed = finalize_company(
             state, regime_info, skip_ai, Path(tempfile.gettempdir())
         )

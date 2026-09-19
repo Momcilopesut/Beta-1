@@ -109,6 +109,10 @@ function renderCard(company) {
     company.piotroski_f_score !== undefined && company.piotroski_f_score !== null
       ? `<span class="mini-badge" title="Piotroski F-Score">F-Score ${company.piotroski_f_score}/9</span>`
       : "";
+  const bookValueBadge =
+    company.book_value_per_share !== undefined && company.book_value_per_share !== null
+      ? `<span class="mini-badge" title="Net worth per share (assets minus liabilities)">Book value $${formatNumber(company.book_value_per_share, { decimals: 2 })}</span>`
+      : "";
   const layeredBadge = renderLayeredBadge(company);
   const hasConviction = company.conviction_score !== null && company.conviction_score !== undefined;
   const convictionBadge = hasConviction
@@ -124,14 +128,8 @@ function renderCard(company) {
       </div>
       <div class="verdicts">
         ${convictionBadge}
-        <span class="verdict-badge ${verdictClass(company.short_term_verdict)}">
-          Short-term: ${escapeHtml(company.short_term_verdict)} (${formatNumber(company.short_term_score, { decimals: 0 })})
-        </span>
-        <span class="verdict-badge ${verdictClass(company.long_term_verdict)}">
-          Long-term: ${escapeHtml(company.long_term_verdict)} (${formatNumber(company.long_term_score, { decimals: 0 })})
-        </span>
       </div>
-      <div class="mini-badges">${grahamBadge}${piotroskiBadge}${layeredBadge}</div>
+      <div class="mini-badges">${grahamBadge}${piotroskiBadge}${bookValueBadge}${layeredBadge}</div>
       <p class="summary">${escapeHtml(company.one_line_summary) || "No AI summary available yet."}</p>
     </a>
   `;

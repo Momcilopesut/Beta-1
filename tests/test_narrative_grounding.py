@@ -5,8 +5,7 @@ from pipeline.narrative.schema import CompanyNarrative, TieredFact
 def _narrative(facts: list[TieredFact]) -> CompanyNarrative:
     return CompanyNarrative(
         one_line_summary="Test summary.",
-        short_term_narrative="Short term narrative.",
-        long_term_narrative="Long term narrative.",
+        narrative="Plain-language narrative.",
         facts=facts,
     )
 

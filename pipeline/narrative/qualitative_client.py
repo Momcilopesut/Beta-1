@@ -1,7 +1,6 @@
-"""Anthropic calls for Layer 3 (qualitative filing-text reasoning) and
-Layer 5 (thesis + falsification). Kept separate from
-pipeline/narrative/anthropic_client.py deliberately - see
-qualitative_schema.py for why these carry a different grounding guarantee
+"""Anthropic call for Layer 3 (qualitative filing-text reasoning). Kept
+separate from pipeline/narrative/anthropic_client.py deliberately - see
+qualitative_schema.py for why this carries a different grounding guarantee
 than the metrics-only narrative layer.
 """
 
@@ -10,8 +9,8 @@ import os
 
 import anthropic
 
-from pipeline.narrative.qualitative_prompts import QUALITATIVE_SYSTEM_PROMPT, THESIS_SYSTEM_PROMPT
-from pipeline.narrative.qualitative_schema import QualitativeAssessment, ThesisAndFalsification
+from pipeline.narrative.qualitative_prompts import QUALITATIVE_SYSTEM_PROMPT
+from pipeline.narrative.qualitative_schema import QualitativeAssessment
 
 DEFAULT_MODEL = "claude-sonnet-5"
 
@@ -45,14 +44,13 @@ def generate_qualitative_assessment(ticker: str, sections: dict, quant_scorecard
     try:
         response = client.messages.parse(
             model=model,
-            # 8192: a real production run showed 4096 still truncating output
-            # mid-JSON-string (the fisher_checklist field, up to 12 items
-            # with evidence text each, pushes a real response well past
-            # 4096 tokens) - the exact same failure mode as the crash this
-            # pipeline hit earlier from an underestimated output budget
-            # (see pipeline/narrative/anthropic_client.py's max_tokens
-            # history). Generous headroom here, not a tight fit.
-            max_tokens=8192,
+            # This schema no longer carries the Fisher checklist or
+            # management_assessment (moat_present/moat_type/moat_explanation/
+            # red_flags only) - a much smaller response than the 8192 this
+            # call needed before, but kept generous rather than re-tuned to
+            # the exact minimum (see qualitative_schema.py's comment on why
+            # max_length isn't the real truncation control - max_tokens is).
+            max_tokens=3072,
             system=[{"type": "text", "text": QUALITATIVE_SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}],
             messages=[
                 {
@@ -73,33 +71,3 @@ def generate_qualitative_assessment(ticker: str, sections: dict, quant_scorecard
     # extraction_confidence must reflect the actual extraction method, not
     # whatever the model decided to say - overwrite rather than trust it.
     return parsed.model_copy(update={"extraction_confidence": sections.get("method", "whole_document_fallback")})
-
-
-def generate_thesis(
-    ticker: str, quant_scorecard: dict, qualitative: QualitativeAssessment, valuation: dict
-) -> ThesisAndFalsification:
-    client = _client()
-    model = os.environ.get("ANTHROPIC_MODEL", DEFAULT_MODEL)
-
-    payload = {
-        "quant": quant_scorecard,
-        "qualitative": qualitative.model_dump(),
-        "valuation": valuation,
-    }
-
-    try:
-        response = client.messages.parse(
-            model=model,
-            max_tokens=2048,
-            system=[{"type": "text", "text": THESIS_SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}],
-            messages=[
-                {
-                    "role": "user",
-                    "content": f"Ticker: {ticker}\n\nLayers 2-4 (JSON):\n{json.dumps(payload, default=str)}",
-                }
-            ],
-            output_format=ThesisAndFalsification,
-        )
-    except Exception as exc:  # noqa: BLE001
-        raise QualitativeError(f"Thesis generation failed for {ticker}: {exc}") from exc
-    return response.parsed_output

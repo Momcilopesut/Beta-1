@@ -17,10 +17,6 @@ def watchlist() -> list[dict]:
     return load_yaml("watchlist.yaml")["companies"]
 
 
-def scoring_weights() -> dict:
-    return load_yaml("scoring_weights.yaml")
-
-
 def sector_macro_sensitivity() -> dict:
     return load_yaml("sector_macro_sensitivity.yaml")
 

@@ -148,24 +148,26 @@ def test_build_metrics_falls_back_fully_to_sec_and_stooq_when_fmp_is_empty():
     built = build_metrics("TEST", fmp_data, sec_data, stooq_prices)
     metrics = built["metrics"]
 
+    # The core assets-vs-liabilities numbers, computed entirely from the
+    # XBRL fallback.
+    assert metrics["total_assets"] == 2_000_000_000
+    assert metrics["total_liabilities"] == 1_200_000_000
+    assert metrics["shareholders_equity"] == 800_000_000
+    assert metrics["book_value_per_share"] == 16.0
+
     # Statement-derived ratios, computed entirely from the XBRL fallback.
-    assert metrics["gross_margin_pct"] == 40.0
-    assert metrics["roe_pct"] == 150_000_000 / 800_000_000 * 100
     assert metrics["debt_to_equity"] == 450_000_000 / 800_000_000
+    assert metrics["debt_to_ebitda"] == 450_000_000 / 260_000_000
     assert metrics["current_ratio"] == 800_000_000 / 300_000_000
-    assert metrics["interest_coverage"] == 200_000_000 / 10_000_000
     assert metrics["fcf_margin_pct"] == (220_000_000 - 70_000_000) / 1_000_000_000 * 100
 
     # Price-derived metrics, from the Stooq fallback.
     assert built["display"]["price"]["close"] == 60.0
-    assert metrics["return_3m_pct"] is not None
 
     # Metrics that need BOTH a fallback price and fallback statement data.
     assert metrics["pe_ttm"] == 60.0 / 3.00
     assert built["profile"]["market_cap"] == 60.0 * 50_000_000
     assert metrics["graham_upside_pct"] is not None
-    assert metrics["roic_pct"] is not None
-    assert metrics["ev_ebitda"] is not None
 
     # profile fields: sector left None (main.py falls back to the
     # watchlist's own sector), industry uses the SIC description.

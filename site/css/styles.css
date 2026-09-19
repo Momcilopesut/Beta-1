@@ -200,11 +200,12 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 .facts ul { margin: 0.5rem 0 0; padding-left: 1.25rem; }
 .fact-source { color: var(--muted); font-size: 0.8rem; }
 
-.subscore-table { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; font-size: 0.85rem; }
-.subscore-table th, .subscore-table td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
-.subscore-table th { color: var(--muted); font-weight: 600; }
-
 .sources ul { padding-left: 1.25rem; }
+
+.balance-sheet-basics { margin-bottom: 1.5rem; }
+.basics-list { list-style: none; padding: 0; margin: 0.5rem 0 1rem; font-size: 0.95rem; }
+.basics-list li { padding: 0.3rem 0; border-bottom: 1px solid var(--border); }
+.basics-list li:last-child { border-bottom: none; }
 
 .attribution { font-size: 0.75rem; color: var(--muted); font-weight: 400; }
 
@@ -229,8 +230,6 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 .check-pass { color: var(--strong); font-weight: 700; }
 .check-fail { color: var(--weak); font-weight: 700; }
 .check-unknown { color: var(--muted); font-weight: 700; }
-
-.supply-demand ul { padding-left: 1.25rem; font-size: 0.9rem; }
 
 .layered-analysis { margin-bottom: 2rem; }
 .layered-overall {
@@ -273,17 +272,6 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 .gate-pass { background: rgba(21, 128, 61, 0.15); color: var(--strong); }
 .gate-fail { background: rgba(220, 38, 38, 0.15); color: var(--weak); }
 .gate-unknown { background: rgba(107, 114, 128, 0.15); color: var(--neutral); }
-
-.thesis-block {
-  margin-top: 1.5rem;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-}
-.thesis-block h4 { margin-top: 0; }
-.thesis-block h5 { margin-bottom: 0.4rem; font-size: 0.85rem; color: var(--muted); }
-.thesis-block ul { padding-left: 1.25rem; font-size: 0.9rem; }
 
 .cycle-context {
   background: var(--card-bg);

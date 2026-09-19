@@ -1,20 +1,17 @@
-"""End-to-end integration test for the layered-analysis wiring added to
-pipeline/main.py (quant scorecard -> valuation -> qualitative -> thesis ->
-aggregation). Mocks every network/API boundary (FMP, SEC EDGAR, Stooq,
-filing text, and all three Anthropic calls) and exercises the real
-fetch_and_score_company -> apply_sector_medians -> finalize_company call
-chain used by the actual pipeline, to catch wiring bugs (wrong argument
-order, missing dict keys, tuple-unpacking mismatches) that per-module unit
-tests can't see."""
+"""End-to-end integration test for the layered-analysis wiring in
+pipeline/main.py (quant scorecard -> qualitative -> aggregation). Mocks
+every network/API boundary (FMP, SEC EDGAR, Stooq, filing text, and both
+Anthropic calls) and exercises the real fetch_and_score_company ->
+finalize_company call chain used by the actual pipeline, to catch wiring
+bugs (wrong argument order, missing dict keys, tuple-unpacking mismatches)
+that per-module unit tests can't see."""
 
-from pathlib import Path
 from unittest.mock import patch
 
 from pipeline.fetch.filing_text import FilingTextError
-from pipeline.main import apply_sector_medians, fetch_and_score_company, finalize_company
+from pipeline.main import fetch_and_score_company, finalize_company
 from pipeline.narrative.anthropic_client import NarrativeError
-from pipeline.narrative.qualitative_client import QualitativeError
-from pipeline.narrative.qualitative_schema import QualitativeAssessment, ThesisAndFalsification
+from pipeline.narrative.qualitative_schema import QualitativeAssessment
 from pipeline.narrative.schema import CompanyNarrative
 
 
@@ -84,7 +81,6 @@ def _empty_fmp_data() -> dict:
         "income_statement": None,
         "balance_sheet": None,
         "cash_flow": None,
-        "dcf": None,
         "_errors": {},
     }
 
@@ -109,7 +105,7 @@ def _stooq_prices() -> list[dict]:
 
 
 def _mocked_narrative() -> CompanyNarrative:
-    return CompanyNarrative(one_line_summary="Test summary.", short_term_narrative="Short.", long_term_narrative="Long.", facts=[])
+    return CompanyNarrative(one_line_summary="Test summary.", narrative="Owns more than it owes.", facts=[])
 
 
 def _mocked_qualitative() -> QualitativeAssessment:
@@ -117,39 +113,25 @@ def _mocked_qualitative() -> QualitativeAssessment:
         moat_present=True,
         moat_type="switching_costs",
         moat_explanation="Excerpts describe high customer switching costs.",
-        management_assessment="Excerpts describe disciplined capital allocation.",
         red_flags=["Customer concentration mentioned in risk factors."],
-        fisher_checklist=[
-            {"criterion": "Sufficient market potential for years of growth", "assessment": "yes", "evidence": "Business section describes a large addressable market."},
-            {"criterion": "Outstanding labor/personnel relations", "assessment": "unknown", "evidence": "Excerpts don't discuss labor relations."},
-        ],
         extraction_confidence="section_match",
     )
 
 
-def _mocked_thesis() -> ThesisAndFalsification:
-    return ThesisAndFalsification(
-        thesis="The company clears the quant screen, shows a moat in its filings, and trades near estimated intrinsic value.",
-        falsification_criteria=["ROIC falls below 12%.", "A major customer is lost per a future 10-K."],
-    )
-
-
 @patch("pipeline.main.filing_text.fetch_filing_sections")
-@patch("pipeline.main.generate_thesis")
 @patch("pipeline.main.generate_qualitative_assessment")
 @patch("pipeline.main.generate_narrative")
 @patch("pipeline.main.stooq.fetch_daily_prices")
 @patch("pipeline.main.sec_edgar.fetch_company")
 @patch("pipeline.main.fmp.fetch_company")
 def test_full_layered_pipeline_wiring(
-    mock_fmp, mock_sec, mock_stooq, mock_narrative, mock_qualitative, mock_thesis, mock_filing_sections, tmp_path
+    mock_fmp, mock_sec, mock_stooq, mock_narrative, mock_qualitative, mock_filing_sections, tmp_path
 ):
     mock_fmp.return_value = _empty_fmp_data()
     mock_sec.return_value = _sec_data()
     mock_stooq.return_value = _stooq_prices()
     mock_narrative.return_value = _mocked_narrative()
     mock_qualitative.return_value = _mocked_qualitative()
-    mock_thesis.return_value = _mocked_thesis()
     mock_filing_sections.return_value = {"business": "Business text.", "risk_factors": None, "mdna": "MD&A text.", "method": "section_match"}
 
     regime_info = {"regime": "Neutral/Expansion", "signals": {}}
@@ -159,22 +141,16 @@ def test_full_layered_pipeline_wiring(
     assert state["quant_scorecard"]["evaluated"] >= 1
     assert state["latest_10k"]["form"] == "10-K"
 
-    apply_sector_medians([state])
-    assert "sector_medians" in state
-
     company_doc, summary, narrative_warnings, qualitative_failed = finalize_company(
         state, regime_info, skip_ai=False, out_dir=tmp_path
     )
 
     assert qualitative_failed is False
     assert company_doc["quant_score"]["evaluated"] >= 1
-    assert company_doc["valuation"]["dcf"]["assumptions"]["discount_rate_pct"] == 9.0
+    assert company_doc["metrics"]["total_assets"] == 2_000_000_000
+    assert company_doc["metrics"]["total_liabilities"] == 1_200_000_000
+    assert company_doc["metrics"]["shareholders_equity"] == 800_000_000
     assert company_doc["qualitative"]["moat_present"] is True
-    assert len(company_doc["qualitative"]["fisher_checklist"]) == 2
-    assert company_doc["lynch_category"]["category"] in (
-        "fast_grower", "stalwart", "slow_grower", "cyclical", "turnaround", "asset_play", None
-    )
-    assert company_doc["thesis"]["falsification_criteria"]
     assert company_doc["layered_analysis"]["quant_gate_pass"] in (True, False)
     assert summary["quant_gate_pass"] == company_doc["layered_analysis"]["quant_gate_pass"]
     assert 0.0 <= company_doc["layered_analysis"]["conviction_score"] <= 100.0
@@ -182,14 +158,12 @@ def test_full_layered_pipeline_wiring(
     assert summary["conviction_score"] == company_doc["layered_analysis"]["conviction_score"]
 
     # The cache file should now exist and be reused on a second call without
-    # calling the Anthropic-backed qualitative/thesis functions again.
+    # calling the Anthropic-backed qualitative function again.
     mock_qualitative.reset_mock()
-    mock_thesis.reset_mock()
     mock_filing_sections.reset_mock()
     company_doc2, *_ = finalize_company(state, regime_info, skip_ai=False, out_dir=tmp_path)
     assert company_doc2["qualitative"] == company_doc["qualitative"]
     mock_qualitative.assert_not_called()
-    mock_thesis.assert_not_called()
     mock_filing_sections.assert_not_called()
 
 
@@ -202,8 +176,8 @@ def test_qualitative_layer_skipped_when_quant_gate_fails(
     mock_fmp, mock_sec, mock_stooq, mock_narrative, mock_filing_sections, tmp_path
 ):
     """A company with almost no data shouldn't trigger the filing fetch or
-    any qualitative/thesis Claude call at all - the deliberate quant-gate
-    cost control from fetch_and_score_company's docstring."""
+    any qualitative Claude call at all - the deliberate quant-gate cost
+    control from fetch_and_score_company's docstring."""
     mock_fmp.return_value = _empty_fmp_data()
     sparse_sec = _sec_data()
     sparse_sec["company_facts"] = {"facts": {"us-gaap": {}, "dei": {}}}
@@ -216,12 +190,10 @@ def test_qualitative_layer_skipped_when_quant_gate_fails(
 
     regime_info = {"regime": "Neutral/Expansion", "signals": {}}
     state = fetch_and_score_company({"ticker": "ZZZZ", "name": "Sparse Co", "sector": "Technology"}, regime_info)
-    apply_sector_medians([state])
 
     company_doc, *_ = finalize_company(state, regime_info, skip_ai=False, out_dir=tmp_path)
 
     assert company_doc["qualitative"] is None
-    assert company_doc["thesis"] is None
     mock_filing_sections.assert_not_called()
 
 
@@ -241,14 +213,12 @@ def test_qualitative_layer_failure_degrades_gracefully(
 
     regime_info = {"regime": "Neutral/Expansion", "signals": {}}
     state = fetch_and_score_company({"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology"}, regime_info)
-    apply_sector_medians([state])
 
     company_doc, summary, warnings, qualitative_failed = finalize_company(
         state, regime_info, skip_ai=False, out_dir=tmp_path
     )
 
     assert company_doc["qualitative"] is None
-    assert company_doc["thesis"] is None
     # Only asserted when the quant gate actually passed (fetch_filing_sections
     # was reached at all) - otherwise there's nothing to have failed.
     if mock_filing_sections.called:
@@ -256,16 +226,15 @@ def test_qualitative_layer_failure_degrades_gracefully(
 
 
 @patch("pipeline.main.filing_text.fetch_filing_sections")
-@patch("pipeline.main.generate_thesis")
 @patch("pipeline.main.generate_qualitative_assessment")
 @patch("pipeline.main.generate_narrative")
 @patch("pipeline.main.stooq.fetch_daily_prices")
 @patch("pipeline.main.sec_edgar.fetch_company")
 @patch("pipeline.main.fmp.fetch_company")
 def test_narrative_failure_does_not_affect_concurrent_qualitative_success(
-    mock_fmp, mock_sec, mock_stooq, mock_narrative, mock_qualitative, mock_thesis, mock_filing_sections, tmp_path
+    mock_fmp, mock_sec, mock_stooq, mock_narrative, mock_qualitative, mock_filing_sections, tmp_path
 ):
-    """Narrative and qualitative/thesis now run concurrently (see
+    """Narrative and qualitative now run concurrently (see
     finalize_company's docstring) - one failing must not corrupt or block
     the other's result."""
     mock_fmp.return_value = _empty_fmp_data()
@@ -277,14 +246,12 @@ def test_narrative_failure_does_not_affect_concurrent_qualitative_success(
     # translation layer and test an unrealistic failure mode.
     mock_narrative.side_effect = NarrativeError("Anthropic overloaded")
     mock_qualitative.return_value = _mocked_qualitative()
-    mock_thesis.return_value = _mocked_thesis()
     mock_filing_sections.return_value = {
         "business": "Business text.", "risk_factors": None, "mdna": "MD&A text.", "method": "section_match"
     }
 
     regime_info = {"regime": "Neutral/Expansion", "signals": {}}
     state = fetch_and_score_company({"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology"}, regime_info)
-    apply_sector_medians([state])
 
     company_doc, _summary, _warnings, qualitative_failed = finalize_company(
         state, regime_info, skip_ai=False, out_dir=tmp_path
@@ -292,11 +259,10 @@ def test_narrative_failure_does_not_affect_concurrent_qualitative_success(
 
     # Narrative degraded gracefully (same resilience as before parallelizing).
     assert company_doc["narrative"]["one_line_summary"] is None
-    # But qualitative/thesis - running concurrently in a separate thread -
-    # completed normally and were unaffected.
+    # But qualitative - running concurrently in a separate thread - completed
+    # normally and was unaffected.
     assert qualitative_failed is False
     assert company_doc["qualitative"]["moat_present"] is True
-    assert company_doc["thesis"]["falsification_criteria"]
 
 
 @patch("pipeline.main.filing_text.fetch_filing_sections")
@@ -315,7 +281,6 @@ def test_qualitative_failure_does_not_affect_concurrent_narrative_success(
 
     regime_info = {"regime": "Neutral/Expansion", "signals": {}}
     state = fetch_and_score_company({"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology"}, regime_info)
-    apply_sector_medians([state])
 
     company_doc, _summary, _warnings, qualitative_failed = finalize_company(
         state, regime_info, skip_ai=False, out_dir=tmp_path
