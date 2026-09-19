@@ -176,6 +176,9 @@ def test_full_layered_pipeline_wiring(
     assert company_doc["thesis"]["falsification_criteria"]
     assert company_doc["layered_analysis"]["quant_gate_pass"] in (True, False)
     assert summary["quant_gate_pass"] == company_doc["layered_analysis"]["quant_gate_pass"]
+    assert 0.0 <= company_doc["layered_analysis"]["conviction_score"] <= 100.0
+    assert company_doc["layered_analysis"]["conviction_verdict"] in ("Strong", "Favorable", "Neutral", "Cautious", "Weak")
+    assert summary["conviction_score"] == company_doc["layered_analysis"]["conviction_score"]
 
     # The cache file should now exist and be reused on a second call without
     # calling the Anthropic-backed qualitative/thesis functions again.

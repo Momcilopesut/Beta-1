@@ -76,6 +76,12 @@ function renderBySector(companies) {
     bySector.get(sector).push(company);
   }
 
+  // Highest Conviction Score first within each sector - companies without
+  // enough data for a score (null) sort last rather than crashing the compare.
+  for (const list of bySector.values()) {
+    list.sort((a, b) => (b.conviction_score ?? -1) - (a.conviction_score ?? -1));
+  }
+
   const orderedSectors = [
     ...SECTOR_ORDER.filter((s) => bySector.has(s)),
     ...[...bySector.keys()].filter((s) => !SECTOR_ORDER.includes(s)).sort(),
@@ -104,6 +110,12 @@ function renderCard(company) {
       ? `<span class="mini-badge" title="Piotroski F-Score">F-Score ${company.piotroski_f_score}/9</span>`
       : "";
   const layeredBadge = renderLayeredBadge(company);
+  const hasConviction = company.conviction_score !== null && company.conviction_score !== undefined;
+  const convictionBadge = hasConviction
+    ? `<span class="verdict-badge conviction-badge ${verdictClass(company.conviction_verdict)}">
+        Conviction: ${escapeHtml(company.conviction_verdict)} (${formatNumber(company.conviction_score, { decimals: 0 })})
+      </span>`
+    : `<span class="verdict-badge conviction-badge verdict-neutral">Conviction: not enough data</span>`;
   return `
     <a class="card" href="company.html?ticker=${encodeURIComponent(company.ticker)}">
       <div class="card-header">
@@ -111,6 +123,7 @@ function renderCard(company) {
         <span class="name">${escapeHtml(company.name)}</span>
       </div>
       <div class="verdicts">
+        ${convictionBadge}
         <span class="verdict-badge ${verdictClass(company.short_term_verdict)}">
           Short-term: ${escapeHtml(company.short_term_verdict)} (${formatNumber(company.short_term_score, { decimals: 0 })})
         </span>

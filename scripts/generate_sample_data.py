@@ -443,7 +443,9 @@ def main() -> None:
             s["metrics"], s["raw"], shares_outstanding, s["close_price"], s["sector_medians"]
         )
         qualitative_out, thesis_out = synth_qualitative_and_thesis(s["name"], quant_scorecard, valuation_out)
-        layered_analysis = aggregation.build_layered_analysis(quant_scorecard, qualitative_out, valuation_out)
+        layered_analysis = aggregation.build_layered_analysis(
+            quant_scorecard, qualitative_out, valuation_out, s["checklist"]
+        )
 
         company_doc = {
             "ticker": s["ticker"],
@@ -495,6 +497,8 @@ def main() -> None:
                 "quant_gate_pass": layered_analysis["quant_gate_pass"],
                 "qualitative_moat_present": layered_analysis["qualitative_moat_present"],
                 "valuation_gate_pass": layered_analysis["valuation_gate_pass"],
+                "conviction_score": layered_analysis["conviction_score"],
+                "conviction_verdict": layered_analysis["conviction_verdict"],
                 "last_updated": generated_at,
             }
         )

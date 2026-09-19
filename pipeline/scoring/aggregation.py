@@ -5,7 +5,19 @@ the way it did, not just a blended number that hides a broken moat behind
 a strong quant score. See README's layered-analysis section for the
 reasoning; this module is a pure function over the other layers' already-
 computed output, no new data or API calls.
+
+Also computes the Conviction Score (see build_conviction_score) - a single
+0-100 number per stock, config-driven via config/conviction_score.yaml.
+This DOES produce one number, but not via a naive average: it's a weighted
+base from the pass-rate checklists (quant screen, Graham, Piotroski,
+Fisher), then the moat read and the valuation gate each multiply that base
+rather than blending into it - the same gate/multiplier/final-gate design
+as the rest of this module, just expressed as a number instead of only a
+verdict and flags.
 """
+
+from pipeline.scoring.thresholds import verdict_for
+from pipeline.utils.config import conviction_score_config
 
 # Classic value-investing convention: a "margin of safety" means a real
 # discount to estimated intrinsic value, not just trading below it by any
@@ -39,7 +51,91 @@ def _required_margin_of_safety_pct(quant_scorecard: dict, qualitative: dict | No
     return required
 
 
-def build_layered_analysis(quant_scorecard: dict, qualitative: dict | None, valuation: dict) -> dict:
+def _checklist_pass_rate_components(
+    quant_scorecard: dict, qualitative: dict | None, value_investing_checklist: dict | None
+) -> dict[str, float]:
+    """Every pass-rate checklist this pipeline computes, as a 0-100 number,
+    included only when it actually has data - a checklist the pipeline
+    couldn't evaluate (e.g. Piotroski needs 2 years of statements) is left
+    out entirely rather than counted as a failure."""
+    components: dict[str, float] = {}
+
+    if quant_scorecard.get("quant_score_pct") is not None:
+        components["quant_score_pct"] = quant_scorecard["quant_score_pct"]
+
+    checklist = value_investing_checklist or {}
+    graham = checklist.get("graham_defensive") or {}
+    if graham.get("evaluated"):
+        components["graham_pct"] = graham["passed"] / graham["evaluated"] * 100
+
+    piotroski = checklist.get("piotroski_f_score") or {}
+    if piotroski.get("evaluated"):
+        components["piotroski_pct"] = piotroski["score"] / piotroski["evaluated"] * 100
+
+    fisher_items = (qualitative or {}).get("fisher_checklist") or []
+    decided = [c for c in fisher_items if c.get("assessment") in ("yes", "no")]
+    if decided:
+        components["fisher_pct"] = sum(1 for c in decided if c["assessment"] == "yes") / len(decided) * 100
+
+    return components
+
+
+def build_conviction_score(
+    quant_scorecard: dict,
+    qualitative: dict | None,
+    value_investing_checklist: dict | None,
+    moat_present: bool | None,
+    valuation_gate: bool | None,
+) -> dict:
+    """Returns {"score": float|None, "verdict": str|None, "score_breakdown": dict|None}.
+    None across the board when none of the pass-rate checklists have any
+    data at all - there's nothing to score, not a score of 0."""
+    cfg = conviction_score_config()
+    weights = cfg["component_weights"]
+    components = _checklist_pass_rate_components(quant_scorecard, qualitative, value_investing_checklist)
+
+    if not components:
+        return {"score": None, "verdict": None, "score_breakdown": None}
+
+    total_weight = sum(weights[key] for key in components)
+    base_score = sum(components[key] * weights[key] for key in components) / total_weight
+
+    moat_multipliers = cfg["qualitative_moat_multiplier"]
+    if moat_present is True:
+        moat_multiplier = moat_multipliers["moat_present"]
+    elif moat_present is False:
+        moat_multiplier = moat_multipliers["no_moat"]
+    else:
+        moat_multiplier = moat_multipliers["not_evaluated"]
+
+    valuation_multipliers = cfg["valuation_gate_multiplier"]
+    if valuation_gate is True:
+        valuation_multiplier = valuation_multipliers["pass"]
+    elif valuation_gate is False:
+        valuation_multiplier = valuation_multipliers["fail"]
+    else:
+        valuation_multiplier = valuation_multipliers["not_evaluated"]
+
+    score = max(0.0, min(100.0, base_score * moat_multiplier * valuation_multiplier))
+
+    return {
+        "score": round(score, 1),
+        "verdict": verdict_for(score),
+        "score_breakdown": {
+            "base_score": round(base_score, 1),
+            "components": {key: round(value, 1) for key, value in components.items()},
+            "moat_multiplier": moat_multiplier,
+            "valuation_multiplier": valuation_multiplier,
+        },
+    }
+
+
+def build_layered_analysis(
+    quant_scorecard: dict,
+    qualitative: dict | None,
+    valuation: dict,
+    value_investing_checklist: dict | None = None,
+) -> dict:
     flags: list[str] = []
 
     quant_gate = quant_scorecard.get("gate_pass")
@@ -83,6 +179,8 @@ def build_layered_analysis(quant_scorecard: dict, qualitative: dict | None, valu
     else:
         overall = "Layers disagree - see flags for specifics."
 
+    conviction = build_conviction_score(quant_scorecard, qualitative, value_investing_checklist, moat_present, valuation_gate)
+
     return {
         "quant_gate_pass": quant_gate,
         "qualitative_moat_present": moat_present,
@@ -90,4 +188,7 @@ def build_layered_analysis(quant_scorecard: dict, qualitative: dict | None, valu
         "required_margin_of_safety_pct": required_margin_of_safety_pct,
         "overall": overall,
         "flags": flags,
+        "conviction_score": conviction["score"],
+        "conviction_verdict": conviction["verdict"],
+        "conviction_score_breakdown": conviction["score_breakdown"],
     }

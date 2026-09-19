@@ -377,7 +377,9 @@ def finalize_company(
                 state, quant_scorecard, valuation_out, out_dir
             )
 
-    layered_analysis = aggregation.build_layered_analysis(quant_scorecard, qualitative_out, valuation_out)
+    layered_analysis = aggregation.build_layered_analysis(
+        quant_scorecard, qualitative_out, valuation_out, state["checklist"]
+    )
 
     company_doc = {
         "ticker": ticker,
@@ -425,6 +427,8 @@ def finalize_company(
         "quant_gate_pass": layered_analysis["quant_gate_pass"],
         "qualitative_moat_present": layered_analysis["qualitative_moat_present"],
         "valuation_gate_pass": layered_analysis["valuation_gate_pass"],
+        "conviction_score": layered_analysis["conviction_score"],
+        "conviction_verdict": layered_analysis["conviction_verdict"],
         "last_updated": generated_at,
     }
 

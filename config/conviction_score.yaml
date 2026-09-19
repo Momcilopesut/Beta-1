@@ -1,0 +1,34 @@
+# Conviction Score: a single 0-100 number per stock, built by literally
+# running it through every filter/checklist this pipeline computes - not a
+# naive average of everything. Matches the aggregation design this project
+# settled on from the start (see README's "Layered analysis" section):
+# the quant/checklist layers form a weighted BASE quality score, then the
+# qualitative moat read and the valuation margin-of-safety gate each
+# MULTIPLY that base rather than blending into it - so a strong quant
+# score can't quietly outvote "no durable moat found" or "no margin of
+# safety at this price." A component only contributes to the base score
+# when it actually has data; weights renormalize over whatever's
+# available rather than penalizing a stock for a checklist this pipeline
+# couldn't evaluate (missing statement years, no filing text, etc.).
+
+component_weights:
+  quant_score_pct: 0.30 # Layer 2: ROIC / FCF margin / growth / debt-EBITDA pass rate
+  graham_pct: 0.20 # Graham Defensive Investor checklist pass rate
+  piotroski_pct: 0.25 # Piotroski F-Score pass rate
+  fisher_pct: 0.25 # Fisher's 15-point checklist (adapted) pass rate
+
+# Applied AFTER the weighted base score above, as a multiplier - deliberately
+# not blended in as a 5th weighted component, so it can meaningfully move
+# the outcome regardless of how strong the checklists look.
+qualitative_moat_multiplier:
+  moat_present: 1.05
+  no_moat: 0.70
+  not_evaluated: 1.0 # qualitative layer didn't run (quant gate failed, or errored) - nothing to penalize
+
+# The final gate: a wonderful business at a bad price still isn't a buy.
+# valuation_gate_pass here is pipeline.scoring.aggregation's own risk-scaled
+# gate (required_margin_of_safety_pct), not a separate threshold.
+valuation_gate_multiplier:
+  pass: 1.0
+  fail: 0.55
+  not_evaluated: 1.0

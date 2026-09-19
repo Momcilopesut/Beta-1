@@ -173,6 +173,37 @@ match) — Klarman's point that margin of safety is a risk-management concept, n
 fixed number every company gets held to equally. See `required_margin_of_safety_pct`
 in the output.
 
+### Conviction Score
+
+A single 0-100 number per stock (`layered_analysis.conviction_score`, shown on every
+card and at the top of the company detail page), built by literally running the
+company through every filter/checklist this pipeline computes — but not via a naive
+average, which would let a strong quant score quietly paper over a broken moat or an
+expensive price. The formula (`pipeline/scoring/aggregation.py::build_conviction_score`,
+weights in `config/conviction_score.yaml`):
+
+1. **Weighted base score** — the four pass-rate checklists (quant screen, Graham,
+   Piotroski, Fisher), each already computed elsewhere, blended by configurable
+   weight. A checklist the pipeline couldn't evaluate (e.g. Piotroski needs 2 years
+   of statements it doesn't have) is left out entirely and the remaining weights
+   renormalize — a data gap is never scored as a failure.
+2. **Qualitative moat multiplier** — ×1.05 if a moat was identified, ×0.70 if the
+   qualitative layer explicitly found none, ×1.0 if that layer never ran. Applied
+   after the base score, not blended into it, so it can meaningfully move the result
+   regardless of how strong the checklists look.
+3. **Valuation gate multiplier** — ×1.0 if the margin-of-safety gate passes (using
+   the same Klarman risk-scaled threshold above), ×0.55 if it fails, ×1.0 if
+   valuation couldn't be evaluated. The final gate: a wonderful business at a bad
+   price still isn't a buy.
+
+The result is clamped to 0-100 and banded into the same Strong/Favorable/Neutral/
+Cautious/Weak verdicts used elsewhere (`pipeline/scoring/thresholds.py`). A company
+with no data in any of the four checklists gets `conviction_score: null`, never a
+misleading 0. The dashboard sorts each sector group by this score (highest first);
+the full breakdown (base score, each component, both multipliers) ships in the
+output and renders on the company page so a high or low score is never just a
+number — you can always see why.
+
 ### Which frameworks became which filters
 
 This project draws on ten value-investing thinkers. Rather than list them as
@@ -203,6 +234,8 @@ importantly, what didn't become a filter and why:
 - `config/quant_score_thresholds.yaml` — pass/fail thresholds for the quant screen
   (layer 1 above) and the fraction of evaluated metrics that must pass to gate the
   deeper layers.
+- `config/conviction_score.yaml` — component weights for the Conviction Score's base
+  score, and the qualitative-moat / valuation-gate multipliers applied on top of it.
 
 ## Deployment
 

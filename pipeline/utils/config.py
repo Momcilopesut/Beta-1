@@ -31,3 +31,7 @@ def macro_series() -> dict:
 
 def quant_score_thresholds() -> dict:
     return load_yaml("quant_score_thresholds.yaml")
+
+
+def conviction_score_config() -> dict:
+    return load_yaml("conviction_score.yaml")

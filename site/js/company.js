@@ -73,6 +73,7 @@ function render(doc) {
     </section>
 
     <section class="verdicts-detail">
+      ${renderConvictionCard(doc.layered_analysis)}
       ${renderScoreCard("Short-Term", doc.scores.short_term)}
       ${renderScoreCard("Long-Term", doc.scores.long_term)}
     </section>
@@ -127,6 +128,38 @@ function render(doc) {
         }
       </ul>
     </section>
+  `;
+}
+
+const CONVICTION_COMPONENT_LABELS = {
+  quant_score_pct: "Quant screen",
+  graham_pct: "Graham checklist",
+  piotroski_pct: "Piotroski F-Score",
+  fisher_pct: "Fisher checklist",
+};
+
+function renderConvictionCard(layered) {
+  if (!layered || layered.conviction_score === null || layered.conviction_score === undefined) {
+    return `
+      <div class="score-card verdict-neutral">
+        <h3>Conviction Score</h3>
+        <p class="score-value">—</p>
+        <p class="verdict-label">Not enough data</p>
+        <p class="score-note">Needs at least one of the quant screen, Graham, Piotroski, or Fisher checklists.</p>
+      </div>
+    `;
+  }
+  const b = layered.conviction_score_breakdown || {};
+  const parts = Object.entries(b.components || {})
+    .map(([key, value]) => `${CONVICTION_COMPONENT_LABELS[key] || key} ${formatNumber(value, { decimals: 0 })}`)
+    .join(", ");
+  return `
+    <div class="score-card ${verdictClass(layered.conviction_verdict)}">
+      <h3>Conviction Score</h3>
+      <p class="score-value">${formatNumber(layered.conviction_score, { decimals: 0 })}</p>
+      <p class="verdict-label">${escapeHtml(layered.conviction_verdict)}</p>
+      <p class="score-note">Base ${formatNumber(b.base_score, { decimals: 0 })} (${parts}) × ${formatNumber(b.moat_multiplier, { decimals: 2 })} moat × ${formatNumber(b.valuation_multiplier, { decimals: 2 })} valuation</p>
+    </div>
   `;
 }
 
@@ -369,7 +402,7 @@ function renderLayeredAnalysis(doc) {
   const flags = (layered?.flags || []).map((f) => `<li>${escapeHtml(f)}</li>`).join("");
   return `
     <section class="layered-analysis">
-      <h3>Layered Analysis <span class="attribution">(quant screen, qualitative moat read, and valuation stay separate — never averaged into one number)</span></h3>
+      <h3>Layered Analysis <span class="attribution">(quant screen, qualitative moat read, and valuation stay visible separately, then combine — via gates and multipliers, never a naive average — into the Conviction Score above)</span></h3>
       ${layered ? `<p class="layered-overall">${escapeHtml(layered.overall)}</p>` : ""}
       ${renderLynchCategory(doc.lynch_category)}
       ${flags ? `<ul class="layered-flags">${flags}</ul>` : ""}
