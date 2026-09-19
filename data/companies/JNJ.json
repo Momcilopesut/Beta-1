@@ -29,8 +29,8 @@
       "trend": "stable"
     },
     "valuation": {
-      "dcf_fair_value": 284.42192545993817,
-      "dcf_upside_pct": 5.411728359624258,
+      "dcf_fair_value": 278.27048178306444,
+      "dcf_upside_pct": 3.0669586959014894,
       "earnings_yield_pct": 3.7703694000465915,
       "ev_ebitda": 20.13703525838966,
       "graham_multiple": 242.00043456378145,
@@ -43,15 +43,16 @@
     }
   },
   "industry": "Drug Manufacturers - General",
-  "last_updated": "2026-09-18T23:35:10Z",
+  "last_updated": "2026-09-19T11:11:05Z",
   "layered_analysis": {
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
     ],
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "quant_gate_pass": true,
-    "required_margin_of_safety_pct": 15.0,
+    "required_margin_of_safety_pct": 30.0,
     "valuation_gate_pass": false
   },
   "lynch_category": {
@@ -68,7 +69,7 @@
   "market_cap": 650648473336,
   "metrics": {
     "current_ratio": 1.0888787685581565,
-    "dcf_upside_pct": 5.411728359624258,
+    "dcf_upside_pct": 3.0669586959014894,
     "debt_to_ebitda": 1.4481706395963625,
     "debt_to_equity": 0.5770910075202128,
     "earnings_yield_pct": 3.7703694000465915,
@@ -107,7 +108,7 @@
     "roic_pct": 19.183663574911403,
     "rsi_distance_from_neutral": 3.000923361034147,
     "sector_relative_momentum_pct": 12.107528144633804,
-    "volume_vs_avg_ratio": 1.9037570874529046
+    "volume_vs_avg_ratio": 1.903667461731043
   },
   "name": "Johnson & Johnson",
   "narrative": {
@@ -117,87 +118,163 @@
         {
           "source_metric": "graham_upside_pct",
           "source_value": "-65.57%",
-          "text": "Johnson & Johnson's Graham fair-value model implies the stock trades roughly 65.6% above that conservative estimate, leaving little to no margin of safety by this measure."
+          "text": "The stock's price appears to offer little to no margin of safety versus its Graham-model fair value estimate, with a -65.6% gap implying the price is well above that model's estimate."
         },
         {
-          "source_metric": "graham_multiple",
-          "source_value": "242.00",
-          "text": "The Graham multiple (P/E \u00d7 P/B) is about 242, far above the traditional Graham ceiling of 22.5, reinforcing a stretched valuation picture by this classic screen."
-        },
-        {
-          "source_metric": "pe_ttm",
-          "source_value": "31.21x",
-          "text": "The stock trades at a trailing P/E of about 31.2x, a premium multiple relative to typical value-investing thresholds."
+          "source_metric": "dcf_upside_pct",
+          "source_value": "3.07%",
+          "text": "The DCF-based margin of safety is thin, at just 3.1% upside to modeled fair value."
         },
         {
           "source_metric": "pb_ratio",
           "source_value": "7.75x",
-          "text": "Price-to-book of about 7.75x indicates the market is pricing the company well above its net asset base."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "4 of 9 evaluated",
-          "text": "A Piotroski F-Score of 4 out of 9 evaluated criteria points to comparatively weak fundamental-quality signals on this checklist."
+          "text": "The stock trades at roughly 7.75 times book value, a high price-to-book multiple."
         }
       ],
       "important": [
         {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "5.41%",
-          "text": "A discounted cash flow model shows about a 5.4% upside to the current price, a modest margin of safety by that approach - contrasting with the much larger Graham-based gap."
-        },
-        {
           "source_metric": "roic_pct",
           "source_value": "19.18%",
-          "text": "Return on invested capital of roughly 19.2% is notably high, a pattern sometimes associated with a durable competitive advantage."
+          "text": "Return on invested capital of 19.2% is notably high, a pattern sometimes associated with a durable competitive advantage."
         },
         {
-          "source_metric": "ev_ebitda",
-          "source_value": "20.14x",
-          "text": "EV/EBITDA of about 20.1x is elevated, consistent with a premium valuation on an enterprise-value basis."
+          "source_metric": "eps_growth_yoy_pct",
+          "source_value": "88.87%",
+          "text": "Year-over-year EPS growth was very large at 88.9%."
+        },
+        {
+          "source_metric": "piotroski_f_score",
+          "source_value": "4 of 9 evaluated",
+          "text": "The company scores 4 of 9 on the evaluated Piotroski financial-strength checklist, a middling result."
         },
         {
           "source_metric": "graham_criteria_passed",
           "source_value": "3 of 6 evaluated",
-          "text": "The company passes 3 of 6 evaluated Graham defensive-investor criteria."
+          "text": "JNJ passes 3 of 6 evaluated Graham defensive-investor criteria."
         },
         {
           "source_metric": "debt_to_equity",
           "source_value": "0.58",
-          "text": "Debt-to-equity of about 0.58 reflects a moderate, manageable leverage level."
+          "text": "Debt-to-equity stands at 0.58, indicating moderate balance-sheet leverage."
+        },
+        {
+          "source_metric": "interest_coverage",
+          "source_value": "25.94x",
+          "text": "Interest coverage is very strong at nearly 26 times, indicating ample ability to service debt from earnings."
         }
       ],
       "minor": [
         {
-          "source_metric": "interest_coverage",
-          "source_value": "25.94x",
-          "text": "Interest coverage of nearly 26x indicates operating income comfortably covers interest expense."
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "6.05%",
+          "text": "Revenue grew 6.0% year-over-year, a modest pace of top-line growth."
+        },
+        {
+          "source_metric": "owner_earnings_yield_pct",
+          "source_value": "4.53%",
+          "text": "The owner earnings yield on the business is 4.5%, a Buffett-style measure of cash generation relative to price."
         }
       ],
       "noise": [
         {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "88.87%",
-          "text": "Year-over-year EPS growth of about 88.9% is a large jump that may reflect a one-time item; taken alone it should be treated cautiously as a growth-trend indicator."
+          "source_metric": "volume_vs_avg_ratio",
+          "source_value": "1.90x average",
+          "text": "Trading volume has been running about 1.9x its average level, a supply/demand divergence worth noting though its cause is not indicated by this data."
         }
       ]
     },
-    "long_term_narrative": "The long-term score of 54.5 ('Neutral') reflects mixed signals: a discounted cash flow model shows only a modest ~5.4% margin of safety, while the Graham fair-value model implies the stock trades about 65.6% above that more conservative estimate. Return on invested capital near 19.2% hints at a potentially durable business advantage, but a Piotroski score of 4 out of 9 and passing only 3 of 6 Graham defensive criteria suggest uneven fundamental quality. Longer-run revenue growth has slowed (5-year CAGR near 2.7%) even as the balance sheet remains conservatively levered (debt-to-equity ~0.58) with strong interest coverage.",
-    "one_line_summary": "JNJ shows strong recent price momentum and high ROIC, but valuation multiples and a large Graham fair-value gap point to a rich price.",
-    "short_term_narrative": "The short-term score of 66.6 ('Favorable') is driven mainly by price action: the stock trades about 2.5% above its 50-day average and roughly 13.1% above its 200-day average, with a 3-month return near 18.2%. RSI sits close to neutral territory, and the stock is showing about 12.1% stronger momentum than its sector along with trading volume nearly 1.9x its average - a supply/demand divergence worth noting, though the data does not indicate why it is occurring."
+    "long_term_narrative": "JNJ's long-term score of 54.3 ('Neutral') reflects a mixed picture: a high 19.2% return on invested capital and 25.7% return on equity point to strong underlying profitability, but the modeled fair-value comparisons show little to no cushion, with DCF upside of just 3.1% and Graham upside deeply negative at -65.6%. The company passes only 3 of 6 evaluated Graham defensive-investor criteria and scores 4 of 9 on the Piotroski financial-strength checklist, suggesting some fundamental weak spots despite low leverage (debt-to-equity of 0.58) and strong interest coverage (25.9x). Revenue growth remains modest at 6.0% year-over-year.",
+    "one_line_summary": "JNJ combines strong profitability and low leverage with a stretched valuation and mixed value-investing checklist scores.",
+    "short_term_narrative": "JNJ's short-term score of 65.8 ('Favorable') reflects price trading 2.5% above its 50-day average and 13.1% above its 200-day average, alongside a 12.1% momentum edge over its sector peers. Trading volume is running about 1.9x its recent average, indicating elevated activity, though the data does not indicate why. Together these suggest recent price strength and heightened trading interest relative to the stock's own history and peer group."
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 8451717.451792829,
+    "avg_volume": 8452115.363346614,
     "close": 269.99,
     "return_1m_pct": -1.2508686587908326,
     "return_3m_pct": 18.21445772581988,
     "sector_avg_return_3m_pct": 6.106929581186077,
     "sector_relative_momentum_pct": 12.107528144633804,
     "volume": 16090017,
-    "volume_vs_avg_ratio": 1.9037570874529046
+    "volume_vs_avg_ratio": 1.903667461731043
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "fisher_checklist": [
+      {
+        "assessment": "unknown",
+        "criterion": "Sufficient market potential for years of growth",
+        "evidence": "The excerpts discuss regulatory and competitive dynamics extensively but do not describe overall market size or growth runway for JNJ's segments; the Business section provided is dominated by risk factors rather than market opportunity description."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Management's commitment to new products/R&D",
+        "evidence": "The filing states the Company pursues product development through 'internal research and development as well as through collaborations, acquisitions, joint ventures and licensing,' and notes new products from the past five years accounted for approximately 25% of 2025 sales."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Effective sales/distribution effort",
+        "evidence": "The excerpts describe international revenue mix (43% of sales outside the U.S.) but do not detail sales or distribution strategy or effectiveness."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Worthwhile profit margin",
+        "evidence": "The scorecard shows FCF margin of 20.9%, well above the 10% threshold, and ROIC of 19.2% versus a 12% threshold, both passing comfortably."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Steps to sustain or improve margin",
+        "evidence": "The excerpts mention cost reduction programs and productivity improvements specifically in high-inflation countries, but no broader company-wide margin improvement plan is described; margin_trend_score of 60 is informational only with no explanatory text."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Outstanding labor/personnel relations",
+        "evidence": "The provided excerpts contain no discussion of labor relations, employee satisfaction, or workforce matters."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Depth of management beyond the top executive",
+        "evidence": "Only the CIO and CISO are named with tenure details in the cybersecurity governance section; no broader executive bench strength is discussed elsewhere in the excerpts."
+      },
+      {
+        "assessment": "no",
+        "criterion": "Cost analysis and accounting controls",
+        "evidence": "The excerpts do not describe specific cost accounting systems or controls beyond generic mention of 'cost reduction programs' in inflationary markets; this is not substantive cost-control disclosure."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "A unique aspect giving a real competitive edge",
+        "evidence": "The Company's patent portfolio and regulatory approval barriers, combined with a captive insurance structure to manage extensive litigation exposure, are specific structural features described in the filing that are not easily replicated by competitors."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Long-range profit outlook over short-range",
+        "evidence": "The excerpts are risk-factor and governance oriented and do not include forward-looking management commentary emphasizing long-term versus short-term profit priorities."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Equity financing that would dilute current shareholders",
+        "evidence": "No discussion of share issuance or equity financing appears in the excerpts, and the scorecard does not provide share count trend data."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Management talks candidly about problems, not just successes",
+        "evidence": "The Risk Factors section discusses specific, substantive issues such as talc litigation, patent challenges from biosimilars, highly inflationary economies by name (Argentina, Turkey, Venezuela, Egypt), and named geopolitical conflicts (Russia-Ukraine, Middle East, U.S.-China tensions) rather than only generic boilerplate."
+      }
+    ],
+    "management_assessment": "The excerpts provide limited direct discussion of capital allocation such as buybacks or dividends. They do note that the Company pursues product development 'through internal research and development as well as through collaborations, acquisitions, joint ventures and licensing or other arrangements with third parties,' indicating an active but diversified approach to funding innovation rather than relying solely on organic R&D. The scorecard's low debt-to-EBITDA (1.45x, well under the 3.0x threshold) suggests conservative balance-sheet management, but the excerpts themselves do not discuss debt strategy, share buybacks, or dividend policy explicitly.",
+    "moat_explanation": "The excerpts emphasize that JNJ 'owns or licenses a significant number of patents and other proprietary rights relating to its products and manufacturing processes' that are 'essential to the Company's businesses,' and describe extensive regulatory approval requirements (FDA, cGMP) that create barriers to entry for pharmaceutical and device competitors. New products introduced in the past five years accounted for ~25% of 2025 sales, suggesting patent-protected innovation is a meaningful revenue driver, though the filing also acknowledges patent challenges from generic/biosimilar competitors as a recurring risk.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Ongoing talc-related product liability litigation (JOHNSON'S Baby Powder), described as potentially requiring payments 'in excess of accruals' and involving joint-and-several liability exposure",
+      "Company does not purchase third-party product liability insurance, relying instead on a wholly owned captive insurer with limits",
+      "Patent challenges from generic and biosimilar manufacturers that could cause loss of 'a major portion of revenues for the referenced product in a very short period of time'",
+      "Significant regulatory scrutiny and government investigations (FDA, Medicaid Rebate Program, false claims acts) with risk of civil/criminal penalties or program debarment",
+      "Exposure to highly inflationary economies (Argentina, Turkey, Venezuela, Egypt) that may produce operating losses despite mitigation efforts",
+      "Geopolitical risks including Russia-Ukraine war and U.S.-China tensions cited as current, ongoing impacts to business and supply chain"
+    ]
+  },
   "quant_score": {
     "evaluated": 5,
     "gate_pass": true,
@@ -246,8 +323,8 @@
   },
   "scores": {
     "long_term": {
-      "base_score": 54.5,
-      "final_score": 54.5,
+      "base_score": 54.3,
+      "final_score": 54.3,
       "macro_adjustment": 0,
       "subscores": [
         {
@@ -266,8 +343,8 @@
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": 5.411728359624258,
-              "score": 60.82345671924851
+              "raw_value": 3.0669586959014894,
+              "score": 56.13391739180298
             },
             {
               "metric": "graham_upside_pct",
@@ -280,7 +357,7 @@
               "score": 0.0
             }
           ],
-          "score": 23.7,
+          "score": 22.8,
           "weight_pct": 25
         },
         {
@@ -389,8 +466,8 @@
       "verdict": "Neutral"
     },
     "short_term": {
-      "base_score": 66.6,
-      "final_score": 66.6,
+      "base_score": 65.8,
+      "final_score": 65.8,
       "macro_adjustment": 0,
       "subscores": [
         {
@@ -453,11 +530,11 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": 5.411728359624258,
-              "score": 60.82345671924851
+              "raw_value": 3.0669586959014894,
+              "score": 56.13391739180298
             }
           ],
-          "score": 60.8,
+          "score": 56.1,
           "weight_pct": 15
         }
       ],
@@ -495,7 +572,17 @@
       }
     ]
   },
-  "thesis": null,
+  "thesis": {
+    "falsification_criteria": [
+      "If JNJ's trailing revenue CAGR rises persistently above the 5% quant threshold without a corresponding drop in margins, the growth weakness cited in this thesis would no longer hold",
+      "If the DCF margin of safety turns positive (i.e., intrinsic value estimate rises above or price falls below the ~$130/share estimate) using consistent methodology, the 'overvalued relative to intrinsic value' claim would be falsified",
+      "If JNJ's P/E and EV/EBITDA multiples fall to or below the sector medians (currently ~27.7x P/E and ~17.6x EV/EBITDA) without a comparable decline in fundamentals, the relative-valuation premium claim would no longer apply",
+      "If a material adverse judgment or settlement in the talc litigation exceeds JNJ's accruals and captive insurance limits in a way that impairs the balance sheet or ROIC materially below the 12% threshold, the moat/quality assessment would be undermined",
+      "If a major patented product loses a significant portion of revenue rapidly to biosimilar or generic competition as the filing warns, and this causes ROIC or FCF margin to drop below their respective 12% and 10% thresholds, the moat argument would weaken",
+      "If debt/EBITDA rises materially above the 3.0x threshold used in the quant screen, the conservative balance-sheet management referenced in the qualitative assessment would be contradicted"
+    ],
+    "thesis": "The quant scorecard shows a strong, efficient business (80% pass rate, ROIC ~19%, FCF margin ~21%, low leverage at 1.45x debt/EBITDA), and the 10-K excerpts corroborate a durable moat rooted in patents and regulatory barriers to entry, with new products from the past five years contributing roughly 25% of sales - though the filing also flags substantive risks including ongoing talc litigation with joint-and-several liability exposure, reliance on a captive insurer rather than third-party coverage, and recurring biosimilar/generic patent challenges. The one weak spot in the quant layer is slow top-line growth (2.7% revenue CAGR versus a 5% threshold), which tempers the growth side of the quality picture despite strong EPS growth. Critically, the valuation layer conflicts with the quality-and-moat narrative: the simplified DCF implies the stock trades roughly 52% above its estimated intrinsic value (a negative margin of safety), and relative multiples (P/E ~31.2x vs. sector median ~27.7x; EV/EBITDA ~20.1x vs. sector median ~17.6x) also show a premium to peers. Taken together, this is a case of a fundamentally sound, moat-protected company whose quantitative and qualitative strengths appear to already be priced in or exceeded by the current valuation, meaning the layers point in different directions - quality and moat on one side, price on the other."
+  },
   "ticker": "JNJ",
   "valuation": {
     "dcf": {

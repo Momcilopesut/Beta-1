@@ -29,8 +29,8 @@
       "trend": "declining"
     },
     "valuation": {
-      "dcf_fair_value": 229.4080586997425,
-      "dcf_upside_pct": 4.214808840113797,
+      "dcf_fair_value": 227.40562563353538,
+      "dcf_upside_pct": 2.310534770115341,
       "earnings_yield_pct": 2.4215658207087762,
       "ev_ebitda": 23.10989001442223,
       "graham_multiple": 656.4857464161621,
@@ -43,7 +43,7 @@
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-18T23:30:24Z",
+  "last_updated": "2026-09-19T11:09:07Z",
   "layered_analysis": {
     "flags": [
       "6 red flag(s) from the filing text - see qualitative.red_flags.",
@@ -69,7 +69,7 @@
   "market_cap": 5383601670000,
   "metrics": {
     "current_ratio": 4.588949069016016,
-    "dcf_upside_pct": 4.214808840113797,
+    "dcf_upside_pct": 2.310534770115341,
     "debt_to_ebitda": 0.08565638369736546,
     "debt_to_equity": 0.1697061803444782,
     "earnings_yield_pct": 2.4215658207087762,
@@ -108,7 +108,7 @@
     "roic_pct": 70.00404426549008,
     "rsi_distance_from_neutral": 4.701195219123505,
     "sector_relative_momentum_pct": -10.648888390564597,
-    "volume_vs_avg_ratio": 0.5126029550923042
+    "volume_vs_avg_ratio": 0.5125939763214936
   },
   "name": "NVIDIA Corporation",
   "narrative": {
@@ -116,86 +116,86 @@
     "facts": {
       "critical": [
         {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "65.47%",
-          "text": "Revenue grew 65.47% year-over-year, indicating very strong top-line expansion."
+          "source_metric": "graham_upside_pct",
+          "source_value": "-85.42%",
+          "text": "NVDA's price implies an 85.4% negative margin of safety versus its Graham-model fair value estimate, indicating the stock trades far above that model's intrinsic value calculation."
+        },
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "2.31%",
+          "text": "The DCF-based margin of safety is only about 2.3%, suggesting the current price sits very close to the modeled discounted-cash-flow fair value with little cushion."
         },
         {
           "source_metric": "roic_pct",
           "source_value": "70.00%",
-          "text": "Return on invested capital stands at 70.00%, a level that may reflect a durable competitive advantage (moat) if it proves sustainable over time."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-85.42%",
-          "text": "The Graham fair-value model shows a -85.42% gap versus the current price, meaning the stock trades far above its classic Graham-derived valuation with no margin of safety by this measure."
+          "text": "Return on invested capital stands at 70.0%, a level that may point to a durable competitive advantage if sustained relative to sector peers."
         }
       ],
       "important": [
         {
-          "source_metric": "roe_pct",
-          "source_value": "110.11%",
-          "text": "Return on equity is 110.11%, an exceptionally high level of profitability relative to shareholder equity."
+          "source_metric": "pe_ttm",
+          "source_value": "27.96",
+          "text": "The trailing P/E ratio of about 28x reflects a valuation that prices in substantial future earnings growth."
+        },
+        {
+          "source_metric": "pb_ratio",
+          "source_value": "23.48",
+          "text": "The price-to-book ratio of about 23.5x is elevated relative to the company's net asset base."
+        },
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "65.47%",
+          "text": "Revenue grew 65.5% year-over-year, indicating rapid top-line expansion."
         },
         {
           "source_metric": "eps_growth_yoy_pct",
           "source_value": "65.99%",
-          "text": "EPS grew 65.99% year-over-year, mirroring the strong revenue growth trend."
+          "text": "EPS grew 66.0% year-over-year, consistent with the strong revenue growth trend."
         },
         {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "4.21%",
-          "text": "A discounted cash flow model shows only a 4.21% upside to estimated fair value, indicating a thin margin of safety by this method."
+          "source_metric": "owner_earnings_yield_pct",
+          "source_value": "2.17%",
+          "text": "The owner earnings yield of 2.17% represents the cash-based return an owner would theoretically receive relative to the current price, a relatively modest figure by historical value-investing standards."
+        }
+      ],
+      "minor": [
+        {
+          "source_metric": "debt_to_equity",
+          "source_value": "0.17",
+          "text": "Debt-to-equity of 0.17 shows the company carries very little leverage relative to its equity base."
         },
         {
-          "source_metric": "gross_margin_pct",
-          "source_value": "71.07%",
-          "text": "Gross margin is 71.07%, indicating strong pricing power on each dollar of revenue."
-        },
-        {
-          "source_metric": "peg_ratio",
-          "source_value": "0.14",
-          "text": "The PEG ratio is 0.14, a very low reading suggesting the stock's earnings multiple is modest relative to its growth rate."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "4",
-          "text": "The Piotroski F-Score is 4 out of 9 evaluated criteria, a middling reading on this financial-strength checklist."
+          "source_metric": "current_ratio",
+          "source_value": "4.59",
+          "text": "A current ratio of 4.59 indicates a large cushion of short-term assets over short-term liabilities."
         },
         {
           "source_metric": "graham_criteria_passed",
-          "source_value": "4",
-          "text": "The stock passes 4 of 6 evaluated Graham defensive-investor criteria."
+          "source_value": "4 of 6 evaluated",
+          "text": "NVDA passes 4 of 6 evaluated Graham defensive-investor criteria, a mixed but not failing checklist result."
         },
         {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "-10.65%",
-          "text": "Sector-relative momentum is -10.65%, meaning the stock has recently underperformed its sector peers\u2014a divergence worth noting without an implied cause."
+          "source_metric": "piotroski_f_score",
+          "source_value": "4 of 9 evaluated",
+          "text": "The Piotroski F-Score is 4 out of 9 evaluated criteria, a middling financial-strength checklist result that does not indicate strong or weak fundamentals decisively."
         }
       ],
-      "minor": [],
-      "noise": [
-        {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "0.51x",
-          "text": "Trading volume is running at 0.51x its average, a metric commonly discussed but not, on its own, decision-relevant given this company's current fundamentals."
-        }
-      ]
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 69.7 ('Favorable') is underpinned by strong fundamentals: 65.47% revenue growth and 65.99% EPS growth year-over-year, a 71.07% gross margin, and a 70.00% return on invested capital that may point to a durable competitive advantage if sustained. The balance sheet is conservative, with debt-to-equity of 0.17 and interest coverage of 426.74x, indicating minimal financial distress risk. Valuation models present a mixed picture: a discounted cash flow analysis suggests only a 4.21% margin of safety, while the Graham fair-value model shows a -85.42% gap, meaning the stock trades well above what that classic value framework would consider fairly priced despite its high growth and quality metrics.",
-    "one_line_summary": "NVDA shows exceptional growth and returns on capital, but DCF and Graham valuation models show thin-to-negative margins of safety.",
-    "short_term_narrative": "The short-term score of 64.4 ('Favorable') reflects a stock trading 3.73% above its 50-day moving average and 12.04% above its 200-day moving average, with 1-month and 3-month returns of 2.16% and 5.50% respectively. RSI sits 4.70 points from neutral, suggesting momentum is not stretched in either direction. However, sector-relative momentum is negative at -10.65%, and volume is running at 0.51x its average\u2014both are divergences from peer and historical trading patterns worth noting without an implied cause."
+    "long_term_narrative": "The long-term score of 69.5 ('Favorable') is supported by very high revenue and EPS growth (65%+ year-over-year), a return on invested capital near 70%, and strong free cash flow generation. However, the modeled fair-value gap is mixed: the DCF-based margin of safety is minimal (about 2.3%) and the Graham-model comparison shows a large negative gap (-85.4%), while trading multiples such as P/E (~28x) and P/B (~23x) are elevated relative to book value and earnings. The balance sheet shows very low leverage and high liquidity, suggesting limited near-term solvency risk even amid rich valuation.",
+    "one_line_summary": "NVDA shows strong growth and profitability metrics, but valuation multiples are elevated and modeled fair-value estimates diverge sharply.",
+    "short_term_narrative": "The short-term score of 63.8 ('Favorable') reflects price sitting above both its 50-day (+3.7%) and 200-day (+12.0%) moving averages, indicating a recent upward price trend. Momentum versus the broader technology sector is actually negative (-10.6%), a divergence from peers that the data does not explain. Trading volume is running at about half its average level, another divergence worth noting without an implied cause."
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 368305605.9752988,
+    "avg_volume": 368312057.3418327,
     "close": 222.27,
     "return_1m_pct": 2.1649200220628826,
     "return_3m_pct": 5.496226683753388,
     "sector_avg_return_3m_pct": 16.145115074317985,
     "sector_relative_momentum_pct": -10.648888390564597,
     "volume": 188794542,
-    "volume_vs_avg_ratio": 0.5126029550923042
+    "volume_vs_avg_ratio": 0.5125939763214936
   },
   "qualitative": {
     "extraction_confidence": "section_match",
@@ -322,8 +322,8 @@
   },
   "scores": {
     "long_term": {
-      "base_score": 68.7,
-      "final_score": 69.7,
+      "base_score": 68.5,
+      "final_score": 69.5,
       "macro_adjustment": 1,
       "subscores": [
         {
@@ -342,8 +342,8 @@
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": 4.214808840113797,
-              "score": 58.429617680227594
+              "raw_value": 2.310534770115341,
+              "score": 54.621069540230685
             },
             {
               "metric": "graham_upside_pct",
@@ -356,7 +356,7 @@
               "score": 0.0
             }
           ],
-          "score": 21.9,
+          "score": 21.2,
           "weight_pct": 25
         },
         {
@@ -465,8 +465,8 @@
       "verdict": "Favorable"
     },
     "short_term": {
-      "base_score": 63.4,
-      "final_score": 64.4,
+      "base_score": 62.8,
+      "final_score": 63.8,
       "macro_adjustment": 1,
       "subscores": [
         {
@@ -529,11 +529,11 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": 4.214808840113797,
-              "score": 58.429617680227594
+              "raw_value": 2.310534770115341,
+              "score": 54.621069540230685
             }
           ],
-          "score": 58.4,
+          "score": 54.6,
           "weight_pct": 15
         }
       ],

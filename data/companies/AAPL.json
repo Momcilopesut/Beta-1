@@ -29,8 +29,8 @@
       "trend": "improving"
     },
     "valuation": {
-      "dcf_fair_value": 137.77020783728028,
-      "dcf_upside_pct": -58.8542990316782,
+      "dcf_fair_value": 135.7988742024617,
+      "dcf_upside_pct": -59.59929961548755,
       "earnings_yield_pct": 2.653938415377797,
       "ev_ebitda": 29.566990564675994,
       "graham_multiple": 1762.4521378776124,
@@ -43,15 +43,16 @@
     }
   },
   "industry": "Consumer Electronics",
-  "last_updated": "2026-09-18T23:27:57Z",
+  "last_updated": "2026-09-19T11:07:28Z",
   "layered_analysis": {
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
     ],
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "quant_gate_pass": true,
-    "required_margin_of_safety_pct": 15.0,
+    "required_margin_of_safety_pct": 30.0,
     "valuation_gate_pass": false
   },
   "lynch_category": {
@@ -68,7 +69,7 @@
   "market_cap": 4936860972280,
   "metrics": {
     "current_ratio": 1.0032948046555858,
-    "dcf_upside_pct": -58.8542990316782,
+    "dcf_upside_pct": -59.59929961548755,
     "debt_to_ebitda": 0.7763630585569403,
     "debt_to_equity": 0.7841052827380952,
     "earnings_yield_pct": 2.653938415377797,
@@ -107,7 +108,7 @@
     "roic_pct": 74.76620225102731,
     "rsi_distance_from_neutral": 15.375257346060266,
     "sector_relative_momentum_pct": -3.353598011132185,
-    "volume_vs_avg_ratio": 1.3495694663578872
+    "volume_vs_avg_ratio": 1.349553392822326
   },
   "name": "Apple Inc.",
   "narrative": {
@@ -124,16 +125,92 @@
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 63902637.95219123,
+    "avg_volume": 63903399.04940239,
     "close": 336.13,
     "return_1m_pct": 6.091594861597706,
     "return_3m_pct": 12.7915170631858,
     "sector_avg_return_3m_pct": 16.145115074317985,
     "sector_relative_momentum_pct": -3.353598011132185,
     "volume": 86241049,
-    "volume_vs_avg_ratio": 1.3495694663578872
+    "volume_vs_avg_ratio": 1.349553392822326
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "fisher_checklist": [
+      {
+        "assessment": "yes",
+        "criterion": "Sufficient market potential for years of growth",
+        "evidence": "Services net sales grew 14% in 2025 driven by advertising, App Store and cloud services, and the Company states it is 'focused on expanding its market opportunities' across all product/service lines, though it also notes some markets have experienced 'little to no growth or contracted overall.'"
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Management's commitment to new products/R&D",
+        "evidence": "R&D expense rose 10% to $34.55 billion (8% of net sales) in 2025, attributed to headcount and infrastructure growth, alongside numerous new product introductions across iPhone, Mac, iPad, Watch and software platforms."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Effective sales/distribution effort",
+        "evidence": "The Company sells through direct channels (40% of net sales via retail/online stores and direct sales force) and indirect channels (60% via carriers and resellers), covering consumer, business, education, enterprise and government markets."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Worthwhile profit margin",
+        "evidence": "Total gross margin was 46.9% in 2025 (Services at 75.4%), and the scorecard shows ROIC of 74.8% and FCF margin of 23.7%, both well above the stated thresholds."
+      },
+      {
+        "assessment": "no",
+        "criterion": "Steps to sustain or improve margin",
+        "evidence": "Management states 'the Company believes, in general, gross margins will be subject to volatility and downward pressure,' citing tariff costs and competitive pricing pressure, without describing a specific offsetting margin-improvement plan beyond a favorable mix shift toward Services."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Outstanding labor/personnel relations",
+        "evidence": "The Human Capital section describes culture, benefits, training (Apple University) and employee surveys, but provides no specific data on labor relations, turnover, or disputes."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Depth of management beyond the top executive",
+        "evidence": "The excerpts do not discuss the executive team, succession planning, or bench strength beyond aggregate references to 'management' and 'the Board.'"
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Cost analysis and accounting controls",
+        "evidence": "The MD&A references 'favorable costs' affecting product margins and standard critical accounting estimate disclosures (uncertain tax positions, contingencies), but does not describe specific cost-control systems or accounting controls."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "A unique aspect giving a real competitive edge",
+        "evidence": "The Company notes it 'designs and develops nearly the entire solution for its products, including the hardware, operating system, numerous software applications and related services,' and uses custom, often single-sourced components not commonly used by competitors."
+      },
+      {
+        "assessment": "unknown",
+        "criterion": "Long-range profit outlook over short-range",
+        "evidence": "The excerpts focus on year-over-year comparisons (2025 vs 2024) and near-term risks such as tariffs, without explicit multi-year strategic profit guidance."
+      },
+      {
+        "assessment": "no",
+        "criterion": "Equity financing that would dilute current shareholders",
+        "evidence": "The Company repurchased $89.3 billion of common stock in 2025 and announced a new $100 billion buyback program, indicating share count reduction rather than dilutive equity issuance."
+      },
+      {
+        "assessment": "yes",
+        "criterion": "Management talks candidly about problems, not just successes",
+        "evidence": "Risk Factors specifically discuss newly imposed U.S. tariffs, a Section 232 investigation into semiconductor imports, Greater China sales declines, single-source component dependence, and acknowledged downward margin pressure rather than generic boilerplate."
+      }
+    ],
+    "management_assessment": "The excerpts show disciplined capital return: $89.3 billion in share repurchases and $15.4 billion in dividends during 2025, a newly authorized $100 billion buyback program, and a stated intent to raise the dividend annually, funded from a large cash/marketable securities balance ($132.4 billion) rather than new equity issuance. Debt levels are described (notes, commercial paper) but the scorecard's low debt/EBITDA (0.78x) and continued buybacks suggest conservative leverage management. R&D spending grew 10% year-over-year, indicating continued reinvestment, but the filing does not discuss M&A activity or provide detail on management depth beyond aggregate financial figures.",
+    "moat_explanation": "The filing describes an integrated hardware-OS-services ecosystem ('the Company designs and develops nearly the entire solution... hardware, operating system, numerous software applications and related services') combined with AppleCare, cloud services, and a growing high-margin Services business (75.4% gross margin, 14% growth) that monetizes an installed base, both of which create real friction for customers to leave. The Company also cites its IP portfolio and brand/reputation as competitive factors, though it explicitly acknowledges having only minority market share and facing aggressive price competition, so the moat is best characterized as ecosystem/switching-cost driven rather than outright market dominance.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Greater China net sales declined 4% in 2025 due to lower iPhone sales, indicating regional demand weakness",
+      "New U.S. tariffs and retaliatory measures from other countries create uncertain, material cost and supply-chain impacts as explicitly described",
+      "Reliance on single or limited-source suppliers for certain critical components, which the Company says exacerbates business-interruption risk",
+      "Company explicitly states it has only a 'minority market share' in smartphones, PCs, tablets and wearables amid aggressive price-based competition",
+      "Management states it believes gross margins will be 'subject to volatility and downward pressure' going forward",
+      "Regulatory investigations/litigation risk that could force the Company to modify products or share IP with competitors"
+    ]
+  },
   "quant_score": {
     "evaluated": 5,
     "gate_pass": true,
@@ -202,7 +279,7 @@
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -58.8542990316782,
+              "raw_value": -59.59929961548755,
               "score": 0.0
             },
             {
@@ -389,7 +466,7 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -58.8542990316782,
+              "raw_value": -59.59929961548755,
               "score": 0.0
             }
           ],
@@ -431,7 +508,17 @@
       }
     ]
   },
-  "thesis": null,
+  "thesis": {
+    "falsification_criteria": [
+      "The DCF's negative margin of safety would need to reverse toward positive territory - through a material price decline, upward revision to the 8.7% revenue growth or 9% discount rate assumptions, or materially higher base FCF than the $98.8B used - before valuation would no longer be the binding objection.",
+      "If P/E (currently 38.4x) or EV/EBITDA (currently 29.6x) converge toward or below sector medians (27.96x P/E, 23.1x EV/EBITDA) without a corresponding earnings decline, the relative-valuation gap this thesis flags would close.",
+      "If gross margin materially deteriorates beyond management's flagged 'volatility and downward pressure' (e.g., a multi-point drop in the 46.9% total gross margin) without Services mix offsetting it, the quant scorecard's FCF-margin and ROIC strength could erode.",
+      "If Greater China net sales decline extends or deepens beyond the reported 4% 2025 drop, or iPhone/hardware market share erosion accelerates, the moat's revenue-growth support would weaken.",
+      "If ROIC or FCF margin drop below the scorecard's pass thresholds (12% and 10% respectively) in a subsequent filing, the quant gate-pass basis for this thesis would no longer hold.",
+      "If tariff or supply-chain disruptions materially impair single/limited-source component availability as the filing warns, causing margin or revenue shortfalls beyond what's currently priced into the DCF's growth assumption, that would falsify the moat's resilience as described."
+    ],
+    "thesis": "AAPL clears every quant screen at a near-perfect level (100% score, 74.8% ROIC, 23.7% FCF margin, low leverage at 0.78x debt/EBITDA), and the qualitative layer supports this with a real ecosystem/switching-cost moat built on integrated hardware-OS-services, a high-margin and growing Services segment, and disciplined capital return via buybacks and dividends. However, the valuation layer sharply conflicts with this strong operating picture: the DCF estimates an intrinsic value of about $139/share against the current price, implying a deeply negative margin of safety (-58.7%), and relative multiples confirm the stock trades well above sector medians (P/E 37% higher, EV/EBITDA 28% higher). Management itself flags that gross margins face structural downward pressure from tariffs and competition, with no explicit offsetting plan beyond Services mix shift, while regional weakness in Greater China and minority market share in core hardware categories temper the growth narrative. Taken together, this is a case of a well-documented quality business priced, by this DCF's assumptions, well above what its projected cash flows justify - a great business at a price the model does not consider cheap."
+  },
   "ticker": "AAPL",
   "valuation": {
     "dcf": {

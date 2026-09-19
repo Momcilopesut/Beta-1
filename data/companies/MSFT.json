@@ -29,8 +29,8 @@
       "trend": "declining"
     },
     "valuation": {
-      "dcf_fair_value": 282.9366933297458,
-      "dcf_upside_pct": -42.75340959899284,
+      "dcf_fair_value": 278.76553027284734,
+      "dcf_upside_pct": -43.54458862796238,
       "earnings_yield_pct": 4.112825232858211,
       "ev_ebitda": 18.188509866566438,
       "graham_multiple": 227.46914103659358,
@@ -43,7 +43,7 @@
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-18T23:28:57Z",
+  "last_updated": "2026-09-19T11:08:46Z",
   "layered_analysis": {
     "flags": [
       "5 red flag(s) from the filing text - see qualitative.red_flags.",
@@ -69,7 +69,7 @@
   "market_cap": 3666588079000,
   "metrics": {
     "current_ratio": 1.2303272619576484,
-    "dcf_upside_pct": -42.75340959899284,
+    "dcf_upside_pct": -43.54458862796238,
     "debt_to_ebitda": 0.6647449824793183,
     "debt_to_equity": 0.29116655778763845,
     "earnings_yield_pct": 4.112825232858211,
@@ -108,7 +108,7 @@
     "roic_pct": 22.739568631871947,
     "rsi_distance_from_neutral": 11.124253689309441,
     "sector_relative_momentum_pct": 14.002486401696778,
-    "volume_vs_avg_ratio": 1.4646284292442837
+    "volume_vs_avg_ratio": 1.4645510489682687
   },
   "name": "Microsoft Corporation",
   "narrative": {
@@ -117,85 +117,86 @@
       "critical": [
         {
           "source_metric": "dcf_upside_pct",
-          "source_value": "-42.75%",
-          "text": "The stock trades roughly 42.8% above its discounted-cash-flow (DCF) modeled fair value, indicating no margin of safety by this measure."
+          "source_value": "-43.54%",
+          "text": "The stock trades at a DCF-implied premium of about 43.5% above modeled fair value, meaning there is currently no margin of safety by this measure."
         },
         {
           "source_metric": "graham_upside_pct",
           "source_value": "-68.55%",
-          "text": "Graham's intrinsic-value framework implies the stock trades roughly 68.5% above its estimated fair value, an even larger gap than the DCF estimate."
+          "text": "The Graham fair-value model implies the stock trades at roughly a 68.5% premium to its estimated intrinsic value, indicating a substantial gap versus that model's margin of safety."
+        },
+        {
+          "source_metric": "graham_multiple",
+          "source_value": "227.47",
+          "text": "The Graham multiple (price relative to the Graham number) stands at about 227, an extremely elevated reading versus the classic defensive-investor benchmark."
         }
       ],
       "important": [
         {
-          "source_metric": "graham_multiple",
-          "source_value": "227.47",
-          "text": "The combined Graham multiple (P/E \u00d7 P/B) of about 227 is far above the classic 22.5 defensive-investor threshold, reflecting a richly priced stock."
-        },
-        {
           "source_metric": "roic_pct",
           "source_value": "22.74%",
-          "text": "Return on invested capital of about 22.7% is well above typical capital costs, a pattern sometimes associated with a durable competitive advantage."
-        },
-        {
-          "source_metric": "debt_to_equity",
-          "source_value": "0.29",
-          "text": "Debt-to-equity of about 0.29 points to a conservatively leveraged balance sheet."
-        },
-        {
-          "source_metric": "interest_coverage",
-          "source_value": "50.88",
-          "text": "Interest coverage near 50.9x means operating earnings comfortably cover interest expense."
-        },
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "17.79%",
-          "text": "Revenue grew about 17.8% year-over-year."
-        },
-        {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "31.39%",
-          "text": "EPS grew about 31.4% year-over-year, outpacing revenue growth."
+          "text": "Return on invested capital is about 22.7%, a level that, if sustained relative to sector peers, could indicate a durable competitive advantage."
         },
         {
           "source_metric": "owner_earnings_yield_pct",
           "source_value": "1.54%",
-          "text": "The owner-earnings yield, a Buffett-style measure of cash return on the business, is about 1.5%, a relatively low yield consistent with a premium valuation."
+          "text": "The owner earnings yield is about 1.5%, a relatively low cash-return-on-price figure in Buffett's owner-earnings framework."
         },
         {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "3",
-          "text": "The company passes 3 of 6 evaluated Graham defensive-investor criteria."
+          "source_metric": "pe_ttm",
+          "source_value": "27.43",
+          "text": "The trailing P/E ratio is about 27.4x, reflecting a valuation that prices in continued strong growth."
+        },
+        {
+          "source_metric": "pb_ratio",
+          "source_value": "8.29",
+          "text": "The price-to-book ratio is about 8.3x, a high multiple of accounting book value."
         },
         {
           "source_metric": "piotroski_f_score",
-          "source_value": "6",
-          "text": "The Piotroski F-Score is 6 out of 9 evaluated criteria, indicating moderate fundamental strength."
+          "source_value": "6 of 9 evaluated",
+          "text": "The company scores 6 of 9 evaluated Piotroski F-Score criteria, a mid-to-upper range financial-strength checklist result."
+        },
+        {
+          "source_metric": "graham_criteria_passed",
+          "source_value": "3 of 6 evaluated",
+          "text": "The company passes 3 of 6 evaluated Graham defensive-investor criteria."
+        },
+        {
+          "source_metric": "revenue_growth_yoy_pct",
+          "source_value": "17.79%",
+          "text": "Year-over-year revenue growth is about 17.8%, indicating continued top-line expansion."
         }
       ],
       "minor": [
         {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "14.00%",
-          "text": "The stock's momentum is running about 14.0 percentage points above its sector peers, a supply/demand divergence worth noting without a known cause."
+          "source_metric": "debt_to_equity",
+          "source_value": "0.29",
+          "text": "Debt-to-equity is low at about 0.29, suggesting limited balance-sheet leverage."
         }
       ],
-      "noise": []
+      "noise": [
+        {
+          "source_metric": "sector_relative_momentum_pct",
+          "source_value": "14.00%",
+          "text": "Momentum is running about 14.0 percentage points above the sector average, a supply/demand divergence versus peers with no identifiable cause in this data."
+        }
+      ]
     },
-    "long_term_narrative": "The long-term score of 57.3 ('Neutral') reflects a tension between strong operating fundamentals and a stretched valuation. Revenue grew 17.8% year-over-year, EPS grew 31.4%, return on invested capital is about 22.7%, and the balance sheet is lightly levered (debt-to-equity of 0.29) with very high interest coverage. Against this, both the DCF and Graham fair-value models show the stock trading well above their estimated intrinsic values, and the company passes only 3 of 6 evaluated Graham defensive-investor criteria while scoring 6 of 9 on the Piotroski F-Score. Together these mixed signals support a neutral rather than clearly bullish or bearish long-term read.",
-    "one_line_summary": "MSFT shows strong growth and balance-sheet strength, but valuation models suggest the stock trades well above estimated fair value.",
-    "short_term_narrative": "The short-term score of 60.7 ('Favorable') is driven mainly by price momentum: the stock trades about 6.3% above its 50-day moving average and 14.4% above its 200-day average after a 30.1% three-month return. Trading volume near 1.46x its average and momentum running about 14.0 percentage points above sector peers point to elevated market interest. These are technical/price-action signals rather than valuation signals, so they describe current market behavior, not an assessment of intrinsic worth."
+    "long_term_narrative": "The long-term score of 57.3 ('Neutral') reflects a tension between strong business fundamentals and stretched valuation. Revenue grew 17.8% year-over-year with a 22.7% ROIC, and the company passes 6 of 9 evaluated Piotroski criteria, suggesting financial strength. However, the DCF model implies the stock is roughly 43.5% above modeled fair value, and the Graham value model implies an even larger 68.5% premium, leaving little to no margin of safety by either measure.",
+    "one_line_summary": "MSFT shows favorable near-term price momentum but its valuation sits well above both DCF and Graham-derived fair-value estimates.",
+    "short_term_narrative": "The short-term score of 60.7 ('Favorable') is driven by strong price action: the stock trades 6.3% above its 50-day average and 14.4% above its 200-day average, with 3-month returns of 30.1%. Momentum is also running 14.0 percentage points above its sector peers, and trading volume is about 1.46x its average, both of which are supply/demand divergences worth noting without a known cause. These are technical/price-based signals rather than valuation signals."
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 26871077.478884462,
+    "avg_volume": 26872497.22549801,
     "close": 493.78,
     "return_1m_pct": 1.9553591707790405,
     "return_3m_pct": 30.147601476014763,
     "sector_avg_return_3m_pct": 16.145115074317985,
     "sector_relative_momentum_pct": 14.002486401696778,
     "volume": 39356144,
-    "volume_vs_avg_ratio": 1.4646284292442837
+    "volume_vs_avg_ratio": 1.4645510489682687
   },
   "qualitative": {
     "extraction_confidence": "section_match",
@@ -341,7 +342,7 @@
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -42.75340959899284,
+              "raw_value": -43.54458862796238,
               "score": 0.0
             },
             {
@@ -528,7 +529,7 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -42.75340959899284,
+              "raw_value": -43.54458862796238,
               "score": 0.0
             }
           ],

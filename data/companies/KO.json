@@ -29,8 +29,8 @@
       "trend": "improving"
     },
     "valuation": {
-      "dcf_fair_value": 76.35999918873688,
-      "dcf_upside_pct": -13.00484284963045,
+      "dcf_fair_value": 74.53452864446646,
+      "dcf_upside_pct": -15.541610601171147,
       "earnings_yield_pct": 3.303060134952919,
       "ev_ebitda": 20.69164154233271,
       "graham_multiple": 278.3218477813914,
@@ -43,7 +43,7 @@
     }
   },
   "industry": "Beverages - Non-Alcoholic",
-  "last_updated": "2026-09-18T23:38:14Z",
+  "last_updated": "2026-09-19T11:12:26Z",
   "layered_analysis": {
     "flags": [
       "6 red flag(s) from the filing text - see qualitative.red_flags.",
@@ -69,7 +69,7 @@
   "market_cap": 379699943426,
   "metrics": {
     "current_ratio": 1.3046031746031745,
-    "dcf_upside_pct": -13.00484284963045,
+    "dcf_upside_pct": -15.541610601171147,
     "debt_to_ebitda": 3.1875506346205777,
     "debt_to_equity": 1.204508990318119,
     "earnings_yield_pct": 3.303060134952919,
@@ -108,95 +108,31 @@
     "roic_pct": 16.351301107377473,
     "rsi_distance_from_neutral": 8.845671267252179,
     "sector_relative_momentum_pct": 6.906687045712522,
-    "volume_vs_avg_ratio": 1.7948692373564574
+    "volume_vs_avg_ratio": 1.794781650977028
   },
   "name": "The Coca-Cola Company",
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-13.00%",
-          "text": "The stock's DCF-based fair value estimate implies roughly -13.00% upside, indicating little to no margin of safety at the current price under this model."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-71.99%",
-          "text": "The Graham-based fair value estimate implies roughly -71.99% upside, a substantial premium to that model's estimate of intrinsic value."
-        },
-        {
-          "source_metric": "graham_multiple",
-          "source_value": "278.32",
-          "text": "The Graham multiple stands at about 278.32, an extremely elevated reading by classic value-investing standards for this metric."
-        },
-        {
-          "source_metric": "ncav_margin_pct",
-          "source_value": "-110.40%",
-          "text": "Net current asset value margin is deeply negative at about -110.40%, meaning current assets net of all liabilities do not provide a balance-sheet-based valuation floor."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "pb_ratio",
-          "source_value": "10.50",
-          "text": "Price-to-book ratio is about 10.50, a high multiple of stated book value."
-        },
-        {
-          "source_metric": "debt_to_equity",
-          "source_value": "1.20",
-          "text": "Debt-to-equity is about 1.20, indicating debt exceeds shareholder equity on the balance sheet."
-        },
-        {
-          "source_metric": "roic_pct",
-          "source_value": "16.35%",
-          "text": "Return on invested capital is about 16.35%, a level that may point to some durable competitive advantage if sustained."
-        },
-        {
-          "source_metric": "owner_earnings_yield_pct",
-          "source_value": "3.17%",
-          "text": "Owner earnings yield is about 3.17%, a Buffett-style measure of the cash return the business generates relative to its price."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "7 of 9 evaluated",
-          "text": "The company passes 7 of 9 evaluated Piotroski criteria, a checklist measure of financial strength and quality trend."
-        },
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "1.87%",
-          "text": "Year-over-year revenue growth is modest at about 1.87%."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "6.91%",
-          "text": "The stock's momentum relative to its sector is about 6.91%, an observed divergence from sector peers rather than an indication of cause."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "1.79x average",
-          "text": "Trading volume is about 1.79x its average, a divergence from typical volume worth noting without an identified cause."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 44.7 (Neutral) is shaped by a valuation that appears stretched relative to modeled fair value: the DCF-based estimate shows about -13.0% upside and the Graham-based estimate shows about -71.99% upside, meaning little to no margin of safety by either measure. Revenue growth has been slow (1.87% YoY), though EPS grew faster and return on invested capital of 16.35% could point to some durable competitive advantage. Balance sheet leverage (debt-to-equity of 1.20) and a high Graham multiple temper the overall picture despite a solid Piotroski score of 7 out of 9.",
-    "one_line_summary": "KO shows modest short-term price momentum but long-term valuation metrics point to a limited margin of safety versus modeled fair value.",
-    "short_term_narrative": "Coca-Cola's short-term score of 54.0 (Neutral) reflects a stock trading modestly above both its 50-day (+1.38%) and 200-day (+11.47%) moving averages, with a 3-month return of 11.16% partly offset by a -2.32% 1-month return. Volume has run about 1.79x its average and the stock has outperformed its sector by roughly 6.91% recently, indicating some supply/demand divergence from peers, though RSI positioning is close to neutral rather than extreme."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 15446734.738645418,
+    "avg_volume": 15447488.548207171,
     "close": 88.25,
     "return_1m_pct": -2.3242944106253396,
     "return_3m_pct": 11.160095729940798,
     "sector_avg_return_3m_pct": 4.253408684228276,
     "sector_relative_momentum_pct": 6.906687045712522,
     "volume": 27724869,
-    "volume_vs_avg_ratio": 1.7948692373564574
+    "volume_vs_avg_ratio": 1.794781650977028
   },
   "qualitative": {
     "extraction_confidence": "section_match",
@@ -323,8 +259,8 @@
   },
   "scores": {
     "long_term": {
-      "base_score": 44.7,
-      "final_score": 44.7,
+      "base_score": 44.4,
+      "final_score": 44.4,
       "macro_adjustment": 0,
       "subscores": [
         {
@@ -343,8 +279,8 @@
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -13.00484284963045,
-              "score": 23.9903143007391
+              "raw_value": -15.541610601171147,
+              "score": 18.916778797657706
             },
             {
               "metric": "graham_upside_pct",
@@ -357,7 +293,7 @@
               "score": 0.0
             }
           ],
-          "score": 18.9,
+          "score": 17.9,
           "weight_pct": 25
         },
         {
@@ -466,8 +402,8 @@
       "verdict": "Neutral"
     },
     "short_term": {
-      "base_score": 54.0,
-      "final_score": 54.0,
+      "base_score": 53.1,
+      "final_score": 53.1,
       "macro_adjustment": 0,
       "subscores": [
         {
@@ -530,11 +466,11 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -13.00484284963045,
-              "score": 23.9903143007391
+              "raw_value": -15.541610601171147,
+              "score": 18.916778797657706
             }
           ],
-          "score": 24.0,
+          "score": 18.9,
           "weight_pct": 15
         }
       ],

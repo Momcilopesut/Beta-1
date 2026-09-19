@@ -29,8 +29,8 @@
       "trend": "stable"
     },
     "valuation": {
-      "dcf_fair_value": 268.01638280355303,
-      "dcf_upside_pct": -10.714776866029375,
+      "dcf_fair_value": 263.2974382517599,
+      "dcf_upside_pct": -12.228335805133714,
       "earnings_yield_pct": 5.753613824337727,
       "ev_ebitda": 15.036469063767509,
       "graham_multiple": 375.90261604273473,
@@ -43,7 +43,7 @@
     }
   },
   "industry": "Home Improvement",
-  "last_updated": "2026-09-18T23:40:58Z",
+  "last_updated": "2026-09-19T11:14:04Z",
   "layered_analysis": {
     "flags": [
       "Fails the quant screen - below threshold on more metrics than it passes.",
@@ -69,7 +69,7 @@
   "market_cap": 299115157660,
   "metrics": {
     "current_ratio": 1.0780839144849663,
-    "dcf_upside_pct": -10.714776866029375,
+    "dcf_upside_pct": -12.228335805133714,
     "debt_to_ebitda": 2.612850345847827,
     "debt_to_equity": 3.765240416440994,
     "earnings_yield_pct": 5.753613824337727,
@@ -107,95 +107,31 @@
     "roic_pct": 20.706427949959213,
     "rsi_distance_from_neutral": 32.40720875348639,
     "sector_relative_momentum_pct": -7.0372179101208925,
-    "volume_vs_avg_ratio": 2.1475390955098064
+    "volume_vs_avg_ratio": 2.147463867519745
   },
   "name": "The Home Depot Inc.",
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-75.58%",
-          "text": "The stock's price implies roughly a 75.6% shortfall versus the Graham fair-value model, indicating no margin of safety by this measure."
-        },
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-10.71%",
-          "text": "The DCF model implies the current price is about 10.7% above modeled fair value, indicating a negative margin of safety."
-        },
-        {
-          "source_metric": "debt_to_equity",
-          "source_value": "3.77",
-          "text": "Debt-to-equity stands at 3.77x, indicating a heavily leveraged balance sheet relative to shareholder equity."
-        },
-        {
-          "source_metric": "price_vs_ma200_pct",
-          "source_value": "-12.33%",
-          "text": "The stock trades about 12.3% below its 200-day moving average, reflecting a sustained downtrend."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "return_1m_pct",
-          "source_value": "-12.87%",
-          "text": "Shares fell approximately 12.9% over the trailing one-month period."
-        },
-        {
-          "source_metric": "roic_pct",
-          "source_value": "20.71%",
-          "text": "Return on invested capital of 20.7% is notably high, which can be read as a possible sign of a durable competitive advantage."
-        },
-        {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "-4.61%",
-          "text": "Trailing twelve-month EPS growth is negative at about -4.6%, pointing to recent earnings deterioration."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "4 of 9 evaluated",
-          "text": "The Piotroski F-Score is 4 out of 9 evaluated criteria, indicating middling fundamental financial strength."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "2 of 6 evaluated",
-          "text": "The company passes only 2 of 6 evaluated Graham defensive-investor criteria."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "current_ratio",
-          "source_value": "1.08",
-          "text": "The current ratio of 1.08 suggests limited short-term liquidity cushion."
-        },
-        {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "-7.04%",
-          "text": "Momentum relative to sector peers is down about 7 percentage points, a divergence worth noting without a known cause."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "2.15x average",
-          "text": "Trading volume is running at roughly 2.15x its average, an unusual supply/demand divergence that is commonly discussed but whose cause is not identifiable from this data."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 37.3 ('Cautious') is shaped by a large negative margin of safety versus both the Graham (-75.6%) and DCF (-10.7%) fair-value estimates, meaning the current price sits well above what these models imply intrinsic value to be. Earnings have contracted on a trailing and 3-year basis even as revenue grew modestly, and the Piotroski score of 4 out of 9 and Graham defensive checklist score of 2 out of 6 both point to fundamental softness. A high ROIC of 20.7% stands out as a potential sign of durable competitive advantage, but this is offset by elevated debt-to-equity of 3.77x and a current ratio near 1.0, indicating limited balance-sheet cushion.",
-    "one_line_summary": "HD shows negative margins of safety on Graham and DCF models, high leverage, and recent price weakness, tempered by strong ROIC.",
-    "short_term_narrative": "The short-term score of 25.5 ('Cautious') reflects a stock trading well below its 50- and 200-day moving averages, a steep one-month decline of nearly 13%, and momentum that lags its sector by about 7 percentage points. Trading volume running more than double its average signals unusual supply/demand activity, though the payload gives no indication of why. Together these price-action metrics point to notable near-term weakness without implying a future direction."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 3811572.053386454,
+    "avg_volume": 3811705.5768924304,
     "close": 299.98,
     "return_1m_pct": -12.872494917223348,
     "return_3m_pct": -10.260859159985628,
     "sector_avg_return_3m_pct": -3.2236412498647358,
     "sector_relative_momentum_pct": -7.0372179101208925,
     "volume": 8185500,
-    "volume_vs_avg_ratio": 2.1475390955098064
+    "volume_vs_avg_ratio": 2.147463867519745
   },
   "qualitative": null,
   "quant_score": {
@@ -246,8 +182,8 @@
   },
   "scores": {
     "long_term": {
-      "base_score": 35.3,
-      "final_score": 37.3,
+      "base_score": 35.1,
+      "final_score": 37.1,
       "macro_adjustment": 2,
       "subscores": [
         {
@@ -266,8 +202,8 @@
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -10.714776866029375,
-              "score": 28.57044626794125
+              "raw_value": -12.228335805133714,
+              "score": 25.543328389732572
             },
             {
               "metric": "graham_upside_pct",
@@ -280,7 +216,7 @@
               "score": 0.0
             }
           ],
-          "score": 30.1,
+          "score": 29.5,
           "weight_pct": 25
         },
         {
@@ -389,8 +325,8 @@
       "verdict": "Cautious"
     },
     "short_term": {
-      "base_score": 23.5,
-      "final_score": 25.5,
+      "base_score": 22.9,
+      "final_score": 24.9,
       "macro_adjustment": 2,
       "subscores": [
         {
@@ -453,15 +389,15 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -10.714776866029375,
-              "score": 28.57044626794125
+              "raw_value": -12.228335805133714,
+              "score": 25.543328389732572
             }
           ],
-          "score": 28.6,
+          "score": 25.5,
           "weight_pct": 15
         }
       ],
-      "verdict": "Cautious"
+      "verdict": "Weak"
     }
   },
   "sector": "Consumer Cyclical",

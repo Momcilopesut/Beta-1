@@ -29,8 +29,8 @@
       "trend": "declining"
     },
     "valuation": {
-      "dcf_fair_value": 708.0603482504553,
-      "dcf_upside_pct": 104.15199038446943,
+      "dcf_fair_value": 702.165936260303,
+      "dcf_upside_pct": 100.80817235116054,
       "earnings_yield_pct": 4.726285406053129,
       "ev_ebitda": 20.01936734328038,
       "graham_multiple": 39.13302127687474,
@@ -43,7 +43,7 @@
     }
   },
   "industry": "Banks - Diversified",
-  "last_updated": "2026-09-18T23:31:53Z",
+  "last_updated": "2026-09-19T11:09:39Z",
   "layered_analysis": {
     "flags": [
       "Fails the quant screen - below threshold on more metrics than it passes."
@@ -68,7 +68,7 @@
   "market_cap": 936944261700,
   "metrics": {
     "current_ratio": 0.8403662699432636,
-    "dcf_upside_pct": 104.15199038446943,
+    "dcf_upside_pct": 100.80817235116054,
     "debt_to_ebitda": 11.574850152304215,
     "debt_to_equity": 3.3045317914137287,
     "earnings_yield_pct": 4.726285406053129,
@@ -107,95 +107,31 @@
     "roic_pct": 5.933365089996858,
     "rsi_distance_from_neutral": 11.001937448104037,
     "sector_relative_momentum_pct": -2.5131610814635676,
-    "volume_vs_avg_ratio": 1.7348401144306898
+    "volume_vs_avg_ratio": 1.7347725264021894
   },
   "name": "JPMorgan Chase & Co.",
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "104.15%",
-          "text": "The discounted cash flow model implies a substantial modeled margin of safety, with the stock appearing to trade well below its estimated fair value."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-29.53%",
-          "text": "In contrast, the Graham valuation model shows no margin of safety, implying the shares trade roughly 30% above their Graham-derived fair value."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "3 of 9 evaluated",
-          "text": "The Piotroski F-Score checklist finds only 3 of 9 evaluated financial-strength criteria met, a comparatively weak reading."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "3 of 6 evaluated",
-          "text": "The stock passes 3 of 6 evaluated Graham defensive-investor criteria."
-        },
-        {
-          "source_metric": "roic_pct",
-          "source_value": "5.93%",
-          "text": "Return on invested capital sits at roughly 5.9%, a level that does not on its own indicate a durable competitive advantage."
-        },
-        {
-          "source_metric": "owner_earnings_yield_pct",
-          "source_value": "7.03%",
-          "text": "The owner earnings yield - cash generated relative to price, in Buffett's framing - is about 7.0%."
-        },
-        {
-          "source_metric": "margin_trend_score",
-          "source_value": "20 (model scale)",
-          "text": "The margin trend score is low, pointing to weakening profitability trends."
-        },
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "3.31%",
-          "text": "Year-over-year revenue growth has slowed sharply to about 3.3%, well below the multi-year historical pace."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "1.52%",
-          "text": "EPS growth over the past year was just 1.5%, also well below its longer-term trend."
-        },
-        {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "-2.51%",
-          "text": "The stock's momentum is running about 2.5 percentage points below its sector peers, a divergence worth noting though no cause is discernible from this data."
-        },
-        {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "1.73x average",
-          "text": "Trading volume is running about 73% above its average, another supply/demand divergence not explained by this dataset."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "interest_coverage",
-          "source_value": "0.85x",
-          "text": "Interest coverage is reported at below 1x, a figure that would flag distress for a typical industrial company but is not a standard solvency gauge for a bank given its balance-sheet structure - worth discounting as a decision driver here."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 41 is neutral, reflecting mixed fundamental signals: the DCF model implies a large modeled margin of safety, yet the Graham model suggests the shares already trade above their Graham-derived fair value, and the stock passes only about half of the evaluated Graham defensive criteria along with a low Piotroski score of 3 of 9. Revenue and EPS growth have decelerated sharply from their three- and five-year trends, the margin trend score is weak, and return on invested capital of roughly 5.9% offers limited support for a durable-moat narrative.",
-    "one_line_summary": "JPMorgan: favorable short-term technicals, neutral long-term fundamentals; DCF and Graham valuation models disagree on fair value.",
-    "short_term_narrative": "JPMorgan's short-term score of 65 reflects a broadly favorable technical setup: the stock trades about 9% above its 200-day moving average despite sitting slightly below its 50-day average, and three-month returns of roughly 7.5% outpace the past month's modest 2.1% pullback. Trading volume running about 73% above its average signals heightened interest, though momentum has lagged the sector by roughly 2.5 percentage points recently."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 10515027.781673307,
+    "avg_volume": 10515437.45498008,
     "close": 349.67,
     "return_1m_pct": -2.124503162962541,
     "return_3m_pct": 7.517987823627078,
     "sector_avg_return_3m_pct": 10.031148905090646,
     "sector_relative_momentum_pct": -2.5131610814635676,
     "volume": 18241892,
-    "volume_vs_avg_ratio": 1.7348401144306898
+    "volume_vs_avg_ratio": 1.7347725264021894
   },
   "qualitative": null,
   "quant_score": {
@@ -266,7 +202,7 @@
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": 104.15199038446943,
+              "raw_value": 100.80817235116054,
               "score": 100.0
             },
             {
@@ -453,7 +389,7 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": 104.15199038446943,
+              "raw_value": 100.80817235116054,
               "score": 100.0
             }
           ],

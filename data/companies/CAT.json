@@ -29,8 +29,8 @@
       "trend": "declining"
     },
     "valuation": {
-      "dcf_fair_value": 170.37677020193462,
-      "dcf_upside_pct": -78.73214702260209,
+      "dcf_fair_value": 168.15288608980828,
+      "dcf_upside_pct": -79.21446666957462,
       "earnings_yield_pct": 2.761078802259384,
       "ev_ebitda": 23.62278626767038,
       "graham_multiple": 665.6270856079346,
@@ -43,7 +43,7 @@
     }
   },
   "industry": "Agricultural - Machinery",
-  "last_updated": "2026-09-18T23:41:39Z",
+  "last_updated": "2026-09-19T11:14:53Z",
   "layered_analysis": {
     "flags": [
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
@@ -68,7 +68,7 @@
   "market_cap": 372650726630,
   "metrics": {
     "current_ratio": 1.3684342799698417,
-    "dcf_upside_pct": -78.73214702260209,
+    "dcf_upside_pct": -79.21446666957462,
     "debt_to_ebitda": 3.2163004750593824,
     "debt_to_equity": 2.3277133281773654,
     "earnings_yield_pct": 2.761078802259384,
@@ -107,31 +107,94 @@
     "roic_pct": 15.59688051094566,
     "rsi_distance_from_neutral": 2.7731945678385586,
     "sector_relative_momentum_pct": 0.0,
-    "volume_vs_avg_ratio": 1.5949806765305454
+    "volume_vs_avg_ratio": 1.5948719593161769
   },
   "name": "Caterpillar Inc.",
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [],
-      "important": [],
+      "critical": [
+        {
+          "source_metric": "dcf_upside_pct",
+          "source_value": "-79.21%",
+          "text": "The stock trades at a level implying about 79% downside to its modeled discounted-cash-flow fair value, indicating no margin of safety by this measure."
+        },
+        {
+          "source_metric": "graham_upside_pct",
+          "source_value": "-83.46%",
+          "text": "Under the Graham valuation model, the stock appears roughly 83% above modeled fair value, also indicating no margin of safety by this measure."
+        },
+        {
+          "source_metric": "eps_growth_yoy_pct",
+          "source_value": "-14.75%",
+          "text": "Earnings per share fell about 14.7% year-over-year, a notable contraction in profitability."
+        }
+      ],
+      "important": [
+        {
+          "source_metric": "debt_to_equity",
+          "source_value": "2.33",
+          "text": "Debt-to-equity of about 2.33 indicates a leveraged balance sheet relative to typical industrial norms."
+        },
+        {
+          "source_metric": "pe_ttm",
+          "source_value": "34.66",
+          "text": "The trailing P/E ratio of about 34.7x is well above levels typically associated with value-oriented screens."
+        },
+        {
+          "source_metric": "ev_ebitda",
+          "source_value": "23.62",
+          "text": "EV/EBITDA of about 23.6x is elevated, suggesting the market is pricing in above-average future cash flow generation."
+        },
+        {
+          "source_metric": "roic_pct",
+          "source_value": "15.60%",
+          "text": "Return on invested capital of about 15.6% is relatively strong, which can be viewed as a possible sign of a durable competitive advantage, though this single data point does not confirm durability."
+        },
+        {
+          "source_metric": "owner_earnings_yield_pct",
+          "source_value": "1.84%",
+          "text": "The owner earnings yield is about 1.8%, a fairly thin cash return to owners relative to the current price."
+        },
+        {
+          "source_metric": "margin_trend_score",
+          "source_value": "20",
+          "text": "A margin trend score of 20 (on a 0-100 scale) points to a weakening trend in profit margins."
+        },
+        {
+          "source_metric": "piotroski_f_score",
+          "source_value": "5 of 9 evaluated",
+          "text": "The company scores 5 out of 9 evaluated Piotroski financial-quality criteria, a middling result."
+        },
+        {
+          "source_metric": "graham_criteria_passed",
+          "source_value": "3 of 6 evaluated",
+          "text": "The company passes 3 of 6 evaluated Graham defensive-investor criteria, a mixed checklist result."
+        }
+      ],
       "minor": [],
-      "noise": []
+      "noise": [
+        {
+          "source_metric": "sector_relative_momentum_pct",
+          "source_value": "0.00%",
+          "text": "Sector-relative momentum reads at 0%, showing no current divergence from industrial peers on this measure - a commonly watched factor that isn't signaling anything distinct here."
+        }
+      ]
     },
-    "long_term_narrative": null,
-    "one_line_summary": null,
-    "short_term_narrative": null
+    "long_term_narrative": "The long-term score of 31.4, also 'Cautious', is grounded in valuation and earnings-quality metrics: both the DCF and Graham models show the current price roughly 79-83% above their modeled fair values, leaving no apparent margin of safety by either method. Year-over-year EPS fell about 14.8% and the margin trend score is low, pointing to recent profitability pressure, even though longer 3- and 5-year EPS and revenue growth rates have been higher. Leverage (debt-to-equity of 2.33) is elevated, though interest coverage remains comfortable, and returns on invested capital (~15.6%) are still respectable, tempering the balance-sheet concern.",
+    "one_line_summary": "CAT shows weak short- and long-term composite scores, with valuation models pointing to no margin of safety and recent earnings decline.",
+    "short_term_narrative": "The short-term score of 37.2 reflects a 'Cautious' read on recent price action: the stock is down about 17.9% over three months and sits roughly 3.7% below its 50-day moving average, even though it remains about 3.2% above its 200-day average. Volume has run about 1.6x its recent average, a divergence from typical trading activity, while momentum (RSI distance from neutral) is only mildly stretched. Together these suggest a stock in a near-term downtrend that hasn't yet reached extreme oversold territory."
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 2922398.4143426293,
+    "avg_volume": 2922597.6247011954,
     "close": 808.99,
     "return_1m_pct": -0.8772897139006272,
     "return_3m_pct": -17.937351646345178,
     "sector_avg_return_3m_pct": -17.937351646345178,
     "sector_relative_momentum_pct": 0.0,
     "volume": 4661169,
-    "volume_vs_avg_ratio": 1.5949806765305454
+    "volume_vs_avg_ratio": 1.5948719593161769
   },
   "qualitative": null,
   "quant_score": {
@@ -202,7 +265,7 @@
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -78.73214702260209,
+              "raw_value": -79.21446666957462,
               "score": 0.0
             },
             {
@@ -389,7 +452,7 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -78.73214702260209,
+              "raw_value": -79.21446666957462,
               "score": 0.0
             }
           ],

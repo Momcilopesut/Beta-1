@@ -29,8 +29,8 @@
       "trend": "declining"
     },
     "valuation": {
-      "dcf_fair_value": 260.25255784512274,
-      "dcf_upside_pct": -30.370934573367915,
+      "dcf_fair_value": 258.58395604997105,
+      "dcf_upside_pct": -31.39189279650542,
       "earnings_yield_pct": 4.785219907706948,
       "ev_ebitda": 15.022420753328419,
       "graham_multiple": 84.06558254500443,
@@ -43,7 +43,7 @@
     }
   },
   "industry": "Medical - Healthcare Plans",
-  "last_updated": "2026-09-18T23:34:12Z",
+  "last_updated": "2026-09-19T11:10:42Z",
   "layered_analysis": {
     "flags": [
       "Fails the quant screen - below threshold on more metrics than it passes.",
@@ -69,7 +69,7 @@
   "market_cap": 342279625868,
   "metrics": {
     "current_ratio": 0.7767841173314255,
-    "dcf_upside_pct": -30.370934573367915,
+    "dcf_upside_pct": -31.39189279650542,
     "debt_to_ebitda": 3.3607288317256163,
     "debt_to_equity": 0.7448474813859234,
     "earnings_yield_pct": 4.785219907706948,
@@ -107,95 +107,31 @@
     "roic_pct": 11.155625129499317,
     "rsi_distance_from_neutral": 13.64563849685429,
     "sector_relative_momentum_pct": -12.107528144633804,
-    "volume_vs_avg_ratio": 1.5181189068307308
+    "volume_vs_avg_ratio": 1.5180073127433344
   },
   "name": "UnitedHealth Group Incorporated",
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-50.81%",
-          "text": "The Graham fair-value model implies the stock trades well above its estimated intrinsic value, leaving roughly a -50.8% margin of safety."
-        },
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-30.37%",
-          "text": "The discounted cash flow model also points to the price sitting above modeled fair value, with about a -30.4% margin of safety."
-        },
-        {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "-15.41%",
-          "text": "Earnings per share declined -15.4% year-over-year, a notable reversal in profitability."
-        },
-        {
-          "source_metric": "current_ratio",
-          "source_value": "0.78",
-          "text": "A current ratio of 0.78 means current liabilities exceed current assets, a potential liquidity strain."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "margin_trend_score",
-          "source_value": "20",
-          "text": "The margin trend score of 20 indicates a weakening trend in profitability margins."
-        },
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "11.81%",
-          "text": "Revenue grew 11.8% year-over-year, showing continued top-line expansion."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "2 of 6",
-          "text": "The company passes only 2 of the 6 Graham defensive-investor criteria evaluated."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "6 of 9",
-          "text": "The Piotroski F-Score is 6 out of 9 evaluated criteria, a moderate fundamental-quality reading."
-        },
-        {
-          "source_metric": "debt_to_ebitda",
-          "source_value": "3.36x",
-          "text": "Debt-to-EBITDA of 3.36x reflects a moderate leverage load relative to cash earnings."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "roic_pct",
-          "source_value": "11.16%",
-          "text": "Return on invested capital of 11.2% is a moderate figure that could hint at some competitive advantage but isn't extreme relative to typical durable-moat levels."
-        },
-        {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "-12.11%",
-          "text": "The stock's momentum trails its sector peers by about -12.1%, a divergence worth noting though its cause isn't indicated in the data."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "r_and_d_to_revenue_pct",
-          "source_value": "0.00%",
-          "text": "R&D spending as a share of revenue is 0.0%, a metric often discussed for growth companies but not decision-relevant for this insurer-type business model."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 30.3 is also Cautious, driven mainly by valuation models showing limited margin of safety: DCF upside is -30.4% and Graham upside is -50.8% versus current price. Revenue growth remains solid at 11.8% year-over-year, but EPS fell -15.4% over the same period, a divergence between top-line and bottom-line trends. The company passes only 2 of 6 evaluated Graham defensive-investor criteria and scores 6 of 9 on the Piotroski F-Score, while debt-to-EBITDA of 3.36x and a current ratio of 0.78 point to a mixed balance-sheet picture that tempers the growth story.",
-    "one_line_summary": "UnitedHealth shows revenue growth but falling EPS, tight liquidity, and large gaps vs modeled fair value; both scores are Cautious.",
-    "short_term_narrative": "The short-term score of 36.1 reflects a Cautious read, shaped by recent price weakness of -3.0% over one month and -6.0% over three months, with the stock 6.8% below its 50-day moving average even though it remains 6.4% above its 200-day average. Momentum relative to the sector is negative at -12.1%, and volume has run about 1.52x its average, a divergence worth noting though the data doesn't indicate why. The RSI distance from neutral of 13.6 suggests the stock isn't at an extreme overbought or oversold reading right now."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 5640731.408764941,
+    "avg_volume": 5641146.078884462,
     "close": 376.9,
     "return_1m_pct": -3.0133038264584124,
     "return_3m_pct": -6.000598563447726,
     "sector_avg_return_3m_pct": 6.106929581186077,
     "sector_relative_momentum_pct": -12.107528144633804,
     "volume": 8563301,
-    "volume_vs_avg_ratio": 1.5181189068307308
+    "volume_vs_avg_ratio": 1.5180073127433344
   },
   "qualitative": null,
   "quant_score": {
@@ -266,7 +202,7 @@
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -30.370934573367915,
+              "raw_value": -31.39189279650542,
               "score": 0.0
             },
             {
@@ -453,7 +389,7 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -30.370934573367915,
+              "raw_value": -31.39189279650542,
               "score": 0.0
             }
           ],

@@ -29,21 +29,21 @@
       "trend": "declining"
     },
     "valuation": {
-      "dcf_fair_value": 116.52152011555347,
-      "dcf_upside_pct": -28.312095413096177,
+      "dcf_fair_value": 115.38142253594853,
+      "dcf_upside_pct": -29.29193373210655,
       "earnings_yield_pct": 4.7857362589733095,
       "ev_ebitda": 9.8583081489732,
       "graham_multiple": 55.14590828979689,
       "graham_number": 98.03735895634553,
-      "graham_upside_pct": -39.92072621868763,
-      "ncav_margin_pct": -114.75032570766939,
+      "graham_upside_pct": -40.05297850290722,
+      "ncav_margin_pct": -114.71785586998587,
       "pb_ratio": 2.6258347065309584,
       "pe_ttm": 21.001287001287004,
       "peg_ratio": null
     }
   },
   "industry": "Oil & Gas Integrated",
-  "last_updated": "2026-09-18T23:41:17Z",
+  "last_updated": "2026-09-19T11:14:27Z",
   "layered_analysis": {
     "flags": [
       "Fails the quant screen - below threshold on more metrics than it passes.",
@@ -69,7 +69,7 @@
   "market_cap": 676292982800,
   "metrics": {
     "current_ratio": 1.1346729708431835,
-    "dcf_upside_pct": -28.312095413096177,
+    "dcf_upside_pct": -29.29193373210655,
     "debt_to_ebitda": 0.7264520865662178,
     "debt_to_equity": 0.16334335723648702,
     "earnings_yield_pct": 4.7857362589733095,
@@ -81,32 +81,32 @@
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 1,
     "graham_multiple": 55.14590828979689,
-    "graham_upside_pct": -39.92072621868763,
+    "graham_upside_pct": -40.05297850290722,
     "gross_margin_pct": 21.68320958305676,
     "interest_coverage": 59.57010785824345,
     "magic_formula_earnings_yield_rank": 3,
     "magic_formula_rank": 8,
     "magic_formula_roic_rank": 12,
     "margin_trend_score": 20,
-    "ncav_margin_pct": -114.75032570766939,
+    "ncav_margin_pct": -114.71785586998587,
     "owner_earnings_yield_pct": 3.915314911352648,
     "pb_ratio": 2.6258347065309584,
     "pe_ttm": 21.001287001287004,
     "piotroski_evaluated": 9,
     "piotroski_f_score": 3,
-    "price_vs_ma200_pct": 11.081839637251562,
-    "price_vs_ma50_pct": 3.4239290952212493,
+    "price_vs_ma200_pct": 11.325539048008025,
+    "price_vs_ma50_pct": 3.6473682542700483,
     "r_and_d_to_revenue_pct": 0.3704789984717741,
-    "return_1m_pct": -0.9649814893487911,
-    "return_3m_pct": 18.409404252231337,
+    "return_1m_pct": -0.7464951144019045,
+    "return_3m_pct": 18.670633480879463,
     "revenue_cagr_3yr_pct": -6.688991546295975,
     "revenue_cagr_5yr_pct": 12.647066121522933,
     "revenue_growth_yoy_pct": -4.522368657644725,
     "roe_pct": 12.675533129278287,
     "roic_pct": 8.375707222988943,
-    "rsi_distance_from_neutral": 10.527172144484211,
+    "rsi_distance_from_neutral": 11.048204464574553,
     "sector_relative_momentum_pct": 0.0,
-    "volume_vs_avg_ratio": 1.9204132277886
+    "volume_vs_avg_ratio": 1.920304033124026
   },
   "name": "Exxon Mobil Corporation",
   "narrative": {
@@ -115,35 +115,40 @@
       "critical": [
         {
           "source_metric": "dcf_upside_pct",
-          "source_value": "-28.31%",
-          "text": "The stock trades about 28.3% above its DCF-modeled fair value, indicating no margin of safety by this measure."
+          "source_value": "-29.29%",
+          "text": "The stock trades about 29.3% above the model's discounted cash flow fair-value estimate, implying a negative margin of safety by that measure."
         },
         {
           "source_metric": "graham_upside_pct",
-          "source_value": "-39.92%",
-          "text": "The stock trades about 39.9% above its Graham-modeled fair value, an even larger gap than the DCF estimate suggests."
+          "source_value": "-40.05%",
+          "text": "The stock trades about 40.1% above the Graham fair-value estimate, indicating no margin of safety under this classic value framework."
+        },
+        {
+          "source_metric": "eps_growth_yoy_pct",
+          "source_value": "-14.54%",
+          "text": "Earnings per share declined about 14.5% year-over-year."
         },
         {
           "source_metric": "eps_growth_cagr_3yr_pct",
           "source_value": "-20.35%",
-          "text": "EPS has declined at a 20.4% compound annual rate over the past three years, indicating significant earnings deterioration."
+          "text": "EPS has contracted at an annualized rate of about 20.4% over the trailing three years."
         },
         {
           "source_metric": "piotroski_f_score",
           "source_value": "3 of 9",
-          "text": "The company scores only 3 out of 9 evaluated Piotroski fundamental-quality criteria, a weak overall quality checklist result."
+          "text": "The company meets only 3 of 9 evaluated Piotroski fundamental-quality criteria, a weak reading."
         }
       ],
       "important": [
         {
-          "source_metric": "revenue_cagr_3yr_pct",
-          "source_value": "-6.69%",
-          "text": "Revenue has contracted at a 6.7% compound annual rate over the past three years."
-        },
-        {
           "source_metric": "revenue_growth_yoy_pct",
           "source_value": "-4.52%",
-          "text": "Revenue declined 4.5% year-over-year in the most recent period."
+          "text": "Revenue declined about 4.5% year-over-year."
+        },
+        {
+          "source_metric": "revenue_cagr_3yr_pct",
+          "source_value": "-6.69%",
+          "text": "Revenue has shrunk at an annualized rate of about 6.7% over the past three years."
         },
         {
           "source_metric": "graham_criteria_passed",
@@ -151,50 +156,45 @@
           "text": "The company passes only 1 of 6 evaluated Graham defensive-investor criteria."
         },
         {
-          "source_metric": "debt_to_ebitda",
-          "source_value": "0.73x",
-          "text": "Debt relative to EBITDA is low at 0.73x, suggesting a conservative balance sheet."
+          "source_metric": "debt_to_equity",
+          "source_value": "0.16",
+          "text": "Debt-to-equity is low at about 0.16, pointing to limited balance-sheet leverage."
         },
         {
           "source_metric": "interest_coverage",
           "source_value": "59.57x",
-          "text": "Interest coverage is very high at about 59.6x, indicating strong ability to service debt obligations from earnings."
-        },
-        {
-          "source_metric": "roic_pct",
-          "source_value": "8.38%",
-          "text": "Return on invested capital is 8.4%, a moderate level that does not by itself indicate a strong durable competitive advantage."
+          "text": "Interest coverage is very high at roughly 59.6x, indicating ample capacity to service interest expense."
         }
       ],
       "minor": [
         {
-          "source_metric": "owner_earnings_yield_pct",
-          "source_value": "3.92%",
-          "text": "The owner earnings yield on the business is about 3.9%."
+          "source_metric": "roic_pct",
+          "source_value": "8.38%",
+          "text": "Return on invested capital is about 8.4%, a moderate level that does not on its own signal a strong durable competitive advantage."
         }
       ],
       "noise": [
         {
           "source_metric": "volume_vs_avg_ratio",
-          "source_value": "1.92x average",
-          "text": "Trading volume has run about 1.9 times the stock's own recent average; the cause of this divergence is not indicated by the data and should not be assumed."
+          "source_value": "1.92x",
+          "text": "Trading volume has been running about 1.9x its average, a divergence from typical activity whose underlying cause is not captured in this data."
         }
       ]
     },
-    "long_term_narrative": "The long-term score of 30.7 (Cautious) is shaped by a valuation gap: modeled fair value estimates put the stock 28.3% above its DCF-derived value and 39.9% above its Graham-derived value, meaning there is currently no margin of safety by either measure. This is compounded by a three-year EPS decline of about 20.4% annually and revenue that has contracted at a 6.7% three-year CAGR, alongside a Piotroski F-Score of only 3 out of 9 evaluated criteria and passing just 1 of 6 evaluated Graham defensive-investor criteria. Offsetting these concerns, the balance sheet appears conservative, with low debt relative to EBITDA and very high interest coverage, suggesting limited near-term financial distress risk even as growth and quality metrics remain weak.",
-    "one_line_summary": "XOM shows strong near-term price momentum but trades above modeled fair value amid declining earnings and weak quality scores.",
-    "short_term_narrative": "The short-term score of 56.5 reflects a Neutral stance driven mainly by price action: the stock is up 18.4% over three months and trading 3.4% above its 50-day and 11.1% above its 200-day moving averages. Trading volume has been about 1.9 times the recent average, a supply/demand divergence from the stock's own norm rather than a signal of any specific cause. RSI positioning is moderately away from neutral, consistent with the recent upward price move rather than an extreme overbought or oversold condition."
+    "long_term_narrative": "The long-term score is weighed down by a modeled DCF value roughly 29% below the current price and a Graham fair-value estimate about 40% below it, leaving little modeled margin of safety by either approach. Earnings have contracted meaningfully, down about 14.5% year-over-year and roughly 20% annualized over three years, while revenue has also declined on both a one-year and three-year basis. The company's fundamental quality checklist (Piotroski) reads a weak 3 of 9 criteria met, and it passes only 1 of 6 evaluated Graham defensive-investor criteria, though the balance sheet itself shows low leverage and very high interest coverage.",
+    "one_line_summary": "XOM: short-term readings near neutral while long-term model flags negative margin of safety and declining growth/earnings trends.",
+    "short_term_narrative": "Over the past month the stock was roughly flat (-0.75%), but it has gained about 18.7% over three months and now trades 3.6% above its 50-day average and 11.3% above its 200-day average, indicating a broadly positive medium-term price trend. The RSI sits about 11 points from a neutral reading, suggesting momentum is present but not extreme. Trading volume has been running about 1.9x its average, a supply/demand divergence worth noting though its cause isn't captured in this data, while momentum relative to sector peers is currently flat."
   },
   "price": {
     "as_of": "2026-09-18",
-    "avg_volume": 18897981.160956174,
-    "close": 163.18,
-    "return_1m_pct": -0.9649814893487911,
-    "return_3m_pct": 18.409404252231337,
-    "sector_avg_return_3m_pct": 18.409404252231337,
+    "avg_volume": 18899055.760956176,
+    "close": 163.54,
+    "return_1m_pct": -0.7464951144019045,
+    "return_3m_pct": 18.670633480879463,
+    "sector_avg_return_3m_pct": 18.670633480879463,
     "sector_relative_momentum_pct": 0.0,
     "volume": 36291933,
-    "volume_vs_avg_ratio": 1.9204132277886
+    "volume_vs_avg_ratio": 1.920304033124026
   },
   "qualitative": null,
   "quant_score": {
@@ -265,13 +265,13 @@
             },
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -28.312095413096177,
+              "raw_value": -29.29193373210655,
               "score": 0.0
             },
             {
               "metric": "graham_upside_pct",
-              "raw_value": -39.92072621868763,
-              "score": 0.09909222664045814
+              "raw_value": -40.05297850290722,
+              "score": 0.0
             },
             {
               "metric": "graham_multiple",
@@ -388,8 +388,8 @@
       "verdict": "Cautious"
     },
     "short_term": {
-      "base_score": 54.5,
-      "final_score": 56.5,
+      "base_score": 54.9,
+      "final_score": 56.9,
       "macro_adjustment": 2,
       "subscores": [
         {
@@ -398,16 +398,16 @@
           "raw_metrics": [
             {
               "metric": "return_1m_pct",
-              "raw_value": -0.9649814893487911,
-              "score": 45.17509255325605
+              "raw_value": -0.7464951144019045,
+              "score": 46.26752442799048
             },
             {
               "metric": "return_3m_pct",
-              "raw_value": 18.409404252231337,
-              "score": 96.02351063057834
+              "raw_value": 18.670633480879463,
+              "score": 96.67658370219866
             }
           ],
-          "score": 70.6,
+          "score": 71.5,
           "weight_pct": 30
         },
         {
@@ -416,21 +416,21 @@
           "raw_metrics": [
             {
               "metric": "price_vs_ma50_pct",
-              "raw_value": 3.4239290952212493,
-              "score": 67.11964547610624
+              "raw_value": 3.6473682542700483,
+              "score": 68.23684127135024
             },
             {
               "metric": "price_vs_ma200_pct",
-              "raw_value": 11.081839637251562,
-              "score": 86.93946545750521
+              "raw_value": 11.325539048008025,
+              "score": 87.75179682669342
             },
             {
               "metric": "rsi_distance_from_neutral",
-              "raw_value": 10.527172144484211,
-              "score": 73.68206963878947
+              "raw_value": 11.048204464574553,
+              "score": 72.37948883856362
             }
           ],
-          "score": 75.9,
+          "score": 76.1,
           "weight_pct": 20
         },
         {
@@ -452,7 +452,7 @@
           "raw_metrics": [
             {
               "metric": "dcf_upside_pct",
-              "raw_value": -28.312095413096177,
+              "raw_value": -29.29193373210655,
               "score": 0.0
             }
           ],
@@ -488,9 +488,9 @@
         "terminal_growth_rate_pct": 2.5
       },
       "intrinsic_value_per_share": 138.47520879376526,
-      "margin_of_safety_pct": -15.139595052233574
+      "margin_of_safety_pct": -15.326397949269127
     },
-    "margin_of_safety_pct": -15.139595052233574,
+    "margin_of_safety_pct": -15.326397949269127,
     "relative": {
       "ev_ebitda": 9.8583081489732,
       "ev_ebitda_vs_sector_median_pct": 0.0,
