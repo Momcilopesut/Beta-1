@@ -43,8 +43,20 @@
     }
   },
   "industry": "Banks - Diversified",
-  "last_updated": "2026-09-19T11:09:39Z",
+  "last_updated": "2026-09-19T12:19:10Z",
   "layered_analysis": {
+    "conviction_score": 40.4,
+    "conviction_score_breakdown": {
+      "base_score": 40.4,
+      "components": {
+        "graham_pct": 50.0,
+        "piotroski_pct": 33.3,
+        "quant_score_pct": 40.0
+      },
+      "moat_multiplier": 1.0,
+      "valuation_multiplier": 1.0
+    },
+    "conviction_verdict": "Neutral",
     "flags": [
       "Fails the quant screen - below threshold on more metrics than it passes."
     ],

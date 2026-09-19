@@ -43,8 +43,20 @@
     }
   },
   "industry": "Medical - Healthcare Plans",
-  "last_updated": "2026-09-19T11:10:42Z",
+  "last_updated": "2026-09-19T12:19:10Z",
   "layered_analysis": {
+    "conviction_score": 21.5,
+    "conviction_score_breakdown": {
+      "base_score": 39.1,
+      "components": {
+        "graham_pct": 33.3,
+        "piotroski_pct": 66.7,
+        "quant_score_pct": 20.0
+      },
+      "moat_multiplier": 1.0,
+      "valuation_multiplier": 0.55
+    },
+    "conviction_verdict": "Weak",
     "flags": [
       "Fails the quant screen - below threshold on more metrics than it passes.",
       "Positive but thin margin of safety - 10% is below the 15% this company's uncertainty calls for (Klarman: margin of safety should scale with risk, not stay flat - see required_margin_of_safety_pct)."

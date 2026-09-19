@@ -43,8 +43,21 @@
     }
   },
   "industry": "Consumer Electronics",
-  "last_updated": "2026-09-19T11:07:28Z",
+  "last_updated": "2026-09-19T12:19:09Z",
   "layered_analysis": {
+    "conviction_score": 46.8,
+    "conviction_score_breakdown": {
+      "base_score": 81.0,
+      "components": {
+        "fisher_pct": 75.0,
+        "graham_pct": 50.0,
+        "piotroski_pct": 88.9,
+        "quant_score_pct": 100.0
+      },
+      "moat_multiplier": 1.05,
+      "valuation_multiplier": 0.55
+    },
+    "conviction_verdict": "Neutral",
     "flags": [
       "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."

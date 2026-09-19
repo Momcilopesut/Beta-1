@@ -43,8 +43,21 @@
     }
   },
   "industry": "Financial - Credit Services",
-  "last_updated": "2026-09-19T11:10:18Z",
+  "last_updated": "2026-09-19T12:19:10Z",
   "layered_analysis": {
+    "conviction_score": 79.9,
+    "conviction_score_breakdown": {
+      "base_score": 76.1,
+      "components": {
+        "fisher_pct": 88.9,
+        "graham_pct": 50.0,
+        "piotroski_pct": 55.6,
+        "quant_score_pct": 100.0
+      },
+      "moat_multiplier": 1.05,
+      "valuation_multiplier": 1.0
+    },
+    "conviction_verdict": "Strong",
     "flags": [
       "4 red flag(s) from the filing text - see qualitative.red_flags."
     ],
@@ -113,78 +126,14 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-45.00%",
-          "text": "The stock's price implies roughly a 45% gap below its DCF-modeled fair value, meaning there is currently no margin of safety versus this model \u2014 the price sits well above the modeled value rather than below it."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-82.35%",
-          "text": "Relative to a Graham-style fair value estimate, the stock shows an even larger gap of about -82%, indicating a substantial premium to that conservative valuation benchmark."
-        },
-        {
-          "source_metric": "graham_multiple",
-          "source_value": "626.83",
-          "text": "The Graham multiple (price relative to Graham's combined P/E x P/B threshold) stands at about 627, far above the traditional Graham benchmark of 22.5, underscoring how richly priced the stock is by this classic value framework."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "roic_pct",
-          "source_value": "46.34%",
-          "text": "Return on invested capital is very high at about 46.3%, a level that, if sustained, could reflect a durable competitive advantage in the business."
-        },
-        {
-          "source_metric": "roe_pct",
-          "source_value": "61.26%",
-          "text": "Return on equity is very high at about 61.3%, indicating strong profitability relative to shareholder equity."
-        },
-        {
-          "source_metric": "pe_ttm",
-          "source_value": "31.29",
-          "text": "The trailing P/E ratio of about 31.3 places the stock at a premium earnings multiple relative to typical market averages."
-        },
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "11.34%",
-          "text": "Revenue grew about 11.3% year-over-year, indicating continued top-line expansion."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "5",
-          "text": "The company passes 5 of 9 evaluated Piotroski financial-strength criteria, a middling score on this balance-sheet and profitability checklist."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "3",
-          "text": "The company passes only 3 of 6 evaluated Graham defensive-investor criteria, suggesting it does not fully meet this conservative screening standard."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "debt_to_ebitda",
-          "source_value": "1.00",
-          "text": "Debt to EBITDA is roughly 1.0x, indicating a low leverage burden relative to earnings before interest, taxes, depreciation, and amortization."
-        },
-        {
-          "source_metric": "current_ratio",
-          "source_value": "0.99",
-          "text": "The current ratio is about 0.99, just below 1, indicating current liabilities slightly exceed current assets on a simple liquidity basis."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "2.78x average",
-          "text": "Trading volume is about 2.8 times the stock's average volume, a notable divergence from its own typical activity level; the data does not indicate why."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 52.9 (Neutral) balances strong underlying business quality against a stretched valuation. Revenue has grown roughly 11.3% year-over-year with high margins (gross margin over 80%) and very high returns on equity (61.3%) and invested capital (46.3%), the latter potentially pointing to a durable competitive advantage. However, modeled fair-value estimates show substantial gaps versus the current price (DCF upside of -45% and Graham upside of -82%), and Visa passes only 3 of 6 evaluated Graham defensive-investor criteria and 5 of 9 Piotroski criteria, tempering the quality picture with valuation and balance-sheet checklist concerns.",
-    "one_line_summary": "Visa shows strong profitability and growth but trades far above modeled fair-value estimates; both short- and long-term scores read Neutral.",
-    "short_term_narrative": "Visa's short-term score of 51.9 (Neutral) reflects modest price momentum, with the stock up about 0.75% over the past month and 12.5% over three months, trading only slightly above its 50-day average and about 9.6% above its 200-day average. RSI positioning is moderately away from neutral, suggesting the stock is not at a momentum extreme in either direction. Recent volume is notably higher than average, a supply/demand divergence worth noting without a known cause in this data."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",

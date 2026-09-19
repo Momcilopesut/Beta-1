@@ -43,8 +43,20 @@
     }
   },
   "industry": "REIT - Industrial",
-  "last_updated": "2026-09-19T11:17:25Z",
+  "last_updated": "2026-09-19T12:19:17Z",
   "layered_analysis": {
+    "conviction_score": 26.2,
+    "conviction_score_breakdown": {
+      "base_score": 47.7,
+      "components": {
+        "graham_pct": 33.3,
+        "piotroski_pct": 44.4,
+        "quant_score_pct": 60.0
+      },
+      "moat_multiplier": 1.0,
+      "valuation_multiplier": 0.55
+    },
+    "conviction_verdict": "Cautious",
     "flags": [
       "Positive but thin margin of safety - 4% is below the 15% this company's uncertainty calls for (Klarman: margin of safety should scale with risk, not stay flat - see required_margin_of_safety_pct)."
     ],
@@ -112,78 +124,14 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-32.83%",
-          "text": "The current share price implies roughly a 32.8% negative margin of safety relative to the modeled discounted cash flow fair value."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-47.54%",
-          "text": "Versus a Graham-style fair value estimate, the stock shows about a 47.5% negative margin of safety."
-        },
-        {
-          "source_metric": "current_ratio",
-          "source_value": "0.70",
-          "text": "The current ratio is below 1, indicating current liabilities exceed current assets, a potential short-term liquidity concern."
-        },
-        {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "-11.41%",
-          "text": "EPS declined 11.4% year over year, a notable earnings deterioration despite revenue growth."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "roic_pct",
-          "source_value": "3.84%",
-          "text": "Return on invested capital is low at 3.8%, which does not support a case for a durable competitive moat based on this metric alone."
-        },
-        {
-          "source_metric": "debt_to_ebitda",
-          "source_value": "5.69x",
-          "text": "Debt-to-EBITDA stands at 5.69x, indicating elevated leverage relative to earnings before interest, taxes, depreciation and amortization."
-        },
-        {
-          "source_metric": "interest_coverage",
-          "source_value": "3.37x",
-          "text": "Interest coverage is 3.37x, a moderate but not wide buffer for covering interest expense from operating earnings."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "4",
-          "text": "The company passes 4 of 9 evaluated Piotroski fundamental-strength criteria."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "2",
-          "text": "The company passes 2 of 6 evaluated Graham defensive-investor criteria."
-        },
-        {
-          "source_metric": "owner_earnings_yield_pct",
-          "source_value": "4.80%",
-          "text": "Owner earnings yield, a Buffett-style measure of cash generation relative to price, is 4.8%."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "7.18%",
-          "text": "Revenue grew 7.2% year over year, continuing a longer-term trend of double-digit multi-year growth."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "0.00%",
-          "text": "Sector-relative momentum is measured at 0.0%, showing no observed divergence from sector peers on this metric - a commonly watched figure that isn't signaling anything distinctive here."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 36.8 is also Cautious, driven by valuation and quality signals rather than growth alone: revenue has grown steadily (7.2% YoY, double-digit 3- and 5-year CAGRs), but EPS fell 11.4% YoY and ROIC sits at a modest 3.8%, offering little support for a durable-advantage read. The stock's price implies a large negative margin of safety versus both DCF (-32.8%) and Graham (-47.5%) fair-value estimates, and leverage (debt/EBITDA 5.7x) alongside thin interest coverage (3.4x) adds balance-sheet risk. Checklist-style quality scores are weak as well, with only 2 of 6 Graham defensive criteria and 4 of 9 Piotroski criteria met.",
-    "one_line_summary": "PLD screens Cautious on both short- and long-term scores, with modeled fair-value gaps and mixed fundamental signals.",
-    "short_term_narrative": "Prologis's short-term score of 34.8 reflects a Cautious near-term read: price sits roughly 4.6% below its 50-day average and about 2.1% below its 200-day average, and 1-month/3-month returns are both negative. Trading volume has run about 2.1x its average recently, a supply/demand divergence worth noting even though its cause is not indicated in the data. Together these point to weak near-term price momentum rather than any specific catalyst."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",

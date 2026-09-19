@@ -43,8 +43,20 @@
     }
   },
   "industry": "Home Improvement",
-  "last_updated": "2026-09-19T11:14:04Z",
+  "last_updated": "2026-09-19T12:19:12Z",
   "layered_analysis": {
+    "conviction_score": 21.8,
+    "conviction_score_breakdown": {
+      "base_score": 39.7,
+      "components": {
+        "graham_pct": 33.3,
+        "piotroski_pct": 44.4,
+        "quant_score_pct": 40.0
+      },
+      "moat_multiplier": 1.0,
+      "valuation_multiplier": 0.55
+    },
+    "conviction_verdict": "Weak",
     "flags": [
       "Fails the quant screen - below threshold on more metrics than it passes.",
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."

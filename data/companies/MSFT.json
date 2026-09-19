@@ -43,8 +43,21 @@
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-19T11:08:46Z",
+  "last_updated": "2026-09-19T12:19:09Z",
   "layered_analysis": {
+    "conviction_score": 45.6,
+    "conviction_score_breakdown": {
+      "base_score": 78.9,
+      "components": {
+        "fisher_pct": 88.9,
+        "graham_pct": 50.0,
+        "piotroski_pct": 66.7,
+        "quant_score_pct": 100.0
+      },
+      "moat_multiplier": 1.05,
+      "valuation_multiplier": 0.55
+    },
+    "conviction_verdict": "Neutral",
     "flags": [
       "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
@@ -114,78 +127,14 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-43.54%",
-          "text": "The stock trades at a DCF-implied premium of about 43.5% above modeled fair value, meaning there is currently no margin of safety by this measure."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-68.55%",
-          "text": "The Graham fair-value model implies the stock trades at roughly a 68.5% premium to its estimated intrinsic value, indicating a substantial gap versus that model's margin of safety."
-        },
-        {
-          "source_metric": "graham_multiple",
-          "source_value": "227.47",
-          "text": "The Graham multiple (price relative to the Graham number) stands at about 227, an extremely elevated reading versus the classic defensive-investor benchmark."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "roic_pct",
-          "source_value": "22.74%",
-          "text": "Return on invested capital is about 22.7%, a level that, if sustained relative to sector peers, could indicate a durable competitive advantage."
-        },
-        {
-          "source_metric": "owner_earnings_yield_pct",
-          "source_value": "1.54%",
-          "text": "The owner earnings yield is about 1.5%, a relatively low cash-return-on-price figure in Buffett's owner-earnings framework."
-        },
-        {
-          "source_metric": "pe_ttm",
-          "source_value": "27.43",
-          "text": "The trailing P/E ratio is about 27.4x, reflecting a valuation that prices in continued strong growth."
-        },
-        {
-          "source_metric": "pb_ratio",
-          "source_value": "8.29",
-          "text": "The price-to-book ratio is about 8.3x, a high multiple of accounting book value."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "6 of 9 evaluated",
-          "text": "The company scores 6 of 9 evaluated Piotroski F-Score criteria, a mid-to-upper range financial-strength checklist result."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "3 of 6 evaluated",
-          "text": "The company passes 3 of 6 evaluated Graham defensive-investor criteria."
-        },
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "17.79%",
-          "text": "Year-over-year revenue growth is about 17.8%, indicating continued top-line expansion."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "debt_to_equity",
-          "source_value": "0.29",
-          "text": "Debt-to-equity is low at about 0.29, suggesting limited balance-sheet leverage."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "sector_relative_momentum_pct",
-          "source_value": "14.00%",
-          "text": "Momentum is running about 14.0 percentage points above the sector average, a supply/demand divergence versus peers with no identifiable cause in this data."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 57.3 ('Neutral') reflects a tension between strong business fundamentals and stretched valuation. Revenue grew 17.8% year-over-year with a 22.7% ROIC, and the company passes 6 of 9 evaluated Piotroski criteria, suggesting financial strength. However, the DCF model implies the stock is roughly 43.5% above modeled fair value, and the Graham value model implies an even larger 68.5% premium, leaving little to no margin of safety by either measure.",
-    "one_line_summary": "MSFT shows favorable near-term price momentum but its valuation sits well above both DCF and Graham-derived fair-value estimates.",
-    "short_term_narrative": "The short-term score of 60.7 ('Favorable') is driven by strong price action: the stock trades 6.3% above its 50-day average and 14.4% above its 200-day average, with 3-month returns of 30.1%. Momentum is also running 14.0 percentage points above its sector peers, and trading volume is about 1.46x its average, both of which are supply/demand divergences worth noting without a known cause. These are technical/price-based signals rather than valuation signals."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",

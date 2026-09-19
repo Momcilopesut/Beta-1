@@ -43,8 +43,20 @@
     }
   },
   "industry": "Oil & Gas Integrated",
-  "last_updated": "2026-09-19T11:14:27Z",
+  "last_updated": "2026-09-19T12:19:12Z",
   "layered_analysis": {
+    "conviction_score": 17.4,
+    "conviction_score_breakdown": {
+      "base_score": 31.6,
+      "components": {
+        "graham_pct": 16.7,
+        "piotroski_pct": 33.3,
+        "quant_score_pct": 40.0
+      },
+      "moat_multiplier": 1.0,
+      "valuation_multiplier": 0.55
+    },
+    "conviction_verdict": "Weak",
     "flags": [
       "Fails the quant screen - below threshold on more metrics than it passes.",
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
@@ -112,78 +124,14 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "-29.29%",
-          "text": "The stock trades about 29.3% above the model's discounted cash flow fair-value estimate, implying a negative margin of safety by that measure."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-40.05%",
-          "text": "The stock trades about 40.1% above the Graham fair-value estimate, indicating no margin of safety under this classic value framework."
-        },
-        {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "-14.54%",
-          "text": "Earnings per share declined about 14.5% year-over-year."
-        },
-        {
-          "source_metric": "eps_growth_cagr_3yr_pct",
-          "source_value": "-20.35%",
-          "text": "EPS has contracted at an annualized rate of about 20.4% over the trailing three years."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "3 of 9",
-          "text": "The company meets only 3 of 9 evaluated Piotroski fundamental-quality criteria, a weak reading."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "-4.52%",
-          "text": "Revenue declined about 4.5% year-over-year."
-        },
-        {
-          "source_metric": "revenue_cagr_3yr_pct",
-          "source_value": "-6.69%",
-          "text": "Revenue has shrunk at an annualized rate of about 6.7% over the past three years."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "1 of 6",
-          "text": "The company passes only 1 of 6 evaluated Graham defensive-investor criteria."
-        },
-        {
-          "source_metric": "debt_to_equity",
-          "source_value": "0.16",
-          "text": "Debt-to-equity is low at about 0.16, pointing to limited balance-sheet leverage."
-        },
-        {
-          "source_metric": "interest_coverage",
-          "source_value": "59.57x",
-          "text": "Interest coverage is very high at roughly 59.6x, indicating ample capacity to service interest expense."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "roic_pct",
-          "source_value": "8.38%",
-          "text": "Return on invested capital is about 8.4%, a moderate level that does not on its own signal a strong durable competitive advantage."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "1.92x",
-          "text": "Trading volume has been running about 1.9x its average, a divergence from typical activity whose underlying cause is not captured in this data."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score is weighed down by a modeled DCF value roughly 29% below the current price and a Graham fair-value estimate about 40% below it, leaving little modeled margin of safety by either approach. Earnings have contracted meaningfully, down about 14.5% year-over-year and roughly 20% annualized over three years, while revenue has also declined on both a one-year and three-year basis. The company's fundamental quality checklist (Piotroski) reads a weak 3 of 9 criteria met, and it passes only 1 of 6 evaluated Graham defensive-investor criteria, though the balance sheet itself shows low leverage and very high interest coverage.",
-    "one_line_summary": "XOM: short-term readings near neutral while long-term model flags negative margin of safety and declining growth/earnings trends.",
-    "short_term_narrative": "Over the past month the stock was roughly flat (-0.75%), but it has gained about 18.7% over three months and now trades 3.6% above its 50-day average and 11.3% above its 200-day average, indicating a broadly positive medium-term price trend. The RSI sits about 11 points from a neutral reading, suggesting momentum is present but not extreme. Trading volume has been running about 1.9x its average, a supply/demand divergence worth noting though its cause isn't captured in this data, while momentum relative to sector peers is currently flat."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",

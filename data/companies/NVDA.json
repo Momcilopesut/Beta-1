@@ -43,8 +43,21 @@
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-19T11:09:07Z",
+  "last_updated": "2026-09-19T12:19:09Z",
   "layered_analysis": {
+    "conviction_score": 44.3,
+    "conviction_score_breakdown": {
+      "base_score": 76.7,
+      "components": {
+        "fisher_pct": 88.9,
+        "graham_pct": 66.7,
+        "piotroski_pct": 44.4,
+        "quant_score_pct": 100.0
+      },
+      "moat_multiplier": 1.05,
+      "valuation_multiplier": 0.55
+    },
+    "conviction_verdict": "Neutral",
     "flags": [
       "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
@@ -114,77 +127,14 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-85.42%",
-          "text": "NVDA's price implies an 85.4% negative margin of safety versus its Graham-model fair value estimate, indicating the stock trades far above that model's intrinsic value calculation."
-        },
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "2.31%",
-          "text": "The DCF-based margin of safety is only about 2.3%, suggesting the current price sits very close to the modeled discounted-cash-flow fair value with little cushion."
-        },
-        {
-          "source_metric": "roic_pct",
-          "source_value": "70.00%",
-          "text": "Return on invested capital stands at 70.0%, a level that may point to a durable competitive advantage if sustained relative to sector peers."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "pe_ttm",
-          "source_value": "27.96",
-          "text": "The trailing P/E ratio of about 28x reflects a valuation that prices in substantial future earnings growth."
-        },
-        {
-          "source_metric": "pb_ratio",
-          "source_value": "23.48",
-          "text": "The price-to-book ratio of about 23.5x is elevated relative to the company's net asset base."
-        },
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "65.47%",
-          "text": "Revenue grew 65.5% year-over-year, indicating rapid top-line expansion."
-        },
-        {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "65.99%",
-          "text": "EPS grew 66.0% year-over-year, consistent with the strong revenue growth trend."
-        },
-        {
-          "source_metric": "owner_earnings_yield_pct",
-          "source_value": "2.17%",
-          "text": "The owner earnings yield of 2.17% represents the cash-based return an owner would theoretically receive relative to the current price, a relatively modest figure by historical value-investing standards."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "debt_to_equity",
-          "source_value": "0.17",
-          "text": "Debt-to-equity of 0.17 shows the company carries very little leverage relative to its equity base."
-        },
-        {
-          "source_metric": "current_ratio",
-          "source_value": "4.59",
-          "text": "A current ratio of 4.59 indicates a large cushion of short-term assets over short-term liabilities."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "4 of 6 evaluated",
-          "text": "NVDA passes 4 of 6 evaluated Graham defensive-investor criteria, a mixed but not failing checklist result."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "4 of 9 evaluated",
-          "text": "The Piotroski F-Score is 4 out of 9 evaluated criteria, a middling financial-strength checklist result that does not indicate strong or weak fundamentals decisively."
-        }
-      ],
+      "critical": [],
+      "important": [],
+      "minor": [],
       "noise": []
     },
-    "long_term_narrative": "The long-term score of 69.5 ('Favorable') is supported by very high revenue and EPS growth (65%+ year-over-year), a return on invested capital near 70%, and strong free cash flow generation. However, the modeled fair-value gap is mixed: the DCF-based margin of safety is minimal (about 2.3%) and the Graham-model comparison shows a large negative gap (-85.4%), while trading multiples such as P/E (~28x) and P/B (~23x) are elevated relative to book value and earnings. The balance sheet shows very low leverage and high liquidity, suggesting limited near-term solvency risk even amid rich valuation.",
-    "one_line_summary": "NVDA shows strong growth and profitability metrics, but valuation multiples are elevated and modeled fair-value estimates diverge sharply.",
-    "short_term_narrative": "The short-term score of 63.8 ('Favorable') reflects price sitting above both its 50-day (+3.7%) and 200-day (+12.0%) moving averages, indicating a recent upward price trend. Momentum versus the broader technology sector is actually negative (-10.6%), a divergence from peers that the data does not explain. Trading volume is running at about half its average level, another divergence worth noting without an implied cause."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",

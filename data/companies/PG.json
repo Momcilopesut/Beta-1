@@ -43,8 +43,21 @@
     }
   },
   "industry": "Household & Personal Products",
-  "last_updated": "2026-09-19T11:12:02Z",
+  "last_updated": "2026-09-19T12:19:10Z",
   "layered_analysis": {
+    "conviction_score": 38.8,
+    "conviction_score_breakdown": {
+      "base_score": 67.2,
+      "components": {
+        "fisher_pct": 90.0,
+        "graham_pct": 50.0,
+        "piotroski_pct": 66.7,
+        "quant_score_pct": 60.0
+      },
+      "moat_multiplier": 1.05,
+      "valuation_multiplier": 0.55
+    },
+    "conviction_verdict": "Cautious",
     "flags": [
       "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."

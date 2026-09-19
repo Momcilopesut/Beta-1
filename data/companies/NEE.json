@@ -43,8 +43,20 @@
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-09-19T11:16:15Z",
+  "last_updated": "2026-09-19T12:19:15Z",
   "layered_analysis": {
+    "conviction_score": 30.7,
+    "conviction_score_breakdown": {
+      "base_score": 55.9,
+      "components": {
+        "graham_pct": 50.0,
+        "piotroski_pct": 55.6,
+        "quant_score_pct": 60.0
+      },
+      "moat_multiplier": 1.0,
+      "valuation_multiplier": 0.55
+    },
+    "conviction_verdict": "Cautious",
     "flags": [
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
     ],
@@ -113,78 +125,14 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "45.4%",
-          "text": "A discounted cash flow model implies the stock trades about 45.4% below its modeled fair value, a positive margin of safety under that specific model."
-        },
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-38.7%",
-          "text": "The Graham valuation model implies the stock trades about 38.7% above its modeled fair value, indicating no margin of safety under this more conservative framework."
-        },
-        {
-          "source_metric": "current_ratio",
-          "source_value": "0.53",
-          "text": "The current ratio of 0.53 is below 1, meaning current liabilities exceed current assets, a sign of tight short-term liquidity."
-        },
-        {
-          "source_metric": "debt_to_ebitda",
-          "source_value": "6.28x",
-          "text": "Debt-to-EBITDA of 6.28x indicates a substantial debt load relative to earnings before interest, taxes, depreciation and amortization."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "interest_coverage",
-          "source_value": "2.44x",
-          "text": "Interest coverage of 2.44x means earnings cover interest expense only about 2.4 times, a relatively thin buffer."
-        },
-        {
-          "source_metric": "debt_to_equity",
-          "source_value": "1.93",
-          "text": "Debt-to-equity of 1.93 shows the company relies more heavily on debt than equity in its capital structure."
-        },
-        {
-          "source_metric": "roic_pct",
-          "source_value": "5.6%",
-          "text": "Return on invested capital of 5.6% is not particularly elevated, which does not clearly support the presence of a durable competitive moat based on this metric alone."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "5 of 9 evaluated",
-          "text": "The company scores 5 of 9 evaluated criteria on the Piotroski F-Score checklist, a middling financial-strength reading."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "3 of 6 evaluated",
-          "text": "The company passes 3 of 6 evaluated Graham defensive-investor criteria."
-        },
-        {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "-2.1%",
-          "text": "EPS growth year-over-year was -2.1%, a decline in per-share earnings despite reported revenue growth."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "price_vs_ma200_pct",
-          "source_value": "-8.2%",
-          "text": "The stock trades 8.2% below its 200-day moving average, reflecting recent price weakness relative to its longer-term trend."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "2.14x average volume",
-          "text": "Trading volume has been about 2.14x the stock's average, a divergence worth noting; the data does not indicate why this occurred, so no cause should be assumed."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "The long-term score of 39.4 (Cautious) is shaped mainly by balance-sheet metrics: a current ratio of 0.53 signals limited short-term liquidity, debt-to-EBITDA of 6.28x and debt-to-equity of 1.93 indicate meaningful leverage, and interest coverage of 2.44x leaves a thinner buffer against debt service than is typical for a defensive-style holding. Valuation signals are mixed - a DCF model implies a 45.4% gap versus current price, while the more conservative Graham model implies the stock trades about 38.7% above its estimated value, so the two frameworks disagree on margin of safety. Return on invested capital of 5.6% does not stand out as unusually high, tempering any read of a durable competitive advantage. The company passes 3 of 6 evaluated Graham defensive-investor criteria and scores 5 of 9 on the Piotroski framework, indicating a middling quality profile on these checklists.",
-    "one_line_summary": "NextEra shows mixed valuation signals, notable leverage, and weak short-term price momentum, with a cautious long-term score.",
-    "short_term_narrative": "The short-term score of 47.9 reflects a mostly directionless technical picture: price is 5.9% below its 50-day average and 8.2% below its 200-day average, with a 1-month return of -6.3% and a 3-month return of -7.2%. Volume has run at roughly 2.1x its average, a divergence from typical trading activity that stands out without an identifiable cause in the data. RSI sits moderately away from neutral, suggesting neither strong overbought nor oversold conditions. Together these point to recent price weakness without a clear directional catalyst."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",

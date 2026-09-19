@@ -43,8 +43,21 @@
     }
   },
   "industry": "Drug Manufacturers - General",
-  "last_updated": "2026-09-19T11:11:05Z",
+  "last_updated": "2026-09-19T12:19:10Z",
   "layered_analysis": {
+    "conviction_score": 37.6,
+    "conviction_score_breakdown": {
+      "base_score": 65.1,
+      "components": {
+        "fisher_pct": 80.0,
+        "graham_pct": 50.0,
+        "piotroski_pct": 44.4,
+        "quant_score_pct": 80.0
+      },
+      "moat_multiplier": 1.05,
+      "valuation_multiplier": 0.55
+    },
+    "conviction_verdict": "Cautious",
     "flags": [
       "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above this pipeline's conservative DCF estimate - no margin of safety by that measure (expected for expensive, high-growth names against a deliberately conservative model - see valuation.dcf.assumptions.note)."
@@ -114,78 +127,14 @@
   "narrative": {
     "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
     "facts": {
-      "critical": [
-        {
-          "source_metric": "graham_upside_pct",
-          "source_value": "-65.57%",
-          "text": "The stock's price appears to offer little to no margin of safety versus its Graham-model fair value estimate, with a -65.6% gap implying the price is well above that model's estimate."
-        },
-        {
-          "source_metric": "dcf_upside_pct",
-          "source_value": "3.07%",
-          "text": "The DCF-based margin of safety is thin, at just 3.1% upside to modeled fair value."
-        },
-        {
-          "source_metric": "pb_ratio",
-          "source_value": "7.75x",
-          "text": "The stock trades at roughly 7.75 times book value, a high price-to-book multiple."
-        }
-      ],
-      "important": [
-        {
-          "source_metric": "roic_pct",
-          "source_value": "19.18%",
-          "text": "Return on invested capital of 19.2% is notably high, a pattern sometimes associated with a durable competitive advantage."
-        },
-        {
-          "source_metric": "eps_growth_yoy_pct",
-          "source_value": "88.87%",
-          "text": "Year-over-year EPS growth was very large at 88.9%."
-        },
-        {
-          "source_metric": "piotroski_f_score",
-          "source_value": "4 of 9 evaluated",
-          "text": "The company scores 4 of 9 on the evaluated Piotroski financial-strength checklist, a middling result."
-        },
-        {
-          "source_metric": "graham_criteria_passed",
-          "source_value": "3 of 6 evaluated",
-          "text": "JNJ passes 3 of 6 evaluated Graham defensive-investor criteria."
-        },
-        {
-          "source_metric": "debt_to_equity",
-          "source_value": "0.58",
-          "text": "Debt-to-equity stands at 0.58, indicating moderate balance-sheet leverage."
-        },
-        {
-          "source_metric": "interest_coverage",
-          "source_value": "25.94x",
-          "text": "Interest coverage is very strong at nearly 26 times, indicating ample ability to service debt from earnings."
-        }
-      ],
-      "minor": [
-        {
-          "source_metric": "revenue_growth_yoy_pct",
-          "source_value": "6.05%",
-          "text": "Revenue grew 6.0% year-over-year, a modest pace of top-line growth."
-        },
-        {
-          "source_metric": "owner_earnings_yield_pct",
-          "source_value": "4.53%",
-          "text": "The owner earnings yield on the business is 4.5%, a Buffett-style measure of cash generation relative to price."
-        }
-      ],
-      "noise": [
-        {
-          "source_metric": "volume_vs_avg_ratio",
-          "source_value": "1.90x average",
-          "text": "Trading volume has been running about 1.9x its average level, a supply/demand divergence worth noting though its cause is not indicated by this data."
-        }
-      ]
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
     },
-    "long_term_narrative": "JNJ's long-term score of 54.3 ('Neutral') reflects a mixed picture: a high 19.2% return on invested capital and 25.7% return on equity point to strong underlying profitability, but the modeled fair-value comparisons show little to no cushion, with DCF upside of just 3.1% and Graham upside deeply negative at -65.6%. The company passes only 3 of 6 evaluated Graham defensive-investor criteria and scores 4 of 9 on the Piotroski financial-strength checklist, suggesting some fundamental weak spots despite low leverage (debt-to-equity of 0.58) and strong interest coverage (25.9x). Revenue growth remains modest at 6.0% year-over-year.",
-    "one_line_summary": "JNJ combines strong profitability and low leverage with a stretched valuation and mixed value-investing checklist scores.",
-    "short_term_narrative": "JNJ's short-term score of 65.8 ('Favorable') reflects price trading 2.5% above its 50-day average and 13.1% above its 200-day average, alongside a 12.1% momentum edge over its sector peers. Trading volume is running about 1.9x its recent average, indicating elevated activity, though the data does not indicate why. Together these suggest recent price strength and heightened trading interest relative to the stock's own history and peer group."
+    "long_term_narrative": null,
+    "one_line_summary": null,
+    "short_term_narrative": null
   },
   "price": {
     "as_of": "2026-09-18",
