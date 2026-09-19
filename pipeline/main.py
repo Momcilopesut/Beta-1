@@ -9,7 +9,7 @@ Usage:
 
 Two phases:
   1. fetch_and_score_company() for every ticker - fetch, balance-sheet-first
-     quantitative scoring, and the Graham/Piotroski checklists.
+     quantitative scoring, and the Graham/Munger checklists.
   2. finalize_company() for every ticker - AI narrative + final JSON
      assembly + write.
 """
@@ -120,8 +120,8 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
     checklist = value_investing.build_checklist(metrics, profile, raw)
     metrics["graham_criteria_passed"] = checklist["graham_defensive"]["passed"]
     metrics["graham_criteria_evaluated"] = checklist["graham_defensive"]["evaluated"]
-    metrics["piotroski_f_score"] = checklist["piotroski_f_score"]["score"]
-    metrics["piotroski_evaluated"] = checklist["piotroski_f_score"]["evaluated"]
+    metrics["munger_quality_passed"] = checklist["munger_quality"]["passed"]
+    metrics["munger_quality_evaluated"] = checklist["munger_quality"]["evaluated"]
 
     recent_filings = sec_edgar.recent_filings(sec_data["submissions"]) if sec_data.get("submissions") else []
     companyfacts_url = (
@@ -309,9 +309,11 @@ def finalize_company(
         "book_value_per_share": metrics.get("book_value_per_share"),
         "graham_criteria_passed": state["checklist"]["graham_defensive"]["passed"],
         "graham_criteria_total": state["checklist"]["graham_defensive"]["total"],
-        "piotroski_f_score": state["checklist"]["piotroski_f_score"]["score"],
+        "munger_quality_passed": state["checklist"]["munger_quality"]["passed"],
+        "munger_quality_total": state["checklist"]["munger_quality"]["total"],
         "quant_gate_pass": layered_analysis["quant_gate_pass"],
         "qualitative_moat_present": layered_analysis["qualitative_moat_present"],
+        "munger_quality_pass": layered_analysis["munger_quality_pass"],
         "valuation_gate_pass": layered_analysis["valuation_gate_pass"],
         "conviction_score": layered_analysis["conviction_score"],
         "conviction_verdict": layered_analysis["conviction_verdict"],

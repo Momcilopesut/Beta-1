@@ -182,9 +182,13 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
   text-align: center;
 }
 .score-card h3 { margin: 0 0 0.5rem; font-size: 0.9rem; color: var(--muted); }
-.score-value { font-size: 2rem; font-weight: 700; margin: 0; }
-.verdict-label { margin: 0.25rem 0; font-weight: 600; }
 .score-note { font-size: 0.75rem; color: var(--muted); margin: 0; }
+
+.meter-card { flex: 1 1 100%; max-width: 320px; margin: 0 auto; }
+.meter-gauge { display: flex; flex-direction: column; align-items: center; }
+.meter-gauge svg { max-width: 100%; height: auto; }
+.meter-score { font-size: 2.25rem; font-weight: 700; margin: 0.25rem 0 0; }
+.meter-verdict { margin: 0 0 0.25rem; font-weight: 600; }
 
 section { margin-bottom: 2rem; }
 section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }

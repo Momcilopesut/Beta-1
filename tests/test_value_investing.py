@@ -1,53 +1,63 @@
-from pipeline.scoring.value_investing import build_checklist, graham_defensive_checklist, piotroski_f_score
+from pipeline.scoring.value_investing import build_checklist, graham_defensive_checklist, munger_quality_checklist
 
 
-def _piotroski_raw_all_improving():
-    return {
-        "income_stmts": [
-            {"netIncome": 100, "revenue": 900, "grossProfit": 450, "weightedAverageShsOutDil": 100},
-            {"netIncome": 80, "revenue": 800, "grossProfit": 360, "weightedAverageShsOutDil": 100},
-        ],
-        "balance_stmts": [
-            {"totalAssets": 1000, "totalDebt": 200, "totalCurrentAssets": 400, "totalCurrentLiabilities": 200},
-            {"totalAssets": 900, "totalDebt": 250, "totalCurrentAssets": 300, "totalCurrentLiabilities": 200},
-        ],
-        "cashflow_stmts": [{"operatingCashFlow": 120}, {"operatingCashFlow": 70}],
-    }
+def _munger_raw_no_dilution(revenue=1000, gross_profit=500):
+    row = {"weightedAverageShsOutDil": 100, "revenue": revenue, "grossProfit": gross_profit}
+    return {"income_stmts": [dict(row), dict(row)]}
 
 
-def test_piotroski_all_nine_criteria_pass():
-    result = piotroski_f_score(_piotroski_raw_all_improving())
-    assert result["score"] == 9
-    assert result["evaluated"] == 9
-    assert result["max"] == 9
+def test_munger_quality_all_criteria_pass():
+    metrics = {"roe_pct": 20.0, "debt_to_equity": 0.5, "margin_trend_score": 100}
+    result = munger_quality_checklist(metrics, _munger_raw_no_dilution())
+    assert result["passed"] == 4
+    assert result["evaluated"] == 4
+    assert result["total"] == 4
     assert all(c["passed"] is True for c in result["criteria"])
 
 
-def test_piotroski_deteriorating_company_fails_most_criteria():
+def test_munger_quality_weak_business_fails_most_criteria():
+    metrics = {"roe_pct": 4.0, "debt_to_equity": 2.5, "margin_trend_score": 20}
     raw = {
         "income_stmts": [
-            {"netIncome": -10, "revenue": 700, "grossProfit": 280, "weightedAverageShsOutDil": 120},
-            {"netIncome": 50, "revenue": 800, "grossProfit": 360, "weightedAverageShsOutDil": 100},
-        ],
-        "balance_stmts": [
-            {"totalAssets": 1000, "totalDebt": 400, "totalCurrentAssets": 250, "totalCurrentLiabilities": 200},
-            {"totalAssets": 900, "totalDebt": 200, "totalCurrentAssets": 300, "totalCurrentLiabilities": 200},
-        ],
-        "cashflow_stmts": [{"operatingCashFlow": -5}, {"operatingCashFlow": 60}],
+            {"weightedAverageShsOutDil": 130, "revenue": 1000, "grossProfit": 400},  # diluted vs a year earlier
+            {"weightedAverageShsOutDil": 100, "revenue": 900, "grossProfit": 450},
+        ]
     }
-    result = piotroski_f_score(raw)
-    # Only "operating cash flow exceeds net income" passes here (-5 > -10) -
-    # correct per Piotroski's literal accrual-quality definition even though
-    # both figures are negative; every other criterion fails.
-    assert result["score"] == 1
-    assert result["evaluated"] == 9
+    result = munger_quality_checklist(metrics, raw)
+    assert result["passed"] == 0
+    assert result["evaluated"] == 4
 
 
-def test_piotroski_insufficient_history_reports_zero_max():
-    result = piotroski_f_score({"income_stmts": [{"netIncome": 100}], "balance_stmts": [], "cashflow_stmts": []})
-    assert result["score"] == 0
+def test_munger_quality_missing_data_is_unevaluated_not_failed():
+    result = munger_quality_checklist({}, {})
     assert result["evaluated"] == 0
-    assert "note" in result
+    assert result["passed"] == 0
+    assert all(c["passed"] is None for c in result["criteria"])
+
+
+def test_munger_quality_dilution_check_needs_two_years():
+    metrics = {"roe_pct": 20.0, "debt_to_equity": 0.5, "margin_trend_score": 100}
+    result = munger_quality_checklist(metrics, {"income_stmts": [{"weightedAverageShsOutDil": 100}]})
+    dilution_check = next(c for c in result["criteria"] if "diluting" in c["criterion"])
+    assert dilution_check["passed"] is None
+    # The other three still evaluate independently, though margin also needs
+    # real revenue/grossProfit data this fixture doesn't provide.
+    margin_check = next(c for c in result["criteria"] if "Margins" in c["criterion"])
+    assert margin_check["passed"] is None
+    assert result["evaluated"] == 2
+
+
+def test_munger_quality_margin_check_ignores_the_default_stable_reading_when_theres_no_real_data():
+    # pipeline.scoring.fundamentals._margin_trend defaults to "stable" (score
+    # 60) when there's no real revenue/grossProfit history - metrics dict
+    # here simulates that default, exactly as the real pipeline would
+    # produce it even for a ticker with zero fetched statements. The margin
+    # criterion must still read as unevaluated, not a false pass, since
+    # there's no real data behind that default.
+    metrics = {"roe_pct": 20.0, "debt_to_equity": 0.5, "margin_trend_score": 60}
+    result = munger_quality_checklist(metrics, {"income_stmts": []})
+    margin_check = next(c for c in result["criteria"] if "Margins" in c["criterion"])
+    assert margin_check["passed"] is None
 
 
 def test_graham_defensive_checklist_all_pass():
@@ -90,9 +100,9 @@ def test_graham_defensive_checklist_missing_data_is_unevaluated_not_failed():
 
 def test_build_checklist_combines_both():
     checklist = build_checklist(
-        {"current_ratio": 2.5, "pe_ttm": 12, "graham_multiple": 15, "eps_growth_cagr_3yr_pct": 5},
+        {"current_ratio": 2.5, "pe_ttm": 12, "graham_multiple": 15, "eps_growth_cagr_3yr_pct": 5, "roe_pct": 20.0, "debt_to_equity": 0.5, "margin_trend_score": 100},
         {"market_cap": 5_000_000_000},
-        _piotroski_raw_all_improving(),
+        _munger_raw_no_dilution(),
     )
     assert "graham_defensive" in checklist
-    assert "piotroski_f_score" in checklist
+    assert "munger_quality" in checklist

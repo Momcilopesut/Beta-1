@@ -1,9 +1,13 @@
 """Classic value-investing checklists: Benjamin Graham's Defensive Investor
-criteria (from "The Intelligent Investor") and the Piotroski F-Score (a
-quantitative quality screen built on the same balance-sheet-driven
-tradition). Both are explicit pass/fail checklists, and together form the
-Conviction Score's two components (see pipeline/scoring/aggregation.py) -
-they're also rendered as their own checklist on the company detail page.
+criteria (from "The Intelligent Investor") and a Munger Quality Checklist -
+Charlie Munger's most distinctly-his, most quotable idea made into simple
+pass/fail arithmetic: a business's return on the capital it's given matters
+more than how statistically cheap it looks ("if a business earns 18% on
+capital over 20 or 30 years, even if you pay an expensive looking price,
+you'll end up with a fine result"). Both are explicit pass/fail checklists;
+Graham's is the Investment Meter's base score, Munger's is a multiplier on
+top of it (see pipeline/scoring/aggregation.py) - they're also rendered as
+their own checklist on the company detail page.
 
 Every criterion is computed from data already fetched (income/balance/cash
 flow statements, quote) - no new API calls. A criterion is `passed: None`
@@ -148,94 +152,87 @@ def graham_defensive_checklist(metrics: dict, profile: dict, raw: dict) -> dict:
     return {"criteria": criteria, "passed": passed_count, "evaluated": len(evaluated), "total": len(criteria)}
 
 
-def piotroski_f_score(raw: dict) -> dict:
-    """The 9-point Piotroski F-Score, comparing the two most recent annual
-    statements. Each criterion is worth 1 point; a criterion that can't be
-    evaluated (missing a required field in either year) is excluded from
-    both the score and the max rather than counted as a failure."""
+_MUNGER_ROE_THRESHOLD_PCT = 15.0  # Buffett/Munger's commonly-cited quality bar
+_MUNGER_DEBT_TO_EQUITY_THRESHOLD = 1.0
+
+
+def munger_quality_checklist(metrics: dict, raw: dict) -> dict:
+    """Munger's own test, in basic arithmetic: does this business actually
+    earn good returns on the capital it's given, without doing anything
+    obviously reckless to get there? Each criterion is independently
+    evaluated (unlike Piotroski's old all-or-nothing 2-year gate) - a
+    missing single-year input doesn't block the other three."""
     income_stmts = raw.get("income_stmts") or []
-    balance_stmts = raw.get("balance_stmts") or []
-    cashflow_stmts = raw.get("cashflow_stmts") or []
-
-    if len(income_stmts) < 2 or len(balance_stmts) < 2 or len(cashflow_stmts) < 2:
-        return {"criteria": [], "score": 0, "evaluated": 0, "max": 9, "note": "Fewer than 2 years of statements available"}
-
-    inc0, inc1 = income_stmts[0], income_stmts[1]
-    bal0, bal1 = balance_stmts[0], balance_stmts[1]
-    cf0 = cashflow_stmts[0]
-
-    def g(row, *keys):
-        return _get(row, *keys)
-
     criteria = []
 
-    def add(name: str, value: bool | None):
-        criteria.append({"criterion": name, "passed": value})
+    def add(name: str, value: bool | None, detail: str):
+        criteria.append({"criterion": name, "passed": value, "detail": detail})
 
-    net_income0 = g(inc0, "netIncome")
-    total_assets0 = g(bal0, "totalAssets")
-    total_assets1 = g(bal1, "totalAssets")
-    op_cash_flow0 = g(cf0, "operatingCashFlow")
+    # 1. Return on equity - Munger's central point: a business that earns a
+    # high return on shareholders' capital, sustained over time, is worth
+    # far more than its statistical cheapness alone would suggest.
+    roe_pct = metrics.get("roe_pct")
+    if roe_pct is None:
+        add(f"Strong return on equity (>= {_MUNGER_ROE_THRESHOLD_PCT:.0f}%)", None, "ROE unavailable")
+    else:
+        passed = roe_pct >= _MUNGER_ROE_THRESHOLD_PCT
+        add(f"Strong return on equity (>= {_MUNGER_ROE_THRESHOLD_PCT:.0f}%)", passed, f"ROE {roe_pct:.1f}%")
 
-    roa0 = net_income0 / total_assets0 if net_income0 is not None and total_assets0 else None
-    net_income1 = g(inc1, "netIncome")
-    roa1 = net_income1 / total_assets1 if net_income1 is not None and total_assets1 else None
+    # 2. Not overloaded with debt - Munger repeatedly warned that leverage
+    # turns an ordinary mistake into a fatal one.
+    debt_to_equity = metrics.get("debt_to_equity")
+    if debt_to_equity is None:
+        add(f"Not overloaded with debt (debt/equity <= {_MUNGER_DEBT_TO_EQUITY_THRESHOLD:.1f})", None, "Debt/equity unavailable")
+    else:
+        passed = debt_to_equity <= _MUNGER_DEBT_TO_EQUITY_THRESHOLD
+        add(
+            f"Not overloaded with debt (debt/equity <= {_MUNGER_DEBT_TO_EQUITY_THRESHOLD:.1f})",
+            passed,
+            f"Debt/equity {debt_to_equity:.2f}",
+        )
 
-    add("Positive net income", net_income0 > 0 if net_income0 is not None else None)
-    add("Positive operating cash flow", op_cash_flow0 > 0 if op_cash_flow0 is not None else None)
-    add("ROA improving year over year", roa0 > roa1 if roa0 is not None and roa1 is not None else None)
-    add(
-        "Operating cash flow exceeds net income (earnings quality)",
-        op_cash_flow0 > net_income0 if op_cash_flow0 is not None and net_income0 is not None else None,
-    )
+    # 3. Not diluting shareholders - reckless share issuance is exactly the
+    # kind of "stupidity" Munger says is easier to avoid than brilliance is
+    # to achieve.
+    if len(income_stmts) < 2:
+        add("Not diluting shareholders (share count flat or falling)", None, "Fewer than 2 years of share-count data")
+    else:
+        shares0 = _get(income_stmts[0], "weightedAverageShsOutDil", "weightedAverageShsOut")
+        shares1 = _get(income_stmts[1], "weightedAverageShsOutDil", "weightedAverageShsOut")
+        if shares0 is None or shares1 is None:
+            add("Not diluting shareholders (share count flat or falling)", None, "Share count unavailable")
+        else:
+            passed = shares0 <= shares1
+            add(
+                "Not diluting shareholders (share count flat or falling)",
+                passed,
+                f"{shares0:,.0f} shares vs. {shares1:,.0f} a year earlier",
+            )
 
-    debt0, debt1 = g(bal0, "totalDebt"), g(bal1, "totalDebt")
-    leverage0 = debt0 / total_assets0 if debt0 is not None and total_assets0 else None
-    leverage1 = debt1 / total_assets1 if debt1 is not None and total_assets1 else None
-    add(
-        "Leverage decreasing year over year",
-        leverage0 < leverage1 if leverage0 is not None and leverage1 is not None else None,
-    )
-
-    ca0, cl0 = g(bal0, "totalCurrentAssets"), g(bal0, "totalCurrentLiabilities")
-    ca1, cl1 = g(bal1, "totalCurrentAssets"), g(bal1, "totalCurrentLiabilities")
-    cur0 = ca0 / cl0 if ca0 is not None and cl0 else None
-    cur1 = ca1 / cl1 if ca1 is not None and cl1 else None
-    add(
-        "Current ratio improving year over year",
-        cur0 > cur1 if cur0 is not None and cur1 is not None else None,
-    )
-
-    shares0 = g(inc0, "weightedAverageShsOutDil", "weightedAverageShsOut")
-    shares1 = g(inc1, "weightedAverageShsOutDil", "weightedAverageShsOut")
-    add(
-        "No new shares issued (no dilution)",
-        shares0 <= shares1 if shares0 is not None and shares1 is not None else None,
-    )
-
-    rev0, gp0 = g(inc0, "revenue"), g(inc0, "grossProfit")
-    rev1, gp1 = g(inc1, "revenue"), g(inc1, "grossProfit")
-    gm0 = gp0 / rev0 if gp0 is not None and rev0 else None
-    gm1 = gp1 / rev1 if gp1 is not None and rev1 else None
-    add(
-        "Gross margin improving year over year",
-        gm0 > gm1 if gm0 is not None and gm1 is not None else None,
-    )
-
-    turnover0 = rev0 / total_assets0 if rev0 is not None and total_assets0 else None
-    turnover1 = rev1 / total_assets1 if rev1 is not None and total_assets1 else None
-    add(
-        "Asset turnover improving year over year",
-        turnover0 > turnover1 if turnover0 is not None and turnover1 is not None else None,
-    )
+    # 4. Margins stable or improving, not declining - a business with
+    # eroding margins is losing whatever edge gave it good returns in the
+    # first place. metrics["margin_trend_score"] defaults to a "stable"
+    # reading when there's no real data to compute a trend from (see
+    # fundamentals.py::_margin_trend) - checking for at least 2 years of
+    # real revenue/gross-profit data directly, rather than trusting that
+    # field's presence, avoids reading "no data" as "a real pass."
+    margin_years = [
+        row for row in income_stmts[:3] if _get(row, "revenue") and _get(row, "grossProfit") is not None
+    ]
+    if len(margin_years) < 2:
+        add("Margins stable or improving (not declining)", None, "Margin trend unavailable")
+    else:
+        margin_trend_score = metrics.get("margin_trend_score")
+        passed = margin_trend_score >= 60  # _MARGIN_TREND_SCORE: declining=20, stable=60, improving=100
+        add("Margins stable or improving (not declining)", passed, f"Margin trend score {margin_trend_score}")
 
     evaluated = [c for c in criteria if c["passed"] is not None]
-    score = sum(1 for c in evaluated if c["passed"])
-    return {"criteria": criteria, "score": score, "evaluated": len(evaluated), "max": 9}
+    passed_count = sum(1 for c in evaluated if c["passed"])
+    return {"criteria": criteria, "passed": passed_count, "evaluated": len(evaluated), "total": len(criteria)}
 
 
 def build_checklist(metrics: dict, profile: dict, raw: dict) -> dict:
     return {
         "graham_defensive": graham_defensive_checklist(metrics, profile, raw),
-        "piotroski_f_score": piotroski_f_score(raw),
+        "munger_quality": munger_quality_checklist(metrics, raw),
     }

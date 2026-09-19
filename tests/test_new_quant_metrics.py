@@ -60,6 +60,7 @@ def test_balance_sheet_basics_are_exact():
     assert metrics["debt_to_ebitda"] == pytest.approx(10_000_000_000 / 6_500_000_000)
     assert metrics["eps_growth_cagr_3yr_pct"] == pytest.approx(10.0)
     assert metrics["fcf_margin_pct"] == pytest.approx(3_000_000_000 / 20_000_000_000 * 100)
+    assert metrics["roe_pct"] == pytest.approx(4_000_000_000 / 60_000_000_000 * 100)
 
 
 def test_ncav_margin_reflects_current_assets_minus_all_liabilities():
@@ -80,3 +81,4 @@ def test_balance_sheet_basics_none_without_balance_sheet_data():
     assert metrics["total_liabilities"] is None
     assert metrics["shareholders_equity"] is None
     assert metrics["ncav_margin_pct"] is None
+    assert metrics["roe_pct"] is None

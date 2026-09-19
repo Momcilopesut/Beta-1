@@ -122,32 +122,93 @@ function render(doc) {
   `;
 }
 
-const CONVICTION_COMPONENT_LABELS = {
-  graham_pct: "Graham checklist",
-  piotroski_pct: "Piotroski F-Score",
-};
+// --- The meter: an inline SVG semi-circle gauge, five bands matching the
+// verdict thresholds/colors already defined in site/css/styles.css (light
+// and dark mode both covered since these read the same CSS custom
+// properties the rest of the page uses for verdict colors). ---
+
+const GAUGE_BANDS = [
+  { min: 0, max: 25, colorVar: "--weak" },
+  { min: 25, max: 40, colorVar: "--cautious" },
+  { min: 40, max: 60, colorVar: "--neutral" },
+  { min: 60, max: 75, colorVar: "--favorable" },
+  { min: 75, max: 100, colorVar: "--strong" },
+];
+
+function polarToCartesian(cx, cy, r, angleDeg) {
+  const rad = (angleDeg * Math.PI) / 180;
+  return { x: cx + r * Math.cos(rad), y: cy - r * Math.sin(rad) };
+}
+
+function scoreToAngleDeg(score) {
+  return 180 - (Math.max(0, Math.min(100, score)) / 100) * 180;
+}
+
+function gaugeArcPath(cx, cy, r, scoreStart, scoreEnd) {
+  const start = polarToCartesian(cx, cy, r, scoreToAngleDeg(scoreStart));
+  const end = polarToCartesian(cx, cy, r, scoreToAngleDeg(scoreEnd));
+  return `M ${start.x.toFixed(2)} ${start.y.toFixed(2)} A ${r} ${r} 0 0 1 ${end.x.toFixed(2)} ${end.y.toFixed(2)}`;
+}
+
+function renderMeterGauge(score, verdict) {
+  const cx = 100;
+  const cy = 96;
+  const r = 78;
+  const strokeWidth = 16;
+  const hasScore = score !== null && score !== undefined;
+
+  const bands = GAUGE_BANDS.map(
+    (b) =>
+      `<path d="${gaugeArcPath(cx, cy, r, b.min, b.max)}" stroke="var(${b.colorVar})" stroke-width="${strokeWidth}" fill="none" />`
+  ).join("");
+
+  let needle = "";
+  if (hasScore) {
+    const tip = polarToCartesian(cx, cy, r - strokeWidth - 8, scoreToAngleDeg(score));
+    needle = `
+      <line x1="${cx}" y1="${cy}" x2="${tip.x.toFixed(2)}" y2="${tip.y.toFixed(2)}" stroke="var(--fg)" stroke-width="3" stroke-linecap="round" />
+      <circle cx="${cx}" cy="${cy}" r="6" fill="var(--fg)" />
+    `;
+  }
+
+  const label = hasScore
+    ? `Investment meter: ${formatNumber(score, { decimals: 0 })}${verdict ? ", " + verdict : ""}`
+    : "Investment meter: not enough data";
+
+  return `
+    <div class="meter-gauge">
+      <svg viewBox="0 0 200 108" width="220" height="119" role="img" aria-label="${escapeHtml(label)}">
+        ${bands}
+        ${needle}
+      </svg>
+      <p class="meter-score">${hasScore ? formatNumber(score, { decimals: 0 }) : "—"}</p>
+      <p class="meter-verdict">${verdict ? escapeHtml(verdict) : "Not enough data"}</p>
+    </div>
+  `;
+}
 
 function renderConvictionCard(layered) {
-  if (!layered || layered.conviction_score === null || layered.conviction_score === undefined) {
+  const hasScore = layered && layered.conviction_score !== null && layered.conviction_score !== undefined;
+  const gauge = renderMeterGauge(hasScore ? layered.conviction_score : null, hasScore ? layered.conviction_verdict : null);
+
+  if (!hasScore) {
     return `
-      <div class="score-card verdict-neutral">
-        <h3>Conviction Score</h3>
-        <p class="score-value">—</p>
-        <p class="verdict-label">Not enough data</p>
-        <p class="score-note">Needs the Graham or Piotroski checklist to have evaluated data.</p>
+      <div class="score-card verdict-neutral meter-card">
+        <h3>Investment Meter <span class="attribution">(Graham · Buffett · Munger)</span></h3>
+        ${gauge}
+        <p class="score-note">Needs Graham's checklist to have evaluated data.</p>
       </div>
     `;
   }
   const b = layered.conviction_score_breakdown || {};
-  const parts = Object.entries(b.components || {})
-    .map(([key, value]) => `${CONVICTION_COMPONENT_LABELS[key] || key} ${formatNumber(value, { decimals: 0 })}`)
-    .join(", ");
   return `
-    <div class="score-card ${verdictClass(layered.conviction_verdict)}">
-      <h3>Conviction Score</h3>
-      <p class="score-value">${formatNumber(layered.conviction_score, { decimals: 0 })}</p>
-      <p class="verdict-label">${escapeHtml(layered.conviction_verdict)}</p>
-      <p class="score-note">Base ${formatNumber(b.base_score, { decimals: 0 })} (${parts}) × ${formatNumber(b.moat_multiplier, { decimals: 2 })} moat × ${formatNumber(b.valuation_multiplier, { decimals: 2 })} valuation</p>
+    <div class="score-card ${verdictClass(layered.conviction_verdict)} meter-card">
+      <h3>Investment Meter <span class="attribution">(Graham · Buffett · Munger)</span></h3>
+      ${gauge}
+      <p class="score-note">Graham checklist ${formatNumber(b.base_score, { decimals: 0 })}% ×
+      ${formatNumber(b.munger_multiplier, { decimals: 2 })} Munger quality ×
+      ${formatNumber(b.moat_multiplier, { decimals: 2 })} Buffett moat ×
+      ${formatNumber(b.valuation_multiplier, { decimals: 2 })} Graham valuation</p>
     </div>
   `;
 }
@@ -183,7 +244,7 @@ function renderBalanceSheetBasics(fundamentals, layered) {
       }
       ${
         layered?.required_margin_of_safety_pct !== undefined && layered?.required_margin_of_safety_pct !== null
-          ? `<p class="meta">Required margin of safety for this company: ${formatNumber(layered.required_margin_of_safety_pct, { decimals: 0, suffix: "%" })} (Klarman: scales up with red flags / thin data, not a flat number — see README).</p>`
+          ? `<p class="meta">Required margin of safety: ${formatNumber(layered.required_margin_of_safety_pct, { decimals: 0, suffix: "%" })} (Graham's convention — a real discount to estimated fair value, not just trading below it by any amount).</p>`
           : ""
       }
     </section>
@@ -212,41 +273,31 @@ function renderChecklistIcon(passed) {
   return '<span class="check-unknown" title="Not enough data to evaluate">?</span>';
 }
 
+function renderChecklistRows(criteria) {
+  return (criteria || [])
+    .map(
+      (c) =>
+        `<li>${renderChecklistIcon(c.passed)}<span class="checklist-text"><span class="checklist-label">${escapeHtml(c.criterion)}</span><span class="checklist-detail">${escapeHtml(c.detail || "")}</span></span></li>`
+    )
+    .join("");
+}
+
 function renderValueInvesting(valueInvesting) {
   if (!valueInvesting) return "";
   const graham = valueInvesting.graham_defensive;
-  const piotroski = valueInvesting.piotroski_f_score;
-
-  const grahamRows = (graham?.criteria || [])
-    .map(
-      (c) =>
-        `<li>${renderChecklistIcon(c.passed)}<span class="checklist-text"><span class="checklist-label">${escapeHtml(c.criterion)}</span><span class="checklist-detail">${escapeHtml(c.detail)}</span></span></li>`
-    )
-    .join("");
-
-  const piotroskiRows = (piotroski?.criteria || [])
-    .map(
-      (c) =>
-        `<li>${renderChecklistIcon(c.passed)}<span class="checklist-text"><span class="checklist-label">${escapeHtml(c.criterion)}</span></span></li>`
-    )
-    .join("");
-
-  const piotroskiNote = piotroski?.note
-    ? `<p class="checklist-note">${escapeHtml(piotroski.note)}</p>`
-    : "";
+  const munger = valueInvesting.munger_quality;
 
   return `
     <section class="value-investing">
-      <h3>Value Investing Checklist <span class="attribution">(Graham / Buffett / Munger frameworks)</span></h3>
+      <h3>Value Investing Checklists <span class="attribution">(Graham / Munger)</span></h3>
       <div class="checklist-columns">
         <div class="checklist-card">
           <h4>Graham Defensive Investor ${graham ? `<span class="checklist-score">${graham.passed}/${graham.evaluated} evaluated</span>` : ""}</h4>
-          <ul class="checklist">${grahamRows}</ul>
+          <ul class="checklist">${renderChecklistRows(graham?.criteria)}</ul>
         </div>
         <div class="checklist-card">
-          <h4>Piotroski F-Score ${piotroski ? `<span class="checklist-score">${piotroski.score}/${piotroski.evaluated} evaluated (max 9)</span>` : ""}</h4>
-          ${piotroskiNote}
-          <ul class="checklist">${piotroskiRows}</ul>
+          <h4>Munger Quality Checklist ${munger ? `<span class="checklist-score">${munger.passed}/${munger.evaluated} evaluated</span>` : ""}</h4>
+          <ul class="checklist">${renderChecklistRows(munger?.criteria)}</ul>
         </div>
       </div>
     </section>
@@ -279,6 +330,18 @@ function renderQuantScorecard(quantScore) {
       <p class="checklist-note">${quantScore.evaluated ? `${quantScore.passed}/${quantScore.evaluated} evaluated metrics pass (${formatNumber(quantScore.quant_score_pct, { decimals: 0, suffix: "%" })})` : "Not enough data to evaluate."}</p>
       <ul class="checklist">${rows}</ul>
       <p class="meta">A fast, deterministic balance-sheet/cash filter — no AI, no news. Gates whether the qualitative layer below ran at all.</p>
+    </div>
+  `;
+}
+
+function renderMungerQuality(munger, mungerQualityPass) {
+  if (!munger) return "";
+  return `
+    <div class="layered-card">
+      <h4>Munger Quality <span class="layered-gate ${gateClass(mungerQualityPass)}">${gateLabel(mungerQualityPass)}</span></h4>
+      <p class="checklist-note">${munger.evaluated ? `${munger.passed}/${munger.evaluated} evaluated criteria pass` : "Not enough data to evaluate."}</p>
+      <ul class="checklist">${renderChecklistRows(munger.criteria)}</ul>
+      <p class="meta">Return on equity, debt discipline, dilution, and margin trend — does the business actually earn good returns on capital, not just look statistically cheap.</p>
     </div>
   `;
 }
@@ -323,11 +386,12 @@ function renderLayeredAnalysis(doc) {
   const flags = (layered?.flags || []).map((f) => `<li>${escapeHtml(f)}</li>`).join("");
   return `
     <section class="layered-analysis">
-      <h3>Layered Analysis <span class="attribution">(quant screen and qualitative moat read stay visible separately, then combine with the balance-sheet valuation gate above — via gates and multipliers, never a naive average — into the Conviction Score)</span></h3>
+      <h3>Layered Analysis <span class="attribution">(the quant screen, Munger's quality checklist, and Buffett's moat read stay visible separately, then combine with Graham's valuation gate above — via gates and multipliers, never a naive average — into the Investment Meter)</span></h3>
       ${layered ? `<p class="layered-overall">${escapeHtml(layered.overall)}</p>` : ""}
       ${flags ? `<ul class="layered-flags">${flags}</ul>` : ""}
       <div class="layered-columns">
         ${renderQuantScorecard(doc.quant_score)}
+        ${renderMungerQuality(doc.value_investing?.munger_quality, layered?.munger_quality_pass)}
         ${renderQualitative(doc.qualitative)}
       </div>
     </section>

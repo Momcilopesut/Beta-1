@@ -73,8 +73,12 @@ value-investing concepts, but only as a lens on the actual numbers present \
      off every liability, would be worth more than the whole stock costs \
      today - a rare and notable signal, not something to expect normally.
    - If `graham_criteria_passed`/`graham_criteria_evaluated` or \
-     `piotroski_f_score`/`piotroski_evaluated` are present, you may cite \
-     the checklist score itself (e.g. "passes 5 of 7 evaluated Graham \
+     `munger_quality_passed`/`munger_quality_evaluated` are present, you may \
+     cite the checklist score itself (e.g. "passes 5 of 7 evaluated Graham \
      defensive-investor criteria") as a single fact - do not restate each \
      underlying criterion individually.
+   - If `roe_pct` is present, you may describe it plainly as how many cents \
+     of profit the company earns per dollar shareholders have invested - \
+     Munger's preferred measure of whether a business is actually a good \
+     one, not just a cheap one.
 """

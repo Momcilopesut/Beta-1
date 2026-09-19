@@ -1,18 +1,25 @@
 from pipeline.scoring.aggregation import build_layered_analysis
 
+_MUNGER_PASS = {"munger_quality": {"passed": 4, "evaluated": 4}}
+_MUNGER_FAIL = {"munger_quality": {"passed": 0, "evaluated": 4}}
+
 
 def test_all_layers_align():
     result = build_layered_analysis(
-        {"gate_pass": True, "evaluated": 5}, {"moat_present": True, "red_flags": []}, {"graham_upside_pct": 25.0}
+        {"gate_pass": True, "evaluated": 5},
+        {"moat_present": True, "red_flags": []},
+        {"graham_upside_pct": 25.0},
+        _MUNGER_PASS,
     )
     assert result == {
         "quant_gate_pass": True,
         "qualitative_moat_present": True,
+        "munger_quality_pass": True,
         "valuation_gate_pass": True,
         "required_margin_of_safety_pct": 15.0,
         "overall": (
-            "All three layers align: passes the quant screen, a moat was identified, and a margin of "
-            "safety exists."
+            "All four checks align: passes the quant screen, a moat was identified (Buffett), Munger's "
+            "quality bar is met, and a margin of safety exists (Graham)."
         ),
         "flags": [],
         "conviction_score": None,
@@ -35,6 +42,17 @@ def test_weak_quant_but_moat_present_is_flagged_not_dismissed():
         {"gate_pass": False}, {"moat_present": True, "red_flags": []}, {"graham_upside_pct": 25.0}
     )
     assert any("weak quant screen" in f for f in result["flags"])
+
+
+def test_weak_quant_but_munger_quality_passes_is_flagged_not_dismissed():
+    result = build_layered_analysis({"gate_pass": False}, None, {"graham_upside_pct": 25.0}, _MUNGER_PASS)
+    assert any("sounder than the fast screen" in f for f in result["flags"])
+
+
+def test_munger_quality_failure_flagged_even_with_good_quant():
+    result = build_layered_analysis({"gate_pass": True}, None, {"graham_upside_pct": 25.0}, _MUNGER_FAIL)
+    assert result["munger_quality_pass"] is False
+    assert any("Munger's quality checklist" in f for f in result["flags"])
 
 
 def test_expensive_valuation_flagged_even_with_good_quant_and_moat():
@@ -67,6 +85,7 @@ def test_incomplete_when_any_layer_has_no_data():
     assert result["overall"].startswith("Incomplete")
     assert result["quant_gate_pass"] is None
     assert result["qualitative_moat_present"] is None
+    assert result["munger_quality_pass"] is None
     assert result["valuation_gate_pass"] is None
 
 
@@ -74,54 +93,21 @@ def test_qualitative_none_when_layer_was_skipped_not_run():
     # quant passed but the qualitative layer never ran (e.g. gate failed
     # upstream in a different company, or an API error) - moat_present is
     # None, which must read as "incomplete", not as "no moat found".
-    result = build_layered_analysis({"gate_pass": True}, None, {"graham_upside_pct": 25.0})
+    result = build_layered_analysis({"gate_pass": True}, None, {"graham_upside_pct": 25.0}, _MUNGER_PASS)
     assert result["qualitative_moat_present"] is None
     assert result["overall"].startswith("Incomplete")
 
 
-# --- Klarman: margin of safety should scale with actual uncertainty ---
-
-
-def test_required_margin_of_safety_bumped_by_thin_quant_coverage():
+def test_required_margin_of_safety_is_a_flat_graham_convention():
+    # No more Klarman-style dynamic risk scaling - always 15%, regardless of
+    # quant coverage or qualitative red flags.
     thin = build_layered_analysis(
-        {"gate_pass": True, "evaluated": 1}, {"moat_present": True, "red_flags": []}, {"graham_upside_pct": 20.0}
+        {"gate_pass": True, "evaluated": 1}, {"moat_present": True, "red_flags": ["a", "b", "c"]}, {"graham_upside_pct": 20.0}
     )
     full = build_layered_analysis(
         {"gate_pass": True, "evaluated": 5}, {"moat_present": True, "red_flags": []}, {"graham_upside_pct": 20.0}
     )
-    assert thin["required_margin_of_safety_pct"] > full["required_margin_of_safety_pct"]
-    # 20% clears the base 15% requirement but not the thin-coverage-bumped one.
+    assert thin["required_margin_of_safety_pct"] == 15.0
+    assert full["required_margin_of_safety_pct"] == 15.0
+    assert thin["valuation_gate_pass"] is True
     assert full["valuation_gate_pass"] is True
-    assert thin["valuation_gate_pass"] is False
-
-
-def test_required_margin_of_safety_bumped_by_red_flags_and_capped():
-    one_flag = build_layered_analysis(
-        {"gate_pass": True, "evaluated": 5}, {"moat_present": True, "red_flags": ["a"]}, {"graham_upside_pct": 20.0}
-    )
-    many_flags = build_layered_analysis(
-        {"gate_pass": True, "evaluated": 5},
-        {"moat_present": True, "red_flags": ["a", "b", "c", "d", "e"]},
-        {"graham_upside_pct": 20.0},
-    )
-    assert one_flag["required_margin_of_safety_pct"] == 20.0  # 15 base + 5 for one flag
-    assert many_flags["required_margin_of_safety_pct"] == 30.0  # capped at +15 regardless of flag count
-
-
-def test_required_margin_of_safety_bumped_by_fallback_extraction():
-    clean = build_layered_analysis(
-        {"gate_pass": True, "evaluated": 5},
-        {"moat_present": True, "red_flags": [], "extraction_confidence": "section_match"},
-        {"graham_upside_pct": 20.0},
-    )
-    fallback = build_layered_analysis(
-        {"gate_pass": True, "evaluated": 5},
-        {"moat_present": True, "red_flags": [], "extraction_confidence": "whole_document_fallback"},
-        {"graham_upside_pct": 20.0},
-    )
-    assert fallback["required_margin_of_safety_pct"] == clean["required_margin_of_safety_pct"] + 5.0
-
-
-def test_required_margin_of_safety_defaults_to_base_without_qualitative():
-    result = build_layered_analysis({"gate_pass": True, "evaluated": 5}, None, {"graham_upside_pct": 20.0})
-    assert result["required_margin_of_safety_pct"] == 15.0

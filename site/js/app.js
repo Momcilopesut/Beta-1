@@ -105,9 +105,9 @@ function renderCard(company) {
     company.graham_criteria_total
       ? `<span class="mini-badge" title="Graham defensive-investor criteria passed">Graham ${company.graham_criteria_passed}/${company.graham_criteria_total}</span>`
       : "";
-  const piotroskiBadge =
-    company.piotroski_f_score !== undefined && company.piotroski_f_score !== null
-      ? `<span class="mini-badge" title="Piotroski F-Score">F-Score ${company.piotroski_f_score}/9</span>`
+  const mungerBadge =
+    company.munger_quality_total !== undefined && company.munger_quality_total !== null
+      ? `<span class="mini-badge" title="Munger quality checklist (return on equity, debt, dilution, margins)">Munger ${company.munger_quality_passed}/${company.munger_quality_total}</span>`
       : "";
   const bookValueBadge =
     company.book_value_per_share !== undefined && company.book_value_per_share !== null
@@ -117,9 +117,9 @@ function renderCard(company) {
   const hasConviction = company.conviction_score !== null && company.conviction_score !== undefined;
   const convictionBadge = hasConviction
     ? `<span class="verdict-badge conviction-badge ${verdictClass(company.conviction_verdict)}">
-        Conviction: ${escapeHtml(company.conviction_verdict)} (${formatNumber(company.conviction_score, { decimals: 0 })})
+        Meter: ${escapeHtml(company.conviction_verdict)} (${formatNumber(company.conviction_score, { decimals: 0 })})
       </span>`
-    : `<span class="verdict-badge conviction-badge verdict-neutral">Conviction: not enough data</span>`;
+    : `<span class="verdict-badge conviction-badge verdict-neutral">Meter: not enough data</span>`;
   return `
     <a class="card" href="company.html?ticker=${encodeURIComponent(company.ticker)}">
       <div class="card-header">
@@ -129,17 +129,23 @@ function renderCard(company) {
       <div class="verdicts">
         ${convictionBadge}
       </div>
-      <div class="mini-badges">${grahamBadge}${piotroskiBadge}${bookValueBadge}${layeredBadge}</div>
+      <div class="mini-badges">${grahamBadge}${mungerBadge}${bookValueBadge}${layeredBadge}</div>
       <p class="summary">${escapeHtml(company.one_line_summary) || "No AI summary available yet."}</p>
     </a>
   `;
 }
 
 function renderLayeredBadge(company) {
-  const { quant_gate_pass: quant, qualitative_moat_present: moat, valuation_gate_pass: value } = company;
-  if (quant === undefined && moat === undefined && value === undefined) return "";
+  const {
+    quant_gate_pass: quant,
+    qualitative_moat_present: moat,
+    munger_quality_pass: munger,
+    valuation_gate_pass: value,
+  } = company;
+  if (quant === undefined && moat === undefined && munger === undefined && value === undefined) return "";
   const parts = [];
   if (quant === true) parts.push("quant");
+  if (munger === true) parts.push("munger");
   if (moat === true) parts.push("moat");
   if (value === true) parts.push("value");
   if (!parts.length) return `<span class="mini-badge" title="Layered analysis: no gates passed yet">layered: —</span>`;

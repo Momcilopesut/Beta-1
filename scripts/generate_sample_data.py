@@ -38,6 +38,7 @@ METRIC_RANGES = {
     "current_ratio": (0.4, 2.8),
     "fcf_margin_pct": (-5, 32),
     "eps_growth_cagr_3yr_pct": (-8, 25),
+    "roe_pct": (-5, 35),
 }
 MARGIN_TREND_LABEL = {20: "declining", 60: "stable", 100: "improving"}
 
@@ -169,6 +170,7 @@ def to_display(metrics: dict, close_price: float) -> dict:
             },
             "profitability": {
                 "trend": MARGIN_TREND_LABEL[metrics["margin_trend_score"]],
+                "roe_pct": metrics["roe_pct"],
             },
         },
     }
@@ -205,8 +207,8 @@ def synth_narrative(name: str, metrics: dict, checklist: dict) -> dict:
             f"{name} owns {metrics['total_assets']:,.0f} in assets against {metrics['total_liabilities']:,.0f} in "
             f"liabilities - a net worth of {metrics['shareholders_equity']:,.0f}. It passes "
             f"{metrics['graham_criteria_passed']}/{metrics['graham_criteria_evaluated']} evaluated Graham "
-            f"defensive-investor criteria and scores {checklist['piotroski_f_score']['score']}/"
-            f"{checklist['piotroski_f_score']['evaluated']} on the Piotroski F-Score."
+            f"defensive-investor criteria and {checklist['munger_quality']['passed']}/"
+            f"{checklist['munger_quality']['evaluated']} of Munger's quality checklist."
         ),
         "facts": facts,
         "disclaimer": DISCLAIMER,
@@ -297,8 +299,8 @@ def main() -> None:
         checklist = value_investing.build_checklist(metrics, {"market_cap": market_cap}, raw)
         metrics["graham_criteria_passed"] = checklist["graham_defensive"]["passed"]
         metrics["graham_criteria_evaluated"] = checklist["graham_defensive"]["evaluated"]
-        metrics["piotroski_f_score"] = checklist["piotroski_f_score"]["score"]
-        metrics["piotroski_evaluated"] = checklist["piotroski_f_score"]["evaluated"]
+        metrics["munger_quality_passed"] = checklist["munger_quality"]["passed"]
+        metrics["munger_quality_evaluated"] = checklist["munger_quality"]["evaluated"]
 
         macro_adj = macro_regime.sector_adjustment(regime_info["regime"], sector)
         narrative = synth_narrative(company_cfg["name"], metrics, checklist)
@@ -347,9 +349,11 @@ def main() -> None:
                 "book_value_per_share": metrics["book_value_per_share"],
                 "graham_criteria_passed": checklist["graham_defensive"]["passed"],
                 "graham_criteria_total": checklist["graham_defensive"]["total"],
-                "piotroski_f_score": checklist["piotroski_f_score"]["score"],
+                "munger_quality_passed": checklist["munger_quality"]["passed"],
+                "munger_quality_total": checklist["munger_quality"]["total"],
                 "quant_gate_pass": layered_analysis["quant_gate_pass"],
                 "qualitative_moat_present": layered_analysis["qualitative_moat_present"],
+                "munger_quality_pass": layered_analysis["munger_quality_pass"],
                 "valuation_gate_pass": layered_analysis["valuation_gate_pass"],
                 "conviction_score": layered_analysis["conviction_score"],
                 "conviction_verdict": layered_analysis["conviction_verdict"],

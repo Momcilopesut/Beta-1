@@ -141,6 +141,7 @@ def build_metrics(
     eps_growth_cagr_3yr_pct = _eps_growth_cagr_3yr(income_stmts)
 
     revenue = _first_of(income0, "revenue") if income_stmts else None
+    net_income = _first_of(income0, "netIncome") if income_stmts else None
     margin_trend = _margin_trend(income_stmts)
 
     # --- The core "assets vs liabilities" numbers ---
@@ -154,6 +155,16 @@ def build_metrics(
     debt_to_equity = _first_of(ratios, "debtToEquityRatioTTM", "debtEquityRatioTTM")
     if debt_to_equity is None and total_debt is not None and total_equity:
         debt_to_equity = total_debt / total_equity
+
+    # Munger/Buffett's own quality bar: return on the equity shareholders
+    # have put in. Simple two-input math (net income / equity), not the
+    # multi-input ROIC formula this pipeline cut earlier for being too
+    # complex to verify by hand.
+    roe_pct = _first_of(key_metrics, "roeTTM", "returnOnEquityTTM")
+    if roe_pct is not None:
+        roe_pct = roe_pct * 100
+    if roe_pct is None and net_income is not None and total_equity:
+        roe_pct = net_income / total_equity * 100
 
     current_ratio = _first_of(ratios, "currentRatioTTM")
     if current_ratio is None and current_assets is not None and current_liabilities:
@@ -228,6 +239,7 @@ def build_metrics(
         "fcf_margin_pct": fcf_margin_pct,
         "eps_growth_cagr_3yr_pct": eps_growth_cagr_3yr_pct,
         "margin_trend_score": _MARGIN_TREND_SCORE[margin_trend],
+        "roe_pct": roe_pct,
         "total_assets": total_assets,
         "total_liabilities": total_liabilities,
         "shareholders_equity": total_equity,
@@ -267,6 +279,7 @@ def build_metrics(
             },
             "profitability": {
                 "trend": margin_trend,
+                "roe_pct": roe_pct,
             },
         },
     }
