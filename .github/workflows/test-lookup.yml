@@ -1,0 +1,79 @@
+name: Test on-demand lookup
+
+# Manual debug tool: runs the exact same code path as api/lookup.py
+# (fetch_and_score_company + finalize_company, ticker not required to be in
+# config/watchlist.yaml) against real FMP/SEC/Anthropic APIs, and prints the
+# resulting JSON to the job log. Never writes to data/, never commits,
+# never deploys - purely a way to test the search field's analysis without
+# needing a live Vercel deployment reachable from wherever you're running
+# this from.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: "Ticker to run (as you'd type it into the search field)"
+        required: true
+      skip_ai:
+        description: "Skip the Anthropic narrative/qualitative/thesis calls (cheap check of FMP/SEC data resolution only)"
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  lookup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run on-demand lookup
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SEC_EDGAR_USER_AGENT: ${{ vars.SEC_EDGAR_USER_AGENT }}
+          LOOKUP_TICKER: ${{ github.event.inputs.ticker }}
+          LOOKUP_SKIP_AI: ${{ github.event.inputs.skip_ai }}
+        run: |
+          python -c "
+          import json
+          import os
+          import tempfile
+          from pathlib import Path
+
+          from pipeline.main import fetch_and_score_company, fetch_macro, finalize_company
+
+          ticker = os.environ['LOOKUP_TICKER'].strip().upper()
+          skip_ai = os.environ.get('LOOKUP_SKIP_AI', 'true') == 'true'
+
+          _macro_data, regime_info = fetch_macro()
+          state = fetch_and_score_company({'ticker': ticker}, regime_info)
+          state['metrics']['sector_relative_momentum_pct'] = None
+          state['display']['price']['sector_relative_momentum_pct'] = None
+          state['sector_medians'] = {'pe_ttm': None, 'ev_ebitda': None}
+
+          company_doc, summary, warnings, qual_failed = finalize_company(
+              state, regime_info, skip_ai, Path(tempfile.gettempdir())
+          )
+
+          print('=== _errors ===')
+          print(json.dumps(company_doc['_errors'], indent=2, default=str))
+          print()
+          print('=== summary ===')
+          print(json.dumps(summary, indent=2, default=str))
+          print()
+          print('=== full company_doc ===')
+          print(json.dumps(company_doc, indent=2, default=str))
+          "
