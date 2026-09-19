@@ -267,6 +267,24 @@ small Flask app deployed as a [Vercel](https://vercel.com) Python serverless fun
 section is fine; the rest of the site works without it, and an untracked search will
 just say live lookup isn't configured.
 
+This runs the **full pipeline** for that one ticker, right then — quant screen,
+qualitative (10-K reasoning, Fisher checklist), valuation, thesis, and the complete
+Conviction Score, identical to a tracked company. The narrative and qualitative/
+thesis Claude calls run concurrently (`pipeline/main.py::finalize_company`) to keep
+this as fast as possible, but it's still a real 10-K fetch plus multiple Claude calls
+for one request, which takes real time.
+
+**Timeout headroom:** `vercel.json` sets `maxDuration: 60` — the maximum a Vercel
+Hobby (free) plan allows by default. If a lookup is timing out, you have two free
+options before paying for anything: enable **Fluid Compute** (Vercel project →
+**Settings → Functions** → toggle it on) to raise Hobby's ceiling to 300s, then bump
+`maxDuration` in `vercel.json` to match and redeploy; or fall back to a faster,
+partial analysis by passing `skip_qualitative=True` to `finalize_company` in
+`api/lookup.py` (narrative + quant + valuation only, no 10-K fetch — sacrifices the
+qualitative/Fisher/thesis layers and lowers the Conviction Score's data coverage,
+but removes the two slowest steps). A Pro plan raises the ceiling further (300s by
+default, more with Fluid Compute) if you have one.
+
 **Why a separate deployment, and why it's gated:** every live lookup spends real FMP/
 Anthropic API budget (it runs the full pipeline for one ticker, right then). Left
 open with no key, anyone who finds the URL could run up your usage. Set

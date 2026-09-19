@@ -21,6 +21,7 @@ import argparse
 import json
 import logging
 import sys
+from concurrent.futures import ThreadPoolExecutor
 
 from pipeline.build import qualitative_cache, writer
 from pipeline.fetch import filing_text, fmp, fred, sec_edgar, stooq
@@ -335,11 +336,16 @@ def finalize_company(
 ) -> tuple[dict, dict, int, bool]:
     """Returns (company_doc, watchlist_summary, narrative_warnings, qualitative_failed).
 
-    skip_qualitative: set by api/lookup.py - layers 3/5 add a 10-K fetch plus
-    two more sequential Claude calls on top of the narrative call, which
-    risks the Vercel function's 60s timeout (vercel.json) for a single
-    on-demand request; the batch pipeline (this function's other caller)
-    has no such constraint and always runs them when the quant gate passes.
+    The narrative call and the qualitative/thesis calls are independent (
+    neither reads the other's output) and run concurrently to cut wall-clock
+    time - this matters most for api/lookup.py's on-demand endpoint, which
+    has a hard Vercel function timeout for a single request, but also just
+    makes the batch pipeline faster.
+
+    skip_qualitative: available for a caller that wants to skip layers 3/5
+    entirely (e.g. if a deployment's Vercel timeout is too tight even with
+    the concurrency above) - unused by default; both callers currently run
+    the full analysis.
     """
     ticker, name, sector = state["ticker"], state["name"], state["sector"]
     metrics, display, profile = state["metrics"], state["display"], state["profile"]
@@ -369,13 +375,17 @@ def finalize_company(
         qualitative_out, thesis_out = None, None
     else:
         payload = _narrative_payload(ticker, name, sector, metrics, short, long, regime_info, macro_adj)
-        narrative_out, narrative_warnings = _run_narrative(ticker, payload)
         if skip_qualitative:
+            narrative_out, narrative_warnings = _run_narrative(ticker, payload)
             qualitative_out, thesis_out = None, None
         else:
-            qualitative_out, thesis_out, qualitative_failed = _run_qualitative_and_thesis(
-                state, quant_scorecard, valuation_out, out_dir
-            )
+            with ThreadPoolExecutor(max_workers=2) as pool:
+                narrative_future = pool.submit(_run_narrative, ticker, payload)
+                qualitative_future = pool.submit(
+                    _run_qualitative_and_thesis, state, quant_scorecard, valuation_out, out_dir
+                )
+                narrative_out, narrative_warnings = narrative_future.result()
+                qualitative_out, thesis_out, qualitative_failed = qualitative_future.result()
 
     layered_analysis = aggregation.build_layered_analysis(
         quant_scorecard, qualitative_out, valuation_out, state["checklist"]

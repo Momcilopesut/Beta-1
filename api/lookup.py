@@ -88,11 +88,14 @@ def lookup():
         state["metrics"]["sector_relative_momentum_pct"] = None
         state["display"]["price"]["sector_relative_momentum_pct"] = None
         state["sector_medians"] = {"pe_ttm": None, "ev_ebitda": None}
-        # skip_qualitative=True: the qualitative layer's filing fetch + two
-        # extra Claude calls risk this function's 60s timeout (vercel.json)
-        # for a single request - see finalize_company's docstring.
+        # Full parity with the batch pipeline - narrative and
+        # qualitative/thesis run concurrently (see finalize_company's
+        # docstring) to fit this function's timeout (vercel.json's
+        # maxDuration - see README's "On-demand lookup deployment" section
+        # for raising it if you have Vercel headroom for it, e.g. Fluid
+        # Compute or a Pro plan).
         company_doc, _summary, _warnings, _qual_failed = finalize_company(
-            state, regime_info, skip_ai, Path(tempfile.gettempdir()), skip_qualitative=True
+            state, regime_info, skip_ai, Path(tempfile.gettempdir())
         )
     except Exception as exc:  # noqa: BLE001
         logger.exception("Lookup failed for %s", ticker)

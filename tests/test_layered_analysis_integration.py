@@ -12,6 +12,7 @@ from unittest.mock import patch
 
 from pipeline.fetch.filing_text import FilingTextError
 from pipeline.main import apply_sector_medians, fetch_and_score_company, finalize_company
+from pipeline.narrative.anthropic_client import NarrativeError
 from pipeline.narrative.qualitative_client import QualitativeError
 from pipeline.narrative.qualitative_schema import QualitativeAssessment, ThesisAndFalsification
 from pipeline.narrative.schema import CompanyNarrative
@@ -252,3 +253,75 @@ def test_qualitative_layer_failure_degrades_gracefully(
     # was reached at all) - otherwise there's nothing to have failed.
     if mock_filing_sections.called:
         assert qualitative_failed is True
+
+
+@patch("pipeline.main.filing_text.fetch_filing_sections")
+@patch("pipeline.main.generate_thesis")
+@patch("pipeline.main.generate_qualitative_assessment")
+@patch("pipeline.main.generate_narrative")
+@patch("pipeline.main.stooq.fetch_daily_prices")
+@patch("pipeline.main.sec_edgar.fetch_company")
+@patch("pipeline.main.fmp.fetch_company")
+def test_narrative_failure_does_not_affect_concurrent_qualitative_success(
+    mock_fmp, mock_sec, mock_stooq, mock_narrative, mock_qualitative, mock_thesis, mock_filing_sections, tmp_path
+):
+    """Narrative and qualitative/thesis now run concurrently (see
+    finalize_company's docstring) - one failing must not corrupt or block
+    the other's result."""
+    mock_fmp.return_value = _empty_fmp_data()
+    mock_sec.return_value = _sec_data()
+    mock_stooq.return_value = _stooq_prices()
+    # NarrativeError, not a raw exception - generate_narrative() itself
+    # always translates provider/parse errors into this (see
+    # anthropic_client.py); mocking it any other way would bypass that
+    # translation layer and test an unrealistic failure mode.
+    mock_narrative.side_effect = NarrativeError("Anthropic overloaded")
+    mock_qualitative.return_value = _mocked_qualitative()
+    mock_thesis.return_value = _mocked_thesis()
+    mock_filing_sections.return_value = {
+        "business": "Business text.", "risk_factors": None, "mdna": "MD&A text.", "method": "section_match"
+    }
+
+    regime_info = {"regime": "Neutral/Expansion", "signals": {}}
+    state = fetch_and_score_company({"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology"}, regime_info)
+    apply_sector_medians([state])
+
+    company_doc, _summary, _warnings, qualitative_failed = finalize_company(
+        state, regime_info, skip_ai=False, out_dir=tmp_path
+    )
+
+    # Narrative degraded gracefully (same resilience as before parallelizing).
+    assert company_doc["narrative"]["one_line_summary"] is None
+    # But qualitative/thesis - running concurrently in a separate thread -
+    # completed normally and were unaffected.
+    assert qualitative_failed is False
+    assert company_doc["qualitative"]["moat_present"] is True
+    assert company_doc["thesis"]["falsification_criteria"]
+
+
+@patch("pipeline.main.filing_text.fetch_filing_sections")
+@patch("pipeline.main.generate_narrative")
+@patch("pipeline.main.stooq.fetch_daily_prices")
+@patch("pipeline.main.sec_edgar.fetch_company")
+@patch("pipeline.main.fmp.fetch_company")
+def test_qualitative_failure_does_not_affect_concurrent_narrative_success(
+    mock_fmp, mock_sec, mock_stooq, mock_narrative, mock_filing_sections, tmp_path
+):
+    mock_fmp.return_value = _empty_fmp_data()
+    mock_sec.return_value = _sec_data()
+    mock_stooq.return_value = _stooq_prices()
+    mock_narrative.return_value = _mocked_narrative()
+    mock_filing_sections.side_effect = FilingTextError("SEC EDGAR unreachable")
+
+    regime_info = {"regime": "Neutral/Expansion", "signals": {}}
+    state = fetch_and_score_company({"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology"}, regime_info)
+    apply_sector_medians([state])
+
+    company_doc, _summary, _warnings, qualitative_failed = finalize_company(
+        state, regime_info, skip_ai=False, out_dir=tmp_path
+    )
+
+    assert company_doc["qualitative"] is None
+    assert qualitative_failed is True
+    # Narrative - running concurrently - completed normally regardless.
+    assert company_doc["narrative"]["one_line_summary"] == "Test summary."
