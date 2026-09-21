@@ -53,13 +53,14 @@ jobs:
           import tempfile
           from pathlib import Path
 
-          from pipeline.main import fetch_and_score_company, fetch_macro, finalize_company
+          from pipeline.main import fetch_and_score_company, fetch_benchmark, fetch_macro, finalize_company
 
           ticker = os.environ['LOOKUP_TICKER'].strip().upper()
           skip_ai = os.environ.get('LOOKUP_SKIP_AI', 'true') == 'true'
 
           _macro_data, regime_info = fetch_macro()
-          state = fetch_and_score_company({'ticker': ticker}, regime_info)
+          benchmark_prices = fetch_benchmark()
+          state = fetch_and_score_company({'ticker': ticker}, regime_info, benchmark_prices)
           state['metrics']['sector_relative_momentum_pct'] = None
           state['display']['price']['sector_relative_momentum_pct'] = None
           state['sector_medians'] = {'pe_ttm': None, 'ev_ebitda': None}
