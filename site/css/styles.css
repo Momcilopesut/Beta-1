@@ -10,6 +10,14 @@
   --neutral: #6b7280;
   --cautious: #d97706;
   --weak: #dc2626;
+
+  /* 5-year trend chart series (earnings/spending/cash/debt) - fixed
+     categorical order, validated against this page's own light/dark
+     surfaces with the data-viz skill's palette checker. */
+  --hist-earnings: #2a78d6;
+  --hist-spending: #eb6834;
+  --hist-cash: #1baf7a;
+  --hist-debt: #eda100;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +33,11 @@
     --neutral: #94a3b8;
     --cautious: #fbbf24;
     --weak: #f87171;
+
+    --hist-earnings: #3987e5;
+    --hist-spending: #d95926;
+    --hist-cash: #199e70;
+    --hist-debt: #c98500;
   }
 }
 
@@ -189,6 +202,30 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
 .meter-gauge svg { max-width: 100%; height: auto; }
 .meter-score { font-size: 2.25rem; font-weight: 700; margin: 0.25rem 0 0; }
 .meter-verdict { margin: 0 0 0.25rem; font-weight: 600; }
+
+.five-year-history .chart-block { margin-bottom: 1.5rem; }
+.chart-block svg { width: 100%; height: auto; display: block; }
+.chart-axis-label { font-size: 8px; fill: var(--muted); }
+.chart-end-label { font-size: 9px; fill: var(--fg); }
+.chart-value-label { font-size: 9px; font-weight: 600; fill: var(--fg); }
+.chart-legend {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.legend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
 
 section { margin-bottom: 2rem; }
 section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }

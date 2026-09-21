@@ -25,7 +25,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from flask import Flask, jsonify, request  # noqa: E402
 
-from pipeline.main import fetch_and_score_company, fetch_macro, finalize_company  # noqa: E402
+from pipeline.main import fetch_and_score_company, fetch_benchmark, fetch_macro, finalize_company  # noqa: E402
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -83,7 +83,8 @@ def lookup():
 
     try:
         regime_info = _regime()
-        state = fetch_and_score_company({"ticker": ticker}, regime_info)
+        benchmark_prices = fetch_benchmark()
+        state = fetch_and_score_company({"ticker": ticker}, regime_info, benchmark_prices)
         # Full parity with the batch pipeline - narrative and qualitative
         # run concurrently (see finalize_company's docstring) to fit this
         # function's timeout (vercel.json's maxDuration - see README's

@@ -36,11 +36,13 @@ def _first_row(payload: Any) -> dict:
     return {}
 
 
-def _historical_rows(historical_prices: Any) -> list[dict]:
+def normalize_price_rows(historical_prices: Any) -> list[dict]:
     """FMP's /stable/historical-price-eod/full has returned a bare list of
     {date, close, ...} rows directly in practice, not the older
     {"symbol":..., "historical": [...]} wrapper this originally assumed.
-    Accept either shape (or a missing/failed fetch) instead of crashing."""
+    Accept either shape (or a missing/failed fetch) instead of crashing.
+    Public since pipeline.main also uses this to normalize the benchmark
+    (SPY) price payload for pipeline.scoring.history."""
     if isinstance(historical_prices, list):
         return historical_prices
     if isinstance(historical_prices, dict):
@@ -126,7 +128,7 @@ def build_metrics(
     income_stmts = fmp_data.get("income_statement") or xbrl.get("income_stmts") or []
     balance_stmts = fmp_data.get("balance_sheet") or xbrl.get("balance_stmts") or []
     cashflow_stmts = fmp_data.get("cash_flow") or xbrl.get("cashflow_stmts") or []
-    historical = _historical_rows(fmp_data.get("historical_prices")) or (stooq_prices or [])
+    historical = normalize_price_rows(fmp_data.get("historical_prices")) or (stooq_prices or [])
 
     price_data = _latest_close(historical)
     if not price_data:
@@ -302,5 +304,10 @@ def build_metrics(
         "metrics": metrics,
         "display": display,
         "profile": profile_out,
-        "raw": {"income_stmts": income_stmts, "balance_stmts": balance_stmts, "cashflow_stmts": cashflow_stmts},
+        "raw": {
+            "income_stmts": income_stmts,
+            "balance_stmts": balance_stmts,
+            "cashflow_stmts": cashflow_stmts,
+            "price_history": historical,
+        },
     }

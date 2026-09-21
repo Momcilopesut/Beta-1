@@ -143,6 +143,31 @@ is a tool whose logic you could explain to someone with no finance background: c
 what's owned to what's owed, check whether the price is fair for that, and use two
 simple checklists (Graham, Munger) to catch the rest.
 
+## 5-Year Trend
+
+A single snapshot hides whether a company's numbers are getting better or worse, and
+whether a good (or bad) year was really about the company, or just the whole market
+moving. Every company page also charts the last 5 fiscal years (`pipeline/scoring/
+history.py`, from the same annual statements FMP already provides — no extra API
+calls per company):
+
+- **Earnings, spending, cash, and debt, year by year** — net income, total costs and
+  expenses, cash and equivalents, and total debt, each straight off that year's income
+  statement or balance sheet. A line going the wrong way (spending or debt climbing
+  faster than earnings, cash draining) is visible at a glance instead of buried in one
+  year's numbers.
+- **This stock's return vs. the market, same years** — each fiscal year's stock price
+  change compared against **SPY** (an S&P 500 index fund) over that same period, so a
+  bad year for the stock can be read against whether the whole market was also down
+  that year, or whether it lagged (or beat) everyone else. SPY was chosen because it's
+  a single, well-known ticker that trades like any other US equity on FMP's free tier —
+  unlike a raw index symbol, it needs no special plan access, and it's fetched once per
+  pipeline run (not once per company) since every company is compared to the same
+  market.
+- Any year or value that can't be computed (a missing statement, no price data close
+  enough to a fiscal year end) shows as genuinely missing, never a guessed or
+  zero-filled number — the same rule the rest of this pipeline follows.
+
 ## Layered analysis
 
 A deeper pass per company, deliberately kept as separate layers rather than one

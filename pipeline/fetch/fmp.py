@@ -85,3 +85,14 @@ def fetch_company(ticker: str) -> dict:
 
     result["_errors"] = errors
     return result
+
+
+def fetch_benchmark_prices(symbol: str = "SPY") -> Any:
+    """Historical daily prices for a single benchmark ticker - the plain
+    stand-in for "the stock market average" used by the 5-year history charts
+    (pipeline/scoring/history.py). Fetched once per pipeline run, not once
+    per company, since every company is compared against the same market.
+    SPY (an S&P 500 ETF) trades like any other US equity FMP already serves
+    on the free tier, unlike a raw index symbol (e.g. ^GSPC), which is often
+    plan-gated."""
+    return _get("historical-price-eod/full", symbol)

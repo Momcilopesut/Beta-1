@@ -26,8 +26,8 @@ from pipeline.narrative.anthropic_client import NarrativeError, generate_narrati
 from pipeline.narrative.grounding import enforce_grounding
 from pipeline.narrative.prompts import DISCLAIMER
 from pipeline.narrative.qualitative_client import QualitativeError, generate_qualitative_assessment
-from pipeline.scoring import aggregation, macro_regime, quant_score, value_investing
-from pipeline.scoring.fundamentals import build_metrics
+from pipeline.scoring import aggregation, history, macro_regime, quant_score, value_investing
+from pipeline.scoring.fundamentals import build_metrics, normalize_price_rows
 from pipeline.utils.config import macro_series, watchlist
 from pipeline.utils.paths import DATA_DIR
 
@@ -67,6 +67,20 @@ def fetch_macro() -> tuple[dict, dict]:
     return macro_data, regime_info
 
 
+def fetch_benchmark() -> list[dict]:
+    """SPY's own daily price history - the "stock market average" the 5-year
+    history charts compare every company's own yearly return against
+    (pipeline.scoring.history). Fetched once per run/request, not once per
+    company, since every company is compared to the same market. Falls back
+    to an empty list (never crashes the run) if the fetch fails - the
+    history builder already treats missing price data as None, not 0."""
+    try:
+        return normalize_price_rows(fmp.fetch_benchmark_prices())
+    except Exception:
+        logger.warning("Benchmark (SPY) price fetch failed; 5-year history will skip market comparison")
+        return []
+
+
 def build_macro_doc(macro_data: dict, regime_info: dict, generated_at: str) -> dict:
     series_cfg = {s["id"]: s for s in macro_series()["series"]}
     series_out = []
@@ -94,7 +108,7 @@ def build_macro_doc(macro_data: dict, regime_info: dict, generated_at: str) -> d
     }
 
 
-def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
+def fetch_and_score_company(company_cfg: dict, regime_info: dict, benchmark_prices: list[dict] | None = None) -> dict:
     """Fetch + score one company."""
     ticker = company_cfg["ticker"]
     logger.info("Processing %s", ticker)
@@ -137,6 +151,10 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
     quant_scorecard = quant_score.build_quant_scorecard(metrics)
     latest_10k = next((f for f in recent_filings if f["form"] == "10-K"), None)
 
+    five_year_history = history.build_five_year_history(
+        raw["income_stmts"], raw["balance_stmts"], raw["price_history"], benchmark_prices or []
+    )
+
     return {
         "ticker": ticker,
         "name": name,
@@ -150,6 +168,7 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict) -> dict:
         "raw": raw,
         "recent_filings": recent_filings,
         "companyfacts_url": companyfacts_url,
+        "five_year_history": five_year_history,
         "errors": errors,
     }
 
@@ -292,6 +311,7 @@ def finalize_company(
             },
         },
         "fundamentals": display["fundamentals"],
+        "five_year_history": state["five_year_history"],
         "value_investing": state["checklist"],
         "narrative": narrative_out,
         "quant_score": quant_scorecard,
@@ -347,6 +367,8 @@ def run_full(args) -> int:
         macro_data, regime_info = {}, {"regime": "Neutral/Expansion", "signals": {}}
         sources_status["fred"] = "failed"
 
+    benchmark_prices = fetch_benchmark()
+
     out_dir = writer.output_dir(args.dry_run)
     macro_doc = build_macro_doc(macro_data, regime_info, generated_at)
     writer.write_macro(out_dir, macro_doc)
@@ -362,7 +384,7 @@ def run_full(args) -> int:
     total_qualitative_skipped = 0
     for company_cfg in companies:
         try:
-            state = fetch_and_score_company(company_cfg, regime_info)
+            state = fetch_and_score_company(company_cfg, regime_info, benchmark_prices)
         except Exception:
             logger.exception("Failed to process %s entirely, skipping", company_cfg["ticker"])
             continue

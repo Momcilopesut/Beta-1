@@ -78,6 +78,8 @@ function render(doc) {
 
     ${renderBalanceSheetBasics(doc.fundamentals, doc.layered_analysis)}
 
+    ${renderFiveYearHistory(doc.five_year_history)}
+
     <section class="narrative">
       <h3>AI Summary</h3>
       <p class="one-liner">${escapeHtml(doc.narrative.one_line_summary) || "Not yet generated — run the pipeline without --skip-ai."}</p>
@@ -247,6 +249,182 @@ function renderBalanceSheetBasics(fundamentals, layered) {
           ? `<p class="meta">Required margin of safety: ${formatNumber(layered.required_margin_of_safety_pct, { decimals: 0, suffix: "%" })} (Graham's convention — a real discount to estimated fair value, not just trading below it by any amount).</p>`
           : ""
       }
+    </section>
+  `;
+}
+
+// --- 5-year history: earnings/spending/cash/debt over time, and this
+// stock's yearly return vs. the market (SPY, standing in for "the stock
+// market average") over the same years. Plain inline SVG, same approach as
+// the meter gauge above - no charting library. ---
+
+const HISTORY_SERIES = [
+  { key: "earnings", label: "Earnings", colorVar: "--hist-earnings" },
+  { key: "spending", label: "Spending", colorVar: "--hist-spending" },
+  { key: "cash", label: "Cash", colorVar: "--hist-cash" },
+  { key: "debt", label: "Debt", colorVar: "--hist-debt" },
+];
+
+function fmtPctSigned(v) {
+  if (v === null || v === undefined) return "—";
+  return `${v > 0 ? "+" : ""}${formatNumber(v, { decimals: 1, suffix: "%" })}`;
+}
+
+// Always includes 0 in the domain (so a zero baseline/axis is always valid
+// to draw), but only pads *below* zero when the data actually goes
+// negative - otherwise an all-positive series would get a stray "-$0.3B"
+// tick from padding alone.
+function computeYDomain(values) {
+  const defined = values.filter((v) => v !== null && v !== undefined);
+  if (!defined.length) return null;
+  const dataMin = Math.min(0, ...defined);
+  const dataMax = Math.max(0, ...defined);
+  const span = dataMax - dataMin || 1;
+  return {
+    min: dataMin < 0 ? dataMin - span * 0.05 : 0,
+    max: dataMax + span * 0.1,
+  };
+}
+
+function renderFundamentalsTrendChart(years) {
+  const width = 480;
+  const height = 260;
+  const plotLeft = 60;
+  const plotRight = width - 66;
+  const plotTop = 16;
+  const plotBottom = height - 32;
+
+  const domain = computeYDomain(years.flatMap((y) => HISTORY_SERIES.map((s) => y[s.key])));
+  if (!domain) return "";
+
+  const xFor = (i) => plotLeft + (i / (years.length - 1)) * (plotRight - plotLeft);
+  const yFor = (v) => plotTop + (1 - (v - domain.min) / (domain.max - domain.min)) * (plotBottom - plotTop);
+
+  const gridlines = [0, 0.5, 1]
+    .map((f) => {
+      const value = domain.min + f * (domain.max - domain.min);
+      const y = yFor(value);
+      return `
+        <line x1="${plotLeft}" y1="${y.toFixed(1)}" x2="${plotRight}" y2="${y.toFixed(1)}" stroke="var(--border)" stroke-width="1" />
+        <text x="${(plotLeft - 8).toFixed(1)}" y="${(y + 3).toFixed(1)}" text-anchor="end" class="chart-axis-label">${escapeHtml(fmtDollars(value))}</text>
+      `;
+    })
+    .join("");
+
+  const xLabels = years
+    .map(
+      (y, i) =>
+        `<text x="${xFor(i).toFixed(1)}" y="${height - 10}" text-anchor="middle" class="chart-axis-label">${escapeHtml((y.fiscal_year || "").slice(0, 4))}</text>`
+    )
+    .join("");
+
+  const seriesSvg = HISTORY_SERIES.map((s) => {
+    const points = years.map((y, i) => ({ i, v: y[s.key] })).filter((p) => p.v !== null && p.v !== undefined);
+    if (!points.length) return "";
+    const path = points.map((p, idx) => `${idx === 0 ? "M" : "L"} ${xFor(p.i).toFixed(1)} ${yFor(p.v).toFixed(1)}`).join(" ");
+    const dots = points
+      .map(
+        (p) =>
+          `<circle cx="${xFor(p.i).toFixed(1)}" cy="${yFor(p.v).toFixed(1)}" r="4" fill="var(${s.colorVar})" stroke="var(--bg)" stroke-width="2" />`
+      )
+      .join("");
+    const last = points[points.length - 1];
+    const endLabel = `<text x="${(xFor(last.i) + 7).toFixed(1)}" y="${(yFor(last.v) + 3).toFixed(1)}" class="chart-end-label">${escapeHtml(fmtDollars(last.v))}</text>`;
+    return `<path d="${path}" fill="none" stroke="var(${s.colorVar})" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />${dots}${endLabel}`;
+  }).join("");
+
+  const legend = HISTORY_SERIES.map(
+    (s) => `<li><span class="legend-swatch" style="background:var(${s.colorVar})"></span>${escapeHtml(s.label)}</li>`
+  ).join("");
+
+  return `
+    <div class="chart-block">
+      <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Earnings, spending, cash, and debt over the last ${years.length} years">
+        ${gridlines}
+        ${seriesSvg}
+        ${xLabels}
+      </svg>
+      <ul class="chart-legend">${legend}</ul>
+    </div>
+  `;
+}
+
+function renderReturnBar(x, value, barWidth, color, zeroY, yFor) {
+  if (value === null || value === undefined) return "";
+  const y = yFor(value);
+  const top = Math.min(y, zeroY);
+  const barHeight = Math.max(1, Math.abs(y - zeroY));
+  const labelY = value >= 0 ? top - 4 : top + barHeight + 10;
+  return `
+    <rect x="${x.toFixed(1)}" y="${top.toFixed(1)}" width="${barWidth.toFixed(1)}" height="${barHeight.toFixed(1)}" rx="2" fill="${color}" />
+    <text x="${(x + barWidth / 2).toFixed(1)}" y="${labelY.toFixed(1)}" text-anchor="middle" class="chart-value-label">${escapeHtml(fmtPctSigned(value))}</text>
+  `;
+}
+
+function renderMarketComparisonChart(years) {
+  const width = 480;
+  const height = 240;
+  const plotLeft = 44;
+  const plotRight = width - 16;
+  const plotTop = 24;
+  const plotBottom = height - 32;
+
+  const domain = computeYDomain(years.flatMap((y) => [y.stock_return_pct, y.market_return_pct]));
+  if (!domain) return "";
+
+  const yFor = (v) => plotTop + (1 - (v - domain.min) / (domain.max - domain.min)) * (plotBottom - plotTop);
+  const zeroY = yFor(0);
+  const groupWidth = (plotRight - plotLeft) / years.length;
+  const barWidth = Math.min(20, groupWidth * 0.28);
+  const gap = 3;
+
+  const bars = years
+    .map((y, i) => {
+      const groupCenter = plotLeft + groupWidth * (i + 0.5);
+      const stockBar = renderReturnBar(groupCenter - barWidth - gap / 2, y.stock_return_pct, barWidth, "var(--accent)", zeroY, yFor);
+      const marketBar = renderReturnBar(groupCenter + gap / 2, y.market_return_pct, barWidth, "var(--muted)", zeroY, yFor);
+      const yearLabel = `<text x="${groupCenter.toFixed(1)}" y="${height - 10}" text-anchor="middle" class="chart-axis-label">${escapeHtml((y.fiscal_year || "").slice(0, 4))}</text>`;
+      return stockBar + marketBar + yearLabel;
+    })
+    .join("");
+
+  const zeroLine = `<line x1="${plotLeft}" y1="${zeroY.toFixed(1)}" x2="${plotRight}" y2="${zeroY.toFixed(1)}" stroke="var(--border)" stroke-width="1" />`;
+
+  return `
+    <div class="chart-block">
+      <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="This stock's yearly return compared to the S&amp;P 500, last ${years.length} years">
+        ${zeroLine}
+        ${bars}
+      </svg>
+      <ul class="chart-legend">
+        <li><span class="legend-swatch" style="background:var(--accent)"></span>This stock</li>
+        <li><span class="legend-swatch" style="background:var(--muted)"></span>The market (S&amp;P 500)</li>
+      </ul>
+    </div>
+  `;
+}
+
+function renderFiveYearHistory(fiveYearHistory) {
+  const years = fiveYearHistory?.years;
+  if (!years || years.length < 2) {
+    return `
+      <section class="five-year-history">
+        <h3>5-Year Trend</h3>
+        <p class="meta">Not enough history yet to chart a trend for this company.</p>
+      </section>
+    `;
+  }
+
+  const trendChart = renderFundamentalsTrendChart(years);
+  const comparisonChart = renderMarketComparisonChart(years);
+
+  return `
+    <section class="five-year-history">
+      <h3>5-Year Trend</h3>
+      <p class="meta">How much the company earned, spent, kept in cash, and owed, year by year.</p>
+      ${trendChart || `<p class="meta">Not enough data yet to chart this.</p>`}
+      <p class="meta">How the stock did each year, compared to just owning the whole stock market (the S&amp;P 500).</p>
+      ${comparisonChart || `<p class="meta">Not enough price history yet to compare this stock's yearly return to the market.</p>`}
     </section>
   `;
 }

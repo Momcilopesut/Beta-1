@@ -136,6 +136,42 @@ def synth_raw_statements(market_cap: float, close_price: float) -> dict:
     return {"income_stmts": income_stmts, "balance_stmts": balance_stmts, "cashflow_stmts": cashflow_stmts}
 
 
+def synth_five_year_history(market_cap: float, close_price: float) -> dict:
+    """5 years of gently trending earnings/spending/cash/debt, plus how the
+    stock did each year vs. a synthetic "market" - scaled off the same
+    market_cap/close_price used elsewhere so the numbers stay proportionate
+    to the rest of this company's sample data. The oldest year has no
+    stock/market return, mirroring the real pipeline's own behavior (no
+    earlier statement to anchor a year-over-year return against)."""
+    revenue = market_cap * random.uniform(0.3, 1.2)
+    earnings = revenue * random.uniform(0.05, 0.22)
+    spending = revenue - earnings * random.uniform(0.8, 1.1)
+    cash = market_cap * random.uniform(0.03, 0.15)
+    debt = market_cap * random.uniform(0.05, 0.35)
+
+    years = []
+    for i in range(5):
+        fiscal_year = f"{2021 + i}-12-31"
+        years.append(
+            {
+                "fiscal_year": fiscal_year,
+                "earnings": round(earnings, 0),
+                "spending": round(spending, 0),
+                "cash": round(cash, 0),
+                "debt": round(debt, 0),
+                "stock_return_pct": None if i == 0 else round(random.uniform(-25, 35), 1),
+                "market_return_pct": None if i == 0 else round(random.uniform(-18, 24), 1),
+            }
+        )
+        growth = random.uniform(-0.08, 0.18)
+        earnings *= 1 + growth
+        spending *= 1 + growth * random.uniform(0.6, 1.1)
+        cash *= 1 + random.uniform(-0.05, 0.15)
+        debt *= 1 + random.uniform(-0.1, 0.1)
+
+    return {"years": years}
+
+
 def to_display(metrics: dict, close_price: float) -> dict:
     return {
         "price": {
@@ -305,6 +341,7 @@ def main() -> None:
         macro_adj = macro_regime.sector_adjustment(regime_info["regime"], sector)
         narrative = synth_narrative(company_cfg["name"], metrics, checklist)
         display = to_display(metrics, close_price)
+        five_year_history = synth_five_year_history(market_cap, close_price)
 
         quant_scorecard = quant_score.build_quant_scorecard(metrics)
         qualitative_out = synth_qualitative(company_cfg["name"], quant_scorecard)
@@ -328,6 +365,7 @@ def main() -> None:
                 },
             },
             "fundamentals": display["fundamentals"],
+            "five_year_history": five_year_history,
             "value_investing": checklist,
             "narrative": narrative,
             "quant_score": quant_scorecard,
