@@ -20,6 +20,7 @@
       "eps_growth_cagr_3yr_pct": 22.801049954679552
     },
     "profitability": {
+      "roe_pct": 33.2150207517826,
       "trend": "declining"
     },
     "valuation": {
@@ -32,22 +33,23 @@
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-19T15:58:21Z",
+  "last_updated": "2026-09-21T12:05:39Z",
   "layered_analysis": {
-    "conviction_score": 32.1,
+    "conviction_score": 30.3,
     "conviction_score_breakdown": {
-      "base_score": 58.3,
+      "base_score": 50.0,
       "components": {
-        "graham_pct": 50.0,
-        "piotroski_pct": 66.7
+        "graham_pct": 50.0
       },
       "moat_multiplier": 1.0,
+      "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
+    "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "quant_gate_pass": true,
@@ -74,11 +76,12 @@
     "graham_multiple": 227.46914103659358,
     "graham_upside_pct": -68.5493217813265,
     "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
     "ncav_margin_pct": -102.95312872395483,
     "pb_ratio": 8.292042080802554,
     "pe_ttm": 27.43222222222222,
-    "piotroski_evaluated": 9,
-    "piotroski_f_score": 6,
+    "roe_pct": 33.2150207517826,
     "shareholders_equity": 442387000000,
     "total_assets": 758376000000,
     "total_liabilities": 315989000000
@@ -207,48 +210,32 @@
       "passed": 3,
       "total": 7
     },
-    "piotroski_f_score": {
+    "munger_quality": {
       "criteria": [
         {
-          "criterion": "Positive net income",
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 33.2%",
           "passed": true
         },
         {
-          "criterion": "Positive operating cash flow",
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.29",
           "passed": true
         },
         {
-          "criterion": "ROA improving year over year",
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "7,453,000,000 shares vs. 7,465,000,000 a year earlier",
           "passed": true
         },
         {
-          "criterion": "Operating cash flow exceeds net income (earnings quality)",
-          "passed": true
-        },
-        {
-          "criterion": "Leverage decreasing year over year",
-          "passed": true
-        },
-        {
-          "criterion": "Current ratio improving year over year",
-          "passed": false
-        },
-        {
-          "criterion": "No new shares issued (no dilution)",
-          "passed": true
-        },
-        {
-          "criterion": "Gross margin improving year over year",
-          "passed": false
-        },
-        {
-          "criterion": "Asset turnover improving year over year",
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 20",
           "passed": false
         }
       ],
-      "evaluated": 9,
-      "max": 9,
-      "score": 6
+      "evaluated": 4,
+      "passed": 3,
+      "total": 4
     }
   }
 }

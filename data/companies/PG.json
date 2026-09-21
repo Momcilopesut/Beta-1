@@ -20,6 +20,7 @@
       "eps_growth_cagr_3yr_pct": 3.6028479444773165
     },
     "profitability": {
+      "roe_pct": 29.83539955468165,
       "trend": "stable"
     },
     "valuation": {
@@ -32,22 +33,23 @@
     }
   },
   "industry": "Household & Personal Products",
-  "last_updated": "2026-09-19T15:58:39Z",
+  "last_updated": "2026-09-21T12:05:57Z",
   "layered_analysis": {
-    "conviction_score": 32.1,
+    "conviction_score": 30.3,
     "conviction_score_breakdown": {
-      "base_score": 58.3,
+      "base_score": 50.0,
       "components": {
-        "graham_pct": 50.0,
-        "piotroski_pct": 66.7
+        "graham_pct": 50.0
       },
       "moat_multiplier": 1.0,
+      "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
+    "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "quant_gate_pass": true,
@@ -74,11 +76,12 @@
     "graham_multiple": 141.50397420360923,
     "graham_upside_pct": -60.13940827301438,
     "margin_trend_score": 60,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 4,
     "ncav_margin_pct": -113.51911489960959,
     "pb_ratio": 6.527159093001417,
     "pe_ttm": 21.679259259259258,
-    "piotroski_evaluated": 9,
-    "piotroski_f_score": 6,
+    "roe_pct": 29.83539955468165,
     "shareholders_equity": 54311000000,
     "total_assets": 126521000000,
     "total_liabilities": 72210000000
@@ -207,48 +210,32 @@
       "passed": 3,
       "total": 7
     },
-    "piotroski_f_score": {
+    "munger_quality": {
       "criteria": [
         {
-          "criterion": "Positive net income",
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 29.8%",
           "passed": true
         },
         {
-          "criterion": "Positive operating cash flow",
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.64",
           "passed": true
         },
         {
-          "criterion": "ROA improving year over year",
-          "passed": false
-        },
-        {
-          "criterion": "Operating cash flow exceeds net income (earnings quality)",
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "2,422,500,000 shares vs. 2,454,400,000 a year earlier",
           "passed": true
         },
         {
-          "criterion": "Leverage decreasing year over year",
-          "passed": true
-        },
-        {
-          "criterion": "Current ratio improving year over year",
-          "passed": false
-        },
-        {
-          "criterion": "No new shares issued (no dilution)",
-          "passed": true
-        },
-        {
-          "criterion": "Gross margin improving year over year",
-          "passed": false
-        },
-        {
-          "criterion": "Asset turnover improving year over year",
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 60",
           "passed": true
         }
       ],
-      "evaluated": 9,
-      "max": 9,
-      "score": 6
+      "evaluated": 4,
+      "passed": 4,
+      "total": 4
     }
   }
 }

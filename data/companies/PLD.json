@@ -20,6 +20,7 @@
       "eps_growth_cagr_3yr_pct": -4.894264952843653
     },
     "profitability": {
+      "roe_pct": 7.900607573036433,
       "trend": "declining"
     },
     "valuation": {
@@ -32,23 +33,25 @@
     }
   },
   "industry": "REIT - Industrial",
-  "last_updated": "2026-09-19T15:58:56Z",
+  "last_updated": "2026-09-21T12:06:14Z",
   "layered_analysis": {
-    "conviction_score": 21.4,
+    "conviction_score": 13.8,
     "conviction_score_breakdown": {
-      "base_score": 38.9,
+      "base_score": 33.3,
       "components": {
-        "graham_pct": 33.3,
-        "piotroski_pct": 44.4
+        "graham_pct": 33.3
       },
       "moat_multiplier": 1.0,
+      "munger_multiplier": 0.75,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
       "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
+      "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
+    "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "quant_gate_pass": false,
@@ -75,11 +78,12 @@
     "graham_multiple": 70.17253718910861,
     "graham_upside_pct": -47.542766730831175,
     "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 1,
     "ncav_margin_pct": -131.51636491026528,
     "pb_ratio": 2.3418601108794777,
     "pe_ttm": 29.964444444444442,
-    "piotroski_evaluated": 9,
-    "piotroski_f_score": 4,
+    "roe_pct": 7.900607573036433,
     "shareholders_equity": 53193178000,
     "total_assets": 98724256000,
     "total_liabilities": 40970248000
@@ -208,48 +212,32 @@
       "passed": 2,
       "total": 7
     },
-    "piotroski_f_score": {
+    "munger_quality": {
       "criteria": [
         {
-          "criterion": "Positive net income",
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 7.9%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.68",
           "passed": true
         },
         {
-          "criterion": "Positive operating cash flow",
-          "passed": true
-        },
-        {
-          "criterion": "ROA improving year over year",
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "958,019,000 shares vs. 953,590,000 a year earlier",
           "passed": false
         },
         {
-          "criterion": "Operating cash flow exceeds net income (earnings quality)",
-          "passed": true
-        },
-        {
-          "criterion": "Leverage decreasing year over year",
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 20",
           "passed": false
-        },
-        {
-          "criterion": "Current ratio improving year over year",
-          "passed": false
-        },
-        {
-          "criterion": "No new shares issued (no dilution)",
-          "passed": false
-        },
-        {
-          "criterion": "Gross margin improving year over year",
-          "passed": false
-        },
-        {
-          "criterion": "Asset turnover improving year over year",
-          "passed": true
         }
       ],
-      "evaluated": 9,
-      "max": 9,
-      "score": 4
+      "evaluated": 4,
+      "passed": 1,
+      "total": 4
     }
   }
 }
