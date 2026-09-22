@@ -1,14 +1,18 @@
 # Weekly Stock Screener
 
 This tool's primary purpose is a **weekly screen**: every Friday after the US market
-closes, it scans a curated universe of companies and surfaces whichever ones come
-closest to satisfying Graham's, Buffett's, and Munger's investing criteria — the same
-question underneath all three: **does this company own more than it owes, is it a
-well-run business, and is the price fair for that?** A scheduled pipeline fetches
-company fundamentals (Financial Modeling Prep + SEC EDGAR) and macroeconomic indicators
-(FRED), runs every company through a transparent, balance-sheet-first scoring model —
-basic arithmetic, not growth projections or opaque composites — and ranks them. The
-result is published as a static site.
+closes, it scans a curated universe of companies and surfaces each sector's 5 best
+price performers over five timeframes — weekly, monthly, quarterly, annual, and
+5-year. This ranking is pure price return, deliberately independent of any
+fundamentals check. Every company also gets its own full value-investing analysis —
+Graham's, Buffett's, and Munger's criteria, the same question underneath all three:
+**does this company own more than it owes, is it a well-run business, and is the
+price fair for that?** — on its own detail page; a scheduled pipeline fetches company
+fundamentals (Financial Modeling Prep + SEC EDGAR) and macroeconomic indicators (FRED)
+and runs every company through a transparent, balance-sheet-first scoring model, basic
+arithmetic, not growth projections or opaque composites, it just doesn't gate or
+influence which tickers surface on the screen itself. The result is published as a
+static site.
 
 **This is not financial advice.** Every score is an automated estimate based on
 public data and may contain errors or delays.
@@ -20,8 +24,8 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
 ```
 
 - **Weekly Screener** (see the dedicated section below): the program's primary purpose.
-  Every company in the screening universe gets scored; the top-ranked companies per
-  sector become the site's homepage.
+  Every company in the screening universe gets its price return computed over 5
+  timeframes; each sector's top 5 performers per timeframe become the site's homepage.
 - **Data sources**: [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs)
   (fundamentals, prices), [SEC EDGAR](https://www.sec.gov/edgar/sec-api-documentation)
   (filings + XBRL fundamentals fallback), [FRED](https://fred.stlouisfed.org/docs/api/fred/)
@@ -36,20 +40,21 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
   Defensive Investor criteria and a Munger Quality Checklist, computed from the same
   fetched statements — no extra API calls. Both are simple pass/fail arithmetic, and
   together they anchor the Investment Meter (see "Investment Meter" below) — built
-  from exactly three investors: Graham, Buffett, Munger. This Meter is also exactly
-  what the weekly screen ranks companies by.
+  from exactly three investors: Graham, Buffett, Munger. Shown on every company's own
+  detail page; the weekly screen itself ranks by price return instead (see "Weekly
+  Screener" below).
 - **Layered analysis** (Munger's quality read → Buffett's qualitative moat read →
   Graham Number valuation gate, see "Layered analysis" below): a deeper pass per
   company that reads the company's own 10-K text — the only AI call in this pipeline,
   and the only place it isn't grounded solely in pre-computed metrics. Only runs for
-  the week's finalists — see "Weekly Screener" below.
+  tickers that make at least one timeframe's top-5 list — see "Weekly Screener" below.
 - **Economic-cycle context**: the macro page frames the current regime against classic
   business-cycle/sector-rotation theory (which sectors have historically led/lagged in
   this phase) — textbook reference, explicitly not a prediction.
 - **Site**: plain HTML/CSS/JS, no framework, no build step — reads the generated JSON
-  directly. The homepage shows this week's top picks grouped by GICS-style sector; the
-  search box reaches every company in the screening universe (instant filter; Enter
-  jumps to any ticker, tracked or not).
+  directly. The homepage shows each sector's top performers across 5 timeframes,
+  GICS-style sector by sector; the search box reaches every company in the screening
+  universe (instant filter; Enter jumps to any ticker, tracked or not).
 - **On-demand lookup** (`api/lookup.py`, optional): a search for a ticker outside the
   screening universe offers a live, on-demand run through the exact same pipeline code,
   via a small backend deployed separately (see "On-demand lookup deployment" below).
@@ -61,27 +66,34 @@ The program's primary purpose: every Friday at 21:30 UTC (`.github/workflows/
 weekly-screen.yml`) — genuinely "after the ~4pm ET close" year-round regardless of
 DST — the pipeline runs a two-phase screen over `config/watchlist.yaml`'s curated
 universe (88 companies, 8 per sector across 11 GICS-style sectors; not the full S&P
-500, to stay well inside a free-tier API budget):
+500, to stay well inside a free-tier API budget), ranking purely by price return, not
+by the Investment Meter or any Graham/Buffett/Munger check:
 
 1. **Cheap screen, whole universe** (`pipeline/main.py::run_full`, phase 1) — every
-   company gets fetched and scored, including a full Investment Meter reading, with
-   the AI qualitative (Buffett moat read) layer skipped entirely. This is not a
-   degraded score: a missing moat read just leaves that multiplier at a neutral 1.0
-   (see `config/conviction_score.yaml`), so the Graham/Munger checklist math alone is
-   already meaningful enough to rank on.
-2. **Rank + select** (`pipeline/scoring/screening.py::select_top_picks`) — within each
-   sector, companies are sorted by Investment Meter score (highest first); companies
-   with no score at all are excluded rather than guessed at. The top
-   `config/screening.yaml`'s `top_n_per_sector` (5 by default) per sector become this
-   week's finalists.
-3. **AI-enrich finalists only** (phase 2) — only the selected finalists get re-scored
-   with the Buffett moat read turned on, so Anthropic spend scales with the number of
-   picks shown, not the size of the universe scanned.
+   company gets fetched and scored (full Investment Meter included, for its own detail
+   page), with the AI qualitative (Buffett moat read) layer skipped entirely. Each
+   company's price return over 5 lookback windows
+   (`pipeline/scoring/performance.py::compute_returns`) comes straight from price
+   history already fetched for it - no extra API calls.
+2. **Rank + select** (`pipeline/scoring/performance.py::select_top_performers`) —
+   within each sector, companies are ranked by price return, independently for each of
+   5 windows: weekly (7 days), monthly (30 days), quarterly (91 days), annual (365
+   days), and 5-year (1825 days). A company missing a return for a given window (not
+   enough price history) is excluded from that window's ranking only, never guessed
+   at. The top `config/screening.yaml`'s `top_n_per_sector` (5 by default) per
+   sector, per window become this week's finalists - a sector can show up to 25
+   distinct tickers across its 5 windows, with overlap when the same stock leads more
+   than one.
+3. **AI-enrich finalists only** (phase 2) — every ticker that made at least one
+   window's top-5 list gets re-scored with the Buffett moat read turned on, so
+   Anthropic spend scales with the number of tickers actually shown, not the size of
+   the universe scanned.
 
 Every scanned company — not just the picks — still gets a full `data/companies/
-{ticker}.json` and detail page; `data/weekly_picks.json` holds just the ranked
-selection the homepage renders, and `data/watchlist.json` keeps covering the whole
-universe so the search box can still find anything scanned. Run it locally with
+{ticker}.json` and detail page, complete with its own Investment Meter and Layered
+Analysis; `data/performance_picks.json` holds just the ranked selection the homepage
+renders (plus each window's key/label), and `data/watchlist.json` keeps covering the
+whole universe so the search box can still find anything scanned. Run it locally with
 `python -m pipeline.main --dry-run` (see "Local development" below); pass `--tickers`
 to test the two-phase flow on a small subset before running the real thing.
 
@@ -348,7 +360,7 @@ linked from the nav on every page) with the full reference, no per-company numbe
   Graham's checklist base score, and the verdict bands (Strong/Favorable/Neutral/
   Cautious/Weak).
 - `config/screening.yaml` — `top_n_per_sector`, how many companies the weekly screen
-  surfaces per sector (see "Weekly Screener" above).
+  surfaces per sector, per timeframe (see "Weekly Screener" above).
 
 ## Deployment
 

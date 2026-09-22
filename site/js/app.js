@@ -18,25 +18,30 @@ const SECTOR_ORDER = [
 ];
 
 let allCompanies = [];
-let weeklyPicksBySector = {};
+let performancePicksBySector = {};
+let performanceWindows = [];
 
 async function main() {
   const status = document.getElementById("status");
   const cardsEl = document.getElementById("cards");
   try {
     const [picks, watchlist] = await Promise.all([
-      fetchJSON("../data/weekly_picks.json"),
+      fetchJSON("../data/performance_picks.json"),
       fetchJSON("../data/watchlist.json"),
     ]);
-    weeklyPicksBySector = picks.picks_by_sector;
+    performancePicksBySector = picks.picks_by_sector;
+    performanceWindows = picks.windows;
     allCompanies = watchlist.companies;
-    const pickCount = Object.values(weeklyPicksBySector).reduce((sum, list) => sum + list.length, 0);
+    const pickCount = Object.values(performancePicksBySector).reduce(
+      (sum, windows) => sum + Object.values(windows).reduce((s, list) => s + list.length, 0),
+      0
+    );
     status.textContent = pickCount
-      ? `This week's top ${picks.top_n_per_sector} per sector, from a screen of ${picks.universe_size} companies · generated ${picks.generated_at}`
-      : `Screened ${picks.universe_size} companies · generated ${picks.generated_at} · no confident picks yet`;
-    cardsEl.innerHTML = pickCount ? renderWeeklyPicks(weeklyPicksBySector) : renderNoPicksYet();
+      ? `Top ${picks.top_n_per_sector} performers per sector, across 5 timeframes, from a screen of ${picks.universe_size} companies · generated ${picks.generated_at}`
+      : `Screened ${picks.universe_size} companies · generated ${picks.generated_at} · no performance data yet`;
+    cardsEl.innerHTML = pickCount ? renderPerformanceScreen(performancePicksBySector, performanceWindows) : renderNoPicksYet();
   } catch (err) {
-    renderError(cardsEl, `Could not load this week's picks (${err.message}). Has the pipeline run yet?`);
+    renderError(cardsEl, `Could not load this week's top performers (${err.message}). Has the pipeline run yet?`);
     status.textContent = "";
   }
   renderDisclaimerFooter();
@@ -44,7 +49,7 @@ async function main() {
 }
 
 function renderNoPicksYet() {
-  return `<p class="status">No sector had a company with enough data to rank yet. Check back after the pipeline's next run, or search for any ticker above.</p>`;
+  return `<p class="status">No sector had a company with enough price history to rank yet. Check back after the pipeline's next run, or search for any ticker above.</p>`;
 }
 
 function wireSearch() {
@@ -56,7 +61,9 @@ function wireSearch() {
   input.addEventListener("input", () => {
     const query = input.value.trim().toLowerCase();
     if (!query) {
-      cardsEl.innerHTML = Object.keys(weeklyPicksBySector).length ? renderWeeklyPicks(weeklyPicksBySector) : renderNoPicksYet();
+      cardsEl.innerHTML = Object.keys(performancePicksBySector).length
+        ? renderPerformanceScreen(performancePicksBySector, performanceWindows)
+        : renderNoPicksYet();
       return;
     }
     const matches = allCompanies.filter(
@@ -80,8 +87,9 @@ function wireSearch() {
   });
 }
 
-// Search results: grouped by sector, re-sorted by score - an arbitrary
-// subset matching the query, not this week's ranked picks, so no rank badges.
+// Search results: grouped by sector, re-sorted by Investment Meter score -
+// an arbitrary subset matching the query, not the performance screen, so it
+// keeps showing the fundamentals badges rather than a rank-by-return list.
 function renderBySector(companies) {
   const bySector = new Map();
   for (const company of companies) {
@@ -113,14 +121,15 @@ function renderBySector(companies) {
     .join("");
 }
 
-// Default homepage view: this week's top picks, already ranked and capped
-// per sector by pipeline.scoring.screening.select_top_picks - rendered in
-// that order with a #1/#2/... rank badge, not re-sorted here.
-function renderWeeklyPicks(picksBySector) {
+// Default homepage view: for each sector, 5 independently-ranked leaderboards
+// (one per pipeline.scoring.performance.WINDOWS entry) - pure price return,
+// already ranked and capped by select_top_performers, rendered in that order
+// with #1/#2/... rank position, not re-sorted here.
+function renderPerformanceScreen(picksBySector, windows) {
   const orderedSectors = [
-    ...SECTOR_ORDER.filter((s) => picksBySector[s]?.length),
+    ...SECTOR_ORDER.filter((s) => picksBySector[s]),
     ...Object.keys(picksBySector)
-      .filter((s) => !SECTOR_ORDER.includes(s) && picksBySector[s]?.length)
+      .filter((s) => !SECTOR_ORDER.includes(s))
       .sort(),
   ];
 
@@ -128,17 +137,62 @@ function renderWeeklyPicks(picksBySector) {
     .map(
       (sector) => `
         <section class="sector-group">
-          <h2 class="sector-heading">${escapeHtml(sector)} <span class="sector-count">(top ${picksBySector[sector].length})</span></h2>
-          <div class="card-grid">${picksBySector[sector].map((c, i) => renderCard(c, i + 1)).join("")}</div>
+          <h2 class="sector-heading">${escapeHtml(sector)}</h2>
+          <div class="perf-grid">
+            ${windows.map((w) => renderPerfPanel(w, picksBySector[sector][w.key])).join("")}
+          </div>
         </section>
       `
     )
     .join("");
 }
 
-function renderCard(company, rank) {
+function renderPerfPanel(perfWindow, picks) {
+  const rows = (picks || []).length
+    ? picks.map((c, i) => renderPerfRow(c, i + 1, perfWindow.key)).join("")
+    : `<li class="perf-empty">Not enough data yet</li>`;
+  return `
+    <div class="perf-panel">
+      <p class="perf-panel-title">${escapeHtml(perfWindow.label)}</p>
+      <ol class="perf-list">${rows}</ol>
+    </div>
+  `;
+}
+
+function fmtReturn(pct) {
+  const sign = pct > 0 ? "+" : "";
+  return `${sign}${formatNumber(pct, { decimals: 1, suffix: "%" })}`;
+}
+
+function renderPerfRow(company, rank, windowKey) {
+  const pct = company.returns?.[windowKey];
+  const hasPct = pct !== null && pct !== undefined;
+  const direction = hasPct ? (pct > 0 ? "perf-up" : pct < 0 ? "perf-down" : "") : "";
+  const returnText = hasPct ? fmtReturn(pct) : "—";
+  const price = company.price?.close;
+  const priceLine =
+    price !== undefined && price !== null
+      ? `<span class="perf-price">$${formatNumber(price, { decimals: 2 })}</span>`
+      : "";
+  return `
+    <li class="perf-row">
+      <a href="company.html?ticker=${encodeURIComponent(company.ticker)}">
+        <span class="perf-rank">${rank}</span>
+        <span class="perf-id">
+          <span class="perf-ticker">${escapeHtml(company.ticker)}</span>
+          <span class="perf-name">${escapeHtml(company.name)}</span>
+        </span>
+        <span class="perf-metrics">
+          <span class="perf-return ${direction}">${returnText}</span>
+          ${priceLine}
+        </span>
+      </a>
+    </li>
+  `;
+}
+
+function renderCard(company) {
   const ticker = escapeHtml(company.ticker);
-  const rankBadge = rank ? `<span class="mini-badge pick-rank">#${rank}</span>` : "";
   const grahamBadge =
     company.graham_criteria_total
       ? `<span class="mini-badge" title="Graham defensive-investor criteria passed">Graham ${company.graham_criteria_passed}/${company.graham_criteria_total}</span>`
@@ -166,7 +220,7 @@ function renderCard(company, rank) {
   return `
     <a class="card" href="company.html?ticker=${encodeURIComponent(company.ticker)}">
       <div class="card-header">
-        <span class="ticker-group">${rankBadge}<span class="ticker">${ticker}</span></span>
+        <span class="ticker-group"><span class="ticker">${ticker}</span></span>
         <span class="name">${escapeHtml(company.name)}</span>
       </div>
       ${priceLine}

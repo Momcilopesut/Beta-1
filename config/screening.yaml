@@ -1,7 +1,8 @@
-# How many top-ranked companies (by Investment Meter score) to surface per
-# sector each week. Selection uses the cheap quant+checklist score (no AI
-# spend) computed for the whole screening universe in config/watchlist.yaml;
-# only the selected top_n_per_sector companies per sector then get the AI
-# narrative/qualitative layer - see pipeline/main.py's two-phase run_full()
-# and pipeline/scoring/screening.py::select_top_picks.
+# How many top-performing companies to surface per sector, per lookback
+# window (weekly/monthly/quarterly/annual/5-year - see
+# pipeline/scoring/performance.py::WINDOWS), each week. Pure price-return
+# ranking over the whole screening universe in config/watchlist.yaml; only
+# tickers that make at least one window's list then get the AI qualitative
+# (Buffett moat read) layer - see pipeline/main.py's two-phase run_full()
+# and pipeline/scoring/performance.py::select_top_performers.
 top_n_per_sector: 5

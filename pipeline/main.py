@@ -1,7 +1,11 @@
 """CLI entrypoint for the weekly screening pipeline - this project's primary
 purpose: scan a curated universe of stocks (config/watchlist.yaml) and
-surface whichever ones come closest to satisfying the Graham/Buffett/Munger
-criteria this pipeline scores on, per sector, every week.
+surface each sector's 5 best price performers over five lookback windows
+(weekly, monthly, quarterly, annual, 5-year), every week. This ranking is
+pure price return - it does not use the Investment Meter or any Graham/
+Buffett/Munger check. Every company still gets the full fundamentals
+scoring on its own detail page; it just doesn't gate or influence which
+tickers surface on the screen itself.
 
 Usage:
   python -m pipeline.main                         # full screen over the whole universe
@@ -11,11 +15,11 @@ Usage:
 
 Two phases (see run_full):
   1. A cheap screen (fetch_and_score_company + finalize_company with
-     skip_ai=True) over the WHOLE universe - no Anthropic spend. The
-     Investment Meter score is still meaningful here (a missing moat read
-     just reads as a neutral multiplier - see aggregation.py), so this
-     alone is enough to rank and select this week's top picks per sector
-     (pipeline.scoring.screening.select_top_picks).
+     skip_ai=True) over the WHOLE universe - no Anthropic spend. Price
+     returns come straight from history already fetched for every company
+     (pipeline.scoring.performance.compute_returns), so this alone is
+     enough to rank and select each window's top performers per sector
+     (pipeline.scoring.performance.select_top_performers).
   2. AI enrichment (skip_ai=False) of just the selected finalists - Buffett's
      10-K moat read, the only place Anthropic budget gets spent.
 """
@@ -27,7 +31,7 @@ import sys
 from pipeline.build import qualitative_cache, writer
 from pipeline.fetch import filing_text, fmp, fred, sec_edgar, stooq
 from pipeline.narrative.qualitative_client import QualitativeError, generate_qualitative_assessment
-from pipeline.scoring import aggregation, history, macro_regime, screening, value_investing
+from pipeline.scoring import aggregation, history, macro_regime, performance, value_investing
 from pipeline.scoring.fundamentals import build_metrics, normalize_price_rows
 from pipeline.utils.config import macro_series, screening_config, watchlist
 
@@ -217,6 +221,7 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
         qualitative_out, qualitative_failed = _run_qualitative(state, out_dir)
 
     layered_analysis = aggregation.build_layered_analysis(qualitative_out, metrics, state["checklist"])
+    returns = performance.compute_returns(state["raw"]["price_history"])
 
     company_doc = {
         "ticker": ticker,
@@ -249,6 +254,7 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
         "name": name,
         "sector": sector,
         "price": display["price"],
+        "returns": returns,
         "book_value_per_share": metrics.get("book_value_per_share"),
         "graham_criteria_passed": state["checklist"]["graham_defensive"]["passed"],
         "graham_criteria_total": state["checklist"]["graham_defensive"]["total"],
@@ -350,24 +356,25 @@ def run_full(args) -> int:
             continue
         summaries.append(summary)
 
-    # Rank + select this week's top picks: highest Investment Meter score
-    # per sector, from the cheap screen above.
+    # Rank + select each window's top performers per sector, from the cheap
+    # screen above - pure price return, independent of the Investment Meter.
     top_n_per_sector = screening_config()["top_n_per_sector"]
-    picks_by_sector = screening.select_top_picks(summaries, top_n_per_sector)
-    finalist_sector = {pick["ticker"]: sector for sector, picks in picks_by_sector.items() for pick in picks}
+    picks_by_sector = performance.select_top_performers(summaries, top_n_per_sector)
+    finalist_tickers = {
+        pick["ticker"] for windows in picks_by_sector.values() for picks in windows.values() for pick in picks
+    }
 
     # Phase 2: AI-enrich only the selected finalists - the only place
     # Anthropic budget gets spent, unless --skip-ai keeps the whole run
     # cheap. Re-fetches rather than reusing phase 1's state (simpler than
     # threading cached raw data through; finalists are a small fraction of
-    # the universe). Selection/rank is NOT recomputed after enrichment - the
-    # displayed score becomes the accurate one, but which companies made the
-    # list stays traceable to the cheap score that actually selected them
-    # (the moat multiplier swing is modest, +-10% - see conviction_score.yaml).
-    if not args.skip_ai and finalist_sector:
+    # the universe). A ticker can lead more than one window (and appear in
+    # more than one of picks_by_sector's window lists within its sector), so
+    # enrichment patches every slot it occupies, not just the first found.
+    if not args.skip_ai and finalist_tickers:
         summaries_by_ticker = {s["ticker"]: s for s in summaries}
         companies_by_ticker = {c["ticker"]: c for c in companies}
-        for ticker, sector in finalist_sector.items():
+        for ticker in finalist_tickers:
             summary, qualitative_failed, errs = _process_company(
                 companies_by_ticker[ticker], regime_info, benchmark_prices, skip_ai=False, out_dir=out_dir
             )
@@ -376,10 +383,11 @@ def run_full(args) -> int:
                 continue
             total_qualitative_failed += int(qualitative_failed)
             summaries_by_ticker[ticker] = summary
-            for i, pick in enumerate(picks_by_sector[sector]):
-                if pick["ticker"] == ticker:
-                    picks_by_sector[sector][i] = summary
-                    break
+            for windows in picks_by_sector.values():
+                for picks in windows.values():
+                    for i, pick in enumerate(picks):
+                        if pick["ticker"] == ticker:
+                            picks[i] = summary
         summaries = list(summaries_by_ticker.values())
 
     if fmp_error_count:
@@ -394,14 +402,14 @@ def run_full(args) -> int:
     # came back with a result (e.g. a bad/expired key or an empty Anthropic
     # credit balance shows up here as "failed" rather than a misleading
     # "ok").
-    if not args.skip_ai and finalist_sector:
-        if total_qualitative_failed >= len(finalist_sector):
+    if not args.skip_ai and finalist_tickers:
+        if total_qualitative_failed >= len(finalist_tickers):
             sources_status["anthropic"] = "failed"
         elif total_qualitative_failed:
             sources_status["anthropic"] = "degraded"
 
     writer.write_watchlist(out_dir, summaries, generated_at)
-    writer.write_weekly_picks(out_dir, picks_by_sector, generated_at, len(companies), top_n_per_sector)
+    writer.write_performance_picks(out_dir, picks_by_sector, generated_at, len(companies), top_n_per_sector)
     writer.write_meta(
         out_dir,
         {
@@ -417,7 +425,7 @@ def run_full(args) -> int:
         "Done. Screened %d/%d companies, enriched %d finalists.",
         len(summaries),
         len(companies),
-        len(finalist_sector) if not args.skip_ai else 0,
+        len(finalist_tickers) if not args.skip_ai else 0,
     )
     return 0 if summaries else 1
 

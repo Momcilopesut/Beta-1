@@ -17,7 +17,7 @@ async function main() {
   const ticker = tickerFromQuery();
 
   if (!ticker) {
-    content.innerHTML = `<p class="error">No ticker specified. Go back to <a href="index.html">this week's top picks</a>.</p>`;
+    content.innerHTML = `<p class="error">No ticker specified. Go back to <a href="index.html">this week's top performers</a>.</p>`;
     renderDisclaimerFooter();
     return;
   }

@@ -10,6 +10,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+from pipeline.scoring.performance import WINDOWS
 from pipeline.utils.paths import DATA_DIR
 
 
@@ -36,15 +37,20 @@ def write_watchlist(base_dir: Path, companies_summary: list[dict], generated_at:
     _write_json(base_dir / "watchlist.json", {"generated_at": generated_at, "companies": companies_summary})
 
 
-def write_weekly_picks(
+def write_performance_picks(
     base_dir: Path, picks_by_sector: dict, generated_at: str, universe_size: int, top_n_per_sector: int
 ) -> None:
+    """picks_by_sector: {sector: {window_key: [summaries]}} from
+    pipeline.scoring.performance.select_top_performers. WINDOWS is written
+    alongside it so the frontend has each window's display label without
+    hardcoding it separately from the scoring module that defines it."""
     _write_json(
-        base_dir / "weekly_picks.json",
+        base_dir / "performance_picks.json",
         {
             "generated_at": generated_at,
             "universe_size": universe_size,
             "top_n_per_sector": top_n_per_sector,
+            "windows": [{"key": key, "label": label} for key, label, *_ in WINDOWS],
             "picks_by_sector": picks_by_sector,
         },
     )

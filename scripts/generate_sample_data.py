@@ -18,7 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from pipeline.build import writer  # noqa: E402
-from pipeline.scoring import aggregation, macro_regime, screening, value_investing  # noqa: E402
+from pipeline.scoring import aggregation, macro_regime, performance, value_investing  # noqa: E402
 from pipeline.utils.config import macro_series, screening_config, watchlist  # noqa: E402
 from pipeline.utils.paths import DATA_DIR  # noqa: E402
 
@@ -133,6 +133,20 @@ def synth_raw_statements(market_cap: float, close_price: float) -> dict:
         },
     ]
     return {"income_stmts": income_stmts, "balance_stmts": balance_stmts, "cashflow_stmts": cashflow_stmts}
+
+
+def synth_returns() -> dict:
+    """Independent, deliberately wide-ranging synthetic price returns per
+    lookback window (pipeline.scoring.performance.WINDOWS) - realistic
+    enough that each window's top-5 genuinely differs from the others, the
+    way real momentum data would."""
+    return {
+        "weekly": round(random.uniform(-6, 6), 2),
+        "monthly": round(random.uniform(-12, 15), 2),
+        "quarterly": round(random.uniform(-20, 25), 2),
+        "annual": round(random.uniform(-35, 60), 2),
+        "five_year": round(random.uniform(-20, 250), 2),
+    }
 
 
 def synth_five_year_history(market_cap: float, close_price: float) -> dict:
@@ -339,6 +353,7 @@ def main() -> None:
                 "name": company_cfg["name"],
                 "sector": sector,
                 "price": display["price"],
+                "returns": synth_returns(),
                 "book_value_per_share": metrics["book_value_per_share"],
                 "graham_criteria_passed": checklist["graham_defensive"]["passed"],
                 "graham_criteria_total": checklist["graham_defensive"]["total"],
@@ -355,8 +370,8 @@ def main() -> None:
 
     writer.write_watchlist(DATA_DIR, summaries, generated_at)
     top_n_per_sector = screening_config()["top_n_per_sector"]
-    picks_by_sector = screening.select_top_picks(summaries, top_n_per_sector)
-    writer.write_weekly_picks(DATA_DIR, picks_by_sector, generated_at, len(companies), top_n_per_sector)
+    picks_by_sector = performance.select_top_performers(summaries, top_n_per_sector)
+    writer.write_performance_picks(DATA_DIR, picks_by_sector, generated_at, len(companies), top_n_per_sector)
     writer.write_meta(
         DATA_DIR,
         {

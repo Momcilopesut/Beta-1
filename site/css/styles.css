@@ -172,8 +172,55 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
 .card-header .ticker { font-weight: 700; }
 .card-header .name { color: var(--muted); font-size: 0.85rem; text-align: right; }
 .ticker-group { display: flex; align-items: baseline; gap: 0.4rem; }
-.pick-rank { font-weight: 700; }
 .card-price { font-size: 1.1rem; font-weight: 700; margin: 0 0 0.5rem; }
+
+/* Homepage performance screen: 5 leaderboards per sector (weekly/monthly/
+   quarterly/annual/5-year), each ranking up to 5 tickers by price return. */
+.perf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 0.6rem;
+}
+.perf-panel {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.65rem 0.8rem;
+}
+.perf-panel-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.4rem;
+}
+.perf-list { list-style: none; margin: 0; padding: 0; }
+.perf-row + .perf-row { border-top: 1px solid var(--border); }
+.perf-row a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0;
+  text-decoration: none;
+  color: inherit;
+}
+.perf-rank { flex: none; width: 1.1rem; font-size: 0.72rem; font-weight: 700; color: var(--muted); }
+.perf-id { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 0.05rem; }
+.perf-ticker { font-weight: 700; font-size: 0.8rem; }
+.perf-name {
+  font-size: 0.68rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.perf-metrics { flex: none; text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 0.05rem; }
+.perf-return { font-weight: 700; font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+.perf-return.perf-up { color: var(--good); }
+.perf-return.perf-down { color: var(--bad); }
+.perf-price { font-size: 0.68rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.perf-empty { font-size: 0.75rem; color: var(--muted); padding: 0.4rem 0; }
 .verdicts { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.6rem; }
 .verdict-badge {
   font-size: 0.75rem;
