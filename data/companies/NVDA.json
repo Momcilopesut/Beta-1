@@ -1,6 +1,55 @@
 {
   "_errors": {},
   "cik": "0001045810",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 1990000000,
+        "debt": 11831000000,
+        "earnings": 9752000000,
+        "fiscal_year": "2022-01-30",
+        "market_return_pct": null,
+        "spending": 16873000000,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 3389000000,
+        "debt": 12031000000,
+        "earnings": 4368000000,
+        "fiscal_year": "2023-01-29",
+        "market_return_pct": -10.962192438487708,
+        "spending": 22750000000,
+        "stock_return_pct": -21.763985300122492
+      },
+      {
+        "cash": 7280000000,
+        "debt": 11056000000,
+        "earnings": 29760000000,
+        "fiscal_year": "2024-01-28",
+        "market_return_pct": 22.636610998776806,
+        "spending": 27950000000,
+        "stock_return_pct": 226.0438413361169
+      },
+      {
+        "cash": 8589000000,
+        "debt": 10270000000,
+        "earnings": 72880000000,
+        "fiscal_year": "2025-01-26",
+        "market_return_pct": 22.004193213507854,
+        "spending": 49044000000,
+        "stock_return_pct": 89.56299023531295
+      },
+      {
+        "cash": 10605000000,
+        "debt": 11412000000,
+        "earnings": 120067000000,
+        "fiscal_year": "2026-01-25",
+        "market_return_pct": 15.57635517293158,
+        "spending": 85551000000,
+        "stock_return_pct": 57.464955244046614
+      }
+    ]
+  },
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 4.588949069016016,
@@ -24,16 +73,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 656.4857464161621,
+      "graham_multiple": 687.0180168233443,
       "graham_number": 32.404054452119475,
-      "graham_upside_pct": -85.42130991491452,
-      "ncav_margin_pct": -98.5794444235983,
-      "pb_ratio": 23.480729221255633,
-      "pe_ttm": 27.95849056603773
+      "graham_upside_pct": -85.74894254018845,
+      "ncav_margin_pct": -98.61136912671824,
+      "pb_ratio": 24.02055252768752,
+      "pe_ttm": 28.60125786163521
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-21T12:05:43Z",
+  "last_updated": "2026-09-22T03:05:09Z",
   "layered_analysis": {
     "conviction_score": 40.3,
     "conviction_score_breakdown": {
@@ -63,7 +112,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 5383601670000,
+  "market_cap": 5507370980000,
   "metrics": {
     "book_value_per_share": 9.46606035551881,
     "current_ratio": 4.588949069016016,
@@ -73,14 +122,14 @@
     "fcf_margin_pct": 44.770258129648326,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 656.4857464161621,
-    "graham_upside_pct": -85.42130991491452,
+    "graham_multiple": 687.0180168233443,
+    "graham_upside_pct": -85.74894254018845,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -98.5794444235983,
-    "pb_ratio": 23.480729221255633,
-    "pe_ttm": 27.95849056603773,
+    "ncav_margin_pct": -98.61136912671824,
+    "pb_ratio": 24.02055252768752,
+    "pe_ttm": 28.60125786163521,
     "roe_pct": 110.11463673627841,
     "shareholders_equity": 157293000000,
     "total_assets": 206803000000,
@@ -99,8 +148,8 @@
     "one_line_summary": null
   },
   "price": {
-    "as_of": "2026-09-18",
-    "close": 222.27
+    "as_of": "2026-09-21",
+    "close": 227.38
   },
   "qualitative": null,
   "quant_score": {
@@ -172,7 +221,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $5383.6B",
+          "detail": "Market cap $5507.4B",
           "passed": true
         },
         {
@@ -197,12 +246,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 28.0",
+          "detail": "P/E 28.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 656.5",
+          "detail": "P/E x P/B = 687.0",
           "passed": false
         }
       ],

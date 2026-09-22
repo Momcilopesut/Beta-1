@@ -1,6 +1,55 @@
 {
   "_errors": {},
   "cik": "0000354950",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 2343000000,
+        "debt": 46269000000,
+        "earnings": 16433000000,
+        "fiscal_year": "2022-01-30",
+        "market_return_pct": null,
+        "spending": 128117000000,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 2757000000,
+        "debt": 50364000000,
+        "earnings": 17105000000,
+        "fiscal_year": "2023-01-29",
+        "market_return_pct": -10.962192438487708,
+        "spending": 133364000000,
+        "stock_return_pct": -14.371355387214562
+      },
+      {
+        "cash": 3760000000,
+        "debt": 52243000000,
+        "earnings": 15143000000,
+        "fiscal_year": "2024-01-28",
+        "market_return_pct": 22.636610998776806,
+        "spending": 130980000000,
+        "stock_return_pct": 13.193737270875758
+      },
+      {
+        "cash": 1659000000,
+        "debt": 62290000000,
+        "earnings": 14806000000,
+        "fiscal_year": "2025-02-02",
+        "market_return_pct": 21.678506727461478,
+        "spending": 137988000000,
+        "stock_return_pct": 14.917064942367164
+      },
+      {
+        "cash": 1389000000,
+        "debt": 65350000000,
+        "earnings": 14156000000,
+        "fiscal_year": "2026-02-01",
+        "market_return_pct": 16.334041520986332,
+        "spending": 143793000000,
+        "stock_return_pct": -7.495841080340539
+      }
+    ]
+  },
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 1.0780839144849663,
@@ -24,16 +73,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 375.90261604273473,
+      "graham_multiple": 368.96770655884137,
       "graham_number": 73.2632808775972,
-      "graham_upside_pct": -75.57727819268045,
-      "ncav_margin_pct": -119.34297606141173,
-      "pb_ratio": 17.944281157850394,
-      "pe_ttm": 20.94832402234637
+      "graham_upside_pct": -75.348828776044,
+      "ncav_margin_pct": -119.52390968675064,
+      "pb_ratio": 17.77798639947042,
+      "pe_ttm": 20.754189944134076
     }
   },
   "industry": "Home Improvement",
-  "last_updated": "2026-09-21T12:06:05Z",
+  "last_updated": "2026-09-22T03:05:31Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -65,7 +114,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 299115157660,
+  "market_cap": 296343172400,
   "metrics": {
     "book_value_per_share": 16.717303822937627,
     "current_ratio": 1.0780839144849663,
@@ -75,14 +124,14 @@
     "fcf_margin_pct": 7.678995403289957,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 375.90261604273473,
-    "graham_upside_pct": -75.57727819268045,
+    "graham_multiple": 368.96770655884137,
+    "graham_upside_pct": -75.348828776044,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -119.34297606141173,
-    "pb_ratio": 17.944281157850394,
-    "pe_ttm": 20.94832402234637,
+    "ncav_margin_pct": -119.52390968675064,
+    "pb_ratio": 17.77798639947042,
+    "pe_ttm": 20.754189944134076,
     "roe_pct": 102.68495128112596,
     "shareholders_equity": 12813000000,
     "total_assets": 105095000000,
@@ -101,8 +150,8 @@
     "one_line_summary": null
   },
   "price": {
-    "as_of": "2026-09-18",
-    "close": 299.98
+    "as_of": "2026-09-21",
+    "close": 297.2
   },
   "qualitative": null,
   "quant_score": {
@@ -174,7 +223,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $299.1B",
+          "detail": "Market cap $296.3B",
           "passed": true
         },
         {
@@ -199,12 +248,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.9",
+          "detail": "P/E 20.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 375.9",
+          "detail": "P/E x P/B = 369.0",
           "passed": false
         }
       ],
