@@ -6,6 +6,8 @@ import {
   renderDisclaimerFooter,
   lookupTicker,
 } from "./shared.js";
+import { METRIC_GLOSSARY, glossaryEntry } from "./metrics-glossary.js";
+import { computeInvestmentMeter } from "./meter-calculator.js";
 
 function tickerFromQuery() {
   return new URLSearchParams(window.location.search).get("ticker");
@@ -16,7 +18,7 @@ async function main() {
   const ticker = tickerFromQuery();
 
   if (!ticker) {
-    content.innerHTML = `<p class="error">No ticker specified. Go back to the <a href="index.html">watchlist</a>.</p>`;
+    content.innerHTML = `<p class="error">No ticker specified. Go back to <a href="index.html">this week's top picks</a>.</p>`;
     renderDisclaimerFooter();
     return;
   }
@@ -26,6 +28,7 @@ async function main() {
   try {
     const doc = await fetchJSON(`../data/companies/${encodeURIComponent(ticker)}.json`);
     content.innerHTML = render(doc);
+    wireWhatIfCalculator(doc);
   } catch {
     renderNotTracked(content, ticker);
   }
@@ -36,7 +39,7 @@ function renderNotTracked(content, ticker) {
   const safeTicker = escapeHtml(ticker);
   content.innerHTML = `
     <section class="not-tracked">
-      <p class="error">${safeTicker} isn't in the tracked watchlist.</p>
+      <p class="error">${safeTicker} isn't in the current screening universe.</p>
       <p class="meta">You can run a live, on-demand analysis instead — the same scoring, checklists,
       and AI narrative as the tracked companies, computed fresh right now via a separate lookup
       service. This spends real API budget per lookup, so it only runs when you ask.</p>
@@ -52,6 +55,7 @@ async function runLiveLookup(content, ticker) {
   try {
     const doc = await lookupTicker(ticker);
     content.innerHTML = render(doc);
+    wireWhatIfCalculator(doc);
   } catch (err) {
     content.innerHTML = `
       <p class="error">Live analysis failed for ${safeTicker}: ${escapeHtml(err.message)}</p>
@@ -76,6 +80,8 @@ function render(doc) {
       ${renderConvictionCard(doc.layered_analysis)}
     </section>
 
+    ${renderKeyMetricsReference(doc.metrics)}
+
     ${renderBalanceSheetBasics(doc.fundamentals, doc.layered_analysis)}
 
     ${renderFiveYearHistory(doc.five_year_history)}
@@ -97,6 +103,8 @@ function render(doc) {
     ${renderLayeredAnalysis(doc)}
 
     ${renderValueInvesting(doc.value_investing)}
+
+    ${renderWhatIfCalculator(doc)}
 
     <section class="macro">
       <h3>Macro Context</h3>
@@ -221,6 +229,71 @@ function fmt(v, decimals = 1, suffix = "") {
 
 function fmtDollars(v) {
   return v === null || v === undefined ? "—" : `$${formatNumber(v, { compact: true })}`;
+}
+
+// --- Key Metrics Reference: every metric this tool scores on, this
+// company's own current value, and (tap to expand) what it means and why
+// it matters - see site/js/metrics-glossary.js for the shared content and
+// site/glossary.html for the full standalone reference. ---
+
+const MARGIN_TREND_LABELS = { 20: "Declining", 60: "Stable", 100: "Improving" };
+
+function formatMetricValue(key, value) {
+  if (value === null || value === undefined) return "—";
+  switch (key) {
+    case "pe_ttm":
+    case "pb_ratio":
+    case "debt_to_ebitda":
+    case "graham_multiple":
+      return fmt(value, 2, "×");
+    case "debt_to_equity":
+    case "current_ratio":
+      return fmt(value, 2);
+    case "graham_upside_pct":
+    case "ncav_margin_pct":
+    case "fcf_margin_pct":
+    case "eps_growth_cagr_3yr_pct":
+    case "roe_pct":
+      return fmt(value, 1, "%");
+    case "margin_trend_score":
+      return MARGIN_TREND_LABELS[value] || String(value);
+    case "total_assets":
+    case "total_liabilities":
+    case "shareholders_equity":
+      return fmtDollars(value);
+    case "book_value_per_share":
+      return `$${fmt(value, 2)}`;
+    default:
+      return fmt(value, 2);
+  }
+}
+
+function renderKeyMetricsReference(metrics) {
+  if (!metrics) return "";
+  const rows = METRIC_GLOSSARY.map((m) => {
+    const value = metrics[m.key];
+    return `
+      <details class="metric-row">
+        <summary>
+          <span class="metric-label">${escapeHtml(m.label)}</span>
+          <span class="metric-value">${escapeHtml(formatMetricValue(m.key, value))}</span>
+        </summary>
+        <div class="metric-info">
+          <p><strong>What it is:</strong> ${escapeHtml(m.explanation)}</p>
+          <p><strong>Why it matters:</strong> ${escapeHtml(m.significance)}</p>
+          <p><strong>How it moves the business:</strong> ${escapeHtml(m.volatilityImpact)}</p>
+        </div>
+      </details>
+    `;
+  }).join("");
+
+  return `
+    <section class="key-metrics-reference">
+      <h3>Key Metrics Reference <span class="attribution"><a href="glossary.html">full glossary &rarr;</a></span></h3>
+      <p class="meta">This company's own numbers - tap any row for what it means and why it matters.</p>
+      <div class="metric-rows">${rows}</div>
+    </section>
+  `;
 }
 
 function renderBalanceSheetBasics(fundamentals, layered) {
@@ -480,6 +553,219 @@ function renderValueInvesting(valueInvesting) {
       </div>
     </section>
   `;
+}
+
+// --- What-If: Investment Meter Calculator. Drag a metric, watch the score
+// recompute live - entirely client-side via site/js/meter-calculator.js,
+// seeded from this company's own real data so it starts in exact agreement
+// with the page's own displayed score. ---
+
+const CALC_SLIDERS = [
+  { key: "marketCap", label: "Market cap", min: 0, max: 3e12, fmt: (v) => fmtDollars(v), criterion: "Graham #1: adequate size (≥ $2B)" },
+  { key: "currentRatio", label: "Current ratio", min: 0, max: 5, fmt: (v) => fmt(v, 2), criterion: "Graham #2: financial condition, simplified (≥ 2)" },
+  { key: "epsGrowthCagr3yr", label: "EPS growth (3yr CAGR)", min: -30, max: 60, fmt: (v) => fmt(v, 1, "%"), criterion: "Graham #5: earnings growth (≥ 2.9%/yr)" },
+  { key: "peTtm", label: "P/E", min: 0, max: 60, fmt: (v) => fmt(v, 1, "×"), criterion: "Graham #6: moderate P/E (≤ 15)" },
+  { key: "pbRatio", label: "P/B", min: 0, max: 20, fmt: (v) => fmt(v, 2, "×"), criterion: "Graham #7: P/E × P/B with the row above (≤ 22.5)" },
+  { key: "roePct", label: "ROE", min: -20, max: 150, fmt: (v) => fmt(v, 1, "%"), criterion: "Munger #1: return on equity (≥ 15%)" },
+  { key: "debtToEquity", label: "Debt / Equity", min: 0, max: 5, fmt: (v) => fmt(v, 2), criterion: "Munger #2: debt discipline (≤ 1.0)" },
+  { key: "marginOfSafetyPct", label: "Margin of safety (Graham upside)", min: -100, max: 100, fmt: (v) => fmt(v, 1, "%"), criterion: "Graham's valuation gate (≥ 15%)" },
+];
+
+const CALC_TOGGLES = [
+  { key: "earningsStability", label: "Graham #3: earnings stability (positive net income every year)" },
+  { key: "dividendRecord", label: "Graham #4: currently pays a dividend" },
+  { key: "dilution", label: "Munger #3: not diluting shareholders" },
+  { key: "moatPresent", label: "Buffett: durable moat present" },
+];
+
+function extendedRange(seed, min, max) {
+  if (seed === null || seed === undefined) return { min, max };
+  return { min: Math.min(min, seed), max: Math.max(max, seed) };
+}
+
+function seedCalculatorInputs(doc) {
+  const metrics = doc.metrics || {};
+  const graham = doc.value_investing?.graham_defensive?.criteria || [];
+  const munger = doc.value_investing?.munger_quality?.criteria || [];
+  const findPassed = (criteria, substr) => {
+    const match = criteria.find((c) => c.criterion.toLowerCase().includes(substr));
+    return match ? match.passed : null;
+  };
+  const marginTrendLabel = { 20: "declining", 60: "stable", 100: "improving" }[metrics.margin_trend_score] ?? null;
+
+  return {
+    marketCap: doc.market_cap ?? null,
+    currentRatio: metrics.current_ratio ?? null,
+    earningsStability: findPassed(graham, "earnings stability"),
+    dividendRecord: findPassed(graham, "dividend"),
+    epsGrowthCagr3yr: metrics.eps_growth_cagr_3yr_pct ?? null,
+    peTtm: metrics.pe_ttm ?? null,
+    pbRatio: metrics.pb_ratio ?? null,
+    roePct: metrics.roe_pct ?? null,
+    debtToEquity: metrics.debt_to_equity ?? null,
+    dilution: findPassed(munger, "diluting"),
+    marginTrend: marginTrendLabel,
+    moatPresent: doc.qualitative ? doc.qualitative.moat_present : null,
+    marginOfSafetyPct: metrics.graham_upside_pct ?? null,
+  };
+}
+
+function renderCalcResult(result) {
+  const gauge = renderMeterGauge(result.score, result.verdict);
+  const breakdown = result.breakdown
+    ? `<p class="score-note">Graham checklist ${fmt(result.breakdown.baseScore, 0)}% ×
+       ${fmt(result.breakdown.mungerMultiplier, 2)} Munger quality ×
+       ${fmt(result.breakdown.moatMultiplier, 2)} Buffett moat ×
+       ${fmt(result.breakdown.valuationMultiplier, 2)} Graham valuation</p>`
+    : `<p class="score-note">Not enough data to score.</p>`;
+
+  return `
+    <div class="score-card ${result.verdict ? verdictClass(result.verdict) : "verdict-neutral"} meter-card">
+      ${gauge}
+      ${breakdown}
+    </div>
+    <div class="checklist-columns">
+      <div class="checklist-card">
+        <h4>Graham Defensive <span class="checklist-score">${result.graham.passed}/${result.graham.evaluated} evaluated</span></h4>
+        <ul class="checklist">${renderChecklistRows(result.graham.criteria)}</ul>
+      </div>
+      <div class="checklist-card">
+        <h4>Munger Quality <span class="checklist-score">${result.munger.passed}/${result.munger.evaluated} evaluated</span></h4>
+        <ul class="checklist">${renderChecklistRows(result.munger.criteria)}</ul>
+      </div>
+    </div>
+  `;
+}
+
+function renderWhatIfCalculator(doc) {
+  const actualScore = doc.layered_analysis?.conviction_score;
+  if (actualScore === null || actualScore === undefined) {
+    return `
+      <section class="what-if-calculator">
+        <h3>What-If: Investment Meter Calculator</h3>
+        <p class="meta">Needs Graham's checklist to have evaluated data before this becomes interactive.</p>
+      </section>
+    `;
+  }
+
+  const seed = seedCalculatorInputs(doc);
+
+  const sliderRows = CALC_SLIDERS.map((c) => {
+    const value = seed[c.key];
+    const range = extendedRange(value, c.min, c.max);
+    return `
+      <div class="calc-row">
+        <label for="calc-${c.key}">${escapeHtml(c.label)}<span class="calc-hint">${escapeHtml(c.criterion)}</span></label>
+        <div class="calc-control">
+          <input type="range" id="calc-${c.key}" min="${range.min}" max="${range.max}" step="any"
+            value="${value ?? range.min}" ${value === null ? "disabled" : ""} />
+          <output id="calc-${c.key}-out">${escapeHtml(c.fmt(value))}</output>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  const marginTrendRow = `
+    <div class="calc-row">
+      <label for="calc-marginTrend">Margin trend<span class="calc-hint">Munger #4: margins stable or improving</span></label>
+      <select id="calc-marginTrend">
+        <option value="declining" ${seed.marginTrend === "declining" ? "selected" : ""}>Declining</option>
+        <option value="stable" ${seed.marginTrend === "stable" ? "selected" : ""}>Stable</option>
+        <option value="improving" ${seed.marginTrend === "improving" ? "selected" : ""}>Improving</option>
+      </select>
+    </div>
+  `;
+
+  const toggleRows = CALC_TOGGLES.map(
+    (c) => `
+      <div class="calc-row">
+        <label for="calc-${c.key}">${escapeHtml(c.label)}</label>
+        <select id="calc-${c.key}">
+          <option value="true" ${seed[c.key] === true ? "selected" : ""}>Pass</option>
+          <option value="false" ${seed[c.key] === false ? "selected" : ""}>Fail</option>
+          <option value="null" ${seed[c.key] === null ? "selected" : ""}>Unknown</option>
+        </select>
+      </div>
+    `
+  ).join("");
+
+  return `
+    <section class="what-if-calculator">
+      <h3>What-If: Investment Meter Calculator</h3>
+      <p class="meta">Drag a metric and watch the Investment Meter recompute live - a way to see how much (or how
+      little) one number actually moves the overall score. Runs entirely in your browser, seeded from this
+      company's real data below, so it starts in exact agreement with the score above. One simplification: the
+      "financial condition" row here checks only the current ratio, not the full debt-vs-working-capital test the
+      real screen also applies.</p>
+      <div class="calc-layout">
+        <div class="calc-controls">
+          ${sliderRows}
+          ${marginTrendRow}
+          ${toggleRows}
+          <button type="button" id="calc-reset" class="live-lookup-button">Reset to actual</button>
+        </div>
+        <div class="calc-result" id="calc-result"></div>
+      </div>
+    </section>
+  `;
+}
+
+function wireWhatIfCalculator(doc) {
+  const section = document.querySelector(".what-if-calculator");
+  const resultEl = document.getElementById("calc-result");
+  if (!section || !resultEl) return;
+
+  const seed = seedCalculatorInputs(doc);
+  const inputs = { ...seed };
+
+  function updateResult() {
+    resultEl.innerHTML = renderCalcResult(computeInvestmentMeter(inputs));
+  }
+
+  CALC_SLIDERS.forEach((c) => {
+    const el = document.getElementById(`calc-${c.key}`);
+    const out = document.getElementById(`calc-${c.key}-out`);
+    if (!el) return;
+    el.addEventListener("input", () => {
+      const v = parseFloat(el.value);
+      inputs[c.key] = Number.isNaN(v) ? null : v;
+      if (out) out.textContent = c.fmt(inputs[c.key]);
+      updateResult();
+    });
+  });
+
+  const marginTrendEl = document.getElementById("calc-marginTrend");
+  marginTrendEl?.addEventListener("change", () => {
+    inputs.marginTrend = marginTrendEl.value;
+    updateResult();
+  });
+
+  CALC_TOGGLES.forEach((c) => {
+    const el = document.getElementById(`calc-${c.key}`);
+    if (!el) return;
+    el.addEventListener("change", () => {
+      inputs[c.key] = el.value === "true" ? true : el.value === "false" ? false : null;
+      updateResult();
+    });
+  });
+
+  document.getElementById("calc-reset")?.addEventListener("click", () => {
+    Object.assign(inputs, seed);
+    CALC_SLIDERS.forEach((c) => {
+      const el = document.getElementById(`calc-${c.key}`);
+      const out = document.getElementById(`calc-${c.key}-out`);
+      if (el) el.value = inputs[c.key] ?? el.min;
+      if (out) out.textContent = c.fmt(inputs[c.key]);
+    });
+    if (marginTrendEl) marginTrendEl.value = inputs.marginTrend;
+    CALC_TOGGLES.forEach((c) => {
+      const el = document.getElementById(`calc-${c.key}`);
+      if (el) el.value = inputs[c.key] === true ? "true" : inputs[c.key] === false ? "false" : "null";
+    });
+    updateResult();
+  });
+
+  updateResult();
 }
 
 function gateLabel(pass) {

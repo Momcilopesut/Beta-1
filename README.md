@@ -334,6 +334,35 @@ longer credited to him and plays no part in the meter. **O'Shaughnessy's
 backtesting** — never implemented; needs historical infrastructure this pipeline
 doesn't have.
 
+## Metrics Glossary + What-If Calculator
+
+Every metric this tool scores on (`site/js/metrics-glossary.js`) carries a short
+explanation, its economic significance, and how swings in it actually affect the
+business — not just the number. It's shown two ways: a **Key Metrics Reference**
+section on every company page (this company's own current value next to each
+explanation), and a standalone **Metrics Glossary** page (`site/glossary.html`,
+linked from the nav on every page) with the full reference, no per-company numbers.
+
+The company page also has a **What-If: Investment Meter Calculator** —
+drag a metric and watch the Investment Meter score recompute live, right in the
+browser, to build intuition for how much (or how little) one number actually
+moves the overall score. This is a pure client-side port of the real scoring chain
+(`site/js/meter-calculator.js`, mirroring `pipeline/scoring/value_investing.py`'s
+two checklists and `pipeline/scoring/aggregation.py::build_conviction_score`),
+seeded from the company's real data so it starts in exact agreement with the
+page's own displayed score. Two things worth knowing about it:
+
+- It's a **client-side approximation**, kept in sync with the Python scoring
+  logic by hand — a real change to the multipliers in `config/conviction_score.yaml`
+  or the checklist thresholds needs the same change made in
+  `meter-calculator.js`, documented at the top of that file.
+- One criterion is **intentionally simplified**: Graham's "strong financial
+  condition" check is `current ratio >= 2` alone here, since the real backend's
+  second condition (debt vs. working capital) needs raw dollar figures that
+  aren't part of the JSON this page already has. Criteria with no single numeric
+  driver at all (earnings stability, dividend record, dilution, Buffett's moat
+  read) are direct Pass/Fail/Unknown toggles instead of sliders.
+
 ## Configuration
 
 - `config/watchlist.yaml` — the screening universe. Edit freely.

@@ -337,6 +337,82 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 .sparkline { color: var(--accent); display: block; margin: 0.5rem 0; }
 .regime-tag { color: var(--accent); }
 
+/* Key Metrics Reference (company page) + full glossary page - shared look. */
+.key-metrics-reference { margin-bottom: 1.5rem; }
+.metric-rows { display: flex; flex-direction: column; gap: 0.4rem; }
+.metric-row {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+.metric-row summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  list-style: none;
+}
+.metric-row summary::-webkit-details-marker { display: none; }
+.metric-label { font-weight: 500; }
+.metric-value { font-weight: 700; white-space: nowrap; }
+.metric-info { margin-top: 0.5rem; font-size: 0.85rem; color: var(--muted); }
+.metric-info p { margin: 0.35rem 0; }
+
+.glossary-intro { margin-bottom: 1.5rem; }
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.glossary-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.glossary-card h3 { margin: 0 0 0.5rem; font-size: 1rem; }
+.glossary-card p { font-size: 0.85rem; margin: 0.4rem 0; }
+
+/* What-If: Investment Meter Calculator */
+.calc-layout { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; }
+.calc-controls { flex: 1 1 320px; min-width: 280px; }
+.calc-result { flex: 1 1 320px; min-width: 280px; }
+.calc-row { margin-bottom: 0.9rem; }
+.calc-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.calc-hint { font-weight: 400; color: var(--muted); font-size: 0.75rem; }
+.calc-control { display: flex; align-items: center; gap: 0.6rem; }
+.calc-control input[type="range"] { flex: 1; }
+.calc-control output { font-size: 0.8rem; font-weight: 600; min-width: 4.5rem; text-align: right; }
+.calc-row select {
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--fg);
+  font-size: 0.85rem;
+}
+#calc-reset {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+#calc-reset:hover { opacity: 0.9; }
+
 .disclaimer {
   max-width: 960px;
   margin: 2rem auto 1rem;
@@ -353,4 +429,6 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
   .verdicts-detail { flex-direction: column; }
   .card-header { flex-direction: column; align-items: flex-start; }
   .card-header .name { text-align: left; }
+  .calc-layout { flex-direction: column; }
+  .metric-row summary { flex-direction: column; align-items: flex-start; gap: 0.15rem; }
 }
