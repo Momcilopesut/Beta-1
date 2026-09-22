@@ -163,6 +163,8 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
 }
 .card-header .ticker { font-weight: 700; }
 .card-header .name { color: var(--muted); font-size: 0.85rem; text-align: right; }
+.ticker-group { display: flex; align-items: baseline; gap: 0.4rem; }
+.pick-rank { font-weight: 700; }
 .verdicts { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.6rem; }
 .verdict-badge {
   font-size: 0.75rem;

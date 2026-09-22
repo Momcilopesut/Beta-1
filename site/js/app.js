@@ -18,21 +18,33 @@ const SECTOR_ORDER = [
 ];
 
 let allCompanies = [];
+let weeklyPicksBySector = {};
 
 async function main() {
   const status = document.getElementById("status");
   const cardsEl = document.getElementById("cards");
   try {
-    const data = await fetchJSON("../data/watchlist.json");
-    allCompanies = data.companies;
-    status.textContent = `Last updated: ${data.generated_at} · ${data.companies.length} companies tracked`;
-    cardsEl.innerHTML = renderBySector(allCompanies);
+    const [picks, watchlist] = await Promise.all([
+      fetchJSON("../data/weekly_picks.json"),
+      fetchJSON("../data/watchlist.json"),
+    ]);
+    weeklyPicksBySector = picks.picks_by_sector;
+    allCompanies = watchlist.companies;
+    const pickCount = Object.values(weeklyPicksBySector).reduce((sum, list) => sum + list.length, 0);
+    status.textContent = pickCount
+      ? `This week's top ${picks.top_n_per_sector} per sector, from a screen of ${picks.universe_size} companies · generated ${picks.generated_at}`
+      : `Screened ${picks.universe_size} companies · generated ${picks.generated_at} · no confident picks yet`;
+    cardsEl.innerHTML = pickCount ? renderWeeklyPicks(weeklyPicksBySector) : renderNoPicksYet();
   } catch (err) {
-    renderError(cardsEl, `Could not load watchlist data (${err.message}). Has the pipeline run yet?`);
+    renderError(cardsEl, `Could not load this week's picks (${err.message}). Has the pipeline run yet?`);
     status.textContent = "";
   }
   renderDisclaimerFooter();
   wireSearch();
+}
+
+function renderNoPicksYet() {
+  return `<p class="status">No sector had a company with enough data to rank yet. Check back after the pipeline's next run, or search for any ticker above.</p>`;
 }
 
 function wireSearch() {
@@ -44,7 +56,7 @@ function wireSearch() {
   input.addEventListener("input", () => {
     const query = input.value.trim().toLowerCase();
     if (!query) {
-      cardsEl.innerHTML = renderBySector(allCompanies);
+      cardsEl.innerHTML = Object.keys(weeklyPicksBySector).length ? renderWeeklyPicks(weeklyPicksBySector) : renderNoPicksYet();
       return;
     }
     const matches = allCompanies.filter(
@@ -68,6 +80,8 @@ function wireSearch() {
   });
 }
 
+// Search results: grouped by sector, re-sorted by score - an arbitrary
+// subset matching the query, not this week's ranked picks, so no rank badges.
 function renderBySector(companies) {
   const bySector = new Map();
   for (const company of companies) {
@@ -92,15 +106,39 @@ function renderBySector(companies) {
       (sector) => `
         <section class="sector-group">
           <h2 class="sector-heading">${escapeHtml(sector)} <span class="sector-count">(${bySector.get(sector).length})</span></h2>
-          <div class="card-grid">${bySector.get(sector).map(renderCard).join("")}</div>
+          <div class="card-grid">${bySector.get(sector).map((c) => renderCard(c)).join("")}</div>
         </section>
       `
     )
     .join("");
 }
 
-function renderCard(company) {
+// Default homepage view: this week's top picks, already ranked and capped
+// per sector by pipeline.scoring.screening.select_top_picks - rendered in
+// that order with a #1/#2/... rank badge, not re-sorted here.
+function renderWeeklyPicks(picksBySector) {
+  const orderedSectors = [
+    ...SECTOR_ORDER.filter((s) => picksBySector[s]?.length),
+    ...Object.keys(picksBySector)
+      .filter((s) => !SECTOR_ORDER.includes(s) && picksBySector[s]?.length)
+      .sort(),
+  ];
+
+  return orderedSectors
+    .map(
+      (sector) => `
+        <section class="sector-group">
+          <h2 class="sector-heading">${escapeHtml(sector)} <span class="sector-count">(top ${picksBySector[sector].length})</span></h2>
+          <div class="card-grid">${picksBySector[sector].map((c, i) => renderCard(c, i + 1)).join("")}</div>
+        </section>
+      `
+    )
+    .join("");
+}
+
+function renderCard(company, rank) {
   const ticker = escapeHtml(company.ticker);
+  const rankBadge = rank ? `<span class="mini-badge pick-rank">#${rank}</span>` : "";
   const grahamBadge =
     company.graham_criteria_total
       ? `<span class="mini-badge" title="Graham defensive-investor criteria passed">Graham ${company.graham_criteria_passed}/${company.graham_criteria_total}</span>`
@@ -123,7 +161,7 @@ function renderCard(company) {
   return `
     <a class="card" href="company.html?ticker=${encodeURIComponent(company.ticker)}">
       <div class="card-header">
-        <span class="ticker">${ticker}</span>
+        <span class="ticker-group">${rankBadge}<span class="ticker">${ticker}</span></span>
         <span class="name">${escapeHtml(company.name)}</span>
       </div>
       <div class="verdicts">

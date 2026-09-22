@@ -31,3 +31,7 @@ def quant_score_thresholds() -> dict:
 
 def conviction_score_config() -> dict:
     return load_yaml("conviction_score.yaml")
+
+
+def screening_config() -> dict:
+    return load_yaml("screening.yaml")

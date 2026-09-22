@@ -1,12 +1,15 @@
-# Watchlist Equity Research Tool
+# Weekly Stock Screener
 
-A minimal, explainable research dashboard for a curated stock watchlist, built around
-the simplest question in investing: **does this company own more than it owes, and is
-the price fair for that?** A scheduled pipeline fetches company fundamentals (Financial
-Modeling Prep + SEC EDGAR) and macroeconomic indicators (FRED), runs them through a
-transparent, balance-sheet-first scoring model — basic arithmetic, not growth
-projections or opaque composites — and asks Claude to summarize what matters, grounded
-strictly in the computed numbers. The result is published as a static site.
+This tool's primary purpose is a **weekly screen**: every Friday after the US market
+closes, it scans a curated universe of companies and surfaces whichever ones come
+closest to satisfying Graham's, Buffett's, and Munger's investing criteria — the same
+question underneath all three: **does this company own more than it owes, is it a
+well-run business, and is the price fair for that?** A scheduled pipeline fetches
+company fundamentals (Financial Modeling Prep + SEC EDGAR) and macroeconomic indicators
+(FRED), runs every company through a transparent, balance-sheet-first scoring model —
+basic arithmetic, not growth projections or opaque composites — ranks them, and asks
+Claude to summarize what matters for the week's top picks, grounded strictly in the
+computed numbers. The result is published as a static site.
 
 **This is not financial advice.** Every score and summary is an automated estimate
 based on public data and may contain errors or delays.
@@ -14,9 +17,12 @@ based on public data and may contain errors or delays.
 ## How it works
 
 ```
-config/watchlist.yaml  →  pipeline (fetch → score → AI narrative)  →  data/*.json  →  site/ (static, no build step)
+config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → AI-enrich finalists)  →  data/*.json  →  site/ (static, no build step)
 ```
 
+- **Weekly Screener** (see the dedicated section below): the program's primary purpose.
+  Every company in the screening universe gets scored; the top-ranked companies per
+  sector become the site's homepage.
 - **Data sources**: [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs)
   (fundamentals, prices), [SEC EDGAR](https://www.sec.gov/edgar/sec-api-documentation)
   (filings + XBRL fundamentals fallback), [FRED](https://fred.stlouisfed.org/docs/api/fred/)
@@ -31,11 +37,13 @@ config/watchlist.yaml  →  pipeline (fetch → score → AI narrative)  →  da
   produces a one-line summary plus facts tiered Critical → Important → Minor → Noise.
   Every fact must cite a real metric key from the payload; facts that don't are
   dropped in code (`pipeline/narrative/grounding.py`), not just discouraged by prompt.
+  Only runs for the week's finalists — see "Weekly Screener" below.
 - **Value-investing checklists** (`pipeline/scoring/value_investing.py`): Graham's
   Defensive Investor criteria and a Munger Quality Checklist, computed from the same
   fetched statements — no extra API calls. Both are simple pass/fail arithmetic, and
   together they anchor the Investment Meter (see "Investment Meter" below) — built
-  from exactly three investors: Graham, Buffett, Munger.
+  from exactly three investors: Graham, Buffett, Munger. This Meter is also exactly
+  what the weekly screen ranks companies by.
 - **Layered analysis** (quant screen → Munger's quality read → Buffett's qualitative
   moat read → Graham Number valuation gate, see "Layered analysis" below): a deeper,
   opt-in-by-passing-the-quant-screen pass per company that reads the company's own
@@ -45,12 +53,43 @@ config/watchlist.yaml  →  pipeline (fetch → score → AI narrative)  →  da
   business-cycle/sector-rotation theory (which sectors have historically led/lagged in
   this phase) — textbook reference, explicitly not a prediction.
 - **Site**: plain HTML/CSS/JS, no framework, no build step — reads the generated JSON
-  directly. The dashboard groups companies by GICS-style sector and has a search box
-  (instant filter of tracked companies; Enter jumps to any ticker).
+  directly. The homepage shows this week's top picks grouped by GICS-style sector; the
+  search box reaches every company in the screening universe (instant filter; Enter
+  jumps to any ticker, tracked or not).
 - **On-demand lookup** (`api/lookup.py`, optional): a search for a ticker outside the
-  tracked watchlist offers a live, on-demand run through the exact same pipeline code,
+  screening universe offers a live, on-demand run through the exact same pipeline code,
   via a small backend deployed separately (see "On-demand lookup deployment" below).
   The static site works fully without this — it's an opt-in extra.
+
+## Weekly Screener
+
+The program's primary purpose: every Friday at 21:30 UTC (`.github/workflows/
+weekly-screen.yml`) — genuinely "after the ~4pm ET close" year-round regardless of
+DST — the pipeline runs a two-phase screen over `config/watchlist.yaml`'s curated
+universe (88 companies, 8 per sector across 11 GICS-style sectors; not the full S&P
+500, to stay well inside a free-tier API budget):
+
+1. **Cheap screen, whole universe** (`pipeline/main.py::run_full`, phase 1) — every
+   company gets fetched and scored, including a full Investment Meter reading, with
+   the AI narrative/qualitative layer skipped entirely. This is not a degraded score:
+   a missing moat read just leaves that multiplier at a neutral 1.0 (see
+   `config/conviction_score.yaml`), so the Graham/Munger checklist math alone is
+   already meaningful enough to rank on.
+2. **Rank + select** (`pipeline/scoring/screening.py::select_top_picks`) — within each
+   sector, companies are sorted by Investment Meter score (highest first); companies
+   with no score at all are excluded rather than guessed at. The top
+   `config/screening.yaml`'s `top_n_per_sector` (5 by default) per sector become this
+   week's finalists.
+3. **AI-enrich finalists only** (phase 2) — only the selected finalists get re-scored
+   with the AI narrative and Buffett moat read turned on, so Anthropic spend scales
+   with the number of picks shown, not the size of the universe scanned.
+
+Every scanned company — not just the picks — still gets a full `data/companies/
+{ticker}.json` and detail page; `data/weekly_picks.json` holds just the ranked
+selection the homepage renders, and `data/watchlist.json` keeps covering the whole
+universe so the search box can still find anything scanned. Run it locally with
+`python -m pipeline.main --dry-run` (see "Local development" below); pass `--tickers`
+to test the two-phase flow on a small subset before running the real thing.
 
 ## Local development
 
@@ -64,9 +103,9 @@ Run the pipeline:
 
 ```bash
 python -m pipeline.main --tickers AAPL,MSFT --dry-run   # writes to data/.dry-run/, doesn't touch tracked data/
-python -m pipeline.main --skip-ai                        # fetch + score only, no Anthropic spend
+python -m pipeline.main --skip-ai                        # cheap screen only, no Anthropic spend, no finalist enrichment
 python -m pipeline.main --ai-only --tickers AAPL          # re-run just the narrative for an already-scored company
-python -m pipeline.main                                   # full run over the whole watchlist, writes data/
+python -m pipeline.main                                   # full weekly screen over the whole universe, writes data/
 ```
 
 Run the tests (pure functions + fixtures, no network, no API keys needed):
@@ -297,7 +336,7 @@ doesn't have.
 
 ## Configuration
 
-- `config/watchlist.yaml` — tracked tickers. Edit freely.
+- `config/watchlist.yaml` — the screening universe. Edit freely.
 - `config/sector_macro_sensitivity.yaml` — how much each sector's macro adjustment
   moves under each regime.
 - `config/macro_series.yaml` — which FRED series are pulled and the regime
@@ -309,14 +348,17 @@ doesn't have.
   (Buffett's moat, Munger's quality checklist, Graham's valuation gate) applied to
   Graham's checklist base score, and the verdict bands (Strong/Favorable/Neutral/
   Cautious/Weak).
+- `config/screening.yaml` — `top_n_per_sector`, how many companies the weekly screen
+  surfaces per sector (see "Weekly Screener" above).
 
 ## Deployment
 
-`.github/workflows/refresh-data.yml` runs the pipeline on a schedule (Saturdays by
-default — see the cron comment in that file), commits updated `data/*.json`, and
-deploys `site/` + `data/` to GitHub Pages. It can also be triggered manually from the
-Actions tab (`workflow_dispatch`), optionally with a `dry_run` flag or a specific
-`tickers` list.
+`.github/workflows/weekly-screen.yml` runs the pipeline on a schedule (Fridays at
+21:30 UTC by default — see the cron comment in that file), commits updated
+`data/*.json`, and deploys `site/` + `data/` to GitHub Pages. It can also be triggered
+manually from the Actions tab (`workflow_dispatch`), optionally with a `dry_run` flag
+or a specific `tickers` list (handy for testing the two-phase screen on a small subset
+before running it over the whole universe).
 
 One-time setup required in the repo's GitHub settings:
 

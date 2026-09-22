@@ -1,17 +1,25 @@
-"""CLI entrypoint for the scheduled watchlist data-refresh pipeline.
+"""CLI entrypoint for the weekly screening pipeline - this project's primary
+purpose: scan a curated universe of stocks (config/watchlist.yaml) and
+surface whichever ones come closest to satisfying the Graham/Buffett/Munger
+criteria this pipeline scores on, per sector, every week.
 
 Usage:
-  python -m pipeline.main                         # full run over the whole watchlist
+  python -m pipeline.main                         # full screen over the whole universe
   python -m pipeline.main --tickers AAPL,MSFT      # run over a subset
   python -m pipeline.main --dry-run                # write to data/ locally, no commit (commit is CI's job)
   python -m pipeline.main --skip-ai                 # fetch + score only, no Anthropic spend
   python -m pipeline.main --ai-only --tickers AAPL  # re-run just the narrative step for already-scored companies
 
-Two phases:
-  1. fetch_and_score_company() for every ticker - fetch, balance-sheet-first
-     quantitative scoring, and the Graham/Munger checklists.
-  2. finalize_company() for every ticker - AI narrative + final JSON
-     assembly + write.
+Two phases (see run_full):
+  1. A cheap screen (fetch_and_score_company + finalize_company with
+     skip_ai=True) over the WHOLE universe - no Anthropic spend. The
+     Investment Meter score is still meaningful here (a missing moat read
+     just reads as a neutral multiplier - see aggregation.py), so this
+     alone is enough to rank and select this week's top picks per sector
+     (pipeline.scoring.screening.select_top_picks).
+  2. AI enrichment (skip_ai=False) of just the selected finalists - the
+     real narrative + 10-K moat read, the only place Anthropic budget gets
+     spent.
 """
 
 import argparse
@@ -26,15 +34,15 @@ from pipeline.narrative.anthropic_client import NarrativeError, generate_narrati
 from pipeline.narrative.grounding import enforce_grounding
 from pipeline.narrative.prompts import DISCLAIMER
 from pipeline.narrative.qualitative_client import QualitativeError, generate_qualitative_assessment
-from pipeline.scoring import aggregation, history, macro_regime, quant_score, value_investing
+from pipeline.scoring import aggregation, history, macro_regime, quant_score, screening, value_investing
 from pipeline.scoring.fundamentals import build_metrics, normalize_price_rows
-from pipeline.utils.config import macro_series, watchlist
+from pipeline.utils.config import macro_series, screening_config, watchlist
 from pipeline.utils.paths import DATA_DIR
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
-PIPELINE_VERSION = "2.0.0"
+PIPELINE_VERSION = "3.0.0"
 
 EMPTY_FACT_TIERS = {"critical": [], "important": [], "minor": [], "noise": []}
 
@@ -343,6 +351,33 @@ def finalize_company(
     return company_doc, summary, narrative_warnings, qualitative_failed
 
 
+def _process_company(
+    company_cfg: dict, regime_info: dict, benchmark_prices: list[dict], skip_ai: bool, out_dir
+) -> tuple[dict | None, int, bool, dict]:
+    """Fetch, score, finalize, and write one company end-to-end. Used for
+    both the cheap screen (skip_ai=True, whole universe) and the AI-enriched
+    finalist pass (skip_ai=False) - the same work either way, just whether
+    finalize_company spends the Anthropic calls. Returns (summary, warnings,
+    qualitative_skipped, errors); summary is None if fetching or finalizing
+    failed outright for this ticker (already logged), in which case the
+    other fields are empty/zero and the caller should just skip it."""
+    ticker = company_cfg["ticker"]
+    try:
+        state = fetch_and_score_company(company_cfg, regime_info, benchmark_prices)
+    except Exception:
+        logger.exception("Failed to process %s entirely, skipping", ticker)
+        return None, 0, False, {}
+
+    try:
+        company_doc, summary, warnings, qual_skipped = finalize_company(state, regime_info, skip_ai, out_dir)
+    except Exception:
+        logger.exception("Failed to finalize %s entirely, skipping", ticker)
+        return None, 0, False, state["errors"]
+
+    writer.write_company(out_dir, ticker, company_doc)
+    return summary, warnings, qual_skipped, state["errors"]
+
+
 def run_full(args) -> int:
     companies = selected_companies(args)
     if not companies:
@@ -373,23 +408,14 @@ def run_full(args) -> int:
     macro_doc = build_macro_doc(macro_data, regime_info, generated_at)
     writer.write_macro(out_dir, macro_doc)
 
-    # Phase 1: fetch + score every company, then finalize (narrative +
-    # qualitative + write) - no cross-company signals left to compute in
-    # between, so this is a single pass per company rather than two.
-    summaries = []
     fmp_error_count = 0
     sec_error_count = 0
     stooq_error_count = 0
     total_narrative_warnings = 0
     total_qualitative_skipped = 0
-    for company_cfg in companies:
-        try:
-            state = fetch_and_score_company(company_cfg, regime_info, benchmark_prices)
-        except Exception:
-            logger.exception("Failed to process %s entirely, skipping", company_cfg["ticker"])
-            continue
 
-        errs = state["errors"]
+    def _track_errors(errs: dict) -> None:
+        nonlocal fmp_error_count, sec_error_count, stooq_error_count
         if any(not k.startswith("sec_") and k != "stooq" for k in errs):
             fmp_error_count += 1
         if any(k.startswith("sec_") for k in errs):
@@ -397,15 +423,54 @@ def run_full(args) -> int:
         if "stooq" in errs:
             stooq_error_count += 1
 
-        try:
-            company_doc, summary, warnings, qual_skipped = finalize_company(state, regime_info, args.skip_ai, out_dir)
-        except Exception:
-            logger.exception("Failed to finalize %s entirely, skipping", state["ticker"])
+    # Phase 1: cheap screen over the WHOLE universe - no AI spend (see
+    # module docstring). Every company still gets a full company_doc/detail
+    # page; only the narrative/moat read is missing until (if) it becomes a
+    # finalist below.
+    summaries = []
+    for company_cfg in companies:
+        summary, warnings, qual_skipped, errs = _process_company(
+            company_cfg, regime_info, benchmark_prices, skip_ai=True, out_dir=out_dir
+        )
+        _track_errors(errs)
+        if summary is None:
             continue
         total_narrative_warnings += warnings
         total_qualitative_skipped += int(qual_skipped)
-        writer.write_company(out_dir, state["ticker"], company_doc)
         summaries.append(summary)
+
+    # Rank + select this week's top picks: highest Investment Meter score
+    # per sector, from the cheap screen above.
+    top_n_per_sector = screening_config()["top_n_per_sector"]
+    picks_by_sector = screening.select_top_picks(summaries, top_n_per_sector)
+    finalist_sector = {pick["ticker"]: sector for sector, picks in picks_by_sector.items() for pick in picks}
+
+    # Phase 2: AI-enrich only the selected finalists - the only place
+    # Anthropic budget gets spent, unless --skip-ai keeps the whole run
+    # cheap. Re-fetches rather than reusing phase 1's state (simpler than
+    # threading cached raw data through; finalists are a small fraction of
+    # the universe). Selection/rank is NOT recomputed after enrichment - the
+    # displayed score becomes the accurate one, but which companies made the
+    # list stays traceable to the cheap score that actually selected them
+    # (the moat multiplier swing is modest, +-10% - see conviction_score.yaml).
+    if not args.skip_ai and finalist_sector:
+        summaries_by_ticker = {s["ticker"]: s for s in summaries}
+        companies_by_ticker = {c["ticker"]: c for c in companies}
+        for ticker, sector in finalist_sector.items():
+            summary, warnings, qual_skipped, errs = _process_company(
+                companies_by_ticker[ticker], regime_info, benchmark_prices, skip_ai=False, out_dir=out_dir
+            )
+            _track_errors(errs)
+            if summary is None:
+                continue
+            total_narrative_warnings += warnings
+            total_qualitative_skipped += int(qual_skipped)
+            summaries_by_ticker[ticker] = summary
+            for i, pick in enumerate(picks_by_sector[sector]):
+                if pick["ticker"] == ticker:
+                    picks_by_sector[sector][i] = summary
+                    break
+        summaries = list(summaries_by_ticker.values())
 
     if fmp_error_count:
         sources_status["fmp"] = "degraded"
@@ -415,6 +480,7 @@ def run_full(args) -> int:
         sources_status["stooq"] = "degraded"
 
     writer.write_watchlist(out_dir, summaries, generated_at)
+    writer.write_weekly_picks(out_dir, picks_by_sector, generated_at, len(companies), top_n_per_sector)
     writer.write_meta(
         out_dir,
         {
@@ -427,7 +493,12 @@ def run_full(args) -> int:
         },
     )
 
-    logger.info("Done. Processed %d/%d companies.", len(summaries), len(companies))
+    logger.info(
+        "Done. Screened %d/%d companies, enriched %d finalists.",
+        len(summaries),
+        len(companies),
+        len(finalist_sector) if not args.skip_ai else 0,
+    )
     return 0 if summaries else 1
 
 

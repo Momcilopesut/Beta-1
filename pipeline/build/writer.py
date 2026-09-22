@@ -36,6 +36,20 @@ def write_watchlist(base_dir: Path, companies_summary: list[dict], generated_at:
     _write_json(base_dir / "watchlist.json", {"generated_at": generated_at, "companies": companies_summary})
 
 
+def write_weekly_picks(
+    base_dir: Path, picks_by_sector: dict, generated_at: str, universe_size: int, top_n_per_sector: int
+) -> None:
+    _write_json(
+        base_dir / "weekly_picks.json",
+        {
+            "generated_at": generated_at,
+            "universe_size": universe_size,
+            "top_n_per_sector": top_n_per_sector,
+            "picks_by_sector": picks_by_sector,
+        },
+    )
+
+
 def write_macro(base_dir: Path, macro_doc: dict) -> None:
     _write_json(base_dir / "macro.json", macro_doc)
 

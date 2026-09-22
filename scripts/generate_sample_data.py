@@ -19,8 +19,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from pipeline.build import writer  # noqa: E402
 from pipeline.narrative.prompts import DISCLAIMER  # noqa: E402
-from pipeline.scoring import aggregation, macro_regime, quant_score, value_investing  # noqa: E402
-from pipeline.utils.config import macro_series, watchlist  # noqa: E402
+from pipeline.scoring import aggregation, macro_regime, quant_score, screening, value_investing  # noqa: E402
+from pipeline.utils.config import macro_series, screening_config, watchlist  # noqa: E402
 from pipeline.utils.paths import DATA_DIR  # noqa: E402
 
 random.seed(42)
@@ -400,6 +400,9 @@ def main() -> None:
         )
 
     writer.write_watchlist(DATA_DIR, summaries, generated_at)
+    top_n_per_sector = screening_config()["top_n_per_sector"]
+    picks_by_sector = screening.select_top_picks(summaries, top_n_per_sector)
+    writer.write_weekly_picks(DATA_DIR, picks_by_sector, generated_at, len(companies), top_n_per_sector)
     writer.write_meta(
         DATA_DIR,
         {

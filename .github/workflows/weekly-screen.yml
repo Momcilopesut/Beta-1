@@ -1,16 +1,20 @@
-name: Refresh watchlist data
+name: Weekly screen
 
 on:
   schedule:
-    # Saturday 11:00 UTC - after Friday's US market close, so end-of-day
-    # data is final. Fundamentals don't move week to week, so weekly stays
-    # well inside every free-tier API's rate limits for a ~15-ticker
-    # watchlist. Change the cron below to refresh more often if desired.
-    - cron: "0 11 * * 6"
+    # Friday 21:30 UTC = 17:30 EDT / 16:30 EST - genuinely "Friday, after
+    # the ~4pm ET market close" year-round regardless of DST, with a
+    # buffer for end-of-day price data to be final. This is now the
+    # program's primary run: a two-phase screen (cheap quant+checklist pass
+    # over the whole curated universe in config/watchlist.yaml, then AI
+    # enrichment of just the top_n_per_sector finalists - see
+    # pipeline/main.py's module docstring) that produces each week's top
+    # picks per sector.
+    - cron: "30 21 * * 5"
   workflow_dispatch:
     inputs:
       tickers:
-        description: "Comma-separated tickers to run (default: full watchlist)"
+        description: "Comma-separated tickers to run (default: full screening universe)"
         required: false
       dry_run:
         description: "Write to data/.dry-run instead of committing/deploying"
@@ -24,11 +28,11 @@ permissions:
   id-token: write
 
 concurrency:
-  group: refresh-data
+  group: weekly-screen
   cancel-in-progress: false
 
 jobs:
-  refresh-and-deploy:
+  screen-and-deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -45,7 +49,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run pipeline
+      - name: Run weekly screen
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
@@ -70,7 +74,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No data changes to commit."
           else
-            git commit -m "Automated data refresh $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git commit -m "Automated weekly screen $(date -u +%Y-%m-%dT%H:%M:%SZ)"
             # Guard against a rejected push if another run's commit landed
             # in between (e.g. an overlapping manual re-run).
             git pull --rebase origin "${GITHUB_REF_NAME}"

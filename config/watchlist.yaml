@@ -1,52 +1,299 @@
-# Companies tracked by the scheduled pipeline.
-# Fully user-editable: add/remove tickers here, then re-run the pipeline
-# (locally with --dry-run, or via the "Run workflow" button on refresh-data.yml).
-# Sector is a display fallback; the pipeline prefers the sector reported by FMP's
-# /profile endpoint when available and only falls back to this value if that call fails.
+# The screening universe: companies scanned every week by the pipeline
+# (pipeline/main.py's two-phase screen-then-enrich flow - see README's
+# "Weekly Screener" section). Fully user-editable: add/remove tickers here,
+# then re-run the pipeline (locally with --dry-run, or via the "Run
+# workflow" button on weekly-screen.yml). Sector is a display fallback; the
+# pipeline prefers the sector reported by FMP's /profile endpoint when
+# available and only falls back to this value if that call fails.
+#
+# Curated (not the full S&P 500) to stay well inside a free-tier API
+# budget - 8 companies per sector, picked for a real moat/growth thesis
+# rather than just size, so the weekly top-5-per-sector selection has a
+# genuine pool to choose from.
 
 companies:
-  - ticker: AAPL
-    name: Apple Inc.
-    sector: Technology
-  - ticker: MSFT
-    name: Microsoft Corporation
-    sector: Technology
-  - ticker: NVDA
-    name: NVIDIA Corporation
-    sector: Technology
-  - ticker: JPM
-    name: JPMorgan Chase & Co.
-    sector: Financial Services
-  - ticker: V
-    name: Visa Inc.
-    sector: Financial Services
-  - ticker: UNH
-    name: UnitedHealth Group Incorporated
-    sector: Healthcare
-  - ticker: JNJ
-    name: Johnson & Johnson
-    sector: Healthcare
-  - ticker: PG
-    name: Procter & Gamble Co.
-    sector: Consumer Defensive
-  - ticker: KO
-    name: The Coca-Cola Company
-    sector: Consumer Defensive
+  # --- Energy ---
+  - ticker: XOM
+    name: Exxon Mobil Corporation
+    sector: Energy
+  - ticker: CVX
+    name: Chevron Corporation
+    sector: Energy
+  - ticker: EOG
+    name: EOG Resources Inc.
+    sector: Energy
+  - ticker: SLB
+    name: SLB (Schlumberger)
+    sector: Energy
+  - ticker: FANG
+    name: Diamondback Energy Inc.
+    sector: Energy
+  - ticker: COP
+    name: ConocoPhillips
+    sector: Energy
+  - ticker: PSX
+    name: Phillips 66
+    sector: Energy
+  - ticker: OXY
+    name: Occidental Petroleum Corporation
+    sector: Energy
+
+  # --- Basic Materials ---
+  - ticker: LIN
+    name: Linde plc
+    sector: Basic Materials
+  - ticker: SHW
+    name: Sherwin-Williams Company
+    sector: Basic Materials
+  - ticker: FCX
+    name: Freeport-McMoRan Inc.
+    sector: Basic Materials
+  - ticker: ALB
+    name: Albemarle Corporation
+    sector: Basic Materials
+  - ticker: ECL
+    name: Ecolab Inc.
+    sector: Basic Materials
+  - ticker: NUE
+    name: Nucor Corporation
+    sector: Basic Materials
+  - ticker: APD
+    name: Air Products and Chemicals Inc.
+    sector: Basic Materials
+  - ticker: DD
+    name: DuPont de Nemours Inc.
+    sector: Basic Materials
+
+  # --- Industrials ---
+  - ticker: ETN
+    name: Eaton Corporation plc
+    sector: Industrials
+  - ticker: CAT
+    name: Caterpillar Inc.
+    sector: Industrials
+  - ticker: UNP
+    name: Union Pacific Corporation
+    sector: Industrials
+  - ticker: HON
+    name: Honeywell International Inc.
+    sector: Industrials
+  - ticker: GE
+    name: GE Aerospace
+    sector: Industrials
+  - ticker: DE
+    name: Deere & Company
+    sector: Industrials
+  - ticker: LMT
+    name: Lockheed Martin Corporation
+    sector: Industrials
+  - ticker: RTX
+    name: RTX Corporation
+    sector: Industrials
+
+  # --- Consumer Cyclical ---
   - ticker: AMZN
     name: Amazon.com Inc.
     sector: Consumer Cyclical
   - ticker: HD
     name: The Home Depot Inc.
     sector: Consumer Cyclical
-  - ticker: XOM
-    name: Exxon Mobil Corporation
-    sector: Energy
-  - ticker: CAT
-    name: Caterpillar Inc.
-    sector: Industrials
+  - ticker: NKE
+    name: Nike Inc.
+    sector: Consumer Cyclical
+  - ticker: RACE
+    name: Ferrari N.V.
+    sector: Consumer Cyclical
+  - ticker: CMG
+    name: Chipotle Mexican Grill Inc.
+    sector: Consumer Cyclical
+  - ticker: SBUX
+    name: Starbucks Corporation
+    sector: Consumer Cyclical
+  - ticker: TJX
+    name: TJX Companies Inc.
+    sector: Consumer Cyclical
+  - ticker: MCD
+    name: McDonald's Corporation
+    sector: Consumer Cyclical
+
+  # --- Consumer Defensive ---
+  - ticker: PG
+    name: Procter & Gamble Co.
+    sector: Consumer Defensive
+  - ticker: KO
+    name: The Coca-Cola Company
+    sector: Consumer Defensive
+  - ticker: COST
+    name: Costco Wholesale Corporation
+    sector: Consumer Defensive
+  - ticker: PEP
+    name: PepsiCo Inc.
+    sector: Consumer Defensive
+  - ticker: WMT
+    name: Walmart Inc.
+    sector: Consumer Defensive
+  - ticker: MDLZ
+    name: Mondelez International Inc.
+    sector: Consumer Defensive
+  - ticker: CL
+    name: Colgate-Palmolive Company
+    sector: Consumer Defensive
+  - ticker: MNST
+    name: Monster Beverage Corporation
+    sector: Consumer Defensive
+
+  # --- Healthcare ---
+  - ticker: UNH
+    name: UnitedHealth Group Incorporated
+    sector: Healthcare
+  - ticker: JNJ
+    name: Johnson & Johnson
+    sector: Healthcare
+  - ticker: LLY
+    name: Eli Lilly and Company
+    sector: Healthcare
+  - ticker: NVO
+    name: Novo Nordisk A/S
+    sector: Healthcare
+  - ticker: ISRG
+    name: Intuitive Surgical Inc.
+    sector: Healthcare
+  - ticker: ABBV
+    name: AbbVie Inc.
+    sector: Healthcare
+  - ticker: ABT
+    name: Abbott Laboratories
+    sector: Healthcare
+  - ticker: TMO
+    name: Thermo Fisher Scientific Inc.
+    sector: Healthcare
+
+  # --- Financial Services ---
+  - ticker: JPM
+    name: JPMorgan Chase & Co.
+    sector: Financial Services
+  - ticker: V
+    name: Visa Inc.
+    sector: Financial Services
+  - ticker: MA
+    name: Mastercard Incorporated
+    sector: Financial Services
+  - ticker: SPGI
+    name: S&P Global Inc.
+    sector: Financial Services
+  - ticker: BRK.B
+    name: Berkshire Hathaway Inc.
+    sector: Financial Services
+  - ticker: AXP
+    name: American Express Company
+    sector: Financial Services
+  - ticker: PGR
+    name: Progressive Corporation
+    sector: Financial Services
+  - ticker: BLK
+    name: BlackRock Inc.
+    sector: Financial Services
+
+  # --- Technology ---
+  - ticker: MSFT
+    name: Microsoft Corporation
+    sector: Technology
+  - ticker: NVDA
+    name: NVIDIA Corporation
+    sector: Technology
+  - ticker: AAPL
+    name: Apple Inc.
+    sector: Technology
+  - ticker: TSM
+    name: Taiwan Semiconductor Manufacturing Company Limited
+    sector: Technology
+  - ticker: ASML
+    name: ASML Holding N.V.
+    sector: Technology
+  - ticker: AVGO
+    name: Broadcom Inc.
+    sector: Technology
+  - ticker: ORCL
+    name: Oracle Corporation
+    sector: Technology
+  - ticker: CRM
+    name: Salesforce Inc.
+    sector: Technology
+
+  # --- Communication Services ---
+  - ticker: GOOGL
+    name: Alphabet Inc.
+    sector: Communication Services
+  - ticker: META
+    name: Meta Platforms Inc.
+    sector: Communication Services
+  - ticker: NFLX
+    name: Netflix Inc.
+    sector: Communication Services
+  - ticker: TMUS
+    name: T-Mobile US Inc.
+    sector: Communication Services
+  - ticker: DIS
+    name: The Walt Disney Company
+    sector: Communication Services
+  - ticker: CMCSA
+    name: Comcast Corporation
+    sector: Communication Services
+  - ticker: VZ
+    name: Verizon Communications Inc.
+    sector: Communication Services
+  - ticker: EA
+    name: Electronic Arts Inc.
+    sector: Communication Services
+
+  # --- Utilities ---
   - ticker: NEE
     name: NextEra Energy Inc.
     sector: Utilities
+  - ticker: CEG
+    name: Constellation Energy Corporation
+    sector: Utilities
+  - ticker: SO
+    name: Southern Company
+    sector: Utilities
+  - ticker: AEP
+    name: American Electric Power Company Inc.
+    sector: Utilities
+  - ticker: SRE
+    name: Sempra
+    sector: Utilities
+  - ticker: DUK
+    name: Duke Energy Corporation
+    sector: Utilities
+  - ticker: XEL
+    name: Xcel Energy Inc.
+    sector: Utilities
+  - ticker: ED
+    name: Consolidated Edison Inc.
+    sector: Utilities
+
+  # --- Real Estate ---
   - ticker: PLD
     name: Prologis Inc.
+    sector: Real Estate
+  - ticker: AMT
+    name: American Tower Corporation
+    sector: Real Estate
+  - ticker: EQIX
+    name: Equinix Inc.
+    sector: Real Estate
+  - ticker: PSA
+    name: Public Storage
+    sector: Real Estate
+  - ticker: DLR
+    name: Digital Realty Trust Inc.
+    sector: Real Estate
+  - ticker: O
+    name: Realty Income Corporation
+    sector: Real Estate
+  - ticker: SPG
+    name: Simon Property Group Inc.
+    sector: Real Estate
+  - ticker: WELL
+    name: Welltower Inc.
     sector: Real Estate
