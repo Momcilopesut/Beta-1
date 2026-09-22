@@ -73,7 +73,7 @@ export const METRIC_GLOSSARY = [
     explanation:
       "Total debt divided by EBITDA (earnings before interest, tax, depreciation, and amortization) - roughly, how many years of pre-cash-cost earnings it would take to pay off all debt.",
     significance:
-      "One of the three metrics in the fast quant screen (threshold: ≤3.0) - a cash-flow-based leverage check, distinct from debt/equity's balance-sheet view.",
+      "A cash-flow-based leverage check, distinct from debt/equity's balance-sheet view - lower is safer.",
     volatilityImpact:
       "EBITDA reacts quickly to a revenue or margin shock, so this ratio can spike fast in a downturn even if debt itself hasn't changed - a company that looked safely levered in a good year can look overleveraged within a single bad one.",
   },
@@ -83,7 +83,7 @@ export const METRIC_GLOSSARY = [
     explanation:
       "Current assets divided by current liabilities - can the company cover what it owes in the next year with what it can convert to cash in the next year?",
     significance:
-      "The most basic short-term solvency check - used in both the quant screen (≥1.5) and Graham's checklist (≥2.0, alongside a debt-vs-working-capital test). Below 1.0 means current liabilities exceed current assets outright.",
+      "The most basic short-term solvency check - used in Graham's own checklist (≥2.0, alongside a debt-vs-working-capital test). Below 1.0 means current liabilities exceed current assets outright.",
     volatilityImpact:
       "Working capital needs swing with the business cycle - inventory builds ahead of a busy season, or a slow collection period, can drag this down temporarily without signaling real distress. A persistent decline matters more than one quarter's dip.",
   },
@@ -93,7 +93,7 @@ export const METRIC_GLOSSARY = [
     explanation:
       "Free cash flow (operating cash flow minus capital expenditures) divided by revenue - what share of every sales dollar turns into cash the company actually gets to keep.",
     significance:
-      "The tool's real cash-generation check (quant screen threshold: ≥10%), distinct from accounting profit, which can be flattered by non-cash items.",
+      "The tool's real cash-generation check, distinct from accounting profit, which can be flattered by non-cash items.",
     volatilityImpact:
       "Capital expenditure is lumpy - a single large plant or acquisition can push this negative for a quarter or year even in a fundamentally healthy, growing business, then rebound once the investment phase ends. Watch the trend, not one period.",
   },

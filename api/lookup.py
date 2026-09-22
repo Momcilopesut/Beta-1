@@ -90,7 +90,7 @@ def lookup():
         # function's timeout (vercel.json's maxDuration - see README's
         # "On-demand lookup deployment" section for raising it if you have
         # Vercel headroom for it, e.g. Fluid Compute or a Pro plan).
-        company_doc, _summary, _warnings, _qual_failed = finalize_company(
+        company_doc, _summary, _warnings, _qual_failed, _narrative_failed = finalize_company(
             state, regime_info, skip_ai, Path(tempfile.gettempdir())
         )
     except Exception as exc:  # noqa: BLE001

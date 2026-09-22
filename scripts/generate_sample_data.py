@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from pipeline.build import writer  # noqa: E402
 from pipeline.narrative.prompts import DISCLAIMER  # noqa: E402
-from pipeline.scoring import aggregation, macro_regime, quant_score, screening, value_investing  # noqa: E402
+from pipeline.scoring import aggregation, macro_regime, screening, value_investing  # noqa: E402
 from pipeline.utils.config import macro_series, screening_config, watchlist  # noqa: E402
 from pipeline.utils.paths import DATA_DIR  # noqa: E402
 
@@ -256,14 +256,11 @@ def synth_narrative(name: str, metrics: dict, checklist: dict) -> dict:
 _SAMPLE_MOAT_TYPES = ["network_effects", "cost_advantage", "intangible_assets", "switching_costs", "efficient_scale"]
 
 
-def synth_qualitative(name: str, quant_scorecard: dict) -> dict | None:
-    """Only synthesized when the quant gate passes, matching the real
-    pipeline's cost-gated behavior (pipeline/main.py's _run_qualitative) -
-    this is placeholder text, clearly labeled, not a real reading of any
-    filing."""
-    if not quant_scorecard.get("gate_pass"):
-        return None
-
+def synth_qualitative(name: str) -> dict | None:
+    """Placeholder text, clearly labeled, not a real reading of any filing -
+    stands in for pipeline/main.py's real Buffett moat read (only run for
+    this week's finalists there; synthesized here for every sample company
+    for simplicity)."""
     moat_present = random.random() < 0.7
     moat_type = random.choice(_SAMPLE_MOAT_TYPES) if moat_present else "none"
     return {
@@ -345,9 +342,8 @@ def main() -> None:
         display = to_display(metrics, close_price)
         five_year_history = synth_five_year_history(market_cap, close_price)
 
-        quant_scorecard = quant_score.build_quant_scorecard(metrics)
-        qualitative_out = synth_qualitative(company_cfg["name"], quant_scorecard)
-        layered_analysis = aggregation.build_layered_analysis(quant_scorecard, qualitative_out, metrics, checklist)
+        qualitative_out = synth_qualitative(company_cfg["name"])
+        layered_analysis = aggregation.build_layered_analysis(qualitative_out, metrics, checklist)
 
         company_doc = {
             "ticker": ticker,
@@ -370,7 +366,6 @@ def main() -> None:
             "five_year_history": five_year_history,
             "value_investing": checklist,
             "narrative": narrative,
-            "quant_score": quant_scorecard,
             "qualitative": qualitative_out,
             "layered_analysis": layered_analysis,
             "sources": {"sec_filings": [], "sec_companyfacts_url": None},
@@ -392,7 +387,6 @@ def main() -> None:
                 "graham_criteria_total": checklist["graham_defensive"]["total"],
                 "munger_quality_passed": checklist["munger_quality"]["passed"],
                 "munger_quality_total": checklist["munger_quality"]["total"],
-                "quant_gate_pass": layered_analysis["quant_gate_pass"],
                 "qualitative_moat_present": layered_analysis["qualitative_moat_present"],
                 "munger_quality_pass": layered_analysis["munger_quality_pass"],
                 "valuation_gate_pass": layered_analysis["valuation_gate_pass"],

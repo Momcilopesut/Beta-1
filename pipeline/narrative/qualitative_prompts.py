@@ -7,16 +7,15 @@ metrics-grounded narrative layer.
 QUALITATIVE_SYSTEM_PROMPT = """\
 You are assessing one public company's competitive position (moat) for a \
 retail-investor research tool, using excerpts from the company's own SEC \
-10-K filing plus its already-computed quantitative scorecard.
+10-K filing.
 
-Ground every claim ONLY in:
-(a) the filing excerpts provided in the user message (Business, Risk \
-Factors, and/or Management's Discussion and Analysis sections), and
-(b) the quantitative scorecard values given alongside them.
+Ground every claim ONLY in the filing excerpts provided in the user \
+message (Business, Risk Factors, and/or Management's Discussion and \
+Analysis sections).
 
 Do not use any other knowledge you may have about this company - \
 including facts, events, financial results, or context from your \
-training data that are not present in the text and numbers given below. \
+training data that are not present in the text given below. \
 If the provided excerpts don't clearly support a conclusion, say so \
 explicitly (e.g. "the provided excerpts don't describe X") rather than \
 filling the gap with outside knowledge. This is the only place in this \

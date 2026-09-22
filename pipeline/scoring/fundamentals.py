@@ -5,8 +5,9 @@ FMP field names are matched defensively (a short list of candidate keys per
 metric) since the exact free-tier response shape should be confirmed against
 a live account before relying on this in production. Any metric that can't
 be resolved from any candidate key, or whose source call failed upstream, is
-left as None here - pipeline.scoring.quant_score treats a missing metric as
-excluded (not failed) rather than crashing.
+left as None here - every checklist that consumes these metrics
+(pipeline.scoring.value_investing) treats a missing metric as excluded (not
+failed) rather than crashing.
 
 Deliberately centered on the balance sheet: "does the company own more than
 it owes, and is the price fair for what's actually owned" (assets vs

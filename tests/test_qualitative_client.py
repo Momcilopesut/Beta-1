@@ -22,7 +22,7 @@ def test_generate_qualitative_assessment_overwrites_extraction_confidence(mock_a
     mock_anthropic_cls.return_value = mock_client
 
     sections = {"business": "b", "risk_factors": None, "mdna": "m", "method": "whole_document_fallback"}
-    result = generate_qualitative_assessment("AAPL", sections, {"gate_pass": True})
+    result = generate_qualitative_assessment("AAPL", sections)
     assert result.extraction_confidence == "whole_document_fallback"
 
 
@@ -35,10 +35,10 @@ def test_generate_qualitative_assessment_wraps_failures(mock_anthropic_cls):
 
     sections = {"business": None, "risk_factors": None, "mdna": None, "method": "whole_document_fallback"}
     with pytest.raises(QualitativeError):
-        generate_qualitative_assessment("AAPL", sections, {"gate_pass": True})
+        generate_qualitative_assessment("AAPL", sections)
 
 
 def test_generate_qualitative_assessment_requires_api_key(monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     with pytest.raises(QualitativeError):
-        generate_qualitative_assessment("AAPL", {"method": "section_match"}, {"gate_pass": True})
+        generate_qualitative_assessment("AAPL", {"method": "section_match"})

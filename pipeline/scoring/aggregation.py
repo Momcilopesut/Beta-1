@@ -1,12 +1,12 @@
-"""Combines the quant gate, Buffett's qualitative moat read, Munger's
-capital-efficiency quality read, and Graham's valuation gate into one place
-WITHOUT averaging them into a single score - each sub-score stays visible
-(quant_gate_pass, qualitative_moat_present, munger_quality_pass,
-valuation_gate_pass) precisely so a reader can see *why* something ranked
-the way it did, not just a blended number that hides a broken moat behind
-a strong balance sheet. See README's layered-analysis section for the
-reasoning; this module is a pure function over the other layers' already-
-computed output, no new data or API calls.
+"""Combines Buffett's qualitative moat read, Munger's capital-efficiency
+quality read, and Graham's valuation gate into one place WITHOUT averaging
+them into a single score - each sub-score stays visible
+(qualitative_moat_present, munger_quality_pass, valuation_gate_pass)
+precisely so a reader can see *why* something ranked the way it did, not
+just a blended number that hides a broken moat behind a strong balance
+sheet. See README's layered-analysis section for the reasoning; this module
+is a pure function over the other layers' already-computed output, no new
+data or API calls.
 
 Also computes the Investment Meter (see build_conviction_score, still keyed
 as "conviction_score" in the output for continuity) - a single 0-100 number
@@ -95,42 +95,28 @@ def build_conviction_score(
 
 
 def build_layered_analysis(
-    quant_scorecard: dict,
     qualitative: dict | None,
     metrics: dict,
     value_investing_checklist: dict | None = None,
 ) -> dict:
     flags: list[str] = []
 
-    quant_gate = quant_scorecard.get("gate_pass")
     moat_present = qualitative.get("moat_present") if qualitative else None
     red_flags = (qualitative.get("red_flags") if qualitative else None) or []
     munger_quality_pass = _munger_quality_pass(value_investing_checklist)
     margin_of_safety = metrics.get("graham_upside_pct")
     valuation_gate = margin_of_safety >= REQUIRED_MARGIN_OF_SAFETY_PCT if margin_of_safety is not None else None
 
-    if quant_gate is False:
-        flags.append("Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.")
-    if quant_gate and moat_present is False:
+    if moat_present is False:
         flags.append(
-            "Passes the quant screen, but the qualitative layer found no durable moat in the filing "
-            "text - current quality may not be durable (Buffett)."
-        )
-    if quant_gate is False and moat_present:
-        flags.append(
-            "A moat was identified despite a weak quant screen - may reflect a temporary setback or a "
-            "data gap rather than a broken business; worth a closer look, not a straight pass."
+            "The qualitative layer found no durable moat in the filing text - current quality may not be "
+            "durable (Buffett)."
         )
     if munger_quality_pass is False:
         flags.append(
             "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) "
             "mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't "
             "actually earn good returns on capital."
-        )
-    if quant_gate is False and munger_quality_pass:
-        flags.append(
-            "Munger's quality checklist mostly passes despite a weak quant screen - the underlying "
-            "business may be sounder than the fast screen alone suggests."
         )
     if red_flags:
         flags.append(f"{len(red_flags)} red flag(s) from the filing text - see qualitative.red_flags.")
@@ -145,12 +131,12 @@ def build_layered_analysis(
             f"{REQUIRED_MARGIN_OF_SAFETY_PCT:.0f}% convention."
         )
 
-    if quant_gate is None or moat_present is None or munger_quality_pass is None or valuation_gate is None:
+    if moat_present is None or munger_quality_pass is None or valuation_gate is None:
         overall = "Incomplete: one or more layers has insufficient data for this company."
-    elif quant_gate and moat_present and munger_quality_pass and valuation_gate:
+    elif moat_present and munger_quality_pass and valuation_gate:
         overall = (
-            "All four checks align: passes the quant screen, a moat was identified (Buffett), Munger's "
-            "quality bar is met, and a margin of safety exists (Graham)."
+            "All three checks align: a moat was identified (Buffett), Munger's quality bar is met, and a "
+            "margin of safety exists (Graham)."
         )
     else:
         overall = "Layers disagree - see flags for specifics."
@@ -158,7 +144,6 @@ def build_layered_analysis(
     conviction = build_conviction_score(value_investing_checklist, moat_present, munger_quality_pass, valuation_gate)
 
     return {
-        "quant_gate_pass": quant_gate,
         "qualitative_moat_present": moat_present,
         "munger_quality_pass": munger_quality_pass,
         "valuation_gate_pass": valuation_gate,

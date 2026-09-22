@@ -44,11 +44,11 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
   together they anchor the Investment Meter (see "Investment Meter" below) — built
   from exactly three investors: Graham, Buffett, Munger. This Meter is also exactly
   what the weekly screen ranks companies by.
-- **Layered analysis** (quant screen → Munger's quality read → Buffett's qualitative
-  moat read → Graham Number valuation gate, see "Layered analysis" below): a deeper,
-  opt-in-by-passing-the-quant-screen pass per company that reads the company's own
-  10-K text — the one place in this pipeline an AI call isn't grounded solely in
-  pre-computed metrics.
+- **Layered analysis** (Munger's quality read → Buffett's qualitative moat read →
+  Graham Number valuation gate, see "Layered analysis" below): a deeper pass per
+  company that reads the company's own 10-K text — the one place in this pipeline an
+  AI call isn't grounded solely in pre-computed metrics. Only runs for the week's
+  finalists, same as the narrative above.
 - **Economic-cycle context**: the macro page frames the current regime against classic
   business-cycle/sector-rotation theory (which sectors have historically led/lagged in
   this phase) — textbook reference, explicitly not a prediction.
@@ -212,54 +212,53 @@ calls per company):
 ## Layered analysis
 
 A deeper pass per company, deliberately kept as separate layers rather than one
-blended score — a great quant score with a broken moat should get flagged, not
+blended score — a great quality checklist with a broken moat should get flagged, not
 averaged away, and a great business at a bad price still isn't a buy. Every company
 detail page shows each layer, plus an `overall` synthesis and a `flags` list
-explaining any disagreement between them.
+explaining any disagreement between them. Exactly three investors, nothing else —
+easy-to-check fundamentals throughout, not exotic ratios (no ROIC, no DCF, no
+EV/EBITDA — see "Assets vs. Liabilities" above for why).
 
-1. **Quant screen** (`pipeline/scoring/quant_score.py`) — a fast, deterministic
-   pass/fail filter, balance-sheet/cash only: current ratio, debt/EBITDA, and FCF
-   margin against thresholds in `config/quant_score_thresholds.yaml`. No API calls,
-   no AI. This gates the qualitative layer below — it only runs for a company that
-   already clears this bar (deliberate cost control, not just a display filter).
-2. **Munger's quality checklist** (`pipeline/scoring/value_investing.py::munger_quality_checklist`) —
+1. **Munger's quality checklist** (`pipeline/scoring/value_investing.py::munger_quality_checklist`) —
    return on equity ≥ 15%, debt/equity ≤ 1.0, no shareholder dilution, and margins
    stable or improving. Pure arithmetic, no AI. See "Investment Meter" below for why
    this specific set of four checks.
-3. **Qualitative** (`pipeline/narrative/qualitative_client.py`) — Claude reads
+2. **Buffett's moat read** (`pipeline/narrative/qualitative_client.py`) — Claude reads
    excerpts from the company's own most recent 10-K (Business, Risk Factors, and
    Management's Discussion and Analysis, extracted by
-   `pipeline/fetch/filing_text.py`) plus the quant scorecard, and classifies the
-   moat (network effects / cost advantage / intangible assets / switching costs /
-   efficient scale / none — the classic Buffett/Munger/Morningstar categories) and
-   lists any red flags the filing itself raises. **This is the one place in the
-   whole pipeline where an AI call reads raw text instead of only pre-computed
-   metrics.** Every other narrative call grounds each fact by requiring a real
-   metric key (`pipeline/narrative/grounding.py` drops anything that doesn't
-   resolve) — that mechanical check doesn't exist for free-form filing prose, so
-   this layer's grounding is prompt discipline only, not code-verified.
-   `qualitative.extraction_confidence` tells you whether the filing-text extraction
-   itself found a clean Item 7 section match or fell back to a raw document prefix,
-   so you know how much to trust it. Results are cached by 10-K URL under
-   `data/qualitative_cache/` — since a 10-K only changes once a year, a weekly
-   refresh skips both the filing fetch and the Claude call entirely once a company
-   already has a current-filing assessment.
-4. **Valuation gate** — not a separate module or AI call, just the Graham Number
-   margin of safety already computed in `fundamentals.py`
+   `pipeline/fetch/filing_text.py`) and classifies the moat (network effects / cost
+   advantage / intangible assets / switching costs / efficient scale / none — the
+   classic Buffett/Munger/Morningstar categories) and lists any red flags the filing
+   itself raises. **This is the one place in the whole pipeline where an AI call
+   reads raw text instead of only pre-computed metrics.** Every other narrative call
+   grounds each fact by requiring a real metric key (`pipeline/narrative/grounding.py`
+   drops anything that doesn't resolve) — that mechanical check doesn't exist for
+   free-form filing prose, so this layer's grounding is prompt discipline only, not
+   code-verified. `qualitative.extraction_confidence` tells you whether the
+   filing-text extraction itself found a clean Item 7 section match or fell back to a
+   raw document prefix, so you know how much to trust it. Results are cached by 10-K
+   URL under `data/qualitative_cache/` — since a 10-K only changes once a year, a
+   weekly refresh skips both the filing fetch and the Claude call entirely once a
+   company already has a current-filing assessment. Only runs for a company that has
+   a 10-K on file — cost control against the whole universe happens one level up, in
+   the weekly screen's two-phase design (see "Weekly Screener" above): this layer
+   only ever runs for that week's per-sector finalists.
+3. **Graham's valuation gate** — not a separate module or AI call, just the Graham
+   Number margin of safety already computed in `fundamentals.py`
    (`graham_upside_pct = sqrt(22.5 × EPS × book value/share)` vs. price). No growth
    projection or discount-rate assumption, unlike a DCF (see "Assets vs.
    Liabilities" above for why that trade-off was made deliberately).
 
-`pipeline/scoring/aggregation.py` combines the four gates (quant pass/fail, Munger's
-quality checklist, Buffett's qualitative moat present/absent, Graham's valuation
-margin of safety) into the `overall` summary and `flags` — e.g. a company that
-passes the quant screen but shows no moat gets flagged explicitly rather than its
-strong quant score quietly winning out in an average. The required margin of safety
-is a single flat number, Graham's own 15% convention — an earlier version of this
-pipeline scaled it dynamically with data coverage and filing red flags (Seth
-Klarman's risk-management framing of margin of safety), which has been removed along
-with everything else not attributable to Graham, Buffett, or Munger specifically.
-See `required_margin_of_safety_pct` in the output.
+`pipeline/scoring/aggregation.py` combines the three gates (Munger's quality
+checklist, Buffett's qualitative moat present/absent, Graham's valuation margin of
+safety) into the `overall` summary and `flags` — e.g. a company with a strong quality
+checklist but no moat gets flagged explicitly rather than the checklist quietly
+winning out in an average. The required margin of safety is a single flat number,
+Graham's own 15% convention — an earlier version of this pipeline scaled it
+dynamically with data coverage and filing red flags (Seth Klarman's risk-management
+framing of margin of safety), which has been removed along with everything else not
+attributable to Graham, Buffett, or Munger specifically. See
+`required_margin_of_safety_pct` in the output.
 
 ### Investment Meter
 
@@ -372,9 +371,6 @@ page's own displayed score. Two things worth knowing about it:
   moves under each regime.
 - `config/macro_series.yaml` — which FRED series are pulled and the regime
   classification thresholds.
-- `config/quant_score_thresholds.yaml` — pass/fail thresholds for the quant screen
-  (layer 1 above, balance-sheet/cash only) and the fraction of evaluated metrics that
-  must pass to gate the qualitative layer.
 - `config/conviction_score.yaml` — the Investment Meter's three multipliers
   (Buffett's moat, Munger's quality checklist, Graham's valuation gate) applied to
   Graham's checklist base score, and the verdict bands (Strong/Favorable/Neutral/
@@ -413,7 +409,7 @@ small Flask app deployed as a [Vercel](https://vercel.com) Python serverless fun
 section is fine; the rest of the site works without it, and an untracked search will
 just say live lookup isn't configured.
 
-This runs the **full pipeline** for that one ticker, right then — quant screen,
+This runs the **full pipeline** for that one ticker, right then — narrative,
 qualitative (10-K moat reasoning), and the complete Investment Meter, identical to a
 tracked company. The narrative and qualitative Claude calls run concurrently
 (`pipeline/main.py::finalize_company`) to keep this as fast as possible, but it's
@@ -425,9 +421,9 @@ options before paying for anything: enable **Fluid Compute** (Vercel project →
 **Settings → Functions** → toggle it on) to raise Hobby's ceiling to 300s, then bump
 `maxDuration` in `vercel.json` to match and redeploy; or fall back to a faster,
 partial analysis by passing `skip_qualitative=True` to `finalize_company` in
-`api/lookup.py` (narrative + quant screen only, no 10-K fetch — sacrifices the
-qualitative moat read and lowers the Investment Meter's data coverage, but removes
-the slowest step). A Pro plan raises the ceiling further (300s by default, more with
+`api/lookup.py` (narrative only, no 10-K fetch — sacrifices the qualitative moat read
+and lowers the Investment Meter's data coverage, but removes the slowest step). A Pro
+plan raises the ceiling further (300s by default, more with
 Fluid Compute) if you have one.
 
 **Why a separate deployment, and why it's gated:** every live lookup spends real FMP/

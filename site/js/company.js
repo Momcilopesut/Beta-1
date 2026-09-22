@@ -80,6 +80,26 @@ function renderPriceHeader(price) {
   return `<p class="detail-price">$${formatNumber(close, { decimals: 2 })}${asOf}</p>`;
 }
 
+// An honest fallback: this page can't tell "never attempted" (this company
+// wasn't one of this week's per-sector finalists - only finalists get an AI
+// summary) apart from "attempted and failed" (e.g. the Anthropic call
+// errored) just from the company doc alone, so the message covers both
+// rather than claiming a specific, possibly-wrong reason.
+function renderNarrative(narrative) {
+  const hasSummary = Boolean(narrative?.one_line_summary);
+  const oneLiner = hasSummary
+    ? escapeHtml(narrative.one_line_summary)
+    : "No AI summary yet — either this company wasn't one of this week's per-sector finalists (only finalists get one), or generation didn't succeed on the last run.";
+  const body = narrative?.narrative ? `<p>${escapeHtml(narrative.narrative)}</p>` : "";
+  return `
+    <section class="narrative">
+      <h3>AI Summary</h3>
+      <p class="one-liner">${oneLiner}</p>
+      ${body}
+    </section>
+  `;
+}
+
 function render(doc) {
   const onDemandBanner = doc.on_demand
     ? `<p class="on-demand-banner">Live on-demand analysis — not part of the tracked watchlist, computed just now.</p>`
@@ -102,11 +122,7 @@ function render(doc) {
 
     ${renderFiveYearHistory(doc.five_year_history)}
 
-    <section class="narrative">
-      <h3>AI Summary</h3>
-      <p class="one-liner">${escapeHtml(doc.narrative.one_line_summary) || "Not yet generated — run the pipeline without --skip-ai."}</p>
-      <p>${escapeHtml(doc.narrative.narrative)}</p>
-    </section>
+    ${renderNarrative(doc.narrative)}
 
     <section class="facts">
       <h3>What Matters</h3>
@@ -1033,24 +1049,6 @@ function gateClass(pass) {
   return "gate-unknown";
 }
 
-function renderQuantScorecard(quantScore) {
-  if (!quantScore) return "";
-  const rows = Object.entries(quantScore.metrics || {})
-    .map(([key, m]) => {
-      const comparator = m.higher_is_better ? "&ge;" : "&le;";
-      return `<li>${renderChecklistIcon(m.pass)}<span class="checklist-text"><span class="checklist-label">${escapeHtml(m.label)}</span><span class="checklist-detail">${m.value === null ? "no data" : formatNumber(m.value, { decimals: 1 })} (threshold ${comparator} ${m.threshold})</span></span></li>`;
-    })
-    .join("");
-  return `
-    <div class="layered-card">
-      <h4>Quant Screen <span class="layered-gate ${gateClass(quantScore.gate_pass)}">${gateLabel(quantScore.gate_pass)}</span></h4>
-      <p class="checklist-note">${quantScore.evaluated ? `${quantScore.passed}/${quantScore.evaluated} evaluated metrics pass (${formatNumber(quantScore.quant_score_pct, { decimals: 0, suffix: "%" })})` : "Not enough data to evaluate."}</p>
-      <ul class="checklist">${rows}</ul>
-      <p class="meta">A fast, deterministic balance-sheet/cash filter — no AI, no news. Gates whether the qualitative layer below ran at all.</p>
-    </div>
-  `;
-}
-
 function renderMungerQuality(munger, mungerQualityPass) {
   if (!munger) return "";
   return `
@@ -1072,12 +1070,12 @@ const MOAT_LABELS = {
   none: "None identified",
 };
 
-function renderQualitative(qualitative) {
+function renderBuffettMoat(qualitative) {
   if (!qualitative) {
     return `
       <div class="layered-card">
-        <h4>Qualitative (10-K) <span class="layered-gate gate-unknown">Not run</span></h4>
-        <p class="meta">Only runs for companies that pass the quant screen (cost control — this layer reads real
+        <h4>Buffett: Moat Read (10-K) <span class="layered-gate gate-unknown">Not run</span></h4>
+        <p class="meta">Only runs for this week's per-sector finalists (cost control — this layer reads real
         filing text and spends extra AI budget per company).</p>
       </div>
     `;
@@ -1087,7 +1085,7 @@ function renderQualitative(qualitative) {
     .join("");
   return `
     <div class="layered-card">
-      <h4>Qualitative (10-K) <span class="layered-gate ${gateClass(qualitative.moat_present)}">${qualitative.moat_present ? "Moat found" : "No moat found"}</span></h4>
+      <h4>Buffett: Moat Read (10-K) <span class="layered-gate ${gateClass(qualitative.moat_present)}">${qualitative.moat_present ? "Moat found" : "No moat found"}</span></h4>
       <p><strong>${escapeHtml(MOAT_LABELS[qualitative.moat_type] || qualitative.moat_type)}</strong></p>
       <p>${escapeHtml(qualitative.moat_explanation)}</p>
       ${redFlags ? `<p class="checklist-label">Red flags from the filing</p><ul>${redFlags}</ul>` : `<p class="meta">No red flags called out in the excerpts.</p>`}
@@ -1099,17 +1097,16 @@ function renderQualitative(qualitative) {
 
 function renderLayeredAnalysis(doc) {
   const layered = doc.layered_analysis;
-  if (!layered && !doc.quant_score) return "";
-  const flags = (layered?.flags || []).map((f) => `<li>${escapeHtml(f)}</li>`).join("");
+  if (!layered) return "";
+  const flags = (layered.flags || []).map((f) => `<li>${escapeHtml(f)}</li>`).join("");
   return `
     <section class="layered-analysis">
-      <h3>Layered Analysis <span class="attribution">(the quant screen, Munger's quality checklist, and Buffett's moat read stay visible separately, then combine with Graham's valuation gate above — via gates and multipliers, never a naive average — into the Investment Meter)</span></h3>
-      ${layered ? `<p class="layered-overall">${escapeHtml(layered.overall)}</p>` : ""}
+      <h3>Layered Analysis <span class="attribution">(Munger's quality checklist and Buffett's moat read stay visible separately, then combine with Graham's own checklist and valuation gate above — via multipliers, never a naive average — into the Investment Meter)</span></h3>
+      <p class="layered-overall">${escapeHtml(layered.overall)}</p>
       ${flags ? `<ul class="layered-flags">${flags}</ul>` : ""}
       <div class="layered-columns">
-        ${renderQuantScorecard(doc.quant_score)}
-        ${renderMungerQuality(doc.value_investing?.munger_quality, layered?.munger_quality_pass)}
-        ${renderQualitative(doc.qualitative)}
+        ${renderMungerQuality(doc.value_investing?.munger_quality, layered.munger_quality_pass)}
+        ${renderBuffettMoat(doc.qualitative)}
       </div>
     </section>
   `;

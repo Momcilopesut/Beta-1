@@ -181,16 +181,14 @@ function renderCard(company, rank) {
 
 function renderLayeredBadge(company) {
   const {
-    quant_gate_pass: quant,
     qualitative_moat_present: moat,
     munger_quality_pass: munger,
     valuation_gate_pass: value,
   } = company;
-  if (quant === undefined && moat === undefined && munger === undefined && value === undefined) return "";
+  if (moat === undefined && munger === undefined && value === undefined) return "";
   const parts = [];
-  if (quant === true) parts.push("quant");
   if (munger === true) parts.push("munger");
-  if (moat === true) parts.push("moat");
+  if (moat === true) parts.push("moat (Buffett)");
   if (value === true) parts.push("value");
   if (!parts.length) return `<span class="mini-badge" title="Layered analysis: no gates passed yet">layered: —</span>`;
   return `<span class="mini-badge" title="Layered analysis gates passed">${escapeHtml(parts.join(" + "))} ✓</span>`;

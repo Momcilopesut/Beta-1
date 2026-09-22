@@ -4,7 +4,6 @@ qualitative_schema.py for why this carries a different grounding guarantee
 than the metrics-only narrative layer.
 """
 
-import json
 import os
 
 import anthropic
@@ -25,10 +24,9 @@ def _client() -> anthropic.Anthropic:
     return anthropic.Anthropic()
 
 
-def generate_qualitative_assessment(ticker: str, sections: dict, quant_scorecard: dict) -> QualitativeAssessment:
+def generate_qualitative_assessment(ticker: str, sections: dict) -> QualitativeAssessment:
     """sections: pipeline.fetch.filing_text.extract_sections()'s return value
-    for this company's most recent 10-K. quant_scorecard:
-    pipeline.scoring.quant_score.build_quant_scorecard()'s return value."""
+    for this company's most recent 10-K."""
     client = _client()
     model = os.environ.get("ANTHROPIC_MODEL", DEFAULT_MODEL)
 
@@ -57,7 +55,6 @@ def generate_qualitative_assessment(ticker: str, sections: dict, quant_scorecard
                     "role": "user",
                     "content": (
                         f"Ticker: {ticker}\n\n"
-                        f"Quantitative scorecard (JSON):\n{json.dumps(quant_scorecard, default=str)}\n\n"
                         f"10-K filing excerpts (extraction method: {sections.get('method')}):\n{excerpts}"
                     ),
                 }

@@ -34,7 +34,7 @@ from pipeline.narrative.anthropic_client import NarrativeError, generate_narrati
 from pipeline.narrative.grounding import enforce_grounding
 from pipeline.narrative.prompts import DISCLAIMER
 from pipeline.narrative.qualitative_client import QualitativeError, generate_qualitative_assessment
-from pipeline.scoring import aggregation, history, macro_regime, quant_score, screening, value_investing
+from pipeline.scoring import aggregation, history, macro_regime, screening, value_investing
 from pipeline.scoring.fundamentals import build_metrics, normalize_price_rows
 from pipeline.utils.config import macro_series, screening_config, watchlist
 from pipeline.utils.paths import DATA_DIR
@@ -42,7 +42,7 @@ from pipeline.utils.paths import DATA_DIR
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
-PIPELINE_VERSION = "3.0.0"
+PIPELINE_VERSION = "3.1.0"
 
 EMPTY_FACT_TIERS = {"critical": [], "important": [], "minor": [], "noise": []}
 
@@ -153,10 +153,6 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict, benchmark_pric
     if stooq_error:
         errors["stooq"] = stooq_error
 
-    # Layer 2 (quant screen, pure function - see pipeline/scoring/quant_score.py).
-    # Gates layer 3 below: the expensive AI call only runs on names that
-    # already clear this bar (deliberate cost control, not just a display filter).
-    quant_scorecard = quant_score.build_quant_scorecard(metrics)
     latest_10k = next((f for f in recent_filings if f["form"] == "10-K"), None)
 
     five_year_history = history.build_five_year_history(
@@ -171,7 +167,6 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict, benchmark_pric
         "metrics": metrics,
         "display": display,
         "checklist": checklist,
-        "quant_scorecard": quant_scorecard,
         "latest_10k": latest_10k,
         "raw": raw,
         "recent_filings": recent_filings,
@@ -182,14 +177,13 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict, benchmark_pric
 
 
 def _narrative_payload(
-    ticker: str, name: str, sector: str | None, metrics: dict, quant_scorecard: dict, regime_info: dict, macro_adj: dict
+    ticker: str, name: str, sector: str | None, metrics: dict, regime_info: dict, macro_adj: dict
 ) -> dict:
     return {
         "ticker": ticker,
         "name": name,
         "sector": sector,
         "metrics": {k: v for k, v in metrics.items() if v is not None},
-        "quant_gate_pass": quant_scorecard.get("gate_pass"),
         "macro": {
             "regime": regime_info["regime"],
             "rate_sensitivity": macro_adj["rate_sensitivity"],
@@ -224,15 +218,15 @@ def _run_narrative(ticker: str, payload: dict) -> tuple[dict, int]:
     return narrative_out, dropped
 
 
-def _run_qualitative(state: dict, quant_scorecard: dict, out_dir) -> tuple[dict | None, bool]:
-    """Layer 3. Only runs when quant_scorecard's gate passed (deliberate
-    cost control - see fetch_and_score_company's comment) and there's a
-    10-K to read. Returns (qualitative, failed) - failed is True only when
-    the layer was attempted and errored, never for a deliberate skip (gate
-    not passed, no 10-K found), so callers can distinguish "nothing to do
-    here" from "something broke"."""
+def _run_qualitative(state: dict, out_dir) -> tuple[dict | None, bool]:
+    """Layer 3 (Buffett's moat read). Only runs when there's a 10-K to read -
+    cost control already happens one level up (only this week's per-sector
+    finalists get here at all, see run_full's two-phase docstring). Returns
+    (qualitative, failed) - failed is True only when the layer was attempted
+    and errored, never for a deliberate skip (no 10-K found), so callers can
+    distinguish "nothing to do here" from "something broke"."""
     ticker, latest_10k = state["ticker"], state.get("latest_10k")
-    if not quant_scorecard.get("gate_pass") or not latest_10k:
+    if not latest_10k:
         return None, False
 
     cached = qualitative_cache.read(out_dir, ticker)
@@ -241,7 +235,7 @@ def _run_qualitative(state: dict, quant_scorecard: dict, out_dir) -> tuple[dict 
 
     try:
         sections = filing_text.fetch_filing_sections(latest_10k["url"])
-        qualitative = generate_qualitative_assessment(ticker, sections, quant_scorecard)
+        qualitative = generate_qualitative_assessment(ticker, sections)
     except (filing_text.FilingTextError, QualitativeError) as exc:
         logger.warning("Qualitative layer skipped for %s: %s", ticker, exc)
         return None, True
@@ -253,14 +247,22 @@ def _run_qualitative(state: dict, quant_scorecard: dict, out_dir) -> tuple[dict 
 
 def finalize_company(
     state: dict, regime_info: dict, skip_ai: bool, out_dir, skip_qualitative: bool = False
-) -> tuple[dict, dict, int, bool]:
-    """Returns (company_doc, watchlist_summary, narrative_warnings, qualitative_failed).
+) -> tuple[dict, dict, int, bool, bool]:
+    """Returns (company_doc, watchlist_summary, narrative_warnings,
+    qualitative_failed, narrative_failed).
 
     The narrative call and the qualitative call are independent (neither
     reads the other's output) and run concurrently to cut wall-clock time -
     this matters most for api/lookup.py's on-demand endpoint, which has a
     hard Vercel function timeout for a single request, but also just makes
     the batch pipeline faster.
+
+    narrative_failed is True only when this call actually attempted a
+    narrative (skip_ai=False) and it came back empty - e.g. the Anthropic
+    call errored (bad/missing key, no credit balance, rate limit). This is
+    what lets run_full report an honest sources_status["anthropic"] instead
+    of just "ok" whenever --skip-ai wasn't passed, regardless of whether any
+    call actually succeeded.
 
     skip_qualitative: available for a caller that wants to skip layer 3
     entirely (e.g. if a deployment's Vercel timeout is too tight even with
@@ -275,8 +277,6 @@ def finalize_company(
     generated_at = writer.now_iso()
     clean_metrics = {k: v for k, v in metrics.items() if v is not None}
 
-    quant_scorecard = state["quant_scorecard"]
-
     narrative_warnings = 0
     qualitative_failed = False
     if skip_ai:
@@ -288,18 +288,20 @@ def finalize_company(
         }
         qualitative_out = None
     else:
-        payload = _narrative_payload(ticker, name, sector, metrics, quant_scorecard, regime_info, macro_adj)
+        payload = _narrative_payload(ticker, name, sector, metrics, regime_info, macro_adj)
         if skip_qualitative:
             narrative_out, narrative_warnings = _run_narrative(ticker, payload)
             qualitative_out = None
         else:
             with ThreadPoolExecutor(max_workers=2) as pool:
                 narrative_future = pool.submit(_run_narrative, ticker, payload)
-                qualitative_future = pool.submit(_run_qualitative, state, quant_scorecard, out_dir)
+                qualitative_future = pool.submit(_run_qualitative, state, out_dir)
                 narrative_out, narrative_warnings = narrative_future.result()
                 qualitative_out, qualitative_failed = qualitative_future.result()
 
-    layered_analysis = aggregation.build_layered_analysis(quant_scorecard, qualitative_out, metrics, state["checklist"])
+    narrative_failed = not skip_ai and narrative_out["one_line_summary"] is None
+
+    layered_analysis = aggregation.build_layered_analysis(qualitative_out, metrics, state["checklist"])
 
     company_doc = {
         "ticker": ticker,
@@ -322,7 +324,6 @@ def finalize_company(
         "five_year_history": state["five_year_history"],
         "value_investing": state["checklist"],
         "narrative": narrative_out,
-        "quant_score": quant_scorecard,
         "qualitative": qualitative_out,
         "layered_analysis": layered_analysis,
         "sources": {"sec_filings": state["recent_filings"], "sec_companyfacts_url": state["companyfacts_url"]},
@@ -340,7 +341,6 @@ def finalize_company(
         "graham_criteria_total": state["checklist"]["graham_defensive"]["total"],
         "munger_quality_passed": state["checklist"]["munger_quality"]["passed"],
         "munger_quality_total": state["checklist"]["munger_quality"]["total"],
-        "quant_gate_pass": layered_analysis["quant_gate_pass"],
         "qualitative_moat_present": layered_analysis["qualitative_moat_present"],
         "munger_quality_pass": layered_analysis["munger_quality_pass"],
         "valuation_gate_pass": layered_analysis["valuation_gate_pass"],
@@ -349,34 +349,37 @@ def finalize_company(
         "last_updated": generated_at,
     }
 
-    return company_doc, summary, narrative_warnings, qualitative_failed
+    return company_doc, summary, narrative_warnings, qualitative_failed, narrative_failed
 
 
 def _process_company(
     company_cfg: dict, regime_info: dict, benchmark_prices: list[dict], skip_ai: bool, out_dir
-) -> tuple[dict | None, int, bool, dict]:
+) -> tuple[dict | None, int, bool, bool, dict]:
     """Fetch, score, finalize, and write one company end-to-end. Used for
     both the cheap screen (skip_ai=True, whole universe) and the AI-enriched
     finalist pass (skip_ai=False) - the same work either way, just whether
     finalize_company spends the Anthropic calls. Returns (summary, warnings,
-    qualitative_skipped, errors); summary is None if fetching or finalizing
-    failed outright for this ticker (already logged), in which case the
-    other fields are empty/zero and the caller should just skip it."""
+    qualitative_skipped, narrative_failed, errors); summary is None if
+    fetching or finalizing failed outright for this ticker (already logged),
+    in which case the other fields are empty/zero and the caller should just
+    skip it."""
     ticker = company_cfg["ticker"]
     try:
         state = fetch_and_score_company(company_cfg, regime_info, benchmark_prices)
     except Exception:
         logger.exception("Failed to process %s entirely, skipping", ticker)
-        return None, 0, False, {}
+        return None, 0, False, False, {}
 
     try:
-        company_doc, summary, warnings, qual_skipped = finalize_company(state, regime_info, skip_ai, out_dir)
+        company_doc, summary, warnings, qual_skipped, narrative_failed = finalize_company(
+            state, regime_info, skip_ai, out_dir
+        )
     except Exception:
         logger.exception("Failed to finalize %s entirely, skipping", ticker)
-        return None, 0, False, state["errors"]
+        return None, 0, False, False, state["errors"]
 
     writer.write_company(out_dir, ticker, company_doc)
-    return summary, warnings, qual_skipped, state["errors"]
+    return summary, warnings, qual_skipped, narrative_failed, state["errors"]
 
 
 def run_full(args) -> int:
@@ -414,6 +417,7 @@ def run_full(args) -> int:
     stooq_error_count = 0
     total_narrative_warnings = 0
     total_qualitative_skipped = 0
+    total_narrative_failed = 0
 
     def _track_errors(errs: dict) -> None:
         nonlocal fmp_error_count, sec_error_count, stooq_error_count
@@ -430,7 +434,7 @@ def run_full(args) -> int:
     # finalist below.
     summaries = []
     for company_cfg in companies:
-        summary, warnings, qual_skipped, errs = _process_company(
+        summary, warnings, qual_skipped, _narrative_failed, errs = _process_company(
             company_cfg, regime_info, benchmark_prices, skip_ai=True, out_dir=out_dir
         )
         _track_errors(errs)
@@ -458,7 +462,7 @@ def run_full(args) -> int:
         summaries_by_ticker = {s["ticker"]: s for s in summaries}
         companies_by_ticker = {c["ticker"]: c for c in companies}
         for ticker, sector in finalist_sector.items():
-            summary, warnings, qual_skipped, errs = _process_company(
+            summary, warnings, qual_skipped, narrative_failed, errs = _process_company(
                 companies_by_ticker[ticker], regime_info, benchmark_prices, skip_ai=False, out_dir=out_dir
             )
             _track_errors(errs)
@@ -466,6 +470,7 @@ def run_full(args) -> int:
                 continue
             total_narrative_warnings += warnings
             total_qualitative_skipped += int(qual_skipped)
+            total_narrative_failed += int(narrative_failed)
             summaries_by_ticker[ticker] = summary
             for i, pick in enumerate(picks_by_sector[sector]):
                 if pick["ticker"] == ticker:
@@ -479,6 +484,17 @@ def run_full(args) -> int:
         sources_status["sec_edgar"] = "degraded"
     if stooq_error_count:
         sources_status["stooq"] = "degraded"
+    # Reflects whether narrative generation actually succeeded, not just
+    # whether it was attempted - a run with --skip-ai stays "skipped", but
+    # otherwise this only reads "ok" when every finalist's call actually
+    # came back with a summary (e.g. a bad/expired key or an empty Anthropic
+    # credit balance shows up here as "failed" rather than a misleading
+    # "ok").
+    if not args.skip_ai and finalist_sector:
+        if total_narrative_failed >= len(finalist_sector):
+            sources_status["anthropic"] = "failed"
+        elif total_narrative_failed:
+            sources_status["anthropic"] = "degraded"
 
     writer.write_watchlist(out_dir, summaries, generated_at)
     writer.write_weekly_picks(out_dir, picks_by_sector, generated_at, len(companies), top_n_per_sector)
@@ -525,7 +541,6 @@ def run_ai_only(args) -> int:
             "name": company_doc.get("name", ticker),
             "sector": company_doc.get("sector"),
             "metrics": company_doc.get("metrics", {}),
-            "quant_gate_pass": company_doc.get("quant_score", {}).get("gate_pass"),
             "macro": company_doc.get("macro_context", {}),
         }
 

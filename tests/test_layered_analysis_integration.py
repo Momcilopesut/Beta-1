@@ -1,10 +1,10 @@
 """End-to-end integration test for the layered-analysis wiring in
-pipeline/main.py (quant scorecard -> qualitative -> aggregation). Mocks
-every network/API boundary (FMP, SEC EDGAR, Stooq, filing text, and both
-Anthropic calls) and exercises the real fetch_and_score_company ->
-finalize_company call chain used by the actual pipeline, to catch wiring
-bugs (wrong argument order, missing dict keys, tuple-unpacking mismatches)
-that per-module unit tests can't see."""
+pipeline/main.py (qualitative -> aggregation). Mocks every network/API
+boundary (FMP, SEC EDGAR, Stooq, filing text, and both Anthropic calls) and
+exercises the real fetch_and_score_company -> finalize_company call chain
+used by the actual pipeline, to catch wiring bugs (wrong argument order,
+missing dict keys, tuple-unpacking mismatches) that per-module unit tests
+can't see."""
 
 from unittest.mock import patch
 
@@ -138,21 +138,18 @@ def test_full_layered_pipeline_wiring(
     company_cfg = {"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology"}
 
     state = fetch_and_score_company(company_cfg, regime_info)
-    assert state["quant_scorecard"]["evaluated"] >= 1
     assert state["latest_10k"]["form"] == "10-K"
 
-    company_doc, summary, narrative_warnings, qualitative_failed = finalize_company(
+    company_doc, summary, narrative_warnings, qualitative_failed, narrative_failed = finalize_company(
         state, regime_info, skip_ai=False, out_dir=tmp_path
     )
 
     assert qualitative_failed is False
-    assert company_doc["quant_score"]["evaluated"] >= 1
+    assert narrative_failed is False
     assert company_doc["metrics"]["total_assets"] == 2_000_000_000
     assert company_doc["metrics"]["total_liabilities"] == 1_200_000_000
     assert company_doc["metrics"]["shareholders_equity"] == 800_000_000
     assert company_doc["qualitative"]["moat_present"] is True
-    assert company_doc["layered_analysis"]["quant_gate_pass"] in (True, False)
-    assert summary["quant_gate_pass"] == company_doc["layered_analysis"]["quant_gate_pass"]
     assert 0.0 <= company_doc["layered_analysis"]["conviction_score"] <= 100.0
     assert company_doc["layered_analysis"]["conviction_verdict"] in ("Strong", "Favorable", "Neutral", "Cautious", "Weak")
     assert summary["conviction_score"] == company_doc["layered_analysis"]["conviction_score"]
@@ -172,24 +169,29 @@ def test_full_layered_pipeline_wiring(
 @patch("pipeline.main.stooq.fetch_daily_prices")
 @patch("pipeline.main.sec_edgar.fetch_company")
 @patch("pipeline.main.fmp.fetch_company")
-def test_qualitative_layer_skipped_when_quant_gate_fails(
+def test_qualitative_layer_skipped_when_no_10k_found(
     mock_fmp, mock_sec, mock_stooq, mock_narrative, mock_filing_sections, tmp_path
 ):
-    """A company with almost no data shouldn't trigger the filing fetch or
-    any qualitative Claude call at all - the deliberate quant-gate cost
-    control from fetch_and_score_company's docstring."""
+    """A company with no 10-K in its recent filings shouldn't trigger the
+    filing fetch or any qualitative Claude call at all - the remaining
+    gate on this layer (cost control against the whole universe now happens
+    one level up, in run_full's two-phase screen: only this week's
+    finalists reach finalize_company with skip_ai=False at all)."""
     mock_fmp.return_value = _empty_fmp_data()
-    sparse_sec = _sec_data()
-    sparse_sec["company_facts"] = {"facts": {"us-gaap": {}, "dei": {}}}
-    from pipeline.fetch.sec_edgar import xbrl_fundamentals
-
-    sparse_sec["xbrl_fundamentals"] = xbrl_fundamentals(sparse_sec["company_facts"])
-    mock_sec.return_value = sparse_sec
-    mock_stooq.return_value = []
+    no_10k_sec = _sec_data()
+    no_10k_sec["submissions"]["filings"]["recent"] = {
+        "form": ["10-Q"],
+        "accessionNumber": ["0000320193-26-000002"],
+        "primaryDocument": ["aapl-20260331.htm"],
+        "filingDate": ["2026-05-01"],
+    }
+    mock_sec.return_value = no_10k_sec
+    mock_stooq.return_value = _stooq_prices()
     mock_narrative.return_value = _mocked_narrative()
 
     regime_info = {"regime": "Neutral/Expansion", "signals": {}}
-    state = fetch_and_score_company({"ticker": "ZZZZ", "name": "Sparse Co", "sector": "Technology"}, regime_info)
+    state = fetch_and_score_company({"ticker": "ZZZZ", "name": "No 10-K Co", "sector": "Technology"}, regime_info)
+    assert state["latest_10k"] is None
 
     company_doc, *_ = finalize_company(state, regime_info, skip_ai=False, out_dir=tmp_path)
 
@@ -214,15 +216,12 @@ def test_qualitative_layer_failure_degrades_gracefully(
     regime_info = {"regime": "Neutral/Expansion", "signals": {}}
     state = fetch_and_score_company({"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology"}, regime_info)
 
-    company_doc, summary, warnings, qualitative_failed = finalize_company(
+    company_doc, summary, warnings, qualitative_failed, narrative_failed = finalize_company(
         state, regime_info, skip_ai=False, out_dir=tmp_path
     )
 
     assert company_doc["qualitative"] is None
-    # Only asserted when the quant gate actually passed (fetch_filing_sections
-    # was reached at all) - otherwise there's nothing to have failed.
-    if mock_filing_sections.called:
-        assert qualitative_failed is True
+    assert qualitative_failed is True
 
 
 @patch("pipeline.main.filing_text.fetch_filing_sections")
@@ -253,12 +252,13 @@ def test_narrative_failure_does_not_affect_concurrent_qualitative_success(
     regime_info = {"regime": "Neutral/Expansion", "signals": {}}
     state = fetch_and_score_company({"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology"}, regime_info)
 
-    company_doc, _summary, _warnings, qualitative_failed = finalize_company(
+    company_doc, _summary, _warnings, qualitative_failed, narrative_failed = finalize_company(
         state, regime_info, skip_ai=False, out_dir=tmp_path
     )
 
     # Narrative degraded gracefully (same resilience as before parallelizing).
     assert company_doc["narrative"]["one_line_summary"] is None
+    assert narrative_failed is True
     # But qualitative - running concurrently in a separate thread - completed
     # normally and was unaffected.
     assert qualitative_failed is False
@@ -282,7 +282,7 @@ def test_qualitative_failure_does_not_affect_concurrent_narrative_success(
     regime_info = {"regime": "Neutral/Expansion", "signals": {}}
     state = fetch_and_score_company({"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology"}, regime_info)
 
-    company_doc, _summary, _warnings, qualitative_failed = finalize_company(
+    company_doc, _summary, _warnings, qualitative_failed, narrative_failed = finalize_company(
         state, regime_info, skip_ai=False, out_dir=tmp_path
     )
 
@@ -290,3 +290,4 @@ def test_qualitative_failure_does_not_affect_concurrent_narrative_success(
     assert qualitative_failed is True
     # Narrative - running concurrently - completed normally regardless.
     assert company_doc["narrative"]["one_line_summary"] == "Test summary."
+    assert narrative_failed is False
