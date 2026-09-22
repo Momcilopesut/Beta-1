@@ -1,0 +1,290 @@
+{
+  "_errors": {},
+  "cik": "0000073309",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 2364858000,
+        "debt": 5684811000,
+        "earnings": 6827461000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "spending": 27165134000,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 4280852000,
+        "debt": 6691350000,
+        "earnings": 7607337000,
+        "fiscal_year": "2022-12-30",
+        "market_return_pct": -19.48164055920498,
+        "spending": 31006000000,
+        "stock_return_pct": 15.47087166009636
+      },
+      {
+        "cash": 6383000000,
+        "debt": 6842000000,
+        "earnings": 4524801000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "spending": 28484000000,
+        "stock_return_pct": 33.093088536529855
+      },
+      {
+        "cash": 3558000000,
+        "debt": 6950000000,
+        "earnings": 2027000000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "spending": 27755000000,
+        "stock_return_pct": -33.47204012996637
+      },
+      {
+        "cash": 2260000000,
+        "debt": 7121000000,
+        "earnings": 1744000000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "spending": 29835000000,
+        "stock_return_pct": 39.75666181132724
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 2.507815478459779,
+      "debt_to_ebitda": 1.7204638801642909,
+      "debt_to_equity": 0.3210909584332172
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 101.954425942156,
+      "shareholders_equity": 20936000000,
+      "total_assets": 35104000000,
+      "total_liabilities": 12980000000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": -0.5785683510801994
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -36.11494655758586
+    },
+    "profitability": {
+      "roe_pct": 13.529108223483604,
+      "trend": "declining"
+    },
+    "valuation": {
+      "graham_multiple": 48.55810652489774,
+      "graham_number": 131.4291771839487,
+      "graham_upside_pct": -46.06484849640976,
+      "ncav_margin_pct": -102.19770023963031,
+      "pb_ratio": 2.507991180062418,
+      "pe_ttm": 19.361354581673307
+    }
+  },
+  "industry": "Steel",
+  "last_updated": "2026-09-22T14:25:08Z",
+  "layered_analysis": {
+    "conviction_score": 30.3,
+    "conviction_score_breakdown": {
+      "base_score": 50.0,
+      "components": {
+        "graham_pct": 50.0
+      },
+      "moat_multiplier": 1.0,
+      "munger_multiplier": 1.1,
+      "valuation_multiplier": 0.55
+    },
+    "conviction_verdict": "Cautious",
+    "flags": [
+      "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": true,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 55337646885,
+  "metrics": {
+    "book_value_per_share": 101.954425942156,
+    "current_ratio": 2.507815478459779,
+    "debt_to_ebitda": 1.7204638801642909,
+    "debt_to_equity": 0.3210909584332172,
+    "eps_growth_cagr_3yr_pct": -36.11494655758586,
+    "fcf_margin_pct": -0.5785683510801994,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 48.55810652489774,
+    "graham_upside_pct": -46.06484849640976,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -102.19770023963031,
+    "pb_ratio": 2.507991180062418,
+    "pe_ttm": 19.361354581673307,
+    "roe_pct": 13.529108223483604,
+    "shareholders_equity": 20936000000,
+    "total_assets": 35104000000,
+    "total_liabilities": 12980000000
+  },
+  "name": "Nucor Corporation",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
+    },
+    "narrative": null,
+    "one_line_summary": null
+  },
+  "price": {
+    "as_of": "2026-09-22",
+    "close": 243.68
+  },
+  "qualitative": null,
+  "quant_score": {
+    "evaluated": 3,
+    "gate_pass": true,
+    "informational": {
+      "margin_trend_score": 20
+    },
+    "metrics": {
+      "current_ratio": {
+        "higher_is_better": true,
+        "label": "Current ratio (current assets / current liabilities)",
+        "pass": true,
+        "threshold": 1.5,
+        "value": 2.507815478459779
+      },
+      "debt_to_ebitda": {
+        "higher_is_better": false,
+        "label": "Debt / EBITDA",
+        "pass": true,
+        "threshold": 3.0,
+        "value": 1.7204638801642909
+      },
+      "fcf_margin_pct": {
+        "higher_is_better": true,
+        "label": "Free cash flow margin",
+        "pass": false,
+        "threshold": 10.0,
+        "value": -0.5785683510801994
+      }
+    },
+    "passed": 2,
+    "quant_score_pct": 66.66666666666666
+  },
+  "sector": "Basic Materials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000073309.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-12",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/73309/000119312526345891/nue-20260704.htm"
+      },
+      {
+        "filed": "2026-05-13",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/73309/000119312526220778/nue-20260404.htm"
+      },
+      {
+        "filed": "2026-02-25",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/73309/000119312526071575/nue-20251231.htm"
+      },
+      {
+        "filed": "2025-11-12",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/73309/000119312525276207/nue-20251004.htm"
+      },
+      {
+        "filed": "2025-08-13",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/73309/000095017025107646/nue-20250705.htm"
+      }
+    ]
+  },
+  "ticker": "NUE",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $55.3B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 2.51, debt $7.1B vs working capital $7.8B",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years (Graham's original window was 10 years)",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr, Graham's 33%/10yr pace)",
+          "detail": "EPS 3yr CAGR -36.1%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 19.4",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 48.6",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 13.5%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.32",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "230,900,000 shares vs. 238,500,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 20",
+          "passed": false
+        }
+      ],
+      "evaluated": 4,
+      "passed": 2,
+      "total": 4
+    }
+  }
+}

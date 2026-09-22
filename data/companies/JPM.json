@@ -73,28 +73,28 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 39.665292079198906,
+      "graham_multiple": 37.37381464160077,
       "graham_number": 246.41268232022387,
-      "graham_upside_pct": -30.004351119127413,
-      "ncav_margin_pct": -333.48507439669004,
-      "pb_ratio": 2.6207666565224588,
-      "pe_ttm": 15.134995700773864
+      "graham_upside_pct": -27.951614771432453,
+      "ncav_margin_pct": -340.3324042882102,
+      "pb_ratio": 2.543939273567932,
+      "pe_ttm": 14.691315563198627
     }
   },
   "industry": "Banks - Diversified",
-  "last_updated": "2026-09-22T03:05:12Z",
+  "last_updated": "2026-09-22T14:26:13Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 40.3,
     "conviction_score_breakdown": {
-      "base_score": 50.0,
+      "base_score": 66.7,
       "components": {
-        "graham_pct": 50.0
+        "graham_pct": 66.7
       },
       "moat_multiplier": 1.0,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
-    "conviction_verdict": "Cautious",
+    "conviction_verdict": "Neutral",
     "flags": [
       "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
       "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
@@ -114,7 +114,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 943294700400,
+  "market_cap": 915642157200,
   "metrics": {
     "book_value_per_share": 134.32710581991608,
     "current_ratio": 0.8403662699432636,
@@ -123,15 +123,15 @@
     "eps_growth_cagr_3yr_pct": 18.412674089532754,
     "fcf_margin_pct": -52.827396378845016,
     "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 39.665292079198906,
-    "graham_upside_pct": -30.004351119127413,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 37.37381464160077,
+    "graham_upside_pct": -27.951614771432453,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -333.48507439669004,
-    "pb_ratio": 2.6207666565224588,
-    "pe_ttm": 15.134995700773864,
+    "ncav_margin_pct": -340.3324042882102,
+    "pb_ratio": 2.543939273567932,
+    "pe_ttm": 14.691315563198627,
     "roe_pct": 17.810887122712458,
     "shareholders_equity": 362438000000,
     "total_assets": 4424900000000,
@@ -150,8 +150,8 @@
     "one_line_summary": null
   },
   "price": {
-    "as_of": "2026-09-21",
-    "close": 352.04
+    "as_of": "2026-09-22",
+    "close": 342.01
   },
   "qualitative": null,
   "quant_score": {
@@ -218,7 +218,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $943.3B",
+          "detail": "Market cap $915.6B",
           "passed": true
         },
         {
@@ -243,17 +243,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 15.1",
-          "passed": false
+          "detail": "P/E 14.7",
+          "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 39.7",
+          "detail": "P/E x P/B = 37.4",
           "passed": false
         }
       ],
       "evaluated": 6,
-      "passed": 3,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {

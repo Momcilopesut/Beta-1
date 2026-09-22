@@ -1,0 +1,202 @@
+{
+  "_errors": {
+    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/balance-sheet-statement?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=6",
+    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/cash-flow-statement?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=6",
+    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/discounted-cash-flow?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/historical-price-eod/full?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/income-statement?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=6",
+    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/key-metrics-ttm?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/quote?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/ratios-ttm?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "sec_cik": "No CIK found for ticker BRK.B",
+    "stooq": "Failed to fetch Stooq prices for BRK.B: Failed to fetch https://stooq.com/q/d/l/ after 3 attempts: 404 Client Error: Not Found for url: https://stooq.com/q/d/l/?s=brk.b.us&i=d"
+  },
+  "cik": null,
+  "five_year_history": null,
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": null,
+      "shareholders_equity": null,
+      "total_assets": null,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": null
+    },
+    "profitability": {
+      "roe_pct": null,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": null,
+  "last_updated": "2026-09-22T14:22:24Z",
+  "layered_analysis": {
+    "conviction_score": null,
+    "conviction_score_breakdown": null,
+    "conviction_verdict": null,
+    "flags": [],
+    "munger_quality_pass": null,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "graham_criteria_evaluated": 0,
+    "graham_criteria_passed": 0,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 0,
+    "munger_quality_passed": 0
+  },
+  "name": "Berkshire Hathaway Inc.",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
+    },
+    "narrative": null,
+    "one_line_summary": null
+  },
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "quant_score": {
+    "evaluated": 0,
+    "gate_pass": null,
+    "informational": {
+      "margin_trend_score": 60
+    },
+    "metrics": {
+      "current_ratio": {
+        "higher_is_better": true,
+        "label": "Current ratio (current assets / current liabilities)",
+        "pass": null,
+        "threshold": 1.5,
+        "value": null
+      },
+      "debt_to_ebitda": {
+        "higher_is_better": false,
+        "label": "Debt / EBITDA",
+        "pass": null,
+        "threshold": 3.0,
+        "value": null
+      },
+      "fcf_margin_pct": {
+        "higher_is_better": true,
+        "label": "Free cash flow margin",
+        "pass": null,
+        "threshold": 10.0,
+        "value": null
+      }
+    },
+    "passed": 0,
+    "quant_score_pct": null
+  },
+  "sector": "Financial Services",
+  "sources": {
+    "sec_companyfacts_url": null,
+    "sec_filings": []
+  },
+  "ticker": "BRK.B",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability",
+          "detail": "No annual net income data available",
+          "passed": null
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 0,
+      "passed": 0,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "Fewer than 2 years of share-count data",
+          "passed": null
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 0,
+      "passed": 0,
+      "total": 4
+    }
+  }
+}

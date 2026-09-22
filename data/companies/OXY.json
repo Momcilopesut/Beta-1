@@ -1,0 +1,290 @@
+{
+  "_errors": {},
+  "cik": "0000797468",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 2764000000,
+        "debt": 30388000000,
+        "earnings": 2312000000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "spending": 21291000000,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 984000000,
+        "debt": 20765000000,
+        "earnings": 13221000000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "spending": 22969000000,
+        "stock_return_pct": 117.28182131769576
+      },
+      {
+        "cash": 1426000000,
+        "debt": 20911000000,
+        "earnings": 4673000000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "spending": 21843000000,
+        "stock_return_pct": -4.667407525003976
+      },
+      {
+        "cash": 2132000000,
+        "debt": 27104000000,
+        "earnings": 3043000000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "spending": 21132000000,
+        "stock_return_pct": -17.718567860116572
+      },
+      {
+        "cash": 1988000000,
+        "debt": 23956000000,
+        "earnings": 2369000000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "spending": 17871000000,
+        "stock_return_pct": -16.777980165958304
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.410542321338064,
+      "debt_to_ebitda": 2.1284762327854287,
+      "debt_to_equity": 0.35035692042351363
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 42.504262360846454,
+      "shareholders_equity": 36034000000,
+      "total_assets": 86783000000,
+      "total_liabilities": 50185000000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 19.01079053396934
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -49.86365822442128
+    },
+    "profitability": {
+      "roe_pct": 18.96805318585633,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 11.634658037269759,
+      "graham_number": 40.2022956592181,
+      "graham_upside_pct": -29.494395546793932,
+      "ncav_margin_pct": -172.55875666559677,
+      "pb_ratio": 1.3595298232165955,
+      "pe_ttm": 8.557854221794564
+    }
+  },
+  "industry": "Oil & Gas Exploration & Production",
+  "last_updated": "2026-09-22T14:24:43Z",
+  "layered_analysis": {
+    "conviction_score": 30.3,
+    "conviction_score_breakdown": {
+      "base_score": 50.0,
+      "components": {
+        "graham_pct": 50.0
+      },
+      "moat_multiplier": 1.0,
+      "munger_multiplier": 1.1,
+      "valuation_multiplier": 0.55
+    },
+    "conviction_verdict": "Cautious",
+    "flags": [
+      "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "quant_gate_pass": true,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 56614605360,
+  "metrics": {
+    "book_value_per_share": 42.504262360846454,
+    "current_ratio": 1.410542321338064,
+    "debt_to_ebitda": 2.1284762327854287,
+    "debt_to_equity": 0.35035692042351363,
+    "eps_growth_cagr_3yr_pct": -49.86365822442128,
+    "fcf_margin_pct": 19.01079053396934,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 11.634658037269759,
+    "graham_upside_pct": -29.494395546793932,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -172.55875666559677,
+    "pb_ratio": 1.3595298232165955,
+    "pe_ttm": 8.557854221794564,
+    "roe_pct": 18.96805318585633,
+    "shareholders_equity": 36034000000,
+    "total_assets": 86783000000,
+    "total_liabilities": 50185000000
+  },
+  "name": "Occidental Petroleum Corporation",
+  "narrative": {
+    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
+    "facts": {
+      "critical": [],
+      "important": [],
+      "minor": [],
+      "noise": []
+    },
+    "narrative": null,
+    "one_line_summary": null
+  },
+  "price": {
+    "as_of": "2026-09-22",
+    "close": 57.02
+  },
+  "qualitative": null,
+  "quant_score": {
+    "evaluated": 3,
+    "gate_pass": true,
+    "informational": {
+      "margin_trend_score": 60
+    },
+    "metrics": {
+      "current_ratio": {
+        "higher_is_better": true,
+        "label": "Current ratio (current assets / current liabilities)",
+        "pass": false,
+        "threshold": 1.5,
+        "value": 1.410542321338064
+      },
+      "debt_to_ebitda": {
+        "higher_is_better": false,
+        "label": "Debt / EBITDA",
+        "pass": true,
+        "threshold": 3.0,
+        "value": 2.1284762327854287
+      },
+      "fcf_margin_pct": {
+        "higher_is_better": true,
+        "label": "Free cash flow margin",
+        "pass": true,
+        "threshold": 10.0,
+        "value": 19.01079053396934
+      }
+    },
+    "passed": 2,
+    "quant_score_pct": 66.66666666666666
+  },
+  "sector": "Energy",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000797468.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-05",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/797468/000162828026053388/oxy-20260630.htm"
+      },
+      {
+        "filed": "2026-05-05",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/797468/000162828026030584/oxy-20260331.htm"
+      },
+      {
+        "filed": "2026-02-18",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/797468/000162828026009059/oxy-20251231.htm"
+      },
+      {
+        "filed": "2025-11-10",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/797468/000162828025051071/oxy-20250930.htm"
+      },
+      {
+        "filed": "2025-08-06",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/797468/000079746825000111/oxy-20250630.htm"
+      }
+    ]
+  },
+  "ticker": "OXY",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $56.6B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.41, debt $24.0B vs working capital $-0.6B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/6 available years (Graham's original window was 10 years)",
+          "passed": false
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr, Graham's 33%/10yr pace)",
+          "detail": "EPS 3yr CAGR -49.9%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 8.6",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 11.6",
+          "passed": true
+        }
+      ],
+      "evaluated": 6,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 19.0%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.35",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "1,000,100,000 shares vs. 967,100,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 60",
+          "passed": true
+        }
+      ],
+      "evaluated": 4,
+      "passed": 3,
+      "total": 4
+    }
+  }
+}
