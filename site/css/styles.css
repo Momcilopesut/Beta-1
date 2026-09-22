@@ -183,7 +183,6 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
   width: fit-content;
 }
 .conviction-badge { font-weight: 700; font-size: 0.8rem; }
-.summary { font-size: 0.85rem; color: var(--muted); margin: 0; }
 
 .verdict-strong { background: rgba(21, 128, 61, 0.15); color: var(--strong); }
 .verdict-favorable { background: rgba(101, 163, 13, 0.15); color: var(--favorable); }
@@ -378,17 +377,6 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
 
 section { margin-bottom: 2rem; }
 section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
-
-.facts details {
-  margin-bottom: 0.5rem;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 0.5rem 0.75rem;
-}
-.facts summary { cursor: pointer; font-weight: 600; }
-.facts ul { margin: 0.5rem 0 0; padding-left: 1.25rem; }
-.fact-source { color: var(--muted); font-size: 0.8rem; }
 
 .sources ul { padding-left: 1.25rem; }
 

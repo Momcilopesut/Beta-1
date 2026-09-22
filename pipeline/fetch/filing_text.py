@@ -1,11 +1,8 @@
 """Fetches plain text from a company's most recent 10-K for the qualitative
-(Layer 3) analysis - the only place in this pipeline that feeds an AI call
-raw filing prose rather than only already-computed metrics. Every other
-narrative call (pipeline/narrative/anthropic_client.py) stays grounded
-strictly in the metrics payload by design; this is a deliberate, separate
-exception scoped to moat/management reasoning, kept visibly distinct in the
-output (see pipeline/narrative/qualitative_schema.py and company_doc's
-"qualitative" key) rather than blurring the two grounding models together.
+(Layer 3) analysis - the only AI call in this pipeline that reads raw filing
+prose rather than only already-computed metrics (see
+pipeline/narrative/qualitative_schema.py and company_doc's "qualitative"
+key).
 """
 
 import re

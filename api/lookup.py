@@ -85,14 +85,12 @@ def lookup():
         regime_info = _regime()
         benchmark_prices = fetch_benchmark()
         state = fetch_and_score_company({"ticker": ticker}, regime_info, benchmark_prices)
-        # Full parity with the batch pipeline - narrative and qualitative
-        # run concurrently (see finalize_company's docstring) to fit this
-        # function's timeout (vercel.json's maxDuration - see README's
-        # "On-demand lookup deployment" section for raising it if you have
-        # Vercel headroom for it, e.g. Fluid Compute or a Pro plan).
-        company_doc, _summary, _warnings, _qual_failed, _narrative_failed = finalize_company(
-            state, regime_info, skip_ai, Path(tempfile.gettempdir())
-        )
+        # Full parity with the batch pipeline - identical scoring and the
+        # same Buffett moat read, subject to this function's timeout
+        # (vercel.json's maxDuration - see README's "On-demand lookup
+        # deployment" section for raising it if you have Vercel headroom for
+        # it, e.g. Fluid Compute or a Pro plan, or pass ?ai=0 to skip it).
+        company_doc, _summary, _qual_failed = finalize_company(state, regime_info, skip_ai, Path(tempfile.gettempdir()))
     except Exception as exc:  # noqa: BLE001
         logger.exception("Lookup failed for %s", ticker)
         return _error(f"Analysis failed for {ticker}: {exc}", 502)

@@ -1,6 +1,6 @@
 """Tests for the api/lookup.py Vercel function's HTTP-level behavior:
 access control, ticker validation, CORS, and error handling. The actual
-fetch/score/narrative calls are mocked - that logic is already covered by
+fetch/score/qualitative calls are mocked - that logic is already covered by
 pipeline/main.py's own code path and tests; this file only verifies the
 request-handling wrapper around it."""
 
@@ -24,7 +24,7 @@ def client():
 def _mock_pipeline():
     return (
         patch("lookup.fetch_and_score_company", return_value={"metrics": {}, "display": {"price": {}}}),
-        patch("lookup.finalize_company", return_value=({"ticker": "MSFT"}, {}, 0, False, False)),
+        patch("lookup.finalize_company", return_value=({"ticker": "MSFT"}, {}, False)),
         patch("lookup._regime", return_value={"regime": "Neutral/Expansion", "signals": {}}),
     )
 

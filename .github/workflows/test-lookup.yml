@@ -15,7 +15,7 @@ on:
         description: "Ticker to run (as you'd type it into the search field)"
         required: true
       skip_ai:
-        description: "Skip the Anthropic narrative/qualitative/thesis calls (cheap check of FMP/SEC data resolution only)"
+        description: "Skip the Anthropic qualitative (moat read) call (cheap check of FMP/SEC data resolution only)"
         required: false
         type: boolean
         default: true

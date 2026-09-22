@@ -2,7 +2,8 @@
 
 Disabled by default. Enable with PIPELINE_CACHE=1 so repeated local runs
 against the same tickers don't re-spend FMP/SEC/FRED rate-limit budget while
-iterating on scoring or narrative code. Never used in CI/scheduled runs.
+iterating on scoring or qualitative-layer code. Never used in CI/scheduled
+runs.
 """
 
 import json

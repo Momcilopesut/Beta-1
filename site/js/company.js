@@ -49,7 +49,7 @@ function renderNotTracked(content, ticker) {
     <section class="not-tracked">
       <p class="error">${safeTicker} isn't in the current screening universe.</p>
       <p class="meta">You can run a live, on-demand analysis instead — the same scoring, checklists,
-      and AI narrative as the tracked companies, computed fresh right now via a separate lookup
+      and Buffett moat read as the tracked companies, computed fresh right now via a separate lookup
       service. This spends real API budget per lookup, so it only runs when you ask.</p>
       <button id="run-live-lookup" class="live-lookup-button">Run live analysis for ${safeTicker}</button>
     </section>
@@ -80,26 +80,6 @@ function renderPriceHeader(price) {
   return `<p class="detail-price">$${formatNumber(close, { decimals: 2 })}${asOf}</p>`;
 }
 
-// An honest fallback: this page can't tell "never attempted" (this company
-// wasn't one of this week's per-sector finalists - only finalists get an AI
-// summary) apart from "attempted and failed" (e.g. the Anthropic call
-// errored) just from the company doc alone, so the message covers both
-// rather than claiming a specific, possibly-wrong reason.
-function renderNarrative(narrative) {
-  const hasSummary = Boolean(narrative?.one_line_summary);
-  const oneLiner = hasSummary
-    ? escapeHtml(narrative.one_line_summary)
-    : "No AI summary yet — either this company wasn't one of this week's per-sector finalists (only finalists get one), or generation didn't succeed on the last run.";
-  const body = narrative?.narrative ? `<p>${escapeHtml(narrative.narrative)}</p>` : "";
-  return `
-    <section class="narrative">
-      <h3>AI Summary</h3>
-      <p class="one-liner">${oneLiner}</p>
-      ${body}
-    </section>
-  `;
-}
-
 function render(doc) {
   const onDemandBanner = doc.on_demand
     ? `<p class="on-demand-banner">Live on-demand analysis — not part of the tracked watchlist, computed just now.</p>`
@@ -121,16 +101,6 @@ function render(doc) {
     ${renderBalanceSheetBasics(doc.fundamentals, doc.layered_analysis)}
 
     ${renderFiveYearHistory(doc.five_year_history)}
-
-    ${renderNarrative(doc.narrative)}
-
-    <section class="facts">
-      <h3>What Matters</h3>
-      ${renderFactTier("Critical", doc.narrative.facts.critical, true)}
-      ${renderFactTier("Important", doc.narrative.facts.important, true)}
-      ${renderFactTier("Minor", doc.narrative.facts.minor, false)}
-      ${renderFactTier("Noise (safe to ignore)", doc.narrative.facts.noise, false)}
-    </section>
 
     ${renderLayeredAnalysis(doc)}
 
@@ -768,22 +738,6 @@ function renderFiveYearHistory(fiveYearHistory) {
       <p class="meta">How the stock did each year, compared to just owning the whole stock market (the S&amp;P 500).</p>
       ${comparisonChart || `<p class="meta">Not enough price history yet to compare this stock's yearly return to the market.</p>`}
     </section>
-  `;
-}
-
-function renderFactTier(label, facts, expanded) {
-  if (!facts || facts.length === 0) return "";
-  const items = facts
-    .map(
-      (f) =>
-        `<li><span class="fact-text">${escapeHtml(f.text)}</span> <span class="fact-source">(${escapeHtml(f.source_metric)}: ${escapeHtml(f.source_value)})</span></li>`
-    )
-    .join("");
-  return `
-    <details ${expanded ? "open" : ""}>
-      <summary>${label} (${facts.length})</summary>
-      <ul>${items}</ul>
-    </details>
   `;
 }
 

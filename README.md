@@ -7,12 +7,11 @@ question underneath all three: **does this company own more than it owes, is it 
 well-run business, and is the price fair for that?** A scheduled pipeline fetches
 company fundamentals (Financial Modeling Prep + SEC EDGAR) and macroeconomic indicators
 (FRED), runs every company through a transparent, balance-sheet-first scoring model —
-basic arithmetic, not growth projections or opaque composites — ranks them, and asks
-Claude to summarize what matters for the week's top picks, grounded strictly in the
-computed numbers. The result is published as a static site.
+basic arithmetic, not growth projections or opaque composites — and ranks them. The
+result is published as a static site.
 
-**This is not financial advice.** Every score and summary is an automated estimate
-based on public data and may contain errors or delays.
+**This is not financial advice.** Every score is an automated estimate based on
+public data and may contain errors or delays.
 
 ## How it works
 
@@ -33,11 +32,6 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
 - **Scoring**: deterministic, config-driven, and deliberately small — see "Assets vs.
   Liabilities" and "Layered analysis" below. A rule-based macro regime classifier
   (`pipeline/scoring/macro_regime.py`) provides cycle context alongside the scores.
-- **AI narrative**: Claude reads the already-computed metrics (never raw news) and
-  produces a one-line summary plus facts tiered Critical → Important → Minor → Noise.
-  Every fact must cite a real metric key from the payload; facts that don't are
-  dropped in code (`pipeline/narrative/grounding.py`), not just discouraged by prompt.
-  Only runs for the week's finalists — see "Weekly Screener" below.
 - **Value-investing checklists** (`pipeline/scoring/value_investing.py`): Graham's
   Defensive Investor criteria and a Munger Quality Checklist, computed from the same
   fetched statements — no extra API calls. Both are simple pass/fail arithmetic, and
@@ -46,9 +40,9 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
   what the weekly screen ranks companies by.
 - **Layered analysis** (Munger's quality read → Buffett's qualitative moat read →
   Graham Number valuation gate, see "Layered analysis" below): a deeper pass per
-  company that reads the company's own 10-K text — the one place in this pipeline an
-  AI call isn't grounded solely in pre-computed metrics. Only runs for the week's
-  finalists, same as the narrative above.
+  company that reads the company's own 10-K text — the only AI call in this pipeline,
+  and the only place it isn't grounded solely in pre-computed metrics. Only runs for
+  the week's finalists — see "Weekly Screener" below.
 - **Economic-cycle context**: the macro page frames the current regime against classic
   business-cycle/sector-rotation theory (which sectors have historically led/lagged in
   this phase) — textbook reference, explicitly not a prediction.
@@ -71,9 +65,9 @@ universe (88 companies, 8 per sector across 11 GICS-style sectors; not the full 
 
 1. **Cheap screen, whole universe** (`pipeline/main.py::run_full`, phase 1) — every
    company gets fetched and scored, including a full Investment Meter reading, with
-   the AI narrative/qualitative layer skipped entirely. This is not a degraded score:
-   a missing moat read just leaves that multiplier at a neutral 1.0 (see
-   `config/conviction_score.yaml`), so the Graham/Munger checklist math alone is
+   the AI qualitative (Buffett moat read) layer skipped entirely. This is not a
+   degraded score: a missing moat read just leaves that multiplier at a neutral 1.0
+   (see `config/conviction_score.yaml`), so the Graham/Munger checklist math alone is
    already meaningful enough to rank on.
 2. **Rank + select** (`pipeline/scoring/screening.py::select_top_picks`) — within each
    sector, companies are sorted by Investment Meter score (highest first); companies
@@ -81,8 +75,8 @@ universe (88 companies, 8 per sector across 11 GICS-style sectors; not the full 
    `config/screening.yaml`'s `top_n_per_sector` (5 by default) per sector become this
    week's finalists.
 3. **AI-enrich finalists only** (phase 2) — only the selected finalists get re-scored
-   with the AI narrative and Buffett moat read turned on, so Anthropic spend scales
-   with the number of picks shown, not the size of the universe scanned.
+   with the Buffett moat read turned on, so Anthropic spend scales with the number of
+   picks shown, not the size of the universe scanned.
 
 Every scanned company — not just the picks — still gets a full `data/companies/
 {ticker}.json` and detail page; `data/weekly_picks.json` holds just the ranked
@@ -104,7 +98,6 @@ Run the pipeline:
 ```bash
 python -m pipeline.main --tickers AAPL,MSFT --dry-run   # writes to data/.dry-run/, doesn't touch tracked data/
 python -m pipeline.main --skip-ai                        # cheap screen only, no Anthropic spend, no finalist enrichment
-python -m pipeline.main --ai-only --tickers AAPL          # re-run just the narrative for an already-scored company
 python -m pipeline.main                                   # full weekly screen over the whole universe, writes data/
 ```
 
@@ -229,11 +222,10 @@ EV/EBITDA — see "Assets vs. Liabilities" above for why).
    `pipeline/fetch/filing_text.py`) and classifies the moat (network effects / cost
    advantage / intangible assets / switching costs / efficient scale / none — the
    classic Buffett/Munger/Morningstar categories) and lists any red flags the filing
-   itself raises. **This is the one place in the whole pipeline where an AI call
-   reads raw text instead of only pre-computed metrics.** Every other narrative call
-   grounds each fact by requiring a real metric key (`pipeline/narrative/grounding.py`
-   drops anything that doesn't resolve) — that mechanical check doesn't exist for
-   free-form filing prose, so this layer's grounding is prompt discipline only, not
+   itself raises. **This is the only AI call in the whole pipeline, and the one place
+   it reads raw text instead of only pre-computed metrics** — there's no mechanical
+   fact-checking possible for free-form filing prose the way there would be for a
+   fixed metrics dict, so this layer's grounding is prompt discipline only, not
    code-verified. `qualitative.extraction_confidence` tells you whether the
    filing-text extraction itself found a clean Item 7 section match or fell back to a
    raw document prefix, so you know how much to trust it. Results are cached by 10-K
@@ -409,22 +401,19 @@ small Flask app deployed as a [Vercel](https://vercel.com) Python serverless fun
 section is fine; the rest of the site works without it, and an untracked search will
 just say live lookup isn't configured.
 
-This runs the **full pipeline** for that one ticker, right then — narrative,
-qualitative (10-K moat reasoning), and the complete Investment Meter, identical to a
-tracked company. The narrative and qualitative Claude calls run concurrently
-(`pipeline/main.py::finalize_company`) to keep this as fast as possible, but it's
-still a real 10-K fetch plus two Claude calls for one request, which takes real time.
+This runs the **full pipeline** for that one ticker, right then — qualitative (10-K
+moat reasoning) and the complete Investment Meter, identical to a tracked company.
+It's a real 10-K fetch plus one Claude call for a single request, which takes real
+time.
 
 **Timeout headroom:** `vercel.json` sets `maxDuration: 60` — the maximum a Vercel
 Hobby (free) plan allows by default. If a lookup is timing out, you have two free
 options before paying for anything: enable **Fluid Compute** (Vercel project →
 **Settings → Functions** → toggle it on) to raise Hobby's ceiling to 300s, then bump
-`maxDuration` in `vercel.json` to match and redeploy; or fall back to a faster,
-partial analysis by passing `skip_qualitative=True` to `finalize_company` in
-`api/lookup.py` (narrative only, no 10-K fetch — sacrifices the qualitative moat read
-and lowers the Investment Meter's data coverage, but removes the slowest step). A Pro
-plan raises the ceiling further (300s by default, more with
-Fluid Compute) if you have one.
+`maxDuration` in `vercel.json` to match and redeploy; or pass `?ai=0` to skip the
+qualitative moat read entirely (removes the slowest step, at the cost of that
+multiplier defaulting to neutral). A Pro plan raises the ceiling further (300s by
+default, more with Fluid Compute) if you have one.
 
 **Why a separate deployment, and why it's gated:** every live lookup spends real FMP/
 Anthropic API budget (it runs the full pipeline for one ticker, right then). Left

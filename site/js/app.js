@@ -174,7 +174,6 @@ function renderCard(company, rank) {
         ${convictionBadge}
       </div>
       <div class="mini-badges">${grahamBadge}${mungerBadge}${bookValueBadge}${layeredBadge}</div>
-      <p class="summary">${escapeHtml(company.one_line_summary) || "No AI summary available yet."}</p>
     </a>
   `;
 }

@@ -1,7 +1,6 @@
-"""Anthropic call for Layer 3 (qualitative filing-text reasoning). Kept
-separate from pipeline/narrative/anthropic_client.py deliberately - see
-qualitative_schema.py for why this carries a different grounding guarantee
-than the metrics-only narrative layer.
+"""Anthropic call for Layer 3 (qualitative filing-text reasoning) - the only
+AI call in this pipeline. See qualitative_schema.py for why this carries a
+prompt-only grounding guarantee rather than a code-verified one.
 """
 
 import os

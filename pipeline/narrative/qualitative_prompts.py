@@ -1,7 +1,6 @@
 """Prompt for Layer 3 (qualitative filing-text reasoning: is there a durable
-moat?). See qualitative_schema.py for why this carries a different,
-prompt-only grounding guarantee than pipeline/narrative/prompts.py's
-metrics-grounded narrative layer.
+moat?). See qualitative_schema.py for why this carries a prompt-only
+grounding guarantee rather than a code-verified one.
 """
 
 QUALITATIVE_SYSTEM_PROMPT = """\

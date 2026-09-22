@@ -1,13 +1,10 @@
 """Strict schema for Layer 3 (qualitative filing-text reasoning: is there a
-durable moat?). Separate from pipeline/narrative/schema.py's CompanyNarrative
-deliberately: that schema's facts are grounded in a fixed metrics dict, so
-grounding can be code-verified (a source_metric key either exists or it
-doesn't - pipeline/narrative/grounding.py drops anything that doesn't). This
-schema is grounded in free-form filing prose instead, which can't be checked
-the same mechanical way - there is no equivalent "drop-if-not-real" pass
-here, only prompt discipline (see qualitative_prompts.py). That's a real,
-lower guarantee than the rest of this pipeline's narrative layer, and is
-documented as such rather than implied to be equally verified.
+durable moat?). Grounded in free-form filing prose, which can't be checked
+mechanically the way a fixed metrics dict can (a required key either exists
+or it doesn't) - there is no code-verified "drop-if-not-real" pass here,
+only prompt discipline (see qualitative_prompts.py). That's a real, lower
+guarantee than the rest of this pipeline's output, and is documented as
+such rather than implied to be equally verified.
 """
 
 from typing import Literal

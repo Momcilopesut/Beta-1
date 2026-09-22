@@ -18,7 +18,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from pipeline.build import writer  # noqa: E402
-from pipeline.narrative.prompts import DISCLAIMER  # noqa: E402
 from pipeline.scoring import aggregation, macro_regime, screening, value_investing  # noqa: E402
 from pipeline.utils.config import macro_series, screening_config, watchlist  # noqa: E402
 from pipeline.utils.paths import DATA_DIR  # noqa: E402
@@ -214,45 +213,6 @@ def to_display(metrics: dict, close_price: float) -> dict:
     }
 
 
-def synth_narrative(name: str, metrics: dict, checklist: dict) -> dict:
-    def fact(text, tier, metric):
-        return {"text": text, "tier": tier, "source_metric": metric, "source_value": str(metrics[metric])}
-
-    facts = {
-        "critical": [
-            fact(
-                f"The Graham Number implies a {metrics['graham_upside_pct']:+.1f}% margin of safety.",
-                "critical",
-                "graham_upside_pct",
-            )
-        ],
-        "important": [
-            fact(
-                f"Passes {metrics['graham_criteria_passed']}/{metrics['graham_criteria_evaluated']} evaluated "
-                "Graham defensive-investor criteria.",
-                "important",
-                "graham_criteria_passed",
-            ),
-            fact(f"Current ratio is {metrics['current_ratio']:.2f}.", "important", "current_ratio"),
-        ],
-        "minor": [fact(f"Free cash flow margin is {metrics['fcf_margin_pct']:.1f}%.", "minor", "fcf_margin_pct")],
-        "noise": [],
-    }
-    summary = f"{name}: net worth of {metrics['shareholders_equity']:,.0f}, trading at {metrics['pb_ratio']:.2f}x book value."
-    return {
-        "one_line_summary": summary[:140],
-        "narrative": (
-            f"{name} owns {metrics['total_assets']:,.0f} in assets against {metrics['total_liabilities']:,.0f} in "
-            f"liabilities - a net worth of {metrics['shareholders_equity']:,.0f}. It passes "
-            f"{metrics['graham_criteria_passed']}/{metrics['graham_criteria_evaluated']} evaluated Graham "
-            f"defensive-investor criteria and {checklist['munger_quality']['passed']}/"
-            f"{checklist['munger_quality']['evaluated']} of Munger's quality checklist."
-        ),
-        "facts": facts,
-        "disclaimer": DISCLAIMER,
-    }
-
-
 _SAMPLE_MOAT_TYPES = ["network_effects", "cost_advantage", "intangible_assets", "switching_costs", "efficient_scale"]
 
 
@@ -338,7 +298,6 @@ def main() -> None:
         metrics["munger_quality_evaluated"] = checklist["munger_quality"]["evaluated"]
 
         macro_adj = macro_regime.sector_adjustment(regime_info["regime"], sector)
-        narrative = synth_narrative(company_cfg["name"], metrics, checklist)
         display = to_display(metrics, close_price)
         five_year_history = synth_five_year_history(market_cap, close_price)
 
@@ -365,7 +324,6 @@ def main() -> None:
             "fundamentals": display["fundamentals"],
             "five_year_history": five_year_history,
             "value_investing": checklist,
-            "narrative": narrative,
             "qualitative": qualitative_out,
             "layered_analysis": layered_analysis,
             "sources": {"sec_filings": [], "sec_companyfacts_url": None},
@@ -380,7 +338,6 @@ def main() -> None:
                 "ticker": ticker,
                 "name": company_cfg["name"],
                 "sector": sector,
-                "one_line_summary": narrative["one_line_summary"],
                 "price": display["price"],
                 "book_value_per_share": metrics["book_value_per_share"],
                 "graham_criteria_passed": checklist["graham_defensive"]["passed"],
@@ -407,7 +364,6 @@ def main() -> None:
             "pipeline_version": "sample-data",
             "watchlist_size": len(companies),
             "sources_status": {"fmp": "sample", "sec_edgar": "sample", "fred": "sample", "anthropic": "sample"},
-            "narrative_warnings": 0,
             "note": (
                 "Placeholder demo data for local preview only. Run `python -m pipeline.main` "
                 "with real API keys configured to replace it with live data."
