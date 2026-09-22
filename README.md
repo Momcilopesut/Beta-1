@@ -38,9 +38,8 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
   (`pipeline/scoring/macro_regime.py`) provides cycle context alongside the scores.
 - **Value-investing checklists** (`pipeline/scoring/value_investing.py`): a Defensive
   Checklist and a Quality Checklist, computed from the same fetched statements — no
-  extra API calls. Both are simple pass/fail arithmetic, and together they anchor the
-  Investment Meter (see "Investment Meter" below). Shown on every company's own
-  detail page; the weekly screen itself ranks by price return instead (see "Weekly
+  extra API calls, simple pass/fail arithmetic. Shown on every company's own detail
+  page; the weekly screen itself ranks by price return instead (see "Weekly
   Screener" below).
 - **Layered analysis** (a quality checklist read → a qualitative moat read →
   a fair-value margin-of-safety gate, see "Layered analysis" below): a deeper pass per
@@ -70,11 +69,11 @@ weekly-screen.yml`) — genuinely "after the ~4pm ET close" year-round regardles
 DST — the pipeline runs a two-phase screen over `config/watchlist.yaml`'s curated
 universe (88 companies, 8 per sector across 11 GICS-style sectors; not the full S&P
 500, to stay well inside a free-tier API budget), ranking purely by price return, not
-by the Investment Meter or any fundamentals check:
+by any fundamentals check:
 
 1. **Cheap screen, whole universe** (`pipeline/main.py::run_full`, phase 1) — every
-   company gets fetched and scored (full Investment Meter included, for its own detail
-   page), with the AI qualitative (moat read) layer skipped entirely. Each
+   company gets fetched and scored (full fundamentals scoring included, for its own
+   detail page), with the AI qualitative (moat read) layer skipped entirely. Each
    company's price return over 5 lookback windows
    (`pipeline/scoring/performance.py::compute_returns`) comes straight from price
    history already fetched for it - no extra API calls.
@@ -93,8 +92,8 @@ by the Investment Meter or any fundamentals check:
    tickers actually shown, not the size of the universe scanned.
 
 Every scanned company — not just the picks — still gets a full `data/companies/
-{ticker}.json` and detail page, complete with its own Investment Meter and Layered
-Analysis; `data/performance_picks.json` holds just the ranked selection the homepage
+{ticker}.json` and detail page, complete with its own Layered Analysis;
+`data/performance_picks.json` holds just the ranked selection the homepage
 renders (plus each window's key/label), and `data/watchlist.json` keeps covering the
 whole universe so the search box can still find anything scanned. Run it locally with
 `python -m pipeline.main --dry-run` (see "Local development" below); pass `--tickers`
@@ -228,8 +227,7 @@ EV/EBITDA — see "Assets vs. Liabilities" above for why).
 
 1. **Quality checklist** (`pipeline/scoring/value_investing.py::munger_quality_checklist`) —
    return on equity ≥ 15%, debt/equity ≤ 1.0, no shareholder dilution, and margins
-   stable or improving. Pure arithmetic, no AI. See "Investment Meter" below for why
-   this specific set of four checks.
+   stable or improving. Pure arithmetic, no AI.
 2. **Moat read** (`pipeline/narrative/qualitative_client.py`) — Claude reads
    excerpts from the company's own most recent 10-K (Business, Risk Factors, and
    Management's Discussion and Analysis, extracted by
@@ -276,45 +274,8 @@ used throughout this tool — an earlier version of this pipeline scaled it
 dynamically with data coverage and filing red flags, which has been removed for
 simplicity. See `required_margin_of_safety_pct` in the output.
 
-### Investment Meter
-
-**The deep dive.** Three separate lenses on a stock, kept visible rather than
-blended into a number no one can trace back:
-
-- **Is it cheap and safe?** The quantitative base: the Defensive Checklist (size,
-  financial strength, earnings stability, dividend record, earnings growth, moderate
-  P/E, moderate P/E×P/B) plus the fair-value margin of safety. This is the meter's
-  **base score** — the checklist's own pass rate, undiluted by anything else.
-- **Is it a wonderful business?** Durable competitive advantage, the "moat." Read
-  from the company's own 10-K by the qualitative AI layer above. A **multiplier** on
-  the base score, not blended into it — quality should gate the decision, not just
-  discount it.
-- **Does it actually earn good returns on capital, without recklessness?** The idea:
-  over the long term, it's hard for a stock to earn a much better return than the
-  business underlying it earns — a business that compounds capital well at a fair
-  price can outperform one that just looks statistically cheap. Also a
-  **multiplier**: a statistically cheap stock that earns poor returns on capital,
-  carries heavy debt, dilutes shareholders, or has eroding margins is a warning,
-  not a wash.
-
-**Formula** (`pipeline/scoring/aggregation.py::build_conviction_score`, multipliers
-in `config/conviction_score.yaml`, still keyed `conviction_score`/
-`conviction_verdict` in the output JSON for continuity):
-
-```
-meter score = defensive checklist pass rate
-              × moat multiplier        (1.05 present / 0.70 absent / 1.0 not evaluated)
-              × quality multiplier     (1.10 present / 0.75 absent / 1.0 not evaluated)
-              × valuation multiplier   (1.0 pass / 0.55 fail / 1.0 not evaluated)
-```
-
-Clamped to 0-100 and banded into Strong/Favorable/Neutral/Cautious/Weak verdicts
-(`pipeline/scoring/thresholds.py::verdict_for`). A company with no evaluated
-checklist data gets `conviction_score: null`, never a misleading 0. The company
-detail page renders this as an actual gauge (`site/js/company.js::renderMeterGauge`
-— an inline SVG semi-circle, colored bands matching the verdict thresholds, a
-needle at the score's position), not just a number in a box; the dashboard sorts
-each sector group by the score (highest first).
+Each company page shows these three gates (and the checklists behind them)
+separately — deliberately not combined into a single blended score.
 
 ## Metrics Glossary
 
@@ -332,10 +293,6 @@ linked from the nav on every page) with the full reference, no per-company numbe
   moves under each regime.
 - `config/macro_series.yaml` — which FRED series are pulled and the regime
   classification thresholds.
-- `config/conviction_score.yaml` — the Investment Meter's three multipliers
-  (moat read, quality checklist, valuation gate) applied to the defensive
-  checklist's base score, and the verdict bands (Strong/Favorable/Neutral/
-  Cautious/Weak).
 - `config/screening.yaml` — `top_n_per_sector`, how many companies the weekly screen
   surfaces per sector, per timeframe (see "Weekly Screener" above).
 
@@ -371,7 +328,7 @@ section is fine; the rest of the site works without it, and an untracked search 
 just say live lookup isn't configured.
 
 This runs the **full pipeline** for that one ticker, right then — qualitative (10-K
-moat reasoning plus 10-K/10-Q/8-K summaries) and the complete Investment Meter,
+moat reasoning plus 10-K/10-Q/8-K summaries) and the complete fundamentals scoring,
 identical to a tracked company. It's a real 10-K (plus 10-Q/8-K, when found) fetch
 plus one Claude call for a single request, which takes real
 time.
@@ -382,7 +339,7 @@ options before paying for anything: enable **Fluid Compute** (Vercel project →
 **Settings → Functions** → toggle it on) to raise Hobby's ceiling to 300s, then bump
 `maxDuration` in `vercel.json` to match and redeploy; or pass `?ai=0` to skip the
 qualitative moat read entirely (removes the slowest step, at the cost of that
-multiplier defaulting to neutral). A Pro plan raises the ceiling further (300s by
+layer showing as not evaluated). A Pro plan raises the ceiling further (300s by
 default, more with Fluid Compute) if you have one.
 
 **Why a separate deployment, and why it's gated:** every live lookup spends real FMP/

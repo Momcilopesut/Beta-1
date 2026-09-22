@@ -150,9 +150,8 @@ def test_full_layered_pipeline_wiring(
     assert company_doc["qualitative"]["moat_present"] is True
     assert company_doc["qualitative"]["filing_summary_10q"] == "Quarterly revenue grew 8% year over year."
     assert company_doc["qualitative"]["filing_summary_8k"] == "The company announced a new CEO."
-    assert 0.0 <= company_doc["layered_analysis"]["conviction_score"] <= 100.0
-    assert company_doc["layered_analysis"]["conviction_verdict"] in ("Strong", "Favorable", "Neutral", "Cautious", "Weak")
-    assert summary["conviction_score"] == company_doc["layered_analysis"]["conviction_score"]
+    assert company_doc["layered_analysis"]["qualitative_moat_present"] is True
+    assert company_doc["layered_analysis"]["munger_quality_pass"] == summary["munger_quality_pass"]
 
     # The 10-Q/8-K text was fetched and passed through to the Anthropic call
     # as filing_texts, alongside the 10-K sections.

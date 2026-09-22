@@ -1,7 +1,7 @@
 """5-year history: revenue, earnings, debt, spending, and cash per fiscal
 year, plus how the stock did that year compared to the broad market (SPY) -
 a plain, unscored time series (no gates, no scoring) that sits beside the
-Investment Meter's single-snapshot numbers so a reader can see the trend
+single-snapshot metrics elsewhere on the page so a reader can see the trend
 behind them.
 
 Every value here comes from statements/prices already fetched elsewhere in

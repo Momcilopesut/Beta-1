@@ -6,18 +6,6 @@ export async function fetchJSON(path) {
   return res.json();
 }
 
-const VERDICT_CLASSES = {
-  Strong: "verdict-strong",
-  Favorable: "verdict-favorable",
-  Neutral: "verdict-neutral",
-  Cautious: "verdict-cautious",
-  Weak: "verdict-weak",
-};
-
-export function verdictClass(verdict) {
-  return VERDICT_CLASSES[verdict] || "verdict-neutral";
-}
-
 export function formatNumber(value, { decimals = 1, suffix = "", compact = false } = {}) {
   if (value === null || value === undefined || Number.isNaN(value)) return "—";
   if (compact) {

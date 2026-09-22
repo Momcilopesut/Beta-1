@@ -221,46 +221,12 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
 .perf-return.perf-down { color: var(--bad); }
 .perf-price { font-size: 0.68rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .perf-empty { font-size: 0.75rem; color: var(--muted); padding: 0.4rem 0; }
-.verdicts { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.6rem; }
-.verdict-badge {
-  font-size: 0.75rem;
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-  display: inline-block;
-  width: fit-content;
-}
-.conviction-badge { font-weight: 700; font-size: 0.8rem; }
-
-.verdict-strong { background: rgba(21, 128, 61, 0.15); color: var(--strong); }
-.verdict-favorable { background: rgba(101, 163, 13, 0.15); color: var(--favorable); }
-.verdict-neutral { background: rgba(107, 114, 128, 0.15); color: var(--neutral); }
-.verdict-cautious { background: rgba(217, 119, 6, 0.15); color: var(--cautious); }
-.verdict-weak { background: rgba(220, 38, 38, 0.15); color: var(--weak); }
 
 .detail-header h2 { margin-bottom: 0.25rem; }
 .ticker-tag { font-size: 0.9rem; color: var(--muted); font-weight: 400; }
 .detail-price { font-size: 1.75rem; font-weight: 700; margin: 0.1rem 0 0.3rem; }
 .price-as-of { font-size: 0.75rem; font-weight: 400; color: var(--muted); }
 .meta { color: var(--muted); font-size: 0.85rem; }
-
-.verdicts-detail { display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap; }
-.score-card {
-  flex: 1;
-  min-width: 180px;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-}
-.score-card h3 { margin: 0 0 0.5rem; font-size: 0.9rem; color: var(--muted); }
-.score-note { font-size: 0.75rem; color: var(--muted); margin: 0; }
-
-.meter-card { flex: 1 1 100%; max-width: 320px; margin: 0 auto; }
-.meter-gauge { display: flex; flex-direction: column; align-items: center; }
-.meter-gauge svg { max-width: 100%; height: auto; }
-.meter-score { font-size: 2.25rem; font-weight: 700; margin: 0.25rem 0 0; }
-.meter-verdict { margin: 0 0 0.25rem; font-weight: 600; }
 
 .five-year-history .chart-block { margin-bottom: 1.5rem; }
 .chart-block svg { width: 100%; height: auto; display: block; }

@@ -1,4 +1,4 @@
-import { fetchJSON, verdictClass, formatNumber, escapeHtml, renderDisclaimerFooter, renderError } from "./shared.js";
+import { fetchJSON, formatNumber, escapeHtml, renderDisclaimerFooter, renderError } from "./shared.js";
 
 // Canonical GICS-style sector order (Energy -> Real Estate), so sections
 // appear in the same order finance convention uses rather than
@@ -87,7 +87,7 @@ function wireSearch() {
   });
 }
 
-// Search results: grouped by sector, re-sorted by Investment Meter score -
+// Search results: grouped by sector, sorted alphabetically by ticker -
 // an arbitrary subset matching the query, not the performance screen, so it
 // keeps showing the fundamentals badges rather than a rank-by-return list.
 function renderBySector(companies) {
@@ -98,10 +98,8 @@ function renderBySector(companies) {
     bySector.get(sector).push(company);
   }
 
-  // Highest Conviction Score first within each sector - companies without
-  // enough data for a score (null) sort last rather than crashing the compare.
   for (const list of bySector.values()) {
-    list.sort((a, b) => (b.conviction_score ?? -1) - (a.conviction_score ?? -1));
+    list.sort((a, b) => a.ticker.localeCompare(b.ticker));
   }
 
   const orderedSectors = [
@@ -206,12 +204,6 @@ function renderCard(company) {
       ? `<span class="mini-badge" title="Net worth per share (assets minus liabilities)">Book value $${formatNumber(company.book_value_per_share, { decimals: 2 })}</span>`
       : "";
   const layeredBadge = renderLayeredBadge(company);
-  const hasConviction = company.conviction_score !== null && company.conviction_score !== undefined;
-  const convictionBadge = hasConviction
-    ? `<span class="verdict-badge conviction-badge ${verdictClass(company.conviction_verdict)}">
-        Meter: ${escapeHtml(company.conviction_verdict)} (${formatNumber(company.conviction_score, { decimals: 0 })})
-      </span>`
-    : `<span class="verdict-badge conviction-badge verdict-neutral">Meter: not enough data</span>`;
   const price = company.price?.close;
   const priceLine =
     price !== undefined && price !== null
@@ -224,9 +216,6 @@ function renderCard(company) {
         <span class="name">${escapeHtml(company.name)}</span>
       </div>
       ${priceLine}
-      <div class="verdicts">
-        ${convictionBadge}
-      </div>
       <div class="mini-badges">${grahamBadge}${mungerBadge}${bookValueBadge}${layeredBadge}</div>
     </a>
   `;

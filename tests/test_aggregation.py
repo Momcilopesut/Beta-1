@@ -20,9 +20,6 @@ def test_all_layers_align():
             "quality bar is met, and a margin of safety exists."
         ),
         "flags": [],
-        "conviction_score": None,
-        "conviction_verdict": None,
-        "conviction_score_breakdown": None,
     }
 
 

@@ -1,6 +1,5 @@
 import {
   fetchJSON,
-  verdictClass,
   formatNumber,
   escapeHtml,
   renderDisclaimerFooter,
@@ -96,10 +95,6 @@ function render(doc) {
       ${renderWebsiteLink(doc.website)}
     </section>
 
-    <section class="verdicts-detail">
-      ${renderConvictionCard(doc.layered_analysis)}
-    </section>
-
     ${renderKeyMetricsReference(doc.metrics)}
 
     ${renderBalanceSheetBasics(doc.fundamentals, doc.layered_analysis)}
@@ -159,97 +154,6 @@ function renderRecentFilings(doc) {
         ${filings.map((f) => renderFilingCard(f, doc.qualitative)).join("")}
       </div>
     </section>
-  `;
-}
-
-// --- The meter: an inline SVG semi-circle gauge, five bands matching the
-// verdict thresholds/colors already defined in site/css/styles.css (light
-// and dark mode both covered since these read the same CSS custom
-// properties the rest of the page uses for verdict colors). ---
-
-const GAUGE_BANDS = [
-  { min: 0, max: 25, colorVar: "--weak" },
-  { min: 25, max: 40, colorVar: "--cautious" },
-  { min: 40, max: 60, colorVar: "--neutral" },
-  { min: 60, max: 75, colorVar: "--favorable" },
-  { min: 75, max: 100, colorVar: "--strong" },
-];
-
-function polarToCartesian(cx, cy, r, angleDeg) {
-  const rad = (angleDeg * Math.PI) / 180;
-  return { x: cx + r * Math.cos(rad), y: cy - r * Math.sin(rad) };
-}
-
-function scoreToAngleDeg(score) {
-  return 180 - (Math.max(0, Math.min(100, score)) / 100) * 180;
-}
-
-function gaugeArcPath(cx, cy, r, scoreStart, scoreEnd) {
-  const start = polarToCartesian(cx, cy, r, scoreToAngleDeg(scoreStart));
-  const end = polarToCartesian(cx, cy, r, scoreToAngleDeg(scoreEnd));
-  return `M ${start.x.toFixed(2)} ${start.y.toFixed(2)} A ${r} ${r} 0 0 1 ${end.x.toFixed(2)} ${end.y.toFixed(2)}`;
-}
-
-function renderMeterGauge(score, verdict) {
-  const cx = 100;
-  const cy = 96;
-  const r = 78;
-  const strokeWidth = 16;
-  const hasScore = score !== null && score !== undefined;
-
-  const bands = GAUGE_BANDS.map(
-    (b) =>
-      `<path d="${gaugeArcPath(cx, cy, r, b.min, b.max)}" stroke="var(${b.colorVar})" stroke-width="${strokeWidth}" fill="none" />`
-  ).join("");
-
-  let needle = "";
-  if (hasScore) {
-    const tip = polarToCartesian(cx, cy, r - strokeWidth - 8, scoreToAngleDeg(score));
-    needle = `
-      <line x1="${cx}" y1="${cy}" x2="${tip.x.toFixed(2)}" y2="${tip.y.toFixed(2)}" stroke="var(--fg)" stroke-width="3" stroke-linecap="round" />
-      <circle cx="${cx}" cy="${cy}" r="6" fill="var(--fg)" />
-    `;
-  }
-
-  const label = hasScore
-    ? `Investment meter: ${formatNumber(score, { decimals: 0 })}${verdict ? ", " + verdict : ""}`
-    : "Investment meter: not enough data";
-
-  return `
-    <div class="meter-gauge">
-      <svg viewBox="0 0 200 108" width="220" height="119" role="img" aria-label="${escapeHtml(label)}">
-        ${bands}
-        ${needle}
-      </svg>
-      <p class="meter-score">${hasScore ? formatNumber(score, { decimals: 0 }) : "—"}</p>
-      <p class="meter-verdict">${verdict ? escapeHtml(verdict) : "Not enough data"}</p>
-    </div>
-  `;
-}
-
-function renderConvictionCard(layered) {
-  const hasScore = layered && layered.conviction_score !== null && layered.conviction_score !== undefined;
-  const gauge = renderMeterGauge(hasScore ? layered.conviction_score : null, hasScore ? layered.conviction_verdict : null);
-
-  if (!hasScore) {
-    return `
-      <div class="score-card verdict-neutral meter-card">
-        <h3>Investment Meter</h3>
-        ${gauge}
-        <p class="score-note">Needs the defensive checklist to have evaluated data.</p>
-      </div>
-    `;
-  }
-  const b = layered.conviction_score_breakdown || {};
-  return `
-    <div class="score-card ${verdictClass(layered.conviction_verdict)} meter-card">
-      <h3>Investment Meter</h3>
-      ${gauge}
-      <p class="score-note">Base checklist ${formatNumber(b.base_score, { decimals: 0 })}% ×
-      ${formatNumber(b.munger_multiplier, { decimals: 2 })} quality checklist ×
-      ${formatNumber(b.moat_multiplier, { decimals: 2 })} moat read ×
-      ${formatNumber(b.valuation_multiplier, { decimals: 2 })} valuation gate</p>
-    </div>
   `;
 }
 
@@ -918,7 +822,7 @@ function renderLayeredAnalysis(doc) {
   const flags = (layered.flags || []).map((f) => `<li>${escapeHtml(f)}</li>`).join("");
   return `
     <section class="layered-analysis">
-      <h3>Layered Analysis <span class="attribution">(the quality checklist and moat read stay visible separately, then combine with the defensive checklist and valuation gate above — via multipliers, never a naive average — into the Investment Meter)</span></h3>
+      <h3>Layered Analysis <span class="attribution">(each gate stays visible separately, deliberately not blended into one score)</span></h3>
       <p class="layered-overall">${escapeHtml(layered.overall)}</p>
       ${flags ? `<ul class="layered-flags">${flags}</ul>` : ""}
       <div class="layered-columns">

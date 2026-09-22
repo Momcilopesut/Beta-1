@@ -389,8 +389,6 @@ def main() -> None:
                 "qualitative_moat_present": layered_analysis["qualitative_moat_present"],
                 "munger_quality_pass": layered_analysis["munger_quality_pass"],
                 "valuation_gate_pass": layered_analysis["valuation_gate_pass"],
-                "conviction_score": layered_analysis["conviction_score"],
-                "conviction_verdict": layered_analysis["conviction_verdict"],
                 "last_updated": generated_at,
             }
         )

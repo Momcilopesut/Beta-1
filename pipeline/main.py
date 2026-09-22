@@ -2,10 +2,9 @@
 purpose: scan a curated universe of stocks (config/watchlist.yaml) and
 surface each sector's 5 best price performers over five lookback windows
 (weekly, monthly, quarterly, annual, 5-year), every week. This ranking is
-pure price return - it does not use the Investment Meter or any Graham/
-Buffett/Munger check. Every company still gets the full fundamentals
-scoring on its own detail page; it just doesn't gate or influence which
-tickers surface on the screen itself.
+pure price return - it does not use any fundamentals check. Every company
+still gets the full fundamentals scoring on its own detail page; it just
+doesn't gate or influence which tickers surface on the screen itself.
 
 Usage:
   python -m pipeline.main                         # full screen over the whole universe
@@ -288,8 +287,6 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
         "qualitative_moat_present": layered_analysis["qualitative_moat_present"],
         "munger_quality_pass": layered_analysis["munger_quality_pass"],
         "valuation_gate_pass": layered_analysis["valuation_gate_pass"],
-        "conviction_score": layered_analysis["conviction_score"],
-        "conviction_verdict": layered_analysis["conviction_verdict"],
         "last_updated": generated_at,
     }
 
@@ -382,7 +379,7 @@ def run_full(args) -> int:
         summaries.append(summary)
 
     # Rank + select each window's top performers per sector, from the cheap
-    # screen above - pure price return, independent of the Investment Meter.
+    # screen above - pure price return, independent of any fundamentals check.
     top_n_per_sector = screening_config()["top_n_per_sector"]
     picks_by_sector = performance.select_top_performers(summaries, top_n_per_sector)
     finalist_tickers = {

@@ -3,7 +3,6 @@ from pathlib import Path
 
 from pipeline.scoring import macro_regime
 from pipeline.scoring.fundamentals import build_metrics
-from pipeline.scoring.thresholds import verdict_for
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -15,14 +14,6 @@ def load_fixture(name):
 
 def _series(values):
     return [{"date": f"2026-01-{i + 1:02d}", "value": v} for i, v in enumerate(values)]
-
-
-def test_verdict_bands():
-    assert verdict_for(80) == "Strong"
-    assert verdict_for(65) == "Favorable"
-    assert verdict_for(50) == "Neutral"
-    assert verdict_for(30) == "Cautious"
-    assert verdict_for(10) == "Weak"
 
 
 def test_macro_regime_classifies_restrictive_late_cycle():

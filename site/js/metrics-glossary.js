@@ -35,7 +35,7 @@ export const METRIC_GLOSSARY = [
     significance:
       "This tool's final valuation gate: even a wonderful, well-run business isn't a buy at any price. Positive means the price sits below the fair-value estimate; negative means it's trading above it.",
     volatilityImpact:
-      "One of the most volatile numbers here since it's measured against the live stock price - it moves every trading day even when nothing about the company changed. A short-term price swing can flip the Investment Meter's valuation multiplier (1.0x to 0.55x) without a single thing being different about the business.",
+      "One of the most volatile numbers here since it's measured against the live stock price - it moves every trading day even when nothing about the company changed. A short-term price swing can flip the valuation gate from pass to fail without a single thing being different about the business.",
   },
   {
     key: "graham_multiple",
