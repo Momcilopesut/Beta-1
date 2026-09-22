@@ -78,34 +78,35 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 82.83002706723659,
+      "graham_multiple": 82.31276204694093,
       "graham_number": 185.39611518465358,
-      "graham_upside_pct": -50.38374051687268,
-      "ncav_margin_pct": -134.97395560165174,
-      "pb_ratio": 3.442985541865166,
-      "pe_ttm": 24.057616873512963
+      "graham_upside_pct": -50.289284036827034,
+      "ncav_margin_pct": -135.04053693554948,
+      "pb_ratio": 3.4322181595173036,
+      "pe_ttm": 23.98238055430519
     }
   },
   "industry": "Medical - Healthcare Plans",
-  "last_updated": "2026-09-22T17:47:09Z",
+  "last_updated": "2026-09-22T21:43:50Z",
   "layered_analysis": {
-    "conviction_score": 20.2,
+    "conviction_score": 21.2,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 339754984424,
+  "market_cap": 338692455472,
   "metrics": {
     "book_value_per_share": 115.46726975917139,
     "current_ratio": 0.7767841173314255,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 3.5916410280471975,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 82.83002706723659,
-    "graham_upside_pct": -50.38374051687268,
+    "graham_multiple": 82.31276204694093,
+    "graham_upside_pct": -50.289284036827034,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -134.97395560165174,
-    "pb_ratio": 3.442985541865166,
-    "pe_ttm": 24.057616873512963,
+    "ncav_margin_pct": -135.04053693554948,
+    "pb_ratio": 3.4322181595173036,
+    "pe_ttm": 23.98238055430519,
     "roe_pct": 14.625671564502557,
     "shareholders_equity": 94110000000,
     "total_assets": 309581000000,
@@ -142,37 +143,43 @@
   "name": "UnitedHealth Group Incorporated",
   "price": {
     "as_of": "2026-09-22",
-    "close": 373.66
+    "close": 372.95
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "UnitedHealth Group's FY2025 10-K reports consolidated revenue of $447.6 billion (up 12%), but earnings from operations fell 41% to $19.0 billion, and diluted EPS was $13.23, driven by elevated medical cost trends, Medicare Advantage funding reductions, and $2.5 billion in Q4 2025 restructuring charges. The medical care ratio rose to 89.1% from 85.5%, and the company also recorded a net $568 million gain from portfolio divestitures and continued financial impacts tied to the 2024 Change Healthcare cyberattack. The filing describes four reportable segments (Optum Health, Optum Insight, Optum Rx, and UnitedHealthcare) and notes a planned 2026 realignment moving Optum Financial from Optum Health to Optum Insight.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated September 8, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that UnitedHealth Group senior leaders participated in an interview-format Q&A at the Wells Fargo 21st Annual Healthcare Conference on September 9, 2026, covering the company's strategy, market positions, recent results, and end-market expectations. A live audio webcast was made available via the company's investor relations website. The filing does not disclose financial results or other material events.",
+    "moat_explanation": "The 10-K describes UnitedHealth Group's massive scale \the UnitedHealthcare businesses serve 49.76 million people, Optum Health serves ~95 million consumers, Optum Insight holds a $31.1 billion contract backlog, and Optum Rx operates a network of ~64,000 retail pharmacies \ffering integration across data, analytics and pharmacy operations that smaller competitors would struggle to replicate. However, the excerpts also describe the commercial risk market as 'highly competitive' and note that pricing has recently fallen well short of medical cost trends, suggesting the scale advantage has not fully protected margins.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Earnings from operations fell 41% year-over-year (from $32.3B to $19.0B) as pricing trends and health-status assumptions were 'well-short' of incurred medical cost trends, materially impacting results",
+      "Medical care ratio rose from 85.5% to 89.1%, reflecting Medicare Advantage funding reductions, elevated medical cost trend, and IRA-driven Part D impacts",
+      "The company disclosed a prior cyberattack on its Change Healthcare business (Feb 2024) and increased reserves by $799 million in Q4 2025 for collection shortfalls on related provider loans",
+      "Management expects Medicare Advantage membership and value-based care participation to contract in 2026 due to continued funding pressure and revised risk-adjustment models",
+      "Medicaid margins face continued downward pressure from a timing mismatch between member health status and state rate updates, with expected 2026 membership losses including exit from one state",
+      "The company recorded $2.5 billion in restructuring and other charges in Q4 2025, including a loss contract reserve for anticipated 2026 losses in certain value-based care businesses"
+    ]
+  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000731766.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-08",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000205/unh-20260908.htm"
+      },
       {
         "filed": "2026-08-10",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000197/unh-20260630.htm"
       },
       {
-        "filed": "2026-05-05",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000127/unh-20260331.htm"
-      },
-      {
         "filed": "2026-03-02",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm"
-      },
-      {
-        "filed": "2025-10-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176625000305/unh-20250930.htm"
-      },
-      {
-        "filed": "2025-08-11",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176625000236/unh-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $339.8B",
+          "detail": "Market cap $338.7B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.1",
+          "detail": "P/E 24.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 82.8",
+          "detail": "P/E x P/B = 82.3",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.unitedhealthgroup.com"
 }

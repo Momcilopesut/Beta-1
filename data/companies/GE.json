@@ -78,34 +78,36 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 696.2866889348862,
+      "graham_multiple": 704.7831459280587,
       "graham_number": 56.17659443811513,
-      "graham_upside_pct": -82.29822138392466,
-      "ncav_margin_pct": -121.46351034607208,
-      "pb_ratio": 18.696973083693877,
-      "pe_ttm": 37.2406103286385
+      "graham_upside_pct": -82.40191891544542,
+      "ncav_margin_pct": -121.33777648119157,
+      "pb_ratio": 18.810702347306123,
+      "pe_ttm": 37.467136150234744
     }
   },
   "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-22T17:49:57Z",
+  "last_updated": "2026-09-22T21:31:53Z",
   "layered_analysis": {
-    "conviction_score": 20.2,
+    "conviction_score": 14.1,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 0.7,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "The qualitative layer found no durable moat in the filing text - current quality may not be durable (Buffett).",
+      "3 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +118,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 329208209750,
+  "market_cap": 331210705400,
   "metrics": {
     "book_value_per_share": 17.18850633259514,
     "current_ratio": 0.9818698985901558,
@@ -126,14 +128,14 @@
     "fcf_margin_pct": 15.841238687166067,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 696.2866889348862,
-    "graham_upside_pct": -82.29822138392466,
+    "graham_multiple": 704.7831459280587,
+    "graham_upside_pct": -82.40191891544542,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -121.46351034607208,
-    "pb_ratio": 18.696973083693877,
-    "pe_ttm": 37.2406103286385,
+    "ncav_margin_pct": -121.33777648119157,
+    "pb_ratio": 18.810702347306123,
+    "pe_ttm": 37.467136150234744,
     "roe_pct": 49.03123548219605,
     "shareholders_equity": 18677000000,
     "total_assets": 130169000000,
@@ -142,37 +144,40 @@
   "name": "GE Aerospace",
   "price": {
     "as_of": "2026-09-22",
-    "close": 317.35
+    "close": 319.22
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K excerpts provided contain only the Item headers and page-range references for the Business, Risk Factors, and Management's Discussion and Analysis sections (e.g., page ranges 4-7/9-10/71-73, 24-31, and 7-22 respectively), without any accompanying narrative text. As a result, the excerpts do not describe specific business operations, risks, or financial results for the period, and no further factual summary can be drawn from what was given.",
+    "filing_summary_10q": "The most recent 10-Q excerpt is composed largely of XBRL tag identifiers rather than narrative text, covering the quarter ended June 30, 2026. It indicates the company (GE Aerospace) reports under two operating segments, Commercial Engines and Services and Defense and Propulsion Technologies, and separately reflects discontinued operations associated with the GE Vernova spinoff and the Bank BPH business, as well as runoff insurance operations spanning long-term care, structured settlement annuity, and life insurance products. No narrative discussion of results or developments is included in the provided excerpt.",
+    "filing_summary_8k": "This Form 8-K, dated September 22, 2026 with an event date of September 21, 2026, reports two board-related items: it clarifies that Judson Althoff, previously elected to the GE Board in June 2026, was appointed to the Audit Committee effective September 21, 2026, and it discloses that the independent directors appointed Wesley Bush as independent Lead Director effective the same date, with a related press release attached as an exhibit.",
+    "moat_explanation": "The 10-K excerpts supplied for Business, Risk Factors, and MD&A consist only of item headers and page-number ranges (e.g., 'Item 1. Business 4-7, 9-10, 71-73') with no actual narrative text about products, customers, competitive position, or market structure. Because no substantive content was provided, the excerpts do not support a moat classification in any category, so no durable competitive advantage can be identified from what was given.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "The 10-Q data references legacy 'Runoff Insurance Operations' including long-term care insurance and structured settlement annuity products, which are commonly associated with long-tail liability risk, though no narrative detail on this risk is provided in the excerpt.",
+      "The 10-Q tags reference 'Bank BPH Litigation' under discontinued operations, indicating an unresolved legal matter tied to a discontinued business, though the excerpt gives no substantive description of the litigation.",
+      "The 10-Q shows discontinued operations tied to the GE Vernova spinoff, indicating a significant recent corporate restructuring whose full financial effects are not detailed in the excerpt provided."
+    ]
+  },
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000040545.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-22",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000059/ge-20260921.htm"
+      },
       {
         "filed": "2026-07-16",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000049/ge-20260630.htm"
       },
       {
-        "filed": "2026-04-21",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000027/ge-20260331.htm"
-      },
-      {
         "filed": "2026-01-29",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/ge-20251231.htm"
-      },
-      {
-        "filed": "2025-10-21",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054525000132/ge-20250930.htm"
-      },
-      {
-        "filed": "2025-07-21",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054525000111/ge-20250630.htm"
       }
     ]
   },
@@ -182,7 +187,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $329.2B",
+          "detail": "Market cap $331.2B",
           "passed": true
         },
         {
@@ -207,12 +212,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 37.2",
+          "detail": "P/E 37.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 696.3",
+          "detail": "P/E x P/B = 704.8",
           "passed": false
         }
       ],
@@ -247,5 +252,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.geaerospace.com"
 }

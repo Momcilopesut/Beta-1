@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1103982/000162828026005345/mdlz-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1103982/000162828026050179/mdlz-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1103982/000162828026050157/mdlz-20260728.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Mondel\u0113z reported global net revenues of $38.5 billion and net earnings of $2.5 billion, selling chocolate, biscuits, baked snacks, and adjacent categories across four regional segments. The filing describes ongoing macroeconomic pressures including elevated cocoa and other commodity costs, tariff and trade policy uncertainty, currency volatility, and continued exposure to the war in Ukraine (with Russia and Ukraine together representing about 4.1% of 2025 net revenue). It also discusses a multi-year ERP system implementation (approved for $1.2 billion in funding), completion of pension plan settlements resulting in non-cash losses, and various 2024-2025 equity method investment transactions including the sale of its JDE Peet's stake and exit from Keurig Dr Pepper.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses under Item 2.02 that Mondel\u0113z issued a press release announcing its financial results for the second quarter ended June 30, 2026, furnished as an exhibit to the filing. The filing itself does not include the financial results text, only the cover disclosure that the earnings release was issued.",
+    "moat_explanation": "The 10-K repeatedly emphasizes a portfolio of iconic global and local brands (Oreo, Ritz, Cadbury Dairy Milk, Milka, Toblerone, Clif Bar) and states that 'brand recognition and loyalty' is a key basis of competition, with the company crediting its 'portfolio of brands' along with global footprint and scale for building 'market-leading positions across most of the product categories in which we sell.' This brand strength, rather than any described patent, network effect, or contractual switching cost, is what the excerpts point to as differentiating.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Significant commodity cost volatility, especially soaring cocoa prices, with hedging strategies acknowledged as not fully protective",
+      "Pricing increases taken to offset input costs have adversely impacted consumer demand/elasticity, particularly in the US and Europe",
+      "Material exposure to tariffs and trade policy uncertainty affecting costs of imported finished products and inputs",
+      "Continued operations in Russia (3.7% of 2025 net revenue) and Ukraine (0.4%) amid the ongoing war, with risk of asset impairment, expropriation, or deconsolidation",
+      "Large non-cash pension settlement losses recognized in 2025 ($282 million and $54 million) from US and Canada retirement plan buy-outs",
+      "Sizable mark-to-market derivative losses ($1,342 million) affecting reported results in 2025"
+    ]
+  }
+}

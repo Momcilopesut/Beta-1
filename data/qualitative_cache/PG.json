@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000060/pg-20260331.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000097/pg-20260729.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "P&G's fiscal 2026 10-K describes a global consumer goods business with five reportable segments (Beauty, Grooming, Health Care, Fabric & Home Care, and Baby, Feminine & Family Care) generating $87.0 billion in net sales, up 3% year-over-year, with organic sales growth of 1% and operating income down 3% to $19.7 billion. The filing discusses several recent developments including completion of a limited market portfolio restructuring (with Argentina liquidation charges), a prior Gillette intangible impairment, a new focused portfolio/productivity restructuring plan, dissolution of the Glad joint venture with Clorox, partial recovery of previously paid IEEPA tariffs following a Supreme Court ruling, and a pending $3.8 billion agreement to acquire Thorne announced after fiscal year-end.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended March 31, 2026, fiscal Q3 2026) consists solely of XBRL taxonomy and context tags rather than narrative text, listing the company's five reportable segments, various outstanding notes/debt instruments, and data points such as Gillette intangible asset sensitivity analysis inputs and stock-based compensation and pension categories. No descriptive discussion of quarterly financial results or business developments was included in the excerpt supplied, so a substantive summary of the quarter's results cannot be provided from this text alone.",
+    "filing_summary_8k": "This 8-K, dated July 29, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that P&G issued a press release announcing its fourth-quarter and full fiscal year 2026 results and held an related conference call. The company furnished informational slides referenced on that call as an exhibit; the filing itself does not include the underlying financial results text, only the announcement and exhibit listing.",
+    "moat_explanation": "The 10-K describes P&G as holding leadership or top-two market share positions across nearly all its categories (e.g., >50% share in grooming, ~35%+ in fabric care, ~30% in oral care and baby care) built on long-standing brand names like Tide, Pampers, Gillette, Crest and Always, along with owned patents and trademarks described as central to its marketing and manufacturing processes. The excerpts attribute competitive success explicitly to brand equity, trademarks and patents rather than to a stated low-cost structure, network effects, or switching-cost mechanics, supporting an intangible-assets moat classification.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Customer concentration: Walmart and affiliates represent ~16% of total sales, and top ten customers account for ~42-43% of net sales",
+      "Company recorded a $1.3 billion pre-tax non-cash impairment on the Gillette indefinite-lived intangible asset, indicating a decline in that asset's estimated fair value",
+      "Ongoing multi-year restructuring programs (including a plan to cut up to 7,000 non-manufacturing roles and $1.5-2.0 billion in restructuring costs) signal cost-structure and organizational pressure",
+      "Operating income and operating margin declined year-over-year in fiscal 2026 despite higher net sales, indicating margin pressure",
+      "Significant exposure to tariffs, foreign currency fluctuations, and geopolitical disruptions (e.g., Russia/Ukraine, Middle East conflict, IEEPA tariff litigation) that the company itself flags as adversely affecting results",
+      "Reliance on single-source/sole suppliers and sole manufacturing plant arrangements for certain materials and products, creating supply chain concentration risk"
+    ]
+  }
+}

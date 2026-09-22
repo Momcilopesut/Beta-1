@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 23.01844780490201,
+      "graham_multiple": 22.535582308907497,
       "graham_number": 48.01644841737092,
-      "graham_upside_pct": 2.336846584336989,
-      "ncav_margin_pct": -223.9317001791921,
-      "pb_ratio": 1.8828595073133179,
-      "pe_ttm": 12.225260416666668
+      "graham_upside_pct": 3.3723324378275867,
+      "ncav_margin_pct": -225.18569154806661,
+      "pb_ratio": 1.8630061585835258,
+      "pe_ttm": 12.096354166666668
     }
   },
   "industry": "Telecommunications Services",
-  "last_updated": "2026-09-22T17:48:25Z",
+  "last_updated": "2026-09-22T21:15:51Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
-      "Positive but thin margin of safety - 2% is below Graham's 15% convention."
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Positive but thin margin of safety - 3% is below Graham's 15% convention."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 196021664200,
+  "market_cap": 193954762000,
   "metrics": {
     "book_value_per_share": 25.238963531669867,
     "current_ratio": 0.6039285656877401,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 14.563900688177956,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 23.01844780490201,
-    "graham_upside_pct": 2.336846584336989,
+    "graham_multiple": 22.535582308907497,
+    "graham_upside_pct": 3.3723324378275867,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -223.9317001791921,
-    "pb_ratio": 1.8828595073133179,
-    "pe_ttm": 12.225260416666668,
+    "ncav_margin_pct": -225.18569154806661,
+    "pb_ratio": 1.8630061585835258,
+    "pe_ttm": 12.096354166666668,
     "roe_pct": 15.522723291523787,
     "shareholders_equity": 104460000000,
     "total_assets": 404258000000,
@@ -142,9 +143,25 @@
   "name": "Verizon Communications Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 46.92
+    "close": 46.45
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Verizon reported consolidated operating revenues of $138.2 billion, up 2.5% from 2024, driven by 3.8% growth in the Consumer segment ($106.8 billion) that offset a 1.6% decline in the Business segment ($29.1 billion). Operating expenses rose 2.7%, largely due to higher wireless equipment costs from increased device upgrades and a mix shift to pricier devices, while net income was $17.6 billion versus $17.9 billion in 2024. The filing also describes the January 2026 completed acquisitions of Frontier Communications and Starry Group Holdings, which expanded Verizon's fiber and fixed wireless broadband footprint, and notes $17.0 billion in 2025 capital expenditures.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the six months ended June 30, 2026) consists primarily of structured XBRL data tags rather than narrative text, so a detailed description of quarterly results cannot be drawn from it. It references ongoing integration items tied to the Frontier and Starry acquisitions, multiple debt issuances, redemptions and open-market repurchases of Verizon notes, asset-backed securities note transactions completed in March and June 2026, and spectrum license transactions related to U.S. Cellular (Array Digital Infrastructure). No further qualitative detail on the quarter's financial performance is available in the provided excerpt.",
+    "filing_summary_8k": "This 8-K, dated July 23, 2026, discloses an amendment to Verizon CEO Daniel H. Schulman's employment agreement. Under the amendment, the initial term of his employment was extended from December 31, 2027 to December 31, 2028, with automatic one-year extensions thereafter absent 90 days' non-extension notice; the agreement also specifies 2028 base salary/incentive targets no less than the prior period and a long-term incentive award with a target value of at least $25 million to be granted in early 2027.",
+    "moat_explanation": "The excerpts describe a capital-intensive national wireless and fiber network requiring $17.0 billion in annual capital expenditures, FCC-licensed spectrum holdings, and a competitive landscape limited primarily to a small number of national providers (Verizon, AT&T, T-Mobile) alongside cable and satellite entrants. This scale of infrastructure investment and spectrum access creates a natural limit on the number of efficient competitors, though the filing also emphasizes that competition remains 'intense' with aggressive pricing pressure from rivals.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Company explicitly states competitors use 'aggressive pricing, promotions, premium content options and other incentives... specifically targeting our customers and putting pressure on our pricing and margins'",
+      "Disclosed 2024 nation-state cyberattack (Salt Typhoon) that accessed portions of Verizon's network, with acknowledgment that a future material cyberattack cannot be ruled out",
+      "Business segment revenue declined 1.6% year-over-year in 2025 while cost of wireless equipment rose 11.0%, partly from a mix shift to higher-priced devices",
+      "Company notes a sustained decline in a reporting unit's revenue and earnings has previously triggered, and could again trigger, goodwill impairment charges",
+      "Public sector business exposed to reduced federal/state government workforce and cost-efficiency measures",
+      "New U.S. tariffs on imported goods and potential retaliatory trade measures could adversely affect cost structure and profitability"
+    ]
+  },
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000732712.json",
@@ -155,24 +172,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000046/vz-20260630.htm"
       },
       {
-        "filed": "2026-05-01",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000023/vz-20260331.htm"
+        "filed": "2026-07-24",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/732712/000119312526315236/d174102d8k.htm"
       },
       {
         "filed": "2026-02-17",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm"
-      },
-      {
-        "filed": "2025-10-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271225000116/vz-20250930.htm"
-      },
-      {
-        "filed": "2025-07-25",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271225000086/vz-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $196.0B",
+          "detail": "Market cap $194.0B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 12.2",
+          "detail": "P/E 12.1",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 23.0",
+          "detail": "P/E x P/B = 22.5",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.verizon.com"
 }

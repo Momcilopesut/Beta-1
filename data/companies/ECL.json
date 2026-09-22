@@ -78,34 +78,35 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 281.1971831318847,
+      "graham_multiple": 284.5869887049542,
       "graham_number": 76.89239923013993,
-      "graham_upside_pct": -71.98258331172369,
-      "ncav_margin_pct": -111.61529232842871,
-      "pb_ratio": 7.681024414499527,
-      "pe_ttm": 36.60933333333333
+      "graham_upside_pct": -72.16262427407867,
+      "ncav_margin_pct": -111.54065202764323,
+      "pb_ratio": 7.72718273581622,
+      "pe_ttm": 36.82933333333334
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-22T17:46:02Z",
+  "last_updated": "2026-09-22T21:30:00Z",
   "layered_analysis": {
-    "conviction_score": 20.2,
+    "conviction_score": 21.2,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "4 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 77274431660,
+  "market_cap": 77738804360,
   "metrics": {
     "book_value_per_share": 35.84927124066832,
     "current_ratio": 1.8407443290014365,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 11.841777976767903,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 281.1971831318847,
-    "graham_upside_pct": -71.98258331172369,
+    "graham_multiple": 284.5869887049542,
+    "graham_upside_pct": -72.16262427407867,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -111.61529232842871,
-    "pb_ratio": 7.681024414499527,
-    "pe_ttm": 36.60933333333333,
+    "ncav_margin_pct": -111.54065202764323,
+    "pb_ratio": 7.72718273581622,
+    "pe_ttm": 36.82933333333334,
     "roe_pct": 21.405237021229254,
     "shareholders_equity": 9770800000,
     "total_assets": 24696300000,
@@ -142,9 +143,23 @@
   "name": "Ecolab Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 274.445
+    "close": 276.22
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Ecolab's 10-K describes a global water, hygiene and infection prevention company with about $16 billion in 2025 sales across four reportable segments: Global Water, Global Institutional & Specialty, Global Pest Elimination, and Global Life Sciences. The company reported 2025 net sales of $16.1 billion (up 2% reported, 3% organic), gross margin improvement to 44.5%, and adjusted diluted EPS growth of 13% to $7.53, while reported diluted EPS declined slightly to $7.28 due to special charges. The filing also discusses the December 2025 acquisition of Ovivo's electronics business for $1.6 billion and details on goodwill, intangible assets, and critical accounting estimates including pension assumptions and tax positions.",
+    "filing_summary_10q": "The excerpt provided is primarily XBRL tagging data from Ecolab's Form 10-Q for the quarter ended June 30, 2026, without narrative text describing business or financial results. It references items such as debt issuances (senior notes across various maturities), the One Ecolab restructuring initiative, the Ovivo Electronics and CoolIT Systems transactions, and goodwill impairment testing across reporting units, but does not provide sufficient prose detail to summarize specific quarterly financial performance.",
+    "filing_summary_8k": "This Form 8-K, dated July 28, 2026, discloses that Ecolab announced its second quarter 2026 earnings results, with a news release and supplemental data furnished as exhibits under Item 2.02. The filing includes standard forward-looking statement cautions referencing risks related to the company's restructuring plan and other factors described in its most recent 10-K, but does not itself detail specific financial figures within the provided text.",
+    "moat_explanation": "The 10-K describes Ecolab as a global leader with a broad portfolio of branded products (Ecolab, Kay, Nalco, Purolite, Bioquell), extensive patented technologies like 3D TRASAR, and long-standing customer relationships built through embedded, on-site service and digital monitoring systems across 170 countries. The MD&A notes the Nalco trade name and customer relationship intangibles are valued in the billions and have shown consistent retention, supporting a durable brand/intangible asset moat, with some switching-cost elements from integrated on-site programs and dispensing systems, though intangible assets/brand strength is the most directly supported category.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Specialty segment (QSR/food retail) business remains largely dependent upon a limited number of major QSR chains, franchisees and large food retail customers, indicating customer concentration risk",
+      "Ongoing IRS audit for tax years 2019-2020 and multiple foreign/state tax audits create some uncertainty around unrecognized tax benefits",
+      "Significant reliance on actuarial and discount rate assumptions for large pension/postretirement obligations, which could materially affect reported results if assumptions change",
+      "Reported diluted EPS decreased slightly year-over-year (from $7.37 to $7.28) despite adjusted EPS growth, reflecting the impact of special charges and acquisition-related costs"
+    ]
+  },
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000031462.json",
@@ -155,24 +170,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/31462/000162828026053886/ecl-20260630.htm"
       },
       {
-        "filed": "2026-05-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/31462/000110465926056737/ecl-20260331x10q.htm"
+        "filed": "2026-07-28",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/31462/000162828026049933/ecl-20260728.htm"
       },
       {
         "filed": "2026-02-23",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/31462/000110465926018357/ecl-20251231x10k.htm"
-      },
-      {
-        "filed": "2025-10-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/31462/000110465925104386/ecl-20250930x10q.htm"
-      },
-      {
-        "filed": "2025-08-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/31462/000155837025010768/ecl-20250630x10q.htm"
       }
     ]
   },
@@ -182,7 +187,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $77.3B",
+          "detail": "Market cap $77.7B",
           "passed": true
         },
         {
@@ -207,12 +212,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 36.6",
+          "detail": "P/E 36.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 281.2",
+          "detail": "P/E x P/B = 284.6",
           "passed": false
         }
       ],
@@ -247,5 +252,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.ecolab.com"
 }

@@ -78,35 +78,37 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 39.38541552713126,
+      "graham_multiple": 38.54396363008454,
       "graham_number": 87.78651532981031,
-      "graham_upside_pct": -30.682999463215825,
-      "ncav_margin_pct": -127.55295604360161,
-      "pb_ratio": 2.3513680911720147,
-      "pe_ttm": 16.750000000000004
+      "graham_upside_pct": -29.922155879452127,
+      "ncav_margin_pct": -127.85538531285962,
+      "pb_ratio": 2.3261145129994336,
+      "pe_ttm": 16.570105820105823
     }
   },
   "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-09-22T17:45:46Z",
+  "last_updated": "2026-09-22T21:35:41Z",
   "layered_analysis": {
-    "conviction_score": 6.9,
+    "conviction_score": 4.8,
     "conviction_score_breakdown": {
       "base_score": 16.7,
       "components": {
         "graham_pct": 16.7
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 0.7,
       "munger_multiplier": 0.75,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "The qualitative layer found no durable moat in the filing text - current quality may not be durable (Buffett).",
       "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -117,7 +119,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 154272570106,
+  "market_cap": 152615690257,
   "metrics": {
     "book_value_per_share": 53.85375453355012,
     "current_ratio": 1.5415194346289753,
@@ -127,14 +129,14 @@
     "fcf_margin_pct": 28.45582247557003,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 1,
-    "graham_multiple": 39.38541552713126,
-    "graham_upside_pct": -30.682999463215825,
+    "graham_multiple": 38.54396363008454,
+    "graham_upside_pct": -29.922155879452127,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -127.55295604360161,
-    "pb_ratio": 2.3513680911720147,
-    "pe_ttm": 16.750000000000004,
+    "ncav_margin_pct": -127.85538531285962,
+    "pb_ratio": 2.3261145129994336,
+    "pe_ttm": 16.570105820105823,
     "roe_pct": 14.318549942151948,
     "shareholders_equity": 64487000000,
     "total_assets": 121939000000,
@@ -143,37 +145,43 @@
   "name": "ConocoPhillips",
   "price": {
     "as_of": "2026-09-22",
-    "close": 126.645
+    "close": 125.27
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, ConocoPhillips reported total production of 2,375 MBOED (up 20% year-over-year, driven partly by the Marathon Oil acquisition completed in late 2024), cash from operations of $19.8 billion, capital expenditures of $12.6 billion, and $9.0 billion returned to shareholders via dividends and buybacks. The filing describes lower average realized crude and bitumen prices in 2025 versus 2024, completion of Marathon Oil integration with over $1 billion in run-rate synergies, a $5 billion asset disposition target (of which $3.2 billion was completed in 2025), continued LNG portfolio expansion, and a newly announced restructuring aimed at further cost reductions and margin enhancements.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended June 30, 2026) consists almost entirely of XBRL data tags rather than narrative text, so specific financial results cannot be summarized from it. It indicates disclosures covering Lower 48 assets classified as held for sale, a subsequent event involving a non-operated joint venture supporting oil fields in the Kirkuk area of northern Iraq, debt and investment security details, commodity and interest-rate derivative positions, and pension-related items as of and for the periods ended June 30, 2026.",
+    "filing_summary_8k": "This 8-K, dated August 6, 2026, discloses a leadership transition at ConocoPhillips: Ryan M. Lance will retire as President and CEO and become Executive Chair of the Board effective September 1, 2026, while Andrew M. O'Brien, currently EVP of Strategy, Commercial and CFO, will become President, CEO, and a Board member. Kontessa S. Haynes-Welsh will become SVP and CFO, and Greig Patterson will become VP, Finance and Controller, also effective September 1, 2026. The filing details related compensation changes for these officers and other executives, including base salary, incentive targets, and restricted stock unit awards.",
+    "moat_explanation": "The excerpts describe ConocoPhillips as an E&P company whose earnings and cash flow 'generally correlate with price levels for crude oil and natural gas, which are subject to factors external to the company and over which we have no control,' and the company states it remains 'unhedged.' While management emphasizes a 'low cost of supply' portfolio and cost-discipline framework, the excerpts provide no comparative data showing a durable structural cost advantage over peers, patents, brand power, network effects, or customer switching costs \u2014 this reads as a commodity price-taking business rather than one with a demonstrated moat.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Company explicitly states it is 'unhedged' and has no control over the commodity prices that drive its earnings and cash flow.",
+      "2025 reserve replacement was only 80% (99% organic), reflecting a net decrease in proved reserves after asset dispositions and lower prices.",
+      "Late-2025 restructuring included workforce reductions as part of a plan to achieve over $1 billion in cost reductions/margin enhancements.",
+      "Reserve, impairment, and business-combination valuations rely heavily on subjective management estimates and judgmental probability assessments that could materially change reported results.",
+      "Company acknowledges GHG emissions-reduction efforts 'may be costly and challenging to achieve.'",
+      "Realized crude and bitumen prices fell 14-19% year-over-year in 2025 due to oversupply relative to demand."
+    ]
+  },
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001163165.json",
     "sec_filings": [
+      {
+        "filed": "2026-08-11",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1163165/000110465926094062/tm2622739d1_8k.htm"
+      },
       {
         "filed": "2026-08-06",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1163165/000116316526000032/cop-20260630.htm"
       },
       {
-        "filed": "2026-04-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1163165/000116316526000018/cop-20260331.htm"
-      },
-      {
         "filed": "2026-02-17",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1163165/000116316526000009/cop-20251231.htm"
-      },
-      {
-        "filed": "2025-11-06",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1163165/000116316525000058/cop-20250930.htm"
-      },
-      {
-        "filed": "2025-08-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1163165/000116316525000042/cop-20250630.htm"
       }
     ]
   },
@@ -183,7 +191,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $154.3B",
+          "detail": "Market cap $152.6B",
           "passed": true
         },
         {
@@ -208,12 +216,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 16.8",
+          "detail": "P/E 16.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 39.4",
+          "detail": "P/E x P/B = 38.5",
           "passed": false
         }
       ],
@@ -248,5 +256,6 @@
       "passed": 1,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.conocophillips.com"
 }

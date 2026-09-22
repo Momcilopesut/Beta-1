@@ -78,34 +78,35 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 100.24992898009499,
+      "graham_multiple": 100.61262456130656,
       "graham_number": 91.71695514212709,
-      "graham_upside_pct": -63.92646798736398,
-      "ncav_margin_pct": -106.48675204237983,
-      "pb_ratio": 4.962867771291831,
-      "pe_ttm": 20.2
+      "graham_upside_pct": -64.02974541449247,
+      "ncav_margin_pct": -106.46818066818994,
+      "pb_ratio": 4.971837279286465,
+      "pe_ttm": 20.236507936507934
     }
   },
   "industry": "Specialty Retail",
-  "last_updated": "2026-09-22T17:46:32Z",
+  "last_updated": "2026-09-22T21:39:59Z",
   "layered_analysis": {
-    "conviction_score": 12.1,
+    "conviction_score": 12.7,
     "conviction_score_breakdown": {
       "base_score": 20.0,
       "components": {
         "graham_pct": 20.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 2737843306500,
+  "market_cap": 2742845358000,
   "metrics": {
     "book_value_per_share": 51.284864261807364,
     "current_ratio": 1.0331158765552857,
@@ -125,14 +126,14 @@
     "fcf_margin_pct": 1.07333552789417,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 1,
-    "graham_multiple": 100.24992898009499,
-    "graham_upside_pct": -63.92646798736398,
+    "graham_multiple": 100.61262456130656,
+    "graham_upside_pct": -64.02974541449247,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -106.48675204237983,
-    "pb_ratio": 4.962867771291831,
-    "pe_ttm": 20.2,
+    "ncav_margin_pct": -106.46818066818994,
+    "pb_ratio": 4.971837279286465,
+    "pe_ttm": 20.236507936507934,
     "roe_pct": 30.499089745974313,
     "shareholders_equity": 411065000000,
     "total_assets": 818042000000,
@@ -141,37 +142,43 @@
   "name": "Amazon.com Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 254.25
+    "close": 254.98
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Amazon's FY2025 10-K reports consolidated net sales of $716.9 billion, up 12% year-over-year, with growth across North America (+10%), International (+13%), and AWS (+20%) segments. Operating cash flow rose to $139.5 billion and cash capital expenditures increased substantially to $128.3 billion, driven largely by AI and technology infrastructure investment expected to continue rising in 2026. The filing also discusses a 2025 U.S. tax law change that reduced cash taxes paid, and notes investments in Anthropic convertible notes as part of acquisition/investment activity.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL tagging data rather than narrative text, referencing items such as senior notes of various maturities, a credit agreement and term loan, share repurchase and equity activity, and investment-related entities including Anthropic and OpenAI Group PBC. No descriptive business or results-of-operations narrative was included in the excerpt, so a substantive summary of quarterly performance cannot be provided from this text.",
+    "filing_summary_8k": "This 8-K, dated September 14, 2026, discloses that Amazon closed a sale of British Pound-denominated notes across four tranches (2029, 2032, 2038, and 2045 maturities) totaling roughly \u00a34.242 billion in aggregate public offering price, with estimated net proceeds of about \u00a34.235 billion. The notes were issued under an existing indenture and registration statement, with the underwriting agreement, officers' certificate, and related note forms filed as exhibits.",
+    "moat_explanation": "The 10-K's MD&A explicitly describes Amazon's strategy of reducing variable costs per unit and leveraging fixed costs through direct sourcing, supplier discounts, and an optimized fulfillment network, which supports lower prices for customers. The Business section also notes the company's massive scale (hundreds of millions of products, a large owned/operated fulfillment and logistics network, and AWS shared infrastructure) that would be costly for smaller competitors to replicate.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Company states it faces 'intense competition' from well-resourced rivals across nearly every business line, including some with greater brand recognition and resources",
+      "Significant reliance on China-based sellers for third-party seller/advertising revenue and China-based suppliers for components and finished goods, exposing the company to tariff, trade-dispute, and regulatory risk",
+      "Regulatory and ownership restrictions in China and India create structural risk to those operations, including potential license revocation or forced restructuring",
+      "Cash capital expenditures increased sharply (from $77.7B to $128.3B year-over-year) primarily for AI/technology infrastructure, which the filing says is expected to keep rising and can pressure short-term free cash flow",
+      "Business is exposed to fraudulent or unlawful seller activity, with the company acknowledging its A-to-z Guarantee reimbursement costs will grow as third-party sales grow",
+      "Results are described as sensitive to currency fluctuations, tariff policy changes, and global economic/geopolitical conditions that are difficult to predict or quantify"
+    ]
+  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-14",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm"
+      },
       {
         "filed": "2026-07-31",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
       },
       {
-        "filed": "2026-04-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm"
-      },
-      {
         "filed": "2026-02-06",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm"
-      },
-      {
-        "filed": "2025-10-31",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000123/amzn-20250930.htm"
-      },
-      {
-        "filed": "2025-08-01",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000086/amzn-20250630.htm"
       }
     ]
   },
@@ -181,7 +188,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $2737.8B",
+          "detail": "Market cap $2742.8B",
           "passed": true
         },
         {
@@ -211,7 +218,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 100.2",
+          "detail": "P/E x P/B = 100.6",
           "passed": false
         }
       ],
@@ -246,5 +253,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.amazon.com"
 }

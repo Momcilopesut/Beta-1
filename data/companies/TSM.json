@@ -80,14 +80,14 @@
     "valuation": {
       "graham_multiple": 282.766541671448,
       "graham_number": 3058.674724043078,
-      "graham_upside_pct": 583.350012445951,
-      "ncav_margin_pct": -88.96817810431321,
+      "graham_upside_pct": 576.6979477971412,
+      "ncav_margin_pct": -89.07556727693003,
       "pb_ratio": 9.916369735770658,
       "pe_ttm": 28.515126927089373
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-22T17:51:07Z",
+  "last_updated": "2026-09-22T21:25:14Z",
   "layered_analysis": {
     "conviction_score": 73.3,
     "conviction_score_breakdown": {
@@ -114,7 +114,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 2324127037648,
+  "market_cap": 2344288960000,
   "metrics": {
     "book_value_per_share": 1248.46,
     "current_ratio": 2.457635046900518,
@@ -125,11 +125,11 @@
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
     "graham_multiple": 282.766541671448,
-    "graham_upside_pct": 583.350012445951,
+    "graham_upside_pct": 576.6979477971412,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -88.96817810431321,
+    "ncav_margin_pct": -89.07556727693003,
     "pb_ratio": 9.916369735770658,
     "pe_ttm": 28.515126927089373,
     "roe_pct": 39.34832282620624,
@@ -140,7 +140,7 @@
   "name": "Taiwan Semiconductor Manufacturing Company Limited",
   "price": {
     "as_of": "2026-09-22",
-    "close": 447.60001
+    "close": 452
   },
   "qualitative": null,
   "sector": "Technology",
@@ -154,7 +154,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $2324.1B",
+          "detail": "Market cap $2344.3B",
           "passed": true
         },
         {
@@ -219,5 +219,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.tsmc.com"
 }

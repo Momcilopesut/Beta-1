@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000167/cvx-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000162/cvx-20260731.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes Chevron as a global integrated energy company with upstream and downstream operations across roughly 20 countries. Net income attributable to Chevron was $12,299 million in 2025, down from $17,661 million in 2024 and $21,369 million in 2023, with return on capital employed falling to 6.6%. The filing discloses several pending environmental Notices of Violation (New Mexico, California refineries, Colorado) and a DOJ notice to Hess regarding Clean Water Act allegations, and notes that Hess, acquired in 2025, was excluded from the internal controls assessment.",
+    "filing_summary_10q": "The excerpt provided is primarily XBRL tagging data and structured financial statement labels rather than narrative text, covering the quarter and six months ended June 30, 2026. It references segment reporting (Upstream and Downstream, U.S. and non-U.S.), pension and postretirement benefit costs, fair value and derivative instrument disclosures, and litigation matters including climate change litigation and a settled coastal erosion case. No further descriptive detail on results of operations is available in the excerpt provided.",
+    "filing_summary_8k": "This 8-K, dated July 31, 2026, discloses under Item 2.02 that Chevron issued a news release announcing unaudited second-quarter 2026 earnings of $12.1 billion, with the release furnished as an exhibit. No other items or events are disclosed in this filing.",
+    "moat_explanation": "The 10-K describes Chevron as a global integrated energy company with substantial operations across roughly 20 countries and upstream property, plant and equipment of $200.8 billion, plus large joint ventures such as Tengizchevroil, implying a capital intensity that limits the number of competitors able to operate at similar scale. However, the excerpts provided are largely financial tables, legal proceedings, and governance/audit boilerplate rather than a discussion of competitive dynamics, brand strength, or customer switching costs, so this classification rests on inference from scale rather than explicit moat language in the filing.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Multiple environmental Notices of Violation across facilities (New Mexico, El Segundo/EPA biofuel credit overstatement, Bay Area Air District, Colorado ECMC well control and reporting violations) each potentially resulting in civil penalties of $1.0 million or more",
+      "DOJ notice to newly acquired Hess of alleged Clean Water Act violations related to Gulf of America operations",
+      "Net income attributable to Chevron declined from $21.369 billion (2023) to $17.661 billion (2024) to $12.299 billion (2025), with return on capital employed falling from 11.9% to 6.6% over the same period",
+      "Management excluded recently acquired Hess (24% of total assets, 3% of total revenues) from its internal control over financial reporting assessment, indicating integration is still in progress",
+      "Earnings are explicitly stated to depend mostly on upstream profitability, which is driven by global crude oil prices outside the company's control, with sustained lower prices potentially triggering asset impairments"
+    ]
+  }
+}

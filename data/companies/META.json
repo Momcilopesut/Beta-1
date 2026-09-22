@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 198.37476721360918,
+      "graham_multiple": 196.28273817088203,
       "graham_number": 235.42181965460392,
-      "graham_upside_pct": -68.28396027717251,
-      "ncav_margin_pct": -102.12345148158057,
-      "pb_ratio": 7.208903304098828,
-      "pe_ttm": 27.51802303976217
+      "graham_upside_pct": -68.03939456223134,
+      "ncav_margin_pct": -102.13465113540174,
+      "pb_ratio": 7.170790575795974,
+      "pe_ttm": 27.372538089929396
     }
   },
   "industry": "Internet Content & Information",
-  "last_updated": "2026-09-22T17:51:29Z",
+  "last_updated": "2026-09-22T21:37:52Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 1886362855354,
+  "market_cap": 1876465870029,
   "metrics": {
     "book_value_per_share": 102.72158867479355,
     "current_ratio": 2.225562709519502,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 22.943682015863377,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 198.37476721360918,
-    "graham_upside_pct": -68.28396027717251,
+    "graham_multiple": 196.28273817088203,
+    "graham_upside_pct": -68.03939456223134,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -102.12345148158057,
-    "pb_ratio": 7.208903304098828,
-    "pe_ttm": 27.51802303976217,
+    "ncav_margin_pct": -102.13465113540174,
+    "pb_ratio": 7.170790575795974,
+    "pe_ttm": 27.372538089929396,
     "roe_pct": 29.73026955581193,
     "shareholders_equity": 217243000000,
     "total_assets": 366021000000,
@@ -142,9 +143,25 @@
   "name": "Meta Platforms Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 742.28
+    "close": 736.6
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Meta's FY2025 10-K reports total revenue of $200.97 billion (up 22% year-over-year), driven by advertising, with income from operations of $83.28 billion and net income of $60.46 billion. The Family of Apps segment was profitable ($102.47 billion operating income) while Reality Labs operated at a $19.19 billion loss, which management expects to continue at a similar level in 2026. The filing highlights continued heavy investment in AI infrastructure and wearables, alongside risk factors covering regulatory, competitive, and data-privacy pressures on the advertising business.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (quarter ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, so detailed financial results and MD&A commentary are not available in what was provided. The tagged data references items such as debt issuances (including a May 2026 debt instrument), a data center campus in Louisiana, a subsequent-event data center project in Texas, and various ongoing legal matters (including FTC, IRS, EU Commission, and youth-related litigation matters). The provided excerpts don't describe the quarter's revenue, profit, or other headline financial results in narrative form.",
+    "filing_summary_8k": "This 8-K, dated July 29, 2026, discloses under Item 2.02 that Meta issued a press release and held a conference call regarding financial results for the quarter ended June 30, 2026, with the press release furnished as Exhibit 99.1. The filing notes that non-GAAP financial measures were referenced in the release and call, with a GAAP-to-non-GAAP reconciliation included in the exhibit. The excerpt does not include the substantive financial results themselves, only the notice of their release.",
+    "moat_explanation": "The 10-K describes a 'Family' of interconnected products (Facebook, Instagram, Messenger, WhatsApp, Threads) with billions of daily active people (3.58 billion DAP), where the value to users, marketers, and developers grows with the size and engagement of the connected user base. The company's own risk factors acknowledge that if users leave for competing products, both engagement and ad revenue would suffer, which is consistent with a network-effects dynamic rather than cost, patent, or switching-cost advantages described in the excerpts.",
+    "moat_present": true,
+    "moat_type": "network_effects",
+    "red_flags": [
+      "Substantially all revenue depends on advertising on Facebook and Instagram, with no long-term commitments from marketers",
+      "Reality Labs segment reported a $19.19 billion operating loss in 2025 and management expects similar losses to continue in 2026",
+      "Extensive and evolving regulatory exposure cited (GDPR, DMA, DSA, UK OSA, EU AI Act, FTC consent order) with potential for revenue-based fines",
+      "Company states ad targeting/measurement effectiveness has already been reduced by regulatory changes (EU consent requirements) and platform changes (Apple iOS), and expects continued adverse impact on ad revenue",
+      "Acknowledges competitive pressure from products like TikTok reducing user engagement, particularly among younger users",
+      "Filing discloses ongoing litigation and investigations, including class actions and government inquiries, with inherently uncertain financial outcomes"
+    ]
+  },
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001326801.json",
@@ -155,24 +172,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm"
       },
       {
-        "filed": "2026-04-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/meta-20260331.htm"
+        "filed": "2026-07-29",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-20260729.htm"
       },
       {
         "filed": "2026-01-29",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
-      },
-      {
-        "filed": "2025-10-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm"
-      },
-      {
-        "filed": "2025-07-31",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/meta-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $1886.4B",
+          "detail": "Market cap $1876.5B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 27.5",
+          "detail": "P/E 27.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 198.4",
+          "detail": "P/E x P/B = 196.3",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 4,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.meta.com"
 }

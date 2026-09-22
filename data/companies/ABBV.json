@@ -78,32 +78,34 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": -5908.549999868425,
+      "graham_multiple": -5917.914316053664,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -123.06884012540155,
-      "pb_ratio": -79.10828797304129,
-      "pe_ttm": 74.68939287223553
+      "ncav_margin_pct": -123.06188347720905,
+      "pb_ratio": -79.17095154844145,
+      "pe_ttm": 74.74855613466684
     }
   },
   "industry": "Drug Manufacturers - General",
-  "last_updated": "2026-09-22T17:50:34Z",
+  "last_updated": "2026-09-22T21:40:28Z",
   "layered_analysis": {
-    "conviction_score": 55.0,
+    "conviction_score": 57.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 1.0
     },
     "conviction_verdict": "Neutral",
-    "flags": [],
+    "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 468500452345,
+  "market_cap": 468765471268,
   "metrics": {
     "book_value_per_share": -3.3139618925438397,
     "current_ratio": 0.8085346525142885,
@@ -124,13 +126,13 @@
     "fcf_margin_pct": 29.130150425114454,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": -5908.549999868425,
+    "graham_multiple": -5917.914316053664,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -123.06884012540155,
-    "pb_ratio": -79.10828797304129,
-    "pe_ttm": 74.68939287223553,
+    "ncav_margin_pct": -123.06188347720905,
+    "pb_ratio": -79.17095154844145,
+    "pe_ttm": 74.74855613466684,
     "roe_pct": -136.4967843052478,
     "shareholders_equity": -3270000000,
     "total_assets": 133960000000,
@@ -139,37 +141,42 @@
   "name": "AbbVie Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 265.23999
+    "close": 265.32
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "AbbVie's 2025 Form 10-K describes a diversified biopharmaceutical portfolio spanning immunology, neuroscience, oncology, and aesthetics, with 2025 worldwide net revenues of $61.2 billion (up 9%), operating earnings of $15.1 billion, and diluted EPS of $2.36. Growth was driven primarily by Skyrizi (+50%) and Rinvoq (+39%), which offset a 49% decline in Humira revenue from biosimilar competition. The filing also discusses IRA-driven Medicare price-setting affecting several products, a September 2025 patent litigation settlement extending Rinvoq exclusivity to 2037, and continued investment in R&D and U.S. manufacturing capacity.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended June 30, 2026) consists only of XBRL taxonomy tags, entity identifiers, and context references rather than narrative or financial statement text. As a result, the excerpt does not contain descriptive information about the quarter's business developments or financial results that can be summarized.",
+    "filing_summary_8k": "This 8-K, dated September 3, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that AbbVie issued a press release announcing the completion of its acquisition of Apogee Therapeutics, Inc. The filing includes forward-looking cautionary language regarding integration risks, the acquired pipeline assets (including zumilokibart/APG777 and APG273), and potential impacts on AbbVie's adjusted diluted EPS guidance, but provides no additional financial detail in the excerpt itself.",
+    "moat_explanation": "AbbVie's business is built on patent-protected biologics and small molecules (Skyrizi, Rinvoq, Humira, etc.) and it describes extensive intellectual property protection and regulatory exclusivity as central to product profitability, including a 2025 litigation settlement pushing Rinvoq generic entry out to 2037. However, the excerpts also show this moat is time-limited and erodes sharply upon patent expiration, as illustrated by Humira's 49% revenue decline in 2025 following biosimilar entry after loss of exclusivity.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Skyrizi and Rinvoq together accounted for approximately 42% of total net revenues in 2025, creating significant product concentration risk",
+      "Humira net revenues fell 49% in 2025 due to continued biosimilar competition following loss of exclusivity, demonstrating rapid revenue erosion once patent protection ends",
+      "Under the Inflation Reduction Act, multiple AbbVie products (Imbruvica, Vraylar, Linzess, and Botox) have been selected for government-set Medicare pricing beginning 2026-2028, which the company states could accelerate revenue erosion ahead of patent expiration",
+      "The 10-K acknowledges ongoing and potential future patent challenges (ANDA filings, inter partes review) that could weaken or invalidate AbbVie's intellectual property protections",
+      "The company explicitly states that a high rate of R&D failure is inherent to its industry and that promising pipeline products may fail to reach market or be commercially successful"
+    ]
+  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001551152.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-03",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1551152/000110465926104940/tm2624674d1_8k.htm"
+      },
       {
         "filed": "2026-08-03",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000026/abbv-20260630.htm"
       },
       {
-        "filed": "2026-05-08",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000017/abbv-20260331.htm"
-      },
-      {
         "filed": "2026-02-20",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000008/abbv-20251231.htm"
-      },
-      {
-        "filed": "2025-11-04",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115225000049/abbv-20250930.htm"
-      },
-      {
-        "filed": "2025-08-04",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115225000040/abbv-20250630.htm"
       }
     ]
   },
@@ -179,7 +186,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $468.5B",
+          "detail": "Market cap $468.8B",
           "passed": true
         },
         {
@@ -209,7 +216,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -5908.5",
+          "detail": "P/E x P/B = -5917.9",
           "passed": true
         }
       ],
@@ -244,5 +251,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.abbvie.com"
 }

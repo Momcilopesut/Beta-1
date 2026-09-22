@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 352.1245466039142,
+      "graham_multiple": 354.4530443659152,
       "graham_number": 28.460620200332578,
-      "graham_upside_pct": -74.11612004880854,
-      "ncav_margin_pct": -110.73118085073159,
-      "pb_ratio": 8.886711311305197,
-      "pe_ttm": 39.623718411552346
+      "graham_upside_pct": -74.15490355945099,
+      "ncav_margin_pct": -110.71510162043398,
+      "pb_ratio": 8.916045522099392,
+      "pe_ttm": 39.754512635379065
     }
   },
   "industry": "Discount Stores",
-  "last_updated": "2026-09-22T17:50:29Z",
+  "last_updated": "2026-09-22T21:28:36Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 873460557216,
+  "market_cap": 876343769600,
   "metrics": {
     "book_value_per_share": 13.138798089011818,
     "current_ratio": 0.7671279079823575,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 2.0925090056550886,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 352.1245466039142,
-    "graham_upside_pct": -74.11612004880854,
+    "graham_multiple": 354.4530443659152,
+    "graham_upside_pct": -74.15490355945099,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -110.73118085073159,
-    "pb_ratio": 8.886711311305197,
-    "pe_ttm": 39.623718411552346,
+    "ncav_margin_pct": -110.71510162043398,
+    "pb_ratio": 8.916045522099392,
+    "pe_ttm": 39.754512635379065,
     "roe_pct": 22.74240945299643,
     "shareholders_equity": 99617000000,
     "total_assets": 284668000000,
@@ -142,9 +143,24 @@
   "name": "Walmart Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 109.955
+    "close": 110.12
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Walmart's Form 10-K for fiscal year ended January 31, 2026 reports net sales of $706.4 billion (up 4.7%) and consolidated net income of $22.3 billion, both increases from the prior year. Growth was driven by comparable sales gains in Walmart U.S. (4.3%) and Sam's Club U.S. (2.9%), with continued strength in eCommerce, grocery, and membership income. Operating expenses as a percentage of sales rose due to higher self-insured liability claims and a one-time PhonePe share-based compensation charge, while free cash flow increased to $14.9 billion. The filing also notes enactment of the OBBB Act tax law changes, which were not material to the effective tax rate but affected the timing of cash tax payments.",
+    "filing_summary_10q": "This is the Form 10-Q for the quarterly period ended July 31, 2026 (Q2 fiscal 2027). The excerpt provided consists primarily of XBRL data tags rather than narrative discussion, so detailed financial results and management commentary are not available in this excerpt. The filing's tagged data references ongoing litigation matters including opioid-related class actions in Canada, an Asda equal value claims matter, driver platform matters, and a Mexico antitrust matter, as well as segment-level revenue reporting for Walmart U.S., Walmart International, and Sam's Club U.S.",
+    "filing_summary_8k": "This Form 8-K, dated August 20, 2026, discloses under Item 2.02 that Walmart furnished a press release and financial presentation reporting results of operations and cash flows for the three and six months ended July 31, 2026, and financial condition as of that date. The filing states this information is furnished, not filed, and is not incorporated by reference into other SEC filings. No specific financial figures are included in the 8-K text itself beyond noting the exhibits (press release and financial presentation) that contain the results.",
+    "moat_explanation": "The 10-K describes Walmart's strategy as 'everyday low prices, supported by everyday low costs,' achieved through supplier negotiations, private label focus, disciplined inventory management, scale-driven purchasing power, and securing shipping capacity. Its massive scale (over 10,900 retail units, $706 billion in net sales) and consistent gross margin management aligned to 'competitive historic price gaps' support a structural cost-based competitive position rather than brand, network, or switching-cost dynamics.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Operating expenses as a percentage of net sales increased, driven in part by a ~$0.9 billion rise in self-insured general liability claims expense in the U.S. due to rising costs to resolve claims",
+      "A $0.7 billion charge from modification of share-based compensation arrangements at the PhonePe subsidiary reduced operating income and provided no tax benefit, raising the effective tax rate",
+      "Gross profit gains were partially offset by mix shifts into lower-margin merchandise categories and ongoing channel/format mix shifts in Walmart International",
+      "Company cites ongoing macroeconomic uncertainty including tariffs, trade restrictions, inflation, and currency fluctuations as factors that may impact results",
+      "10-Q filing indexes reference multiple pending litigation matters, including opioid-related class actions, an Asda equal value claims matter, driver platform matters, and a Mexico antitrust matter"
+    ]
+  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000104169.json",
@@ -155,24 +171,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/wmt-20260731.htm"
       },
       {
-        "filed": "2026-05-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000102/wmt-20260430.htm"
+        "filed": "2026-08-20",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000145/wmt-20260820.htm"
       },
       {
         "filed": "2026-03-13",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm"
-      },
-      {
-        "filed": "2025-12-03",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416925000191/wmt-20251031.htm"
-      },
-      {
-        "filed": "2025-08-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416925000137/wmt-20250731.htm"
       }
     ]
   },
@@ -182,7 +188,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $873.5B",
+          "detail": "Market cap $876.3B",
           "passed": true
         },
         {
@@ -207,12 +213,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 39.6",
+          "detail": "P/E 39.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 352.1",
+          "detail": "P/E x P/B = 354.5",
           "passed": false
         }
       ],
@@ -247,5 +253,6 @@
       "passed": 4,
       "total": 4
     }
-  }
+  },
+  "website": "https://corporate.walmart.com"
 }

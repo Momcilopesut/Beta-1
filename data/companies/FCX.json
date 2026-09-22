@@ -78,34 +78,35 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 194.72500295066763,
+      "graham_multiple": 195.407741295163,
       "graham_number": 27.725542686405927,
-      "graham_upside_pct": -62.59370927360236,
-      "ncav_margin_pct": -112.78777198592431,
-      "pb_ratio": 5.325946591078622,
-      "pe_ttm": 36.5615763546798
+      "graham_upside_pct": -62.70942476609827,
+      "ncav_margin_pct": -112.74821330997591,
+      "pb_ratio": 5.3352752498881095,
+      "pe_ttm": 36.62561576354679
     }
   },
   "industry": "Copper",
-  "last_updated": "2026-09-22T17:45:57Z",
+  "last_updated": "2026-09-22T21:47:09Z",
   "layered_analysis": {
-    "conviction_score": 20.2,
+    "conviction_score": 21.2,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 106695703200,
+  "market_cap": 106882586000,
   "metrics": {
     "book_value_per_share": 22.32986832986833,
     "current_ratio": 2.066073512252042,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 4.335495901480129,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 194.72500295066763,
-    "graham_upside_pct": -62.59370927360236,
+    "graham_multiple": 195.407741295163,
+    "graham_upside_pct": -62.70942476609827,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -112.78777198592431,
-    "pb_ratio": 5.325946591078622,
-    "pe_ttm": 36.5615763546798,
+    "ncav_margin_pct": -112.74821330997591,
+    "pb_ratio": 5.3352752498881095,
+    "pe_ttm": 36.62561576354679,
     "roe_pct": 15.25946268038032,
     "shareholders_equity": 18899000000,
     "total_assets": 58167000000,
@@ -142,37 +143,43 @@
   "name": "Freeport-McMoRan Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 74.12
+    "close": 74.35
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "whole_document_fallback",
+    "filing_summary_10k": "The FY2025 10-K excerpt provided consists largely of XBRL financial-statement note disclosures rather than narrative text, covering Freeport-McMoRan's segments (North America Copper Mines, South America Mines, Grasberg/Indonesia, Molybdenum, Atlantic Copper smelting), debt and credit facilities, pension and postretirement plans, income taxes (including disputes with Peruvian and Indonesian tax authorities), environmental and asset retirement obligations, derivative/hedging positions, and litigation including asbestos/talc claims tied to Cyprus Mines. It also references an operational incident ('mud rush') affecting the Grasberg segment and PTFI's revolving credit facility and reserve/royalty arrangements with the Indonesian government.",
+    "filing_summary_10q": "The most recent 10-Q covers the quarter and six months ended June 30, 2026, presenting results by segment (North America Copper Mines, South America Mines, Indonesia, Molybdenum, and other). It discloses a Cerro Verde-related equity transaction in May 2026, new May 2031 senior unsecured revolving credit facilities for both the parent company and Cerro Verde, outstanding debt across FCX, PTFI, and Cerro Verde entities, commodity derivative/hedging activity in copper and gold, and a subsequent-event share repurchase program disclosed as of July 2026.",
+    "filing_summary_8k": "This 8-K, dated September 1, 2026 (filed September 8, 2026), discloses under Item 8.01 that PT Freeport Indonesia (PTFI), a 48.76%-owned subsidiary of Freeport-McMoRan, amended and restated its $1.75 billion senior unsecured revolving credit facility to extend its maturity from November 2028 to September 2031; as of the report date, PTFI had $250 million outstanding under this facility, which is available for general corporate purposes.",
+    "moat_explanation": "The excerpts (mostly XBRL/financial-statement note disclosures rather than narrative business description) indicate Freeport-McMoRan operates large, capital-intensive, long-lived mining complexes (Grasberg in Indonesia via PT Freeport Indonesia, Cerro Verde and El Abra in South America, Morenci and other North America copper mines, plus Atlantic Copper smelting) with reserves and infrastructure built over decades. This scale of integrated mine/smelter/reserve assets is the type of natural barrier that limits the number of competitors able to operate at similar scale, but the provided excerpts do not include narrative business/competition discussion, so this classification rests on inference from segment and asset structure rather than explicit moat language.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Ongoing tax disputes and assessments from Peruvian (SUNAT) and Indonesian tax authorities affecting Cerro Verde and PT Freeport Indonesia across multiple tax years",
+      "Asbestos and talc-related litigation exposure tied to legacy Cyprus Mines Corporation, including future claims risk",
+      "A 'mud rush' incident and related asset damage (chute galleries, assets damaged beyond repair) disclosed for the Grasberg segment, indicating operational/safety disruption risk",
+      "Significant environmental and asset retirement obligations across historical smelter sites, Arizona/New Mexico/Colorado reclamation programs, and PTFI operations",
+      "PT Freeport Indonesia is only minority-owned by FCX (48.76% per the 8-K), creating structural reliance on a partially-controlled foreign subsidiary operating in a single host country",
+      "Extensive long-term debt across FCX, PTFI, and Cerro Verde entities with multiple senior notes and revolving credit facilities"
+    ]
+  },
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000831259.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-08",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000038/fcx-20260901.htm"
+      },
       {
         "filed": "2026-08-06",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000036/fcx-20260630.htm"
       },
       {
-        "filed": "2026-05-08",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000025/fcx-20260331.htm"
-      },
-      {
         "filed": "2026-02-13",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm"
-      },
-      {
-        "filed": "2025-11-06",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125925000050/fcx-20250930.htm"
-      },
-      {
-        "filed": "2025-08-08",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125925000031/fcx-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $106.7B",
+          "detail": "Market cap $106.9B",
           "passed": true
         },
         {
@@ -212,7 +219,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 194.7",
+          "detail": "P/E x P/B = 195.4",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://fcx.com"
 }

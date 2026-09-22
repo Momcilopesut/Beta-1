@@ -78,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 42.02487418627862,
+      "graham_multiple": 42.076006161492664,
       "graham_number": 95.83655300246792,
-      "graham_upside_pct": -20.332056193135276,
-      "ncav_margin_pct": -220.6023752769961,
-      "pb_ratio": 2.03486751957947,
-      "pe_ttm": 20.652388316151203
+      "graham_upside_pct": -20.31549596535468,
+      "ncav_margin_pct": -220.6274443663944,
+      "pb_ratio": 2.0361050624419,
+      "pe_ttm": 20.664948453608247
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-09-22T17:51:43Z",
+  "last_updated": "2026-09-22T21:22:17Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 65434831769,
+  "market_cap": 65474627190,
   "metrics": {
     "book_value_per_share": 61.29225820083312,
     "current_ratio": 0.5039915224302367,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 31.28127438828444,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 42.02487418627862,
-    "graham_upside_pct": -20.332056193135276,
+    "graham_multiple": 42.076006161492664,
+    "graham_upside_pct": -20.31549596535468,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -220.6023752769961,
-    "pb_ratio": 2.03486751957947,
-    "pe_ttm": 20.652388316151203,
+    "ncav_margin_pct": -220.6274443663944,
+    "pb_ratio": 2.0361050624419,
+    "pe_ttm": 20.664948453608247,
     "roe_pct": 10.012886690367976,
     "shareholders_equity": 31138000000,
     "total_assets": 117246000000,
@@ -142,7 +142,7 @@
   "name": "American Electric Power Company Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 120.295
+    "close": 120.27
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -155,24 +155,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000059/aep-20260630.htm"
       },
       {
-        "filed": "2026-05-05",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000034/aep-20260331.htm"
+        "filed": "2026-07-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000055/aep-20260730.htm"
       },
       {
         "filed": "2026-02-12",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000013/aep-20251231.htm"
-      },
-      {
-        "filed": "2025-10-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000171/aep-20250930.htm"
-      },
-      {
-        "filed": "2025-07-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000141/aep-20250630.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $65.4B",
+          "detail": "Market cap $65.5B",
           "passed": true
         },
         {
@@ -212,7 +202,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 42.0",
+          "detail": "P/E x P/B = 42.1",
           "passed": false
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.aep.com"
 }

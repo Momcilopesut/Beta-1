@@ -78,34 +78,35 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 229.8385110769938,
+      "graham_multiple": 231.37380167138724,
       "graham_number": 155.29715890816604,
-      "graham_upside_pct": -68.75182926714032,
-      "ncav_margin_pct": -102.93411385028458,
-      "pb_ratio": 8.335116097444093,
-      "pe_ttm": 27.57472222222222
+      "graham_upside_pct": -68.81583154454498,
+      "ncav_margin_pct": -102.92810421950686,
+      "pb_ratio": 8.362908494146527,
+      "pe_ttm": 27.666666666666664
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-22T17:51:13Z",
+  "last_updated": "2026-09-22T21:44:24Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 3685634623814,
+  "market_cap": 3697923900000,
   "metrics": {
     "book_value_per_share": 59.54866065419303,
     "current_ratio": 1.2303272619576484,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 20.18659651216403,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 229.8385110769938,
-    "graham_upside_pct": -68.75182926714032,
+    "graham_multiple": 231.37380167138724,
+    "graham_upside_pct": -68.81583154454498,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -102.93411385028458,
-    "pb_ratio": 8.335116097444093,
-    "pe_ttm": 27.57472222222222,
+    "ncav_margin_pct": -102.92810421950686,
+    "pb_ratio": 8.362908494146527,
+    "pe_ttm": 27.666666666666664,
     "roe_pct": 33.2150207517826,
     "shareholders_equity": 442387000000,
     "total_assets": 758376000000,
@@ -142,13 +143,34 @@
   "name": "Microsoft Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 496.98
+    "close": 498
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2026 (ended June 30, 2026), Microsoft reported revenue of $331.8 billion (up 18%) and net income of $133.7 billion (up 31%), driven largely by growth in Microsoft Cloud revenue (up 27% to $214.4 billion) and Azure (up 41%). Commercial remaining performance obligation grew 84% to $678 billion. Results were affected by a $5.0 billion net gain from the company's OpenAI investment (versus a $3.6 billion loss the prior year) tied to an OpenAI recapitalization, while gross margin percentage declined slightly due to continued AI infrastructure investment; the company also disclosed an ongoing IRS transfer-pricing dispute seeking $28.9 billion in additional taxes, which it is contesting.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists primarily of XBRL data tags rather than narrative text, covering the fiscal third quarter ended March 31, 2026. It references the company's three reportable segments (Productivity and Business Processes, Intelligent Cloud, More Personal Computing), the OpenAI investment, various long-term debt issuances, and an ongoing share repurchase program (approved in 2024), but does not contain readable discussion of quarterly results or developments beyond these structured data references.",
+    "filing_summary_8k": "This 8-K, dated September 2, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that Microsoft posted investor presentation materials announcing a change to its reportable segments and investor metrics effective fiscal year 2027. Beginning in FY2027, the company will report financial performance under two new segments, \"Agents and Infra\" and \"Devices and Consumer,\" replacing the prior three-segment structure. The presentation materials were furnished as Exhibit 99.1 and are not deemed \"filed\" for Exchange Act liability purposes.",
+    "moat_explanation": "The MD&A highlights an 84% increase in commercial remaining performance obligation to $678 billion, multi-year enterprise contracts, and growing Microsoft 365 Commercial seat counts, all of which indicate that commercial customers are locked into long-duration, subscription-based agreements across an integrated suite of cloud and productivity products. This pattern of recurring, multi-year commitments and seat-based subscription growth (Microsoft 365, Azure, Dynamics 365, LinkedIn) suggests meaningful switching costs for enterprise customers, though the excerpts (largely MD&A) don't fully detail contractual lock-in mechanics found in Business/Risk Factors sections.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "IRS has proposed additional tax payment of $28.9 billion plus penalties/interest related to transfer pricing for tax years 2004-2013, which the company is contesting",
+      "Gross margin percentage and Microsoft Cloud gross margin percentage declined, explicitly attributed to continued heavy AI infrastructure investment",
+      "XBOX segment revenue declined (content/services down 5%, hardware down 29%) and included impairment and other related expenses",
+      "Windows OEM and Devices revenue decreased slightly, indicating softness in the devices business",
+      "Company acknowledges investments in cloud/AI infrastructure will continue to increase operating costs and may decrease operating margins",
+      "Effective tax rate increased year-over-year due to shifts in earnings mix between U.S. and foreign jurisdictions"
+    ]
+  },
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-02",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm"
+      },
       {
         "filed": "2026-07-29",
         "form": "10-K",
@@ -158,21 +180,6 @@
         "filed": "2026-04-29",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm"
-      },
-      {
-        "filed": "2026-01-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526027207/msft-20251231.htm"
-      },
-      {
-        "filed": "2025-10-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312525256321/msft-20250930.htm"
-      },
-      {
-        "filed": "2025-07-30",
-        "form": "10-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $3685.6B",
+          "detail": "Market cap $3697.9B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 27.6",
+          "detail": "P/E 27.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 229.8",
+          "detail": "P/E x P/B = 231.4",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.microsoft.com"
 }

@@ -78,35 +78,36 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 151.7877783707067,
+      "graham_multiple": 152.43108682355953,
       "graham_number": 55.02633893939792,
-      "graham_upside_pct": -63.086912900383766,
-      "ncav_margin_pct": -138.18893831750069,
-      "pb_ratio": 6.609890822500449,
-      "pe_ttm": 22.963734567901234
+      "graham_upside_pct": -63.0992898743308,
+      "ncav_margin_pct": -138.17613355009271,
+      "pb_ratio": 6.623883064757683,
+      "pe_ttm": 23.012345679012345
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-22T17:48:06Z",
+  "last_updated": "2026-09-22T21:48:51Z",
   "layered_analysis": {
-    "conviction_score": 20.6,
+    "conviction_score": 21.7,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 0.75,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
       "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -117,7 +118,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 428628338350,
+  "market_cap": 429535686400,
   "metrics": {
     "book_value_per_share": 22.655428186109237,
     "current_ratio": 1.1708128130656228,
@@ -127,14 +128,14 @@
     "fcf_margin_pct": -35.16434573473084,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 151.7877783707067,
-    "graham_upside_pct": -63.086912900383766,
+    "graham_multiple": 152.43108682355953,
+    "graham_upside_pct": -63.0992898743308,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -138.18893831750069,
-    "pb_ratio": 6.609890822500449,
-    "pe_ttm": 22.963734567901234,
+    "ncav_margin_pct": -138.17613355009271,
+    "pb_ratio": 6.623883064757683,
+    "pe_ttm": 23.012345679012345,
     "roe_pct": 42.582402124618795,
     "shareholders_equity": 42508000000,
     "total_assets": 261759000000,
@@ -143,13 +144,33 @@
   "name": "Oracle Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 149.07
+    "close": 149.12
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Oracle's fiscal 2026 10-K describes three segments (cloud and software, hardware, services), with cloud and software representing 87% of total revenue and cloud revenue growing to 51% of total revenue (from 43% in fiscal 2025). Total revenue rose to $67.4 billion (up 17% reported) with operating margin of $20.6 billion (31% of revenue), driven mainly by cloud and software growth, while operating expenses rose $7.0 billion, including a $1.5 billion increase in restructuring and other expenses and a $6.0 billion increase in cloud and software expenses tied to higher infrastructure costs. The filing highlights continuing customer migration from on-premise licenses to Oracle Cloud and R&D investment of $10.3 billion in fiscal 2026.",
+    "filing_summary_10q": "For the quarter ended August 31, 2026, Oracle reported total revenues of $19.345 billion, up from $14.926 billion a year earlier, with cloud revenue nearly doubling to $11.607 billion. Operating income rose to $6.728 billion from $4.277 billion, though interest expense increased to $1.428 billion from $923 million. The balance sheet shows a sharp increase in property, plant and equipment (to $127.8 billion from $99.96 billion at fiscal year-end) and higher non-current borrowings, reflecting continued infrastructure investment funded partly by additional debt and equity issuance.",
+    "filing_summary_8k": "This 8-K, dated September 12, 2026, discloses that Larry Ellison, Executive Chair and Chief Technology Officer, cancelled his Rule 10b5-1 trading plan to sell Oracle stock, and states that no shares were sold under the plan before it was terminated. The filing attaches the related press release as an exhibit.",
+    "moat_explanation": "The 10-K states that substantially all customers who purchase software licenses also buy support contracts and that substantially all support customers renew them, and describes an integrated suite (ERP, HCM, CX, database) built on 'a common data model' that becomes more valuable as customers adopt more modules, creating migration and integration friction that discourages switching. The company also describes multi-year cloud contract structures (one to five years) with renewal-driven revenue growth, reinforcing this stickiness.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Property, plant and equipment roughly doubled quarter-over-quarter driven by cloud/AI infrastructure buildout, alongside a large jump in non-current borrowings and interest expense (nearly doubling year over year), indicating significantly increased leverage and capital intensity",
+      "Fiscal 2026 10-K MD&A discloses a large increase in restructuring and other expenses ($1.838 billion vs $374 million in the prior year)",
+      "MD&A repeatedly flags that margins and revenues can be adversely affected by tariffs, trade barriers, inflation, foreign currency fluctuations and governmental budgetary constraints",
+      "Software license revenue recognition and hardware revenue are described as dependent on the timing of a few large transactions, which the company says can substantially affect quarterly results",
+      "Full Risk Factors section (Item 1A) text was not provided in the excerpts, limiting visibility into company-specific risks beyond what MD&A and Business sections disclose"
+    ]
+  },
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001341439.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-14",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389753/d20034d8k.htm"
+      },
       {
         "filed": "2026-09-11",
         "form": "10-Q",
@@ -159,21 +180,6 @@
         "filed": "2026-06-22",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm"
-      },
-      {
-        "filed": "2026-03-11",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/orcl-20260228.htm"
-      },
-      {
-        "filed": "2025-12-11",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312525315925/orcl-20251130.htm"
-      },
-      {
-        "filed": "2025-09-10",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312525200095/orcl-20250831.htm"
       }
     ]
   },
@@ -183,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $428.6B",
+          "detail": "Market cap $429.5B",
           "passed": true
         },
         {
@@ -213,7 +219,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 151.8",
+          "detail": "P/E x P/B = 152.4",
           "passed": false
         }
       ],
@@ -248,5 +254,6 @@
       "passed": 1,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.oracle.com"
 }

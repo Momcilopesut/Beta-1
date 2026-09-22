@@ -78,34 +78,35 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 53.289261172611326,
+      "graham_multiple": 52.93672080272002,
       "graham_number": 106.81815222632748,
-      "graham_upside_pct": -34.663800705653266,
-      "ncav_margin_pct": -177.3063600033878,
-      "pb_ratio": 3.1329330182689064,
-      "pe_ttm": 17.009384133611693
+      "graham_upside_pct": -34.2293256410766,
+      "ncav_margin_pct": -177.82043468354084,
+      "pb_ratio": 3.122552707900115,
+      "pe_ttm": 16.95302713987474
     }
   },
   "industry": "Telecommunications Services",
-  "last_updated": "2026-09-22T17:51:35Z",
+  "last_updated": "2026-09-22T21:14:52Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 174791732071,
+  "market_cap": 174212596667,
   "metrics": {
     "book_value_per_share": 52.01193228511395,
     "current_ratio": 0.9242166935552347,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 20.377311485805524,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 53.289261172611326,
-    "graham_upside_pct": -34.663800705653266,
+    "graham_multiple": 52.93672080272002,
+    "graham_upside_pct": -34.2293256410766,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -177.3063600033878,
-    "pb_ratio": 3.1329330182689064,
-    "pe_ttm": 17.009384133611693,
+    "ncav_margin_pct": -177.82043468354084,
+    "pb_ratio": 3.122552707900115,
+    "pe_ttm": 16.95302713987474,
     "roe_pct": 18.22071916626406,
     "shareholders_equity": 59203000000,
     "total_assets": 219237000000,
@@ -142,37 +143,42 @@
   "name": "T-Mobile US Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 163.49
+    "close": 162.41
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, T-Mobile reported total revenues of $88.3 billion (up 8% year-over-year) but net income declined slightly to $11.0 billion from $11.3 billion, driven by higher operating expenses including UScellular merger-related costs, workforce transformation charges, and a software impairment. The filing describes completion of the UScellular Wireless Business acquisition (August 2025), the Vistar and Blis advertising technology acquisitions, and new Lumos and Metronet fiber joint ventures. It also discusses ongoing network and workforce restructuring initiatives and notes the One Big Beautiful Bill Act's tax provisions did not materially affect 2025 results.",
+    "filing_summary_10q": "This 10-Q covers the quarter and six months ended June 30, 2026. The excerpt (largely XBRL tagging data rather than narrative text) references financial statement line items including receivables, debt fair values, and spectrum license transactions with Comcast and Grain Management, as well as two new joint ventures (with Wren House and Oak Hill) entered into in April 2026 and a subsequent-event spectrum auction license matter disclosed in July 2026. The provided excerpt does not include narrative MD&A discussion of quarterly results.",
+    "filing_summary_8k": "This 8-K, dated September 1, 2026, discloses a Chief Financial Officer transition: Peter Osvaldik will retire as CFO in February 2027, remaining as Strategic Advisor through July 2027, while Jessica Uhl will join as CFO Designate in mid-September 2026 and become CFO after the company files its FY2026 Form 10-K. The filing details the terms of Ms. Uhl's offer letter, including base salary, incentive awards, a sign-on bonus, equity grants, and severance and retirement provisions, and references an associated press release announcing the transition.",
+    "moat_explanation": "The 10-K describes T-Mobile's extensive FCC-licensed spectrum holdings (an average of 394 MHz of low- and mid-band spectrum plus large mmWave holdings), which are scarce, government-allocated assets that new entrants cannot easily replicate, along with ongoing acquisitions (Comcast, Grain, UScellular) to expand this position. However, the Business and Risk Factors sections also emphasize that the wireless industry 'remains competitive' with intensifying pricing pressure from AT&T, Verizon, cable MVNOs and others, so the moat, while present via regulated spectrum access and network scale, is only moderately durable rather than dominant.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Prior cyberattacks (August 2021 and January 2023) led to mass arbitration claims, multiple class action lawsuits, and an FCC investigation, with the company acknowledging ongoing cybersecurity risk from third parties and AI-enabled threats.",
+      "Company explicitly states industry competition is intensifying with pricing/margin pressure as the market reaches saturation.",
+      "Significant integration, restructuring and merger-related costs disclosed for the UScellular Acquisition (up to $2.6 billion to achieve $1.2 billion in run-rate synergies) and a new 2025 Workforce Transformation and Network Restructuring Initiative, indicating execution risk.",
+      "A $278 million impairment expense was recorded in 2025 related to capitalized software development costs for the company's billing system.",
+      "Reliance on numerous third-party providers (cloud, SaaS, retail partners) for critical systems, which the company states it cannot fully control or assess for security effectiveness."
+    ]
+  },
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001283699.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-03",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312526381901/d155079d8k.htm"
+      },
       {
         "filed": "2026-07-23",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000101/tmus-20260630.htm"
       },
       {
-        "filed": "2026-04-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000063/tmus-20260331.htm"
-      },
-      {
         "filed": "2026-02-11",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000010/tmus-20251231.htm"
-      },
-      {
-        "filed": "2025-10-23",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369925000154/tmus-20250930.htm"
-      },
-      {
-        "filed": "2025-07-23",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369925000117/tmus-20250630.htm"
       }
     ]
   },
@@ -182,7 +188,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $174.8B",
+          "detail": "Market cap $174.2B",
           "passed": true
         },
         {
@@ -212,7 +218,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 53.3",
+          "detail": "P/E x P/B = 52.9",
           "passed": false
         }
       ],
@@ -247,5 +253,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.t-mobile.com"
 }

@@ -78,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 37.12922798749001,
+      "graham_multiple": 36.998529721080835,
       "graham_number": 246.41268232022387,
-      "graham_upside_pct": -27.670340988545306,
-      "ncav_margin_pct": -341.27065161034045,
-      "pb_ratio": 2.5356014180534867,
-      "pe_ttm": 14.643164230438524
+      "graham_upside_pct": -27.525681670522395,
+      "ncav_margin_pct": -341.7531929135611,
+      "pb_ratio": 2.531134709742177,
+      "pe_ttm": 14.617368873602754
     }
   },
   "industry": "Banks - Diversified",
-  "last_updated": "2026-09-22T17:50:48Z",
+  "last_updated": "2026-09-22T21:30:19Z",
   "layered_analysis": {
     "conviction_score": 40.3,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 912641106000,
+  "market_cap": 911033400000,
   "metrics": {
     "book_value_per_share": 134.32710581991608,
     "current_ratio": 0.8403662699432636,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": -52.827396378845016,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 37.12922798749001,
-    "graham_upside_pct": -27.670340988545306,
+    "graham_multiple": 36.998529721080835,
+    "graham_upside_pct": -27.525681670522395,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -341.27065161034045,
-    "pb_ratio": 2.5356014180534867,
-    "pe_ttm": 14.643164230438524,
+    "ncav_margin_pct": -341.7531929135611,
+    "pb_ratio": 2.531134709742177,
+    "pe_ttm": 14.617368873602754,
     "roe_pct": 17.810887122712458,
     "shareholders_equity": 362438000000,
     "total_assets": 4424900000000,
@@ -142,7 +142,7 @@
   "name": "JPMorgan Chase & Co.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 340.68
+    "close": 340
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -155,19 +155,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026054343/jpm-20260630.htm"
       },
       {
-        "filed": "2026-05-01",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026029344/jpm-20260331.htm"
+        "filed": "2026-07-23",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/19617/000119312526314128/d103985d8k.htm"
       },
       {
         "filed": "2026-02-13",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm"
-      },
-      {
-        "filed": "2025-11-04",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828025048859/jpm-20250930.htm"
       }
     ]
   },
@@ -177,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $912.6B",
+          "detail": "Market cap $911.0B",
           "passed": true
         },
         {
@@ -207,7 +202,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 37.1",
+          "detail": "P/E x P/B = 37.0",
           "passed": false
         }
       ],
@@ -242,5 +237,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.jpmorganchase.com"
 }

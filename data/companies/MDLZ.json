@@ -78,34 +78,35 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 66.21766161369774,
+      "graham_multiple": 66.36882856404696,
       "graham_number": 29.674694770080446,
-      "graham_upside_pct": -51.357424941184995,
-      "ncav_margin_pct": -141.68697905813949,
-      "pb_ratio": 2.9521530688088893,
-      "pe_ttm": 22.43029411764706
+      "graham_upside_pct": -51.41667522907589,
+      "ncav_margin_pct": -141.6362012054557,
+      "pb_ratio": 2.955520852884868,
+      "pe_ttm": 22.455882352941178
     }
   },
   "industry": "Food Confectioners",
-  "last_updated": "2026-09-22T17:47:02Z",
+  "last_updated": "2026-09-22T21:19:18Z",
   "layered_analysis": {
-    "conviction_score": 20.2,
+    "conviction_score": 21.2,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 77868183624,
+  "market_cap": 77957014800,
   "metrics": {
     "book_value_per_share": 20.707525213343676,
     "current_ratio": 0.5991756587783078,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 8.39452993227288,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 66.21766161369774,
-    "graham_upside_pct": -51.357424941184995,
+    "graham_multiple": 66.36882856404696,
+    "graham_upside_pct": -51.41667522907589,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -141.68697905813949,
-    "pb_ratio": 2.9521530688088893,
-    "pe_ttm": 22.43029411764706,
+    "ncav_margin_pct": -141.6362012054557,
+    "pb_ratio": 2.955520852884868,
+    "pe_ttm": 22.455882352941178,
     "roe_pct": 13.470748247193596,
     "shareholders_equity": 25838000000,
     "total_assets": 71487000000,
@@ -142,9 +143,25 @@
   "name": "Mondelez International Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 61.0056
+    "close": 61.08
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Mondel\u0113z reported global net revenues of $38.5 billion and net earnings of $2.5 billion, selling chocolate, biscuits, baked snacks, and adjacent categories across four regional segments. The filing describes ongoing macroeconomic pressures including elevated cocoa and other commodity costs, tariff and trade policy uncertainty, currency volatility, and continued exposure to the war in Ukraine (with Russia and Ukraine together representing about 4.1% of 2025 net revenue). It also discusses a multi-year ERP system implementation (approved for $1.2 billion in funding), completion of pension plan settlements resulting in non-cash losses, and various 2024-2025 equity method investment transactions including the sale of its JDE Peet's stake and exit from Keurig Dr Pepper.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses under Item 2.02 that Mondel\u0113z issued a press release announcing its financial results for the second quarter ended June 30, 2026, furnished as an exhibit to the filing. The filing itself does not include the financial results text, only the cover disclosure that the earnings release was issued.",
+    "moat_explanation": "The 10-K repeatedly emphasizes a portfolio of iconic global and local brands (Oreo, Ritz, Cadbury Dairy Milk, Milka, Toblerone, Clif Bar) and states that 'brand recognition and loyalty' is a key basis of competition, with the company crediting its 'portfolio of brands' along with global footprint and scale for building 'market-leading positions across most of the product categories in which we sell.' This brand strength, rather than any described patent, network effect, or contractual switching cost, is what the excerpts point to as differentiating.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Significant commodity cost volatility, especially soaring cocoa prices, with hedging strategies acknowledged as not fully protective",
+      "Pricing increases taken to offset input costs have adversely impacted consumer demand/elasticity, particularly in the US and Europe",
+      "Material exposure to tariffs and trade policy uncertainty affecting costs of imported finished products and inputs",
+      "Continued operations in Russia (3.7% of 2025 net revenue) and Ukraine (0.4%) amid the ongoing war, with risk of asset impairment, expropriation, or deconsolidation",
+      "Large non-cash pension settlement losses recognized in 2025 ($282 million and $54 million) from US and Canada retirement plan buy-outs",
+      "Sizable mark-to-market derivative losses ($1,342 million) affecting reported results in 2025"
+    ]
+  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001103982.json",
@@ -155,24 +172,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/1103982/000162828026050179/mdlz-20260630.htm"
       },
       {
-        "filed": "2026-04-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1103982/000162828026027937/mdlz-20260331.htm"
+        "filed": "2026-07-28",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1103982/000162828026050157/mdlz-20260728.htm"
       },
       {
         "filed": "2026-02-04",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1103982/000162828026005345/mdlz-20251231.htm"
-      },
-      {
-        "filed": "2025-10-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1103982/000162828025046773/mdlz-20250930.htm"
-      },
-      {
-        "filed": "2025-07-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1103982/000110398225000188/mdlz-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $77.9B",
+          "detail": "Market cap $78.0B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 22.4",
+          "detail": "P/E 22.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 66.2",
+          "detail": "P/E x P/B = 66.4",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.mondelezinternational.com"
 }

@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389753/d20034d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Oracle's fiscal 2026 10-K describes three segments (cloud and software, hardware, services), with cloud and software representing 87% of total revenue and cloud revenue growing to 51% of total revenue (from 43% in fiscal 2025). Total revenue rose to $67.4 billion (up 17% reported) with operating margin of $20.6 billion (31% of revenue), driven mainly by cloud and software growth, while operating expenses rose $7.0 billion, including a $1.5 billion increase in restructuring and other expenses and a $6.0 billion increase in cloud and software expenses tied to higher infrastructure costs. The filing highlights continuing customer migration from on-premise licenses to Oracle Cloud and R&D investment of $10.3 billion in fiscal 2026.",
+    "filing_summary_10q": "For the quarter ended August 31, 2026, Oracle reported total revenues of $19.345 billion, up from $14.926 billion a year earlier, with cloud revenue nearly doubling to $11.607 billion. Operating income rose to $6.728 billion from $4.277 billion, though interest expense increased to $1.428 billion from $923 million. The balance sheet shows a sharp increase in property, plant and equipment (to $127.8 billion from $99.96 billion at fiscal year-end) and higher non-current borrowings, reflecting continued infrastructure investment funded partly by additional debt and equity issuance.",
+    "filing_summary_8k": "This 8-K, dated September 12, 2026, discloses that Larry Ellison, Executive Chair and Chief Technology Officer, cancelled his Rule 10b5-1 trading plan to sell Oracle stock, and states that no shares were sold under the plan before it was terminated. The filing attaches the related press release as an exhibit.",
+    "moat_explanation": "The 10-K states that substantially all customers who purchase software licenses also buy support contracts and that substantially all support customers renew them, and describes an integrated suite (ERP, HCM, CX, database) built on 'a common data model' that becomes more valuable as customers adopt more modules, creating migration and integration friction that discourages switching. The company also describes multi-year cloud contract structures (one to five years) with renewal-driven revenue growth, reinforcing this stickiness.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Property, plant and equipment roughly doubled quarter-over-quarter driven by cloud/AI infrastructure buildout, alongside a large jump in non-current borrowings and interest expense (nearly doubling year over year), indicating significantly increased leverage and capital intensity",
+      "Fiscal 2026 10-K MD&A discloses a large increase in restructuring and other expenses ($1.838 billion vs $374 million in the prior year)",
+      "MD&A repeatedly flags that margins and revenues can be adversely affected by tariffs, trade barriers, inflation, foreign currency fluctuations and governmental budgetary constraints",
+      "Software license revenue recognition and hardware revenue are described as dependent on the timing of a few large transactions, which the company says can substantially affect quarterly results",
+      "Full Risk Factors section (Item 1A) text was not provided in the excerpts, limiting visibility into company-specific risks beyond what MD&A and Business sections disclose"
+    ]
+  }
+}

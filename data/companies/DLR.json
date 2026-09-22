@@ -78,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 203.82218638817628,
+      "graham_multiple": 205.01309470336201,
       "graham_number": 83.68049194496547,
-      "graham_upside_pct": -54.885574604434076,
-      "ncav_margin_pct": -129.76980793055674,
-      "pb_ratio": 2.38935845963126,
-      "pe_ttm": 85.3041474654378
+      "graham_upside_pct": -54.92567091572019,
+      "ncav_margin_pct": -129.74334944249563,
+      "pb_ratio": 2.396328658800407,
+      "pe_ttm": 85.55299539170507
     }
   },
   "industry": "REIT - Specialty",
-  "last_updated": "2026-09-22T17:52:16Z",
+  "last_updated": "2026-09-22T21:17:14Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 68486257730,
+  "market_cap": 68686044771,
   "metrics": {
     "book_value_per_share": 83.43669624249544,
     "current_ratio": 1.06839041307356,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 39.461108133699526,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 203.82218638817628,
-    "graham_upside_pct": -54.885574604434076,
+    "graham_multiple": 205.01309470336201,
+    "graham_upside_pct": -54.92567091572019,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -129.76980793055674,
-    "pb_ratio": 2.38935845963126,
-    "pe_ttm": 85.3041474654378,
+    "ncav_margin_pct": -129.74334944249563,
+    "pb_ratio": 2.396328658800407,
+    "pe_ttm": 85.55299539170507,
     "roe_pct": 3.3033164259728776,
     "shareholders_equity": 22925663000,
     "total_assets": 49410468000,
@@ -142,7 +142,7 @@
   "name": "Digital Realty Trust Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 185.485
+    "close": 185.65
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -150,29 +150,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001297996.json",
     "sec_filings": [
       {
+        "filed": "2026-08-19",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1297996/000119312526357083/d145363d8k.htm"
+      },
+      {
         "filed": "2026-07-31",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926089296/dlr-20260630x10q.htm"
       },
       {
-        "filed": "2026-05-01",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926054255/dlr-20260331x10q.htm"
-      },
-      {
         "filed": "2026-02-13",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm"
-      },
-      {
-        "filed": "2025-10-31",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465925104945/dlr-20250930x10q.htm"
-      },
-      {
-        "filed": "2025-08-01",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1297996/000155837025009991/dlr-20250630x10q.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $68.5B",
+          "detail": "Market cap $68.7B",
           "passed": true
         },
         {
@@ -207,12 +197,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 85.3",
+          "detail": "P/E 85.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 203.8",
+          "detail": "P/E x P/B = 205.0",
           "passed": false
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.digitalrealty.com"
 }

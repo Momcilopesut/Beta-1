@@ -78,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": -6378.371804840062,
+      "graham_multiple": -6393.021201965324,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -127.97481978918282,
-      "pb_ratio": 4.614131865915672,
-      "pe_ttm": -1382.355769230769
+      "ncav_margin_pct": -127.89901780406659,
+      "pb_ratio": 4.619427534248549,
+      "pe_ttm": -1383.9423076923076
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-22T17:49:40Z",
+  "last_updated": "2026-09-22T21:21:20Z",
   "layered_analysis": {
     "conviction_score": 30.0,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 64028770441,
+  "market_cap": 64102256666,
   "metrics": {
     "book_value_per_share": 74.49012567324955,
     "current_ratio": 1.084846895285555,
@@ -125,13 +125,13 @@
     "fcf_margin_pct": -31.284424247962583,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": -6378.371804840062,
+    "graham_multiple": -6393.021201965324,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -127.97481978918282,
-    "pb_ratio": 4.614131865915672,
-    "pe_ttm": -1382.355769230769,
+    "ncav_margin_pct": -127.89901780406659,
+    "pb_ratio": 4.619427534248549,
+    "pe_ttm": -1383.9423076923076,
     "roe_pct": -0.3154916049551525,
     "shareholders_equity": 15024900000,
     "total_assets": 41059500000,
@@ -140,7 +140,7 @@
   "name": "Air Products and Chemicals Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 287.08
+    "close": 287.86
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -153,24 +153,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/2969/000000296926000036/apd-20260630.htm"
       },
       {
-        "filed": "2026-04-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/2969/000000296926000020/apd-20260331.htm"
-      },
-      {
-        "filed": "2026-01-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/2969/000000296926000008/apd-20251231.htm"
+        "filed": "2026-07-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2969/000000296926000034/apd-20260730.htm"
       },
       {
         "filed": "2025-11-20",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm"
-      },
-      {
-        "filed": "2025-07-31",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/2969/000000296925000044/apd-20250630.htm"
       }
     ]
   },
@@ -180,7 +170,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $64.0B",
+          "detail": "Market cap $64.1B",
           "passed": true
         },
         {
@@ -205,12 +195,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E -1382.4",
+          "detail": "P/E -1383.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -6378.4",
+          "detail": "P/E x P/B = -6393.0",
           "passed": true
         }
       ],
@@ -245,5 +235,6 @@
       "passed": 1,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.airproducts.com"
 }

@@ -78,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 254.0189052300926,
+      "graham_multiple": 254.54755406047732,
       "graham_number": 162.24106920529775,
-      "graham_upside_pct": -21.4861260136964,
-      "ncav_margin_pct": -143.74674126786823,
-      "pb_ratio": 24.550962517824402,
-      "pe_ttm": 10.346596596596598
+      "graham_upside_pct": -21.599947228521433,
+      "ncav_margin_pct": -143.68332181111575,
+      "pb_ratio": 24.576496231411692,
+      "pe_ttm": 10.35735735735736
     }
   },
   "industry": "Insurance - Property & Casualty",
-  "last_updated": "2026-09-22T17:50:55Z",
+  "last_updated": "2026-09-22T21:27:50Z",
   "layered_analysis": {
     "conviction_score": 40.3,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 120189915000,
+  "market_cap": 120314916000,
   "metrics": {
     "book_value_per_share": 60.64665523156089,
     "current_ratio": 0,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 19.626413501146775,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 254.0189052300926,
-    "graham_upside_pct": -21.4861260136964,
+    "graham_multiple": 254.54755406047732,
+    "graham_upside_pct": -21.599947228521433,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -143.74674126786823,
-    "pb_ratio": 24.550962517824402,
-    "pe_ttm": 10.346596596596598,
+    "ncav_margin_pct": -143.68332181111575,
+    "pb_ratio": 24.576496231411692,
+    "pe_ttm": 10.35735735735736,
     "roe_pct": 46.04149442935317,
     "shareholders_equity": 30323000000,
     "total_assets": 123039000000,
@@ -142,7 +142,7 @@
   "name": "Progressive Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 206.64
+    "close": 206.94
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -150,29 +150,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000080661.json",
     "sec_filings": [
       {
+        "filed": "2026-09-18",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/80661/000008066126000322/pgr-20260918.htm"
+      },
+      {
         "filed": "2026-08-03",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/80661/000008066126000308/pgr-20260630.htm"
       },
       {
-        "filed": "2026-05-04",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/80661/000008066126000177/pgr-20260331.htm"
-      },
-      {
         "filed": "2026-03-02",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm"
-      },
-      {
-        "filed": "2025-11-03",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/80661/000008066125000129/pgr-20250930.htm"
-      },
-      {
-        "filed": "2025-08-04",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/80661/000008066125000051/pgr-20250630.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $120.2B",
+          "detail": "Market cap $120.3B",
           "passed": true
         },
         {
@@ -207,12 +197,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 10.3",
+          "detail": "P/E 10.4",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 254.0",
+          "detail": "P/E x P/B = 254.5",
           "passed": false
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.progressive.com"
 }

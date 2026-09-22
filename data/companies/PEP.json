@@ -78,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 138.29973017387087,
+      "graham_multiple": 139.25340897330736,
       "graham_number": 47.03104991311295,
-      "graham_upside_pct": -64.05368064123122,
-      "ncav_margin_pct": -132.9844328719391,
-      "pb_ratio": 8.081764865598696,
-      "pe_ttm": 17.112565445026178
+      "graham_upside_pct": -64.15043073929952,
+      "ncav_margin_pct": -132.89565473910062,
+      "pb_ratio": 8.109581862612,
+      "pe_ttm": 17.171465968586386
     }
   },
   "industry": "Beverages - Non-Alcoholic",
-  "last_updated": "2026-09-22T17:46:57Z",
+  "last_updated": "2026-09-22T21:11:35Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 178590840000,
+  "market_cap": 179205540000,
   "metrics": {
     "book_value_per_share": 16.30307467057101,
     "current_ratio": 0.9336010938301145,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 8.168219323928666,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 138.29973017387087,
-    "graham_upside_pct": -64.05368064123122,
+    "graham_multiple": 139.25340897330736,
+    "graham_upside_pct": -64.15043073929952,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -132.9844328719391,
-    "pb_ratio": 8.081764865598696,
-    "pe_ttm": 17.112565445026178,
+    "ncav_margin_pct": -132.89565473910062,
+    "pb_ratio": 8.109581862612,
+    "pe_ttm": 17.171465968586386,
     "roe_pct": 50.3632542779946,
     "shareholders_equity": 20406000000,
     "total_assets": 107399000000,
@@ -142,7 +142,7 @@
   "name": "PepsiCo Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 130.8369
+    "close": 131.19
   },
   "qualitative": null,
   "sector": "Consumer Defensive",
@@ -150,29 +150,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000077476.json",
     "sec_filings": [
       {
+        "filed": "2026-09-17",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/77476/000007747626000042/pep-20260917.htm"
+      },
+      {
         "filed": "2026-07-09",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/77476/000007747626000035/pep-20260613.htm"
       },
       {
-        "filed": "2026-04-16",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/77476/000007747626000017/pep-20260321.htm"
-      },
-      {
         "filed": "2026-02-03",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/77476/000007747626000007/pep-20251227.htm"
-      },
-      {
-        "filed": "2025-10-09",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/77476/000007747625000053/pep-20250906.htm"
-      },
-      {
-        "filed": "2025-07-17",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/77476/000007747625000044/pep-20250614.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $178.6B",
+          "detail": "Market cap $179.2B",
           "passed": true
         },
         {
@@ -207,12 +197,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 17.1",
+          "detail": "P/E 17.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 138.3",
+          "detail": "P/E x P/B = 139.3",
           "passed": false
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.pepsico.com"
 }

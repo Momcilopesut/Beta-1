@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 41.28340197353983,
+      "graham_multiple": 40.6026247317264,
       "graham_number": 121.87687569695709,
-      "graham_upside_pct": -40.312025223097564,
-      "ncav_margin_pct": -123.1225658144681,
-      "pb_ratio": 2.117564269365873,
-      "pe_ttm": 19.49570200573066
+      "graham_upside_pct": -39.78712726794274,
+      "ncav_margin_pct": -123.3259063962069,
+      "pb_ratio": 2.1000320157149406,
+      "pe_ttm": 19.334288443170966
     }
   },
   "industry": "Oil & Gas Integrated",
-  "last_updated": "2026-09-22T17:49:19Z",
+  "last_updated": "2026-09-22T21:36:14Z",
   "layered_analysis": {
-    "conviction_score": 10.1,
+    "conviction_score": 10.6,
     "conviction_score_breakdown": {
       "base_score": 16.7,
       "components": {
         "graham_pct": 16.7
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 406525392000,
+  "market_cap": 403159588000,
   "metrics": {
     "book_value_per_share": 99.27467221153904,
     "current_ratio": 1.3582040277319247,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 8.996269627830312,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 1,
-    "graham_multiple": 41.28340197353983,
-    "graham_upside_pct": -40.312025223097564,
+    "graham_multiple": 40.6026247317264,
+    "graham_upside_pct": -39.78712726794274,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -123.1225658144681,
-    "pb_ratio": 2.117564269365873,
-    "pe_ttm": 19.49570200573066,
+    "ncav_margin_pct": -123.3259063962069,
+    "pb_ratio": 2.1000320157149406,
+    "pe_ttm": 19.334288443170966,
     "roe_pct": 10.983462929945818,
     "shareholders_equity": 186450000000,
     "total_assets": 324012000000,
@@ -142,9 +143,24 @@
   "name": "Chevron Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 204.19
+    "close": 202.41
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes Chevron as a global integrated energy company with upstream and downstream operations across roughly 20 countries. Net income attributable to Chevron was $12,299 million in 2025, down from $17,661 million in 2024 and $21,369 million in 2023, with return on capital employed falling to 6.6%. The filing discloses several pending environmental Notices of Violation (New Mexico, California refineries, Colorado) and a DOJ notice to Hess regarding Clean Water Act allegations, and notes that Hess, acquired in 2025, was excluded from the internal controls assessment.",
+    "filing_summary_10q": "The excerpt provided is primarily XBRL tagging data and structured financial statement labels rather than narrative text, covering the quarter and six months ended June 30, 2026. It references segment reporting (Upstream and Downstream, U.S. and non-U.S.), pension and postretirement benefit costs, fair value and derivative instrument disclosures, and litigation matters including climate change litigation and a settled coastal erosion case. No further descriptive detail on results of operations is available in the excerpt provided.",
+    "filing_summary_8k": "This 8-K, dated July 31, 2026, discloses under Item 2.02 that Chevron issued a news release announcing unaudited second-quarter 2026 earnings of $12.1 billion, with the release furnished as an exhibit. No other items or events are disclosed in this filing.",
+    "moat_explanation": "The 10-K describes Chevron as a global integrated energy company with substantial operations across roughly 20 countries and upstream property, plant and equipment of $200.8 billion, plus large joint ventures such as Tengizchevroil, implying a capital intensity that limits the number of competitors able to operate at similar scale. However, the excerpts provided are largely financial tables, legal proceedings, and governance/audit boilerplate rather than a discussion of competitive dynamics, brand strength, or customer switching costs, so this classification rests on inference from scale rather than explicit moat language in the filing.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Multiple environmental Notices of Violation across facilities (New Mexico, El Segundo/EPA biofuel credit overstatement, Bay Area Air District, Colorado ECMC well control and reporting violations) each potentially resulting in civil penalties of $1.0 million or more",
+      "DOJ notice to newly acquired Hess of alleged Clean Water Act violations related to Gulf of America operations",
+      "Net income attributable to Chevron declined from $21.369 billion (2023) to $17.661 billion (2024) to $12.299 billion (2025), with return on capital employed falling from 11.9% to 6.6% over the same period",
+      "Management excluded recently acquired Hess (24% of total assets, 3% of total revenues) from its internal control over financial reporting assessment, indicating integration is still in progress",
+      "Earnings are explicitly stated to depend mostly on upstream profitability, which is driven by global crude oil prices outside the company's control, with sustained lower prices potentially triggering asset impairments"
+    ]
+  },
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000093410.json",
@@ -155,24 +171,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000167/cvx-20260630.htm"
       },
       {
-        "filed": "2026-05-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000113/cvx-20260331.htm"
+        "filed": "2026-07-31",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000162/cvx-20260731.htm"
       },
       {
         "filed": "2026-02-24",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231.htm"
-      },
-      {
-        "filed": "2025-11-06",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000108/cvx-20250930.htm"
-      },
-      {
-        "filed": "2025-08-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000062/cvx-20250630.htm"
       }
     ]
   },
@@ -182,7 +188,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $406.5B",
+          "detail": "Market cap $403.2B",
           "passed": true
         },
         {
@@ -207,12 +213,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 19.5",
+          "detail": "P/E 19.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 41.3",
+          "detail": "P/E x P/B = 40.6",
           "passed": false
         }
       ],
@@ -247,5 +253,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.chevron.com"
 }

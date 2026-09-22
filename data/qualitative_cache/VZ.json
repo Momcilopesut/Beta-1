@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000046/vz-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/732712/000119312526315236/d174102d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Verizon reported consolidated operating revenues of $138.2 billion, up 2.5% from 2024, driven by 3.8% growth in the Consumer segment ($106.8 billion) that offset a 1.6% decline in the Business segment ($29.1 billion). Operating expenses rose 2.7%, largely due to higher wireless equipment costs from increased device upgrades and a mix shift to pricier devices, while net income was $17.6 billion versus $17.9 billion in 2024. The filing also describes the January 2026 completed acquisitions of Frontier Communications and Starry Group Holdings, which expanded Verizon's fiber and fixed wireless broadband footprint, and notes $17.0 billion in 2025 capital expenditures.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the six months ended June 30, 2026) consists primarily of structured XBRL data tags rather than narrative text, so a detailed description of quarterly results cannot be drawn from it. It references ongoing integration items tied to the Frontier and Starry acquisitions, multiple debt issuances, redemptions and open-market repurchases of Verizon notes, asset-backed securities note transactions completed in March and June 2026, and spectrum license transactions related to U.S. Cellular (Array Digital Infrastructure). No further qualitative detail on the quarter's financial performance is available in the provided excerpt.",
+    "filing_summary_8k": "This 8-K, dated July 23, 2026, discloses an amendment to Verizon CEO Daniel H. Schulman's employment agreement. Under the amendment, the initial term of his employment was extended from December 31, 2027 to December 31, 2028, with automatic one-year extensions thereafter absent 90 days' non-extension notice; the agreement also specifies 2028 base salary/incentive targets no less than the prior period and a long-term incentive award with a target value of at least $25 million to be granted in early 2027.",
+    "moat_explanation": "The excerpts describe a capital-intensive national wireless and fiber network requiring $17.0 billion in annual capital expenditures, FCC-licensed spectrum holdings, and a competitive landscape limited primarily to a small number of national providers (Verizon, AT&T, T-Mobile) alongside cable and satellite entrants. This scale of infrastructure investment and spectrum access creates a natural limit on the number of efficient competitors, though the filing also emphasizes that competition remains 'intense' with aggressive pricing pressure from rivals.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Company explicitly states competitors use 'aggressive pricing, promotions, premium content options and other incentives... specifically targeting our customers and putting pressure on our pricing and margins'",
+      "Disclosed 2024 nation-state cyberattack (Salt Typhoon) that accessed portions of Verizon's network, with acknowledgment that a future material cyberattack cannot be ruled out",
+      "Business segment revenue declined 1.6% year-over-year in 2025 while cost of wireless equipment rose 11.0%, partly from a mix shift to higher-priced devices",
+      "Company notes a sustained decline in a reporting unit's revenue and earnings has previously triggered, and could again trigger, goodwill impairment charges",
+      "Public sector business exposed to reduced federal/state government workforce and cost-efficiency measures",
+      "New U.S. tariffs on imported goods and potential retaliatory trade measures could adversely affect cost structure and profitability"
+    ]
+  }
+}

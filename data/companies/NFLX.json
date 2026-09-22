@@ -78,34 +78,35 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 220.85605822457137,
+      "graham_multiple": 223.9831902166297,
       "graham_number": 20.44036574011356,
-      "graham_upside_pct": -71.48330779324155,
-      "ncav_margin_pct": -105.3477943485721,
-      "pb_ratio": 9.955621322671506,
-      "pe_ttm": 22.18405572755418
+      "graham_upside_pct": -71.67355080361202,
+      "ncav_margin_pct": -105.31211768283757,
+      "pb_ratio": 10.025855105317543,
+      "pe_ttm": 22.340557275541798
     }
   },
   "industry": "Entertainment",
-  "last_updated": "2026-09-22T17:51:32Z",
+  "last_updated": "2026-09-22T21:23:18Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 298396268208,
+  "market_cap": 300469910328,
   "metrics": {
     "book_value_per_share": 7.197391069588425,
     "current_ratio": 1.1416085244391836,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 20.939391943471882,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 220.85605822457137,
-    "graham_upside_pct": -71.48330779324155,
+    "graham_multiple": 223.9831902166297,
+    "graham_upside_pct": -71.67355080361202,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -105.3477943485721,
-    "pb_ratio": 9.955621322671506,
-    "pe_ttm": 22.18405572755418,
+    "ncav_margin_pct": -105.31211768283757,
+    "pb_ratio": 10.025855105317543,
+    "pe_ttm": 22.340557275541798,
     "roe_pct": 47.957434885929544,
     "shareholders_equity": 26615488000,
     "total_assets": 55596993000,
@@ -142,37 +143,43 @@
   "name": "Netflix Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 71.6786
+    "close": 72.16
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Netflix reported total revenues of $45.18 billion (up 16% year-over-year), operating margin of 29.5%, and net income of $10.98 billion, driven by membership growth, price increases, and advertising revenue, partially offset by unfavorable foreign exchange. The company discontinued reporting membership numbers in 2025, focusing instead on revenue and operating margin. During the period it entered a definitive (later amended) merger agreement to acquire Warner Bros. Discovery's streaming and studio businesses for a total equity value of approximately $72.0 billion, financed in part through new multi-billion-dollar credit and term loan facilities, while also repurchasing $9.1 billion of common stock and paying down debt.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists almost entirely of structured XBRL tags and context data (covering the quarter and six months ended June 30, 2026) rather than narrative disclosure, so a detailed summary of results cannot be responsibly derived from it. What can be discerned is that the filing includes information on senior notes and related interest-rate/foreign-exchange hedging instruments, licensed and produced content assets, and activity related to the Warner Bros. Discovery transaction referenced in a Q1 2026 context. No further substantive business or financial narrative was included in the provided excerpt.",
+    "filing_summary_8k": "This Form 8-K, dated July 26, 2026, discloses under Item 5.02 that board member Anne Sweeney notified Netflix of her resignation from the Board of Directors effective that date. The filing states her resignation was not due to any disagreement with the company.",
+    "moat_explanation": "The 10-K describes a large global subscriber base, a large original/exclusive content library, and a proprietary global content delivery network (Open Connect) that the company says helps differentiate its service, enhance its brand, and stream efficiently at scale. However, the Risk Factors section repeatedly emphasizes that competitors have comparable or greater resources, exclusive content, brand recognition, and financial firepower, and that the entertainment video market is 'intensely competitive and subject to rapid change,' which tempers the strength of any durable advantage described in the excerpts.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Risk factors state content costs are largely fixed, so slower-than-expected growth could pressure margins and liquidity",
+      "Company faces potential liability and litigation risk tied to content it produces, licenses, and distributes",
+      "Non-income tax assessments in Brazil increased costs in 2025 and the company expects to pay ~$700 million in related deposits",
+      "Regulatory frameworks in various countries are expanding to include investment obligations, levies, content quotas, and ownership restrictions on services like Netflix",
+      "The pending WBD transaction is being financed with very large new debt facilities (bridge commitments increased to $42.2 billion), materially increasing leverage and integration/execution risk",
+      "Piracy is described as a compelling, difficult-to-compete-against threat that is subject to rapid growth"
+    ]
+  },
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001065280.json",
     "sec_filings": [
+      {
+        "filed": "2026-07-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000214/nflx-20260726.htm"
+      },
       {
         "filed": "2026-07-17",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm"
       },
       {
-        "filed": "2026-04-17",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000138/nflx-20260331.htm"
-      },
-      {
         "filed": "2026-01-23",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm"
-      },
-      {
-        "filed": "2025-10-22",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000406/nflx-20250930.htm"
-      },
-      {
-        "filed": "2025-07-18",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000323/nflx-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $298.4B",
+          "detail": "Market cap $300.5B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 22.2",
+          "detail": "P/E 22.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 220.9",
+          "detail": "P/E x P/B = 224.0",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 4,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.netflix.com"
 }

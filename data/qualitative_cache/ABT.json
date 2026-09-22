@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1800/000110465926099247/tm2623675d1_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Abbott's 2025 10-K describes a diversified healthcare business across four segments (Established Pharmaceutical Products, Diagnostic Products, Nutritional Products, and Medical Devices), with total net sales growth of 5.7% in 2025 driven primarily by Medical Devices and Established Pharmaceutical Products. Diagnostics sales declined due to continued COVID-19 testing decline and China market conditions, while gross margins improved to 52.6% and operating margin rose to 18.2%. The filing discloses a pending definitive agreement (announced November 19, 2025) to acquire Exact Sciences Corporation for approximately $21 billion in equity value to enter the cancer diagnostics market, along with ongoing IRS and Malaysian tax disputes and litigation reserves of approximately $175 million.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated August 20, 2026, discloses that Abbott settled a portion of litigation related to necrotizing enterocolitis (NEC) claims involving its preterm infant formula products. Following the Missouri Court of Appeals' affirmation of a $495 million jury verdict in the Gill case, Abbott agreed to resolve the Gill lawsuit and NEC claims on behalf of approximately 2,000 additional infants for an aggregate of approximately $670 million, rather than continue appealing or pay the roughly $600 million judgment plus interest. The filing states that approximately 1,700 lawsuits remain pending on behalf of about 12,700 individual infants, and that Abbott continues to work to identify and eliminate claims it considers improperly asserted.",
+    "moat_explanation": "The 10-K describes an extensive portfolio of patents, trademarks, and regulatory approvals (FDA/PMA/CE Mark) across pharmaceuticals, diagnostics, nutrition, and medical devices, with company statements that patent protection and licenses materially affect which products can be sold. The filing also notes technological advantages in diagnostics and devices, though it explicitly acknowledges these advantages 'may be reduced or eliminated as competitors introduce new products,' suggesting the moat is real but not unassailable.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Ongoing IRS disputes (SNODs) covering 2017-2020 tax years totaling several hundred million dollars in disputed income tax assessments, with litigation in U.S. Tax Court",
+      "A $413 million Malaysian tax assessment upheld by the Penang High Court and now under appeal",
+      "Diagnostics segment sales declined 4.5% in 2025 (and 3.9% in 2024) due to continued COVID-19 testing decline and challenging market conditions in China, including volume-based procurement programs",
+      "44% of consolidated gross revenues in 2025 were subject to rebates/allowances, with rebates rising to 21.1% of subject gross sales, indicating pricing/margin pressure sensitivity",
+      "Restructuring actions in 2025, 2024, and 2023 across multiple segments with associated severance and impairment charges",
+      "Significant NEC litigation involving preterm infant formula, including a $495 million jury verdict (Gill) later affirmed on appeal, with thousands of additional claims pending"
+    ]
+  }
+}

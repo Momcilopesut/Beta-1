@@ -78,35 +78,36 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 37.942798574320165,
+      "graham_multiple": 37.793307269950965,
       "graham_number": 64.00739476141354,
-      "graham_upside_pct": -21.075962069773684,
-      "ncav_margin_pct": -164.21290846387805,
-      "pb_ratio": 1.6226461800947864,
-      "pe_ttm": 23.38328530259366
+      "graham_upside_pct": -20.959008691759035,
+      "ncav_margin_pct": -164.30806219338737,
+      "pb_ratio": 1.6194464834123221,
+      "pe_ttm": 23.337175792507207
     }
   },
   "industry": "Diversified Utilities",
-  "last_updated": "2026-09-22T17:48:38Z",
+  "last_updated": "2026-09-22T21:34:33Z",
   "layered_analysis": {
-    "conviction_score": 13.8,
+    "conviction_score": 14.4,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 0.75,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
       "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -117,7 +118,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 53041785980,
+  "market_cap": 52937192860,
   "metrics": {
     "book_value_per_share": 66.21327812757058,
     "current_ratio": 1.6417100203573851,
@@ -127,14 +128,14 @@
     "fcf_margin_pct": -44.10005834305718,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 37.942798574320165,
-    "graham_upside_pct": -21.075962069773684,
+    "graham_multiple": 37.793307269950965,
+    "graham_upside_pct": -20.959008691759035,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -164.21290846387805,
-    "pb_ratio": 1.6226461800947864,
-    "pe_ttm": 23.38328530259366,
+    "ncav_margin_pct": -164.30806219338737,
+    "pb_ratio": 1.6194464834123221,
+    "pe_ttm": 23.337175792507207,
     "roe_pct": 7.142074363992172,
     "shareholders_equity": 31614000000,
     "total_assets": 110878000000,
@@ -143,37 +144,43 @@
   "name": "Sempra",
   "price": {
     "as_of": "2026-09-22",
-    "close": 81.1
+    "close": 80.98
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Sempra's 2025 Form 10-K reports earnings attributable to common shares of $1,796 million, down from $2,817 million in 2024, primarily due to a $651 million regulatory disallowance charge at SDG&E, tax expenses from classifying SI Partners and Ecogas as held for sale, and a swing to losses at the Sempra Infrastructure segment. The company invested $12.6 billion in capital expenditures and investments during 2025, entered agreements to sell a 45% interest in SI Partners to KKR (~$9.99 billion) and to sell Ecogas (~$500 million), both expected to close in 2026, and continued to grow rate base at SDG&E, SoCalGas and Oncor amid ongoing CPUC and PUCT rate proceedings.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL data tags for the quarter ended June 30, 2026, with no narrative business or financial discussion included. It confirms the filing covers Sempra, SDG&E and SoCalGas for the six months ended June 30, 2026, and references items such as natural gas and electricity revenue categories, related-party balances, and various LNG joint venture and financing arrangements, but the excerpts do not provide substantive descriptive text about quarterly results or developments.",
+    "filing_summary_8k": "This 8-K, dated August 21, 2026, discloses that Southern California Gas Company closed a previously announced public offering of $500,000,000 aggregate principal amount of 5.500% First Mortgage Bonds, Series GGG, due 2036, issued under a Supplemental Indenture dated the same day. The bonds pay interest semiannually starting March 1, 2027, and are redeemable prior to maturity at the company's option under terms described in the bond form; net proceeds to the company were 98.755% of the principal amount before offering expenses.",
+    "moat_explanation": "The excerpts describe SDG&E, SoCalGas and Oncor as regulated utilities operating exclusive service territories under CPUC, FERC and PUCT oversight, with returns tied to a regulator-approved rate base rather than market competition \\u2014 a structure characteristic of efficient-scale, capital-intensive natural monopolies where new entrants are effectively precluded by regulation and infrastructure cost. However, the same excerpts show that regulators can and do disallow cost recovery (e.g., a $651 million WMP-related disallowance), meaning the moat comes with regulatory constraint on economics rather than pricing power.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "CPUC issued a Track 2 GRC final decision disallowing recovery of certain wildfire mitigation plan (WMP) costs, resulting in a $651 million ($464 million after-tax) charge to SDG&E in Q4 2025",
+      "Sempra Infrastructure segment swung to a $160 million loss in 2025 from $911 million earnings in 2024, driven largely by tax charges from classifying SI Partners and Ecogas as held for sale and foreign currency/inflation effects in Mexico",
+      "Pending sales of a 45% equity interest in SI Partners to KKR (~$9.99 billion) and of Ecogas (~$500 million) are subject to closing conditions and not yet completed as of the filing",
+      "FERC found the TO5 adder refund provision triggered, requiring SDG&E to refund customers the California ISO adder retroactively from June 1, 2019",
+      "Wildfire-related liability risk is significant enough that 2025 legislation established an $18 billion Continuation Account and a task force to evaluate replacing the existing Wildfire Fund",
+      "Effective income tax rate was volatile (39% in 2025 vs. 8% in 2024), reflecting large one-time tax impacts tied to held-for-sale reclassifications and foreign currency/inflation effects"
+    ]
+  },
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001032208.json",
     "sec_filings": [
+      {
+        "filed": "2026-08-21",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1032208/000119312526361126/d417152d8k.htm"
+      },
       {
         "filed": "2026-08-06",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1032208/000103220826000045/sre-20260630.htm"
       },
       {
-        "filed": "2026-05-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1032208/000103220826000030/sre-20260331.htm"
-      },
-      {
         "filed": "2026-02-26",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1032208/000103220826000010/sre-20251231.htm"
-      },
-      {
-        "filed": "2025-11-05",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1032208/000103220825000065/sre-20250930.htm"
-      },
-      {
-        "filed": "2025-08-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1032208/000103220825000048/sre-20250630.htm"
       }
     ]
   },
@@ -183,7 +190,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $53.0B",
+          "detail": "Market cap $52.9B",
           "passed": true
         },
         {
@@ -208,12 +215,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 23.4",
+          "detail": "P/E 23.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 37.9",
+          "detail": "P/E x P/B = 37.8",
           "passed": false
         }
       ],
@@ -248,5 +255,6 @@
       "passed": 1,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.sempra.com"
 }

@@ -78,35 +78,36 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 70.97102829565529,
+      "graham_multiple": 71.32211655709426,
       "graham_number": 70.73333334014724,
-      "graham_upside_pct": -47.85600196082032,
-      "ncav_margin_pct": -131.32817283081584,
-      "pb_ratio": 2.355146398218715,
-      "pe_ttm": 30.13444444444444
+      "graham_upside_pct": -47.944264542134796,
+      "ncav_margin_pct": -131.2751445724181,
+      "pb_ratio": 2.3609645763345903,
+      "pe_ttm": 30.208888888888886
     }
   },
   "industry": "REIT - Industrial",
-  "last_updated": "2026-09-22T17:48:47Z",
+  "last_updated": "2026-09-22T21:23:50Z",
   "layered_analysis": {
-    "conviction_score": 13.8,
+    "conviction_score": 14.4,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 0.75,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
       "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -117,7 +118,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 126529770980,
+  "market_cap": 126842351440,
   "metrics": {
     "book_value_per_share": 62.28701457091048,
     "current_ratio": 0.6977452900375469,
@@ -127,14 +128,14 @@
     "fcf_margin_pct": 56.97794810018103,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 70.97102829565529,
-    "graham_upside_pct": -47.85600196082032,
+    "graham_multiple": 71.32211655709426,
+    "graham_upside_pct": -47.944264542134796,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -131.32817283081584,
-    "pb_ratio": 2.355146398218715,
-    "pe_ttm": 30.13444444444444,
+    "ncav_margin_pct": -131.2751445724181,
+    "pb_ratio": 2.3609645763345903,
+    "pe_ttm": 30.208888888888886,
     "roe_pct": 7.900607573036433,
     "shareholders_equity": 53193178000,
     "total_assets": 98724256000,
@@ -143,37 +144,43 @@
   "name": "Prologis Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 135.65
+    "close": 135.88
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Prologis reported resilient operating results despite tariff-related economic disruption earlier in the year, with 112 million square feet of new leases signed (228 million on an owned-and-managed basis), 95.6% portfolio occupancy, and 50.1% net effective rent change on new/renewed leases. The company generated $2.7 billion in net proceeds and $944 million in net gains from real estate dispositions, listed Prologis C-REIT on the Shenzhen Stock Exchange, issued $3.4 billion of senior notes, and ended the year with $35.0 billion of total debt and $7.6 billion of available liquidity. Real Estate Segment NOI grew to $6,188 million from $5,717 million, while Strategic Capital Segment NOI declined to $321 million from $380 million, partly due to lower promote revenue.",
+    "filing_summary_10q": "The 10-Q excerpt provided consists primarily of XBRL taxonomy tags, entity identifiers, and financial-statement line-item labels covering the quarter and six months ended June 30, 2026, rather than narrative disclosure text. As a result, the specific financial results, business developments, or management commentary for this quarter cannot be summarized from the excerpt given here.",
+    "filing_summary_8k": "This Form 8-K, dated August 5, 2026, discloses that underwriters in Prologis's recent common stock offering (which closed August 5, 2026) exercised their option to purchase an additional 2,250,000 shares, expected to close August 7, 2026 and generate approximately $312.2 million in additional net proceeds to the company before transaction expenses. The filing's forward-looking-statements section also references a proposed combination with SEGRO plc and associated risks, though no further details of that transaction are provided in this excerpt.",
+    "moat_explanation": "The 10-K describes Prologis's scale-driven efficiencies: scalable systems that allow portfolio growth 'with limited incremental G&A expenses,' procurement capabilities that let it 'secure high-demand data center equipment' and 'procure high demand construction materials at a lower cost,' and an energy procurement strategy leveraging scale and utility relationships. These scale and cost advantages, combined with a portfolio concentrated in 'high-barrier, high-growth markets' near end consumers, support a durable competitive position, though the excerpts frame this more as operational cost efficiency than a wide, quantified cost gap versus specific competitors.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Company acknowledges 'economic uncertainty related to trade tensions and shifting policies' and disruption from April 2025 tariff proposals affecting the business",
+      "Recent quarters have shown 'lower, or in some cases negative, market rental growth' despite still-positive embedded lease mark-to-market",
+      "G&A expenses increased year over year 'principally due to inflationary increases and higher compensation expenses'",
+      "Meaningful foreign currency exposure (7.9% of 2025 consolidated revenue) with a 10% dollar move potentially causing a $140 million cash payment on settlement of currency contracts",
+      "Interest expense rose due to new senior note issuances at higher rates (4.2% weighted average in 2025 vs. lower historical rates), alongside $35.0 billion of total debt outstanding",
+      "The 8-K excerpt's forward-looking statement list references a pending combination with SEGRO plc, along with associated integration, financing, and shareholder litigation risks"
+    ]
+  },
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045609.json",
     "sec_filings": [
+      {
+        "filed": "2026-08-06",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045609/000110465926092072/tm2621154d3_8k.htm"
+      },
       {
         "filed": "2026-07-29",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1045609/000119312526323746/pld-20260630.htm"
       },
       {
-        "filed": "2026-04-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1045609/000119312526197850/pld-20260331.htm"
-      },
-      {
         "filed": "2026-02-13",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1045609/000119312526051453/pld-20251231.htm"
-      },
-      {
-        "filed": "2025-10-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1045609/000119312525253512/pld-20250930.htm"
-      },
-      {
-        "filed": "2025-07-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1045609/000095017025099770/pld-20250630.htm"
       }
     ]
   },
@@ -183,7 +190,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $126.5B",
+          "detail": "Market cap $126.8B",
           "passed": true
         },
         {
@@ -208,12 +215,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 30.1",
+          "detail": "P/E 30.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 71.0",
+          "detail": "P/E x P/B = 71.3",
           "passed": false
         }
       ],
@@ -248,5 +255,6 @@
       "passed": 1,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.prologis.com"
 }

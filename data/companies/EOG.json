@@ -78,34 +78,35 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 25.26487327916089,
+      "graham_multiple": 24.871150314533367,
       "graham_number": 111.7368105366237,
-      "graham_upside_pct": -20.582244900939127,
-      "ncav_margin_pct": -119.3906032283622,
-      "pb_ratio": 2.321306803916646,
-      "pe_ttm": 10.883900928792569
+      "graham_upside_pct": -19.913409879140133,
+      "ncav_margin_pct": -119.55390568530977,
+      "pb_ratio": 2.303148380617625,
+      "pe_ttm": 10.798761609907121
     }
   },
   "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-09-22T17:49:11Z",
+  "last_updated": "2026-09-22T21:43:01Z",
   "layered_analysis": {
-    "conviction_score": 20.2,
+    "conviction_score": 21.2,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 74898289980,
+  "market_cap": 74312398080,
   "metrics": {
     "book_value_per_share": 60.57794676806083,
     "current_ratio": 1.8513589503280226,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 17.410377985554128,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 25.26487327916089,
-    "graham_upside_pct": -20.582244900939127,
+    "graham_multiple": 24.871150314533367,
+    "graham_upside_pct": -19.913409879140133,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -119.3906032283622,
-    "pb_ratio": 2.321306803916646,
-    "pe_ttm": 10.883900928792569,
+    "ncav_margin_pct": -119.55390568530977,
+    "pb_ratio": 2.303148380617625,
+    "pe_ttm": 10.798761609907121,
     "roe_pct": 22.380991130279114,
     "shareholders_equity": 29833000000,
     "total_assets": 51799000000,
@@ -142,9 +143,25 @@
   "name": "EOG Resources Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 140.695
+    "close": 139.52
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "EOG's FY2025 10-K reports net income of $4,980 million (down from $6,403 million in 2024) on total operating revenues of $22,632 million, a 4% decline year over year driven largely by lower gathering, processing and marketing revenues and a lower composite crude oil price, partly offset by higher natural gas prices and volumes. Total proved reserves grew to 5,514 MMBoe, aided by the August 2025 acquisition of Encino Acquisition Partners for $5.7 billion (675,000 net acres in the Utica play). The company funded $13.6 billion in capital expenditures, paid $2.2 billion in dividends and $2.6 billion in share repurchases, issued new senior notes, and its debt-to-capitalization ratio rose from 14% to 21%.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter and six months ended June 30, 2026) consists only of XBRL taxonomy tags and context data rather than narrative text, so specific financial results or business developments cannot be summarized from it. The tags reference items such as oil, NGL and natural gas revenue categories, the Encino acquisition, a revolving credit facility, derivative contracts, and equity compensation plans, but no descriptive figures or discussion are available in the excerpt given.",
+    "filing_summary_8k": "This 8-K, dated August 4, 2026, discloses that EOG issued a press release announcing its second quarter 2026 financial and operational results along with third quarter and full-year 2026 forecast and benchmark commodity pricing information. The information is furnished under Items 2.02 and 7.01 and is not deemed 'filed' for liability purposes under the Exchange Act. The press release itself is attached as Exhibit 99.1, but its specific contents are not included in the excerpt provided.",
+    "moat_explanation": "The 10-K describes EOG's strategy as being 'among the highest return and lowest cost producers,' emphasizing internally generated low-cost drilling prospects, a self-sourced sand program, downhole drilling motor and extended-lateral techniques that reduce cost per foot, and a stated goal of maintaining 'the lowest possible operating cost structure.' These excerpts point to a cost-efficiency focus rather than brand, network effects, or switching costs, though as a commodity producer EOG has limited pricing power and the durability of any cost edge versus peers is not independently verified in the excerpts.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Revenues and realized prices are subject to significant commodity price volatility (crude oil price fell 15% year over year in 2025) that directly affects cash flow and results.",
+      "Two purchasers each accounted for more than 10% of total crude oil, NGLs, natural gas and marketing revenues in 2025, indicating customer concentration, though EOG states it does not believe losing one would be material.",
+      "Debt-to-total-capitalization ratio rose from 14% to 21% during 2025, coinciding with multiple senior notes issuances and the $5.7 billion Encino acquisition, indicating increased leverage.",
+      "The $5.7 billion Encino acquisition (closed August 2025) introduces integration risk and contributed to higher G&A expenses (including acquisition-related costs) and interest expense.",
+      "International operations in Trinidad, Bahrain and the United Arab Emirates expose EOG to foreign government concession/production-sharing arrangements and geopolitical/regulatory uncertainty not present in a purely domestic operation.",
+      "Management explicitly states there is no assurance that efficiency initiatives will be sufficient to offset future inflationary pressures from tariffs or other macroeconomic factors on costs and capital expenditures."
+    ]
+  },
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000821189.json",
@@ -155,24 +172,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/821189/000082118926000149/eog-20260630.htm"
       },
       {
-        "filed": "2026-05-05",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/821189/000082118926000104/eog-20260331.htm"
+        "filed": "2026-08-04",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/821189/000082118926000147/eog-20260804.htm"
       },
       {
         "filed": "2026-02-24",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/821189/000082118926000054/eog-20251231.htm"
-      },
-      {
-        "filed": "2025-11-06",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/821189/000082118925000131/eog-20250930.htm"
-      },
-      {
-        "filed": "2025-08-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/821189/000082118925000070/eog-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $74.9B",
+          "detail": "Market cap $74.3B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 10.9",
+          "detail": "P/E 10.8",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 25.3",
+          "detail": "P/E x P/B = 24.9",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.eogresources.com"
 }

@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000058/isrg-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000063/isrg-20260723.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes Intuitive's da Vinci surgical system and Ion endoluminal platforms, including the newly launched da Vinci 5 system and phased international rollout, alongside a broad instruments/accessories and services business. It discusses competitive pressures (including from GLP-1 weight-loss drugs reducing bariatric procedures and a growing list of robotic-surgery competitors), regulatory clearances obtained across the U.S., Japan, South Korea, and Europe, and operational headwinds such as China market softness (anti-corruption campaign, provincial pricing limits, procurement quotas) and approximately $63.0 million of tariff-related cost increases in 2025.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated July 23, 2026, discloses that Intuitive Surgical's Board amended and restated the company's bylaws. The changes address shareholder director-nomination and proposal procedures (including universal proxy compliance, disclosure requirements, and proxy card color rules), special meeting record-date logistics, and a shift to a majority-of-votes-cast standard for non-election corporate actions, along with other technical conforming amendments. No financial results or operational events are reported in this filing.",
+    "moat_explanation": "The 10-K describes a highly integrated ecosystem in which da Vinci systems, proprietary instruments, accessories, service contracts, and multi-year surgeon training/learning pathways are all interlocked (e.g., instrument memory chips tied to specific system generations, service substantially sourced through Intuitive contracts, and progressive surgeon training programs). This creates real friction for hospitals and surgeons to switch to competing platforms once they have invested in systems, training, and consumable/instrument relationships, which is the strongest moat signal supported by the excerpts.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company states GLP-1 weight-loss drugs have already reduced the number of bariatric procedures performed on its systems",
+      "Growing list of named robotic-assisted surgery competitors (Johnson & Johnson, Medtronic, multiple Chinese entrants) explicitly disclosed as increasing competitive pressure, especially in China",
+      "China anti-corruption/systematic governance campaign and provincial pricing limits have led to canceled/delayed tenders and fewer systems placed than anticipated in 2025",
+      "Tariffs and trade measures increased cost of revenues by approximately $63.0 million in 2025, with further increases expected in 2026",
+      "Third-party remanufactured/reprocessed instrument offerings could reduce revenue and pose safety/reputational risk if uptake grows",
+      "Reliance on Mexicali, Mexico and German manufacturing/import sources exposes the company to tariff and supply-chain disruption risk"
+    ]
+  }
+}

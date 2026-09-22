@@ -78,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": -772.6120375364015,
+      "graham_multiple": -774.8442862196723,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -130.2248303428607,
-      "pb_ratio": -14.155037335001236,
-      "pe_ttm": 54.5821264367816
+      "ncav_margin_pct": -130.18351788418582,
+      "pb_ratio": -14.175471117886971,
+      "pe_ttm": 54.660919540229884
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-22T17:50:04Z",
+  "last_updated": "2026-09-22T21:50:28Z",
   "layered_analysis": {
     "conviction_score": 37.5,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 108269106000,
+  "market_cap": 108425400000,
   "metrics": {
     "book_value_per_share": -6.7031823745410035,
     "current_ratio": 0.7597333844245682,
@@ -126,13 +126,13 @@
     "fcf_margin_pct": 6.567270145544906,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": -772.6120375364015,
+    "graham_multiple": -774.8442862196723,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -130.2248303428607,
-    "pb_ratio": -14.155037335001236,
-    "pe_ttm": 54.5821264367816,
+    "ncav_margin_pct": -130.18351788418582,
+    "pb_ratio": -14.175471117886971,
+    "pe_ttm": 54.660919540229884,
     "roe_pct": -24.307962985100247,
     "shareholders_equity": -8096600000,
     "total_assets": 32019700000,
@@ -141,7 +141,7 @@
   "name": "Starbucks Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 94.98
+    "close": 95.11
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -154,24 +154,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000130/sbux-20260628.htm"
       },
       {
-        "filed": "2026-04-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000080/sbux-20260329.htm"
-      },
-      {
-        "filed": "2026-01-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000011/sbux-20251228.htm"
+        "filed": "2026-07-29",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000129/sbux-20260729.htm"
       },
       {
         "filed": "2025-11-14",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm"
-      },
-      {
-        "filed": "2025-07-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922425000058/sbux-20250629.htm"
       }
     ]
   },
@@ -181,7 +171,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $108.3B",
+          "detail": "Market cap $108.4B",
           "passed": true
         },
         {
@@ -206,12 +196,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 54.6",
+          "detail": "P/E 54.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -772.6",
+          "detail": "P/E x P/B = -774.8",
           "passed": true
         }
       ],
@@ -246,5 +236,6 @@
       "passed": 1,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.starbucks.com"
 }

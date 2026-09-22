@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-20260902.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Broadcom's FY2025 10-K (year ended November 2, 2025) reports total net revenue of $63,887 million, up from $51,574 million in FY2024, with operating income rising to $25,484 million from $13,463 million. The filing discusses the November 2023 VMware acquisition (funded partly via new term loans and assumed VMware notes), the July 2024 divestiture of VMware's EUC business to KKR for $3.5 billion, and the April 2024 acquisition of Seagate's SoC operations for $600 million. It also notes $27,537 million of cash generated from operations, $11,142 million paid in dividends, and $2,450 million in stock repurchases during the year.",
+    "filing_summary_10q": "The excerpts for this 10-Q (covering the quarter ended August 2, 2026, Broadcom's fiscal Q3) consist primarily of the cover page and XBRL tagging data rather than narrative MD&A text, so specific financial results or business developments for the quarter are not described in what was provided. The cover page confirms the filer is Broadcom Inc. (Delaware, ticker AVGO) reporting for the period ended August 2, 2026.",
+    "filing_summary_8k": "This 8-K, dated September 2, 2026, discloses that Broadcom issued a press release (furnished as Exhibit 99.1) announcing unaudited financial results for its fiscal third quarter ended August 2, 2026. It also announces that the Board declared a quarterly cash dividend of $0.65 per share, payable September 30, 2026 to stockholders of record as of September 21, 2026.",
+    "moat_explanation": "The 10-K describes many major OEM and software customer relationships as 'in place for many years' and 'the result of years of collaborative product development,' including custom ASIC design work tied to individual customer specifications and an enterprise-wide VMware licensing model with portability across on-prem and cloud environments that encourages deep, sticky customer integration. This collaborative, design-in nature of both semiconductor and software relationships (mainframe, VCF, Symantec endpoint customers) points to real switching friction rather than commoditized product sales.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "A relatively small number of customers account for a significant portion of net revenue, per the 10-K's own disclosure",
+      "Revenue is recognized upon delivery to distributors, which the company states 'can cause our quarterly net revenue to fluctuate significantly'",
+      "Reliance on Singapore and Malaysia tax incentives/holidays scheduled to expire (2030 and 2028 respectively), with compliance conditions that could require refunding prior tax benefits",
+      "Company states it expects a 'material impact' on fiscal 2026 results and cash flows from newly enacted global minimum tax laws, particularly in Singapore",
+      "Highly subjective, judgment-heavy goodwill and long-lived asset impairment testing following large acquisitions (VMware, Seagate SoC unit) raises risk of future write-downs if performance deteriorates"
+    ]
+  }
+}
