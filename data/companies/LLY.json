@@ -87,25 +87,26 @@
     }
   },
   "industry": "Drug Manufacturers - General",
-  "last_updated": "2026-09-22T21:24:45Z",
+  "last_updated": "2026-09-22T23:02:42Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -144,7 +145,23 @@
     "as_of": "2026-09-22",
     "close": 1170.48
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Lilly reported revenue of $65.2 billion (up 45%) and net income of $20.6 billion (up 95%), driven primarily by higher volumes of Mounjaro and Zepbound, partially offset by lower realized prices. Gross margin improved to 83.0% of revenue, while R&D and marketing/selling/administrative expenses both rose double digits to support pipeline investment and product launches. The filing discusses a large clinical pipeline (including orforglipron, insulin efsitora alfa, and donanemab-related programs), capital expenditures of $7.8 billion for manufacturing expansion, total debt of $42.5 billion, and preliminary November 2025 voluntary pricing agreements with the U.S. government affecting Medicaid and other drug pricing.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter and six months ended June 30, 2026) consists almost entirely of XBRL data tags rather than narrative text, so detailed financial or business commentary cannot be summarized. It indicates the filing includes revenue breakdowns by product (Mounjaro, Zepbound, Jardiance, Trulicity, Verzenio, Taltz, and others) across U.S. and non-U.S. markets, references to sales-based milestone payments tied to Boehringer Ingelheim and Roche collaborations, and disclosure of several 2026 business development transactions/acquisitions (including Kelonia Therapeutics, Centessa Pharmaceuticals, Ventyx Biosciences, Ajax Therapeutics, and Orna Therapeutics), plus a subsequent event referencing three additional acquired companies in July 2026.",
+    "filing_summary_8k": "This Form 8-K, dated August 5, 2026, discloses under Item 2.02 that Eli Lilly issued a press release announcing its financial results for the quarter ended June 30, 2026, furnished as Exhibit 99.1. The excerpt provided does not include the actual financial figures or press release content, only the cover page and item disclosure.",
+    "moat_explanation": "The 10-K describes a broad portfolio of patented, FDA/EMA/PMDA-approved medicines (e.g., Mounjaro, Zepbound, Verzenio, Jaypirca) protected by intellectual property and regulatory exclusivity, plus a large late-stage pipeline requiring costly, uncertain clinical development that raises barriers to entry. The Business and Risk Factors sections explicitly discuss how loss of patent/market exclusivity or biosimilar/generic entry erodes revenue quickly, confirming that IP and regulatory approval status (not scale, switching costs, or network effects) are the primary source of competitive advantage described.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Mounjaro and Zepbound together accounted for 56% of 2025 total revenues, indicating heavy product concentration risk",
+      "Three U.S. wholesale distributors (McKesson, Cencora, Cardinal Health) each account for a significant percentage of consolidated revenue",
+      "IRA government price-setting has already applied to Jardiance and will apply to Trulicity and Verzenio in 2028, with more products expected to be selected in future years",
+      "Ongoing litigation and investigations related to the 340B program, insulin pricing, and product safety are disclosed",
+      "Persistent production and sale of counterfeit, misbranded, and mass-compounded versions of incretin products cited as an ongoing risk to safety and revenue",
+      "November 2025 voluntary pricing agreements with the U.S. government to lower Medicaid and other drug prices introduce uncertainty about future pricing and revenue impact"
+    ]
+  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000059478.json",

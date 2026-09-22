@@ -87,25 +87,26 @@
     }
   },
   "industry": "Discount Stores",
-  "last_updated": "2026-09-22T21:20:08Z",
+  "last_updated": "2026-09-22T23:02:06Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 21.2,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 0.7,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
-    "conviction_verdict": "Cautious",
+    "conviction_verdict": "Weak",
     "flags": [
+      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -144,7 +145,16 @@
     "as_of": "2026-09-22",
     "close": 899.41
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The provided 10-K excerpts consist only of the Item 1 (Business), Item 1A (Risk Factors), and Item 7 (MD&A) section headers with page numbers, and contain no actual narrative text describing the company's operations, risks, or financial discussion for the period. No substantive content is available to summarize from this filing.",
+    "filing_summary_10q": "For the 36 weeks ended May 10, 2026, Costco reported net sales of $203,374 million and membership fees of $4,057 million, totaling revenue of $207,431 million, with net income of $6,228 million, up from $5,489 million in the comparable prior-year period. Total assets grew to $86,430 million from $77,099 million at fiscal year-end August 31, 2025, and cash and cash equivalents increased to $18,946 million. The company paid cash dividends of $1,806 million declared during the period and repurchased $603 million of common stock, while also reporting increases in merchandise inventories and accounts payable.",
+    "filing_summary_8k": "This 8-K discloses that Costco's Board of Directors declared a quarterly cash dividend of $1.47 per share on July 7, 2026, payable August 7, 2026, to shareholders of record as of July 24, 2026. The filing also references an attached press release dated July 8, 2026, as an exhibit.",
+    "moat_explanation": "The 10-K excerpts provided for Business, Risk Factors, and MD&A sections contain only section headers and page numbers with no substantive text describing Costco's business model, competitive positioning, membership structure, or scale advantages. Without actual narrative content from these sections, there is no textual basis in the provided excerpts to support any specific moat classification.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": []
+  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000909832.json",

@@ -87,25 +87,26 @@
     }
   },
   "industry": "Insurance - Property & Casualty",
-  "last_updated": "2026-09-22T21:27:50Z",
+  "last_updated": "2026-09-22T23:04:55Z",
   "layered_analysis": {
-    "conviction_score": 40.3,
+    "conviction_score": 42.4,
     "conviction_score_breakdown": {
       "base_score": 66.7,
       "components": {
         "graham_pct": 66.7
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Neutral",
     "flags": [
+      "4 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -144,7 +145,21 @@
     "as_of": "2026-09-22",
     "close": 206.94
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Progressive's 10-K describes an insurance holding company writing personal and commercial auto, personal property, and specialty property-casualty insurance across the U.S. Personal Lines (87% of 2025 net premiums written) is led by personal auto, where Progressive ranks #2 nationally, while Commercial Lines (13%) is led by commercial auto, where it has ranked #1 since 2015. The filing discusses ongoing rollout of new pricing/product models (e.g., personal auto model 9.0, commercial auto model 8.3) and a 'Destination Era' bundling strategy across agency and direct channels; the MDA section is incorporated by reference from the Annual Report rather than included directly.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists only of XBRL structured data tags (covering the quarter and six months ended June 30, 2026, with comparative 2025 periods) rather than narrative text. It identifies investment portfolio categories such as fixed maturities (government, municipal, corporate, mortgage- and asset-backed securities), equity securities, and short-term investments, along with fair value hierarchy classifications, but the excerpts do not include descriptive discussion of quarterly business or financial results.",
+    "filing_summary_8k": "This 8-K, dated September 18, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that Progressive issued a news release containing financial results for the month and year-to-date periods ended August 31, 2026, attached as Exhibit 99. Item 9.01 lists the exhibits filed, including the news release and the Inline XBRL cover page data file; the filing itself does not include the content of the results beyond referencing the attached exhibit.",
+    "moat_explanation": "The excerpts describe Progressive's scale-driven advantages: it is ranked #1 in U.S. commercial auto since 2015 and #2 in personal auto, distributing through a network of over 40,000 independent agencies plus a large direct channel, and continuously refining proprietary pricing/segmentation models (e.g., Snapshot, product model 9.0, Smart Haul) using large proprietary data sets to match rate to risk more accurately than smaller competitors. This scale and data advantage supports a cost/pricing-accuracy edge in a highly fragmented market (over 230 personal auto and 340 commercial auto competitors), consistent with a cost_advantage moat rather than brand, network effects, or switching costs, which are not clearly emphasized in these excerpts.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Property/catastrophe business has a geographic concentration in hurricane- and hailstorm-prone states, which the company states has historically caused it to be affected by catastrophe events to a greater relative degree than some other insurers",
+      "Company depends on reinsurance arrangements to manage catastrophe and certain commercial exposures, and faces risk that reinsurers could fail to pay or dispute claims",
+      "Regulatory and legislative efforts to limit use of certain rating factors (e.g., credit, education, occupation) are described as having potential to significantly undermine risk-based pricing effectiveness",
+      "Loss reserve estimates are subject to substantial uncertainty from factors like inflation, litigation outcomes, tariffs, and medical/repair cost trends, and ultimate paid losses could materially exceed reserves"
+    ]
+  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000080661.json",

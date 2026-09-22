@@ -87,25 +87,26 @@
     }
   },
   "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-22T21:18:17Z",
+  "last_updated": "2026-09-22T22:56:06Z",
   "layered_analysis": {
-    "conviction_score": 20.2,
+    "conviction_score": 21.2,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -144,7 +145,23 @@
     "as_of": "2026-09-22",
     "close": 190.99
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "RTX's FY2025 10-K reports total net sales of $88.6 billion, up from $80.7 billion in 2024, with operating profit of $9.3 billion (10.5% margin) across its Collins Aerospace, Pratt & Whitney, and Raytheon segments. The filing highlights a record $268 billion backlog, continued GTF engine deliveries and F135 production awards, new government contracts including Golden Dome-related defense funding, and ongoing risks from tariffs, government shutdowns/continuing resolutions, and the Pratt & Whitney Powder Metal Matter inspection program.",
+    "filing_summary_10q": "The provided excerpt for RTX's most recent 10-Q (period ended June 30, 2026) consists primarily of XBRL tag metadata rather than narrative text, so specific financial results and discussion cannot be summarized from it. Identifiable items include references to the three reporting segments (Collins Aerospace, Pratt & Whitney, Raytheon), various outstanding debt notes, ongoing legal/contingency matters (including Powder Metal and trade compliance items), and a disposal of the Blue Canyon Technologies (BCT) business within the Raytheon segment dated June 19, 2026.",
+    "filing_summary_8k": "This 8-K, dated September 15, 2026, discloses an executive leadership change under Item 5.02: Shane Eddy will step down as president of Pratt & Whitney effective January 1, 2027, and retire from the company at the end of Q1 2027. Jill Albertelli, currently president of Pratt & Whitney's Military Engines business, was named to succeed him as president effective January 1, 2027. A related press release is filed as an exhibit.",
+    "moat_explanation": "The 10-K describes extensive long-term aftermarket service agreements (spare parts and maintenance) at both Collins and Pratt & Whitney, a $268 billion backlog, and sole-source arrangements such as the F135 engine exclusively powering the F-35 across all variants, all of which create high switching costs for customers tied to certified parts, engines, and multi-year service contracts. Regulatory certification requirements (FAA/EASA) for aerospace parts and the long, capital-intensive nature of engine and defense programs also reinforce this stickiness, though the excerpts frame competition as intense and note customers can sometimes source parts from non-OEM suppliers, so the moat is not absolute.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Heavy reliance on U.S. government spending and appropriations; the filing explicitly notes recent government shutdowns, continuing resolutions, and unpredictable defense budget outcomes as risks",
+      "Significant customer concentration: Boeing and Airbus combined represented 16% of Collins segment sales and Airbus alone represented 29% of Pratt & Whitney segment sales in 2025",
+      "Company acknowledges fixed-price contract risk, stating it 'carries the burden of any cost overruns' and that inflation, supply chain issues, and inaccurate cost estimates have negatively affected performance",
+      "Pratt & Whitney Powder Metal Matter required accelerated inspection of the PW1100G-JM GTF fleet, previously resulting in a $5.4 billion net sales charge in 2023",
+      "Geopolitical and sanctions exposure disclosed, including Chinese sanctions against the Raytheon business and a Collins joint venture, and monitoring of Russia-related sanctions impacts",
+      "Uncertain tariff impacts acknowledged, with the company stating results reflect only its 'best estimate' of tariffs currently in effect and future impacts remain uncertain"
+    ]
+  },
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000101829.json",

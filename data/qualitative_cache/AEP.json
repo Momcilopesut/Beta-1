@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000013/aep-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000059/aep-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000055/aep-20260730.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes AEP as a vertically integrated electric utility holding company operating through regulated subsidiaries across multiple states, with rates set by state commissions and the FERC on a cost-of-service basis and various fuel/cost recovery mechanisms. It details AEP's franchise-based service territories, RTO memberships (PJM, SPP, ERCOT), and transmission agreements, and discusses regulatory processes for rate recovery, formula rate challenges, and the company's growing capital investment plans tied to data center and large-load demand growth. The MD&A section largely incorporates by reference prior-year comparative discussion and does not include detailed current-year financial results in the excerpt provided.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists only of XBRL taxonomy tags and entity/member identifiers (e.g., revenue categories, subsidiary registrants, equity roll-forward tags) for the quarter ended June 30, 2026, without accompanying narrative text. As a result, the excerpt does not describe specific financial results, business developments, or management commentary for the period, and no further factual summary can be drawn from it.",
+    "filing_summary_8k": "This 8-K, dated July 30, 2026, reports under Item 2.02 (Results of Operations and Financial Condition) that AEP is furnishing a press release (Exhibit 99.1) containing its financial results for the period ended June 30, 2026. The filing explicitly states this information is furnished, not filed, for purposes of Section 18 of the Exchange Act. The excerpt does not include the content of the press release itself, so no specific financial figures or results are described.",
+    "moat_explanation": "The 10-K describes AEP's utility subsidiaries as holding franchises or other rights that in many cases grant the exclusive right to provide electric service within specific municipalities and regions, combined with rates set through traditional cost-of-service regulation approved by state commissions and the FERC. This regulatory-granted exclusivity, rather than a low-cost structure or customer switching friction per se, is what the excerpts point to as the basis for AEP's competitive position; the filing itself states sales 'are not subject to competition from other vertically integrated public utilities.'",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company acknowledges it may not recover costs of substantial planned capital investment if regulators do not approve rate adjustments",
+      "Heavy dependence on continued growth of data centers and other large-load customers for future capital plans, with explicit risk that projected demand may not materialize or be sustained",
+      "Execution risks on large construction projects including cost overruns, supply chain disruption, inflation, and potential unrecoverable costs or asset impairments if projects are canceled",
+      "Regulated earnings and rate recovery are subject to prudency reviews and potential disallowance of costs by regulators",
+      "AEP's FERC transmission formula rates have been and continue to be subject to challenge, which could lower rates or require refunds of amounts previously collected",
+      "Company states it is subject to negative publicity risk tied to service reliability, storm response, and public views on fossil fuel use"
+    ]
+  }
+}

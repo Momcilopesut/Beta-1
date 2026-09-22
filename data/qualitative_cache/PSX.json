@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1534701/000153470126000006/psx-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1534701/000153470126000032/psx-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1534701/000119312526361266/d131307d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Phillips 66 reported net income attributable to the company of $4.4 billion on total assets of $73.7 billion, with segment results showing gains in Midstream and Marketing & Specialties offset by losses in Refining and Renewable Fuels. Major events included acquiring the remaining 50% of WRB Refining LP for $1.3 billion, acquiring Coastal Bend NGL assets, divesting stakes in Germany/Austria Marketing and Coop Mineraloel AG for large gains, and ceasing fuel production at the Los Angeles Refinery. The company also disclosed an impairment on its WRB equity investment prior to the acquisition and an accrual related to ongoing Propel Fuels litigation, and raised its quarterly dividend to $1.27 per share in February 2026.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, covering the six months and quarter ended June 30, 2026 versus prior-year comparatives. It references items such as the WRB Refining LP and Coastal Bend acquisitions, a Lindsey Oil Refinery asset transaction in April 2026, various debt instruments (senior notes maturities, a term loan agreement, receivables securitization facility amendments), and the ongoing Propel Fuels litigation, but does not include descriptive discussion of results or business developments in the text supplied.",
+    "filing_summary_8k": "This 8-K, dated August 20, 2026, discloses that Phillips 66 Company amended its accounts receivable securitization program via a Fifth Amendment to its Receivables Purchase and Financing Agreement with PNC Bank and related parties. The amendment established a new uncommitted facility of up to $250 million, increased the maximum committed facility size from $1.75 billion to $2 billion, and extended the maturity date from September 28, 2026 to August 19, 2027. The filing also incorporates this disclosure under Item 2.03 as the creation of a direct financial obligation.",
+    "moat_explanation": "The excerpts describe Phillips 66 as an integrated downstream energy company across Midstream, Chemicals, Refining, M&S, and Renewable Fuels, but the MD&A repeatedly frames results as driven by commodity prices, market crack spreads, and industry oversupply (e.g., Chemicals segment described as 'mainly a commodity-based industry' with 'continued industry oversupply from capacity additions,' and Refining posting worldwide losses before taxes in 2024 and 2025). No excerpt describes brand strength, patents, network effects, high switching costs, or a durable cost advantage over competitors; the Midstream integration and scale are mentioned as a strategic focus rather than a demonstrated competitive barrier.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Chemicals segment margins fell sharply due to industry oversupply and higher feedstock costs, per the company's own disclosure",
+      "Refining segment reported a worldwide loss before income taxes in both 2024 and 2025, with West Coast losses widening ($908M loss in 2024, $1,248M loss in 2025)",
+      "Cessation of fuel production and idling of the Los Angeles Refinery in Q4 2025, with associated accelerated depreciation",
+      "A before-tax impairment of $948 million on the equity method investment in WRB Refining LP recognized in Q3 2025, tied to economic obsolescence of refining assets",
+      "Ongoing litigation with Propel Fuels, Inc., with accruals of $605 million (2024) and $262 million (2025) disclosed",
+      "Renewable Fuels segment posted before-tax losses in 2024 and 2025"
+    ]
+  }
+}

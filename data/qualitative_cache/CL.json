@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/21665/000002166526000006/cl-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/21665/000002166526000042/cl-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/21665/000002166526000041/cl-20260731.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Colgate-Palmolive's 10-K for fiscal 2025 reports worldwide net sales of $20,382 million, up 1.4%, driven by pricing gains offset by volume declines and negative foreign exchange. Operating profit fell 23% to $3,306 million due to a $919 million pretax goodwill and intangible asset impairment in the skin health (Filorga) business, an ERISA litigation charge, and restructuring costs tied to a new Strategic Growth and Productivity Program approved in July 2025. The filing also notes the April 2025 acquisition of Prime100 pet food business and continued exposure to tariffs, foreign currency volatility, and geopolitical risks including Ukraine, Russia, and Venezuela.",
+    "filing_summary_10q": "The excerpt provided consists primarily of XBRL tags and metadata from Colgate-Palmolive's Form 10-Q for the quarter ended June 30, 2026, without substantive narrative text. It references items also covered in the 10-K such as the Strategic Growth and Productivity Program, Prime100 acquisition, ERISA litigation, talcum powder matters, and Brazilian tax matters, but the excerpt does not include discussion of quarterly results of operations in prose form.",
+    "filing_summary_8k": "This 8-K, dated July 31, 2026, discloses under Item 2.02 that Colgate-Palmolive issued a press release announcing its earnings for the quarter ended June 30, 2026, attached as Exhibit 99. The filing does not include the financial results themselves in the excerpt provided, only the announcement of the release.",
+    "moat_explanation": "The 10-K describes Colgate as a global leader in toothpaste (41.3% global market share) and manual toothbrushes (32.4% global market share) built on well-known brands like Colgate, Palmolive, and Hill's, supported by trademark protections the company describes as material to its business. This brand strength and market leadership across 200+ countries supports an intangible-assets moat, though the filing also acknowledges vigorous competition, private label pressure, and eroding share in some categories/regions, suggesting the moat is not unassailable.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company states it is 'increasingly dependent on certain key retailers, some of which exercise greater bargaining strength' including exclusive access to first-party consumer data, which could pressure margins.",
+      "Walmart and affiliates represented approximately 11% of 2025 Net sales, indicating meaningful customer concentration.",
+      "Q4 2025 goodwill and intangible asset impairment charges of $919 pretax ($794 aftertax) tied to the skin health business (Filorga), citing weaker-than-expected performance particularly in China.",
+      "Toothpaste global market share declined 0.4 points year-over-year in 2025, with declines in North America, Latin America, and Africa/Eurasia.",
+      "Company anticipates consumers may trade down to private label or lower-priced offerings amid macroeconomic pressure, and expects the 'softness' seen in 2025 to continue into 2026.",
+      "Ongoing ERISA litigation resulted in a $65 charge and increased pension obligations, plus exposure to Venezuela and Russia/Ukraine operational and repatriation risks."
+    ]
+  }
+}
