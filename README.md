@@ -190,11 +190,13 @@ moving. Every company page also charts the last 5 fiscal years (`pipeline/scorin
 history.py`, from the same annual statements FMP already provides — no extra API
 calls per company):
 
-- **Earnings, spending, cash, and debt, year by year** — net income, total costs and
-  expenses, cash and equivalents, and total debt, each straight off that year's income
-  statement or balance sheet. A line going the wrong way (spending or debt climbing
-  faster than earnings, cash draining) is visible at a glance instead of buried in one
-  year's numbers.
+- **Total revenue, net profit, debt, spending, and cash reserve, year by year** — each
+  straight off that year's income statement or balance sheet, shown as five small
+  multiples you tap to compare. Select 2–5 metrics and they overlay in one chart, each
+  independently scaled to its own range (so a $400B and a $30B metric can share the
+  same picture) and kept in its own color. Tap a year along the bottom to pop up every
+  metric you're currently comparing at that year — its value and year-over-year change,
+  side by side — rather than one point at a time.
 - **This stock's return vs. the market, same years** — each fiscal year's stock price
   change compared against **SPY** (an S&P 500 index fund) over that same period, so a
   bad year for the stock can be read against whether the whole market was also down

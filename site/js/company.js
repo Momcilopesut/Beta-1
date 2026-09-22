@@ -28,11 +28,19 @@ async function main() {
   try {
     const doc = await fetchJSON(`../data/companies/${encodeURIComponent(ticker)}.json`);
     content.innerHTML = render(doc);
-    wireWhatIfCalculator(doc);
+    wireDetailPage(content, doc);
   } catch {
     renderNotTracked(content, ticker);
   }
   renderDisclaimerFooter();
+}
+
+function wireDetailPage(content, doc) {
+  wireWhatIfCalculator(doc);
+  const years = doc.five_year_history?.years;
+  if (years && years.length >= 2) {
+    initTrendCompare(content, years);
+  }
 }
 
 function renderNotTracked(content, ticker) {
@@ -55,7 +63,7 @@ async function runLiveLookup(content, ticker) {
   try {
     const doc = await lookupTicker(ticker);
     content.innerHTML = render(doc);
-    wireWhatIfCalculator(doc);
+    wireDetailPage(content, doc);
   } catch (err) {
     content.innerHTML = `
       <p class="error">Live analysis failed for ${safeTicker}: ${escapeHtml(err.message)}</p>
@@ -334,17 +342,20 @@ function renderBalanceSheetBasics(fundamentals, layered) {
   `;
 }
 
-// --- 5-year history: earnings/spending/cash/debt over time, and this
+// --- 5-year history: revenue/profit/debt/spending/cash over time, and this
 // stock's yearly return vs. the market (SPY, standing in for "the stock
 // market average") over the same years. Plain inline SVG, same approach as
 // the meter gauge above - no charting library. ---
 
-const HISTORY_SERIES = [
-  { key: "earnings", label: "Earnings", colorVar: "--hist-earnings" },
-  { key: "spending", label: "Spending", colorVar: "--hist-spending" },
-  { key: "cash", label: "Cash", colorVar: "--hist-cash" },
-  { key: "debt", label: "Debt", colorVar: "--hist-debt" },
+const TREND_SERIES = [
+  { key: "revenue", label: "Total Revenue", colorVar: "--trend-revenue" },
+  { key: "earnings", label: "Net Profit", colorVar: "--trend-profit" },
+  { key: "debt", label: "Debt", colorVar: "--trend-debt" },
+  { key: "spending", label: "Spending", colorVar: "--trend-spending" },
+  { key: "cash", label: "Cash Reserve", colorVar: "--trend-cash" },
 ];
+const TREND_MAX_SELECTED = 5;
+const TREND_ARROW = { up: "↑", down: "↓", flat: "→" };
 
 function fmtPctSigned(v) {
   if (v === null || v === undefined) return "—";
@@ -367,67 +378,289 @@ function computeYDomain(values) {
   };
 }
 
-function renderFundamentalsTrendChart(years) {
-  const width = 480;
-  const height = 260;
-  const plotLeft = 60;
-  const plotRight = width - 66;
-  const plotTop = 16;
-  const plotBottom = height - 32;
+// Points where this series actually has a value - real statement data
+// (unlike the prototype this was designed in) can have gaps, so every
+// calculation below works off defined points only, never a guessed or
+// interpolated one.
+function trendDefinedPoints(data) {
+  return data.map((v, i) => ({ i, v })).filter((p) => p.v !== null && p.v !== undefined);
+}
 
-  const domain = computeYDomain(years.flatMap((y) => HISTORY_SERIES.map((s) => y[s.key])));
-  if (!domain) return "";
+// Year-over-year change vs the immediately preceding year in the series -
+// null for the first year shown, or when either year's value is missing.
+function trendYoyChange(data, i) {
+  if (i === 0) return null;
+  const prev = data[i - 1];
+  const curr = data[i];
+  if (prev === null || prev === undefined || curr === null || curr === undefined || !prev) return null;
+  const pct = ((curr - prev) / prev) * 100;
+  return { pct, direction: pct > 0 ? "up" : pct < 0 ? "down" : "flat" };
+}
 
-  const xFor = (i) => plotLeft + (i / (years.length - 1)) * (plotRight - plotLeft);
-  const yFor = (v) => plotTop + (1 - (v - domain.min) / (domain.max - domain.min)) * (plotBottom - plotTop);
+function trendTileSVG(s) {
+  const width = 220, height = 130;
+  const plotLeft = 10, plotRight = width - 10, plotTop = 22, plotBottom = height - 22;
+  const points = trendDefinedPoints(s.data);
+  if (points.length < 2) {
+    return `<div class="trend-tile-empty">Not enough ${escapeHtml(s.label.toLowerCase())} history yet</div>`;
+  }
 
-  const gridlines = [0, 0.5, 1]
-    .map((f) => {
-      const value = domain.min + f * (domain.max - domain.min);
-      const y = yFor(value);
-      return `
-        <line x1="${plotLeft}" y1="${y.toFixed(1)}" x2="${plotRight}" y2="${y.toFixed(1)}" stroke="var(--border)" stroke-width="1" />
-        <text x="${(plotLeft - 8).toFixed(1)}" y="${(y + 3).toFixed(1)}" text-anchor="end" class="chart-axis-label">${escapeHtml(fmtDollars(value))}</text>
-      `;
-    })
+  const values = points.map((p) => p.v);
+  const minV = Math.min(...values), maxV = Math.max(...values);
+  const span = maxV - minV || Math.abs(maxV) * 0.1 || 1;
+  const yMin = minV - span * 0.15, yMax = maxV + span * 0.15;
+  const xFor = (i) => plotLeft + (i / (s.data.length - 1)) * (plotRight - plotLeft);
+  const yFor = (v) => plotTop + (1 - (v - yMin) / (yMax - yMin)) * (plotBottom - plotTop);
+
+  const linePath = points.map((p, idx) => `${idx === 0 ? "M" : "L"} ${xFor(p.i).toFixed(1)} ${yFor(p.v).toFixed(1)}`).join(" ");
+  const last = points[points.length - 1];
+  const areaPath = `${linePath} L ${xFor(last.i).toFixed(1)} ${plotBottom.toFixed(1)} L ${xFor(points[0].i).toFixed(1)} ${plotBottom.toFixed(1)} Z`;
+  const dots = points
+    .map((p) => `<circle class="trend-dot" cx="${xFor(p.i).toFixed(1)}" cy="${yFor(p.v).toFixed(1)}" r="2.2" fill="var(${s.colorVar})" />`)
     .join("");
 
-  const xLabels = years
-    .map(
-      (y, i) =>
-        `<text x="${xFor(i).toFixed(1)}" y="${height - 10}" text-anchor="middle" class="chart-axis-label">${escapeHtml((y.fiscal_year || "").slice(0, 4))}</text>`
-    )
-    .join("");
-
-  const seriesSvg = HISTORY_SERIES.map((s) => {
-    const points = years.map((y, i) => ({ i, v: y[s.key] })).filter((p) => p.v !== null && p.v !== undefined);
-    if (!points.length) return "";
-    const path = points.map((p, idx) => `${idx === 0 ? "M" : "L"} ${xFor(p.i).toFixed(1)} ${yFor(p.v).toFixed(1)}`).join(" ");
-    const dots = points
-      .map(
-        (p) =>
-          `<circle cx="${xFor(p.i).toFixed(1)}" cy="${yFor(p.v).toFixed(1)}" r="4" fill="var(${s.colorVar})" stroke="var(--bg)" stroke-width="2" />`
-      )
-      .join("");
-    const last = points[points.length - 1];
-    const endLabel = `<text x="${(xFor(last.i) + 7).toFixed(1)}" y="${(yFor(last.v) + 3).toFixed(1)}" class="chart-end-label">${escapeHtml(fmtDollars(last.v))}</text>`;
-    return `<path d="${path}" fill="none" stroke="var(${s.colorVar})" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />${dots}${endLabel}`;
-  }).join("");
-
-  const legend = HISTORY_SERIES.map(
-    (s) => `<li><span class="legend-swatch" style="background:var(${s.colorVar})"></span>${escapeHtml(s.label)}</li>`
-  ).join("");
+  const first = points[0];
+  const change = first.v ? ((last.v - first.v) / first.v) * 100 : null;
+  const changeLabel = change === null ? "" : `${change >= 0 ? "+" : ""}${change.toFixed(0)}%`;
 
   return `
-    <div class="chart-block">
-      <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Earnings, spending, cash, and debt over the last ${years.length} years">
-        ${gridlines}
-        ${seriesSvg}
-        ${xLabels}
-      </svg>
-      <ul class="chart-legend">${legend}</ul>
-    </div>
+    <svg viewBox="0 0 ${width} ${height}">
+      <text x="10" y="15" class="trend-tile-title">${escapeHtml(s.label)}</text>
+      ${changeLabel ? `<text x="${width - 10}" y="15" text-anchor="end" class="trend-tile-change" style="fill:var(${s.colorVar})">${changeLabel}</text>` : ""}
+      <path d="${areaPath}" fill="var(${s.colorVar})" opacity="0.1" />
+      <path d="${linePath}" fill="none" stroke="var(${s.colorVar})" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+      ${dots}
+      <text x="10" y="${height - 8}" class="chart-axis-label">${escapeHtml(fmtDollars(first.v))}</text>
+      <text x="${width - 10}" y="${height - 8}" text-anchor="end" class="chart-axis-label">${escapeHtml(fmtDollars(last.v))}</text>
+    </svg>
   `;
+}
+
+// A small multiples grid (revenue/profit/debt/spending/cash, tap to select
+// up to all 5) plus a compare chart below it that overlays every selected
+// metric in its own color, independently scaled so a $400B and a $30B
+// metric can share one picture. Tapping a year under the compare chart
+// pops up every currently-selected metric's value and year-over-year
+// change for that year at once - not a per-point click, so adding or
+// removing a metric while the popup is open updates it live rather than
+// requiring it to be reopened.
+function initTrendCompare(root, years) {
+  const series = TREND_SERIES.map((s) => ({ ...s, data: years.map((y) => (y[s.key] ?? null)) }));
+  const yearLabels = years.map((y) => (y.fiscal_year || "").slice(0, 4));
+
+  let selected = [];
+  let activeYearIdx = null;
+
+  const tileGrid = root.querySelector(".trend-tile-grid");
+  const compareArea = root.querySelector(".trend-compare-area");
+  const panelLabel = root.querySelector(".trend-panel-label");
+  const popup = root.querySelector(".trend-dp-popup");
+  const popupTitle = root.querySelector(".trend-dp-title");
+  const popupRows = root.querySelector(".trend-dp-rows");
+
+  function hidePopup() {
+    popup.hidden = true;
+  }
+
+  function showYearPopup(yearIdx, anchorEl, chosen) {
+    popupTitle.textContent = yearLabels[yearIdx];
+    popupRows.innerHTML = chosen
+      .map((s) => {
+        const value = s.data[yearIdx];
+        if (value === null || value === undefined) {
+          return `
+            <li class="trend-dp-row">
+              <span class="trend-dp-row-swatch" style="background:var(${s.colorVar})"></span>
+              <span class="trend-dp-row-label">${escapeHtml(s.label)}</span>
+              <span class="trend-dp-row-value">No data</span>
+            </li>
+          `;
+        }
+        const change = trendYoyChange(s.data, yearIdx);
+        const changeHtml = change
+          ? `<span class="trend-dp-row-change trend-${change.direction}">${TREND_ARROW[change.direction]} ${change.pct > 0 ? "+" : ""}${change.pct.toFixed(1)}%</span>`
+          : `<span class="trend-dp-row-change trend-muted">${yearIdx === 0 ? "first year" : "no prior data"}</span>`;
+        return `
+          <li class="trend-dp-row">
+            <span class="trend-dp-row-swatch" style="background:var(${s.colorVar})"></span>
+            <span class="trend-dp-row-label">${escapeHtml(s.label)}</span>
+            <span class="trend-dp-row-value" style="color:var(${s.colorVar})">${escapeHtml(fmtDollars(value))}</span>
+            ${changeHtml}
+          </li>
+        `;
+      })
+      .join("");
+
+    popup.hidden = false;
+    if (anchorEl) {
+      const rect = anchorEl.getBoundingClientRect();
+      const popupRect = popup.getBoundingClientRect();
+      let left = rect.left + rect.width / 2 - popupRect.width / 2;
+      let top = rect.top - popupRect.height - 10;
+      if (top < 8) top = rect.bottom + 10;
+      left = Math.max(8, Math.min(left, window.innerWidth - popupRect.width - 8));
+      popup.style.left = `${left}px`;
+      popup.style.top = `${top}px`;
+    }
+  }
+
+  function wireYearTicks(container, chosen) {
+    container.querySelectorAll(".trend-year-tick").forEach((tick) => {
+      const idx = parseInt(tick.dataset.yearIdx, 10);
+      const activate = (e) => {
+        e.stopPropagation();
+        activeYearIdx = activeYearIdx === idx ? null : idx;
+        renderCompare();
+      };
+      tick.addEventListener("click", activate);
+      tick.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          activate(e);
+        }
+      });
+    });
+  }
+
+  function renderTiles() {
+    panelLabel.textContent = `Tap to compare (${selected.length} of ${TREND_MAX_SELECTED} selected)`;
+    tileGrid.innerHTML = series
+      .map((s) => {
+        const isSelected = selected.includes(s.key);
+        const isDisabled = !isSelected && selected.length >= TREND_MAX_SELECTED;
+        const idx = selected.indexOf(s.key);
+        return `
+          <button type="button" class="trend-tile ${isSelected ? "selected" : ""} ${isDisabled ? "disabled" : ""}"
+            style="--tile-color:var(${s.colorVar})" data-key="${s.key}" ${isDisabled ? "disabled" : ""}>
+            <span class="trend-tile-check">${isSelected ? idx + 1 : ""}</span>
+            ${trendTileSVG(s)}
+          </button>
+        `;
+      })
+      .join("");
+
+    tileGrid.querySelectorAll(".trend-tile").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        // A deliberate in-app action, not a "click elsewhere" - otherwise
+        // the document-level listener that closes an open year popup on
+        // outside clicks would immediately close it again after this.
+        e.stopPropagation();
+        const key = btn.dataset.key;
+        if (selected.includes(key)) {
+          selected = selected.filter((k) => k !== key);
+        } else if (selected.length < TREND_MAX_SELECTED) {
+          selected = [...selected, key];
+        }
+        renderTiles();
+        renderCompare();
+      });
+    });
+  }
+
+  function renderCompare() {
+    if (selected.length < 2) {
+      compareArea.innerHTML = `<p class="trend-compare-empty">Tap a second metric above to compare it directly against the first.</p>`;
+      activeYearIdx = null;
+      hidePopup();
+      return;
+    }
+
+    const chosen = selected.map((key) => series.find((s) => s.key === key));
+    const width = 640, height = 300;
+    const plotLeft = 16, plotRight = width - 16, plotTop = 20, plotBottom = height - 26;
+    const xFor = (i) => plotLeft + (i / (yearLabels.length - 1)) * (plotRight - plotLeft);
+
+    const scaled = chosen.map((s) => {
+      const points = trendDefinedPoints(s.data);
+      const values = points.map((p) => p.v);
+      const minV = values.length ? Math.min(...values) : 0;
+      const maxV = values.length ? Math.max(...values) : 1;
+      const span = maxV - minV || Math.abs(maxV) * 0.1 || 1;
+      const yMin = minV - span * 0.2, yMax = maxV + span * 0.2;
+      const yFor = (v) => plotTop + (1 - (v - yMin) / (yMax - yMin)) * (plotBottom - plotTop);
+      return { ...s, points, yFor };
+    });
+
+    const guide = activeYearIdx !== null
+      ? `<line class="trend-year-guide" x1="${xFor(activeYearIdx).toFixed(1)}" x2="${xFor(activeYearIdx).toFixed(1)}" y1="${plotTop}" y2="${plotBottom}" />`
+      : "";
+
+    const lines = scaled
+      .map((s) => {
+        if (s.points.length < 2) return "";
+        const linePath = s.points.map((p, idx) => `${idx === 0 ? "M" : "L"} ${xFor(p.i).toFixed(1)} ${s.yFor(p.v).toFixed(1)}`).join(" ");
+        const dots = s.points
+          .map((p) => {
+            const isActive = activeYearIdx === p.i;
+            const r = isActive ? 4.5 : 3;
+            const ring = isActive ? `stroke="var(--bg)" stroke-width="2"` : "";
+            return `<circle class="trend-dot" cx="${xFor(p.i).toFixed(1)}" cy="${s.yFor(p.v).toFixed(1)}" r="${r}" fill="var(${s.colorVar})" ${ring} />`;
+          })
+          .join("");
+        return `<path d="${linePath}" fill="none" stroke="var(${s.colorVar})" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />${dots}`;
+      })
+      .join("");
+
+    const yearTicks = yearLabels
+      .map((label, i) => {
+        const cx = xFor(i);
+        const half = Math.min(cx - plotLeft, plotRight - cx, (plotRight - plotLeft) / (yearLabels.length - 1) / 2);
+        const hitX = cx - half, hitW = half * 2;
+        return `
+          <g class="trend-year-tick ${activeYearIdx === i ? "active" : ""}" data-year-idx="${i}" tabindex="0" role="button" aria-label="Show ${escapeHtml(label)} details">
+            <rect x="${hitX.toFixed(1)}" y="${plotTop}" width="${hitW.toFixed(1)}" height="${(plotBottom - plotTop).toFixed(1)}" fill="transparent" />
+            <text x="${cx.toFixed(1)}" y="${height - 8}" text-anchor="middle" class="chart-axis-label trend-year-label">${escapeHtml(label)}</text>
+          </g>
+        `;
+      })
+      .join("");
+
+    const legend = chosen
+      .map((s) => `<li><span class="trend-legend-line" style="background:var(${s.colorVar})"></span>${escapeHtml(s.label)}</li>`)
+      .join("");
+
+    compareArea.innerHTML = `
+      <div class="trend-compare-chart">
+        <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(chosen.map((s) => s.label).join(" vs. "))} over the last ${yearLabels.length} years">${guide}${lines}${yearTicks}</svg>
+      </div>
+      <ul class="trend-legend">${legend}</ul>
+      <p class="trend-hint">
+        Each line is scaled to its own range so trend shape reads clearly regardless of dollar size - tap
+        a year below the chart to compare every selected metric's value and year-over-year change at once.
+        <button type="button" class="trend-clear-btn">Clear selection</button>
+      </p>
+    `;
+    compareArea.querySelector(".trend-clear-btn").addEventListener("click", () => {
+      selected = [];
+      activeYearIdx = null;
+      renderTiles();
+      renderCompare();
+    });
+    wireYearTicks(compareArea, chosen);
+
+    if (activeYearIdx !== null) {
+      const tickLabel = compareArea.querySelector(`.trend-year-tick[data-year-idx="${activeYearIdx}"] .trend-year-label`);
+      showYearPopup(activeYearIdx, tickLabel, chosen);
+    } else {
+      hidePopup();
+    }
+  }
+
+  root.querySelector(".trend-dp-close").addEventListener("click", (e) => {
+    e.stopPropagation();
+    activeYearIdx = null;
+    renderCompare();
+  });
+  document.addEventListener("click", (e) => {
+    if (activeYearIdx === null) return;
+    if (popup.contains(e.target)) return;
+    if (e.target.closest && e.target.closest(".trend-year-tick")) return;
+    activeYearIdx = null;
+    renderCompare();
+  });
+
+  renderTiles();
+  renderCompare();
 }
 
 function renderReturnBar(x, value, barWidth, color, zeroY, yFor) {
@@ -496,14 +729,26 @@ function renderFiveYearHistory(fiveYearHistory) {
     `;
   }
 
-  const trendChart = renderFundamentalsTrendChart(years);
   const comparisonChart = renderMarketComparisonChart(years);
 
   return `
     <section class="five-year-history">
       <h3>5-Year Trend</h3>
-      <p class="meta">How much the company earned, spent, kept in cash, and owed, year by year.</p>
-      ${trendChart || `<p class="meta">Not enough data yet to chart this.</p>`}
+      <p class="meta">Total revenue, net profit, debt, spending, and cash reserve, year by year. Tap a metric
+      below to add it to the comparison chart, then tap a year to see every metric you're comparing at once.</p>
+      <div class="trend-panel">
+        <p class="trend-panel-label"></p>
+        <div class="trend-grid trend-tile-grid"></div>
+      </div>
+      <div class="trend-panel">
+        <p class="trend-panel-label">Comparison</p>
+        <div class="trend-compare-area"></div>
+      </div>
+      <div class="trend-dp-popup" hidden>
+        <button type="button" class="trend-dp-close" aria-label="Close">&times;</button>
+        <p class="trend-dp-title"></p>
+        <ul class="trend-dp-rows"></ul>
+      </div>
       <p class="meta">How the stock did each year, compared to just owning the whole stock market (the S&amp;P 500).</p>
       ${comparisonChart || `<p class="meta">Not enough price history yet to compare this stock's yearly return to the market.</p>`}
     </section>
