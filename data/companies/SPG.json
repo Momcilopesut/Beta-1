@@ -78,34 +78,35 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 217.8653372564671,
+      "graham_multiple": 219.18302529867768,
       "graham_number": 73.98486251891407,
-      "graham_upside_pct": -63.93796913681319,
+      "graham_upside_pct": -64.07629884976252,
       "ncav_margin_pct": null,
-      "pb_ratio": 15.003242920208661,
-      "pe_ttm": 14.521216407355022
+      "pb_ratio": 15.048545655369276,
+      "pe_ttm": 14.565063649222065
     }
   },
   "industry": "REIT - Retail",
-  "last_updated": "2026-09-22T17:52:08Z",
+  "last_updated": "2026-09-22T21:33:14Z",
   "layered_analysis": {
-    "conviction_score": 40.3,
+    "conviction_score": 42.4,
     "conviction_score_breakdown": {
       "base_score": 66.7,
       "components": {
         "graham_pct": 66.7
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Neutral",
     "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 66584823060,
+  "market_cap": 66785877900,
   "metrics": {
     "book_value_per_share": 17.204965839832205,
     "current_ratio": 1.0525881520152192,
@@ -126,13 +127,13 @@
     "fcf_margin_pct": 56.01940763657189,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 217.8653372564671,
-    "graham_upside_pct": -63.93796913681319,
+    "graham_multiple": 219.18302529867768,
+    "graham_upside_pct": -64.07629884976252,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "pb_ratio": 15.003242920208661,
-    "pe_ttm": 14.521216407355022,
+    "pb_ratio": 15.048545655369276,
+    "pe_ttm": 14.565063649222065,
     "roe_pct": 109.37823941199636,
     "shareholders_equity": 5208268000,
     "total_assets": 40606466000,
@@ -141,9 +142,24 @@
   "name": "Simon Property Group Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 205.16
+    "close": 205.95
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Simon Property Group's 10-K for fiscal year 2025 describes it as a REIT owning or holding interests in 212 U.S. income-producing properties (malls, Premium Outlets, Mills, and other retail) plus 42 international properties, along with a 22.2% stake in Klepierre and other platform investments. During 2025 the company completed the TRG Acquisition (acquiring the remaining 12% of Taubman Realty Group), recognized a $2.9 billion non-cash remeasurement gain, and reported diluted EPS of $14.17 versus $7.26 in 2024, with portfolio NOI up 4.7% and U.S. Malls/Premium Outlets occupancy at 96.4%. The filing also details financing activity including new senior unsecured notes issuances, credit facility draws/repayments, and various property acquisitions and dispositions during the year.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended June 30, 2026) consists primarily of XBRL tagging metadata and structured data tags rather than narrative text, so it does not contain readable discussion of the quarter's business or financial results. It references items such as debt facilities, interest rate swaps, equity method investments (including Klepierre, Catalyst Brands, Rue Gilt Groupe, and Jamestown), a stock repurchase program, and subsequent dividend declarations, but no substantive narrative summary can be drawn from this excerpt.",
+    "filing_summary_8k": "This 8-K, dated August 10, 2026, discloses that Simon Property Group issued a press release reporting earnings and other financial/operating results for the quarter ended June 30, 2026, furnished as Exhibit 99.1. It also incorporates supplemental financial and operating information under Regulation FD (Item 7.01) and notes that no financial statements are included in the filing itself; the report is signed by CFO Brian J. McDade.",
+    "moat_explanation": "The 10-K describes Simon as owning or holding interests in a large, high-quality portfolio of 212 U.S. properties plus 42 international properties, with high occupancy (96.4%) and rising base minimum rents, reflecting a scale of premier real estate that is difficult to replicate given the limited number of viable sites for such large-format retail destinations. The excerpts also note economies of scale in operating expenses and access to large, diversified capital markets (multi-billion dollar credit facilities and investment-grade ratings) that support the ongoing investment needed to maintain and redevelop this footprint, consistent with an efficient-scale moat in a mature retail real estate market rather than a market with unlimited new entrants.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "The company acknowledges reliance on tenant financial health and bankruptcy risk, noting it must assess collectability of receivables when tenants seek bankruptcy reorganization.",
+      "Results were significantly influenced by non-recurring, non-cash gains (e.g., $2.9 billion gain from TRG remeasurement) and one-time transactions (ABG sale, SPARC/Catalyst restructuring), which the company itself flags as affecting comparability of earnings.",
+      "The company disclosed a net pre-tax loss in 2025 related to restructuring activities within Catalyst and reduction in carrying value of certain equity instruments, indicating volatility in its non-core retail brand investments.",
+      "Increased interest expense and a rising effective borrowing rate (3.87% vs 3.62%) reflect exposure to higher financing costs as debt matures and is refinanced.",
+      "The company depends on maintaining investment-grade credit ratings to access capital on favorable terms, and states it cannot assure it will maintain such ratings in the future."
+    ]
+  },
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001063761.json",
@@ -154,24 +170,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/1063761/000110465926093360/spg-20260630x10q.htm"
       },
       {
-        "filed": "2026-05-11",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1063761/000110465926058640/spg-20260331x10q.htm"
+        "filed": "2026-08-10",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1063761/000110465926093361/tm2620726d2_8k.htm"
       },
       {
         "filed": "2026-02-25",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/spg-20251231x10k.htm"
-      },
-      {
-        "filed": "2025-11-06",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1063761/000110465925107395/spg-20250930x10q.htm"
-      },
-      {
-        "filed": "2025-08-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1063761/000155837025010639/spg-20250630x10q.htm"
       }
     ]
   },
@@ -181,7 +187,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $66.6B",
+          "detail": "Market cap $66.8B",
           "passed": true
         },
         {
@@ -206,12 +212,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 14.5",
+          "detail": "P/E 14.6",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 217.9",
+          "detail": "P/E x P/B = 219.2",
           "passed": false
         }
       ],
@@ -246,5 +252,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.simon.com"
 }

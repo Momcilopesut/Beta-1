@@ -78,35 +78,36 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 50.07214424624062,
+      "graham_multiple": 49.960602147546574,
       "graham_number": 57.45724807368108,
-      "graham_upside_pct": -32.58565285265625,
-      "ncav_margin_pct": -210.25826445491256,
-      "pb_ratio": 2.4494203942380595,
-      "pe_ttm": 20.442446043165468
+      "graham_upside_pct": -32.52231582656363,
+      "ncav_margin_pct": -210.36185413378976,
+      "pb_ratio": 2.4466906747536017,
+      "pe_ttm": 20.419664268585134
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-09-22T17:51:50Z",
+  "last_updated": "2026-09-22T21:21:48Z",
   "layered_analysis": {
-    "conviction_score": 20.6,
+    "conviction_score": 21.7,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 0.75,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
       "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -117,7 +118,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 98062438200,
+  "market_cap": 97953154000,
   "metrics": {
     "book_value_per_share": 37.2401055408971,
     "current_ratio": 0.7867039532223211,
@@ -127,14 +128,14 @@
     "fcf_margin_pct": -9.93130985009982,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 50.07214424624062,
-    "graham_upside_pct": -32.58565285265625,
+    "graham_multiple": 49.960602147546574,
+    "graham_upside_pct": -32.52231582656363,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 0,
-    "ncav_margin_pct": -210.25826445491256,
-    "pb_ratio": 2.4494203942380595,
-    "pe_ttm": 20.442446043165468,
+    "ncav_margin_pct": -210.36185413378976,
+    "pb_ratio": 2.4466906747536017,
+    "pe_ttm": 20.419664268585134,
     "roe_pct": 12.611197616952136,
     "shareholders_equity": 36016000000,
     "total_assets": 155720000000,
@@ -143,37 +144,43 @@
   "name": "Southern Company",
   "price": {
     "as_of": "2026-09-22",
-    "close": 85.23
+    "close": 85.15
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes Southern Company as a holding company for vertically integrated electric utilities in Alabama, Georgia, and Mississippi, a wholesale generator (Southern Power), and a natural gas distribution business (Southern Company Gas) serving Illinois, Georgia, Virginia, and Tennessee. It discusses rate plans (e.g., Alabama Power rates stable through 2027, Georgia Power's ARP extended through 2028), rising capital expenditures tied to projected data-center and large-load demand growth, and various regulatory, environmental, and tax-legislation matters (including the OBBB's effect on renewable tax incentives) affecting future costs and recovery.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists only of XBRL taxonomy tags and entity/date identifiers (covering the quarter and six months ended June 30, 2026, for Southern Company and its subsidiaries Alabama Power, Georgia Power, Mississippi Power, Southern Power, and Southern Company Gas) rather than narrative text. No descriptive discussion of results, financial condition, or business developments was included in the excerpt, so a substantive summary of the quarter's results cannot be provided from this material.",
+    "filing_summary_8k": "This 8-K discloses that on August 6, 2026, Southern Company issued $833.75 million of Series 2026A 2.125% Convertible Senior Notes due 2027 and $1,897.5 million of Series 2026B 3.50% Convertible Senior Notes due 2029, sold to initial purchasers under Rule 144A/Section 4(a)(2) exemptions. The filing outlines conversion terms, conversion rates and prices, redemption/repurchase provisions upon a fundamental change, and states the shares issuable upon conversion have not been registered under the Securities Act.",
+    "moat_explanation": "The excerpts describe Southern Company's core businesses as vertically integrated, state-regulated electric utilities (Alabama Power, Georgia Power, Mississippi Power) and regulated natural gas distribution utilities serving defined territories under state PSC and FERC oversight, which is the classic structure of a regulated monopoly where only one provider efficiently serves a given service area. This reflects an efficient-scale dynamic (regulated franchise territories limiting competition) rather than brand, network effects, or switching costs, though the filing does not claim any patent or brand-based advantage.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Company acknowledges a period of rising costs and increased capital expenditures that could increase resistance from regulators to authorizing full cost recovery",
+      "Disclosed disallowances at Nicor Gas noted in rate proceedings",
+      "Significant and potentially material environmental compliance costs (CCR ARO updates, GHG rules) with no assurance of full rate recovery",
+      "Company states it is 'extremely challenging' to meet its 2030 GHG emissions reduction goal due to projected load growth",
+      "Heavy reliance on projected large-load/data-center demand growth (~9 GW of new contracts) to justify major capital investment, with revenue adequacy dependent on contract terms being honored",
+      "Ongoing regulatory/legal uncertainty around the SEEM market platform and pending FERC compliance filings/appeals, and unresolved impact of the OBBB on renewable tax credits"
+    ]
+  },
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000092122.json",
     "sec_filings": [
+      {
+        "filed": "2026-08-06",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000063/so-20260803.htm"
+      },
       {
         "filed": "2026-07-30",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000054/so-20260630.htm"
       },
       {
-        "filed": "2026-04-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000034/so-20260331.htm"
-      },
-      {
         "filed": "2026-02-19",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000006/so-20251231.htm"
-      },
-      {
-        "filed": "2025-10-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/92122/000009212225000084/so-20250930.htm"
-      },
-      {
-        "filed": "2025-07-31",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/92122/000009212225000076/so-20250630.htm"
       }
     ]
   },
@@ -183,7 +190,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $98.1B",
+          "detail": "Market cap $98.0B",
           "passed": true
         },
         {
@@ -213,7 +220,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 50.1",
+          "detail": "P/E x P/B = 50.0",
           "passed": false
         }
       ],
@@ -248,5 +255,6 @@
       "passed": 0,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.southerncompany.com"
 }

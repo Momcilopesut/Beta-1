@@ -78,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 21.728925855732708,
+      "graham_multiple": 21.89828428801676,
       "graham_number": 162.7377589378414,
-      "graham_upside_pct": -22.938766426598857,
-      "ncav_margin_pct": -141.6068242836975,
-      "pb_ratio": 2.653445207119356,
-      "pe_ttm": 8.18894838960031
+      "graham_upside_pct": -23.18255419502412,
+      "ncav_margin_pct": -141.4751986351965,
+      "pb_ratio": 2.663765806477187,
+      "pe_ttm": 8.22079937912301
     }
   },
   "industry": "Conglomerates",
-  "last_updated": "2026-09-22T17:49:43Z",
+  "last_updated": "2026-09-22T21:33:37Z",
   "layered_analysis": {
     "conviction_score": 40.3,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 66883594648,
+  "market_cap": 67143739000,
   "metrics": {
     "book_value_per_share": 79.53026481715007,
     "current_ratio": 1.21061481417608,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 14.403610918220181,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 21.728925855732708,
-    "graham_upside_pct": -22.938766426598857,
+    "graham_multiple": 21.89828428801676,
+    "graham_upside_pct": -23.18255419502412,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -141.6068242836975,
-    "pb_ratio": 2.653445207119356,
-    "pe_ttm": 8.18894838960031,
+    "ncav_margin_pct": -141.4751986351965,
+    "pb_ratio": 2.663765806477187,
+    "pe_ttm": 8.22079937912301,
     "roe_pct": 41.710999098538615,
     "shareholders_equity": 15440000000,
     "total_assets": 74115000000,
@@ -142,7 +142,7 @@
   "name": "Honeywell International Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 211.1798
+    "close": 211.85
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -150,29 +150,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000773840.json",
     "sec_filings": [
       {
+        "filed": "2026-08-19",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/773840/000077384026000130/hon-20260819.htm"
+      },
+      {
         "filed": "2026-07-23",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/773840/000077384026000124/hon-20260630.htm"
       },
       {
-        "filed": "2026-04-23",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/773840/000077384026000057/hon-20260331.htm"
-      },
-      {
         "filed": "2026-02-17",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm"
-      },
-      {
-        "filed": "2025-10-23",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/773840/000077384025000105/hon-20250930.htm"
-      },
-      {
-        "filed": "2025-07-24",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/773840/000077384025000064/hon-20250630.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $66.9B",
+          "detail": "Market cap $67.1B",
           "passed": true
         },
         {
@@ -212,7 +202,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 21.7",
+          "detail": "P/E x P/B = 21.9",
           "passed": true
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.honeywell.com"
 }

@@ -78,32 +78,34 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 319.6679065546472,
+      "graham_multiple": 326.2826043380242,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -119.03079711259859,
-      "pb_ratio": 1.3272259765265175,
-      "pe_ttm": 240.85416666666657
+      "ncav_margin_pct": -118.75217842199459,
+      "pb_ratio": 1.3408874150877712,
+      "pe_ttm": 243.33333333333323
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-22T17:45:59Z",
+  "last_updated": "2026-09-22T21:41:01Z",
   "layered_analysis": {
-    "conviction_score": 22.0,
+    "conviction_score": 23.1,
     "conviction_score_breakdown": {
       "base_score": 20.0,
       "components": {
         "graham_pct": 20.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 1.0
     },
     "conviction_verdict": "Weak",
-    "flags": [],
+    "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 13634425002,
+  "market_cap": 13774767237,
   "metrics": {
     "book_value_per_share": 88.95324725968753,
     "current_ratio": 2.0856649569033894,
@@ -123,13 +125,13 @@
     "fcf_margin_pct": 13.464941695398148,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 1,
-    "graham_multiple": 319.6679065546472,
+    "graham_multiple": 326.2826043380242,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -119.03079711259859,
-    "pb_ratio": 1.3272259765265175,
-    "pe_ttm": 240.85416666666657,
+    "ncav_margin_pct": -118.75217842199459,
+    "pb_ratio": 1.3408874150877712,
+    "pe_ttm": 243.33333333333323,
     "roe_pct": 2.261283691080083,
     "shareholders_equity": 9533365000,
     "total_assets": 16374211000,
@@ -138,37 +140,43 @@
   "name": "Albemarle Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 115.09
+    "close": 116.8
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Albemarle is a global producer of lithium and bromine-based specialty chemicals operating through Energy Storage, Specialties, and Ketjen segments, with mineral extraction sites in Australia, Chile, Argentina, Jordan, and the United States. Fiscal 2025 net sales were $5.1 billion, down 4% from 2024, while gross margin improved sharply to 13.0% from 1.2% due to lower lithium input costs and higher sales volumes, particularly in Energy Storage. The company recorded large non-cash goodwill and long-lived asset impairments in 2025 tied to its agreement to divest the Refining Solutions business (within Ketjen) and continued restructuring, including idling certain Kemerton and Chengdu facilities as part of broader cost-reduction efforts.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, so a detailed summary of financial results cannot be provided. It references the completed sale of the company's Eurecat S.A. interest in January 2026, the pending Refining Solutions divestiture, ongoing restructuring activities (including a Kemerton Train 1 restructuring and continuation of a second-half 2024 restructuring program), and details of the company's senior notes, preferred stock, and other debt instruments.",
+    "filing_summary_8k": "This 8-K, dated September 2, 2026, discloses a CEO succession plan: Ragnar Udd, currently BHP's Chief Commercial Officer, will become Albemarle's President and CEO effective February 1, 2027 (or an earlier agreed date), with current CEO J. Kent Masters, Jr. transitioning to Executive Chair. The filing details Udd's employment agreement terms, including base salary, target and maximum bonus, a sign-on cash bonus, and make-whole RSU/PSU equity awards, as well as severance terms and non-compete provisions, and separately describes a letter agreement governing Masters' compensation and role as Executive Chair.",
+    "moat_explanation": "The excerpts describe Albemarle's ownership of large, high-grade, low-cost lithium and bromine resources (e.g., Greenbushes hard-rock reserves at 1.9% Li2O, Salar de Atacama and Jordan Dead Sea brine concessions) developed over decades, and management explicitly cites 'access to geographically diverse, low-cost resources' and a 'strong cost position' as differentiators versus competitors. Long-term concession agreements (e.g., through 2058 in Jordan) and joint-venture ownership of scarce, high-quality deposits support a durable cost-based advantage rather than brand, network, or switching-cost dynamics.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Net sales and profitability are described as strongly dependent on volatile, index-referenced lithium market pricing, which fell significantly from prior peaks",
+      "2025 goodwill impairment ($181.1 million) and long-lived asset impairment ($245.6 million) tied to the planned divestiture of the Refining Solutions business",
+      "Valuation allowance recorded against U.S. losses contributed to a negative effective tax rate of (28.4)% in 2025",
+      "Restructuring actions including idling Kemerton Trains 1 and 2 and the Chengdu, China conversion facility, and halted construction of Kemerton Trains 3 and 4",
+      "Significant reliance on unconsolidated joint ventures (Windfield/Greenbushes, MARBL/Wodgina, JBC/Safi) for resources and earnings, introducing dependency on joint-venture partner performance",
+      "Water rights/usage risk disclosed via an 'early warning plan' at Chilean facilities"
+    ]
+  },
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000915913.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-03",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/915913/000114036126035623/ef20081522_8k.htm"
+      },
       {
         "filed": "2026-08-05",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000102/alb-20260630.htm"
       },
       {
-        "filed": "2026-05-06",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000072/alb-20260331.htm"
-      },
-      {
         "filed": "2026-02-11",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm"
-      },
-      {
-        "filed": "2025-11-05",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591325000162/alb-20250930.htm"
-      },
-      {
-        "filed": "2025-08-04",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591325000133/alb-20250630.htm"
       }
     ]
   },
@@ -178,7 +186,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $13.6B",
+          "detail": "Market cap $13.8B",
           "passed": true
         },
         {
@@ -203,12 +211,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 240.9",
+          "detail": "P/E 243.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 319.7",
+          "detail": "P/E x P/B = 326.3",
           "passed": false
         }
       ],
@@ -243,5 +251,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.albemarle.com"
 }

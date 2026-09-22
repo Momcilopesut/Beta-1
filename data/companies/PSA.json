@@ -78,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 155.49577812294956,
+      "graham_multiple": 152.55398577457976,
       "graham_number": 103.72212235359945,
-      "graham_upside_pct": -64.61445061626657,
-      "ncav_margin_pct": -120.2155357558768,
-      "pb_ratio": 5.587407035954291,
-      "pe_ttm": 27.829685061845854
+      "graham_upside_pct": -64.19794886141332,
+      "ncav_margin_pct": -120.45348051763007,
+      "pb_ratio": 5.534301164926422,
+      "pe_ttm": 27.565176022835388
     }
   },
   "industry": "REIT - Industrial",
-  "last_updated": "2026-09-22T17:48:54Z",
+  "last_updated": "2026-09-22T21:13:34Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 54542363419,
+  "market_cap": 54023961960,
   "metrics": {
     "book_value_per_share": 52.892225494272644,
     "current_ratio": 0.6664451520605473,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 60.05396225171342,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 155.49577812294956,
-    "graham_upside_pct": -64.61445061626657,
+    "graham_multiple": 152.55398577457976,
+    "graham_upside_pct": -64.19794886141332,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -120.2155357558768,
-    "pb_ratio": 5.587407035954291,
-    "pe_ttm": 27.829685061845854,
+    "ncav_margin_pct": -120.45348051763007,
+    "pb_ratio": 5.534301164926422,
+    "pe_ttm": 27.565176022835388,
     "roe_pct": 22.11632868171467,
     "shareholders_equity": 9248128000,
     "total_assets": 20208604000,
@@ -142,7 +142,7 @@
   "name": "Public Storage",
   "price": {
     "as_of": "2026-09-22",
-    "close": 293.12
+    "close": 289.71
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -150,29 +150,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001393311.json",
     "sec_filings": [
       {
+        "filed": "2026-09-16",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1393311/000119312526393149/d130476d8k.htm"
+      },
+      {
         "filed": "2026-07-29",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1393311/000162828026050612/psa-20260630.htm"
       },
       {
-        "filed": "2026-04-27",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1393311/000162828026027487/psa-20260331.htm"
-      },
-      {
         "filed": "2026-02-12",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1393311/000162828026007696/psa-20251231.htm"
-      },
-      {
-        "filed": "2025-10-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1393311/000162828025047163/psa-20250930.htm"
-      },
-      {
-        "filed": "2025-07-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1393311/000139331125000120/psa-20250630.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $54.5B",
+          "detail": "Market cap $54.0B",
           "passed": true
         },
         {
@@ -207,12 +197,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 27.8",
+          "detail": "P/E 27.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 155.5",
+          "detail": "P/E x P/B = 152.6",
           "passed": false
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.publicstorage.com"
 }

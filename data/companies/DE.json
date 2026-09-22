@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 259.0718655053397,
+      "graham_multiple": 264.15656989691445,
       "graham_number": 208.33201818215974,
-      "graham_upside_pct": -70.04916498718195,
-      "ncav_margin_pct": -102.71240058673715,
-      "pb_ratio": 6.71193769203287,
-      "pe_ttm": 38.59866962305987
+      "graham_upside_pct": -70.37034671433614,
+      "ncav_margin_pct": -102.68331380151699,
+      "pb_ratio": 6.777483958556628,
+      "pe_ttm": 38.97560975609756
     }
   },
   "industry": "Agricultural - Machinery",
-  "last_updated": "2026-09-22T17:46:24Z",
+  "last_updated": "2026-09-22T21:25:53Z",
   "layered_analysis": {
-    "conviction_score": 20.2,
+    "conviction_score": 21.2,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 187962827776,
+  "market_cap": 189798402266,
   "metrics": {
     "book_value_per_share": 103.93254262416605,
     "current_ratio": 0.7667986333315255,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 7.233852009403336,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 259.0718655053397,
-    "graham_upside_pct": -70.04916498718195,
+    "graham_multiple": 264.15656989691445,
+    "graham_upside_pct": -70.37034671433614,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -102.71240058673715,
-    "pb_ratio": 6.71193769203287,
-    "pe_ttm": 38.59866962305987,
+    "ncav_margin_pct": -102.68331380151699,
+    "pb_ratio": 6.777483958556628,
+    "pe_ttm": 38.97560975609756,
     "roe_pct": 18.10750051093399,
     "shareholders_equity": 25950000000,
     "total_assets": 105996000000,
@@ -142,9 +143,25 @@
   "name": "Deere & Company",
   "price": {
     "as_of": "2026-09-22",
-    "close": 695.58
+    "close": 703.12
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Deere's 10-K describes a business organized into four segments (Production & Precision Agriculture, Small Agriculture & Turf, Construction & Forestry, and Financial Services), with PPA generating 45% of fiscal 2025 equipment operations net sales, SAT 26%, and CF 29%. The filing discusses the company's 'Smart Industrial Operating Model' and 'Leap Ambitions' strategy centered on production systems, technology stack, and lifecycle solutions. It also discloses that fiscal 2025 saw unfavorable agricultural market conditions leading to lower sales volumes, increased sales incentives, and elevated receivable write-offs, alongside tariff-related cost impacts of approximately $600 million.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists almost entirely of raw XBRL tagging data (e.g., us-gaap and de: taxonomy elements) rather than narrative text, so it does not describe qualitative business developments or discuss financial results in prose. It does indicate the filing covers a quarterly period ending August 2, 2026 (fiscal third quarter 2026), with segment and geographic revenue breakdowns tagged in the data but not presented as readable figures or discussion in this excerpt.",
+    "filing_summary_8k": "This 8-K, dated August 20, 2026, discloses under Item 2.02 that Deere & Company issued a press release announcing its results of operations for the third quarter of fiscal year 2026. Under Item 7.01, the company also made available an investor presentation reviewing the quarter in connection with its earnings call. The press release and presentation are furnished as exhibits, but their content is not included in the provided excerpt.",
+    "moat_explanation": "The 10-K describes an integrated ecosystem \\u2013 the John Deere Operations Center telematics platform, a 'best-in-class dealer channel,' and enterprise-wide 'Lifecycle Solutions' that manage equipment, service, and technology needs across a machine's full life \\u2013 that ties customers into Deere's dealer and data infrastructure once adopted, creating friction to switch brands. The long operating history (since 1837) and portfolio of associated brand names also suggest some intangible-asset strength, but the excerpts emphasize the integrated technology/dealer relationship most explicitly as a competitive advantage.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company states fiscal 2025 unfavorable market conditions caused lower sales volumes, greater reliance on sales incentives, and elevated receivable write-offs, with some conditions expected to persist into fiscal 2026",
+      "Direct tariff impact of approximately $600 million in fiscal 2025, with ongoing uncertainty from pending litigation over IEEPA tariff authority",
+      "Business is explicitly described as highly cyclical and dependent on the agricultural market business cycle and farm income levels, which are outside the company's control",
+      "Manufacturing shift of skid steer/track loader production to Mexico exposed those products to new tariffs, with no guarantee of USMCA exemption qualification",
+      "Manufacturing processes are dependent on water, and the company flags water scarcity/regulatory restriction risk as a potential disruption to operations",
+      "Significant exposure to international/geopolitical risks including trade barriers, sanctions, and political instability in growth markets like Brazil, Argentina, China, and India"
+    ]
+  },
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000315189.json",
@@ -155,24 +172,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926102213/de-20260802x10q.htm"
       },
       {
-        "filed": "2026-05-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926067311/de-20260503x10q.htm"
-      },
-      {
-        "filed": "2026-02-26",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926020158/de-20260201x10q.htm"
+        "filed": "2026-08-20",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926098904/de-20260820x8k.htm"
       },
       {
         "filed": "2025-12-18",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm"
-      },
-      {
-        "filed": "2025-08-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837025011789/de-20250727x10q.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $188.0B",
+          "detail": "Market cap $189.8B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 38.6",
+          "detail": "P/E 39.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 259.1",
+          "detail": "P/E x P/B = 264.2",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.deere.com"
 }

@@ -78,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 658.2262268501341,
+      "graham_multiple": 664.015398340591,
       "graham_number": 133.84069998072064,
-      "graham_upside_pct": -83.34029973602522,
-      "ncav_margin_pct": -106.71064951380814,
-      "pb_ratio": 19.09680804331013,
-      "pe_ttm": 34.46786632390745
+      "graham_upside_pct": -83.43576193602547,
+      "ncav_margin_pct": -106.67219663915444,
+      "pb_ratio": 19.18060345449858,
+      "pe_ttm": 34.61910882604969
     }
   },
   "industry": "Agricultural - Machinery",
-  "last_updated": "2026-09-22T17:49:50Z",
+  "last_updated": "2026-09-22T21:45:16Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 370573253760,
+  "market_cap": 372199302370,
   "metrics": {
     "book_value_per_share": 42.124239791485664,
     "current_ratio": 1.3684342799698417,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 11.026942253917058,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 658.2262268501341,
-    "graham_upside_pct": -83.34029973602522,
+    "graham_multiple": 664.015398340591,
+    "graham_upside_pct": -83.43576193602547,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -106.71064951380814,
-    "pb_ratio": 19.09680804331013,
-    "pe_ttm": 34.46786632390745,
+    "ncav_margin_pct": -106.67219663915444,
+    "pb_ratio": 19.18060345449858,
+    "pe_ttm": 34.61910882604969,
     "roe_pct": 54.14401919256289,
     "shareholders_equity": 21318000000,
     "total_assets": 98585000000,
@@ -142,7 +142,7 @@
   "name": "Caterpillar Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 803.38
+    "close": 808.01
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -150,29 +150,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000018230.json",
     "sec_filings": [
       {
+        "filed": "2026-09-01",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/18230/000110465926104197/tm2624321d1_8k.htm"
+      },
+      {
         "filed": "2026-08-05",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000046/cat-20260630.htm"
       },
       {
-        "filed": "2026-05-06",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000021/cat-20260331.htm"
-      },
-      {
         "filed": "2026-02-13",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm"
-      },
-      {
-        "filed": "2025-11-03",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823025000048/cat-20250930.htm"
-      },
-      {
-        "filed": "2025-08-06",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823025000040/cat-20250630.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $370.6B",
+          "detail": "Market cap $372.2B",
           "passed": true
         },
         {
@@ -207,12 +197,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 34.5",
+          "detail": "P/E 34.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 658.2",
+          "detail": "P/E x P/B = 664.0",
           "passed": false
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.caterpillar.com"
 }

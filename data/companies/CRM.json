@@ -78,34 +78,35 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 104.444155137413,
+      "graham_multiple": 105.70458901169704,
       "graham_number": 90.92018913686293,
-      "graham_upside_pct": -60.749662134872494,
-      "ncav_margin_pct": -113.08269136830984,
-      "pb_ratio": 4.9545494814737605,
-      "pe_ttm": 21.080454545454547
+      "graham_upside_pct": -61.02529615189346,
+      "ncav_margin_pct": -112.99081866169307,
+      "pb_ratio": 4.984355620407525,
+      "pe_ttm": 21.207272727272727
     }
   },
   "industry": "Software - Application",
-  "last_updated": "2026-09-22T17:48:08Z",
+  "last_updated": "2026-09-22T21:26:58Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 189913815000,
+  "market_cap": 191056320000,
   "metrics": {
     "book_value_per_share": 46.802439024390246,
     "current_ratio": 0.8385100243013366,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 34.68272125225768,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 104.444155137413,
-    "graham_upside_pct": -60.749662134872494,
+    "graham_multiple": 105.70458901169704,
+    "graham_upside_pct": -61.02529615189346,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -113.08269136830984,
-    "pb_ratio": 4.9545494814737605,
-    "pe_ttm": 21.080454545454547,
+    "ncav_margin_pct": -112.99081866169307,
+    "pb_ratio": 4.984355620407525,
+    "pe_ttm": 21.207272727272727,
     "roe_pct": 20.15267812447856,
     "shareholders_equity": 59142000000,
     "total_assets": 112305000000,
@@ -142,37 +143,43 @@
   "name": "Salesforce Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 231.6418
+    "close": 233.28
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2026 (ended January 31, 2026), Salesforce reported total revenue of $41.5 billion, up 10% year-over-year, with income from operations of $8.3 billion (about 20% operating margin) and diluted EPS of $7.80. The company completed its ~$9.6 billion acquisition of Informatica in November 2025, which contributed about $0.4 billion of fiscal 2026 revenue, and also acquired Regrello in October 2025. Remaining performance obligation grew 14% to $72.4 billion, the company repurchased about $12.7 billion of stock and paid about $1.6 billion in dividends, and cash from operations was $15.0 billion, while total debt principal rose to $14.5 billion.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended July 31, 2026, fiscal Q2 2027) consists only of XBRL structured-data tags rather than narrative text, so specific financial results and management commentary cannot be summarized from it. The tags indicate the filing covers subscription/support and professional services revenue lines, expense categories (cost of revenue, R&D, sales and marketing, G&A, restructuring), geographic revenue breakdowns (Americas, Europe, Asia Pacific), a strategic investment in Anthropic PBC, foreign exchange hedging contracts, and references to pending lawsuits, claims, and plaintiffs, but no further detail on these items is available in the provided text.",
+    "filing_summary_8k": "This Form 8-K, dated September 16, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that Salesforce posted an investor presentation to its website used at its September 16, 2026 Investor Day, covering financial performance, guidance, growth targets, market opportunity, competitive position, and economic model. The presentation is furnished (not filed) as Exhibit 99.1, and the filing includes standard forward-looking-statements language cautioning that actual results could differ from projections discussed in the presentation.",
+    "moat_explanation": "The 10-K describes a deeply unified platform (Agentforce 360, Data 360, MuleSoft, Slack) that becomes embedded in customers' data, workflows, and business logic, with customers building processes on Salesforce's metadata and APIs rather than having to 'remove and rebuild existing processes.' This deep integration, combined with a subscription/renewal-based revenue model and a relatively low stated attrition rate (~8%) and large remaining performance obligation ($72.4B), suggests meaningful friction for customers to switch providers once embedded.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company states it operates in 'intensely competitive markets' and lists inability to compete effectively as a top strategic risk",
+      "Extensive cybersecurity risk disclosure, including acknowledgment of past security incidents and inability to guarantee future incidents won't be material",
+      "Ongoing restructuring activity (workforce reductions, office/data center exits) cited across multiple fiscal years, indicating cost/margin pressure requiring active management",
+      "Outstanding debt principal increased sharply from $8.5B to $14.5B year-over-year per the 10-K balance sheet data, partly tied to the Informatica acquisition",
+      "10-K notes risk from inability to realize expected benefits of acquisitions, relevant given recent large acquisitions (Informatica, Regrello)",
+      "10-Q XBRL tags reference pending lawsuits/claims/plaintiffs, though no narrative detail on these matters was provided in the excerpt"
+    ]
+  },
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001108524.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-17",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000210/crm-20260916.htm"
+      },
       {
         "filed": "2026-08-27",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000190/crm-20260731.htm"
       },
       {
-        "filed": "2026-05-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000127/crm-20260430.htm"
-      },
-      {
         "filed": "2026-03-02",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm"
-      },
-      {
-        "filed": "2025-12-04",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000238/crm-20251031.htm"
-      },
-      {
-        "filed": "2025-09-04",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000088/crm-20250731.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $189.9B",
+          "detail": "Market cap $191.1B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 21.1",
+          "detail": "P/E 21.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 104.4",
+          "detail": "P/E x P/B = 105.7",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.salesforce.com"
 }

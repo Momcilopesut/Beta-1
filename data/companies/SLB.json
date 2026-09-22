@@ -78,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 76.31210431543579,
+      "graham_multiple": 75.08262551554449,
       "graham_number": 31.202834453277035,
-      "graham_upside_pct": -40.54337947165199,
-      "ncav_margin_pct": -110.35334955385893,
-      "pb_ratio": 3.02082361739664,
-      "pe_ttm": 25.26201923076923
+      "graham_upside_pct": -40.13270442579233,
+      "ncav_margin_pct": -110.42486156152181,
+      "pb_ratio": 2.996390273836005,
+      "pe_ttm": 25.057692307692303
     }
   },
   "industry": "Oil & Gas Equipment & Services",
-  "last_updated": "2026-09-22T17:45:41Z",
+  "last_updated": "2026-09-22T21:25:17Z",
   "layered_analysis": {
     "conviction_score": 6.9,
     "conviction_score_breakdown": {
@@ -117,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 77984308017,
+  "market_cap": 77353547128,
   "metrics": {
     "book_value_per_share": 18.18145430286858,
     "current_ratio": 1.4392151286790844,
@@ -127,14 +127,14 @@
     "fcf_margin_pct": 12.722282897868883,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 1,
-    "graham_multiple": 76.31210431543579,
-    "graham_upside_pct": -40.54337947165199,
+    "graham_multiple": 75.08262551554449,
+    "graham_upside_pct": -40.13270442579233,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -110.35334955385893,
-    "pb_ratio": 3.02082361739664,
-    "pe_ttm": 25.26201923076923,
+    "ncav_margin_pct": -110.42486156152181,
+    "pb_ratio": 2.996390273836005,
+    "pe_ttm": 25.057692307692303,
     "roe_pct": 11.83518438386461,
     "shareholders_equity": 26109000000,
     "total_assets": 54868000000,
@@ -143,7 +143,7 @@
   "name": "SLB (Schlumberger)",
   "price": {
     "as_of": "2026-09-22",
-    "close": 52.48
+    "close": 52.12
   },
   "qualitative": null,
   "sector": "Energy",
@@ -151,29 +151,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000087347.json",
     "sec_filings": [
       {
+        "filed": "2026-08-31",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/87347/000119312526375358/d106278d8k.htm"
+      },
+      {
         "filed": "2026-07-29",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/87347/000119312526322595/slb-20260630.htm"
       },
       {
-        "filed": "2026-04-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/87347/000119312526190101/slb-20260331.htm"
-      },
-      {
         "filed": "2026-01-23",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/slb-20251231.htm"
-      },
-      {
-        "filed": "2025-10-22",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/87347/000119312525246028/slb-20250930.htm"
-      },
-      {
-        "filed": "2025-07-24",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/87347/000095017025098217/slb-20250630.htm"
       }
     ]
   },
@@ -183,7 +173,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $78.0B",
+          "detail": "Market cap $77.4B",
           "passed": true
         },
         {
@@ -208,12 +198,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 25.3",
+          "detail": "P/E 25.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 76.3",
+          "detail": "P/E x P/B = 75.1",
           "passed": false
         }
       ],
@@ -248,5 +238,6 @@
       "passed": 1,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.slb.com"
 }

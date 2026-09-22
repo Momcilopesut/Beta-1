@@ -78,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 619.6648138877607,
+      "graham_multiple": 625.2889467438969,
       "graham_number": 60.64283849140076,
-      "graham_upside_pct": -81.42297558773411,
-      "ncav_margin_pct": -119.30192771087718,
-      "pb_ratio": 20.75849638104133,
-      "pe_ttm": 29.851141552511418
+      "graham_upside_pct": -81.53103746264634,
+      "ncav_margin_pct": -119.18964909985914,
+      "pb_ratio": 20.852486574830728,
+      "pe_ttm": 29.986301369863018
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-22T17:49:32Z",
+  "last_updated": "2026-09-22T21:15:23Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 79350356817,
+  "market_cap": 79709638881,
   "metrics": {
     "book_value_per_share": 15.746323529411764,
     "current_ratio": 0.7270385374467643,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 11.258022507561199,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 619.6648138877607,
-    "graham_upside_pct": -81.42297558773411,
+    "graham_multiple": 625.2889467438969,
+    "graham_upside_pct": -81.53103746264634,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -119.30192771087718,
-    "pb_ratio": 20.75849638104133,
-    "pe_ttm": 29.851141552511418,
+    "ncav_margin_pct": -119.18964909985914,
+    "pb_ratio": 20.852486574830728,
+    "pe_ttm": 29.986301369863018,
     "roe_pct": 62.12115960114157,
     "shareholders_equity": 4598300000,
     "total_assets": 25901700000,
@@ -142,7 +142,7 @@
   "name": "Sherwin-Williams Company",
   "price": {
     "as_of": "2026-09-22",
-    "close": 326.44
+    "close": 328.35
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -155,24 +155,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/89800/000008980026000049/shw-20260630.htm"
       },
       {
-        "filed": "2026-04-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/89800/000008980026000038/shw-20260331.htm"
+        "filed": "2026-07-28",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/89800/000008980026000046/shw-20260728.htm"
       },
       {
         "filed": "2026-02-19",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/89800/000008980026000008/shw-20251231.htm"
-      },
-      {
-        "filed": "2025-10-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/89800/000008980025000126/shw-20250930.htm"
-      },
-      {
-        "filed": "2025-07-24",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/89800/000008980025000115/shw-20250630.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $79.4B",
+          "detail": "Market cap $79.7B",
           "passed": true
         },
         {
@@ -207,12 +197,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 29.9",
+          "detail": "P/E 30.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 619.7",
+          "detail": "P/E x P/B = 625.3",
           "passed": false
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.sherwin-williams.com"
 }

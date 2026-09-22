@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000190/crm-20260731.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000210/crm-20260916.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2026 (ended January 31, 2026), Salesforce reported total revenue of $41.5 billion, up 10% year-over-year, with income from operations of $8.3 billion (about 20% operating margin) and diluted EPS of $7.80. The company completed its ~$9.6 billion acquisition of Informatica in November 2025, which contributed about $0.4 billion of fiscal 2026 revenue, and also acquired Regrello in October 2025. Remaining performance obligation grew 14% to $72.4 billion, the company repurchased about $12.7 billion of stock and paid about $1.6 billion in dividends, and cash from operations was $15.0 billion, while total debt principal rose to $14.5 billion.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended July 31, 2026, fiscal Q2 2027) consists only of XBRL structured-data tags rather than narrative text, so specific financial results and management commentary cannot be summarized from it. The tags indicate the filing covers subscription/support and professional services revenue lines, expense categories (cost of revenue, R&D, sales and marketing, G&A, restructuring), geographic revenue breakdowns (Americas, Europe, Asia Pacific), a strategic investment in Anthropic PBC, foreign exchange hedging contracts, and references to pending lawsuits, claims, and plaintiffs, but no further detail on these items is available in the provided text.",
+    "filing_summary_8k": "This Form 8-K, dated September 16, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that Salesforce posted an investor presentation to its website used at its September 16, 2026 Investor Day, covering financial performance, guidance, growth targets, market opportunity, competitive position, and economic model. The presentation is furnished (not filed) as Exhibit 99.1, and the filing includes standard forward-looking-statements language cautioning that actual results could differ from projections discussed in the presentation.",
+    "moat_explanation": "The 10-K describes a deeply unified platform (Agentforce 360, Data 360, MuleSoft, Slack) that becomes embedded in customers' data, workflows, and business logic, with customers building processes on Salesforce's metadata and APIs rather than having to 'remove and rebuild existing processes.' This deep integration, combined with a subscription/renewal-based revenue model and a relatively low stated attrition rate (~8%) and large remaining performance obligation ($72.4B), suggests meaningful friction for customers to switch providers once embedded.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company states it operates in 'intensely competitive markets' and lists inability to compete effectively as a top strategic risk",
+      "Extensive cybersecurity risk disclosure, including acknowledgment of past security incidents and inability to guarantee future incidents won't be material",
+      "Ongoing restructuring activity (workforce reductions, office/data center exits) cited across multiple fiscal years, indicating cost/margin pressure requiring active management",
+      "Outstanding debt principal increased sharply from $8.5B to $14.5B year-over-year per the 10-K balance sheet data, partly tied to the Informatica acquisition",
+      "10-K notes risk from inability to realize expected benefits of acquisitions, relevant given recent large acquisitions (Informatica, Regrello)",
+      "10-Q XBRL tags reference pending lawsuits/claims/plaintiffs, though no narrative detail on these matters was provided in the excerpt"
+    ]
+  }
+}

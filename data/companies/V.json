@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 610.1939194204175,
+      "graham_multiple": 605.735253661719,
       "graham_number": 65.01949718324255,
-      "graham_upside_pct": -82.11391472732103,
-      "ncav_margin_pct": -114.04043775284616,
-      "pb_ratio": 19.764929497697427,
-      "pe_ttm": 30.872557349192864
+      "graham_upside_pct": -82.04079737508492,
+      "ncav_margin_pct": -114.0978343053658,
+      "pb_ratio": 19.692586276650182,
+      "pe_ttm": 30.759558198810538
     }
   },
   "industry": "Financial - Credit Services",
-  "last_updated": "2026-09-22T17:50:57Z",
+  "last_updated": "2026-09-22T21:13:44Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 678428945061,
+  "market_cap": 675945772270,
   "metrics": {
     "book_value_per_share": 18.384583665847728,
     "current_ratio": 0.9852226141672228,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 53.9425,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 610.1939194204175,
-    "graham_upside_pct": -82.11391472732103,
+    "graham_multiple": 605.735253661719,
+    "graham_upside_pct": -82.04079737508492,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -114.04043775284616,
-    "pb_ratio": 19.764929497697427,
-    "pe_ttm": 30.872557349192864,
+    "ncav_margin_pct": -114.0978343053658,
+    "pb_ratio": 19.692586276650182,
+    "pe_ttm": 30.759558198810538,
     "roe_pct": 61.256058295204205,
     "shareholders_equity": 37909000000,
     "total_assets": 99627000000,
@@ -142,9 +143,24 @@
   "name": "Visa Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 363.52
+    "close": 362.04
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Visa's fiscal 2025 10-K reports net revenue of $40.0 billion (up 11%) and GAAP net income of $20.1 billion (up 2%), with GAAP operating expenses up 30% due largely to higher litigation provisions and personnel costs. The filing discusses growth in payments volume, cross-border volume, and processed transactions (258 billion in fiscal 2025), the acquisition of Featurespace for $946 million, issuance of \u20ac3.5 billion in senior notes, a new $30 billion share repurchase authorization, and continued interchange multidistrict litigation accruals of $2.2 billion during the year. It also details extensive global regulatory risks affecting interchange fees, network rules, and licensing across many jurisdictions.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL data tags rather than narrative text, covering the quarter and nine months ended June 30, 2026 (fiscal Q3 2026). Identifiable facts include a February 27, 2026 acquisition referred to as 'Prisma and Newpay' involving technology-based and customer-relationship intangible assets, issuance of senior notes around the same date, and references to ongoing interchange multidistrict litigation (including class action developments in April and June 2026) and related covered/uncovered litigation categories. The excerpt does not include narrative discussion of quarterly financial results or business performance.",
+    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses that Visa issued an earnings release for its fiscal third quarter ended June 30, 2026 (furnished as Exhibit 99.1) and held a conference call to discuss those results. It also reports that Visa's board of directors declared a quarterly cash dividend of $0.670 per share of Class A common stock, payable September 1, 2026, to shareholders of record as of August 11, 2026. The filing does not include the actual financial results themselves within the excerpt provided.",
+    "moat_explanation": "The 10-K describes Visa's four-party model connecting nearly 14,500 financial institutions, 5 billion payment credentials, and more than 175 million merchant locations across 200+ countries through VisaNet, where value to issuers, acquirers, and merchants grows as more of each participate\u2014a classic two-sided network effect. The scale of processed transactions (258 billion in fiscal 2025) and the breadth of the acceptance network are presented as central to Visa's competitive position.",
+    "moat_present": true,
+    "moat_type": "network_effects",
+    "red_flags": [
+      "Interchange multidistrict litigation resulted in $2.2 billion in additional accruals in fiscal 2025 and $875 million in additional escrow deposits, with estimated unresolved claims still around $39.4 billion as of October 2025",
+      "GAAP operating expenses rose 30% in fiscal 2025, driven substantially by higher litigation provisions and personnel costs",
+      "Extensive and increasing global regulation of interchange fees, merchant discount rates, network routing rules, and scheme/processing separation (e.g., U.S. Federal Reserve Regulation II litigation, EU IFR, Latin American and Asia-Pacific interchange caps) that the company states could reduce revenue opportunities and increase compliance costs",
+      "A U.S. District Court (North Dakota) ruled the Federal Reserve exceeded its authority in setting debit interchange caps under Regulation II, creating potential for a lower interchange cap if the ruling is affirmed on appeal, while a separate court (Kentucky) reached the opposite conclusion, creating regulatory uncertainty",
+      "Client incentives grew 14% in fiscal 2025, outpacing several revenue categories, which the company notes are paid to grow volume and could pressure net revenue if incentive levels continue rising"
+    ]
+  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001403161.json",
@@ -155,24 +171,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000104/v-20260630.htm"
       },
       {
-        "filed": "2026-04-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000079/v-20260331.htm"
-      },
-      {
-        "filed": "2026-01-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000045/v-20251231.htm"
+        "filed": "2026-07-28",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000103/v-20260728.htm"
       },
       {
         "filed": "2025-11-06",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm"
-      },
-      {
-        "filed": "2025-07-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000052/v-20250630.htm"
       }
     ]
   },
@@ -182,7 +188,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $678.4B",
+          "detail": "Market cap $675.9B",
           "passed": true
         },
         {
@@ -207,12 +213,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 30.9",
+          "detail": "P/E 30.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 610.2",
+          "detail": "P/E x P/B = 605.7",
           "passed": false
         }
       ],
@@ -247,5 +253,6 @@
       "passed": 4,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.visa.com/en-us"
 }

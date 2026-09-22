@@ -78,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 52.762679317497565,
+      "graham_multiple": 52.15291131644239,
       "graham_number": 98.03735895634553,
-      "graham_upside_pct": -38.621155763752995,
-      "ncav_margin_pct": -115.0693889433557,
-      "pb_ratio": 2.568467990458015,
-      "pe_ttm": 20.542471042471043
+      "graham_upside_pct": -38.22083372843561,
+      "ncav_margin_pct": -115.16767376001947,
+      "pb_ratio": 2.553583218405428,
+      "pe_ttm": 20.423423423423422
     }
   },
   "industry": "Oil & Gas Integrated",
-  "last_updated": "2026-09-22T17:49:23Z",
+  "last_updated": "2026-09-22T21:43:28Z",
   "layered_analysis": {
     "conviction_score": 6.9,
     "conviction_score_breakdown": {
@@ -117,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 661517982900,
+  "market_cap": 657684357400,
   "metrics": {
     "book_value_per_share": 63.75670813356778,
     "current_ratio": 1.1346729708431835,
@@ -127,14 +127,14 @@
     "fcf_margin_pct": 7.289791759929609,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 1,
-    "graham_multiple": 52.762679317497565,
-    "graham_upside_pct": -38.621155763752995,
+    "graham_multiple": 52.15291131644239,
+    "graham_upside_pct": -38.22083372843561,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -115.0693889433557,
-    "pb_ratio": 2.568467990458015,
-    "pe_ttm": 20.542471042471043,
+    "ncav_margin_pct": -115.16767376001947,
+    "pb_ratio": 2.553583218405428,
+    "pe_ttm": 20.423423423423422,
     "roe_pct": 12.675533129278287,
     "shareholders_equity": 259386000000,
     "total_assets": 448980000000,
@@ -143,13 +143,18 @@
   "name": "Exxon Mobil Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 159.725
+    "close": 158.69
   },
   "qualitative": null,
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0002115436.json",
     "sec_filings": [
+      {
+        "filed": "2026-08-28",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2115436/000119312526373026/d82162d8k.htm"
+      },
       {
         "filed": "2026-08-03",
         "form": "10-Q",
@@ -163,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $661.5B",
+          "detail": "Market cap $657.7B",
           "passed": true
         },
         {
@@ -188,12 +193,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.5",
+          "detail": "P/E 20.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 52.8",
+          "detail": "P/E x P/B = 52.2",
           "passed": false
         }
       ],
@@ -228,5 +233,6 @@
       "passed": 1,
       "total": 4
     }
-  }
+  },
+  "website": "https://corporate.exxonmobil.com"
 }

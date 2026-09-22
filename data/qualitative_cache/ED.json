@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1047862/000104786226000031/ed-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1047862/000104786226000142/ed-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1047862/000119312526383674/d144518d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "whole_document_fallback",
+    "filing_summary_10k": "The provided 10-K excerpt for fiscal year 2025 consists almost entirely of XBRL data tags (covering debt instruments/debentures, tax-exempt debt, property categories such as electric transmission, gas transmission, steam plant, and equity-method investments including Mountain Valley Pipeline and New York Transco) rather than narrative text. It confirms Consolidated Edison, Inc. and its regulated utility subsidiary Consolidated Edison Company of New York, Inc. (CECONY) report electricity, gas, steam and non-utility revenue lines, and reference multi-year electric and gas rate plans running through 2028. No further narrative detail on business developments or financial results is available in the excerpt provided.",
+    "filing_summary_10q": "The provided 10-Q excerpt, covering the quarter and six months ended June 30, 2026, is also composed mainly of XBRL tags rather than narrative disclosure. It references a subsequent event in which Rockland Electric Company entered a new electric rate plan with the New Jersey Board of Public Utilities effective July 2026, tracks routine and major-event storm costs for Rockland Electric, and reflects continued equity-method activity in the Mountain Valley Pipeline joint venture during the first half of 2026. Detailed financial results and management discussion are not present in the excerpt provided.",
+    "filing_summary_8k": "The 8-K, dated September 4, 2026, discloses that CECONY, the New York State Department of Public Service, and other parties entered into a Joint Proposal for a three-year CECONY steam rate plan covering November 2026 through October 2029, subject to NYSPSC approval. The proposal specifies base rate increases, capital expenditure levels, an authorized 9.5% return on common equity, a 48% common equity ratio, and various reconciliation and adjustment mechanisms, and it also notes an ongoing NYSDPS audit of CECONY's income tax accounting with any resulting adjustment to be trued up with customers.",
+    "moat_explanation": "The excerpts (largely XBRL tags rather than narrative prose) show Consolidated Edison operating as a rate-regulated electric, gas and steam utility subject to NYSPSC (and NJ Board of Public Utilities) oversight, with multi-year rate plans, authorized rates of return on equity (e.g., 9.5% in the CECONY steam Joint Proposal), and defined rate bases and equity ratios. This regulated, franchise-based distribution model is consistent with an efficient-scale moat, since duplicating electric/gas/steam distribution infrastructure in a service territory is generally uneconomic, limiting competition to the incumbent utility. However, the 10-K excerpt provided contains almost no narrative business/risk-factor discussion (mostly XBRL taxonomy tags), so this read rests on structural inferences from the rate-plan and asset-category tags rather than explicit qualitative discussion.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "The 8-K discloses an ongoing NYSDPS 'focused operations audit' investigating CECONY's income tax accounting, with any ordered adjustment to be refunded to or collected from customers",
+      "The proposed steam rate Joint Proposal includes potential negative revenue adjustments (penalties) of $4.3-$4.7 million per year if service, reliability, safety or other performance targets are not met",
+      "The rate plan and its financial terms are subject to approval by the NYSPSC and are not yet finalized",
+      "The 10-Q excerpt references storm cost categories (routine, major event, non-major) for Rockland Electric Company, indicating recurring weather-related cost exposure",
+      "The provided 10-K and 10-Q excerpts consist almost entirely of XBRL data tags rather than descriptive text, limiting the ability to identify additional risks that may be discussed in the full filings"
+    ]
+  }
+}

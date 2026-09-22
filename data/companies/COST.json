@@ -78,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 536.8643130215637,
+      "graham_multiple": 538.2578137228802,
       "graham_number": 176.00726175658534,
-      "graham_upside_pct": -80.41927045249807,
-      "ncav_margin_pct": -102.39693416788869,
-      "pb_ratio": 11.899836316661194,
-      "pe_ttm": 45.11526870919136
+      "graham_upside_pct": -80.43080889065217,
+      "ncav_margin_pct": -102.39552171404785,
+      "pb_ratio": 11.915270089528185,
+      "pe_ttm": 45.173782019085884
     }
   },
   "industry": "Discount Stores",
-  "last_updated": "2026-09-22T17:50:26Z",
+  "last_updated": "2026-09-22T21:20:08Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 398352792190,
+  "market_cap": 398869447390,
   "metrics": {
     "book_value_per_share": 75.48381138170359,
     "current_ratio": 1.0724510385756676,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 2.8473849619416134,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 536.8643130215637,
-    "graham_upside_pct": -80.41927045249807,
+    "graham_multiple": 538.2578137228802,
+    "graham_upside_pct": -80.43080889065217,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -102.39693416788869,
-    "pb_ratio": 11.899836316661194,
-    "pe_ttm": 45.11526870919136,
+    "ncav_margin_pct": -102.39552171404785,
+    "pb_ratio": 11.915270089528185,
+    "pe_ttm": 45.173782019085884,
     "roe_pct": 28.267353253960003,
     "shareholders_equity": 29164000000,
     "total_assets": 77099000000,
@@ -142,7 +142,7 @@
   "name": "Costco Wholesale Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 898.88
+    "close": 899.41
   },
   "qualitative": null,
   "sector": "Consumer Defensive",
@@ -150,29 +150,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000909832.json",
     "sec_filings": [
       {
+        "filed": "2026-07-08",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000060/cost-20260707.htm"
+      },
+      {
         "filed": "2026-06-03",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000051/cost-20260510.htm"
       },
       {
-        "filed": "2026-03-11",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000029/cost-20260215.htm"
-      },
-      {
-        "filed": "2025-12-17",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000169/cost-20251123.htm"
-      },
-      {
         "filed": "2025-10-08",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm"
-      },
-      {
-        "filed": "2025-06-05",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000033/cost-20250511.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $398.4B",
+          "detail": "Market cap $398.9B",
           "passed": true
         },
         {
@@ -207,12 +197,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 45.1",
+          "detail": "P/E 45.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 536.9",
+          "detail": "P/E x P/B = 538.3",
           "passed": false
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.costco.com"
 }

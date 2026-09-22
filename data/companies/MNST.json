@@ -78,34 +78,35 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 382.04041004819777,
+      "graham_multiple": 375.8261527541197,
       "graham_number": 10.244631485368055,
-      "graham_upside_pct": -77.04273972013756,
-      "ncav_margin_pct": -91.70406799226805,
-      "pb_ratio": 9.329645161310992,
-      "pe_ttm": 40.94908256880735
+      "graham_upside_pct": -76.85874975069336,
+      "ncav_margin_pct": -91.63758060405158,
+      "pb_ratio": 9.253456211926595,
+      "pe_ttm": 40.61467889908258
     }
   },
   "industry": "Beverages - Non-Alcoholic",
-  "last_updated": "2026-09-22T17:50:16Z",
+  "last_updated": "2026-09-22T21:27:25Z",
   "layered_analysis": {
-    "conviction_score": 40.3,
+    "conviction_score": 42.4,
     "conviction_score_breakdown": {
       "base_score": 66.7,
       "components": {
         "graham_pct": 66.7
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Neutral",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 87305805972,
+  "market_cap": 86592838059,
   "metrics": {
     "book_value_per_share": 4.784158371327384,
     "current_ratio": 3.729314920459693,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 23.701720558216607,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 382.04041004819777,
-    "graham_upside_pct": -77.04273972013756,
+    "graham_multiple": 375.8261527541197,
+    "graham_upside_pct": -76.85874975069336,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -91.70406799226805,
-    "pb_ratio": 9.329645161310992,
-    "pe_ttm": 40.94908256880735,
+    "ncav_margin_pct": -91.63758060405158,
+    "pb_ratio": 9.253456211926595,
+    "pe_ttm": 40.61467889908258,
     "roe_pct": 24.964996796316953,
     "shareholders_equity": 8254108000,
     "total_assets": 9988945000,
@@ -142,37 +143,43 @@
   "name": "Monster Beverage Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 44.6248
+    "close": 44.27
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Monster Beverage reported record net sales of $8.29 billion, up 10.7% from 2024, driven primarily by increased worldwide Monster Energy brand sales; gross margin improved to 55.8% aided by pricing actions and supply chain optimization. Operating income rose 25.3% to $2.42 billion and net income increased 26.3% to $1.91 billion. The Monster Energy Drinks segment remained the dominant revenue driver (92.4% of sales), while the Alcohol Brands segment saw a sales decline and continued operating losses along with impairment charges.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists only of XBRL data tags rather than narrative text, so detailed financial results and MD&A commentary are not available in this excerpt. The tags indicate disclosures on stock repurchase programs (including an August 2024 and a May 2026 repurchase plan), a revolving credit facility with JPMorgan Chase Bank, a line of credit with HSBC, segment reporting across Monster Energy Drinks, Strategic Brands, Alcohol Brands and Other segments, and customer/related-party concentration disclosures involving The Coca-Cola Company, Coca-Cola Consolidated and Coca-Cola Europacific Partners.",
+    "filing_summary_8k": "This 8-K, dated September 3, 2026, discloses under Item 5.02 that Monster Beverage's Board of Directors elected Matthew S. Burroughs as Chief Accounting Officer and Deputy Chief Financial Officer. The filing notes Mr. Burroughs, age 57, has been with the Company since October 2006 in various corporate finance roles, and states there is no arrangement regarding his appointment, no related-party transactions, and no family relationship with other directors or officers.",
+    "moat_explanation": "The 10-K describes an extensive, decades-old portfolio of energy drink and beverage brands (Monster Energy, NOS, Burn, Reign, Bang, etc.) sold in ~158 countries, with management citing 'maintenance of our brand image, product quality and corporate reputation' and protection of trademarks/intellectual property as key value drivers and risks. High gross margins (55.8%) achieved via price increases without apparent loss of volume (case sales up 13.3%) suggest brand-driven pricing power rather than cost or network-effect advantages.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Heavy dependence on The Coca-Cola Company (TCCC) for distribution globally and domestically, with TCCC also holding ~20.9% equity ownership and board influence, creating both concentration and governance risk",
+      "Customer concentration: Coca-Cola Europacific Partners (~15%) and Coca-Cola Consolidated (~10%) each account for significant portions of net sales",
+      "Reliance on a shrinking number of third-party bottlers/co-packers due to industry consolidation, with limited alternative capacity",
+      "Alcohol Brands segment posted an operating loss ($127.0 million in 2025) and recorded impairment charges ($53.7 million in 2025, $138.8 million in 2024) related to goodwill, intangibles and property",
+      "Ongoing regulatory and legislative risk targeting energy drink caffeine content, labeling, taxes, and alcohol sales restrictions",
+      "Litigation and negative publicity risk explicitly acknowledged as a potential threat to demand and reputation"
+    ]
+  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000865752.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-04",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/865752/000110465926105498/tm2624805d1_8k.htm"
+      },
       {
         "filed": "2026-08-07",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/865752/000110465926092193/mnst-20260630x10q.htm"
       },
       {
-        "filed": "2026-05-08",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/865752/000110465926057398/mnst-20260331x10q.htm"
-      },
-      {
         "filed": "2026-02-27",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/865752/000110465926020831/mnst-20251231x10k.htm"
-      },
-      {
-        "filed": "2025-11-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/865752/000110465925107944/mnst-20250930x10q.htm"
-      },
-      {
-        "filed": "2025-08-08",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/865752/000141057825001620/mnst-20250630x10q.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $87.3B",
+          "detail": "Market cap $86.6B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 40.9",
+          "detail": "P/E 40.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 382.0",
+          "detail": "P/E x P/B = 375.8",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 4,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.monsterbevcorp.com"
 }

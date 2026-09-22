@@ -78,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 51.76340942646035,
+      "graham_multiple": 51.39314999199934,
       "graham_number": 49.29440636909986,
-      "graham_upside_pct": -38.02867803929671,
-      "ncav_margin_pct": -179.97410490742874,
-      "pb_ratio": 2.90882444071001,
-      "pe_ttm": 17.79530201342282
+      "graham_upside_pct": -37.80670405109783,
+      "ncav_margin_pct": -180.26056274723717,
+      "pb_ratio": 2.898402478731226,
+      "pe_ttm": 17.731543624161077
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-09-22T17:51:39Z",
+  "last_updated": "2026-09-22T21:17:45Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 165919539942,
+  "market_cap": 165334631656,
   "metrics": {
     "book_value_per_share": 32.62757300143609,
     "current_ratio": 0.5338234279008767,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 11.686562818459747,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 51.76340942646035,
-    "graham_upside_pct": -38.02867803929671,
+    "graham_multiple": 51.39314999199934,
+    "graham_upside_pct": -37.80670405109783,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -179.97410490742874,
-    "pb_ratio": 2.90882444071001,
-    "pe_ttm": 17.79530201342282,
+    "ncav_margin_pct": -180.26056274723717,
+    "pb_ratio": 2.898402478731226,
+    "pe_ttm": 17.731543624161077,
     "roe_pct": 16.820342140844815,
     "shareholders_equity": 54608000000,
     "total_assets": 212721000000,
@@ -142,7 +142,7 @@
   "name": "NextEra Energy Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 79.5439
+    "close": 79.26
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -150,29 +150,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000753308.json",
     "sec_filings": [
       {
+        "filed": "2026-09-14",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/753308/000110465926107537/tm2625368d1_8k.htm"
+      },
+      {
         "filed": "2026-07-24",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000060/nee-20260630.htm"
       },
       {
-        "filed": "2026-04-23",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000031/nee-20260331.htm"
-      },
-      {
         "filed": "2026-02-13",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm"
-      },
-      {
-        "filed": "2025-10-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330825000056/nee-20250930.htm"
-      },
-      {
-        "filed": "2025-07-23",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330825000040/nee-20250630.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $165.9B",
+          "detail": "Market cap $165.3B",
           "passed": true
         },
         {
@@ -207,12 +197,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 17.8",
+          "detail": "P/E 17.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 51.8",
+          "detail": "P/E x P/B = 51.4",
           "passed": false
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.nexteraenergy.com"
 }

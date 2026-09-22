@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000016/jnj-20251228.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000153/jnj-20260628.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000167/jnj-20260804.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K excerpts describe Johnson & Johnson as subject to extensive government regulation, significant legal proceedings (including talc-related litigation and government investigations), and patent challenges from generic and biosimilar competitors. The Company notes that new products introduced within the past five years accounted for about 25% of 2025 sales, and that approximately 43% of sales occurred outside the U.S., with specific exposure to highly inflationary economies and geopolitical tensions such as the Russia-Ukraine war and U.S.-China relations. The filing also discusses cybersecurity governance, including board and management oversight roles.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated August 4, 2026, discloses under Item 5.02 that Jennifer Taubert will retire from her position as Executive Vice President, Worldwide Chairman, Innovative Medicine, and member of the Executive Committee, effective September 1, 2026. A related press release is attached as Exhibit 99.1. No financial results or other events are disclosed in this filing.",
+    "moat_explanation": "The excerpts state the Company owns or licenses 'a significant number of patents and other proprietary rights relating to its products and manufacturing processes' that are described as 'essential to the Company's businesses,' and note that new products from the past five years accounted for about 25% of 2025 sales, indicating reliance on patent-protected innovation. However, the same excerpts also describe increasing challenges to these patents from generic and biosimilar competitors, which tempers the durability of this protection.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company is a defendant in numerous lawsuits over talc-containing body powders (primarily Johnson's Baby Powder), which could result in significant settlements or judgments potentially exceeding accruals",
+      "Increasing patent challenges from generic and biosimilar manufacturers that could cause rapid loss of a major portion of revenue for affected products if patents are invalidated or an 'at-risk' launch occurs",
+      "Significant regulatory scrutiny and government investigations, including matters described under 'Government proceedings,' with risk of civil/criminal penalties or debarment from government healthcare programs",
+      "Exposure to highly inflationary economies (Argentina, Turkey, Venezuela, Egypt) that could pressure operating margins",
+      "Geopolitical risks including the Russia-Ukraine war, Middle East conflict, and U.S.-China tensions affecting supply chain, demand, and currency",
+      "Approximately 43% of sales occur outside the U.S., creating exposure to currency fluctuation, illegal drug importation, and varying international regulatory/anti-corruption compliance risk"
+    ]
+  }
+}

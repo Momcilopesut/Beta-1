@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 536.287690971888,
+      "graham_multiple": 528.5986440494137,
       "graham_number": 51.69855269921381,
-      "graham_upside_pct": -70.72562134812355,
-      "ncav_margin_pct": -161.17534381008852,
-      "pb_ratio": 22.117461988870073,
-      "pe_ttm": 24.247252747252745
+      "graham_upside_pct": -70.50011258247429,
+      "ncav_margin_pct": -161.64659467538735,
+      "pb_ratio": 21.958334543108315,
+      "pe_ttm": 24.072802197802194
     }
   },
   "industry": "REIT - Specialty",
-  "last_updated": "2026-09-22T17:52:13Z",
+  "last_updated": "2026-09-22T21:42:01Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 82241940000,
+  "market_cap": 81659490000,
   "metrics": {
     "book_value_per_share": 21.997862972785086,
     "current_ratio": 0.3519981962685305,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 35.54311373307907,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 536.287690971888,
-    "graham_upside_pct": -70.72562134812355,
+    "graham_multiple": 528.5986440494137,
+    "graham_upside_pct": -70.50011258247429,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -161.17534381008852,
-    "pb_ratio": 22.117461988870073,
-    "pe_ttm": 24.247252747252745,
+    "ncav_margin_pct": -161.64659467538735,
+    "pb_ratio": 21.958334543108315,
+    "pe_ttm": 24.072802197802194,
     "roe_pct": 90.23194947053561,
     "shareholders_equity": 3652500000,
     "total_assets": 63190400000,
@@ -142,37 +143,42 @@
   "name": "American Tower Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 176.6
+    "close": 175.25
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "American Tower's FY2025 10-K describes a global REIT operating ~149,686 communications sites plus 30 U.S. data centers, with property operations (towers, DAS, data centers) generating 97% of revenue and services 3%. Total revenue grew 5% year-over-year to $10.6 billion, driven by tenant billings growth, new site additions, and 14% Data Center segment growth, while churn remained around 2%. The filing discusses two ongoing customer disputes (AT&T Mexico arbitration and DISH Wireless SCA default) and notes reliance on a small number of large carrier customers for a substantial share of revenue.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists primarily of structured XBRL tags rather than narrative text, so a detailed factual summary cannot be reliably constructed. The tags indicate the filing covers the quarter ended June 30, 2026, and reference disposals of ATC Philippines and Kirtonkhola Tower Bangladesh Limited assets, as well as an arrangement involving Stonepeak Partners' common and preferred equity interest in the U.S. Data Centers business. No further narrative detail on financial results or operational developments was included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated September 17-18, 2026, discloses two items: the Board's election of Kristen M. Ludgate as a new director and member of the Compensation and Human Capital Committee, effective immediately, along with background on her prior roles at HP Inc. and 3M; and the Board's declaration of a cash distribution of $1.79 per share, payable October 20, 2026 to stockholders of record as of September 30, 2026.",
+    "moat_explanation": "The 10-K explains that tenants (wireless carriers) rarely relocate because suitable alternative sites may not exist, and repositioning equipment is costly and can degrade network quality, resulting in high lease renewal rates and low (~2%) churn despite competitive pressure. This friction, combined with long-term (5-10 year) non-cancellable leases with contractual escalators, supports a switching-cost-based moat rather than network effects or brand-based advantages.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Heavy customer concentration: T-Mobile (18%), AT&T (17%), Verizon (14%) and Telef\u00f3nica (10%) together account for a large share of total revenue, per the company's own disclosure.",
+      "Active arbitration dispute with AT&T Mexico (~$300M of 2025 tenant revenue) over lease calculation and rent abatement, with ~$30M of reserves recorded and further reserves expected until resolved.",
+      "DISH Wireless (a subsidiary of EchoStar) is in default under its Strategic Collocation Agreement and has attempted to be excused from contractual obligations, leading to litigation; EchoStar has also begun decommissioning portions of its network.",
+      "Company acknowledges risk from RAN sharing, spectrum-efficient technologies, and network consolidation among carriers, which could reduce demand for tower space or new equipment additions.",
+      "In data centers, the filing states some competitors have structural advantages (lower costs, better power access, existing relationships), which could pressure rental rates or customer retention in that segment."
+    ]
+  },
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001053507.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-18",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000145/amt-20260917.htm"
+      },
       {
         "filed": "2026-07-28",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000133/amt-20260630.htm"
       },
       {
-        "filed": "2026-04-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000099/amt-20260331.htm"
-      },
-      {
         "filed": "2026-02-24",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/amt-20251231.htm"
-      },
-      {
-        "filed": "2025-10-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350725000149/amt-20250930.htm"
-      },
-      {
-        "filed": "2025-07-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350725000120/amt-20250630.htm"
       }
     ]
   },
@@ -182,7 +188,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $82.2B",
+          "detail": "Market cap $81.7B",
           "passed": true
         },
         {
@@ -207,12 +213,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.2",
+          "detail": "P/E 24.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 536.3",
+          "detail": "P/E x P/B = 528.6",
           "passed": false
         }
       ],
@@ -247,5 +253,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.americantower.com"
 }

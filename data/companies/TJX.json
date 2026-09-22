@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 330.5613778738852,
+      "graham_multiple": 331.65077103483736,
       "graham_number": 32.390249577323246,
-      "graham_upside_pct": -75.20078893092165,
-      "ncav_margin_pct": -107.22153020282525,
-      "pb_ratio": 13.694812224204302,
-      "pe_ttm": 24.137707948243996
+      "graham_upside_pct": -75.23491889492833,
+      "ncav_margin_pct": -107.21159155738975,
+      "pb_ratio": 13.71735987231246,
+      "pe_ttm": 24.177449168207026
     }
   },
   "industry": "Apparel - Retail",
-  "last_updated": "2026-09-22T17:50:13Z",
+  "last_updated": "2026-09-22T21:46:20Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 144257830081,
+  "market_cap": 144495341537,
   "metrics": {
     "book_value_per_share": 9.535362578334825,
     "current_ratio": 1.147380239520958,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 8.144504074736632,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 330.5613778738852,
-    "graham_upside_pct": -75.20078893092165,
+    "graham_multiple": 331.65077103483736,
+    "graham_upside_pct": -75.23491889492833,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -107.22153020282525,
-    "pb_ratio": 13.694812224204302,
-    "pe_ttm": 24.137707948243996,
+    "ncav_margin_pct": -107.21159155738975,
+    "pb_ratio": 13.71735987231246,
+    "pe_ttm": 24.177449168207026,
     "roe_pct": 59.76898258749353,
     "shareholders_equity": 10190000000,
     "total_assets": 35767000000,
@@ -142,37 +143,42 @@
   "name": "TJX Companies Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 130.61
+    "close": 130.79
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2026 (ended January 31, 2026), TJX reported net sales of $60.4 billion, up 7% from $56.4 billion, with consolidated comp sales up 5% and diluted EPS of $4.87 versus $4.26 a year earlier. Pre-tax margin improved to 12.1% from 11.5%, aided partly by a $419 million net gain from a credit card interchange fee litigation settlement recorded in SG&A, offset by related one-time compensation expenses. The filing also discusses ongoing uncertainty around U.S. tariffs, including a Supreme Court ruling invalidating certain IEEPA tariffs followed by a new executive order imposing a global tariff, and notes store count grew about 3% with continued expansion planned across all segments in fiscal 2027.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K discloses that on September 16, 2026, TJX's Board of Directors elected Craig A. Pintoff, an Executive Vice President and Chief Administrative Officer at United Rentals, Inc., as a new independent director and member of the Audit and Finance Committee, effective immediately. The filing describes his compensation under the company's standard non-employee director program and states there are no related-party transactions or arrangements connected to his appointment.",
+    "moat_explanation": "The 10-K describes a low-cost operating structure (lean advertising spend, no-frills store fixtures, cost-effective distribution) combined with an opportunistic buying strategy leveraging roughly 21,000 global vendors and substantial buying power to acquire brand-name merchandise at prices 20%-60% below full-price retailers. This scale-driven, flexible sourcing and inventory model is presented as a structural cost and pricing advantage versus traditional retailers, though the filing also notes larger competitors with greater resources.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Company acknowledges it operates in 'highly competitive markets' against larger, better-resourced competitors and 'may not be able to compete effectively'",
+      "Heavy reliance on merchandise sourced from China, India, and southeastern Asia exposes the company to tariffs, trade restrictions, and supply chain disruption risks explicitly discussed in Risk Factors",
+      "Tariff uncertainty is called out as an ongoing issue, including a Supreme Court ruling invalidating certain IEEPA tariffs followed by a new executive order imposing different tariffs, creating unresolved uncertainty for cost structure",
+      "Fiscal 2026 results benefited from a one-time $419 million net gain from a credit card interchange fee litigation settlement, which inflates period-over-period margin and EPS comparisons and is not a recurring business driver",
+      "General corporate expense increased in fiscal 2026 due to higher administrative costs and settlement-related expenses"
+    ]
+  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000109198.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-17",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/109198/000010919826000051/tjx-20260916.htm"
+      },
       {
         "filed": "2026-08-28",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/109198/000010919826000048/tjx-20260801.htm"
       },
       {
-        "filed": "2026-05-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/109198/000010919826000034/tjx-20260502.htm"
-      },
-      {
         "filed": "2026-03-31",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/109198/000010919826000008/tjx-20260131.htm"
-      },
-      {
-        "filed": "2025-12-02",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/109198/000010919825000061/tjx-20251101.htm"
-      },
-      {
-        "filed": "2025-08-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/109198/000010919825000054/tjx-20250802.htm"
       }
     ]
   },
@@ -182,7 +188,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $144.3B",
+          "detail": "Market cap $144.5B",
           "passed": true
         },
         {
@@ -207,12 +213,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.1",
+          "detail": "P/E 24.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 330.6",
+          "detail": "P/E x P/B = 331.7",
           "passed": false
         }
       ],
@@ -247,5 +253,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.tjx.com"
 }

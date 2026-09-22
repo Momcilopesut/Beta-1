@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 113.5446716534826,
+      "graham_multiple": 111.62647975577293,
       "graham_number": 132.40309530376433,
-      "graham_upside_pct": -56.96167751145354,
-      "ncav_margin_pct": -204.95382343903538,
-      "pb_ratio": 6.085386231038507,
-      "pe_ttm": 18.65858095815646
+      "graham_upside_pct": -56.59910994074661,
+      "ncav_margin_pct": -205.8379855206505,
+      "pb_ratio": 6.03376487747958,
+      "pe_ttm": 18.500303214069135
     }
   },
   "industry": "Financial - Credit Services",
-  "last_updated": "2026-09-22T17:47:47Z",
+  "last_updated": "2026-09-22T21:26:27Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 207779380800,
+  "market_cap": 206016821700,
   "metrics": {
     "book_value_per_share": 50.56047197640118,
     "current_ratio": 1.551305274984809,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 19.888397295685024,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 113.5446716534826,
-    "graham_upside_pct": -56.96167751145354,
+    "graham_multiple": 111.62647975577293,
+    "graham_upside_pct": -56.59910994074661,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -204.95382343903538,
-    "pb_ratio": 6.085386231038507,
-    "pe_ttm": 18.65858095815646,
+    "ncav_margin_pct": -205.8379855206505,
+    "pb_ratio": 6.03376487747958,
+    "pe_ttm": 18.500303214069135,
     "roe_pct": 34.12190868029158,
     "shareholders_equity": 33474000000,
     "total_assets": 300052000000,
@@ -142,37 +143,42 @@
   "name": "American Express Company",
   "price": {
     "as_of": "2026-09-22",
-    "close": 307.64
+    "close": 305.07
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, American Express reported total revenues net of interest expense of $72.2 billion (up 10% year over year) and net income of $10.8 billion, or $15.38 per diluted share, driven by 8% growth in worldwide billed business across its USCS, CS, ICS, and GMNS segments. The filing describes continued investment in the Membership Model, a refreshed U.S. Consumer and Business Platinum card launch, growth in card fees and net interest income, and credit performance described as 'best-in-class' with stable write-off and delinquency rates. The company returned $7.6 billion to shareholders via buybacks and dividends and maintained its CET1 ratio within its 10-11% target range.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists almost entirely of XBRL data tags rather than narrative text, so detailed financial results cannot be summarized from what was given. The identifiable items include a January 2026 transaction involving an acquired interest in Swisscard AECS GmbH within the International Card Services segment, and a reference to property under construction related to the company's headquarters at 200 Greenwich Street as of February 2026. No income statement, balance sheet, or MD&A narrative content was included in the excerpt.",
+    "filing_summary_8k": "This Form 8-K, dated September 15, 2026, furnishes (under Item 7.01, Regulation FD) delinquency and write-off statistics for U.S. Consumer and U.S. Small Business Card balances held for investment for June, July, and August 2026, alongside comparable credit performance data for the American Express Credit Account Master Trust. It notes that in June 2026 the company sold certain previously written-off Card balances to a third party, which reduced the reported net write-off rates for that month by approximately 0.3% (U.S. Consumer) and 0.1% (U.S. Small Business). The filing does not disclose any earnings, transactions, or other corporate events beyond these credit statistics.",
+    "moat_explanation": "The 10-K describes American Express's 'integrated payments platform' spanning card issuing, merchant acquiring, and network operations, which the company says provides differentiated value by connecting Card Members and merchants and gives it access to information at both ends of a transaction that competitors relying on third parties lack. This two-sided structure, plus a premium brand and cobrand partnerships (e.g., Delta) that reinforce Card Member and merchant engagement, supports a network-effects-based moat, though the Risk Factors section also notes Visa and Mastercard have larger scale and merchant acceptance in most countries, which qualifies the strength of this advantage.",
+    "moat_present": true,
+    "moat_type": "network_effects",
+    "red_flags": [
+      "Delta cobrand portfolio alone represents about 13% of worldwide billed business and about 21% of worldwide Card Member loans, indicating meaningful partner concentration",
+      "Company states competitors like Visa and Mastercard are larger in most countries and may have scale, resource, and pricing advantages",
+      "Management cites macroeconomic conditions, inflation, and geopolitical/tariff developments as major drivers of results, with an acknowledged reserve build in 2025 partly due to 'deterioration in the macroeconomic outlook used in our reserve models'",
+      "Filing flags risks from open banking initiatives, alternative payment mechanisms (BNPL, digital wallets, stablecoins), and AI-enabled competitors potentially disintermediating or disadvantaging the business",
+      "Company notes small business and corporate client spending (about 41% of billed business) is sensitive to economic conditions and business investment climate"
+    ]
+  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000004962.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-15",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000353/axp-20260915.htm"
+      },
       {
         "filed": "2026-07-24",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000322/axp-20260630.htm"
       },
       {
-        "filed": "2026-04-23",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000192/axp-20260331.htm"
-      },
-      {
         "filed": "2026-02-06",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000080/axp-20251231.htm"
-      },
-      {
-        "filed": "2025-10-17",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/4962/000000496225000222/axp-20250930.htm"
-      },
-      {
-        "filed": "2025-07-18",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/4962/000000496225000083/axp-20250630.htm"
       }
     ]
   },
@@ -182,7 +188,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $207.8B",
+          "detail": "Market cap $206.0B",
           "passed": true
         },
         {
@@ -207,12 +213,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 18.7",
+          "detail": "P/E 18.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 113.5",
+          "detail": "P/E x P/B = 111.6",
           "passed": false
         }
       ],
@@ -247,5 +253,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.americanexpress.com"
 }

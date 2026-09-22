@@ -78,34 +78,35 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 172.80232456004205,
+      "graham_multiple": 174.73270706897227,
       "graham_number": 97.02658457483096,
-      "graham_upside_pct": -64.4063227224157,
-      "ncav_margin_pct": -128.82266305775084,
-      "pb_ratio": 7.833063706283559,
-      "pe_ttm": 22.06063055780113
+      "graham_upside_pct": -64.64174608256589,
+      "ncav_margin_pct": -128.63202447515613,
+      "pb_ratio": 7.876693948628647,
+      "pe_ttm": 22.183508488278093
     }
   },
   "industry": "Railroads",
-  "last_updated": "2026-09-22T17:49:54Z",
+  "last_updated": "2026-09-22T21:42:32Z",
   "layered_analysis": {
-    "conviction_score": 20.2,
+    "conviction_score": 21.2,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 162117262649,
+  "market_cap": 163020257406,
   "metrics": {
     "book_value_per_share": 34.838220424671384,
     "current_ratio": 0.9859230220955096,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 22.43574051407589,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 172.80232456004205,
-    "graham_upside_pct": -64.4063227224157,
+    "graham_multiple": 174.73270706897227,
+    "graham_upside_pct": -64.64174608256589,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -128.82266305775084,
-    "pb_ratio": 7.833063706283559,
-    "pe_ttm": 22.06063055780113,
+    "ncav_margin_pct": -128.63202447515613,
+    "pb_ratio": 7.876693948628647,
+    "pe_ttm": 22.183508488278093,
     "roe_pct": 38.64912604466004,
     "shareholders_equity": 18467000000,
     "total_assets": 69698000000,
@@ -142,9 +143,25 @@
   "name": "Union Pacific Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 272.595
+    "close": 274.41
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Union Pacific reported freight revenues of $23.2 billion (up 2% from 2024), driven by core pricing gains and 1% volume growth, with operating income of $9.8 billion and an operating ratio of 59.8%. Net income was $7.1 billion ($11.98 diluted EPS, up 8% year-over-year), and the company generated $9.3 billion in operating cash flow and $2.3 billion in free cash flow. The filing notes best-ever safety and service metrics for the year, while flagging 2026 outlook uncertainty including flat industrial production forecasts and lower expected international intermodal volumes.",
+    "filing_summary_10q": "This is Union Pacific's Form 10-Q for the quarterly period ended June 30, 2026, filed as an unaudited condensed consolidated report. The excerpt provided consists mainly of XBRL data tags rather than narrative text, but it references a Norfolk Southern-related matter (including acquisition-related costs, a forecast scenario tied to 2027, and equity-method/TTX Company disclosures), a 2025 accelerated share repurchase program, and revolving credit facility and secured debt balances. Because substantive MD&A narrative was not included in the excerpt, specific quarterly financial results and commentary cannot be summarized from what was provided.",
+    "filing_summary_8k": "This Form 8-K, dated July 23, 2026, discloses under Item 2.02 that Union Pacific Corporation issued a press release announcing its financial results for the quarter ended June 30, 2026. The press release itself is furnished as Exhibit 99.1 but its contents are not included in the excerpt provided.",
+    "moat_explanation": "The 10-K describes a 32,889 route-mile rail network across the western two-thirds of the U.S. that is the only railroad serving all six major Mexico gateways, a scale of fixed infrastructure that would be extremely costly and impractical for a new entrant to replicate. The Risk Factors section reinforces this by noting high barriers to entry among the limited suppliers (only two domestic locomotive makers and a limited number of qualifying steel/rail producers) that serve the capital-intensive rail industry, consistent with a market that structurally supports only a small number of efficient players.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Dependence on a small number of key suppliers (two domestic locomotive makers, limited rail/steel producers) with high barriers to entry, creating cost and availability risk if a supplier exits",
+      "Significant reliance on international trade flows (Mexico, Canada, Southeast Asia) exposes results to tariff changes, trade agreement shifts, and geopolitical disruptions",
+      "Majority of workforce is unionized (13 major rail unions, ~83% of workforce) under RLA agreements, with strikes, work stoppages, or failed negotiations cited as a potential material risk; two subsidiary negotiations were still ongoing",
+      "Company transports hazardous materials (crude oil, chlorine, other TIH materials) under common carrier obligations, with acknowledged risk of costs/claims from an accident exceeding insurance coverage",
+      "Company acknowledges it has experienced and expects to continue experiencing cyber incidents, with no guarantee its defenses will prevent a materially adverse event",
+      "Exposure to severe weather and climate-related events (earthquakes, hurricanes, floods, extreme temperatures) that have previously disrupted network operations and revenues"
+    ]
+  },
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000100885.json",
@@ -155,24 +172,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088526000250/unp-20260630.htm"
       },
       {
-        "filed": "2026-04-23",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088526000155/unp-20260331.htm"
+        "filed": "2026-07-23",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088526000249/unp-20260723.htm"
       },
       {
         "filed": "2026-02-06",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm"
-      },
-      {
-        "filed": "2025-10-23",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088525000321/unp-20250930.htm"
-      },
-      {
-        "filed": "2025-07-24",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088525000253/unp-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $162.1B",
+          "detail": "Market cap $163.0B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 22.1",
+          "detail": "P/E 22.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 172.8",
+          "detail": "P/E x P/B = 174.7",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.up.com"
 }

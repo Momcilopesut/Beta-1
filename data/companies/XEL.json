@@ -78,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 36.749591038551834,
+      "graham_multiple": 36.758772506577536,
       "graham_number": 54.58222128129269,
-      "graham_upside_pct": -24.32085475784118,
-      "ncav_margin_pct": -217.0860560206977,
-      "pb_ratio": 1.8718824042898117,
-      "pe_ttm": 19.632425068119893
+      "graham_upside_pct": -24.25448059770651,
+      "ncav_margin_pct": -217.18874598379108,
+      "pb_ratio": 1.872116223968076,
+      "pe_ttm": 19.634877384196187
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-09-22T17:48:42Z",
+  "last_updated": "2026-09-22T21:29:25Z",
   "layered_analysis": {
     "conviction_score": 13.8,
     "conviction_score_breakdown": {
@@ -117,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 45005504334,
+  "market_cap": 45011126040,
   "metrics": {
     "book_value_per_share": 38.4912,
     "current_ratio": 0.7013376383763837,
@@ -127,14 +127,14 @@
     "fcf_margin_pct": -46.52668893585111,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 36.749591038551834,
-    "graham_upside_pct": -24.32085475784118,
+    "graham_multiple": 36.758772506577536,
+    "graham_upside_pct": -24.25448059770651,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -217.0860560206977,
-    "pb_ratio": 1.8718824042898117,
-    "pe_ttm": 19.632425068119893,
+    "ncav_margin_pct": -217.18874598379108,
+    "pb_ratio": 1.872116223968076,
+    "pe_ttm": 19.634877384196187,
     "roe_pct": 9.640270687403538,
     "shareholders_equity": 23609000000,
     "total_assets": 81371000000,
@@ -143,7 +143,7 @@
   "name": "Xcel Energy Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 72.1232
+    "close": 72.06
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -151,29 +151,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000072903.json",
     "sec_filings": [
       {
+        "filed": "2026-08-20",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000160/xel-20260819.htm"
+      },
+      {
         "filed": "2026-07-30",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000154/xel-20260630.htm"
       },
       {
-        "filed": "2026-04-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000073/xel-20260331.htm"
-      },
-      {
         "filed": "2026-02-25",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000009/xel-20251231.htm"
-      },
-      {
-        "filed": "2025-10-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000257/xel-20250930.htm"
-      },
-      {
-        "filed": "2025-07-31",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000225/xel-20250630.htm"
       }
     ]
   },
@@ -213,7 +203,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 36.7",
+          "detail": "P/E x P/B = 36.8",
           "passed": false
         }
       ],
@@ -248,5 +238,6 @@
       "passed": 1,
       "total": 4
     }
-  }
+  },
+  "website": "https://my.xcelenergy.com/s"
 }

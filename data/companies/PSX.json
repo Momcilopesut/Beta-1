@@ -78,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 50.25694504023993,
+      "graham_multiple": 47.59609892680967,
       "graham_number": 141.04328749239437,
-      "graham_upside_pct": -46.538060991435685,
-      "ncav_margin_pct": -124.85805553019055,
-      "pb_ratio": 3.3579547527455085,
-      "pe_ttm": 14.966534316505957
+      "graham_upside_pct": -45.072323587353225,
+      "ncav_margin_pct": -125.53957555095757,
+      "pb_ratio": 3.267852730273598,
+      "pe_ttm": 14.564946114577424
     }
   },
   "industry": "Oil & Gas Refining & Marketing",
-  "last_updated": "2026-09-22T17:49:15Z",
+  "last_updated": "2026-09-22T21:47:43Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 105766658276,
+  "market_cap": 102952094436,
   "metrics": {
     "book_value_per_share": 81.56297231103818,
     "current_ratio": 1.3196578402528059,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 2.0644682991776926,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 50.25694504023993,
-    "graham_upside_pct": -46.538060991435685,
+    "graham_multiple": 47.59609892680967,
+    "graham_upside_pct": -45.072323587353225,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -124.85805553019055,
-    "pb_ratio": 3.3579547527455085,
-    "pe_ttm": 14.966534316505957,
+    "ncav_margin_pct": -125.53957555095757,
+    "pb_ratio": 3.267852730273598,
+    "pe_ttm": 14.564946114577424,
     "roe_pct": 24.44934679948985,
     "shareholders_equity": 29093000000,
     "total_assets": 73680000000,
@@ -142,7 +142,7 @@
   "name": "Phillips 66",
   "price": {
     "as_of": "2026-09-22",
-    "close": 263.82
+    "close": 256.78
   },
   "qualitative": null,
   "sector": "Energy",
@@ -150,29 +150,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001534701.json",
     "sec_filings": [
       {
+        "filed": "2026-08-21",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1534701/000119312526361266/d131307d8k.htm"
+      },
+      {
         "filed": "2026-08-05",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1534701/000153470126000032/psx-20260630.htm"
       },
       {
-        "filed": "2026-04-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1534701/000153470126000022/psx-20260331.htm"
-      },
-      {
         "filed": "2026-02-20",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1534701/000153470126000006/psx-20251231.htm"
-      },
-      {
-        "filed": "2025-10-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1534701/000153470125000155/psx-20250930.htm"
-      },
-      {
-        "filed": "2025-07-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1534701/000153470125000137/psx-20250630.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $105.8B",
+          "detail": "Market cap $103.0B",
           "passed": true
         },
         {
@@ -207,12 +197,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 15.0",
+          "detail": "P/E 14.6",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 50.3",
+          "detail": "P/E x P/B = 47.6",
           "passed": false
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.phillips66.com"
 }

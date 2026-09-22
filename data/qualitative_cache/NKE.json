@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000037/nke-20260228.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000170/nke-20260915.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "NIKE's fiscal 2026 10-K reports total revenues of $46.4 billion, roughly flat versus fiscal 2025, with gross margin up 20 basis points to 42.9% but net income down 3% to $3.1 billion. Wholesale revenue grew while NIKE Direct (stores and digital) revenue declined on lower traffic; Greater China and Converse revenues fell notably amid ongoing brand and marketplace repositioning efforts the company expects to substantially complete by December 2026. The filing also discusses $385 million in severance charges and a $986 million benefit recognized from anticipated recovery of previously paid IEEPA tariffs following a Supreme Court ruling.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (for the quarter ended February 28, 2026, fiscal 2026 Q3) consists only of XBRL data tags and cover-page identifiers rather than narrative financial disclosure, so specific reported figures or discussion of the quarter's results cannot be summarized from what was given.",
+    "filing_summary_8k": "This 8-K, dated September 15-16, 2026, discloses that NIKE's Board of Directors expanded to twelve members and appointed Alexandre Arnault, Deputy CEO of Mo\u00ebt Hennessy (LVMH), as a new director effective immediately, with a term through the 2027 annual meeting; he received a $200,000 sign-on restricted stock grant under the standard director compensation program. The filing also notes a press release announcing the appointment was furnished under Item 7.01 (Regulation FD Disclosure).",
+    "moat_explanation": "The 10-K describes NIKE as 'the largest seller of athletic footwear and apparel in the world' and details substantial ongoing investment in demand creation (brand marketing and sports marketing expense of ~$4.75 billion in fiscal 2026) as well as a portfolio of owned brands (NIKE, Jordan, Converse) and licensing revenue, consistent with a brand-based intangible asset moat rather than a cost, network, or switching-cost advantage described in the excerpts.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Greater China revenues declined 11% (13% currency-neutral) amid 'declining store traffic, elevated promotional activity and higher levels of inventory across the marketplace,' with negative impacts expected to continue through fiscal 2027",
+      "Converse revenues fell 31% and EBIT fell 93% as the brand undergoes a 'strategic reset'",
+      "NIKE Direct digital sales declined 12% (currency-neutral), attributed to reduced traffic, and overall NIKE Direct revenue fell 6%",
+      "Company recognized $385 million in employee severance charges in fiscal 2026 and states it 'may take additional actions which could lead to additional charges in future quarters'",
+      "Effective tax rate rose from 17.1% to 20.3%, partly due to non-recurrence of a prior-year one-time tax benefit",
+      "Exposure to tariff policy volatility, illustrated by a $986 million IEEPA tariff benefit recognized in fiscal 2026 tied to a Supreme Court ruling, with continued monitoring of tariff/litigation developments"
+    ]
+  }
+}

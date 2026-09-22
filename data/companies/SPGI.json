@@ -78,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 92.35375191883399,
+      "graham_multiple": 92.10183548719755,
       "graham_number": 202.33862899944677,
-      "graham_upside_pct": -49.85287640351761,
-      "ncav_margin_pct": -115.70084793956514,
-      "pb_ratio": 3.765284855769231,
-      "pe_ttm": 24.527693244065734
+      "graham_upside_pct": -49.72203831640822,
+      "ncav_margin_pct": -115.74181277988056,
+      "pb_ratio": 3.7601460020242916,
+      "pe_ttm": 24.494217894096163
     }
   },
   "industry": "Financial - Data & Stock Exchanges",
-  "last_updated": "2026-09-22T17:51:04Z",
+  "last_updated": "2026-09-22T21:46:40Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 118819140000,
+  "market_cap": 118639312000,
   "metrics": {
     "book_value_per_share": 124.03520649966147,
     "current_ratio": 0.9544109589041095,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 35.57642149191445,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 92.35375191883399,
-    "graham_upside_pct": -49.85287640351761,
+    "graham_multiple": 92.10183548719755,
+    "graham_upside_pct": -49.72203831640822,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -115.70084793956514,
-    "pb_ratio": 3.765284855769231,
-    "pe_ttm": 24.527693244065734,
+    "ncav_margin_pct": -115.74181277988056,
+    "pb_ratio": 3.7601460020242916,
+    "pe_ttm": 24.494217894096163,
     "roe_pct": 15.470446794801276,
     "shareholders_equity": 31235000000,
     "total_assets": 61200000000,
@@ -142,7 +142,7 @@
   "name": "S&P Global Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 403.49
+    "close": 402.44
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -155,24 +155,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm"
       },
       {
-        "filed": "2026-04-28",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000024/spgi-20260331.htm"
+        "filed": "2026-07-28",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000040/spgi-20260728.htm"
       },
       {
         "filed": "2026-02-11",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm"
-      },
-      {
-        "filed": "2025-10-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404025000167/spgi-20250930.htm"
-      },
-      {
-        "filed": "2025-08-01",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404025000147/spgi-20250630.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $118.8B",
+          "detail": "Market cap $118.6B",
           "passed": true
         },
         {
@@ -212,7 +202,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 92.4",
+          "detail": "P/E x P/B = 92.1",
           "passed": false
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 4,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.spglobal.com"
 }

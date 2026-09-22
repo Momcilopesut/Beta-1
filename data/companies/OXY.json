@@ -78,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 11.710410306947932,
+      "graham_multiple": 11.386621772469974,
       "graham_number": 40.2022956592181,
-      "graham_upside_pct": -29.587011718682714,
-      "ncav_margin_pct": -172.4634434726741,
-      "pb_ratio": 1.3639485339912805,
-      "pe_ttm": 8.585668751503489
+      "graham_upside_pct": -28.605406394569172,
+      "ncav_margin_pct": -173.47363354772384,
+      "pb_ratio": 1.3449600201216885,
+      "pe_ttm": 8.466141448159732
     }
   },
   "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-09-22T17:49:06Z",
+  "last_updated": "2026-09-22T21:35:09Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 56798614601,
+  "market_cap": 56007880013,
   "metrics": {
     "book_value_per_share": 42.504262360846454,
     "current_ratio": 1.410542321338064,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 19.01079053396934,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 11.710410306947932,
-    "graham_upside_pct": -29.587011718682714,
+    "graham_multiple": 11.386621772469974,
+    "graham_upside_pct": -28.605406394569172,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -172.4634434726741,
-    "pb_ratio": 1.3639485339912805,
-    "pe_ttm": 8.585668751503489,
+    "ncav_margin_pct": -173.47363354772384,
+    "pb_ratio": 1.3449600201216885,
+    "pe_ttm": 8.466141448159732,
     "roe_pct": 18.96805318585633,
     "shareholders_equity": 36034000000,
     "total_assets": 86783000000,
@@ -142,7 +142,7 @@
   "name": "Occidental Petroleum Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 57.095
+    "close": 56.31
   },
   "qualitative": null,
   "sector": "Energy",
@@ -155,24 +155,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/797468/000162828026053388/oxy-20260630.htm"
       },
       {
-        "filed": "2026-05-05",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/797468/000162828026030584/oxy-20260331.htm"
+        "filed": "2026-08-05",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/797468/000162828026053377/oxy-20260805.htm"
       },
       {
         "filed": "2026-02-18",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/797468/000162828026009059/oxy-20251231.htm"
-      },
-      {
-        "filed": "2025-11-10",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/797468/000162828025051071/oxy-20250930.htm"
-      },
-      {
-        "filed": "2025-08-06",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/797468/000079746825000111/oxy-20250630.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $56.8B",
+          "detail": "Market cap $56.0B",
           "passed": true
         },
         {
@@ -207,12 +197,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 8.6",
+          "detail": "P/E 8.5",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 11.7",
+          "detail": "P/E x P/B = 11.4",
           "passed": true
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.oxy.com"
 }

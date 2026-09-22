@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/315189/000110465926102213/de-20260802x10q.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/315189/000110465926098904/de-20260820x8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Deere's 10-K describes a business organized into four segments (Production & Precision Agriculture, Small Agriculture & Turf, Construction & Forestry, and Financial Services), with PPA generating 45% of fiscal 2025 equipment operations net sales, SAT 26%, and CF 29%. The filing discusses the company's 'Smart Industrial Operating Model' and 'Leap Ambitions' strategy centered on production systems, technology stack, and lifecycle solutions. It also discloses that fiscal 2025 saw unfavorable agricultural market conditions leading to lower sales volumes, increased sales incentives, and elevated receivable write-offs, alongside tariff-related cost impacts of approximately $600 million.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists almost entirely of raw XBRL tagging data (e.g., us-gaap and de: taxonomy elements) rather than narrative text, so it does not describe qualitative business developments or discuss financial results in prose. It does indicate the filing covers a quarterly period ending August 2, 2026 (fiscal third quarter 2026), with segment and geographic revenue breakdowns tagged in the data but not presented as readable figures or discussion in this excerpt.",
+    "filing_summary_8k": "This 8-K, dated August 20, 2026, discloses under Item 2.02 that Deere & Company issued a press release announcing its results of operations for the third quarter of fiscal year 2026. Under Item 7.01, the company also made available an investor presentation reviewing the quarter in connection with its earnings call. The press release and presentation are furnished as exhibits, but their content is not included in the provided excerpt.",
+    "moat_explanation": "The 10-K describes an integrated ecosystem \\u2013 the John Deere Operations Center telematics platform, a 'best-in-class dealer channel,' and enterprise-wide 'Lifecycle Solutions' that manage equipment, service, and technology needs across a machine's full life \\u2013 that ties customers into Deere's dealer and data infrastructure once adopted, creating friction to switch brands. The long operating history (since 1837) and portfolio of associated brand names also suggest some intangible-asset strength, but the excerpts emphasize the integrated technology/dealer relationship most explicitly as a competitive advantage.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company states fiscal 2025 unfavorable market conditions caused lower sales volumes, greater reliance on sales incentives, and elevated receivable write-offs, with some conditions expected to persist into fiscal 2026",
+      "Direct tariff impact of approximately $600 million in fiscal 2025, with ongoing uncertainty from pending litigation over IEEPA tariff authority",
+      "Business is explicitly described as highly cyclical and dependent on the agricultural market business cycle and farm income levels, which are outside the company's control",
+      "Manufacturing shift of skid steer/track loader production to Mexico exposed those products to new tariffs, with no guarantee of USMCA exemption qualification",
+      "Manufacturing processes are dependent on water, and the company flags water scarcity/regulatory restriction risk as a potential disruption to operations",
+      "Significant exposure to international/geopolitical risks including trade barriers, sanctions, and political instability in growth markets like Brazil, Argentina, China, and India"
+    ]
+  }
+}

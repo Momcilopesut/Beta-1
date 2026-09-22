@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/wmt-20260731.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000145/wmt-20260820.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Walmart's Form 10-K for fiscal year ended January 31, 2026 reports net sales of $706.4 billion (up 4.7%) and consolidated net income of $22.3 billion, both increases from the prior year. Growth was driven by comparable sales gains in Walmart U.S. (4.3%) and Sam's Club U.S. (2.9%), with continued strength in eCommerce, grocery, and membership income. Operating expenses as a percentage of sales rose due to higher self-insured liability claims and a one-time PhonePe share-based compensation charge, while free cash flow increased to $14.9 billion. The filing also notes enactment of the OBBB Act tax law changes, which were not material to the effective tax rate but affected the timing of cash tax payments.",
+    "filing_summary_10q": "This is the Form 10-Q for the quarterly period ended July 31, 2026 (Q2 fiscal 2027). The excerpt provided consists primarily of XBRL data tags rather than narrative discussion, so detailed financial results and management commentary are not available in this excerpt. The filing's tagged data references ongoing litigation matters including opioid-related class actions in Canada, an Asda equal value claims matter, driver platform matters, and a Mexico antitrust matter, as well as segment-level revenue reporting for Walmart U.S., Walmart International, and Sam's Club U.S.",
+    "filing_summary_8k": "This Form 8-K, dated August 20, 2026, discloses under Item 2.02 that Walmart furnished a press release and financial presentation reporting results of operations and cash flows for the three and six months ended July 31, 2026, and financial condition as of that date. The filing states this information is furnished, not filed, and is not incorporated by reference into other SEC filings. No specific financial figures are included in the 8-K text itself beyond noting the exhibits (press release and financial presentation) that contain the results.",
+    "moat_explanation": "The 10-K describes Walmart's strategy as 'everyday low prices, supported by everyday low costs,' achieved through supplier negotiations, private label focus, disciplined inventory management, scale-driven purchasing power, and securing shipping capacity. Its massive scale (over 10,900 retail units, $706 billion in net sales) and consistent gross margin management aligned to 'competitive historic price gaps' support a structural cost-based competitive position rather than brand, network, or switching-cost dynamics.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Operating expenses as a percentage of net sales increased, driven in part by a ~$0.9 billion rise in self-insured general liability claims expense in the U.S. due to rising costs to resolve claims",
+      "A $0.7 billion charge from modification of share-based compensation arrangements at the PhonePe subsidiary reduced operating income and provided no tax benefit, raising the effective tax rate",
+      "Gross profit gains were partially offset by mix shifts into lower-margin merchandise categories and ongoing channel/format mix shifts in Walmart International",
+      "Company cites ongoing macroeconomic uncertainty including tariffs, trade restrictions, inflation, and currency fluctuations as factors that may impact results",
+      "10-Q filing indexes reference multiple pending litigation matters, including opioid-related class actions, an Asda equal value claims matter, driver platform matters, and a Mexico antitrust matter"
+    ]
+  }
+}

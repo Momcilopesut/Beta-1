@@ -78,34 +78,35 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 75.18908488916638,
+      "graham_multiple": 74.67574178270075,
       "graham_number": 123.29759369172413,
-      "graham_upside_pct": -53.46031265174796,
-      "ncav_margin_pct": -132.25533108519855,
-      "pb_ratio": 2.92663026550333,
-      "pe_ttm": 25.691350826044697
+      "graham_upside_pct": -53.200640062353244,
+      "ncav_margin_pct": -132.43530275716105,
+      "pb_ratio": 2.916622572473965,
+      "pe_ttm": 25.60349854227405
     }
   },
   "industry": "Independent Power Producers",
-  "last_updated": "2026-09-22T17:48:31Z",
+  "last_updated": "2026-09-22T21:49:58Z",
   "layered_analysis": {
-    "conviction_score": 12.1,
+    "conviction_score": 12.7,
     "conviction_score_breakdown": {
       "base_score": 20.0,
       "components": {
         "graham_pct": 20.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 94933646415,
+  "market_cap": 94609018189,
   "metrics": {
     "book_value_per_share": 91.30508474576271,
     "current_ratio": 1.4552639656230817,
@@ -125,14 +126,14 @@
     "fcf_margin_pct": 5.044452277444876,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 1,
-    "graham_multiple": 75.18908488916638,
-    "graham_upside_pct": -53.46031265174796,
+    "graham_multiple": 74.67574178270075,
+    "graham_upside_pct": -53.200640062353244,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -132.25533108519855,
-    "pb_ratio": 2.92663026550333,
-    "pe_ttm": 25.691350826044697,
+    "ncav_margin_pct": -132.43530275716105,
+    "pb_ratio": 2.916622572473965,
+    "pe_ttm": 25.60349854227405,
     "roe_pct": 14.7486933751736,
     "shareholders_equity": 14517000000,
     "total_assets": 57249000000,
@@ -141,9 +142,25 @@
   "name": "Constellation Energy Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 264.93
+    "close": 263.46
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K excerpts describe Constellation's 2025 results by region (Mid-Atlantic, Midwest, New York, ERCOT, and Other), noting revenue increases driven by higher energy/capacity prices, contracted load growth, and realized hedging gains, partially offset by a large decline in nuclear PTC revenue. It details debt issuances/redemptions, a $9.5 billion credit facility capacity, and the January 2026 acquisition of Calpine, which included roughly $4.5 billion cash consideration and assumption of about $12.6 billion in debt. The filing also discusses NRC decommissioning funding requirements, planned capital expenditures of $5.7 billion (2026) and $4.7 billion (2027), and credit rating and collateral risk disclosures.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists primarily of XBRL taxonomy tags and cover-page data for the quarter ended June 30, 2026, rather than narrative text, so it does not describe specific financial results or business developments in prose. It does reference the Calpine acquisition (closed January 2026) and related LS Power transactions involving natural gas, geothermal, battery storage, and solar assets, as well as PJM and ERCOT market data tags, but no discussion of revenue, income, or operational results is included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated August 6, 2026, discloses that Constellation Energy Corporation announced its second-quarter 2026 results via press release, with the release and an earnings call presentation furnished as exhibits under Items 2.02 and 7.01. The filing states the information is furnished, not filed, and includes standard forward-looking-statement cautionary language referencing risks discussed in the 2025 10-K and the concurrently filed Q2 2026 10-Q. No specific financial figures are included in the excerpt itself.",
+    "moat_explanation": "The excerpts describe a large fleet of NRC-licensed nuclear generating facilities, which are subject to extensive federal licensing, decommissioning funding, and minimum funding requirements that new entrants cannot easily replicate. The company also benefits from state-sponsored programs (ZECs, CMCs) and a federal nuclear production tax credit tied specifically to its existing licensed nuclear units, reinforcing the regulatory-license nature of its competitive position.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Nuclear PTC revenue fell sharply (from $2,080 to $320) year over year, showing earnings sensitivity to this government program and its phase-out thresholds",
+      "Company disclosed that a three-notch credit rating downgrade would require providing an estimated $2.7 billion in incremental collateral, indicating meaningful liquidity risk tied to credit ratings",
+      "Assumed approximately $12.6 billion of Calpine debt in the January 2026 acquisition, materially increasing leverage and requiring exchange offers on assumed notes",
+      "Retirement of Mystic Units 8 and 9 reduced generation volumes and contributed to higher purchased power costs in Other Power Regions",
+      "Capital expenditures include costs tied to potential Russia/Ukraine conflict impacts on long-term nuclear fuel supply, an acknowledged supply-chain risk",
+      "State-sponsored nuclear compensation programs (ZECs, CMCs) contain refund/pass-through provisions tied to the nuclear PTC, creating revenue variability and complexity"
+    ]
+  },
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001868275.json",
@@ -154,24 +171,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000104/ceg-20260630.htm"
       },
       {
-        "filed": "2026-05-11",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000067/ceg-20260331.htm"
+        "filed": "2026-08-06",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000097/ceg-20260806.htm"
       },
       {
         "filed": "2026-02-24",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000032/ceg-20251231.htm"
-      },
-      {
-        "filed": "2025-11-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827525000092/ceg-20250930.htm"
-      },
-      {
-        "filed": "2025-08-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827525000073/ceg-20250630.htm"
       }
     ]
   },
@@ -181,7 +188,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $94.9B",
+          "detail": "Market cap $94.6B",
           "passed": true
         },
         {
@@ -206,12 +213,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 25.7",
+          "detail": "P/E 25.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 75.2",
+          "detail": "P/E x P/B = 74.7",
           "passed": false
         }
       ],
@@ -246,5 +253,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://constellationenergy.com"
 }

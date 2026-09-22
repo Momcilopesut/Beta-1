@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 376.21382467810935,
+      "graham_multiple": 380.89934274295564,
       "graham_number": 111.05057545497145,
-      "graham_upside_pct": -74.71353338001879,
-      "ncav_margin_pct": -105.5266456547433,
-      "pb_ratio": 8.43521082255357,
-      "pe_ttm": 44.60040567951319
+      "graham_upside_pct": -74.90325759791827,
+      "ncav_margin_pct": -105.48517926324577,
+      "pb_ratio": 8.487576034363583,
+      "pe_ttm": 44.87728194726167
     }
   },
   "industry": "Electrical Equipment & Parts",
-  "last_updated": "2026-09-22T17:49:47Z",
+  "last_updated": "2026-09-22T21:34:08Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "4 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 170758808000,
+  "market_cap": 171818867000,
   "metrics": {
     "book_value_per_share": 52.24967824967825,
     "current_ratio": 1.2404064153161474,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 12.944476828912855,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 376.21382467810935,
-    "graham_upside_pct": -74.71353338001879,
+    "graham_multiple": 380.89934274295564,
+    "graham_upside_pct": -74.90325759791827,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -105.5266456547433,
-    "pb_ratio": 8.43521082255357,
-    "pe_ttm": 44.60040567951319,
+    "ncav_margin_pct": -105.48517926324577,
+    "pb_ratio": 8.487576034363583,
+    "pe_ttm": 44.87728194726167,
     "roe_pct": 19.55852876967662,
     "shareholders_equity": 19425000000,
     "total_assets": 41251000000,
@@ -142,9 +143,23 @@
   "name": "Eaton Corporation plc",
   "price": {
     "as_of": "2026-09-22",
-    "close": 439.17
+    "close": 442.49
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Eaton describes itself as an intelligent power management company serving data center, utility, industrial, aerospace, and other markets, with $27.4 billion in 2025 revenue across 180 countries. The filing discloses 2025-2026 acquisitions (Fibrebond, Resilient Power Systems, Ultra PCS) and a pending Boyd Thermal acquisition aimed at expanding data center and aerospace offerings, plus a January 2026 announcement to pursue a spin-off of the Mobility business (Vehicle and eMobility segments). It also notes segment-level customer concentration figures and describes the company's approximately 97,000 employees and its intellectual property and raw materials as generally not subject to material single-point risks.",
+    "filing_summary_10q": "The Q2 2026 (period ended June 30, 2026) filing's XBRL data references several 2025-2026 acquisitions (Fibrebond, Resilient Power Systems, Ultra PCS, and a pending Boyd Thermal deal), each with associated intangible assets and integration costs recorded in cost of revenue and SG&A. It also reflects new debt activity, including U.S. and Euro-denominated senior notes issued in March 2026 (maturities ranging from 2028 to 2056) and a delayed draw term loan, along with continued share repurchases under 2022 and 2025 programs and disclosure of the planned Mobility business divestiture. The excerpt consists primarily of XBRL tagging data rather than narrative text, limiting further detail.",
+    "filing_summary_8k": "This 8-K, dated July 31, 2026, discloses under Item 2.02 that Eaton issued a press release announcing its financial results for the quarter ended June 30, 2026, furnished as Exhibit 99.1. The filing excerpt does not include the press release's actual financial figures or commentary.",
+    "moat_explanation": "The 10-K repeatedly states Eaton has a 'strong competitive position' and is 'considered among the market leaders' across its Electrical, Aerospace, and Vehicle segments, and describes its patent, trademark, and trade secret portfolio as being of 'significant value' to the business. These claims of brand/IP-driven leadership across multiple product lines are the strongest moat signal in the excerpts, though the filing does not quantify pricing power or provide detail on how durable this leadership is against competitors.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Customer concentration: 22% of Electrical segment sales made to six large customers, 20% of Aerospace sales to three OEMs, 37% of Vehicle sales to four OEMs, and 18% of eMobility sales to a single OEM customer",
+      "Announced intention (Jan 2026) to spin off the Mobility business (Vehicle and eMobility segments) into an independent public company, creating structural/business uncertainty",
+      "Ongoing environmental contingencies and liabilities tied to emissions and regulated substance use/disposal, per the filing's own disclosure",
+      "Recent re-segmentation of reportable segments (Q1 2026) means comparable financial detail for the new Mobility segment is not yet available in the 10-K"
+    ]
+  },
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001551182.json",
@@ -155,24 +170,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000030/etn-20260630.htm"
       },
       {
-        "filed": "2026-05-05",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000013/etn-20260331.htm"
+        "filed": "2026-07-31",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000027/etn-20260731.htm"
       },
       {
         "filed": "2026-02-26",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm"
-      },
-      {
-        "filed": "2025-11-04",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000036/etn-20250930.htm"
-      },
-      {
-        "filed": "2025-08-05",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000028/etn-20250630.htm"
       }
     ]
   },
@@ -182,7 +187,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $170.8B",
+          "detail": "Market cap $171.8B",
           "passed": true
         },
         {
@@ -207,12 +212,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 44.6",
+          "detail": "P/E 44.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 376.2",
+          "detail": "P/E x P/B = 380.9",
           "passed": false
         }
       ],
@@ -247,5 +252,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.eaton.com"
 }

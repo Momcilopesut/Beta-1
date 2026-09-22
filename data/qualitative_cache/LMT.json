@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/936468/000162828026049411/lmt-20260628.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/936468/000119312526371750/d177255d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Lockheed Martin reported total sales of $75.0 billion, up from $71.0 billion in 2024, with net earnings of $5.0 billion versus $5.3 billion in 2024. Growth was driven by higher product sales in Missiles and Fire Control, Aeronautics, and Space, partially offset by reach-forward losses on certain contracts and higher non-service pension expense including a $479 million pension settlement charge. The filing also discusses the $360 million acquisition of Amentum's Rapid Solutions business, a $193.6 billion year-end backlog, and ongoing effects of tariffs, supply chain constraints, and the U.S. Government budget environment on operations.",
+    "filing_summary_10q": "The excerpt provided consists only of XBRL tagging metadata and context references for the quarter and six months ended June 28, 2026, without narrative financial or business text. As a result, the provided excerpt does not describe specific financial results, segment performance, or business developments for this quarter.",
+    "filing_summary_8k": "This 8-K, dated August 24, 2026, discloses that Lockheed Martin entered into a new $2.25 billion 364-Day Revolving Credit Agreement, replacing a prior facility from December 2025, with no borrowings made at closing. It also discloses an Extension Agreement extending the company's existing $3.0 billion five-year revolving credit facility's expiration date by one year, to August 24, 2031. The filing describes standard terms of these credit facilities, including interest rate mechanics, covenants, and events of default, with the agreements filed as exhibits.",
+    "moat_explanation": "The excerpts describe long-cycle, highly complex programs (e.g., F-35, Aegis, THAAD) involving decades-long development, production and sustainment contracts, incumbency advantages in recompetes, and deep integration with U.S. Government and allied military infrastructure, all of which imply substantial customer switching costs once a platform is fielded. The government's extensive rights and the regulatory/security clearance requirements (FAR/DFARS, classified work) also point to intangible regulatory barriers, but the incumbency/sustainment dynamic described is the most directly supported theme.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "72% of 2025 sales derived from the U.S. Government (63% from the Department of War), creating heavy customer concentration risk explicitly acknowledged by the company.",
+      "F-35 program alone represents 27% of total consolidated sales, so funding cuts, delays, or performance/cost issues on this single program could materially affect results, as stated in the risk factors.",
+      "The company discloses recognizing reach-forward losses on multiple contracts in 2025 (a classified Aeronautics contract, TUHP and CMHP at RMS), indicating cost overruns on fixed-price or complex programs.",
+      "Supply chain challenges, including rare earth mineral sourcing and supplier shortages, have adversely affected program performance and operating results, per the company's own disclosure.",
+      "Tariffs had an approximate $485 million cash flow impact in 2025, with the company acknowledging uncertainty about full recoverability and potential future impact.",
+      "The company notes increasing competition from new entrants, startups, and non-traditional defense contractors, as well as risk from U.S. Government use of multi-award/IDIQ contracts that could increase pricing pressure."
+    ]
+  }
+}

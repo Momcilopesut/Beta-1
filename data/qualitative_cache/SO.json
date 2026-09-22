@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000006/so-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000054/so-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000063/so-20260803.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes Southern Company as a holding company for vertically integrated electric utilities in Alabama, Georgia, and Mississippi, a wholesale generator (Southern Power), and a natural gas distribution business (Southern Company Gas) serving Illinois, Georgia, Virginia, and Tennessee. It discusses rate plans (e.g., Alabama Power rates stable through 2027, Georgia Power's ARP extended through 2028), rising capital expenditures tied to projected data-center and large-load demand growth, and various regulatory, environmental, and tax-legislation matters (including the OBBB's effect on renewable tax incentives) affecting future costs and recovery.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists only of XBRL taxonomy tags and entity/date identifiers (covering the quarter and six months ended June 30, 2026, for Southern Company and its subsidiaries Alabama Power, Georgia Power, Mississippi Power, Southern Power, and Southern Company Gas) rather than narrative text. No descriptive discussion of results, financial condition, or business developments was included in the excerpt, so a substantive summary of the quarter's results cannot be provided from this material.",
+    "filing_summary_8k": "This 8-K discloses that on August 6, 2026, Southern Company issued $833.75 million of Series 2026A 2.125% Convertible Senior Notes due 2027 and $1,897.5 million of Series 2026B 3.50% Convertible Senior Notes due 2029, sold to initial purchasers under Rule 144A/Section 4(a)(2) exemptions. The filing outlines conversion terms, conversion rates and prices, redemption/repurchase provisions upon a fundamental change, and states the shares issuable upon conversion have not been registered under the Securities Act.",
+    "moat_explanation": "The excerpts describe Southern Company's core businesses as vertically integrated, state-regulated electric utilities (Alabama Power, Georgia Power, Mississippi Power) and regulated natural gas distribution utilities serving defined territories under state PSC and FERC oversight, which is the classic structure of a regulated monopoly where only one provider efficiently serves a given service area. This reflects an efficient-scale dynamic (regulated franchise territories limiting competition) rather than brand, network effects, or switching costs, though the filing does not claim any patent or brand-based advantage.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Company acknowledges a period of rising costs and increased capital expenditures that could increase resistance from regulators to authorizing full cost recovery",
+      "Disclosed disallowances at Nicor Gas noted in rate proceedings",
+      "Significant and potentially material environmental compliance costs (CCR ARO updates, GHG rules) with no assurance of full rate recovery",
+      "Company states it is 'extremely challenging' to meet its 2030 GHG emissions reduction goal due to projected load growth",
+      "Heavy reliance on projected large-load/data-center demand growth (~9 GW of new contracts) to justify major capital investment, with revenue adequacy dependent on contract terms being honored",
+      "Ongoing regulatory/legal uncertainty around the SEEM market platform and pending FERC compliance filings/appeals, and unresolved impact of the OBBB on renewable tax credits"
+    ]
+  }
+}

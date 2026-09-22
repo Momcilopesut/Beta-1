@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Alphabet's FY2025 10-K reports consolidated revenue of $402.8 billion (up 15% year over year), driven by growth in Google Services (+12%) and Google Cloud (+36%), and net income of $132.2 billion. Operating expenses rose 22%, partly due to a $3.5 billion EC fine and a $1.4 billion legal accrual. The company invested $91.4 billion in capital expenditures, issued $37.3 billion in senior notes, and disclosed pending acquisitions of Wiz ($32.0 billion) and Intersect ($4.8 billion). Other Bets (including Waymo) posted a wider operating loss of $7.5 billion, and the company had 190,820 employees as of year-end.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated August 10, 2026, discloses that Alphabet closed an underwritten public offering of $25 billion aggregate principal amount of U.S. dollar-denominated senior notes across ten tranches with maturities ranging from 2028 to 2066, issued under a 2016 indenture with The Bank of New York Mellon Trust Company as trustee. The filing lists the specific note series and principal amounts and includes related legal opinions and exhibits. No other business or financial events are described in this filing.",
+    "moat_explanation": "The 10-K describes several two-sided/network-driven properties (Google Search with trillions of annual searches, 15 products with over half a billion users each, YouTube's creator ecosystem, and Android/Google Play) where user scale and data improve relevance for advertisers and content partners, reinforcing use by both sides. The filing also cites a widely recognized brand and heavy R&D investment (>$200B over five years) as supporting factors, but the excerpts most strongly emphasize the scale of interconnected user/advertiser/developer ecosystems rather than patents or switching frictions specifically.",
+    "moat_present": true,
+    "moat_type": "network_effects",
+    "red_flags": [
+      "More than 70% of 2025 revenue came from online advertising, and the company states many advertisers, publishers, and distribution partners can terminate agreements at any time.",
+      "Rising regulatory and legal exposure, including a $3.5 billion EC fine accrued in Q3 2025 and a $1.4 billion legal accrual in Q2 2025, contributing to a 22% increase in operating expenses.",
+      "Rapidly escalating capital expenditures ($91.4 billion in 2025, expected to increase significantly in 2026) tied to long-duration leasing and commercial infrastructure agreements that could create excess capacity or liability if counterparties or Alphabet underperform.",
+      "The company explicitly warns of possible downward pressure on operating margin from a growing mix of lower-margin businesses (Cloud, devices, subscriptions) and increasing competition.",
+      "Other Bets segment operating loss widened to $7.5 billion in 2025, including a $2.1 billion Waymo-related compensation charge, reflecting continued unprofitability in newer ventures.",
+      "The filing acknowledges intense, broadening competition across search, advertising, cloud, AI models, and devices from well-resourced incumbents and emerging entrants."
+    ]
+  }
+}

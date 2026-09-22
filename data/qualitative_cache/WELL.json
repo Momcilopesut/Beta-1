@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/well-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/766704/000076670426000030/well-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/766704/000162828026050186/well-20260728.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Welltower is a REIT focused on senior housing, wellness housing, and post-acute care real estate in the U.S., U.K., and Canada, operating through three segments: Seniors Housing Operating (78% of 2025 revenue), Triple-net (11%), and Outpatient Medical (7%). The filing describes a portfolio of 2,500+ communities, partnerships with 62 operating partners for its Seniors Housing Operating segment, use of RIDEA structures, triple-net master leases with bundling features, and various investment types including loans, construction funding, and unconsolidated joint ventures. Risk factors emphasize operator/tenant dependence, reimbursement program exposure (Medicare/Medicaid), labor cost pressures, competition for acquisitions, and REIT-specific tax and capital structure risks.",
+    "filing_summary_10q": "This 10-Q excerpt consists almost entirely of XBRL taxonomy tags for the quarter ended June 30, 2026 (fiscal Q2 2026), rather than narrative text, so a detailed summary of results is not possible from what was provided. The tagged data references corporate activity during the period and shortly after, including an Amica Senior Lifestyles acquisition (April 2026), prior Barchester Healthcare and HC One Group acquisitions (October 2025), property dispositions (including a completed outpatient medical portfolio sale), several debt transactions (including a 4.25% senior unsecured notes issuance in April 2026 and subsequent notes issued in July 2026), and segment-level data for Seniors Housing Operating, Triple-net, and Outpatient Medical.",
+    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses that Welltower entered into a new Equity Distribution Agreement (at-the-market equity program) with multiple sales agents and forward purchasers permitting the offer and sale of up to $7.5 billion in common stock, replacing a prior ATM agreement from October 2025. It also discloses a prospectus supplement filed the same day to register the resale of 261,753 shares issued as consideration for a recent lease amendment, along with related legal and tax opinions from the company's outside counsel filed as exhibits.",
+    "moat_explanation": "The excerpts describe Welltower as a diversified healthcare/senior-housing REIT with a large portfolio (2,500+ communities), a proprietary 'Data Science platform' and 'Welltower Business System,' and master-lease bundling that protects the landlord in tenant bankruptcy scenarios, but none of these are described with concrete evidence of durable, hard-to-replicate advantages over other capital-rich REITs. The Risk Factors section explicitly notes competition for acquisitions can drive up prices, oversupply risk affects operators, and Welltower has limited control over day-to-day operations since it relies on third-party operators/tenants, undermining a clear moat claim.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Revenue concentration in Seniors Housing Operating segment (78% of 2025 revenue) with reliance on a small number of operating partners (Care UK 14%, Cogir 12%, Sunrise 10% of that segment's revenue)",
+      "Triple-net segment revenue concentrated with Integra Healthcare Properties at ~16% of segment revenue",
+      "Company explicitly acknowledges it has 'very limited control' over operators'/tenants' businesses and relies on their financial health to receive payments",
+      "Disclosed exposure to Medicaid reimbursement cuts under OBBBA starting 2028 and ongoing labor cost/staffing shortage pressures for operators and tenants",
+      "Very large stock-based compensation expense recognized in 2025 ($1,556,732,000, most tied to Executive & Key Employee LTIP awards)",
+      "Risk factors note competition for acquisitions may increase prices and oversupply may affect operators' ability to maintain occupancy/pricing"
+    ]
+  }
+}

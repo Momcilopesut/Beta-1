@@ -78,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 55.10311399702154,
+      "graham_multiple": 54.98632890657075,
       "graham_number": 34.410284360878755,
-      "graham_upside_pct": -39.247379306358134,
-      "ncav_margin_pct": -158.18456831554158,
-      "pb_ratio": 1.3340036433277875,
-      "pe_ttm": 41.306569343065696
+      "graham_upside_pct": -39.12916263775207,
+      "ncav_margin_pct": -158.29778788947948,
+      "pb_ratio": 1.332589255298106,
+      "pe_ttm": 41.262773722627735
     }
   },
   "industry": "REIT - Retail",
-  "last_updated": "2026-09-22T17:48:59Z",
+  "last_updated": "2026-09-22T21:13:38Z",
   "layered_analysis": {
     "conviction_score": 13.8,
     "conviction_score_breakdown": {
@@ -117,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 52769779012,
+  "market_cap": 52713829290,
   "metrics": {
     "book_value_per_share": 44.978828862166644,
     "current_ratio": 1.655577145164833,
@@ -127,14 +127,14 @@
     "fcf_margin_pct": 69.48123282429471,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 55.10311399702154,
-    "graham_upside_pct": -39.247379306358134,
+    "graham_multiple": 54.98632890657075,
+    "graham_upside_pct": -39.12916263775207,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -158.18456831554158,
-    "pb_ratio": 1.3340036433277875,
-    "pe_ttm": 41.306569343065696,
+    "ncav_margin_pct": -158.29778788947948,
+    "pb_ratio": 1.332589255298106,
+    "pe_ttm": 41.262773722627735,
     "roe_pct": 3.3608596024639144,
     "shareholders_equity": 39438695000,
     "total_assets": 72795612000,
@@ -143,7 +143,7 @@
   "name": "Realty Income Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 56.64
+    "close": 56.53
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -151,29 +151,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000726728.json",
     "sec_filings": [
       {
+        "filed": "2026-08-25",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/726728/000110465926100789/tm2623824d1_8k.htm"
+      },
+      {
         "filed": "2026-08-06",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000048/o-20260630.htm"
       },
       {
-        "filed": "2026-05-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000030/o-20260331.htm"
-      },
-      {
         "filed": "2026-02-25",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000011/o-20251231.htm"
-      },
-      {
-        "filed": "2025-11-04",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672825000148/o-20250930.htm"
-      },
-      {
-        "filed": "2025-08-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672825000131/o-20250630.htm"
       }
     ]
   },
@@ -183,7 +173,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $52.8B",
+          "detail": "Market cap $52.7B",
           "passed": true
         },
         {
@@ -213,7 +203,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 55.1",
+          "detail": "P/E x P/B = 55.0",
           "passed": false
         }
       ],
@@ -248,5 +238,6 @@
       "passed": 1,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.realtyincome.com"
 }

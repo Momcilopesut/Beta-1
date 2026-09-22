@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000010/tmus-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000101/tmus-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1283699/000119312526381901/d155079d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, T-Mobile reported total revenues of $88.3 billion (up 8% year-over-year) but net income declined slightly to $11.0 billion from $11.3 billion, driven by higher operating expenses including UScellular merger-related costs, workforce transformation charges, and a software impairment. The filing describes completion of the UScellular Wireless Business acquisition (August 2025), the Vistar and Blis advertising technology acquisitions, and new Lumos and Metronet fiber joint ventures. It also discusses ongoing network and workforce restructuring initiatives and notes the One Big Beautiful Bill Act's tax provisions did not materially affect 2025 results.",
+    "filing_summary_10q": "This 10-Q covers the quarter and six months ended June 30, 2026. The excerpt (largely XBRL tagging data rather than narrative text) references financial statement line items including receivables, debt fair values, and spectrum license transactions with Comcast and Grain Management, as well as two new joint ventures (with Wren House and Oak Hill) entered into in April 2026 and a subsequent-event spectrum auction license matter disclosed in July 2026. The provided excerpt does not include narrative MD&A discussion of quarterly results.",
+    "filing_summary_8k": "This 8-K, dated September 1, 2026, discloses a Chief Financial Officer transition: Peter Osvaldik will retire as CFO in February 2027, remaining as Strategic Advisor through July 2027, while Jessica Uhl will join as CFO Designate in mid-September 2026 and become CFO after the company files its FY2026 Form 10-K. The filing details the terms of Ms. Uhl's offer letter, including base salary, incentive awards, a sign-on bonus, equity grants, and severance and retirement provisions, and references an associated press release announcing the transition.",
+    "moat_explanation": "The 10-K describes T-Mobile's extensive FCC-licensed spectrum holdings (an average of 394 MHz of low- and mid-band spectrum plus large mmWave holdings), which are scarce, government-allocated assets that new entrants cannot easily replicate, along with ongoing acquisitions (Comcast, Grain, UScellular) to expand this position. However, the Business and Risk Factors sections also emphasize that the wireless industry 'remains competitive' with intensifying pricing pressure from AT&T, Verizon, cable MVNOs and others, so the moat, while present via regulated spectrum access and network scale, is only moderately durable rather than dominant.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Prior cyberattacks (August 2021 and January 2023) led to mass arbitration claims, multiple class action lawsuits, and an FCC investigation, with the company acknowledging ongoing cybersecurity risk from third parties and AI-enabled threats.",
+      "Company explicitly states industry competition is intensifying with pricing/margin pressure as the market reaches saturation.",
+      "Significant integration, restructuring and merger-related costs disclosed for the UScellular Acquisition (up to $2.6 billion to achieve $1.2 billion in run-rate synergies) and a new 2025 Workforce Transformation and Network Restructuring Initiative, indicating execution risk.",
+      "A $278 million impairment expense was recorded in 2025 related to capitalized software development costs for the company's billing system.",
+      "Reliance on numerous third-party providers (cloud, SaaS, retail partners) for critical systems, which the company states it cannot fully control or assess for security effectiveness."
+    ]
+  }
+}

@@ -78,34 +78,35 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 61.75771689202826,
+      "graham_multiple": 61.89480390178272,
       "graham_number": 21.765636169131962,
-      "graham_upside_pct": -39.60700286034417,
-      "ncav_margin_pct": -96.56792935352684,
-      "pb_ratio": 3.5965392532795155,
-      "pe_ttm": 17.171428571428574
+      "graham_upside_pct": -39.70737903287545,
+      "ncav_margin_pct": -96.57363362606944,
+      "pb_ratio": 3.600528758829465,
+      "pe_ttm": 17.190476190476193
     }
   },
   "industry": "Apparel - Footwear & Accessories",
-  "last_updated": "2026-09-22T17:46:36Z",
+  "last_updated": "2026-09-22T21:36:48Z",
   "layered_analysis": {
-    "conviction_score": 20.2,
+    "conviction_score": 21.2,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 53361994806,
+  "market_cap": 53421185223,
   "metrics": {
     "book_value_per_share": 10.026305139619588,
     "current_ratio": 1.9608671395552721,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 4.70709944394155,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 61.75771689202826,
-    "graham_upside_pct": -39.60700286034417,
+    "graham_multiple": 61.89480390178272,
+    "graham_upside_pct": -39.70737903287545,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -96.56792935352684,
-    "pb_ratio": 3.5965392532795155,
-    "pe_ttm": 17.171428571428574,
+    "ncav_margin_pct": -96.57363362606944,
+    "pb_ratio": 3.600528758829465,
+    "pe_ttm": 17.190476190476193,
     "roe_pct": 22.00042471862391,
     "shareholders_equity": 14865000000,
     "total_assets": 38410000000,
@@ -142,13 +143,34 @@
   "name": "Nike Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 36.04
+    "close": 36.1
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "NIKE's fiscal 2026 10-K reports total revenues of $46.4 billion, roughly flat versus fiscal 2025, with gross margin up 20 basis points to 42.9% but net income down 3% to $3.1 billion. Wholesale revenue grew while NIKE Direct (stores and digital) revenue declined on lower traffic; Greater China and Converse revenues fell notably amid ongoing brand and marketplace repositioning efforts the company expects to substantially complete by December 2026. The filing also discusses $385 million in severance charges and a $986 million benefit recognized from anticipated recovery of previously paid IEEPA tariffs following a Supreme Court ruling.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (for the quarter ended February 28, 2026, fiscal 2026 Q3) consists only of XBRL data tags and cover-page identifiers rather than narrative financial disclosure, so specific reported figures or discussion of the quarter's results cannot be summarized from what was given.",
+    "filing_summary_8k": "This 8-K, dated September 15-16, 2026, discloses that NIKE's Board of Directors expanded to twelve members and appointed Alexandre Arnault, Deputy CEO of Mo\u00ebt Hennessy (LVMH), as a new director effective immediately, with a term through the 2027 annual meeting; he received a $200,000 sign-on restricted stock grant under the standard director compensation program. The filing also notes a press release announcing the appointment was furnished under Item 7.01 (Regulation FD Disclosure).",
+    "moat_explanation": "The 10-K describes NIKE as 'the largest seller of athletic footwear and apparel in the world' and details substantial ongoing investment in demand creation (brand marketing and sports marketing expense of ~$4.75 billion in fiscal 2026) as well as a portfolio of owned brands (NIKE, Jordan, Converse) and licensing revenue, consistent with a brand-based intangible asset moat rather than a cost, network, or switching-cost advantage described in the excerpts.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Greater China revenues declined 11% (13% currency-neutral) amid 'declining store traffic, elevated promotional activity and higher levels of inventory across the marketplace,' with negative impacts expected to continue through fiscal 2027",
+      "Converse revenues fell 31% and EBIT fell 93% as the brand undergoes a 'strategic reset'",
+      "NIKE Direct digital sales declined 12% (currency-neutral), attributed to reduced traffic, and overall NIKE Direct revenue fell 6%",
+      "Company recognized $385 million in employee severance charges in fiscal 2026 and states it 'may take additional actions which could lead to additional charges in future quarters'",
+      "Effective tax rate rose from 17.1% to 20.3%, partly due to non-recurrence of a prior-year one-time tax benefit",
+      "Exposure to tariff policy volatility, illustrated by a $986 million IEEPA tariff benefit recognized in fiscal 2026 tied to a Supreme Court ruling, with continued monitoring of tariff/litigation developments"
+    ]
+  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320187.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-16",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000170/nke-20260915.htm"
+      },
       {
         "filed": "2026-07-15",
         "form": "10-K",
@@ -158,21 +180,6 @@
         "filed": "2026-04-01",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000037/nke-20260228.htm"
-      },
-      {
-        "filed": "2025-12-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018725000151/nke-20251130.htm"
-      },
-      {
-        "filed": "2025-10-01",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018725000097/nke-20250831.htm"
-      },
-      {
-        "filed": "2025-07-17",
-        "form": "10-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018725000047/nke-20250531.htm"
       }
     ]
   },
@@ -212,7 +219,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 61.8",
+          "detail": "P/E x P/B = 61.9",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.nike.com"
 }

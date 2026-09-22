@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000214/nflx-20260726.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Netflix reported total revenues of $45.18 billion (up 16% year-over-year), operating margin of 29.5%, and net income of $10.98 billion, driven by membership growth, price increases, and advertising revenue, partially offset by unfavorable foreign exchange. The company discontinued reporting membership numbers in 2025, focusing instead on revenue and operating margin. During the period it entered a definitive (later amended) merger agreement to acquire Warner Bros. Discovery's streaming and studio businesses for a total equity value of approximately $72.0 billion, financed in part through new multi-billion-dollar credit and term loan facilities, while also repurchasing $9.1 billion of common stock and paying down debt.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists almost entirely of structured XBRL tags and context data (covering the quarter and six months ended June 30, 2026) rather than narrative disclosure, so a detailed summary of results cannot be responsibly derived from it. What can be discerned is that the filing includes information on senior notes and related interest-rate/foreign-exchange hedging instruments, licensed and produced content assets, and activity related to the Warner Bros. Discovery transaction referenced in a Q1 2026 context. No further substantive business or financial narrative was included in the provided excerpt.",
+    "filing_summary_8k": "This Form 8-K, dated July 26, 2026, discloses under Item 5.02 that board member Anne Sweeney notified Netflix of her resignation from the Board of Directors effective that date. The filing states her resignation was not due to any disagreement with the company.",
+    "moat_explanation": "The 10-K describes a large global subscriber base, a large original/exclusive content library, and a proprietary global content delivery network (Open Connect) that the company says helps differentiate its service, enhance its brand, and stream efficiently at scale. However, the Risk Factors section repeatedly emphasizes that competitors have comparable or greater resources, exclusive content, brand recognition, and financial firepower, and that the entertainment video market is 'intensely competitive and subject to rapid change,' which tempers the strength of any durable advantage described in the excerpts.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Risk factors state content costs are largely fixed, so slower-than-expected growth could pressure margins and liquidity",
+      "Company faces potential liability and litigation risk tied to content it produces, licenses, and distributes",
+      "Non-income tax assessments in Brazil increased costs in 2025 and the company expects to pay ~$700 million in related deposits",
+      "Regulatory frameworks in various countries are expanding to include investment obligations, levies, content quotas, and ownership restrictions on services like Netflix",
+      "The pending WBD transaction is being financed with very large new debt facilities (bridge commitments increased to $42.2 billion), materially increasing leverage and integration/execution risk",
+      "Piracy is described as a compelling, difficult-to-compete-against threat that is subject to rapid growth"
+    ]
+  }
+}

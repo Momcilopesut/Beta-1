@@ -78,34 +78,35 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 118.94595175213165,
+      "graham_multiple": 117.9885524299459,
       "graham_number": 49.990086796974246,
-      "graham_upside_pct": -52.01565867059489,
-      "ncav_margin_pct": -104.37887776748882,
-      "pb_ratio": 3.551818626491881,
-      "pe_ttm": 33.4887459807074
+      "graham_upside_pct": -51.78890269363078,
+      "ncav_margin_pct": -104.39957069936334,
+      "pb_ratio": 3.5374954020739584,
+      "pe_ttm": 33.353697749196144
     }
   },
   "industry": "Medical - Devices",
-  "last_updated": "2026-09-22T17:47:22Z",
+  "last_updated": "2026-09-22T21:37:29Z",
   "layered_analysis": {
-    "conviction_score": 20.2,
+    "conviction_score": 21.2,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 180219430834,
+  "market_cap": 179492667178,
   "metrics": {
     "book_value_per_share": 29.69707401032702,
     "current_ratio": 1.3762770854384192,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 16.682458040064972,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 118.94595175213165,
-    "graham_upside_pct": -52.01565867059489,
+    "graham_multiple": 117.9885524299459,
+    "graham_upside_pct": -51.78890269363078,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -104.37887776748882,
-    "pb_ratio": 3.551818626491881,
-    "pe_ttm": 33.4887459807074,
+    "ncav_margin_pct": -104.39957069936334,
+    "pb_ratio": 3.5374954020739584,
+    "pe_ttm": 33.353697749196144,
     "roe_pct": 10.52095706770745,
     "shareholders_equity": 52130000000,
     "total_assets": 86713000000,
@@ -142,37 +143,43 @@
   "name": "Abbott Laboratories",
   "price": {
     "as_of": "2026-09-22",
-    "close": 104.18
+    "close": 103.69
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Abbott's 2025 10-K describes a diversified healthcare business across four segments (Established Pharmaceutical Products, Diagnostic Products, Nutritional Products, and Medical Devices), with total net sales growth of 5.7% in 2025 driven primarily by Medical Devices and Established Pharmaceutical Products. Diagnostics sales declined due to continued COVID-19 testing decline and China market conditions, while gross margins improved to 52.6% and operating margin rose to 18.2%. The filing discloses a pending definitive agreement (announced November 19, 2025) to acquire Exact Sciences Corporation for approximately $21 billion in equity value to enter the cancer diagnostics market, along with ongoing IRS and Malaysian tax disputes and litigation reserves of approximately $175 million.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated August 20, 2026, discloses that Abbott settled a portion of litigation related to necrotizing enterocolitis (NEC) claims involving its preterm infant formula products. Following the Missouri Court of Appeals' affirmation of a $495 million jury verdict in the Gill case, Abbott agreed to resolve the Gill lawsuit and NEC claims on behalf of approximately 2,000 additional infants for an aggregate of approximately $670 million, rather than continue appealing or pay the roughly $600 million judgment plus interest. The filing states that approximately 1,700 lawsuits remain pending on behalf of about 12,700 individual infants, and that Abbott continues to work to identify and eliminate claims it considers improperly asserted.",
+    "moat_explanation": "The 10-K describes an extensive portfolio of patents, trademarks, and regulatory approvals (FDA/PMA/CE Mark) across pharmaceuticals, diagnostics, nutrition, and medical devices, with company statements that patent protection and licenses materially affect which products can be sold. The filing also notes technological advantages in diagnostics and devices, though it explicitly acknowledges these advantages 'may be reduced or eliminated as competitors introduce new products,' suggesting the moat is real but not unassailable.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Ongoing IRS disputes (SNODs) covering 2017-2020 tax years totaling several hundred million dollars in disputed income tax assessments, with litigation in U.S. Tax Court",
+      "A $413 million Malaysian tax assessment upheld by the Penang High Court and now under appeal",
+      "Diagnostics segment sales declined 4.5% in 2025 (and 3.9% in 2024) due to continued COVID-19 testing decline and challenging market conditions in China, including volume-based procurement programs",
+      "44% of consolidated gross revenues in 2025 were subject to rebates/allowances, with rebates rising to 21.1% of subject gross sales, indicating pricing/margin pressure sensitivity",
+      "Restructuring actions in 2025, 2024, and 2023 across multiple segments with associated severance and impairment charges",
+      "Significant NEC litigation involving preterm infant formula, including a $495 million jury verdict (Gill) later affirmed on appeal, with thousands of additional claims pending"
+    ]
+  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000001800.json",
     "sec_filings": [
+      {
+        "filed": "2026-08-20",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1800/000110465926099247/tm2623675d1_8k.htm"
+      },
       {
         "filed": "2026-07-28",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026050134/abt-20260630.htm"
       },
       {
-        "filed": "2026-04-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/abt-20260331.htm"
-      },
-      {
         "filed": "2026-02-20",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm"
-      },
-      {
-        "filed": "2025-10-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828025047131/abt-20250930.htm"
-      },
-      {
-        "filed": "2025-07-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1800/000162828025036720/abt-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $180.2B",
+          "detail": "Market cap $179.5B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 33.5",
+          "detail": "P/E 33.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 118.9",
+          "detail": "P/E x P/B = 118.0",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.abbott.com"
 }

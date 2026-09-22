@@ -78,34 +78,35 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 114.1445166517105,
+      "graham_multiple": 113.692446585113,
       "graham_number": 113.749739382613,
-      "graham_upside_pct": -67.7040006295639,
-      "ncav_margin_pct": -99.39003922054123,
-      "pb_ratio": 6.604051994613416,
-      "pe_ttm": 17.28401241310824
+      "graham_upside_pct": -67.60743268521102,
+      "ncav_margin_pct": -99.387685576074,
+      "pb_ratio": 6.59096132588059,
+      "pe_ttm": 17.249751737835155
     }
   },
   "industry": "Internet Content & Information",
-  "last_updated": "2026-09-22T17:51:26Z",
+  "last_updated": "2026-09-22T21:18:46Z",
   "layered_analysis": {
-    "conviction_score": 40.3,
+    "conviction_score": 42.4,
     "conviction_score_breakdown": {
       "base_score": 66.7,
       "components": {
         "graham_pct": 66.7
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Neutral",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 4266175937260.9995,
+  "market_cap": 4249777399192,
   "metrics": {
     "book_value_per_share": 52.710065015225084,
     "current_ratio": 2.723981254609035,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 18.187550268595658,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 114.1445166517105,
-    "graham_upside_pct": -67.7040006295639,
+    "graham_multiple": 113.692446585113,
+    "graham_upside_pct": -67.60743268521102,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -99.39003922054123,
-    "pb_ratio": 6.604051994613416,
-    "pe_ttm": 17.28401241310824,
+    "ncav_margin_pct": -99.387685576074,
+    "pb_ratio": 6.59096132588059,
+    "pe_ttm": 17.249751737835155,
     "roe_pct": 50.84008289969907,
     "shareholders_equity": 415265000000,
     "total_assets": 595281000000,
@@ -142,37 +143,43 @@
   "name": "Alphabet Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 352.21
+    "close": 351.16
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Alphabet's FY2025 10-K reports consolidated revenue of $402.8 billion (up 15% year over year), driven by growth in Google Services (+12%) and Google Cloud (+36%), and net income of $132.2 billion. Operating expenses rose 22%, partly due to a $3.5 billion EC fine and a $1.4 billion legal accrual. The company invested $91.4 billion in capital expenditures, issued $37.3 billion in senior notes, and disclosed pending acquisitions of Wiz ($32.0 billion) and Intersect ($4.8 billion). Other Bets (including Waymo) posted a wider operating loss of $7.5 billion, and the company had 190,820 employees as of year-end.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated August 10, 2026, discloses that Alphabet closed an underwritten public offering of $25 billion aggregate principal amount of U.S. dollar-denominated senior notes across ten tranches with maturities ranging from 2028 to 2066, issued under a 2016 indenture with The Bank of New York Mellon Trust Company as trustee. The filing lists the specific note series and principal amounts and includes related legal opinions and exhibits. No other business or financial events are described in this filing.",
+    "moat_explanation": "The 10-K describes several two-sided/network-driven properties (Google Search with trillions of annual searches, 15 products with over half a billion users each, YouTube's creator ecosystem, and Android/Google Play) where user scale and data improve relevance for advertisers and content partners, reinforcing use by both sides. The filing also cites a widely recognized brand and heavy R&D investment (>$200B over five years) as supporting factors, but the excerpts most strongly emphasize the scale of interconnected user/advertiser/developer ecosystems rather than patents or switching frictions specifically.",
+    "moat_present": true,
+    "moat_type": "network_effects",
+    "red_flags": [
+      "More than 70% of 2025 revenue came from online advertising, and the company states many advertisers, publishers, and distribution partners can terminate agreements at any time.",
+      "Rising regulatory and legal exposure, including a $3.5 billion EC fine accrued in Q3 2025 and a $1.4 billion legal accrual in Q2 2025, contributing to a 22% increase in operating expenses.",
+      "Rapidly escalating capital expenditures ($91.4 billion in 2025, expected to increase significantly in 2026) tied to long-duration leasing and commercial infrastructure agreements that could create excess capacity or liability if counterparties or Alphabet underperform.",
+      "The company explicitly warns of possible downward pressure on operating margin from a growing mix of lower-margin businesses (Cloud, devices, subscriptions) and increasing competition.",
+      "Other Bets segment operating loss widened to $7.5 billion in 2025, including a $2.1 billion Waymo-related compensation charge, reflecting continued unprofitability in newer ventures.",
+      "The filing acknowledges intense, broadening competition across search, advertising, cloud, AI models, and devices from well-resourced incumbents and emerging entrants."
+    ]
+  },
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
     "sec_filings": [
+      {
+        "filed": "2026-08-10",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm"
+      },
       {
         "filed": "2026-07-23",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
       },
       {
-        "filed": "2026-04-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
-      },
-      {
         "filed": "2026-02-05",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
-      },
-      {
-        "filed": "2025-10-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000091/goog-20250930.htm"
-      },
-      {
-        "filed": "2025-07-24",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000062/goog-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $4266.2B",
+          "detail": "Market cap $4249.8B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 17.3",
+          "detail": "P/E 17.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 114.1",
+          "detail": "P/E x P/B = 113.7",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 4,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.abc.xyz"
 }

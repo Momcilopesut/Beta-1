@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 354.4350981299623,
+      "graham_multiple": 356.4534566656803,
       "graham_number": 96.38875798414655,
-      "graham_upside_pct": -75.94031354023252,
-      "ncav_margin_pct": -94.99051391479794,
-      "pb_ratio": 7.823296217608595,
-      "pe_ttm": 45.30508474576271
+      "graham_upside_pct": -76.02806387024135,
+      "ncav_margin_pct": -95.00878447945747,
+      "pb_ratio": 7.8455397833601195,
+      "pe_ttm": 45.433898305084746
     }
   },
   "industry": "Medical - Instruments & Supplies",
-  "last_updated": "2026-09-22T17:50:38Z",
+  "last_updated": "2026-09-22T21:44:55Z",
   "layered_analysis": {
-    "conviction_score": 40.3,
+    "conviction_score": 42.4,
     "conviction_score_breakdown": {
       "base_score": 66.7,
       "components": {
         "graham_pct": 66.7
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Neutral",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 141646814100,
+  "market_cap": 142049551020,
   "metrics": {
     "book_value_per_share": 51.61551480959098,
     "current_ratio": 4.962660564771959,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 24.74688763698868,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 354.4350981299623,
-    "graham_upside_pct": -75.94031354023252,
+    "graham_multiple": 356.4534566656803,
+    "graham_upside_pct": -76.02806387024135,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -94.99051391479794,
-    "pb_ratio": 7.823296217608595,
-    "pe_ttm": 45.30508474576271,
+    "ncav_margin_pct": -95.00878447945747,
+    "pb_ratio": 7.8455397833601195,
+    "pe_ttm": 45.433898305084746,
     "roe_pct": 17.83495225621692,
     "shareholders_equity": 17824000000,
     "total_assets": 20631200000,
@@ -142,37 +143,43 @@
   "name": "Intuitive Surgical Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 400.6235
+    "close": 402.09
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes Intuitive's da Vinci surgical system and Ion endoluminal platforms, including the newly launched da Vinci 5 system and phased international rollout, alongside a broad instruments/accessories and services business. It discusses competitive pressures (including from GLP-1 weight-loss drugs reducing bariatric procedures and a growing list of robotic-surgery competitors), regulatory clearances obtained across the U.S., Japan, South Korea, and Europe, and operational headwinds such as China market softness (anti-corruption campaign, provincial pricing limits, procurement quotas) and approximately $63.0 million of tariff-related cost increases in 2025.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated July 23, 2026, discloses that Intuitive Surgical's Board amended and restated the company's bylaws. The changes address shareholder director-nomination and proposal procedures (including universal proxy compliance, disclosure requirements, and proxy card color rules), special meeting record-date logistics, and a shift to a majority-of-votes-cast standard for non-election corporate actions, along with other technical conforming amendments. No financial results or operational events are reported in this filing.",
+    "moat_explanation": "The 10-K describes a highly integrated ecosystem in which da Vinci systems, proprietary instruments, accessories, service contracts, and multi-year surgeon training/learning pathways are all interlocked (e.g., instrument memory chips tied to specific system generations, service substantially sourced through Intuitive contracts, and progressive surgeon training programs). This creates real friction for hospitals and surgeons to switch to competing platforms once they have invested in systems, training, and consumable/instrument relationships, which is the strongest moat signal supported by the excerpts.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company states GLP-1 weight-loss drugs have already reduced the number of bariatric procedures performed on its systems",
+      "Growing list of named robotic-assisted surgery competitors (Johnson & Johnson, Medtronic, multiple Chinese entrants) explicitly disclosed as increasing competitive pressure, especially in China",
+      "China anti-corruption/systematic governance campaign and provincial pricing limits have led to canceled/delayed tenders and fewer systems placed than anticipated in 2025",
+      "Tariffs and trade measures increased cost of revenues by approximately $63.0 million in 2025, with further increases expected in 2026",
+      "Third-party remanufactured/reprocessed instrument offerings could reduce revenue and pose safety/reputational risk if uptake grows",
+      "Reliance on Mexicali, Mexico and German manufacturing/import sources exposes the company to tariff and supply-chain disruption risk"
+    ]
+  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001035267.json",
     "sec_filings": [
+      {
+        "filed": "2026-07-27",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000063/isrg-20260723.htm"
+      },
       {
         "filed": "2026-07-21",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000058/isrg-20260630.htm"
       },
       {
-        "filed": "2026-04-22",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000032/isrg-20260331.htm"
-      },
-      {
         "filed": "2026-02-03",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm"
-      },
-      {
-        "filed": "2025-10-22",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526725000209/isrg-20250930.htm"
-      },
-      {
-        "filed": "2025-07-23",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526725000192/isrg-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $141.6B",
+          "detail": "Market cap $142.0B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 45.3",
+          "detail": "P/E 45.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 354.4",
+          "detail": "P/E x P/B = 356.5",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.intuitive.com"
 }

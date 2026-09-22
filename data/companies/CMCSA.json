@@ -78,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 6.636910180562447,
+      "graham_multiple": 6.490191195681895,
       "graham_number": 55.31266931322897,
-      "graham_upside_pct": 143.9367996173273,
-      "ncav_margin_pct": -411.42887388273095,
-      "pb_ratio": 0.9016268241060488,
-      "pe_ttm": 7.361038961038961
+      "graham_upside_pct": 146.71128150414347,
+      "ncav_margin_pct": -414.97099532965774,
+      "pb_ratio": 0.8916052133229364,
+      "pe_ttm": 7.27922077922078
     }
   },
   "industry": "Telecommunications Services",
-  "last_updated": "2026-09-22T17:51:22Z",
+  "last_updated": "2026-09-22T21:48:23Z",
   "layered_analysis": {
     "conviction_score": 91.7,
     "conviction_score_breakdown": {
@@ -114,7 +114,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 80454689290,
+  "market_cap": 79560432863,
   "metrics": {
     "book_value_per_share": 25.134453781512605,
     "current_ratio": 0.7957876288036745,
@@ -124,14 +124,14 @@
     "fcf_margin_pct": 17.697462552644556,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 5,
-    "graham_multiple": 6.636910180562447,
-    "graham_upside_pct": 143.9367996173273,
+    "graham_multiple": 6.490191195681895,
+    "graham_upside_pct": 146.71128150414347,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -411.42887388273095,
-    "pb_ratio": 0.9016268241060488,
-    "pe_ttm": 7.361038961038961,
+    "ncav_margin_pct": -414.97099532965774,
+    "pb_ratio": 0.8916052133229364,
+    "pe_ttm": 7.27922077922078,
     "roe_pct": 12.042071989011609,
     "shareholders_equity": 96904000000,
     "total_assets": 272631000000,
@@ -140,7 +140,7 @@
   "name": "Comcast Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 22.675
+    "close": 22.42
   },
   "qualitative": null,
   "sector": "Communication Services",
@@ -153,24 +153,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026049360/cmcsa-20260630.htm"
       },
       {
-        "filed": "2026-04-23",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026026805/cmcsa-20260331.htm"
+        "filed": "2026-07-23",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026049274/cmcsa-20260723.htm"
       },
       {
         "filed": "2026-02-03",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026004994/cmcsa-20251231.htm"
-      },
-      {
-        "filed": "2025-10-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1166691/000116669125000054/cmcsa-20250930.htm"
-      },
-      {
-        "filed": "2025-07-31",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1166691/000116669125000036/cmcsa-20250630.htm"
       }
     ]
   },
@@ -180,7 +170,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $80.5B",
+          "detail": "Market cap $79.6B",
           "passed": true
         },
         {
@@ -205,12 +195,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 7.4",
+          "detail": "P/E 7.3",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 6.6",
+          "detail": "P/E x P/B = 6.5",
           "passed": true
         }
       ],
@@ -245,5 +235,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://corporate.comcast.com"
 }

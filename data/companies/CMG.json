@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 592.8813419384933,
+      "graham_multiple": 571.6613686098344,
       "graham_number": 6.648260501574977,
-      "graham_upside_pct": -79.98416227133832,
-      "ncav_margin_pct": -111.1750535827202,
-      "pb_ratio": 19.450433791210163,
-      "pe_ttm": 30.48165137614679
+      "graham_upside_pct": -79.62531259094399,
+      "ncav_margin_pct": -111.37540314894426,
+      "pb_ratio": 19.09918442252014,
+      "pe_ttm": 29.931192660550458
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-22T17:50:10Z",
+  "last_updated": "2026-09-22T21:16:21Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 42618704250,
+  "market_cap": 41849066250,
   "metrics": {
     "book_value_per_share": 1.7081881235479022,
     "current_ratio": 0.7153473552939745,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 12.138507736423515,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 592.8813419384933,
-    "graham_upside_pct": -79.98416227133832,
+    "graham_multiple": 571.6613686098344,
+    "graham_upside_pct": -79.62531259094399,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -111.1750535827202,
-    "pb_ratio": 19.450433791210163,
-    "pe_ttm": 30.48165137614679,
+    "ncav_margin_pct": -111.37540314894426,
+    "pb_ratio": 19.09918442252014,
+    "pe_ttm": 29.931192660550458,
     "roe_pct": 53.2616576692157,
     "shareholders_equity": 2830607000,
     "total_assets": 8994531000,
@@ -142,37 +143,43 @@
   "name": "Chipotle Mexican Grill Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 33.215
+    "close": 32.63
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2025, Chipotle reported total revenue of $11.9 billion, up 5.4% year-over-year, while comparable restaurant sales decreased 1.7% due to a 2.9% decline in transactions partly offset by higher average check. The company opened 334 new company-owned restaurants (ending the year with 4,042) and 11 partner-operated restaurants, with digital sales at 36.7% of food and beverage revenue. Diluted EPS was $1.14, up 2.7% from 2024, and management expects roughly flat comparable sales in 2026 with 350-370 planned restaurant openings.",
+    "filing_summary_10q": "For the quarter and six months ended June 30, 2026, Chipotle reported total revenue of $3.35 billion and $6.44 billion, respectively, both up from the prior-year periods, but net income declined to $403.5 million (Q2) and $706.4 million (six months) from $436.1 million and $822.7 million a year earlier. Diluted EPS was $0.32 for the quarter and $0.55 for the six months, versus $0.32 and $0.61 in the comparable 2025 periods. The balance sheet shows retained earnings turned to an accumulated deficit of $67.2 million as of June 30, 2026, down from $619.9 million retained earnings at year-end 2025, alongside continued common stock repurchases.",
+    "filing_summary_8k": "This 8-K, dated September 14, 2026, discloses that Chipotle's Board of Directors increased its size to 11 directors and elected Sabir Sami, a former Yum! Brands executive (including CEO of the KFC Division), as an independent director effective immediately; he was not appointed to any board committees. The filing includes a press release announcing the election as an exhibit.",
+    "moat_explanation": "The 10-K emphasizes a differentiated brand built on 'Food with Integrity,' registered trademarks ('Chipotle,' 'Responsibly Raised,' etc.), protected trade dress, and food-safety leadership that the company says resonates with guests and supports competitive advantage. However, the Risk Factors section itself notes that many competitors now make similar quality/no-preservative claims, which 'may lessen our differentiation,' indicating the brand-based moat is real but not unassailable.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Comparable restaurant sales declined 1.7% in 2025, driven by a 2.9% drop in transactions",
+      "Company states it 'may have higher risk for food safety incidents than some of our competitors' due to fresh, unprocessed produce and raw chicken handling",
+      "Risk factors acknowledge competitors' similar 'quality ingredient' claims could lessen Chipotle's brand differentiation",
+      "Ongoing wage-and-hour litigation and a second NYC audit of Fair Workweek/Earned Safe and Sick Time Act compliance that could result in additional liabilities",
+      "Reliance on third-party delivery (over 16% of 2025 food and beverage revenue) carries profitability and reputational risk outside the company's control",
+      "2025 tariffs added an estimated ~15 basis points to food, beverage and packaging costs on an ongoing basis"
+    ]
+  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001058090.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-14",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000088/cmg-20260914.htm"
+      },
       {
         "filed": "2026-07-31",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm"
       },
       {
-        "filed": "2026-04-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000028/cmg-20260331.htm"
-      },
-      {
         "filed": "2026-02-04",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm"
-      },
-      {
-        "filed": "2025-10-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809025000088/cmg-20250930.htm"
-      },
-      {
-        "filed": "2025-07-24",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $42.6B",
+          "detail": "Market cap $41.8B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 30.5",
+          "detail": "P/E 29.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 592.9",
+          "detail": "P/E x P/B = 571.7",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.chipotle.com"
 }

@@ -78,34 +78,35 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 696.0392832074832,
+      "graham_multiple": 696.0514481641296,
       "graham_number": 32.404054452119475,
       "graham_upside_pct": -85.8417204298862,
       "ncav_margin_pct": -98.62040945529425,
-      "pb_ratio": 24.17774569402229,
-      "pe_ttm": 28.78842767295597
+      "pb_ratio": 24.177956975159834,
+      "pe_ttm": 28.788679245283014
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-22T17:51:10Z",
+  "last_updated": "2026-09-22T21:50:53Z",
   "layered_analysis": {
-    "conviction_score": 40.3,
+    "conviction_score": 42.4,
     "conviction_score_breakdown": {
       "base_score": 66.7,
       "components": {
         "graham_pct": 66.7
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Neutral",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 5543411828000,
+  "market_cap": 5543460270000,
   "metrics": {
     "book_value_per_share": 9.46606035551881,
     "current_ratio": 4.588949069016016,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 44.770258129648326,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 696.0392832074832,
+    "graham_multiple": 696.0514481641296,
     "graham_upside_pct": -85.8417204298862,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
     "ncav_margin_pct": -98.62040945529425,
-    "pb_ratio": 24.17774569402229,
-    "pe_ttm": 28.78842767295597,
+    "pb_ratio": 24.177956975159834,
+    "pe_ttm": 28.788679245283014,
     "roe_pct": 110.11463673627841,
     "shareholders_equity": 157293000000,
     "total_assets": 206803000000,
@@ -144,35 +145,41 @@
     "as_of": "2026-09-22",
     "close": 228.87
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2026 (ended January 25, 2026), NVIDIA reported revenue of $215.9 billion, up 65% year-over-year, driven primarily by Data Center compute and networking demand tied to the Blackwell architecture. Gross margin fell to 71.1% from 75.0%, partly due to a $4.5 billion charge related to H20 export licensing issues in China. Operating income rose 60% to $130.4 billion and net income rose 65% to $120.1 billion; the filing also discloses large capital expenditures, sizable investments in private AI companies/infrastructure, and revenue concentration among a small number of direct and indirect customers.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended July 26, 2026, NVIDIA's fiscal Q2 2027) consists primarily of XBRL data tags rather than narrative text, so it does not contain discussion of revenue, profit, or business developments for the quarter. Visible items include references to outstanding notes payable across multiple maturities, customer concentration risk categories for accounts receivable, and land/power/shell guarantees related to AI cloud infrastructure, but no quantified results or MD&A-style commentary is included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated September 2, 2026, discloses that NVIDIA entered into a definitive agreement to acquire Hugging Face, Inc., a platform and community for open-source AI models, datasets, and applications, for a purchase price of approximately $11.9 billion plus an equity-based retention program of up to about $1.0 billion for Hugging Face employees. The transaction is expected to close in the first half of 2027 subject to customary closing conditions and regulatory approvals. The filing also adds a supplemental risk factor noting that government restrictions on open-source AI models, including those affecting models originating in China, could impact the Hugging Face platform and NVIDIA's broader business.",
+    "moat_explanation": "The 10-K describes a large, self-reinforcing developer ecosystem (over 7.5 million CUDA developers, 6,000 supported applications, hundreds of software libraries/SDKs) and states explicitly that 'the large and growing number of developers and installed base across our platforms strengthens our ecosystem and increases the value of our platform for our customers.' This ecosystem effect, combined with the CUDA software stack that ties hardware, libraries, and third-party developer tools together, supports a network-effects-based moat; switching costs (CUDA lock-in) are a secondary factor also visible in the excerpts.",
+    "moat_present": true,
+    "moat_type": "network_effects",
+    "red_flags": [
+      "Revenue is highly concentrated: for fiscal 2026, one direct customer represented 22% of total revenue and another 14%, with the company noting this concentration trend may continue.",
+      "The company incurred a $4.5 billion charge in Q1 FY2026 tied to U.S. export licensing requirements for H20 chips into China, and future China-related shipments (e.g., H200) remain uncertain and subject to a 25% import tariff.",
+      "Gross margin declined from 75.0% to 71.1% year-over-year, attributed to the Hopper-to-Blackwell product transition and the H20-related charge.",
+      "The company discloses $4.0 billion in unrecognized tax benefits and is currently under IRS examination for fiscal years 2023 and 2024, with uncertain timing of resolution.",
+      "Supply chain is described as 'mainly concentrated in Asia,' which the filing flags as a risk even as the company begins diversifying to the U.S. and Latin America.",
+      "The 10-K notes that rising high-quality open-source AI models could reduce demand for NVIDIA's products if deployed on competitors' platforms."
+    ]
+  },
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-03",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
+      },
       {
         "filed": "2026-08-26",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
       },
       {
-        "filed": "2026-05-20",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm"
-      },
-      {
         "filed": "2026-02-25",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
-      },
-      {
-        "filed": "2025-11-19",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000230/nvda-20251026.htm"
-      },
-      {
-        "filed": "2025-08-27",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000209/nvda-20250727.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $5543.4B",
+          "detail": "Market cap $5543.5B",
           "passed": true
         },
         {
@@ -212,7 +219,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 696.0",
+          "detail": "P/E x P/B = 696.1",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.nvidia.com"
 }

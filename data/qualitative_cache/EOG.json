@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/821189/000082118926000054/eog-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/821189/000082118926000149/eog-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/821189/000082118926000147/eog-20260804.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "EOG's FY2025 10-K reports net income of $4,980 million (down from $6,403 million in 2024) on total operating revenues of $22,632 million, a 4% decline year over year driven largely by lower gathering, processing and marketing revenues and a lower composite crude oil price, partly offset by higher natural gas prices and volumes. Total proved reserves grew to 5,514 MMBoe, aided by the August 2025 acquisition of Encino Acquisition Partners for $5.7 billion (675,000 net acres in the Utica play). The company funded $13.6 billion in capital expenditures, paid $2.2 billion in dividends and $2.6 billion in share repurchases, issued new senior notes, and its debt-to-capitalization ratio rose from 14% to 21%.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter and six months ended June 30, 2026) consists only of XBRL taxonomy tags and context data rather than narrative text, so specific financial results or business developments cannot be summarized from it. The tags reference items such as oil, NGL and natural gas revenue categories, the Encino acquisition, a revolving credit facility, derivative contracts, and equity compensation plans, but no descriptive figures or discussion are available in the excerpt given.",
+    "filing_summary_8k": "This 8-K, dated August 4, 2026, discloses that EOG issued a press release announcing its second quarter 2026 financial and operational results along with third quarter and full-year 2026 forecast and benchmark commodity pricing information. The information is furnished under Items 2.02 and 7.01 and is not deemed 'filed' for liability purposes under the Exchange Act. The press release itself is attached as Exhibit 99.1, but its specific contents are not included in the excerpt provided.",
+    "moat_explanation": "The 10-K describes EOG's strategy as being 'among the highest return and lowest cost producers,' emphasizing internally generated low-cost drilling prospects, a self-sourced sand program, downhole drilling motor and extended-lateral techniques that reduce cost per foot, and a stated goal of maintaining 'the lowest possible operating cost structure.' These excerpts point to a cost-efficiency focus rather than brand, network effects, or switching costs, though as a commodity producer EOG has limited pricing power and the durability of any cost edge versus peers is not independently verified in the excerpts.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Revenues and realized prices are subject to significant commodity price volatility (crude oil price fell 15% year over year in 2025) that directly affects cash flow and results.",
+      "Two purchasers each accounted for more than 10% of total crude oil, NGLs, natural gas and marketing revenues in 2025, indicating customer concentration, though EOG states it does not believe losing one would be material.",
+      "Debt-to-total-capitalization ratio rose from 14% to 21% during 2025, coinciding with multiple senior notes issuances and the $5.7 billion Encino acquisition, indicating increased leverage.",
+      "The $5.7 billion Encino acquisition (closed August 2025) introduces integration risk and contributed to higher G&A expenses (including acquisition-related costs) and interest expense.",
+      "International operations in Trinidad, Bahrain and the United Arab Emirates expose EOG to foreign government concession/production-sharing arrangements and geopolitical/regulatory uncertainty not present in a purely domestic operation.",
+      "Management explicitly states there is no assurance that efficiency initiatives will be sufficient to offset future inflationary pressures from tariffs or other macroeconomic factors on costs and capital expenditures."
+    ]
+  }
+}

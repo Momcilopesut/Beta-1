@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000197/unh-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000205/unh-20260908.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "UnitedHealth Group's FY2025 10-K reports consolidated revenue of $447.6 billion (up 12%), but earnings from operations fell 41% to $19.0 billion, and diluted EPS was $13.23, driven by elevated medical cost trends, Medicare Advantage funding reductions, and $2.5 billion in Q4 2025 restructuring charges. The medical care ratio rose to 89.1% from 85.5%, and the company also recorded a net $568 million gain from portfolio divestitures and continued financial impacts tied to the 2024 Change Healthcare cyberattack. The filing describes four reportable segments (Optum Health, Optum Insight, Optum Rx, and UnitedHealthcare) and notes a planned 2026 realignment moving Optum Financial from Optum Health to Optum Insight.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated September 8, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that UnitedHealth Group senior leaders participated in an interview-format Q&A at the Wells Fargo 21st Annual Healthcare Conference on September 9, 2026, covering the company's strategy, market positions, recent results, and end-market expectations. A live audio webcast was made available via the company's investor relations website. The filing does not disclose financial results or other material events.",
+    "moat_explanation": "The 10-K describes UnitedHealth Group's massive scale \the UnitedHealthcare businesses serve 49.76 million people, Optum Health serves ~95 million consumers, Optum Insight holds a $31.1 billion contract backlog, and Optum Rx operates a network of ~64,000 retail pharmacies \ffering integration across data, analytics and pharmacy operations that smaller competitors would struggle to replicate. However, the excerpts also describe the commercial risk market as 'highly competitive' and note that pricing has recently fallen well short of medical cost trends, suggesting the scale advantage has not fully protected margins.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Earnings from operations fell 41% year-over-year (from $32.3B to $19.0B) as pricing trends and health-status assumptions were 'well-short' of incurred medical cost trends, materially impacting results",
+      "Medical care ratio rose from 85.5% to 89.1%, reflecting Medicare Advantage funding reductions, elevated medical cost trend, and IRA-driven Part D impacts",
+      "The company disclosed a prior cyberattack on its Change Healthcare business (Feb 2024) and increased reserves by $799 million in Q4 2025 for collection shortfalls on related provider loans",
+      "Management expects Medicare Advantage membership and value-based care participation to contract in 2026 due to continued funding pressure and revised risk-adjustment models",
+      "Medicaid margins face continued downward pressure from a timing mismatch between member health status and state rate updates, with expected 2026 membership losses including exit from one state",
+      "The company recorded $2.5 billion in restructuring and other charges in Q4 2025, including a loss contract reserve for anticipated 2026 losses in certain value-based care businesses"
+    ]
+  }
+}

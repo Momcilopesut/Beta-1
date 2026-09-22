@@ -78,34 +78,35 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 1815.7227859465079,
+      "graham_multiple": 1800.6185158417884,
       "graham_number": 35.117915084899316,
-      "graham_upside_pct": -89.71205095763749,
-      "ncav_margin_pct": -102.76111270136387,
-      "pb_ratio": 46.620858701450906,
-      "pe_ttm": 38.946575342465756
+      "graham_upside_pct": -89.66360115234751,
+      "ncav_margin_pct": -102.77411581522202,
+      "pb_ratio": 46.42654363141742,
+      "pe_ttm": 38.784246575342465
     }
   },
   "industry": "Consumer Electronics",
-  "last_updated": "2026-09-22T17:51:17Z",
+  "last_updated": "2026-09-22T21:37:13Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 5010914578203,
+  "market_cap": 4990029201000,
   "metrics": {
     "book_value_per_share": 7.318011926480932,
     "current_ratio": 1.0032948046555858,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 23.732882225869314,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 1815.7227859465079,
-    "graham_upside_pct": -89.71205095763749,
+    "graham_multiple": 1800.6185158417884,
+    "graham_upside_pct": -89.66360115234751,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -102.76111270136387,
-    "pb_ratio": 46.620858701450906,
-    "pe_ttm": 38.946575342465756,
+    "ncav_margin_pct": -102.77411581522202,
+    "pb_ratio": 46.42654363141742,
+    "pe_ttm": 38.784246575342465,
     "roe_pct": 137.18365457766524,
     "shareholders_equity": 73733000000,
     "total_assets": 359241000000,
@@ -142,9 +143,25 @@
   "name": "Apple Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 341.35001
+    "close": 339.75
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Apple's fiscal 2025 10-K reports total net sales of $416.2 billion, up 6% year-over-year, driven by growth in Services (up 14%) and iPhone, Mac, and iPad, partially offset by declines in Wearables, Home and Accessories. Total gross margin percentage rose to 46.9% from 46.2%, though product margins faced pressure from tariffs and product mix. The filing discusses new U.S. tariffs on imports from several countries beginning in fiscal Q2 2025, a lower effective tax rate partly due to a prior-year State Aid Decision impact, and a capital return program including an increased $100 billion share repurchase authorization and a raised quarterly dividend to $0.26 per share.",
+    "filing_summary_10q": "This Q3 fiscal 2026 10-Q (quarter ended June 27, 2026) shows total net sales of $109.4 billion for the quarter, up from $94.0 billion a year earlier, with net income of $29.8 billion versus $23.4 billion in the prior-year quarter. For the nine months ended June 27, 2026, net sales were $364.4 billion and net income was $101.5 billion, both higher than the comparable 2025 period. The balance sheet shows total assets of $383.3 billion and shareholders' equity of $107.5 billion as of June 27, 2026, up from $73.7 billion at fiscal year-end 2025.",
+    "filing_summary_8k": "This 8-K, dated July 30, 2026, discloses under Item 2.02 that Apple issued a press release announcing its financial results for the third fiscal quarter ended June 27, 2026, attached as an exhibit; the 8-K itself does not include the detailed financial figures beyond referencing the attached press release.",
+    "moat_explanation": "The 10-K describes Apple's integrated ecosystem (proprietary hardware, operating systems, software, and services), a large portfolio of patents, trademarks, and copyrights, and a strong brand/third-party ecosystem as principal competitive factors. However, the filing itself acknowledges the Company holds only a 'minority market share' in smartphones, PCs, tablets, and wearables, and faces intense price-based competition, tempering the strength of this moat.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company explicitly states it has a minority market share in global smartphone, PC, tablet, and wearables markets and faces aggressive price competition",
+      "Reliance on single or limited-source suppliers and custom components creates supply concentration risk",
+      "Majority of manufacturing performed by outsourcing partners concentrated in China mainland, India, Japan, South Korea, Taiwan, and Vietnam, exposing the Company to geopolitical and trade risk",
+      "New U.S. tariffs beginning fiscal Q2 2025 (including on China, India, Japan, South Korea, Taiwan, Vietnam, EU) already impacting costs and gross margin, with uncertain further impact",
+      "Section 232 investigation into semiconductor and related imports adds regulatory uncertainty",
+      "Company states gross margins will be subject to volatility and downward pressure going forward"
+    ]
+  },
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
@@ -155,24 +172,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm"
       },
       {
-        "filed": "2026-05-01",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm"
-      },
-      {
-        "filed": "2026-01-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/aapl-20251227.htm"
+        "filed": "2026-07-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm"
       },
       {
         "filed": "2025-10-31",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
-      },
-      {
-        "filed": "2025-08-01",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/aapl-20250628.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $5010.9B",
+          "detail": "Market cap $4990.0B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 38.9",
+          "detail": "P/E 38.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1815.7",
+          "detail": "P/E x P/B = 1800.6",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 4,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.apple.com"
 }

@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/73309/000119312526071575/nue-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/73309/000119312526345891/nue-20260704.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/73309/000119312526318190/d468854d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Nucor reported net sales of $32.49 billion (up 6% from 2024) but net earnings of $1.74 billion, or $7.52 per diluted share, down from $2.03 billion ($8.46 per diluted share) in 2024, primarily due to weaker steel products segment profitability. Steel mills segment earnings rose on higher volumes and metal margins, while gross margins overall fell to 12% from 13%. The filing also describes debt issuance/redemption activity, continued capital spending on new facilities (West Virginia sheet mill, Arizona melt shop, Kentucky plate mill), and roughly $1.2 billion returned to shareholders via dividends and buybacks.",
+    "filing_summary_10q": "For the quarter ended July 4, 2026, Nucor reported net sales of $10.397 billion, up from $8.456 billion in the year-ago quarter, with net earnings attributable to Nucor stockholders of $1.156 billion ($5.04 diluted EPS) versus $603 million ($2.60 diluted EPS) a year earlier. For the six-month period, net sales were $19.893 billion versus $16.286 billion, and net earnings attributable to Nucor stockholders were $1.899 billion versus $759 million in the prior-year period. The excerpt provided is limited to the condensed financial statements and does not include the accompanying MD&A narrative explaining these changes.",
+    "filing_summary_8k": "This 8-K, dated July 27, 2026, discloses under Item 2.02 that Nucor issued a news release reporting financial results for the quarter ended July 4, 2026, and under Item 7.01 that it posted an accompanying investor presentation to its investor relations website; both documents are furnished as exhibits. The filing itself does not restate the financial figures in the excerpt provided beyond referencing the furnished news release and presentation.",
+    "moat_explanation": "The 10-K MD&A describes Nucor's low-cost, highly variable cost structure (EAF production, incentive-based pay that flexes down in downturns) and its integrated raw-material supply chain (DRI facilities, scrap brokerage/processing via DJJ) as strengths that let it keep operating and control input costs when higher-fixed-cost competitors must idle capacity. This is a structural cost-advantage argument rather than network effects, switching costs, or brand-based differentiation, which the excerpts do not describe.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Risk factors cite global steel overcapacity (~704 million net tons per OECD) and China's near-record production/exports as ongoing industry risks",
+      "Circumvention of trade duties via third-country routing is flagged as a continuing risk",
+      "Ferrous scrap price volatility is described as a persistent challenge to maintaining margins",
+      "Steel products segment earnings declined in 2025 due to decreased selling prices and margin compression in joist/deck, metal buildings, and rebar fabrication",
+      "2025 net earnings and EPS declined year-over-year versus 2024",
+      "Critical audit matter flags goodwill impairment risk tied to significant management judgment in a Steel Products segment reporting unit"
+    ]
+  }
+}

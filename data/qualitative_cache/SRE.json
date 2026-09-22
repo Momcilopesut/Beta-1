@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1032208/000103220826000010/sre-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1032208/000103220826000045/sre-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1032208/000119312526361126/d417152d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Sempra's 2025 Form 10-K reports earnings attributable to common shares of $1,796 million, down from $2,817 million in 2024, primarily due to a $651 million regulatory disallowance charge at SDG&E, tax expenses from classifying SI Partners and Ecogas as held for sale, and a swing to losses at the Sempra Infrastructure segment. The company invested $12.6 billion in capital expenditures and investments during 2025, entered agreements to sell a 45% interest in SI Partners to KKR (~$9.99 billion) and to sell Ecogas (~$500 million), both expected to close in 2026, and continued to grow rate base at SDG&E, SoCalGas and Oncor amid ongoing CPUC and PUCT rate proceedings.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL data tags for the quarter ended June 30, 2026, with no narrative business or financial discussion included. It confirms the filing covers Sempra, SDG&E and SoCalGas for the six months ended June 30, 2026, and references items such as natural gas and electricity revenue categories, related-party balances, and various LNG joint venture and financing arrangements, but the excerpts do not provide substantive descriptive text about quarterly results or developments.",
+    "filing_summary_8k": "This 8-K, dated August 21, 2026, discloses that Southern California Gas Company closed a previously announced public offering of $500,000,000 aggregate principal amount of 5.500% First Mortgage Bonds, Series GGG, due 2036, issued under a Supplemental Indenture dated the same day. The bonds pay interest semiannually starting March 1, 2027, and are redeemable prior to maturity at the company's option under terms described in the bond form; net proceeds to the company were 98.755% of the principal amount before offering expenses.",
+    "moat_explanation": "The excerpts describe SDG&E, SoCalGas and Oncor as regulated utilities operating exclusive service territories under CPUC, FERC and PUCT oversight, with returns tied to a regulator-approved rate base rather than market competition \\u2014 a structure characteristic of efficient-scale, capital-intensive natural monopolies where new entrants are effectively precluded by regulation and infrastructure cost. However, the same excerpts show that regulators can and do disallow cost recovery (e.g., a $651 million WMP-related disallowance), meaning the moat comes with regulatory constraint on economics rather than pricing power.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "CPUC issued a Track 2 GRC final decision disallowing recovery of certain wildfire mitigation plan (WMP) costs, resulting in a $651 million ($464 million after-tax) charge to SDG&E in Q4 2025",
+      "Sempra Infrastructure segment swung to a $160 million loss in 2025 from $911 million earnings in 2024, driven largely by tax charges from classifying SI Partners and Ecogas as held for sale and foreign currency/inflation effects in Mexico",
+      "Pending sales of a 45% equity interest in SI Partners to KKR (~$9.99 billion) and of Ecogas (~$500 million) are subject to closing conditions and not yet completed as of the filing",
+      "FERC found the TO5 adder refund provision triggered, requiring SDG&E to refund customers the California ISO adder retroactively from June 1, 2019",
+      "Wildfire-related liability risk is significant enough that 2025 legislation established an $18 billion Continuation Account and a task force to evaluate replacing the existing Wildfire Fund",
+      "Effective income tax rate was volatile (39% in 2025 vs. 8% in 2024), reflecting large one-time tax impacts tied to held-for-sale reclassifications and foreign currency/inflation effects"
+    ]
+  }
+}

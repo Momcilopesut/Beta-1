@@ -78,34 +78,35 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 72.97621350519306,
+      "graham_multiple": 72.30358456068328,
       "graham_number": 579.0062947016412,
-      "graham_upside_pct": -45.96957021531301,
-      "ncav_margin_pct": -148.80753558644352,
-      "pb_ratio": 2.886742089458976,
-      "pe_ttm": 25.279782967681058
+      "graham_upside_pct": -45.71782060809994,
+      "ncav_margin_pct": -149.0349496189043,
+      "pb_ratio": 2.873407598979397,
+      "pe_ttm": 25.163010143901868
     }
   },
   "industry": "Asset Management",
-  "last_updated": "2026-09-22T17:47:51Z",
+  "last_updated": "2026-09-22T21:41:32Z",
   "layered_analysis": {
-    "conviction_score": 20.2,
+    "conviction_score": 21.2,
     "conviction_score_breakdown": {
       "base_score": 33.3,
       "components": {
         "graham_pct": 33.3
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Weak",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 166094191950,
+  "market_cap": 165326966700,
   "metrics": {
     "book_value_per_share": 415.85051546391753,
     "current_ratio": 1.3505659384048434,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 14.66798810703667,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 72.97621350519306,
-    "graham_upside_pct": -45.96957021531301,
+    "graham_multiple": 72.30358456068328,
+    "graham_upside_pct": -45.71782060809994,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -148.80753558644352,
-    "pb_ratio": 2.886742089458976,
-    "pe_ttm": 25.279782967681058,
+    "ncav_margin_pct": -149.0349496189043,
+    "pb_ratio": 2.873407598979397,
+    "pe_ttm": 25.163010143901868,
     "roe_pct": 11.653995427720771,
     "shareholders_equity": 55888000000,
     "total_assets": 169998000000,
@@ -142,9 +143,25 @@
   "name": "BlackRock Inc.",
   "price": {
     "as_of": "2026-09-22",
-    "close": 1071.63
+    "close": 1066.66
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, BlackRock reported AUM of $14.0 trillion, GAAP revenue of $24.2 billion, and net income attributable to BlackRock of $5.55 billion, with GAAP operating margin declining to 29.1% from 37.1% in 2024 due to acquisition-related and charitable contribution expenses. The company completed three acquisitions during the year (Preqin, HPS, and ElmTree Funds), reported record annual net inflows of $698 billion, and highlighted growth in ETFs, private markets, and its Aladdin/eFront/Preqin technology platform as strategic priorities heading into 2026.",
+    "filing_summary_10q": "The 10-Q excerpt provided consists only of XBRL data tags and structured financial statement labels (e.g., revenue categories, fair value measurements, equity awards) without accompanying narrative text, so no substantive summary of the quarter's business or financial results can be drawn from it.",
+    "filing_summary_8k": "This 8-K, dated July 15, 2026, discloses that BlackRock reported its results of operations for the three and six months ended June 30, 2026 (Item 2.02) via an attached earnings release, and separately furnished supplemental investor materials used during an earnings conference call (Item 7.01). The filing does not itself contain the financial results, only the disclosure that they were released and where to find them (Exhibits 99.1 and 99.2).",
+    "moat_explanation": "The 10-K emphasizes that BlackRock's Aladdin platform combines risk analytics, portfolio management, trading and operations on a single integrated system used by institutional clients, and warns that losing this competitive position 'could lead to a loss of clients and could impede BlackRock's productivity and growth.' This suggests clients who have built their operations around Aladdin face real friction in switching to standalone or competing solutions, which is the strongest moat signal in the excerpts, though the filing also stresses intense competition and potential fee compression that could erode this advantage over time.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Management explicitly warns that increased competition, fee compression, and the failure or negative performance of competitors' products could cause AUM, revenue and earnings to decline.",
+      "Investment advisory contracts can be terminated or not renewed by clients or fund boards, and shareholder activism has increased pressure on closed-end funds to liquidate or terminate management contracts.",
+      "BlackRock provides borrower default indemnification on ~$353 billion of securities on loan, creating potential liability exposure if collateral shortfalls occur during market stress.",
+      "GAAP operating margin declined 800 basis points year-over-year (to 29.1%) due to noncash acquisition-related expenses and a $109 million noncash charitable contribution of Circle stock.",
+      "Revenue and AUM are directly exposed to market value swings, interest rate changes, and foreign exchange fluctuations, which the company states can meaningfully affect earnings.",
+      "Large recent acquisitions (Preqin, HPS, ElmTree) introduce integration risk and have already contributed to noncash acquisition-related expense drags on GAAP results."
+    ]
+  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0002012383.json",
@@ -155,19 +172,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526337177/blk-20260630.htm"
       },
       {
-        "filed": "2026-05-06",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526208766/blk-20260331.htm"
+        "filed": "2026-07-15",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526304013/blk-20260715.htm"
       },
       {
         "filed": "2026-02-25",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm"
-      },
-      {
-        "filed": "2025-11-05",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312525267043/blk-20250930.htm"
       }
     ]
   },
@@ -177,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $166.1B",
+          "detail": "Market cap $165.3B",
           "passed": true
         },
         {
@@ -202,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 25.3",
+          "detail": "P/E 25.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 73.0",
+          "detail": "P/E x P/B = 72.3",
           "passed": false
         }
       ],
@@ -242,5 +254,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.blackrock.com"
 }

@@ -78,32 +78,34 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -3532.7343605184487,
+      "graham_multiple": -3528.504807637467,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -132.22448515917813,
-      "pb_ratio": -174.0277126099707,
-      "pe_ttm": 20.299837925445704
+      "ncav_margin_pct": -132.2553774157717,
+      "pb_ratio": -173.923504398827,
+      "pe_ttm": 20.287682333873583
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-22T17:50:01Z",
+  "last_updated": "2026-09-22T21:21:02Z",
   "layered_analysis": {
-    "conviction_score": 73.3,
+    "conviction_score": 77.0,
     "conviction_score_breakdown": {
       "base_score": 66.7,
       "components": {
         "graham_pct": 66.7
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 1.0
     },
-    "conviction_verdict": "Favorable",
-    "flags": [],
+    "conviction_verdict": "Strong",
+    "flags": [
+      "4 red flag(s) from the filing text - see qualitative.red_flags."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 177981753000,
+  "market_cap": 177875177100,
   "metrics": {
     "book_value_per_share": -1.4394259181089066,
     "current_ratio": 1.0813837730214038,
@@ -124,13 +126,13 @@
     "fcf_margin_pct": 26.728659103589365,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": -3532.7343605184487,
+    "graham_multiple": -3528.504807637467,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -132.22448515917813,
-    "pb_ratio": -174.0277126099707,
-    "pe_ttm": 20.299837925445704,
+    "ncav_margin_pct": -132.2553774157717,
+    "pb_ratio": -173.923504398827,
+    "pe_ttm": 20.287682333873583,
     "roe_pct": -561.2007025387195,
     "shareholders_equity": -1791000000,
     "total_assets": 59515000000,
@@ -139,9 +141,23 @@
   "name": "McDonald's Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 250.59
+    "close": 250.35
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "whole_document_fallback",
+    "filing_summary_10k": "McDonald's FY2025 10-K reports consolidated revenues of $26.9 billion (up 4%, 2% constant currency) and systemwide sales of $139.4 billion (up 7%, 5% constant currency), with operating income of $12.4 billion and operating margin improving to 46.1% from 45.2%. Global comparable sales rose 3.1%, with growth across the U.S. (2.1%), International Operated Markets (3.2%), and International Developmental Licensed Markets (4.6%). The Company opened nearly 2,300 new restaurants systemwide, generated $7.2 billion in free cash flow (up 8%), and returned $7.1 billion to shareholders via dividends and buybacks, while results were affected by restructuring charges tied to 'Accelerating the Organization.'",
+    "filing_summary_10q": "For the quarter ended June 30, 2026, McDonald's reported total revenues of $7,099 million versus $6,843 million a year earlier, and net income of $2,362 million versus $2,253 million, with diluted EPS of $3.32 versus $3.14. For the six months ended June 30, 2026, revenues were $13,616 million (vs. $12,799 million) and net income was $4,345 million (vs. $4,121 million). The balance sheet as of June 30, 2026 showed total assets of $59,920 million, long-term debt of $39,863 million, and a shareholders' deficit of $(1,023) million; the Company declared dividends of $1.86 per share for the quarter.",
+    "filing_summary_8k": "This 8-K, dated August 3-4, 2026, discloses a management transition: Joseph M. Erlinger, EVP and President of McDonald's USA, notified the Company of his intent to leave that role effective August 4, 2026, and will serve in an advisory capacity until early 2027 with no change to his compensation. The Board appointed Skye Anderson, previously Chief Operating Officer of McDonald's USA with over 26 years at the Company, as EVP and President of McDonald's USA effective August 4, 2026. A press release announcing the transition was issued and furnished as an exhibit.",
+    "moat_explanation": "The excerpts describe McDonald's global brand strength (the Company considers the McDonald's trademark and Golden Arches Logo to be of material importance), a heavily franchised model (~95% of 45,356 restaurants) supported by long-term (generally 20-year) franchise/license agreements, Company ownership of real estate combined with franchisee co-investment, and scale advantages (global supply chain, loyalty programs in 70 markets, systemwide sales of $139.4 billion). These points collectively support brand/intangible-asset strength as the primary durable advantage, with elements of switching costs (long-term franchise agreements, real estate control) and scale reinforcing it, though brand is the most explicitly emphasized factor in the excerpts.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "The Company acknowledges increased restructuring charges in 2025 and 2024 associated with 'Accelerating the Organization,' which reduced reported earnings and cash flow growth rates.",
+      "2024 results were impacted by net charges including transaction costs, property sale gains, and non-cash impairment charges tied to the sale of the South Korea business and acquisition-related costs in Israel, indicating portfolio restructuring activity.",
+      "The Company operates in over 100 countries and is subject to varying foreign laws, regulations, and currency translation effects, which the filing notes have increased compliance costs.",
+      "Competition is broad and intense, spanning quick-service restaurants, fast casual, convenience stores, cafes, and delivery/takeaway providers, per the Competition section."
+    ]
+  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000063908.json",
@@ -152,24 +168,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm"
       },
       {
-        "filed": "2026-05-07",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000051/mcd-20260331.htm"
+        "filed": "2026-08-04",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000069/mcd-20260803.htm"
       },
       {
         "filed": "2026-02-24",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm"
-      },
-      {
-        "filed": "2025-11-05",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390825000059/mcd-20250930.htm"
-      },
-      {
-        "filed": "2025-08-06",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390825000039/mcd-20250630.htm"
       }
     ]
   },
@@ -179,7 +185,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $178.0B",
+          "detail": "Market cap $177.9B",
           "passed": true
         },
         {
@@ -209,7 +215,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -3532.7",
+          "detail": "P/E x P/B = -3528.5",
           "passed": true
         }
       ],
@@ -244,5 +250,6 @@
       "passed": 3,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.mcdonalds.com"
 }

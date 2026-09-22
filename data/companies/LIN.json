@@ -78,34 +78,35 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 164.01677233618562,
+      "graham_multiple": 164.39845312532375,
       "graham_number": 170.25216039457646,
-      "graham_upside_pct": -63.31167753591714,
-      "ncav_margin_pct": -115.77755238548497,
-      "pb_ratio": 5.495835169263836,
-      "pe_ttm": 29.843830334190237
+      "graham_upside_pct": -63.379544343082216,
+      "ncav_margin_pct": -115.74836674729367,
+      "pb_ratio": 5.502226088124663,
+      "pe_ttm": 29.878534704370185
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-22T17:49:29Z",
+  "last_updated": "2026-09-22T21:28:58Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
+    "conviction_score": 31.8,
     "conviction_score_breakdown": {
       "base_score": 50.0,
       "components": {
         "graham_pct": 50.0
       },
-      "moat_multiplier": 1.0,
+      "moat_multiplier": 1.05,
       "munger_multiplier": 1.1,
       "valuation_multiplier": 0.55
     },
     "conviction_verdict": "Cautious",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -116,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 214817562000,
+  "market_cap": 215067366000,
   "metrics": {
     "book_value_per_share": 87.81579374087887,
     "current_ratio": 0.8790227568673653,
@@ -126,14 +127,14 @@
     "fcf_margin_pct": 14.973812746425,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 164.01677233618562,
-    "graham_upside_pct": -63.31167753591714,
+    "graham_multiple": 164.39845312532375,
+    "graham_upside_pct": -63.379544343082216,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -115.77755238548497,
-    "pb_ratio": 5.495835169263836,
-    "pe_ttm": 29.843830334190237,
+    "ncav_margin_pct": -115.74836674729367,
+    "pb_ratio": 5.502226088124663,
+    "pe_ttm": 29.878534704370185,
     "roe_pct": 18.86504258679162,
     "shareholders_equity": 38245000000,
     "total_assets": 86817000000,
@@ -142,9 +143,25 @@
   "name": "Linde plc",
   "price": {
     "as_of": "2026-09-22",
-    "close": 464.05
+    "close": 464.91
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Linde plc's 2025 10-K describes it as the largest industrial gas company worldwide, serving diverse end markets (healthcare, chemicals and energy, manufacturing, metals and mining, food and beverage, electronics) through on-site, merchant, and packaged gas distribution plus an Engineering segment. For 2025, sales were $33,986 million (up 3% from $33,005 million in 2024), reported operating profit was $8,923 million, and net income attributable to Linde plc was $6,898 million with diluted EPS of $14.61. The filing notes growth was driven by higher pricing and productivity initiatives that offset cost inflation, with roughly 64% of 2025 sales generated outside the United States.",
+    "filing_summary_10q": "The most recent 10-Q excerpt provided consists primarily of XBRL data tags (covering the quarter and six months ended June 30, 2026, compared to 2025 periods) rather than narrative text, so it does not contain a discussion of results of operations. It does indicate the filing covers Linde's four reportable segments (Americas, EMEA, APAC, Engineering) and includes disclosures on debt instruments, derivative/hedging activity, and fair value measurements, along with a reference to RusChemAlliance-related matters, but the excerpt does not provide sufficient narrative detail to summarize specific quarterly results or developments.",
+    "filing_summary_8k": "This 8-K, dated July 31, 2026, discloses under Item 2.02 that Linde plc issued a press release on that date reporting its results of operations for the quarter ended June 30, 2026, furnished as Exhibit 99.1. The filing excerpt does not include the actual financial results, only the notice of the earnings release and standard cover-page/signature information.",
+    "moat_explanation": "The 10-K describes on-site industrial gas plants built by Linde directly on or adjacent to customer sites, supplied via dedicated pipelines, under total-requirement contracts typically lasting 10-20 years with minimum purchase requirements and price escalation clauses. This dedicated infrastructure and long contract duration create real friction for customers to switch suppliers, and the filing also notes pipeline networks provide a competitive advantage in reliable, economic supply to larger customers.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Energy is described as the single largest cost item, and the company acknowledges energy/raw material price and supply disruptions could reduce profitability",
+      "Significant customer end-markets (chemicals and energy, metals and mining) are described as cyclical, creating exposure to industry downturns",
+      "Goodwill and indefinite-lived intangible assets carry a net value of approximately $28 billion and $2 billion respectively, and the filing flags impairment risk from negative industry/economic trends or market cap declines",
+      "Substantial international operations expose the company to currency fluctuation, trade/tariff, and geopolitical risks as stated in the risk factors",
+      "The company acknowledges its IT systems have been and will likely continue to be subject to cyberattacks and disruptions",
+      "Pension benefit obligations require significant actuarial estimates and are sensitive to discount rate and investment return assumptions"
+    ]
+  },
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001707925.json",
@@ -155,24 +172,14 @@
         "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026051289/lin-20260630.htm"
       },
       {
-        "filed": "2026-05-01",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026029165/lin-20260331.htm"
+        "filed": "2026-07-31",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1707925/000165495426007052/lin_8k.htm"
       },
       {
         "filed": "2026-02-25",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm"
-      },
-      {
-        "filed": "2025-10-31",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828025047710/lin-20250930.htm"
-      },
-      {
-        "filed": "2025-08-01",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828025037164/lin-20250630.htm"
       }
     ]
   },
@@ -182,7 +189,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $214.8B",
+          "detail": "Market cap $215.1B",
           "passed": true
         },
         {
@@ -207,12 +214,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 29.8",
+          "detail": "P/E 29.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 164.0",
+          "detail": "P/E x P/B = 164.4",
           "passed": false
         }
       ],
@@ -247,5 +254,6 @@
       "passed": 4,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.linde.com"
 }

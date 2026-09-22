@@ -78,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 127.3588257486256,
+      "graham_multiple": 128.94726209096785,
       "graham_number": 75.5298744404976,
-      "graham_upside_pct": -60.22021675857292,
-      "ncav_margin_pct": -117.04149975993631,
-      "pb_ratio": 3.8581383913102427,
-      "pe_ttm": 33.0104347826087
+      "graham_upside_pct": -60.453492622389874,
+      "ncav_margin_pct": -116.94156531451443,
+      "pb_ratio": 3.882123446374497,
+      "pe_ttm": 33.21565217391304
     }
   },
   "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-22T17:46:29Z",
+  "last_updated": "2026-09-22T21:18:17Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -116,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 255817965151,
+  "market_cap": 257408319710,
   "metrics": {
     "book_value_per_share": 50.506967091609845,
     "current_ratio": 1.01054628824413,
@@ -126,14 +126,14 @@
     "fcf_margin_pct": 8.96132185140458,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 127.3588257486256,
-    "graham_upside_pct": -60.22021675857292,
+    "graham_multiple": 128.94726209096785,
+    "graham_upside_pct": -60.453492622389874,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -117.04149975993631,
-    "pb_ratio": 3.8581383913102427,
-    "pe_ttm": 33.0104347826087,
+    "ncav_margin_pct": -116.94156531451443,
+    "pb_ratio": 3.882123446374497,
+    "pe_ttm": 33.21565217391304,
     "roe_pct": 11.795012499237851,
     "shareholders_equity": 65245000000,
     "total_assets": 171079000000,
@@ -142,7 +142,7 @@
   "name": "RTX Corporation",
   "price": {
     "as_of": "2026-09-22",
-    "close": 189.87
+    "close": 190.99
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -150,29 +150,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000101829.json",
     "sec_filings": [
       {
+        "filed": "2026-09-15",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/101829/000114036126036662/ef20082011_8k.htm"
+      },
+      {
         "filed": "2026-07-23",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000027/rtx-20260630.htm"
       },
       {
-        "filed": "2026-04-21",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000011/rtx-20260331.htm"
-      },
-      {
         "filed": "2026-02-06",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000006/rtx-20251231.htm"
-      },
-      {
-        "filed": "2025-10-21",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/101829/000010182925000042/rtx-20250930.htm"
-      },
-      {
-        "filed": "2025-07-22",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/101829/000010182925000032/rtx-20250630.htm"
       }
     ]
   },
@@ -182,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $255.8B",
+          "detail": "Market cap $257.4B",
           "passed": true
         },
         {
@@ -207,12 +197,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 33.0",
+          "detail": "P/E 33.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 127.4",
+          "detail": "P/E x P/B = 128.9",
           "passed": false
         }
       ],
@@ -247,5 +237,6 @@
       "passed": 2,
       "total": 4
     }
-  }
+  },
+  "website": "https://www.rtx.com"
 }

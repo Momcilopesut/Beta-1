@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/109198/000010919826000008/tjx-20260131.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/109198/000010919826000048/tjx-20260801.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/109198/000010919826000051/tjx-20260916.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2026 (ended January 31, 2026), TJX reported net sales of $60.4 billion, up 7% from $56.4 billion, with consolidated comp sales up 5% and diluted EPS of $4.87 versus $4.26 a year earlier. Pre-tax margin improved to 12.1% from 11.5%, aided partly by a $419 million net gain from a credit card interchange fee litigation settlement recorded in SG&A, offset by related one-time compensation expenses. The filing also discusses ongoing uncertainty around U.S. tariffs, including a Supreme Court ruling invalidating certain IEEPA tariffs followed by a new executive order imposing a global tariff, and notes store count grew about 3% with continued expansion planned across all segments in fiscal 2027.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K discloses that on September 16, 2026, TJX's Board of Directors elected Craig A. Pintoff, an Executive Vice President and Chief Administrative Officer at United Rentals, Inc., as a new independent director and member of the Audit and Finance Committee, effective immediately. The filing describes his compensation under the company's standard non-employee director program and states there are no related-party transactions or arrangements connected to his appointment.",
+    "moat_explanation": "The 10-K describes a low-cost operating structure (lean advertising spend, no-frills store fixtures, cost-effective distribution) combined with an opportunistic buying strategy leveraging roughly 21,000 global vendors and substantial buying power to acquire brand-name merchandise at prices 20%-60% below full-price retailers. This scale-driven, flexible sourcing and inventory model is presented as a structural cost and pricing advantage versus traditional retailers, though the filing also notes larger competitors with greater resources.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Company acknowledges it operates in 'highly competitive markets' against larger, better-resourced competitors and 'may not be able to compete effectively'",
+      "Heavy reliance on merchandise sourced from China, India, and southeastern Asia exposes the company to tariffs, trade restrictions, and supply chain disruption risks explicitly discussed in Risk Factors",
+      "Tariff uncertainty is called out as an ongoing issue, including a Supreme Court ruling invalidating certain IEEPA tariffs followed by a new executive order imposing different tariffs, creating unresolved uncertainty for cost structure",
+      "Fiscal 2026 results benefited from a one-time $419 million net gain from a credit card interchange fee litigation settlement, which inflates period-over-period margin and EPS comparisons and is not a recurring business driver",
+      "General corporate expense increased in fiscal 2026 due to higher administrative costs and settlement-related expenses"
+    ]
+  }
+}

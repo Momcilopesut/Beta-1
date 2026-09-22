@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000104/v-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000103/v-20260728.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Visa's fiscal 2025 10-K reports net revenue of $40.0 billion (up 11%) and GAAP net income of $20.1 billion (up 2%), with GAAP operating expenses up 30% due largely to higher litigation provisions and personnel costs. The filing discusses growth in payments volume, cross-border volume, and processed transactions (258 billion in fiscal 2025), the acquisition of Featurespace for $946 million, issuance of \u20ac3.5 billion in senior notes, a new $30 billion share repurchase authorization, and continued interchange multidistrict litigation accruals of $2.2 billion during the year. It also details extensive global regulatory risks affecting interchange fees, network rules, and licensing across many jurisdictions.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL data tags rather than narrative text, covering the quarter and nine months ended June 30, 2026 (fiscal Q3 2026). Identifiable facts include a February 27, 2026 acquisition referred to as 'Prisma and Newpay' involving technology-based and customer-relationship intangible assets, issuance of senior notes around the same date, and references to ongoing interchange multidistrict litigation (including class action developments in April and June 2026) and related covered/uncovered litigation categories. The excerpt does not include narrative discussion of quarterly financial results or business performance.",
+    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses that Visa issued an earnings release for its fiscal third quarter ended June 30, 2026 (furnished as Exhibit 99.1) and held a conference call to discuss those results. It also reports that Visa's board of directors declared a quarterly cash dividend of $0.670 per share of Class A common stock, payable September 1, 2026, to shareholders of record as of August 11, 2026. The filing does not include the actual financial results themselves within the excerpt provided.",
+    "moat_explanation": "The 10-K describes Visa's four-party model connecting nearly 14,500 financial institutions, 5 billion payment credentials, and more than 175 million merchant locations across 200+ countries through VisaNet, where value to issuers, acquirers, and merchants grows as more of each participate\u2014a classic two-sided network effect. The scale of processed transactions (258 billion in fiscal 2025) and the breadth of the acceptance network are presented as central to Visa's competitive position.",
+    "moat_present": true,
+    "moat_type": "network_effects",
+    "red_flags": [
+      "Interchange multidistrict litigation resulted in $2.2 billion in additional accruals in fiscal 2025 and $875 million in additional escrow deposits, with estimated unresolved claims still around $39.4 billion as of October 2025",
+      "GAAP operating expenses rose 30% in fiscal 2025, driven substantially by higher litigation provisions and personnel costs",
+      "Extensive and increasing global regulation of interchange fees, merchant discount rates, network routing rules, and scheme/processing separation (e.g., U.S. Federal Reserve Regulation II litigation, EU IFR, Latin American and Asia-Pacific interchange caps) that the company states could reduce revenue opportunities and increase compliance costs",
+      "A U.S. District Court (North Dakota) ruled the Federal Reserve exceeded its authority in setting debit interchange caps under Regulation II, creating potential for a lower interchange cap if the ruling is affirmed on appeal, while a separate court (Kentucky) reached the opposite conclusion, creating regulatory uncertainty",
+      "Client incentives grew 14% in fiscal 2025, outpacing several revenue categories, which the company notes are paid to grow volume and could pressure net revenue if incentive levels continue rising"
+    ]
+  }
+}
