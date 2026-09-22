@@ -268,6 +268,50 @@ function fmtDollars(v) {
 
 const MARGIN_TREND_LABELS = { 20: "Declining", 60: "Stable", 100: "Improving" };
 
+// Green/yellow/red read on each metric, reusing the same thresholds this
+// app's own checklists already score against (pipeline/scoring/
+// value_investing.py, aggregation.py's margin-of-safety convention) rather
+// than inventing new ones - so a metric colored green here is the same
+// "green" as a passing checklist row. Returns "good" | "neutral" | "bad" |
+// null. null means no data, or - for total_assets/total_liabilities/
+// book_value_per_share - a metric that's pure scale with no inherent
+// direction (a bigger number isn't better or worse on its own) and for
+// ncav_margin_pct, which the glossary itself explains is expected to be
+// sharply negative for a normal large-cap, so coloring it red would flag
+// something that isn't actually a problem for the companies this tool
+// tracks.
+function metricSentiment(key, value) {
+  if (value === null || value === undefined) return null;
+  switch (key) {
+    case "pe_ttm": // cheaper is better; >15 fails the defensive checklist's own bar
+      return value <= 15 ? "good" : value <= 25 ? "neutral" : "bad";
+    case "pb_ratio": // <=1.5x book is classic deep-value territory
+      return value <= 1.5 ? "good" : value <= 3 ? "neutral" : "bad";
+    case "graham_upside_pct": // mirrors aggregation.py's own margin-of-safety flags
+      return value >= 15 ? "good" : value >= 0 ? "neutral" : "bad";
+    case "graham_multiple": // 22.5 is this tool's own combined P/E x P/B ceiling
+      return value <= 22.5 ? "good" : value <= 35 ? "neutral" : "bad";
+    case "debt_to_equity": // 1.0 is the defensive checklist's own leverage bar
+      return value <= 1.0 ? "good" : value <= 2.0 ? "neutral" : "bad";
+    case "debt_to_ebitda": // standard leverage read: <2x low, >4x stretched
+      return value <= 2 ? "good" : value <= 4 ? "neutral" : "bad";
+    case "current_ratio": // 2.0 is the defensive checklist's own bar; <1.0 means short-term liabilities exceed short-term assets
+      return value >= 2.0 ? "good" : value >= 1.0 ? "neutral" : "bad";
+    case "fcf_margin_pct": // negative means burning cash, not just generating less of it
+      return value >= 15 ? "good" : value >= 0 ? "neutral" : "bad";
+    case "eps_growth_cagr_3yr_pct": // 2.9%/yr merely passes the checklist; double digits is a clearly strong signal
+      return value >= 10 ? "good" : value >= 0 ? "neutral" : "bad";
+    case "roe_pct": // 15% is the quality checklist's own bar
+      return value >= 15 ? "good" : value >= 0 ? "neutral" : "bad";
+    case "margin_trend_score": // already categorical: 20 declining / 60 stable / 100 improving
+      return value >= 100 ? "good" : value >= 60 ? "neutral" : "bad";
+    case "shareholders_equity": // negative net worth is unambiguous - liabilities exceed assets
+      return value > 0 ? "good" : "bad";
+    default: // ncav_margin_pct, total_assets, total_liabilities, book_value_per_share
+      return null;
+  }
+}
+
 function formatMetricValue(key, value) {
   if (value === null || value === undefined) return "—";
   switch (key) {
@@ -302,11 +346,13 @@ function renderKeyMetricsReference(metrics) {
   if (!metrics) return "";
   const rows = METRIC_GLOSSARY.map((m) => {
     const value = metrics[m.key];
+    const sentiment = metricSentiment(m.key, value);
+    const valueClass = sentiment ? ` metric-value-${sentiment}` : "";
     return `
       <details class="metric-row">
         <summary>
           <span class="metric-label">${escapeHtml(m.label)}</span>
-          <span class="metric-value">${escapeHtml(formatMetricValue(m.key, value))}</span>
+          <span class="metric-value${valueClass}">${escapeHtml(formatMetricValue(m.key, value))}</span>
         </summary>
         <div class="metric-info">
           <p><strong>What it is:</strong> ${escapeHtml(m.explanation)}</p>
@@ -320,7 +366,9 @@ function renderKeyMetricsReference(metrics) {
   return `
     <section class="key-metrics-reference">
       <h3>Key Metrics Reference <span class="attribution"><a href="glossary.html">full glossary &rarr;</a></span></h3>
-      <p class="meta">This company's own numbers - tap any row for what it means and why it matters.</p>
+      <p class="meta">This company's own numbers - tap any row for what it means and why it matters. Colored
+      where the value clearly signals better (green) or worse (red) for this company's finances; some figures
+      are shown in gray because they're pure scale (bigger isn't inherently better or worse).</p>
       <div class="metric-rows">${rows}</div>
     </section>
   `;

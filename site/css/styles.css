@@ -554,6 +554,9 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 .metric-row summary::-webkit-details-marker { display: none; }
 .metric-label { font-weight: 500; }
 .metric-value { font-weight: 700; white-space: nowrap; }
+.metric-value-good { color: var(--strong); }
+.metric-value-neutral { color: var(--cautious); }
+.metric-value-bad { color: var(--weak); }
 .metric-info { margin-top: 0.5rem; font-size: 0.85rem; color: var(--muted); }
 .metric-info p { margin: 0.35rem 0; }
 
