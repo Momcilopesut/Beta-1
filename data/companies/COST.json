@@ -9,6 +9,7 @@
         "earnings": 5007000000,
         "fiscal_year": "2021-08-29",
         "market_return_pct": null,
+        "revenue": 195929000000,
         "spending": 189221000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 5844000000,
         "fiscal_year": "2022-08-28",
         "market_return_pct": null,
+        "revenue": 226954000000,
         "spending": 219161000000,
         "stock_return_pct": null
       },
@@ -27,6 +29,7 @@
         "earnings": 6292000000,
         "fiscal_year": "2023-09-03",
         "market_return_pct": 11.576385266870332,
+        "revenue": 242290000000,
         "spending": 234176000000,
         "stock_return_pct": 2.5740970888411994
       },
@@ -36,6 +39,7 @@
         "earnings": 7367000000,
         "fiscal_year": "2024-09-01",
         "market_return_pct": 22.891995369958156,
+        "revenue": 254453000000,
         "spending": 245168000000,
         "stock_return_pct": 61.28540744956217
       },
@@ -45,6 +49,7 @@
         "earnings": 8099000000,
         "fiscal_year": "2025-08-31",
         "market_return_pct": 15.974134183451664,
+        "revenue": 275235000000,
         "spending": 264852000000,
         "stock_return_pct": 6.8577347280239485
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 540.090648400003,
+      "graham_multiple": 536.8643130215637,
       "graham_number": 176.00726175658534,
-      "graham_upside_pct": -80.4425119405111,
-      "ncav_margin_pct": -102.3940891096085,
-      "pb_ratio": 11.93553933629771,
-      "pe_ttm": 45.25062782521346
+      "graham_upside_pct": -80.41927045249807,
+      "ncav_margin_pct": -102.39693416788869,
+      "pb_ratio": 11.899836316661194,
+      "pe_ttm": 45.11526870919136
     }
   },
   "industry": "Discount Stores",
-  "last_updated": "2026-09-22T14:25:53Z",
+  "last_updated": "2026-09-22T17:50:26Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -96,14 +101,11 @@
     },
     "conviction_verdict": "Cautious",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
-      "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 399547970260,
+  "market_cap": 398352792190,
   "metrics": {
     "book_value_per_share": 75.48381138170359,
     "current_ratio": 1.0724510385756676,
@@ -124,68 +126,25 @@
     "fcf_margin_pct": 2.8473849619416134,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 540.090648400003,
-    "graham_upside_pct": -80.4425119405111,
+    "graham_multiple": 536.8643130215637,
+    "graham_upside_pct": -80.41927045249807,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -102.3940891096085,
-    "pb_ratio": 11.93553933629771,
-    "pe_ttm": 45.25062782521346,
+    "ncav_margin_pct": -102.39693416788869,
+    "pb_ratio": 11.899836316661194,
+    "pe_ttm": 45.11526870919136,
     "roe_pct": 28.267353253960003,
     "shareholders_equity": 29164000000,
     "total_assets": 77099000000,
     "total_liabilities": 47935000000
   },
   "name": "Costco Wholesale Corporation",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 899.9482
+    "close": 898.88
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.0724510385756676
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 0.7979545631977516
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": 2.8473849619416134
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000909832.json",
@@ -223,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $399.5B",
+          "detail": "Market cap $398.4B",
           "passed": true
         },
         {
@@ -248,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 45.3",
+          "detail": "P/E 45.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 540.1",
+          "detail": "P/E x P/B = 536.9",
           "passed": false
         }
       ],

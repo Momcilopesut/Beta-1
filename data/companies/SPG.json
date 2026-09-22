@@ -9,6 +9,7 @@
         "earnings": 2249631000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 5116789000,
         "spending": 2703599000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 2139535000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 5291447000,
         "spending": 2707894000,
         "stock_return_pct": -26.469299618201163
       },
@@ -27,6 +29,7 @@
         "earnings": 2283126000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 5658836000,
         "spending": 2851814000,
         "stock_return_pct": 21.748382703438878
       },
@@ -36,6 +39,7 @@
         "earnings": 2370896000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 5963798000,
         "spending": 2871002000,
         "stock_return_pct": 20.40131440956443
       },
@@ -45,6 +49,7 @@
         "earnings": 4614970000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 6364505000,
         "spending": 3189109000,
         "stock_return_pct": 7.490854189652171
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 217.61075973820036,
+      "graham_multiple": 217.8653372564671,
       "graham_number": 73.98486251891407,
-      "graham_upside_pct": -63.95026920093842,
+      "graham_upside_pct": -63.93796913681319,
       "ncav_margin_pct": null,
-      "pb_ratio": 14.994474648887252,
-      "pe_ttm": 14.512729844413013
+      "pb_ratio": 15.003242920208661,
+      "pe_ttm": 14.521216407355022
     }
   },
   "industry": "REIT - Retail",
-  "last_updated": "2026-09-22T14:27:16Z",
+  "last_updated": "2026-09-22T17:52:08Z",
   "layered_analysis": {
     "conviction_score": 40.3,
     "conviction_score_breakdown": {
@@ -96,14 +101,11 @@
     },
     "conviction_verdict": "Neutral",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
-      "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 66545909220,
+  "market_cap": 66584823060,
   "metrics": {
     "book_value_per_share": 17.204965839832205,
     "current_ratio": 1.0525881520152192,
@@ -124,67 +126,24 @@
     "fcf_margin_pct": 56.01940763657189,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 217.61075973820036,
-    "graham_upside_pct": -63.95026920093842,
+    "graham_multiple": 217.8653372564671,
+    "graham_upside_pct": -63.93796913681319,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "pb_ratio": 14.994474648887252,
-    "pe_ttm": 14.512729844413013,
+    "pb_ratio": 15.003242920208661,
+    "pe_ttm": 14.521216407355022,
     "roe_pct": 109.37823941199636,
     "shareholders_equity": 5208268000,
     "total_assets": 40606466000,
     "total_liabilities": 33901073000
   },
   "name": "Simon Property Group Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 205.23
+    "close": 205.16
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.0525881520152192
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 6.3424298087343285
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 56.01940763657189
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001063761.json",
@@ -222,7 +181,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $66.5B",
+          "detail": "Market cap $66.6B",
           "passed": true
         },
         {
@@ -252,7 +211,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 217.6",
+          "detail": "P/E x P/B = 217.9",
           "passed": false
         }
       ],

@@ -9,6 +9,7 @@
         "earnings": 1377475000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 5541352000,
         "spending": 3743885000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 1191624000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 6311050000,
         "spending": 4726329000,
         "stock_return_pct": 5.705955851728436
       },
@@ -27,6 +29,7 @@
         "earnings": 1630988000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 7140027000,
         "spending": 5186672000,
         "stock_return_pct": 15.44523246650907
       },
@@ -36,6 +39,7 @@
         "earnings": 1509048000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 7492709000,
         "spending": 5562415000,
         "stock_return_pct": -10.307167235494878
       },
@@ -45,6 +49,7 @@
         "earnings": 1905432000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 8294343000,
         "spending": 5874989000,
         "stock_return_pct": 45.89041095890411
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 379.5707742726482,
+      "graham_multiple": 382.04041004819777,
       "graham_number": 10.244631485368055,
-      "graham_upside_pct": -76.96800475411858,
-      "ncav_margin_pct": -91.67706145101985,
-      "pb_ratio": 9.299441311692211,
-      "pe_ttm": 40.816513761467895
+      "graham_upside_pct": -77.04273972013756,
+      "ncav_margin_pct": -91.70406799226805,
+      "pb_ratio": 9.329645161310992,
+      "pe_ttm": 40.94908256880735
     }
   },
   "industry": "Beverages - Non-Alcoholic",
-  "last_updated": "2026-09-22T14:25:44Z",
+  "last_updated": "2026-09-22T17:50:16Z",
   "layered_analysis": {
     "conviction_score": 40.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 87023161628,
+  "market_cap": 87305805972,
   "metrics": {
     "book_value_per_share": 4.784158371327384,
     "current_ratio": 3.729314920459693,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 23.701720558216607,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 379.5707742726482,
-    "graham_upside_pct": -76.96800475411858,
+    "graham_multiple": 382.04041004819777,
+    "graham_upside_pct": -77.04273972013756,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -91.67706145101985,
-    "pb_ratio": 9.299441311692211,
-    "pe_ttm": 40.816513761467895,
+    "ncav_margin_pct": -91.70406799226805,
+    "pb_ratio": 9.329645161310992,
+    "pe_ttm": 40.94908256880735,
     "roe_pct": 24.964996796316953,
     "shareholders_equity": 8254108000,
     "total_assets": 9988945000,
     "total_liabilities": 1734837000
   },
   "name": "Monster Beverage Corporation",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 44.48
+    "close": 44.6248
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 3.729314920459693
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 0.0
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 23.701720558216607
-      }
-    },
-    "passed": 3,
-    "quant_score_pct": 100.0
-  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000865752.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $87.0B",
+          "detail": "Market cap $87.3B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 40.8",
+          "detail": "P/E 40.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 379.6",
+          "detail": "P/E x P/B = 382.0",
           "passed": false
         }
       ],

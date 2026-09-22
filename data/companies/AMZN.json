@@ -9,6 +9,7 @@
         "earnings": 33364000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 469822000000,
         "spending": 444943000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": -2722000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 513983000000,
         "spending": 501735000000,
         "stock_return_pct": -49.61612284069098
       },
@@ -27,6 +29,7 @@
         "earnings": 30425000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 574785000000,
         "spending": 537933000000,
         "stock_return_pct": 78.48809523809524
       },
@@ -36,6 +39,7 @@
         "earnings": 59248000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 637959000000,
         "spending": 569366000000,
         "stock_return_pct": 46.32828653371572
       },
@@ -45,6 +49,7 @@
         "earnings": 77670000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 716924000000,
         "spending": 636949000000,
         "stock_return_pct": 5.209900177765626
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 102.08585417865874,
+      "graham_multiple": 100.24992898009499,
       "graham_number": 91.71695514212709,
-      "graham_upside_pct": -64.24847915842558,
-      "ncav_margin_pct": -106.42884790865592,
-      "pb_ratio": 5.008105289873463,
-      "pe_ttm": 20.384126984126983
+      "graham_upside_pct": -63.92646798736398,
+      "ncav_margin_pct": -106.48675204237983,
+      "pb_ratio": 4.962867771291831,
+      "pe_ttm": 20.2
     }
   },
   "industry": "Specialty Retail",
-  "last_updated": "2026-09-22T14:21:13Z",
+  "last_updated": "2026-09-22T17:46:32Z",
   "layered_analysis": {
     "conviction_score": 12.1,
     "conviction_score_breakdown": {
@@ -96,14 +101,11 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
-      "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 2762853564000,
+  "market_cap": 2737843306500,
   "metrics": {
     "book_value_per_share": 51.284864261807364,
     "current_ratio": 1.0331158765552857,
@@ -123,68 +125,25 @@
     "fcf_margin_pct": 1.07333552789417,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 1,
-    "graham_multiple": 102.08585417865874,
-    "graham_upside_pct": -64.24847915842558,
+    "graham_multiple": 100.24992898009499,
+    "graham_upside_pct": -63.92646798736398,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -106.42884790865592,
-    "pb_ratio": 5.008105289873463,
-    "pe_ttm": 20.384126984126983,
+    "ncav_margin_pct": -106.48675204237983,
+    "pb_ratio": 4.962867771291831,
+    "pe_ttm": 20.2,
     "roe_pct": 30.499089745974313,
     "shareholders_equity": 411065000000,
     "total_assets": 818042000000,
     "total_liabilities": 406977000000
   },
   "name": "Amazon.com Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 256.54001
+    "close": 254.25
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.0331158765552857
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 1.0497903671833722
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": 1.07333552789417
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
@@ -222,7 +181,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $2762.9B",
+          "detail": "Market cap $2737.8B",
           "passed": true
         },
         {
@@ -247,12 +206,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.4",
+          "detail": "P/E 20.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 102.1",
+          "detail": "P/E x P/B = 100.2",
           "passed": false
         }
       ],

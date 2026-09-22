@@ -9,6 +9,7 @@
         "earnings": 7071000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 43075000000,
         "spending": 33875000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 6933000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 43653000000,
         "spending": 35291000000,
         "stock_return_pct": -21.990905215290606
       },
@@ -27,6 +29,7 @@
         "earnings": 5723000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 40109000000,
         "spending": 33674000000,
         "stock_return_pct": 0.05464978595499414
       },
@@ -36,6 +39,7 @@
         "earnings": 13402000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 41950000000,
         "spending": 35099000000,
         "stock_return_pct": 2.9676832043696
       },
@@ -45,6 +49,7 @@
         "earnings": 6524000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 44328000000,
         "spending": 36280000000,
         "stock_return_pct": 10.768278666784552
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 119.24307367565451,
+      "graham_multiple": 118.94595175213165,
       "graham_number": 49.990086796974246,
-      "graham_upside_pct": -52.04327820704696,
-      "ncav_margin_pct": -104.37635730829801,
-      "pb_ratio": 3.55625200547838,
-      "pe_ttm": 33.530546623794216
+      "graham_upside_pct": -52.01565867059489,
+      "ncav_margin_pct": -104.37887776748882,
+      "pb_ratio": 3.551818626491881,
+      "pe_ttm": 33.4887459807074
     }
   },
   "industry": "Medical - Devices",
-  "last_updated": "2026-09-22T14:22:02Z",
+  "last_updated": "2026-09-22T17:47:22Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 180392466531,
+  "market_cap": 180219430834,
   "metrics": {
     "book_value_per_share": 29.69707401032702,
     "current_ratio": 1.3762770854384192,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 16.682458040064972,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 119.24307367565451,
-    "graham_upside_pct": -52.04327820704696,
+    "graham_multiple": 118.94595175213165,
+    "graham_upside_pct": -52.01565867059489,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -104.37635730829801,
-    "pb_ratio": 3.55625200547838,
-    "pe_ttm": 33.530546623794216,
+    "ncav_margin_pct": -104.37887776748882,
+    "pb_ratio": 3.551818626491881,
+    "pe_ttm": 33.4887459807074,
     "roe_pct": 10.52095706770745,
     "shareholders_equity": 52130000000,
     "total_assets": 86713000000,
     "total_liabilities": 33942000000
   },
   "name": "Abbott Laboratories",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 104.24
+    "close": 104.18
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.3762770854384192
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 1.3496058760300966
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 16.682458040064972
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000001800.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $180.4B",
+          "detail": "Market cap $180.2B",
           "passed": true
         },
         {
@@ -251,7 +212,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 119.2",
+          "detail": "P/E x P/B = 118.9",
           "passed": false
         }
       ],

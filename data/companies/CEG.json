@@ -9,6 +9,7 @@
         "earnings": -205000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 19649000000,
         "spending": 19995000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": -160000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 24440000000,
         "spending": 23945000000,
         "stock_return_pct": null
       },
@@ -27,6 +29,7 @@
         "earnings": 1623000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 24918000000,
         "spending": 23308000000,
         "stock_return_pct": 33.68518733325601
       },
@@ -36,6 +39,7 @@
         "earnings": 3749000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 23568000000,
         "spending": 19216000000,
         "stock_return_pct": 94.10845986984816
       },
@@ -45,6 +49,7 @@
         "earnings": 2319000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 25533000000,
         "spending": 22434000000,
         "stock_return_pct": 57.914264002503224
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 74.48595609353332,
+      "graham_multiple": 75.18908488916638,
       "graham_number": 123.29759369172413,
-      "graham_upside_pct": -53.21070972286609,
-      "ncav_margin_pct": -132.42832376240918,
-      "pb_ratio": 2.9129139694155173,
-      "pe_ttm": 25.570942662779395
+      "graham_upside_pct": -53.46031265174796,
+      "ncav_margin_pct": -132.25533108519855,
+      "pb_ratio": 2.92663026550333,
+      "pe_ttm": 25.691350826044697
     }
   },
   "industry": "Independent Power Producers",
-  "last_updated": "2026-09-22T14:23:57Z",
+  "last_updated": "2026-09-22T17:48:31Z",
   "layered_analysis": {
     "conviction_score": 12.1,
     "conviction_score_breakdown": {
@@ -96,14 +101,11 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
-      "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 94488719013,
+  "market_cap": 94933646415,
   "metrics": {
     "book_value_per_share": 91.30508474576271,
     "current_ratio": 1.4552639656230817,
@@ -123,68 +125,25 @@
     "fcf_margin_pct": 5.044452277444876,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 1,
-    "graham_multiple": 74.48595609353332,
-    "graham_upside_pct": -53.21070972286609,
+    "graham_multiple": 75.18908488916638,
+    "graham_upside_pct": -53.46031265174796,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -132.42832376240918,
-    "pb_ratio": 2.9129139694155173,
-    "pe_ttm": 25.570942662779395,
+    "ncav_margin_pct": -132.25533108519855,
+    "pb_ratio": 2.92663026550333,
+    "pe_ttm": 25.691350826044697,
     "roe_pct": 14.7486933751736,
     "shareholders_equity": 14517000000,
     "total_assets": 57249000000,
     "total_liabilities": 42396000000
   },
   "name": "Constellation Energy Corporation",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 263.5167
+    "close": 264.93
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.4552639656230817
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 1.5811499912080182
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": 5.044452277444876
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001868275.json",
@@ -222,7 +181,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $94.5B",
+          "detail": "Market cap $94.9B",
           "passed": true
         },
         {
@@ -247,12 +206,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 25.6",
+          "detail": "P/E 25.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 74.5",
+          "detail": "P/E x P/B = 75.2",
           "passed": false
         }
       ],

@@ -9,6 +9,7 @@
         "earnings": 4299000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 22357000000,
         "spending": 14544000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 3461000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 23334000000,
         "spending": 15782000000,
         "stock_return_pct": -8.938413611310802
       },
@@ -27,6 +29,7 @@
         "earnings": 1842000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 22707000000,
         "spending": 16624000000,
         "stock_return_pct": 10.763157894736851
       },
@@ -36,6 +39,7 @@
         "earnings": 1883000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 25455000000,
         "spending": 18592000000,
         "stock_return_pct": -9.527203611309112
       },
@@ -45,6 +49,7 @@
         "earnings": 2204000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 25741000000,
         "spending": 19451000000,
         "stock_return_pct": 33.37710084033614
       }
@@ -73,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 191.6414375814373,
+      "graham_multiple": 194.72500295066763,
       "graham_number": 27.725542686405927,
-      "graham_upside_pct": -62.34477429525202,
-      "ncav_margin_pct": -112.87287327986839,
-      "pb_ratio": 5.283608831866329,
-      "pe_ttm": 36.270935960591125
+      "graham_upside_pct": -62.59370927360236,
+      "ncav_margin_pct": -112.78777198592431,
+      "pb_ratio": 5.325946591078622,
+      "pe_ttm": 36.5615763546798
     }
   },
   "industry": "Copper",
-  "last_updated": "2026-09-22T14:20:41Z",
+  "last_updated": "2026-09-22T17:45:57Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 105847542800,
+  "market_cap": 106695703200,
   "metrics": {
     "book_value_per_share": 22.32986832986833,
     "current_ratio": 2.066073512252042,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 4.335495901480129,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 191.6414375814373,
-    "graham_upside_pct": -62.34477429525202,
+    "graham_multiple": 194.72500295066763,
+    "graham_upside_pct": -62.59370927360236,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -112.87287327986839,
-    "pb_ratio": 5.283608831866329,
-    "pe_ttm": 36.270935960591125,
+    "ncav_margin_pct": -112.78777198592431,
+    "pb_ratio": 5.325946591078622,
+    "pe_ttm": 36.5615763546798,
     "roe_pct": 15.25946268038032,
     "shareholders_equity": 18899000000,
     "total_assets": 58167000000,
     "total_liabilities": 27401000000
   },
   "name": "Freeport-McMoRan Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 73.63
+    "close": 74.12
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 20
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 2.066073512252042
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 1.3477853292711508
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": 4.335495901480129
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000831259.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $105.8B",
+          "detail": "Market cap $106.7B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 36.3",
+          "detail": "P/E 36.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 191.6",
+          "detail": "P/E x P/B = 194.7",
           "passed": false
         }
       ],

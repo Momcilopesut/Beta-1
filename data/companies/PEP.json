@@ -9,6 +9,7 @@
         "earnings": 7618000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 79474000000,
         "spending": 68312000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 8910000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 86392000000,
         "spending": 74880000000,
         "stock_return_pct": 4.000921075355471
       },
@@ -27,6 +29,7 @@
         "earnings": 9074000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 91471000000,
         "spending": 79485000000,
         "stock_return_pct": -4.2898261928484445
       },
@@ -36,6 +39,7 @@
         "earnings": 9578000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 91854000000,
         "spending": 78967000000,
         "stock_return_pct": -12.058296223468853
       },
@@ -45,6 +49,7 @@
         "earnings": 8240000000,
         "fiscal_year": "2025-12-27",
         "market_return_pct": 17.784261534261518,
+        "revenue": 93925000000,
         "spending": 80434000000,
         "stock_return_pct": -5.44521899250296
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 138.26799731556335,
+      "graham_multiple": 138.29973017387087,
       "graham_number": 47.03104991311295,
-      "graham_upside_pct": -64.00156917421846,
-      "ncav_margin_pct": -133.03225048487425,
-      "pb_ratio": 8.08083763236492,
-      "pe_ttm": 17.110602094240836
+      "graham_upside_pct": -64.05368064123122,
+      "ncav_margin_pct": -132.9844328719391,
+      "pb_ratio": 8.081764865598696,
+      "pe_ttm": 17.112565445026178
     }
   },
   "industry": "Beverages - Non-Alcoholic",
-  "last_updated": "2026-09-22T14:21:37Z",
+  "last_updated": "2026-09-22T17:46:57Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -96,14 +101,11 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
-      "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 178570350000,
+  "market_cap": 178590840000,
   "metrics": {
     "book_value_per_share": 16.30307467057101,
     "current_ratio": 0.9336010938301145,
@@ -124,68 +126,25 @@
     "fcf_margin_pct": 8.168219323928666,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 138.26799731556335,
-    "graham_upside_pct": -64.00156917421846,
+    "graham_multiple": 138.29973017387087,
+    "graham_upside_pct": -64.05368064123122,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -133.03225048487425,
-    "pb_ratio": 8.08083763236492,
-    "pe_ttm": 17.110602094240836,
+    "ncav_margin_pct": -132.9844328719391,
+    "pb_ratio": 8.081764865598696,
+    "pe_ttm": 17.112565445026178,
     "roe_pct": 50.3632542779946,
     "shareholders_equity": 20406000000,
     "total_assets": 107399000000,
     "total_liabilities": 86852000000
   },
   "name": "PepsiCo Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 130.6475
+    "close": 130.8369
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.9336010938301145
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 2.824211896541966
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": 8.168219323928666
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000077476.json",

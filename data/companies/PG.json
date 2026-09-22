@@ -9,6 +9,7 @@
         "earnings": 14742000000,
         "fiscal_year": "2022-06-30",
         "market_return_pct": null,
+        "revenue": 80187000000,
         "spending": 62374000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 14653000000,
         "fiscal_year": "2023-06-30",
         "market_return_pct": 17.50298210735586,
+        "revenue": 82006000000,
         "spending": 63872000000,
         "stock_return_pct": 5.528896307114555
       },
@@ -27,6 +29,7 @@
         "earnings": 14879000000,
         "fiscal_year": "2024-06-30",
         "market_return_pct": 23.0238224147266,
+        "revenue": 84039000000,
         "spending": 65494000000,
         "stock_return_pct": 7.236061684460254
       },
@@ -36,6 +39,7 @@
         "earnings": 15974000000,
         "fiscal_year": "2025-06-30",
         "market_return_pct": 13.296292221366485,
+        "revenue": 84284000000,
         "spending": 63833000000,
         "stock_return_pct": -2.0894788593903675
       },
@@ -45,6 +49,7 @@
         "earnings": 16046000000,
         "fiscal_year": "2026-06-30",
         "market_return_pct": 20.865905964230794,
+        "revenue": 87032000000,
         "spending": 67285000000,
         "stock_return_pct": -7.9588250062766805
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 143.72703665924027,
+      "graham_multiple": 143.90250967575625,
       "graham_number": 58.35192022913423,
-      "graham_upside_pct": -60.39910401823262,
-      "ncav_margin_pct": -113.43103651275095,
-      "pb_ratio": 6.5782309292776775,
-      "pe_ttm": 21.848888888888887
+      "graham_upside_pct": -60.50364405069809,
+      "ncav_margin_pct": -113.39558072423206,
+      "pb_ratio": 6.582245309421664,
+      "pe_ttm": 21.86222222222222
     }
   },
   "industry": "Household & Personal Products",
-  "last_updated": "2026-09-22T14:25:47Z",
+  "last_updated": "2026-09-22T17:50:20Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 350567001939,
+  "market_cap": 350804722833,
   "metrics": {
     "book_value_per_share": 22.41940144478844,
     "current_ratio": 0.6773143122964801,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 18.284079419064252,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 143.72703665924027,
-    "graham_upside_pct": -60.39910401823262,
+    "graham_multiple": 143.90250967575625,
+    "graham_upside_pct": -60.50364405069809,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -113.43103651275095,
-    "pb_ratio": 6.5782309292776775,
-    "pe_ttm": 21.848888888888887,
+    "ncav_margin_pct": -113.39558072423206,
+    "pb_ratio": 6.582245309421664,
+    "pe_ttm": 21.86222222222222,
     "roe_pct": 29.83539955468165,
     "shareholders_equity": 54311000000,
     "total_assets": 126521000000,
     "total_liabilities": 72210000000
   },
   "name": "Procter & Gamble Co.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 147.35
+    "close": 147.74001
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.6773143122964801
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 1.5289855072463767
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 18.284079419064252
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000080424.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $350.6B",
+          "detail": "Market cap $350.8B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 21.8",
+          "detail": "P/E 21.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 143.7",
+          "detail": "P/E x P/B = 143.9",
           "passed": false
         }
       ],

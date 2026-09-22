@@ -9,6 +9,7 @@
         "earnings": 76033000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 257637000000,
         "spending": 178923000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 59972000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 282836000000,
         "spending": 207994000000,
         "stock_return_pct": -39.08871246116672
       },
@@ -27,6 +29,7 @@
         "earnings": 73795000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 307394000000,
         "spending": 223101000000,
         "stock_return_pct": 56.60206279043407
       },
@@ -36,6 +39,7 @@
         "earnings": 100118000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 350018000000,
         "spending": 237628000000,
         "stock_return_pct": 37.00513859738006
       },
@@ -45,6 +49,7 @@
         "earnings": 132170000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 402836000000,
         "spending": 273797000000,
         "stock_return_pct": 65.34601162176439
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 119.96845437327634,
+      "graham_multiple": 114.1445166517105,
       "graham_number": 113.749739382613,
-      "graham_upside_pct": -68.47465789517959,
-      "ncav_margin_pct": -99.40544632452715,
-      "pb_ratio": 6.770433690357232,
-      "pe_ttm": 17.719463753723932
+      "graham_upside_pct": -67.7040006295639,
+      "ncav_margin_pct": -99.39003922054123,
+      "pb_ratio": 6.604051994613416,
+      "pe_ttm": 17.28401241310824
     }
   },
   "industry": "Internet Content & Information",
-  "last_updated": "2026-09-22T14:26:51Z",
+  "last_updated": "2026-09-22T17:51:26Z",
   "layered_analysis": {
     "conviction_score": 40.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 4376728472716,
+  "market_cap": 4266175937260.9995,
   "metrics": {
     "book_value_per_share": 52.710065015225084,
     "current_ratio": 2.723981254609035,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 18.187550268595658,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 119.96845437327634,
-    "graham_upside_pct": -68.47465789517959,
+    "graham_multiple": 114.1445166517105,
+    "graham_upside_pct": -67.7040006295639,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -99.40544632452715,
-    "pb_ratio": 6.770433690357232,
-    "pe_ttm": 17.719463753723932,
+    "ncav_margin_pct": -99.39003922054123,
+    "pb_ratio": 6.604051994613416,
+    "pe_ttm": 17.28401241310824,
     "roe_pct": 50.84008289969907,
     "shareholders_equity": 415265000000,
     "total_assets": 595281000000,
     "total_liabilities": 180016000000
   },
   "name": "Alphabet Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 360.82
+    "close": 352.21
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 2.723981254609035
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 0.3944817399751166
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 18.187550268595658
-      }
-    },
-    "passed": 3,
-    "quant_score_pct": 100.0
-  },
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $4376.7B",
+          "detail": "Market cap $4266.2B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 17.7",
+          "detail": "P/E 17.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 120.0",
+          "detail": "P/E x P/B = 114.1",
           "passed": false
         }
       ],

@@ -9,6 +9,7 @@
         "earnings": 7725000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 39211000000,
         "spending": 28893000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 6950000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 44915000000,
         "spending": 36390000000,
         "stock_return_pct": -17.4674779689467
       },
@@ -27,6 +29,7 @@
         "earnings": 5995000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 42857000000,
         "spending": 35411000000,
         "stock_return_pct": -1.1876010096424625
       },
@@ -36,6 +39,7 @@
         "earnings": 6335000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 42879000000,
         "spending": 35217000000,
         "stock_return_pct": -4.395846733437464
       },
@@ -45,6 +49,7 @@
         "earnings": 6737000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 44556000000,
         "spending": 36447000000,
         "stock_return_pct": 11.383426561328648
       }
@@ -73,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 163.62339894701304,
+      "graham_multiple": 164.20605256936662,
       "graham_number": 238.284411537287,
-      "graham_upside_pct": -63.63831512806284,
-      "ncav_margin_pct": -111.59710773717543,
-      "pb_ratio": 4.632129975891722,
-      "pe_ttm": 35.32357679914071
+      "graham_upside_pct": -63.836850159744884,
+      "ncav_margin_pct": -111.53378745484723,
+      "pb_ratio": 4.640370022589647,
+      "pe_ttm": 35.38641353383459
     }
   },
   "industry": "Medical - Diagnostics & Research",
-  "last_updated": "2026-09-22T14:22:05Z",
+  "last_updated": "2026-09-22T17:47:25Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 243192033684,
+  "market_cap": 243624645231,
   "metrics": {
     "book_value_per_share": 142.01078167115904,
     "current_ratio": 1.5505342093038688,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 14.123799263847742,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 163.62339894701304,
-    "graham_upside_pct": -63.63831512806284,
+    "graham_multiple": 164.20605256936662,
+    "graham_upside_pct": -63.836850159744884,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -111.59710773717543,
-    "pb_ratio": 4.632129975891722,
-    "pe_ttm": 35.32357679914071,
+    "ncav_margin_pct": -111.53378745484723,
+    "pb_ratio": 4.640370022589647,
+    "pe_ttm": 35.38641353383459,
     "roe_pct": 13.352660055396893,
     "shareholders_equity": 53407000000,
     "total_assets": 110343000000,
     "total_liabilities": 56807000000
   },
   "name": "Thermo Fisher Scientific Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 655.3173
+    "close": 658.91498
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 20
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 1.5505342093038688
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 3.616952888235834
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 14.123799263847742
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000097745.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $243.2B",
+          "detail": "Market cap $243.6B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 35.3",
+          "detail": "P/E 35.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 163.6",
+          "detail": "P/E x P/B = 164.2",
           "passed": false
         }
       ],

@@ -9,6 +9,7 @@
         "earnings": 2312000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 25962000000,
         "spending": 21291000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 13221000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 36253000000,
         "spending": 22969000000,
         "stock_return_pct": 117.28182131769576
       },
@@ -27,6 +29,7 @@
         "earnings": 4673000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 28331000000,
         "spending": 21843000000,
         "stock_return_pct": -4.667407525003976
       },
@@ -36,6 +39,7 @@
         "earnings": 3043000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 27099000000,
         "spending": 21132000000,
         "stock_return_pct": -17.718567860116572
       },
@@ -45,6 +49,7 @@
         "earnings": 2369000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 21593000000,
         "spending": 17871000000,
         "stock_return_pct": -16.777980165958304
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 11.634658037269759,
+      "graham_multiple": 11.710410306947932,
       "graham_number": 40.2022956592181,
-      "graham_upside_pct": -29.494395546793932,
-      "ncav_margin_pct": -172.55875666559677,
-      "pb_ratio": 1.3595298232165955,
-      "pe_ttm": 8.557854221794564
+      "graham_upside_pct": -29.587011718682714,
+      "ncav_margin_pct": -172.4634434726741,
+      "pb_ratio": 1.3639485339912805,
+      "pe_ttm": 8.585668751503489
     }
   },
   "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-09-22T14:24:43Z",
+  "last_updated": "2026-09-22T17:49:06Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 56614605360,
+  "market_cap": 56798614601,
   "metrics": {
     "book_value_per_share": 42.504262360846454,
     "current_ratio": 1.410542321338064,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 19.01079053396934,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 11.634658037269759,
-    "graham_upside_pct": -29.494395546793932,
+    "graham_multiple": 11.710410306947932,
+    "graham_upside_pct": -29.587011718682714,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -172.55875666559677,
-    "pb_ratio": 1.3595298232165955,
-    "pe_ttm": 8.557854221794564,
+    "ncav_margin_pct": -172.4634434726741,
+    "pb_ratio": 1.3639485339912805,
+    "pe_ttm": 8.585668751503489,
     "roe_pct": 18.96805318585633,
     "shareholders_equity": 36034000000,
     "total_assets": 86783000000,
     "total_liabilities": 50185000000
   },
   "name": "Occidental Petroleum Corporation",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 57.02
+    "close": 57.095
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.410542321338064
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 2.1284762327854287
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 19.01079053396934
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000797468.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $56.6B",
+          "detail": "Market cap $56.8B",
           "passed": true
         },
         {
@@ -251,7 +212,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 11.6",
+          "detail": "P/E x P/B = 11.7",
           "passed": true
         }
       ],

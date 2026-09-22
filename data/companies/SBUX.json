@@ -9,6 +9,7 @@
         "earnings": 4199300000,
         "fiscal_year": "2021-09-30",
         "market_return_pct": null,
+        "revenue": 29060600000,
         "spending": 24188500000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 3281600000,
         "fiscal_year": "2022-09-30",
         "market_return_pct": -16.768420562054338,
+        "revenue": 32250300000,
         "spending": 27632500000,
         "stock_return_pct": -23.61526606835282
       },
@@ -27,6 +29,7 @@
         "earnings": 4124500000,
         "fiscal_year": "2023-09-30",
         "market_return_pct": 19.681953076880006,
+        "revenue": 35975600000,
         "spending": 30104800000,
         "stock_return_pct": 8.319487301210527
       },
@@ -36,6 +39,7 @@
         "earnings": 3760900000,
         "fiscal_year": "2024-09-30",
         "market_return_pct": 34.21914475531018,
+        "revenue": 36176200000,
         "spending": 30767400000,
         "stock_return_pct": 6.814944669661443
       },
@@ -45,6 +49,7 @@
         "earnings": 1856400000,
         "fiscal_year": "2025-09-28",
         "market_return_pct": 15.67205800334634,
+        "revenue": 37184400000,
         "spending": 33603600000,
         "stock_return_pct": -12.155092830033846
       }
@@ -73,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": -778.2942237527485,
+      "graham_multiple": -772.6120375364015,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -130.12334088105888,
-      "pb_ratio": -14.206993693235864,
-      "pe_ttm": 54.782471264367814
+      "ncav_margin_pct": -130.2248303428607,
+      "pb_ratio": -14.155037335001236,
+      "pe_ttm": 54.5821264367816
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-22T14:25:33Z",
+  "last_updated": "2026-09-22T17:50:04Z",
   "layered_analysis": {
     "conviction_score": 37.5,
     "conviction_score_breakdown": {
@@ -96,13 +101,11 @@
     },
     "conviction_verdict": "Cautious",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
       "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -113,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 108666510000,
+  "market_cap": 108269106000,
   "metrics": {
     "book_value_per_share": -6.7031823745410035,
     "current_ratio": 0.7597333844245682,
@@ -123,67 +126,24 @@
     "fcf_margin_pct": 6.567270145544906,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": -778.2942237527485,
+    "graham_multiple": -772.6120375364015,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -130.12334088105888,
-    "pb_ratio": -14.206993693235864,
-    "pe_ttm": 54.782471264367814,
+    "ncav_margin_pct": -130.2248303428607,
+    "pb_ratio": -14.155037335001236,
+    "pe_ttm": 54.5821264367816,
     "roe_pct": -24.307962985100247,
     "shareholders_equity": -8096600000,
     "total_assets": 32019700000,
     "total_liabilities": 40108900000
   },
   "name": "Starbucks Corporation",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 95.3
+    "close": 94.98
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 20
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.7597333844245682
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 4.30119605624697
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": 6.567270145544906
-      }
-    },
-    "passed": 0,
-    "quant_score_pct": 0.0
-  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000829224.json",
@@ -221,7 +181,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $108.7B",
+          "detail": "Market cap $108.3B",
           "passed": true
         },
         {
@@ -246,12 +206,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 54.8",
+          "detail": "P/E 54.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -778.3",
+          "detail": "P/E x P/B = -772.6",
           "passed": true
         }
       ],

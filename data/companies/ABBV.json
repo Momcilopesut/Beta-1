@@ -9,6 +9,7 @@
         "earnings": 11542000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 56197000000,
         "spending": 38273000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 11836000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 58054000000,
         "spending": 39937000000,
         "stock_return_pct": 19.357459379615957
       },
@@ -27,6 +29,7 @@
         "earnings": 4863000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 54318000000,
         "spending": 41561000000,
         "stock_return_pct": -1.1076047274302459
       },
@@ -36,6 +39,7 @@
         "earnings": 4278000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 56334000000,
         "spending": 47197000000,
         "stock_return_pct": 11.187586034288573
       },
@@ -45,6 +49,7 @@
         "earnings": 4226000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 61160000000,
         "spending": 41069000000,
         "stock_return_pct": 28.5818795723129
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": -5823.940546635126,
+      "graham_multiple": -5908.549999868425,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -123.18114510422065,
-      "pb_ratio": -78.53983684078855,
-      "pe_ttm": 74.15269474573883
+      "ncav_margin_pct": -123.06884012540155,
+      "pb_ratio": -79.10828797304129,
+      "pe_ttm": 74.68939287223553
     }
   },
   "industry": "Drug Manufacturers - General",
-  "last_updated": "2026-09-22T14:26:00Z",
+  "last_updated": "2026-09-22T17:50:34Z",
   "layered_analysis": {
     "conviction_score": 55.0,
     "conviction_score_breakdown": {
@@ -99,7 +104,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -110,7 +114,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 465028680727,
+  "market_cap": 468500452345,
   "metrics": {
     "book_value_per_share": -3.3139618925438397,
     "current_ratio": 0.8085346525142885,
@@ -120,67 +124,24 @@
     "fcf_margin_pct": 29.130150425114454,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": -5823.940546635126,
+    "graham_multiple": -5908.549999868425,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -123.18114510422065,
-    "pb_ratio": -78.53983684078855,
-    "pe_ttm": 74.15269474573883,
+    "ncav_margin_pct": -123.06884012540155,
+    "pb_ratio": -79.10828797304129,
+    "pe_ttm": 74.68939287223553,
     "roe_pct": -136.4967843052478,
     "shareholders_equity": -3270000000,
     "total_assets": 133960000000,
     "total_liabilities": 137188000000
   },
   "name": "AbbVie Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 263.95499
+    "close": 265.23999
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.8085346525142885
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 2.4466170740347146
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 29.130150425114454
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001551152.json",
@@ -218,7 +179,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $465.0B",
+          "detail": "Market cap $468.5B",
           "passed": true
         },
         {
@@ -243,12 +204,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 74.2",
+          "detail": "P/E 74.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -5823.9",
+          "detail": "P/E x P/B = -5908.5",
           "passed": true
         }
       ],

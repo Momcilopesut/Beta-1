@@ -9,6 +9,7 @@
         "earnings": 2099100000,
         "fiscal_year": "2021-09-30",
         "market_return_pct": null,
+        "revenue": 10323000000,
         "spending": 8041600000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 2256100000,
         "fiscal_year": "2022-09-30",
         "market_return_pct": -16.768420562054338,
+        "revenue": 12698600000,
         "spending": 10359800000,
         "stock_return_pct": -9.128889930108166
       },
@@ -27,6 +29,7 @@
         "earnings": 2300200000,
         "fiscal_year": "2023-09-30",
         "market_return_pct": 19.681953076880006,
+        "revenue": 12600000000,
         "spending": 10105400000,
         "stock_return_pct": 21.77201048425213
       },
@@ -36,6 +39,7 @@
         "earnings": 3828200000,
         "fiscal_year": "2024-09-30",
         "market_return_pct": 34.21914475531018,
+        "revenue": 12100600000,
         "spending": 7634500000,
         "stock_return_pct": 5.059985885673971
       },
@@ -45,6 +49,7 @@
         "earnings": -394500000,
         "fiscal_year": "2025-09-30",
         "market_return_pct": 16.107780256553255,
+        "revenue": 12037300000,
         "spending": 12914300000,
         "stock_return_pct": -8.403304896889898
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": -6211.768227455464,
+      "graham_multiple": -6378.371804840062,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -128.3066149659997,
-      "pb_ratio": 4.553472392284534,
-      "pe_ttm": -1364.1826923076922
+      "ncav_margin_pct": -127.97481978918282,
+      "pb_ratio": 4.614131865915672,
+      "pe_ttm": -1382.355769230769
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-22T14:25:13Z",
+  "last_updated": "2026-09-22T17:49:40Z",
   "layered_analysis": {
     "conviction_score": 30.0,
     "conviction_score_breakdown": {
@@ -96,13 +101,11 @@
     },
     "conviction_verdict": "Cautious",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
       "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -113,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 63187019138,
+  "market_cap": 64028770441,
   "metrics": {
     "book_value_per_share": 74.49012567324955,
     "current_ratio": 1.084846895285555,
@@ -122,67 +125,24 @@
     "fcf_margin_pct": -31.284424247962583,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": -6211.768227455464,
+    "graham_multiple": -6378.371804840062,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -128.3066149659997,
-    "pb_ratio": 4.553472392284534,
-    "pe_ttm": -1364.1826923076922,
+    "ncav_margin_pct": -127.97481978918282,
+    "pb_ratio": 4.614131865915672,
+    "pe_ttm": -1382.355769230769,
     "roe_pct": -0.3154916049551525,
     "shareholders_equity": 15024900000,
     "total_assets": 41059500000,
     "total_liabilities": 23709700000
   },
   "name": "Air Products and Chemicals Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 283.715
+    "close": 287.08
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.084846895285555
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 26.784342258440045
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": -31.284424247962583
-      }
-    },
-    "passed": 0,
-    "quant_score_pct": 0.0
-  },
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000002969.json",
@@ -220,7 +180,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $63.2B",
+          "detail": "Market cap $64.0B",
           "passed": true
         },
         {
@@ -245,12 +205,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E -1364.2",
+          "detail": "P/E -1382.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -6211.8",
+          "detail": "P/E x P/B = -6378.4",
           "passed": true
         }
       ],

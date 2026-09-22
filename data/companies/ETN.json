@@ -9,6 +9,7 @@
         "earnings": 2144000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 19628000000,
         "spending": 16758000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 2462000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 20752000000,
         "spending": 17511000000,
         "stock_return_pct": -9.182964934614052
       },
@@ -27,6 +29,7 @@
         "earnings": 3218000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 23196000000,
         "spending": 19201000000,
         "stock_return_pct": 52.21408091748966
       },
@@ -36,6 +39,7 @@
         "earnings": 3794000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 24878000000,
         "spending": 20012000000,
         "stock_return_pct": 38.915864378401004
       },
@@ -45,6 +49,7 @@
         "earnings": 4089000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 27448000000,
         "spending": 22210000000,
         "stock_return_pct": -4.025672703166907
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 376.1624965456453,
+      "graham_multiple": 376.21382467810935,
       "graham_number": 111.05057545497145,
-      "graham_upside_pct": -74.77098042688701,
-      "ncav_margin_pct": -105.51408994750577,
-      "pb_ratio": 8.434635380665549,
-      "pe_ttm": 44.59736308316431
+      "graham_upside_pct": -74.71353338001879,
+      "ncav_margin_pct": -105.5266456547433,
+      "pb_ratio": 8.43521082255357,
+      "pe_ttm": 44.60040567951319
     }
   },
   "industry": "Electrical Equipment & Parts",
-  "last_updated": "2026-09-22T14:25:18Z",
+  "last_updated": "2026-09-22T17:49:47Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 170747159000,
+  "market_cap": 170758808000,
   "metrics": {
     "book_value_per_share": 52.24967824967825,
     "current_ratio": 1.2404064153161474,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 12.944476828912855,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 376.1624965456453,
-    "graham_upside_pct": -74.77098042688701,
+    "graham_multiple": 376.21382467810935,
+    "graham_upside_pct": -74.71353338001879,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -105.51408994750577,
-    "pb_ratio": 8.434635380665549,
-    "pe_ttm": 44.59736308316431,
+    "ncav_margin_pct": -105.5266456547433,
+    "pb_ratio": 8.43521082255357,
+    "pe_ttm": 44.60040567951319,
     "roe_pct": 19.55852876967662,
     "shareholders_equity": 19425000000,
     "total_assets": 41251000000,
     "total_liabilities": 21782000000
   },
   "name": "Eaton Corporation plc",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 440.17
+    "close": 439.17
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.2404064153161474
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 1.7913392141138733
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 12.944476828912855
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001551182.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $170.7B",
+          "detail": "Market cap $170.8B",
           "passed": true
         },
         {

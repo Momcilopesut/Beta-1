@@ -9,6 +9,7 @@
         "earnings": 3350900000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 47676500000,
         "spending": 43466500000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 722000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 49587000000,
         "spending": 48665000000,
         "stock_return_pct": 26.36142230881637
       },
@@ -27,6 +29,7 @@
         "earnings": 3903000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 62083000000,
         "spending": 57179000000,
         "stock_return_pct": 24.608742579600637
       },
@@ -36,6 +39,7 @@
         "earnings": 8480000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 75343000000,
         "spending": 64630000000,
         "stock_return_pct": 48.245993936769175
       },
@@ -45,6 +49,7 @@
         "earnings": 11308000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 87637000000,
         "spending": 73414000000,
         "stock_return_pct": -4.962230290889368
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 250.35814731720927,
+      "graham_multiple": 254.0189052300926,
       "graham_number": 162.24106920529775,
-      "graham_upside_pct": -21.00829192984188,
-      "ncav_margin_pct": -144.01298318122738,
-      "pb_ratio": 24.373414137298838,
-      "pe_ttm": 10.271771771771773
+      "graham_upside_pct": -21.4861260136964,
+      "ncav_margin_pct": -143.74674126786823,
+      "pb_ratio": 24.550962517824402,
+      "pe_ttm": 10.346596596596598
     }
   },
   "industry": "Insurance - Property & Casualty",
-  "last_updated": "2026-09-22T14:26:15Z",
+  "last_updated": "2026-09-22T17:50:55Z",
   "layered_analysis": {
     "conviction_score": 40.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 119320722000,
+  "market_cap": 120189915000,
   "metrics": {
     "book_value_per_share": 60.64665523156089,
     "current_ratio": 0,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 19.626413501146775,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 250.35814731720927,
-    "graham_upside_pct": -21.00829192984188,
+    "graham_multiple": 254.0189052300926,
+    "graham_upside_pct": -21.4861260136964,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -144.01298318122738,
-    "pb_ratio": 24.373414137298838,
-    "pe_ttm": 10.271771771771773,
+    "ncav_margin_pct": -143.74674126786823,
+    "pb_ratio": 24.550962517824402,
+    "pe_ttm": 10.346596596596598,
     "roe_pct": 46.04149442935317,
     "shareholders_equity": 30323000000,
     "total_assets": 123039000000,
     "total_liabilities": 92716000000
   },
   "name": "Progressive Corporation",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 205.39
+    "close": 206.64
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 0.4744771601541002
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 19.626413501146775
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000080661.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $119.3B",
+          "detail": "Market cap $120.2B",
           "passed": true
         },
         {
@@ -251,7 +212,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 250.4",
+          "detail": "P/E x P/B = 254.0",
           "passed": false
         }
       ],

@@ -9,6 +9,7 @@
         "earnings": 94680000000,
         "fiscal_year": "2021-09-25",
         "market_return_pct": null,
+        "revenue": 365817000000,
         "spending": 256868000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 99803000000,
         "fiscal_year": "2022-09-24",
         "market_return_pct": -17.11157667094682,
+        "revenue": 394328000000,
         "spending": 274891000000,
         "stock_return_pct": 2.389055268173169
       },
@@ -27,6 +29,7 @@
         "earnings": 96995000000,
         "fiscal_year": "2023-09-30",
         "market_return_pct": 16.178828645196365,
+        "revenue": 383285000000,
         "spending": 268984000000,
         "stock_return_pct": 13.813733962640432
       },
@@ -36,6 +39,7 @@
         "earnings": 93736000000,
         "fiscal_year": "2024-09-28",
         "market_return_pct": 33.683447178815385,
+        "revenue": 391035000000,
         "spending": 267819000000,
         "stock_return_pct": 33.04713509724898
       },
@@ -45,6 +49,7 @@
         "earnings": 112010000000,
         "fiscal_year": "2025-09-27",
         "market_return_pct": 15.81010376747686,
+        "revenue": 416161000000,
         "spending": 283111000000,
         "stock_return_pct": 12.147153079590858
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 1804.7717377816869,
+      "graham_multiple": 1815.7227859465079,
       "graham_number": 35.117915084899316,
-      "graham_upside_pct": -89.65446602300801,
-      "ncav_margin_pct": -102.77656753048075,
-      "pb_ratio": 46.480055432700894,
-      "pe_ttm": 38.8289497716895
+      "graham_upside_pct": -89.71205095763749,
+      "ncav_margin_pct": -102.76111270136387,
+      "pb_ratio": 46.620858701450906,
+      "pe_ttm": 38.946575342465756
     }
   },
   "industry": "Consumer Electronics",
-  "last_updated": "2026-09-22T14:26:42Z",
+  "last_updated": "2026-09-22T17:51:17Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 4995022848253,
+  "market_cap": 5010914578203,
   "metrics": {
     "book_value_per_share": 7.318011926480932,
     "current_ratio": 1.0032948046555858,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 23.732882225869314,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 1804.7717377816869,
-    "graham_upside_pct": -89.65446602300801,
+    "graham_multiple": 1815.7227859465079,
+    "graham_upside_pct": -89.71205095763749,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -102.77656753048075,
-    "pb_ratio": 46.480055432700894,
-    "pe_ttm": 38.8289497716895,
+    "ncav_margin_pct": -102.76111270136387,
+    "pb_ratio": 46.620858701450906,
+    "pe_ttm": 38.946575342465756,
     "roe_pct": 137.18365457766524,
     "shareholders_equity": 73733000000,
     "total_assets": 359241000000,
     "total_liabilities": 285508000000
   },
   "name": "Apple Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 339.45
+    "close": 341.35001
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.0032948046555858
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 0.7763630585569403
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 23.732882225869314
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $4995.0B",
+          "detail": "Market cap $5010.9B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 38.8",
+          "detail": "P/E 38.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1804.8",
+          "detail": "P/E x P/B = 1815.7",
           "passed": false
         }
       ],

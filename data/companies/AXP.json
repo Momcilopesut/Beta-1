@@ -9,6 +9,7 @@
         "earnings": 8060000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 44430000000,
         "spending": 33741000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 7514000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 55625000000,
         "spending": 46040000000,
         "stock_return_pct": -9.688264058679703
       },
@@ -27,6 +29,7 @@
         "earnings": 8374000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 67364000000,
         "spending": 56851000000,
         "stock_return_pct": 27.451776649746197
       },
@@ -36,6 +39,7 @@
         "earnings": 10129000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 74201000000,
         "spending": 61306000000,
         "stock_return_pct": 57.60713716743668
       },
@@ -45,6 +49,7 @@
         "earnings": 10833000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 80464000000,
         "spending": 66669000000,
         "stock_return_pct": 24.65042622729875
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 116.60213915040269,
+      "graham_multiple": 113.5446716534826,
       "graham_number": 132.40309530376433,
-      "graham_upside_pct": -57.67570395941427,
-      "ncav_margin_pct": -203.21258908284005,
-      "pb_ratio": 6.166773920653442,
-      "pe_ttm": 18.90812613705276
+      "graham_upside_pct": -56.96167751145354,
+      "ncav_margin_pct": -204.95382343903538,
+      "pb_ratio": 6.085386231038507,
+      "pe_ttm": 18.65858095815646
     }
   },
   "industry": "Financial - Credit Services",
-  "last_updated": "2026-09-22T14:22:26Z",
+  "last_updated": "2026-09-22T17:47:47Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 210558281450,
+  "market_cap": 207779380800,
   "metrics": {
     "book_value_per_share": 50.56047197640118,
     "current_ratio": 1.551305274984809,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 19.888397295685024,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 116.60213915040269,
-    "graham_upside_pct": -57.67570395941427,
+    "graham_multiple": 113.5446716534826,
+    "graham_upside_pct": -56.96167751145354,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -203.21258908284005,
-    "pb_ratio": 6.166773920653442,
-    "pe_ttm": 18.90812613705276,
+    "ncav_margin_pct": -204.95382343903538,
+    "pb_ratio": 6.085386231038507,
+    "pe_ttm": 18.65858095815646,
     "roe_pct": 34.12190868029158,
     "shareholders_equity": 33474000000,
     "total_assets": 300052000000,
     "total_liabilities": 266578000000
   },
   "name": "American Express Company",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 312.83
+    "close": 307.64
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 1.551305274984809
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 3.7091574621114822
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 19.888397295685024
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000004962.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $210.6B",
+          "detail": "Market cap $207.8B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 18.9",
+          "detail": "P/E 18.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 116.6",
+          "detail": "P/E x P/B = 113.5",
           "passed": false
         }
       ],

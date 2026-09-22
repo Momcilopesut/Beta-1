@@ -9,6 +9,7 @@
         "earnings": 1444000000,
         "fiscal_year": "2022-01-31",
         "market_return_pct": null,
+        "revenue": 26492000000,
         "spending": 25944000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 208000000,
         "fiscal_year": "2023-01-31",
         "market_return_pct": -9.653041719455004,
+        "revenue": 31352000000,
         "spending": 30322000000,
         "stock_return_pct": -27.795211279714565
       },
@@ -27,6 +29,7 @@
         "earnings": 4136000000,
         "fiscal_year": "2024-01-31",
         "market_return_pct": 18.795512694351498,
+        "revenue": 34857000000,
         "spending": 29846000000,
         "stock_return_pct": 67.34535929034945
       },
@@ -36,6 +39,7 @@
         "earnings": 6197000000,
         "fiscal_year": "2025-01-31",
         "market_return_pct": 24.631378396288945,
+        "revenue": 37895000000,
         "spending": 30690000000,
         "stock_return_pct": 21.56248888256431
       },
@@ -45,6 +49,7 @@
         "earnings": 7457000000,
         "fiscal_year": "2026-01-31",
         "market_return_pct": 14.979561995280976,
+        "revenue": 41525000000,
         "spending": 32608000000,
         "stock_return_pct": -37.87240269242025
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 106.39445826444125,
+      "graham_multiple": 104.444155137413,
       "graham_number": 90.92018913686293,
-      "graham_upside_pct": -61.201592072687994,
-      "ncav_margin_pct": -112.93205674404606,
-      "pb_ratio": 5.00059409036427,
-      "pe_ttm": 21.276363636363637
+      "graham_upside_pct": -60.749662134872494,
+      "ncav_margin_pct": -113.08269136830984,
+      "pb_ratio": 4.9545494814737605,
+      "pe_ttm": 21.080454545454547
     }
   },
   "industry": "Software - Application",
-  "last_updated": "2026-09-22T14:22:55Z",
+  "last_updated": "2026-09-22T17:48:08Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 191678760000,
+  "market_cap": 189913815000,
   "metrics": {
     "book_value_per_share": 46.802439024390246,
     "current_ratio": 0.8385100243013366,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 34.68272125225768,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 106.39445826444125,
-    "graham_upside_pct": -61.201592072687994,
+    "graham_multiple": 104.444155137413,
+    "graham_upside_pct": -60.749662134872494,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -112.93205674404606,
-    "pb_ratio": 5.00059409036427,
-    "pe_ttm": 21.276363636363637,
+    "ncav_margin_pct": -113.08269136830984,
+    "pb_ratio": 4.9545494814737605,
+    "pe_ttm": 21.080454545454547,
     "roe_pct": 20.15267812447856,
     "shareholders_equity": 59142000000,
     "total_assets": 112305000000,
     "total_liabilities": 53163000000
   },
   "name": "Salesforce Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 234.34
+    "close": 231.6418
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.8385100243013366
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 1.3688237169270003
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 34.68272125225768
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001108524.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $191.7B",
+          "detail": "Market cap $189.9B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 21.3",
+          "detail": "P/E 21.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 106.4",
+          "detail": "P/E x P/B = 104.4",
           "passed": false
         }
       ],

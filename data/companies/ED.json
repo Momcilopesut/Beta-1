@@ -9,6 +9,7 @@
         "earnings": 1346000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 13673000000,
         "spending": 10873000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 1660000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 15665000000,
         "spending": 13050000000,
         "stock_return_pct": 11.708860759493682
       },
@@ -27,6 +29,7 @@
         "earnings": 2519000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 14646000000,
         "spending": 12336000000,
         "stock_return_pct": -3.0427027594166467
       },
@@ -36,6 +39,7 @@
         "earnings": 1820000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 15256000000,
         "spending": 12524000000,
         "stock_return_pct": -3.4411860188291232
       },
@@ -45,6 +49,7 @@
         "earnings": 2023000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 16918000000,
         "spending": 13987000000,
         "stock_return_pct": 11.307856102207765
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 25.5112104189882,
+      "graham_multiple": 25.25980384641794,
       "graham_number": 94.23908433483945,
-      "graham_upside_pct": -9.60713219045662,
-      "ncav_margin_pct": -213.64338986386295,
-      "pb_ratio": 1.4950459971227499,
-      "pe_ttm": 17.06382978723404
+      "graham_upside_pct": -9.313557067058538,
+      "ncav_margin_pct": -214.01247730417913,
+      "pb_ratio": 1.487661106574906,
+      "pe_ttm": 16.979541734860884
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-09-22T14:27:14Z",
+  "last_updated": "2026-09-22T17:52:03Z",
   "layered_analysis": {
     "conviction_score": 20.6,
     "conviction_score_breakdown": {
@@ -96,14 +101,12 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
       "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 38422937800,
+  "market_cap": 38233144850,
   "metrics": {
     "book_value_per_share": 69.73698481561821,
     "current_ratio": 1.268210683601046,
@@ -124,68 +127,25 @@
     "fcf_margin_pct": 0.2127911100602908,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 25.5112104189882,
-    "graham_upside_pct": -9.60713219045662,
+    "graham_multiple": 25.25980384641794,
+    "graham_upside_pct": -9.313557067058538,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -213.64338986386295,
-    "pb_ratio": 1.4950459971227499,
-    "pe_ttm": 17.06382978723404,
+    "ncav_margin_pct": -214.01247730417913,
+    "pb_ratio": 1.487661106574906,
+    "pe_ttm": 16.979541734860884,
     "roe_pct": 8.89709349573104,
     "shareholders_equity": 24190000000,
     "total_assets": 74603000000,
     "total_liabilities": 50413000000
   },
   "name": "Consolidated Edison Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 104.255
+    "close": 103.9175
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.268210683601046
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 5.61143637782982
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": 0.2127911100602908
-      }
-    },
-    "passed": 0,
-    "quant_score_pct": 0.0
-  },
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001047862.json",
@@ -223,7 +183,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $38.4B",
+          "detail": "Market cap $38.2B",
           "passed": true
         },
         {
@@ -248,12 +208,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 17.1",
+          "detail": "P/E 17.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 25.5",
+          "detail": "P/E x P/B = 25.3",
           "passed": false
         }
       ],

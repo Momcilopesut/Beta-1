@@ -45,7 +45,7 @@
     }
   },
   "industry": null,
-  "last_updated": "2026-09-22T14:22:24Z",
+  "last_updated": "2026-09-22T17:47:44Z",
   "layered_analysis": {
     "conviction_score": null,
     "conviction_score_breakdown": null,
@@ -54,7 +54,6 @@
     "munger_quality_pass": null,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -74,54 +73,11 @@
     "munger_quality_passed": 0
   },
   "name": "Berkshire Hathaway Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": null,
     "close": null
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 0,
-    "gate_pass": null,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": null,
-        "threshold": 1.5,
-        "value": null
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": null,
-        "threshold": 3.0,
-        "value": null
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": null,
-        "threshold": 10.0,
-        "value": null
-      }
-    },
-    "passed": 0,
-    "quant_score_pct": null
-  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": null,

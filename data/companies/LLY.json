@@ -9,6 +9,7 @@
         "earnings": 5581700000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 28318400000,
         "spending": 20385400000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 6244800000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 28541400000,
         "spending": 19888100000,
         "stock_return_pct": 32.44515241474185
       },
@@ -27,6 +29,7 @@
         "earnings": 5240400000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 34124100000,
         "spending": 23336800000,
         "stock_return_pct": 61.87404329761647
       },
@@ -36,6 +39,7 @@
         "earnings": 10590000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 45043000000,
         "spending": 28003000000,
         "stock_return_pct": 30.361364403917584
       },
@@ -45,6 +49,7 @@
         "earnings": 20640000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 65179000000,
         "spending": 35483000000,
         "stock_return_pct": 39.20725388601037
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 1187.6615212556928,
+      "graham_multiple": 1209.7796386542466,
       "graham_number": 140.37849012470082,
-      "graham_upside_pct": -87.91549101918832,
-      "ncav_margin_pct": -102.77197077855669,
-      "pb_ratio": 30.579035980991172,
-      "pe_ttm": 38.839076614252264
+      "graham_upside_pct": -87.98746447674988,
+      "ncav_margin_pct": -102.75546135136283,
+      "pb_ratio": 30.862463000678886,
+      "pe_ttm": 39.199063231850126
     }
   },
   "industry": "Drug Manufacturers - General",
-  "last_updated": "2026-09-22T14:26:10Z",
+  "last_updated": "2026-09-22T17:50:45Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 1093267126900,
+  "market_cap": 1103400260060,
   "metrics": {
     "book_value_per_share": 37.9639175257732,
     "current_ratio": 1.3546427598919168,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 13.76516976326731,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 1187.6615212556928,
-    "graham_upside_pct": -87.91549101918832,
+    "graham_multiple": 1209.7796386542466,
+    "graham_upside_pct": -87.98746447674988,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -102.77197077855669,
-    "pb_ratio": 30.579035980991172,
-    "pe_ttm": 38.839076614252264,
+    "ncav_margin_pct": -102.75546135136283,
+    "pb_ratio": 30.862463000678886,
+    "pe_ttm": 39.199063231850126,
     "roe_pct": 92.58222975894522,
     "shareholders_equity": 26535000000,
     "total_assets": 112476000000,
     "total_liabilities": 85941000000
   },
   "name": "Eli Lilly and Company",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 1161.64
+    "close": 1168.6
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.3546427598919168
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 1.3410847821285456
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 13.76516976326731
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000059478.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $1093.3B",
+          "detail": "Market cap $1103.4B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 38.8",
+          "detail": "P/E 39.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1187.7",
+          "detail": "P/E x P/B = 1209.8",
           "passed": false
         }
       ],

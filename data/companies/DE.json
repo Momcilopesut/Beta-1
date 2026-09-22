@@ -9,6 +9,7 @@
         "earnings": 5963000000,
         "fiscal_year": "2021-10-31",
         "market_return_pct": null,
+        "revenue": 43033000000,
         "spending": 35370000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 7131000000,
         "fiscal_year": "2022-10-30",
         "market_return_pct": -16.048604469176603,
+        "revenue": 51282000000,
         "spending": 42256000000,
         "stock_return_pct": 10.333101045296166
       },
@@ -27,6 +29,7 @@
         "earnings": 10166000000,
         "fiscal_year": "2023-10-29",
         "market_return_pct": 7.607260298801169,
+        "revenue": 60248000000,
         "spending": 45657000000,
         "stock_return_pct": -7.078975291799298
       },
@@ -36,6 +39,7 @@
         "earnings": 7100000000,
         "fiscal_year": "2024-10-27",
         "market_return_pct": 39.76034072042159,
+        "revenue": 50518000000,
         "spending": 39091000000,
         "stock_return_pct": 12.11256117455139
       },
@@ -45,6 +49,7 @@
         "earnings": 5027000000,
         "fiscal_year": "2025-11-02",
         "market_return_pct": 17.648881772635708,
+        "revenue": 44665000000,
         "spending": 36249000000,
         "stock_return_pct": 12.026191342306285
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 255.36094337799022,
+      "graham_multiple": 259.0718655053397,
       "graham_number": 208.33201818215974,
-      "graham_upside_pct": -69.86634775194403,
-      "ncav_margin_pct": -102.72895683887211,
-      "pb_ratio": 6.663693712040015,
-      "pe_ttm": 38.32123059866963
+      "graham_upside_pct": -70.04916498718195,
+      "ncav_margin_pct": -102.71240058673715,
+      "pb_ratio": 6.71193769203287,
+      "pe_ttm": 38.59866962305987
     }
   },
   "industry": "Agricultural - Machinery",
-  "last_updated": "2026-09-22T14:21:06Z",
+  "last_updated": "2026-09-22T17:46:24Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -96,14 +101,11 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
-      "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 186611791623,
+  "market_cap": 187962827776,
   "metrics": {
     "book_value_per_share": 103.93254262416605,
     "current_ratio": 0.7667986333315255,
@@ -124,68 +126,25 @@
     "fcf_margin_pct": 7.233852009403336,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 255.36094337799022,
-    "graham_upside_pct": -69.86634775194403,
+    "graham_multiple": 259.0718655053397,
+    "graham_upside_pct": -70.04916498718195,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -102.72895683887211,
-    "pb_ratio": 6.663693712040015,
-    "pe_ttm": 38.32123059866963,
+    "ncav_margin_pct": -102.71240058673715,
+    "pb_ratio": 6.71193769203287,
+    "pe_ttm": 38.59866962305987,
     "roe_pct": 18.10750051093399,
     "shareholders_equity": 25950000000,
     "total_assets": 105996000000,
     "total_liabilities": 79989000000
   },
   "name": "Deere & Company",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 691.36
+    "close": 695.58
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.7667986333315255
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 6.0062000939408176
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": 7.233852009403336
-      }
-    },
-    "passed": 0,
-    "quant_score_pct": 0.0
-  },
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000315189.json",
@@ -223,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $186.6B",
+          "detail": "Market cap $188.0B",
           "passed": true
         },
         {
@@ -248,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 38.3",
+          "detail": "P/E 38.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 255.4",
+          "detail": "P/E x P/B = 259.1",
           "passed": false
         }
       ],

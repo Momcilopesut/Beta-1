@@ -9,6 +9,7 @@
         "earnings": 1318000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 13061000000,
         "spending": 10013000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 2139000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 15554000000,
         "spending": 12028000000,
         "stock_return_pct": 16.827940731781062
       },
@@ -27,6 +29,7 @@
         "earnings": 3075000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 15802000000,
         "spending": 12732000000,
         "stock_return_pct": -1.8765368189465548
       },
@@ -36,6 +39,7 @@
         "earnings": 2862000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 12957000000,
         "spending": 10126000000,
         "stock_return_pct": 15.695067264574
       },
@@ -45,6 +49,7 @@
         "earnings": 1837000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 13712000000,
         "spending": 10459000000,
         "stock_return_pct": 0.6497948016415953
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 38.073845517625685,
+      "graham_multiple": 37.942798574320165,
       "graham_number": 64.00739476141354,
-      "graham_upside_pct": -20.92971616872942,
-      "ncav_margin_pct": -164.33189470562706,
-      "pb_ratio": 1.6254459146919429,
-      "pe_ttm": 23.42363112391931
+      "graham_upside_pct": -21.075962069773684,
+      "ncav_margin_pct": -164.21290846387805,
+      "pb_ratio": 1.6226461800947864,
+      "pe_ttm": 23.38328530259366
     }
   },
   "industry": "Diversified Utilities",
-  "last_updated": "2026-09-22T14:24:11Z",
+  "last_updated": "2026-09-22T17:48:38Z",
   "layered_analysis": {
     "conviction_score": 13.8,
     "conviction_score_breakdown": {
@@ -96,14 +101,12 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
       "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 53133304960,
+  "market_cap": 53041785980,
   "metrics": {
     "book_value_per_share": 66.21327812757058,
     "current_ratio": 1.6417100203573851,
@@ -124,68 +127,25 @@
     "fcf_margin_pct": -44.10005834305718,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 38.073845517625685,
-    "graham_upside_pct": -20.92971616872942,
+    "graham_multiple": 37.942798574320165,
+    "graham_upside_pct": -21.075962069773684,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -164.33189470562706,
-    "pb_ratio": 1.6254459146919429,
-    "pe_ttm": 23.42363112391931,
+    "ncav_margin_pct": -164.21290846387805,
+    "pb_ratio": 1.6226461800947864,
+    "pe_ttm": 23.38328530259366,
     "roe_pct": 7.142074363992172,
     "shareholders_equity": 31614000000,
     "total_assets": 110878000000,
     "total_liabilities": 68879000000
   },
   "name": "Sempra",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 80.95
+    "close": 81.1
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 1.6417100203573851
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 6.239167812929849
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": -44.10005834305718
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001032208.json",
@@ -223,7 +183,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $53.1B",
+          "detail": "Market cap $53.0B",
           "passed": true
         },
         {
@@ -253,7 +213,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 38.1",
+          "detail": "P/E x P/B = 37.9",
           "passed": false
         }
       ],

@@ -9,6 +9,7 @@
         "earnings": 5883200000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 18611000000,
         "spending": 12074600000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 5624200000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 21173400000,
         "spending": 14672700000,
         "stock_return_pct": -31.36885472404351
       },
@@ -27,6 +29,7 @@
         "earnings": 7839000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 27558500000,
         "spending": 18516200000,
         "stock_return_pct": 31.20790629575402
       },
@@ -36,6 +39,7 @@
         "earnings": 7571600000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 28262900000,
         "spending": 19240300000,
         "stock_return_pct": -3.32533616024102
       },
@@ -45,6 +49,7 @@
         "earnings": 9609400000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 32667300000,
         "spending": 21365900000,
         "stock_return_pct": 54.36313268309573
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 1459.7516556886362,
+      "graham_multiple": 1455.8857896532397,
       "graham_number": 177.5123477801659,
-      "graham_upside_pct": -89.74709205707511,
-      "ncav_margin_pct": -100.050697771753,
-      "pb_ratio": 26.653475308585406,
-      "pe_ttm": 54.7677793904209
+      "graham_upside_pct": -89.72354806554671,
+      "ncav_margin_pct": -100.05081419022814,
+      "pb_ratio": 26.61815865917692,
+      "pe_ttm": 54.69521044992743
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-22T14:26:46Z",
+  "last_updated": "2026-09-22T17:51:20Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 668557611610,
+  "market_cap": 666329884331,
   "metrics": {
     "book_value_per_share": 56.63051375194603,
     "current_ratio": 1.3337726702355268,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 33.932709467877665,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 1459.7516556886362,
-    "graham_upside_pct": -89.74709205707511,
+    "graham_multiple": 1455.8857896532397,
+    "graham_upside_pct": -89.72354806554671,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -100.050697771753,
-    "pb_ratio": 26.653475308585406,
-    "pe_ttm": 54.7677793904209,
+    "ncav_margin_pct": -100.05081419022814,
+    "pb_ratio": 26.61815865917692,
+    "pe_ttm": 54.69521044992743,
     "roe_pct": 52.36682968129697,
     "shareholders_equity": 19612200000,
     "total_assets": 50566600000,
     "total_liabilities": 30954400000
   },
   "name": "ASML Holding N.V.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 1731.3366
+    "close": 1727.37
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.3337726702355268
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 0.21826883565782795
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 33.932709467877665
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000937966.json",
@@ -195,7 +156,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $668.6B",
+          "detail": "Market cap $666.3B",
           "passed": true
         },
         {
@@ -220,12 +181,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 54.8",
+          "detail": "P/E 54.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1459.8",
+          "detail": "P/E x P/B = 1455.9",
           "passed": false
         }
       ],

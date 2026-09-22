@@ -9,6 +9,7 @@
         "earnings": 6827461000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 36483939000,
         "spending": 27165134000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 7607337000,
         "fiscal_year": "2022-12-30",
         "market_return_pct": -19.48164055920498,
+        "revenue": 41512000000,
         "spending": 31006000000,
         "stock_return_pct": 15.47087166009636
       },
@@ -27,6 +29,7 @@
         "earnings": 4524801000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 34714000000,
         "spending": 28484000000,
         "stock_return_pct": 33.093088536529855
       },
@@ -36,6 +39,7 @@
         "earnings": 2027000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 30734000000,
         "spending": 27755000000,
         "stock_return_pct": -33.47204012996637
       },
@@ -45,6 +49,7 @@
         "earnings": 1744000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 32494000000,
         "spending": 29835000000,
         "stock_return_pct": 39.75666181132724
       }
@@ -73,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 48.55810652489774,
+      "graham_multiple": 49.423236062831755,
       "graham_number": 131.4291771839487,
-      "graham_upside_pct": -46.06484849640976,
-      "ncav_margin_pct": -102.19770023963031,
-      "pb_ratio": 2.507991180062418,
-      "pe_ttm": 19.361354581673307
+      "graham_upside_pct": -46.334628862641146,
+      "ncav_margin_pct": -102.18670747593195,
+      "pb_ratio": 2.530234203265638,
+      "pe_ttm": 19.533067729083665
     }
   },
   "industry": "Steel",
-  "last_updated": "2026-09-22T14:25:08Z",
+  "last_updated": "2026-09-22T17:49:36Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 55337646885,
+  "market_cap": 55828428740,
   "metrics": {
     "book_value_per_share": 101.954425942156,
     "current_ratio": 2.507815478459779,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": -0.5785683510801994,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 48.55810652489774,
-    "graham_upside_pct": -46.06484849640976,
+    "graham_multiple": 49.423236062831755,
+    "graham_upside_pct": -46.334628862641146,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -102.19770023963031,
-    "pb_ratio": 2.507991180062418,
-    "pe_ttm": 19.361354581673307,
+    "ncav_margin_pct": -102.18670747593195,
+    "pb_ratio": 2.530234203265638,
+    "pe_ttm": 19.533067729083665,
     "roe_pct": 13.529108223483604,
     "shareholders_equity": 20936000000,
     "total_assets": 35104000000,
     "total_liabilities": 12980000000
   },
   "name": "Nucor Corporation",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 243.68
+    "close": 244.905
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 20
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 2.507815478459779
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 1.7204638801642909
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": -0.5785683510801994
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000073309.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $55.3B",
+          "detail": "Market cap $55.8B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 19.4",
+          "detail": "P/E 19.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 48.6",
+          "detail": "P/E x P/B = 49.4",
           "passed": false
         }
       ],

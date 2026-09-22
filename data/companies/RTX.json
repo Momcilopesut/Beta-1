@@ -9,6 +9,7 @@
         "earnings": 3864000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 64388000000,
         "spending": 59252000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 5197000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 67074000000,
         "spending": 61570000000,
         "stock_return_pct": 17.267023007204273
       },
@@ -27,6 +29,7 @@
         "earnings": 3195000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 68920000000,
         "spending": 65359000000,
         "stock_return_pct": -15.556876734046773
       },
@@ -36,6 +39,7 @@
         "earnings": 4774000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 80738000000,
         "spending": 74200000000,
         "stock_return_pct": 35.789720722835014
       },
@@ -45,6 +49,7 @@
         "earnings": 6732000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 88603000000,
         "spending": 79303000000,
         "stock_return_pct": 58.486000691323895
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 124.63593624737747,
+      "graham_multiple": 127.3588257486256,
       "graham_number": 75.5298744404976,
-      "graham_upside_pct": -59.888542516995436,
-      "ncav_margin_pct": -117.18358767615035,
-      "pb_ratio": 3.8166727028940746,
-      "pe_ttm": 32.65565217391305
+      "graham_upside_pct": -60.22021675857292,
+      "ncav_margin_pct": -117.04149975993631,
+      "pb_ratio": 3.8581383913102427,
+      "pe_ttm": 33.0104347826087
     }
   },
   "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-22T14:21:11Z",
+  "last_updated": "2026-09-22T17:46:29Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -96,14 +101,11 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
-      "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 253068538625,
+  "market_cap": 255817965151,
   "metrics": {
     "book_value_per_share": 50.506967091609845,
     "current_ratio": 1.01054628824413,
@@ -124,68 +126,25 @@
     "fcf_margin_pct": 8.96132185140458,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 124.63593624737747,
-    "graham_upside_pct": -59.888542516995436,
+    "graham_multiple": 127.3588257486256,
+    "graham_upside_pct": -60.22021675857292,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -117.18358767615035,
-    "pb_ratio": 3.8166727028940746,
-    "pe_ttm": 32.65565217391305,
+    "ncav_margin_pct": -117.04149975993631,
+    "pb_ratio": 3.8581383913102427,
+    "pe_ttm": 33.0104347826087,
     "roe_pct": 11.795012499237851,
     "shareholders_equity": 65245000000,
     "total_assets": 171079000000,
     "total_liabilities": 103941000000
   },
   "name": "RTX Corporation",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 188.3
+    "close": 189.87
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.01054628824413
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 2.888287761368621
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": 8.96132185140458
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000101829.json",
@@ -223,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $253.1B",
+          "detail": "Market cap $255.8B",
           "passed": true
         },
         {
@@ -248,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 32.7",
+          "detail": "P/E 33.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 124.6",
+          "detail": "P/E x P/B = 127.4",
           "passed": false
         }
       ],

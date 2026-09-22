@@ -9,6 +9,7 @@
         "earnings": 6467000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 12566000000,
         "spending": 10696000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 5868000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 13017000000,
         "spending": 10995000000,
         "stock_return_pct": -15.029585798816575
       },
@@ -27,6 +29,7 @@
         "earnings": 423000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 12068000000,
         "spending": 10351000000,
         "stock_return_pct": 12.917827298050149
       },
@@ -36,6 +39,7 @@
         "earnings": 703000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 12386000000,
         "spending": 10557000000,
         "stock_return_pct": -1.6342892383595469
       },
@@ -45,6 +49,7 @@
         "earnings": -779000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 6849000000,
         "spending": 5989000000,
         "stock_return_pct": 26.01880877742946
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 370.4840326300103,
+      "graham_multiple": 373.90846054108647,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -110.69950499087456,
-      "pb_ratio": 1.2988541651536059,
-      "pe_ttm": 285.2391304347828
+      "ncav_margin_pct": -110.67308445277455,
+      "pb_ratio": 1.3048430895489866,
+      "pe_ttm": 286.5543478260871
     }
   },
   "industry": "Chemicals",
-  "last_updated": "2026-09-22T14:24:57Z",
+  "last_updated": "2026-09-22T17:49:25Z",
   "layered_analysis": {
     "conviction_score": 44.0,
     "conviction_score_breakdown": {
@@ -99,7 +104,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -110,7 +114,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 17715842990,
+  "market_cap": 17797529485,
   "metrics": {
     "book_value_per_share": 101.8415260454879,
     "current_ratio": 2.4267866066966515,
@@ -119,67 +123,24 @@
     "fcf_margin_pct": 15.754124689735727,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": 370.4840326300103,
+    "graham_multiple": 373.90846054108647,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -110.69950499087456,
-    "pb_ratio": 1.2988541651536059,
-    "pe_ttm": 285.2391304347828,
+    "ncav_margin_pct": -110.67308445277455,
+    "pb_ratio": 1.3048430895489866,
+    "pe_ttm": 286.5543478260871,
     "roe_pct": 0.34044133576800467,
     "shareholders_equity": 13919000000,
     "total_assets": 21575000000,
     "total_liabilities": 7472000000
   },
   "name": "DuPont de Nemours Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 131.29
+    "close": 131.615
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 2.4267866066966515
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 2.119442601194426
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 15.754124689735727
-      }
-    },
-    "passed": 3,
-    "quant_score_pct": 100.0
-  },
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001666700.json",
@@ -217,7 +178,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $17.7B",
+          "detail": "Market cap $17.8B",
           "passed": true
         },
         {
@@ -242,12 +203,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 285.2",
+          "detail": "P/E 286.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 370.5",
+          "detail": "P/E x P/B = 373.9",
           "passed": false
         }
       ],

@@ -9,6 +9,7 @@
         "earnings": 23040000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 276692000000,
         "spending": 252673000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 55740000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 398675000000,
         "spending": 334647000000,
         "stock_return_pct": 80.25821212616441
       },
@@ -27,6 +29,7 @@
         "earnings": 36010000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 334697000000,
         "spending": 290236000000,
         "stock_return_pct": -7.198549410698095
       },
@@ -36,6 +39,7 @@
         "earnings": 33680000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 339247000000,
         "spending": 299595000000,
         "stock_return_pct": 5.0898788589292625
       },
@@ -45,6 +49,7 @@
         "earnings": 28844000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 323905000000,
         "spending": 289967000000,
         "stock_return_pct": 11.871339592823288
       }
@@ -73,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 52.15291131644239,
+      "graham_multiple": 52.762679317497565,
       "graham_number": 98.03735895634553,
-      "graham_upside_pct": -38.23251073818956,
-      "ncav_margin_pct": -115.1648068861989,
-      "pb_ratio": 2.553583218405428,
-      "pe_ttm": 20.423423423423422
+      "graham_upside_pct": -38.621155763752995,
+      "ncav_margin_pct": -115.0693889433557,
+      "pb_ratio": 2.568467990458015,
+      "pe_ttm": 20.542471042471043
     }
   },
   "industry": "Oil & Gas Integrated",
-  "last_updated": "2026-09-22T14:24:55Z",
+  "last_updated": "2026-09-22T17:49:23Z",
   "layered_analysis": {
     "conviction_score": 6.9,
     "conviction_score_breakdown": {
@@ -96,14 +101,12 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
       "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 657684357400,
+  "market_cap": 661517982900,
   "metrics": {
     "book_value_per_share": 63.75670813356778,
     "current_ratio": 1.1346729708431835,
@@ -124,68 +127,25 @@
     "fcf_margin_pct": 7.289791759929609,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 1,
-    "graham_multiple": 52.15291131644239,
-    "graham_upside_pct": -38.23251073818956,
+    "graham_multiple": 52.762679317497565,
+    "graham_upside_pct": -38.621155763752995,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -115.1648068861989,
-    "pb_ratio": 2.553583218405428,
-    "pe_ttm": 20.423423423423422,
+    "ncav_margin_pct": -115.0693889433557,
+    "pb_ratio": 2.568467990458015,
+    "pe_ttm": 20.542471042471043,
     "roe_pct": 12.675533129278287,
     "shareholders_equity": 259386000000,
     "total_assets": 448980000000,
     "total_liabilities": 182354000000
   },
   "name": "Exxon Mobil Corporation",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 158.72
+    "close": 159.725
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 20
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.1346729708431835
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 0.7264520865662178
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": 7.289791759929609
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0002115436.json",
@@ -203,7 +163,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $657.7B",
+          "detail": "Market cap $661.5B",
           "passed": true
         },
         {
@@ -228,12 +188,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.4",
+          "detail": "P/E 20.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 52.2",
+          "detail": "P/E x P/B = 52.8",
           "passed": false
         }
       ],

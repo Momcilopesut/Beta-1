@@ -9,6 +9,7 @@
         "earnings": 336138000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 4709481000,
         "spending": 3946125000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 141214000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 5776068000,
         "spending": 5029848000,
         "stock_return_pct": -23.574676460300804
       },
@@ -27,6 +29,7 @@
         "earnings": 340094000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 6478231000,
         "spending": 5537777000,
         "stock_return_pct": 37.66590389016018
       },
@@ -36,6 +39,7 @@
         "earnings": 951680000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 7853618000,
         "spending": 6707920000,
         "stock_return_pct": 39.66090425531916
       },
@@ -45,6 +49,7 @@
         "earnings": 936845000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 10667136000,
         "spending": 10311968000,
         "stock_return_pct": 47.2744584622709
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 417.4118188070468,
+      "graham_multiple": 417.8650002026766,
       "graham_number": 46.20958915962588,
-      "graham_upside_pct": -79.99541584898986,
-      "ncav_margin_pct": -108.70093913019781,
-      "pb_ratio": 3.497611298127036,
-      "pe_ttm": 119.34196891191712
+      "graham_upside_pct": -79.98285069975053,
+      "ncav_margin_pct": -108.70640430747258,
+      "pb_ratio": 3.499509450396675,
+      "pe_ttm": 119.40673575129536
     }
   },
   "industry": "REIT - Healthcare Facilities",
-  "last_updated": "2026-09-22T14:27:24Z",
+  "last_updated": "2026-09-22T17:52:21Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -96,14 +101,11 @@
     },
     "conviction_verdict": "Cautious",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
-      "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 165969351294,
+  "market_cap": 166059422795,
   "metrics": {
     "book_value_per_share": 67.3073642332991,
     "current_ratio": 0.8419626755055797,
@@ -124,68 +126,25 @@
     "fcf_margin_pct": 26.69768155201171,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 417.4118188070468,
-    "graham_upside_pct": -79.99541584898986,
+    "graham_multiple": 417.8650002026766,
+    "graham_upside_pct": -79.98285069975053,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -108.70093913019781,
-    "pb_ratio": 3.497611298127036,
-    "pe_ttm": 119.34196891191712,
+    "ncav_margin_pct": -108.70640430747258,
+    "pb_ratio": 3.499509450396675,
+    "pe_ttm": 119.40673575129536,
     "roe_pct": 3.1467201261404685,
     "shareholders_equity": 42129498000,
     "total_assets": 67303047000,
     "total_liabilities": 24100108000
   },
   "name": "Welltower Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 230.995
+    "close": 230.85
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.8419626755055797
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 8.57373753657222
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 26.69768155201171
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000766704.json",
@@ -223,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $166.0B",
+          "detail": "Market cap $166.1B",
           "passed": true
         },
         {
@@ -248,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 119.3",
+          "detail": "P/E 119.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 417.4",
+          "detail": "P/E x P/B = 417.9",
           "passed": false
         }
       ],

@@ -9,6 +9,7 @@
         "earnings": 1704600000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 5710100000,
         "spending": 3889100000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 1322300000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 6222200000,
         "spending": 4645100000,
         "stock_return_pct": -26.148065683273025
       },
@@ -27,6 +29,7 @@
         "earnings": 1798000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 7124100000,
         "spending": 5357300000,
         "stock_return_pct": 24.733371019408327
       },
@@ -36,6 +39,7 @@
         "earnings": 2322600000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 8352100000,
         "spending": 6003200000,
         "stock_return_pct": 57.70137168408967
       },
@@ -45,6 +49,7 @@
         "earnings": 2856000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 10064700000,
         "spending": 7119200000,
         "stock_return_pct": 8.506398957774538
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 349.58105673426957,
+      "graham_multiple": 354.4350981299623,
       "graham_number": 96.38875798414655,
-      "graham_upside_pct": -75.7792848567327,
-      "ncav_margin_pct": -94.95698600699833,
-      "pb_ratio": 7.769540933709077,
-      "pe_ttm": 44.99378531073446
+      "graham_upside_pct": -75.94031354023252,
+      "ncav_margin_pct": -94.99051391479794,
+      "pb_ratio": 7.823296217608595,
+      "pe_ttm": 45.30508474576271
     }
   },
   "industry": "Medical - Instruments & Supplies",
-  "last_updated": "2026-09-22T14:26:03Z",
+  "last_updated": "2026-09-22T17:50:38Z",
   "layered_analysis": {
     "conviction_score": 40.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 140673533210,
+  "market_cap": 141646814100,
   "metrics": {
     "book_value_per_share": 51.61551480959098,
     "current_ratio": 4.962660564771959,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 24.74688763698868,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 349.58105673426957,
-    "graham_upside_pct": -75.7792848567327,
+    "graham_multiple": 354.4350981299623,
+    "graham_upside_pct": -75.94031354023252,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -94.95698600699833,
-    "pb_ratio": 7.769540933709077,
-    "pe_ttm": 44.99378531073446,
+    "ncav_margin_pct": -94.99051391479794,
+    "pb_ratio": 7.823296217608595,
+    "pe_ttm": 45.30508474576271,
     "roe_pct": 17.83495225621692,
     "shareholders_equity": 17824000000,
     "total_assets": 20631200000,
     "total_liabilities": 2689500000
   },
   "name": "Intuitive Surgical Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 397.96
+    "close": 400.6235
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 4.962660564771959
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 0.08358637442720698
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 24.74688763698868
-      }
-    },
-    "passed": 3,
-    "quant_score_pct": 100.0
-  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001035267.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $140.7B",
+          "detail": "Market cap $141.6B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 45.0",
+          "detail": "P/E 45.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 349.6",
+          "detail": "P/E x P/B = 354.4",
           "passed": false
         }
       ],

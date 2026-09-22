@@ -9,6 +9,7 @@
         "earnings": 17285000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 287597000000,
         "spending": 263627000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 20120000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 324162000000,
         "spending": 295727000000,
         "stock_return_pct": 5.584100051778381
       },
@@ -27,6 +29,7 @@
         "earnings": 22381000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 371622000000,
         "spending": 339264000000,
         "stock_return_pct": 1.7277151156211252
       },
@@ -36,6 +39,7 @@
         "earnings": 14405000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 400278000000,
         "spending": 367991000000,
         "stock_return_pct": -6.207587050839918
       },
@@ -45,6 +49,7 @@
         "earnings": 12056000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 447567000000,
         "spending": 428603000000,
         "stock_return_pct": -34.74281421737239
       }
@@ -73,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 83.82041674269244,
+      "graham_multiple": 82.83002706723659,
       "graham_number": 185.39611518465358,
-      "graham_upside_pct": -50.85458479215651,
-      "ncav_margin_pct": -134.64206265061884,
-      "pb_ratio": 3.4635080805912826,
-      "pe_ttm": 24.201016654877503
+      "graham_upside_pct": -50.38374051687268,
+      "ncav_margin_pct": -134.97395560165174,
+      "pb_ratio": 3.442985541865166,
+      "pe_ttm": 24.057616873512963
     }
   },
   "industry": "Medical - Healthcare Plans",
-  "last_updated": "2026-09-22T14:21:48Z",
+  "last_updated": "2026-09-22T17:47:09Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -96,14 +101,11 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
-      "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 341780151988,
+  "market_cap": 339754984424,
   "metrics": {
     "book_value_per_share": 115.46726975917139,
     "current_ratio": 0.7767841173314255,
@@ -124,68 +126,25 @@
     "fcf_margin_pct": 3.5916410280471975,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 83.82041674269244,
-    "graham_upside_pct": -50.85458479215651,
+    "graham_multiple": 82.83002706723659,
+    "graham_upside_pct": -50.38374051687268,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -134.64206265061884,
-    "pb_ratio": 3.4635080805912826,
-    "pe_ttm": 24.201016654877503,
+    "ncav_margin_pct": -134.97395560165174,
+    "pb_ratio": 3.442985541865166,
+    "pe_ttm": 24.057616873512963,
     "roe_pct": 14.625671564502557,
     "shareholders_equity": 94110000000,
     "total_assets": 309581000000,
     "total_liabilities": 207883000000
   },
   "name": "UnitedHealth Group Incorporated",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 377.2399
+    "close": 373.66
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 20
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.7767841173314255
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 3.3607288317256163
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": 3.5916410280471975
-      }
-    },
-    "passed": 0,
-    "quant_score_pct": 0.0
-  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000731766.json",
@@ -223,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $341.8B",
+          "detail": "Market cap $339.8B",
           "passed": true
         },
         {
@@ -248,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.2",
+          "detail": "P/E 24.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 83.8",
+          "detail": "P/E x P/B = 82.8",
           "passed": false
         }
       ],

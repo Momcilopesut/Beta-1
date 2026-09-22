@@ -9,6 +9,7 @@
         "earnings": -6337000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 56469000000,
         "spending": 55411000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 336000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 29139000000,
         "spending": 25543000000,
         "stock_return_pct": -11.294437829562852
       },
@@ -27,6 +29,7 @@
         "earnings": 9482000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 35348000000,
         "spending": 30631000000,
         "stock_return_pct": 92.61744966442954
       },
@@ -36,6 +39,7 @@
         "earnings": 6556000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 38702000000,
         "spending": 31941000000,
         "stock_return_pct": 66.04280736684916
       },
@@ -45,6 +49,7 @@
         "earnings": 8704000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 45855000000,
         "spending": 37085000000,
         "stock_return_pct": 84.68133581149948
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 686.9259867817744,
+      "graham_multiple": 696.2866889348862,
       "graham_number": 56.17659443811513,
-      "graham_upside_pct": -82.16815936025867,
-      "ncav_margin_pct": -121.62121131223662,
-      "pb_ratio": 18.570869133367346,
-      "pe_ttm": 36.989436619718305
+      "graham_upside_pct": -82.29822138392466,
+      "ncav_margin_pct": -121.46351034607208,
+      "pb_ratio": 18.696973083693877,
+      "pe_ttm": 37.2406103286385
     }
   },
   "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-22T14:25:27Z",
+  "last_updated": "2026-09-22T17:49:57Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 326987825972,
+  "market_cap": 329208209750,
   "metrics": {
     "book_value_per_share": 17.18850633259514,
     "current_ratio": 0.9818698985901558,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 15.841238687166067,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 686.9259867817744,
-    "graham_upside_pct": -82.16815936025867,
+    "graham_multiple": 696.2866889348862,
+    "graham_upside_pct": -82.29822138392466,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -121.62121131223662,
-    "pb_ratio": 18.570869133367346,
-    "pe_ttm": 36.989436619718305,
+    "ncav_margin_pct": -121.46351034607208,
+    "pb_ratio": 18.696973083693877,
+    "pe_ttm": 37.2406103286385,
     "roe_pct": 49.03123548219605,
     "shareholders_equity": 18677000000,
     "total_assets": 130169000000,
     "total_liabilities": 111269000000
   },
   "name": "GE Aerospace",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 315.03531
+    "close": 317.35
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.9818698985901558
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 2.0514514514514515
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 15.841238687166067
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000040545.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $327.0B",
+          "detail": "Market cap $329.2B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 37.0",
+          "detail": "P/E 37.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 686.9",
+          "detail": "P/E x P/B = 696.3",
           "passed": false
         }
       ],

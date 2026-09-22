@@ -9,6 +9,7 @@
         "earnings": 3024000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 80118000000,
         "spending": 73226000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 2590000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 79571000000,
         "spending": 73028000000,
         "stock_return_pct": 20.710467321952056
       },
@@ -27,6 +29,7 @@
         "earnings": 8317000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 78558000000,
         "spending": 64292000000,
         "stock_return_pct": 15.649999999999997
       },
@@ -36,6 +39,7 @@
         "earnings": 11339000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 81400000000,
         "spending": 63390000000,
         "stock_return_pct": 36.3288246556729
       },
@@ -45,6 +49,7 @@
         "earnings": 10992000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 88309000000,
         "spending": 69565000000,
         "stock_return_pct": -8.014316132831965
       }
@@ -73,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 54.25842756157974,
+      "graham_multiple": 53.289261172611326,
       "graham_number": 106.81815222632748,
-      "graham_upside_pct": -34.84568601303385,
-      "ncav_margin_pct": -177.0911517236967,
-      "pb_ratio": 3.161293818092953,
-      "pe_ttm": 17.1633611691023
+      "graham_upside_pct": -34.663800705653266,
+      "ncav_margin_pct": -177.3063600033878,
+      "pb_ratio": 3.1329330182689064,
+      "pe_ttm": 17.009384133611693
     }
   },
   "industry": "Telecommunications Services",
-  "last_updated": "2026-09-22T14:27:01Z",
+  "last_updated": "2026-09-22T17:51:35Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -96,14 +101,11 @@
     },
     "conviction_verdict": "Cautious",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
-      "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 176374029968,
+  "market_cap": 174791732071,
   "metrics": {
     "book_value_per_share": 52.01193228511395,
     "current_ratio": 0.9242166935552347,
@@ -124,68 +126,25 @@
     "fcf_margin_pct": 20.377311485805524,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 54.25842756157974,
-    "graham_upside_pct": -34.84568601303385,
+    "graham_multiple": 53.289261172611326,
+    "graham_upside_pct": -34.663800705653266,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -177.0911517236967,
-    "pb_ratio": 3.161293818092953,
-    "pe_ttm": 17.1633611691023,
+    "ncav_margin_pct": -177.3063600033878,
+    "pb_ratio": 3.1329330182689064,
+    "pe_ttm": 17.009384133611693,
     "roe_pct": 18.22071916626406,
     "shareholders_equity": 59203000000,
     "total_assets": 219237000000,
     "total_liabilities": 160034000000
   },
   "name": "T-Mobile US Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 163.9464
+    "close": 163.49
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 20
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.9242166935552347
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 3.7910517177229317
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 20.377311485805524
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001283699.json",
@@ -223,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $176.4B",
+          "detail": "Market cap $174.8B",
           "passed": true
         },
         {
@@ -248,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 17.2",
+          "detail": "P/E 17.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 54.3",
+          "detail": "P/E x P/B = 53.3",
           "passed": false
         }
       ],

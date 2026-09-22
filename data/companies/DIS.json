@@ -9,6 +9,7 @@
         "earnings": 1995000000,
         "fiscal_year": "2021-10-02",
         "market_return_pct": null,
+        "revenue": 67418000000,
         "spending": 63759000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 3145000000,
         "fiscal_year": "2022-10-01",
         "market_return_pct": -17.745946941783348,
+        "revenue": 82722000000,
         "spending": 75952000000,
         "stock_return_pct": -46.40645417873984
       },
@@ -27,6 +29,7 @@
         "earnings": 2354000000,
         "fiscal_year": "2023-09-30",
         "market_return_pct": 19.681953076880006,
+        "revenue": 88898000000,
         "spending": 79906000000,
         "stock_return_pct": -14.07823598006997
       },
@@ -36,6 +39,7 @@
         "earnings": 4972000000,
         "fiscal_year": "2024-09-28",
         "market_return_pct": 33.683447178815385,
+        "revenue": 91361000000,
         "spending": 79447000000,
         "stock_return_pct": 18.457742134484896
       },
@@ -45,6 +49,7 @@
         "earnings": 12404000000,
         "fiscal_year": "2025-09-27",
         "market_return_pct": 15.81010376747686,
+        "revenue": 94425000000,
         "spending": 80593000000,
         "stock_return_pct": 18.185605666076444
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 35.349219631804836,
+      "graham_multiple": 34.74174005683944,
       "graham_number": 102.01407200026841,
-      "graham_upside_pct": -2.1400815384254317,
-      "ncav_margin_pct": -132.57527578608705,
-      "pb_ratio": 1.6473027846444672,
-      "pe_ttm": 21.45884773662552
+      "graham_upside_pct": -1.4261551838163897,
+      "ncav_margin_pct": -132.81292515528696,
+      "pb_ratio": 1.6330869201686784,
+      "pe_ttm": 21.27366255144033
     }
   },
   "industry": "Entertainment",
-  "last_updated": "2026-09-22T14:23:24Z",
+  "last_updated": "2026-09-22T17:48:20Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 181100627900,
+  "market_cap": 179537768900,
   "metrics": {
     "book_value_per_share": 67.22784810126582,
     "current_ratio": 0.7090727816550348,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 10.671961874503575,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 35.349219631804836,
-    "graham_upside_pct": -2.1400815384254317,
+    "graham_multiple": 34.74174005683944,
+    "graham_upside_pct": -1.4261551838163897,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -132.57527578608705,
-    "pb_ratio": 1.6473027846444672,
-    "pe_ttm": 21.45884773662552,
+    "ncav_margin_pct": -132.81292515528696,
+    "pb_ratio": 1.6330869201686784,
+    "pe_ttm": 21.27366255144033,
     "roe_pct": 7.870322706109796,
     "shareholders_equity": 109869000000,
     "total_assets": 197514000000,
     "total_liabilities": 82902000000
   },
   "name": "The Walt Disney Company",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 104.245
+    "close": 103.49
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.7090727816550348
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 2.370967741935484
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 10.671961874503575
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001744489.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $181.1B",
+          "detail": "Market cap $179.5B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 21.5",
+          "detail": "P/E 21.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 35.3",
+          "detail": "P/E x P/B = 34.7",
           "passed": false
         }
       ],

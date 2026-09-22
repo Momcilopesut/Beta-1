@@ -9,6 +9,7 @@
         "earnings": 16433000000,
         "fiscal_year": "2022-01-30",
         "market_return_pct": null,
+        "revenue": 151157000000,
         "spending": 128117000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 17105000000,
         "fiscal_year": "2023-01-29",
         "market_return_pct": -10.962192438487708,
+        "revenue": 157403000000,
         "spending": 133364000000,
         "stock_return_pct": -14.371355387214562
       },
@@ -27,6 +29,7 @@
         "earnings": 15143000000,
         "fiscal_year": "2024-01-28",
         "market_return_pct": 22.636610998776806,
+        "revenue": 152669000000,
         "spending": 130980000000,
         "stock_return_pct": 13.193737270875758
       },
@@ -36,6 +39,7 @@
         "earnings": 14806000000,
         "fiscal_year": "2025-02-02",
         "market_return_pct": 21.678506727461478,
+        "revenue": 159514000000,
         "spending": 137988000000,
         "stock_return_pct": 14.917064942367164
       },
@@ -45,6 +49,7 @@
         "earnings": 14156000000,
         "fiscal_year": "2026-02-01",
         "market_return_pct": 16.334041520986332,
+        "revenue": 164683000000,
         "spending": 143793000000,
         "stock_return_pct": -7.495841080340539
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 378.0107585083997,
+      "graham_multiple": 385.65141995009657,
       "graham_number": 73.2632808775972,
-      "graham_upside_pct": -75.64871339573317,
-      "ncav_margin_pct": -119.28639885296248,
-      "pb_ratio": 17.994528494914846,
-      "pe_ttm": 21.006983240223462
+      "graham_upside_pct": -75.8684845594212,
+      "ncav_margin_pct": -119.11233846805762,
+      "pb_ratio": 18.175478726605284,
+      "pe_ttm": 21.21822625698324
     }
   },
   "industry": "Home Improvement",
-  "last_updated": "2026-09-22T14:21:15Z",
+  "last_updated": "2026-09-22T17:46:34Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -96,14 +101,11 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
-      "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 299892908920,
+  "market_cap": 302969016082,
   "metrics": {
     "book_value_per_share": 16.717303822937627,
     "current_ratio": 1.0780839144849663,
@@ -124,68 +126,25 @@
     "fcf_margin_pct": 7.678995403289957,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 378.0107585083997,
-    "graham_upside_pct": -75.64871339573317,
+    "graham_multiple": 385.65141995009657,
+    "graham_upside_pct": -75.8684845594212,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -119.28639885296248,
-    "pb_ratio": 17.994528494914846,
-    "pe_ttm": 21.006983240223462,
+    "ncav_margin_pct": -119.11233846805762,
+    "pb_ratio": 18.175478726605284,
+    "pe_ttm": 21.21822625698324,
     "roe_pct": 102.68495128112596,
     "shareholders_equity": 12813000000,
     "total_assets": 105095000000,
     "total_liabilities": 92282000000
   },
   "name": "The Home Depot Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 300.86
+    "close": 303.6
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 1.0780839144849663
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 2.612850345847827
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": 7.678995403289957
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000354950.json",
@@ -223,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $299.9B",
+          "detail": "Market cap $303.0B",
           "passed": true
         },
         {
@@ -248,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 21.0",
+          "detail": "P/E 21.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 378.0",
+          "detail": "P/E x P/B = 385.7",
           "passed": false
         }
       ],

@@ -9,6 +9,7 @@
         "earnings": 2939723000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 4759440000,
         "spending": 1552444000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 3364856000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 5973692000,
         "spending": 2506154000,
         "stock_return_pct": -33.04229033024472
       },
@@ -27,6 +29,7 @@
         "earnings": 3059214000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 8023469000,
         "spending": 4315677000,
         "stock_return_pct": 19.418078594872703
       },
@@ -36,6 +39,7 @@
         "earnings": 3731635000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 8201610000,
         "spending": 3785690000,
         "stock_return_pct": -21.482692021987816
       },
@@ -45,6 +49,7 @@
         "earnings": 3410663000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 8790127000,
         "spending": 5254054000,
         "stock_return_pct": 20.775780510879844
       }
@@ -73,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 70.32353820865544,
+      "graham_multiple": 70.97102829565529,
       "graham_number": 70.73333334014724,
-      "graham_upside_pct": -47.535646457397256,
-      "ncav_margin_pct": -131.52064277857474,
-      "pb_ratio": 2.344378426780379,
-      "pe_ttm": 29.99666666666667
+      "graham_upside_pct": -47.85600196082032,
+      "ncav_margin_pct": -131.32817283081584,
+      "pb_ratio": 2.355146398218715,
+      "pe_ttm": 30.13444444444444
     }
   },
   "industry": "REIT - Industrial",
-  "last_updated": "2026-09-22T14:24:23Z",
+  "last_updated": "2026-09-22T17:48:47Z",
   "layered_analysis": {
     "conviction_score": 13.8,
     "conviction_score_breakdown": {
@@ -96,14 +101,12 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
       "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 125951263860,
+  "market_cap": 126529770980,
   "metrics": {
     "book_value_per_share": 62.28701457091048,
     "current_ratio": 0.6977452900375469,
@@ -124,68 +127,25 @@
     "fcf_margin_pct": 56.97794810018103,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 70.32353820865544,
-    "graham_upside_pct": -47.535646457397256,
+    "graham_multiple": 70.97102829565529,
+    "graham_upside_pct": -47.85600196082032,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -131.52064277857474,
-    "pb_ratio": 2.344378426780379,
-    "pe_ttm": 29.99666666666667,
+    "ncav_margin_pct": -131.32817283081584,
+    "pb_ratio": 2.355146398218715,
+    "pe_ttm": 30.13444444444444,
     "roe_pct": 7.900607573036433,
     "shareholders_equity": 53193178000,
     "total_assets": 98724256000,
     "total_liabilities": 40970248000
   },
   "name": "Prologis Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 134.8217
+    "close": 135.65
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 20
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.6977452900375469
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 5.68589722888346
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 56.97794810018103
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045609.json",
@@ -223,7 +183,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $126.0B",
+          "detail": "Market cap $126.5B",
           "passed": true
         },
         {
@@ -248,12 +208,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 30.0",
+          "detail": "P/E 30.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 70.3",
+          "detail": "P/E x P/B = 71.0",
           "passed": false
         }
       ],

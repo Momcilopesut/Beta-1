@@ -9,6 +9,7 @@
         "earnings": 14159000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 116385000000,
         "spending": 95568000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 5370000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 121427000000,
         "spending": 98803000000,
         "stock_return_pct": -30.518577389231076
       },
@@ -27,6 +29,7 @@
         "earnings": 15388000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 121572000000,
         "spending": 98259000000,
         "stock_return_pct": 24.878467257649422
       },
@@ -36,6 +39,7 @@
         "earnings": 16192000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 123731000000,
         "spending": 100433000000,
         "stock_return_pct": -14.059995420196932
       },
@@ -45,6 +49,7 @@
         "earnings": 19998000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 123707000000,
         "spending": 103037000000,
         "stock_return_pct": -25.393018918198777
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 6.809561929729511,
+      "graham_multiple": 6.636910180562447,
       "graham_number": 55.31266931322897,
-      "graham_upside_pct": 142.2986788908021,
-      "ncav_margin_pct": -409.3375203274412,
-      "pb_ratio": 0.9132789350562548,
-      "pe_ttm": 7.4561688311688314
+      "graham_upside_pct": 143.9367996173273,
+      "ncav_margin_pct": -411.42887388273095,
+      "pb_ratio": 0.9016268241060488,
+      "pe_ttm": 7.361038961038961
     }
   },
   "industry": "Telecommunications Services",
-  "last_updated": "2026-09-22T14:26:48Z",
+  "last_updated": "2026-09-22T17:51:22Z",
   "layered_analysis": {
     "conviction_score": 91.7,
     "conviction_score_breakdown": {
@@ -99,7 +104,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": true
   },
@@ -110,7 +114,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 81401820402,
+  "market_cap": 80454689290,
   "metrics": {
     "book_value_per_share": 25.134453781512605,
     "current_ratio": 0.7957876288036745,
@@ -120,68 +124,25 @@
     "fcf_margin_pct": 17.697462552644556,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 5,
-    "graham_multiple": 6.809561929729511,
-    "graham_upside_pct": 142.2986788908021,
+    "graham_multiple": 6.636910180562447,
+    "graham_upside_pct": 143.9367996173273,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -409.3375203274412,
-    "pb_ratio": 0.9132789350562548,
-    "pe_ttm": 7.4561688311688314,
+    "ncav_margin_pct": -411.42887388273095,
+    "pb_ratio": 0.9016268241060488,
+    "pe_ttm": 7.361038961038961,
     "roe_pct": 12.042071989011609,
     "shareholders_equity": 96904000000,
     "total_assets": 272631000000,
     "total_liabilities": 175254000000
   },
   "name": "Comcast Corporation",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 22.8283
+    "close": 22.675
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.7957876288036745
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 2.994577153547897
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 17.697462552644556
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001166691.json",
@@ -219,7 +180,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $81.4B",
+          "detail": "Market cap $80.5B",
           "passed": true
         },
         {
@@ -244,12 +205,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 7.5",
+          "detail": "P/E 7.4",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 6.8",
+          "detail": "P/E x P/B = 6.6",
           "passed": true
         }
       ],

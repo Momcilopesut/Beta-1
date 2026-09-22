@@ -9,6 +9,7 @@
         "earnings": 6523000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 21804000000,
         "spending": 12466000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 6998000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 24875000000,
         "spending": 14958000000,
         "stock_return_pct": -17.80653356090978
       },
@@ -27,6 +29,7 @@
         "earnings": 6379000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 24119000000,
         "spending": 15037000000,
         "stock_return_pct": 17.559279470710397
       },
@@ -36,6 +39,7 @@
         "earnings": 6747000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 24250000000,
         "spending": 14537000000,
         "stock_return_pct": -6.3221459967958
       },
@@ -45,6 +49,7 @@
         "earnings": 7138000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 24510000000,
         "spending": 14671000000,
         "stock_return_pct": 1.4383441501490972
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 171.0212273072548,
+      "graham_multiple": 172.80232456004205,
       "graham_number": 97.02658457483096,
-      "graham_upside_pct": -64.27066409823577,
-      "ncav_margin_pct": -128.93251523135808,
-      "pb_ratio": 7.792590915687129,
-      "pe_ttm": 21.946645109135005
+      "graham_upside_pct": -64.4063227224157,
+      "ncav_margin_pct": -128.82266305775084,
+      "pb_ratio": 7.833063706283559,
+      "pe_ttm": 22.06063055780113
     }
   },
   "industry": "Railroads",
-  "last_updated": "2026-09-22T14:25:24Z",
+  "last_updated": "2026-09-22T17:49:54Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 161279616197,
+  "market_cap": 162117262649,
   "metrics": {
     "book_value_per_share": 34.838220424671384,
     "current_ratio": 0.9859230220955096,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 22.43574051407589,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 171.0212273072548,
-    "graham_upside_pct": -64.27066409823577,
+    "graham_multiple": 172.80232456004205,
+    "graham_upside_pct": -64.4063227224157,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -128.93251523135808,
-    "pb_ratio": 7.792590915687129,
-    "pe_ttm": 21.946645109135005,
+    "ncav_margin_pct": -128.82266305775084,
+    "pb_ratio": 7.833063706283559,
+    "pe_ttm": 22.06063055780113,
     "roe_pct": 38.64912604466004,
     "shareholders_equity": 18467000000,
     "total_assets": 69698000000,
     "total_liabilities": 51231000000
   },
   "name": "Union Pacific Corporation",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 271.56
+    "close": 272.595
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.9859230220955096
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 2.585663198959688
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 22.43574051407589
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000100885.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $161.3B",
+          "detail": "Market cap $162.1B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 21.9",
+          "detail": "P/E 22.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 171.0",
+          "detail": "P/E x P/B = 172.8",
           "passed": false
         }
       ],

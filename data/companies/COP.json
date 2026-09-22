@@ -9,6 +9,7 @@
         "earnings": 8079000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 45828000000,
         "spending": 33757000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 18680000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 78494000000,
         "spending": 53032000000,
         "stock_return_pct": 63.48018841784426
       },
@@ -27,6 +29,7 @@
         "earnings": 10957000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 56141000000,
         "spending": 41115000000,
         "stock_return_pct": -0.3474576271186412
       },
@@ -36,6 +39,7 @@
         "earnings": 9245000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 54745000000,
         "spending": 41962000000,
         "stock_return_pct": -15.664597329704907
       },
@@ -45,6 +49,7 @@
         "earnings": 7988000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 58944000000,
         "spending": 47602000000,
         "stock_return_pct": -5.606534234143392
       }
@@ -73,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 39.01925804754141,
+      "graham_multiple": 39.38541552713126,
       "graham_number": 87.78651532981031,
-      "graham_upside_pct": -30.300503906462634,
-      "ncav_margin_pct": -127.7049949832626,
-      "pb_ratio": 2.34041249475891,
-      "pe_ttm": 16.671957671957674
+      "graham_upside_pct": -30.682999463215825,
+      "ncav_margin_pct": -127.55295604360161,
+      "pb_ratio": 2.3513680911720147,
+      "pe_ttm": 16.750000000000004
     }
   },
   "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-09-22T14:20:30Z",
+  "last_updated": "2026-09-22T17:45:46Z",
   "layered_analysis": {
     "conviction_score": 6.9,
     "conviction_score_breakdown": {
@@ -102,7 +107,6 @@
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -113,7 +117,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 153553776642,
+  "market_cap": 154272570106,
   "metrics": {
     "book_value_per_share": 53.85375453355012,
     "current_ratio": 1.5415194346289753,
@@ -123,68 +127,25 @@
     "fcf_margin_pct": 28.45582247557003,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 1,
-    "graham_multiple": 39.01925804754141,
-    "graham_upside_pct": -30.300503906462634,
+    "graham_multiple": 39.38541552713126,
+    "graham_upside_pct": -30.682999463215825,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -127.7049949832626,
-    "pb_ratio": 2.34041249475891,
-    "pe_ttm": 16.671957671957674,
+    "ncav_margin_pct": -127.55295604360161,
+    "pb_ratio": 2.3513680911720147,
+    "pe_ttm": 16.750000000000004,
     "roe_pct": 14.318549942151948,
     "shareholders_equity": 64487000000,
     "total_assets": 121939000000,
     "total_liabilities": 57452000000
   },
   "name": "ConocoPhillips",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 125.95
+    "close": 126.645
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 20
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 1.5415194346289753
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 1.0263549601611068
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 28.45582247557003
-      }
-    },
-    "passed": 3,
-    "quant_score_pct": 100.0
-  },
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001163165.json",
@@ -222,7 +183,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $153.6B",
+          "detail": "Market cap $154.3B",
           "passed": true
         },
         {
@@ -247,12 +208,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 16.7",
+          "detail": "P/E 16.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 39.0",
+          "detail": "P/E x P/B = 39.4",
           "passed": false
         }
       ],

@@ -9,6 +9,7 @@
         "earnings": 4664000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 19669000000,
         "spending": 13567000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 7759000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 29492000000,
         "spending": 19526000000,
         "stock_return_pct": 45.806596870426674
       },
@@ -27,6 +29,7 @@
         "earnings": 7594000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 23182000000,
         "spending": 13579000000,
         "stock_return_pct": -6.114885731933304
       },
@@ -36,6 +39,7 @@
         "earnings": 6403000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 23378000000,
         "spending": 15296000000,
         "stock_return_pct": 0.8059210526315823
       },
@@ -45,6 +49,7 @@
         "earnings": 4980000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 22567000000,
         "spending": 14635896000,
         "stock_return_pct": -14.333496492086795
       }
@@ -73,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 25.203823183028643,
+      "graham_multiple": 25.26487327916089,
       "graham_number": 111.7368105366237,
-      "graham_upside_pct": -20.697792379968995,
-      "ncav_margin_pct": -119.36239120805124,
-      "pb_ratio": 2.3185005021340697,
-      "pe_ttm": 10.870743034055726
+      "graham_upside_pct": -20.582244900939127,
+      "ncav_margin_pct": -119.3906032283622,
+      "pb_ratio": 2.321306803916646,
+      "pe_ttm": 10.883900928792569
     }
   },
   "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-09-22T14:24:47Z",
+  "last_updated": "2026-09-22T17:49:11Z",
   "layered_analysis": {
     "conviction_score": 20.2,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 74807743050,
+  "market_cap": 74898289980,
   "metrics": {
     "book_value_per_share": 60.57794676806083,
     "current_ratio": 1.8513589503280226,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 17.410377985554128,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 25.203823183028643,
-    "graham_upside_pct": -20.697792379968995,
+    "graham_multiple": 25.26487327916089,
+    "graham_upside_pct": -20.582244900939127,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -119.36239120805124,
-    "pb_ratio": 2.3185005021340697,
-    "pe_ttm": 10.870743034055726,
+    "ncav_margin_pct": -119.3906032283622,
+    "pb_ratio": 2.321306803916646,
+    "pe_ttm": 10.883900928792569,
     "roe_pct": 22.380991130279114,
     "shareholders_equity": 29833000000,
     "total_assets": 51799000000,
     "total_liabilities": 21966000000
   },
   "name": "EOG Resources Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 140.9
+    "close": 140.695
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 20
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 1.8513589503280226
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 0.6784965652321834
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 17.410377985554128
-      }
-    },
-    "passed": 3,
-    "quant_score_pct": 100.0
-  },
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000821189.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $74.8B",
+          "detail": "Market cap $74.9B",
           "passed": true
         },
         {
@@ -251,7 +212,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 25.2",
+          "detail": "P/E x P/B = 25.3",
           "passed": false
         }
       ],

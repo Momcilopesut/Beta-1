@@ -9,6 +9,7 @@
         "earnings": 652984000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 7547061000,
         "spending": 6742118000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 899101000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 8634652000,
         "spending": 7474249000,
         "stock_return_pct": -20.64626822991135
       },
@@ -27,6 +29,7 @@
         "earnings": 1228737000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 9871649000,
         "spending": 8313836000,
         "stock_return_pct": 61.801801801801794
       },
@@ -36,6 +39,7 @@
         "earnings": 1534110000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 11313853000,
         "spending": 9397520000,
         "stock_return_pct": 34.29844097995545
       },
@@ -45,6 +49,7 @@
         "earnings": 1535761000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 11925601000,
         "spending": 9912793000,
         "stock_return_pct": -38.640132669983416
       }
@@ -73,16 +78,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 602.5564896867036,
+      "graham_multiple": 592.8813419384933,
       "graham_number": 6.648260501574977,
-      "graham_upside_pct": -80.17515878462807,
-      "ncav_margin_pct": -111.06841821231701,
-      "pb_ratio": 19.608496007120674,
-      "pe_ttm": 30.729357798165132
+      "graham_upside_pct": -79.98416227133832,
+      "ncav_margin_pct": -111.1750535827202,
+      "pb_ratio": 19.450433791210163,
+      "pe_ttm": 30.48165137614679
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-22T14:25:38Z",
+  "last_updated": "2026-09-22T17:50:10Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -96,14 +101,11 @@
     },
     "conviction_verdict": "Cautious",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
-      "Munger's quality checklist mostly passes despite a weak quant screen - the underlying business may be sounder than the fast screen alone suggests.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +116,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 42965041350,
+  "market_cap": 42618704250,
   "metrics": {
     "book_value_per_share": 1.7081881235479022,
     "current_ratio": 0.7153473552939745,
@@ -124,68 +126,25 @@
     "fcf_margin_pct": 12.138507736423515,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 602.5564896867036,
-    "graham_upside_pct": -80.17515878462807,
+    "graham_multiple": 592.8813419384933,
+    "graham_upside_pct": -79.98416227133832,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -111.06841821231701,
-    "pb_ratio": 19.608496007120674,
-    "pe_ttm": 30.729357798165132,
+    "ncav_margin_pct": -111.1750535827202,
+    "pb_ratio": 19.450433791210163,
+    "pe_ttm": 30.48165137614679,
     "roe_pct": 53.2616576692157,
     "shareholders_equity": 2830607000,
     "total_assets": 8994531000,
     "total_liabilities": 6163924000
   },
   "name": "Chipotle Mexican Grill Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 33.535
+    "close": 33.215
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 60
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.7153473552939745
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 4.148466634936547
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 12.138507736423515
-      }
-    },
-    "passed": 1,
-    "quant_score_pct": 33.33333333333333
-  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001058090.json",
@@ -223,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $43.0B",
+          "detail": "Market cap $42.6B",
           "passed": true
         },
         {
@@ -248,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 30.7",
+          "detail": "P/E 30.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 602.6",
+          "detail": "P/E x P/B = 592.9",
           "passed": false
         }
       ],

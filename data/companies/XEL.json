@@ -9,6 +9,7 @@
         "earnings": 1597000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 13431000000,
         "spending": 11228000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 1736000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 15310000000,
         "spending": 12882000000,
         "stock_return_pct": 3.559822747415061
       },
@@ -27,6 +29,7 @@
         "earnings": 1771000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 14206000000,
         "spending": 11725000000,
         "stock_return_pct": -9.470831550420767
       },
@@ -36,6 +39,7 @@
         "earnings": 1936000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 13441000000,
         "spending": 11055000000,
         "stock_return_pct": 6.380967386166689
       },
@@ -45,6 +49,7 @@
         "earnings": 2018000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 14669000000,
         "spending": 11790000000,
         "stock_return_pct": 9.38981042654029
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 36.71287663444416,
+      "graham_multiple": 36.749591038551834,
       "graham_number": 54.58222128129269,
-      "graham_upside_pct": -24.20314995265641,
-      "ncav_margin_pct": -217.2681615580907,
-      "pb_ratio": 1.8709471255767554,
-      "pe_ttm": 19.622615803814718
+      "graham_upside_pct": -24.32085475784118,
+      "ncav_margin_pct": -217.0860560206977,
+      "pb_ratio": 1.8718824042898117,
+      "pe_ttm": 19.632425068119893
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-09-22T14:24:18Z",
+  "last_updated": "2026-09-22T17:48:42Z",
   "layered_analysis": {
     "conviction_score": 13.8,
     "conviction_score_breakdown": {
@@ -96,14 +101,12 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Fails the quant screen - below threshold on more balance-sheet/cash metrics than it passes.",
       "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
       "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -114,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 44983017510,
+  "market_cap": 45005504334,
   "metrics": {
     "book_value_per_share": 38.4912,
     "current_ratio": 0.7013376383763837,
@@ -124,68 +127,25 @@
     "fcf_margin_pct": -46.52668893585111,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 36.71287663444416,
-    "graham_upside_pct": -24.20314995265641,
+    "graham_multiple": 36.749591038551834,
+    "graham_upside_pct": -24.32085475784118,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -217.2681615580907,
-    "pb_ratio": 1.8709471255767554,
-    "pe_ttm": 19.622615803814718,
+    "ncav_margin_pct": -217.0860560206977,
+    "pb_ratio": 1.8718824042898117,
+    "pe_ttm": 19.632425068119893,
     "roe_pct": 9.640270687403538,
     "shareholders_equity": 23609000000,
     "total_assets": 81371000000,
     "total_liabilities": 57762000000
   },
   "name": "Xcel Energy Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 72.0112
+    "close": 72.1232
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": false,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.7013376383763837
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 5.834759268579098
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": false,
-        "threshold": 10.0,
-        "value": -46.52668893585111
-      }
-    },
-    "passed": 0,
-    "quant_score_pct": 0.0
-  },
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000072903.json",

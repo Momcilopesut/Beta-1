@@ -9,6 +9,7 @@
         "earnings": 592359200000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 1587415000000,
         "spending": 937434100000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 992923400000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 2263891300000,
         "spending": 1142612400000,
         "stock_return_pct": -38.08494721968249
       },
@@ -27,6 +29,7 @@
         "earnings": 851740000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 2161736000000,
         "spending": 1240270000000,
         "stock_return_pct": 36.30017452006982
       },
@@ -36,6 +39,7 @@
         "earnings": 1158380200000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 2894308000000,
         "spending": 1572255000000,
         "stock_return_pct": 94.51393676745789
       },
@@ -45,6 +49,7 @@
         "earnings": 1735678080000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 3848510949000,
         "spending": 1892815132000,
         "stock_return_pct": 53.876145627626705
       }
@@ -75,14 +80,14 @@
     "valuation": {
       "graham_multiple": 282.766541671448,
       "graham_number": 3058.674724043078,
-      "graham_upside_pct": 583.9161379209285,
-      "ncav_margin_pct": -88.95903872435153,
+      "graham_upside_pct": 583.350012445951,
+      "ncav_margin_pct": -88.96817810431321,
       "pb_ratio": 9.916369735770658,
       "pe_ttm": 28.515126927089373
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-22T14:26:29Z",
+  "last_updated": "2026-09-22T17:51:07Z",
   "layered_analysis": {
     "conviction_score": 73.3,
     "conviction_score_breakdown": {
@@ -99,7 +104,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": true
   },
@@ -110,7 +114,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 2313224527910,
+  "market_cap": 2324127037648,
   "metrics": {
     "book_value_per_share": 1248.46,
     "current_ratio": 2.457635046900518,
@@ -121,11 +125,11 @@
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
     "graham_multiple": 282.766541671448,
-    "graham_upside_pct": 583.9161379209285,
+    "graham_upside_pct": 583.350012445951,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -88.95903872435153,
+    "ncav_margin_pct": -88.96817810431321,
     "pb_ratio": 9.916369735770658,
     "pe_ttm": 28.515126927089373,
     "roe_pct": 39.34832282620624,
@@ -134,54 +138,11 @@
     "total_liabilities": 2536623300000
   },
   "name": "Taiwan Semiconductor Manufacturing Company Limited",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 447.2295
+    "close": 447.60001
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 2.457635046900518
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 0.4015899591885588
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 28.51970594718451
-      }
-    },
-    "passed": 3,
-    "quant_score_pct": 100.0
-  },
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001046179.json",
@@ -193,7 +154,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $2313.2B",
+          "detail": "Market cap $2324.1B",
           "passed": true
         },
         {

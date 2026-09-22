@@ -9,6 +9,7 @@
         "earnings": 359456000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 2080463000,
         "spending": 1128420000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 869408000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 3343681000,
         "spending": 2035178000,
         "stock_return_pct": -11.398239977650515
       },
@@ -27,6 +29,7 @@
         "earnings": 872309000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 4078993000,
         "spending": 2356677000,
         "stock_return_pct": -7.661989594828944
       },
@@ -36,6 +39,7 @@
         "earnings": 860772000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 5271142000,
         "spending": 2950214000,
         "stock_return_pct": -8.809970974901834
       },
@@ -45,6 +49,7 @@
         "earnings": 1058600000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 5749400000,
         "spending": 4122319600,
         "stock_return_pct": 5.542033327092307
       }
@@ -73,16 +78,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 55.405382226198036,
+      "graham_multiple": 55.10311399702154,
       "graham_number": 34.410284360878755,
-      "graham_upside_pct": -39.333067064741265,
-      "ncav_margin_pct": -158.10250263385535,
-      "pb_ratio": 1.3376574790711309,
-      "pe_ttm": 41.419708029197075
+      "graham_upside_pct": -39.247379306358134,
+      "ncav_margin_pct": -158.18456831554158,
+      "pb_ratio": 1.3340036433277875,
+      "pe_ttm": 41.306569343065696
     }
   },
   "industry": "REIT - Retail",
-  "last_updated": "2026-09-22T14:24:36Z",
+  "last_updated": "2026-09-22T17:48:59Z",
   "layered_analysis": {
     "conviction_score": 13.8,
     "conviction_score_breakdown": {
@@ -102,7 +107,6 @@
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -113,7 +117,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 52914315285,
+  "market_cap": 52769779012,
   "metrics": {
     "book_value_per_share": 44.978828862166644,
     "current_ratio": 1.655577145164833,
@@ -123,68 +127,25 @@
     "fcf_margin_pct": 69.48123282429471,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 55.405382226198036,
-    "graham_upside_pct": -39.333067064741265,
+    "graham_multiple": 55.10311399702154,
+    "graham_upside_pct": -39.247379306358134,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -158.10250263385535,
-    "pb_ratio": 1.3376574790711309,
-    "pe_ttm": 41.419708029197075,
+    "ncav_margin_pct": -158.18456831554158,
+    "pb_ratio": 1.3340036433277875,
+    "pe_ttm": 41.306569343065696,
     "roe_pct": 3.3608596024639144,
     "shareholders_equity": 39438695000,
     "total_assets": 72795612000,
     "total_liabilities": 32671644000
   },
   "name": "Realty Income Corporation",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 56.72
+    "close": 56.64
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 20
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": true,
-        "threshold": 1.5,
-        "value": 1.655577145164833
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": false,
-        "threshold": 3.0,
-        "value": 7.914009133182138
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 69.48123282429471
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000726728.json",
@@ -222,7 +183,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $52.9B",
+          "detail": "Market cap $52.8B",
           "passed": true
         },
         {
@@ -247,12 +208,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 41.4",
+          "detail": "P/E 41.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 55.4",
+          "detail": "P/E x P/B = 55.1",
           "passed": false
         }
       ],

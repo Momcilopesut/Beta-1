@@ -9,6 +9,7 @@
         "earnings": 3024000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
+        "revenue": 8297000000,
         "spending": 4076000000,
         "stock_return_pct": null
       },
@@ -18,6 +19,7 @@
         "earnings": 3248000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
+        "revenue": 11181000000,
         "spending": 6237000000,
         "stock_return_pct": -29.02761002691077
       },
@@ -27,6 +29,7 @@
         "earnings": 2626000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
+        "revenue": 12497000000,
         "spending": 8477000000,
         "stock_return_pct": 30.289006986325905
       },
@@ -36,6 +39,7 @@
         "earnings": 3852000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
+        "revenue": 14208000000,
         "spending": 8628000000,
         "stock_return_pct": 14.124979949128072
       },
@@ -45,6 +49,7 @@
         "earnings": 4471000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
+        "revenue": 15336000000,
         "spending": 8858000000,
         "stock_return_pct": 4.931429833544176
       }
@@ -73,16 +78,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 92.85402105115308,
+      "graham_multiple": 92.35375191883399,
       "graham_number": 202.33862899944677,
-      "graham_upside_pct": -49.94839360948743,
-      "ncav_margin_pct": -115.67094191467302,
-      "pb_ratio": 3.7754691295546556,
-      "pe_ttm": 24.594035301278147
+      "graham_upside_pct": -49.85287640351761,
+      "ncav_margin_pct": -115.70084793956514,
+      "pb_ratio": 3.765284855769231,
+      "pe_ttm": 24.527693244065734
     }
   },
   "industry": "Financial - Data & Stock Exchanges",
-  "last_updated": "2026-09-22T14:26:26Z",
+  "last_updated": "2026-09-22T17:51:04Z",
   "layered_analysis": {
     "conviction_score": 30.3,
     "conviction_score_breakdown": {
@@ -101,7 +106,6 @@
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
-    "quant_gate_pass": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -112,7 +116,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 119122784000,
+  "market_cap": 118819140000,
   "metrics": {
     "book_value_per_share": 124.03520649966147,
     "current_ratio": 0.9544109589041095,
@@ -122,68 +126,25 @@
     "fcf_margin_pct": 35.57642149191445,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 92.85402105115308,
-    "graham_upside_pct": -49.94839360948743,
+    "graham_multiple": 92.35375191883399,
+    "graham_upside_pct": -49.85287640351761,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -115.67094191467302,
-    "pb_ratio": 3.7754691295546556,
-    "pe_ttm": 24.594035301278147,
+    "ncav_margin_pct": -115.70084793956514,
+    "pb_ratio": 3.765284855769231,
+    "pe_ttm": 24.527693244065734,
     "roe_pct": 15.470446794801276,
     "shareholders_equity": 31235000000,
     "total_assets": 61200000000,
     "total_liabilities": 25048000000
   },
   "name": "S&P Global Inc.",
-  "narrative": {
-    "disclaimer": "This is not financial advice. All figures are estimates based on automated analysis of public data and may contain errors or delays.",
-    "facts": {
-      "critical": [],
-      "important": [],
-      "minor": [],
-      "noise": []
-    },
-    "narrative": null,
-    "one_line_summary": null
-  },
   "price": {
     "as_of": "2026-09-22",
-    "close": 404.26001
+    "close": 403.49
   },
   "qualitative": null,
-  "quant_score": {
-    "evaluated": 3,
-    "gate_pass": true,
-    "informational": {
-      "margin_trend_score": 100
-    },
-    "metrics": {
-      "current_ratio": {
-        "higher_is_better": true,
-        "label": "Current ratio (current assets / current liabilities)",
-        "pass": false,
-        "threshold": 1.5,
-        "value": 0.9544109589041095
-      },
-      "debt_to_ebitda": {
-        "higher_is_better": false,
-        "label": "Debt / EBITDA",
-        "pass": true,
-        "threshold": 3.0,
-        "value": 1.8545122110487136
-      },
-      "fcf_margin_pct": {
-        "higher_is_better": true,
-        "label": "Free cash flow margin",
-        "pass": true,
-        "threshold": 10.0,
-        "value": 35.57642149191445
-      }
-    },
-    "passed": 2,
-    "quant_score_pct": 66.66666666666666
-  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000064040.json",
@@ -221,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $119.1B",
+          "detail": "Market cap $118.8B",
           "passed": true
         },
         {
@@ -246,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.6",
+          "detail": "P/E 24.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 92.9",
+          "detail": "P/E x P/B = 92.4",
           "passed": false
         }
       ],
