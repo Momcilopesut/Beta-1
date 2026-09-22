@@ -37,6 +37,7 @@ function wireDetailPage(content, doc) {
   const years = doc.five_year_history?.years;
   if (years && years.length >= 2) {
     initTrendCompare(content, years);
+    wireReturnTargetChecker(content, years);
   }
 }
 
@@ -629,14 +630,14 @@ function initTrendCompare(root, years) {
   renderCompare();
 }
 
-function renderReturnBar(x, value, barWidth, color, zeroY, yFor) {
+function renderReturnBar(x, value, barWidth, color, zeroY, yFor, extraAttrs = "") {
   if (value === null || value === undefined) return "";
   const y = yFor(value);
   const top = Math.min(y, zeroY);
   const barHeight = Math.max(1, Math.abs(y - zeroY));
   const labelY = value >= 0 ? top - 4 : top + barHeight + 10;
   return `
-    <rect x="${x.toFixed(1)}" y="${top.toFixed(1)}" width="${barWidth.toFixed(1)}" height="${barHeight.toFixed(1)}" rx="2" fill="${color}" />
+    <rect ${extraAttrs} x="${x.toFixed(1)}" y="${top.toFixed(1)}" width="${barWidth.toFixed(1)}" height="${barHeight.toFixed(1)}" rx="2" fill="${color}" />
     <text x="${(x + barWidth / 2).toFixed(1)}" y="${labelY.toFixed(1)}" text-anchor="middle" class="chart-value-label">${escapeHtml(fmtPctSigned(value))}</text>
   `;
 }
@@ -661,7 +662,15 @@ function renderMarketComparisonChart(years) {
   const bars = years
     .map((y, i) => {
       const groupCenter = plotLeft + groupWidth * (i + 0.5);
-      const stockBar = renderReturnBar(groupCenter - barWidth - gap / 2, y.stock_return_pct, barWidth, "var(--accent)", zeroY, yFor);
+      const stockBar = renderReturnBar(
+        groupCenter - barWidth - gap / 2,
+        y.stock_return_pct,
+        barWidth,
+        "var(--accent)",
+        zeroY,
+        yFor,
+        `class="return-bar-stock" data-year-index="${i}"`
+      );
       const marketBar = renderReturnBar(groupCenter + gap / 2, y.market_return_pct, barWidth, "var(--muted)", zeroY, yFor);
       const yearLabel = `<text x="${groupCenter.toFixed(1)}" y="${height - 10}" text-anchor="middle" class="chart-axis-label">${escapeHtml((y.fiscal_year || "").slice(0, 4))}</text>`;
       return stockBar + marketBar + yearLabel;
@@ -682,6 +691,71 @@ function renderMarketComparisonChart(years) {
       </ul>
     </div>
   `;
+}
+
+// Lets the user type a target annual return and outlines every year's
+// stock-return bar (above, tagged with data-year-index) that met or beat
+// it, then reports how many of the years with data qualified. Purely a
+// read of the chart already drawn - no re-render, just toggling a CSS
+// class on the matching <rect> elements.
+function renderReturnTargetChecker() {
+  return `
+    <div class="return-target-row">
+      <label for="return-target-input">Highlight years that met a target:</label>
+      <input type="text" id="return-target-input" inputmode="decimal" placeholder="e.g. 10" />
+      <span class="meta">% annually</span>
+      <button id="return-target-check" type="button">Check</button>
+    </div>
+    <p id="return-target-result" class="return-target-result"></p>
+  `;
+}
+
+function wireReturnTargetChecker(content, years) {
+  const input = content.querySelector("#return-target-input");
+  const button = content.querySelector("#return-target-check");
+  const result = content.querySelector("#return-target-result");
+  if (!input || !button || !result) return;
+
+  function checkTarget() {
+    const rawInput = input.value.trim(); // User Action -> Input: raw text, data type string
+    const targetReturn = Number(rawInput); // Type conversion: string -> number
+
+    content.querySelectorAll(".return-bar-stock").forEach((bar) => bar.classList.remove("return-bar-met"));
+
+    const isValidTarget = rawInput !== "" && !Number.isNaN(targetReturn);
+    if (!isValidTarget) {
+      result.textContent = "Enter a target annual return (e.g. 10 for 10%).";
+      return;
+    }
+
+    let yearsWithData = 0; // Arithmetic: running count of years that have a real return
+    let yearsMetTarget = 0; // Arithmetic: running count of years that met the target
+
+    years.forEach((year, i) => {
+      const stockReturn = year.stock_return_pct;
+      const hasData = stockReturn !== null && stockReturn !== undefined; // Comparison -> boolean
+      if (!hasData) return; // Boolean logic: a missing year is skipped, never treated as 0%
+
+      yearsWithData += 1;
+
+      const metTarget = stockReturn >= targetReturn; // Comparison -> boolean
+      if (metTarget) {
+        yearsMetTarget += 1;
+        const bar = content.querySelector(`.return-bar-stock[data-year-index="${i}"]`);
+        if (bar) bar.classList.add("return-bar-met");
+      }
+    });
+
+    result.textContent =
+      yearsWithData > 0
+        ? `${yearsMetTarget} of ${yearsWithData} year(s) with data met your ${targetReturn}% target.`
+        : "No years have stock-return data yet.";
+  }
+
+  button.addEventListener("click", checkTarget);
+  input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") checkTarget();
+  });
 }
 
 function renderFiveYearHistory(fiveYearHistory) {
@@ -717,6 +791,7 @@ function renderFiveYearHistory(fiveYearHistory) {
       </div>
       <p class="meta">How the stock did each year, compared to just owning the whole stock market (the S&amp;P 500).</p>
       ${comparisonChart || `<p class="meta">Not enough price history yet to compare this stock's yearly return to the market.</p>`}
+      ${comparisonChart ? renderReturnTargetChecker() : ""}
     </section>
   `;
 }

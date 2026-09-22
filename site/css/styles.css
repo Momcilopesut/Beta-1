@@ -252,6 +252,38 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
   vertical-align: middle;
 }
 
+.return-target-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+.return-target-row label { color: var(--muted); }
+.return-target-row input {
+  width: 5rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--fg);
+  font-size: 0.85rem;
+}
+.return-target-row input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.return-target-row button {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.return-target-row button:hover { opacity: 0.9; }
+.return-target-result { font-size: 0.85rem; color: var(--muted); margin: 0.4rem 0 0; }
+.return-bar-met { stroke: var(--strong); stroke-width: 2px; }
+
 /* Revenue/profit/debt/spending/cash small-multiples + compare chart. */
 .trend-panel {
   background: var(--card-bg);
