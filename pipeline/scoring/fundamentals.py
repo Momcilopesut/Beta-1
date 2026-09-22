@@ -299,6 +299,8 @@ def build_metrics(
         "cik": sec_data.get("cik"),
         "market_cap": market_cap,
         "shares_outstanding": shares_outstanding,
+        # The company's general corporate site, not a verified investor-relations URL - FMP doesn't expose one separately.
+        "website": _first_of(profile, "website"),
     }
 
     return {

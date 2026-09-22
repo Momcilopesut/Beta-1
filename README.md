@@ -46,15 +46,19 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
 - **Layered analysis** (Munger's quality read → Buffett's qualitative moat read →
   Graham Number valuation gate, see "Layered analysis" below): a deeper pass per
   company that reads the company's own 10-K text — the only AI call in this pipeline,
-  and the only place it isn't grounded solely in pre-computed metrics. Only runs for
-  tickers that make at least one timeframe's top-5 list — see "Weekly Screener" below.
+  and the only place it isn't grounded solely in pre-computed metrics. The same call
+  also writes short, neutral summaries of the company's latest 10-K, 10-Q, and 8-K,
+  shown on its detail page's Recent Filings section. Only runs for tickers that make
+  at least one timeframe's top-5 list — see "Weekly Screener" below.
 - **Economic-cycle context**: the macro page frames the current regime against classic
   business-cycle/sector-rotation theory (which sectors have historically led/lagged in
   this phase) — textbook reference, explicitly not a prediction.
 - **Site**: plain HTML/CSS/JS, no framework, no build step — reads the generated JSON
   directly. The homepage shows each sector's top performers across 5 timeframes,
   GICS-style sector by sector; the search box reaches every company in the screening
-  universe (instant filter; Enter jumps to any ticker, tracked or not).
+  universe (instant filter; Enter jumps to any ticker, tracked or not). Every company
+  page also links to its own investor-facing corporate site (from FMP's profile data,
+  when available) and lists its latest 10-K/10-Q/8-K with a direct SEC link each.
 - **On-demand lookup** (`api/lookup.py`, optional): a search for a ticker outside the
   screening universe offers a live, on-demand run through the exact same pipeline code,
   via a small backend deployed separately (see "On-demand lookup deployment" below).
@@ -85,9 +89,9 @@ by the Investment Meter or any Graham/Buffett/Munger check:
    distinct tickers across its 5 windows, with overlap when the same stock leads more
    than one.
 3. **AI-enrich finalists only** (phase 2) — every ticker that made at least one
-   window's top-5 list gets re-scored with the Buffett moat read turned on, so
-   Anthropic spend scales with the number of tickers actually shown, not the size of
-   the universe scanned.
+   window's top-5 list gets re-scored with the Buffett moat read (plus short 10-K/
+   10-Q/8-K summaries) turned on, so Anthropic spend scales with the number of
+   tickers actually shown, not the size of the universe scanned.
 
 Every scanned company — not just the picks — still gets a full `data/companies/
 {ticker}.json` and detail page, complete with its own Investment Meter and Layered
@@ -240,13 +244,25 @@ EV/EBITDA — see "Assets vs. Liabilities" above for why).
    fixed metrics dict, so this layer's grounding is prompt discipline only, not
    code-verified. `qualitative.extraction_confidence` tells you whether the
    filing-text extraction itself found a clean Item 7 section match or fell back to a
-   raw document prefix, so you know how much to trust it. Results are cached by 10-K
-   URL under `data/qualitative_cache/` — since a 10-K only changes once a year, a
-   weekly refresh skips both the filing fetch and the Claude call entirely once a
-   company already has a current-filing assessment. Only runs for a company that has
-   a 10-K on file — cost control against the whole universe happens one level up, in
-   the weekly screen's two-phase design (see "Weekly Screener" above): this layer
-   only ever runs for that week's per-sector finalists.
+   raw document prefix, so you know how much to trust it.
+
+   The same call also writes short, neutral 2-4 sentence summaries of the company's
+   latest 10-K, 10-Q, and 8-K (`qualitative.filing_summary_10k`/`_10q`/`_8k`, shown on
+   the company page's Recent Filings section, one Anthropic call handles all of it
+   rather than three) — grounded the same way, and left `null` (never guessed) for a
+   filing type the company hasn't recently filed. `pipeline/fetch/sec_edgar.py::
+   latest_filings_by_form` finds each of the three independently, so a burst of
+   recent 8-Ks (a company can file 10-20+/year, vs. one 10-K and ~3 10-Qs) can't crowd
+   out the latest 10-Q/10-K. Results are cached by all three filing URLs together
+   under `data/qualitative_cache/` — a weekly refresh skips the filing fetch and the
+   Claude call entirely only when none of the three have changed since the last run,
+   so a fresh 10-Q or 8-K correctly invalidates the cache even when the 10-K itself
+   hasn't. Only runs for a company that has a 10-K on file — cost control against the
+   whole universe happens one level up, in the weekly screen's two-phase design (see
+   "Weekly Screener" above): this layer, filing summaries included, only ever runs
+   for that week's per-sector finalists. Every company (finalist or not) still gets
+   its latest 10-K/10-Q/8-K listed with a direct SEC link on its own page — it's just
+   the AI summary of each that's finalists-only.
 3. **Graham's valuation gate** — not a separate module or AI call, just the Graham
    Number margin of safety already computed in `fundamentals.py`
    (`graham_upside_pct = sqrt(22.5 × EPS × book value/share)` vs. price). No growth
@@ -394,8 +410,9 @@ section is fine; the rest of the site works without it, and an untracked search 
 just say live lookup isn't configured.
 
 This runs the **full pipeline** for that one ticker, right then — qualitative (10-K
-moat reasoning) and the complete Investment Meter, identical to a tracked company.
-It's a real 10-K fetch plus one Claude call for a single request, which takes real
+moat reasoning plus 10-K/10-Q/8-K summaries) and the complete Investment Meter,
+identical to a tracked company. It's a real 10-K (plus 10-Q/8-K, when found) fetch
+plus one Claude call for a single request, which takes real
 time.
 
 **Timeout headroom:** `vercel.json` sets `maxDuration: 60` — the maximum a Vercel

@@ -21,7 +21,11 @@ Two phases (see run_full):
      enough to rank and select each window's top performers per sector
      (pipeline.scoring.performance.select_top_performers).
   2. AI enrichment (skip_ai=False) of just the selected finalists - Buffett's
-     10-K moat read, the only place Anthropic budget gets spent.
+     10-K moat read plus short neutral summaries of the latest 10-K/10-Q/8-K,
+     the only place Anthropic budget gets spent. Every company (finalist or
+     not) still gets its latest 10-K/10-Q/8-K listed with a direct SEC link
+     and, when available, a company-website link - it's just the AI summary
+     of each filing that's finalists-only.
 """
 
 import argparse
@@ -138,7 +142,9 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict, benchmark_pric
     metrics["munger_quality_passed"] = checklist["munger_quality"]["passed"]
     metrics["munger_quality_evaluated"] = checklist["munger_quality"]["evaluated"]
 
-    recent_filings = sec_edgar.recent_filings(sec_data["submissions"]) if sec_data.get("submissions") else []
+    latest_filings = sec_edgar.latest_filings_by_form(sec_data["submissions"]) if sec_data.get("submissions") else {}
+    # Display order for the company page's Sources section - newest filing first.
+    recent_filings = sorted(latest_filings.values(), key=lambda f: f["filed"], reverse=True)
     companyfacts_url = (
         f"https://data.sec.gov/api/xbrl/companyfacts/CIK{sec_data['cik']}.json" if sec_data.get("cik") else None
     )
@@ -146,7 +152,7 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict, benchmark_pric
     if stooq_error:
         errors["stooq"] = stooq_error
 
-    latest_10k = next((f for f in recent_filings if f["form"] == "10-K"), None)
+    latest_10k = latest_filings.get("10-K")
 
     five_year_history = history.build_five_year_history(
         raw["income_stmts"], raw["balance_stmts"], raw["price_history"], benchmark_prices or []
@@ -161,6 +167,7 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict, benchmark_pric
         "display": display,
         "checklist": checklist,
         "latest_10k": latest_10k,
+        "latest_filings": latest_filings,
         "raw": raw,
         "recent_filings": recent_filings,
         "companyfacts_url": companyfacts_url,
@@ -170,29 +177,46 @@ def fetch_and_score_company(company_cfg: dict, regime_info: dict, benchmark_pric
 
 
 def _run_qualitative(state: dict, out_dir) -> tuple[dict | None, bool]:
-    """Layer 3 (Buffett's moat read). Only runs when there's a 10-K to read -
-    cost control already happens one level up (only this week's per-sector
+    """Layer 3 (Buffett's moat read from the 10-K, plus short neutral
+    summaries of the latest 10-K/10-Q/8-K - all one Anthropic call, see
+    qualitative_client.py). Only runs when there's a 10-K to read - cost
+    control already happens one level up (only this week's per-sector
     finalists get here at all, see run_full's two-phase docstring). Returns
     (qualitative, failed) - failed is True only when the layer was attempted
     and errored, never for a deliberate skip (no 10-K found), so callers can
     distinguish "nothing to do here" from "something broke"."""
-    ticker, latest_10k = state["ticker"], state.get("latest_10k")
+    ticker = state["ticker"]
+    latest_filings = state.get("latest_filings") or {}
+    latest_10k = latest_filings.get("10-K")
     if not latest_10k:
         return None, False
 
+    filing_urls = {form: f["url"] for form, f in latest_filings.items()}
     cached = qualitative_cache.read(out_dir, ticker)
-    if cached and cached.get("filing_url") == latest_10k["url"]:
+    if cached and cached.get("filing_urls") == filing_urls:
         return cached["qualitative"], False
 
     try:
         sections = filing_text.fetch_filing_sections(latest_10k["url"])
-        qualitative = generate_qualitative_assessment(ticker, sections)
+        # 10-Q/8-K text is a bonus, not required - a fetch failure here
+        # just means that one filing_summary_* field comes back null,
+        # it shouldn't sink the whole moat-read call.
+        filing_texts: dict[str, str] = {}
+        for form in ("10-Q", "8-K"):
+            filing = latest_filings.get(form)
+            if not filing:
+                continue
+            try:
+                filing_texts[form] = filing_text.fetch_plain_text(filing["url"])
+            except filing_text.FilingTextError as exc:
+                logger.warning("%s text fetch failed for %s, summarizing without it: %s", form, ticker, exc)
+        qualitative = generate_qualitative_assessment(ticker, sections, filing_texts)
     except (filing_text.FilingTextError, QualitativeError) as exc:
         logger.warning("Qualitative layer skipped for %s: %s", ticker, exc)
         return None, True
 
     qualitative_dict = qualitative.model_dump()
-    qualitative_cache.write(out_dir, ticker, latest_10k["url"], qualitative_dict)
+    qualitative_cache.write(out_dir, ticker, filing_urls, qualitative_dict)
     return qualitative_dict, False
 
 
@@ -230,6 +254,7 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
         "sector": sector,
         "industry": profile.get("industry"),
         "market_cap": profile.get("market_cap"),
+        "website": profile.get("website"),
         "last_updated": generated_at,
         "price": display["price"],
         "metrics": clean_metrics,

@@ -33,3 +33,13 @@ class QualitativeAssessment(BaseModel):
     moat_explanation: str = Field(max_length=1000)
     red_flags: list[str] = Field(max_length=6)
     extraction_confidence: Literal["section_match", "whole_document_fallback"]
+
+    # Short, neutral "what did this filing actually say" summaries - a
+    # separate purpose from the moat read above, but generated in the same
+    # call to keep this the only Anthropic call per finalist (see
+    # qualitative_client.py). None when that filing type wasn't found for
+    # this company (e.g. no 8-K filed recently) - never a guess at what it
+    # might have said.
+    filing_summary_10k: str | None = Field(default=None, max_length=800)
+    filing_summary_10q: str | None = Field(default=None, max_length=800)
+    filing_summary_8k: str | None = Field(default=None, max_length=800)

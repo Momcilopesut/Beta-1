@@ -15,6 +15,12 @@ from pipeline.utils.http import get_text
 _MAX_CHARS = 60_000  # ~15k tokens - keeps the qualitative-layer prompt a bounded, predictable size
 _RATE = {"host_key": "sec_edgar", "min_interval_seconds": 0.15}
 
+# 10-Qs and 8-Ks only need a few sentences of "what did this filing say," not
+# the deep excerpt grounding the moat read needs from the 10-K - a much
+# smaller budget than _MAX_CHARS. 8-Ks in particular are usually a page or
+# two (an event description plus exhibits), so this rarely even gets used up.
+_SHORT_FILING_MAX_CHARS = 20_000
+
 # Item headers as they appear (case-insensitively) at the start of a 10-K's
 # structured sections. Real filings vary in formatting (all-caps, "Item 7.",
 # "ITEM 7 —", a table-of-contents entry vs. the actual section, etc.), so
@@ -104,3 +110,17 @@ def fetch_filing_sections(url: str) -> dict:
     except Exception as exc:  # noqa: BLE001
         raise FilingTextError(f"Failed to fetch filing text from {url}: {exc}") from exc
     return extract_sections(html)
+
+
+def fetch_plain_text(url: str, max_chars: int = _SHORT_FILING_MAX_CHARS) -> str:
+    """Bounded whole-document plain text for a 10-Q or 8-K - filings whose
+    structure doesn't warrant (10-Q's item numbering differs from the 10-K's)
+    or doesn't have (8-K, which is just a short event disclosure) the 10-K's
+    Item-based section extraction above. Used only for the short
+    filing-summary AI fields, not the moat-read layer, which stays grounded
+    in the 10-K's own extract_sections() output."""
+    try:
+        html = get_text(url, headers=edgar_headers(), **_RATE)
+    except Exception as exc:  # noqa: BLE001
+        raise FilingTextError(f"Failed to fetch filing text from {url}: {exc}") from exc
+    return _html_to_text(html)[:max_chars]

@@ -52,23 +52,36 @@ def fetch_company_facts(cik: str) -> dict:
     )
 
 
-def recent_filings(submissions: dict, forms: tuple[str, ...] = ("10-K", "10-Q"), limit: int = 5) -> list[dict]:
-    """Extract recent filing metadata (form, filed date, direct document URL)."""
+def _filing_url(cik: str, accession: str, primary_doc: str) -> str:
+    accession_nodash = accession.replace("-", "")
+    return f"{SEC_BASE}/Archives/edgar/data/{cik}/{accession_nodash}/{primary_doc}"
+
+
+def latest_filings_by_form(
+    submissions: dict, forms: tuple[str, ...] = ("10-K", "10-Q", "8-K")
+) -> dict[str, dict]:
+    """Most recent filing of each requested form type, found independently -
+    a burst of recent 8-Ks (a company can file 10-20+/year, vs. 1 10-K and
+    ~3 10-Qs) can't crowd out the latest 10-Q/10-K the way a single
+    combined-and-capped list would. submissions["filings"]["recent"] is
+    already newest-first, so the first match per form is its latest filing.
+
+    Returns {form: {"form", "filed", "url"}}, omitting any form with no
+    match in the submissions payload."""
     recent = submissions.get("filings", {}).get("recent", {})
     cik = str(int(submissions.get("cik", "0")))
     forms_list = recent.get("form", [])
 
-    out: list[dict] = []
+    out: dict[str, dict] = {}
     for i, form in enumerate(forms_list):
-        if form not in forms:
+        if form not in forms or form in out:
             continue
-        accession = recent["accessionNumber"][i]
-        primary_doc = recent["primaryDocument"][i]
-        filed = recent["filingDate"][i]
-        accession_nodash = accession.replace("-", "")
-        url = f"{SEC_BASE}/Archives/edgar/data/{cik}/{accession_nodash}/{primary_doc}"
-        out.append({"form": form, "filed": filed, "url": url})
-        if len(out) >= limit:
+        out[form] = {
+            "form": form,
+            "filed": recent["filingDate"][i],
+            "url": _filing_url(cik, recent["accessionNumber"][i], recent["primaryDocument"][i]),
+        }
+        if len(out) == len(forms):
             break
     return out
 

@@ -78,6 +78,11 @@ function renderPriceHeader(price) {
   return `<p class="detail-price">$${formatNumber(close, { decimals: 2 })}${asOf}</p>`;
 }
 
+function renderWebsiteLink(website) {
+  if (!website) return "";
+  return `<p class="meta"><a href="${escapeHtml(website)}" target="_blank" rel="noopener">Company website ↗</a> <span class="meta">(investor relations is usually linked from there — this is the company's general site, not a verified IR-specific URL)</span></p>`;
+}
+
 function render(doc) {
   const onDemandBanner = doc.on_demand
     ? `<p class="on-demand-banner">Live on-demand analysis — not part of the tracked watchlist, computed just now.</p>`
@@ -88,6 +93,7 @@ function render(doc) {
       <h2>${escapeHtml(doc.name)} <span class="ticker-tag">${escapeHtml(doc.ticker)}</span></h2>
       ${renderPriceHeader(doc.price)}
       <p class="meta">${escapeHtml(doc.sector || "—")} · ${escapeHtml(doc.industry || "—")} · Updated ${escapeHtml(doc.last_updated)}</p>
+      ${renderWebsiteLink(doc.website)}
     </section>
 
     <section class="verdicts-detail">
@@ -111,21 +117,47 @@ function render(doc) {
       <p><a href="macro.html">See full macro overview &rarr;</a></p>
     </section>
 
+    ${renderRecentFilings(doc)}
+
     <section class="sources">
       <h3>Sources</h3>
       <ul>
-        ${(doc.sources.sec_filings || [])
-          .map(
-            (f) =>
-              `<li><a href="${escapeHtml(f.url)}" target="_blank" rel="noopener">${escapeHtml(f.form)} filed ${escapeHtml(f.filed)}</a></li>`
-          )
-          .join("")}
         ${
           doc.sources.sec_companyfacts_url
             ? `<li><a href="${escapeHtml(doc.sources.sec_companyfacts_url)}" target="_blank" rel="noopener">SEC XBRL company facts (raw)</a></li>`
             : ""
         }
       </ul>
+    </section>
+  `;
+}
+
+const FILING_SUMMARY_KEY = { "10-K": "filing_summary_10k", "10-Q": "filing_summary_10q", "8-K": "filing_summary_8k" };
+
+function renderFilingCard(filing, qualitative) {
+  const summary = qualitative?.[FILING_SUMMARY_KEY[filing.form]];
+  const body = summary
+    ? `<p>${escapeHtml(summary)}</p>`
+    : qualitative
+      ? `<p class="meta">No excerpt was available to summarize this filing.</p>`
+      : `<p class="meta">AI summary only runs for this week's per-sector finalists (cost control — this layer reads real filing text and spends extra AI budget per company).</p>`;
+  return `
+    <div class="filing-card">
+      <h4><a href="${escapeHtml(filing.url)}" target="_blank" rel="noopener">${escapeHtml(filing.form)}</a> <span class="meta">filed ${escapeHtml(filing.filed)}</span></h4>
+      ${body}
+    </div>
+  `;
+}
+
+function renderRecentFilings(doc) {
+  const filings = doc.sources?.sec_filings || [];
+  if (!filings.length) return "";
+  return `
+    <section class="recent-filings">
+      <h3>Recent Filings <span class="attribution">(latest 10-K, 10-Q, and 8-K, each with a short AI summary when available)</span></h3>
+      <div class="filings-grid">
+        ${filings.map((f) => renderFilingCard(f, doc.qualitative)).join("")}
+      </div>
     </section>
   `;
 }

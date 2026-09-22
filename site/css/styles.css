@@ -427,6 +427,21 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 
 .sources ul { padding-left: 1.25rem; }
 
+.recent-filings { margin-bottom: 2rem; }
+.filings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.filing-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.filing-card h4 { margin: 0 0 0.5rem; font-size: 0.9rem; display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+.filing-card p { margin: 0; font-size: 0.85rem; }
+
 .balance-sheet-basics { margin-bottom: 1.5rem; }
 .basics-list { list-style: none; padding: 0; margin: 0.5rem 0 1rem; font-size: 0.95rem; }
 .basics-list li { padding: 0.3rem 0; border-bottom: 1px solid var(--border); }

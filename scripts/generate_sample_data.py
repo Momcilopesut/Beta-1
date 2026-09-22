@@ -14,6 +14,7 @@ import random
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import quote
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -229,12 +230,32 @@ def to_display(metrics: dict, close_price: float) -> dict:
 
 _SAMPLE_MOAT_TYPES = ["network_effects", "cost_advantage", "intangible_assets", "switching_costs", "efficient_scale"]
 
+# Sample-data stand-in for pipeline.fetch.sec_edgar.latest_filings_by_form()'s
+# real per-company URLs - a generic (but genuinely working) SEC EDGAR company
+# search, parameterized by ticker and form type, rather than a fake
+# accession-number URL that would 404. Newest-filed-first, matching the real
+# pipeline's display order.
+_SAMPLE_FILINGS = (("8-K", "2026-08-01"), ("10-Q", "2026-06-01"), ("10-K", "2026-02-15"))
+
+
+def synth_sec_filings(ticker: str) -> list[dict]:
+    return [
+        {
+            "form": form,
+            "filed": filed,
+            "url": f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company={quote(ticker)}&type={quote(form)}",
+        }
+        for form, filed in _SAMPLE_FILINGS
+    ]
+
 
 def synth_qualitative(name: str) -> dict | None:
     """Placeholder text, clearly labeled, not a real reading of any filing -
-    stands in for pipeline/main.py's real Buffett moat read (only run for
-    this week's finalists there; synthesized here for every sample company
-    for simplicity)."""
+    stands in for pipeline/main.py's real Buffett moat read + filing
+    summaries (only run for this week's finalists there; synthesized here
+    for every sample company for simplicity). filing_summary_8k is
+    occasionally None to demonstrate the "no recent 8-K found" case the real
+    pipeline also produces."""
     moat_present = random.random() < 0.7
     moat_type = random.choice(_SAMPLE_MOAT_TYPES) if moat_present else "none"
     return {
@@ -245,6 +266,11 @@ def synth_qualitative(name: str) -> dict | None:
         ),
         "red_flags": ["[Sample data] Placeholder red flag."] if random.random() < 0.3 else [],
         "extraction_confidence": "section_match",
+        "filing_summary_10k": f"[Sample data] Placeholder 10-K summary for {name}.",
+        "filing_summary_10q": f"[Sample data] Placeholder 10-Q summary for {name}.",
+        "filing_summary_8k": (
+            f"[Sample data] Placeholder 8-K summary for {name}." if random.random() < 0.85 else None
+        ),
     }
 
 
@@ -325,6 +351,7 @@ def main() -> None:
             "sector": sector,
             "industry": None,
             "market_cap": market_cap,
+            "website": f"https://www.{ticker.lower().replace('.', '')}.example",
             "last_updated": generated_at,
             "price": display["price"],
             "metrics": metrics,
@@ -340,7 +367,7 @@ def main() -> None:
             "value_investing": checklist,
             "qualitative": qualitative_out,
             "layered_analysis": layered_analysis,
-            "sources": {"sec_filings": [], "sec_companyfacts_url": None},
+            "sources": {"sec_filings": synth_sec_filings(ticker), "sec_companyfacts_url": None},
             "_errors": {
                 "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
             },
