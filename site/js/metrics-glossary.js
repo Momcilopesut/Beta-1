@@ -13,7 +13,7 @@ export const METRIC_GLOSSARY = [
     explanation:
       "Price divided by trailing twelve-month earnings per share - how many years of today's profit you're paying for at the current price.",
     significance:
-      "The most widely used shorthand for whether a stock is cheap or expensive relative to what it actually earns. Graham's Defensive Investor checklist caps this at 15 as a plain check against overpaying.",
+      "The most widely used shorthand for whether a stock is cheap or expensive relative to what it actually earns. This tool's defensive checklist caps this at 15 as a plain check against overpaying.",
     volatilityImpact:
       "Can swing sharply even when the business hasn't changed at all - a falling stock price or a temporary earnings dip both push it up. A P/E that's high because earnings collapsed is a very different situation than one caused by investor optimism, so this number should never be read alone.",
   },
@@ -29,19 +29,19 @@ export const METRIC_GLOSSARY = [
   },
   {
     key: "graham_upside_pct",
-    label: "Margin of Safety (vs. Graham Number)",
+    label: "Margin of Safety (vs. Fair-Value Estimate)",
     explanation:
-      "The percentage gap between the Graham Number (a fair-value estimate combining EPS and book value) and the current price - Graham's own definition of a margin of safety.",
+      "The percentage gap between the fair-value estimate (combining EPS and book value) and the current price - this tool's definition of a margin of safety.",
     significance:
-      "This tool's final valuation gate: even a wonderful, well-run business isn't a buy at any price. Positive means the price sits below Graham's fair-value estimate; negative means it's trading above it.",
+      "This tool's final valuation gate: even a wonderful, well-run business isn't a buy at any price. Positive means the price sits below the fair-value estimate; negative means it's trading above it.",
     volatilityImpact:
       "One of the most volatile numbers here since it's measured against the live stock price - it moves every trading day even when nothing about the company changed. A short-term price swing can flip the Investment Meter's valuation multiplier (1.0x to 0.55x) without a single thing being different about the business.",
   },
   {
     key: "graham_multiple",
-    label: "P/E × P/B (Graham's combined multiple)",
+    label: "P/E × P/B (Combined Multiple)",
     explanation:
-      "Price-to-earnings multiplied by price-to-book - Graham's own combined ceiling test (he wanted this at or below 22.5, roughly P/E ≤ 15 × P/B ≤ 1.5).",
+      "Price-to-earnings multiplied by price-to-book - a combined ceiling test (kept at or below 22.5, roughly P/E ≤ 15 × P/B ≤ 1.5).",
     significance:
       "Catches a company that looks fine on one ratio but expensive on the other - e.g. a low-P/E stock actually trading at 5x book value. Multiplying the two forces both to be reasonable at once.",
     volatilityImpact:
@@ -51,7 +51,7 @@ export const METRIC_GLOSSARY = [
     key: "ncav_margin_pct",
     label: "NCAV Margin (Net Current Asset Value)",
     explanation:
-      "Graham's strictest test: (current assets − total liabilities) per share, compared against the stock price - do just the short-term assets alone, after paying off every liability, exceed what the whole company costs?",
+      "The strictest test here: (current assets − total liabilities) per share, compared against the stock price - do just the short-term assets alone, after paying off every liability, exceed what the whole company costs?",
     significance:
       "Almost always sharply negative for a normal, healthy large-cap - expected, since this test was designed for cheap small caps, not blue chips. A positive reading is rare and notable.",
     volatilityImpact:
@@ -63,9 +63,9 @@ export const METRIC_GLOSSARY = [
     explanation:
       "Total debt divided by shareholders' equity - how much of the company's financing comes from borrowing versus money shareholders have put in.",
     significance:
-      "Munger's central leverage check (threshold: ≤1.0 to pass). Debt has to be repaid regardless of how business is going, so a highly levered company has far less room for error.",
+      "This tool's central leverage check (threshold: ≤1.0 to pass). Debt has to be repaid regardless of how business is going, so a highly levered company has far less room for error.",
     volatilityImpact:
-      "Rising debt/equity means the same revenue shortfall hits equity harder, since interest and principal payments don't shrink when sales do. Crossing the 1.0 threshold flips Munger's debt-discipline criterion from pass to fail, pulling that multiplier from 1.10x down to 0.75x.",
+      "Rising debt/equity means the same revenue shortfall hits equity harder, since interest and principal payments don't shrink when sales do. Crossing the 1.0 threshold flips the debt-discipline criterion from pass to fail, pulling that multiplier from 1.10x down to 0.75x.",
   },
   {
     key: "debt_to_ebitda",
@@ -83,7 +83,7 @@ export const METRIC_GLOSSARY = [
     explanation:
       "Current assets divided by current liabilities - can the company cover what it owes in the next year with what it can convert to cash in the next year?",
     significance:
-      "The most basic short-term solvency check - used in Graham's own checklist (≥2.0, alongside a debt-vs-working-capital test). Below 1.0 means current liabilities exceed current assets outright.",
+      "The most basic short-term solvency check - used in this tool's defensive checklist (≥2.0, alongside a debt-vs-working-capital test). Below 1.0 means current liabilities exceed current assets outright.",
     volatilityImpact:
       "Working capital needs swing with the business cycle - inventory builds ahead of a busy season, or a slow collection period, can drag this down temporarily without signaling real distress. A persistent decline matters more than one quarter's dip.",
   },
@@ -102,7 +102,7 @@ export const METRIC_GLOSSARY = [
     label: "EPS Growth (3yr CAGR)",
     explanation: "The compound annual growth rate of diluted EPS over the most recent 3 years of annual statements.",
     significance:
-      "Graham's growth check (≥ ~2.9%/yr, his modernized 33%-over-10-years pace). A company whose earnings aren't growing struggles to compound shareholder wealth over time, even at a cheap price.",
+      "This tool's growth check (≥ ~2.9%/yr average pace). A company whose earnings aren't growing struggles to compound shareholder wealth over time, even at a cheap price.",
     volatilityImpact:
       "A single unusually strong or weak base year can distort a 3-year CAGR significantly. Share buybacks also inflate EPS growth without any real increase in the underlying business - worth checking net income growth alongside this.",
   },
@@ -112,7 +112,7 @@ export const METRIC_GLOSSARY = [
     explanation:
       "Classifies the company's gross margin trend over its most recent annual statements as declining, stable, or improving, scored 20 / 60 / 100 respectively.",
     significance:
-      "Feeds Munger's quality checklist directly (needs 'stable or improving' to pass) - eroding margins usually mean a weakening competitive position, exactly what Munger's checklist is built to catch.",
+      "Feeds the quality checklist directly (needs 'stable or improving' to pass) - eroding margins usually mean a weakening competitive position, exactly what that checklist is built to catch.",
     volatilityImpact:
       "Margins can move for reasons unrelated to competitive position - a one-off commodity input spike, a temporary promotion, a currency swing. A single 'declining' reading is worth less than a multi-year pattern, which is why this tool checks a 3-year window rather than one quarter.",
   },
@@ -122,7 +122,7 @@ export const METRIC_GLOSSARY = [
     explanation:
       "Net income divided by shareholders' equity - how much profit the company generates per dollar shareholders have actually invested in the business.",
     significance:
-      "Munger's central point in basic arithmetic: a business that sustainably earns a high return on the capital it's given is worth far more than its statistical cheapness alone suggests. This tool's threshold is ≥15%.",
+      "The central idea here, in basic arithmetic: a business that sustainably earns a high return on the capital it's given is worth far more than its statistical cheapness alone suggests. This tool's threshold is ≥15%.",
     volatilityImpact:
       "Can be inflated by leverage alone - a company that borrows heavily to shrink its equity base can show a high ROE without actually running the business better, which is exactly why this tool also separately checks debt/equity rather than trusting ROE in isolation.",
   },
@@ -158,7 +158,7 @@ export const METRIC_GLOSSARY = [
     label: "Book Value per Share",
     explanation: "Shareholders' equity divided by shares outstanding - net worth on a per-share basis, directly comparable to the stock price.",
     significance:
-      "Feeds both P/B and the Graham Number. Buying below book value per share means paying less than the accounting net worth of what you'd own.",
+      "Feeds both P/B and the fair-value estimate. Buying below book value per share means paying less than the accounting net worth of what you'd own.",
     volatilityImpact:
       "Share buybacks mechanically raise this per-share figure even if total equity doesn't grow, since fewer shares divide the same pie - so a rising book value per share can reflect capital return to shareholders just as much as the business getting bigger.",
   },

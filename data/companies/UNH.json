@@ -101,7 +101,7 @@
     },
     "conviction_verdict": "Weak",
     "flags": [
-      "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - no margin of safety by that measure."
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
@@ -192,7 +192,7 @@
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years (Graham's original window was 10 years)",
+          "detail": "Positive in 6/6 available years",
           "passed": true
         },
         {
@@ -201,7 +201,7 @@
           "passed": null
         },
         {
-          "criterion": "Earnings growth (>= ~2.9%/yr, Graham's 33%/10yr pace)",
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
           "detail": "EPS 3yr CAGR -15.0%/yr",
           "passed": false
         },

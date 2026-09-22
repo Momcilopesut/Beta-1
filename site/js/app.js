@@ -195,11 +195,11 @@ function renderCard(company) {
   const ticker = escapeHtml(company.ticker);
   const grahamBadge =
     company.graham_criteria_total
-      ? `<span class="mini-badge" title="Graham defensive-investor criteria passed">Graham ${company.graham_criteria_passed}/${company.graham_criteria_total}</span>`
+      ? `<span class="mini-badge" title="Defensive checklist criteria passed">Defensive ${company.graham_criteria_passed}/${company.graham_criteria_total}</span>`
       : "";
   const mungerBadge =
     company.munger_quality_total !== undefined && company.munger_quality_total !== null
-      ? `<span class="mini-badge" title="Munger quality checklist (return on equity, debt, dilution, margins)">Munger ${company.munger_quality_passed}/${company.munger_quality_total}</span>`
+      ? `<span class="mini-badge" title="Quality checklist (return on equity, debt, dilution, margins)">Quality ${company.munger_quality_passed}/${company.munger_quality_total}</span>`
       : "";
   const bookValueBadge =
     company.book_value_per_share !== undefined && company.book_value_per_share !== null
@@ -240,8 +240,8 @@ function renderLayeredBadge(company) {
   } = company;
   if (moat === undefined && munger === undefined && value === undefined) return "";
   const parts = [];
-  if (munger === true) parts.push("munger");
-  if (moat === true) parts.push("moat (Buffett)");
+  if (munger === true) parts.push("quality");
+  if (moat === true) parts.push("moat");
   if (value === true) parts.push("value");
   if (!parts.length) return `<span class="mini-badge" title="Layered analysis: no gates passed yet">layered: —</span>`;
   return `<span class="mini-badge" title="Layered analysis gates passed">${escapeHtml(parts.join(" + "))} ✓</span>`;

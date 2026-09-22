@@ -90,8 +90,7 @@ def graham_defensive_checklist(metrics: dict, profile: dict, raw: dict) -> dict:
             _criterion(
                 "Earnings stability (positive net income every year)",
                 passed,
-                f"Positive in {sum(1 for v in net_incomes if v > 0)}/{len(net_incomes)} available years "
-                "(Graham's original window was 10 years)",
+                f"Positive in {sum(1 for v in net_incomes if v > 0)}/{len(net_incomes)} available years",
             )
         )
 
@@ -107,7 +106,7 @@ def graham_defensive_checklist(metrics: dict, profile: dict, raw: dict) -> dict:
         passed = abs(dividends_paid) > 0
         criteria.append(
             _criterion(
-                "Currently pays a dividend (proxy for Graham's 20yr record, unverifiable here)",
+                "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
                 passed,
                 f"Most recent year dividends paid: {'yes' if passed else 'no'}",
             )
@@ -122,7 +121,7 @@ def graham_defensive_checklist(metrics: dict, profile: dict, raw: dict) -> dict:
         passed = eps_cagr >= 2.9
         criteria.append(
             _criterion(
-                "Earnings growth (>= ~2.9%/yr, Graham's 33%/10yr pace)",
+                "Earnings growth (>= ~2.9%/yr average pace)",
                 passed,
                 f"EPS 3yr CAGR {eps_cagr:.1f}%/yr",
             )

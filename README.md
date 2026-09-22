@@ -4,10 +4,10 @@ This tool's primary purpose is a **weekly screen**: every Friday after the US ma
 closes, it scans a curated universe of companies and surfaces each sector's 5 best
 price performers over five timeframes — weekly, monthly, quarterly, annual, and
 5-year. This ranking is pure price return, deliberately independent of any
-fundamentals check. Every company also gets its own full value-investing analysis —
-Graham's, Buffett's, and Munger's criteria, the same question underneath all three:
-**does this company own more than it owes, is it a well-run business, and is the
-price fair for that?** — on its own detail page; a scheduled pipeline fetches company
+fundamentals check. Every company also gets its own full value-investing analysis on
+its own detail page, asking one question three ways: **does this company own more
+than it owes, is it a well-run business, and is the price fair for that?** — a
+scheduled pipeline fetches company
 fundamentals (Financial Modeling Prep + SEC EDGAR) and macroeconomic indicators (FRED)
 and runs every company through a transparent, balance-sheet-first scoring model, basic
 arithmetic, not growth projections or opaque composites, it just doesn't gate or
@@ -36,15 +36,14 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
 - **Scoring**: deterministic, config-driven, and deliberately small — see "Assets vs.
   Liabilities" and "Layered analysis" below. A rule-based macro regime classifier
   (`pipeline/scoring/macro_regime.py`) provides cycle context alongside the scores.
-- **Value-investing checklists** (`pipeline/scoring/value_investing.py`): Graham's
-  Defensive Investor criteria and a Munger Quality Checklist, computed from the same
-  fetched statements — no extra API calls. Both are simple pass/fail arithmetic, and
-  together they anchor the Investment Meter (see "Investment Meter" below) — built
-  from exactly three investors: Graham, Buffett, Munger. Shown on every company's own
+- **Value-investing checklists** (`pipeline/scoring/value_investing.py`): a Defensive
+  Checklist and a Quality Checklist, computed from the same fetched statements — no
+  extra API calls. Both are simple pass/fail arithmetic, and together they anchor the
+  Investment Meter (see "Investment Meter" below). Shown on every company's own
   detail page; the weekly screen itself ranks by price return instead (see "Weekly
   Screener" below).
-- **Layered analysis** (Munger's quality read → Buffett's qualitative moat read →
-  Graham Number valuation gate, see "Layered analysis" below): a deeper pass per
+- **Layered analysis** (a quality checklist read → a qualitative moat read →
+  a fair-value margin-of-safety gate, see "Layered analysis" below): a deeper pass per
   company that reads the company's own 10-K text — the only AI call in this pipeline,
   and the only place it isn't grounded solely in pre-computed metrics. The same call
   also writes short, neutral summaries of the company's latest 10-K, 10-Q, and 8-K,
@@ -71,11 +70,11 @@ weekly-screen.yml`) — genuinely "after the ~4pm ET close" year-round regardles
 DST — the pipeline runs a two-phase screen over `config/watchlist.yaml`'s curated
 universe (88 companies, 8 per sector across 11 GICS-style sectors; not the full S&P
 500, to stay well inside a free-tier API budget), ranking purely by price return, not
-by the Investment Meter or any Graham/Buffett/Munger check:
+by the Investment Meter or any fundamentals check:
 
 1. **Cheap screen, whole universe** (`pipeline/main.py::run_full`, phase 1) — every
    company gets fetched and scored (full Investment Meter included, for its own detail
-   page), with the AI qualitative (Buffett moat read) layer skipped entirely. Each
+   page), with the AI qualitative (moat read) layer skipped entirely. Each
    company's price return over 5 lookback windows
    (`pipeline/scoring/performance.py::compute_returns`) comes straight from price
    history already fetched for it - no extra API calls.
@@ -89,7 +88,7 @@ by the Investment Meter or any Graham/Buffett/Munger check:
    distinct tickers across its 5 windows, with overlap when the same stock leads more
    than one.
 3. **AI-enrich finalists only** (phase 2) — every ticker that made at least one
-   window's top-5 list gets re-scored with the Buffett moat read (plus short 10-K/
+   window's top-5 list gets re-scored with the moat read (plus short 10-K/
    10-Q/8-K summaries) turned on, so Anthropic spend scales with the number of
    tickers actually shown, not the size of the universe scanned.
 
@@ -148,7 +147,7 @@ whenever FMP's own statement/price endpoints come back empty:
 - **SEC EDGAR XBRL** (`pipeline/fetch/sec_edgar.py::xbrl_fundamentals`) — synthesizes
   income statement, balance sheet, and cash flow rows directly from official filings,
   shaped to match FMP's own field names so every downstream calculation (the
-  assets/liabilities/equity figures, ratios, the Graham/Munger checklists) works
+  assets/liabilities/equity figures, ratios, the value-investing checklists) works
   unchanged regardless of which source populated it.
 - **Stooq** (`pipeline/fetch/stooq.py`) — free daily close price, used only when FMP's
   price/quote data is missing, so the price side of every valuation check still works.
@@ -168,28 +167,27 @@ there be anything left over — and is the stock price fair for that?
   share** — computed straight from the latest balance sheet in
   `pipeline/scoring/fundamentals.py`, no derived assumptions. This is the first thing
   shown on every company page.
-- **NCAV margin** (`ncav_margin_pct`) — Graham's strictest test: even just the
+- **NCAV margin** (`ncav_margin_pct`) — the strictest test here: even just the
   company's *current* assets (cash, receivables, inventory), after paying off *every*
   liability, compared against the whole stock's price. Almost always sharply negative
   for a normal large-cap — a rare positive reading is itself the interesting fact.
-- **Graham Number** (`graham_number`/`graham_upside_pct`) — `sqrt(22.5 × EPS × book
-  value per share)`, a single closed-form formula combining earnings and net worth per
-  share. This is the pipeline's valuation check — no multi-year growth projection or
-  discount-rate assumption, unlike a DCF.
+- **Fair-value estimate** (`graham_number`/`graham_upside_pct`) — `sqrt(22.5 × EPS ×
+  book value per share)`, a single closed-form formula combining earnings and net
+  worth per share. This is the pipeline's valuation check — no multi-year growth
+  projection or discount-rate assumption, unlike a DCF.
 - **Debt/equity, debt/EBITDA, current ratio** — how much of the company is borrowed vs.
   actually owned, and whether short-term assets cover short-term debts.
 - **P/E and P/B** — the two simplest "is the price fair" ratios, kept alongside the
-  Graham Number rather than instead of it.
+  fair-value estimate rather than instead of it.
 
-A number of more sophisticated frameworks — a discounted cash flow model, Fisher's
-qualitative checklist, Greenblatt's Magic Formula, Lynch's growth categorization, a
-synthesized investment thesis, the academic Piotroski F-Score, Klarman's dynamic
-margin-of-safety scaling — were built across earlier iterations of this tool and then
-deliberately retired, leaving exactly three investors: Graham, Buffett, and Munger
-(see "Which frameworks became which filters" below for the full reasoning). The goal
-is a tool whose logic you could explain to someone with no finance background: compare
+A number of more sophisticated frameworks — a discounted cash flow model, a
+qualitative checklist, a cross-sectional ranking formula, a growth-type
+categorization, a synthesized investment thesis, the academic Piotroski F-Score, a
+dynamic margin-of-safety scaling — were built across earlier iterations of this tool
+and then deliberately retired, leaving a deliberately small set of checks. The goal is
+a tool whose logic you could explain to someone with no finance background: compare
 what's owned to what's owed, check whether the price is fair for that, and use two
-simple checklists (Graham, Munger) to catch the rest.
+simple checklists to catch the rest.
 
 ## 5-Year Trend
 
@@ -228,16 +226,16 @@ explaining any disagreement between them. Exactly three investors, nothing else 
 easy-to-check fundamentals throughout, not exotic ratios (no ROIC, no DCF, no
 EV/EBITDA — see "Assets vs. Liabilities" above for why).
 
-1. **Munger's quality checklist** (`pipeline/scoring/value_investing.py::munger_quality_checklist`) —
+1. **Quality checklist** (`pipeline/scoring/value_investing.py::munger_quality_checklist`) —
    return on equity ≥ 15%, debt/equity ≤ 1.0, no shareholder dilution, and margins
    stable or improving. Pure arithmetic, no AI. See "Investment Meter" below for why
    this specific set of four checks.
-2. **Buffett's moat read** (`pipeline/narrative/qualitative_client.py`) — Claude reads
+2. **Moat read** (`pipeline/narrative/qualitative_client.py`) — Claude reads
    excerpts from the company's own most recent 10-K (Business, Risk Factors, and
    Management's Discussion and Analysis, extracted by
    `pipeline/fetch/filing_text.py`) and classifies the moat (network effects / cost
    advantage / intangible assets / switching costs / efficient scale / none — the
-   classic Buffett/Munger/Morningstar categories) and lists any red flags the filing
+   classic moat-investing categories) and lists any red flags the filing
    itself raises. **This is the only AI call in the whole pipeline, and the one place
    it reads raw text instead of only pre-computed metrics** — there's no mechanical
    fact-checking possible for free-form filing prose the way there would be for a
@@ -263,44 +261,38 @@ EV/EBITDA — see "Assets vs. Liabilities" above for why).
    for that week's per-sector finalists. Every company (finalist or not) still gets
    its latest 10-K/10-Q/8-K listed with a direct SEC link on its own page — it's just
    the AI summary of each that's finalists-only.
-3. **Graham's valuation gate** — not a separate module or AI call, just the Graham
-   Number margin of safety already computed in `fundamentals.py`
+3. **Valuation gate** — not a separate module or AI call, just the fair-value
+   estimate's margin of safety already computed in `fundamentals.py`
    (`graham_upside_pct = sqrt(22.5 × EPS × book value/share)` vs. price). No growth
    projection or discount-rate assumption, unlike a DCF (see "Assets vs.
    Liabilities" above for why that trade-off was made deliberately).
 
-`pipeline/scoring/aggregation.py` combines the three gates (Munger's quality
-checklist, Buffett's qualitative moat present/absent, Graham's valuation margin of
-safety) into the `overall` summary and `flags` — e.g. a company with a strong quality
-checklist but no moat gets flagged explicitly rather than the checklist quietly
-winning out in an average. The required margin of safety is a single flat number,
-Graham's own 15% convention — an earlier version of this pipeline scaled it
-dynamically with data coverage and filing red flags (Seth Klarman's risk-management
-framing of margin of safety), which has been removed along with everything else not
-attributable to Graham, Buffett, or Munger specifically. See
-`required_margin_of_safety_pct` in the output.
+`pipeline/scoring/aggregation.py` combines the three gates (quality checklist
+present/absent, qualitative moat present/absent, valuation margin of safety) into
+the `overall` summary and `flags` — e.g. a company with a strong quality checklist
+but no moat gets flagged explicitly rather than the checklist quietly winning out in
+an average. The required margin of safety is a single flat number, a 15% convention
+used throughout this tool — an earlier version of this pipeline scaled it
+dynamically with data coverage and filing red flags, which has been removed for
+simplicity. See `required_margin_of_safety_pct` in the output.
 
 ### Investment Meter
 
-**The deep dive.** Graham, Buffett, and Munger aren't interchangeable — each is
-known for a distinct, well-documented lens on a stock, and the meter keeps each one
-visible rather than blending them into a number no one can trace back:
+**The deep dive.** Three separate lenses on a stock, kept visible rather than
+blended into a number no one can trace back:
 
-- **Graham — is it cheap and safe?** His own quantitative domain: the Defensive
-  Investor checklist (size, financial strength, earnings stability, dividend
-  record, earnings growth, moderate P/E, moderate P/E×P/B) plus the Graham Number
-  margin of safety. This is the meter's **base score** — Graham's own checklist
-  pass rate, undiluted by anything else.
-- **Buffett — is it a wonderful business?** His most distinctive, quotable
-  contribution: durable competitive advantage, the "moat." Read from the company's
-  own 10-K by the qualitative AI layer above. A **multiplier** on Graham's base
-  score, not blended into it — Buffett's own point was that quality should gate the
-  decision ("a wonderful company at a fair price").
-- **Munger — does it actually earn good returns on capital, without stupidity?**
-  Munger's single most-quoted, most distinctly-his idea: *"Over the long term, it's
-  hard for a stock to earn a much better return than the business which underlies
-  it earns... if a business earns 18% on capital over 20 or 30 years, even if you
-  pay an expensive looking price, you'll end up with a fine result."* Also a
+- **Is it cheap and safe?** The quantitative base: the Defensive Checklist (size,
+  financial strength, earnings stability, dividend record, earnings growth, moderate
+  P/E, moderate P/E×P/B) plus the fair-value margin of safety. This is the meter's
+  **base score** — the checklist's own pass rate, undiluted by anything else.
+- **Is it a wonderful business?** Durable competitive advantage, the "moat." Read
+  from the company's own 10-K by the qualitative AI layer above. A **multiplier** on
+  the base score, not blended into it — quality should gate the decision, not just
+  discount it.
+- **Does it actually earn good returns on capital, without recklessness?** The idea:
+  over the long term, it's hard for a stock to earn a much better return than the
+  business underlying it earns — a business that compounds capital well at a fair
+  price can outperform one that just looks statistically cheap. Also a
   **multiplier**: a statistically cheap stock that earns poor returns on capital,
   carries heavy debt, dilutes shareholders, or has eroding margins is a warning,
   not a wash.
@@ -310,50 +302,19 @@ in `config/conviction_score.yaml`, still keyed `conviction_score`/
 `conviction_verdict` in the output JSON for continuity):
 
 ```
-meter score = Graham checklist pass rate
-              × Buffett moat multiplier      (1.05 present / 0.70 absent / 1.0 not evaluated)
-              × Munger quality multiplier    (1.10 present / 0.75 absent / 1.0 not evaluated)
-              × Graham valuation multiplier  (1.0 pass / 0.55 fail / 1.0 not evaluated)
+meter score = defensive checklist pass rate
+              × moat multiplier        (1.05 present / 0.70 absent / 1.0 not evaluated)
+              × quality multiplier     (1.10 present / 0.75 absent / 1.0 not evaluated)
+              × valuation multiplier   (1.0 pass / 0.55 fail / 1.0 not evaluated)
 ```
 
 Clamped to 0-100 and banded into Strong/Favorable/Neutral/Cautious/Weak verdicts
-(`pipeline/scoring/thresholds.py::verdict_for`). A company with no evaluated Graham
+(`pipeline/scoring/thresholds.py::verdict_for`). A company with no evaluated
 checklist data gets `conviction_score: null`, never a misleading 0. The company
 detail page renders this as an actual gauge (`site/js/company.js::renderMeterGauge`
 — an inline SVG semi-circle, colored bands matching the verdict thresholds, a
 needle at the score's position), not just a number in a box; the dashboard sorts
 each sector group by the score (highest first).
-
-### Which frameworks became which filters
-
-Earlier iterations of this tool drew on ten value-investing thinkers. It's now
-built from exactly three — Graham, Buffett, Munger — with everything else
-deliberately removed:
-
-| Thinker | Framework | Where it lives |
-|---|---|---|
-| **Benjamin Graham** | Defensive Investor checklist, Graham Number, NCAV, P/E×P/B ≤ 22.5, margin-of-safety convention | The meter's base score and valuation gate. `pipeline/scoring/value_investing.py`, `pipeline/scoring/fundamentals.py`, `pipeline/scoring/aggregation.py` |
-| **Warren Buffett** | Moat classification; "wonderful company at a fair price" | The meter's moat multiplier. `pipeline/narrative/qualitative_client.py` |
-| **Charlie Munger** | Return on capital over statistical cheapness; avoiding leverage/dilution "stupidity" | The meter's quality multiplier — a 4-criterion checklist (ROE, debt/equity, dilution, margin trend). `pipeline/scoring/value_investing.py::munger_quality_checklist` |
-
-Removed, and why: **Owner earnings** (Buffett) and **ROIC** (Munger) — cut for
-needing more inputs than a reader could verify by hand; ROE (net income ÷ equity)
-does the same job in two inputs. **Piotroski F-Score** — never one of the named
-thinkers, replaced by Munger's own checklist. **Fisher's 15-point checklist** — the
-single biggest driver of "data heavy": a 12-item AI-judged checklist per company.
-**Lynch's PEG ratio and growth categorization** — abstract bucketing, not balance-
-sheet math. **Greenblatt's Magic Formula** — a cross-sectional ranking against
-watchlist peers, not this company's own assets vs. liabilities. **Damodaran's DCF**
-— the least "basic math" of anything here: a multi-year growth projection plus a
-discount-rate assumption, versus the Graham Number's single closed-form formula.
-**Klarman's risk-scaled margin of safety** — a real, useful idea, but not Graham's,
-Buffett's, or Munger's; the margin of safety is now Graham's own flat convention.
-**Marks' cycle awareness** — the macro page's business-cycle context
-(`macro_regime.py::cycle_context`) stays, since it's generic textbook
-sector-rotation reference rather than something specifically Marks', but it's no
-longer credited to him and plays no part in the meter. **O'Shaughnessy's
-backtesting** — never implemented; needs historical infrastructure this pipeline
-doesn't have.
 
 ## Metrics Glossary
 
@@ -372,8 +333,8 @@ linked from the nav on every page) with the full reference, no per-company numbe
 - `config/macro_series.yaml` — which FRED series are pulled and the regime
   classification thresholds.
 - `config/conviction_score.yaml` — the Investment Meter's three multipliers
-  (Buffett's moat, Munger's quality checklist, Graham's valuation gate) applied to
-  Graham's checklist base score, and the verdict bands (Strong/Favorable/Neutral/
+  (moat read, quality checklist, valuation gate) applied to the defensive
+  checklist's base score, and the verdict bands (Strong/Favorable/Neutral/
   Cautious/Weak).
 - `config/screening.yaml` — `top_n_per_sector`, how many companies the weekly screen
   surfaces per sector, per timeframe (see "Weekly Screener" above).

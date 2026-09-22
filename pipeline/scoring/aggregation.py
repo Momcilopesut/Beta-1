@@ -110,11 +110,11 @@ def build_layered_analysis(
     if moat_present is False:
         flags.append(
             "The qualitative layer found no durable moat in the filing text - current quality may not be "
-            "durable (Buffett)."
+            "durable."
         )
     if munger_quality_pass is False:
         flags.append(
-            "Munger's quality checklist (return on equity, debt discipline, no dilution, stable margins) "
+            "The quality checklist (return on equity, debt discipline, no dilution, stable margins) "
             "mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't "
             "actually earn good returns on capital."
         )
@@ -122,21 +122,21 @@ def build_layered_analysis(
         flags.append(f"{len(red_flags)} red flag(s) from the filing text - see qualitative.red_flags.")
     if margin_of_safety is not None and margin_of_safety < 0:
         flags.append(
-            "Trading above the Graham Number (a simple fair-value estimate from earnings and book value) - "
+            "Trading above the fair-value estimate (a simple estimate from earnings and book value) - "
             "no margin of safety by that measure."
         )
     elif valuation_gate is False:
         flags.append(
-            f"Positive but thin margin of safety - {margin_of_safety:.0f}% is below Graham's "
-            f"{REQUIRED_MARGIN_OF_SAFETY_PCT:.0f}% convention."
+            f"Positive but thin margin of safety - {margin_of_safety:.0f}% is below the "
+            f"{REQUIRED_MARGIN_OF_SAFETY_PCT:.0f}% convention used here."
         )
 
     if moat_present is None or munger_quality_pass is None or valuation_gate is None:
         overall = "Incomplete: one or more layers has insufficient data for this company."
     elif moat_present and munger_quality_pass and valuation_gate:
         overall = (
-            "All three checks align: a moat was identified (Buffett), Munger's quality bar is met, and a "
-            "margin of safety exists (Graham)."
+            "All three checks align: a moat was identified, the quality bar is met, and a "
+            "margin of safety exists."
         )
     else:
         overall = "Layers disagree - see flags for specifics."

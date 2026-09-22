@@ -16,8 +16,8 @@ def test_all_layers_align():
         "valuation_gate_pass": True,
         "required_margin_of_safety_pct": 15.0,
         "overall": (
-            "All three checks align: a moat was identified (Buffett), Munger's "
-            "quality bar is met, and a margin of safety exists (Graham)."
+            "All three checks align: a moat was identified, the "
+            "quality bar is met, and a margin of safety exists."
         ),
         "flags": [],
         "conviction_score": None,
@@ -35,7 +35,7 @@ def test_no_moat_is_flagged_not_averaged_away():
 def test_munger_quality_failure_flagged():
     result = build_layered_analysis(None, {"graham_upside_pct": 25.0}, _MUNGER_FAIL)
     assert result["munger_quality_pass"] is False
-    assert any("Munger's quality checklist" in f for f in result["flags"])
+    assert any("quality checklist" in f for f in result["flags"])
 
 
 def test_expensive_valuation_flagged_even_with_moat():

@@ -47,7 +47,7 @@ function renderNotTracked(content, ticker) {
     <section class="not-tracked">
       <p class="error">${safeTicker} isn't in the current screening universe.</p>
       <p class="meta">You can run a live, on-demand analysis instead — the same scoring, checklists,
-      and Buffett moat read as the tracked companies, computed fresh right now via a separate lookup
+      and moat read as the tracked companies, computed fresh right now via a separate lookup
       service. This spends real API budget per lookup, so it only runs when you ask.</p>
       <button id="run-live-lookup" class="live-lookup-button">Run live analysis for ${safeTicker}</button>
     </section>
@@ -234,21 +234,21 @@ function renderConvictionCard(layered) {
   if (!hasScore) {
     return `
       <div class="score-card verdict-neutral meter-card">
-        <h3>Investment Meter <span class="attribution">(Graham · Buffett · Munger)</span></h3>
+        <h3>Investment Meter</h3>
         ${gauge}
-        <p class="score-note">Needs Graham's checklist to have evaluated data.</p>
+        <p class="score-note">Needs the defensive checklist to have evaluated data.</p>
       </div>
     `;
   }
   const b = layered.conviction_score_breakdown || {};
   return `
     <div class="score-card ${verdictClass(layered.conviction_verdict)} meter-card">
-      <h3>Investment Meter <span class="attribution">(Graham · Buffett · Munger)</span></h3>
+      <h3>Investment Meter</h3>
       ${gauge}
-      <p class="score-note">Graham checklist ${formatNumber(b.base_score, { decimals: 0 })}% ×
-      ${formatNumber(b.munger_multiplier, { decimals: 2 })} Munger quality ×
-      ${formatNumber(b.moat_multiplier, { decimals: 2 })} Buffett moat ×
-      ${formatNumber(b.valuation_multiplier, { decimals: 2 })} Graham valuation</p>
+      <p class="score-note">Base checklist ${formatNumber(b.base_score, { decimals: 0 })}% ×
+      ${formatNumber(b.munger_multiplier, { decimals: 2 })} quality checklist ×
+      ${formatNumber(b.moat_multiplier, { decimals: 2 })} moat read ×
+      ${formatNumber(b.valuation_multiplier, { decimals: 2 })} valuation gate</p>
     </div>
   `;
 }
@@ -341,15 +341,15 @@ function renderBalanceSheetBasics(fundamentals, layered) {
         <li>Net worth per share (book value): <strong>$${fmt(basics?.book_value_per_share, 2)}</strong></li>
       </ul>
       <p class="checklist-label">Is the price fair for what's owned?</p>
-      <p class="meta">Price ÷ book value: ${fmt(valuation?.pb_ratio, 2)}× · Graham Number (a simple fair-value estimate from earnings and book value): $${fmt(valuation?.graham_number, 2)}, a margin of safety of ${fmt(valuation?.graham_upside_pct, 0, "%")}</p>
+      <p class="meta">Price ÷ book value: ${fmt(valuation?.pb_ratio, 2)}× · Fair-value estimate (a simple estimate from earnings and book value): $${fmt(valuation?.graham_number, 2)}, a margin of safety of ${fmt(valuation?.graham_upside_pct, 0, "%")}</p>
       ${
         valuation?.ncav_margin_pct !== null && valuation?.ncav_margin_pct !== undefined && valuation.ncav_margin_pct > 0
-          ? `<p class="meta">Graham's strictest test also passes: even just the current assets, after paying off every liability, are worth ${fmt(valuation.ncav_margin_pct, 0, "%")} more than the whole stock costs today.</p>`
+          ? `<p class="meta">The strictest test here also passes: even just the current assets, after paying off every liability, are worth ${fmt(valuation.ncav_margin_pct, 0, "%")} more than the whole stock costs today.</p>`
           : ""
       }
       ${
         layered?.required_margin_of_safety_pct !== undefined && layered?.required_margin_of_safety_pct !== null
-          ? `<p class="meta">Required margin of safety: ${formatNumber(layered.required_margin_of_safety_pct, { decimals: 0, suffix: "%" })} (Graham's convention — a real discount to estimated fair value, not just trading below it by any amount).</p>`
+          ? `<p class="meta">Required margin of safety: ${formatNumber(layered.required_margin_of_safety_pct, { decimals: 0, suffix: "%" })} (this tool's convention — a real discount to estimated fair value, not just trading below it by any amount).</p>`
           : ""
       }
     </section>
@@ -791,14 +791,14 @@ function renderValueInvesting(valueInvesting) {
 
   return `
     <section class="value-investing">
-      <h3>Value Investing Checklists <span class="attribution">(Graham / Munger)</span></h3>
+      <h3>Value Investing Checklists</h3>
       <div class="checklist-columns">
         <div class="checklist-card">
-          <h4>Graham Defensive Investor ${graham ? `<span class="checklist-score">${graham.passed}/${graham.evaluated} evaluated</span>` : ""}</h4>
+          <h4>Defensive Checklist ${graham ? `<span class="checklist-score">${graham.passed}/${graham.evaluated} evaluated</span>` : ""}</h4>
           <ul class="checklist">${renderChecklistRows(graham?.criteria)}</ul>
         </div>
         <div class="checklist-card">
-          <h4>Munger Quality Checklist ${munger ? `<span class="checklist-score">${munger.passed}/${munger.evaluated} evaluated</span>` : ""}</h4>
+          <h4>Quality Checklist ${munger ? `<span class="checklist-score">${munger.passed}/${munger.evaluated} evaluated</span>` : ""}</h4>
           <ul class="checklist">${renderChecklistRows(munger?.criteria)}</ul>
         </div>
       </div>
@@ -822,7 +822,7 @@ function renderMungerQuality(munger, mungerQualityPass) {
   if (!munger) return "";
   return `
     <div class="layered-card">
-      <h4>Munger Quality <span class="layered-gate ${gateClass(mungerQualityPass)}">${gateLabel(mungerQualityPass)}</span></h4>
+      <h4>Quality Checklist <span class="layered-gate ${gateClass(mungerQualityPass)}">${gateLabel(mungerQualityPass)}</span></h4>
       <p class="checklist-note">${munger.evaluated ? `${munger.passed}/${munger.evaluated} evaluated criteria pass` : "Not enough data to evaluate."}</p>
       <ul class="checklist">${renderChecklistRows(munger.criteria)}</ul>
       <p class="meta">Return on equity, debt discipline, dilution, and margin trend — does the business actually earn good returns on capital, not just look statistically cheap.</p>
@@ -843,7 +843,7 @@ function renderBuffettMoat(qualitative) {
   if (!qualitative) {
     return `
       <div class="layered-card">
-        <h4>Buffett: Moat Read (10-K) <span class="layered-gate gate-unknown">Not run</span></h4>
+        <h4>Moat Read (10-K) <span class="layered-gate gate-unknown">Not run</span></h4>
         <p class="meta">Only runs for this week's per-sector finalists (cost control — this layer reads real
         filing text and spends extra AI budget per company).</p>
       </div>
@@ -854,7 +854,7 @@ function renderBuffettMoat(qualitative) {
     .join("");
   return `
     <div class="layered-card">
-      <h4>Buffett: Moat Read (10-K) <span class="layered-gate ${gateClass(qualitative.moat_present)}">${qualitative.moat_present ? "Moat found" : "No moat found"}</span></h4>
+      <h4>Moat Read (10-K) <span class="layered-gate ${gateClass(qualitative.moat_present)}">${qualitative.moat_present ? "Moat found" : "No moat found"}</span></h4>
       <p><strong>${escapeHtml(MOAT_LABELS[qualitative.moat_type] || qualitative.moat_type)}</strong></p>
       <p>${escapeHtml(qualitative.moat_explanation)}</p>
       ${redFlags ? `<p class="checklist-label">Red flags from the filing</p><ul>${redFlags}</ul>` : `<p class="meta">No red flags called out in the excerpts.</p>`}
@@ -870,7 +870,7 @@ function renderLayeredAnalysis(doc) {
   const flags = (layered.flags || []).map((f) => `<li>${escapeHtml(f)}</li>`).join("");
   return `
     <section class="layered-analysis">
-      <h3>Layered Analysis <span class="attribution">(Munger's quality checklist and Buffett's moat read stay visible separately, then combine with Graham's own checklist and valuation gate above — via multipliers, never a naive average — into the Investment Meter)</span></h3>
+      <h3>Layered Analysis <span class="attribution">(the quality checklist and moat read stay visible separately, then combine with the defensive checklist and valuation gate above — via multipliers, never a naive average — into the Investment Meter)</span></h3>
       <p class="layered-overall">${escapeHtml(layered.overall)}</p>
       ${flags ? `<ul class="layered-flags">${flags}</ul>` : ""}
       <div class="layered-columns">
