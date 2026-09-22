@@ -3,8 +3,11 @@ import pytest
 from pipeline.scoring.history import build_five_year_history
 
 
-def _income_row(d, net_income, **spending_fields):
-    return {"date": d, "netIncome": net_income, **spending_fields}
+def _income_row(d, net_income, revenue=None, **spending_fields):
+    row = {"date": d, "netIncome": net_income, **spending_fields}
+    if revenue is not None:
+        row["revenue"] = revenue
+    return row
 
 
 def _balance_row(d, cash, debt):
@@ -19,11 +22,11 @@ def _price_row(d, close):
 # for 5 years shown but only 4 of them get a year-over-year return (the
 # oldest has no earlier statement to anchor against).
 INCOME_STMTS = [
-    _income_row("2025-12-31", 500, costAndExpenses=350),
-    _income_row("2024-12-31", 400, costOfRevenue=200, operatingExpenses=80),
-    _income_row("2023-12-31", 300),  # no spending fields at all
-    _income_row("2022-12-31", 200, costAndExpenses=150),
-    _income_row("2021-12-31", 100, costAndExpenses=90),
+    _income_row("2025-12-31", 500, revenue=900, costAndExpenses=350),
+    _income_row("2024-12-31", 400, revenue=800, costOfRevenue=200, operatingExpenses=80),
+    _income_row("2023-12-31", 300),  # no revenue or spending fields at all
+    _income_row("2022-12-31", 200, revenue=600, costAndExpenses=150),
+    _income_row("2021-12-31", 100, revenue=500, costAndExpenses=90),
 ]
 BALANCE_STMTS = [
     _balance_row("2025-12-31", 50, 5),
@@ -59,9 +62,16 @@ def test_shape_and_oldest_first_order():
         "2024-12-31",
         "2025-12-31",
     ]
+    assert years[-1]["revenue"] == 900
     assert years[-1]["earnings"] == 500
     assert years[-1]["cash"] == 50
     assert years[-1]["debt"] == 5
+
+
+def test_revenue_is_none_when_the_statement_has_none():
+    result = build_five_year_history(INCOME_STMTS, BALANCE_STMTS, PRICE_ROWS, BENCHMARK_ROWS)
+    by_year = {y["fiscal_year"]: y for y in result["years"]}
+    assert by_year["2023-12-31"]["revenue"] is None  # fixture omits revenue for this year
 
 
 def test_return_pct_arithmetic():

@@ -155,6 +155,7 @@ def synth_five_year_history(market_cap: float, close_price: float) -> dict:
         years.append(
             {
                 "fiscal_year": fiscal_year,
+                "revenue": round(revenue, 0),
                 "earnings": round(earnings, 0),
                 "spending": round(spending, 0),
                 "cash": round(cash, 0),
@@ -164,6 +165,7 @@ def synth_five_year_history(market_cap: float, close_price: float) -> dict:
             }
         )
         growth = random.uniform(-0.08, 0.18)
+        revenue *= 1 + growth * random.uniform(0.7, 1.0)
         earnings *= 1 + growth
         spending *= 1 + growth * random.uniform(0.6, 1.1)
         cash *= 1 + random.uniform(-0.05, 0.15)
@@ -384,6 +386,7 @@ def main() -> None:
                 "name": company_cfg["name"],
                 "sector": sector,
                 "one_line_summary": narrative["one_line_summary"],
+                "price": display["price"],
                 "book_value_per_share": metrics["book_value_per_share"],
                 "graham_criteria_passed": checklist["graham_defensive"]["passed"],
                 "graham_criteria_total": checklist["graham_defensive"]["total"],

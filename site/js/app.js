@@ -158,12 +158,18 @@ function renderCard(company, rank) {
         Meter: ${escapeHtml(company.conviction_verdict)} (${formatNumber(company.conviction_score, { decimals: 0 })})
       </span>`
     : `<span class="verdict-badge conviction-badge verdict-neutral">Meter: not enough data</span>`;
+  const price = company.price?.close;
+  const priceLine =
+    price !== undefined && price !== null
+      ? `<p class="card-price">$${formatNumber(price, { decimals: 2 })}</p>`
+      : "";
   return `
     <a class="card" href="company.html?ticker=${encodeURIComponent(company.ticker)}">
       <div class="card-header">
         <span class="ticker-group">${rankBadge}<span class="ticker">${ticker}</span></span>
         <span class="name">${escapeHtml(company.name)}</span>
       </div>
+      ${priceLine}
       <div class="verdicts">
         ${convictionBadge}
       </div>

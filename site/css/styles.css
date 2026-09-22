@@ -165,6 +165,7 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
 .card-header .name { color: var(--muted); font-size: 0.85rem; text-align: right; }
 .ticker-group { display: flex; align-items: baseline; gap: 0.4rem; }
 .pick-rank { font-weight: 700; }
+.card-price { font-size: 1.1rem; font-weight: 700; margin: 0 0 0.5rem; }
 .verdicts { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.6rem; }
 .verdict-badge {
   font-size: 0.75rem;
@@ -184,6 +185,8 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
 
 .detail-header h2 { margin-bottom: 0.25rem; }
 .ticker-tag { font-size: 0.9rem; color: var(--muted); font-weight: 400; }
+.detail-price { font-size: 1.75rem; font-weight: 700; margin: 0.1rem 0 0.3rem; }
+.price-as-of { font-size: 0.75rem; font-weight: 400; color: var(--muted); }
 .meta { color: var(--muted); font-size: 0.85rem; }
 
 .verdicts-detail { display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap; }

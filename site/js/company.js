@@ -65,6 +65,13 @@ async function runLiveLookup(content, ticker) {
   }
 }
 
+function renderPriceHeader(price) {
+  const close = price?.close;
+  if (close === undefined || close === null) return "";
+  const asOf = price?.as_of ? ` <span class="price-as-of">as of ${escapeHtml(price.as_of)}</span>` : "";
+  return `<p class="detail-price">$${formatNumber(close, { decimals: 2 })}${asOf}</p>`;
+}
+
 function render(doc) {
   const onDemandBanner = doc.on_demand
     ? `<p class="on-demand-banner">Live on-demand analysis — not part of the tracked watchlist, computed just now.</p>`
@@ -73,6 +80,7 @@ function render(doc) {
     ${onDemandBanner}
     <section class="detail-header">
       <h2>${escapeHtml(doc.name)} <span class="ticker-tag">${escapeHtml(doc.ticker)}</span></h2>
+      ${renderPriceHeader(doc.price)}
       <p class="meta">${escapeHtml(doc.sector || "—")} · ${escapeHtml(doc.industry || "—")} · Updated ${escapeHtml(doc.last_updated)}</p>
     </section>
 

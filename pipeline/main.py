@@ -334,6 +334,7 @@ def finalize_company(
         "name": name,
         "sector": sector,
         "one_line_summary": narrative_out["one_line_summary"],
+        "price": display["price"],
         "book_value_per_share": metrics.get("book_value_per_share"),
         "graham_criteria_passed": state["checklist"]["graham_defensive"]["passed"],
         "graham_criteria_total": state["checklist"]["graham_defensive"]["total"],
