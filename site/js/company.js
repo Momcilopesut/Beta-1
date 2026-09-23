@@ -722,9 +722,9 @@ function wireReturnTargetChecker(content, years) {
 
     content.querySelectorAll(".return-bar-stock").forEach((bar) => bar.classList.remove("return-bar-met"));
 
-    const isValidTarget = rawInput !== "" && !Number.isNaN(targetReturn);
+    const isValidTarget = rawInput !== "" && !Number.isNaN(targetReturn) && targetReturn > -100;
     if (!isValidTarget) {
-      result.textContent = "Enter a target annual return (e.g. 10 for 10%).";
+      result.textContent = "Enter a target annual return greater than -100% (e.g. 10 for 10%).";
       return;
     }
 
