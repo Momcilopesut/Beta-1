@@ -36,7 +36,13 @@ def _load_ticker_map() -> dict[str, dict]:
 
 
 def cik_for_ticker(ticker: str) -> str | None:
-    row = _load_ticker_map().get(ticker.upper())
+    ticker_map = _load_ticker_map()
+    row = ticker_map.get(ticker.upper())
+    if row is None and "." in ticker:
+        # SEC's own ticker file spells share classes with a hyphen (e.g.
+        # "BRK-B"), not the dot notation (e.g. "BRK.B") this pipeline's
+        # watchlist and most other data sources use.
+        row = ticker_map.get(ticker.upper().replace(".", "-"))
     if row is None:
         return None
     return str(row["cik_str"]).zfill(10)

@@ -23,7 +23,30 @@ class StooqError(Exception):
 def fetch_daily_prices(ticker: str) -> list[dict]:
     """Returns [{"date": "YYYY-MM-DD", "close": float, "volume": float}, ...]
     ascending by date - the same shape pipeline.scoring.fundamentals expects
-    from FMP's historical-price endpoint, so it's a drop-in substitute."""
+    from FMP's historical-price endpoint, so it's a drop-in substitute.
+
+    A ticker with a dot (e.g. "BRK.B") is retried with a hyphen ("BRK-B")
+    if the dot form comes back empty or 404s - Stooq spells share classes
+    with a hyphen, not the dot notation this pipeline's watchlist uses."""
+    candidates = [ticker]
+    if "." in ticker:
+        candidates.append(ticker.replace(".", "-"))
+
+    last_exc: StooqError | None = None
+    for candidate in candidates:
+        try:
+            rows = _fetch_daily_prices(candidate)
+        except StooqError as exc:
+            last_exc = exc
+            continue
+        if rows:
+            return rows
+    if last_exc is not None:
+        raise last_exc
+    return []
+
+
+def _fetch_daily_prices(ticker: str) -> list[dict]:
     params = {"s": f"{ticker.lower()}.us", "i": "d"}
     try:
         text = get_text(BASE_URL, params=params, host_key="stooq", min_interval_seconds=0.2)

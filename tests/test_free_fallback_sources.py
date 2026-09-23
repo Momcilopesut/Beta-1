@@ -6,6 +6,7 @@ from unittest.mock import patch
 
 from pipeline.fetch import sec_edgar, stooq
 from pipeline.scoring.fundamentals import build_metrics
+from pipeline.utils.http import HttpError
 
 
 def _fact(end: str, filed: str, val: float) -> dict:
@@ -92,6 +93,16 @@ def test_latest_shares_outstanding():
     assert sec_edgar.latest_shares_outstanding(None) is None
 
 
+def test_cik_for_ticker_falls_back_to_hyphen_for_dot_tickers():
+    """SEC's own ticker file spells share classes with a hyphen ("BRK-B"),
+    not the dot notation ("BRK.B") this pipeline's watchlist uses."""
+    fake_map = {"BRK-B": {"cik_str": 1067983}, "AAPL": {"cik_str": 320193}}
+    with patch("pipeline.fetch.sec_edgar._load_ticker_map", return_value=fake_map):
+        assert sec_edgar.cik_for_ticker("BRK.B") == "0001067983"
+        assert sec_edgar.cik_for_ticker("AAPL") == "0000320193"
+        assert sec_edgar.cik_for_ticker("NOSUCHTICKER") is None
+
+
 def test_stooq_parses_csv_into_fmp_compatible_rows():
     csv_text = (
         "Date,Open,High,Low,Close,Volume\n"
@@ -110,6 +121,36 @@ def test_stooq_parses_csv_into_fmp_compatible_rows():
 def test_stooq_no_data_response_returns_empty_list():
     with patch("pipeline.fetch.stooq.get_text", return_value="No data"):
         assert stooq.fetch_daily_prices("BADTICKER") == []
+
+
+def test_stooq_retries_with_hyphen_for_dot_tickers():
+    """Stooq spells share classes with a hyphen ("brk-b.us"), not the dot
+    notation ("BRK.B") this pipeline's watchlist uses - the dot form 404s."""
+    csv_text = "Date,Open,High,Low,Close,Volume\n2026-08-01,58.0,59.0,57.5,58.5,1200000\n"
+
+    def fake_get_text(url, *, params, **kwargs):
+        if params["s"] == "brk.b.us":
+            raise HttpError("404 Client Error: Not Found for url: ...")
+        assert params["s"] == "brk-b.us"
+        return csv_text
+
+    with patch("pipeline.fetch.stooq.get_text", side_effect=fake_get_text):
+        rows = stooq.fetch_daily_prices("BRK.B")
+
+    assert rows == [{"date": "2026-08-01", "close": 58.5, "volume": 1200000.0}]
+
+
+def test_stooq_dot_ticker_propagates_error_when_both_forms_fail():
+    with patch(
+        "pipeline.fetch.stooq.get_text",
+        side_effect=HttpError("404 Client Error: Not Found for url: ..."),
+    ):
+        try:
+            stooq.fetch_daily_prices("BRK.B")
+        except stooq.StooqError:
+            pass
+        else:
+            raise AssertionError("expected StooqError when both ticker forms fail")
 
 
 def test_build_metrics_falls_back_fully_to_sec_and_stooq_when_fmp_is_empty():
