@@ -1,40 +1,40 @@
 {
   "capital_efficiency": {
-    "companies_covered": 6,
-    "cost_of_debt_pct": 4.432581013674261,
+    "companies_covered": 506,
+    "cost_of_debt_pct": 4.885073474830396,
     "cost_of_equity_pct": 9.96,
     "coverage": {
-      "capex": 3,
-      "change_in_working_capital": 3,
-      "depreciation": 6,
-      "interest_expense": 2,
-      "invested_capital": 3,
-      "market_cap": 4,
-      "nopat": 3,
-      "total_debt": 3
+      "capex": 506,
+      "change_in_working_capital": 504,
+      "depreciation": 506,
+      "interest_expense": 506,
+      "invested_capital": 506,
+      "market_cap": 506,
+      "nopat": 506,
+      "total_debt": 506
     },
-    "expected_growth_pct": 4.051445442246035,
-    "reinvestment_rate_pct": 4.7813080144661715,
-    "roic_pct": 84.73508567086897,
+    "expected_growth_pct": 9.54799571743727,
+    "reinvestment_rate_pct": 55.2700818799167,
+    "roic_pct": 17.275161158946453,
     "sentiment": {
-      "expected_growth": "neutral",
+      "expected_growth": "good",
       "reinvestment_rate": "neutral",
       "roic": "good",
       "value_creation": "good",
       "wacc": "neutral"
     },
     "totals": {
-      "capex": 33786731000,
-      "change_in_working_capital": 5919347000,
-      "depreciation": 34308328000,
-      "interest_expense": 5141075000,
-      "invested_capital": 133230228000,
-      "market_cap": 5884885434270,
-      "nopat": 112892747835.29405,
-      "total_debt": 91627186000
+      "capex": 2766243672000,
+      "change_in_working_capital": 1252210857604,
+      "depreciation": 1713611284997,
+      "interest_expense": 836078516998,
+      "invested_capital": 24139550465002,
+      "market_cap": 77455354590461.0,
+      "nopat": 4170146245874.3037,
+      "total_debt": 13520820758000
     },
-    "value_creation_pct": 74.8598277068587,
-    "wacc_pct": 9.87525796401027
+    "value_creation_pct": 8.069393480145024,
+    "wacc_pct": 9.205767678801429
   },
   "cycle_context": {
     "description": "No stress signal is currently flashing - broad-based growth conditions have historically favored cyclical and growth-oriented sectors over defensives.",
@@ -50,12 +50,16 @@
     "note": "Historical tendencies from long-run sector-rotation research, not a prediction - every cycle differs, and this names no current event or company-specific catalyst.",
     "phase_name": "Mid-cycle expansion"
   },
-  "generated_at": "2026-09-23T21:00:13Z",
+  "generated_at": "2026-09-23T02:42:23Z",
   "regime": "Neutral/Expansion",
   "series": [
     {
-      "as_of": "2026-09-22",
+      "as_of": "2026-09-21",
       "history": [
+        {
+          "date": "2025-09-22",
+          "value": 4.17
+        },
         {
           "date": "2025-09-23",
           "value": 4.16
@@ -1051,21 +1055,21 @@
         {
           "date": "2026-09-21",
           "value": 3.96
-        },
-        {
-          "date": "2026-09-22",
-          "value": 3.97
         }
       ],
       "label": "1-Month Treasury Yield",
-      "latest_value": 3.97,
+      "latest_value": 3.96,
       "mood": null,
       "series_id": "DGS1MO",
       "source_url": "https://fred.stlouisfed.org/series/DGS1MO"
     },
     {
-      "as_of": "2026-09-22",
+      "as_of": "2026-09-21",
       "history": [
+        {
+          "date": "2025-09-22",
+          "value": 4.0
+        },
         {
           "date": "2025-09-23",
           "value": 4.0
@@ -2061,21 +2065,21 @@
         {
           "date": "2026-09-21",
           "value": 4.17
-        },
-        {
-          "date": "2026-09-22",
-          "value": 4.16
         }
       ],
       "label": "3-Month Treasury Yield",
-      "latest_value": 4.16,
+      "latest_value": 4.17,
       "mood": null,
       "series_id": "DGS3MO",
       "source_url": "https://fred.stlouisfed.org/series/DGS3MO"
     },
     {
-      "as_of": "2026-09-22",
+      "as_of": "2026-09-21",
       "history": [
+        {
+          "date": "2025-09-22",
+          "value": 3.61
+        },
         {
           "date": "2025-09-23",
           "value": 3.53
@@ -3071,21 +3075,21 @@
         {
           "date": "2026-09-21",
           "value": 4.76
-        },
-        {
-          "date": "2026-09-22",
-          "value": 4.71
         }
       ],
       "label": "2-Year Treasury Yield",
-      "latest_value": 4.71,
+      "latest_value": 4.76,
       "mood": null,
       "series_id": "DGS2",
       "source_url": "https://fred.stlouisfed.org/series/DGS2"
     },
     {
-      "as_of": "2026-09-22",
+      "as_of": "2026-09-21",
       "history": [
+        {
+          "date": "2025-09-22",
+          "value": 4.15
+        },
         {
           "date": "2025-09-23",
           "value": 4.12
@@ -4081,10 +4085,6 @@
         {
           "date": "2026-09-21",
           "value": 4.96
-        },
-        {
-          "date": "2026-09-22",
-          "value": 4.96
         }
       ],
       "label": "10-Year Treasury Yield",
@@ -4094,8 +4094,12 @@
       "source_url": "https://fred.stlouisfed.org/series/DGS10"
     },
     {
-      "as_of": "2026-09-22",
+      "as_of": "2026-09-21",
       "history": [
+        {
+          "date": "2025-09-22",
+          "value": 4.77
+        },
         {
           "date": "2025-09-23",
           "value": 4.73
@@ -5090,10 +5094,6 @@
         },
         {
           "date": "2026-09-21",
-          "value": 5.29
-        },
-        {
-          "date": "2026-09-22",
           "value": 5.29
         }
       ],

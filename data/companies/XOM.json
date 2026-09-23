@@ -1,47 +1,103 @@
 {
   "_errors": {},
   "cik": "0002115436",
-  "five_year_history": null,
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 6802000000,
+        "debt": 47704000000,
+        "earnings": 23040000000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 276692000000,
+        "spending": 252673000000,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 29640000000,
+        "debt": 41193000000,
+        "earnings": 55740000000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 398675000000,
+        "spending": 334647000000,
+        "stock_return_pct": 80.25821212616441
+      },
+      {
+        "cash": 31539000000,
+        "debt": 41573000000,
+        "earnings": 36010000000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 334697000000,
+        "spending": 290236000000,
+        "stock_return_pct": -7.198549410698095
+      },
+      {
+        "cash": 23029000000,
+        "debt": 41710000000,
+        "earnings": 33680000000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 339247000000,
+        "spending": 299595000000,
+        "stock_return_pct": 5.0898788589292625
+      },
+      {
+        "cash": 10681000000,
+        "debt": 43537000000,
+        "earnings": 28844000000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 323905000000,
+        "spending": 289967000000,
+        "stock_return_pct": 11.871339592823288
+      }
+    ]
+  },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": null,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 1.1346729708431835,
+      "debt_to_ebitda": 0.7264520865662178,
+      "debt_to_equity": 0.16334335723648702
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
-      "total_assets": null,
-      "total_liabilities": null
+      "book_value_per_share": 63.75670813356778,
+      "shareholders_equity": 259386000000,
+      "total_assets": 448980000000,
+      "total_liabilities": 182354000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 7.289791759929609
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": null
+      "eps_growth_cagr_3yr_pct": -20.351593235352716
     },
     "profitability": {
-      "roe_pct": null,
-      "trend": "stable"
+      "roe_pct": 12.675533129278287,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 52.15291131644239,
+      "graham_number": 98.03735895634553,
+      "graham_upside_pct": -38.22083372843561,
+      "ncav_margin_pct": -115.16767376001947,
+      "pb_ratio": 2.553583218405428,
+      "pe_ttm": 20.423423423423422
     }
   },
   "industry": "Oil & Gas Integrated",
-  "last_updated": "2026-09-23T21:02:30Z",
+  "last_updated": "2026-09-23T02:42:31Z",
   "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": null,
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -50,18 +106,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 668418508800,
+  "market_cap": 657684357400,
   "metrics": {
-    "graham_criteria_evaluated": 1,
+    "book_value_per_share": 63.75670813356778,
+    "current_ratio": 1.1346729708431835,
+    "debt_to_ebitda": 0.7264520865662178,
+    "debt_to_equity": 0.16334335723648702,
+    "eps_growth_cagr_3yr_pct": -20.351593235352716,
+    "fcf_margin_pct": 7.289791759929609,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 0,
-    "munger_quality_passed": 0
+    "graham_multiple": 52.15291131644239,
+    "graham_upside_pct": -38.22083372843561,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -115.16767376001947,
+    "pb_ratio": 2.553583218405428,
+    "pe_ttm": 20.423423423423422,
+    "roe_pct": 12.675533129278287,
+    "shareholders_equity": 259386000000,
+    "total_assets": 448980000000,
+    "total_liabilities": 182354000000
   },
   "name": "Exxon Mobil Corporation",
   "price": {
-    "as_of": "2026-09-23",
-    "close": 161.28
+    "as_of": "2026-09-22",
+    "close": 158.69
   },
   "qualitative": null,
   "sector": "Energy",
@@ -86,18 +157,18 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $668.4B",
+          "detail": "Market cap $657.7B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.13, debt $43.5B vs working capital $11.1B",
+          "passed": false
         },
         {
-          "criterion": "Earnings stability",
-          "detail": "No annual net income data available",
-          "passed": null
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/6 available years",
+          "passed": false
         },
         {
           "criterion": "Dividend record",
@@ -105,22 +176,22 @@
           "passed": null
         },
         {
-          "criterion": "Earnings growth",
-          "detail": "Insufficient EPS history",
-          "passed": null
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -20.4%/yr",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 20.4",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 52.2",
+          "passed": false
         }
       ],
-      "evaluated": 1,
+      "evaluated": 6,
       "passed": 1,
       "total": 7
     },
@@ -128,27 +199,27 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 12.7%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.16",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "Fewer than 2 years of share-count data",
-          "passed": null
+          "detail": "4,305,000,000 shares vs. 4,298,000,000 a year earlier",
+          "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 0,
-      "passed": 0,
+      "evaluated": 4,
+      "passed": 1,
       "total": 4
     }
   },
