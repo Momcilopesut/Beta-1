@@ -12,19 +12,27 @@ Usage:
   python -m pipeline.main --dry-run                # write to data/ locally, no commit (commit is CI's job)
   python -m pipeline.main --skip-ai                 # fetch + score only, no Anthropic spend
 
-Two phases (see run_full):
-  1. A cheap screen (fetch_and_score_company + finalize_company with
-     skip_ai=True) over the WHOLE universe - no Anthropic spend. Price
-     returns come straight from history already fetched for every company
-     (pipeline.scoring.performance.compute_returns), so this alone is
-     enough to rank and select each window's top performers per sector
-     (pipeline.scoring.performance.select_top_performers).
-  2. AI enrichment (skip_ai=False) of just the selected finalists - Buffett's
-     10-K moat read plus short neutral summaries of the latest 10-K/10-Q/8-K,
-     the only place Anthropic budget gets spent. Every company (finalist or
-     not) still gets its latest 10-K/10-Q/8-K listed with a direct SEC link
-     and, when available, a company-website link - it's just the AI summary
-     of each filing that's finalists-only.
+Two phases (see run_full), gating BOTH the paid Anthropic call and FMP's
+rate-limited request budget the same way - a small, bounded finalist
+subset, never the whole universe:
+  1. A cheap, entirely-free screen (fetch_and_score_company + finalize_company
+     with skip_ai=True, use_fmp=False) over the WHOLE universe - no Anthropic
+     spend, no FMP requests either. Statements come from SEC EDGAR XBRL,
+     price history from Stooq, sector from the watchlist's own configured
+     value (see pipeline.scoring.fundamentals's fallback chain) - free and
+     rate-limit-generous enough to run at any universe size. Price returns
+     come straight from that history (pipeline.scoring.performance.compute_returns),
+     so this alone is enough to rank and select each window's top performers
+     per sector (pipeline.scoring.performance.select_top_performers).
+  2. Enrichment (skip_ai=False, use_fmp=True) of just the selected finalists:
+     Buffett's 10-K moat read plus short neutral summaries of the latest
+     10-K/10-Q/8-K (the only place Anthropic budget gets spent), and FMP's
+     live price/quote/profile data layered on top of the free-sourced
+     numbers (the only place FMP's request budget gets spent - see
+     pipeline.fetch.fmp's module docstring for why). Every company
+     (finalist or not) still gets its latest 10-K/10-Q/8-K listed with a
+     direct SEC link - it's the AI summary of each filing, and FMP's
+     precision refinements, that are finalists-only.
 """
 
 import argparse
@@ -161,12 +169,19 @@ def build_filings_digest(entries: list[dict], generated_at: str) -> dict:
     }
 
 
-def fetch_and_score_company(company_cfg: dict, regime_info: dict, benchmark_prices: list[dict] | None = None) -> dict:
-    """Fetch + score one company."""
+def fetch_and_score_company(
+    company_cfg: dict, regime_info: dict, benchmark_prices: list[dict] | None = None, use_fmp: bool = True
+) -> dict:
+    """Fetch + score one company. use_fmp=False skips FMP entirely (used for
+    the whole-universe phase-1 screen, see module docstring) - fundamentals.py
+    already falls back to free sources (SEC EDGAR XBRL, Stooq, the
+    watchlist's own configured sector) for every field FMP would otherwise
+    supply, so this still produces a complete, fully-scored company_doc,
+    just without FMP's live-quote precision or website link for that run."""
     ticker = company_cfg["ticker"]
     logger.info("Processing %s", ticker)
 
-    fmp_data = fmp.fetch_company(ticker)
+    fmp_data = fmp.fetch_company(ticker) if use_fmp else {}
     sec_data = sec_edgar.fetch_company(ticker)
 
     stooq_prices: list[dict] = []
@@ -343,25 +358,28 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
 
 
 def _process_company(
-    company_cfg: dict, regime_info: dict, benchmark_prices: list[dict], skip_ai: bool, out_dir
+    company_cfg: dict, regime_info: dict, benchmark_prices: list[dict], skip_ai: bool, out_dir, use_fmp: bool = True
 ) -> tuple[dict | None, bool, dict, dict | None, dict | None]:
     """Fetch, score, finalize, and write one company end-to-end. Used for
-    both the cheap screen (skip_ai=True, whole universe) and the AI-enriched
-    finalist pass (skip_ai=False) - the same work either way, just whether
-    finalize_company spends the Anthropic call. Returns (summary,
-    qualitative_failed, errors, company_doc, capital_efficiency_inputs);
-    summary/company_doc/capital_efficiency_inputs are None if fetching or
-    finalizing failed outright for this ticker (already logged), in which
-    case the other fields are empty/zero and the caller should just skip
-    it. company_doc lets callers pull the AI filing summaries back out for
-    the finalists digest (build_filings_digest) without a second read from
-    disk. capital_efficiency_inputs feeds the market-wide aggregate on the
-    macro page (pipeline.scoring.capital_efficiency) - computed here, once
-    per company, from the same raw statements already fetched for scoring,
-    regardless of skip_ai (it needs no AI call and no finalist status)."""
+    both the cheap screen (skip_ai=True, use_fmp=False, whole universe) and
+    the enriched finalist pass (skip_ai=False, use_fmp=True) - the same work
+    either way, just whether finalize_company spends the Anthropic call and
+    fetch_and_score_company spends an FMP request budget (see module
+    docstring - both are gated to the same small finalist subset). Returns
+    (summary, qualitative_failed, errors, company_doc,
+    capital_efficiency_inputs); summary/company_doc/capital_efficiency_inputs
+    are None if fetching or finalizing failed outright for this ticker
+    (already logged), in which case the other fields are empty/zero and the
+    caller should just skip it. company_doc lets callers pull the AI filing
+    summaries back out for the finalists digest (build_filings_digest)
+    without a second read from disk. capital_efficiency_inputs feeds the
+    market-wide aggregate on the macro page
+    (pipeline.scoring.capital_efficiency) - computed here, once per company,
+    from the same raw statements already fetched for scoring, regardless of
+    skip_ai/use_fmp (it needs no AI call and no FMP data)."""
     ticker = company_cfg["ticker"]
     try:
-        state = fetch_and_score_company(company_cfg, regime_info, benchmark_prices)
+        state = fetch_and_score_company(company_cfg, regime_info, benchmark_prices, use_fmp=use_fmp)
     except Exception:
         logger.exception("Failed to process %s entirely, skipping", ticker)
         return None, False, {}, None, None
@@ -431,7 +449,7 @@ def run_full(args) -> int:
     capital_efficiency_inputs = []
     for company_cfg in companies:
         summary, _qualitative_failed, errs, _company_doc, ce_inputs = _process_company(
-            company_cfg, regime_info, benchmark_prices, skip_ai=True, out_dir=out_dir
+            company_cfg, regime_info, benchmark_prices, skip_ai=True, out_dir=out_dir, use_fmp=False
         )
         _track_errors(errs)
         if ce_inputs:
@@ -461,7 +479,7 @@ def run_full(args) -> int:
         companies_by_ticker = {c["ticker"]: c for c in companies}
         for ticker in finalist_tickers:
             summary, qualitative_failed, errs, company_doc, _ce_inputs = _process_company(
-                companies_by_ticker[ticker], regime_info, benchmark_prices, skip_ai=False, out_dir=out_dir
+                companies_by_ticker[ticker], regime_info, benchmark_prices, skip_ai=False, out_dir=out_dir, use_fmp=True
             )
             _track_errors(errs)
             if summary is None:

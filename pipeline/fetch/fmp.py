@@ -1,8 +1,18 @@
-"""Financial Modeling Prep client (free tier, API key required).
+"""Financial Modeling Prep client (API key required).
+
+Deliberately lean: FMP's free tier caps out around 250 requests/day, which
+can't sustain a large tracked universe if every company pulls FMP's full
+statement set every run. pipeline.scoring.fundamentals already has a
+complete fallback chain to free sources (SEC EDGAR XBRL for statements,
+Stooq for price history, the watchlist's own configured sector) for
+everything FMP would otherwise supply, so FMP here is reserved for what
+only it provides: live price/quote and profile (company name/sector/
+website precision, when available). pipeline.main only calls this during
+phase 2's finalist enrichment (a small, bounded subset), never across the
+whole screening universe - see run_full's module docstring.
 
 Each endpoint is fetched independently and failures are captured per-call
-rather than aborting the whole ticker — a single gated/renamed endpoint on
-the account's free tier shouldn't take down every other metric.
+rather than aborting the whole ticker.
 """
 
 import os
@@ -44,15 +54,22 @@ def _get(endpoint: str, ticker: str, **params: Any) -> Any:
 
 
 def fetch_company(ticker: str) -> dict:
-    """Fetch all FMP data needed for one ticker.
+    """Fetch the FMP data this pipeline actually can't get elsewhere for one
+    ticker: profile (name/sector/website) and price (quote + history).
+    Statements, ratios, and a discounted-cash-flow figure used to be fetched
+    here too, but pipeline.scoring.fundamentals already derives every one of
+    those from free sources (SEC EDGAR XBRL, computed ratios) with complete
+    fallback formulas - see this module's docstring - so calling FMP for
+    them was pure request-budget cost with no accuracy benefit at this
+    pipeline's scale.
 
-    The 9 endpoint calls are independent, so they run concurrently rather
-    than one-at-a-time - on a degraded account (see module docstring; each
-    failing call retries 3x with backoff before giving up) that's the
-    difference between ~30-80s and ~single-call-latency per ticker, which
-    matters for the on-demand lookup endpoint (api/lookup.py) far more than
-    for the batch pipeline, though both benefit. pipeline.utils.http's
-    per-host rate limiting is lock-protected so this stays polite to FMP.
+    The 3 endpoint calls are independent, so they run concurrently rather
+    than one-at-a-time - on a degraded account (each failing call retries 3x
+    with backoff before giving up) that's the difference between ~10-25s and
+    ~single-call-latency per ticker, which matters for the on-demand lookup
+    endpoint (api/lookup.py) far more than for the batch pipeline, though
+    both benefit. pipeline.utils.http's per-host rate limiting is
+    lock-protected so this stays polite to FMP.
 
     Returns {<call_name>: <payload or None>, "_errors": {<call_name>: str}}.
     """
@@ -60,12 +77,6 @@ def fetch_company(ticker: str) -> dict:
         "profile": lambda: _get("profile", ticker),
         "quote": lambda: _get("quote", ticker),
         "historical_prices": lambda: _get("historical-price-eod/full", ticker),
-        "ratios_ttm": lambda: _get("ratios-ttm", ticker),
-        "key_metrics_ttm": lambda: _get("key-metrics-ttm", ticker),
-        "income_statement": lambda: _get("income-statement", ticker, limit=6),
-        "balance_sheet": lambda: _get("balance-sheet-statement", ticker, limit=6),
-        "cash_flow": lambda: _get("cash-flow-statement", ticker, limit=6),
-        "dcf": lambda: _get("discounted-cash-flow", ticker),
     }
 
     result: dict[str, Any] = {}

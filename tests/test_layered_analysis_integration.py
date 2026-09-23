@@ -8,6 +8,8 @@ tests can't see."""
 
 from unittest.mock import patch
 
+import pytest
+
 from pipeline.fetch.filing_text import FilingTextError
 from pipeline.main import digest_entry_from_doc, fetch_and_score_company, finalize_company
 from pipeline.narrative.qualitative_schema import QualitativeAssessment
@@ -77,11 +79,6 @@ def _empty_fmp_data() -> dict:
         "profile": None,
         "quote": None,
         "historical_prices": None,
-        "ratios_ttm": None,
-        "key_metrics_ttm": None,
-        "income_statement": None,
-        "balance_sheet": None,
-        "cash_flow": None,
         "_errors": {},
     }
 
@@ -116,6 +113,42 @@ def _mocked_qualitative() -> QualitativeAssessment:
         filing_summary_10q="Quarterly revenue grew 8% year over year.",
         filing_summary_8k="The company announced a new CEO.",
     )
+
+
+@patch("pipeline.main.fmp.fetch_company")
+@patch("pipeline.main.stooq.fetch_daily_prices")
+@patch("pipeline.main.sec_edgar.fetch_company")
+def test_use_fmp_false_never_calls_fmp_and_still_scores_correctly(mock_sec, mock_stooq, mock_fmp):
+    """The whole-universe phase-1 screen (see run_full's module docstring)
+    passes use_fmp=False - this proves FMP is genuinely never touched (not
+    just that its data happens to go unused), and that every metric still
+    computes correctly from SEC EDGAR XBRL + Stooq alone, matching the same
+    fixture values test_full_layered_pipeline_wiring checks with FMP mocked
+    as merely empty rather than skipped outright."""
+    mock_sec.return_value = _sec_data()
+    mock_stooq.return_value = _stooq_prices()
+
+    regime_info = {"regime": "Neutral/Expansion", "signals": {}}
+    company_cfg = {"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology"}
+
+    state = fetch_and_score_company(company_cfg, regime_info, use_fmp=False)
+
+    mock_fmp.assert_not_called()
+    metrics = state["metrics"]
+    assert metrics["total_assets"] == 2_000_000_000
+    assert metrics["total_liabilities"] == 1_200_000_000
+    assert metrics["shareholders_equity"] == 800_000_000
+    # roe_pct = net_income / equity * 100 = 150M / 800M * 100 - the local
+    # fallback formula, since there's no FMP key_metrics_ttm at all here.
+    assert metrics["roe_pct"] == pytest.approx(150_000_000 / 800_000_000 * 100)
+    # debt_to_equity = total_debt / equity = (400M + 50M) / 800M - the local
+    # fallback formula, since there's no FMP ratios_ttm at all here.
+    assert metrics["debt_to_equity"] == pytest.approx(450_000_000 / 800_000_000)
+    assert metrics["current_ratio"] == pytest.approx(800_000_000 / 300_000_000)
+    # price comes from Stooq alone (last of the 28 synthetic days: day 28 -> 128.0).
+    assert state["display"]["price"]["close"] == pytest.approx(128.0)
+    assert state["sector"] == "Technology"  # falls back to company_cfg's sector, no FMP profile at all
+    assert state["profile"]["website"] is None  # only FMP supplies this
 
 
 @patch("pipeline.main.filing_text.fetch_plain_text")
