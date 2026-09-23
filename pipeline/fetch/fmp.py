@@ -42,6 +42,12 @@ class FmpError(Exception):
 
 
 def _get(endpoint: str, ticker: str, **params: Any) -> Any:
+    """A ticker with a dot (e.g. "BRK.B") is retried with a hyphen
+    ("BRK-B") if the dot form fails - FMP spells share classes with a
+    hyphen, not the dot notation this pipeline's watchlist uses. A real
+    run confirmed this: FMP returned 402 Payment Required for BRK.B and
+    MOG.A specifically, the same class of failure already seen (and
+    fixed) for SEC EDGAR and Stooq on the same tickers."""
     api_key = os.environ.get("FMP_API_KEY")
     if not api_key:
         raise FmpError("FMP_API_KEY is not set")
@@ -52,13 +58,25 @@ def _get(endpoint: str, ticker: str, **params: Any) -> Any:
         if cached is not None:
             return cached
 
-    query = {"symbol": ticker, "apikey": api_key, **params}
-    result = get_json(
-        f"{BASE_URL}/{endpoint}",
-        params=query,
-        host_key="fmp",
-        min_interval_seconds=0.2,
-    )
+    candidates = [ticker]
+    if "." in ticker:
+        candidates.append(ticker.replace(".", "-"))
+
+    last_exc: Exception | None = None
+    result: Any = None
+    for candidate in candidates:
+        query = {"symbol": candidate, "apikey": api_key, **params}
+        try:
+            result = get_json(
+                f"{BASE_URL}/{endpoint}", params=query, host_key="fmp", min_interval_seconds=0.2
+            )
+            last_exc = None
+            break
+        except Exception as exc:  # noqa: BLE001 - retry-with-alternate-ticker, see docstring
+            last_exc = exc
+
+    if last_exc is not None:
+        raise last_exc
 
     if cache.enabled():
         cache.write(cache_key, result)
