@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/797468/000162828026009059/oxy-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/797468/000162828026053388/oxy-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/797468/000162828026053377/oxy-20260805.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The FY2025 10-K describes a year of lower average realized commodity prices (WTI down 14% to $64.81/bbl, Brent down 15% to $68.18/bbl vs. 2024) amid continued price volatility and no commodity hedges in place. The company invested $5.6 billion in oil and gas assets (mainly Permian Basin, DJ Basin, Gulf of America, and Oman) and $0.7 billion in midstream/marketing, repaid about $4.0 billion of debt, and declared $945 million ($0.96/share) in dividends. It also announced (October 2025) and completed (January 2, 2026) the sale of OxyChem to Berkshire Hathaway for $9.7 billion, reported as discontinued operations, while retaining certain legacy environmental/tort liabilities and indemnification obligations. Year-end 2025 proved reserves were 4,603 MMboe versus 4,612 MMboe in 2024.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists almost entirely of XBRL taxonomy tags and structured data rather than narrative text, so substantive discussion of the quarter's results is not available in what was provided. It does indicate references to Western Midstream Partners LP activity in February 2026, the completed OxyChem disposition (effective January 2, 2026, reported as discontinued operations), and a BlackRock-related variable interest entity, alongside segment-level oil, NGL, and natural gas revenue data for the oil and gas and midstream and marketing segments.",
+    "filing_summary_8k": "This 8-K, dated August 5, 2026, discloses under Item 2.02 that Occidental Petroleum issued a press release announcing its financial condition and results of operations for the quarter ended June 30, 2026, furnished as Exhibit 99.1. The filing does not include the press release content itself and states the information is furnished, not filed, under the Exchange Act.",
+    "moat_explanation": "The 10-K MD&A describes OXY's oil and gas segment as benefiting from scale, technical expertise, decades of high-margin inventory, and industry-leading Permian Basin CO2 EOR capability built over 50+ years with 34 active floods, which the company says lowers breakeven costs and extends field life. However, the Risk Factors section explicitly states results are driven by volatile global commodity prices set by market forces outside the company's control, with no hedges in place, so any cost-based advantage does not translate into pricing power and the moat is limited.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Potential repayment of an $881 million tentative tax refund plus related benefits and interest, now totaling approximately $2.3 billion, if the Tronox settlement deduction is disallowed by the U.S. Tax Court",
+      "Company indebtedness (principal debt around $15 billion as of the filing date) described as a source of reduced financial flexibility and vulnerability to adverse conditions",
+      "Retained legacy environmental and tort liabilities plus post-closing indemnification obligations (guaranteed to Berkshire Hathaway) related to the OxyChem Transaction",
+      "No commodity hedges in place as of December 31, 2025, leaving results fully exposed to oil, NGL, and natural gas price swings",
+      "Exposure to litigation, government investigations, and evolving/uncertain domestic and international regulatory, tax, and tariff policies"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/2969/000000296926000036/apd-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/2969/000000296926000034/apd-20260730.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Air Products' FY2025 10-K describes a 'transitional year' under a new CEO who joined in February 2025, marked by cancellation/descoping of several large energy transition projects and a shift toward its core industrial gas business. Sales were $12.0 billion, down 1%, while the company reported an operating loss of $877.0 million and a net loss of $354.4 million, driven by approximately $3.7 billion in pre-tax charges for project exits and other business/asset actions, contrasted with a $1.6 billion gain on the September 2024 sale of its LNG business in the prior year. The filing also notes $86.3 million in shareholder activism-related costs tied to a proxy contest that concluded in January 2025, and the company's 43rd consecutive year of dividend increases.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL tagging metadata rather than narrative text, covering the quarter ended 30 June 2026 (fiscal Q3 2026) and the nine months then ended. From the tags, it references ongoing items such as project exit costs (both 2025- and 2026-designated), a global cost reduction plan, NEOM Green Hydrogen Project financing arrangements, and segment reporting across the Americas, Asia, Europe, and Middle East and India segments, but the excerpt does not include readable discussion of results, so specific financial outcomes cannot be summarized from what was given.",
+    "filing_summary_8k": "This 8-K, dated 30 July 2026, discloses under Item 2.02 that Air Products issued a press release that day announcing its earnings for the third quarter of fiscal year 2026, furnished as Exhibit 99.1. The filing states this information is furnished, not 'filed,' for certain Exchange Act purposes and does not include the underlying financial results text within the excerpt provided.",
+    "moat_explanation": "The 10-K MD&A states that roughly half of Air Products' revenue comes through its 'on-site' supply mode, governed by long-term contracts with provisions to pass through energy cost changes to customers - these are typically dedicated plants built at or near a customer's facility, creating high switching costs for customers once a plant is built. The Business/Risk Factors excerpts also describe capital-intensive, multi-year, technically complex projects (clean hydrogen, gasification) that require significant government approvals and financing, which could support an efficient-scale argument, but the excerpts don't clearly quantify competitive intensity or barriers to entry, so switching costs tied to long-term on-site contracts is the better-supported category.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Fiscal 2025 operating loss of $877.0 million, driven by ~$3.7 billion in pre-tax charges for cancelled/descoped energy transition projects",
+      "Net loss of $354.4 million in FY2025 versus net income of $3.9 billion in FY2024",
+      "Shareholder activism-related costs of $86.3 million tied to a proxy contest and related CEO/executive separation costs",
+      "Large clean hydrogen projects (e.g., NEOM) are being built before offtake agreements are finalized for a substantial percentage of production, creating demand/pricing uncertainty",
+      "Declining global helium demand cited as an ongoing headwind",
+      "Retained environmental remediation liabilities from divested businesses (Piedmont/atmospheric emulsions and adhesives; Pace/Amines) resulted in additional charges to discontinued operations"
+    ]
+  }
+}

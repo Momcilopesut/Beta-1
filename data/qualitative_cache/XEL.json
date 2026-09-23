@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000009/xel-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000154/xel-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000160/xel-20260819.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "whole_document_fallback",
+    "filing_summary_10k": "The provided 10-K excerpt consists almost entirely of XBRL data tags for Xcel Energy's fiscal year 2025 filing rather than narrative text. It reflects a regulated electric and natural gas utility operating through subsidiaries NSP-Minnesota, NSP-Wisconsin, Public Service Company of Colorado, and Southwestern Public Service Company, with disclosures on long-term bonds and other debt across these entities, revenue by customer class (residential, commercial/industrial, other) and segment (regulated electric, regulated gas), and numerous regulatory assets/liabilities such as pension costs, deferred fuel costs, and environmental restoration costs. No narrative discussion of results, strategy, or risk factors was included in the excerpt provided.",
+    "filing_summary_10q": "The provided 10-Q excerpt for the quarter ended June 30, 2026 is largely XBRL data tags rather than narrative disclosure. It covers the same regulated electric and gas utility subsidiaries (NSP-Minnesota, NSP-Wisconsin, PSCo, SPS), referencing commercial paper and revolving credit facility usage, new long-term bond issuances by several subsidiaries, forward equity and collared forward equity agreements, a dividend reinvestment program, and revenue disaggregated by customer class and segment for the three- and six-month periods. No MD&A narrative describing quarterly results or developments was included in the excerpt provided.",
+    "filing_summary_8k": "This 8-K, dated August 19, 2026, discloses that Public Service Company of Colorado's November 2025 electric rate case with the Colorado Public Utilities Commission (CPUC) concluded with a mostly-approved non-unanimous settlement. As approved, the settlement provides for a $157 million (4.4%) revenue increase excluding rider roll-ins, a 9.3% return on equity, a 54.5% equity ratio, and a performance framework tied to the Comanche Unit 3 coal facility through 2029, with new rates expected effective August 29, 2026 pending a written decision. The filing also states that Xcel Energy reaffirmed its 2026 ongoing earnings-per-share guidance of $4.04 to $4.16.",
+    "moat_explanation": "The excerpts show Xcel Energy operating through multiple state-regulated utility subsidiaries (NSP-Minnesota, NSP-Wisconsin, Public Service Co. of Colorado, Southwestern Public Service Co.) with rate bases, allowed ROEs, and equity ratios set by state commissions, plus extensive regulatory asset/liability mechanisms (deferred fuel costs, decoupling, conservation programs) typical of a rate-regulated natural monopoly. This structure reflects the efficient-scale dynamic where a defined service territory supports only one integrated utility provider, rather than a moat built on brand, patents, or network effects.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "PSCo's requested Colorado rate increase ($356 million) was cut substantially in the regulator-approved settlement ($157 million), illustrating cost-recovery/regulatory risk.",
+      "A settlement performance framework applies specifically to continued operation of the Comanche Unit 3 coal facility through 2029, indicating ongoing coal-asset and transition risk.",
+      "8-K forward-looking disclosures cite wildfire risk and the possibility of wildfire damages exceeding liability insurance coverage.",
+      "XBRL tags reference pending 'complaint' and 'Claims' items without narrative detail provided in the excerpts, leaving litigation exposure unclear.",
+      "Extensive reliance on commercial paper, revolving credit facilities, and repeated new long-term bond issuances points to continuous, capital-intensive financing needs.",
+      "Forward-looking risk factors reference growth in large load customers as a factor that could affect results, suggesting some customer concentration exposure."
+    ]
+  }
+}
