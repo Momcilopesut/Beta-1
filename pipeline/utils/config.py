@@ -27,3 +27,7 @@ def macro_series() -> dict:
 
 def screening_config() -> dict:
     return load_yaml("screening.yaml")
+
+
+def capital_efficiency_config() -> dict:
+    return load_yaml("capital_efficiency.yaml")

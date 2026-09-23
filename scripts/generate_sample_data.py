@@ -21,8 +21,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from pipeline.build import writer  # noqa: E402
 from pipeline.main import build_filings_digest, build_macro_doc, digest_entry_from_doc  # noqa: E402
-from pipeline.scoring import aggregation, macro_regime, performance, value_investing  # noqa: E402
-from pipeline.utils.config import macro_series, screening_config, watchlist  # noqa: E402
+from pipeline.scoring import aggregation, capital_efficiency, macro_regime, performance, value_investing  # noqa: E402
+from pipeline.utils.config import capital_efficiency_config, macro_series, screening_config, watchlist  # noqa: E402
 from pipeline.utils.paths import DATA_DIR  # noqa: E402
 
 random.seed(42)
@@ -94,6 +94,7 @@ def synth_raw_statements(market_cap: float, close_price: float) -> dict:
             "operatingIncome": revenue0 * random.uniform(0.1, 0.3),
             "incomeBeforeTax": net_income0 * 1.25,
             "incomeTaxExpense": net_income0 * 0.25,
+            "interestExpense": revenue0 * random.uniform(0.005, 0.02),
             "weightedAverageShsOutDil": shares0,
         },
         {
@@ -104,6 +105,7 @@ def synth_raw_statements(market_cap: float, close_price: float) -> dict:
             "operatingIncome": revenue1 * random.uniform(0.08, 0.28),
             "incomeBeforeTax": net_income1 * 1.25,
             "incomeTaxExpense": net_income1 * 0.25,
+            "interestExpense": revenue1 * random.uniform(0.005, 0.02),
             "weightedAverageShsOutDil": shares0,
         },
     ]
@@ -325,10 +327,10 @@ def main() -> None:
     # sample data gets the same mood computation, shape, and source URLs as
     # a real pipeline run - never a hand-duplicated second copy of that logic.
     macro_doc = build_macro_doc(macro_data, regime_info, generated_at)
-    writer.write_macro(DATA_DIR, macro_doc)
 
     summaries = []
     company_docs = {}
+    capital_efficiency_inputs = []
     for company_cfg in companies:
         ticker = company_cfg["ticker"]
         sector = company_cfg["sector"]
@@ -387,6 +389,9 @@ def main() -> None:
         }
         writer.write_company(DATA_DIR, ticker, company_doc)
         company_docs[ticker] = company_doc
+        ce_inputs = capital_efficiency.company_capital_efficiency_inputs(raw, {"market_cap": market_cap})
+        if ce_inputs:
+            capital_efficiency_inputs.append(ce_inputs)
 
         summaries.append(
             {
@@ -406,6 +411,14 @@ def main() -> None:
                 "last_updated": generated_at,
             }
         )
+
+    ce_cfg = capital_efficiency_config()
+    risk_free_observations = macro_data.get(ce_cfg["risk_free_rate_series"]) or []
+    risk_free_rate_pct = risk_free_observations[-1]["value"] if risk_free_observations else None
+    macro_doc["capital_efficiency"] = capital_efficiency.aggregate_capital_efficiency(
+        capital_efficiency_inputs, risk_free_rate_pct, ce_cfg
+    )
+    writer.write_macro(DATA_DIR, macro_doc)
 
     writer.write_watchlist(DATA_DIR, summaries, generated_at)
     top_n_per_sector = screening_config()["top_n_per_sector"]

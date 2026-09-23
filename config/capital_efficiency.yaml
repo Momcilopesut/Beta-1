@@ -1,0 +1,34 @@
+# Aggregate, market-wide capital-efficiency thresholds and cost-of-capital
+# assumptions - see pipeline/scoring/capital_efficiency.py. All rule-based,
+# no ML: every number here is a documented, adjustable estimate, not
+# something derived live from data this pipeline fetches.
+
+# CAPM cost of equity = risk-free rate + equity_risk_premium_pct, with beta
+# assumed to be 1.0 since this is measuring the tracked universe against
+# itself (its own aggregate IS "the market" being evaluated here), not an
+# individual stock's volatility relative to some external benchmark.
+# 5.0% sits within the range of commonly-cited long-run US equity risk
+# premium estimates (e.g. Damodaran's historical implied-ERP series) - a
+# convention, not a live-fitted number.
+equity_risk_premium_pct: 5.0
+
+# Fallback statutory tax rate for the after-tax cost of debt, used only
+# when the aggregate effective tax rate can't be computed cleanly (e.g. a
+# quarter with unusually large one-off tax items). Matches the flat US
+# federal corporate rate since the Tax Cuts and Jobs Act of 2017.
+assumed_tax_rate_pct: 21.0
+
+# Which already-tracked FRED series (config/macro_series.yaml) proxies the
+# risk-free rate in the cost-of-equity calculation.
+risk_free_rate_series: DGS10
+
+# Color bands, reusing this app's existing red/yellow/green convention
+# (see site/js/company.js's metricSentiment). ROIC and expected growth are
+# judged directly; reinvestment rate has no inherent "good" direction on
+# its own (see the module docstring) so it isn't banded here.
+roic_bands:
+  good_pct: 15.0      # matches the existing ROE quality bar used elsewhere
+  neutral_pct: 0.0
+expected_growth_bands:
+  good_pct: 8.0
+  neutral_pct: 0.0

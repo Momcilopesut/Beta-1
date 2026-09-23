@@ -34,9 +34,9 @@ import sys
 from pipeline.build import qualitative_cache, writer
 from pipeline.fetch import filing_text, fmp, fred, sec_edgar, stooq
 from pipeline.narrative.qualitative_client import QualitativeError, generate_qualitative_assessment
-from pipeline.scoring import aggregation, history, macro_mood, macro_regime, performance, value_investing
+from pipeline.scoring import aggregation, capital_efficiency, history, macro_mood, macro_regime, performance, value_investing
 from pipeline.scoring.fundamentals import build_metrics, normalize_price_rows
-from pipeline.utils.config import macro_series, screening_config, watchlist
+from pipeline.utils.config import capital_efficiency_config, macro_series, screening_config, watchlist
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -115,6 +115,11 @@ def build_macro_doc(macro_data: dict, regime_info: dict, generated_at: str) -> d
         "series": series_out,
         "cycle_context": macro_regime.cycle_context(regime_info["regime"]),
     }
+
+
+def _risk_free_rate_pct(macro_data: dict, series_id: str) -> float | None:
+    observations = macro_data.get(series_id) or []
+    return observations[-1]["value"] if observations else None
 
 
 def digest_entry_from_doc(company_doc: dict) -> dict | None:
@@ -339,32 +344,40 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
 
 def _process_company(
     company_cfg: dict, regime_info: dict, benchmark_prices: list[dict], skip_ai: bool, out_dir
-) -> tuple[dict | None, bool, dict, dict | None]:
+) -> tuple[dict | None, bool, dict, dict | None, dict | None]:
     """Fetch, score, finalize, and write one company end-to-end. Used for
     both the cheap screen (skip_ai=True, whole universe) and the AI-enriched
     finalist pass (skip_ai=False) - the same work either way, just whether
     finalize_company spends the Anthropic call. Returns (summary,
-    qualitative_failed, errors, company_doc); summary and company_doc are
-    None if fetching or finalizing failed outright for this ticker (already
-    logged), in which case the other fields are empty/zero and the caller
-    should just skip it. company_doc lets callers pull the AI filing
-    summaries back out for the finalists digest (build_filings_digest)
-    without a second read from disk."""
+    qualitative_failed, errors, company_doc, capital_efficiency_inputs);
+    summary/company_doc/capital_efficiency_inputs are None if fetching or
+    finalizing failed outright for this ticker (already logged), in which
+    case the other fields are empty/zero and the caller should just skip
+    it. company_doc lets callers pull the AI filing summaries back out for
+    the finalists digest (build_filings_digest) without a second read from
+    disk. capital_efficiency_inputs feeds the market-wide aggregate on the
+    macro page (pipeline.scoring.capital_efficiency) - computed here, once
+    per company, from the same raw statements already fetched for scoring,
+    regardless of skip_ai (it needs no AI call and no finalist status)."""
     ticker = company_cfg["ticker"]
     try:
         state = fetch_and_score_company(company_cfg, regime_info, benchmark_prices)
     except Exception:
         logger.exception("Failed to process %s entirely, skipping", ticker)
-        return None, False, {}, None
+        return None, False, {}, None, None
+
+    capital_efficiency_inputs = capital_efficiency.company_capital_efficiency_inputs(
+        state["raw"], state["profile"]
+    )
 
     try:
         company_doc, summary, qualitative_failed = finalize_company(state, regime_info, skip_ai, out_dir)
     except Exception:
         logger.exception("Failed to finalize %s entirely, skipping", ticker)
-        return None, False, state["errors"], None
+        return None, False, state["errors"], None, None
 
     writer.write_company(out_dir, ticker, company_doc)
-    return summary, qualitative_failed, state["errors"], company_doc
+    return summary, qualitative_failed, state["errors"], company_doc, capital_efficiency_inputs
 
 
 def run_full(args) -> int:
@@ -395,7 +408,6 @@ def run_full(args) -> int:
 
     out_dir = writer.output_dir(args.dry_run)
     macro_doc = build_macro_doc(macro_data, regime_info, generated_at)
-    writer.write_macro(out_dir, macro_doc)
 
     fmp_error_count = 0
     sec_error_count = 0
@@ -416,11 +428,14 @@ def run_full(args) -> int:
     # page; only the moat read is missing until (if) it becomes a finalist
     # below.
     summaries = []
+    capital_efficiency_inputs = []
     for company_cfg in companies:
-        summary, _qualitative_failed, errs, _company_doc = _process_company(
+        summary, _qualitative_failed, errs, _company_doc, ce_inputs = _process_company(
             company_cfg, regime_info, benchmark_prices, skip_ai=True, out_dir=out_dir
         )
         _track_errors(errs)
+        if ce_inputs:
+            capital_efficiency_inputs.append(ce_inputs)
         if summary is None:
             continue
         summaries.append(summary)
@@ -445,7 +460,7 @@ def run_full(args) -> int:
         summaries_by_ticker = {s["ticker"]: s for s in summaries}
         companies_by_ticker = {c["ticker"]: c for c in companies}
         for ticker in finalist_tickers:
-            summary, qualitative_failed, errs, company_doc = _process_company(
+            summary, qualitative_failed, errs, company_doc, _ce_inputs = _process_company(
                 companies_by_ticker[ticker], regime_info, benchmark_prices, skip_ai=False, out_dir=out_dir
             )
             _track_errors(errs)
@@ -480,6 +495,13 @@ def run_full(args) -> int:
             sources_status["anthropic"] = "failed"
         elif total_qualitative_failed:
             sources_status["anthropic"] = "degraded"
+
+    ce_cfg = capital_efficiency_config()
+    risk_free_rate_pct = _risk_free_rate_pct(macro_data, ce_cfg["risk_free_rate_series"])
+    macro_doc["capital_efficiency"] = capital_efficiency.aggregate_capital_efficiency(
+        capital_efficiency_inputs, risk_free_rate_pct, ce_cfg
+    )
+    writer.write_macro(out_dir, macro_doc)
 
     writer.write_watchlist(out_dir, summaries, generated_at)
     writer.write_performance_picks(out_dir, picks_by_sector, generated_at, len(companies), top_n_per_sector)

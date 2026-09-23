@@ -20,7 +20,82 @@ function render(doc) {
       <p class="meta">Updated ${escapeHtml(doc.generated_at)}</p>
     </section>
     ${renderCycleContext(doc.cycle_context)}
+    ${renderCapitalEfficiency(doc.capital_efficiency)}
     <section class="series-grid">${seriesHtml}</section>
+  `;
+}
+
+const CE_STATS = [
+  {
+    key: "roic_pct",
+    sentimentKey: "roic",
+    label: "Return on Invested Capital (ROIC)",
+    explanation:
+      "Aggregate after-tax operating profit (NOPAT) divided by aggregate invested capital, summed across every " +
+      "tracked company's latest statements. How efficiently this universe turns the capital it's been given into profit.",
+  },
+  {
+    key: "reinvestment_rate_pct",
+    sentimentKey: "reinvestment_rate",
+    label: "Reinvestment Rate",
+    explanation:
+      "The share of NOPAT plowed back into the businesses (CapEx minus depreciation, plus the change in working " +
+      "capital) rather than available for dividends or buybacks. Neither high nor low is inherently good - what " +
+      "matters is how much growth that reinvestment is actually buying (see Expected Growth).",
+  },
+  {
+    key: "expected_growth_pct",
+    sentimentKey: "expected_growth",
+    label: "Expected Growth",
+    explanation:
+      "ROIC x Reinvestment Rate - the fundamental, organic earnings growth this reinvestment should buy. The same " +
+      "growth rate achieved with a lower reinvestment rate (a higher ROIC) is the stronger outcome, since it " +
+      "leaves more free cash flow for dividends or buybacks.",
+  },
+  {
+    key: "wacc_pct",
+    sentimentKey: "wacc",
+    label: "Cost of Capital (WACC)",
+    explanation:
+      "A simplified weighted-average cost of capital: the 10-year Treasury yield plus a configured equity risk " +
+      "premium (cost of equity, beta assumed at 1.0 - this is being measured against the market itself), blended " +
+      "with an after-tax cost of debt, weighted by aggregate market cap vs. aggregate debt.",
+  },
+  {
+    key: "value_creation_pct",
+    sentimentKey: "value_creation",
+    label: "Value Creation (ROIC − WACC)",
+    explanation:
+      "Positive means this universe is earning more on its capital than that capital costs - creating value, even " +
+      "if earnings per share growth alone might have suggested otherwise. Negative means the opposite: it's " +
+      "destroying value regardless of how fast earnings are growing.",
+  },
+];
+
+function renderCapitalEfficiency(ce) {
+  if (!ce) return "";
+  const sentiment = ce.sentiment || {};
+  const cards = CE_STATS.map((stat) => {
+    const value = ce[stat.key];
+    const valueText = value === null || value === undefined ? "—" : `${value.toFixed(1)}%`;
+    const sentimentClass = sentiment[stat.sentimentKey] ? ` metric-value-${sentiment[stat.sentimentKey]}` : "";
+    return `
+      <div class="ce-card">
+        <h4>${escapeHtml(stat.label)}</h4>
+        <p class="ce-value${sentimentClass}">${valueText}</p>
+        <p class="ce-explanation">${escapeHtml(stat.explanation)}</p>
+      </div>
+    `;
+  }).join("");
+
+  return `
+    <section class="capital-efficiency">
+      <h3>Market Capital Efficiency</h3>
+      <p class="meta">Bottom-up, computed from ${ce.companies_covered} tracked companies' own latest financial
+      statements - no aggregate data vendor (Compustat, FactSet, Bloomberg) needed, since every one of these
+      companies' statements is already fetched here every run. See each card for what it measures and why.</p>
+      <div class="ce-grid">${cards}</div>
+    </section>
   `;
 }
 

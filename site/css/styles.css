@@ -549,6 +549,17 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 .series-info .metric-info { margin-top: 0.4rem; color: var(--muted); }
 .series-info .metric-info p { margin: 0.35rem 0; }
 
+.capital-efficiency { margin-bottom: 1.5rem; }
+.ce-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.ce-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+.ce-card h4 { margin: 0 0 0.35rem; font-size: 0.85rem; }
+.ce-value { font-size: 1.5rem; font-weight: 700; margin: 0.25rem 0; }
+.ce-explanation { font-size: 0.8rem; color: var(--muted); margin: 0.35rem 0 0; }
+
 /* Key Metrics Reference (company page) + full glossary page - shared look. */
 .key-metrics-reference { margin-bottom: 1.5rem; }
 .metric-rows { display: flex; flex-direction: column; gap: 0.4rem; }

@@ -314,6 +314,39 @@ Tapping any series card ("What is this?") expands its glossary entry
 significant, and how its volatility specifically affects the broader economy —
 the same tap-to-expand pattern the company page's Key Metrics Reference uses.
 
+### Market Capital Efficiency
+
+The macro page also shows a bottom-up, market-wide read on capital efficiency —
+**ROIC**, **Reinvestment Rate**, **Expected Growth**, **WACC**, and **Value
+Creation** (ROIC − WACC) — computed across every tracked company's own latest
+financial statements (`pipeline/scoring/capital_efficiency.py`). No aggregate data
+vendor (Compustat, FactSet, a Bloomberg terminal) is needed: this pipeline already
+fetches every one of these companies' statements individually, every run, so the
+aggregate is just those same numbers summed.
+
+```
+ROIC = aggregate NOPAT / aggregate Invested Capital
+Reinvestment Rate = (aggregate CapEx - aggregate Depreciation + aggregate Change in Working Capital) / aggregate NOPAT
+Expected Growth = ROIC x Reinvestment Rate
+```
+
+A company missing any one input (operating income, tax figures, CapEx, debt, ...) is
+simply excluded from that one sum, never counted as a zero — each aggregate's own
+`coverage` count in `data/macro.json` says how many companies it was actually built
+from. **WACC** is a deliberately simplified CAPM proxy: the latest 10-year Treasury
+yield (already tracked above) plus a configured equity risk premium as the cost of
+equity, with beta assumed to be 1.0 — this is being measured against the aggregate
+market itself, not one stock's volatility relative to it — blended with an
+after-tax cost of debt, weighted by aggregate market cap vs. aggregate debt. Both
+the equity risk premium and the fallback tax rate are documented, adjustable
+estimates in `config/capital_efficiency.yaml`, not values derived from live data.
+
+Each card is color-coded green/yellow/red the same way the company page's Key
+Metrics Reference is, using thresholds from that same config file — Reinvestment
+Rate and WACC are always shown neutral, since neither has an inherent "good"
+direction on its own (a high reinvestment rate is only good or bad relative to the
+growth it buys, which Expected Growth already captures).
+
 ## Filings Digest
 
 `site/filings-digest.html` rolls up this week's per-sector finalists' AI-summarized
@@ -346,6 +379,9 @@ linked from the nav on every page) with the full reference, no per-company numbe
   direction/thresholds (see "Macro Overview" above).
 - `config/screening.yaml` — `top_n_per_sector`, how many companies the weekly screen
   surfaces per sector, per timeframe (see "Weekly Screener" above).
+- `config/capital_efficiency.yaml` — the equity risk premium and fallback tax rate
+  used by the Market Capital Efficiency WACC estimate, plus its ROIC/Expected
+  Growth color-band thresholds (see "Macro Overview" above).
 
 ## Deployment
 
