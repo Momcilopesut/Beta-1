@@ -71,17 +71,19 @@ The program's primary purpose: every Friday at 21:30 UTC (`.github/workflows/
 weekly-screen.yml`) — genuinely "after the ~4pm ET close" year-round regardless of
 DST — the pipeline runs a two-phase screen over `config/watchlist.yaml`'s curated
 universe (508 companies as of this writing - the original 88-company core plus every
-S&P 500 constituent not already tracked, the first of three staged tranches toward
-full S&P 1500 coverage; see "Data source limits and free backup chain" below for why
-that scale is sustainable), ranking purely by price return, not by any fundamentals
-check:
+S&P 500 constituent not already tracked), ranking purely by price return, not by any
+fundamentals check:
 
 1. **Cheap screen, whole universe** (`pipeline/main.py::run_full`, phase 1) — every
    company gets fetched and scored (full fundamentals scoring included, for its own
-   detail page) from free sources only (SEC EDGAR + Stooq - see below), with the AI
-   qualitative (moat read) layer and FMP both skipped entirely. Each company's price
-   return over 5 lookback windows (`pipeline/scoring/performance.py::compute_returns`)
-   comes straight from price history already fetched for it - no extra API calls.
+   detail page), with the AI qualitative (moat read) layer skipped entirely.
+   Fundamentals lean on SEC EDGAR XBRL where possible; price/quote/profile currently
+   come from FMP for every company in this phase, not just finalists - the free-tier
+   design this pipeline was meant to have here is unfinished (see "Data source limits
+   and free backup chain" below), so a paid or free-trial FMP plan is currently
+   required to run the whole universe reliably. Each company's price return over 5
+   lookback windows (`pipeline/scoring/performance.py::compute_returns`) comes
+   straight from price history already fetched for it - no extra API calls.
 2. **Rank + select** (`pipeline/scoring/performance.py::select_top_performers`) —
    within each sector, companies are ranked by price return, independently for each of
    5 windows: weekly (7 days), monthly (30 days), quarterly (91 days), annual (365
@@ -92,10 +94,13 @@ check:
    distinct tickers across its 5 windows, with overlap when the same stock leads more
    than one.
 3. **AI-enrich finalists only** (phase 2) — every ticker that made at least one
-   window's top-5 list gets re-fetched with FMP turned on (live quote/profile) and
-   re-scored with the moat read (plus short 10-K/10-Q/8-K summaries) turned on, so
-   both Anthropic spend and FMP request volume scale with the number of tickers
-   actually shown, not the size of the universe scanned.
+   window's top-5 list gets re-scored with the moat read (plus short 10-K/10-Q/8-K
+   summaries) turned on, so Anthropic spend scales with the number of tickers actually
+   shown, not the size of the universe scanned.
+
+Anything not in the tracked universe is reachable through the search box instead
+(see "On-demand lookup" above) - searching pools that company's data live, within
+about 5 minutes, rather than waiting for it to be added to a future tranche.
 
 Every scanned company — not just the picks — still gets a full `data/companies/
 {ticker}.json` and detail page, complete with its own Layered Analysis;
@@ -141,12 +146,18 @@ so the site is browsable before you've run the pipeline for real — running
 ## Data source limits and free backup chain
 
 FMP's free tier caps out around 250 requests/day - nowhere near enough to run FMP's
-full statement/ratio set against a several-hundred-company universe every week, even
-before accounting for a paid plan lapsing. Rather than requiring a paid plan, this
-pipeline treats free, no-key sources as primary for the whole universe and reserves
-FMP for the one thing only it provides at this pipeline's scale: live
-price/quote and profile data, fetched only for the small set of finalists phase 2
-enriches (see "Weekly Screener" above).
+full statement/ratio set (or even just its price/quote endpoints) against a
+several-hundred-company universe every week. `pipeline/fetch/fmp.py::fetch_company`
+used to also pull ratios, key metrics, and all three financial statements directly
+from FMP; every one of those already has a complete fallback formula computed locally
+from SEC EDGAR's raw statement data (see `pipeline/scoring/fundamentals.py`), so those
+calls were pure request-budget cost with no accuracy benefit and have been dropped -
+FMP is reserved for the one thing only it reliably provides at this pipeline's scale:
+live price/quote and profile data.
+
+**This was designed to be free-tier sustainable, and currently isn't.** The plan was
+free, no-key sources covering the whole tracked universe, with FMP's budget reserved
+for just the small finalist subset phase 2 enriches:
 
 - **SEC EDGAR XBRL** (`pipeline/fetch/sec_edgar.py::xbrl_fundamentals`) — synthesizes
   income statement, balance sheet, and cash flow rows directly from official filings,
@@ -154,27 +165,31 @@ enriches (see "Weekly Screener" above).
   assets/liabilities/equity figures, ratios, the value-investing checklists) works
   unchanged regardless of which source populated it. Free, no API key, no documented
   daily cap (just a ~10 req/sec fair-use guideline this pipeline stays well under).
-- **Stooq** (`pipeline/fetch/stooq.py`) — free daily close price, no API key, no
-  documented rate limit, used as the primary price history source in phase 1 so the
-  price side of every valuation check works across the whole scanned universe, not
-  just the finalists.
+  This part of the plan works fine - zero failures across a real 906-company run.
+- **Stooq** (`pipeline/fetch/stooq.py`) — was meant to be the free price history
+  source covering phase 1's whole scanned universe. **In practice it's blocked from
+  GitHub Actions runners almost entirely** - a real run against 906 companies saw 95%+
+  of requests fail (HTTP 404 escalating to connection timeouts, regardless of a
+  browser User-Agent), leaving the whole weekly screen with no price data and empty
+  performance picks. `pipeline.main.fetch_and_score_company`'s `use_fmp` flag still
+  exists and works (set it `False` to skip FMP and rely on free sources only, e.g. for
+  local testing without a key), but `run_full` currently passes `use_fmp=True` in
+  *both* phases - FMP covers price/quote/profile for the whole universe, not just
+  finalists, because Stooq can't be trusted to.
 
-`pipeline/fetch/fmp.py::fetch_company` used to also pull ratios, key metrics, and all
-three financial statements directly from FMP; every one of those already has a
-complete fallback formula computed locally from SEC EDGAR's raw statement data (see
-`pipeline/scoring/fundamentals.py`), so those calls were pure request-budget cost with
-no accuracy benefit and have been dropped. `pipeline.main.fetch_and_score_company`
-takes a `use_fmp` flag - phase 1 runs with it off (zero FMP calls across the whole
-508-company universe), phase 2 turns it on only for the tickers that made a top-5
-list. At `top_n_per_sector: 5` across 11 sectors and 5 windows, that's at most a few
-hundred FMP calls a week even at full S&P 1500 scale - comfortably inside the free
-tier, whether or not a paid plan is active. `data/meta.json`'s `sources_status.fmp`
-reads `"degraded"` when FMP calls fail outright (missing key, `402 Payment Required`,
-etc.), and per-company `_errors` include the real HTTP status so an invalid-key
-problem is distinguishable from a plan-limit problem at a glance; `sources_status.stooq`
-reports whether the price fallback itself is working. If you still want fuller FMP
-coverage on the finalist set: upgrade the FMP plan, or swap in a different provider
-(e.g. Finnhub's free tier) in `pipeline/fetch/`.
+**What this means in practice:** the weekly screen currently requires an active FMP
+plan (paid or free-trial) with enough daily quota for the whole tracked universe (500+
+requests/week at present) - the free tier alone won't cover it. `data/meta.json`'s
+`sources_status.fmp` reads `"degraded"` when FMP calls fail outright (missing key,
+`402 Payment Required`, etc.), and per-company `_errors` include the real HTTP status
+so an invalid-key problem is distinguishable from a plan-limit problem at a glance;
+`sources_status.stooq` reports the free fallback's own (currently poor) health. Fixing
+this for real needs either a different free price-history provider that isn't blocked
+from GitHub Actions, or a design that spreads FMP's request volume across multiple
+runs per week to stay inside its free-tier budget - tracked as known follow-up work,
+not solved. In the meantime, the on-demand search (see "On-demand lookup" above)
+already uses FMP per-lookup rather than per-universe, so its budget stays naturally
+bounded regardless of this.
 
 ## Assets vs. Liabilities
 

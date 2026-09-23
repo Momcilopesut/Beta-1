@@ -12,27 +12,31 @@ Usage:
   python -m pipeline.main --dry-run                # write to data/ locally, no commit (commit is CI's job)
   python -m pipeline.main --skip-ai                 # fetch + score only, no Anthropic spend
 
-Two phases (see run_full), gating BOTH the paid Anthropic call and FMP's
-rate-limited request budget the same way - a small, bounded finalist
-subset, never the whole universe:
-  1. A cheap, entirely-free screen (fetch_and_score_company + finalize_company
-     with skip_ai=True, use_fmp=False) over the WHOLE universe - no Anthropic
-     spend, no FMP requests either. Statements come from SEC EDGAR XBRL,
-     price history from Stooq, sector from the watchlist's own configured
-     value (see pipeline.scoring.fundamentals's fallback chain) - free and
-     rate-limit-generous enough to run at any universe size. Price returns
-     come straight from that history (pipeline.scoring.performance.compute_returns),
-     so this alone is enough to rank and select each window's top performers
-     per sector (pipeline.scoring.performance.select_top_performers).
-  2. Enrichment (skip_ai=False, use_fmp=True) of just the selected finalists:
-     Buffett's 10-K moat read plus short neutral summaries of the latest
-     10-K/10-Q/8-K (the only place Anthropic budget gets spent), and FMP's
-     live price/quote/profile data layered on top of the free-sourced
-     numbers (the only place FMP's request budget gets spent - see
-     pipeline.fetch.fmp's module docstring for why). Every company
-     (finalist or not) still gets its latest 10-K/10-Q/8-K listed with a
-     direct SEC link - it's the AI summary of each filing, and FMP's
-     precision refinements, that are finalists-only.
+Two phases (see run_full). Originally designed to gate BOTH the paid
+Anthropic call and FMP's request budget the same way - a small, bounded
+finalist subset, never the whole universe - but Stooq (the free price
+source phase 1 was meant to lean on instead of FMP) turned out to be
+blocked from GitHub Actions runners in practice (see pipeline.fetch.stooq's
+module docstring), so only the AI gating held up at full-universe scale:
+  1. Fetch + score every company (fetch_and_score_company + finalize_company
+     with skip_ai=True) over the WHOLE universe - no Anthropic spend.
+     Statements come from SEC EDGAR XBRL, sector from the watchlist's own
+     configured value where FMP's profile doesn't have it (see
+     pipeline.scoring.fundamentals's fallback chain); price/quote/profile
+     currently come from FMP for every company, not just finalists (use_fmp=
+     True in both phases - the free-tier-budget design this pipeline was
+     meant to have for price data is unfinished, tracked as known follow-up
+     work, not solved - see pipeline.fetch.fmp's module docstring). Price
+     returns come straight from that history
+     (pipeline.scoring.performance.compute_returns), so this alone is enough
+     to rank and select each window's top performers per sector
+     (pipeline.scoring.performance.select_top_performers).
+  2. Enrichment (skip_ai=False) of just the selected finalists: Buffett's
+     10-K moat read plus short neutral summaries of the latest 10-K/10-Q/
+     8-K - the only place Anthropic budget gets spent, and still gated to
+     a small, bounded subset. Every company (finalist or not) still gets
+     its latest 10-K/10-Q/8-K listed with a direct SEC link - it's the AI
+     summary of each filing that's finalists-only.
 """
 
 import argparse
@@ -172,12 +176,15 @@ def build_filings_digest(entries: list[dict], generated_at: str) -> dict:
 def fetch_and_score_company(
     company_cfg: dict, regime_info: dict, benchmark_prices: list[dict] | None = None, use_fmp: bool = True
 ) -> dict:
-    """Fetch + score one company. use_fmp=False skips FMP entirely (used for
-    the whole-universe phase-1 screen, see module docstring) - fundamentals.py
-    already falls back to free sources (SEC EDGAR XBRL, Stooq, the
+    """Fetch + score one company. use_fmp=False skips FMP entirely -
+    fundamentals.py falls back to free sources (SEC EDGAR XBRL, Stooq, the
     watchlist's own configured sector) for every field FMP would otherwise
     supply, so this still produces a complete, fully-scored company_doc,
-    just without FMP's live-quote precision or website link for that run."""
+    just without FMP's live-quote precision or website link for that run.
+    run_full currently passes use_fmp=True in both phases (Stooq's free
+    price history is unreliable from GitHub Actions in practice - see
+    module docstring), but the flag itself still works standalone, e.g. for
+    a from-scratch run against free sources only."""
     ticker = company_cfg["ticker"]
     logger.info("Processing %s", ticker)
 
@@ -361,13 +368,13 @@ def _process_company(
     company_cfg: dict, regime_info: dict, benchmark_prices: list[dict], skip_ai: bool, out_dir, use_fmp: bool = True
 ) -> tuple[dict | None, bool, dict, dict | None, dict | None]:
     """Fetch, score, finalize, and write one company end-to-end. Used for
-    both the cheap screen (skip_ai=True, use_fmp=False, whole universe) and
-    the enriched finalist pass (skip_ai=False, use_fmp=True) - the same work
-    either way, just whether finalize_company spends the Anthropic call and
-    fetch_and_score_company spends an FMP request budget (see module
-    docstring - both are gated to the same small finalist subset). Returns
-    (summary, qualitative_failed, errors, company_doc,
-    capital_efficiency_inputs); summary/company_doc/capital_efficiency_inputs
+    both the cheap screen (skip_ai=True, whole universe) and the enriched
+    finalist pass (skip_ai=False) - the same work either way, just whether
+    finalize_company spends the Anthropic call (see module docstring - only
+    the AI call is still gated to the small finalist subset; use_fmp is
+    True in both phases in practice). Returns (summary, qualitative_failed,
+    errors, company_doc, capital_efficiency_inputs); summary/company_doc/
+    capital_efficiency_inputs
     are None if fetching or finalizing failed outright for this ticker
     (already logged), in which case the other fields are empty/zero and the
     caller should just skip it. company_doc lets callers pull the AI filing
@@ -441,15 +448,19 @@ def run_full(args) -> int:
         if "stooq" in errs:
             stooq_error_count += 1
 
-    # Phase 1: cheap screen over the WHOLE universe - no AI spend (see
-    # module docstring). Every company still gets a full company_doc/detail
+    # Phase 1: cheap (no AI spend) screen over the WHOLE universe - see
+    # module docstring. Every company still gets a full company_doc/detail
     # page; only the moat read is missing until (if) it becomes a finalist
-    # below.
+    # below. use_fmp=True here too: Stooq (the free price source this was
+    # designed to lean on for the whole universe) turned out to be blocked
+    # from GitHub Actions runners in practice - see pipeline.fetch.stooq's
+    # module docstring - so FMP is back to covering price for every company,
+    # not just finalists, until a working free alternative exists.
     summaries = []
     capital_efficiency_inputs = []
     for company_cfg in companies:
         summary, _qualitative_failed, errs, _company_doc, ce_inputs = _process_company(
-            company_cfg, regime_info, benchmark_prices, skip_ai=True, out_dir=out_dir, use_fmp=False
+            company_cfg, regime_info, benchmark_prices, skip_ai=True, out_dir=out_dir, use_fmp=True
         )
         _track_errors(errs)
         if ce_inputs:

@@ -7,9 +7,21 @@ complete fallback chain to free sources (SEC EDGAR XBRL for statements,
 Stooq for price history, the watchlist's own configured sector) for
 everything FMP would otherwise supply, so FMP here is reserved for what
 only it provides: live price/quote and profile (company name/sector/
-website precision, when available). pipeline.main only calls this during
-phase 2's finalist enrichment (a small, bounded subset), never across the
-whole screening universe - see run_full's module docstring.
+website precision, when available).
+
+pipeline.main was originally designed to call this only during phase 2's
+finalist enrichment, leaving Stooq to cover price for the whole screening
+universe for free - see run_full's module docstring. In practice Stooq
+turned out to be blocked from GitHub Actions runners (see
+pipeline.fetch.stooq's module docstring: every request failed on a real
+run, 404s escalating to connection timeouts, regardless of a browser
+User-Agent), so FMP is back to being called for every company, not just
+finalists, until a working free price source is found. That means this
+pipeline currently depends on an active paid/free-trial FMP plan to cover
+its whole tracked universe - the ~250/day free-tier budget this module's
+lean endpoint set was designed for does NOT currently hold at the scale
+this pipeline runs at (500+ companies/week). Tracked as known follow-up
+work, not solved.
 
 Each endpoint is fetched independently and failures are captured per-call
 rather than aborting the whole ticker.
