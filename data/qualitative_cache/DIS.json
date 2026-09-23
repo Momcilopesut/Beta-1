@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1744489/000174448925000155/dis-20250927.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000057/dis-20260627.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000056/dis-20260805.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2025, Disney reported total revenues of $94.4 billion, up 3% from $91.4 billion in fiscal 2024, with net income attributable to Disney rising to $12.4 billion from $5.0 billion, largely due to a lower effective tax rate (including a non-cash benefit from a change in Hulu's tax classification) and the prior year's comparison to Star India and goodwill impairments. Entertainment, Sports and Experiences segment operating income all grew, with Direct-to-Consumer swinging to a much larger profit. Disney+ and Hulu paid subscriber counts grew year over year, while domestic and international Linear Networks affiliate and advertising revenue declined. The Company completed the Star India transaction in November 2024, now reporting a 37% equity interest in that India joint venture.",
+    "filing_summary_10q": "The excerpt provided consists almost entirely of raw XBRL tagging data rather than narrative text. It indicates this is Disney's Form 10-Q for the fiscal quarter ended June 27, 2026 (fiscal Q3 2026), referencing the Entertainment, Sports and Experiences segments, the India joint venture, and details of bank credit facility terms (SOFR-based borrowing rates), but it does not contain readable discussion of financial results, revenue, or earnings for the period.",
+    "filing_summary_8k": "This Form 8-K, dated August 5, 2026, discloses under Item 2.02 that Disney issued an earnings release on that date covering results for the fiscal quarter ended June 27, 2026, furnished as an exhibit. The filing itself does not include the earnings figures in the body of the document, only the cover information and reference to the attached earnings release exhibit.",
+    "moat_explanation": "The 10-K describes an extensive proprietary content library (~5,300 live-action and 460 animated titles) and globally recognized brands/franchises (Disney, Pixar, Marvel, Star Wars, National Geographic, ESPN) that underpin Linear Networks, DTC, Content Sales/Licensing and Experiences revenue, along with a multi-year affiliate/licensing contract structure. These IP and brand assets, rather than low-cost production or network effects, are what the excerpts point to as the main source of competitive advantage.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Domestic and international Linear Networks affiliate fees and advertising revenue declined year over year due to fewer subscribers and lower average viewership, reflecting industry-wide cord-cutting acknowledged in Risk Factors",
+      "Fiscal 2024 and 2025 included substantial restructuring/impairment charges, including goodwill impairment related to general entertainment linear networks and impairments of equity investments (A+E, Tata Play)",
+      "Equity in the income of investees declined due to losses from the new India joint venture and lower A+E income, indicating volatility in equity-method investments",
+      "The Company acknowledges DTC streaming services initially experienced significant losses and there is no assurance the DTC model will be as profitable as historic business models",
+      "Risk Factors note dependence on third-party distributors, licensees and advertisers, and that a contraction in these relationships could adversely affect revenue",
+      "Company discloses exposure to foreign currency fluctuations, inflation, and uncontrollable events (weather, geopolitical, cyber incidents) that have previously disrupted operations (e.g., COVID-19 park closures, hurricanes)"
+    ]
+  }
+}

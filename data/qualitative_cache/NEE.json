@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000060/nee-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/753308/000110465926107537/tm2625368d1_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K covers fiscal year 2025 for NEE and its regulated utility subsidiary FPL, which together with NEER (an energy infrastructure/clean energy developer) make up the two main reportable segments. NEE reported net income attributable to NEE of $6.84 billion in 2025, down from $6.95 billion in 2024, as higher results at FPL and NEER were offset by lower Corporate and Other results tied to hedge-related interest expense volatility. The filing discusses FPL's base rate proceedings and storm cost recovery, NEER's continued wind, solar, and battery storage capacity additions, and the impact of legislative/regulatory developments including the OBBBA tax law changes affecting clean energy tax credits.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter and six months ended June 30, 2026) consists mainly of XBRL taxonomy tags and structured data rather than narrative text, so specific financial results or developments cannot be summarized from it. It does reference FPL retail customer revenue concentration disclosures and fair value/derivative measurement categories (commodity, interest rate, and currency contracts), consistent with NEE's regulated utility and energy trading operations, but no substantive discussion of quarterly results or events is present in the provided text.",
+    "filing_summary_8k": "This 8-K, dated September 14, 2026, provides a Regulation FD update related to the previously disclosed Agreement and Plan of Merger dated May 15, 2026 among NEE, two NEE subsidiaries (WG Development Corp. and CS Holdco, LLC), and Dominion Energy, Inc. It discloses that NEE and Dominion Energy issued a joint press release on September 14, 2026 announcing an enhanced Virginia benefits package connected to the merger agreement, with an accompanying stakeholder presentation attached as exhibits; the information is furnished, not filed, under Item 7.01.",
+    "moat_explanation": "FPL operates as the largest electric utility in Florida under an extensive FPSC/FERC regulatory framework that sets rates, cost recovery mechanisms and returns, and the 10-K notes FPL faces only 'limited, but growing, competition' in retail electricity - characteristics of a regulated natural monopoly where the market supports a small number of efficient providers. NEER's scale as 'one of the largest energy infrastructure developers in the U.S.' with a large backlog and access to clean energy tax credits also suggests scale-based advantages in project development, though the excerpts describe this more as scale of operations than a hard barrier to entry.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "FPL's ability to recover costs and earn a reasonable return depends on FPSC rate proceedings, and a 2025 base rate settlement is being challenged via a motion for reconsideration by intervenors as of early 2026",
+      "Heavy dependence on government clean energy tax credits and policies (e.g., OBBBA changes, tariffs, executive orders) that the company says could materially affect project economics and development if reduced or eliminated",
+      "NEER recognized large equity-method impairment losses related to its investment in XPLR (~$0.7 billion in 2025, ~$0.8 billion in 2024), indicating losses on a significant affiliated investment",
+      "Corporate and Other results swung materially (down $1,256 million in 2025) due to non-qualifying hedge activity tied to interest rate and foreign currency derivatives, creating earnings volatility",
+      "Extensive and evolving environmental, siting, and permitting regulation that the company states could delay projects, restrict output, or increase costs",
+      "Storm-related costs and surcharges (Hurricanes Debby, Helene, Milton) materially affected FPL revenues and depreciation/amortization, with cost recovery subject to FPSC prudence review"
+    ]
+  }
+}

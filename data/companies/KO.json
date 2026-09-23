@@ -87,25 +87,15 @@
     }
   },
   "industry": "Beverages - Non-Alcoholic",
-  "last_updated": "2026-09-22T22:56:34Z",
+  "last_updated": "2026-09-23T00:24:02Z",
   "layered_analysis": {
-    "conviction_score": 30.3,
-    "conviction_score_breakdown": {
-      "base_score": 50.0,
-      "components": {
-        "graham_pct": 50.0
-      },
-      "moat_multiplier": 1.0,
-      "munger_multiplier": 1.1,
-      "valuation_multiplier": 0.55
-    },
-    "conviction_verdict": "Cautious",
     "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -144,7 +134,23 @@
     "as_of": "2026-09-22",
     "close": 88.61
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The provided 10-K excerpts consist mainly of Risk Factors covering regulatory compliance, foreign currency and interest rate exposure, counterparty/financial institution risk, impairment risk, cybersecurity, and data privacy, plus a brief MD&A introduction. Critical accounting estimate disclosures describe a $960 million impairment charge recorded in Q4 2025 on the BodyArmor trademark (following a $760 million charge in 2024), leaving a remaining carrying value of $2,440 million, and note $28.8 billion of 2025 net operating revenues came from outside the United States. The excerpts also describe pension plan assumptions, with total net periodic pension cost of $121 million in 2025 and an expected $87 million in 2026.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q, covering the fiscal quarter ended July 3, 2026, consists almost entirely of XBRL data tags (e.g., relating to hedging instruments, debt notes, segment revenue by geography and product type, and fair value disclosures) rather than narrative text. As a result, this excerpt does not contain descriptive discussion of the quarter's business results or developments that can be summarized.",
+    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses under Item 2.02 (Results of Operations and Financial Condition) that Coca-Cola issued a press release, attached as Exhibit 99.1, reporting its second quarter 2026 financial results. The excerpt itself does not include the substantive financial figures from that press release, only the notice that the release was furnished.",
+    "moat_explanation": "The excerpts reference material indefinite-lived intangible assets and trademarks (e.g., the BodyArmor trademark with a remaining carrying value of $2,440 million) that the company tests annually for impairment, implying brand-based assets are a core part of the business. However, the provided excerpts are dominated by risk-factor and accounting-estimate language rather than an affirmative description of brand strength, distribution scale, or bottling-network advantages, so the support for a durable moat is limited to this intangible-asset framing.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Recorded a $960 million additional impairment charge on the BodyArmor trademark in Q4 2025 (following a $760 million impairment in 2024), with remaining carrying value of $2,440 million still at risk of further write-down",
+      "Significant reliance on and financial interdependence with third-party bottling partners, whose credit downgrades or financial distress could raise the company's own borrowing costs or reduce equity income",
+      "Extensive foreign currency exposure ($28.8 billion of 2025 net operating revenues from outside the U.S.) subject to exchange rate volatility, tariffs, and geopolitical/economic disruption",
+      "Acknowledged cybersecurity and data-privacy risks, including reliance on third-party bottlers/vendors with differing security controls",
+      "Exposure to evolving environmental regulation (plastics, water use, emissions) that could raise compliance and capital costs or restrict operations",
+      "Pension and other long-lived asset valuations depend on judgment-heavy assumptions (discount rates, growth rates) that could trigger material impairment charges in future periods"
+    ]
+  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000021344.json",

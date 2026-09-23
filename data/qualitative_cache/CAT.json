@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000046/cat-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/18230/000110465926104197/tm2624321d1_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Caterpillar reported total sales and revenues of $67.589 billion, up 4% from $64.809 billion in 2024, driven by higher sales volume partially offset by unfavorable price realization. Consolidated operating profit fell 15% to $11.151 billion (16.5% margin, down from 20.2%), primarily due to higher manufacturing costs linked to tariffs and unfavorable pricing. Power & Energy sales grew 12% while Construction Industries sales declined 2% and Resource Industries was roughly flat; the company also disclosed a pending acquisition of RPMGlobal Holdings Limited for approximately $790 million and maintained its quarterly dividend of $1.51 per share while continuing share repurchases under a $20 billion authorization.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter and six months ended June 30, 2026) consists almost entirely of XBRL taxonomy tags and structured data identifiers rather than narrative text, so it does not contain descriptive discussion of results, segment performance, or business developments. It does indicate the filing covers Machinery, Power & Energy and Financial Products segments, pension/OPEB and hedging activity, an accelerated share repurchase (ASR) program, and a subsequent event in July 2026, but no substantive prose is available to summarize beyond these structural references.",
+    "filing_summary_8k": "This 8-K, dated August 27, 2026, discloses that Caterpillar and related borrowing subsidiaries entered into new and amended credit agreements: a new $3.5 billion 364-day unsecured revolving credit facility (replacing a 2025 facility of the same type), and amended/extended three-year ($3.0 billion, expiring 2029) and five-year ($5.0 billion, expiring 2031) unsecured revolving credit facilities. The facilities are for general corporate purposes, include financial covenants (minimum consolidated net worth of $9 billion for Caterpillar and specific interest coverage/leverage ratios for Cat Financial), and as of the filing date no amounts had been drawn under any of these facilities.",
+    "moat_explanation": "The 10-K describes Caterpillar as backed by 'one of the largest independent global dealer networks' and states that Cat Financial's dealer-funded marketing programs provide 'a significant competitive advantage' in financing Caterpillar products, suggesting a durable brand/distribution-network advantage that would be costly for rivals to replicate. However, the excerpts also describe an intensely competitive landscape with numerous global and regional competitors across every segment, which somewhat tempers the strength of this advantage.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company explicitly attributes 2025 operating profit decline (down 15%) and margin compression in Construction Industries (24.2% to 18.7%) and Resource Industries (20.4% to 15.9%) to unfavorable manufacturing costs 'largely reflecting the impact of higher tariffs'",
+      "Effective tax rate increased from 19.7% to 24.0% year-over-year due to changes in U.S. tax incentives",
+      "Unfavorable price realization reduced sales and profit across multiple segments in 2025",
+      "Construction and Resource Industries operate in markets with many global and regional/local competitors (e.g., numerous Chinese manufacturers), which could pressure pricing and share",
+      "Company expects to incur $300-350 million in restructuring costs in 2026"
+    ]
+  }
+}

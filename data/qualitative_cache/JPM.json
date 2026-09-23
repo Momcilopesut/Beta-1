@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/19617/000162828026054343/jpm-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/19617/000119312526314128/d103985d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes JPMorganChase as a Delaware-incorporated financial holding company with $4.4 trillion in assets and $362.4 billion in stockholders' equity as of December 31, 2025, operating through three reportable segments (Consumer & Community Banking, Commercial & Investment Bank, and Asset & Wealth Management) plus Corporate. It details extensive supervision by the Federal Reserve, OCC, SEC, FINRA, and non-U.S. regulators, ongoing Basel III capital/liquidity and CCAR stress-testing requirements, and notes the Firm remains subject to a March 2024 OCC consent order related to trade surveillance data processes. The filing also outlines a competitive landscape that includes banks, broker-dealers, fintech, and digital asset companies.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the six months ended June 30, 2026) consists almost entirely of XBRL taxonomy tags and contextual data points (e.g., fair value hierarchy categories, equity roll-forward tags, dates) rather than narrative text. As a result, the provided excerpt does not describe the period's business developments or financial results in prose, so no substantive summary of operating performance can be drawn from it.",
+    "filing_summary_8k": "This 8-K, dated July 23, 2026, discloses under Item 8.01 that JPMorgan Chase & Co. closed public offerings of several series of debt securities, including $500 million of Floating Rate Notes due 2030, $2.5 billion of Fixed-to-Floating Rate Notes due 2030, $3.0 billion of Fixed-to-Floating Rate Notes due 2032, and $3.0 billion of Fixed-Rate Reset Subordinated Notes due 2041. The offerings were registered under an existing Form S-3 shelf registration, and the filing includes related legal opinions from Simpson Thacher & Bartlett LLP as exhibits.",
+    "moat_explanation": "The excerpts describe JPMorganChase as a $4.4 trillion-asset, globally systemically important financial institution operating across investment banking, consumer/commercial banking, and asset management, subject to extensive Basel III capital, liquidity, and stress-testing requirements administered by the Federal Reserve and OCC. These heavy regulatory and capital requirements (GSIB status, CCAR, SCB) create structural barriers that only a small number of large, diversified institutions can meet, limiting the field of similarly-scaled full-service competitors, though the filing itself also notes vulnerability to less-regulated fintech entrants.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Firm remains subject to a March 2024 OCC consent order regarding trade surveillance data completeness processes",
+      "Named as defendant or involved in numerous civil and governmental legal proceedings, investigations, and enforcement actions, with unpredictable and potentially uninsured exposure",
+      "Competition from less-regulated or unregulated fintech, digital asset, and internet-based companies that can undercut a heavily regulated firm like JPMorganChase",
+      "Pending and uncertain regulatory changes (revised U.S. risk-based capital framework, stress testing methodology, SCB requirements) could increase capital requirements or costs",
+      "Differences in regulatory implementation across jurisdictions could create competitive disadvantages or require costly restructuring of operations"
+    ]
+  }
+}
