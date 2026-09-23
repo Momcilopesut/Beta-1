@@ -364,10 +364,11 @@ either way.
 
 Every metric this tool scores on (`site/js/metrics-glossary.js`) carries a short
 explanation, its economic significance, and how swings in it actually affect the
-business — not just the number. It's shown two ways: a **Key Metrics Reference**
-section on every company page (this company's own current value next to each
-explanation), and a standalone **Metrics Glossary** page (`site/glossary.html`,
-linked from the nav on every page) with the full reference, no per-company numbers.
+business — not just the number. Shown as a **Key Metrics Reference** section on
+every company page — this company's own current value next to each explanation,
+tap any row to expand it. A standalone, no-per-company-numbers version of the same
+content still exists at `site/glossary.html`, just no longer linked from the nav —
+the per-company view already covers the same explanations in context.
 
 ## Configuration
 

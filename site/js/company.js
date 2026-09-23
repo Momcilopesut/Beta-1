@@ -254,7 +254,7 @@ function renderKeyMetricsReference(metrics) {
 
   return `
     <section class="key-metrics-reference">
-      <h3>Key Metrics Reference <span class="attribution"><a href="glossary.html">full glossary &rarr;</a></span></h3>
+      <h3>Key Metrics Reference</h3>
       <p class="meta">This company's own numbers - tap any row for what it means and why it matters. Colored
       where the value clearly signals better (green) or worse (red) for this company's finances; some figures
       are shown in gray because they're pure scale (bigger isn't inherently better or worse).</p>
