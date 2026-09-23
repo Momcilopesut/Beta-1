@@ -55,10 +55,14 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
   this phase) — textbook reference, explicitly not a prediction.
 - **Site**: plain HTML/CSS/JS, no framework, no build step — reads the generated JSON
   directly. The homepage shows each sector's top performers across 5 timeframes,
-  GICS-style sector by sector; the search box reaches every company in the screening
-  universe (instant filter; Enter jumps to any ticker, tracked or not). Every company
-  page also links to its own investor-facing corporate site (from FMP's profile data,
-  when available) and lists its latest 10-K/10-Q/8-K with a direct SEC link each.
+  GICS-style sector by sector; the search box has a typeahead suggestion dropdown
+  (`site/js/app.js::wireSearch`, ranked by `site/js/search-index.js`) — as you type, up
+  to 8 matching tracked companies appear below the input, each showing ticker, name,
+  and sector, navigable with arrow keys + Enter or a click. Enter with nothing
+  highlighted still jumps straight to a single exact tracked match, or to the ticker as
+  typed if it isn't tracked (see "On-demand lookup" below). Every company page also
+  links to its own investor-facing corporate site (from FMP's profile data, when
+  available) and lists its latest 10-K/10-Q/8-K with a direct SEC link each.
 - **On-demand lookup** (`api/lookup.py`, optional): searching a ticker outside the
   screening universe immediately runs a live analysis through the exact same pipeline
   code, no extra click - the search *is* the request. Backed by a small server
@@ -70,9 +74,15 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
 The program's primary purpose: every Friday at 21:30 UTC (`.github/workflows/
 weekly-screen.yml`) — genuinely "after the ~4pm ET close" year-round regardless of
 DST — the pipeline runs a two-phase screen over `config/watchlist.yaml`'s curated
-universe (508 companies as of this writing - the original 88-company core plus every
-S&P 500 constituent not already tracked), ranking purely by price return, not by any
-fundamentals check:
+universe (906 companies as of this writing - the original 88-company core, every S&P
+500 constituent, and every S&P 400 MidCap constituent not already tracked, added in
+two staged tranches so each could be validated against a real run before the next
+landed), ranking purely by price return, not by any fundamentals check. A further
+tranche adding the S&P 600 SmallCap constituents (toward full S&P 1500 coverage) was
+evaluated and deliberately held off for now - the universe already requires an active
+paid/free-trial FMP plan to run reliably (see "Data source limits and free backup
+chain" below), and doubling it again would roughly double that weekly request volume
+and the run's GitHub Actions time before that tradeoff is settled:
 
 1. **Cheap screen, whole universe** (`pipeline/main.py::run_full`, phase 1) — every
    company gets fetched and scored (full fundamentals scoring included, for its own
@@ -178,7 +188,7 @@ for just the small finalist subset phase 2 enriches:
   finalists, because Stooq can't be trusted to.
 
 **What this means in practice:** the weekly screen currently requires an active FMP
-plan (paid or free-trial) with enough daily quota for the whole tracked universe (500+
+plan (paid or free-trial) with enough daily quota for the whole tracked universe (900+
 requests/week at present) - the free tier alone won't cover it. `data/meta.json`'s
 `sources_status.fmp` reads `"degraded"` when FMP calls fail outright (missing key,
 `402 Payment Required`, etc.), and per-company `_errors` include the real HTTP status
