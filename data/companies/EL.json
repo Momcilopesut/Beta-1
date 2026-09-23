@@ -1,102 +1,105 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for EL: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=el.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca26d6f00>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001001250",
   "five_year_history": {
     "years": [
       {
-        "cash": null,
-        "debt": 268000000,
-        "earnings": null,
+        "cash": 3957000000,
+        "debt": 7645000000,
+        "earnings": 2390000000,
         "fiscal_year": "2022-06-30",
         "market_return_pct": null,
         "revenue": 17737000000,
-        "spending": null,
+        "spending": 14567000000,
         "stock_return_pct": null
       },
       {
-        "cash": null,
-        "debt": 997000000,
-        "earnings": null,
+        "cash": 4029000000,
+        "debt": 10169000000,
+        "earnings": 1006000000,
         "fiscal_year": "2023-06-30",
         "market_return_pct": 17.50298210735586,
         "revenue": 15910000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 14401000000,
+        "stock_return_pct": -22.88844386853575
       },
       {
-        "cash": null,
-        "debt": 504000000,
-        "earnings": null,
+        "cash": 3395000000,
+        "debt": 9826000000,
+        "earnings": 390000000,
         "fiscal_year": "2024-06-30",
         "market_return_pct": 23.0238224147266,
         "revenue": 15608000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 14638000000,
+        "stock_return_pct": -46.338731031673284
       },
       {
-        "cash": null,
-        "debt": 3000000,
-        "earnings": null,
+        "cash": 2921000000,
+        "debt": 9439000000,
+        "earnings": -1133000000,
         "fiscal_year": "2025-06-30",
         "market_return_pct": 13.296292221366485,
-        "revenue": 14326000000,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 14288000000,
+        "spending": 13330000000,
+        "stock_return_pct": -23.32510912886696
       },
       {
-        "cash": null,
-        "debt": 503000000,
-        "earnings": null,
+        "cash": 3498000000,
+        "debt": 9246000000,
+        "earnings": 182000000,
         "fiscal_year": "2026-06-30",
         "market_return_pct": 20.865905964230794,
         "revenue": 15049000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 14269000000,
+        "stock_return_pct": -2.2896039603960325
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 1.2216337666506178,
-      "debt_to_ebitda": 0.31916243654822335,
-      "debt_to_equity": null
+      "debt_to_ebitda": 5.866751269035533,
+      "debt_to_equity": 2.4293221229637414
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": 10.505106265525807,
+      "shareholders_equity": 3806000000,
       "total_assets": 19762000000,
-      "total_liabilities": null
+      "total_liabilities": 15956000000
     },
     "cash_flow": {
       "fcf_margin_pct": 8.74476709415908
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -43.62040735317784
+      "eps_growth_cagr_3yr_pct": -43.75448536856374
     },
     "profitability": {
-      "roe_pct": null,
+      "roe_pct": 4.631043256997455,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 1914.8943086862853,
+      "graham_number": 10.871174981903534,
+      "graham_upside_pct": -89.1602602633328,
+      "ncav_margin_pct": -123.00374813163684,
+      "pb_ratio": 9.546785864424594,
+      "pe_ttm": 200.58
     }
   },
-  "industry": "Perfumes, Cosmetics & Other Toilet Preparations",
-  "last_updated": "2026-09-23T13:12:11Z",
+  "industry": "Household & Personal Products",
+  "last_updated": "2026-09-23T03:47:27Z",
   "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "flags": [
+      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "3 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": false,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,25 +108,48 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 36272349846,
   "metrics": {
+    "book_value_per_share": 10.505106265525807,
     "current_ratio": 1.2216337666506178,
-    "debt_to_ebitda": 0.31916243654822335,
-    "eps_growth_cagr_3yr_pct": -43.62040735317784,
+    "debt_to_ebitda": 5.866751269035533,
+    "debt_to_equity": 2.4293221229637414,
+    "eps_growth_cagr_3yr_pct": -43.75448536856374,
     "fcf_margin_pct": 8.74476709415908,
-    "graham_criteria_evaluated": 3,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 1,
+    "graham_multiple": 1914.8943086862853,
+    "graham_upside_pct": -89.1602602633328,
     "margin_trend_score": 100,
-    "munger_quality_evaluated": 2,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "total_assets": 19762000000
+    "ncav_margin_pct": -123.00374813163684,
+    "pb_ratio": 9.546785864424594,
+    "pe_ttm": 200.58,
+    "roe_pct": 4.631043256997455,
+    "shareholders_equity": 3806000000,
+    "total_assets": 19762000000,
+    "total_liabilities": 15956000000
   },
   "name": "Est\u00e9e Lauder Companies (The)",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 100.29
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The provided 10-K excerpts consist mainly of administrative content: cross-references to the 2026 Proxy Statement for executive compensation and related-party information, a table of equity compensation plan securities outstanding as of June 30, 2026, a description of the Audit Committee's and CISO's oversight of cybersecurity risk, a note on dividends declared through August 12, 2026, and a lengthy exhibit index listing debt indentures, employment agreements, and equity plan documents. The excerpts do not include a substantive business description, risk factor discussion, or results-of-operations narrative.",
+    "filing_summary_10q": "This is the Form 10-Q for the quarter and nine months ended March 31, 2026 (fiscal Q3 2026), presented here as structured XBRL data rather than narrative text. It identifies four product segments (skin care, makeup, fragrance, hair care), references an ongoing Restructuring Program that began February 5, 2024 with charges continuing through the period and further amounts anticipated in fiscal 2027 and 2028, and separately tags a Securities Class Action and a Talcum Litigation matter as legal proceedings. It also reflects the company's use of interest rate swaps, currency swaps, and foreign exchange forward contracts for hedging purposes.",
+    "filing_summary_8k": "This Form 8-K, dated September 8, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that the Board of Directors has nominated two new director candidates, Jean-Fr\u00e9d\u00e9ric Dufour (CEO of Rolex SA) and Matthew E. Rubel (non-executive Chairman of Holley Inc.), to stand for election as Class III directors at the company's next annual meeting, expected to be held November 17, 2026. No financial results or other operational events are disclosed in this filing.",
+    "moat_explanation": "The 10-K excerpts provided (Business, Risk Factors, and MD&A sections) contain only administrative and governance content - proxy statement cross-references, equity compensation plan tables, cybersecurity oversight structure, and an exhibit index - with no substantive discussion of products, brands, market share, customer relationships, or competitive positioning. There is nothing in these excerpts describing scale advantages, patents, switching costs, network effects, or brand strength that would support a moat classification.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "A Securities Class Action and Talcum Litigation are both identified as distinct, ongoing legal matters in the most recent 10-Q's financial data tags, indicating active litigation exposure.",
+      "An extended, multi-year Restructuring Program (originating February 2024 and still generating charges through fiscal Q3 2026, with further amounts forecast into fiscal 2027-2028) suggests sustained cost-cutting and operational disruption.",
+      "The 10-K excerpts supplied contain no actual Risk Factors narrative or MD&A results discussion, only boilerplate/governance content, limiting visibility into company-specific risks the filing itself may disclose elsewhere."
+    ]
+  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001001250.json",
@@ -150,42 +176,42 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.22, debt $0.5B vs working capital $1.4B",
-          "passed": false
-        },
-        {
-          "criterion": "Earnings stability",
-          "detail": "No annual net income data available",
-          "passed": null
-        },
-        {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $36.3B",
           "passed": true
         },
         {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -43.6%/yr",
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.22, debt $9.2B vs working capital $1.4B",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
           "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -43.8%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 200.6",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 1914.9",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 6,
       "passed": 1,
       "total": 7
     },
@@ -193,13 +219,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 4.6%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 2.43",
+          "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -212,10 +238,10 @@
           "passed": true
         }
       ],
-      "evaluated": 2,
+      "evaluated": 4,
       "passed": 1,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.elcompanies.com"
 }

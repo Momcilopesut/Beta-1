@@ -1,102 +1,104 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for PHM: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=phm.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1723380>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000822416",
   "five_year_history": {
     "years": [
       {
-        "cash": 1779088000,
-        "debt": null,
+        "cash": 1833565000,
+        "debt": 2816868000,
         "earnings": 1946320000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 13736995000,
+        "spending": 11179773000,
         "stock_return_pct": null
       },
       {
-        "cash": 1053104000,
-        "debt": null,
+        "cash": 1094553000,
+        "debt": 2812404000,
         "earnings": 2617317000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 16002979000,
+        "spending": 12560821000,
+        "stock_return_pct": -20.34639608117564
       },
       {
-        "cash": 1806583000,
-        "debt": null,
+        "cash": 1849177000,
+        "debt": 2623207000,
         "earnings": 2602372000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 16061578000,
+        "spending": 12665273000,
+        "stock_return_pct": 123.03975400834612
       },
       {
-        "cash": 1613327000,
-        "debt": null,
+        "cash": 1653680000,
+        "debt": 2339880000,
         "earnings": 3083262000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 17946950000,
+        "spending": 14057055000,
+        "stock_return_pct": 7.237813884785828
       },
       {
-        "cash": 1980869000,
-        "debt": null,
+        "cash": 2008776000,
+        "debt": 2403146000,
         "earnings": 2218730000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 17311953000,
+        "spending": 14313277000,
+        "stock_return_pct": 7.6767676767676765
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": null,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 5.2675421168401355,
+      "debt_to_ebitda": 0.7724219372502357,
+      "debt_to_equity": 0.17659662705491608
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 69.27322510540534,
+      "book_value_per_share": 67.88220365419009,
       "shareholders_equity": 12985442000,
       "total_assets": 18048423000,
       "total_liabilities": 5062981000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 10.100148723832604
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 0.33192759993181387
+      "eps_growth_cagr_3yr_pct": 0.41979502652429446
     },
     "profitability": {
-      "roe_pct": 17.086287859897258,
-      "trend": "stable"
+      "roe_pct": 14.727466128300307,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 131.65166509153013,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 22.411578181727737,
+      "graham_number": 130.84948917240027,
+      "graham_upside_pct": 6.999336963284211,
+      "ncav_margin_pct": -55.77887516548723,
+      "pb_ratio": 1.8015030953175537,
+      "pe_ttm": 12.440488301119025
     }
   },
-  "industry": "Operative Builders",
-  "last_updated": "2026-09-23T13:04:58Z",
+  "industry": "Residential Construction",
+  "last_updated": "2026-09-23T03:32:02Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Positive but thin margin of safety - 7% is below the 15% convention used here."
+    ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": false,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,26 +107,51 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 23603290365,
   "metrics": {
-    "book_value_per_share": 69.27322510540534,
-    "eps_growth_cagr_3yr_pct": 0.33192759993181387,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 2,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
+    "book_value_per_share": 67.88220365419009,
+    "current_ratio": 5.2675421168401355,
+    "debt_to_ebitda": 0.7724219372502357,
+    "debt_to_equity": 0.17659662705491608,
+    "eps_growth_cagr_3yr_pct": 0.41979502652429446,
+    "fcf_margin_pct": 10.100148723832604,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 22.411578181727737,
+    "graham_upside_pct": 6.999336963284211,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "roe_pct": 17.086287859897258,
+    "ncav_margin_pct": -55.77887516548723,
+    "pb_ratio": 1.8015030953175537,
+    "pe_ttm": 12.440488301119025,
+    "roe_pct": 14.727466128300307,
     "shareholders_equity": 12985442000,
     "total_assets": 18048423000,
     "total_liabilities": 5062981000
   },
   "name": "PulteGroup",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 122.29
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, PulteGroup reported home sale revenues of $16.7 billion, down 3% from 2024, and net income of $2.2 billion, down from $3.1 billion, as home sale gross margin fell to 26.3% from 28.9%. Management attributes the decline to weakened consumer demand from affordability challenges, elevated mortgage rates, increased sales incentives, and higher land costs, resulting in $77.4 million of land impairments and $48.4 million of land-option deposit write-offs in 2025. The company continued shareholder returns, raising its dividend and repurchasing $1.2 billion of stock, while maintaining a debt-to-capitalization ratio of 11.2%.",
+    "filing_summary_10q": "The Form 10-Q covers the quarter and six months ended June 30, 2026. Home sale revenues were $3.81 billion for the quarter (down from $4.27 billion a year earlier) and $7.11 billion for the six months (down from $8.02 billion), with home sale cost of revenues also declining. The balance sheet shows cash and equivalents of $1.34 billion (down from $1.98 billion at year-end 2025), higher house and land inventory of $13.7 billion, and increased notes payable of $1.82 billion, alongside continued share repurchase activity during the period.",
+    "filing_summary_8k": "This 8-K, dated August 11, 2026, discloses that Pulte Mortgage LLC entered into a new Master Repurchase Agreement with Truist Bank (as Agent) and other Buyers to finance mortgage loan originations, providing a maximum aggregate commitment of $625 million and expiring August 10, 2027. The filing also reports this arrangement as the creation of a direct financial obligation under Item 2.03.",
+    "moat_explanation": "The Risk Factors section explicitly describes homebuilding as a highly competitive, cyclical industry where PulteGroup competes with numerous national, regional, and local builders as well as resales and rentals, and where suitable land is scarce and contested. The excerpts do not describe any patented technology, exclusive brand power, network effects, or high customer switching costs that would insulate PulteGroup from this competition; its captive Pulte Mortgage financial services arm and land-option strategy are described as risk-management and operational tools rather than durable competitive barriers.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Home sale gross margin declined from 28.9% to 26.3% in 2025, with sequential quarterly deterioration (27.5% to 24.7%) attributed to elevated incentives and higher land costs",
+      "Homebuilding income before income taxes fell 27% year-over-year in 2025, with Texas segment income down 53% and West down 31%",
+      "Land-related charges rose to $126.9 million in 2025 (impairments and deposit/pre-acquisition write-offs) versus $34.6 million in 2024, reflecting weakening demand assumptions",
+      "Net new orders (units) declined 4% and backlog dollars declined 19% in 2025, indicating softening demand",
+      "Goodwill impairment of $28.6 million and property/equipment impairments of $49.6 million recorded in 2025 tied to expected divestiture of manufacturing assets",
+      "Company faces near-term debt refinancing needs, including $251.9 million of senior notes due March 2026 and the need to renew Pulte Mortgage's repurchase agreement, with no assurance of comparable terms"
+    ]
+  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000822416.json",
@@ -151,14 +178,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $23.6B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 5.27, debt $2.4B vs working capital $12.6B",
+          "passed": true
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -166,41 +193,41 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 0.3%/yr",
+          "detail": "EPS 3yr CAGR 0.4%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 12.4",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 22.4",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 6,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 17.1%",
-          "passed": true
+          "detail": "ROE 14.7%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.18",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -209,14 +236,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 2,
+      "evaluated": 4,
       "passed": 2,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.pultegroupinc.com"
 }

@@ -1,102 +1,103 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for VRTX: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=vrtx.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1c0abd0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000875320",
   "five_year_history": {
     "years": [
       {
         "cash": 6795000000,
-        "debt": null,
+        "debt": 967400000,
         "earnings": 2342100000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 7574400000,
+        "spending": 4792300000,
         "stock_return_pct": null
       },
       {
         "cash": 10504000000,
-        "debt": null,
+        "debt": 899700000,
         "earnings": 3322000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 8930700000,
+        "spending": 4623300000,
+        "stock_return_pct": 31.502732240437147
       },
       {
         "cash": 10369100000,
-        "debt": null,
+        "debt": 808400000,
         "earnings": 3619600000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 9869200000,
+        "spending": 6037200000,
+        "stock_return_pct": 42.29170995221278
       },
       {
         "cash": 4569600000,
-        "debt": null,
+        "debt": 1749500000,
         "earnings": -535600000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 11020100000,
+        "spending": 11253000000,
+        "stock_return_pct": -1.9980044291937493
       },
       {
-        "cash": 5084800000,
-        "debt": null,
+        "cash": 5087800000,
+        "debt": 3882500000,
         "earnings": 3953200000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 12074600000,
+        "spending": 7313900000,
+        "stock_return_pct": 12.580084430096852
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.9009116336890086,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 3.1853779933467075,
+      "debt_to_ebitda": 0.7811085403882909,
+      "debt_to_equity": 0.09766938793652676
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 73.64369901847276,
+      "book_value_per_share": 79.74753840094526,
       "shareholders_equity": 18665800000,
-      "total_assets": 25643000000,
-      "total_liabilities": 6977200000
+      "total_assets": 26142800000,
+      "total_liabilities": 7477000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 26.450565650207874
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 6.118290879552779
+      "eps_growth_cagr_3yr_pct": 6.028635189990483
     },
     "profitability": {
-      "roe_pct": 21.178840446163573,
-      "trend": "stable"
+      "roe_pct": 23.309663149651296,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 159.32665518257627,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 192.01378918521436,
+      "graham_number": 166.55383884128523,
+      "graham_upside_pct": -67.65882078462005,
+      "ncav_margin_pct": -97.14701254187091,
+      "pb_ratio": 6.457754186853944,
+      "pe_ttm": 29.733833718244803
     }
   },
-  "industry": "Pharmaceutical Preparations",
-  "last_updated": "2026-09-23T14:04:46Z",
+  "industry": "Biotechnology",
+  "last_updated": "2026-09-23T03:19:38Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,27 +106,51 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 130707036950,
   "metrics": {
-    "book_value_per_share": 73.64369901847276,
-    "current_ratio": 2.9009116336890086,
-    "eps_growth_cagr_3yr_pct": 6.118290879552779,
-    "graham_criteria_evaluated": 2,
-    "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 1,
-    "roe_pct": 21.178840446163573,
+    "book_value_per_share": 79.74753840094526,
+    "current_ratio": 3.1853779933467075,
+    "debt_to_ebitda": 0.7811085403882909,
+    "debt_to_equity": 0.09766938793652676,
+    "eps_growth_cagr_3yr_pct": 6.028635189990483,
+    "fcf_margin_pct": 26.450565650207874,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 192.01378918521436,
+    "graham_upside_pct": -67.65882078462005,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -97.14701254187091,
+    "pb_ratio": 6.457754186853944,
+    "pe_ttm": 29.733833718244803,
+    "roe_pct": 23.309663149651296,
     "shareholders_equity": 18665800000,
-    "total_assets": 25643000000,
-    "total_liabilities": 6977200000
+    "total_assets": 26142800000,
+    "total_liabilities": 7477000000
   },
   "name": "Vertex Pharmaceuticals",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 514.99
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Vertex reported total revenues of $12.0 billion, up 9% from $11.0 billion in 2024, driven by continued TRIKAFTA/KAFTRIO demand and contributions from newly launched ALYFTREK, JOURNAVX and CASGEVY. R&D and SG&A expenses rose to $5.7 billion from $5.1 billion, while acquired in-process R&D expense fell sharply to $133.0 million from $4.6 billion (which had included the Alpine acquisition in 2024). Cash, cash equivalents and marketable securities increased to $12.3 billion. The filing also discloses a Royalty Pharma arbitration over ALYFTREK royalty rates and a December 2024 FDA-required boxed warning label change for TRIKAFTA.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists only of XBRL data tags identifying reporting periods, financial statement line items, and disclosure categories (e.g., product and collaborative/royalty revenue, CRISPR JDCA amounts, stock-based compensation, marketable securities, and foreign currency hedging) rather than narrative text. As a result, no substantive description of the quarter's business developments or financial results can be drawn from what was given.",
+    "filing_summary_8k": "This 8-K, dated August 27, 2026, discloses a management change: Vertex appointed Jonathan Poole as Executive Vice President and Chief Financial Officer effective January 1, 2027. Charles F. Wagner, Jr., previously Executive Vice President and Chief Operating & Financial Officer, will step down as CFO on that date but remain Executive Vice President and Chief Operating Officer. The filing describes Poole's prior finance roles and the terms of his new employment and change-of-control agreements, including base salary, target bonus, and severance provisions.",
+    "moat_explanation": "The 10-K describes patent- and regulatory-protected franchises: Vertex's five CF medicines (led by TRIKAFTA/KAFTRIO) treat nearly three-quarters of people with CF in the U.S., Europe, Australia and Canada, and CASGEVY is a proprietary gene-edited cell therapy developed under an exclusive CRISPR collaboration and protected by regulatory approvals across multiple countries. These are durable, hard-to-replicate regulatory/IP positions rather than scale or network effects, though the Risk Factors section also notes active and potential competition and pricing pressure that could erode this advantage over time.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Substantially all net product revenues are concentrated in CF medicines, creating high dependence on a single disease franchise",
+      "Royalty Pharma initiated confidential arbitration in October 2025 disputing the royalty burden on ALYFTREK and alleging unpaid royalties/damages under the CFF Agreement",
+      "FDA required a boxed warning label change for TRIKAFTA (and similar language for ALYFTREK) regarding liver injury/failure risk",
+      "Company states it is experiencing an ongoing violation of its intellectual property rights in Russia, contributing to declining ex-U.S. revenue there",
+      "CASGEVY manufacturing cost as a percentage of revenue is significantly higher than for CF medicines, and commercial uptake/reimbursement remains uncertain",
+      "Clinical development risk acknowledged, including a T1D program (VX-264) that failed its efficacy endpoint and a temporary postponement of dosing completion in the zimislecel T1D trial pending an internal manufacturing analysis"
+    ]
+  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000875320.json",
@@ -152,14 +177,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $130.7B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 3.19, debt $3.9B vs working capital $7.3B",
+          "passed": true
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -173,35 +198,35 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 6.1%/yr",
+          "detail": "EPS 3yr CAGR 6.0%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 29.7",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 192.0",
+          "passed": false
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 6,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 21.2%",
+          "detail": "ROE 23.3%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.10",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -210,14 +235,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.vrtx.com"
 }

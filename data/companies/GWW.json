@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for GWW: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=gww.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca3168140>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000277135",
   "five_year_history": {
     "years": [
       {
         "cash": 241000000,
-        "debt": 2362000000,
+        "debt": 2762000000,
         "earnings": 1043000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 13022000000,
-        "spending": null,
+        "spending": 11475000000,
         "stock_return_pct": null
       },
       {
         "cash": 325000000,
-        "debt": 2319000000,
+        "debt": 2705000000,
         "earnings": 1547000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 15228000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 13013000000,
+        "stock_return_pct": 7.334439641864771
       },
       {
         "cash": 660000000,
-        "debt": 2300000000,
+        "debt": 2752000000,
         "earnings": 1829000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 16478000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 13913000000,
+        "stock_return_pct": 46.20044943820225
       },
       {
         "cash": 1036000000,
-        "debt": 2778000000,
+        "debt": 3183000000,
         "earnings": 1909000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 17168000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 14531000000,
+        "stock_return_pct": 29.611184890069346
       },
       {
         "cash": 585000000,
-        "debt": 2488000000,
+        "debt": 3163000000,
         "earnings": 1706000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 17942000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 15251000000,
+        "stock_return_pct": -4.269247189412267
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.8268041237113404,
-      "debt_to_ebitda": 0.8807079646017699,
-      "debt_to_equity": 0.6659528907922913
+      "current_ratio": 2.8054256314312442,
+      "debt_to_ebitda": 1.0740237691001697,
+      "debt_to_equity": 0.6770757685790365
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 79.31900809966815,
+      "book_value_per_share": 95.41226215644821,
       "shareholders_equity": 3736000000,
       "total_assets": 8962000000,
-      "total_liabilities": null
+      "total_liabilities": 4821000000
     },
     "cash_flow": {
       "fcf_margin_pct": 7.418348010255267
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 5.601826190477133
+      "eps_growth_cagr_3yr_pct": 5.287503821818973
     },
     "profitability": {
-      "roe_pct": 45.66381156316916,
+      "roe_pct": 48.70425836697487,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 251.35152665417746,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 469.6129394720951,
+      "graham_number": 275.9459025253091,
+      "graham_upside_pct": -78.24834051762474,
+      "ncav_margin_pct": -98.8904359384223,
+      "pb_ratio": 14.525714354877751,
+      "pe_ttm": 32.32976554536187
     }
   },
-  "industry": "Wholesale-Durable Goods",
-  "last_updated": "2026-09-23T14:17:25Z",
+  "industry": "Industrial - Distribution",
+  "last_updated": "2026-09-23T02:56:24Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,27 +105,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 59895482922,
   "metrics": {
-    "book_value_per_share": 79.31900809966815,
-    "current_ratio": 2.8268041237113404,
-    "debt_to_ebitda": 0.8807079646017699,
-    "debt_to_equity": 0.6659528907922913,
-    "eps_growth_cagr_3yr_pct": 5.601826190477133,
+    "book_value_per_share": 95.41226215644821,
+    "current_ratio": 2.8054256314312442,
+    "debt_to_ebitda": 1.0740237691001697,
+    "debt_to_equity": 0.6770757685790365,
+    "eps_growth_cagr_3yr_pct": 5.287503821818973,
     "fcf_margin_pct": 7.418348010255267,
-    "graham_criteria_evaluated": 4,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
+    "graham_multiple": 469.6129394720951,
+    "graham_upside_pct": -78.24834051762474,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "roe_pct": 45.66381156316916,
+    "ncav_margin_pct": -98.8904359384223,
+    "pb_ratio": 14.525714354877751,
+    "pe_ttm": 32.32976554536187,
+    "roe_pct": 48.70425836697487,
     "shareholders_equity": 3736000000,
-    "total_assets": 8962000000
+    "total_assets": 8962000000,
+    "total_liabilities": 4821000000
   },
   "name": "W. W. Grainger",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 1268.62
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -154,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $59.9B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.83, debt $2.5B vs working capital $3.5B",
+          "detail": "Current ratio 2.81, debt $3.2B vs working capital $3.5B",
           "passed": true
         },
         {
@@ -169,27 +175,27 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 5.6%/yr",
+          "detail": "EPS 3yr CAGR 5.3%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 32.3",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 469.6",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 4,
       "total": 7
     },
@@ -197,12 +203,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 45.7%",
+          "detail": "ROE 48.7%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.67",
+          "detail": "Debt/equity 0.68",
           "passed": true
         },
         {
@@ -221,5 +227,5 @@
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.grainger.com"
 }

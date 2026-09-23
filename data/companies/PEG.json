@@ -1,104 +1,103 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for PEG: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=peg.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca27ae330>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000788784",
   "five_year_history": {
     "years": [
       {
         "cash": 818000000,
-        "debt": 15919000000,
+        "debt": 19629000000,
         "earnings": -648000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 9722000000,
-        "spending": null,
+        "spending": 10578000000,
         "stock_return_pct": null
       },
       {
         "cash": 465000000,
-        "debt": 18070000000,
+        "debt": 20439000000,
         "earnings": 1031000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 9800000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 8419000000,
+        "stock_return_pct": -8.182226884459764
       },
       {
         "cash": 54000000,
-        "debt": 19284000000,
+        "debt": 20406000000,
         "earnings": 2563000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 11237000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 7552000000,
+        "stock_return_pct": 0.4406724334910984
       },
       {
         "cash": 125000000,
-        "debt": 21114000000,
+        "debt": 22888000000,
         "earnings": 1772000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 10290000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 7937000000,
+        "stock_return_pct": 37.292817679558006
       },
       {
-        "cash": 132000000,
-        "debt": 22545000000,
+        "cash": 135000000,
+        "debt": 24372000000,
         "earnings": 2111000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 12168000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 9188000000,
+        "stock_return_pct": -4.959166765297666
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.8006968641114982,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 0.8769497400346621,
+      "debt_to_ebitda": 5.970602645761882,
+      "debt_to_equity": 1.4240867909285013
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": 34.72745490981964,
+      "shareholders_equity": 16982000000,
       "total_assets": 57576000000,
-      "total_liabilities": null
+      "total_liabilities": 40594000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 0.2136752136752137
+      "fcf_margin_pct": 2.6709401709401708
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 27.003320832428358
+      "eps_growth_cagr_3yr_pct": 26.89855417664633
     },
     "profitability": {
-      "roe_pct": null,
-      "trend": "stable"
+      "roe_pct": 11.727846348891772,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 34.05282431041881,
+      "graham_number": 57.490742916073756,
+      "graham_upside_pct": -16.82473536447663,
+      "ncav_margin_pct": -204.49106512596376,
+      "pb_ratio": 1.9903560505510993,
+      "pe_ttm": 17.10891089108911
     }
   },
-  "industry": "Electric & Other Services Combined",
-  "last_updated": "2026-09-23T15:13:01Z",
+  "industry": "Regulated Electric",
+  "last_updated": "2026-09-23T03:02:49Z",
   "layered_analysis": {
     "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -107,22 +106,33 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 34443947520,
   "metrics": {
-    "current_ratio": 0.8006968641114982,
-    "eps_growth_cagr_3yr_pct": 27.003320832428358,
-    "fcf_margin_pct": 0.2136752136752137,
-    "graham_criteria_evaluated": 4,
+    "book_value_per_share": 34.72745490981964,
+    "current_ratio": 0.8769497400346621,
+    "debt_to_ebitda": 5.970602645761882,
+    "debt_to_equity": 1.4240867909285013,
+    "eps_growth_cagr_3yr_pct": 26.89855417664633,
+    "fcf_margin_pct": 2.6709401709401708,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 1,
-    "munger_quality_passed": 0,
-    "total_assets": 57576000000
+    "graham_multiple": 34.05282431041881,
+    "graham_upside_pct": -16.82473536447663,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -204.49106512596376,
+    "pb_ratio": 1.9903560505510993,
+    "pe_ttm": 17.10891089108911,
+    "roe_pct": 11.727846348891772,
+    "shareholders_equity": 16982000000,
+    "total_assets": 57576000000,
+    "total_liabilities": 40594000000
   },
   "name": "Public Service Enterprise Group",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 69.12
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -151,13 +161,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $34.4B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.80, debt $22.5B vs working capital $-1.1B",
+          "detail": "Current ratio 0.88, debt $24.4B vs working capital $-1.1B",
           "passed": false
         },
         {
@@ -166,27 +176,27 @@
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 27.0%/yr",
+          "detail": "EPS 3yr CAGR 26.9%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 17.1",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 34.1",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 2,
       "total": 7
     },
@@ -194,13 +204,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 11.7%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 1.42",
+          "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -209,14 +219,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 1,
-      "passed": 0,
+      "evaluated": 4,
+      "passed": 1,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://investor.pseg.com"
 }

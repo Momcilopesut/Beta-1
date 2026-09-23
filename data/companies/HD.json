@@ -5,96 +5,98 @@
     "years": [
       {
         "cash": 2343000000,
-        "debt": null,
+        "debt": 46269000000,
         "earnings": 16433000000,
         "fiscal_year": "2022-01-30",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 151157000000,
+        "spending": 128117000000,
         "stock_return_pct": null
       },
       {
         "cash": 2757000000,
-        "debt": null,
+        "debt": 50364000000,
         "earnings": 17105000000,
         "fiscal_year": "2023-01-29",
         "market_return_pct": -10.962192438487708,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 157403000000,
+        "spending": 133364000000,
+        "stock_return_pct": -14.371355387214562
       },
       {
         "cash": 3760000000,
-        "debt": null,
+        "debt": 52243000000,
         "earnings": 15143000000,
         "fiscal_year": "2024-01-28",
         "market_return_pct": 22.636610998776806,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 152669000000,
+        "spending": 130980000000,
+        "stock_return_pct": 13.193737270875758
       },
       {
         "cash": 1659000000,
-        "debt": null,
+        "debt": 62290000000,
         "earnings": 14806000000,
         "fiscal_year": "2025-02-02",
         "market_return_pct": 21.678506727461478,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 159514000000,
+        "spending": 137988000000,
+        "stock_return_pct": 14.917064942367164
       },
       {
         "cash": 1389000000,
-        "debt": null,
+        "debt": 65350000000,
         "earnings": 14156000000,
         "fiscal_year": "2026-02-01",
         "market_return_pct": 16.334041520986332,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 164683000000,
+        "spending": 143793000000,
+        "stock_return_pct": -7.495841080340539
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.06066493955095,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 1.0780839144849663,
+      "debt_to_ebitda": 2.612850345847827,
+      "debt_to_equity": 3.765240416440994
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 12.84267137403311,
+      "book_value_per_share": 16.717303822937627,
       "shareholders_equity": 12813000000,
       "total_assets": 105095000000,
       "total_liabilities": 92282000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 7.678995403289957
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -5.176454930934304
+      "eps_growth_cagr_3yr_pct": -5.182280331321687
     },
     "profitability": {
-      "roe_pct": 110.48154218371965,
+      "roe_pct": 102.68495128112596,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 64.12411642417423,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 389.4812859289959,
+      "graham_number": 73.2632808775972,
+      "graham_upside_pct": -76.00678536839784,
+      "ncav_margin_pct": -119.0028032058369,
+      "pb_ratio": 18.26550520551243,
+      "pe_ttm": 21.32332402234637
     }
   },
-  "industry": "Retail-Lumber & Other Building Materials Dealers",
-  "last_updated": "2026-09-23T12:26:42Z",
+  "industry": "Home Improvement",
+  "last_updated": "2026-09-23T02:43:29Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -103,25 +105,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 304469675950,
   "metrics": {
-    "book_value_per_share": 12.84267137403311,
-    "current_ratio": 1.06066493955095,
-    "eps_growth_cagr_3yr_pct": -5.176454930934304,
-    "graham_criteria_evaluated": 3,
+    "book_value_per_share": 16.717303822937627,
+    "current_ratio": 1.0780839144849663,
+    "debt_to_ebitda": 2.612850345847827,
+    "debt_to_equity": 3.765240416440994,
+    "eps_growth_cagr_3yr_pct": -5.182280331321687,
+    "fcf_margin_pct": 7.678995403289957,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
+    "graham_multiple": 389.4812859289959,
+    "graham_upside_pct": -76.00678536839784,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 1,
-    "roe_pct": 110.48154218371965,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -119.0028032058369,
+    "pb_ratio": 18.26550520551243,
+    "pe_ttm": 21.32332402234637,
+    "roe_pct": 102.68495128112596,
     "shareholders_equity": 12813000000,
     "total_assets": 105095000000,
     "total_liabilities": 92282000000
   },
   "name": "The Home Depot Inc.",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 305.35
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -150,14 +160,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $304.5B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.08, debt $65.3B vs working capital $2.0B",
+          "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -165,9 +175,9 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -175,17 +185,17 @@
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 21.3",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 389.5",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 6,
       "passed": 2,
       "total": 7
     },
@@ -193,29 +203,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 110.5%",
+          "detail": "ROE 102.7%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 3.77",
+          "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "995,000,000 shares vs. 993,000,000 a year earlier",
+          "detail": "997,000,000 shares vs. 993,000,000 a year earlier",
           "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 60",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.homedepot.com"
 }

@@ -1,104 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for PFE: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=pfe.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2b25ee0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000078003",
   "five_year_history": {
     "years": [
       {
         "cash": 1944000000,
-        "debt": 38436000000,
-        "earnings": 21979000000,
+        "debt": 36998000000,
+        "earnings": 22147000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 81288000000,
-        "spending": null,
+        "spending": 60495000000,
         "stock_return_pct": null
       },
       {
         "cash": 416000000,
-        "debt": 35829000000,
-        "earnings": 31372000000,
+        "debt": 34859000000,
+        "earnings": 31365000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 101175000000,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 100330000000,
+        "spending": 62781000000,
+        "stock_return_pct": -13.22607959356477
       },
       {
         "cash": 2853000000,
-        "debt": 71888000000,
-        "earnings": 2119000000,
+        "debt": 70845000000,
+        "earnings": 2133000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 59553000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 54261000000,
+        "stock_return_pct": -41.978922716627636
       },
       {
         "cash": 1043000000,
-        "debt": 64351000000,
-        "earnings": 8031000000,
+        "debt": 66993000000,
+        "earnings": 8020000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 63627000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 47144000000,
+        "stock_return_pct": -10.76353851328624
       },
       {
         "cash": 1142000000,
-        "debt": 64795000000,
-        "earnings": 7771000000,
+        "debt": 67416000000,
+        "earnings": 7770000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 62579000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 47142000000,
+        "stock_return_pct": -6.143987938183199
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.1599069868051048,
-      "debt_to_ebitda": null,
-      "debt_to_equity": 0.7492830380683658
+      "current_ratio": 1.2668627090608344,
+      "debt_to_ebitda": 3.0603295655726543,
+      "debt_to_equity": 0.7418006808310834
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 15.172096901635397,
+      "book_value_per_share": 15.001228285664151,
       "shareholders_equity": 86476000000,
       "total_assets": 208160000000,
       "total_liabilities": 121385000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 14.501669889259974
+      "fcf_margin_pct": 14.503267869413062
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -37.11932514902995
+      "eps_growth_cagr_3yr_pct": -37.5833266685398
     },
     "profitability": {
-      "roe_pct": 8.986308339886211,
-      "trend": "stable"
+      "roe_pct": 4.890458247783218,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 21.546836547160307,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 68.95579767815359,
+      "graham_number": 21.425162439088368,
+      "graham_upside_pct": -23.289787185505308,
+      "ncav_margin_pct": -149.30339308316923,
+      "pb_ratio": 1.8684478225143797,
+      "pe_ttm": 36.9053911205074
     }
   },
-  "industry": "Pharmaceutical Preparations",
-  "last_updated": "2026-09-23T14:00:48Z",
+  "industry": "Drug Manufacturers - General",
+  "last_updated": "2026-09-23T02:54:35Z",
   "layered_analysis": {
     "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
-    "munger_quality_pass": false,
+    "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -107,27 +105,33 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 159185359200,
   "metrics": {
-    "book_value_per_share": 15.172096901635397,
-    "current_ratio": 1.1599069868051048,
-    "debt_to_equity": 0.7492830380683658,
-    "eps_growth_cagr_3yr_pct": -37.11932514902995,
-    "fcf_margin_pct": 14.501669889259974,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
-    "munger_quality_passed": 1,
-    "roe_pct": 8.986308339886211,
+    "book_value_per_share": 15.001228285664151,
+    "current_ratio": 1.2668627090608344,
+    "debt_to_ebitda": 3.0603295655726543,
+    "debt_to_equity": 0.7418006808310834,
+    "eps_growth_cagr_3yr_pct": -37.5833266685398,
+    "fcf_margin_pct": 14.503267869413062,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 68.95579767815359,
+    "graham_upside_pct": -23.289787185505308,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -149.30339308316923,
+    "pb_ratio": 1.8684478225143797,
+    "pe_ttm": 36.9053911205074,
+    "roe_pct": 4.890458247783218,
     "shareholders_equity": 86476000000,
     "total_assets": 208160000000,
     "total_liabilities": 121385000000
   },
   "name": "Pfizer",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 27.93
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -156,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $159.2B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.16, debt $64.8B vs working capital $5.9B",
+          "detail": "Current ratio 1.27, debt $67.4B vs working capital $5.9B",
           "passed": false
         },
         {
@@ -177,51 +181,51 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -37.1%/yr",
+          "detail": "EPS 3yr CAGR -37.6%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 36.9",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 69.0",
+          "passed": false
         }
       ],
-      "evaluated": 3,
-      "passed": 1,
+      "evaluated": 6,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 9.0%",
+          "detail": "ROE 4.9%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.75",
+          "detail": "Debt/equity 0.74",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "5,713,000,000 shares vs. 5,700,000,000 a year earlier",
-          "passed": false
+          "detail": "5,686,000,000 shares vs. 5,700,000,000 a year earlier",
+          "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.pfizer.com"
 }

@@ -1,95 +1,93 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for IVZ: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=ivz.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1ee4d40>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000914208",
   "five_year_history": {
     "years": [
       {
-        "cash": 1896400000,
-        "debt": null,
-        "earnings": 1393000000,
+        "cash": 2147100000,
+        "debt": 9711000000,
+        "earnings": 1629800000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 6894500000,
+        "spending": 5106300000,
         "stock_return_pct": null
       },
       {
-        "cash": 1234700000,
-        "debt": null,
-        "earnings": 683900000,
+        "cash": 1434100000,
+        "debt": 8558200000,
+        "earnings": 920700000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 6048900000,
+        "spending": 4731200000,
+        "stock_return_pct": -21.85056472632494
       },
       {
-        "cash": 1469200000,
-        "debt": null,
-        "earnings": -333700000,
+        "cash": 1931600000,
+        "debt": 9045000000,
+        "earnings": -96900000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 5716400000,
+        "spending": 6151200000,
+        "stock_return_pct": -1.33407448582545
       },
       {
-        "cash": 986500000,
-        "debt": null,
-        "earnings": 538000000,
+        "cash": 1496000000,
+        "debt": 7546400000,
+        "earnings": 774800000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 6067000000,
+        "spending": 5234900000,
+        "stock_return_pct": -1.5211267605633778
       },
       {
-        "cash": 1037500000,
-        "debt": null,
-        "earnings": null,
+        "cash": 1979800000,
+        "debt": 10124600000,
+        "earnings": -281700000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 6377100000,
+        "spending": 7072800000,
+        "stock_return_pct": 50.28604118993134
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": null,
+      "current_ratio": 0.708422525934464,
       "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "debt_to_equity": 0.13021271819049224
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 27.70329806279858,
+      "book_value_per_share": 29.042543762463993,
       "shareholders_equity": 12231000000,
       "total_assets": 27094000000,
       "total_liabilities": 14089100000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 22.59647802292578
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": null,
-      "trend": "stable"
+      "roe_pct": -0.5062446652996753,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": -50.64471570325388,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -182.4110056018322,
+      "pb_ratio": 1.1163178826000852,
+      "pe_ttm": -45.36764705882354
     }
   },
-  "industry": "Investment Advice",
-  "last_updated": "2026-09-23T13:36:46Z",
+  "industry": "Asset Management",
+  "last_updated": "2026-09-23T03:40:39Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
@@ -105,22 +103,30 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 13675712450,
   "metrics": {
-    "book_value_per_share": 27.70329806279858,
-    "graham_criteria_evaluated": 2,
-    "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 1,
-    "munger_quality_passed": 1,
+    "book_value_per_share": 29.042543762463993,
+    "current_ratio": 0.708422525934464,
+    "debt_to_equity": 0.13021271819049224,
+    "fcf_margin_pct": 22.59647802292578,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 2,
+    "graham_multiple": -50.64471570325388,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -182.4110056018322,
+    "pb_ratio": 1.1163178826000852,
+    "pe_ttm": -45.36764705882354,
+    "roe_pct": -0.5062446652996753,
     "shareholders_equity": 12231000000,
     "total_assets": 27094000000,
     "total_liabilities": 14089100000
   },
   "name": "Invesco",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 30.85
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -149,24 +155,24 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $13.7B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 4/5 available years",
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.71, debt $10.1B vs working capital $2.8B",
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 4/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth",
@@ -174,47 +180,47 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E -45.4",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -50.6",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 5,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE -0.5%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.13",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "455,000,000 shares vs. 457,700,000 a year earlier",
+          "detail": "453,800,000 shares vs. 457,700,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 1,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.invesco.com"
 }

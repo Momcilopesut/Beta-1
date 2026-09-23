@@ -5,96 +5,100 @@
     "years": [
       {
         "cash": 3147000000,
-        "debt": 1489000000,
-        "earnings": 1317000000,
+        "debt": 14738000000,
+        "earnings": 1315000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 111476000000,
-        "spending": null,
+        "revenue": 111944000000,
+        "spending": 110719000000,
         "stock_return_pct": null
       },
       {
         "cash": 6133000000,
-        "debt": 529000000,
+        "debt": 17190000000,
         "earnings": 11024000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 169990000000,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 170118000000,
+        "spending": 160045000000,
+        "stock_return_pct": 43.637869169196804
       },
       {
         "cash": 3323000000,
-        "debt": 1482000000,
-        "earnings": 7015000000,
+        "debt": 19359000000,
+        "earnings": 7004000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 147399000000,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 147262000000,
+        "spending": 138994000000,
+        "stock_return_pct": 29.025749423520363
       },
       {
         "cash": 1738000000,
-        "debt": 1831000000,
+        "debt": 20062000000,
         "earnings": 2117000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 143153000000,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 143118000000,
+        "spending": 140793100000,
+        "stock_return_pct": -15.161218258991724
       },
       {
         "cash": 1116000000,
-        "debt": 1038000000,
+        "debt": 22882000000,
         "earnings": 4403000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 132376000000,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 132189000000,
+        "spending": 128669000000,
+        "stock_return_pct": 13.262529623452984
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.2960378208014407,
-      "debt_to_ebitda": null,
-      "debt_to_equity": 0.035678685594472896
+      "current_ratio": 1.3196578402528059,
+      "debt_to_ebitda": 3.37941219908433,
+      "debt_to_equity": 0.6527328127975623
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 72.91096489789021,
+      "book_value_per_share": 81.56297231103818,
       "shareholders_equity": 29093000000,
       "total_assets": 73680000000,
       "total_liabilities": 43439000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 2.0644682991776926
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -22.599870532058443
+      "eps_growth_cagr_3yr_pct": -22.58018166408158
     },
     "profitability": {
-      "roe_pct": 15.134224727597703,
-      "trend": "stable"
+      "roe_pct": 24.44934679948985,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 133.04495294104657,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 47.59609892680967,
+      "graham_number": 141.04328749239437,
+      "graham_upside_pct": -45.072323587353225,
+      "ncav_margin_pct": -125.53957555095757,
+      "pb_ratio": 3.267852730273598,
+      "pe_ttm": 14.564946114577424
     }
   },
-  "industry": "Petroleum Refining",
-  "last_updated": "2026-09-23T12:26:21Z",
+  "industry": "Oil & Gas Refining & Marketing",
+  "last_updated": "2026-09-23T03:16:23Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": false,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -103,28 +107,51 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 102952094436,
   "metrics": {
-    "book_value_per_share": 72.91096489789021,
-    "current_ratio": 1.2960378208014407,
-    "debt_to_equity": 0.035678685594472896,
-    "eps_growth_cagr_3yr_pct": -22.599870532058443,
-    "graham_criteria_evaluated": 4,
-    "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
+    "book_value_per_share": 81.56297231103818,
+    "current_ratio": 1.3196578402528059,
+    "debt_to_ebitda": 3.37941219908433,
+    "debt_to_equity": 0.6527328127975623,
+    "eps_growth_cagr_3yr_pct": -22.58018166408158,
+    "fcf_margin_pct": 2.0644682991776926,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 47.59609892680967,
+    "graham_upside_pct": -45.072323587353225,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "roe_pct": 15.134224727597703,
+    "ncav_margin_pct": -125.53957555095757,
+    "pb_ratio": 3.267852730273598,
+    "pe_ttm": 14.564946114577424,
+    "roe_pct": 24.44934679948985,
     "shareholders_equity": 29093000000,
     "total_assets": 73680000000,
     "total_liabilities": 43439000000
   },
   "name": "Phillips 66",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 256.78
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Phillips 66 reported net income attributable to the company of $4.4 billion on total assets of $73.7 billion, with segment results showing gains in Midstream and Marketing & Specialties offset by losses in Refining and Renewable Fuels. Major events included acquiring the remaining 50% of WRB Refining LP for $1.3 billion, acquiring Coastal Bend NGL assets, divesting stakes in Germany/Austria Marketing and Coop Mineraloel AG for large gains, and ceasing fuel production at the Los Angeles Refinery. The company also disclosed an impairment on its WRB equity investment prior to the acquisition and an accrual related to ongoing Propel Fuels litigation, and raised its quarterly dividend to $1.27 per share in February 2026.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, covering the six months and quarter ended June 30, 2026 versus prior-year comparatives. It references items such as the WRB Refining LP and Coastal Bend acquisitions, a Lindsey Oil Refinery asset transaction in April 2026, various debt instruments (senior notes maturities, a term loan agreement, receivables securitization facility amendments), and the ongoing Propel Fuels litigation, but does not include descriptive discussion of results or business developments in the text supplied.",
+    "filing_summary_8k": "This 8-K, dated August 20, 2026, discloses that Phillips 66 Company amended its accounts receivable securitization program via a Fifth Amendment to its Receivables Purchase and Financing Agreement with PNC Bank and related parties. The amendment established a new uncommitted facility of up to $250 million, increased the maximum committed facility size from $1.75 billion to $2 billion, and extended the maturity date from September 28, 2026 to August 19, 2027. The filing also incorporates this disclosure under Item 2.03 as the creation of a direct financial obligation.",
+    "moat_explanation": "The excerpts describe Phillips 66 as an integrated downstream energy company across Midstream, Chemicals, Refining, M&S, and Renewable Fuels, but the MD&A repeatedly frames results as driven by commodity prices, market crack spreads, and industry oversupply (e.g., Chemicals segment described as 'mainly a commodity-based industry' with 'continued industry oversupply from capacity additions,' and Refining posting worldwide losses before taxes in 2024 and 2025). No excerpt describes brand strength, patents, network effects, high switching costs, or a durable cost advantage over competitors; the Midstream integration and scale are mentioned as a strategic focus rather than a demonstrated competitive barrier.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Chemicals segment margins fell sharply due to industry oversupply and higher feedstock costs, per the company's own disclosure",
+      "Refining segment reported a worldwide loss before income taxes in both 2024 and 2025, with West Coast losses widening ($908M loss in 2024, $1,248M loss in 2025)",
+      "Cessation of fuel production and idling of the Los Angeles Refinery in Q4 2025, with associated accelerated depreciation",
+      "A before-tax impairment of $948 million on the equity method investment in WRB Refining LP recognized in Q3 2025, tied to economic obsolescence of refining assets",
+      "Ongoing litigation with Propel Fuels, Inc., with accruals of $605 million (2024) and $262 million (2025) disclosed",
+      "Renewable Fuels segment posted before-tax losses in 2024 and 2025"
+    ]
+  },
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001534701.json",
@@ -151,13 +178,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $103.0B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.30, debt $1.0B vs working capital $3.9B",
+          "detail": "Current ratio 1.32, debt $22.9B vs working capital $3.9B",
           "passed": false
         },
         {
@@ -166,9 +193,9 @@
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -176,30 +203,30 @@
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 14.6",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 47.6",
+          "passed": false
         }
       ],
-      "evaluated": 4,
-      "passed": 1,
+      "evaluated": 6,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 15.1%",
+          "detail": "ROE 24.4%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.04",
+          "detail": "Debt/equity 0.65",
           "passed": true
         },
         {
@@ -209,14 +236,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 4,
       "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.phillips66.com"
 }

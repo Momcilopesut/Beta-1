@@ -1,70 +1,68 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for LOW: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=low.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1670b60>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000060667",
   "five_year_history": {
     "years": [
       {
         "cash": 1133000000,
-        "debt": null,
+        "debt": 29384000000,
         "earnings": 8442000000,
-        "fiscal_year": "2022-01-28",
+        "fiscal_year": "2022-01-31",
         "market_return_pct": null,
         "revenue": 96250000000,
-        "spending": null,
+        "spending": 84157000000,
         "stock_return_pct": null
       },
       {
         "cash": 1348000000,
-        "debt": null,
+        "debt": 37994000000,
         "earnings": 6437000000,
-        "fiscal_year": "2023-02-03",
-        "market_return_pct": -6.697590225138583,
+        "fiscal_year": "2023-01-31",
+        "market_return_pct": -9.653041719455004,
         "revenue": 97059000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 86900000000,
+        "stock_return_pct": -12.260374973667577
       },
       {
         "cash": 921000000,
-        "debt": null,
+        "debt": 40145000000,
         "earnings": 7726000000,
-        "fiscal_year": "2024-02-02",
-        "market_return_pct": 19.886019158481872,
+        "fiscal_year": "2024-01-31",
+        "market_return_pct": 18.795512694351498,
         "revenue": 86377000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 74820000000,
+        "stock_return_pct": 2.2040816326530632
       },
       {
         "cash": 1761000000,
-        "debt": null,
+        "debt": 39678000000,
         "earnings": 6957000000,
         "fiscal_year": "2025-01-31",
-        "market_return_pct": 21.73965813694751,
+        "market_return_pct": 24.631378396288945,
         "revenue": 83674000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 73208000000,
+        "stock_return_pct": 22.17628265363654
       },
       {
         "cash": 982000000,
-        "debt": null,
+        "debt": 44677000000,
         "earnings": 6654000000,
         "fiscal_year": "2026-01-30",
         "market_return_pct": 14.979561995280976,
         "revenue": 86286000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 76133000000,
+        "stock_return_pct": 2.699584679280104
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.0766582746750244,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 1.1045807306454667,
+      "debt_to_ebitda": 3.618449825868632,
+      "debt_to_equity": -5.650531128143069
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -17.675659854777727,
+      "book_value_per_share": -13.304114490161002,
       "shareholders_equity": -9917000000,
       "total_assets": 54144000000,
       "total_liabilities": 64061000000
@@ -73,23 +71,23 @@
       "fcf_margin_pct": 8.867023619127089
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 5.228278564465261
+      "eps_growth_cagr_3yr_pct": 5.184121096662819
     },
     "profitability": {
-      "roe_pct": -67.09690430573762,
+      "roe_pct": -71.79376317353943,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": -244.22755738746,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -139.1711999696414,
+      "pb_ratio": -14.742807583703105,
+      "pe_ttm": 16.565878378378375
     }
   },
-  "industry": "Retail-Lumber & Other Building Materials Dealers",
-  "last_updated": "2026-09-23T13:02:04Z",
+  "industry": "Home Improvement",
+  "last_updated": "2026-09-23T02:48:08Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
@@ -105,26 +103,32 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 109977070980,
   "metrics": {
-    "book_value_per_share": -17.675659854777727,
-    "current_ratio": 1.0766582746750244,
-    "eps_growth_cagr_3yr_pct": 5.228278564465261,
+    "book_value_per_share": -13.304114490161002,
+    "current_ratio": 1.1045807306454667,
+    "debt_to_ebitda": 3.618449825868632,
+    "debt_to_equity": -5.650531128143069,
+    "eps_growth_cagr_3yr_pct": 5.184121096662819,
     "fcf_margin_pct": 8.867023619127089,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 3,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": -244.22755738746,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
-    "munger_quality_passed": 2,
-    "roe_pct": -67.09690430573762,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -139.1711999696414,
+    "pb_ratio": -14.742807583703105,
+    "pe_ttm": 16.565878378378375,
+    "roe_pct": -71.79376317353943,
     "shareholders_equity": -9917000000,
     "total_assets": 54144000000,
     "total_liabilities": 64061000000
   },
   "name": "Lowe's",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 196.14
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -153,14 +157,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $110.0B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.10, debt $44.7B vs working capital $1.5B",
+          "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -168,9 +172,9 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -178,35 +182,35 @@
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 16.6",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -244.2",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 3,
+      "evaluated": 6,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -67.1%",
+          "detail": "ROE -71.8%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity -5.65",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "560,000,000 shares vs. 568,000,000 a year earlier",
+          "detail": "560,000,000 shares vs. 567,457,000 a year earlier",
           "passed": true
         },
         {
@@ -215,10 +219,10 @@
           "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.lowes.com"
 }

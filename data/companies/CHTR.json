@@ -1,102 +1,100 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for CHTR: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=chtr.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0868e00>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001091667",
   "five_year_history": {
     "years": [
       {
         "cash": 601000000,
-        "debt": 91561000000,
+        "debt": 91830000000,
         "earnings": 4654000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 51682000000,
-        "spending": null,
+        "spending": 40827000000,
         "stock_return_pct": null
       },
       {
         "cash": 645000000,
-        "debt": 97603000000,
+        "debt": 97898000000,
         "earnings": 5055000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 54022000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 41779000000,
+        "stock_return_pct": -47.988401140640875
       },
       {
         "cash": 709000000,
-        "debt": 97777000000,
+        "debt": 98202000000,
         "earnings": 4557000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 54607000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 42101000000,
+        "stock_return_pct": 15.455615768995292
       },
       {
         "cash": 459000000,
-        "debt": 93933000000,
+        "debt": 95763000000,
         "earnings": 5083000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 55085000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 41840000000,
+        "stock_return_pct": -12.4492350131542
       },
       {
         "cash": 477000000,
-        "debt": 94756000000,
+        "debt": 97121000000,
         "earnings": 4987000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 54774000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 41450000000,
+        "stock_return_pct": -39.0991043556904
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.38659251465504285,
-      "debt_to_ebitda": 4.382996438318146,
-      "debt_to_equity": 5.902329637473527
+      "current_ratio": 0.3609377268108579,
+      "debt_to_ebitda": 4.407578851826639,
+      "debt_to_equity": 5.7049315714959885
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 59.25563320132622,
+      "book_value_per_share": 182.3244894731146,
       "shareholders_equity": 16054000000,
       "total_assets": 154213000000,
-      "total_liabilities": null
+      "total_liabilities": 133694000000
     },
     "cash_flow": {
       "fcf_margin_pct": 8.065870668565378
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 5.610772798941088
+      "eps_growth_cagr_3yr_pct": 5.6397446746913715
     },
     "profitability": {
-      "roe_pct": 31.06390930609194,
-      "trend": "stable"
+      "roe_pct": 30.427461340007106,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 219.72038084790975,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 2.498234306850716,
+      "graham_number": 389.0692835280799,
+      "graham_upside_pct": 231.80051469220527,
+      "ncav_margin_pct": -504.6397799392812,
+      "pb_ratio": 0.830898328220859,
+      "pe_ttm": 3.006666666666667
     }
   },
-  "industry": "Cable & Other Pay Television Services",
-  "last_updated": "2026-09-23T12:49:03Z",
+  "industry": "Telecommunications Services",
+  "last_updated": "2026-09-23T02:46:46Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": true
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,27 +103,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 15804007774,
   "metrics": {
-    "book_value_per_share": 59.25563320132622,
-    "current_ratio": 0.38659251465504285,
-    "debt_to_ebitda": 4.382996438318146,
-    "debt_to_equity": 5.902329637473527,
-    "eps_growth_cagr_3yr_pct": 5.610772798941088,
+    "book_value_per_share": 182.3244894731146,
+    "current_ratio": 0.3609377268108579,
+    "debt_to_ebitda": 4.407578851826639,
+    "debt_to_equity": 5.7049315714959885,
+    "eps_growth_cagr_3yr_pct": 5.6397446746913715,
     "fcf_margin_pct": 8.065870668565378,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 2,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
-    "munger_quality_passed": 2,
-    "roe_pct": 31.06390930609194,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 2.498234306850716,
+    "graham_upside_pct": 231.80051469220527,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -504.6397799392812,
+    "pb_ratio": 0.830898328220859,
+    "pe_ttm": 3.006666666666667,
+    "roe_pct": 30.427461340007106,
     "shareholders_equity": 16054000000,
-    "total_assets": 154213000000
+    "total_assets": 154213000000,
+    "total_liabilities": 133694000000
   },
   "name": "Charter Communications",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 117.26
   },
   "qualitative": null,
   "sector": "Communication Services",
@@ -154,13 +158,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $15.8B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.39, debt $94.8B vs working capital $-8.2B",
+          "detail": "Current ratio 0.36, debt $97.1B vs working capital $-8.2B",
           "passed": false
         },
         {
@@ -179,47 +183,47 @@
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 3.0",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 2.5",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 6,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 31.1%",
+          "detail": "ROE 30.4%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 5.90",
+          "detail": "Debt/equity 5.70",
           "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "137,743,676 shares vs. 145,363,771 a year earlier",
+          "detail": "137,744,000 shares vs. 145,364,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://corporate.charter.com"
 }

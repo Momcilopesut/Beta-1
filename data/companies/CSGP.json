@@ -1,104 +1,103 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for CSGP: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=csgp.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca39f8a40>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001057352",
   "five_year_history": {
     "years": [
       {
-        "cash": 3800000000,
-        "debt": 987944000,
+        "cash": 3827126000,
+        "debt": 1113582000,
         "earnings": 292600000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 1944135000,
+        "spending": 1511800000,
         "stock_return_pct": null
       },
       {
-        "cash": 5000000000,
-        "debt": 989200000,
+        "cash": 4967970000,
+        "debt": 1105580000,
         "earnings": 369500000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 2182399000,
+        "spending": 1731400000,
+        "stock_return_pct": -2.2143489813994686
       },
       {
-        "cash": 5200000000,
-        "debt": 990500000,
-        "earnings": 375000000,
+        "cash": 5215900000,
+        "debt": 1110400000,
+        "earnings": 374700000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 2455000000,
+        "spending": 2172700000,
+        "stock_return_pct": 10.58488612836438
       },
       {
         "cash": 4681000000,
-        "debt": 992000000,
-        "earnings": 139000000,
+        "debt": 1042400000,
+        "earnings": 138700000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 2736200000,
+        "spending": 2731500000,
+        "stock_return_pct": -16.229815118183936
       },
       {
-        "cash": 1633000000,
-        "debt": 993000000,
+        "cash": 1733000000,
+        "debt": 1144000000,
         "earnings": 7000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 3247000000,
+        "spending": 3319000000,
+        "stock_return_pct": -6.076267635144585
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.8404825737265416,
-      "debt_to_ebitda": 5.198952879581152,
-      "debt_to_equity": 0.119150467962563
+      "current_ratio": 2.214190093708166,
+      "debt_to_ebitda": 5.989528795811518,
+      "debt_to_equity": 0.14561270801815432
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 20.567743359814866,
+      "book_value_per_share": 19.660975006186586,
       "shareholders_equity": 8334000000,
       "total_assets": 10538000000,
       "total_liabilities": 2167000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 1.2627040344933786
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -72.19119357371476
+      "eps_growth_cagr_3yr_pct": -73.76131226458527
     },
     "profitability": {
-      "roe_pct": 0.083993280537557,
-      "trend": "stable"
+      "roe_pct": 0.9038018222401112,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 3.042282779742325,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 229.54969094269168,
+      "graham_number": 2.726141697039706,
+      "graham_upside_pct": -90.52435976002884,
+      "ncav_margin_pct": -100.41175086859417,
+      "pb_ratio": 1.4657031013615736,
+      "pe_ttm": 156.6140446379967
     }
   },
-  "industry": "Services-Business Services, NEC",
-  "last_updated": "2026-09-23T14:35:32Z",
+  "industry": "Real Estate - Services",
+  "last_updated": "2026-09-23T02:58:27Z",
   "layered_analysis": {
     "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -107,27 +106,33 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 11657546460,
   "metrics": {
-    "book_value_per_share": 20.567743359814866,
-    "current_ratio": 2.8404825737265416,
-    "debt_to_ebitda": 5.198952879581152,
-    "debt_to_equity": 0.119150467962563,
-    "eps_growth_cagr_3yr_pct": -72.19119357371476,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 2,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
+    "book_value_per_share": 19.660975006186586,
+    "current_ratio": 2.214190093708166,
+    "debt_to_ebitda": 5.989528795811518,
+    "debt_to_equity": 0.14561270801815432,
+    "eps_growth_cagr_3yr_pct": -73.76131226458527,
+    "fcf_margin_pct": 1.2627040344933786,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 229.54969094269168,
+    "graham_upside_pct": -90.52435976002884,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "roe_pct": 0.083993280537557,
+    "ncav_margin_pct": -100.41175086859417,
+    "pb_ratio": 1.4657031013615736,
+    "pe_ttm": 156.6140446379967,
+    "roe_pct": 0.9038018222401112,
     "shareholders_equity": 8334000000,
     "total_assets": 10538000000,
     "total_liabilities": 2167000000
   },
   "name": "CoStar Group",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 28.77
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -156,13 +161,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $11.7B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.84, debt $1.0B vs working capital $1.4B",
+          "detail": "Current ratio 2.21, debt $1.1B vs working capital $1.4B",
           "passed": true
         },
         {
@@ -177,34 +182,34 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -72.2%/yr",
+          "detail": "EPS 3yr CAGR -73.8%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 156.6",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 229.5",
+          "passed": false
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 6,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 0.1%",
+          "detail": "ROE 0.9%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.12",
+          "detail": "Debt/equity 0.15",
           "passed": true
         },
         {
@@ -214,14 +219,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 4,
       "passed": 1,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.costargroup.com"
 }

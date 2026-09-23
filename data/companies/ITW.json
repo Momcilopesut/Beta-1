@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for ITW: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=itw.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1d354c0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000049826",
   "five_year_history": {
     "years": [
       {
         "cash": 1527000000,
-        "debt": 7687000000,
-        "earnings": null,
+        "debt": 7881000000,
+        "earnings": 2694000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 14455000000,
+        "spending": 10978000000,
         "stock_return_pct": null
       },
       {
         "cash": 708000000,
-        "debt": 7763000000,
-        "earnings": null,
+        "debt": 7949000000,
+        "earnings": 3034000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 15932000000,
+        "spending": 12142000000,
+        "stock_return_pct": -10.73743922204214
       },
       {
         "cash": 1065000000,
-        "debt": 8164000000,
-        "earnings": null,
+        "debt": 8370000000,
+        "earnings": 2957000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 16107000000,
+        "spending": 12067000000,
+        "stock_return_pct": 18.288697231048552
       },
       {
         "cash": 948000000,
-        "debt": 7863000000,
-        "earnings": null,
+        "debt": 8078000000,
+        "earnings": 3488000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 15898000000,
+        "spending": 11634000000,
+        "stock_return_pct": -2.6977243946429157
       },
       {
         "cash": 851000000,
         "debt": 8969000000,
-        "earnings": null,
+        "earnings": 3066000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 16044000000,
+        "spending": 11828000000,
+        "stock_return_pct": -2.863227638428771
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.2095200936402652,
-      "debt_to_ebitda": null,
-      "debt_to_equity": 2.7802231866088034
+      "current_ratio": 1.1086846967915336,
+      "debt_to_ebitda": 1.944287882072404,
+      "debt_to_equity": 3.349689011748445
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 11.327247191011235,
-      "shareholders_equity": 3226000000,
+      "book_value_per_share": 10.129189944134078,
+      "shareholders_equity": 3225000000,
       "total_assets": 16148000000,
-      "total_liabilities": null
+      "total_liabilities": 12922000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 16.872351034654702
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 2.3985109954127504
+      "eps_growth_cagr_3yr_pct": 2.3913387524434615
     },
     "profitability": {
-      "roe_pct": null,
-      "trend": "stable"
+      "roe_pct": 101.74404714501873,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 51.70602980560804,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 655.1645809792144,
+      "graham_number": 48.96508204605131,
+      "graham_upside_pct": -81.89629827853318,
+      "ncav_margin_pct": -108.72648651972034,
+      "pb_ratio": 26.76662335867312,
+      "pe_ttm": 24.47692307692308
     }
   },
-  "industry": "General Industrial Machinery & Equipment",
-  "last_updated": "2026-09-23T14:19:58Z",
+  "industry": "Industrial - Machinery",
+  "last_updated": "2026-09-23T02:56:40Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,24 +105,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 77814219000,
   "metrics": {
-    "book_value_per_share": 11.327247191011235,
-    "current_ratio": 1.2095200936402652,
-    "debt_to_equity": 2.7802231866088034,
-    "eps_growth_cagr_3yr_pct": 2.3985109954127504,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 1,
-    "shareholders_equity": 3226000000,
-    "total_assets": 16148000000
+    "book_value_per_share": 10.129189944134078,
+    "current_ratio": 1.1086846967915336,
+    "debt_to_ebitda": 1.944287882072404,
+    "debt_to_equity": 3.349689011748445,
+    "eps_growth_cagr_3yr_pct": 2.3913387524434615,
+    "fcf_margin_pct": 16.872351034654702,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 655.1645809792144,
+    "graham_upside_pct": -81.89629827853318,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -108.72648651972034,
+    "pb_ratio": 26.76662335867312,
+    "pe_ttm": 24.47692307692308,
+    "roe_pct": 101.74404714501873,
+    "shareholders_equity": 3225000000,
+    "total_assets": 16148000000,
+    "total_liabilities": 12922000000
   },
   "name": "Illinois Tool Works",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 270.47
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -151,24 +160,24 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $77.8B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.21, debt $9.0B vs working capital $1.1B",
+          "detail": "Current ratio 1.11, debt $9.0B vs working capital $1.1B",
           "passed": false
         },
         {
-          "criterion": "Earnings stability",
-          "detail": "No annual net income data available",
-          "passed": null
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -176,30 +185,30 @@
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 24.5",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 655.2",
+          "passed": false
         }
       ],
-      "evaluated": 3,
-      "passed": 1,
+      "evaluated": 6,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 101.7%",
+          "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 2.78",
+          "detail": "Debt/equity 3.35",
           "passed": false
         },
         {
@@ -209,14 +218,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.itw.com"
 }

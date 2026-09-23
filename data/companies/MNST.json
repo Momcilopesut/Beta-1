@@ -5,96 +5,99 @@
     "years": [
       {
         "cash": 1326462000,
-        "debt": null,
-        "earnings": null,
+        "debt": 0,
+        "earnings": 1377475000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 5541352000,
-        "spending": null,
+        "spending": 3743885000,
         "stock_return_pct": null
       },
       {
         "cash": 1307141000,
-        "debt": null,
-        "earnings": null,
+        "debt": 0,
+        "earnings": 1191624000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 6311050000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 4726329000,
+        "stock_return_pct": 5.705955851728436
       },
       {
         "cash": 2297675000,
-        "debt": null,
-        "earnings": null,
+        "debt": 0,
+        "earnings": 1630988000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 7140027000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5186672000,
+        "stock_return_pct": 15.44523246650907
       },
       {
         "cash": 1533287000,
         "debt": 373951000,
-        "earnings": null,
+        "earnings": 1509048000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 7492709000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5562415000,
+        "stock_return_pct": -10.307167235494878
       },
       {
         "cash": 2088117000,
-        "debt": null,
-        "earnings": null,
+        "debt": 0,
+        "earnings": 1905432000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 8294343000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5874989000,
+        "stock_return_pct": 45.89041095890411
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 3.7029686830872093,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 3.729314920459693,
+      "debt_to_ebitda": 0.0,
+      "debt_to_equity": 0
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 8.426635938548891,
+      "book_value_per_share": 4.784158371327384,
       "shareholders_equity": 8254108000,
       "total_assets": 9988945000,
-      "total_liabilities": null
+      "total_liabilities": 1734837000
     },
     "cash_flow": {
       "fcf_margin_pct": 23.701720558216607
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": null
+      "eps_growth_cagr_3yr_pct": 19.945894979754296
     },
     "profitability": {
-      "roe_pct": null,
+      "roe_pct": 24.964996796316953,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 375.8261527541197,
+      "graham_number": 10.244631485368055,
+      "graham_upside_pct": -76.85874975069336,
+      "ncav_margin_pct": -91.63758060405158,
+      "pb_ratio": 9.253456211926595,
+      "pe_ttm": 40.61467889908258
     }
   },
-  "industry": "Bottled & Canned Soft Drinks & Carbonated Waters",
-  "last_updated": "2026-09-23T12:26:56Z",
+  "industry": "Beverages - Non-Alcoholic",
+  "last_updated": "2026-09-23T03:50:57Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -103,25 +106,51 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 86592838059,
   "metrics": {
-    "book_value_per_share": 8.426635938548891,
-    "current_ratio": 3.7029686830872093,
+    "book_value_per_share": 4.784158371327384,
+    "current_ratio": 3.729314920459693,
+    "debt_to_ebitda": 0.0,
+    "debt_to_equity": 0,
+    "eps_growth_cagr_3yr_pct": 19.945894979754296,
     "fcf_margin_pct": 23.701720558216607,
-    "graham_criteria_evaluated": 0,
-    "graham_criteria_passed": 0,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 375.8261527541197,
+    "graham_upside_pct": -76.85874975069336,
     "margin_trend_score": 100,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 2,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 4,
+    "ncav_margin_pct": -91.63758060405158,
+    "pb_ratio": 9.253456211926595,
+    "pe_ttm": 40.61467889908258,
+    "roe_pct": 24.964996796316953,
     "shareholders_equity": 8254108000,
-    "total_assets": 9988945000
+    "total_assets": 9988945000,
+    "total_liabilities": 1734837000
   },
   "name": "Monster Beverage Corporation",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 44.27
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Monster Beverage reported record net sales of $8.29 billion, up 10.7% from 2024, driven primarily by increased worldwide Monster Energy brand sales; gross margin improved to 55.8% aided by pricing actions and supply chain optimization. Operating income rose 25.3% to $2.42 billion and net income increased 26.3% to $1.91 billion. The Monster Energy Drinks segment remained the dominant revenue driver (92.4% of sales), while the Alcohol Brands segment saw a sales decline and continued operating losses along with impairment charges.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists only of XBRL data tags rather than narrative text, so detailed financial results and MD&A commentary are not available in this excerpt. The tags indicate disclosures on stock repurchase programs (including an August 2024 and a May 2026 repurchase plan), a revolving credit facility with JPMorgan Chase Bank, a line of credit with HSBC, segment reporting across Monster Energy Drinks, Strategic Brands, Alcohol Brands and Other segments, and customer/related-party concentration disclosures involving The Coca-Cola Company, Coca-Cola Consolidated and Coca-Cola Europacific Partners.",
+    "filing_summary_8k": "This 8-K, dated September 3, 2026, discloses under Item 5.02 that Monster Beverage's Board of Directors elected Matthew S. Burroughs as Chief Accounting Officer and Deputy Chief Financial Officer. The filing notes Mr. Burroughs, age 57, has been with the Company since October 2006 in various corporate finance roles, and states there is no arrangement regarding his appointment, no related-party transactions, and no family relationship with other directors or officers.",
+    "moat_explanation": "The 10-K describes an extensive, decades-old portfolio of energy drink and beverage brands (Monster Energy, NOS, Burn, Reign, Bang, etc.) sold in ~158 countries, with management citing 'maintenance of our brand image, product quality and corporate reputation' and protection of trademarks/intellectual property as key value drivers and risks. High gross margins (55.8%) achieved via price increases without apparent loss of volume (case sales up 13.3%) suggest brand-driven pricing power rather than cost or network-effect advantages.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Heavy dependence on The Coca-Cola Company (TCCC) for distribution globally and domestically, with TCCC also holding ~20.9% equity ownership and board influence, creating both concentration and governance risk",
+      "Customer concentration: Coca-Cola Europacific Partners (~15%) and Coca-Cola Consolidated (~10%) each account for significant portions of net sales",
+      "Reliance on a shrinking number of third-party bottlers/co-packers due to industry consolidation, with limited alternative capacity",
+      "Alcohol Brands segment posted an operating loss ($127.0 million in 2025) and recorded impairment charges ($53.7 million in 2025, $138.8 million in 2024) related to goodwill, intangibles and property",
+      "Ongoing regulatory and legislative risk targeting energy drink caffeine content, labeling, taxes, and alcohol sales restrictions",
+      "Litigation and negative publicity risk explicitly acknowledged as a potential threat to demand and reputation"
+    ]
+  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000865752.json",
@@ -148,19 +177,19 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $86.6B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 3.73, debt $0.0B vs working capital $3.9B",
+          "passed": true
         },
         {
-          "criterion": "Earnings stability",
-          "detail": "No annual net income data available",
-          "passed": null
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
         },
         {
           "criterion": "Dividend record",
@@ -168,40 +197,40 @@
           "passed": null
         },
         {
-          "criterion": "Earnings growth",
-          "detail": "Insufficient EPS history",
-          "passed": null
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 19.9%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 40.6",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 375.8",
+          "passed": false
         }
       ],
-      "evaluated": 0,
-      "passed": 0,
+      "evaluated": 6,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 25.0%",
+          "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.00",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "984,451,000 shares vs. 1,013,107,000 a year earlier",
+          "detail": "1,968,902,000 shares vs. 2,026,214,000 a year earlier",
           "passed": true
         },
         {
@@ -210,10 +239,10 @@
           "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 4,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.monsterbevcorp.com"
 }

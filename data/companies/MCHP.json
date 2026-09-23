@@ -1,104 +1,103 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for MCHP: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=mchp.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca153e450>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000827054",
   "five_year_history": {
     "years": [
       {
         "cash": 317400000,
-        "debt": 7687400000,
+        "debt": 7849800000,
         "earnings": 1285500000,
         "fiscal_year": "2022-03-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 6820900000,
+        "spending": 4971300000,
         "stock_return_pct": null
       },
       {
         "cash": 234000000,
-        "debt": 6439900000,
+        "debt": 6600000000,
         "earnings": 2237700000,
         "fiscal_year": "2023-03-31",
         "market_return_pct": -9.354795855105836,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 8438700000,
+        "spending": 5322700000,
+        "stock_return_pct": 11.498536066010114
       },
       {
         "cash": 319700000,
-        "debt": 5999800000,
+        "debt": 6032400000,
         "earnings": 1906900000,
         "fiscal_year": "2024-03-31",
         "market_return_pct": 27.545860915019905,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 7634400000,
+        "spending": 5063400000,
+        "stock_return_pct": 7.113869658629738
       },
       {
         "cash": 771700000,
-        "debt": 5630400000,
+        "debt": 5666100000,
         "earnings": -500000,
         "fiscal_year": "2025-03-31",
         "market_return_pct": 7.1299984679025625,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 4401600000,
+        "spending": 4105300000,
+        "stock_return_pct": -46.05527078225986
       },
       {
         "cash": 240300000,
-        "debt": 5496400000,
-        "earnings": 230000000,
+        "debt": 5535200000,
+        "earnings": 202200000,
         "fiscal_year": "2026-03-31",
         "market_return_pct": 16.258781887413086,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 4713100000,
+        "spending": 4223000000,
+        "stock_return_pct": 33.46416029745921
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.0924051746897825,
-      "debt_to_ebitda": 4.66033576394777,
-      "debt_to_equity": 0.8544866612772838
+      "current_ratio": 1.920735475896168,
+      "debt_to_ebitda": 4.6932338477191795,
+      "debt_to_equity": 0.836878003410324
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 11.84585091659242,
+      "book_value_per_share": 11.891244239631336,
       "shareholders_equity": 6432400000,
       "total_assets": 14370100000,
-      "total_liabilities": null
+      "total_liabilities": 7931700000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 18.480405677791687
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -62.033647476478926
+      "eps_growth_cagr_3yr_pct": -59.51851349868793
     },
     "profitability": {
-      "roe_pct": 3.575648280579566,
-      "trend": "stable"
+      "roe_pct": 6.89536445122861,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 7.657477524428817,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 669.8592448241845,
+      "graham_number": 8.499371080012942,
+      "graham_upside_pct": -88.79006715904387,
+      "ncav_margin_pct": -113.49034741373308,
+      "pb_ratio": 6.376119981398232,
+      "pe_ttm": 105.05750311763892
     }
   },
-  "industry": "Semiconductors & Related Devices",
-  "last_updated": "2026-09-23T14:55:06Z",
+  "industry": "Semiconductors",
+  "last_updated": "2026-09-23T03:01:00Z",
   "layered_analysis": {
     "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -107,26 +106,33 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 41170866560,
   "metrics": {
-    "book_value_per_share": 11.84585091659242,
-    "current_ratio": 2.0924051746897825,
-    "debt_to_ebitda": 4.66033576394777,
-    "debt_to_equity": 0.8544866612772838,
-    "eps_growth_cagr_3yr_pct": -62.033647476478926,
-    "graham_criteria_evaluated": 4,
+    "book_value_per_share": 11.891244239631336,
+    "current_ratio": 1.920735475896168,
+    "debt_to_ebitda": 4.6932338477191795,
+    "debt_to_equity": 0.836878003410324,
+    "eps_growth_cagr_3yr_pct": -59.51851349868793,
+    "fcf_margin_pct": 18.480405677791687,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
+    "graham_multiple": 669.8592448241845,
+    "graham_upside_pct": -88.79006715904387,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "roe_pct": 3.575648280579566,
+    "ncav_margin_pct": -113.49034741373308,
+    "pb_ratio": 6.376119981398232,
+    "pe_ttm": 105.05750311763892,
+    "roe_pct": 6.89536445122861,
     "shareholders_equity": 6432400000,
-    "total_assets": 14370100000
+    "total_assets": 14370100000,
+    "total_liabilities": 7931700000
   },
   "name": "Microchip Technology",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 75.82
   },
   "qualitative": null,
   "sector": "Technology",
@@ -155,13 +161,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $41.2B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.09, debt $5.5B vs working capital $1.2B",
+          "detail": "Current ratio 1.92, debt $5.5B vs working capital $1.2B",
           "passed": false
         },
         {
@@ -170,27 +176,27 @@
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -62.0%/yr",
+          "detail": "EPS 3yr CAGR -59.5%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 105.1",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 669.9",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 1,
       "total": 7
     },
@@ -198,29 +204,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 3.6%",
+          "detail": "ROE 6.9%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.85",
+          "detail": "Debt/equity 0.84",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "545,200,000 shares vs. 537,300,000 a year earlier",
+          "detail": "547,900,000 shares vs. 537,300,000 a year earlier",
           "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 4,
       "passed": 1,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.microchip.com"
 }

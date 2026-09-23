@@ -1,102 +1,103 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for FDS: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=fds.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca08d20c0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001013237",
   "five_year_history": {
     "years": [
       {
         "cash": 681865000,
-        "debt": 574535000,
+        "debt": 866248000,
         "earnings": 399590000,
         "fiscal_year": "2021-08-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 1591445000,
+        "spending": 1117404000,
         "stock_return_pct": null
       },
       {
         "cash": 503273000,
-        "debt": 1982424000,
+        "debt": 2220231000,
         "earnings": 396917000,
         "fiscal_year": "2022-08-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 1843892000,
+        "spending": 1368410000,
         "stock_return_pct": null
       },
       {
         "cash": 425444000,
-        "debt": 1612700000,
+        "debt": 1839921000,
         "earnings": 468173000,
         "fiscal_year": "2023-08-31",
         "market_return_pct": 13.960726757427,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 2085508000,
+        "spending": 1456301000,
+        "stock_return_pct": 0.7084506392209466
       },
       {
         "cash": 422979000,
-        "debt": 1365973000,
+        "debt": 1574567000,
         "earnings": 537126000,
         "fiscal_year": "2024-08-31",
         "market_return_pct": 25.16487176640389,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 2203056000,
+        "spending": 1501757000,
+        "stock_return_pct": -3.1094612864049975
       },
       {
         "cash": 337651000,
-        "debt": 1368260000,
+        "debt": 1558509000,
         "earnings": 597040000,
         "fiscal_year": "2025-08-31",
         "market_return_pct": 13.587496451887604,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 2321748000,
+        "spending": 1573445000,
+        "stock_return_pct": -12.761328161952507
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.3998668728155823,
-      "debt_to_ebitda": 1.5102307520800358,
-      "debt_to_equity": 0.6258012552980613
+      "current_ratio": 0.683301853742471,
+      "debt_to_ebitda": 1.663339295777053,
+      "debt_to_equity": 0.7728434426189176
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 61.47559732182354,
+      "book_value_per_share": 55.196773405035444,
       "shareholders_equity": 2186413000,
       "total_assets": 4304272000,
       "total_liabilities": 2117859000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 26.59435907772937
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 14.904095738686006
+      "eps_growth_cagr_3yr_pct": 14.519949663542576
     },
     "profitability": {
-      "roe_pct": 27.306826294940617,
+      "roe_pct": 26.58478182472161,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 146.65870111579815,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 90.65383830678452,
+      "graham_number": 139.81393815136352,
+      "graham_upside_pct": -49.419745983878336,
+      "ncav_margin_pct": -114.11958225806909,
+      "pb_ratio": 5.00790142154909,
+      "pe_ttm": 18.102161100196465
     }
   },
-  "industry": "Services-Computer Programming, Data Processing, Etc.",
-  "last_updated": "2026-09-23T13:32:26Z",
+  "industry": "Financial - Data & Stock Exchanges",
+  "last_updated": "2026-09-23T03:46:27Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,29 +106,50 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 9831027396,
   "metrics": {
-    "book_value_per_share": 61.47559732182354,
-    "current_ratio": 1.3998668728155823,
-    "debt_to_ebitda": 1.5102307520800358,
-    "debt_to_equity": 0.6258012552980613,
-    "eps_growth_cagr_3yr_pct": 14.904095738686006,
-    "graham_criteria_evaluated": 4,
+    "book_value_per_share": 55.196773405035444,
+    "current_ratio": 0.683301853742471,
+    "debt_to_ebitda": 1.663339295777053,
+    "debt_to_equity": 0.7728434426189176,
+    "eps_growth_cagr_3yr_pct": 14.519949663542576,
+    "fcf_margin_pct": 26.59435907772937,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
+    "graham_multiple": 90.65383830678452,
+    "graham_upside_pct": -49.419745983878336,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
-    "munger_quality_passed": 3,
-    "roe_pct": 27.306826294940617,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 4,
+    "ncav_margin_pct": -114.11958225806909,
+    "pb_ratio": 5.00790142154909,
+    "pe_ttm": 18.102161100196465,
+    "roe_pct": 26.58478182472161,
     "shareholders_equity": 2186413000,
     "total_assets": 4304272000,
     "total_liabilities": 2117859000
   },
   "name": "FactSet",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 276.42
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025 (ended August 31, 2025), FactSet reported revenues of $2,321.7 million (up 5.4%), driven by growth in workstations, CGS, and front office solutions across all three segments (Americas, EMEA, Asia Pacific). Operating margin was 32.2% (up from 31.8%), net income rose 11.2% to $597.0 million, and diluted EPS was $15.55. The company had approximately 8,996 clients and 237,324 users as of August 31, 2025, with annual ASV retention above 95%, and returned $460.4 million to shareholders via buybacks and dividends; the filing also references a previously disclosed Sales Tax Dispute that affected prior-year results.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (quarter ended May 31, 2026) consists mainly of structured XBRL tagging data rather than narrative discussion, so detailed financial results cannot be summarized from it. It references items such as a credit agreement, a 2025 senior notes/revolving facility structure, an interest rate swap hedge, prior acquisitions (Platform Group Limited/Irwin and Liquid Holdings/LiquidityBook), and ongoing 'Sales Tax Matters,' but no further descriptive text was included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated August 28, 2026, discloses that FactSet entered into Amendment No. 1 to its April 2025 credit agreement with PNC Bank as administrative agent. The amendment extends the term loan facility's maturity to August 28, 2029 and the revolving credit facility's maturity to August 28, 2031 while increasing revolving commitments from $1.0 billion to $1.5 billion, removes a 0.10% credit spread adjustment on certain borrowings, and eliminates term loan amortization requirements, among other conforming changes.",
+    "moat_explanation": "FactSet's platform is deeply embedded in clients' daily investment workflows (research, portfolio construction, risk, performance reporting), and the 10-K reports annual ASV retention above 95% (91% on a per-client basis), indicating that once clients adopt the Hosted Platform or CGS Identifier Platform they rarely leave. Contracts require notice to modify or terminate, reinforcing the friction of switching to an alternative provider.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company disclosed a 'Sales Tax Dispute' that resulted in charges in the prior fiscal year, indicating ongoing tax/litigation exposure (Note 12, Commitments and Contingencies).",
+      "Cost of services grew 8.5% in fiscal 2025, outpacing 5.4% revenue growth, though overall operating margin still improved slightly.",
+      "The company relies on a single cloud provider for the majority of its cloud computing support, creating a concentration/operational risk if that relationship is disrupted.",
+      "Two third-party data suppliers each represented more than 10% of total data costs, indicating some data-sourcing concentration risk.",
+      "Client count growth was partly driven by recent acquisitions (Irwin, LiquidityBook), and organic growth was somewhat offset by existing client cancellations."
+    ]
+  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001013237.json",
@@ -154,13 +176,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $9.8B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.40, debt $1.4B vs working capital $0.2B",
+          "detail": "Current ratio 0.68, debt $1.6B vs working capital $0.2B",
           "passed": false
         },
         {
@@ -169,27 +191,27 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 14.9%/yr",
+          "detail": "EPS 3yr CAGR 14.5%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 18.1",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 90.7",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 3,
       "total": 7
     },
@@ -197,12 +219,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 27.3%",
+          "detail": "ROE 26.6%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.63",
+          "detail": "Debt/equity 0.77",
           "passed": true
         },
         {
@@ -212,14 +234,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 60",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 3,
+      "evaluated": 4,
+      "passed": 4,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.factset.com"
 }

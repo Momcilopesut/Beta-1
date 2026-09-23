@@ -1,62 +1,18 @@
 {
   "_errors": {
-    "stooq": "Failed to fetch Stooq prices for BRK-B: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=brk-b.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca08b7080>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+    "balance_sheet": "Failed to fetch https://financialmodelingprep.com/stable/balance-sheet-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/balance-sheet-statement?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=6",
+    "cash_flow": "Failed to fetch https://financialmodelingprep.com/stable/cash-flow-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/cash-flow-statement?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=6",
+    "dcf": "Failed to fetch https://financialmodelingprep.com/stable/discounted-cash-flow after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/discounted-cash-flow?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "historical_prices": "Failed to fetch https://financialmodelingprep.com/stable/historical-price-eod/full after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/historical-price-eod/full?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "income_statement": "Failed to fetch https://financialmodelingprep.com/stable/income-statement after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/income-statement?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU&limit=6",
+    "key_metrics_ttm": "Failed to fetch https://financialmodelingprep.com/stable/key-metrics-ttm after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/key-metrics-ttm?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "quote": "Failed to fetch https://financialmodelingprep.com/stable/quote after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/quote?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "ratios_ttm": "Failed to fetch https://financialmodelingprep.com/stable/ratios-ttm after 3 attempts: 402 Client Error: Payment Required for url: https://financialmodelingprep.com/stable/ratios-ttm?symbol=BRK.B&apikey=nDNoYnOiNd9NEceBq5HVucOFjKvuGGsU",
+    "sec_cik": "No CIK found for ticker BRK.B",
+    "stooq": "Failed to fetch Stooq prices for BRK.B: Failed to fetch https://stooq.com/q/d/l/ after 3 attempts: 404 Client Error: Not Found for url: https://stooq.com/q/d/l/?s=brk.b.us&i=d"
   },
-  "cik": "0001067983",
-  "five_year_history": {
-    "years": [
-      {
-        "cash": null,
-        "debt": null,
-        "earnings": 89937000000,
-        "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
-        "revenue": 276185000000,
-        "spending": null,
-        "stock_return_pct": null
-      },
-      {
-        "cash": null,
-        "debt": null,
-        "earnings": -22759000000,
-        "fiscal_year": "2022-12-31",
-        "market_return_pct": -19.48164055920498,
-        "revenue": 302020000000,
-        "spending": null,
-        "stock_return_pct": null
-      },
-      {
-        "cash": null,
-        "debt": null,
-        "earnings": 96223000000,
-        "fiscal_year": "2023-12-31",
-        "market_return_pct": 23.591245456684877,
-        "revenue": 364482000000,
-        "spending": null,
-        "stock_return_pct": null
-      },
-      {
-        "cash": null,
-        "debt": null,
-        "earnings": 88995000000,
-        "fiscal_year": "2024-12-31",
-        "market_return_pct": 23.99873056172645,
-        "revenue": 371433000000,
-        "spending": null,
-        "stock_return_pct": null
-      },
-      {
-        "cash": null,
-        "debt": null,
-        "earnings": 66968000000,
-        "fiscal_year": "2025-12-31",
-        "market_return_pct": 16.35271635271634,
-        "revenue": 371444000000,
-        "spending": null,
-        "stock_return_pct": null
-      }
-    ]
-  },
+  "cik": null,
+  "five_year_history": null,
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": null,
@@ -64,19 +20,19 @@
       "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 762011.1292739842,
-      "shareholders_equity": 717419000000,
-      "total_assets": 1222176000000,
-      "total_liabilities": 502473000000
+      "book_value_per_share": null,
+      "shareholders_equity": null,
+      "total_assets": null,
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 6.741796879206556
+      "fcf_margin_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 9.334572962243822,
+      "roe_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -88,13 +44,11 @@
       "pe_ttm": null
     }
   },
-  "industry": "Fire, Marine & Casualty Insurance",
-  "last_updated": "2026-09-23T12:29:15Z",
+  "industry": null,
+  "last_updated": "2026-09-23T02:44:38Z",
   "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
+    "flags": [],
+    "munger_quality_pass": null,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
@@ -109,17 +63,11 @@
   },
   "market_cap": null,
   "metrics": {
-    "book_value_per_share": 762011.1292739842,
-    "fcf_margin_pct": 6.741796879206556,
-    "graham_criteria_evaluated": 1,
+    "graham_criteria_evaluated": 0,
     "graham_criteria_passed": 0,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 1,
-    "munger_quality_passed": 0,
-    "roe_pct": 9.334572962243822,
-    "shareholders_equity": 717419000000,
-    "total_assets": 1222176000000,
-    "total_liabilities": 502473000000
+    "munger_quality_evaluated": 0,
+    "munger_quality_passed": 0
   },
   "name": "Berkshire Hathaway Inc.",
   "price": {
@@ -129,24 +77,8 @@
   "qualitative": null,
   "sector": "Financial Services",
   "sources": {
-    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001067983.json",
-    "sec_filings": [
-      {
-        "filed": "2026-08-11",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526344495/d159922d8k.htm"
-      },
-      {
-        "filed": "2026-08-10",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526341032/brka-20260630.htm"
-      },
-      {
-        "filed": "2026-03-02",
-        "form": "10-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm"
-      }
-    ]
+    "sec_companyfacts_url": null,
+    "sec_filings": []
   },
   "ticker": "BRK.B",
   "value_investing": {
@@ -163,9 +95,9 @@
           "passed": null
         },
         {
-          "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/6 available years",
-          "passed": false
+          "criterion": "Earnings stability",
+          "detail": "No annual net income data available",
+          "passed": null
         },
         {
           "criterion": "Dividend record",
@@ -188,7 +120,7 @@
           "passed": null
         }
       ],
-      "evaluated": 1,
+      "evaluated": 0,
       "passed": 0,
       "total": 7
     },
@@ -196,8 +128,8 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 9.3%",
-          "passed": false
+          "detail": "ROE unavailable",
+          "passed": null
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
@@ -206,7 +138,7 @@
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "Share count unavailable",
+          "detail": "Fewer than 2 years of share-count data",
           "passed": null
         },
         {
@@ -215,7 +147,7 @@
           "passed": null
         }
       ],
-      "evaluated": 1,
+      "evaluated": 0,
       "passed": 0,
       "total": 4
     }

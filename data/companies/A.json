@@ -1,7 +1,5 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for A: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=a.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2c60290>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001090872",
   "five_year_history": {
     "years": [
@@ -11,92 +9,95 @@
         "earnings": 1210000000,
         "fiscal_year": "2021-10-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 6319000000,
+        "spending": 4972000000,
         "stock_return_pct": null
       },
       {
         "cash": 1053000000,
-        "debt": null,
+        "debt": 2769000000,
         "earnings": 1254000000,
         "fiscal_year": "2022-10-31",
         "market_return_pct": -16.048604469176603,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 6848000000,
+        "spending": 5230000000,
+        "stock_return_pct": -11.912644849102259
       },
       {
         "cash": 1590000000,
-        "debt": null,
+        "debt": 2735000000,
         "earnings": 1240000000,
         "fiscal_year": "2023-10-31",
         "market_return_pct": 8.28305843970897,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 6833000000,
+        "spending": 5483000000,
+        "stock_return_pct": -25.2837007589447
       },
       {
         "cash": 1329000000,
-        "debt": null,
+        "debt": 3574000000,
         "earnings": 1289000000,
         "fiscal_year": "2024-10-31",
         "market_return_pct": 35.97321855571497,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 6510000000,
+        "spending": 5022000000,
+        "stock_return_pct": 26.061720034826347
       },
       {
         "cash": 1789000000,
-        "debt": null,
+        "debt": 3354000000,
         "earnings": 1303000000,
         "fiscal_year": "2025-10-31",
         "market_return_pct": 19.945835678109166,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 6948000000,
+        "spending": 5469000000,
+        "stock_return_pct": 12.316783055790047
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.9573924158500213,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 2.0502402795980776,
+      "debt_to_ebitda": 1.898132427843803,
+      "debt_to_equity": 0.5363303001493956
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 23.910287664277174,
+      "book_value_per_share": 26.109929078014183,
       "shareholders_equity": 6741000000,
       "total_assets": 12727000000,
       "total_liabilities": 5986000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 16.580310880829018
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 3.0180455204013246
+      "eps_growth_cagr_3yr_pct": 3.085968186944621
     },
     "profitability": {
-      "roe_pct": 19.329476338822133,
-      "trend": "stable"
+      "roe_pct": 20.473448496481126,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 49.58402292149459,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 210.479003230457,
+      "graham_number": 51.92786270906896,
+      "graham_upside_pct": -68.95195054764187,
+      "ncav_margin_pct": -102.95211711645413,
+      "pb_ratio": 6.405609126714655,
+      "pe_ttm": 32.858546168958746
     }
   },
-  "industry": "Laboratory Analytical Instruments",
-  "last_updated": "2026-09-23T13:47:44Z",
+  "industry": "Medical - Diagnostics & Research",
+  "last_updated": "2026-09-23T03:05:19Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,27 +106,50 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 47236752000,
   "metrics": {
-    "book_value_per_share": 23.910287664277174,
-    "current_ratio": 1.9573924158500213,
-    "eps_growth_cagr_3yr_pct": 3.0180455204013246,
-    "graham_criteria_evaluated": 3,
+    "book_value_per_share": 26.109929078014183,
+    "current_ratio": 2.0502402795980776,
+    "debt_to_ebitda": 1.898132427843803,
+    "debt_to_equity": 0.5363303001493956,
+    "eps_growth_cagr_3yr_pct": 3.085968186944621,
+    "fcf_margin_pct": 16.580310880829018,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 2,
-    "roe_pct": 19.329476338822133,
+    "graham_multiple": 210.479003230457,
+    "graham_upside_pct": -68.95195054764187,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 4,
+    "ncav_margin_pct": -102.95211711645413,
+    "pb_ratio": 6.405609126714655,
+    "pe_ttm": 32.858546168958746,
+    "roe_pct": 20.473448496481126,
     "shareholders_equity": 6741000000,
     "total_assets": 12727000000,
     "total_liabilities": 5986000000
   },
   "name": "Agilent Technologies",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 167.25
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Agilent's fiscal 2025 10-K describes a global life sciences, diagnostics and applied markets company reorganized in November 2024 into three segments: Life Sciences and Diagnostics Markets, Agilent CrossLab, and Applied Markets. Net revenue was $6,948 million in fiscal 2025, up 7% from $6,510 million in 2024 (which itself was down 5% from 2023), with growth in 2025 aided partly by the BIOVECTRA acquisition. Net income was $1,303 million in 2025 versus $1,289 million in 2024 and $1,240 million in 2023, with 2025 benefiting from tax items and 2023 affected by impairment charges tied to exiting the Resolution Bioscience business. The filing also discusses share repurchase programs, dividends, and tariff-related cost pressures the company expects to substantially mitigate in fiscal 2026.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL taxonomy tags and context references rather than narrative text, covering the quarter ended July 31, 2026 and the nine-month period from November 2025. From the tags, it appears the filing references a business combination involving an entity called 'Biocare' around June 24, 2026, and senior notes due 2032 issued around June 25, 2026, along with standard segment (Life Sciences and Diagnostics Markets, Agilent CrossLab, Applied Markets), geographic (Americas, Europe, Asia Pacific), and end-market revenue breakdowns. No prose discussion of results, drivers, or management commentary was included in the excerpt provided, so specific financial outcomes or explanations cannot be summarized from this material.",
+    "filing_summary_8k": "This 8-K, dated September 2, 2026, discloses that Board Chairperson Boon Hwee Koh notified the company of his retirement from the Board effective September 4, 2026, after 23 years of service, stated to not be due to any disagreement with the company. The Board appointed Glenn Boehnlein, former CFO of Stryker Corporation, to fill the resulting vacancy as a Class III director effective September 4, 2026, assigning him to the Audit and Finance Committee and Compensation Committee. The company also noted it issued a September 8, 2026 press release (furnished as Exhibit 99.1) announcing these board changes.",
+    "moat_explanation": "The 10-K describes Agilent's CrossLab segment as spanning 'the entire lab with its extensive services and consumables portfolio,' built around annual instrument service and software maintenance contracts tied to an installed base of instruments, which creates recurring, sticky revenue. The specialty CDMO business (BIOVECTRA, nucleic acid solutions) operates under pharmaceutical GMP conditions and provides validated companion diagnostics tied to specific approved therapies, both of which would be costly and time-consuming for customers to re-qualify with another supplier.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Fiscal 2024 net revenue declined 5% versus 2023, driven by pressure on customers' capital expenditure spending, particularly in the Life Sciences and Diagnostics Markets and Applied Markets segments serving the pharmaceutical market.",
+      "Recent U.S. and international tariff/trade policy changes adversely impacted costs of revenue beginning in the second half of fiscal 2025, with the company stating mitigation is not expected to be complete until fiscal 2026.",
+      "The company noted that customers receiving funding from the U.S. federal government have not seen capital spending normalize, unlike other customer segments.",
+      "Fiscal 2023 net income was impacted by asset impairment charges related to the exit of the Resolution Bioscience business.",
+      "Item 1A Risk Factors was not populated with substantive text in the provided excerpt, so specific company-acknowledged risks beyond MD&A commentary could not be reviewed."
+    ]
+  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001090872.json",
@@ -152,14 +176,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $47.2B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 2.05, debt $3.4B vs working capital $2.2B",
+          "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -167,27 +191,27 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 3.0%/yr",
+          "detail": "EPS 3yr CAGR 3.1%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 32.9",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 210.5",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 6,
       "passed": 3,
       "total": 7
     },
@@ -195,29 +219,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 19.3%",
+          "detail": "ROE 20.5%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.54",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "285,000,000 shares vs. 291,000,000 a year earlier",
+          "detail": "284,000,000 shares vs. 291,000,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 4,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.agilent.com"
 }

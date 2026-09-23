@@ -5,96 +5,99 @@
     "years": [
       {
         "cash": 6227000000,
-        "debt": 3355000000,
+        "debt": 12508000000,
         "earnings": 3283000000,
-        "fiscal_year": "2022-01-29",
+        "fiscal_year": "2022-01-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 48550000000,
+        "spending": 43795000000,
         "stock_return_pct": null
       },
       {
         "cash": 5477000000,
-        "debt": 3359000000,
+        "debt": 12744000000,
         "earnings": 3498000000,
-        "fiscal_year": "2023-01-28",
-        "market_return_pct": -8.206810725195155,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "fiscal_year": "2023-01-31",
+        "market_return_pct": -9.653041719455004,
+        "revenue": 49936000000,
+        "spending": 45076000000,
+        "stock_return_pct": 13.74183687647631
       },
       {
         "cash": 5600000000,
-        "debt": 2862000000,
+        "debt": 12542000000,
         "earnings": 4474000000,
-        "fiscal_year": "2024-02-03",
-        "market_return_pct": 21.857128771445478,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "fiscal_year": "2024-01-31",
+        "market_return_pct": 18.795512694351498,
+        "revenue": 54217000000,
+        "spending": 48420000000,
+        "stock_return_pct": 15.941851942340579
       },
       {
         "cash": 5335000000,
-        "debt": 2866000000,
+        "debt": 12778000000,
         "earnings": 4864000000,
-        "fiscal_year": "2025-02-01",
-        "market_return_pct": 21.73965813694751,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "fiscal_year": "2025-01-31",
+        "market_return_pct": 24.631378396288945,
+        "revenue": 56360000000,
+        "spending": 50058000000,
+        "stock_return_pct": 31.482457064587514
       },
       {
         "cash": 6230000000,
-        "debt": 2869000000,
+        "debt": 13489000000,
         "earnings": 5494000000,
         "fiscal_year": "2026-01-31",
         "market_return_pct": 14.979561995280976,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 60372000000,
+        "spending": 53194000000,
+        "stock_return_pct": 20.04968346822662
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.1377890876431405,
-      "debt_to_ebitda": null,
-      "debt_to_equity": 0.2815505397448479
+      "current_ratio": 1.147380239520958,
+      "debt_to_ebitda": 1.6010682492581603,
+      "debt_to_equity": 1.3441930335179795
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 9.263854813754557,
+      "book_value_per_share": 9.535362578334825,
       "shareholders_equity": 10190000000,
       "total_assets": 35767000000,
-      "total_liabilities": null
+      "total_liabilities": 25577000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 8.144504074736632
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 17.920914155588186
+      "eps_growth_cagr_3yr_pct": 17.68719218995578
     },
     "profitability": {
-      "roe_pct": 53.915603532875366,
+      "roe_pct": 59.76898258749353,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 31.86042829619771,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 331.65077103483736,
+      "graham_number": 32.390249577323246,
+      "graham_upside_pct": -75.23681224975287,
+      "ncav_margin_pct": -107.21104021246946,
+      "pb_ratio": 13.71735987231246,
+      "pe_ttm": 24.177449168207026
     }
   },
-  "industry": "Retail-Family Clothing Stores",
-  "last_updated": "2026-09-23T12:26:48Z",
+  "industry": "Apparel - Retail",
+  "last_updated": "2026-09-23T03:53:57Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -103,27 +106,50 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 144495341537,
   "metrics": {
-    "book_value_per_share": 9.263854813754557,
-    "current_ratio": 1.1377890876431405,
-    "debt_to_equity": 0.2815505397448479,
-    "eps_growth_cagr_3yr_pct": 17.920914155588186,
-    "graham_criteria_evaluated": 4,
+    "book_value_per_share": 9.535362578334825,
+    "current_ratio": 1.147380239520958,
+    "debt_to_ebitda": 1.6010682492581603,
+    "debt_to_equity": 1.3441930335179795,
+    "eps_growth_cagr_3yr_pct": 17.68719218995578,
+    "fcf_margin_pct": 8.144504074736632,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
+    "graham_multiple": 331.65077103483736,
+    "graham_upside_pct": -75.23681224975287,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "roe_pct": 53.915603532875366,
+    "ncav_margin_pct": -107.21104021246946,
+    "pb_ratio": 13.71735987231246,
+    "pe_ttm": 24.177449168207026,
+    "roe_pct": 59.76898258749353,
     "shareholders_equity": 10190000000,
-    "total_assets": 35767000000
+    "total_assets": 35767000000,
+    "total_liabilities": 25577000000
   },
   "name": "TJX Companies Inc.",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 130.8
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2026 (ended January 31, 2026), TJX reported net sales of $60.4 billion, up 7% from $56.4 billion, with consolidated comp sales up 5% and diluted EPS of $4.87 versus $4.26 a year earlier. Pre-tax margin improved to 12.1% from 11.5%, aided partly by a $419 million net gain from a credit card interchange fee litigation settlement recorded in SG&A, offset by related one-time compensation expenses. The filing also discusses ongoing uncertainty around U.S. tariffs, including a Supreme Court ruling invalidating certain IEEPA tariffs followed by a new executive order imposing a global tariff, and notes store count grew about 3% with continued expansion planned across all segments in fiscal 2027.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K discloses that on September 16, 2026, TJX's Board of Directors elected Craig A. Pintoff, an Executive Vice President and Chief Administrative Officer at United Rentals, Inc., as a new independent director and member of the Audit and Finance Committee, effective immediately. The filing describes his compensation under the company's standard non-employee director program and states there are no related-party transactions or arrangements connected to his appointment.",
+    "moat_explanation": "The 10-K describes a low-cost operating structure (lean advertising spend, no-frills store fixtures, cost-effective distribution) combined with an opportunistic buying strategy leveraging roughly 21,000 global vendors and substantial buying power to acquire brand-name merchandise at prices 20%-60% below full-price retailers. This scale-driven, flexible sourcing and inventory model is presented as a structural cost and pricing advantage versus traditional retailers, though the filing also notes larger competitors with greater resources.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Company acknowledges it operates in 'highly competitive markets' against larger, better-resourced competitors and 'may not be able to compete effectively'",
+      "Heavy reliance on merchandise sourced from China, India, and southeastern Asia exposes the company to tariffs, trade restrictions, and supply chain disruption risks explicitly discussed in Risk Factors",
+      "Tariff uncertainty is called out as an ongoing issue, including a Supreme Court ruling invalidating certain IEEPA tariffs followed by a new executive order imposing different tariffs, creating unresolved uncertainty for cost structure",
+      "Fiscal 2026 results benefited from a one-time $419 million net gain from a credit card interchange fee litigation settlement, which inflates period-over-period margin and EPS comparisons and is not a recurring business driver",
+      "General corporate expense increased in fiscal 2026 due to higher administrative costs and settlement-related expenses"
+    ]
+  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000109198.json",
@@ -150,13 +176,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $144.5B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.14, debt $2.9B vs working capital $1.8B",
+          "detail": "Current ratio 1.15, debt $13.5B vs working capital $1.8B",
           "passed": false
         },
         {
@@ -165,27 +191,27 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 17.9%/yr",
+          "detail": "EPS 3yr CAGR 17.7%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 24.2",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 331.7",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 3,
       "total": 7
     },
@@ -193,29 +219,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 53.9%",
+          "detail": "ROE 59.8%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.28",
-          "passed": true
+          "detail": "Debt/equity 1.34",
+          "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "1,128,000,000 shares vs. 1,142,000,000 a year earlier",
+          "detail": "1,125,000,000 shares vs. 1,142,000,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 60",
+          "passed": true
         }
       ],
-      "evaluated": 3,
+      "evaluated": 4,
       "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.tjx.com"
 }

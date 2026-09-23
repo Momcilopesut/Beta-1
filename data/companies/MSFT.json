@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for MSFT: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=msft.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1fac9b0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000789019",
   "five_year_history": {
     "years": [
       {
         "cash": 13931000000,
-        "debt": 49781000000,
+        "debt": 78400000000,
         "earnings": 72738000000,
         "fiscal_year": "2022-06-30",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 198270000000,
+        "spending": 114887000000,
         "stock_return_pct": null
       },
       {
         "cash": 34704000000,
-        "debt": 47237000000,
+        "debt": 79441000000,
         "earnings": 72361000000,
         "fiscal_year": "2023-06-30",
         "market_return_pct": 17.50298210735586,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 211915000000,
+        "spending": 123392000000,
+        "stock_return_pct": 32.59354436786982
       },
       {
         "cash": 18315000000,
-        "debt": 44937000000,
+        "debt": 97852000000,
         "earnings": 88136000000,
         "fiscal_year": "2024-06-30",
         "market_return_pct": 23.0238224147266,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 245122000000,
+        "spending": 135689000000,
+        "stock_return_pct": 34.119339871968045
       },
       {
         "cash": 30242000000,
-        "debt": 43151000000,
+        "debt": 112184000000,
         "earnings": 101832000000,
         "fiscal_year": "2025-06-30",
         "market_return_pct": 13.296292221366485,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 281724000000,
+        "spending": 153196000000,
+        "stock_return_pct": 8.906793948284546
       },
       {
         "cash": 20935000000,
-        "debt": 40294000000,
+        "debt": 128808300000,
         "earnings": 133749000000,
         "fiscal_year": "2026-06-30",
         "market_return_pct": 20.865905964230794,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 331839000000,
+        "spending": 176602000000,
+        "stock_return_pct": -25.007539052290873
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 1.2303272619576484,
-      "debt_to_ebitda": null,
-      "debt_to_equity": 0.09108314665666034
+      "debt_to_ebitda": 0.6647449824793183,
+      "debt_to_equity": 0.29116655778763845
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 59.57636385585238,
+      "book_value_per_share": 59.54866065419303,
       "shareholders_equity": 442387000000,
       "total_assets": 758376000000,
       "total_liabilities": 315989000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 20.18659651216403
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 22.855998285745226
+      "eps_growth_cagr_3yr_pct": 22.801049954679552
     },
     "profitability": {
-      "roe_pct": 30.233483352811003,
-      "trend": "stable"
+      "roe_pct": 33.2150207517826,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 155.11738765297196,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 231.37380167138724,
+      "graham_number": 155.29715890816604,
+      "graham_upside_pct": -68.81583154454498,
+      "ncav_margin_pct": -102.92810421950686,
+      "pb_ratio": 8.362908494146527,
+      "pe_ttm": 27.666666666666664
     }
   },
-  "industry": "Services-Prepackaged Software",
-  "last_updated": "2026-09-23T12:30:43Z",
+  "industry": "Software - Infrastructure",
+  "last_updated": "2026-09-23T02:44:47Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,26 +105,33 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 3697923900000,
   "metrics": {
-    "book_value_per_share": 59.57636385585238,
+    "book_value_per_share": 59.54866065419303,
     "current_ratio": 1.2303272619576484,
-    "debt_to_equity": 0.09108314665666034,
-    "eps_growth_cagr_3yr_pct": 22.855998285745226,
-    "graham_criteria_evaluated": 4,
+    "debt_to_ebitda": 0.6647449824793183,
+    "debt_to_equity": 0.29116655778763845,
+    "eps_growth_cagr_3yr_pct": 22.801049954679552,
+    "fcf_margin_pct": 20.18659651216403,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
+    "graham_multiple": 231.37380167138724,
+    "graham_upside_pct": -68.81583154454498,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "roe_pct": 30.233483352811003,
+    "ncav_margin_pct": -102.92810421950686,
+    "pb_ratio": 8.362908494146527,
+    "pe_ttm": 27.666666666666664,
+    "roe_pct": 33.2150207517826,
     "shareholders_equity": 442387000000,
     "total_assets": 758376000000,
     "total_liabilities": 315989000000
   },
   "name": "Microsoft Corporation",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 498
   },
   "qualitative": null,
   "sector": "Technology",
@@ -153,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $3697.9B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.23, debt $40.3B vs working capital $38.9B",
+          "detail": "Current ratio 1.23, debt $128.8B vs working capital $38.9B",
           "passed": false
         },
         {
@@ -168,27 +175,27 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 22.9%/yr",
+          "detail": "EPS 3yr CAGR 22.8%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 27.7",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 231.4",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 3,
       "total": 7
     },
@@ -196,12 +203,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 30.2%",
+          "detail": "ROE 33.2%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.09",
+          "detail": "Debt/equity 0.29",
           "passed": true
         },
         {
@@ -211,14 +218,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 4,
       "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.microsoft.com"
 }

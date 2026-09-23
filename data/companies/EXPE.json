@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for EXPE: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=expe.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0ce8890>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001324424",
   "five_year_history": {
     "years": [
       {
         "cash": 4111000000,
-        "debt": 8450000000,
+        "debt": 8810000000,
         "earnings": 12000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 8598000000,
-        "spending": null,
+        "spending": 8412000000,
         "stock_return_pct": null
       },
       {
         "cash": 4096000000,
-        "debt": 6240000000,
+        "debt": 6552000000,
         "earnings": 352000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 11667000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 10582000000,
+        "stock_return_pct": -51.527224435590966
       },
       {
         "cash": 4225000000,
-        "debt": 6253000000,
+        "debt": 6567000000,
         "earnings": 797000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 12839000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 11806000000,
+        "stock_return_pct": 69.81735159817352
       },
       {
         "cash": 4183000000,
-        "debt": 6266000000,
+        "debt": 6531000000,
         "earnings": 1234000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 13691000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 12372000000,
+        "stock_return_pct": 25.25544501210004
       },
       {
-        "cash": 5413000000,
-        "debt": 6161000000,
+        "cash": 6976000000,
+        "debt": 6669000000,
         "earnings": 1294000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 14733000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 12570000000,
+        "stock_return_pct": 52.04744270917189
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.7323647715675091,
-      "debt_to_ebitda": 2.2338651196519215,
-      "debt_to_equity": 4.798286604361371
+      "current_ratio": 0.800923651370738,
+      "debt_to_ebitda": 2.1865573770491804,
+      "debt_to_equity": 4.702233250620347
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
+      "book_value_per_share": 20.416931759028977,
       "shareholders_equity": 1284000000,
       "total_assets": 24452000000,
-      "total_liabilities": null
+      "total_liabilities": 21905000000
     },
     "cash_flow": {
       "fcf_margin_pct": 21.109074865947193
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 65.34957812135467
+      "eps_growth_cagr_3yr_pct": 66.14950805270684
     },
     "profitability": {
-      "roe_pct": 100.77881619937695,
-      "trend": "stable"
+      "roe_pct": 184.83885610531095,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 472.85057046959173,
+      "graham_number": 68.85355150205783,
+      "graham_upside_pct": -75.47076896969796,
+      "ncav_margin_pct": -130.19935052579802,
+      "pb_ratio": 28.099486269644334,
+      "pe_ttm": 16.827730084888017
     }
   },
-  "industry": "Transportation Services",
-  "last_updated": "2026-09-23T12:59:11Z",
+  "industry": "Travel Services",
+  "last_updated": "2026-09-23T02:47:49Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,26 +105,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 32139764038,
   "metrics": {
-    "current_ratio": 0.7323647715675091,
-    "debt_to_ebitda": 2.2338651196519215,
-    "debt_to_equity": 4.798286604361371,
-    "eps_growth_cagr_3yr_pct": 65.34957812135467,
+    "book_value_per_share": 20.416931759028977,
+    "current_ratio": 0.800923651370738,
+    "debt_to_ebitda": 2.1865573770491804,
+    "debt_to_equity": 4.702233250620347,
+    "eps_growth_cagr_3yr_pct": 66.14950805270684,
     "fcf_margin_pct": 21.109074865947193,
-    "graham_criteria_evaluated": 4,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
-    "munger_quality_passed": 2,
-    "roe_pct": 100.77881619937695,
+    "graham_multiple": 472.85057046959173,
+    "graham_upside_pct": -75.47076896969796,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -130.19935052579802,
+    "pb_ratio": 28.099486269644334,
+    "pe_ttm": 16.827730084888017,
+    "roe_pct": 184.83885610531095,
     "shareholders_equity": 1284000000,
-    "total_assets": 24452000000
+    "total_assets": 24452000000,
+    "total_liabilities": 21905000000
   },
   "name": "Expedia Group",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 280.7
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -153,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $32.1B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.73, debt $6.2B vs working capital $-4.5B",
+          "detail": "Current ratio 0.80, debt $6.7B vs working capital $-4.5B",
           "passed": false
         },
         {
@@ -168,27 +175,27 @@
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 65.3%/yr",
+          "detail": "EPS 3yr CAGR 66.1%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 16.8",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 472.9",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 2,
       "total": 7
     },
@@ -196,12 +203,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 100.8%",
+          "detail": "ROE 184.8%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 4.80",
+          "detail": "Debt/equity 4.70",
           "passed": false
         },
         {
@@ -211,14 +218,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.expediagroup.com"
 }

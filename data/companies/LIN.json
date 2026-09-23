@@ -5,64 +5,64 @@
     "years": [
       {
         "cash": 2823000000,
-        "debt": 13044000000,
+        "debt": 15216000000,
         "earnings": 3826000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 30793000000,
-        "spending": null,
+        "spending": 25510000000,
         "stock_return_pct": null
       },
       {
         "cash": 5436000000,
-        "debt": 13797000000,
+        "debt": 18791000000,
         "earnings": 4147000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 33364000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 26904000000,
+        "stock_return_pct": -5.845336720260947
       },
       {
         "cash": 4664000000,
-        "debt": 14660000000,
+        "debt": 20315000000,
         "earnings": 6199000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 32854000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 24749000000,
+        "stock_return_pct": 25.56870439634557
       },
       {
         "cash": 4850000000,
-        "debt": 17400000000,
+        "debt": 22609000000,
         "earnings": 6565000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 33005000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 24410000000,
+        "stock_return_pct": 2.219346647785544
       },
       {
         "cash": 5056000000,
-        "debt": 22479000000,
+        "debt": 26989000000,
         "earnings": 6898000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 33986000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 24732000000,
+        "stock_return_pct": 1.8439343635799008
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.8767601000131596,
-      "debt_to_ebitda": 1.7719533343843608,
-      "debt_to_equity": 0.5877631062884037
+      "current_ratio": 0.8790227568673653,
+      "debt_to_ebitda": 2.073365598832296,
+      "debt_to_equity": 0.7167933266804841
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 82.96452444093565,
+      "book_value_per_share": 87.81579374087887,
       "shareholders_equity": 38245000000,
       "total_assets": 86817000000,
       "total_liabilities": 47076000000
@@ -71,30 +71,32 @@
       "fcf_margin_pct": 14.973812746425
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 21.083080176239765
+      "eps_growth_cagr_3yr_pct": 20.906785197304778
     },
     "profitability": {
-      "roe_pct": 18.036344620211793,
-      "trend": "stable"
+      "roe_pct": 18.753721490149378,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 165.1439169235324,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 164.39845312532375,
+      "graham_number": 170.25216039457646,
+      "graham_upside_pct": -63.379544343082216,
+      "ncav_margin_pct": -115.74836674729367,
+      "pb_ratio": 5.502226088124663,
+      "pe_ttm": 29.878534704370185
     }
   },
-  "industry": "Industrial Inorganic Chemicals",
-  "last_updated": "2026-09-23T12:26:23Z",
+  "industry": "Chemicals - Specialty",
+  "last_updated": "2026-09-23T02:42:48Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -103,28 +105,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 215067366000,
   "metrics": {
-    "book_value_per_share": 82.96452444093565,
-    "current_ratio": 0.8767601000131596,
-    "debt_to_ebitda": 1.7719533343843608,
-    "debt_to_equity": 0.5877631062884037,
-    "eps_growth_cagr_3yr_pct": 21.083080176239765,
+    "book_value_per_share": 87.81579374087887,
+    "current_ratio": 0.8790227568673653,
+    "debt_to_ebitda": 2.073365598832296,
+    "debt_to_equity": 0.7167933266804841,
+    "eps_growth_cagr_3yr_pct": 20.906785197304778,
     "fcf_margin_pct": 14.973812746425,
-    "graham_criteria_evaluated": 4,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
-    "munger_quality_passed": 3,
-    "roe_pct": 18.036344620211793,
+    "graham_multiple": 164.39845312532375,
+    "graham_upside_pct": -63.379544343082216,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 4,
+    "ncav_margin_pct": -115.74836674729367,
+    "pb_ratio": 5.502226088124663,
+    "pe_ttm": 29.878534704370185,
+    "roe_pct": 18.753721490149378,
     "shareholders_equity": 38245000000,
     "total_assets": 86817000000,
     "total_liabilities": 47076000000
   },
   "name": "Linde plc",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 464.91
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -153,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $215.1B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.88, debt $22.5B vs working capital $-1.9B",
+          "detail": "Current ratio 0.88, debt $27.0B vs working capital $-1.9B",
           "passed": false
         },
         {
@@ -168,27 +175,27 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 21.1%/yr",
+          "detail": "EPS 3yr CAGR 20.9%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 29.9",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 164.4",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 3,
       "total": 7
     },
@@ -196,29 +203,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 18.0%",
+          "detail": "ROE 18.8%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.59",
+          "detail": "Debt/equity 0.72",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "472,195,000 shares vs. 482,092,000 a year earlier",
+          "detail": "468,702,000 shares vs. 482,092,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 3,
+      "evaluated": 4,
+      "passed": 4,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.linde.com"
 }

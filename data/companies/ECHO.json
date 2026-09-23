@@ -1,70 +1,68 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for ECHO: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=echo.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2baab10>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001415404",
   "five_year_history": {
     "years": [
       {
         "cash": 535894000,
-        "debt": 1495994000,
-        "earnings": null,
-        "fiscal_year": "2023-06-30",
-        "market_return_pct": 8.27816996018466,
-        "revenue": 4356462000,
-        "spending": null,
+        "debt": 1647672000,
+        "earnings": 2486285000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 19818678000,
+        "spending": 16396274000,
         "stock_return_pct": null
       },
       {
         "cash": 2497536000,
-        "debt": null,
-        "earnings": null,
-        "fiscal_year": "2023-09-30",
-        "market_return_pct": -3.5643385670456498,
-        "revenue": 4108874000,
-        "spending": null,
-        "stock_return_pct": null
+        "debt": 25722748000,
+        "earnings": 2477720000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 18634246000,
+        "spending": 16401408000,
+        "stock_return_pct": -36.698292220113856
       },
       {
         "cash": 1821376000,
-        "debt": null,
+        "debt": 25885227000,
         "earnings": -1702057000,
         "fiscal_year": "2023-12-31",
-        "market_return_pct": 10.566576214091878,
+        "market_return_pct": 23.591245456684877,
         "revenue": 17015598000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 17293507000,
+        "stock_return_pct": -5.815347721822535
       },
       {
         "cash": 4305393000,
-        "debt": null,
+        "debt": 29814724000,
         "earnings": -119546000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 15825516000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 16129586000,
+        "stock_return_pct": 45.76702737110119
       },
       {
         "cash": 1883074000,
-        "debt": null,
+        "debt": 31006514000,
         "earnings": -14497180000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 15004989000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 15096124000,
+        "stock_return_pct": 374.6724890829695
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.4151902479403149,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 5.200833444228707,
+      "debt_to_ebitda": 20.74827591283272,
+      "debt_to_equity": 1.235936108852336
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
+      "book_value_per_share": 48.94656046542888,
       "shareholders_equity": 5765784000,
       "total_assets": 43016355000,
       "total_liabilities": 37204357000
@@ -73,30 +71,32 @@
       "fcf_margin_pct": -7.09833242796779
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 362.3620427178321
+      "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": -251.43467046285468,
-      "trend": "stable"
+      "roe_pct": -69.7131255798401,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": -9.360216588935033,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -312.01189874926797,
+      "pb_ratio": 1.9502902572168215,
+      "pe_ttm": -4.799396681749624
     }
   },
-  "industry": "Communications Services, NEC",
-  "last_updated": "2026-09-23T12:49:24Z",
+  "industry": "Telecommunications Services",
+  "last_updated": "2026-09-23T03:42:21Z",
   "layered_analysis": {
     "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "6 red flag(s) from the filing text - see qualitative.red_flags."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "qualitative_moat_present": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -107,27 +107,49 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 15127068900,
   "metrics": {
-    "current_ratio": 0.4151902479403149,
-    "eps_growth_cagr_3yr_pct": 362.3620427178321,
+    "book_value_per_share": 48.94656046542888,
+    "current_ratio": 5.200833444228707,
+    "debt_to_ebitda": 20.74827591283272,
+    "debt_to_equity": 1.235936108852336,
     "fcf_margin_pct": -7.09833242796779,
-    "graham_criteria_evaluated": 2,
-    "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 2,
+    "graham_multiple": -9.360216588935033,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 0,
-    "roe_pct": -251.43467046285468,
+    "ncav_margin_pct": -312.01189874926797,
+    "pb_ratio": 1.9502902572168215,
+    "pe_ttm": -4.799396681749624,
+    "roe_pct": -69.7131255798401,
     "shareholders_equity": 5765784000,
     "total_assets": 43016355000,
     "total_liabilities": 37204357000
   },
   "name": "EchoStar",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 95.46
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The FY2025 10-K describes a going-concern qualification due to insufficient cash, cash flow, and committed financing to meet obligations over the next twelve months, alongside $25.980 billion in total debt. Following an FCC review that deemed the company's spectrum underutilized, EchoStar agreed to sell material spectrum licenses to AT&T (~$22.65 billion) and SpaceX (~$20 billion, later increased), transitioning its wireless business to a 'Hybrid MNO' model dependent on AT&T's network. The filing also reports continued declines in Pay-TV (DISH TV and SLING TV) subscribers, rising programming costs, and $17.632 billion in non-cash impairment charges tied to 5G network abandonment and Broadband/Satellite segment assets.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (quarter ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, so detailed financial results cannot be summarized from it. It references subsequent events as of July 28, 2026 tied to the AT&T License Purchase Agreement, including repayment/redemption of certain debt instruments (an intercompany loan tranche and senior notes), and references a new DISH DBS financing term loan due 2029 and associated mandatorily redeemable preferred shares entered into in March 2026. The provided excerpts do not include prose discussion of quarterly revenue, subscriber trends, or overall results.",
+    "filing_summary_8k": "This 8-K, dated August 7, 2026 and filed jointly by EchoStar Corporation and its subsidiary Hughes Satellite Systems Corporation (HSSC), discloses under Item 7.01 (Regulation FD) that HSSC held confidential discussions with holders of its 5.25% Senior Secured Notes due 2026 and 6.625% Senior Notes due 2026 regarding a potential transaction, but these discussions did not result in an agreement. Pursuant to confidentiality agreements with those noteholders, HSSC is publicly furnishing 'cleansing materials' (a presentation and Q4 2025 financial models under various assumptions) that were previously shared confidentially, noting these materials reflect assumptions as of the fourth quarter of 2025 that may have since changed and should not be relied upon for investment decisions.",
+    "moat_explanation": "The excerpts describe a Pay-TV business with a subscriber base in sustained decline amid cord-cutting and OTT competition, rising programming costs the company has struggled to fully pass through, and a wireless business that depends on AT&T's network under a 'Hybrid MNO' arrangement rather than its own independent infrastructure. While the company holds FCC spectrum licenses (an intangible/regulatory asset), the excerpts show the FCC itself deemed this spectrum underutilized and forced the company to sell a material portion of its licenses or face revocation, undermining rather than supporting a durable competitive advantage. No excerpt describes network effects, cost leadership, switching costs, or scale barriers that competitors cannot replicate.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Going concern doubt: the company states it lacks sufficient cash on hand, projected cash flows, or committed financing to meet obligations over the next twelve months",
+      "Total debt, finance lease and other obligations of $25.980 billion as of December 31, 2025, with $2.0B, $1.377B and $2.750B of debt maturing at various points in 2026",
+      "The company elected not to make scheduled interest payments on certain senior notes during 2025 (later cured within grace periods) amid the FCC review",
+      "FCC review found the company's spectrum 'underutilized' and required a material sale of spectrum licenses (AT&T and SpaceX transactions) or face wide-ranging license revocation",
+      "Continued decline in Pay-TV (DISH TV and SLING TV) subscribers, with programming costs rising faster than the company's ability to raise subscriber rates",
+      "Recorded non-cash asset impairment and other charges totaling $17.632 billion during 2025 related to 5G network decommissioning and Broadband/Satellite segment assets"
+    ]
+  },
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001415404.json",
@@ -154,18 +176,18 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $15.1B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 5.20, debt $31.0B vs working capital $-7.2B",
+          "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 0/3 available years",
+          "detail": "Positive in 2/6 available years",
           "passed": false
         },
         {
@@ -174,36 +196,36 @@
           "passed": null
         },
         {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 362.4%/yr",
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E -4.8",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -9.4",
           "passed": true
-        },
-        {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 5,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -251.4%",
+          "detail": "ROE -69.7%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 1.24",
+          "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -212,14 +234,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 2,
+      "evaluated": 4,
       "passed": 0,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://echostar.com"
 }

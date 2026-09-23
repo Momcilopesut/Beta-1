@@ -10,91 +10,93 @@
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 67044000000,
-        "spending": null,
+        "spending": 57921000000,
         "stock_return_pct": null
       },
       {
         "cash": 2547000000,
-        "debt": 15429000000,
+        "debt": 15547000000,
         "earnings": 5732000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 65984000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 57636000000,
+        "stock_return_pct": 36.88134830196111
       },
       {
         "cash": 1442000000,
-        "debt": 17291000000,
+        "debt": 17459000000,
         "earnings": 6920000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 67571000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 59064000000,
+        "stock_return_pct": -6.242677136220684
       },
       {
         "cash": 2483000000,
-        "debt": 19627000000,
+        "debt": 20270000000,
         "earnings": 5336000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 71043000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 64030000000,
+        "stock_return_pct": 6.537753222836094
       },
       {
         "cash": 4121000000,
-        "debt": 20532000000,
+        "debt": 21700000000,
         "earnings": 5017000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 75048000000,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 75057000000,
+        "spending": 67326000000,
+        "stock_return_pct": -0.4671358603942836
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.0868652239125778,
-      "debt_to_ebitda": 2.180080696538543,
-      "debt_to_equity": 3.0549025442642463
+      "current_ratio": 1.1928682431013482,
+      "debt_to_ebitda": 2.3040985347207474,
+      "debt_to_equity": 2.3423813868613137
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 29.121617363933122,
+      "book_value_per_share": 38.088618592528235,
       "shareholders_equity": 6721000000,
       "total_assets": 59840000000,
       "total_liabilities": 53119000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 9.203671876040875
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -0.2623064045820689
+      "eps_growth_cagr_3yr_pct": -0.27675418263768403
     },
     "profitability": {
-      "roe_pct": 74.6466299657789,
+      "roe_pct": 86.2443842381426,
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 118.66351602702392,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 262.8723096628274,
+      "graham_number": 135.92935253003836,
+      "graham_upside_pct": -73.97684409962125,
+      "ncav_margin_pct": -123.02506349785676,
+      "pb_ratio": 13.713807937956206,
+      "pe_ttm": 19.16844036697248
     }
   },
-  "industry": "Guided Missiles & Space Vehicles & Parts",
-  "last_updated": "2026-09-23T12:26:39Z",
+  "industry": "Aerospace & Defense",
+  "last_updated": "2026-09-23T02:43:23Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -103,27 +105,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 120551370940,
   "metrics": {
-    "book_value_per_share": 29.121617363933122,
-    "current_ratio": 1.0868652239125778,
-    "debt_to_ebitda": 2.180080696538543,
-    "debt_to_equity": 3.0549025442642463,
-    "eps_growth_cagr_3yr_pct": -0.2623064045820689,
-    "graham_criteria_evaluated": 4,
+    "book_value_per_share": 38.088618592528235,
+    "current_ratio": 1.1928682431013482,
+    "debt_to_ebitda": 2.3040985347207474,
+    "debt_to_equity": 2.3423813868613137,
+    "eps_growth_cagr_3yr_pct": -0.27675418263768403,
+    "fcf_margin_pct": 9.203671876040875,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
+    "graham_multiple": 262.8723096628274,
+    "graham_upside_pct": -73.97684409962125,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "roe_pct": 74.6466299657789,
+    "ncav_margin_pct": -123.02506349785676,
+    "pb_ratio": 13.713807937956206,
+    "pe_ttm": 19.16844036697248,
+    "roe_pct": 86.2443842381426,
     "shareholders_equity": 6721000000,
     "total_assets": 59840000000,
     "total_liabilities": 53119000000
   },
   "name": "Lockheed Martin Corporation",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 522.34
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -152,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $120.6B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.09, debt $20.5B vs working capital $2.0B",
+          "detail": "Current ratio 1.19, debt $21.7B vs working capital $2.0B",
           "passed": false
         },
         {
@@ -167,9 +175,9 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -177,17 +185,17 @@
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 19.2",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 262.9",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 2,
       "total": 7
     },
@@ -195,17 +203,17 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 74.6%",
+          "detail": "ROE 86.2%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 3.05",
+          "detail": "Debt/equity 2.34",
           "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "233,500,000 shares vs. 239,200,000 a year earlier",
+          "detail": "231,900,000 shares vs. 239,200,000 a year earlier",
           "passed": true
         },
         {
@@ -219,5 +227,5 @@
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.lockheedmartin.com"
 }

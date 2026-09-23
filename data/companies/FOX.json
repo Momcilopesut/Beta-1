@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for FOX: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=fox.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2bab620>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001754301",
   "five_year_history": {
     "years": [
       {
-        "cash": null,
-        "debt": 7206000000,
-        "earnings": null,
+        "cash": 5200000000,
+        "debt": 7718000000,
+        "earnings": 1205000000,
         "fiscal_year": "2022-06-30",
         "market_return_pct": null,
         "revenue": 13974000000,
-        "spending": null,
+        "spending": 11400000000,
         "stock_return_pct": null
       },
       {
-        "cash": null,
-        "debt": 7210000000,
-        "earnings": null,
+        "cash": 4272000000,
+        "debt": 8207000000,
+        "earnings": 1239000000,
         "fiscal_year": "2023-06-30",
         "market_return_pct": 17.50298210735586,
         "revenue": 14913000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 12149000000,
+        "stock_return_pct": 7.373737373737378
       },
       {
-        "cash": null,
-        "debt": 7197000000,
-        "earnings": null,
+        "cash": 4319000000,
+        "debt": 8152000000,
+        "earnings": 1501000000,
         "fiscal_year": "2024-06-30",
         "market_return_pct": 23.0238224147266,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 13980000000,
+        "spending": 11502000000,
+        "stock_return_pct": -0.2822201317027277
       },
       {
-        "cash": null,
-        "debt": 6602000000,
-        "earnings": null,
+        "cash": 5351000000,
+        "debt": 7465000000,
+        "earnings": 2263000000,
         "fiscal_year": "2025-06-30",
         "market_return_pct": 13.296292221366485,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 16300000000,
+        "spending": 13071000000,
+        "stock_return_pct": 62.35849056603774
       },
       {
-        "cash": null,
-        "debt": 6606000000,
-        "earnings": null,
+        "cash": 4205000000,
+        "debt": 7568000000,
+        "earnings": 1685000000,
         "fiscal_year": "2026-06-30",
         "market_return_pct": 20.865905964230794,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 17126000000,
+        "spending": 12934000000,
+        "stock_return_pct": -9.277551810962617
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 3.1694788151481066,
-      "debt_to_ebitda": null,
-      "debt_to_equity": 0.5681114551083591
+      "debt_to_ebitda": 1.6445023902651021,
+      "debt_to_equity": 0.6508427932576539
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 11628000000.0,
+      "book_value_per_share": 27.86320754716981,
       "shareholders_equity": 11628000000,
       "total_assets": 22482000000,
-      "total_liabilities": null
+      "total_liabilities": 10668000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 8.571762232862316
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 18.120452257112785
+      "eps_growth_cagr_3yr_pct": 19.43864338401604
     },
     "profitability": {
-      "roe_pct": null,
-      "trend": "stable"
+      "roe_pct": 14.737716747206612,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 1002326.8927849835,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 30.798076657443303,
+      "graham_number": 49.88868623396434,
+      "graham_upside_pct": -12.964608803272256,
+      "ncav_margin_pct": -3864270860.6420097,
+      "pb_ratio": 2.0900997592019266,
+      "pe_ttm": 14.735218508997432
     }
   },
-  "industry": "Television Broadcasting Stations",
-  "last_updated": "2026-09-23T12:49:46Z",
+  "industry": "Entertainment",
+  "last_updated": "2026-09-23T03:35:35Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,24 +105,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 25135097601,
   "metrics": {
-    "book_value_per_share": 11628000000.0,
+    "book_value_per_share": 27.86320754716981,
     "current_ratio": 3.1694788151481066,
-    "debt_to_equity": 0.5681114551083591,
-    "eps_growth_cagr_3yr_pct": 18.120452257112785,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 2,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
+    "debt_to_ebitda": 1.6445023902651021,
+    "debt_to_equity": 0.6508427932576539,
+    "eps_growth_cagr_3yr_pct": 19.43864338401604,
+    "fcf_margin_pct": 8.571762232862316,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 30.798076657443303,
+    "graham_upside_pct": -12.964608803272256,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
+    "ncav_margin_pct": -3864270860.6420097,
+    "pb_ratio": 2.0900997592019266,
+    "pe_ttm": 14.735218508997432,
+    "roe_pct": 14.737716747206612,
     "shareholders_equity": 11628000000,
-    "total_assets": 22482000000
+    "total_assets": 22482000000,
+    "total_liabilities": 10668000000
   },
   "name": "Fox Corporation (Class B)",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 57.32
   },
   "qualitative": null,
   "sector": "Communication Services",
@@ -151,72 +160,72 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $25.1B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 3.17, debt $6.6B vs working capital $5.8B",
+          "detail": "Current ratio 3.17, debt $7.6B vs working capital $5.8B",
           "passed": false
         },
         {
-          "criterion": "Earnings stability",
-          "detail": "No annual net income data available",
-          "passed": null
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 18.1%/yr",
+          "detail": "EPS 3yr CAGR 19.4%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 14.7",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 30.8",
+          "passed": false
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 6,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 14.7%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.57",
+          "detail": "Debt/equity 0.65",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "439,000,000 shares vs. 461,000,000 a year earlier",
+          "detail": "432,000,000 shares vs. 461,000,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 2,
+      "evaluated": 4,
       "passed": 2,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.foxcorporation.com"
 }

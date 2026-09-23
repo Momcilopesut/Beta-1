@@ -1,70 +1,68 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for KVUE: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=kvue.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca15264e0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001944048",
   "five_year_history": {
     "years": [
       {
-        "cash": 1231000000,
-        "debt": 0,
-        "earnings": 430000000,
-        "fiscal_year": "2023-07-02",
-        "market_return_pct": 7.9912398101958955,
-        "revenue": 4011000000,
-        "spending": null,
+        "cash": 740000000,
+        "debt": 129000000,
+        "earnings": 2078000000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 15054000000,
+        "spending": 12134000000,
         "stock_return_pct": null
       },
       {
-        "cash": 1170000000,
-        "debt": null,
-        "earnings": 438000000,
-        "fiscal_year": "2023-10-01",
-        "market_return_pct": -3.713468081750381,
-        "revenue": 3915000000,
-        "spending": null,
+        "cash": 1231000000,
+        "debt": 9046000000,
+        "earnings": 2064000000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 14950000000,
+        "spending": 12275000000,
         "stock_return_pct": null
       },
       {
         "cash": 1382000000,
-        "debt": 599000000,
+        "debt": 8427000000,
         "earnings": 1664000000,
         "fiscal_year": "2023-12-31",
-        "market_return_pct": 10.610563759331628,
+        "market_return_pct": 23.591245456684877,
         "revenue": 15444000000,
-        "spending": null,
+        "spending": 12932000000,
         "stock_return_pct": null
       },
       {
         "cash": 1070000000,
-        "debt": 1552000000,
+        "debt": 8719000000,
         "earnings": 1030000000,
         "fiscal_year": "2024-12-29",
         "market_return_pct": 24.451496879297586,
         "revenue": 15455000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 13614000000,
+        "stock_return_pct": -1.8080667593880415
       },
       {
         "cash": 1062000000,
-        "debt": 1453000000,
+        "debt": 8524000000,
         "earnings": 1470000000,
         "fiscal_year": "2025-12-28",
         "market_return_pct": 16.937540376049775,
         "revenue": 15124000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 12420000000,
+        "stock_return_pct": -18.838526912181297
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.9582842724978974,
-      "debt_to_ebitda": 0.4890609222484012,
-      "debt_to_equity": 0.13497445424988389
+      "current_ratio": 1.005454235554798,
+      "debt_to_ebitda": 2.6139221097822753,
+      "debt_to_equity": 0.8035629678764332
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 5.6045130698382355,
+      "book_value_per_share": 5.496354166666666,
       "shareholders_equity": 10765000000,
       "total_assets": 27076000000,
       "total_liabilities": 16311000000
@@ -73,30 +71,32 @@
       "fcf_margin_pct": 11.385876752181963
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 48.94591112260744
+      "eps_growth_cagr_3yr_pct": -10.664859817243943
     },
     "profitability": {
-      "roe_pct": 13.655364607524383,
+      "roe_pct": 15.582706766917292,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 9.78964623948352,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 66.70662174835068,
+      "graham_number": 9.758295749642967,
+      "graham_upside_pct": -45.362285836265585,
+      "ncav_margin_pct": -130.94008346033635,
+      "pb_ratio": 3.2494267033071162,
+      "pe_ttm": 20.528735632183906
     }
   },
-  "industry": "Perfumes, Cosmetics & Other Toilet Preparations",
-  "last_updated": "2026-09-23T13:15:05Z",
+  "industry": "Household & Personal Products",
+  "last_updated": "2026-09-23T02:49:37Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,28 +105,33 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 34291354810,
   "metrics": {
-    "book_value_per_share": 5.6045130698382355,
-    "current_ratio": 0.9582842724978974,
-    "debt_to_ebitda": 0.4890609222484012,
-    "debt_to_equity": 0.13497445424988389,
-    "eps_growth_cagr_3yr_pct": 48.94591112260744,
+    "book_value_per_share": 5.496354166666666,
+    "current_ratio": 1.005454235554798,
+    "debt_to_ebitda": 2.6139221097822753,
+    "debt_to_equity": 0.8035629678764332,
+    "eps_growth_cagr_3yr_pct": -10.664859817243943,
     "fcf_margin_pct": 11.385876752181963,
-    "graham_criteria_evaluated": 4,
-    "graham_criteria_passed": 3,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 1,
+    "graham_multiple": 66.70662174835068,
+    "graham_upside_pct": -45.362285836265585,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "roe_pct": 13.655364607524383,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -130.94008346033635,
+    "pb_ratio": 3.2494267033071162,
+    "pe_ttm": 20.528735632183906,
+    "roe_pct": 15.582706766917292,
     "shareholders_equity": 10765000000,
     "total_assets": 27076000000,
     "total_liabilities": 16311000000
   },
   "name": "Kenvue",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 17.86
   },
   "qualitative": null,
   "sector": "Consumer Defensive",
@@ -155,55 +160,55 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $34.3B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.96, debt $1.5B vs working capital $-0.2B",
+          "detail": "Current ratio 1.01, debt $8.5B vs working capital $-0.2B",
           "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years",
-          "passed": true
+          "detail": "Positive in 5/6 available years",
+          "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 48.9%/yr",
-          "passed": true
+          "detail": "EPS 3yr CAGR -10.7%/yr",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 20.5",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 66.7",
+          "passed": false
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 6,
+      "passed": 1,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 13.7%",
-          "passed": false
+          "detail": "ROE 15.6%",
+          "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.13",
+          "detail": "Debt/equity 0.80",
           "passed": true
         },
         {
@@ -218,9 +223,9 @@
         }
       ],
       "evaluated": 4,
-      "passed": 2,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.kenvue.com"
 }

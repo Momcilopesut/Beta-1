@@ -1,71 +1,69 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for VTRS: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=vtrs.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca3181640>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001792044",
   "five_year_history": {
     "years": [
       {
         "cash": 701200000,
-        "debt": 21577400000,
-        "earnings": null,
+        "debt": 23358000000,
+        "earnings": -1269100000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 17886300000,
-        "spending": null,
+        "spending": 17920300000,
         "stock_return_pct": null
       },
       {
         "cash": 1259900000,
-        "debt": 19265700000,
-        "earnings": null,
+        "debt": 19527700000,
+        "earnings": 2078600000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 16262700000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 14647800000,
+        "stock_return_pct": -17.738359201773825
       },
       {
         "cash": 991900000,
-        "debt": 18122800000,
-        "earnings": null,
+        "debt": 18371200000,
+        "earnings": 54700000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 15426900000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 14660700000,
+        "stock_return_pct": 2.336028751123089
       },
       {
         "cash": 734800000,
-        "debt": 14039500000,
-        "earnings": null,
+        "debt": 14305900000,
+        "earnings": -634200000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 14739300000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 14729200000,
+        "stock_return_pct": 9.306409130816494
       },
       {
-        "cash": 1322400000,
-        "debt": 14410500000,
-        "earnings": null,
+        "cash": 1348000000,
+        "debt": 14701400000,
+        "earnings": -3514900000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 14299900000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 16963000000,
+        "stock_return_pct": 0.0
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.3798683450093738,
-      "debt_to_ebitda": 106.58653846153847,
-      "debt_to_equity": null
+      "current_ratio": 1.5846229001859498,
+      "debt_to_ebitda": 108.73816568047337,
+      "debt_to_equity": 0.9555412190401391
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": 12.258574744262013,
+      "shareholders_equity": 14711300000,
       "total_assets": 37193100000,
       "total_liabilities": 22481800000
     },
@@ -76,25 +74,23 @@
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": null,
+      "roe_pct": -2.791646126395568,
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": -66.8811664391524,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -167.2023535380957,
+      "pb_ratio": 1.4014679812627977,
+      "pe_ttm": -47.72222222222222
     }
   },
-  "industry": "Pharmaceutical Preparations",
-  "last_updated": "2026-09-23T14:05:08Z",
+  "industry": "Drug Manufacturers - Specialty & Generic",
+  "last_updated": "2026-09-23T02:55:03Z",
   "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
+    "flags": [],
+    "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
@@ -107,23 +103,31 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 20007014596,
   "metrics": {
-    "current_ratio": 1.3798683450093738,
-    "debt_to_ebitda": 106.58653846153847,
+    "book_value_per_share": 12.258574744262013,
+    "current_ratio": 1.5846229001859498,
+    "debt_to_ebitda": 108.73816568047337,
+    "debt_to_equity": 0.9555412190401391,
     "fcf_margin_pct": 13.546248575164862,
-    "graham_criteria_evaluated": 1,
-    "graham_criteria_passed": 0,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 2,
+    "graham_multiple": -66.8811664391524,
     "margin_trend_score": 20,
-    "munger_quality_evaluated": 1,
-    "munger_quality_passed": 0,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -167.2023535380957,
+    "pb_ratio": 1.4014679812627977,
+    "pe_ttm": -47.72222222222222,
+    "roe_pct": -2.791646126395568,
+    "shareholders_equity": 14711300000,
     "total_assets": 37193100000,
     "total_liabilities": 22481800000
   },
   "name": "Viatris",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 17.18
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -152,19 +156,19 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $20.0B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.38, debt $14.4B vs working capital $2.7B",
+          "detail": "Current ratio 1.58, debt $14.7B vs working capital $2.1B",
           "passed": false
         },
         {
-          "criterion": "Earnings stability",
-          "detail": "No annual net income data available",
-          "passed": null
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 2/6 available years",
+          "passed": false
         },
         {
           "criterion": "Dividend record",
@@ -177,36 +181,36 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E -47.7",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -66.9",
+          "passed": true
         }
       ],
-      "evaluated": 1,
-      "passed": 0,
+      "evaluated": 5,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE -2.8%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.96",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "Share count unavailable",
-          "passed": null
+          "detail": "1,170,700,000 shares vs. 1,193,300,000 a year earlier",
+          "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
@@ -214,10 +218,10 @@
           "passed": false
         }
       ],
-      "evaluated": 1,
-      "passed": 0,
+      "evaluated": 4,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.viatris.com"
 }

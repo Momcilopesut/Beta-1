@@ -1,49 +1,47 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for TRMB: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=trmb.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca27b94c0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000864749",
   "five_year_history": {
     "years": [
       {
         "cash": 325700000,
-        "debt": 1293200000,
-        "earnings": 492700000,
+        "debt": 1449600000,
+        "earnings": 492800000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 3659400000,
-        "spending": null,
+        "revenue": 3659100000,
+        "spending": 3098100000,
         "stock_return_pct": null
       },
       {
         "cash": 271000000,
-        "debt": 1520000000,
+        "debt": 1625100000,
         "earnings": 449700000,
-        "fiscal_year": "2022-12-30",
+        "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 3676300000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 3165400000,
+        "stock_return_pct": -42.01169858928776
       },
       {
         "cash": 229800000,
-        "debt": 3066600000,
+        "debt": 3188500000,
         "earnings": 311300000,
-        "fiscal_year": "2023-12-29",
-        "market_return_pct": 24.286797583871554,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
         "revenue": 3798700000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 3349900000,
+        "stock_return_pct": 3.738132911392406
       },
       {
         "cash": 738800000,
-        "debt": 1390600000,
+        "debt": 1535200000,
         "earnings": 1504400000,
         "fiscal_year": "2025-01-03",
-        "market_return_pct": 24.539774042204044,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "market_return_pct": 25.240664339363185,
+        "revenue": 3683300000,
+        "spending": 3222600000,
+        "stock_return_pct": 34.547187797902744
       },
       {
         "cash": 253400000,
@@ -51,52 +49,54 @@
         "earnings": 424000000,
         "fiscal_year": "2026-01-02",
         "market_return_pct": 15.41008531125938,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 3587300000,
+        "spending": 2979800000,
+        "stock_return_pct": 10.996174011619676
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.0854729280297992,
-      "debt_to_ebitda": 1.7580502588710696,
-      "debt_to_equity": 0.2385456290051746
+      "current_ratio": 0.9536945114168203,
+      "debt_to_ebitda": 1.724300222937825,
+      "debt_to_equity": 0.2855325976363779
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 25.02874948267399,
+      "book_value_per_share": 21.934763948497853,
       "shareholders_equity": 5836200000,
       "total_assets": 9312000000,
       "total_liabilities": 3475800000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 3.7130989880968976
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -0.7462964697448338
+      "eps_growth_cagr_3yr_pct": -0.7421423784358283
     },
     "profitability": {
-      "roe_pct": 7.265001199410576,
-      "trend": "stable"
+      "roe_pct": -1.8717987682241155,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 31.482351873929147,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": -341.09752147725544,
+      "graham_number": 29.555912678327616,
+      "graham_upside_pct": -50.15866327432105,
+      "ncav_margin_pct": -113.33495812034553,
+      "pb_ratio": 2.7034710808483995,
+      "pe_ttm": -126.17021276595742
     }
   },
-  "industry": "Measuring & Controlling Devices, NEC",
-  "last_updated": "2026-09-23T15:03:52Z",
+  "industry": "Hardware, Equipment & Parts",
+  "last_updated": "2026-09-23T03:01:53Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,27 +105,33 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 13823513077,
   "metrics": {
-    "book_value_per_share": 25.02874948267399,
-    "current_ratio": 1.0854729280297992,
-    "debt_to_ebitda": 1.7580502588710696,
-    "debt_to_equity": 0.2385456290051746,
-    "eps_growth_cagr_3yr_pct": -0.7462964697448338,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
-    "munger_quality_passed": 2,
-    "roe_pct": 7.265001199410576,
+    "book_value_per_share": 21.934763948497853,
+    "current_ratio": 0.9536945114168203,
+    "debt_to_ebitda": 1.724300222937825,
+    "debt_to_equity": 0.2855325976363779,
+    "eps_growth_cagr_3yr_pct": -0.7421423784358283,
+    "fcf_margin_pct": 3.7130989880968976,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": -341.09752147725544,
+    "graham_upside_pct": -50.15866327432105,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -113.33495812034553,
+    "pb_ratio": 2.7034710808483995,
+    "pe_ttm": -126.17021276595742,
+    "roe_pct": -1.8717987682241155,
     "shareholders_equity": 5836200000,
     "total_assets": 9312000000,
     "total_liabilities": 3475800000
   },
   "name": "Trimble Inc.",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 59.3
   },
   "qualitative": null,
   "sector": "Technology",
@@ -154,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $13.8B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.09, debt $1.4B vs working capital $0.1B",
+          "detail": "Current ratio 0.95, debt $1.4B vs working capital $0.1B",
           "passed": false
         },
         {
@@ -179,47 +185,47 @@
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E -126.2",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -341.1",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 1,
+      "evaluated": 6,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 7.3%",
+          "detail": "ROE -1.9%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.24",
+          "detail": "Debt/equity 0.29",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "241,500,000 shares vs. 247,200,000 a year earlier",
+          "detail": "239,800,000 shares vs. 247,200,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.trimble.com"
 }

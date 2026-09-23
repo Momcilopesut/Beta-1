@@ -5,96 +5,98 @@
     "years": [
       {
         "cash": 8574000000,
-        "debt": 9420000000,
+        "debt": 12627000000,
         "earnings": 6046000000,
         "fiscal_year": "2022-05-31",
         "market_return_pct": null,
         "revenue": 46710000000,
-        "spending": null,
+        "spending": 40035000000,
         "stock_return_pct": null
       },
       {
         "cash": 7441000000,
-        "debt": 8927000000,
+        "debt": 12144000000,
         "earnings": 5070000000,
         "fiscal_year": "2023-05-31",
         "market_return_pct": 1.1914852396289966,
         "revenue": 51217000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 45302000000,
+        "stock_return_pct": -11.434581405132512
       },
       {
         "cash": 9860000000,
-        "debt": 8903000000,
+        "debt": 11952000000,
         "earnings": 5700000000,
         "fiscal_year": "2024-05-31",
         "market_return_pct": 26.210362570300344,
         "revenue": 51362000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 45051000000,
+        "stock_return_pct": -9.699790993729819
       },
       {
         "cash": 7464000000,
-        "debt": 7961000000,
+        "debt": 11018000000,
         "earnings": 3219000000,
         "fiscal_year": "2025-05-31",
         "market_return_pct": 11.760244230805693,
         "revenue": 46309000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 42607000000,
+        "stock_return_pct": -36.254602840610204
       },
       {
         "cash": 7563000000,
-        "debt": 7942000000,
+        "debt": 11033000000,
         "earnings": 3108000000,
         "fiscal_year": "2026-05-31",
         "market_return_pct": 28.699163541967117,
         "revenue": 46398000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 42601000000,
+        "stock_return_pct": -24.195411784122797
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 1.9608671395552721,
-      "debt_to_ebitda": null,
-      "debt_to_equity": 0.5342751429532459
+      "debt_to_ebitda": 2.4264350120958875,
+      "debt_to_equity": 0.7422132526067945
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 17.37881847788325,
+      "book_value_per_share": 10.026305139619588,
       "shareholders_equity": 14865000000,
       "total_assets": 38410000000,
-      "total_liabilities": null
+      "total_liabilities": 23545000000
     },
     "cash_flow": {
       "fcf_margin_pct": 4.70709944394155
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -13.36921346091703
+      "eps_growth_cagr_3yr_pct": -13.723898237279887
     },
     "profitability": {
-      "roe_pct": 20.908173562058526,
+      "roe_pct": 22.00042471862391,
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 28.655700533750412,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 61.89480390178272,
+      "graham_number": 21.765636169131962,
+      "graham_upside_pct": -39.70737903287545,
+      "ncav_margin_pct": -96.57363362606944,
+      "pb_ratio": 3.600528758829465,
+      "pe_ttm": 17.190476190476193
     }
   },
-  "industry": "Rubber & Plastics Footwear",
-  "last_updated": "2026-09-23T12:26:43Z",
+  "industry": "Apparel - Footwear & Accessories",
+  "last_updated": "2026-09-23T02:43:31Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -103,26 +105,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 53421185223,
   "metrics": {
-    "book_value_per_share": 17.37881847788325,
+    "book_value_per_share": 10.026305139619588,
     "current_ratio": 1.9608671395552721,
-    "debt_to_equity": 0.5342751429532459,
-    "eps_growth_cagr_3yr_pct": -13.36921346091703,
+    "debt_to_ebitda": 2.4264350120958875,
+    "debt_to_equity": 0.7422132526067945,
+    "eps_growth_cagr_3yr_pct": -13.723898237279887,
     "fcf_margin_pct": 4.70709944394155,
-    "graham_criteria_evaluated": 4,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
+    "graham_multiple": 61.89480390178272,
+    "graham_upside_pct": -39.70737903287545,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "roe_pct": 20.908173562058526,
+    "ncav_margin_pct": -96.57363362606944,
+    "pb_ratio": 3.600528758829465,
+    "pe_ttm": 17.190476190476193,
+    "roe_pct": 22.00042471862391,
     "shareholders_equity": 14865000000,
-    "total_assets": 38410000000
+    "total_assets": 38410000000,
+    "total_liabilities": 23545000000
   },
   "name": "Nike Inc.",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 36.1
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -151,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $53.4B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.96, debt $7.9B vs working capital $12.1B",
+          "detail": "Current ratio 1.96, debt $11.0B vs working capital $12.1B",
           "passed": false
         },
         {
@@ -166,27 +175,27 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -13.4%/yr",
+          "detail": "EPS 3yr CAGR -13.7%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 17.2",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 61.9",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 2,
       "total": 7
     },
@@ -194,17 +203,17 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 20.9%",
+          "detail": "ROE 22.0%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.53",
+          "detail": "Debt/equity 0.74",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "1,481,000,000 shares vs. 1,487,600,000 a year earlier",
+          "detail": "1,482,900,000 shares vs. 1,487,600,000 a year earlier",
           "passed": true
         },
         {
@@ -218,5 +227,5 @@
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.nike.com"
 }

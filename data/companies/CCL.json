@@ -1,104 +1,103 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for CCL: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=ccl.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0dea150>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000815097",
   "five_year_history": {
     "years": [
       {
         "cash": 8939000000,
-        "debt": 30436000000,
+        "debt": 34607000000,
         "earnings": -9501000000,
         "fiscal_year": "2021-11-30",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 1908000000,
+        "spending": 8997000000,
         "stock_return_pct": null
       },
       {
         "cash": 4029000000,
-        "debt": 34346000000,
+        "debt": 35881000000,
         "earnings": -6093000000,
         "fiscal_year": "2022-11-30",
         "market_return_pct": -10.510141364474492,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 12169000000,
+        "spending": 16548000000,
+        "stock_return_pct": -43.64358683314416
       },
       {
         "cash": 2415000000,
-        "debt": 30572000000,
+        "debt": 31891000000,
         "earnings": -74000000,
         "fiscal_year": "2023-11-30",
         "market_return_pct": 11.950549450549444,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 21593000000,
+        "spending": 19637000000,
+        "stock_return_pct": 51.66163141993959
       },
       {
         "cash": 1210000000,
-        "debt": 27474000000,
+        "debt": 28876000000,
         "earnings": 1916000000,
         "fiscal_year": "2024-11-30",
         "market_return_pct": 32.02234881682734,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 25021000000,
+        "spending": 21447000000,
+        "stock_return_pct": 68.85790172642761
       },
       {
         "cash": 1928000000,
-        "debt": 26640000000,
+        "debt": 27993000000,
         "earnings": 2760000000,
         "fiscal_year": "2025-11-30",
         "market_return_pct": 12.898514646087467,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 26622000000,
+        "spending": 22139000000,
+        "stock_return_pct": 1.966181675186787
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.3222578673999389,
-      "debt_to_ebitda": 3.6628626426509006,
-      "debt_to_equity": 2.1686746987951806
+      "current_ratio": 0.3343754652374572,
+      "debt_to_ebitda": 3.8488931665062562,
+      "debt_to_equity": 2.018044417026527
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 8.968720404075988,
+      "book_value_per_share": 9.39507959479016,
       "shareholders_equity": 12284000000,
       "total_assets": 51687000000,
-      "total_liabilities": null
+      "total_liabilities": 39404000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 9.792652693261212
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 22.468251383914033,
-      "trend": "stable"
+      "roe_pct": 24.448825954472127,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 20.18980788331711,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 22.900946612507376,
+      "graham_number": 21.069350033967233,
+      "graham_upside_pct": -5.433796975012426,
+      "ncav_margin_pct": -215.30099268589726,
+      "pb_ratio": 2.374380012338063,
+      "pe_ttm": 9.645021645021645
     }
   },
-  "industry": "Water Transportation",
-  "last_updated": "2026-09-23T12:56:18Z",
+  "industry": "Travel Services",
+  "last_updated": "2026-09-23T02:47:31Z",
   "layered_analysis": {
     "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -107,25 +106,32 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 30515782371,
   "metrics": {
-    "book_value_per_share": 8.968720404075988,
-    "current_ratio": 0.3222578673999389,
-    "debt_to_ebitda": 3.6628626426509006,
-    "debt_to_equity": 2.1686746987951806,
-    "graham_criteria_evaluated": 2,
-    "graham_criteria_passed": 0,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
+    "book_value_per_share": 9.39507959479016,
+    "current_ratio": 0.3343754652374572,
+    "debt_to_ebitda": 3.8488931665062562,
+    "debt_to_equity": 2.018044417026527,
+    "fcf_margin_pct": 9.792652693261212,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 22.900946612507376,
+    "graham_upside_pct": -5.433796975012426,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "roe_pct": 22.468251383914033,
+    "ncav_margin_pct": -215.30099268589726,
+    "pb_ratio": 2.374380012338063,
+    "pe_ttm": 9.645021645021645,
+    "roe_pct": 24.448825954472127,
     "shareholders_equity": 12284000000,
-    "total_assets": 51687000000
+    "total_assets": 51687000000,
+    "total_liabilities": 39404000000
   },
   "name": "Carnival Corporation",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 22.28
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -154,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $30.5B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.32, debt $26.6B vs working capital $-8.9B",
+          "detail": "Current ratio 0.33, debt $28.0B vs working capital $-8.9B",
           "passed": false
         },
         {
@@ -179,30 +185,30 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 9.6",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 22.9",
+          "passed": false
         }
       ],
-      "evaluated": 2,
-      "passed": 0,
+      "evaluated": 5,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 22.5%",
+          "detail": "ROE 24.4%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 2.17",
+          "detail": "Debt/equity 2.02",
           "passed": false
         },
         {
@@ -212,14 +218,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 4,
       "passed": 1,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.carnivalcorp.com"
 }

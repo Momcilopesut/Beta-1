@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for GDDY: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=gddy.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1091520>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001609711",
   "five_year_history": {
     "years": [
       {
-        "cash": null,
-        "debt": 3882300000,
+        "cash": 1255700000,
+        "debt": 4061900000,
         "earnings": 242300000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 3815700000,
-        "spending": null,
+        "spending": 3433600000,
         "stock_return_pct": null
       },
       {
-        "cash": null,
-        "debt": 3831100000,
+        "cash": 774000000,
+        "debt": 3980900000,
         "earnings": 352200000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 4091300000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 3592500000,
+        "stock_return_pct": -11.831251473014385
       },
       {
-        "cash": null,
-        "debt": 3816400000,
+        "cash": 458800000,
+        "debt": 3935700000,
         "earnings": 1374800000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 4254100000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 3706700000,
+        "stock_return_pct": 37.663726276396694
       },
       {
-        "cash": null,
-        "debt": 3795000000,
+        "cash": 1089000000,
+        "debt": 3894700000,
         "earnings": 936900000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 4573200000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 3679700000,
+        "stock_return_pct": 91.62135922330098
       },
       {
-        "cash": null,
-        "debt": 3780300000,
+        "cash": 1080900000,
+        "debt": 3862600000,
         "earnings": 875000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 4951100000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 3812700000,
+        "stock_return_pct": -37.13330293357654
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.614555166082457,
-      "debt_to_ebitda": 3.039070664844441,
-      "debt_to_equity": 17.574616457461644
+      "current_ratio": 0.6321253484571758,
+      "debt_to_ebitda": 3.077768924302789,
+      "debt_to_equity": 573.3432835820895
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 1.698412155975603,
+      "book_value_per_share": 0.05123734361139151,
       "shareholders_equity": 215100000,
       "total_assets": 8034900000,
-      "total_liabilities": null
+      "total_liabilities": 7819800000
     },
     "cash_flow": {
       "fcf_margin_pct": 31.821211447961055
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": null
+      "eps_growth_cagr_3yr_pct": 41.87703193989307
     },
     "profitability": {
-      "roe_pct": 406.78754067875406,
+      "roe_pct": 660.9548012343438,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 15.41728838767653,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 27700.090574328355,
+      "graham_number": 2.7035175357605876,
+      "graham_upside_pct": -97.2480481109929,
+      "ncav_margin_pct": -148.05467175029253,
+      "pb_ratio": 1917.3515462686569,
+      "pe_ttm": 14.447058823529408
     }
   },
-  "industry": "Services-Computer Integrated Systems Design",
-  "last_updated": "2026-09-23T14:50:02Z",
+  "industry": "Software - Infrastructure",
+  "last_updated": "2026-09-23T03:00:23Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,26 +105,33 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 13007943369,
   "metrics": {
-    "book_value_per_share": 1.698412155975603,
-    "current_ratio": 0.614555166082457,
-    "debt_to_ebitda": 3.039070664844441,
-    "debt_to_equity": 17.574616457461644,
+    "book_value_per_share": 0.05123734361139151,
+    "current_ratio": 0.6321253484571758,
+    "debt_to_ebitda": 3.077768924302789,
+    "debt_to_equity": 573.3432835820895,
+    "eps_growth_cagr_3yr_pct": 41.87703193989307,
     "fcf_margin_pct": 31.821211447961055,
-    "graham_criteria_evaluated": 2,
-    "graham_criteria_passed": 0,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 27700.090574328355,
+    "graham_upside_pct": -97.2480481109929,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
-    "munger_quality_passed": 2,
-    "roe_pct": 406.78754067875406,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -148.05467175029253,
+    "pb_ratio": 1917.3515462686569,
+    "pe_ttm": 14.447058823529408,
+    "roe_pct": 660.9548012343438,
     "shareholders_equity": 215100000,
-    "total_assets": 8034900000
+    "total_assets": 8034900000,
+    "total_liabilities": 7819800000
   },
   "name": "GoDaddy",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 98.24
   },
   "qualitative": null,
   "sector": "Technology",
@@ -153,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $13.0B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.61, debt $3.8B vs working capital $-1.2B",
+          "detail": "Current ratio 0.63, debt $3.9B vs working capital $-1.2B",
           "passed": false
         },
         {
@@ -173,35 +180,35 @@
           "passed": null
         },
         {
-          "criterion": "Earnings growth",
-          "detail": "Insufficient EPS history",
-          "passed": null
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 41.9%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 14.4",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 27700.1",
+          "passed": false
         }
       ],
-      "evaluated": 2,
-      "passed": 0,
+      "evaluated": 6,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 406.8%",
+          "detail": "ROE 661.0%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 17.57",
+          "detail": "Debt/equity 573.34",
           "passed": false
         },
         {
@@ -211,14 +218,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 60",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.godaddy.com"
 }

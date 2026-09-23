@@ -1,104 +1,103 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for ETR: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=etr.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0915b50>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000065984",
   "five_year_history": {
     "years": [
       {
         "cash": 442559000,
-        "debt": 25880901000,
-        "earnings": 1103166000,
-        "fiscal_year": "2022-12-31",
-        "market_return_pct": -19.48164055920498,
-        "revenue": 13764237000,
-        "spending": null,
+        "debt": 27366186000,
+        "earnings": 1118719000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 11742896000,
+        "spending": 9897270000,
         "stock_return_pct": null
       },
       {
         "cash": 224164000,
-        "debt": 25932549000,
-        "earnings": 2356536000,
-        "fiscal_year": "2023-12-31",
-        "market_return_pct": 23.591245456684877,
-        "revenue": 12147412000,
-        "spending": null,
-        "stock_return_pct": null
+        "debt": 27020321000,
+        "earnings": 1097138000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 13764237000,
+        "spending": 11713462000,
+        "stock_return_pct": -0.14202023788389542
       },
       {
         "cash": 132548000,
-        "debt": 25107896000,
-        "earnings": null,
-        "fiscal_year": "2024-09-30",
-        "market_return_pct": 21.392150640008467,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "debt": 26542369000,
+        "earnings": 2362310000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 12147412000,
+        "spending": 9529437000,
+        "stock_return_pct": -8.764444444444445
       },
       {
         "cash": 859703000,
-        "debt": 27991595000,
-        "earnings": null,
+        "debt": 29310872000,
+        "earnings": 1061184000,
         "fiscal_year": "2024-12-31",
-        "market_return_pct": 2.14723926380369,
+        "market_return_pct": 23.99873056172645,
         "revenue": 11879653000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 9228563000,
+        "stock_return_pct": 47.73967264224473
       },
       {
-        "cash": 1928916000,
-        "debt": 30277161000,
-        "earnings": null,
+        "cash": 45895000,
+        "debt": 30934935000,
+        "earnings": 1773328000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 12946686000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 9893159000,
+        "stock_return_pct": 21.907148509628087
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.7422823409222689,
-      "debt_to_ebitda": 5.497096505603098,
-      "debt_to_equity": 1.7891050657693672
+      "current_ratio": 0.8764679937114599,
+      "debt_to_ebitda": 5.533319381504705,
+      "debt_to_equity": 1.8769691677331473
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 36.963500612790185,
-      "shareholders_equity": 16923076000,
+      "book_value_per_share": 40.41475446630262,
+      "shareholders_equity": 17142486000,
       "total_assets": 71890730000,
-      "total_liabilities": null
+      "total_liabilities": 54622153000
     },
     "cash_flow": {
-      "fcf_margin_pct": -19.574669533191738
+      "fcf_margin_pct": -21.55532311511996
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 13.417652596303453
+      "eps_growth_cagr_3yr_pct": 13.80808157293214
     },
     "profitability": {
-      "roe_pct": null,
-      "trend": "stable"
+      "roe_pct": 10.413099072114731,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 57.025116978487794,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 64.25881649562737,
+      "graham_number": 60.15929905224461,
+      "graham_upside_pct": -40.530546607112875,
+      "ncav_margin_pct": -205.58684301502285,
+      "pb_ratio": 2.51546968488221,
+      "pe_ttm": 25.545454545454547
     }
   },
-  "industry": "Electric Services",
-  "last_updated": "2026-09-23T15:10:06Z",
+  "industry": "Regulated Electric",
+  "last_updated": "2026-09-23T03:10:21Z",
   "layered_analysis": {
     "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -107,26 +106,33 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 47204442338,
   "metrics": {
-    "book_value_per_share": 36.963500612790185,
-    "current_ratio": 0.7422823409222689,
-    "debt_to_ebitda": 5.497096505603098,
-    "debt_to_equity": 1.7891050657693672,
-    "eps_growth_cagr_3yr_pct": 13.417652596303453,
-    "fcf_margin_pct": -19.574669533191738,
-    "graham_criteria_evaluated": 4,
+    "book_value_per_share": 40.41475446630262,
+    "current_ratio": 0.8764679937114599,
+    "debt_to_ebitda": 5.533319381504705,
+    "debt_to_equity": 1.8769691677331473,
+    "eps_growth_cagr_3yr_pct": 13.80808157293214,
+    "fcf_margin_pct": -21.55532311511996,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
+    "graham_multiple": 64.25881649562737,
+    "graham_upside_pct": -40.530546607112875,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 0,
-    "shareholders_equity": 16923076000,
-    "total_assets": 71890730000
+    "ncav_margin_pct": -205.58684301502285,
+    "pb_ratio": 2.51546968488221,
+    "pe_ttm": 25.545454545454547,
+    "roe_pct": 10.413099072114731,
+    "shareholders_equity": 17142486000,
+    "total_assets": 71890730000,
+    "total_liabilities": 54622153000
   },
   "name": "Entergy",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 101.16
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -155,42 +161,42 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $47.2B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.74, debt $30.3B vs working capital $-2.0B",
+          "detail": "Current ratio 0.88, debt $30.9B vs working capital $-2.1B",
           "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 3/3 available years",
+          "detail": "Positive in 6/6 available years",
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 13.4%/yr",
+          "detail": "EPS 3yr CAGR 13.8%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 25.5",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 64.3",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 3,
       "total": 7
     },
@@ -198,29 +204,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 10.4%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.79",
+          "detail": "Debt/equity 1.88",
           "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "450,151,884 shares vs. 431,581,696 a year earlier",
+          "detail": "450,151,884 shares vs. 431,582,000 a year earlier",
           "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 2,
+      "evaluated": 4,
       "passed": 0,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.entergy.com"
 }

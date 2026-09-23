@@ -1,70 +1,68 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for TDG: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=tdg.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca03c6180>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001260221",
   "five_year_history": {
     "years": [
       {
         "cash": 4787000000,
-        "debt": 277000000,
+        "debt": 20018000000,
         "earnings": 680000000,
         "fiscal_year": "2021-09-30",
         "market_return_pct": null,
         "revenue": 4798000000,
-        "spending": null,
+        "spending": 3107000000,
         "stock_return_pct": null
       },
       {
         "cash": 3001000000,
-        "debt": 76000000,
+        "debt": 19813000000,
         "earnings": 866000000,
         "fiscal_year": "2022-09-30",
         "market_return_pct": -16.768420562054338,
         "revenue": 5429000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 3214000000,
+        "stock_return_pct": -15.970988039771361
       },
       {
         "cash": 3472000000,
-        "debt": 71000000,
+        "debt": 19766000000,
         "earnings": 1298000000,
         "fiscal_year": "2023-09-30",
         "market_return_pct": 19.681953076880006,
         "revenue": 6585000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 3662000000,
+        "stock_return_pct": 60.6512709119317
       },
       {
         "cash": 6261000000,
-        "debt": 98000000,
+        "debt": 24899000000,
         "earnings": 1714000000,
         "fiscal_year": "2024-09-30",
         "market_return_pct": 34.21914475531018,
         "revenue": 7940000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 4409000000,
+        "stock_return_pct": 69.26571228636155
       },
       {
         "cash": 2808000000,
-        "debt": 124000000,
+        "debt": 30030000000,
         "earnings": 2074000000,
         "fiscal_year": "2025-09-30",
         "market_return_pct": 16.107780256553255,
         "revenue": 8831000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 4666000000,
+        "stock_return_pct": -7.645414222950967
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 3.213565536205316,
-      "debt_to_ebitda": 0.02736098852603707,
-      "debt_to_equity": -0.012801982242411728
+      "current_ratio": 3.091770788453253,
+      "debt_to_ebitda": 6.62621359223301,
+      "debt_to_equity": -2.74294645060459
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -175.22809185273496,
+      "book_value_per_share": -209.8272884283247,
       "shareholders_equity": -9686000000,
       "total_assets": 22909000000,
       "total_liabilities": 32588000000
@@ -73,23 +71,23 @@
       "fcf_margin_pct": 20.563922545578077
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 33.77548076206609
+      "eps_growth_cagr_3yr_pct": 33.76849322071192
     },
     "profitability": {
-      "roe_pct": -21.41234771835639,
+      "roe_pct": -21.019375539923484,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": -178.81441274185,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -141.5932735089293,
+      "pb_ratio": -5.298109566504895,
+      "pe_ttm": 33.75060679611651
     }
   },
-  "industry": "Aircraft Parts & Auxiliary Equipment, NEC",
-  "last_updated": "2026-09-23T14:29:00Z",
+  "industry": "Aerospace & Defense",
+  "last_updated": "2026-09-23T02:57:45Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
@@ -105,28 +103,32 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 62221655312,
   "metrics": {
-    "book_value_per_share": -175.22809185273496,
-    "current_ratio": 3.213565536205316,
-    "debt_to_ebitda": 0.02736098852603707,
-    "debt_to_equity": -0.012801982242411728,
-    "eps_growth_cagr_3yr_pct": 33.77548076206609,
+    "book_value_per_share": -209.8272884283247,
+    "current_ratio": 3.091770788453253,
+    "debt_to_ebitda": 6.62621359223301,
+    "debt_to_equity": -2.74294645060459,
+    "eps_growth_cagr_3yr_pct": 33.76849322071192,
     "fcf_margin_pct": 20.563922545578077,
-    "graham_criteria_evaluated": 4,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
+    "graham_multiple": -178.81441274185,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "roe_pct": -21.41234771835639,
+    "ncav_margin_pct": -141.5932735089293,
+    "pb_ratio": -5.298109566504895,
+    "pe_ttm": 33.75060679611651,
+    "roe_pct": -21.019375539923484,
     "shareholders_equity": -9686000000,
     "total_assets": 22909000000,
     "total_liabilities": 32588000000
   },
   "name": "TransDigm Group",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 1112.42
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -155,14 +157,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $62.2B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 3.21, debt $0.1B vs working capital $4.8B",
-          "passed": true
+          "detail": "Current ratio 3.09, debt $30.0B vs working capital $4.8B",
+          "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -170,9 +172,9 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -180,17 +182,17 @@
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 33.8",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -178.8",
+          "passed": true
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 4,
       "total": 7
     },
@@ -198,12 +200,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -21.4%",
+          "detail": "ROE -21.0%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity -0.01",
+          "detail": "Debt/equity -2.74",
           "passed": true
         },
         {
@@ -222,5 +224,5 @@
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.transdigm.com"
 }

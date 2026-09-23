@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for BAC: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=bac.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0c782c0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000070858",
   "five_year_history": {
     "years": [
       {
-        "cash": null,
-        "debt": null,
+        "cash": 355365000000,
+        "debt": 496199000000,
         "earnings": 31978000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 89113000000,
-        "spending": null,
+        "revenue": 93851000000,
+        "spending": 59875000000,
         "stock_return_pct": null
       },
       {
-        "cash": null,
-        "debt": null,
+        "cash": 237462000000,
+        "debt": 498549000000,
         "earnings": 27528000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 94950000000,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 115053000000,
+        "spending": 84084000000,
+        "stock_return_pct": -25.556304787592726
       },
       {
-        "cash": null,
-        "debt": null,
-        "earnings": 26305000000,
+        "cash": 341419000000,
+        "debt": 618189000000,
+        "earnings": 26515000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 102769000000,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 171912000000,
+        "spending": 143570000000,
+        "stock_return_pct": 2.3550724637681193
       },
       {
-        "cash": null,
-        "debt": null,
-        "earnings": 26973000000,
+        "cash": 296486000000,
+        "debt": 658428000000,
+        "earnings": 27132000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 105856000000,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 192434000000,
+        "spending": 163180000000,
+        "stock_return_pct": 29.646017699115056
       },
       {
-        "cash": null,
-        "debt": null,
+        "cash": 231845000000,
+        "debt": 365904000000,
         "earnings": 30509000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 113097000000,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 191567000000,
+        "spending": 153872000000,
+        "stock_return_pct": 25.142207053469846
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": null,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 0.07297353115908586,
+      "debt_to_ebitda": 9.145542252993076,
+      "debt_to_equity": 2.4313337363082623
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 43.365352815752296,
+      "book_value_per_share": 42.103982548383485,
       "shareholders_equity": 303243000000,
-      "total_assets": 3411738000000,
-      "total_liabilities": 3108495000000
+      "total_assets": 3410394000000,
+      "total_liabilities": 3107151000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 6.584119394258928
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 6.09903426261329
+      "eps_growth_cagr_3yr_pct": 6.522715997091133
     },
     "profitability": {
-      "roe_pct": 10.060908248500377,
+      "roe_pct": 11.133376393636228,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 60.97126265816024,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 17.010256587063832,
+      "graham_number": 60.62736738861319,
+      "graham_upside_pct": 7.8778779156818235,
+      "ncav_margin_pct": -619.1112342958511,
+      "pb_ratio": 1.3347905969564324,
+      "pe_ttm": 12.7437641723356
     }
   },
-  "industry": "National Commercial Banks",
-  "last_updated": "2026-09-23T13:26:37Z",
+  "industry": "Banks - Diversified",
+  "last_updated": "2026-09-23T02:50:52Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Positive but thin margin of safety - 8% is below the 15% convention used here."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,24 +105,33 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 398828358000,
   "metrics": {
-    "book_value_per_share": 43.365352815752296,
-    "eps_growth_cagr_3yr_pct": 6.09903426261329,
-    "graham_criteria_evaluated": 2,
-    "graham_criteria_passed": 2,
+    "book_value_per_share": 42.103982548383485,
+    "current_ratio": 0.07297353115908586,
+    "debt_to_ebitda": 9.145542252993076,
+    "debt_to_equity": 2.4313337363082623,
+    "eps_growth_cagr_3yr_pct": 6.522715997091133,
+    "fcf_margin_pct": 6.584119394258928,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 17.010256587063832,
+    "graham_upside_pct": 7.8778779156818235,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 1,
-    "roe_pct": 10.060908248500377,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -619.1112342958511,
+    "pb_ratio": 1.3347905969564324,
+    "pe_ttm": 12.7437641723356,
+    "roe_pct": 11.133376393636228,
     "shareholders_equity": 303243000000,
-    "total_assets": 3411738000000,
-    "total_liabilities": 3108495000000
+    "total_assets": 3410394000000,
+    "total_liabilities": 3107151000000
   },
   "name": "Bank of America",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 56.2
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -151,14 +160,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $398.8B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.07, debt $365.9B vs working capital $-1492.5B",
+          "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -172,51 +181,51 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 6.1%/yr",
+          "detail": "EPS 3yr CAGR 6.5%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 12.7",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 17.0",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 2,
+      "evaluated": 6,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 10.1%",
+          "detail": "ROE 11.1%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 2.43",
+          "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "7,680,900,000 shares vs. 7,935,800,000 a year earlier",
+          "detail": "7,546,900,000 shares vs. 7,843,700,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 60",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.bankofamerica.com"
 }

@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for URI: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=uri.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca25c8980>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001067701",
   "five_year_history": {
     "years": [
       {
         "cash": 144000000,
-        "debt": 906000000,
-        "earnings": 689000000,
-        "fiscal_year": "2024-12-31",
-        "market_return_pct": 2.14723926380369,
-        "revenue": 4095000000,
-        "spending": null,
+        "debt": 10508000000,
+        "earnings": 1386000000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 9716000000,
+        "spending": 7420000000,
         "stock_return_pct": null
       },
       {
         "cash": 106000000,
-        "debt": 161000000,
-        "earnings": 518000000,
-        "fiscal_year": "2025-03-31",
-        "market_return_pct": -4.553985803985813,
-        "revenue": 3719000000,
-        "spending": null,
-        "stock_return_pct": null
+        "debt": 12223000000,
+        "earnings": 2105000000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 11642000000,
+        "spending": 8410000000,
+        "stock_return_pct": 6.960787264136746
       },
       {
         "cash": 363000000,
-        "debt": 1465000000,
-        "earnings": 622000000,
-        "fiscal_year": "2025-06-30",
-        "market_return_pct": 10.450669479254195,
-        "revenue": 3943000000,
-        "spending": null,
-        "stock_return_pct": null
+        "debt": 12662000000,
+        "earnings": 2424000000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 14332000000,
+        "spending": 10477000000,
+        "stock_return_pct": 59.557706375555675
       },
       {
         "cash": 457000000,
-        "debt": 1178000000,
-        "earnings": 701000000,
-        "fiscal_year": "2025-09-30",
-        "market_return_pct": 7.82228696285505,
-        "revenue": 4229000000,
-        "spending": null,
-        "stock_return_pct": null
+        "debt": 14789000000,
+        "earnings": 2575000000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 15345000000,
+        "spending": 11277000000,
+        "stock_return_pct": 24.21795097866338
       },
       {
         "cash": 459000000,
-        "debt": 1577000000,
-        "earnings": 653000000,
+        "debt": 16477000000,
+        "earnings": 2494000000,
         "fiscal_year": "2025-12-31",
-        "market_return_pct": 2.362724789096042,
-        "revenue": 4208000000,
-        "spending": null,
-        "stock_return_pct": null
+        "market_return_pct": 16.35271635271634,
+        "revenue": 16099000000,
+        "spending": 12125000000,
+        "stock_return_pct": 14.888422008971663
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.9447499345378372,
-      "debt_to_ebitda": null,
-      "debt_to_equity": 0.17584745762711865
+      "current_ratio": 0.7639804380182862,
+      "debt_to_ebitda": 2.3266026546173397,
+      "debt_to_equity": 1.6679314830875975
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 143.152320406052,
+      "book_value_per_share": 145.48895899053628,
       "shareholders_equity": 8968000000,
       "total_assets": 29866000000,
       "total_liabilities": 20898000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 4.112056649481334
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 9.093276796312644
+      "eps_growth_cagr_3yr_pct": 9.147747841720077
     },
     "profitability": {
-      "roe_pct": 7.281445138269402,
-      "trend": "stable"
+      "roe_pct": 29.181415929203542,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 181.87611838234417,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 180.3609828359417,
+      "graham_number": 355.9736592176201,
+      "graham_upside_pct": -65.8715236982647,
+      "ncav_margin_pct": -126.4604254028453,
+      "pb_ratio": 7.16920381613183,
+      "pe_ttm": 25.15774240231548
     }
   },
-  "industry": "Services-Equipment Rental & Leasing, NEC",
-  "last_updated": "2026-09-23T14:31:12Z",
+  "industry": "Rental & Leasing Services",
+  "last_updated": "2026-09-23T02:58:00Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,26 +105,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 64921417200,
   "metrics": {
-    "book_value_per_share": 143.152320406052,
-    "current_ratio": 0.9447499345378372,
-    "debt_to_equity": 0.17584745762711865,
-    "eps_growth_cagr_3yr_pct": 9.093276796312644,
-    "graham_criteria_evaluated": 4,
+    "book_value_per_share": 145.48895899053628,
+    "current_ratio": 0.7639804380182862,
+    "debt_to_ebitda": 2.3266026546173397,
+    "debt_to_equity": 1.6679314830875975,
+    "eps_growth_cagr_3yr_pct": 9.147747841720077,
+    "fcf_margin_pct": 4.112056649481334,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
+    "graham_multiple": 180.3609828359417,
+    "graham_upside_pct": -65.8715236982647,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "roe_pct": 7.281445138269402,
+    "ncav_margin_pct": -126.4604254028453,
+    "pb_ratio": 7.16920381613183,
+    "pe_ttm": 25.15774240231548,
+    "roe_pct": 29.181415929203542,
     "shareholders_equity": 8968000000,
     "total_assets": 29866000000,
     "total_liabilities": 20898000000
   },
   "name": "United Rentals",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 1043.04
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -153,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $64.9B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.94, debt $1.6B vs working capital $-0.2B",
+          "detail": "Current ratio 0.76, debt $16.5B vs working capital $-0.2B",
           "passed": false
         },
         {
@@ -168,9 +175,9 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -178,17 +185,17 @@
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 25.2",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 180.4",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 3,
       "total": 7
     },
@@ -196,29 +203,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 7.3%",
-          "passed": false
+          "detail": "ROE 29.2%",
+          "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.18",
-          "passed": true
+          "detail": "Debt/equity 1.67",
+          "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "Share count unavailable",
-          "passed": null
+          "detail": "64,599,999 shares vs. 66,567,000 a year earlier",
+          "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 4,
       "passed": 2,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.unitedrentals.com"
 }

@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for SMCI: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=smci.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca178aed0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001375365",
   "five_year_history": {
     "years": [
       {
         "cash": 267397000,
-        "debt": 147618000,
+        "debt": 620564000,
         "earnings": 285163000,
         "fiscal_year": "2022-06-30",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 5196099000,
+        "spending": 4860932000,
         "stock_return_pct": null
       },
       {
         "cash": 440459000,
-        "debt": 120179000,
+        "debt": 290302000,
         "earnings": 639998000,
         "fiscal_year": "2023-06-30",
         "market_return_pct": 17.50298210735586,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 7123482000,
+        "spending": 6362340000,
+        "stock_return_pct": 517.0792079207921
       },
       {
         "cash": 1669766000,
-        "debt": null,
+        "debt": 2183393000,
         "earnings": 1152666000,
         "fiscal_year": "2024-06-30",
         "market_return_pct": 23.0238224147266,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 14989251000,
+        "spending": 13778477000,
+        "stock_return_pct": 225.83233052547135
       },
       {
         "cash": 5169911000,
-        "debt": null,
+        "debt": 4778842000,
         "earnings": 1048854000,
         "fiscal_year": "2025-06-30",
         "market_return_pct": 13.296292221366485,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 21972042000,
+        "spending": 20719048000,
+        "stock_return_pct": -39.665148344207815
       },
       {
         "cash": 7521474000,
-        "debt": null,
+        "debt": 8720287000,
         "earnings": 2230453000,
         "fiscal_year": "2026-06-30",
         "market_return_pct": 20.865905964230794,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 39063072000,
+        "spending": 36292586000,
+        "stock_return_pct": -40.15507039379719
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 3.8723242365406323,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "debt_to_ebitda": 3.020910455816828,
+      "debt_to_equity": 0.46137885605062956
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 22.039900963792636,
+      "book_value_per_share": 24.060271914869578,
       "shareholders_equity": 14479452000,
       "total_assets": 29945467000,
       "total_liabilities": 15465851000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": -17.84776425161851
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 41.93981981419097
+      "eps_growth_cagr_3yr_pct": 18.92624598578454
     },
     "profitability": {
-      "roe_pct": 15.40426391827536,
-      "trend": "stable"
+      "roe_pct": 25.082204144149863,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 40.20729704536466,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 19.649183467160576,
+      "graham_number": 44.45165723579565,
+      "graham_upside_pct": 7.009285594115674,
+      "ncav_margin_pct": -55.07421278587819,
+      "pb_ratio": 1.7265170836575858,
+      "pe_ttm": 11.380821917808218
     }
   },
-  "industry": "Electronic Computers",
-  "last_updated": "2026-09-23T15:00:55Z",
+  "industry": "Computer Hardware",
+  "last_updated": "2026-09-23T03:10:53Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Positive but thin margin of safety - 7% is below the 15% convention used here."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,25 +105,33 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 26871104420,
   "metrics": {
-    "book_value_per_share": 22.039900963792636,
+    "book_value_per_share": 24.060271914869578,
     "current_ratio": 3.8723242365406323,
-    "eps_growth_cagr_3yr_pct": 41.93981981419097,
-    "graham_criteria_evaluated": 2,
-    "graham_criteria_passed": 2,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 1,
-    "roe_pct": 15.40426391827536,
+    "debt_to_ebitda": 3.020910455816828,
+    "debt_to_equity": 0.46137885605062956,
+    "eps_growth_cagr_3yr_pct": 18.92624598578454,
+    "fcf_margin_pct": -17.84776425161851,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 6,
+    "graham_multiple": 19.649183467160576,
+    "graham_upside_pct": 7.009285594115674,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -55.07421278587819,
+    "pb_ratio": 1.7265170836575858,
+    "pe_ttm": 11.380821917808218,
+    "roe_pct": 25.082204144149863,
     "shareholders_equity": 14479452000,
     "total_assets": 29945467000,
     "total_liabilities": 15465851000
   },
   "name": "Supermicro",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 41.54
   },
   "qualitative": null,
   "sector": "Technology",
@@ -152,14 +160,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $26.9B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 3.87, debt $8.7B vs working capital $20.6B",
+          "passed": true
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -173,35 +181,35 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 41.9%/yr",
+          "detail": "EPS 3yr CAGR 18.9%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 11.4",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 19.6",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 2,
+      "evaluated": 6,
+      "passed": 6,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 15.4%",
+          "detail": "ROE 25.1%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.46",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -210,14 +218,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.supermicro.com"
 }

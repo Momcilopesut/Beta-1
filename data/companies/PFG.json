@@ -1,102 +1,103 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for PFG: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=pfg.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca03fd610>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001126328",
   "five_year_history": {
     "years": [
       {
         "cash": 2332000000,
-        "debt": null,
+        "debt": 4692500000,
         "earnings": 1580200000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 14427800000,
-        "spending": null,
+        "spending": 12516900000,
         "stock_return_pct": null
       },
       {
         "cash": 4848000000,
-        "debt": null,
+        "debt": 4077700000,
         "earnings": 4756900000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 17536100000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 11549100000,
+        "stock_return_pct": 16.023779897691142
       },
       {
         "cash": 4707700000,
-        "debt": null,
+        "debt": 3992000000,
         "earnings": 623200000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 13665800000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 12927000000,
+        "stock_return_pct": -5.731649189704483
       },
       {
         "cash": 4211900000,
-        "debt": null,
+        "debt": 4108000000,
         "earnings": 1571000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 16127700000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 14238100000,
+        "stock_return_pct": -2.1489065857666576
       },
       {
         "cash": 4431000000,
-        "debt": null,
+        "debt": 3954000000,
         "earnings": 1185100000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 15625500000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 14209500000,
+        "stock_return_pct": 13.9516858287043
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": null,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 0.3022145352578836,
+      "debt_to_ebitda": 2.3713566030946382,
+      "debt_to_equity": 0.3574628586487466
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 55.01490136787713,
+      "book_value_per_share": 58.93689986282579,
       "shareholders_equity": 11883900000,
       "total_assets": 341376500000,
       "total_liabilities": 328985200000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 28.406770983328535
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -34.43850984081621
+      "eps_growth_cagr_3yr_pct": -34.509663907295305
     },
     "profitability": {
-      "roe_pct": 9.972315485657065,
-      "trend": "stable"
+      "roe_pct": 13.02615376519497,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 80.61411305770527,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 33.00938864760768,
+      "graham_number": 83.99254082107677,
+      "graham_upside_pct": -26.056395086647793,
+      "ncav_margin_pct": -1207.4299943193066,
+      "pb_ratio": 2.045832345093389,
+      "pe_ttm": 16.134943181818183
     }
   },
-  "industry": "Accident & Health Insurance",
-  "last_updated": "2026-09-23T13:41:29Z",
+  "industry": "Asset Management",
+  "last_updated": "2026-09-23T03:07:24Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,26 +106,51 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 24320186950,
   "metrics": {
-    "book_value_per_share": 55.01490136787713,
-    "eps_growth_cagr_3yr_pct": -34.43850984081621,
-    "graham_criteria_evaluated": 3,
+    "book_value_per_share": 58.93689986282579,
+    "current_ratio": 0.3022145352578836,
+    "debt_to_ebitda": 2.3713566030946382,
+    "debt_to_equity": 0.3574628586487466,
+    "eps_growth_cagr_3yr_pct": -34.509663907295305,
+    "fcf_margin_pct": 28.406770983328535,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 1,
-    "roe_pct": 9.972315485657065,
+    "graham_multiple": 33.00938864760768,
+    "graham_upside_pct": -26.056395086647793,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -1207.4299943193066,
+    "pb_ratio": 2.045832345093389,
+    "pe_ttm": 16.134943181818183,
+    "roe_pct": 13.02615376519497,
     "shareholders_equity": 11883900000,
     "total_assets": 341376500000,
     "total_liabilities": 328985200000
   },
   "name": "Principal Financial Group",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 113.59
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Principal Financial Group's 10-K describes a global financial services company organized into Retirement and Income Solutions, Principal Asset Management, and Benefits and Protection segments, with $1,814.6 billion in assets under administration and $781.0 billion in AUM as of December 31, 2025. The Risk Factors section highlights sensitivity to interest rates, credit spreads, market conditions, investment portfolio credit/liquidity risk, and derivative counterparty exposure. The MD&A discusses profitability drivers tied to AUM, fee revenue, and insurance margins, and details critical accounting estimates for investment valuation, goodwill (tested with no impairment identified), insurance reserves, and pension benefit assumptions.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists primarily of XBRL taxonomy tags and metadata for the quarter ended June 30, 2026, rather than narrative text. It does not contain readable disclosure of business results, financial performance, or developments for the period, so no substantive summary can be provided from this excerpt.",
+    "filing_summary_8k": "This 8-K, dated September 9, 2026, discloses that Principal Financial Group and related subsidiaries entered into an Amended and Restated Five-Year Credit Facility with a bank syndicate led by Wells Fargo, refinancing an existing 2022 credit facility. The new facility allows borrowing up to $900 million (expandable to $1.3 billion subject to conditions), matures September 9, 2031 (with possible extensions), and includes financial covenants such as a minimum statutory surplus and a maximum Total Debt to Total Capital ratio of 35%. As of the filing date, no amounts were outstanding under the facility.",
+    "moat_explanation": "The 10-K describes PFG as a leading provider of defined contribution, nonqualified, and defined benefit retirement plans, ESOP consulting, and Total Retirement Solutions bundling administrative and investment services, with over 42,000 defined contribution plans and 1,600 defined benefit plans under administration. Once plan sponsors integrate PFG's recordkeeping, trust, and investment platforms into their employee benefit infrastructure, moving to a competitor would require significant operational effort, which supports a switching-costs moat; the excerpts do not describe patented technology, a low-cost structure, or network effects as strongly.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Profitability is significantly exposed to interest rate movements (both prolonged low rates and rising rates), which the company states can compress margins and increase reserve requirements",
+      "Investment portfolio includes less-liquid privately placed fixed maturities, mortgage loans, and real estate (~41% of invested assets), creating potential difficulty selling assets at favorable prices in stressed markets",
+      "Commercial mortgage loan portfolio, including balloon maturities, carries delinquency/default risk that could adversely affect profitability",
+      "Widening credit spreads could cause unrealized losses and higher allowances for credit losses on the investment portfolio",
+      "A downgrade in financial strength or credit ratings could increase surrenders/withdrawals, reduce new sales, and raise cost of capital",
+      "Reliance on capital and credit markets for liquidity, with access potentially constrained by market disruption or negative rating actions"
+    ]
+  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001126328.json",
@@ -151,14 +177,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $24.3B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.30, debt $4.0B vs working capital $39.4B",
+          "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -166,27 +192,27 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -34.4%/yr",
+          "detail": "EPS 3yr CAGR -34.5%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 16.1",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 33.0",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 6,
       "passed": 2,
       "total": 7
     },
@@ -194,29 +220,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 10.0%",
+          "detail": "ROE 13.0%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.36",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "225,700,000 shares vs. 235,300,000 a year earlier",
+          "detail": "225,700,000 shares vs. 226,225,161 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.principal.com"
 }

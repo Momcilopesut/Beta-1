@@ -1,102 +1,103 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for WMB: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=wmb.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca3651a90>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000107263",
   "five_year_history": {
     "years": [
       {
         "cash": 1680000000,
-        "debt": null,
+        "debt": 23675000000,
         "earnings": 1517000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 10627000000,
-        "spending": null,
+        "spending": 7996000000,
         "stock_return_pct": null
       },
       {
         "cash": 152000000,
-        "debt": null,
+        "debt": 22904000000,
         "earnings": 2049000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 10965000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 7947000000,
+        "stock_return_pct": 26.344086021505376
       },
       {
-        "cash": null,
-        "debt": null,
+        "cash": 2150000000,
+        "debt": 26462000000,
         "earnings": 3179000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 10907000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 6596000000,
+        "stock_return_pct": 7.9635258358662755
       },
       {
-        "cash": null,
-        "debt": null,
+        "cash": 60000000,
+        "debt": 27079000000,
         "earnings": 2225000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 10503000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 7164000000,
+        "stock_return_pct": 52.36486486486485
       },
       {
-        "cash": null,
-        "debt": null,
+        "cash": 63000000,
+        "debt": 29393000000,
         "earnings": 2618000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 11950000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 7549000000,
+        "stock_return_pct": 11.067997043606805
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.5312807075008189,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 0.4770852428964253,
+      "debt_to_ebitda": 4.355809128630705,
+      "debt_to_equity": 2.3345716451857466
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 10.470356916096932,
+      "book_value_per_share": 12.555555555555555,
       "shareholders_equity": 12807000000,
       "total_assets": 58573000000,
-      "total_liabilities": null
+      "total_liabilities": 43578000000
     },
     "cash_flow": {
       "fcf_margin_pct": 8.410041841004185
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 8.61732445982799
+      "eps_growth_cagr_3yr_pct": 8.40138487543931
     },
     "profitability": {
-      "roe_pct": 20.441945810884672,
-      "trend": "stable"
+      "roe_pct": 23.86379079384185,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 22.453233297457793,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 185.52740561031084,
+      "graham_number": 24.587598500056895,
+      "graham_upside_pct": -65.35982178070316,
+      "ncav_margin_pct": -146.45680897708533,
+      "pb_ratio": 6.5867717968157695,
+      "pe_ttm": 28.166666666666664
     }
   },
-  "industry": "Natural Gas Transmission",
-  "last_updated": "2026-09-23T13:22:39Z",
+  "industry": "Oil & Gas Midstream",
+  "last_updated": "2026-09-23T03:43:54Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,27 +106,51 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 86820427163,
   "metrics": {
-    "book_value_per_share": 10.470356916096932,
-    "current_ratio": 0.5312807075008189,
-    "eps_growth_cagr_3yr_pct": 8.61732445982799,
+    "book_value_per_share": 12.555555555555555,
+    "current_ratio": 0.4770852428964253,
+    "debt_to_ebitda": 4.355809128630705,
+    "debt_to_equity": 2.3345716451857466,
+    "eps_growth_cagr_3yr_pct": 8.40138487543931,
     "fcf_margin_pct": 8.410041841004185,
-    "graham_criteria_evaluated": 3,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 1,
-    "roe_pct": 20.441945810884672,
+    "graham_multiple": 185.52740561031084,
+    "graham_upside_pct": -65.35982178070316,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -146.45680897708533,
+    "pb_ratio": 6.5867717968157695,
+    "pe_ttm": 28.166666666666664,
+    "roe_pct": 23.86379079384185,
     "shareholders_equity": 12807000000,
-    "total_assets": 58573000000
+    "total_assets": 58573000000,
+    "total_liabilities": 43578000000
   },
   "name": "Williams Companies",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 70.98
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes Williams as a FERC-regulated energy infrastructure company operating interstate natural gas pipelines (including Transco and NWP), gathering/processing, NGL, and marketing segments, plus minor upstream operations. It details multiple pipeline expansion projects, a 2024 Transco rate case that was settled in late 2025 (effective March 2026), and various PHMSA safety and cybersecurity regulatory developments. Reported 2025 total revenues were $11,950 million (up from $10,503 million in 2024), with net income attributable to Williams of $2,618 million, alongside a $212 million asset impairment recorded in 2025 that had no 2024 counterpart.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (for the quarter ended June 30, 2026) consists primarily of XBRL tagging and entity/context metadata for Williams Companies, Transco, and Northwest Pipeline as co-registrants, without narrative discussion of quarterly results, segment performance, or financial highlights. As a result, the provided excerpts don't describe the substantive business or financial content of this filing beyond confirming it covers the second quarter of fiscal year 2026.",
+    "filing_summary_8k": "This 8-K, dated September 10, 2026, discloses that Williams completed a registered public offering of $2.75 billion in aggregate senior unsecured notes across four tranches (2029, 2033, 2036, and 2056 maturities) with coupons ranging from 5.000% to 6.400%. The notes were issued under a supplemented indenture with The Bank of New York Mellon Trust Company as trustee, and the filing describes standard terms including semi-annual interest payments, make-whole redemption provisions, and customary covenants and events of default.",
+    "moat_explanation": "Williams' interstate pipelines (Transco and NWP) operate under FERC certificates of public convenience and necessity that are required to own and operate jurisdictional pipeline facilities, and the excerpts describe an extensive FERC rate-making and regulatory framework (SFV rate design, rate case settlements, PHMSA safety mandates) that governs entry and operation. This regulatory licensing structure, combined with large-scale, already-built transmission and storage infrastructure, creates a barrier that new entrants cannot easily replicate, though the excerpts also show profitability is capped/negotiated through FERC-approved rates rather than being purely a free-market advantage.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Revenues and returns on Transco/NWP are subject to FERC rate case proceedings and can be collected 'subject to refund,' creating regulatory rate risk (e.g., Transco's 2024 rate case remained unresolved until a late-2025 settlement).",
+      "Company recorded a $212 million impairment or write-off of certain assets in 2025 with no comparable charge in 2024.",
+      "Interest expense is large and rising ($1,442 million in 2025 vs $1,364 million in 2024), reflecting a heavy debt load, and the company issued an additional $2.75 billion in new senior notes in September 2026 per the 8-K.",
+      "PHMSA Mega Rule and new pipeline safety/class-location regulations have already increased remediation and compliance costs and are expected to continue doing so, with 2026 Gas Integrity Management costs estimated at ~$210 million.",
+      "Net gain/loss from commodity derivatives is highly volatile between periods (e.g., a $250 million loss in 2024 vs a $956 million gain in 2023), indicating commodity price exposure can swing reported results materially.",
+      "A prior period included a large one-time litigation gain ($534 million Energy Transfer judgment in 2023) that did not recur in 2024 or 2025, showing part of past earnings was non-recurring."
+    ]
+  },
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000107263.json",
@@ -152,14 +177,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $86.8B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.48, debt $29.4B vs working capital $-2.9B",
+          "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -167,27 +192,27 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 8.6%/yr",
+          "detail": "EPS 3yr CAGR 8.4%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 28.2",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 185.5",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 6,
       "passed": 3,
       "total": 7
     },
@@ -195,29 +220,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 20.4%",
+          "detail": "ROE 23.9%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "1,225,000,000 shares vs. 1,223,000,000 a year earlier",
+          "detail": "Debt/equity 2.33",
           "passed": false
         },
         {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "1,221,000,000 shares vs. 1,222,954,000 a year earlier",
+          "passed": true
+        },
+        {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.williams.com"
 }

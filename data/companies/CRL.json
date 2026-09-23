@@ -1,100 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for CRL: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=crl.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2539bb0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001100682",
   "five_year_history": {
     "years": [
       {
-        "cash": 241214000,
-        "debt": 101000,
+        "cash": 245237000,
+        "debt": 3205570000,
         "earnings": 390982000,
-        "fiscal_year": "2021-12-25",
+        "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 3540160000,
+        "spending": 2950298000,
         "stock_return_pct": null
       },
       {
         "cash": 233912000,
-        "debt": 1347000,
+        "debt": 3097276000,
         "earnings": 486226000,
         "fiscal_year": "2022-12-31",
-        "market_return_pct": -19.869672715081922,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "market_return_pct": -19.48164055920498,
+        "revenue": 3976060000,
+        "spending": 3325085000,
+        "stock_return_pct": -42.1678433037847
       },
       {
         "cash": 276771000,
-        "debt": 3172000,
+        "debt": 3066381000,
         "earnings": 474624000,
-        "fiscal_year": "2023-12-30",
-        "market_return_pct": 24.286797583871554,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 4129409000,
+        "spending": 3512148000,
+        "stock_return_pct": 7.503441945846716
       },
       {
         "cash": 194606000,
-        "debt": 155000,
-        "earnings": 22203000,
+        "debt": 2723994000,
+        "earnings": 10297000,
         "fiscal_year": "2024-12-28",
-        "market_return_pct": 25.18356441059519,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "market_return_pct": 25.88807785888078,
+        "revenue": 4049989000,
+        "spending": 3822642000,
+        "stock_return_pct": -20.529348986125935
       },
       {
         "cash": 213770000,
-        "debt": 166000,
+        "debt": 3065513000,
         "earnings": -144338000,
         "fiscal_year": "2025-12-27",
         "market_return_pct": 16.01653753718424,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 4015382000,
+        "spending": 3507543000,
+        "stock_return_pct": 9.400515685431888
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.2916447606253598,
-      "debt_to_ebitda": 0.0003874214071332216,
-      "debt_to_equity": 5.2454789343461954e-05
+      "current_ratio": 1.347531518066598,
+      "debt_to_ebitda": 3.3644401421937746,
+      "debt_to_equity": 1.0662257416091359
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 66.29042261409109,
+      "book_value_per_share": 58.6971496926948,
       "shareholders_equity": 3164630000,
       "total_assets": 7135422000,
       "total_liabilities": 3924228000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 12.912694234321915
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": -4.560975532684706,
-      "trend": "stable"
+      "roe_pct": -7.723142797479804,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": -286.76967380260726,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -118.2000586087893,
+      "pb_ratio": 4.868174463205847,
+      "pe_ttm": -58.90702479338844
     }
   },
-  "industry": "Services-Commercial Physical & Biological Research",
-  "last_updated": "2026-09-23T13:52:27Z",
+  "industry": "Medical - Diagnostics & Research",
+  "last_updated": "2026-09-23T03:07:48Z",
   "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
+    "flags": [
+      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "3 red flag(s) from the filing text - see qualitative.red_flags."
+    ],
+    "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "qualitative_moat_present": false,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -105,28 +107,46 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 13733092947,
   "metrics": {
-    "book_value_per_share": 66.29042261409109,
-    "current_ratio": 1.2916447606253598,
-    "debt_to_ebitda": 0.0003874214071332216,
-    "debt_to_equity": 5.2454789343461954e-05,
-    "graham_criteria_evaluated": 2,
-    "graham_criteria_passed": 0,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
-    "munger_quality_passed": 2,
-    "roe_pct": -4.560975532684706,
+    "book_value_per_share": 58.6971496926948,
+    "current_ratio": 1.347531518066598,
+    "debt_to_ebitda": 3.3644401421937746,
+    "debt_to_equity": 1.0662257416091359,
+    "fcf_margin_pct": 12.912694234321915,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 2,
+    "graham_multiple": -286.76967380260726,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -118.2000586087893,
+    "pb_ratio": 4.868174463205847,
+    "pe_ttm": -58.90702479338844,
+    "roe_pct": -7.723142797479804,
     "shareholders_equity": 3164630000,
     "total_assets": 7135422000,
     "total_liabilities": 3924228000
   },
   "name": "Charles River Laboratories",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 285.11
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The provided 10-K excerpts consist mainly of governance-related disclosures (insider trading policy, code of ethics, board nomination procedures, cybersecurity risk oversight) and the exhibit/signature pages, rather than the Business, Risk Factor, or MD&A narrative content typically found in those sections. The exhibit list notes a May 2025 Cooperation Agreement with activist investor Elliott Investment Management, a December 2024 Executive Separation Plan, and that the report was signed by an Interim Chief Financial Officer. The excerpts do not describe the company's operations, segment results, or financial performance for the fiscal year.",
+    "filing_summary_10q": "This 10-Q, covering the quarter ended June 27, 2026, is provided only as raw XBRL tag data without narrative text. The tags indicate the company completed an acquisition of Pathoquest (April 2026) and a transaction involving K.F. Cambodia (January 2026), and disclosed two divestitures during the quarter: a European Discovery business (May 2026) and a CDMO and Cell Solutions business (May 2026). The filing also reflects the company's three reportable segments (Research Models and Services, Discovery and Safety Assessment, and Manufacturing Support) and standard balance sheet, debt, and fair value line items, but no descriptive discussion of results is included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated August 5, 2026, discloses under Item 2.02 that Charles River Laboratories issued a press release reporting financial results for the second quarter ended June 27, 2026. The press release is attached as Exhibit 99.1 and is noted to contain forward-looking, safe-harbor language, but the specific financial results are not included in the excerpt provided.",
+    "moat_explanation": "The 10-K excerpts provided (Item 1 Business, Item 1A Risk Factors, and Item 7 MD&A) contain only governance, cybersecurity-oversight, and exhibit-index material rather than any description of Charles River's products, market position, customer relationships, cost structure, or competitive dynamics. There is no substantive discussion in these excerpts of scale, brand, patents, switching costs, or network effects that would support classifying a durable competitive advantage.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "The 10-K exhibit list references a Cooperation Agreement dated May 2025 between the Company and activist investor Elliott Investment Management L.P. and affiliates, indicating shareholder activism involvement.",
+      "The CFO signing the 10-K is listed as 'Interim Chief Financial Officer,' suggesting a leadership transition in the finance function.",
+      "An Executive Separation Plan dated December 2024 is referenced as an exhibit, though the excerpts do not explain the circumstances."
+    ]
+  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001100682.json",
@@ -153,13 +173,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $13.7B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.29, debt $0.0B vs working capital $0.3B",
+          "detail": "Current ratio 1.35, debt $3.1B vs working capital $0.3B",
           "passed": false
         },
         {
@@ -178,31 +198,31 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E -58.9",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -286.8",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 0,
+      "evaluated": 5,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -4.6%",
+          "detail": "ROE -7.7%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.00",
-          "passed": true
+          "detail": "Debt/equity 1.07",
+          "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -211,14 +231,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 1,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.criver.com"
 }

@@ -1,49 +1,47 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for NXPI: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=nxpi.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9f07deb0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001413447",
   "five_year_history": {
     "years": [
       {
         "cash": 2830000000,
-        "debt": null,
+        "debt": 10572000000,
         "earnings": 1871000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 11063000000,
-        "spending": null,
+        "spending": 8480000000,
         "stock_return_pct": null
       },
       {
-        "cash": 3845000000,
-        "debt": 0,
+        "cash": 3618000000,
+        "debt": 11165000000,
         "earnings": 2787000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 13205000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 9411000000,
+        "stock_return_pct": -30.621652471683202
       },
       {
-        "cash": 3862000000,
+        "cash": 3648000000,
         "debt": 11175000000,
         "earnings": 2797000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 13276000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 9615000000,
+        "stock_return_pct": 39.960766942985515
       },
       {
-        "cash": 3292000000,
+        "cash": 3031000000,
         "debt": 10854000000,
         "earnings": 2510000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 12614000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 9197000000,
+        "stock_return_pct": -6.026765530337287
       },
       {
         "cash": 3267000000,
@@ -52,51 +50,53 @@
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 12269000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 8958999999,
+        "stock_return_pct": 4.431080105845566
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.045864467920639,
-      "debt_to_ebitda": 3.1508120649651974,
-      "debt_to_equity": 1.2153937947494033
+      "current_ratio": 2.040361125862985,
+      "debt_to_ebitda": 2.9507484314221992,
+      "debt_to_equity": 0.9628914817089218
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 39.830304682145396,
+      "book_value_per_share": 46.59390289800527,
       "shareholders_equity": 10056000000,
       "total_assets": 26560000000,
-      "total_liabilities": null
+      "total_liabilities": 16109000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 19.748960795500857
+      "fcf_margin_pct": 18.607873502322928
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -9.000664080454257
+      "eps_growth_cagr_3yr_pct": -9.068130565548627
     },
     "profitability": {
-      "roe_pct": 20.097454256165474,
+      "roe_pct": 28.04817685907559,
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 84.40761665879897,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 106.0928975938042,
+      "graham_number": 91.58003342236204,
+      "graham_upside_pct": -61.45134763549185,
+      "ncav_margin_pct": -113.61964106565574,
+      "pb_ratio": 5.260657211158874,
+      "pe_ttm": 20.167232597623087
     }
   },
-  "industry": "Semiconductors & Related Devices",
-  "last_updated": "2026-09-23T14:57:38Z",
+  "industry": "Semiconductors",
+  "last_updated": "2026-09-23T03:01:17Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,27 +105,33 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 59906642817,
   "metrics": {
-    "book_value_per_share": 39.830304682145396,
-    "current_ratio": 2.045864467920639,
-    "debt_to_ebitda": 3.1508120649651974,
-    "debt_to_equity": 1.2153937947494033,
-    "eps_growth_cagr_3yr_pct": -9.000664080454257,
-    "fcf_margin_pct": 19.748960795500857,
-    "graham_criteria_evaluated": 4,
+    "book_value_per_share": 46.59390289800527,
+    "current_ratio": 2.040361125862985,
+    "debt_to_ebitda": 2.9507484314221992,
+    "debt_to_equity": 0.9628914817089218,
+    "eps_growth_cagr_3yr_pct": -9.068130565548627,
+    "fcf_margin_pct": 18.607873502322928,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
+    "graham_multiple": 106.0928975938042,
+    "graham_upside_pct": -61.45134763549185,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "roe_pct": 20.097454256165474,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -113.61964106565574,
+    "pb_ratio": 5.260657211158874,
+    "pe_ttm": 20.167232597623087,
+    "roe_pct": 28.04817685907559,
     "shareholders_equity": 10056000000,
-    "total_assets": 26560000000
+    "total_assets": 26560000000,
+    "total_liabilities": 16109000000
   },
   "name": "NXP Semiconductors",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 237.57
   },
   "qualitative": null,
   "sector": "Technology",
@@ -154,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $59.9B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.05, debt $12.2B vs working capital $4.1B",
+          "detail": "Current ratio 2.04, debt $12.2B vs working capital $4.1B",
           "passed": false
         },
         {
@@ -169,27 +175,27 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -9.0%/yr",
+          "detail": "EPS 3yr CAGR -9.1%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 20.2",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 106.1",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 2,
       "total": 7
     },
@@ -197,13 +203,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 20.1%",
+          "detail": "ROE 28.0%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.22",
-          "passed": false
+          "detail": "Debt/equity 0.96",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -217,9 +223,9 @@
         }
       ],
       "evaluated": 4,
-      "passed": 2,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.nxp.com"
 }

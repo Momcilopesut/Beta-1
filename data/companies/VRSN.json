@@ -1,70 +1,68 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for VRSN: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=vrsn.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0cfea50>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001014473",
   "five_year_history": {
     "years": [
       {
-        "cash": 223500000,
-        "debt": null,
-        "earnings": null,
+        "cash": 223487000,
+        "debt": 1788200000,
+        "earnings": 784800000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 1327600000,
-        "spending": null,
+        "revenue": 1327576000,
+        "spending": 460773000,
         "stock_return_pct": null
       },
       {
         "cash": 373600000,
-        "debt": null,
-        "earnings": null,
+        "debt": 1795000000,
+        "earnings": 673800000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 1424900000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 481800000,
+        "stock_return_pct": -19.060751713812937
       },
       {
         "cash": 240100000,
-        "debt": null,
-        "earnings": null,
+        "debt": 1797500000,
+        "earnings": 817600000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 1493100000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 492500000,
+        "stock_return_pct": -1.8886292834890943
       },
       {
         "cash": 206700000,
-        "debt": null,
-        "earnings": null,
+        "debt": 1801500000,
+        "earnings": 785700000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 1557400000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 499200000,
+        "stock_return_pct": 2.6791029966263173
       },
       {
         "cash": 307900000,
-        "debt": null,
-        "earnings": null,
+        "debt": 1798000000,
+        "earnings": 825700000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 1656600000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 535600000,
+        "stock_return_pct": 17.389833784306134
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.48946065561473256,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 0.5909641409088515,
+      "debt_to_ebitda": 1.5604929699704913,
+      "debt_to_equity": -1.0382414267335078
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -23.856035437430787,
+      "book_value_per_share": -24.82488986784141,
       "shareholders_equity": -2154200000,
       "total_assets": 1325900000,
       "total_liabilities": 3480100000
@@ -73,23 +71,23 @@
       "fcf_margin_pct": 64.48750452734517
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": null
+      "eps_growth_cagr_3yr_pct": 12.268702794510066
     },
     "profitability": {
-      "roe_pct": null,
+      "roe_pct": -39.20573787504901,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": -391.2664234913119,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -110.45801876244607,
+      "pb_ratio": -12.061282108158467,
+      "pe_ttm": 32.43986998916577
     }
   },
-  "industry": "Services-Computer Programming Services",
-  "last_updated": "2026-09-23T15:05:02Z",
+  "industry": "Software - Infrastructure",
+  "last_updated": "2026-09-23T03:02:00Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
@@ -105,24 +103,32 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 27067568000,
   "metrics": {
-    "book_value_per_share": -23.856035437430787,
-    "current_ratio": 0.48946065561473256,
+    "book_value_per_share": -24.82488986784141,
+    "current_ratio": 0.5909641409088515,
+    "debt_to_ebitda": 1.5604929699704913,
+    "debt_to_equity": -1.0382414267335078,
+    "eps_growth_cagr_3yr_pct": 12.268702794510066,
     "fcf_margin_pct": 64.48750452734517,
-    "graham_criteria_evaluated": 0,
-    "graham_criteria_passed": 0,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": -391.2664234913119,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 1,
-    "munger_quality_passed": 1,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -110.45801876244607,
+    "pb_ratio": -12.061282108158467,
+    "pe_ttm": 32.43986998916577,
+    "roe_pct": -39.20573787504901,
     "shareholders_equity": -2154200000,
     "total_assets": 1325900000,
     "total_liabilities": 3480100000
   },
   "name": "Verisign",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 299.42
   },
   "qualitative": null,
   "sector": "Technology",
@@ -151,19 +157,19 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $27.1B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.59, debt $1.8B vs working capital $-0.7B",
+          "passed": false
         },
         {
-          "criterion": "Earnings stability",
-          "detail": "No annual net income data available",
-          "passed": null
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
         },
         {
           "criterion": "Dividend record",
@@ -171,52 +177,52 @@
           "passed": null
         },
         {
-          "criterion": "Earnings growth",
-          "detail": "Insufficient EPS history",
-          "passed": null
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 12.3%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 32.4",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -391.3",
+          "passed": true
         }
       ],
-      "evaluated": 0,
-      "passed": 0,
+      "evaluated": 6,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE -39.2%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity -1.04",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "93,800,000 shares vs. 98,200,000 a year earlier",
+          "detail": "92,600,000 shares vs. 98,200,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 60",
+          "passed": true
         }
       ],
-      "evaluated": 1,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.verisign.com"
 }

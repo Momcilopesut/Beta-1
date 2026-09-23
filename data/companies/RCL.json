@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for RCL: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=rcl.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca27f0260>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000884887",
   "five_year_history": {
     "years": [
       {
         "cash": 2701770000,
-        "debt": 2243131000,
+        "debt": 21693988000,
         "earnings": -5260000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 1532000000,
+        "spending": 5402000000,
         "stock_return_pct": null
       },
       {
         "cash": 1935000000,
-        "debt": 2088000000,
+        "debt": 23994000000,
         "earnings": -2156000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 8840000000,
+        "spending": 9606000000,
+        "stock_return_pct": -35.721716514954494
       },
       {
         "cash": 497000000,
-        "debt": 1720000000,
+        "debt": 22130000000,
         "earnings": 1697000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 13900000000,
+        "spending": 11022000000,
+        "stock_return_pct": 143.05077887922315
       },
       {
         "cash": 388000000,
-        "debt": 1603000000,
+        "debt": 20820000000,
         "earnings": 2877000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 16485000000,
+        "spending": 12379000000,
+        "stock_return_pct": 92.01764607957382
       },
       {
         "cash": 825000000,
-        "debt": 3180000000,
-        "earnings": 4268000000,
+        "debt": 22635000000,
+        "earnings": 4273000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 17935000000,
+        "spending": 13026000000,
+        "stock_return_pct": 20.906844683341287
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.18340937370385732,
-      "debt_to_ebitda": 0.47978273989136994,
-      "debt_to_equity": 0.3168277373717246
+      "current_ratio": 0.20875160875160875,
+      "debt_to_ebitda": 3.4155726573110003,
+      "debt_to_equity": 2.297577178585385
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 37.52821757784471,
+      "book_value_per_share": 38.888475836431226,
       "shareholders_equity": 10037000000,
       "total_assets": 41619000000,
       "total_liabilities": 31374000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 6.891552829662671
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 42.52266613529939,
-      "trend": "stable"
+      "roe_pct": 43.82825140012446,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 114.80787524720813,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 89.11760482664434,
+      "graham_number": 117.31838649763694,
+      "graham_upside_pct": -50.05390331745202,
+      "ncav_margin_pct": -146.42176873418347,
+      "pb_ratio": 6.172861469323954,
+      "pe_ttm": 14.437000614628149
     }
   },
-  "industry": "Water Transportation",
-  "last_updated": "2026-09-23T13:05:19Z",
+  "industry": "Travel Services",
+  "last_updated": "2026-09-23T03:38:16Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,26 +105,32 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 62996323550,
   "metrics": {
-    "book_value_per_share": 37.52821757784471,
-    "current_ratio": 0.18340937370385732,
-    "debt_to_ebitda": 0.47978273989136994,
-    "debt_to_equity": 0.3168277373717246,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
+    "book_value_per_share": 38.888475836431226,
+    "current_ratio": 0.20875160875160875,
+    "debt_to_ebitda": 3.4155726573110003,
+    "debt_to_equity": 2.297577178585385,
+    "fcf_margin_pct": 6.891552829662671,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 89.11760482664434,
+    "graham_upside_pct": -50.05390331745202,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "roe_pct": 42.52266613529939,
+    "ncav_margin_pct": -146.42176873418347,
+    "pb_ratio": 6.172861469323954,
+    "pe_ttm": 14.437000614628149,
+    "roe_pct": 43.82825140012446,
     "shareholders_equity": 10037000000,
     "total_assets": 41619000000,
     "total_liabilities": 31374000000
   },
   "name": "Royal Caribbean Group",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 234.89
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -132,9 +138,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000884887.json",
     "sec_filings": [
       {
-        "filed": "2026-09-23",
+        "filed": "2026-08-20",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/884887/000110465926109755/tm2625963d1_8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/884887/000110465926099245/tm2623517d1_8k.htm"
       },
       {
         "filed": "2026-07-28",
@@ -153,13 +159,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $63.0B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.18, debt $3.2B vs working capital $-9.8B",
+          "detail": "Current ratio 0.21, debt $22.6B vs working capital $-9.8B",
           "passed": false
         },
         {
@@ -168,9 +174,9 @@
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth",
@@ -178,47 +184,47 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 14.4",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 89.1",
+          "passed": false
         }
       ],
-      "evaluated": 3,
-      "passed": 1,
+      "evaluated": 5,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 42.5%",
+          "detail": "ROE 43.8%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.32",
-          "passed": true
+          "detail": "Debt/equity 2.30",
+          "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "274,000,000 shares vs. 279,000,000 a year earlier",
+          "detail": "273,000,000 shares vs. 279,000,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 3,
+      "evaluated": 4,
       "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.rclinvestor.com"
 }

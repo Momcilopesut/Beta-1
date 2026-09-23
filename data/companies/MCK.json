@@ -1,100 +1,100 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for MCK: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=mck.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca159a060>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000927653",
   "five_year_history": {
     "years": [
       {
         "cash": 3532000000,
-        "debt": null,
+        "debt": 7542000000,
         "earnings": 1114000000,
         "fiscal_year": "2022-03-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 263966000000,
+        "spending": 261243000000,
         "stock_return_pct": null
       },
       {
         "cash": 4678000000,
-        "debt": null,
+        "debt": 7295000000,
         "earnings": 3560000000,
         "fiscal_year": "2023-03-31",
         "market_return_pct": -9.354795855105836,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 276711000000,
+        "spending": 272258000000,
+        "stock_return_pct": 16.30679776565512
       },
       {
         "cash": 4583000000,
-        "debt": null,
+        "debt": 7390000000,
         "earnings": 3002000000,
         "fiscal_year": "2024-03-31",
         "market_return_pct": 27.545860915019905,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 308951000000,
+        "spending": 305024000000,
+        "stock_return_pct": 50.678275523100694
       },
       {
         "cash": 5691000000,
-        "debt": null,
+        "debt": 7390000000,
         "earnings": 3295000000,
         "fiscal_year": "2025-03-31",
         "market_return_pct": 7.1299984679025625,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 359051000000,
+        "spending": 354679000000,
+        "stock_return_pct": 25.443158306771796
       },
       {
         "cash": 3975000000,
-        "debt": null,
+        "debt": 8614000000,
         "earnings": 4762000000,
         "fiscal_year": "2026-03-31",
         "market_return_pct": 16.258781887413086,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 403430000000,
+        "spending": 396976000000,
+        "stock_return_pct": 28.584377182424703
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.8536639957025829,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 0.8931292284950821,
+      "debt_to_ebitda": 1.1992203814562161,
+      "debt_to_equity": -2.7596698113207547
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -18.62932702250871,
+      "book_value_per_share": -32.55265374894692,
       "shareholders_equity": -2172000000,
       "total_assets": 82323000000,
-      "total_liabilities": null
+      "total_liabilities": 83157000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 1.3410009171355624
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 15.31382381030486
+      "eps_growth_cagr_3yr_pct": 15.177870306362085
     },
     "profitability": {
-      "roe_pct": -219.24493554327807,
+      "roe_pct": -194.39094084030054,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": -592.4966401798687,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -124.97092903042957,
+      "pb_ratio": -24.95023608490566,
+      "pe_ttm": 23.747135624833465
     }
   },
-  "industry": "Wholesale-Drugs, Proprietaries & Druggists' Sundries",
-  "last_updated": "2026-09-23T13:58:59Z",
+  "industry": "Medical - Distribution",
+  "last_updated": "2026-09-23T03:18:37Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -105,26 +105,50 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 104343425940,
   "metrics": {
-    "book_value_per_share": -18.62932702250871,
-    "current_ratio": 0.8536639957025829,
-    "eps_growth_cagr_3yr_pct": 15.31382381030486,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 2,
+    "book_value_per_share": -32.55265374894692,
+    "current_ratio": 0.8931292284950821,
+    "debt_to_ebitda": 1.1992203814562161,
+    "debt_to_equity": -2.7596698113207547,
+    "eps_growth_cagr_3yr_pct": 15.177870306362085,
+    "fcf_margin_pct": 1.3410009171355624,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": -592.4966401798687,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 1,
-    "roe_pct": -219.24493554327807,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -124.97092903042957,
+    "pb_ratio": -24.95023608490566,
+    "pe_ttm": 23.747135624833465,
+    "roe_pct": -194.39094084030054,
     "shareholders_equity": -2172000000,
-    "total_assets": 82323000000
+    "total_assets": 82323000000,
+    "total_liabilities": 83157000000
   },
   "name": "McKesson Corporation",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 891.23
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year ended March 31, 2026, McKesson reported revenues of $403.4 billion (up 12%) and net income attributable to McKesson of $4.8 billion, with diluted EPS rising to $38.38 from $25.72. The company adopted a new four-segment structure (North American Pharmaceutical, Oncology & Multispecialty, Prescription Technology Solutions, Medical-Surgical Solutions), completed acquisitions of PRISM Vision and Core Ventures, divested its Norway operations, raised its dividend, repurchased $4.8 billion of stock, and announced plans to separate the Medical-Surgical Solutions segment, including a minority investment from Apollo Funds. The filing also describes restructuring charges, debt issuances/repayments, and litigation risks including opioid-related claims.",
+    "filing_summary_10q": "The excerpt provided is the XBRL data/tagging portion of the Form 10-Q for the quarter ended June 30, 2026, covering the first quarter of fiscal 2027. It references balance sheet and income statement line items, segment reporting (North American Pharmaceutical, Oncology & Multispecialty, Prescription Technology Solutions, Medical-Surgical Solutions, Corporate), debt instruments, hedging activity, and prior acquisitions (PRISM Vision, Core Ventures) and the Norway divestiture, but does not include narrative discussion of quarterly results in the excerpt given.",
+    "filing_summary_8k": "This Form 8-K, dated August 25, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that McKesson discovered a cybersecurity incident affecting its information systems, with an investigation in its early stages. As of the filing date, the company states it has not determined the incident to be material or to have had a material impact on its financial condition or results of operations.",
+    "moat_explanation": "The 10-K describes McKesson operating one of a small number of national-scale pharmaceutical distribution networks (27 U.S. distribution centers plus Canadian operations) in a business with extremely thin gross margins (3.61% in fiscal 2026), heavy regulatory requirements (DEA, FDA, state boards of pharmacy) needed to purchase, store, and distribute controlled substances, and capital-intensive logistics/technology investment. These characteristics - thin margins, regulatory complexity, and scale requirements - are consistent with an efficient-scale dynamic where the market realistically supports only a few large distributors, rather than a moat based on brand or switching costs per se.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Ongoing costly litigation related to distribution of controlled substances (opioids), including claims from governmental entities, with outcomes described as difficult to predict and potentially material",
+      "Extensive, frequently changing healthcare, environmental, DEA/FDA, and anti-kickback regulatory exposure that could increase costs or restrict operations",
+      "Extremely thin gross profit margin (3.61% in fiscal 2026, down from 3.71%) indicating limited pricing power and sensitivity to cost or volume shifts",
+      "Company acknowledges cybersecurity incidents could compromise technology systems or cause material data breaches; a cybersecurity incident was disclosed in an August 2026 8-K, though materiality had not yet been determined",
+      "Customer concentration/counterparty risk evidenced by a prior-year credit related to the bankruptcy of customer Rite Aid Corporation",
+      "Announced separation of the Medical-Surgical Solutions segment into an independent company, introducing execution and structural uncertainty"
+    ]
+  },
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000927653.json",
@@ -151,14 +175,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $104.3B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.89, debt $8.6B vs working capital $-9.8B",
+          "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -166,41 +190,41 @@
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 15.3%/yr",
+          "detail": "EPS 3yr CAGR 15.2%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 23.7",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -592.5",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 6,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -219.2%",
+          "detail": "ROE -194.4%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity -2.76",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -209,14 +233,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 60",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.mckesson.com"
 }

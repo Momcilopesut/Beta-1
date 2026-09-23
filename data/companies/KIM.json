@@ -1,104 +1,103 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for KIM: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=kim.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2ca7410>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000879101",
   "five_year_history": {
     "years": [
       {
         "cash": 325631000,
-        "debt": null,
+        "debt": 7599481000,
         "earnings": 844059000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 1364585000,
-        "spending": null,
+        "spending": 940299000,
         "stock_return_pct": null
       },
       {
         "cash": 146970000,
-        "debt": null,
+        "debt": 7271565000,
         "earnings": 125976000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 1727684000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 1162220000,
+        "stock_return_pct": -14.077079107505067
       },
       {
         "cash": 780518000,
-        "debt": null,
+        "debt": 7726781000,
         "earnings": 654273000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 1783400000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 1144623000,
+        "stock_return_pct": 0.4721435316336234
       },
       {
         "cash": 688622000,
-        "debt": null,
+        "debt": 8578375000,
         "earnings": 410785000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 2037014000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 1407926000,
+        "stock_return_pct": 10.103383458646608
       },
       {
-        "cash": 211648000,
-        "debt": null,
-        "earnings": 584741000,
+        "cash": 212794000,
+        "debt": 8640538000,
+        "earnings": 584101000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 2140116000,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 2140115999,
+        "spending": 1387543999,
+        "stock_return_pct": -13.48698250106701
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": null,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 5.2328805756004355,
+      "debt_to_ebitda": 6.262793350835205,
+      "debt_to_equity": 0.8513528823105437
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 15.49195085414688,
+      "book_value_per_share": 15.521587624475258,
       "shareholders_equity": 10391836000,
       "total_assets": 19688250000,
       "total_liabilities": 9120372000
     },
     "cash_flow": {
-      "fcf_margin_pct": 51.47454623954963
+      "fcf_margin_pct": 36.091454872582354
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": null
+      "eps_growth_cagr_3yr_pct": 73.10888931567598
     },
     "profitability": {
-      "roe_pct": 5.62692675288563,
-      "trend": "stable"
+      "roe_pct": 5.841105209261045,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 37.32493353678919,
+      "graham_number": 17.025441224446297,
+      "graham_upside_pct": -24.448896274922134,
+      "ncav_margin_pct": -153.94648271070412,
+      "pb_ratio": 1.4741154137005714,
+      "pe_ttm": 25.320224719101127
     }
   },
-  "industry": "Real Estate Investment Trusts",
-  "last_updated": "2026-09-23T14:38:28Z",
+  "industry": "REIT - Retail",
+  "last_updated": "2026-09-23T02:58:48Z",
   "layered_analysis": {
     "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -107,24 +106,33 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 15197378650,
   "metrics": {
-    "book_value_per_share": 15.49195085414688,
-    "fcf_margin_pct": 51.47454623954963,
-    "graham_criteria_evaluated": 1,
-    "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 0,
-    "roe_pct": 5.62692675288563,
+    "book_value_per_share": 15.521587624475258,
+    "current_ratio": 5.2328805756004355,
+    "debt_to_ebitda": 6.262793350835205,
+    "debt_to_equity": 0.8513528823105437,
+    "eps_growth_cagr_3yr_pct": 73.10888931567598,
+    "fcf_margin_pct": 36.091454872582354,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 37.32493353678919,
+    "graham_upside_pct": -24.448896274922134,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -153.94648271070412,
+    "pb_ratio": 1.4741154137005714,
+    "pe_ttm": 25.320224719101127,
+    "roe_pct": 5.841105209261045,
     "shareholders_equity": 10391836000,
     "total_assets": 19688250000,
     "total_liabilities": 9120372000
   },
   "name": "Kimco Realty",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 22.535
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -153,14 +161,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $15.2B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 5.23, debt $8.6B vs working capital $0.1B",
+          "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -173,52 +181,52 @@
           "passed": null
         },
         {
-          "criterion": "Earnings growth",
-          "detail": "Insufficient EPS history",
-          "passed": null
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 73.1%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 25.3",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 37.3",
+          "passed": false
         }
       ],
-      "evaluated": 1,
-      "passed": 1,
+      "evaluated": 6,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 5.6%",
+          "detail": "ROE 5.8%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.85",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "675,279,000 shares vs. 672,136,000 a year earlier",
+          "detail": "674,146,000 shares vs. 672,136,000 a year earlier",
           "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 2,
-      "passed": 0,
+      "evaluated": 4,
+      "passed": 1,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.kimcorealty.com"
 }

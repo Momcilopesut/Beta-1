@@ -1,70 +1,68 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for ZTS: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=zts.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca097e210>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001555280",
   "five_year_history": {
     "years": [
       {
-        "cash": null,
-        "debt": 6592000000,
+        "cash": 3482000000,
+        "debt": 6743000000,
         "earnings": 2037000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 7776000000,
-        "spending": null,
+        "spending": 4973000000,
         "stock_return_pct": null
       },
       {
-        "cash": null,
-        "debt": 6552000000,
+        "cash": 3577000000,
+        "debt": 8090000000,
         "earnings": 2114000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 8080000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5152000000,
+        "stock_return_pct": -39.94590828996434
       },
       {
-        "cash": null,
-        "debt": 6564000000,
+        "cash": 2039000000,
+        "debt": 6755000000,
         "earnings": 2344000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 8544000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5475000000,
+        "stock_return_pct": 34.13169566700783
       },
       {
-        "cash": null,
-        "debt": 5220000000,
+        "cash": 1985000000,
+        "debt": 6744000000,
         "earnings": 2486000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 9256000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5864000000,
+        "stock_return_pct": -17.113496464363834
       },
       {
-        "cash": null,
-        "debt": 9042000000,
+        "cash": 2312000000,
+        "debt": 9493000000,
         "earnings": 2673000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 9467000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5870000000,
+        "stock_return_pct": -22.776652550174926
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 3.0281879194630874,
-      "debt_to_ebitda": null,
-      "debt_to_equity": 2.7145001501050734
+      "current_ratio": 3.083939835031538,
+      "debt_to_ebitda": 2.3244368266405484,
+      "debt_to_equity": 2.934561626429479
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 8.061010997140478,
+      "book_value_per_share": 7.538314176245211,
       "shareholders_equity": 3331000000,
       "total_assets": 15467000000,
       "total_liabilities": 12136000000
@@ -73,30 +71,32 @@
       "fcf_margin_pct": 24.11534805112496
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 10.268140283428306
+      "eps_growth_cagr_3yr_pct": 10.165833197215246
     },
     "profitability": {
-      "roe_pct": 80.24617232062444,
-      "trend": "stable"
+      "roe_pct": 69.25215089344805,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 33.043364531516424,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 115.91992393666821,
+      "graham_number": 31.980631261156635,
+      "graham_upside_pct": -56.1248027697124,
+      "ncav_margin_pct": -117.82212305067796,
+      "pb_ratio": 9.669270648030494,
+      "pe_ttm": 11.988486842105264
     }
   },
-  "industry": "Pharmaceutical Preparations",
-  "last_updated": "2026-09-23T14:06:36Z",
+  "industry": "Drug Manufacturers - Specialty & Generic",
+  "last_updated": "2026-09-23T02:55:16Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,27 +105,33 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 30557528920,
   "metrics": {
-    "book_value_per_share": 8.061010997140478,
-    "current_ratio": 3.0281879194630874,
-    "debt_to_equity": 2.7145001501050734,
-    "eps_growth_cagr_3yr_pct": 10.268140283428306,
+    "book_value_per_share": 7.538314176245211,
+    "current_ratio": 3.083939835031538,
+    "debt_to_ebitda": 2.3244368266405484,
+    "debt_to_equity": 2.934561626429479,
+    "eps_growth_cagr_3yr_pct": 10.165833197215246,
     "fcf_margin_pct": 24.11534805112496,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 2,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
-    "munger_quality_passed": 2,
-    "roe_pct": 80.24617232062444,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 115.91992393666821,
+    "graham_upside_pct": -56.1248027697124,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -117.82212305067796,
+    "pb_ratio": 9.669270648030494,
+    "pe_ttm": 11.988486842105264,
+    "roe_pct": 69.25215089344805,
     "shareholders_equity": 3331000000,
     "total_assets": 15467000000,
     "total_liabilities": 12136000000
   },
   "name": "Zoetis",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 72.89
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -154,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $30.6B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 3.03, debt $9.0B vs working capital $4.5B",
+          "detail": "Current ratio 3.08, debt $9.5B vs working capital $4.5B",
           "passed": false
         },
         {
@@ -175,34 +181,34 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 10.3%/yr",
+          "detail": "EPS 3yr CAGR 10.2%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 12.0",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 115.9",
+          "passed": false
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 6,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 80.2%",
+          "detail": "ROE 69.3%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 2.71",
+          "detail": "Debt/equity 2.93",
           "passed": false
         },
         {
@@ -212,14 +218,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.zoetis.com"
 }

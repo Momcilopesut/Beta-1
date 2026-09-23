@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for NEM: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=nem.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9edf14f0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001164727",
   "five_year_history": {
     "years": [
       {
         "cash": 4992000000,
-        "debt": 5652000000,
+        "debt": 6302000000,
         "earnings": 1166000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 12190000000,
+        "spending": 10274000000,
         "stock_return_pct": null
       },
       {
         "cash": 2877000000,
-        "debt": 5571000000,
-        "earnings": -429000000,
+        "debt": 6132000000,
+        "earnings": -459000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 11949000000,
+        "spending": 10328000000,
+        "stock_return_pct": -23.895517574975813
       },
       {
         "cash": 3002000000,
-        "debt": 8874000000,
-        "earnings": -2494000000,
+        "debt": 9436000000,
+        "earnings": -2521000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 11775000000,
+        "spending": 11125000000,
+        "stock_return_pct": -13.32627118644069
       },
       {
         "cash": 3619000000,
-        "debt": 8476000000,
+        "debt": 8972000000,
         "earnings": 3348000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 18557000000,
+        "spending": 12809000000,
+        "stock_return_pct": -9.019799560009773
       },
       {
-        "cash": 7647000000,
-        "debt": 5115000000,
+        "cash": 7650000000,
+        "debt": 5712000000,
         "earnings": 7085000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 22097000000,
+        "spending": 11744000000,
+        "stock_return_pct": 168.2697474476088
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.2874649859943976,
-      "debt_to_ebitda": null,
-      "debt_to_equity": 0.15103197803171228
+      "current_ratio": 2.546115575966322,
+      "debt_to_ebitda": 0.4436849464036042,
+      "debt_to_equity": 0.1543457389732874
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 32.1412626172713,
+      "book_value_per_share": 33.25258215962441,
       "shareholders_equity": 33867000000,
       "total_assets": 57121000000,
       "total_liabilities": 23079000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 33.031633253382815
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 20.9200696843535,
-      "trend": "stable"
+      "roe_pct": 25.02164691158601,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 67.978746919888,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 61.26202299271901,
+      "graham_number": 69.25210222059566,
+      "graham_upside_pct": -45.58219218875086,
+      "ncav_margin_pct": -107.46721236721768,
+      "pb_ratio": 3.8270712147738184,
+      "pe_ttm": 16.00754716981132
     }
   },
-  "industry": "Gold and Silver Ores",
-  "last_updated": "2026-09-23T12:46:32Z",
+  "industry": "Gold",
+  "last_updated": "2026-09-23T03:25:24Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,25 +105,32 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 134092878407,
   "metrics": {
-    "book_value_per_share": 32.1412626172713,
-    "current_ratio": 2.2874649859943976,
-    "debt_to_equity": 0.15103197803171228,
-    "graham_criteria_evaluated": 3,
+    "book_value_per_share": 33.25258215962441,
+    "current_ratio": 2.546115575966322,
+    "debt_to_ebitda": 0.4436849464036042,
+    "debt_to_equity": 0.1543457389732874,
+    "fcf_margin_pct": 33.031633253382815,
+    "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
-    "munger_quality_passed": 3,
-    "roe_pct": 20.9200696843535,
+    "graham_multiple": 61.26202299271901,
+    "graham_upside_pct": -45.58219218875086,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 4,
+    "ncav_margin_pct": -107.46721236721768,
+    "pb_ratio": 3.8270712147738184,
+    "pe_ttm": 16.00754716981132,
+    "roe_pct": 25.02164691158601,
     "shareholders_equity": 33867000000,
     "total_assets": 57121000000,
     "total_liabilities": 23079000000
   },
   "name": "Newmont",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 127.26
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -152,13 +159,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $134.1B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.29, debt $5.1B vs working capital $7.4B",
+          "detail": "Current ratio 2.55, debt $5.7B vs working capital $7.4B",
           "passed": true
         },
         {
@@ -167,9 +174,9 @@
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth",
@@ -177,17 +184,17 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 16.0",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 61.3",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 5,
       "passed": 2,
       "total": 7
     },
@@ -195,7 +202,7 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 20.9%",
+          "detail": "ROE 25.0%",
           "passed": true
         },
         {
@@ -210,14 +217,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 3,
+      "evaluated": 4,
+      "passed": 4,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.newmont.com"
 }

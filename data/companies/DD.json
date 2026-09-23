@@ -5,94 +5,96 @@
     "years": [
       {
         "cash": 1972000000,
-        "debt": 150000000,
-        "earnings": -117000000,
-        "fiscal_year": "2024-12-31",
-        "market_return_pct": 2.14723926380369,
-        "revenue": null,
-        "spending": null,
+        "debt": 11211000000,
+        "earnings": 6467000000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 12566000000,
+        "spending": 10696000000,
         "stock_return_pct": null
       },
       {
         "cash": 3662000000,
-        "debt": 300000000,
-        "earnings": -589000000,
-        "fiscal_year": "2025-03-31",
-        "market_return_pct": -4.553985803985813,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "debt": 8074000000,
+        "earnings": 5868000000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 13017000000,
+        "spending": 10995000000,
+        "stock_return_pct": -15.029585798816575
       },
       {
         "cash": 2392000000,
-        "debt": 0,
-        "earnings": 59000000,
-        "fiscal_year": "2025-06-30",
-        "market_return_pct": 10.450669479254195,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "debt": 7800000000,
+        "earnings": 423000000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 12068000000,
+        "spending": 10351000000,
+        "stock_return_pct": 12.917827298050149
       },
       {
-        "cash": 1792000000,
-        "debt": 1848000000,
-        "earnings": -123000000,
-        "fiscal_year": "2025-09-30",
-        "market_return_pct": 7.82228696285505,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "cash": 1850000000,
+        "debt": 7171000000,
+        "earnings": 703000000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 12386000000,
+        "spending": 10557000000,
+        "stock_return_pct": -1.6342892383595469
       },
       {
-        "cash": 715000000,
-        "debt": 60000000,
-        "earnings": -126000000,
+        "cash": 757000000,
+        "debt": 3194000000,
+        "earnings": -779000000,
         "fiscal_year": "2025-12-31",
-        "market_return_pct": 2.362724789096042,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "market_return_pct": 16.35271635271634,
+        "revenue": 6849000000,
+        "spending": 5989000000,
+        "stock_return_pct": 26.01880877742946
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.418655097613883,
-      "debt_to_ebitda": null,
-      "debt_to_equity": 0.004310654501041742
+      "current_ratio": 2.4267866066966515,
+      "debt_to_ebitda": 2.119442601194426,
+      "debt_to_equity": 0.22695911104655386
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 103.07089280282814,
+      "book_value_per_share": 101.8415260454879,
       "shareholders_equity": 13919000000,
       "total_assets": 21575000000,
       "total_liabilities": 7472000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 15.754124689735727
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -40.159151941142454
+      "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": -0.9052374452187657,
+      "roe_pct": 0.34044133576800467,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": 373.48308927742556,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -110.66295741803494,
+      "pb_ratio": 1.3041006609049313,
+      "pe_ttm": 286.3913043478263
     }
   },
-  "industry": "Plastic Materials, Synth Resins & Nonvulcan Elastomers",
-  "last_updated": "2026-09-23T12:26:31Z",
+  "industry": "Chemicals",
+  "last_updated": "2026-09-23T03:20:55Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -103,28 +105,48 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 17787403060,
   "metrics": {
-    "book_value_per_share": 103.07089280282814,
-    "current_ratio": 2.418655097613883,
-    "debt_to_equity": 0.004310654501041742,
-    "eps_growth_cagr_3yr_pct": -40.159151941142454,
-    "graham_criteria_evaluated": 4,
+    "book_value_per_share": 101.8415260454879,
+    "current_ratio": 2.4267866066966515,
+    "debt_to_ebitda": 2.119442601194426,
+    "debt_to_equity": 0.22695911104655386,
+    "fcf_margin_pct": 15.754124689735727,
+    "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
+    "graham_multiple": 373.48308927742556,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 1,
-    "roe_pct": -0.9052374452187657,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -110.66295741803494,
+    "pb_ratio": 1.3041006609049313,
+    "pe_ttm": 286.3913043478263,
+    "roe_pct": 0.34044133576800467,
     "shareholders_equity": 13919000000,
     "total_assets": 21575000000,
     "total_liabilities": 7472000000
   },
   "name": "DuPont de Nemours Inc.",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 131.74
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, DuPont reported net sales of $6.8 billion, up 2% from 2024, driven by 7% volume growth in Healthcare & Water Technologies partially offset by a 1% decline in Diversified Industrials. The year included major corporate actions: the November 2025 spin-off of the Electronics Business into Qnity Electronics, a pending Aramids business divestiture expected to close around Q1 2026, and a Q4 2025 segment realignment into two new reportable segments (Healthcare & Water Technologies and Diversified Industrials). The filing also details ongoing PFAS-related cost-sharing obligations under the 2021 MOU with Corteva/EIDP and Chemours, including a $186 million charge tied to a proposed New Jersey settlement, plus multiple restructuring programs and share repurchase activity.",
+    "filing_summary_10q": "This Q2 2026 (period ended June 30, 2026) 10-Q excerpt consists primarily of XBRL tagging data rather than narrative text, but indicates the Aramids business divestiture to Arclin was completed around April 1, 2026 and is reported as discontinued operations, alongside continuing discontinued-operations treatment of the previously separated Electronics Business. It also references a new 2026 DuPont restructuring program approved in February 2026 with charges allocated across segments and Corporate, ongoing interest rate swap activity, and disclosure of customer concentration risk tied to an equity-method investee's revenue.",
+    "filing_summary_8k": "This 8-K, dated September 10, 2026, discloses that on September 9, 2026 DuPont, together with Chemours and Corteva/EIDP, entered into a Settlement Agreement with the State of North Carolina and various local government plaintiffs to resolve PFAS-related claims tied to the Fayetteville Works facility and AFFF contamination. The settlement totals $455 million payable over 15 years, shared per the 2021 MOU, with DuPont having recorded a probable loss of about $125 million in Q2 2026 for its share before a 44% reimbursement obligation from Qnity; DuPont and Corteva will also establish a $135 million reserve fund as financial security tied to Chemours' compliance with its own consent order.",
+    "moat_explanation": "The 10-K describes a portfolio of well-known, differentiated brands (TYVEK, FILMTEC, CORIAN, MOLYKOTE, Vespel, etc.) combined with a large patent estate (about 6,100 patents and applications, over 70% with more than 5 years remaining life) and proprietary trade secrets that the company says strengthen its competitive position in regulated, mission-critical medical, water, and industrial applications. This combination of intellectual property and brand recognition, rather than scale, network effects, or switching costs, is what the excerpts explicitly cite as the basis for its competitive position.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company faces significant and recurring PFAS-related legacy liabilities shared with Corteva/EIDP and Chemours under a cost-sharing MOU, including a $186 million pre-tax charge in 2025 tied to a proposed New Jersey settlement and an indemnification liability of $185 million as of year-end 2025.",
+      "Extensive corporate restructuring activity (multiple divestitures, the Electronics/Qnity spin-off, and pending Aramids sale) reflects an ongoing multi-year portfolio transformation that creates complexity, stranded costs, and discontinued-operations accounting.",
+      "Multiple restructuring programs (2022, 2023-2024, and Transformational Separation-Related) indicate recurring cost-cutting and organizational disruption.",
+      "Diversified Industrials segment showed declining volume and negative local price/mix in 2025, indicating some end-market softness.",
+      "The Business section notes competition from multinational companies with significant resources as well as well-established regional competitors, without describing barriers that clearly exclude such competition."
+    ]
+  },
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001666700.json",
@@ -151,42 +173,42 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $17.8B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.42, debt $0.1B vs working capital $3.3B",
+          "detail": "Current ratio 2.43, debt $3.2B vs working capital $3.3B",
           "passed": true
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 2/6 available years",
+          "detail": "Positive in 4/6 available years",
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -40.2%/yr",
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 286.4",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 373.5",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 5,
       "passed": 2,
       "total": 7
     },
@@ -194,29 +216,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -0.9%",
+          "detail": "ROE 0.3%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.00",
+          "detail": "Debt/equity 0.23",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "Share count unavailable",
-          "passed": null
+          "detail": "139,733,333 shares vs. 140,200,000 a year earlier",
+          "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 60",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.dupont.com"
 }

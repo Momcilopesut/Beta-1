@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for MKC: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=mkc.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca15264b0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000063754",
   "five_year_history": {
     "years": [
       {
         "cash": 351700000,
-        "debt": 4743600000,
+        "debt": 5388800000,
         "earnings": 755300000,
         "fiscal_year": "2021-11-30",
         "market_return_pct": null,
         "revenue": 6317900000,
-        "spending": null,
+        "spending": 5302800000,
         "stock_return_pct": null
       },
       {
         "cash": 334000000,
-        "debt": 3912900000,
+        "debt": 5325700000,
         "earnings": 682000000,
         "fiscal_year": "2022-11-30",
         "market_return_pct": -10.510141364474492,
         "revenue": 6350500000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5486900000,
+        "stock_return_pct": -0.7457469121416761
       },
       {
         "cash": 166600000,
-        "debt": 4139200000,
+        "debt": 4591300000,
         "earnings": 680600000,
         "fiscal_year": "2023-11-30",
         "market_return_pct": 11.950549450549444,
         "revenue": 6662200000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5699200000,
+        "stock_return_pct": -23.890584644282704
       },
       {
         "cash": 186100000,
-        "debt": 3858800000,
+        "debt": 4508500000,
         "earnings": 788500000,
         "fiscal_year": "2024-11-30",
         "market_return_pct": 32.02234881682734,
         "revenue": 6723700000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5663400000,
+        "stock_return_pct": 20.94709239549591
       },
       {
         "cash": 95900000,
-        "debt": 3614900000,
+        "debt": 3996300000,
         "earnings": 789400000,
         "fiscal_year": "2025-11-30",
         "market_return_pct": 12.898514646087467,
         "revenue": 6840300000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5748400000,
+        "stock_return_pct": -15.316923861752315
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.6982234994448436,
-      "debt_to_ebitda": 2.776207664541894,
-      "debt_to_equity": 0.6301577617013858
+      "current_ratio": 0.7807827985889467,
+      "debt_to_ebitda": 3.020178355501814,
+      "debt_to_equity": 0.7052290010863972
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
+      "book_value_per_share": 28.13261515601783,
       "shareholders_equity": 5736500000,
       "total_assets": 13200400000,
       "total_liabilities": 7432300000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 10.824086662865664
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 5.153167622194932
+      "eps_growth_cagr_3yr_pct": 4.995625364547895
     },
     "profitability": {
-      "roe_pct": 13.761004096574567,
+      "roe_pct": 25.580007225547018,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 15.612019222714078,
+      "graham_number": 43.138990398137274,
+      "graham_upside_pct": -12.709448809920534,
+      "ncav_margin_pct": -139.8460292950271,
+      "pb_ratio": 1.9017473840699868,
+      "pe_ttm": 8.209302325581396
     }
   },
-  "industry": "Miscellaneous Food Preparations & Kindred Products",
-  "last_updated": "2026-09-23T13:15:26Z",
+  "industry": "Packaged Foods",
+  "last_updated": "2026-09-23T02:49:39Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,26 +105,33 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 13286643848,
   "metrics": {
-    "current_ratio": 0.6982234994448436,
-    "debt_to_ebitda": 2.776207664541894,
-    "debt_to_equity": 0.6301577617013858,
-    "eps_growth_cagr_3yr_pct": 5.153167622194932,
-    "graham_criteria_evaluated": 4,
-    "graham_criteria_passed": 3,
+    "book_value_per_share": 28.13261515601783,
+    "current_ratio": 0.7807827985889467,
+    "debt_to_ebitda": 3.020178355501814,
+    "debt_to_equity": 0.7052290010863972,
+    "eps_growth_cagr_3yr_pct": 4.995625364547895,
+    "fcf_margin_pct": 10.824086662865664,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 15.612019222714078,
+    "graham_upside_pct": -12.709448809920534,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "roe_pct": 13.761004096574567,
+    "munger_quality_passed": 4,
+    "ncav_margin_pct": -139.8460292950271,
+    "pb_ratio": 1.9017473840699868,
+    "pe_ttm": 8.209302325581396,
+    "roe_pct": 25.580007225547018,
     "shareholders_equity": 5736500000,
     "total_assets": 13200400000,
     "total_liabilities": 7432300000
   },
   "name": "McCormick & Company",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 49.42
   },
   "qualitative": null,
   "sector": "Consumer Defensive",
@@ -153,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $13.3B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.70, debt $3.6B vs working capital $-0.9B",
+          "detail": "Current ratio 0.78, debt $4.0B vs working capital $-0.9B",
           "passed": false
         },
         {
@@ -168,45 +175,45 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 5.2%/yr",
+          "detail": "EPS 3yr CAGR 5.0%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 8.2",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 15.6",
+          "passed": true
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 6,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 13.8%",
-          "passed": false
+          "detail": "ROE 25.6%",
+          "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.63",
+          "detail": "Debt/equity 0.71",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "269,400,000 shares vs. 269,600,000 a year earlier",
+          "detail": "269,300,000 shares vs. 269,600,000 a year earlier",
           "passed": true
         },
         {
@@ -216,9 +223,9 @@
         }
       ],
       "evaluated": 4,
-      "passed": 3,
+      "passed": 4,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.mccormickcorporation.com"
 }

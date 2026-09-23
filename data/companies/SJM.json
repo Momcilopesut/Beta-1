@@ -1,95 +1,93 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for SJM: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=sjm.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2f2cfb0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000091419",
   "five_year_history": {
     "years": [
       {
-        "cash": null,
-        "debt": 4310600000,
+        "cash": 169900000,
+        "debt": 4606900000,
         "earnings": 631700000,
         "fiscal_year": "2022-04-30",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 7998900000,
+        "spending": 6975100000,
         "stock_return_pct": null
       },
       {
-        "cash": null,
-        "debt": 4314200000,
+        "cash": 655800000,
+        "debt": 4424600000,
         "earnings": -91300000,
         "fiscal_year": "2023-04-30",
         "market_return_pct": 0.8519417475728134,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 8529200000,
+        "spending": 8371700000,
+        "stock_return_pct": 14.686336084130566
       },
       {
-        "cash": null,
-        "debt": 7773000000,
+        "cash": 62000000,
+        "debt": 8548000000,
         "earnings": 744000000,
         "fiscal_year": "2024-04-30",
         "market_return_pct": 20.810570142716188,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 8178700000,
+        "spending": 6872900000,
+        "stock_return_pct": -26.86576668364748
       },
       {
-        "cash": null,
-        "debt": 7036800000,
+        "cash": 69900000,
+        "debt": 7761700000,
         "earnings": -1230800000,
         "fiscal_year": "2025-04-30",
         "market_return_pct": 10.470536674767908,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 8726100000,
+        "spending": 9400000000,
+        "stock_return_pct": 1.2363952982150646
       },
       {
-        "cash": null,
-        "debt": 6542800000,
+        "cash": 58600000,
+        "debt": 7089000000,
         "earnings": -138700000,
         "fiscal_year": "2026-04-30",
         "market_return_pct": 29.595700941320736,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 9050900000,
+        "spending": 7707900000,
+        "stock_return_pct": -15.687623634643499
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.7773619100149712,
-      "debt_to_ebitda": null,
-      "debt_to_equity": 1.1802013059634187
+      "current_ratio": 0.869975533030409,
+      "debt_to_ebitda": 3.7310526315789474,
+      "debt_to_equity": 1.1993287890380468
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 51.896974461058704,
+      "book_value_per_share": 53.846441947565545,
       "shareholders_equity": 5543800000,
       "total_assets": 16219400000,
       "total_liabilities": 10675600000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 12.774420223403196
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 14.766455004123301
     },
     "profitability": {
-      "roe_pct": -2.501894007720336,
-      "trend": "stable"
+      "roe_pct": 4.06358312417832,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": 126.69647646839024,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -167.2664507834565,
+      "pb_ratio": 2.249173680183626,
+      "pe_ttm": 56.33023255813955
     }
   },
-  "industry": "Canned, Fruits, Veg, Preserves, Jams & Jellies",
-  "last_updated": "2026-09-23T13:16:32Z",
+  "industry": "Packaged Foods",
+  "last_updated": "2026-09-23T03:53:11Z",
   "layered_analysis": {
     "flags": [
       "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
@@ -107,26 +105,32 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 12944320366,
   "metrics": {
-    "book_value_per_share": 51.896974461058704,
-    "current_ratio": 0.7773619100149712,
-    "debt_to_equity": 1.1802013059634187,
+    "book_value_per_share": 53.846441947565545,
+    "current_ratio": 0.869975533030409,
+    "debt_to_ebitda": 3.7310526315789474,
+    "debt_to_equity": 1.1993287890380468,
     "eps_growth_cagr_3yr_pct": 14.766455004123301,
-    "graham_criteria_evaluated": 4,
+    "fcf_margin_pct": 12.774420223403196,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
+    "graham_multiple": 126.69647646839024,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 0,
-    "roe_pct": -2.501894007720336,
+    "ncav_margin_pct": -167.2664507834565,
+    "pb_ratio": 2.249173680183626,
+    "pe_ttm": 56.33023255813955,
+    "roe_pct": 4.06358312417832,
     "shareholders_equity": 5543800000,
     "total_assets": 16219400000,
     "total_liabilities": 10675600000
   },
   "name": "J.M. Smucker Company (The)",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 121.11
   },
   "qualitative": null,
   "sector": "Consumer Defensive",
@@ -155,13 +159,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $12.9B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.78, debt $6.5B vs working capital $-0.6B",
+          "detail": "Current ratio 0.87, debt $7.1B vs working capital $-0.6B",
           "passed": false
         },
         {
@@ -170,9 +174,9 @@
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -180,17 +184,17 @@
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 56.3",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 126.7",
+          "passed": false
         }
       ],
-      "evaluated": 4,
+      "evaluated": 6,
       "passed": 2,
       "total": 7
     },
@@ -198,29 +202,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -2.5%",
+          "detail": "ROE 4.1%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.18",
+          "detail": "Debt/equity 1.20",
           "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "Share count unavailable",
-          "passed": null
+          "detail": "106,700,000 shares vs. 106,400,000 a year earlier",
+          "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 2,
+      "evaluated": 4,
       "passed": 0,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.jmsmucker.com"
 }

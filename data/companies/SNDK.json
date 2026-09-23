@@ -1,60 +1,68 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for SNDK: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=sndk.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1788fb0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0002023554",
   "five_year_history": {
     "years": [
       {
-        "cash": null,
-        "debt": null,
+        "cash": 335000000,
+        "debt": 950000000,
+        "earnings": 1064000000,
+        "fiscal_year": "2022-06-30",
+        "market_return_pct": null,
+        "revenue": 9754000000,
+        "spending": 8554000000,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 292000000,
+        "debt": 1020000000,
         "earnings": -2143000000,
         "fiscal_year": "2023-06-30",
-        "market_return_pct": null,
+        "market_return_pct": 17.50298210735586,
         "revenue": 6086000000,
-        "spending": null,
+        "spending": 8121000000,
         "stock_return_pct": null
       },
       {
         "cash": 328000000,
-        "debt": 0,
+        "debt": 985000000,
         "earnings": -672000000,
-        "fiscal_year": "2024-06-28",
-        "market_return_pct": 22.77116044035374,
+        "fiscal_year": "2024-06-30",
+        "market_return_pct": 23.0238224147266,
         "revenue": 6663000000,
-        "spending": null,
+        "spending": 7131000000,
         "stock_return_pct": null
       },
       {
         "cash": 1481000000,
-        "debt": 1849000000,
+        "debt": 2042000000,
         "earnings": -1641000000,
         "fiscal_year": "2025-06-27",
-        "market_return_pct": 12.989232295762731,
+        "market_return_pct": 12.757179007591581,
         "revenue": 7355000000,
-        "spending": null,
+        "spending": 8732000000,
         "stock_return_pct": null
       },
       {
         "cash": 4762000000,
-        "debt": 0,
+        "debt": 393000000,
         "earnings": 11433000000,
         "fiscal_year": "2026-07-03",
         "market_return_pct": 21.12016392642826,
         "revenue": 20248000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 7859000000,
+        "stock_return_pct": 3600.954400848356
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 2.2899122021143166,
-      "debt_to_ebitda": 0.0,
-      "debt_to_equity": 0.0
+      "debt_to_ebitda": 0.03134471207529112,
+      "debt_to_equity": 0.024974580579562786
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 107.47239014422725,
+      "book_value_per_share": 107.04761904761905,
       "shareholders_equity": 15736000000,
       "total_assets": 22507000000,
       "total_liabilities": 6771000000
@@ -66,27 +74,30 @@
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 72.65505846466701,
+      "roe_pct": 93.12725273382614,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 422.3282830729663,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 427.67834540162096,
+      "graham_number": 432.8263921184633,
+      "graham_upside_pct": -77.06321052450063,
+      "ncav_margin_pct": -97.8251782956847,
+      "pb_ratio": 17.628042704626335,
+      "pe_ttm": 24.26124967858061
     }
   },
-  "industry": "Computer Storage Devices",
-  "last_updated": "2026-09-23T15:01:16Z",
+  "industry": "Computer Hardware",
+  "last_updated": "2026-09-23T03:31:02Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -95,29 +106,50 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 279451281840,
   "metrics": {
-    "book_value_per_share": 107.47239014422725,
+    "book_value_per_share": 107.04761904761905,
     "current_ratio": 2.2899122021143166,
-    "debt_to_ebitda": 0.0,
-    "debt_to_equity": 0.0,
+    "debt_to_ebitda": 0.03134471207529112,
+    "debt_to_equity": 0.024974580579562786,
     "fcf_margin_pct": 56.76610035559067,
-    "graham_criteria_evaluated": 2,
-    "graham_criteria_passed": 1,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 427.67834540162096,
+    "graham_upside_pct": -77.06321052450063,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "roe_pct": 72.65505846466701,
+    "ncav_margin_pct": -97.8251782956847,
+    "pb_ratio": 17.628042704626335,
+    "pe_ttm": 24.26124967858061,
+    "roe_pct": 93.12725273382614,
     "shareholders_equity": 15736000000,
     "total_assets": 22507000000,
     "total_liabilities": 6771000000
   },
   "name": "Sandisk",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 1887.04
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Sandisk's FY2026 10-K reports net revenue of $20,248 million, up 175% from $7,355 million in FY2025, driven by large increases in Datacenter (+437%) and Edge (+195%) revenue, with gross margin rising to 71.5% from 30.1%. Net income was $11,433 million in FY2026 versus a net loss of $1,641 million in FY2025, when the company recorded a $1.8 billion goodwill impairment following its February 2025 spin-off from Western Digital. The filing also describes new long-term 'New Business Model' customer agreements intended to reduce revenue cyclicality, the March 2026 early repayment of its Term Loan Facility, and ongoing monitoring of potential U.S. tariff actions.",
+    "filing_summary_10q": "This is the Q3 FY2026 Form 10-Q (period ended April 3, 2026), presented largely in structured XBRL data covering the quarter and year-to-date periods. It discloses revenue disaggregated by end market (Datacenter, Edge, Consumer) and geography (Asia, Americas, EMEA), customer concentration metrics (top-ten-customer and single-customer revenue risk), related-party balances and transactions with Western Digital and the Flash Ventures joint ventures with Kioxia, and Term B Loan and revolving credit facility balances. It also notes a subsequent event dated April 8, 2026 involving the company's investment in Nanya Technology Corporation, though the excerpt does not describe the nature or financial impact of that event.",
+    "filing_summary_8k": "This 8-K, dated September 10, 2026, discloses compensation adjustments approved by the Compensation and Talent Committee for two named executive officers, Chief Technology Officer Alper Ilkbahar and Chief Legal Officer Bernard Shek, effective October 1, 2026, including updated base salaries and short-term incentive target percentages. The filing states there were no changes to the CEO's base salary or to the STI targets of the CEO, CFO, or CTO, and it lists current compensation figures for all four named executives.",
+    "moat_explanation": "The 10-K describes a vertically integrated manufacturing model and a long-standing joint venture (Flash Ventures) with Kioxia across eight Japanese fabs, which the company states 'helps us reduce product costs' and provides scale and cost-efficient wafer supply not easily replicated by smaller competitors. The filing also emphasizes 'leadership in driving cost efficiency' and large-scale manufacturing as a differentiator versus competitors, though it also acknowledges intense competition and declining average selling prices, which tempers the durability of this advantage.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Company discloses declining average selling prices and volatile demand as an industry-wide competitive risk",
+      "Reliance on a limited number of qualified suppliers (e.g., DRAM) creates supply chain vulnerability",
+      "Guarantees of certain Flash Ventures obligations with Kioxia may negatively impact financial position, and contractual restrictions prevent the company from manufacturing flash independently or working with third parties while the JV operates",
+      "Customer concentration risk disclosed via top-ten-customer and single-customer revenue concentration metrics in the 10-Q",
+      "Pending U.S. Section 232/301 trade investigations could increase tariffs and costs on products currently exempt",
+      "FY2025 goodwill impairment of $1.8 billion recorded shortly after the WDC separation, indicating the reporting unit's fair value fell below carrying value at that time"
+    ]
+  },
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0002023554.json",
@@ -144,18 +176,18 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $279.5B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.29, debt $0.0B vs working capital $7.2B",
+          "detail": "Current ratio 2.29, debt $0.4B vs working capital $7.2B",
           "passed": true
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 1/4 available years",
+          "detail": "Positive in 2/5 available years",
           "passed": false
         },
         {
@@ -169,30 +201,30 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 24.3",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 427.7",
+          "passed": false
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 5,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 72.7%",
+          "detail": "ROE 93.1%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.00",
+          "detail": "Debt/equity 0.02",
           "passed": true
         },
         {
@@ -211,5 +243,5 @@
       "total": 4
     }
   },
-  "website": null
+  "website": "http://www.sandisk.com"
 }

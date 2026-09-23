@@ -1,39 +1,37 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for CEG: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=ceg.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2d31550>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001868275",
   "five_year_history": {
     "years": [
       {
         "cash": 504000000,
-        "debt": 5795000000,
+        "debt": 8196000000,
         "earnings": -205000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 19649000000,
-        "spending": null,
+        "spending": 19995000000,
         "stock_return_pct": null
       },
       {
         "cash": 422000000,
-        "debt": 4609000000,
+        "debt": 5768000000,
         "earnings": -160000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 24440000000,
-        "spending": null,
+        "spending": 23945000000,
         "stock_return_pct": null
       },
       {
         "cash": 368000000,
-        "debt": 7617000000,
+        "debt": 9261000000,
         "earnings": 1623000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 24918000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 23308000000,
+        "stock_return_pct": 33.68518733325601
       },
       {
         "cash": 3022000000,
@@ -42,29 +40,29 @@
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 23568000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 19216000000,
+        "stock_return_pct": 94.10845986984816
       },
       {
-        "cash": 3641000000,
-        "debt": 7342000000,
+        "cash": 3748000000,
+        "debt": 8992000000,
         "earnings": 2319000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 25533000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 22434000000,
+        "stock_return_pct": 57.914264002503224
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.52555387713998,
-      "debt_to_ebitda": 1.291014594689643,
-      "debt_to_equity": 0.5057518771095957
+      "current_ratio": 1.4552639656230817,
+      "debt_to_ebitda": 1.5811499912080182,
+      "debt_to_equity": 0.7724301841948901
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 40.97289771658975,
+      "book_value_per_share": 91.30508474576271,
       "shareholders_equity": 14517000000,
       "total_assets": 57249000000,
       "total_liabilities": 42396000000
@@ -76,27 +74,30 @@
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 15.974374870841082,
-      "trend": "stable"
+      "roe_pct": 14.7486933751736,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 82.59532353476311,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 74.67574178270075,
+      "graham_number": 123.29759369172413,
+      "graham_upside_pct": -53.200640062353244,
+      "ncav_margin_pct": -132.43530275716105,
+      "pb_ratio": 2.916622572473965,
+      "pe_ttm": 25.60349854227405
     }
   },
-  "industry": "Electric Services",
-  "last_updated": "2026-09-23T12:36:49Z",
+  "industry": "Independent Power Producers",
+  "last_updated": "2026-09-23T03:50:07Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,29 +106,50 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 94609018189,
   "metrics": {
-    "book_value_per_share": 40.97289771658975,
-    "current_ratio": 1.52555387713998,
-    "debt_to_ebitda": 1.291014594689643,
-    "debt_to_equity": 0.5057518771095957,
+    "book_value_per_share": 91.30508474576271,
+    "current_ratio": 1.4552639656230817,
+    "debt_to_ebitda": 1.5811499912080182,
+    "debt_to_equity": 0.7724301841948901,
     "fcf_margin_pct": 5.044452277444876,
-    "graham_criteria_evaluated": 3,
+    "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
+    "graham_multiple": 74.67574178270075,
+    "graham_upside_pct": -53.200640062353244,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "roe_pct": 15.974374870841082,
+    "ncav_margin_pct": -132.43530275716105,
+    "pb_ratio": 2.916622572473965,
+    "pe_ttm": 25.60349854227405,
+    "roe_pct": 14.7486933751736,
     "shareholders_equity": 14517000000,
     "total_assets": 57249000000,
     "total_liabilities": 42396000000
   },
   "name": "Constellation Energy Corporation",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 263.46
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K excerpts describe Constellation's 2025 results by region (Mid-Atlantic, Midwest, New York, ERCOT, and Other), noting revenue increases driven by higher energy/capacity prices, contracted load growth, and realized hedging gains, partially offset by a large decline in nuclear PTC revenue. It details debt issuances/redemptions, a $9.5 billion credit facility capacity, and the January 2026 acquisition of Calpine, which included roughly $4.5 billion cash consideration and assumption of about $12.6 billion in debt. The filing also discusses NRC decommissioning funding requirements, planned capital expenditures of $5.7 billion (2026) and $4.7 billion (2027), and credit rating and collateral risk disclosures.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists primarily of XBRL taxonomy tags and cover-page data for the quarter ended June 30, 2026, rather than narrative text, so it does not describe specific financial results or business developments in prose. It does reference the Calpine acquisition (closed January 2026) and related LS Power transactions involving natural gas, geothermal, battery storage, and solar assets, as well as PJM and ERCOT market data tags, but no discussion of revenue, income, or operational results is included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated August 6, 2026, discloses that Constellation Energy Corporation announced its second-quarter 2026 results via press release, with the release and an earnings call presentation furnished as exhibits under Items 2.02 and 7.01. The filing states the information is furnished, not filed, and includes standard forward-looking-statement cautionary language referencing risks discussed in the 2025 10-K and the concurrently filed Q2 2026 10-Q. No specific financial figures are included in the excerpt itself.",
+    "moat_explanation": "The excerpts describe a large fleet of NRC-licensed nuclear generating facilities, which are subject to extensive federal licensing, decommissioning funding, and minimum funding requirements that new entrants cannot easily replicate. The company also benefits from state-sponsored programs (ZECs, CMCs) and a federal nuclear production tax credit tied specifically to its existing licensed nuclear units, reinforcing the regulatory-license nature of its competitive position.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Nuclear PTC revenue fell sharply (from $2,080 to $320) year over year, showing earnings sensitivity to this government program and its phase-out thresholds",
+      "Company disclosed that a three-notch credit rating downgrade would require providing an estimated $2.7 billion in incremental collateral, indicating meaningful liquidity risk tied to credit ratings",
+      "Assumed approximately $12.6 billion of Calpine debt in the January 2026 acquisition, materially increasing leverage and requiring exchange offers on assumed notes",
+      "Retirement of Mystic Units 8 and 9 reduced generation volumes and contributed to higher purchased power costs in Other Power Regions",
+      "Capital expenditures include costs tied to potential Russia/Ukraine conflict impacts on long-term nuclear fuel supply, an acknowledged supply-chain risk",
+      "State-sponsored nuclear compensation programs (ZECs, CMCs) contain refund/pass-through provisions tied to the nuclear PTC, creating revenue variability and complexity"
+    ]
+  },
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001868275.json",
@@ -154,13 +176,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $94.6B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.53, debt $7.3B vs working capital $4.2B",
+          "detail": "Current ratio 1.46, debt $9.0B vs working capital $4.2B",
           "passed": false
         },
         {
@@ -169,9 +191,9 @@
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth",
@@ -179,17 +201,17 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 25.6",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 74.7",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 5,
       "passed": 1,
       "total": 7
     },
@@ -197,12 +219,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 16.0%",
-          "passed": true
+          "detail": "ROE 14.7%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.51",
+          "detail": "Debt/equity 0.77",
           "passed": true
         },
         {
@@ -212,14 +234,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 3,
+      "evaluated": 4,
       "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://constellationenergy.com"
 }

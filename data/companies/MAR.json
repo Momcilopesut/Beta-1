@@ -1,100 +1,100 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for MAR: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=mar.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca185c3e0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001048286",
   "five_year_history": {
     "years": [
       {
         "cash": 1393000000,
-        "debt": null,
+        "debt": 11236000000,
         "earnings": 1099000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 13857000000,
-        "spending": null,
+        "spending": 12107000000,
         "stock_return_pct": null
       },
       {
         "cash": 507000000,
-        "debt": null,
+        "debt": 11098000000,
         "earnings": 2358000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 20773000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 17311000000,
+        "stock_return_pct": -9.89469862018883
       },
       {
         "cash": 338000000,
-        "debt": null,
+        "debt": 12760000000,
         "earnings": 3083000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 23713000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 19849000000,
+        "stock_return_pct": 48.99590301564915
       },
       {
         "cash": 396000000,
-        "debt": null,
+        "debt": 15241000000,
         "earnings": 2375000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 25100000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 21333000000,
+        "stock_return_pct": 25.739271547060945
       },
       {
         "cash": 358000000,
-        "debt": null,
+        "debt": 17083000000,
         "earnings": 2601000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 26186000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 22045000000,
+        "stock_return_pct": 11.221051122105116
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.426768278161467,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 0.534665991902834,
+      "debt_to_ebitda": 3.6040084388185654,
+      "debt_to_equity": -3.9279558011049724
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -14.461225141188496,
+      "book_value_per_share": -16.852886405959033,
       "shareholders_equity": -3771000000,
       "total_assets": 27540000000,
-      "total_liabilities": null
+      "total_liabilities": 31311000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 9.959520354387841
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 9.516775967882673
+      "eps_growth_cagr_3yr_pct": 9.404246452838505
     },
     "profitability": {
-      "roe_pct": -68.97374701670644,
+      "roe_pct": -66.73115367253499,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": -748.7946023618784,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -130.54902273482242,
+      "pb_ratio": -20.652841988950275,
+      "pe_ttm": 36.25625
     }
   },
-  "industry": "Hotels & Motels",
-  "last_updated": "2026-09-23T13:03:09Z",
+  "industry": "Travel Lodging",
+  "last_updated": "2026-09-23T03:20:04Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "6 red flag(s) from the filing text - see qualitative.red_flags."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -105,26 +105,50 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 90762314201,
   "metrics": {
-    "book_value_per_share": -14.461225141188496,
-    "current_ratio": 0.426768278161467,
-    "eps_growth_cagr_3yr_pct": 9.516775967882673,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 2,
+    "book_value_per_share": -16.852886405959033,
+    "current_ratio": 0.534665991902834,
+    "debt_to_ebitda": 3.6040084388185654,
+    "debt_to_equity": -3.9279558011049724,
+    "eps_growth_cagr_3yr_pct": 9.404246452838505,
+    "fcf_margin_pct": 9.959520354387841,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": -748.7946023618784,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 1,
-    "roe_pct": -68.97374701670644,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -130.54902273482242,
+    "pb_ratio": -20.652841988950275,
+    "pe_ttm": 36.25625,
+    "roe_pct": -66.73115367253499,
     "shareholders_equity": -3771000000,
-    "total_assets": 27540000000
+    "total_assets": 27540000000,
+    "total_liabilities": 31311000000
   },
   "name": "Marriott International",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 348.06
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Marriott reported systemwide growth to 9,805 properties (1,779,936 rooms) across 145 countries, with worldwide RevPAR up 2.0% driven by ADR growth. Net fee revenues rose 5% to $5,303 million, aided by franchise and management fee growth, while debt increased to $16,204 million partly due to new Senior Notes issuances. The filing also discusses the 2025 termination of the Sonder Holdings licensing agreement, the citizenM brand acquisition, and ongoing matters related to the 2018 Starwood data security incident.",
+    "filing_summary_10q": "The excerpt provided is the XBRL data/cover page portion of Marriott's Form 10-Q for the quarterly period ended June 30, 2026, and does not include the narrative financial results or MD&A text. It confirms the filing covers Q2 2026 (three and six months ended June 30, 2026) with comparative 2025 periods, and references segment-level fee, owned/leased, and reimbursement revenue data across U.S. & Canada, EMEA, Greater China, and APEC segments, as well as debt securities (multiple Senior Notes series) outstanding. No further descriptive detail on quarterly business or financial performance is included in the excerpt given.",
+    "filing_summary_8k": "This Form 8-K, dated August 11, 2026, discloses that Marriott entered into a Terms Agreement to issue $250 million of 4.875% Series NN Notes due 2029 and $1.0 billion of 5.650% Series YY Notes due 2036, with the notes issued on August 13, 2026. Net proceeds were approximately $1.233 billion, intended for general corporate purposes including working capital, capital expenditures, acquisitions, stock repurchases, or debt repayment. The filing includes related exhibits such as the Terms Agreement, forms of notes, and a legal opinion.",
+    "moat_explanation": "The excerpts describe a large, globally recognized portfolio of hotel brands (Luxury, Premium, Select, Midscale) combined with the Marriott Bonvoy loyalty program, which drove approximately 75% of U.S. and 68% of global room nights in 2025, and co-branded credit card agreements with major issuers. These brand and loyalty-driven demand generation advantages, achieved with an asset-light franchise/management model, most closely fit the intangible assets category (brand strength) with some switching-cost-like loyalty reinforcement, though the filing itself frames brand recognition as the primary competitive asset.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company explicitly acknowledges highly competitive industry including from Airbnb, Vrbo, and major hotel chains, plus online travel intermediaries that increase distribution costs",
+      "Risk factors disclose ongoing disagreements/litigation and arbitration with hotel owners, and premature termination risk on management/franchise agreements",
+      "Ongoing legal proceedings and financial exposure related to the 2018 Starwood data security incident, with the company stating it cannot reasonably estimate the total possible financial impact beyond amounts already recorded",
+      "Termination of licensing agreement with Sonder Holdings Inc. during 2025, resulting in $23 million of expenses and removal of Sonder properties from the portfolio",
+      "Debt increased by $1,757 million in 2025 to $16,204 million, with a current ratio of only 0.4 to 1.0 at year-end 2025",
+      "Risk factors note AI-driven changes in travel booking by intermediaries could erode brand loyalty and increase distribution costs"
+    ]
+  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001048286.json",
@@ -151,14 +175,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $90.8B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.53, debt $17.1B vs working capital $-4.8B",
+          "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -166,57 +190,57 @@
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 9.5%/yr",
+          "detail": "EPS 3yr CAGR 9.4%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 36.3",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -748.8",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 6,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -69.0%",
+          "detail": "ROE -66.7%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity -3.93",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "273,600,000 shares vs. 285,200,000 a year earlier",
+          "detail": "269,400,000 shares vs. 285,200,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 60",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.marriott.com"
 }

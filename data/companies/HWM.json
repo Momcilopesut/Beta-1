@@ -1,49 +1,47 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for HWM: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=hwm.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca39ed8b0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000004281",
   "five_year_history": {
     "years": [
       {
         "cash": 720000000,
-        "debt": 4232000000,
+        "debt": 4346000000,
         "earnings": 258000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 4972000000,
-        "spending": null,
+        "spending": 4106000000,
         "stock_return_pct": null
       },
       {
         "cash": 791000000,
-        "debt": 4162000000,
+        "debt": 4277000000,
         "earnings": 469000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 5663000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 4629000000,
+        "stock_return_pct": 23.81401193842287
       },
       {
         "cash": 610000000,
-        "debt": 3706000000,
+        "debt": 3835000000,
         "earnings": 765000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 6640000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5395000000,
+        "stock_return_pct": 36.33595534128394
       },
       {
         "cash": 564000000,
-        "debt": 3315000000,
+        "debt": 3471000000,
         "earnings": 1155000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 7430000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 5758000000,
+        "stock_return_pct": 103.55481109249955
       },
       {
         "cash": 742000000,
@@ -52,19 +50,19 @@
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 8252000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 6122000000,
+        "stock_return_pct": 87.4554265337844
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.13382269904009,
-      "debt_to_ebitda": 1.3095749248604551,
-      "debt_to_equity": 0.5697739585279282
+      "current_ratio": 1.8183000867302688,
+      "debt_to_ebitda": 1.2639867384997927,
+      "debt_to_equity": 0.7868108862526169
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 13.422721217685599,
+      "book_value_per_share": 14.33,
       "shareholders_equity": 5353000000,
       "total_assets": 11179000000,
       "total_liabilities": 5826000000
@@ -73,30 +71,32 @@
       "fcf_margin_pct": 17.341250605913718
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 49.5146138791156
+      "eps_growth_cagr_3yr_pct": 49.33568659992187
     },
     "profitability": {
-      "roe_pct": 28.171118998692325,
-      "trend": "stable"
+      "roe_pct": 34.409195402298856,
+      "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 33.47329762133252,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 758.910561840735,
+      "graham_number": 34.6791760282738,
+      "graham_upside_pct": -84.61165422955548,
+      "ncav_margin_pct": -102.27763608884418,
+      "pb_ratio": 15.726448011165388,
+      "pe_ttm": 48.256959314775166
     }
   },
-  "industry": "Rolling Drawing & Extruding of  Nonferrous Metals",
-  "last_updated": "2026-09-23T14:18:52Z",
+  "industry": "Aerospace & Defense",
+  "last_updated": "2026-09-23T03:57:55Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,28 +105,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 90168222369,
   "metrics": {
-    "book_value_per_share": 13.422721217685599,
-    "current_ratio": 2.13382269904009,
-    "debt_to_ebitda": 1.3095749248604551,
-    "debt_to_equity": 0.5697739585279282,
-    "eps_growth_cagr_3yr_pct": 49.5146138791156,
+    "book_value_per_share": 14.33,
+    "current_ratio": 1.8183000867302688,
+    "debt_to_ebitda": 1.2639867384997927,
+    "debt_to_equity": 0.7868108862526169,
+    "eps_growth_cagr_3yr_pct": 49.33568659992187,
     "fcf_margin_pct": 17.341250605913718,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 2,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
-    "munger_quality_passed": 3,
-    "roe_pct": 28.171118998692325,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 758.910561840735,
+    "graham_upside_pct": -84.61165422955548,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 4,
+    "ncav_margin_pct": -102.27763608884418,
+    "pb_ratio": 15.726448011165388,
+    "pe_ttm": 48.256959314775166,
+    "roe_pct": 34.409195402298856,
     "shareholders_equity": 5353000000,
     "total_assets": 11179000000,
     "total_liabilities": 5826000000
   },
   "name": "Howmet Aerospace",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 225.36
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -155,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $90.2B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.13, debt $3.0B vs working capital $2.0B",
+          "detail": "Current ratio 1.82, debt $3.0B vs working capital $2.0B",
           "passed": false
         },
         {
@@ -176,34 +181,34 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 49.5%/yr",
+          "detail": "EPS 3yr CAGR 49.3%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 48.3",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 758.9",
+          "passed": false
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 6,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 28.2%",
+          "detail": "ROE 34.4%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.57",
+          "detail": "Debt/equity 0.79",
           "passed": true
         },
         {
@@ -213,14 +218,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 100",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 3,
+      "evaluated": 4,
+      "passed": 4,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.howmet.com"
 }

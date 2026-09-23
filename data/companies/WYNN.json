@@ -1,95 +1,93 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for WYNN: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=wynn.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1822090>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001174922",
   "five_year_history": {
     "years": [
       {
         "cash": 2522530000,
-        "debt": 11934546000,
+        "debt": 12049733000,
         "earnings": -755786000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
+        "revenue": 3763664000,
+        "spending": 4158205000,
         "stock_return_pct": null
       },
       {
         "cash": 3650440000,
-        "debt": 12116859000,
+        "debt": 13732016000,
         "earnings": -423856000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 3756825000,
+        "spending": 3857501000,
+        "stock_return_pct": -3.022107243650056
       },
       {
         "cash": 2879186000,
-        "debt": 11738337000,
+        "debt": 13370086000,
         "earnings": 729994000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 6531897000,
+        "spending": 5691726000,
+        "stock_return_pct": 14.708378804413721
       },
       {
         "cash": 2426155000,
-        "debt": 10541734000,
+        "debt": 12165624000,
         "earnings": 501078000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 7127961000,
+        "spending": 5995230000,
+        "stock_return_pct": -8.921775898520083
       },
       {
         "cash": 1463442000,
-        "debt": 10546812000,
+        "debt": 12292054000,
         "earnings": 327334000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
+        "revenue": 7137924000,
+        "spending": 5981046000,
+        "stock_return_pct": 39.65877437325906
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.6331286080996703,
-      "debt_to_ebitda": 6.064812477393838,
-      "debt_to_equity": -38.28355088351023
+      "current_ratio": 0.9124050173333375,
+      "debt_to_ebitda": 6.91531810492312,
+      "debt_to_equity": -72.83794725318823
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -2.6753577758851512,
+      "book_value_per_share": -8.817316295172521,
       "shareholders_equity": -275492000,
-      "total_assets": 13108117000,
-      "total_liabilities": 14139396000
+      "total_assets": 13500643000,
+      "total_liabilities": 14531922000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": 9.69137525140363
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": -118.81796930582375,
-      "trend": "stable"
+      "roe_pct": -174.86635755307475,
+      "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": -945.3638474223533,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -239.4524130480734,
+      "pb_ratio": -50.0695674855858,
+      "pe_ttm": 18.881006864988557
     }
   },
-  "industry": "Hotels & Motels",
-  "last_updated": "2026-09-23T13:08:13Z",
+  "industry": "Gambling, Resorts & Casinos",
+  "last_updated": "2026-09-23T02:48:46Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
@@ -105,26 +103,31 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": null,
+  "market_cap": 8563465370,
   "metrics": {
-    "book_value_per_share": -2.6753577758851512,
-    "current_ratio": 1.6331286080996703,
-    "debt_to_ebitda": 6.064812477393838,
-    "debt_to_equity": -38.28355088351023,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 1,
-    "margin_trend_score": 60,
-    "munger_quality_evaluated": 3,
+    "book_value_per_share": -8.817316295172521,
+    "current_ratio": 0.9124050173333375,
+    "debt_to_ebitda": 6.91531810492312,
+    "debt_to_equity": -72.83794725318823,
+    "fcf_margin_pct": 9.69137525140363,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 2,
+    "graham_multiple": -945.3638474223533,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "roe_pct": -118.81796930582375,
+    "ncav_margin_pct": -239.4524130480734,
+    "pb_ratio": -50.0695674855858,
+    "pe_ttm": 18.881006864988557,
+    "roe_pct": -174.86635755307475,
     "shareholders_equity": -275492000,
-    "total_assets": 13108117000,
-    "total_liabilities": 14139396000
+    "total_assets": 13500643000,
+    "total_liabilities": 14531922000
   },
   "name": "Wynn Resorts",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 82.51
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -153,13 +156,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $8.6B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.63, debt $10.5B vs working capital $1.0B",
+          "detail": "Current ratio 0.91, debt $12.3B vs working capital $1.0B",
           "passed": false
         },
         {
@@ -168,9 +171,9 @@
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth",
@@ -178,30 +181,30 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 18.9",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -945.4",
+          "passed": true
         }
       ],
-      "evaluated": 3,
-      "passed": 1,
+      "evaluated": 5,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -118.8%",
+          "detail": "ROE -174.9%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity -38.28",
+          "detail": "Debt/equity -72.84",
           "passed": true
         },
         {
@@ -211,14 +214,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 20",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 4,
       "passed": 2,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.wynnresorts.com"
 }

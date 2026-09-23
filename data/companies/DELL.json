@@ -1,49 +1,47 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for DELL: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=dell.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0916480>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0001571996",
   "five_year_history": {
     "years": [
       {
         "cash": 9477000000,
         "debt": 26954000000,
-        "earnings": 997000000,
-        "fiscal_year": "2024-05-03",
-        "market_return_pct": 3.4267219581268327,
-        "revenue": 22244000000,
-        "spending": null,
+        "earnings": 5563000000,
+        "fiscal_year": "2022-01-28",
+        "market_return_pct": null,
+        "revenue": 101197000000,
+        "spending": 96538000000,
         "stock_return_pct": null
       },
       {
         "cash": 8607000000,
         "debt": 29588000000,
-        "earnings": 887000000,
-        "fiscal_year": "2024-08-02",
-        "market_return_pct": 4.226564180797582,
-        "revenue": 25026000000,
-        "spending": null,
-        "stock_return_pct": null
+        "earnings": 2442000000,
+        "fiscal_year": "2023-02-03",
+        "market_return_pct": -6.697590225138583,
+        "revenue": 102301000000,
+        "spending": 96530000000,
+        "stock_return_pct": -24.893314366998574
       },
       {
         "cash": 7366000000,
         "debt": 25994000000,
-        "earnings": 1175000000,
-        "fiscal_year": "2024-11-01",
-        "market_return_pct": 7.157065115406265,
-        "revenue": 24366000000,
-        "spending": null,
-        "stock_return_pct": null
+        "earnings": 3388000000,
+        "fiscal_year": "2024-02-02",
+        "market_return_pct": 19.886019158481872,
+        "revenue": 88425000000,
+        "spending": 83014000000,
+        "stock_return_pct": 104.35606060606058
       },
       {
         "cash": 3633000000,
         "debt": 24567000000,
         "earnings": 4592000000,
         "fiscal_year": "2025-01-31",
-        "market_return_pct": 5.390165312412456,
+        "market_return_pct": 21.73965813694751,
         "revenue": 95567000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 89330000000,
+        "stock_return_pct": 20.018535681186286
       },
       {
         "cash": 11528000000,
@@ -52,19 +50,19 @@
         "fiscal_year": "2026-01-30",
         "market_return_pct": 14.979561995280976,
         "revenue": 113538000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 105092000000,
+        "stock_return_pct": 10.463320463320468
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.9104300684379396,
-      "debt_to_ebitda": 2.8183038110574343,
-      "debt_to_equity": -12.75425101214575
+      "current_ratio": 0.9622952582344719,
+      "debt_to_ebitda": 2.745359477124183,
+      "debt_to_equity": -24.152768044849335
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
+      "book_value_per_share": -2.2124031007751936,
       "shareholders_equity": -2470000000,
       "total_assets": 101286000000,
       "total_liabilities": 103756000000
@@ -73,23 +71,23 @@
       "fcf_margin_pct": 7.532279941517378
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 91.81012921933427
+      "eps_growth_cagr_3yr_pct": 39.087443739456276
     },
     "profitability": {
-      "roe_pct": -240.3238866396761,
+      "roe_pct": -574.5739174346674,
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": -7789.7274549517315,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "ncav_margin_pct": -112.65578244552512,
+      "pb_ratio": -248.15550105115628,
+      "pe_ttm": 31.390508862206968
     }
   },
-  "industry": "Electronic Computers",
-  "last_updated": "2026-09-23T14:47:52Z",
+  "industry": "Computer Hardware",
+  "last_updated": "2026-09-23T03:56:48Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
@@ -105,27 +103,32 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 364687052726,
   "metrics": {
-    "current_ratio": 0.9104300684379396,
-    "debt_to_ebitda": 2.8183038110574343,
-    "debt_to_equity": -12.75425101214575,
-    "eps_growth_cagr_3yr_pct": 91.81012921933427,
+    "book_value_per_share": -2.2124031007751936,
+    "current_ratio": 0.9622952582344719,
+    "debt_to_ebitda": 2.745359477124183,
+    "debt_to_equity": -24.152768044849335,
+    "eps_growth_cagr_3yr_pct": 39.087443739456276,
     "fcf_margin_pct": 7.532279941517378,
-    "graham_criteria_evaluated": 4,
-    "graham_criteria_passed": 3,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": -7789.7274549517315,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "roe_pct": -240.3238866396761,
+    "ncav_margin_pct": -112.65578244552512,
+    "pb_ratio": -248.15550105115628,
+    "pe_ttm": 31.390508862206968,
+    "roe_pct": -574.5739174346674,
     "shareholders_equity": -2470000000,
     "total_assets": 101286000000,
     "total_liabilities": 103756000000
   },
   "name": "Dell Technologies",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 549.02
   },
   "qualitative": null,
   "sector": "Technology",
@@ -154,13 +157,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $364.7B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.91, debt $31.5B vs working capital $-5.7B",
+          "detail": "Current ratio 0.96, debt $31.5B vs working capital $-5.7B",
           "passed": false
         },
         {
@@ -169,45 +172,45 @@
           "passed": true
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 91.8%/yr",
+          "detail": "EPS 3yr CAGR 39.1%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 31.4",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -7789.7",
+          "passed": true
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 6,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -240.3%",
+          "detail": "ROE -574.6%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity -12.75",
+          "detail": "Debt/equity -24.15",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "684,000,000 shares vs. 720,000,000 a year earlier",
+          "detail": "683,871,000 shares vs. 724,000,000 a year earlier",
           "passed": true
         },
         {
@@ -221,5 +224,5 @@
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.dell.com"
 }

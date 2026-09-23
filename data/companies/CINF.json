@@ -1,70 +1,68 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for CINF: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=cinf.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1069610>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000020286",
   "five_year_history": {
     "years": [
       {
         "cash": 1139000000,
-        "debt": null,
+        "debt": 897000000,
         "earnings": 2968000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 9626000000,
-        "spending": null,
+        "spending": 5928000000,
         "stock_return_pct": null
       },
       {
-        "cash": null,
-        "debt": null,
+        "cash": 1264000000,
+        "debt": 891000000,
         "earnings": -487000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 6563000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 7257000000,
+        "stock_return_pct": -10.129026595277807
       },
       {
-        "cash": null,
-        "debt": null,
+        "cash": 907000000,
+        "debt": 874000000,
         "earnings": 1843000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 10013000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 7737000000,
+        "stock_return_pct": 3.4085359898427527
       },
       {
-        "cash": null,
-        "debt": null,
+        "cash": 983000000,
+        "debt": 875000000,
         "earnings": 2292000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 11337000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 8479000000,
+        "stock_return_pct": 35.719682659614655
       },
       {
-        "cash": null,
-        "debt": null,
+        "cash": 1431000000,
+        "debt": 886000000,
         "earnings": 2393000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 12631000000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 9651000000,
+        "stock_return_pct": 13.65344467640919
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": null,
-      "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "current_ratio": 1.8986339057015464,
+      "debt_to_ebitda": 0.28144853875476494,
+      "debt_to_equity": 0.05254633795213245
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 103.66955091198875,
+      "book_value_per_share": 107.83067741456269,
       "shareholders_equity": 15911000000,
       "total_assets": 41002000000,
       "total_liabilities": 25091000000
@@ -76,27 +74,27 @@
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 15.039909496574696,
+      "roe_pct": 20.891023829707073,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 188.10903610681373,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 11.951220157969733,
+      "graham_number": 191.84709007051842,
+      "graham_upside_pct": 15.689012887003804,
+      "ncav_margin_pct": -104.47914881923523,
+      "pb_ratio": 1.5336306154591806,
+      "pe_ttm": 7.792763157894737
     }
   },
-  "industry": "Fire, Marine & Casualty Insurance",
-  "last_updated": "2026-09-23T13:29:53Z",
+  "industry": "Insurance - Property & Casualty",
+  "last_updated": "2026-09-23T02:51:12Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": true
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,24 +103,32 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": null,
+  "market_cap": 25451264202,
   "metrics": {
-    "book_value_per_share": 103.66955091198875,
+    "book_value_per_share": 107.83067741456269,
+    "current_ratio": 1.8986339057015464,
+    "debt_to_ebitda": 0.28144853875476494,
+    "debt_to_equity": 0.05254633795213245,
     "fcf_margin_pct": 24.4794553083683,
-    "graham_criteria_evaluated": 2,
-    "graham_criteria_passed": 1,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 11.951220157969733,
+    "graham_upside_pct": 15.689012887003804,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 2,
-    "munger_quality_passed": 2,
-    "roe_pct": 15.039909496574696,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 4,
+    "ncav_margin_pct": -104.47914881923523,
+    "pb_ratio": 1.5336306154591806,
+    "pe_ttm": 7.792763157894737,
+    "roe_pct": 20.891023829707073,
     "shareholders_equity": 15911000000,
     "total_assets": 41002000000,
     "total_liabilities": 25091000000
   },
   "name": "Cincinnati Financial",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 165.83
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -151,14 +157,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $25.5B",
+          "passed": true
         },
         {
-          "criterion": "Strong financial condition",
-          "detail": "Balance sheet data unavailable",
-          "passed": null
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.90, debt $0.9B vs working capital $5.3B",
+          "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -166,9 +172,9 @@
           "passed": false
         },
         {
-          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
-          "detail": "Most recent year dividends paid: yes",
-          "passed": true
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings growth",
@@ -176,47 +182,47 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 7.8",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 12.0",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 1,
+      "evaluated": 5,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 15.0%",
+          "detail": "ROE 20.9%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.05",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "157,700,000 shares vs. 157,800,000 a year earlier",
+          "detail": "157,746,000 shares vs. 157,800,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend unavailable",
-          "passed": null
+          "detail": "Margin trend score 60",
+          "passed": true
         }
       ],
-      "evaluated": 2,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 4,
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.cinfin.com"
 }

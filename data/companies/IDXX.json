@@ -1,102 +1,102 @@
 {
-  "_errors": {
-    "stooq": "Failed to fetch Stooq prices for IDXX: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=idxx.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0eaecf0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
-  },
+  "_errors": {},
   "cik": "0000874716",
   "five_year_history": {
     "years": [
       {
         "cash": 144454000,
-        "debt": 850201000,
+        "debt": 1031009000,
         "earnings": 744845000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 3215360000,
-        "spending": null,
+        "spending": 2283332000,
         "stock_return_pct": null
       },
       {
         "cash": 112546000,
-        "debt": 769369000,
+        "debt": 1470033000,
         "earnings": 679089000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 3367324000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 2468559000,
+        "stock_return_pct": -38.04331318531119
       },
       {
         "cash": 453932000,
-        "debt": 697880000,
+        "debt": 1067353000,
         "earnings": 845042000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 3660953000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 2563825000,
+        "stock_return_pct": 34.250906951661946
       },
       {
         "cash": 288266000,
-        "debt": 617573000,
+        "debt": 986948000,
         "earnings": 887867000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 3897504000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 2769167000,
+        "stock_return_pct": -24.512041483320864
       },
       {
         "cash": 180070000,
-        "debt": 449837000,
+        "debt": 1077213000,
         "earnings": 1059464000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 4303702000,
-        "spending": null,
-        "stock_return_pct": null
+        "spending": 2943671000,
+        "stock_return_pct": 63.63438467492259
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.2306839923608173,
-      "debt_to_ebitda": 0.29885252196697615,
-      "debt_to_equity": 0.2802054089273401
+      "current_ratio": 1.172268408320487,
+      "debt_to_ebitda": 0.7156543853565008,
+      "debt_to_equity": 0.67970854068803
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 20.377764133221977,
+      "book_value_per_share": 20.133027866560127,
       "shareholders_equity": 1605383000,
       "total_assets": 3350759000,
       "total_liabilities": 1745376000
     },
     "cash_flow": {
-      "fcf_margin_pct": 24.563248105932985
+      "fcf_margin_pct": 24.476392649862838
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 17.66051173291583
+      "eps_growth_cagr_3yr_pct": 17.492437896087722
     },
     "profitability": {
-      "roe_pct": 65.99446985547996,
+      "roe_pct": 71.95653145015498,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": 77.44143583642563,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": null
+      "graham_multiple": 948.6140256171344,
+      "graham_number": 77.23936485082221,
+      "graham_upside_pct": -85.18900002860552,
+      "ncav_margin_pct": -100.9860493845909,
+      "pb_ratio": 25.90271088166442,
+      "pe_ttm": 36.622191011235955
     }
   },
-  "industry": "In Vitro & In Vivo Diagnostic Substances",
-  "last_updated": "2026-09-23T13:57:10Z",
+  "industry": "Medical - Diagnostics & Research",
+  "last_updated": "2026-09-23T02:54:13Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,28 +105,33 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": null,
+  "market_cap": 41137484500,
   "metrics": {
-    "book_value_per_share": 20.377764133221977,
-    "current_ratio": 1.2306839923608173,
-    "debt_to_ebitda": 0.29885252196697615,
-    "debt_to_equity": 0.2802054089273401,
-    "eps_growth_cagr_3yr_pct": 17.66051173291583,
-    "fcf_margin_pct": 24.563248105932985,
-    "graham_criteria_evaluated": 3,
-    "graham_criteria_passed": 2,
+    "book_value_per_share": 20.133027866560127,
+    "current_ratio": 1.172268408320487,
+    "debt_to_ebitda": 0.7156543853565008,
+    "debt_to_equity": 0.67970854068803,
+    "eps_growth_cagr_3yr_pct": 17.492437896087722,
+    "fcf_margin_pct": 24.476392649862838,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 948.6140256171344,
+    "graham_upside_pct": -85.18900002860552,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "roe_pct": 65.99446985547996,
+    "ncav_margin_pct": -100.9860493845909,
+    "pb_ratio": 25.90271088166442,
+    "pe_ttm": 36.622191011235955,
+    "roe_pct": 71.95653145015498,
     "shareholders_equity": 1605383000,
     "total_assets": 3350759000,
     "total_liabilities": 1745376000
   },
   "name": "Idexx Laboratories",
   "price": {
-    "as_of": null,
-    "close": null
+    "as_of": "2026-09-22",
+    "close": 521.5
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -155,13 +160,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size",
-          "detail": "Market cap unavailable",
-          "passed": null
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $41.1B",
+          "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.23, debt $0.4B vs working capital $0.3B",
+          "detail": "Current ratio 1.17, debt $1.1B vs working capital $0.2B",
           "passed": false
         },
         {
@@ -176,39 +181,39 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 17.7%/yr",
+          "detail": "EPS 3yr CAGR 17.5%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E",
-          "detail": "P/E unavailable",
-          "passed": null
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 36.6",
+          "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 948.6",
+          "passed": false
         }
       ],
-      "evaluated": 3,
-      "passed": 2,
+      "evaluated": 6,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 66.0%",
+          "detail": "ROE 72.0%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.28",
+          "detail": "Debt/equity 0.68",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "81,025,000 shares vs. 83,246,000 a year earlier",
+          "detail": "80,675,000 shares vs. 83,246,000 a year earlier",
           "passed": true
         },
         {
@@ -222,5 +227,5 @@
       "total": 4
     }
   },
-  "website": null
+  "website": "https://www.idexx.com"
 }
