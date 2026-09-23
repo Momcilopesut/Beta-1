@@ -59,9 +59,10 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
   universe (instant filter; Enter jumps to any ticker, tracked or not). Every company
   page also links to its own investor-facing corporate site (from FMP's profile data,
   when available) and lists its latest 10-K/10-Q/8-K with a direct SEC link each.
-- **On-demand lookup** (`api/lookup.py`, optional): a search for a ticker outside the
-  screening universe offers a live, on-demand run through the exact same pipeline code,
-  via a small backend deployed separately (see "On-demand lookup deployment" below).
+- **On-demand lookup** (`api/lookup.py`, optional): searching a ticker outside the
+  screening universe immediately runs a live analysis through the exact same pipeline
+  code, no extra click - the search *is* the request. Backed by a small server
+  deployed separately (see "On-demand lookup deployment" below).
   The static site works fully without this — it's an opt-in extra.
 
 ## Weekly Screener
@@ -426,26 +427,31 @@ required.
 
 ## On-demand lookup deployment (optional)
 
-Searching a ticker that isn't tracked offers a live analysis via `api/lookup.py`, a
-small Flask app deployed as a [Vercel](https://vercel.com) Python serverless function
-— GitHub Pages can't run server code, so this needs separate hosting. Skipping this
-section is fine; the rest of the site works without it, and an untracked search will
-just say live lookup isn't configured.
+Searching a ticker that isn't tracked immediately runs a live analysis via
+`api/lookup.py`, a small Flask app deployed as a [Vercel](https://vercel.com) Python
+serverless function — GitHub Pages can't run server code, so this needs separate
+hosting. Skipping this section is fine; the rest of the site works without it, and an
+untracked search will just say live lookup isn't configured.
 
 This runs the **full pipeline** for that one ticker, right then — qualitative (10-K
 moat reasoning plus 10-K/10-Q/8-K summaries) and the complete fundamentals scoring,
-identical to a tracked company. It's a real 10-K (plus 10-Q/8-K, when found) fetch
-plus one Claude call for a single request, which takes real
-time.
+identical to a tracked company, using FMP as the primary price/profile source (the
+same reliable path finalists get during the weekly screen's phase 2 - see "Data source
+limits and free backup chain"). It's a real 10-K (plus 10-Q/8-K, when found) fetch plus
+one Claude call for a single request, which takes real time - the site shows an elapsed
+counter while it works, since a wait past "a few seconds" is expected here, not a sign
+something's stuck.
 
-**Timeout headroom:** `vercel.json` sets `maxDuration: 60` — the maximum a Vercel
-Hobby (free) plan allows by default. If a lookup is timing out, you have two free
-options before paying for anything: enable **Fluid Compute** (Vercel project →
-**Settings → Functions** → toggle it on) to raise Hobby's ceiling to 300s, then bump
-`maxDuration` in `vercel.json` to match and redeploy; or pass `?ai=0` to skip the
-qualitative moat read entirely (removes the slowest step, at the cost of that
-layer showing as not evaluated). A Pro plan raises the ceiling further (300s by
-default, more with Fluid Compute) if you have one.
+**Timeout headroom (required setup, not just a troubleshooting tip):** `vercel.json`
+sets `maxDuration: 300` (5 minutes) - safely above what a real lookup needs, but past
+what a Vercel Hobby (free) plan allows *by default* (60s). Enable **Fluid Compute**
+(Vercel project → **Settings → Functions** → toggle it on) before your first deploy -
+it's free and raises Hobby's ceiling to 300s to match. Skip this and the deploy will
+either fail or silently cap at 60s, and most real lookups (10-K fetch + a Claude call)
+won't reliably finish in that window. If you still see timeouts after enabling it,
+`?ai=0` skips the qualitative moat read (the slowest step, at the cost of that layer
+showing as not evaluated) as a fallback. A Pro plan raises the ceiling further if you
+have one, but isn't required.
 
 **Why a separate deployment, and why it's gated:** every live lookup spends real FMP/
 Anthropic API budget (it runs the full pipeline for one ticker, right then). Left
@@ -458,14 +464,17 @@ open to anyone with the URL — only reasonable for a private deployment you don
 1. Create a free [Vercel](https://vercel.com) account and import this repository as a
    new project (Vercel auto-detects `api/lookup.py` as a Python serverless function
    and `vercel.json` for its config — no build settings to change).
-2. In the Vercel project's **Settings → Environment Variables**, add the same keys as
+2. Before deploying, enable **Fluid Compute** (project **Settings → Functions**) so
+   `vercel.json`'s `maxDuration: 300` actually takes effect instead of failing or
+   silently capping at 60s.
+3. In the Vercel project's **Settings → Environment Variables**, add the same keys as
    the GitHub Actions secrets (these are separate stores — copy the values over):
    `FMP_API_KEY`, `FRED_API_KEY`, `ANTHROPIC_API_KEY`, `SEC_EDGAR_USER_AGENT`, plus a
    new `SEARCH_API_KEY` (any string you choose — this is the shared secret from above).
-3. Deploy. Note the resulting URL (e.g. `https://your-project.vercel.app`).
-4. On the live site, search for a ticker that isn't tracked and click "Run live
-   analysis" — the first time, it'll prompt for the Vercel URL and your
-   `SEARCH_API_KEY` value, then remember both in the browser's local storage (per
+4. Deploy. Note the resulting URL (e.g. `https://your-project.vercel.app`).
+5. On the live site, search for a ticker that isn't tracked — it now runs
+   automatically, no extra click. The first time, it'll prompt for the Vercel URL and
+   your `SEARCH_API_KEY` value, then remember both in the browser's local storage (per
    browser/device — visitors without the key just get a 401 from the API).
 
 Local dev: `python api/lookup.py` runs a dev server at `http://localhost:5328`; point

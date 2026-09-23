@@ -28,10 +28,17 @@ async function main() {
     const doc = await fetchJSON(`../data/companies/${encodeURIComponent(ticker)}.json`);
     content.innerHTML = render(doc);
     wireDetailPage(content, doc);
+    renderDisclaimerFooter();
   } catch {
-    renderNotTracked(content, ticker);
+    // Not in the tracked universe - pool it live, right now, no extra click.
+    // Searching a ticker IS the request for its data; a confirmation step
+    // here would just be friction between "click search" and "get an
+    // answer" (see README's "On-demand lookup" section for the budget/cost
+    // tradeoff this implies - every untracked search spends real API spend).
+    await runLiveLookup(content, ticker);
+    renderDisclaimerFooter();
+    return;
   }
-  renderDisclaimerFooter();
 }
 
 function wireDetailPage(content, doc) {
@@ -42,23 +49,20 @@ function wireDetailPage(content, doc) {
   }
 }
 
-function renderNotTracked(content, ticker) {
-  const safeTicker = escapeHtml(ticker);
-  content.innerHTML = `
-    <section class="not-tracked">
-      <p class="error">${safeTicker} isn't in the current screening universe.</p>
-      <p class="meta">You can run a live, on-demand analysis instead — the same scoring, checklists,
-      and moat read as the tracked companies, computed fresh right now via a separate lookup
-      service. This spends real API budget per lookup, so it only runs when you ask.</p>
-      <button id="run-live-lookup" class="live-lookup-button">Run live analysis for ${safeTicker}</button>
-    </section>
-  `;
-  document.getElementById("run-live-lookup").addEventListener("click", () => runLiveLookup(content, ticker));
-}
-
 async function runLiveLookup(content, ticker) {
   const safeTicker = escapeHtml(ticker);
-  content.innerHTML = `<p class="status">Analyzing ${safeTicker} live&hellip; this can take up to a minute.</p>`;
+  const startedAt = Date.now();
+  content.innerHTML = `<p class="status">Analyzing ${safeTicker} live&hellip; <span id="live-lookup-elapsed">this can take a few minutes</span>.</p>`;
+  const elapsedEl = document.getElementById("live-lookup-elapsed");
+  const timer = setInterval(() => {
+    if (!elapsedEl.isConnected) {
+      clearInterval(timer);
+      return;
+    }
+    const secs = Math.floor((Date.now() - startedAt) / 1000);
+    elapsedEl.textContent = `${secs}s elapsed - can take up to a few minutes`;
+  }, 1000);
+
   try {
     const doc = await lookupTicker(ticker);
     content.innerHTML = render(doc);
@@ -69,6 +73,8 @@ async function runLiveLookup(content, ticker) {
       <button id="run-live-lookup" class="live-lookup-button">Try again</button>
     `;
     document.getElementById("run-live-lookup").addEventListener("click", () => runLiveLookup(content, ticker));
+  } finally {
+    clearInterval(timer);
   }
 }
 
