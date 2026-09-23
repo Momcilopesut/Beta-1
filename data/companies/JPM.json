@@ -4,97 +4,98 @@
   "five_year_history": {
     "years": [
       {
-        "cash": 740834000000,
-        "debt": 548939000000,
+        "cash": null,
+        "debt": null,
         "earnings": 48334000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 127238000000,
-        "spending": 67676000000,
+        "revenue": 121649000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 567234000000,
-        "debt": 542505000000,
+        "cash": null,
+        "debt": null,
         "earnings": 37676000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 153824000000,
-        "spending": 107658000000,
+        "revenue": 128695000000,
+        "spending": null,
         "stock_return_pct": -15.314177455004737
       },
       {
-        "cash": 624151000000,
-        "debt": 653072000000,
+        "cash": null,
+        "debt": null,
         "earnings": 49552000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 236273000000,
-        "spending": 174661000000,
+        "revenue": 158104000000,
+        "spending": null,
         "stock_return_pct": 28.322147651006723
       },
       {
-        "cash": 469317000000,
-        "debt": 751146000000,
+        "cash": null,
+        "debt": null,
         "earnings": 58471000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 270789000000,
-        "spending": 195708000000,
+        "revenue": 177556000000,
+        "spending": null,
         "stock_return_pct": 39.30148768014876
       },
       {
-        "cash": 343338000000,
-        "debt": 942378000000,
+        "cash": null,
+        "debt": null,
         "earnings": 57048000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 279745000000,
-        "spending": 207150000000,
+        "revenue": 182447000000,
+        "spending": null,
         "stock_return_pct": 34.42075841641985
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.8403662699432636,
-      "debt_to_ebitda": 11.574850152304215,
-      "debt_to_equity": 3.3045317914137287
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 134.32710581991608,
+      "book_value_per_share": 136.34786031232096,
       "shareholders_equity": 362438000000,
       "total_assets": 4424900000000,
       "total_liabilities": 4062462000000
     },
     "cash_flow": {
-      "fcf_margin_pct": -52.827396378845016
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 18.412674089532754
+      "eps_growth_cagr_3yr_pct": 18.307585413289562
     },
     "profitability": {
-      "roe_pct": 17.810887122712458,
-      "trend": "declining"
+      "roe_pct": 15.74007140531622,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 36.998529721080835,
-      "graham_number": 246.41268232022387,
-      "graham_upside_pct": -27.525681670522395,
-      "ncav_margin_pct": -341.7531929135611,
-      "pb_ratio": 2.531134709742177,
-      "pe_ttm": 14.617368873602754
+      "graham_multiple": 41.73614750942432,
+      "graham_number": 247.82633774013,
+      "graham_upside_pct": -26.576500536210112,
+      "ncav_margin_pct": null,
+      "pb_ratio": 2.4755063939166146,
+      "pe_ttm": 16.85964035964036
     }
   },
   "industry": "Banks - Diversified",
-  "last_updated": "2026-09-23T02:44:20Z",
+  "last_updated": "2026-09-23T21:02:19Z",
   "layered_analysis": {
     "flags": [
+      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
+    "overall": "Layers disagree - see flags for specifics.",
+    "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -105,35 +106,45 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 911033400000,
+  "market_cap": 904415010300,
   "metrics": {
-    "book_value_per_share": 134.32710581991608,
-    "current_ratio": 0.8403662699432636,
-    "debt_to_ebitda": 11.574850152304215,
-    "debt_to_equity": 3.3045317914137287,
-    "eps_growth_cagr_3yr_pct": 18.412674089532754,
-    "fcf_margin_pct": -52.827396378845016,
+    "book_value_per_share": 136.34786031232096,
+    "eps_growth_cagr_3yr_pct": 18.307585413289562,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 36.998529721080835,
-    "graham_upside_pct": -27.525681670522395,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "graham_multiple": 41.73614750942432,
+    "graham_upside_pct": -26.576500536210112,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -341.7531929135611,
-    "pb_ratio": 2.531134709742177,
-    "pe_ttm": 14.617368873602754,
-    "roe_pct": 17.810887122712458,
+    "pb_ratio": 2.4755063939166146,
+    "pe_ttm": 16.85964035964036,
+    "roe_pct": 15.74007140531622,
     "shareholders_equity": 362438000000,
     "total_assets": 4424900000000,
     "total_liabilities": 4062462000000
   },
   "name": "JPMorgan Chase & Co.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 340
+    "as_of": "2026-09-23",
+    "close": 337.53
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes JPMorganChase as a Delaware-incorporated financial holding company with $4.4 trillion in assets and $362.4 billion in stockholders' equity as of December 31, 2025, operating through three reportable segments (Consumer & Community Banking, Commercial & Investment Bank, and Asset & Wealth Management) plus Corporate. It details extensive supervision by the Federal Reserve, OCC, SEC, FINRA, and non-U.S. regulators, ongoing Basel III capital/liquidity and CCAR stress-testing requirements, and notes the Firm remains subject to a March 2024 OCC consent order related to trade surveillance data processes. The filing also outlines a competitive landscape that includes banks, broker-dealers, fintech, and digital asset companies.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the six months ended June 30, 2026) consists almost entirely of XBRL taxonomy tags and contextual data points (e.g., fair value hierarchy categories, equity roll-forward tags, dates) rather than narrative text. As a result, the provided excerpt does not describe the period's business developments or financial results in prose, so no substantive summary of operating performance can be drawn from it.",
+    "filing_summary_8k": "This 8-K, dated July 23, 2026, discloses under Item 8.01 that JPMorgan Chase & Co. closed public offerings of several series of debt securities, including $500 million of Floating Rate Notes due 2030, $2.5 billion of Fixed-to-Floating Rate Notes due 2030, $3.0 billion of Fixed-to-Floating Rate Notes due 2032, and $3.0 billion of Fixed-Rate Reset Subordinated Notes due 2041. The offerings were registered under an existing Form S-3 shelf registration, and the filing includes related legal opinions from Simpson Thacher & Bartlett LLP as exhibits.",
+    "moat_explanation": "The excerpts describe JPMorganChase as a $4.4 trillion-asset, globally systemically important financial institution operating across investment banking, consumer/commercial banking, and asset management, subject to extensive Basel III capital, liquidity, and stress-testing requirements administered by the Federal Reserve and OCC. These heavy regulatory and capital requirements (GSIB status, CCAR, SCB) create structural barriers that only a small number of large, diversified institutions can meet, limiting the field of similarly-scaled full-service competitors, though the filing itself also notes vulnerability to less-regulated fintech entrants.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Firm remains subject to a March 2024 OCC consent order regarding trade surveillance data completeness processes",
+      "Named as defendant or involved in numerous civil and governmental legal proceedings, investigations, and enforcement actions, with unpredictable and potentially uninsured exposure",
+      "Competition from less-regulated or unregulated fintech, digital asset, and internet-based companies that can undercut a heavily regulated firm like JPMorganChase",
+      "Pending and uncertain regulatory changes (revised U.S. risk-based capital framework, stress testing methodology, SCB requirements) could increase capital requirements or costs",
+      "Differences in regulatory implementation across jurisdictions could create competitive disadvantages or require costly restructuring of operations"
+    ]
+  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000019617.json",
@@ -161,13 +172,13 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $911.0B",
+          "detail": "Market cap $904.4B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.84, debt $942.4B vs working capital $-1707.0B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -175,23 +186,23 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 18.4%/yr",
+          "detail": "EPS 3yr CAGR 18.3%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 14.6",
-          "passed": true
+          "detail": "P/E 16.9",
+          "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 37.0",
+          "detail": "P/E x P/B = 41.7",
           "passed": false
         }
       ],
@@ -203,26 +214,26 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 17.8%",
+          "detail": "ROE 15.7%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 3.30",
-          "passed": false
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "2,793,700,000 shares vs. 2,879,000,000 a year earlier",
+          "detail": "2,781,500,000 shares vs. 2,879,000,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 2,
       "passed": 2,
       "total": 4
     }

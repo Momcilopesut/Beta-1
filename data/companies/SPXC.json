@@ -1,0 +1,228 @@
+{
+  "_errors": {},
+  "cik": "0000088205",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 388200000,
+        "debt": 13000000,
+        "earnings": 3100000,
+        "fiscal_year": "2022-10-01",
+        "market_return_pct": -6.3109852061693426,
+        "revenue": 370500000,
+        "spending": null,
+        "stock_return_pct": 3.330838323353295
+      },
+      {
+        "cash": 147800000,
+        "debt": 2000000,
+        "earnings": 200000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": 7.069264796461168,
+        "revenue": 1460900000,
+        "spending": null,
+        "stock_return_pct": 18.888084027526272
+      },
+      {
+        "cash": 99400000,
+        "debt": 17300000,
+        "earnings": 89900000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 1741200000,
+        "spending": null,
+        "stock_return_pct": 51.02817974105103
+      },
+      {
+        "cash": 156900000,
+        "debt": 27600000,
+        "earnings": 200500000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 1983900000,
+        "spending": null,
+        "stock_return_pct": 46.76752395360565
+      },
+      {
+        "cash": 364000000,
+        "debt": 3500000,
+        "earnings": 244000000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 2265100000,
+        "spending": null,
+        "stock_return_pct": 37.479384277075305
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 2.4803730210366517,
+      "debt_to_ebitda": 0.007399577167019027,
+      "debt_to_equity": 0.0015642458100558658
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 44.67328703150949,
+      "shareholders_equity": 2237500000,
+      "total_assets": 3604600000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": null
+    },
+    "profitability": {
+      "roe_pct": 10.905027932960893,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 134.1169127701367,
+      "graham_number": 71.1048469500574,
+      "graham_upside_pct": -59.04098677992086,
+      "ncav_margin_pct": null,
+      "pb_ratio": 3.885991193743017,
+      "pe_ttm": 34.512922465208746
+    }
+  },
+  "industry": "Construction Materials",
+  "last_updated": "2026-09-23T21:02:26Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 8691256050,
+  "metrics": {
+    "book_value_per_share": 44.67328703150949,
+    "current_ratio": 2.4803730210366517,
+    "debt_to_ebitda": 0.007399577167019027,
+    "debt_to_equity": 0.0015642458100558658,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 134.1169127701367,
+    "graham_upside_pct": -59.04098677992086,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 1,
+    "pb_ratio": 3.885991193743017,
+    "pe_ttm": 34.512922465208746,
+    "roe_pct": 10.905027932960893,
+    "shareholders_equity": 2237500000,
+    "total_assets": 3604600000
+  },
+  "name": "SPX Technologies",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 173.6
+  },
+  "qualitative": null,
+  "sector": "Basic Materials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000088205.json",
+    "sec_filings": [
+      {
+        "filed": "2026-07-31",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/88205/000008820526000053/spxc-20260627.htm"
+      },
+      {
+        "filed": "2026-07-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/88205/000008820526000052/spxc-20260730.htm"
+      },
+      {
+        "filed": "2026-02-25",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/88205/000008820526000008/spxc-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "SPXC",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $8.7B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 2.48, debt $0.0B vs working capital $0.7B",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 34.5",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 134.1",
+          "passed": false
+        }
+      ],
+      "evaluated": 5,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 10.9%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.00",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "48,511,000 shares vs. 47,078,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": "https://www.spx.com"
+}
