@@ -1,5 +1,7 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for CASY: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=casy.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9eed6c90>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000726958",
   "five_year_history": {
     "years": [
@@ -10,7 +12,7 @@
         "fiscal_year": "2022-04-30",
         "market_return_pct": null,
         "revenue": 12952594000,
-        "spending": 12454894000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
@@ -20,49 +22,49 @@
         "fiscal_year": "2023-04-30",
         "market_return_pct": 0.8519417475728134,
         "revenue": 15094475000,
-        "spending": 14455142000,
-        "stock_return_pct": 15.668156979632384
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 206482000,
-        "debt": 1751108000,
+        "debt": 1635939000,
         "earnings": 501972000,
         "fiscal_year": "2024-04-30",
         "market_return_pct": 20.810570142716188,
         "revenue": 14862913000,
-        "spending": 14153312000,
-        "stock_return_pct": 37.25304930424325
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 326662000,
-        "debt": 2957899000,
+        "debt": 2508545000,
         "earnings": 546520000,
         "fiscal_year": "2025-04-30",
         "market_return_pct": 10.470536674767908,
         "revenue": 15940899000,
-        "spending": 15144499000,
-        "stock_return_pct": 44.74935853307466
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 522991000,
-        "debt": 2905075000,
+        "debt": 2431594000,
         "earnings": 714448000,
         "fiscal_year": "2026-04-30",
         "market_return_pct": 29.595700941320736,
         "revenue": 17561101000,
-        "spending": 16527444000,
-        "stock_return_pct": 77.72757733630213
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.0185155172325286,
-      "debt_to_ebitda": 1.9581057080172417,
-      "debt_to_equity": 0.7054737118253368
+      "current_ratio": 1.0099259147375326,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.6153256342366449
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 110.7507232562768,
+      "book_value_per_share": 106.91832101299758,
       "shareholders_equity": 3951719000,
       "total_assets": 8936055000,
       "total_liabilities": 4984336000
@@ -71,87 +73,62 @@
       "fcf_margin_pct": 4.10919565920155
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 17.15548209401463
+      "eps_growth_cagr_3yr_pct": 17.173098488337637
     },
     "profitability": {
-      "roe_pct": 19.67866738346942,
-      "trend": "improving"
+      "roe_pct": 18.079423157365188,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 147.90478334866168,
-      "graham_number": 219.18864876761498,
-      "graham_upside_pct": -62.52096356759829,
-      "ncav_margin_pct": -116.74880676284245,
-      "pb_ratio": 5.280597569071449,
-      "pe_ttm": 28.00909961685824
+      "graham_multiple": null,
+      "graham_number": 214.69161182659946,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Specialty Retail",
-  "last_updated": "2026-09-23T03:21:36Z",
+  "industry": "Retail-Auto Dealers & Gasoline Stations",
+  "last_updated": "2026-09-23T13:10:22Z",
   "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
-      "cyclicality": "high",
-      "rate_sensitivity": "medium"
+      "cyclicality": "low",
+      "rate_sensitivity": "low"
     }
   },
-  "market_cap": 21641575667,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 110.7507232562768,
-    "current_ratio": 1.0185155172325286,
-    "debt_to_ebitda": 1.9581057080172417,
-    "debt_to_equity": 0.7054737118253368,
-    "eps_growth_cagr_3yr_pct": 17.15548209401463,
+    "book_value_per_share": 106.91832101299758,
+    "current_ratio": 1.0099259147375326,
+    "debt_to_equity": 0.6153256342366449,
+    "eps_growth_cagr_3yr_pct": 17.173098488337637,
     "fcf_margin_pct": 4.10919565920155,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 3,
-    "graham_multiple": 147.90478334866168,
-    "graham_upside_pct": -62.52096356759829,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -116.74880676284245,
-    "pb_ratio": 5.280597569071449,
-    "pe_ttm": 28.00909961685824,
-    "roe_pct": 19.67866738346942,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "roe_pct": 18.079423157365188,
     "shareholders_equity": 3951719000,
     "total_assets": 8936055000,
     "total_liabilities": 4984336000
   },
   "name": "Casey's",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 584.83
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year ended April 30, 2026, Casey's operated 2,944 convenience stores across 19 states, with total revenue of about $17.56 billion, up 10.2% year-over-year, driven substantially by a full year of contribution from the prior-year Fikes acquisition and store growth. Net income rose 30.7% to $714.4 million and EBITDA grew 23.6% to about $1.48 billion, aided by improved fuel margins per gallon and higher-margin prepared food and grocery sales. The filing also notes increased operating expenses, higher interest expense from acquisition-related debt, and details of the Company's long-term debt structure, including new term loans and senior notes.",
-    "filing_summary_10q": "For the three months ended July 31, 2026, Casey's reported total revenue of $5.68 billion versus $4.57 billion in the prior-year quarter, with net income of $273.7 million compared to $215.4 million a year earlier. The Company operated 2,959 stores as of July 31, 2026, and generated $384.1 million in operating cash flow, while spending on property/equipment and acquisitions increased versus the prior-year period. The filing also notes early adoption of a new accounting standard (ASU 2026-02) affecting accounting for renewable identification numbers (RINs), which had no material retrospective effect.",
-    "filing_summary_8k": "This 8-K discloses two items: the Company's announcement, via press release dated September 8, 2026, of financial results for the first quarter ended July 31, 2026, and the results of votes taken at the September 2, 2026 annual shareholders' meeting. At the meeting, all eleven director nominees were elected, KPMG LLP's appointment as auditor was ratified, the advisory say-on-pay vote passed, and a shareholder proposal regarding special meeting rights was voted down.",
-    "moat_explanation": "The 10-K describes Casey's deliberate strategy of locating stores in towns with populations under 20,000 that are typically not served by national-chain convenience stores, and notes ~71% of stores are in such areas; this suggests the local market often supports only one strong operator, limiting direct competition. The Company also operates its own three distribution centers and a fuel terminal with a self-owned trucking fleet, giving it a logistics/self-distribution footprint that would be costly for a new entrant to replicate at a similar scale, reinforcing the efficient-scale dynamic rather than a pure cost or brand-based advantage.",
-    "moat_present": true,
-    "moat_type": "efficient_scale",
-    "red_flags": [
-      "Business is described as 'highly competitive' both for in-store products and fuel, competing against grocery, dollar stores, drug chains, and expanded fuel stations.",
-      "Company explicitly flags exposure to commodity cost inflation, particularly cheese (its largest food cost), which could compress margins if it cannot pass costs to consumers.",
-      "Significant debt load taken on to fund the Fikes acquisition, with long-term debt and finance lease obligations of about $2.43 billion as of fiscal year-end and a current ratio of only 1.01 to 1.",
-      "Company acknowledges reliance on third-party IT/software vendors and warns that cyber/data-security incidents (including AI-related risks) could materially harm operations and reputation.",
-      "Litigation, food-safety, and foodborne illness risks are cited as capable of damaging brand value and sales, given high guest traffic volumes.",
-      "A shareholder proposal on special meeting rights received substantial support (about 39% for) at the 2026 annual meeting, indicating some governance friction, though it did not pass."
-    ]
-  },
-  "sector": "Consumer Cyclical",
+  "qualitative": null,
+  "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000726958.json",
     "sec_filings": [
@@ -177,13 +154,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $21.6B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.02, debt $2.9B vs working capital $0.0B",
+          "detail": "Current ratio 1.01, debt $2.4B vs working capital $0.0B",
           "passed": false
         },
         {
@@ -192,9 +169,9 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -202,17 +179,17 @@
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 28.0",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 147.9",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 3,
       "total": 7
     },
@@ -220,29 +197,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 19.7%",
+          "detail": "ROE 18.1%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.71",
+          "detail": "Debt/equity 0.62",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "37,281,653 shares vs. 37,343,000 a year earlier",
+          "detail": "37,281,653 shares vs. 37,343,012 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.caseys.com"
+  "website": null
 }

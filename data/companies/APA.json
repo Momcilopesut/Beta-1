@@ -1,104 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for APA: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=apa.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9f109970>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001841666",
   "five_year_history": {
     "years": [
       {
         "cash": 302000000,
-        "debt": 7609000000,
-        "earnings": 1135000000,
+        "debt": 215000000,
+        "earnings": null,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 7985000000,
-        "spending": 5293000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 245000000,
-        "debt": 5620000000,
-        "earnings": 3674000000,
+        "debt": 2000000,
+        "earnings": null,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 11075000000,
-        "spending": 5993000000,
-        "stock_return_pct": 73.5961323912235
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 87000000,
-        "debt": 5304000000,
+        "debt": 2000000,
         "earnings": 2855000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 8279000000,
-        "spending": 4921000000,
-        "stock_return_pct": -22.643530419880033
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 625000000,
-        "debt": 6162000000,
+        "debt": 53000000,
         "earnings": 804000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 9737000000,
-        "spending": 6538000000,
-        "stock_return_pct": -36.056494045970645
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 516000000,
-        "debt": 4810000000,
+        "debt": 213000000,
         "earnings": 1434000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 8920000000,
-        "spending": 6170000000,
-        "stock_return_pct": 5.933304460805547
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.9459908599916909,
-      "debt_to_ebitda": 0.9108123461465631,
-      "debt_to_equity": 0.5527702606466315
+      "current_ratio": 0.8249708284714119,
+      "debt_to_ebitda": 0.03951029493600445,
+      "debt_to_equity": 0.034958148695224026
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 22.504249291784703,
+      "book_value_per_share": 17.391105293081225,
       "shareholders_equity": 6093000000,
-      "total_assets": 18998000000,
-      "total_liabilities": 11995000000
+      "total_assets": 17761000000,
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 19.943946188340806
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -28.833584547812208
+      "eps_growth_cagr_3yr_pct": -28.726114714581406
     },
     "profitability": {
-      "roe_pct": 26.269825729391034,
-      "trend": "declining"
+      "roe_pct": 23.535204332840966,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 19.019334927865145,
-      "graham_number": 44.94795857622426,
-      "graham_upside_pct": 6.259949352776034,
-      "ncav_margin_pct": -166.62677034875273,
-      "pb_ratio": 2.1267483264492237,
-      "pe_ttm": 8.942917547568708
+      "graham_multiple": null,
+      "graham_number": 39.5131177925302,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-09-23T03:51:00Z",
+  "industry": "Crude Petroleum & Natural Gas",
+  "last_updated": "2026-09-23T13:18:20Z",
   "layered_analysis": {
-    "flags": [
-      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Positive but thin margin of safety - 6% is below the 15% convention used here."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -107,51 +105,28 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 14951781000,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 22.504249291784703,
-    "current_ratio": 0.9459908599916909,
-    "debt_to_ebitda": 0.9108123461465631,
-    "debt_to_equity": 0.5527702606466315,
-    "eps_growth_cagr_3yr_pct": -28.833584547812208,
-    "fcf_margin_pct": 19.943946188340806,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 19.019334927865145,
-    "graham_upside_pct": 6.259949352776034,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "book_value_per_share": 17.391105293081225,
+    "current_ratio": 0.8249708284714119,
+    "debt_to_ebitda": 0.03951029493600445,
+    "debt_to_equity": 0.034958148695224026,
+    "eps_growth_cagr_3yr_pct": -28.726114714581406,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -166.62677034875273,
-    "pb_ratio": 2.1267483264492237,
-    "pe_ttm": 8.942917547568708,
-    "roe_pct": 26.269825729391034,
+    "roe_pct": 23.535204332840966,
     "shareholders_equity": 6093000000,
-    "total_assets": 18998000000,
-    "total_liabilities": 11995000000
+    "total_assets": 17761000000
   },
   "name": "APA Corporation",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 42.3
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "APA Corporation's 10-K describes an independent E&P company operating in the U.S. (Permian Basin), Egypt, and the North Sea, with exploration activity in Suriname, Uruguay, and Alaska. For 2025, the company reported net income of $1.4 billion (versus $804 million in 2024, a year that included $1.1 billion of impairments), $4.5 billion of operating cash flow, and lower oil and NGL prices offset partly by higher natural gas prices and volumes. The filing discusses a cost-reduction program ($350 million in annualized savings achieved, targeting $450 million by end-2026), continued share repurchases and dividends, portfolio activity including sales of non-core Permian assets and new Egypt exploration acreage, and a new Egypt gas sales agreement effective 2025.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists only of XBRL taxonomy tags and context data (covering the quarter and six months ended June 30, 2026) rather than narrative text, so a substantive description of period results is not supported. Visible tags reference debt activity including repayment/redemption of notes due 2026 and issuance of notes due 2030, credit agreements and commercial paper balances, ongoing litigation matters (including an Australian operations divestiture dispute and a Delaware litigation matter), and continued oil, natural gas, and NGL segment reporting for the U.S., Egypt, and North Sea. The provided excerpts don't describe specific quarterly financial results or business developments in narrative form.",
-    "filing_summary_8k": "This 8-K, dated August 5, 2026, reports under Item 2.02 that APA Corporation issued a press release announcing its financial and operating results for the fiscal quarter ended June 30, 2026, furnished as Exhibit 99.1. The filing does not itself contain the substantive results, only the disclosure that the press release was issued and furnished.",
-    "moat_explanation": "The excerpts describe APA as a commodity oil, gas, and NGL producer whose revenues and margins depend heavily on volatile market-determined prices for crude oil, natural gas, and NGLs, factors largely outside the company's control (OPEC+ actions, pipeline capacity, weather, regulation). Nothing in the Business/Risk Factors/MD&A excerpts points to brand strength, patents, network effects, switching costs, or a durable cost advantage versus peers; the company competes as a price-taker in a cyclical, capital-intensive industry.",
-    "moat_present": false,
-    "moat_type": "none",
-    "red_flags": [
-      "Heavy dependence on volatile, largely uncontrollable commodity prices, with 2025 oil and gas prices down 14% and 3% respectively versus 2024",
-      "Significant concentration risk in Egypt, where substantially all natural gas production is sold to a single buyer (EGPC) under a government-set pricing agreement",
-      "History of large non-cash impairments ($1.1 billion in 2024, including $796 million in the North Sea and $315 million in the U.S.) tied to commodity price and asset value declines",
-      "Frontier exploration exposure in Alaska, Suriname, and Uruguay involving heightened regulatory, permitting, litigation, and execution risk with uncertain commercial outcomes",
-      "Insurance coverage explicitly stated as inadequate to cover all operational, environmental, and political risks the company faces",
-      "Derivative/hedging activities that do not use hedge accounting, introducing earnings volatility even when exposures are economically hedged"
-    ]
-  },
+  "qualitative": null,
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001841666.json",
@@ -178,55 +153,55 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $15.0B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.95, debt $4.8B vs working capital $-0.5B",
+          "detail": "Current ratio 0.82, debt $0.2B vs working capital $-0.5B",
           "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/6 available years",
-          "passed": false
+          "detail": "Positive in 3/3 available years",
+          "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -28.8%/yr",
+          "detail": "EPS 3yr CAGR -28.7%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 8.9",
-          "passed": true
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 19.0",
-          "passed": true
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 4,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 26.3%",
+          "detail": "ROE 23.5%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.55",
+          "detail": "Debt/equity 0.03",
           "passed": true
         },
         {
@@ -236,14 +211,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 2,
       "total": 4
     }
   },
-  "website": "https://apacorp.com"
+  "website": null
 }

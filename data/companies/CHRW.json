@@ -1,103 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for CHRW: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=chrw.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9eed68a0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001043277",
   "five_year_history": {
     "years": [
       {
         "cash": 257413000,
-        "debt": 2226329000,
+        "debt": 1393649000,
         "earnings": 844245000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 23102138000,
-        "spending": 22020030000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 217482000,
-        "debt": 2361168000,
+        "debt": 920049000,
         "earnings": 940524000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 24696625000,
-        "spending": 23429843000,
-        "stock_return_pct": -14.930781380655944
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 145524000,
-        "debt": 1952501000,
+        "debt": 1420487000,
         "earnings": 325129000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 17596443000,
-        "spending": 17081836000,
-        "stock_return_pct": -4.8383573612931485
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 145762000,
-        "debt": 1741132000,
+        "debt": 921857000,
         "earnings": 465690000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 17724956000,
-        "spending": 17055815000,
-        "stock_return_pct": 18.58143004705612
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 160871000,
-        "debt": 1629154000,
+        "debt": 1089438000,
         "earnings": 587081000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 16232763000,
-        "spending": 15437802000,
-        "stock_return_pct": 55.594270228416576
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.5815242929130977,
-      "debt_to_ebitda": 1.8146492622349153,
-      "debt_to_equity": 1.2118837125005375
+      "current_ratio": 1.527837497584214,
+      "debt_to_ebitda": 1.2134812687755003,
+      "debt_to_equity": 0.5902743048914554
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 13.728250326824949,
+      "book_value_per_share": 15.794840651180666,
       "shareholders_equity": 1845647000,
       "total_assets": 5058381000,
       "total_liabilities": 3212734000
     },
     "cash_flow": {
-      "fcf_margin_pct": 5.512869250909411
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -13.269322007146156
+      "eps_growth_cagr_3yr_pct": -13.256194627034546
     },
     "profitability": {
-      "roe_pct": 36.01262861790157,
-      "trend": "improving"
+      "roe_pct": 31.808953716501588,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 306.84651996841063,
-      "graham_number": 38.82475867130895,
-      "graham_upside_pct": -74.040680214423,
-      "ncav_margin_pct": -102.37001889835555,
-      "pb_ratio": 10.894323489116477,
-      "pe_ttm": 28.16572504708098
+      "graham_multiple": null,
+      "graham_number": 41.43071695936553,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Integrated Freight & Logistics",
-  "last_updated": "2026-09-23T03:53:40Z",
+  "industry": "Arrangement of  Transportation of  Freight & Cargo",
+  "last_updated": "2026-09-23T14:10:12Z",
   "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,51 +105,29 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 17629092162,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 13.728250326824949,
-    "current_ratio": 1.5815242929130977,
-    "debt_to_ebitda": 1.8146492622349153,
-    "debt_to_equity": 1.2118837125005375,
-    "eps_growth_cagr_3yr_pct": -13.269322007146156,
-    "fcf_margin_pct": 5.512869250909411,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 15.794840651180666,
+    "current_ratio": 1.527837497584214,
+    "debt_to_ebitda": 1.2134812687755003,
+    "debt_to_equity": 0.5902743048914554,
+    "eps_growth_cagr_3yr_pct": -13.256194627034546,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 2,
-    "graham_multiple": 306.84651996841063,
-    "graham_upside_pct": -74.040680214423,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -102.37001889835555,
-    "pb_ratio": 10.894323489116477,
-    "pe_ttm": 28.16572504708098,
-    "roe_pct": 36.01262861790157,
+    "roe_pct": 31.808953716501588,
     "shareholders_equity": 1845647000,
     "total_assets": 5058381000,
     "total_liabilities": 3212734000
   },
   "name": "C.H. Robinson",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 149.56
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "C.H. Robinson's FY2025 10-K reports total revenues of $16.2 billion, down 8.4% from 2024, primarily due to the divestiture of its Europe Surface Transportation business plus lower ocean pricing/volume and lower fuel surcharges. Adjusted gross profits decreased slightly to $2.7 billion while operating income rose 18.8% to $795.0 million and net income rose 26.1% to $587.1 million, driven by cost reductions and headcount declines (down 11.5%). The filing describes soft freight demand, tightening North American truckload capacity late in the year, depressed global ocean/air freight pricing, and continued restructuring and cost-optimization efforts, including a Kansas City lease impairment.",
-    "filing_summary_10q": "The excerpt provided is XBRL tagging data from the Q2 2026 10-Q (covering the six months ended June 30, 2026) rather than narrative text, so it does not describe specific financial results, business developments, or management commentary for the period. It confirms the filing covers segments (NAST, Global Forwarding, Corporate/Other), ongoing 2025 Restructuring Program activity, debt facilities, and stock compensation plans, but the provided text does not support a substantive summary of results or trends.",
-    "filing_summary_8k": "This 8-K, dated July 29, 2026, furnishes (under Item 2.02) C.H. Robinson's press release and earnings conference call slides announcing financial results for the quarter ended June 30, 2026. The filing itself does not include the actual financial results text, only the cover information and exhibit list (Exhibits 99.1 and 99.2), and states this information is furnished, not filed, under the Exchange Act.",
-    "moat_explanation": "The 10-K describes a scale-based network of 75,000 customers and 450,000 contract carriers, one of the largest proprietary datasets on shipments/routings/carriers, and a proprietary Navisphere technology platform combined with century-long customer relationships and branded produce programs. These are best characterized as intangible/data and relationship advantages combined with scale rather than a classic switching-cost or network-effect moat, though the company itself states competitive advantages include scale, relationships, and technology; the industry is described as 'highly competitive and fragmented' with many alternative brokers and technology platforms, which tempers the durability of any advantage.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Company describes the transportation services industry as 'highly competitive and fragmented' with many traditional and non-traditional competitors, including technology-driven matching platforms",
-      "2025 excerpts note tariffs and shifting U.S. trade policy adversely impacted Global Forwarding volumes and demand, particularly in Q2 2025",
-      "Ocean freight rates and adjusted gross profit per shipment declined significantly in 2025 due to excess vessel capacity and weak global demand",
-      "Company acknowledges risk that contracted rates could require providing transportation services at a loss if market conditions shift below agreed pricing",
-      "Multiple years of restructuring programs (2024 and 2025) with severance charges and facility impairments (e.g., Kansas City lease) indicate cost pressure and headcount reductions",
-      "Sourcing business is dependent on weather-driven produce supply and price volatility outside the company's control"
-    ]
-  },
+  "qualitative": null,
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001043277.json",
@@ -177,13 +154,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $17.6B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.58, debt $1.6B vs working capital $1.0B",
+          "detail": "Current ratio 1.53, debt $1.1B vs working capital $1.0B",
           "passed": false
         },
         {
@@ -192,9 +169,9 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -202,17 +179,17 @@
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 28.2",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 306.8",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 2,
       "total": 7
     },
@@ -220,13 +197,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 36.0%",
+          "detail": "ROE 31.8%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.21",
-          "passed": false
+          "detail": "Debt/equity 0.59",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -235,14 +212,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.chrobinson.com"
+  "website": null
 }

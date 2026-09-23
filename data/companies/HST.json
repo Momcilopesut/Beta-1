@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for HST: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=hst.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca39b58b0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001070750",
   "five_year_history": {
     "years": [
       {
         "cash": 807000000,
-        "debt": 5455000000,
+        "debt": null,
         "earnings": -11000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 2890000000,
-        "spending": 3140000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 667000000,
-        "debt": 4783000000,
+        "debt": null,
         "earnings": 633000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 4907000000,
-        "spending": 4132000000,
-        "stock_return_pct": -7.705577918343874
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1144000000,
-        "debt": 4772000000,
+        "debt": null,
         "earnings": 740000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 5311000000,
-        "spending": 4484000000,
-        "stock_return_pct": 22.741433021806845
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 554000000,
-        "debt": 5643000000,
+        "debt": null,
         "earnings": 697000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 5684000000,
-        "spending": 4809000000,
-        "stock_return_pct": -11.065989847715734
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 768000000,
-        "debt": 5640000000,
+        "debt": null,
         "earnings": 765000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 6114000000,
-        "spending": 5283000000,
-        "stock_return_pct": 1.1986301369863064
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.7691275167785236,
-      "debt_to_ebitda": 3.4686346863468636,
-      "debt_to_equity": 0.8836881653099562
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 9.230324909747292,
+      "book_value_per_share": 9.571984313464801,
       "shareholders_equity": 6558000000,
       "total_assets": 13049000000,
       "total_liabilities": 6317000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 14.033366045142296
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 7.316761752004952
+      "eps_growth_cagr_3yr_pct": 7.721734501594191
     },
     "profitability": {
-      "roe_pct": 15.540591662253158,
-      "trend": "declining"
+      "roe_pct": 11.665141811527905,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 36.607317717318615,
-      "graham_number": 15.114580428058384,
-      "graham_upside_pct": -32.16077007155124,
-      "ncav_margin_pct": -135.3498292514413,
-      "pb_ratio": 2.415294301815905,
-      "pe_ttm": 15.156462585034014
+      "graham_multiple": null,
+      "graham_number": 15.391770910400592,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "REIT - Hotel & Motel",
-  "last_updated": "2026-09-23T03:56:04Z",
+  "industry": "Real Estate Investment Trusts",
+  "last_updated": "2026-09-23T14:37:22Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,24 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 15259104120,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 9.230324909747292,
-    "current_ratio": 2.7691275167785236,
-    "debt_to_ebitda": 3.4686346863468636,
-    "debt_to_equity": 0.8836881653099562,
-    "eps_growth_cagr_3yr_pct": 7.316761752004952,
-    "fcf_margin_pct": 14.033366045142296,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 9.571984313464801,
+    "eps_growth_cagr_3yr_pct": 7.721734501594191,
+    "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 2,
-    "graham_multiple": 36.607317717318615,
-    "graham_upside_pct": -32.16077007155124,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -135.3498292514413,
-    "pb_ratio": 2.415294301815905,
-    "pe_ttm": 15.156462585034014,
-    "roe_pct": 15.540591662253158,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "roe_pct": 11.665141811527905,
     "shareholders_equity": 6558000000,
     "total_assets": 13049000000,
     "total_liabilities": 6317000000
   },
   "name": "Host Hotels & Resorts",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 22.28
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -160,14 +151,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $15.3B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.77, debt $5.6B vs working capital $0.9B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -175,27 +166,27 @@
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 7.3%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 15.2",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 7.7%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 36.6",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 3,
       "passed": 2,
       "total": 7
     },
@@ -203,29 +194,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 15.5%",
-          "passed": true
+          "detail": "ROE 11.7%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.88",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "693,900,000 shares vs. 705,900,000 a year earlier",
+          "detail": "694,100,000 shares vs. 704,000,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },
-  "website": "https://www.hosthotels.com"
+  "website": null
 }

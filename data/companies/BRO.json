@@ -1,102 +1,104 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for BRO: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=bro.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca102d0d0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000079282",
   "five_year_history": {
     "years": [
       {
         "cash": 693200000,
-        "debt": 2246300000,
+        "debt": 1980400000,
         "earnings": 587100000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 3047500000,
-        "spending": 2192800000,
+        "revenue": 3051400000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 650000000,
-        "debt": 4183000000,
-        "earnings": 671800000,
+        "debt": 3691500000,
+        "earnings": 672000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 3563000000,
-        "spending": 2600000000,
-        "stock_return_pct": -18.938531587933984
+        "revenue": 3573000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 700000000,
-        "debt": 4020000000,
-        "earnings": 870500000,
+        "debt": 3227000000,
+        "earnings": 871000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 4199000000,
-        "spending": 3043000000,
-        "stock_return_pct": 24.188169211865898
+        "revenue": 4257000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 675000000,
-        "debt": 4060000000,
+        "debt": 3599000000,
         "earnings": 993000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 4705000000,
-        "spending": 3338000000,
-        "stock_return_pct": 44.19787985865724
+        "revenue": 4805000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1079000000,
-        "debt": 7918000000,
+        "debt": 6894000000,
         "earnings": 1054000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 5956000000,
-        "spending": 4261000000,
-        "stock_return_pct": -21.87806312487747
+        "revenue": 5902000000,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.1269285621677687,
-      "debt_to_ebitda": 3.83996120271581,
-      "debt_to_equity": 0.6363347373440356
+      "current_ratio": 1.0385821075476247,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 37.86186186186186,
-      "shareholders_equity": 12547000000,
+      "book_value_per_share": null,
+      "shareholders_equity": null,
       "total_assets": 29991000000,
-      "total_liabilities": 17418000000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 23.20349227669577
+      "fcf_margin_pct": 23.41579125720095
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 12.624788044360603
+      "eps_growth_cagr_3yr_pct": 10.064241629820891
     },
     "profitability": {
-      "roe_pct": 9.619798423311046,
-      "trend": "improving"
+      "roe_pct": null,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 28.502125967553347,
-      "graham_number": 53.81851384451667,
-      "graham_upside_pct": -13.807633176622877,
-      "ncav_margin_pct": -142.13837271779656,
-      "pb_ratio": 1.652429468330287,
-      "pe_ttm": 17.248618784530386
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Insurance - Brokers",
-  "last_updated": "2026-09-23T02:50:58Z",
+  "industry": "Insurance Agents, Brokers & Service",
+  "last_updated": "2026-09-23T13:27:42Z",
   "layered_analysis": {
     "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
-    "munger_quality_pass": true,
+    "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +107,22 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 20893070691,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 37.86186186186186,
-    "current_ratio": 1.1269285621677687,
-    "debt_to_ebitda": 3.83996120271581,
-    "debt_to_equity": 0.6363347373440356,
-    "eps_growth_cagr_3yr_pct": 12.624788044360603,
-    "fcf_margin_pct": 23.20349227669577,
-    "graham_criteria_evaluated": 6,
+    "current_ratio": 1.0385821075476247,
+    "eps_growth_cagr_3yr_pct": 10.064241629820891,
+    "fcf_margin_pct": 23.41579125720095,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 3,
-    "graham_multiple": 28.502125967553347,
-    "graham_upside_pct": -13.807633176622877,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -142.13837271779656,
-    "pb_ratio": 1.652429468330287,
-    "pe_ttm": 17.248618784530386,
-    "roe_pct": 9.619798423311046,
-    "shareholders_equity": 12547000000,
-    "total_assets": 29991000000,
-    "total_liabilities": 17418000000
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 0,
+    "total_assets": 29991000000
   },
   "name": "Brown & Brown",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 62.44
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -160,13 +151,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $20.9B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.13, debt $7.9B vs working capital $0.3B",
+          "detail": "Current ratio 1.04, debt $6.9B vs working capital $0.3B",
           "passed": false
         },
         {
@@ -175,27 +166,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 12.6%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 17.2",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 10.1%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 28.5",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 3,
       "total": 7
     },
@@ -203,13 +194,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 9.6%",
-          "passed": false
+          "detail": "ROE unavailable",
+          "passed": null
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.64",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -218,14 +209,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 1,
+      "passed": 0,
       "total": 4
     }
   },
-  "website": "http://www.bbrown.com"
+  "website": null
 }

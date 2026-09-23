@@ -1,0 +1,224 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for AEIS: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=aeis.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0e33710>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0000927003",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 544372000,
+        "debt": 392733000,
+        "earnings": 134736000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 458818000,
+        "debt": 373262000,
+        "earnings": 199660000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 1044556000,
+        "debt": 915679000,
+        "earnings": 128284000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 722100000,
+        "debt": 564700000,
+        "earnings": 54214000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 791200000,
+        "debt": 567500000,
+        "earnings": null,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.5878732849071833,
+      "debt_to_ebitda": 2.467391304347826,
+      "debt_to_equity": 0.4164220722042853
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 34.027090137981496,
+      "shareholders_equity": 1362800000,
+      "total_assets": 2545800000,
+      "total_liabilities": 1175200000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -10.127839089328294
+    },
+    "profitability": {
+      "roe_pct": null,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": 54.22121898225455,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Electronic Components, NEC",
+  "last_updated": "2026-09-23T17:17:45Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 34.027090137981496,
+    "current_ratio": 1.5878732849071833,
+    "debt_to_ebitda": 2.467391304347826,
+    "debt_to_equity": 0.4164220722042853,
+    "eps_growth_cagr_3yr_pct": -10.127839089328294,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "shareholders_equity": 1362800000,
+    "total_assets": 2545800000,
+    "total_liabilities": 1175200000
+  },
+  "name": "Advanced Energy",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Technology",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000927003.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-03",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/927003/000092700326000032/aeis-20260630x10q.htm"
+      },
+      {
+        "filed": "2026-08-03",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/927003/000092700326000030/aeis-20260803x8k.htm"
+      },
+      {
+        "filed": "2026-02-13",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/927003/000110465926014731/aeis-20251231x10k.htm"
+      }
+    ]
+  },
+  "ticker": "AEIS",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.59, debt $0.6B vs working capital $0.6B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/5 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -10.1%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 4,
+      "passed": 2,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.42",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "38,600,000 shares vs. 37,800,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": null
+}

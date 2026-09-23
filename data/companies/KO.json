@@ -5,99 +5,96 @@
     "years": [
       {
         "cash": 9684000000,
-        "debt": 44542000000,
+        "debt": 39454000000,
         "earnings": 9771000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 38655000000,
-        "spending": 28347000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 9519000000,
-        "debt": 40603000000,
+        "debt": 36776000000,
         "earnings": 9542000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 43004000000,
-        "spending": 32095000000,
-        "stock_return_pct": 7.431177166019251
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 9366000000,
-        "debt": 43426000000,
+        "debt": 37507000000,
         "earnings": 10714000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 45754000000,
-        "spending": 34443000000,
-        "stock_return_pct": -5.958182675679923
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 10828000000,
-        "debt": 45735000000,
+        "debt": null,
         "earnings": 10631000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 47061000000,
-        "spending": 37069000000,
-        "stock_return_pct": 4.078903376797054
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 10270000000,
-        "debt": 47214000000,
+        "debt": null,
         "earnings": 13107000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 47941000000,
-        "spending": 34179000000,
-        "stock_return_pct": 12.287182781882427
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.3046031746031745,
-      "debt_to_ebitda": 3.1875506346205777,
-      "debt_to_equity": 1.204508990318119
+      "current_ratio": 1.4587660354306657,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 8.906322640632265,
+      "book_value_per_share": 7.476846358608408,
       "shareholders_equity": 32169000000,
       "total_assets": 104816000000,
-      "total_liabilities": 70541000000
+      "total_liabilities": null
     },
     "cash_flow": {
       "fcf_margin_pct": 11.046911829123298
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 11.504497834166227
+      "eps_growth_cagr_3yr_pct": 11.551776147388226
     },
     "profitability": {
-      "roe_pct": 42.99131374860172,
+      "roe_pct": 40.74419472162641,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 280.59720711749094,
-      "graham_number": 24.722386438476953,
-      "graham_upside_pct": -72.09977831116471,
-      "ncav_margin_pct": -110.36005996509036,
-      "pb_ratio": 10.544957676348547,
-      "pe_ttm": 26.609609609609613
+      "graham_multiple": null,
+      "graham_number": 22.614515049605092,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Beverages - Non-Alcoholic",
-  "last_updated": "2026-09-23T03:38:59Z",
+  "industry": "Beverages",
+  "last_updated": "2026-09-23T12:26:52Z",
   "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,51 +103,27 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 381248861042,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 8.906322640632265,
-    "current_ratio": 1.3046031746031745,
-    "debt_to_ebitda": 3.1875506346205777,
-    "debt_to_equity": 1.204508990318119,
-    "eps_growth_cagr_3yr_pct": 11.504497834166227,
+    "book_value_per_share": 7.476846358608408,
+    "current_ratio": 1.4587660354306657,
+    "eps_growth_cagr_3yr_pct": 11.551776147388226,
     "fcf_margin_pct": 11.046911829123298,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 3,
-    "graham_multiple": 280.59720711749094,
-    "graham_upside_pct": -72.09977831116471,
     "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -110.36005996509036,
-    "pb_ratio": 10.544957676348547,
-    "pe_ttm": 26.609609609609613,
-    "roe_pct": 42.99131374860172,
+    "roe_pct": 40.74419472162641,
     "shareholders_equity": 32169000000,
-    "total_assets": 104816000000,
-    "total_liabilities": 70541000000
+    "total_assets": 104816000000
   },
   "name": "The Coca-Cola Company",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 88.61
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "The provided 10-K excerpts consist mainly of Risk Factors covering regulatory compliance, foreign currency and interest rate exposure, counterparty/financial institution risk, impairment risk, cybersecurity, and data privacy, plus a brief MD&A introduction. Critical accounting estimate disclosures describe a $960 million impairment charge recorded in Q4 2025 on the BodyArmor trademark (following a $760 million charge in 2024), leaving a remaining carrying value of $2,440 million, and note $28.8 billion of 2025 net operating revenues came from outside the United States. The excerpts also describe pension plan assumptions, with total net periodic pension cost of $121 million in 2025 and an expected $87 million in 2026.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q, covering the fiscal quarter ended July 3, 2026, consists almost entirely of XBRL data tags (e.g., relating to hedging instruments, debt notes, segment revenue by geography and product type, and fair value disclosures) rather than narrative text. As a result, this excerpt does not contain descriptive discussion of the quarter's business results or developments that can be summarized.",
-    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses under Item 2.02 (Results of Operations and Financial Condition) that Coca-Cola issued a press release, attached as Exhibit 99.1, reporting its second quarter 2026 financial results. The excerpt itself does not include the substantive financial figures from that press release, only the notice that the release was furnished.",
-    "moat_explanation": "The excerpts reference material indefinite-lived intangible assets and trademarks (e.g., the BodyArmor trademark with a remaining carrying value of $2,440 million) that the company tests annually for impairment, implying brand-based assets are a core part of the business. However, the provided excerpts are dominated by risk-factor and accounting-estimate language rather than an affirmative description of brand strength, distribution scale, or bottling-network advantages, so the support for a durable moat is limited to this intangible-asset framing.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Recorded a $960 million additional impairment charge on the BodyArmor trademark in Q4 2025 (following a $760 million impairment in 2024), with remaining carrying value of $2,440 million still at risk of further write-down",
-      "Significant reliance on and financial interdependence with third-party bottling partners, whose credit downgrades or financial distress could raise the company's own borrowing costs or reduce equity income",
-      "Extensive foreign currency exposure ($28.8 billion of 2025 net operating revenues from outside the U.S.) subject to exchange rate volatility, tariffs, and geopolitical/economic disruption",
-      "Acknowledged cybersecurity and data-privacy risks, including reliance on third-party bottlers/vendors with differing security controls",
-      "Exposure to evolving environmental regulation (plastics, water use, emissions) that could raise compliance and capital costs or restrict operations",
-      "Pension and other long-lived asset valuations depend on judgment-heavy assumptions (discount rates, growth rates) that could trigger material impairment charges in future periods"
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000021344.json",
@@ -177,14 +150,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $381.2B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.30, debt $47.2B vs working capital $9.8B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -192,27 +165,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 11.5%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 26.6",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 11.6%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 280.6",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 3,
       "passed": 3,
       "total": 7
     },
@@ -220,13 +193,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 43.0%",
+          "detail": "ROE 40.7%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.20",
-          "passed": false
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -239,10 +212,10 @@
           "passed": true
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.coca-colacompany.com"
+  "website": null
 }

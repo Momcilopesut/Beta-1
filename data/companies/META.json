@@ -1,103 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for META: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=meta.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2f61b50>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001326801",
   "five_year_history": {
     "years": [
       {
         "cash": 16601000000,
-        "debt": 13873000000,
+        "debt": 0,
         "earnings": 39370000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 117929000000,
-        "spending": 71176000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 14681000000,
-        "debt": 26591000000,
+        "debt": 9923000000,
         "earnings": 23200000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 116609000000,
-        "spending": 87665000000,
-        "stock_return_pct": -64.2217927753828
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 41862000000,
-        "debt": 37234000000,
+        "debt": 18385000000,
         "earnings": 39098000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 134902000000,
-        "spending": 88151000000,
-        "stock_return_pct": 187.75968090410504
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 43889000000,
-        "debt": 49060000000,
+        "debt": 28826000000,
         "earnings": 62360000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 164501000000,
-        "spending": 95121000000,
-        "stock_return_pct": 69.08082820757167
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 35873000000,
-        "debt": 83897000000,
+        "debt": 58744000000,
         "earnings": 60458000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 200966000000,
-        "spending": 117690000000,
-        "stock_return_pct": 12.73761336270944
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.225562709519502,
-      "debt_to_ebitda": 0.823391434067444,
-      "debt_to_equity": 0.42997308792172145
+      "current_ratio": 2.5987666124868536,
+      "debt_to_ebitda": 0.57653201428964,
+      "debt_to_equity": 0.27040687156778354
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 102.72158867479355,
+      "book_value_per_share": null,
       "shareholders_equity": 217243000000,
       "total_assets": 366021000000,
       "total_liabilities": 148778000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 22.943682015863377
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 40.58731209452298
+      "eps_growth_cagr_3yr_pct": 39.8395285030712
     },
     "profitability": {
-      "roe_pct": 29.73026955581193,
+      "roe_pct": 27.82966539773433,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 196.28273817088203,
-      "graham_number": 235.42181965460392,
-      "graham_upside_pct": -68.03939456223134,
-      "ncav_margin_pct": -102.13465113540174,
-      "pb_ratio": 7.170790575795974,
-      "pe_ttm": 27.372538089929396
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Internet Content & Information",
-  "last_updated": "2026-09-23T03:47:00Z",
+  "industry": "Services-Computer Programming, Data Processing, Etc.",
+  "last_updated": "2026-09-23T12:33:56Z",
   "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,51 +105,28 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 1876465870029,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 102.72158867479355,
-    "current_ratio": 2.225562709519502,
-    "debt_to_ebitda": 0.823391434067444,
-    "debt_to_equity": 0.42997308792172145,
-    "eps_growth_cagr_3yr_pct": 40.58731209452298,
-    "fcf_margin_pct": 22.943682015863377,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 196.28273817088203,
-    "graham_upside_pct": -68.03939456223134,
+    "current_ratio": 2.5987666124868536,
+    "debt_to_ebitda": 0.57653201428964,
+    "debt_to_equity": 0.27040687156778354,
+    "eps_growth_cagr_3yr_pct": 39.8395285030712,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 4,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -102.13465113540174,
-    "pb_ratio": 7.170790575795974,
-    "pe_ttm": 27.372538089929396,
-    "roe_pct": 29.73026955581193,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "roe_pct": 27.82966539773433,
     "shareholders_equity": 217243000000,
     "total_assets": 366021000000,
     "total_liabilities": 148778000000
   },
   "name": "Meta Platforms Inc.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 736.6
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Meta's FY2025 10-K reports total revenue of $200.97 billion (up 22% year-over-year), driven by advertising, with income from operations of $83.28 billion and net income of $60.46 billion. The Family of Apps segment was profitable ($102.47 billion operating income) while Reality Labs operated at a $19.19 billion loss, which management expects to continue at a similar level in 2026. The filing highlights continued heavy investment in AI infrastructure and wearables, alongside risk factors covering regulatory, competitive, and data-privacy pressures on the advertising business.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (quarter ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, so detailed financial results and MD&A commentary are not available in what was provided. The tagged data references items such as debt issuances (including a May 2026 debt instrument), a data center campus in Louisiana, a subsequent-event data center project in Texas, and various ongoing legal matters (including FTC, IRS, EU Commission, and youth-related litigation matters). The provided excerpts don't describe the quarter's revenue, profit, or other headline financial results in narrative form.",
-    "filing_summary_8k": "This 8-K, dated July 29, 2026, discloses under Item 2.02 that Meta issued a press release and held a conference call regarding financial results for the quarter ended June 30, 2026, with the press release furnished as Exhibit 99.1. The filing notes that non-GAAP financial measures were referenced in the release and call, with a GAAP-to-non-GAAP reconciliation included in the exhibit. The excerpt does not include the substantive financial results themselves, only the notice of their release.",
-    "moat_explanation": "The 10-K describes a 'Family' of interconnected products (Facebook, Instagram, Messenger, WhatsApp, Threads) with billions of daily active people (3.58 billion DAP), where the value to users, marketers, and developers grows with the size and engagement of the connected user base. The company's own risk factors acknowledge that if users leave for competing products, both engagement and ad revenue would suffer, which is consistent with a network-effects dynamic rather than cost, patent, or switching-cost advantages described in the excerpts.",
-    "moat_present": true,
-    "moat_type": "network_effects",
-    "red_flags": [
-      "Substantially all revenue depends on advertising on Facebook and Instagram, with no long-term commitments from marketers",
-      "Reality Labs segment reported a $19.19 billion operating loss in 2025 and management expects similar losses to continue in 2026",
-      "Extensive and evolving regulatory exposure cited (GDPR, DMA, DSA, UK OSA, EU AI Act, FTC consent order) with potential for revenue-based fines",
-      "Company states ad targeting/measurement effectiveness has already been reduced by regulatory changes (EU consent requirements) and platform changes (Apple iOS), and expects continued adverse impact on ad revenue",
-      "Acknowledges competitive pressure from products like TikTok reducing user engagement, particularly among younger users",
-      "Filing discloses ongoing litigation and investigations, including class actions and government inquiries, with inherently uncertain financial outcomes"
-    ]
-  },
+  "qualitative": null,
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001326801.json",
@@ -177,14 +153,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $1876.5B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.23, debt $83.9B vs working capital $66.9B",
-          "passed": false
+          "detail": "Current ratio 2.60, debt $58.7B vs working capital $66.9B",
+          "passed": true
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -192,40 +168,40 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 40.6%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 27.4",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 39.8%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 196.3",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 4,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 29.7%",
+          "detail": "ROE 27.8%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.43",
+          "detail": "Debt/equity 0.27",
           "passed": true
         },
         {
@@ -235,14 +211,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.meta.com"
+  "website": null
 }

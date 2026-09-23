@@ -1,47 +1,49 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for CHD: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=chd.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca31f1760>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000313927",
   "five_year_history": {
     "years": [
       {
         "cash": 240600000,
-        "debt": 2733900000,
+        "debt": 2901600000,
         "earnings": 827500000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 5190100000,
-        "spending": 4111000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 270300000,
-        "debt": 2847300000,
+        "debt": 2599500000,
         "earnings": 413900000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 5375600000,
-        "spending": 4777800000,
-        "stock_return_pct": -21.35609756097561
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 344500000,
-        "debt": 2605600000,
+        "debt": 2402100000,
         "earnings": 755600000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 5867900000,
-        "spending": 4810500000,
-        "stock_return_pct": 17.317950626473134
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 964100000,
-        "debt": 2405500000,
+        "debt": 2204600000,
         "earnings": 585300000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 6107100000,
-        "spending": 5300000000,
-        "stock_return_pct": 10.72221634767897
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 409000000,
@@ -50,19 +52,19 @@
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 6203200000,
-        "spending": 5125600000,
-        "stock_return_pct": -19.921688472925222
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.1465491259795058,
+      "current_ratio": 1.066301662549242,
       "debt_to_ebitda": 1.6642264150943396,
-      "debt_to_equity": 0.5585123510741065
+      "debt_to_equity": 0.5509719654190195
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 18.36839881706802,
+      "book_value_per_share": 16.872403370657803,
       "shareholders_equity": 4002200000,
       "total_assets": 8912400000,
       "total_liabilities": 4910200000
@@ -71,32 +73,30 @@
       "fcf_margin_pct": 17.61993809646634
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 21.37844072600441
+      "eps_growth_cagr_3yr_pct": 21.590381307279838
     },
     "profitability": {
-      "roe_pct": 17.776716987887106,
+      "roe_pct": 18.409874568987057,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 161.2471288330614,
-      "graham_number": 35.445711716474996,
-      "graham_upside_pct": -63.1273153890825,
-      "ncav_margin_pct": -114.53004208957918,
-      "pb_ratio": 5.233444730668383,
-      "pe_ttm": 30.81089743589743
+      "graham_multiple": null,
+      "graham_number": 33.85970775178365,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Household & Personal Products",
-  "last_updated": "2026-09-23T03:30:32Z",
+  "industry": "Soap, Detergents, Cleang Preparations, Perfumes, Cosmetics",
+  "last_updated": "2026-09-23T13:10:44Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,28 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 22777426720,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 18.36839881706802,
-    "current_ratio": 1.1465491259795058,
+    "book_value_per_share": 16.872403370657803,
+    "current_ratio": 1.066301662549242,
     "debt_to_ebitda": 1.6642264150943396,
-    "debt_to_equity": 0.5585123510741065,
-    "eps_growth_cagr_3yr_pct": 21.37844072600441,
+    "debt_to_equity": 0.5509719654190195,
+    "eps_growth_cagr_3yr_pct": 21.590381307279838,
     "fcf_margin_pct": 17.61993809646634,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 3,
-    "graham_multiple": 161.2471288330614,
-    "graham_upside_pct": -63.1273153890825,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -114.53004208957918,
-    "pb_ratio": 5.233444730668383,
-    "pe_ttm": 30.81089743589743,
-    "roe_pct": 17.776716987887106,
+    "roe_pct": 18.409874568987057,
     "shareholders_equity": 4002200000,
     "total_assets": 8912400000,
     "total_liabilities": 4910200000
   },
   "name": "Church & Dwight",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 96.13
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Consumer Defensive",
@@ -160,13 +155,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $22.8B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.15, debt $2.2B vs working capital $0.1B",
+          "detail": "Current ratio 1.07, debt $2.2B vs working capital $0.1B",
           "passed": false
         },
         {
@@ -175,27 +170,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 21.4%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 30.8",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 21.6%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 161.2",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 3,
       "total": 7
     },
@@ -203,12 +198,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 17.8%",
+          "detail": "ROE 18.4%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.56",
+          "detail": "Debt/equity 0.55",
           "passed": true
         },
         {
@@ -227,5 +222,5 @@
       "total": 4
     }
   },
-  "website": "https://www.churchdwight.com"
+  "website": null
 }

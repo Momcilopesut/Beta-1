@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for FLEX: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=flex.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca38ea1b0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000866374",
   "five_year_history": {
     "years": [
       {
         "cash": 2964000000,
-        "debt": 4748000000,
-        "earnings": 936000000,
-        "fiscal_year": "2022-03-31",
-        "market_return_pct": null,
-        "revenue": 24633000000,
-        "spending": 23743000000,
+        "debt": 3248000000,
+        "earnings": 139000000,
+        "fiscal_year": "2024-06-28",
+        "market_return_pct": 4.224758694652992,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 3164000000,
-        "debt": 4198000000,
-        "earnings": 793000000,
-        "fiscal_year": "2023-03-31",
-        "market_return_pct": -9.354795855105836,
-        "revenue": 28502000000,
-        "spending": 27485000000,
-        "stock_return_pct": 24.043126684636125
+        "debt": 3544000000,
+        "earnings": 214000000,
+        "fiscal_year": "2024-09-27",
+        "market_return_pct": 5.007166219543566,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2474000000,
-        "debt": 3887000000,
-        "earnings": 1006000000,
-        "fiscal_year": "2024-03-31",
-        "market_return_pct": 27.545860915019905,
-        "revenue": 26415000000,
-        "spending": 25562000000,
-        "stock_return_pct": 23.59843546284224
+        "debt": 3261000000,
+        "earnings": 263000000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 2.556564649062945,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2289000000,
-        "debt": 4148000000,
+        "debt": 2483000000,
         "earnings": 838000000,
         "fiscal_year": "2025-03-31",
-        "market_return_pct": 7.1299984679025625,
-        "revenue": 25813000000,
-        "spending": 24644000000,
-        "stock_return_pct": 16.31504922644162
+        "market_return_pct": -4.553985803985813,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2389000000,
-        "debt": 4316000000,
+        "debt": 3751000000,
         "earnings": 880000000,
         "fiscal_year": "2026-03-31",
         "market_return_pct": 16.258781887413086,
-        "revenue": 27914000000,
-        "spending": 26408000000,
-        "stock_return_pct": 97.88391777509068
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.379500756429652,
-      "debt_to_ebitda": 2.198675496688742,
-      "debt_to_equity": 1.0781818181818181
+      "current_ratio": 1.3591877496671105,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.729199066874028
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 14.705882352941176,
+      "book_value_per_share": 13.92517198385986,
       "shareholders_equity": 5144000000,
       "total_assets": 22060000000,
       "total_liabilities": 16916000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 3.768718205918177
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 10.011805108482985
+      "eps_growth_cagr_3yr_pct": 62.799869991248556
     },
     "profitability": {
-      "roe_pct": 18.711538461538463,
-      "trend": "improving"
+      "roe_pct": 17.107309486780714,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 343.9067837837838,
-      "graham_number": 27.76609231334041,
-      "graham_upside_pct": -75.73954363185635,
-      "ncav_margin_pct": -101.38132749952511,
-      "pb_ratio": 7.7826,
-      "pe_ttm": 44.189189189189186
+      "graham_multiple": null,
+      "graham_number": 27.019014438980804,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Hardware, Equipment & Parts",
-  "last_updated": "2026-09-23T03:00:03Z",
+  "industry": "Printed Circuit Boards",
+  "last_updated": "2026-09-23T14:48:57Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,26 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 42278170832,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 14.705882352941176,
-    "current_ratio": 1.379500756429652,
-    "debt_to_ebitda": 2.198675496688742,
-    "debt_to_equity": 1.0781818181818181,
-    "eps_growth_cagr_3yr_pct": 10.011805108482985,
-    "fcf_margin_pct": 3.768718205918177,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 343.9067837837838,
-    "graham_upside_pct": -75.73954363185635,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
+    "book_value_per_share": 13.92517198385986,
+    "current_ratio": 1.3591877496671105,
+    "debt_to_equity": 0.729199066874028,
+    "eps_growth_cagr_3yr_pct": 62.799869991248556,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -101.38132749952511,
-    "pb_ratio": 7.7826,
-    "pe_ttm": 44.189189189189186,
-    "roe_pct": 18.711538461538463,
+    "roe_pct": 17.107309486780714,
     "shareholders_equity": 5144000000,
     "total_assets": 22060000000,
     "total_liabilities": 16916000000
   },
   "name": "Flex Ltd.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 114.45
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Technology",
@@ -160,13 +153,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $42.3B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.38, debt $4.3B vs working capital $4.3B",
+          "detail": "Current ratio 1.36, debt $3.8B vs working capital $4.3B",
           "passed": false
         },
         {
@@ -181,51 +174,51 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 10.0%/yr",
+          "detail": "EPS 3yr CAGR 62.8%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 44.2",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 343.9",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 18.7%",
+          "detail": "ROE 17.1%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.08",
-          "passed": false
+          "detail": "Debt/equity 0.73",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "374,000,000 shares vs. 398,000,000 a year earlier",
+          "detail": "378,000,000 shares vs. 398,000,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.flex.com"
+  "website": null
 }

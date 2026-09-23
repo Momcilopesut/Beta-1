@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for SNA: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=sna.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1ef9610>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000091440",
   "five_year_history": {
     "years": [
       {
         "cash": 780000000,
-        "debt": 1254100000,
+        "debt": 1200300000,
         "earnings": 820500000,
         "fiscal_year": "2022-01-01",
         "market_return_pct": null,
         "revenue": 4601700000,
-        "spending": 3478200000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 757200000,
-        "debt": 1265100000,
+        "debt": 1183800000,
         "earnings": 911700000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 4842500000,
-        "spending": 3635300000,
-        "stock_return_pct": 6.086916148203183
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1001500000,
-        "debt": 1278600000,
+        "debt": 1184600000,
         "earnings": 1011100000,
         "fiscal_year": "2023-12-30",
         "market_return_pct": 24.286797583871554,
         "revenue": 5108300000,
-        "spending": 3797900000,
-        "stock_return_pct": 26.412534465403283
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1360500000,
-        "debt": 1292800000,
+        "debt": 1185500000,
         "earnings": 1043900000,
         "fiscal_year": "2024-12-28",
         "market_return_pct": 25.18356441059519,
         "revenue": 5108400000,
-        "spending": 3762700000,
-        "stock_return_pct": 18.941282370862776
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1624500000,
-        "debt": 1326200000,
+        "debt": 1186400000,
         "earnings": 1016900000,
         "fiscal_year": "2026-01-03",
         "market_return_pct": 14.816557704912517,
         "revenue": 5156100000,
-        "spending": 3828400000,
-        "stock_return_pct": 2.1539804977441355
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 3.432506259959026,
-      "debt_to_ebitda": 0.9298836067872669,
-      "debt_to_equity": 0.21175905848079055
+      "current_ratio": 4.793467610234077,
+      "debt_to_ebitda": 0.831860889075866,
+      "debt_to_equity": 0.20000674331568832
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 117.11003861003861,
+      "book_value_per_share": 114.67484641133345,
       "shareholders_equity": 5931800000,
-      "total_assets": 8412299999,
+      "total_assets": 8412300000,
       "total_liabilities": 2455500000
     },
     "cash_flow": {
-      "fcf_margin_pct": 19.505052268187196
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 4.429451893802927
+      "eps_growth_cagr_3yr_pct": 4.491988613427633
     },
     "profitability": {
-      "roe_pct": 17.409537587051897,
+      "roe_pct": 17.14319430864156,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 59.501620538732155,
-      "graham_number": 226.79225947445596,
-      "graham_upside_pct": -39.00154398212589,
-      "ncav_margin_pct": -89.87476420310007,
-      "pb_ratio": 3.187929750219324,
-      "pe_ttm": 18.66465863453815
+      "graham_multiple": null,
+      "graham_number": 222.516812419317,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Manufacturing - Tools & Accessories",
-  "last_updated": "2026-09-23T02:57:41Z",
+  "industry": "Cutlery, Handtools & General Hardware",
+  "last_updated": "2026-09-23T14:28:17Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,27 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 19232144703,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 117.11003861003861,
-    "current_ratio": 3.432506259959026,
-    "debt_to_ebitda": 0.9298836067872669,
-    "debt_to_equity": 0.21175905848079055,
-    "eps_growth_cagr_3yr_pct": 4.429451893802927,
-    "fcf_margin_pct": 19.505052268187196,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 114.67484641133345,
+    "current_ratio": 4.793467610234077,
+    "debt_to_ebitda": 0.831860889075866,
+    "debt_to_equity": 0.20000674331568832,
+    "eps_growth_cagr_3yr_pct": 4.491988613427633,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 4,
-    "graham_multiple": 59.501620538732155,
-    "graham_upside_pct": -39.00154398212589,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -89.87476420310007,
-    "pb_ratio": 3.187929750219324,
-    "pe_ttm": 18.66465863453815,
-    "roe_pct": 17.409537587051897,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "roe_pct": 17.14319430864156,
     "shareholders_equity": 5931800000,
-    "total_assets": 8412299999,
+    "total_assets": 8412300000,
     "total_liabilities": 2455500000
   },
   "name": "Snap-on",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 371.8
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -160,13 +154,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $19.2B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 3.43, debt $1.3B vs working capital $3.5B",
+          "detail": "Current ratio 4.79, debt $1.2B vs working capital $3.5B",
           "passed": true
         },
         {
@@ -175,27 +169,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 4.4%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 18.7",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 4.5%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 59.5",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 4,
       "total": 7
     },
@@ -203,12 +197,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 17.4%",
+          "detail": "ROE 17.1%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.21",
+          "detail": "Debt/equity 0.20",
           "passed": true
         },
         {
@@ -218,14 +212,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.snapon.com"
+  "website": null
 }

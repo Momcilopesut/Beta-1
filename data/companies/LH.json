@@ -1,68 +1,70 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for LH: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=lh.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca35b9af0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000920148",
   "five_year_history": {
     "years": [
       {
         "cash": 1472700000,
-        "debt": 6342600000,
+        "debt": 5418000000,
         "earnings": 2377300000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 13136100000,
-        "spending": 10087500000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 320600000,
-        "debt": 6246400000,
+        "debt": 5340100000,
         "earnings": 1279100000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 11863900000,
-        "spending": 10427400000,
-        "stock_return_pct": -25.058348460712043
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 536800000,
-        "debt": 5954200000,
+        "debt": 5054500000,
         "earnings": 418000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 12161600000,
-        "spending": 11436000000,
-        "stock_return_pct": 14.96366602402492
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1518700000,
-        "debt": 7272800000,
+        "debt": 6331500000,
         "earnings": 746000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 13008900000,
-        "spending": 11922200000,
-        "stock_return_pct": -1.393188854489168
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 532299999,
-        "debt": 7204000000,
+        "cash": 532300000,
+        "debt": 5084600000,
         "earnings": 876500000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 13951700000,
-        "spending": 12435500000,
-        "stock_return_pct": 9.401709401709404
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.7955850513037748,
-      "debt_to_ebitda": 3.2785691530514725,
-      "debt_to_equity": 0.7861342194543849
+      "current_ratio": 1.4239419160616256,
+      "debt_to_ebitda": 2.461322490076484,
+      "debt_to_equity": 0.5898744750458247
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 105.54712362301102,
+      "book_value_per_share": 106.28606658446363,
       "shareholders_equity": 8619800000,
       "total_assets": 18392700000,
       "total_liabilities": 9756000000
@@ -71,32 +73,30 @@
       "fcf_margin_pct": 8.644107886494119
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -9.11521844835933
+      "eps_growth_cagr_3yr_pct": -9.194582513342853
     },
     "profitability": {
-      "roe_pct": 11.569861566831447,
+      "roe_pct": 10.168449383976427,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 75.70375093260039,
-      "graham_number": 158.2103042383683,
-      "graham_upside_pct": -49.21669633486284,
-      "ncav_margin_pct": -122.70056226785404,
-      "pb_ratio": 2.9572916763489334,
-      "pe_ttm": 25.599013968775676
+      "graham_multiple": null,
+      "graham_number": 158.15949472179506,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Medical - Diagnostics & Research",
-  "last_updated": "2026-09-23T02:54:22Z",
+  "industry": "Services-Medical Laboratories",
+  "last_updated": "2026-09-23T13:58:37Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,28 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 25546280000,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 105.54712362301102,
-    "current_ratio": 1.7955850513037748,
-    "debt_to_ebitda": 3.2785691530514725,
-    "debt_to_equity": 0.7861342194543849,
-    "eps_growth_cagr_3yr_pct": -9.11521844835933,
+    "book_value_per_share": 106.28606658446363,
+    "current_ratio": 1.4239419160616256,
+    "debt_to_ebitda": 2.461322490076484,
+    "debt_to_equity": 0.5898744750458247,
+    "eps_growth_cagr_3yr_pct": -9.194582513342853,
     "fcf_margin_pct": 8.644107886494119,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 2,
-    "graham_multiple": 75.70375093260039,
-    "graham_upside_pct": -49.21669633486284,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -122.70056226785404,
-    "pb_ratio": 2.9572916763489334,
-    "pe_ttm": 25.599013968775676,
-    "roe_pct": 11.569861566831447,
+    "roe_pct": 10.168449383976427,
     "shareholders_equity": 8619800000,
     "total_assets": 18392700000,
     "total_liabilities": 9756000000
   },
   "name": "Labcorp",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 311.54
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -160,13 +155,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $25.5B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.80, debt $7.2B vs working capital $1.2B",
+          "detail": "Current ratio 1.42, debt $5.1B vs working capital $1.2B",
           "passed": false
         },
         {
@@ -175,27 +170,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -9.1%/yr",
+          "detail": "EPS 3yr CAGR -9.2%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 25.6",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 75.7",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 2,
       "total": 7
     },
@@ -203,12 +198,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 11.6%",
+          "detail": "ROE 10.2%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.79",
+          "detail": "Debt/equity 0.59",
           "passed": true
         },
         {
@@ -227,5 +222,5 @@
       "total": 4
     }
   },
-  "website": "https://www.labcorp.com"
+  "website": null
 }

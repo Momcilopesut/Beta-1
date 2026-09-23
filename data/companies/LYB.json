@@ -1,71 +1,73 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for LYB: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=lyb.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9f75ce60>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001489393",
   "five_year_history": {
     "years": [
       {
         "cash": 1472000000,
-        "debt": 13599000000,
-        "earnings": 5610000000,
+        "debt": null,
+        "earnings": null,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 46173000000,
-        "spending": 39400000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 2151000000,
-        "debt": 13175000000,
-        "earnings": 3882000000,
+        "debt": null,
+        "earnings": null,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 50451000000,
-        "spending": 45350000000,
-        "stock_return_pct": -9.975062344139655
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 3390000000,
-        "debt": 13001000000,
-        "earnings": 2114000000,
+        "debt": null,
+        "earnings": null,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 41107000000,
-        "spending": 38054000000,
-        "stock_return_pct": 16.319402625557025
+        "revenue": 33336000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 3375000000,
-        "debt": 12923000000,
-        "earnings": 1360000000,
+        "debt": null,
+        "earnings": null,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 40302000000,
-        "spending": 38485000000,
-        "stock_return_pct": -23.100020708221166
+        "revenue": 33394000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 3449000000,
-        "debt": 15962000000,
-        "earnings": -743000000,
+        "cash": 3443000000,
+        "debt": null,
+        "earnings": null,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 30153000000,
-        "spending": 30480000000,
-        "stock_return_pct": -41.69920560118487
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.641339524412551,
-      "debt_to_ebitda": 15.01599247412982,
-      "debt_to_equity": 1.3325836378971043
+      "current_ratio": 1.7732093326806984,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 33.06501547987616,
+      "book_value_per_share": 31.20995516960187,
       "shareholders_equity": 10082000000,
       "total_assets": 34003000000,
-      "total_liabilities": 23796000000
+      "total_liabilities": null
     },
     "cash_flow": {
       "fcf_margin_pct": 1.2735051238682717
@@ -74,25 +76,23 @@
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": -3.3629686896018556,
-      "trend": "declining"
+      "roe_pct": null,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -94.84391648928339,
+      "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -167.55581618182168,
-      "pb_ratio": 1.7931327898041423,
-      "pe_ttm": -52.892857142857146
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-23T02:46:21Z",
+  "industry": "Industrial Organic Chemicals",
+  "last_updated": "2026-09-23T12:45:28Z",
   "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
+    "flags": [],
+    "munger_quality_pass": null,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
@@ -105,31 +105,23 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 19121783400,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 33.06501547987616,
-    "current_ratio": 1.641339524412551,
-    "debt_to_ebitda": 15.01599247412982,
-    "debt_to_equity": 1.3325836378971043,
+    "book_value_per_share": 31.20995516960187,
+    "current_ratio": 1.7732093326806984,
     "fcf_margin_pct": 1.2735051238682717,
-    "graham_criteria_evaluated": 5,
-    "graham_criteria_passed": 2,
-    "graham_multiple": -94.84391648928339,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 1,
-    "ncav_margin_pct": -167.55581618182168,
-    "pb_ratio": 1.7931327898041423,
-    "pe_ttm": -52.892857142857146,
-    "roe_pct": -3.3629686896018556,
+    "graham_criteria_evaluated": 1,
+    "graham_criteria_passed": 1,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 0,
+    "munger_quality_passed": 0,
     "shareholders_equity": 10082000000,
-    "total_assets": 34003000000,
-    "total_liabilities": 23796000000
+    "total_assets": 34003000000
   },
   "name": "LyondellBasell",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 59.24
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -158,24 +150,24 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $19.1B",
-          "passed": true
-        },
-        {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.64, debt $16.0B vs working capital $4.7B",
-          "passed": false
-        },
-        {
-          "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/6 available years",
-          "passed": false
-        },
-        {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
           "passed": null
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability",
+          "detail": "No annual net income data available",
+          "passed": null
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth",
@@ -183,47 +175,47 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E -52.9",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -94.8",
-          "passed": true
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 5,
-      "passed": 2,
+      "evaluated": 1,
+      "passed": 1,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -3.4%",
-          "passed": false
+          "detail": "ROE unavailable",
+          "passed": null
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.33",
-          "passed": false
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "322,000,000 shares vs. 326,000,000 a year earlier",
-          "passed": true
+          "detail": "Share count unavailable",
+          "passed": null
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 1,
+      "evaluated": 0,
+      "passed": 0,
       "total": 4
     }
   },
-  "website": "https://www.lyondellbasell.com"
+  "website": null
 }

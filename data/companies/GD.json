@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for GD: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=gd.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9fe32d50>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000040533",
   "five_year_history": {
     "years": [
       {
         "cash": 1603000000,
-        "debt": 13175000000,
+        "debt": 11495000000,
         "earnings": 3257000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 38469000000,
-        "spending": 34306000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 1242000000,
-        "debt": 12114000000,
+        "debt": 10496000000,
         "earnings": 3390000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 39407000000,
-        "spending": 35196000000,
-        "stock_return_pct": 19.01472633952128
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1913000000,
-        "debt": 11083000000,
+        "debt": 9261000000,
         "earnings": 3315000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 42272000000,
-        "spending": 38027000000,
-        "stock_return_pct": 4.227963403329172
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1697000000,
-        "debt": 10676000000,
+        "debt": 8762000000,
         "earnings": 3782000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 47716000000,
-        "spending": 42920000000,
-        "stock_return_pct": 1.8909512761020826
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2333000000,
-        "debt": 9789000000,
+        "debt": 8013000000,
         "earnings": 4210000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 52550000000,
-        "spending": 47194000000,
-        "stock_return_pct": 27.769554821814875
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.4408739674926725,
-      "debt_to_ebitda": 1.5587579617834395,
-      "debt_to_equity": 0.3533512264221278
+      "current_ratio": 1.4436770659680875,
+      "debt_to_ebitda": 1.275955414012739,
+      "debt_to_equity": 0.3127390523768636
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 99.2820133234641,
+      "book_value_per_share": 94.74533994978897,
       "shareholders_equity": 25622000000,
       "total_assets": 57249000000,
-      "total_liabilities": 31627000000
+      "total_liabilities": null
     },
     "cash_flow": {
       "fcf_margin_pct": 7.533777354900096
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 8.307757838043916
+      "eps_growth_cagr_3yr_pct": 8.220181851997577
     },
     "profitability": {
-      "roe_pct": 17.431843125066774,
+      "roe_pct": 16.431191944422764,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 71.4187858455679,
-      "graham_number": 186.91532973121016,
-      "graham_upside_pct": -45.567625809950734,
-      "ncav_margin_pct": -107.94611229304945,
-      "pb_ratio": 3.458733243867889,
-      "pe_ttm": 20.64882742032471
+      "graham_multiple": null,
+      "graham_number": 181.4823649836132,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-23T02:56:17Z",
+  "industry": "Ship & Boat Building & Repairing",
+  "last_updated": "2026-09-23T14:16:20Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,27 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 92906568230,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 99.2820133234641,
-    "current_ratio": 1.4408739674926725,
-    "debt_to_ebitda": 1.5587579617834395,
-    "debt_to_equity": 0.3533512264221278,
-    "eps_growth_cagr_3yr_pct": 8.307757838043916,
+    "book_value_per_share": 94.74533994978897,
+    "current_ratio": 1.4436770659680875,
+    "debt_to_ebitda": 1.275955414012739,
+    "debt_to_equity": 0.3127390523768636,
+    "eps_growth_cagr_3yr_pct": 8.220181851997577,
     "fcf_margin_pct": 7.533777354900096,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 3,
-    "graham_multiple": 71.4187858455679,
-    "graham_upside_pct": -45.567625809950734,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -107.94611229304945,
-    "pb_ratio": 3.458733243867889,
-    "pe_ttm": 20.64882742032471,
-    "roe_pct": 17.431843125066774,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "roe_pct": 16.431191944422764,
     "shareholders_equity": 25622000000,
-    "total_assets": 57249000000,
-    "total_liabilities": 31627000000
+    "total_assets": 57249000000
   },
   "name": "General Dynamics",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 343.39
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -160,13 +154,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $92.9B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.44, debt $9.8B vs working capital $7.5B",
+          "detail": "Current ratio 1.44, debt $8.0B vs working capital $7.5B",
           "passed": false
         },
         {
@@ -175,27 +169,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 8.3%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.6",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 8.2%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 71.4",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 3,
       "total": 7
     },
@@ -203,29 +197,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 17.4%",
+          "detail": "ROE 16.4%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.35",
+          "detail": "Debt/equity 0.31",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "273,900,000 shares vs. 277,485,000 a year earlier",
+          "detail": "272,425,000 shares vs. 277,485,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.gd.com"
+  "website": null
 }

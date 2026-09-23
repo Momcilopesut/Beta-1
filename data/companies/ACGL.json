@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for ACGL: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=acgl.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0a60320>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000947484",
   "five_year_history": {
     "years": [
       {
-        "cash": 858668000,
-        "debt": 2724394000,
+        "cash": 859000000,
+        "debt": null,
         "earnings": 2157000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 8924000000,
-        "spending": 7187000000,
+        "revenue": 9248000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 855000000,
-        "debt": 2725000000,
+        "debt": null,
         "earnings": 1476000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 9657000000,
-        "spending": 8285000000,
-        "stock_return_pct": 41.23734533183352
+        "revenue": 9613000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 917000000,
-        "debt": 2726000000,
+        "debt": null,
         "earnings": 4443000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 13294000000,
-        "spending": 10187000000,
-        "stock_return_pct": 20.340872889455234
+        "revenue": 13634000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 979000000,
-        "debt": 2728000000,
+        "debt": null,
         "earnings": 4312000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 17440000000,
-        "spending": 12966000000,
-        "stock_return_pct": 22.236929185969554
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 993000000,
-        "debt": 2729000000,
+        "debt": null,
         "earnings": 4399000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 19929000000,
-        "spending": 14950000000,
-        "stock_return_pct": 3.8657282079047186
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.6737412508466922,
-      "debt_to_ebitda": 0.5276488785769529,
-      "debt_to_equity": 0.17836038285476488
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 70.01748251748252,
+      "book_value_per_share": 70.93767253619494,
       "shareholders_equity": 24206000000,
-      "total_assets": 67056000000,
-      "total_liabilities": 42850000000
+      "total_assets": 79241000000,
+      "total_liabilities": 55035000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 30.749159516282802
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 44.79793393254603
+      "eps_growth_cagr_3yr_pct": 45.06349306453876
     },
     "profitability": {
-      "roe_pct": 19.520921959997086,
-      "trend": "improving"
+      "roe_pct": 18.17318020325539,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 9.93524188514357,
-      "graham_number": 136.57473171365683,
-      "graham_upside_pct": 43.83858000385132,
-      "ncav_margin_pct": -204.51946850467772,
-      "pb_ratio": 1.3560898876404495,
-      "pe_ttm": 7.326388888888888
+      "graham_multiple": null,
+      "graham_number": 136.06885217398903,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Insurance - Diversified",
-  "last_updated": "2026-09-23T03:54:59Z",
+  "industry": "Fire, Marine & Casualty Insurance",
+  "last_updated": "2026-09-23T13:23:01Z",
   "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
-    "overall": "All three checks align: a moat was identified, the quality bar is met, and a margin of safety exists.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,51 +105,26 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 33174580500,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 70.01748251748252,
-    "current_ratio": 0.6737412508466922,
-    "debt_to_ebitda": 0.5276488785769529,
-    "debt_to_equity": 0.17836038285476488,
-    "eps_growth_cagr_3yr_pct": 44.79793393254603,
-    "fcf_margin_pct": 30.749159516282802,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 5,
-    "graham_multiple": 9.93524188514357,
-    "graham_upside_pct": 43.83858000385132,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -204.51946850467772,
-    "pb_ratio": 1.3560898876404495,
-    "pe_ttm": 7.326388888888888,
-    "roe_pct": 19.520921959997086,
+    "book_value_per_share": 70.93767253619494,
+    "eps_growth_cagr_3yr_pct": 45.06349306453876,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 2,
+    "roe_pct": 18.17318020325539,
     "shareholders_equity": 24206000000,
-    "total_assets": 67056000000,
-    "total_liabilities": 42850000000
+    "total_assets": 79241000000,
+    "total_liabilities": 55035000000
   },
   "name": "Arch Capital Group",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 94.95
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Arch Capital's 2025 Form 10-K reports approximately $26.9 billion in capital, $16.5 billion of net premiums written, and net income available to common shareholders of $4.4 billion, with book value per share rising 22.6% to $65.11. The insurance, reinsurance, and mortgage segments each contributed underwriting income ($375 million, $1.6 billion, and $1.0 billion respectively), with insurance segment growth driven largely by the August 2024 MCE acquisition from Allianz. The filing notes increased competition and softening reinsurance pricing heading into 2026, alongside $1.9 billion of share repurchases during 2025.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, so it does not include a discussion of quarterly results. It indicates the filing covers Arch's insurance, reinsurance, and mortgage segments, investment portfolio categories (fixed maturities, short-term investments, equities, and other investments), and an updated share repurchase authorization referenced as of April 19, 2026. No further descriptive detail on the quarter's financial performance is available in the excerpt given.",
-    "filing_summary_8k": "This Form 8-K, dated July 28, 2026, discloses under Item 2.02 that Arch Capital issued a press release reporting earnings and made available a financial supplement for the quarter ended June 30, 2026, attached as exhibits. The filing does not include the actual financial results in its body, only the announcement of their release.",
-    "moat_explanation": "The 10-K describes Arch's insurance/reinsurance subsidiaries as licensed or admitted across numerous U.S. states and international jurisdictions, its mortgage units as GSE-eligible insurers approved by Fannie Mae and Freddie Mac and APRA-authorized in Australia, and its Lloyd's syndicate access via a managing agency \\u2014 regulatory licenses and approvals that are not trivial for new entrants to replicate. However, the Risk Factors section explicitly states the industry is highly competitive with many rivals having greater financial resources, and highly cyclical with periods of excess capacity and falling rates (e.g., Jan 2026 property-cat renewal rates down 10-20%), which tempers the durability of any pricing-power advantage.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Company states it operates in a highly competitive industry against firms with greater financial, marketing and management resources",
-      "Highly cyclical market described, with January 2026 reinsurance renewals seeing rates down 10-20% in property catastrophe/short-tail lines",
-      "Reliance on natural catastrophe and climate-related loss exposure that could cause large losses and volatility",
-      "Loss reserving and underwriting results depend on probabilistic modeling subject to inherent uncertainty",
-      "Exposure to reinsurance counterparty credit risk and potential unavailability of reinsurance/retrocessional coverage",
-      "New Bermuda corporate income tax (CIT Act effective 2025) and potential further international tax changes could increase taxation"
-    ]
-  },
+  "qualitative": null,
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000947484.json",
@@ -176,14 +151,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $33.2B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.67, debt $2.7B vs working capital $1.5B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -197,51 +172,51 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 44.8%/yr",
+          "detail": "EPS 3yr CAGR 45.1%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 7.3",
-          "passed": true
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 9.9",
-          "passed": true
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 5,
+      "evaluated": 2,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 19.5%",
+          "detail": "ROE 18.2%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.18",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "376,100,000 shares vs. 381,800,000 a year earlier",
+          "detail": "375,900,000 shares vs. 381,800,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 2,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.archgroup.com"
+  "website": null
 }

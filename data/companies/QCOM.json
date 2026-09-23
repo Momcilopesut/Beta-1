@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for QCOM: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=qcom.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2899b50>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000804328",
   "five_year_history": {
     "years": [
       {
         "cash": 7116000000,
-        "debt": 16299000000,
+        "debt": 15745000000,
         "earnings": 9043000000,
-        "fiscal_year": "2021-09-30",
+        "fiscal_year": "2021-09-26",
         "market_return_pct": null,
         "revenue": 33566000000,
-        "spending": 23777000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 2773000000,
-        "debt": 16159000000,
+        "debt": 15482000000,
         "earnings": 12936000000,
-        "fiscal_year": "2022-09-30",
-        "market_return_pct": -16.768420562054338,
+        "fiscal_year": "2022-09-25",
+        "market_return_pct": -17.6960961503705,
         "revenue": 44200000000,
-        "spending": 28340000000,
-        "stock_return_pct": -12.405024034734058
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 8450000000,
-        "debt": 16067000000,
+        "debt": 15398000000,
         "earnings": 7232000000,
-        "fiscal_year": "2023-09-30",
-        "market_return_pct": 19.681953076880006,
+        "fiscal_year": "2023-09-24",
+        "market_return_pct": 18.643462984820623,
         "revenue": 35820000000,
-        "spending": 28032000000,
-        "stock_return_pct": -1.6994158258098795
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 7849000000,
-        "debt": 15440000000,
+        "debt": 14634000000,
         "earnings": 10142000000,
-        "fiscal_year": "2024-09-30",
-        "market_return_pct": 34.21914475531018,
+        "fiscal_year": "2024-09-29",
+        "market_return_pct": 32.744140850935835,
         "revenue": 38962000000,
-        "spending": 28891000000,
-        "stock_return_pct": 53.11543309922565
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 7843000000,
-        "debt": 16373000000,
+        "cash": 5520000000,
+        "debt": 14811000000,
         "earnings": 5541000000,
         "fiscal_year": "2025-09-28",
         "market_return_pct": 15.67205800334634,
         "revenue": 44284000000,
-        "spending": 31929000000,
-        "stock_return_pct": -2.793296089385475
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.015596249890476,
-      "debt_to_ebitda": 1.1731031023858995,
-      "debt_to_equity": 0.5521006580374576
+      "current_ratio": 2.8164916885389326,
+      "debt_to_ebitda": 1.0611879343698503,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 26.16650898770104,
-      "shareholders_equity": 21206000000,
+      "book_value_per_share": null,
+      "shareholders_equity": null,
       "total_assets": 50143000000,
       "total_liabilities": 28937000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 28.9495077228796
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -23.98499193487128
+      "eps_growth_cagr_3yr_pct": -23.904480364790935
     },
     "profitability": {
-      "roe_pct": 37.3290329083304,
+      "roe_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 171.10933848243377,
-      "graham_number": 54.58073880271101,
-      "graham_upside_pct": -72.47150915281637,
-      "ncav_margin_pct": -101.52893961336993,
-      "pb_ratio": 7.5772431123002395,
-      "pe_ttm": 22.582004555808656
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Semiconductors",
-  "last_updated": "2026-09-23T03:01:32Z",
+  "industry": "Radio & Tv Broadcasting & Communications Equipment",
+  "last_updated": "2026-09-23T15:00:11Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,23 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 208183500000,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 26.16650898770104,
-    "current_ratio": 2.015596249890476,
-    "debt_to_ebitda": 1.1731031023858995,
-    "debt_to_equity": 0.5521006580374576,
-    "eps_growth_cagr_3yr_pct": -23.98499193487128,
-    "fcf_margin_pct": 28.9495077228796,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 171.10933848243377,
-    "graham_upside_pct": -72.47150915281637,
+    "current_ratio": 2.8164916885389326,
+    "debt_to_ebitda": 1.0611879343698503,
+    "eps_growth_cagr_3yr_pct": -23.904480364790935,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 2,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -101.52893961336993,
-    "pb_ratio": 7.5772431123002395,
-    "pe_ttm": 22.582004555808656,
-    "roe_pct": 37.3290329083304,
-    "shareholders_equity": 21206000000,
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 1,
     "total_assets": 50143000000,
     "total_liabilities": 28937000000
   },
   "name": "Qualcomm",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 198.27
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Technology",
@@ -160,13 +150,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $208.2B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.02, debt $16.4B vs working capital $16.6B",
+          "detail": "Current ratio 2.82, debt $14.8B vs working capital $16.6B",
           "passed": true
         },
         {
@@ -181,35 +171,35 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -24.0%/yr",
+          "detail": "EPS 3yr CAGR -23.9%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 22.6",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 171.1",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 37.3%",
-          "passed": true
+          "detail": "ROE unavailable",
+          "passed": null
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.55",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -218,14 +208,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 1,
+      "passed": 1,
       "total": 4
     }
   },
-  "website": "https://www.qualcomm.com"
+  "website": null
 }

@@ -1,93 +1,95 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for EXE: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=exe.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0c78a10>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000895126",
   "five_year_history": {
     "years": [
       {
         "cash": 905000000,
-        "debt": 2316000000,
-        "earnings": 6328000000,
+        "debt": 2278000000,
+        "earnings": 945000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 7301000000,
-        "spending": 4976000000,
+        "revenue": 5549000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 130000000,
-        "debt": 3212000000,
+        "debt": 3093000000,
         "earnings": 4936000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 11443000000,
-        "spending": 7663000000,
-        "stock_return_pct": 46.264724116553026
+        "revenue": 11743000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1079000000,
-        "debt": 2127000000,
+        "debt": 2028000000,
         "earnings": 2419000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 7775000000,
-        "spending": 4633000000,
-        "stock_return_pct": -18.416869767934735
+        "revenue": 8721000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 317000000,
-        "debt": 5825000000,
+        "debt": 5291000000,
         "earnings": -714000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 4221000000,
-        "spending": 5024000000,
-        "stock_return_pct": 29.302506819067414
+        "revenue": 4235000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 696000000,
-        "debt": 5060000000,
+        "cash": 616000000,
+        "debt": 5009000000,
         "earnings": 1819000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 11648000000,
-        "spending": 9611000000,
-        "stock_return_pct": 10.858864892014065
+        "revenue": 12124000000,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.9585160202360877,
-      "debt_to_ebitda": 1.008570859079131,
-      "debt_to_equity": 0.19206594538897476
+      "current_ratio": 1.0051706308169597,
+      "debt_to_ebitda": 0.9189139607411484,
+      "debt_to_equity": 0.26961998062224135
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 81.47793673181543,
+      "book_value_per_share": 80.24922650402063,
       "shareholders_equity": 18578000000,
       "total_assets": 28287000000,
       "total_liabilities": 9709000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 15.788118131868131
+      "fcf_margin_pct": 15.168261299901022
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -41.701497733324935
+      "eps_growth_cagr_3yr_pct": -39.005602482842995
     },
     "profitability": {
-      "roe_pct": 14.697954653559536,
-      "trend": "declining"
+      "roe_pct": 9.791150823554743,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 7.958937631364993,
-      "graham_number": 118.57931915596853,
-      "graham_upside_pct": 36.25108486265487,
-      "ncav_margin_pct": -133.71588218570466,
-      "pb_ratio": 1.0681419227202473,
-      "pe_ttm": 7.451198630136986
+      "graham_multiple": null,
+      "graham_number": 116.91214438328173,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-09-23T02:50:07Z",
+  "industry": "Crude Petroleum & Natural Gas",
+  "last_updated": "2026-09-23T13:19:47Z",
   "layered_analysis": {
     "flags": [
       "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
@@ -96,7 +98,7 @@
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +107,28 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 20147793120,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 81.47793673181543,
-    "current_ratio": 0.9585160202360877,
-    "debt_to_ebitda": 1.008570859079131,
-    "debt_to_equity": 0.19206594538897476,
-    "eps_growth_cagr_3yr_pct": -41.701497733324935,
-    "fcf_margin_pct": 15.788118131868131,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 7.958937631364993,
-    "graham_upside_pct": 36.25108486265487,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "book_value_per_share": 80.24922650402063,
+    "current_ratio": 1.0051706308169597,
+    "debt_to_ebitda": 0.9189139607411484,
+    "debt_to_equity": 0.26961998062224135,
+    "eps_growth_cagr_3yr_pct": -39.005602482842995,
+    "fcf_margin_pct": 15.168261299901022,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 1,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -133.71588218570466,
-    "pb_ratio": 1.0681419227202473,
-    "pe_ttm": 7.451198630136986,
-    "roe_pct": 14.697954653559536,
+    "roe_pct": 9.791150823554743,
     "shareholders_equity": 18578000000,
     "total_assets": 28287000000,
     "total_liabilities": 9709000000
   },
   "name": "Expand Energy",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 87.03
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Energy",
@@ -160,55 +157,55 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $20.1B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.96, debt $5.1B vs working capital $0.0B",
+          "detail": "Current ratio 1.01, debt $5.0B vs working capital $0.0B",
           "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 4/6 available years",
+          "detail": "Positive in 5/6 available years",
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -41.7%/yr",
+          "detail": "EPS 3yr CAGR -39.0%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 7.5",
-          "passed": true
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 8.0",
-          "passed": true
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 4,
+      "passed": 1,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 14.7%",
+          "detail": "ROE 9.8%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.19",
+          "detail": "Debt/equity 0.27",
           "passed": true
         },
         {
@@ -218,14 +215,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 1,
       "total": 4
     }
   },
-  "website": "http://www.expandenergy.com"
+  "website": null
 }

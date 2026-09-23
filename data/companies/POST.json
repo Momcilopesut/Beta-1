@@ -1,0 +1,225 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for POST: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=post.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9edf30e0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0001530950",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 664500000,
+        "debt": 6442700000,
+        "earnings": 166700000,
+        "fiscal_year": "2021-09-30",
+        "market_return_pct": null,
+        "revenue": 4980700000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 586500000,
+        "debt": 5957700000,
+        "earnings": 756600000,
+        "fiscal_year": "2022-09-30",
+        "market_return_pct": -16.768420562054338,
+        "revenue": 5851200000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 93300000,
+        "debt": 6040100000,
+        "earnings": 301300000,
+        "fiscal_year": "2023-09-30",
+        "market_return_pct": 19.681953076880006,
+        "revenue": 6991000000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 787400000,
+        "debt": 6812800000,
+        "earnings": 366700000,
+        "fiscal_year": "2024-09-30",
+        "market_return_pct": 34.21914475531018,
+        "revenue": 7922700000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 176700000,
+        "debt": 7422900000,
+        "earnings": 335700000,
+        "fiscal_year": "2025-09-30",
+        "market_return_pct": 16.107780256553255,
+        "revenue": 8158100000,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.6691946253400378,
+      "debt_to_ebitda": 5.608114233907525,
+      "debt_to_equity": 1.977805014521329
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 85.38154672524539,
+      "shareholders_equity": 3753100000,
+      "total_assets": 13528400000,
+      "total_liabilities": 9764600000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -23.044127576570705
+    },
+    "profitability": {
+      "roe_pct": 8.944605792544829,
+      "trend": "improving"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": 102.88429061456515,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Grain Mill Products",
+  "last_updated": "2026-09-23T15:51:02Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "low"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 85.38154672524539,
+    "current_ratio": 1.6691946253400378,
+    "debt_to_ebitda": 5.608114233907525,
+    "debt_to_equity": 1.977805014521329,
+    "eps_growth_cagr_3yr_pct": -23.044127576570705,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 1,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 2,
+    "roe_pct": 8.944605792544829,
+    "shareholders_equity": 3753100000,
+    "total_assets": 13528400000,
+    "total_liabilities": 9764600000
+  },
+  "name": "Post Holdings",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Consumer Defensive",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001530950.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-06",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1530950/000153095026000077/post-20260630.htm"
+      },
+      {
+        "filed": "2026-08-06",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1530950/000153095026000076/post-20260806.htm"
+      },
+      {
+        "filed": "2025-11-21",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1530950/000153095025000260/post-20250930.htm"
+      }
+    ]
+  },
+  "ticker": "POST",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.67, debt $7.4B vs working capital $0.8B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -23.0%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 1,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 8.9%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 1.98",
+          "passed": false
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "62,900,000 shares vs. 66,900,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 100",
+          "passed": true
+        }
+      ],
+      "evaluated": 4,
+      "passed": 2,
+      "total": 4
+    }
+  },
+  "website": null
+}

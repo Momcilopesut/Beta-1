@@ -1,103 +1,104 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for DLR: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=dlr.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9f049be0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001297996",
   "five_year_history": {
     "years": [
       {
         "cash": 142698000,
-        "debt": 14960397000,
-        "earnings": 1709259000,
-        "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
-        "revenue": 4427882000,
-        "spending": 3733873000,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2023-06-30",
+        "market_return_pct": 15.911408623800424,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 141773000,
-        "debt": 18067847000,
-        "earnings": 377684000,
-        "fiscal_year": "2022-12-31",
-        "market_return_pct": -19.48164055920498,
-        "revenue": 4691834000,
-        "spending": 4101866000,
-        "stock_return_pct": -43.30864476734325
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2023-09-30",
+        "market_return_pct": -3.5643385670456498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1625495000,
-        "debt": 18968001000,
+        "debt": null,
         "earnings": 948838000,
         "fiscal_year": "2023-12-31",
-        "market_return_pct": 23.591245456684877,
+        "market_return_pct": 10.566576214091878,
         "revenue": 5477061000,
-        "spending": 4952600000,
-        "stock_return_pct": 34.86586217213523
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 3870891000,
-        "debt": 18008596000,
+        "debt": null,
         "earnings": 602490000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 5554968000,
-        "spending": 5083104000,
-        "stock_return_pct": 31.132145234045723
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 3451647000,
-        "debt": 24182228000,
+        "debt": null,
         "earnings": 1308589000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 6112692000,
-        "spending": 5454200000,
-        "stock_return_pct": -12.755878869903572
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.06839041307356,
-      "debt_to_ebitda": 9.471608160656261,
-      "debt_to_equity": 0.6653563564377223
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 83.43669624249544,
+      "book_value_per_share": 65.23980362661351,
       "shareholders_equity": 22925663000,
       "total_assets": 49410468000,
       "total_liabilities": 24564494000
     },
     "cash_flow": {
-      "fcf_margin_pct": 39.461108133699526
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 46.760418495600064
+      "eps_growth_cagr_3yr_pct": 15.724065450765746
     },
     "profitability": {
-      "roe_pct": 3.3033164259728776,
-      "trend": "improving"
+      "roe_pct": 5.707965784893549,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 205.01309470336201,
-      "graham_number": 83.68049194496547,
-      "graham_upside_pct": -54.92567091572019,
-      "ncav_margin_pct": -129.74334944249563,
-      "pb_ratio": 2.396328658800407,
-      "pe_ttm": 85.55299539170507
+      "graham_multiple": null,
+      "graham_number": 72.49183527904172,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "REIT - Specialty",
-  "last_updated": "2026-09-23T03:29:03Z",
+  "industry": "Real Estate Investment Trusts",
+  "last_updated": "2026-09-23T12:40:45Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
-    "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,51 +107,26 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 68686044771,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 83.43669624249544,
-    "current_ratio": 1.06839041307356,
-    "debt_to_ebitda": 9.471608160656261,
-    "debt_to_equity": 0.6653563564377223,
-    "eps_growth_cagr_3yr_pct": 46.760418495600064,
-    "fcf_margin_pct": 39.461108133699526,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 205.01309470336201,
-    "graham_upside_pct": -54.92567091572019,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -129.74334944249563,
-    "pb_ratio": 2.396328658800407,
-    "pe_ttm": 85.55299539170507,
-    "roe_pct": 3.3033164259728776,
+    "book_value_per_share": 65.23980362661351,
+    "eps_growth_cagr_3yr_pct": 15.724065450765746,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 0,
+    "roe_pct": 5.707965784893549,
     "shareholders_equity": 22925663000,
     "total_assets": 49410468000,
     "total_liabilities": 24564494000
   },
   "name": "Digital Realty Trust Inc.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 185.65
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, Digital Realty reported total operating revenues of about $6.11 billion, up 10.0% from 2024, driven by growth in both stabilized and non-stabilized portfolios and higher fee income from construction/development and joint-venture management fees. The company completed several capital markets and portfolio transactions during the year, including multiple euro-denominated notes offerings, debt redemptions, contributions of data centers to joint ventures (including a new fund with Blackstone-related and other partners), and non-core asset sales, while recording $78.6 million of impairments on certain non-core U.S. properties. Portfolio occupancy stood at approximately 84.7% across 310 data centers globally as of December 31, 2025.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended June 30, 2026) consists primarily of XBRL tagging data rather than narrative discussion, so detailed financial results and management commentary are not available in this excerpt. It does reference items such as interest expense figures, a Teraco-related term loan and acquisition-related dates in 2026, involvement with Digital Core REIT and the Ascenty joint venture, and details on secured/unsecured debt and revolving credit facilities. No further descriptive detail on quarterly performance is available from the text supplied.",
-    "filing_summary_8k": "This 8-K, dated August 19, 2026, discloses that in connection with Digital Realty's acquisition of Columbia Capital, the company is registering the resale of shares of common stock issued as consideration in that transaction via a prospectus supplement filed with the SEC. The filing attaches a legal opinion from Venable LLP regarding certain Maryland law matters related to those shares as Exhibit 5.1, along with a related consent, and states the report does not constitute an offer to sell securities in any jurisdiction where such an offer would be unlawful.",
-    "moat_explanation": "The 10-K describes a global data center platform with over 232,000 cross connects and 'densely connected data communities' that the company says are 'difficult for competitors to replicate,' indicating that added customers and interconnections increase the value of the platform for existing tenants. The filing also cites large scale (300+ facilities, ~2.9 GW capacity) and high replication cost as reinforcing factors, though these are secondary to the interconnection/network-density narrative.",
-    "moat_present": true,
-    "moat_type": "network_effects",
-    "red_flags": [
-      "Customer concentration: largest customer accounted for ~11.7% of annualized recurring revenue, with no other customer above ~9.0%",
-      "Recorded impairment charges on non-core properties in secondary U.S. markets in both 2025 ($78.6M) and 2024 ($191.2M)",
-      "Equity in earnings of unconsolidated entities fell ~$88.2M year-over-year due to FX remeasurement volatility tied to the Ascenty joint venture",
-      "Company acknowledges rising utility/power costs and risk that new energy taxation or regulation could raise costs it cannot fully pass through to customers",
-      "Transactions and integration expenses rose ~97% year-over-year, reflecting increased placement fees and deal-related costs",
-      "Geographic revenue concentration, with Northern Virginia alone representing 21.4% of total annualized rent"
-    ]
-  },
+  "qualitative": null,
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001297996.json",
@@ -177,18 +153,18 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $68.7B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.07, debt $24.2B vs working capital $4.0B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years",
+          "detail": "Positive in 4/4 available years",
           "passed": true
         },
         {
@@ -198,51 +174,51 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 46.8%/yr",
+          "detail": "EPS 3yr CAGR 15.7%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 85.6",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 205.0",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 2,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 3.3%",
+          "detail": "ROE 5.7%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.67",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "351,570,000 shares vs. 331,547,000 a year earlier",
+          "detail": "347,810,000 shares vs. 331,547,000 a year earlier",
           "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 2,
+      "passed": 0,
       "total": 4
     }
   },
-  "website": "https://www.digitalrealty.com"
+  "website": null
 }

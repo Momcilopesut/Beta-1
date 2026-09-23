@@ -1,93 +1,95 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for HCA: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=hca.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0a126c0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000860730",
   "five_year_history": {
     "years": [
       {
         "cash": 1451000000,
-        "debt": 36726000000,
+        "debt": 34342000000,
         "earnings": 6956000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 58752000000,
-        "spending": 49074000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 908000000,
-        "debt": 40200000000,
+        "debt": 37714000000,
         "earnings": 5643000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 60233000000,
-        "spending": 51180000000,
-        "stock_return_pct": -6.601276661995954
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 935000000,
-        "debt": 41859000000,
+        "debt": 37169000000,
         "earnings": 5242000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 64968000000,
-        "spending": 55341000000,
-        "stock_return_pct": 14.735789298216362
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1933000000,
-        "debt": 45237000000,
+        "debt": 43031000000,
         "earnings": 5760000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 70603000000,
-        "spending": 60056000000,
-        "stock_return_pct": 9.01859654220543
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1040000000,
-        "debt": 50198000000,
+        "debt": 46492000000,
         "earnings": 6784000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 75600000000,
-        "spending": 63635000000,
-        "stock_return_pct": 55.54222888555724
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.7811961347610342,
-      "debt_to_ebitda": 3.2410898760330578,
-      "debt_to_equity": -7.418403041825095
+      "current_ratio": 0.9653211009174312,
+      "debt_to_ebitda": null,
+      "debt_to_equity": -7.71395387423262
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -14.100561868346887,
+      "book_value_per_share": -27.168253848047105,
       "shareholders_equity": -6027000000,
       "total_assets": 60720000000,
-      "total_liabilities": 63491000000
+      "total_liabilities": null
     },
     "cash_flow": {
       "fcf_margin_pct": 10.174603174603176
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 13.760403275951916
+      "eps_growth_cagr_3yr_pct": 13.944298430482704
     },
     "profitability": {
-      "roe_pct": -112.87128712871286,
-      "trend": "improving"
+      "roe_pct": -112.56014600962337,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -217.12926091611732,
+      "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -151.37435918978312,
-      "pb_ratio": -14.847970092775666,
-      "pe_ttm": 14.623497997329773
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Medical - Care Facilities",
-  "last_updated": "2026-09-23T02:54:07Z",
+  "industry": "Services-General Medical & Surgical Hospitals, NEC",
+  "last_updated": "2026-09-23T13:56:05Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
@@ -103,32 +105,26 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 94853638056,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": -14.100561868346887,
-    "current_ratio": 0.7811961347610342,
-    "debt_to_ebitda": 3.2410898760330578,
-    "debt_to_equity": -7.418403041825095,
-    "eps_growth_cagr_3yr_pct": 13.760403275951916,
+    "book_value_per_share": -27.168253848047105,
+    "current_ratio": 0.9653211009174312,
+    "debt_to_equity": -7.71395387423262,
+    "eps_growth_cagr_3yr_pct": 13.944298430482704,
     "fcf_margin_pct": 10.174603174603176,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 5,
-    "graham_multiple": -217.12926091611732,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -151.37435918978312,
-    "pb_ratio": -14.847970092775666,
-    "pe_ttm": 14.623497997329773,
-    "roe_pct": -112.87128712871286,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": -112.56014600962337,
     "shareholders_equity": -6027000000,
-    "total_assets": 60720000000,
-    "total_liabilities": 63491000000
+    "total_assets": 60720000000
   },
   "name": "HCA Healthcare",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 438.12
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -157,13 +153,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $94.9B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.78, debt $50.2B vs working capital $-2.8B",
+          "detail": "Current ratio 0.97, debt $46.5B vs working capital $-0.6B",
           "passed": false
         },
         {
@@ -178,51 +174,51 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 13.8%/yr",
+          "detail": "EPS 3yr CAGR 13.9%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 14.6",
-          "passed": true
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -217.1",
-          "passed": true
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 5,
+      "evaluated": 3,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -112.9%",
+          "detail": "ROE -112.6%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity -7.42",
+          "detail": "Debt/equity -7.71",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "230,710,000 shares vs. 261,806,000 a year earlier",
+          "detail": "239,495,000 shares vs. 261,806,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.hcahealthcare.com"
+  "website": null
 }

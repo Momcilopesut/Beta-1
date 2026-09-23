@@ -1,68 +1,70 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for TXN: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=txn.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca30a1250>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000097476",
   "five_year_history": {
     "years": [
       {
         "cash": 4631000000,
-        "debt": 8206000000,
+        "debt": 7741000000,
         "earnings": 7769000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 18344000000,
-        "spending": 9384000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 3050000000,
-        "debt": 9498000000,
+        "debt": 8735000000,
         "earnings": 8749000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 20028000000,
-        "spending": 9888000000,
-        "stock_return_pct": -12.336180824534408
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2964000000,
-        "debt": 12267000000,
+        "debt": 11223000000,
         "earnings": 6510000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 17519000000,
-        "spending": 10188000000,
-        "stock_return_pct": 2.4452245490860625
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 3200000000,
-        "debt": 15040000000,
+        "debt": 13596000000,
         "earnings": 4799000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 15641000000,
-        "spending": 10176000000,
-        "stock_return_pct": 10.782228524164008
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 3225000000,
-        "debt": 15391000000,
+        "debt": 14048000000,
         "earnings": 5001000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 17682000000,
-        "spending": 11659000000,
-        "stock_return_pct": -7.476934563489938
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 4.85727496917386,
-      "debt_to_ebitda": 1.918598853153827,
-      "debt_to_equity": 0.7803631920919643
+      "current_ratio": 4.352643241532131,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.8632704479813188
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 19.74451754385965,
+      "book_value_per_share": 17.818824235159354,
       "shareholders_equity": 16273000000,
       "total_assets": 34585000000,
       "total_liabilities": 18312000000
@@ -71,32 +73,30 @@
       "fcf_margin_pct": 14.72118538626852
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -16.937436854154196
+      "eps_growth_cagr_3yr_pct": -16.644237941707228
     },
     "profitability": {
-      "roe_pct": 35.765679249464434,
+      "roe_pct": 30.73188717507528,
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 564.4217024292202,
-      "graham_number": 49.20540075861378,
-      "graham_upside_pct": -81.87045401473277,
-      "ncav_margin_pct": -101.84052133230152,
-      "pb_ratio": 13.74609429666241,
-      "pe_ttm": 41.0605143721634
+      "graham_multiple": null,
+      "graham_number": 46.74433999786943,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Semiconductors",
-  "last_updated": "2026-09-23T03:01:55Z",
+  "industry": "Semiconductors & Related Devices",
+  "last_updated": "2026-09-23T15:04:13Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,27 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 247864554457,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 19.74451754385965,
-    "current_ratio": 4.85727496917386,
-    "debt_to_ebitda": 1.918598853153827,
-    "debt_to_equity": 0.7803631920919643,
-    "eps_growth_cagr_3yr_pct": -16.937436854154196,
+    "book_value_per_share": 17.818824235159354,
+    "current_ratio": 4.352643241532131,
+    "debt_to_equity": 0.8632704479813188,
+    "eps_growth_cagr_3yr_pct": -16.644237941707228,
     "fcf_margin_pct": 14.72118538626852,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 2,
-    "graham_multiple": 564.4217024292202,
-    "graham_upside_pct": -81.87045401473277,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -101.84052133230152,
-    "pb_ratio": 13.74609429666241,
-    "pe_ttm": 41.0605143721634,
-    "roe_pct": 35.765679249464434,
+    "roe_pct": 30.73188717507528,
     "shareholders_equity": 16273000000,
     "total_assets": 34585000000,
     "total_liabilities": 18312000000
   },
   "name": "Texas Instruments",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 271.41
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Technology",
@@ -160,13 +154,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $247.9B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 4.86, debt $15.4B vs working capital $10.6B",
+          "detail": "Current ratio 4.35, debt $14.0B vs working capital $10.6B",
           "passed": false
         },
         {
@@ -175,27 +169,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -16.9%/yr",
+          "detail": "EPS 3yr CAGR -16.6%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 41.1",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 564.4",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 2,
       "total": 7
     },
@@ -203,12 +197,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 35.8%",
+          "detail": "ROE 30.7%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.78",
+          "detail": "Debt/equity 0.86",
           "passed": true
         },
         {
@@ -227,5 +221,5 @@
       "total": 4
     }
   },
-  "website": "https://www.ti.com"
+  "website": null
 }

@@ -1,102 +1,104 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for CPRT: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=cprt.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca105ec00>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000900075",
   "five_year_history": {
     "years": [
       {
-        "cash": 1384236000,
-        "debt": 119473000,
-        "earnings": 1090130000,
-        "fiscal_year": "2022-07-31",
+        "cash": null,
+        "debt": null,
+        "earnings": 936495000,
+        "fiscal_year": "2021-07-31",
         "market_return_pct": null,
-        "revenue": 3500921000,
-        "spending": 2125924000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 957395000,
-        "debt": 120453000,
+        "cash": null,
+        "debt": null,
+        "earnings": 1090130000,
+        "fiscal_year": "2022-07-31",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": null,
+        "debt": null,
         "earnings": 1237741000,
         "fiscal_year": "2023-07-31",
         "market_return_pct": 11.446795043454985,
-        "revenue": 3869518000,
-        "spending": 2382949000,
-        "stock_return_pct": 37.18187461204223
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 1514111000,
-        "debt": 118733000,
+        "cash": null,
+        "debt": null,
         "earnings": 1363020000,
         "fiscal_year": "2024-07-31",
         "market_return_pct": 20.31936040542605,
-        "revenue": 4236823000,
-        "spending": 2664800000,
-        "stock_return_pct": 18.39366515837103
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 2780531000,
-        "debt": 103739000,
+        "cash": null,
+        "debt": null,
         "earnings": 1552449000,
         "fiscal_year": "2025-07-31",
         "market_return_pct": 14.754634084348522,
-        "revenue": 4646958000,
-        "spending": 2950244000,
-        "stock_return_pct": -13.376648194152493
-      },
-      {
-        "cash": 1907901000,
-        "debt": 88367000,
-        "earnings": 1484270000,
-        "fiscal_year": "2026-07-31",
-        "market_return_pct": 18.185989115301847,
-        "revenue": 4666209000,
-        "spending": 3013619000,
-        "stock_return_pct": -35.7599823516435
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 7.91227738614064,
-      "debt_to_ebitda": 0.04672891759947881,
-      "debt_to_equity": 0.009713546719107163
+      "current_ratio": 8.422051835189329,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 9.597194726422645,
-      "shareholders_equity": 9097295000,
-      "total_assets": 10027810000,
-      "total_liabilities": 913930000
+      "book_value_per_share": null,
+      "shareholders_equity": null,
+      "total_assets": 10090902000,
+      "total_liabilities": 883411000
     },
     "cash_flow": {
-      "fcf_margin_pct": 27.155427457278492
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 6.265856918261115
+      "eps_growth_cagr_3yr_pct": 12.057146804226226
     },
     "profitability": {
-      "roe_pct": 15.93386672913095,
+      "roe_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 55.48253410949812,
-      "graham_number": 18.353788025839105,
-      "graham_upside_pct": -36.27156935472533,
-      "ncav_margin_pct": -82.54435249174314,
-      "pb_ratio": 3.005825775683871,
-      "pe_ttm": 18.458333333333332
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Specialty Business Services",
-  "last_updated": "2026-09-23T02:55:45Z",
+  "industry": "Retail-Auto Dealers & Gasoline Stations",
+  "last_updated": "2026-09-23T14:10:55Z",
   "layered_analysis": {
     "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
-    "munger_quality_pass": true,
+    "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +107,22 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 26658741624,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 9.597194726422645,
-    "current_ratio": 7.91227738614064,
-    "debt_to_ebitda": 0.04672891759947881,
-    "debt_to_equity": 0.009713546719107163,
-    "eps_growth_cagr_3yr_pct": 6.265856918261115,
-    "fcf_margin_pct": 27.155427457278492,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 55.48253410949812,
-    "graham_upside_pct": -36.27156935472533,
+    "current_ratio": 8.422051835189329,
+    "eps_growth_cagr_3yr_pct": 12.057146804226226,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 2,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -82.54435249174314,
-    "pb_ratio": 3.005825775683871,
-    "pe_ttm": 18.458333333333332,
-    "roe_pct": 15.93386672913095,
-    "shareholders_equity": 9097295000,
-    "total_assets": 10027810000,
-    "total_liabilities": 913930000
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 0,
+    "total_assets": 10090902000,
+    "total_liabilities": 883411000
   },
   "name": "Copart",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 28.8
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -160,14 +151,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $26.7B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 7.91, debt $0.1B vs working capital $4.9B",
-          "passed": true
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -181,51 +172,51 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 6.3%/yr",
+          "detail": "EPS 3yr CAGR 12.1%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 18.5",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 55.5",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 4,
+      "evaluated": 2,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 15.9%",
-          "passed": true
+          "detail": "ROE unavailable",
+          "passed": null
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.01",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "956,860,000 shares vs. 977,563,000 a year earlier",
-          "passed": true
+          "detail": "977,563,000 shares vs. 974,798,000 a year earlier",
+          "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 1,
+      "passed": 0,
       "total": 4
     }
   },
-  "website": "https://www.copart.com"
+  "website": null
 }

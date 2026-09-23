@@ -1,0 +1,224 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for DAR: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=dar.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca09f7b00>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0000916540",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 68906000,
+        "debt": null,
+        "earnings": 650914000,
+        "fiscal_year": "2022-01-01",
+        "market_return_pct": null,
+        "revenue": 4741369000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 127016000,
+        "debt": null,
+        "earnings": 737690000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 6532204000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 126502000,
+        "debt": null,
+        "earnings": 647726000,
+        "fiscal_year": "2023-12-30",
+        "market_return_pct": 24.286797583871554,
+        "revenue": 6788080000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 75973000,
+        "debt": null,
+        "earnings": 278880000,
+        "fiscal_year": "2024-12-28",
+        "market_return_pct": 25.18356441059519,
+        "revenue": 5715175000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 88671000,
+        "debt": null,
+        "earnings": 62804000,
+        "fiscal_year": "2026-01-03",
+        "market_return_pct": 14.816557704912517,
+        "revenue": 6135877000,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.5013487691937444,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 30.01789269851008,
+      "shareholders_equity": 4736911000,
+      "total_assets": 10298782000,
+      "total_liabilities": 5489267000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 11.070006781426681
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -55.71335760766488
+    },
+    "profitability": {
+      "roe_pct": 1.3258429385732602,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": 16.229818496502848,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Fats & Oils",
+  "last_updated": "2026-09-23T15:49:14Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "low"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 30.01789269851008,
+    "current_ratio": 1.5013487691937444,
+    "eps_growth_cagr_3yr_pct": -55.71335760766488,
+    "fcf_margin_pct": 11.070006781426681,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 1,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": 1.3258429385732602,
+    "shareholders_equity": 4736911000,
+    "total_assets": 10298782000,
+    "total_liabilities": 5489267000
+  },
+  "name": "Darling Ingredients",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Consumer Defensive",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000916540.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-07",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/916540/000091654026000023/dar-20260704.htm"
+      },
+      {
+        "filed": "2026-08-05",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/916540/000091654026000021/dar-20260805.htm"
+      },
+      {
+        "filed": "2026-03-03",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/916540/000091654026000008/dar-20260103.htm"
+      }
+    ]
+  },
+  "ticker": "DAR",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -55.7%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 1.3%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "160,157,000 shares vs. 161,418,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 60",
+          "passed": true
+        }
+      ],
+      "evaluated": 3,
+      "passed": 2,
+      "total": 4
+    }
+  },
+  "website": null
+}

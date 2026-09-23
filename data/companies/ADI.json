@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for ADI: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=adi.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca16211f0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000006281",
   "five_year_history": {
     "years": [
       {
         "cash": 1977964000,
-        "debt": 6822451000,
+        "debt": 516663000,
         "earnings": 1390422000,
         "fiscal_year": "2021-10-30",
         "market_return_pct": null,
-        "revenue": 7318286000,
-        "spending": 5626085000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 1470572000,
-        "debt": 6602253000,
+        "debt": 6548625000,
         "earnings": 2748561000,
         "fiscal_year": "2022-10-29",
         "market_return_pct": -15.292324442025047,
-        "revenue": 12013953000,
-        "spending": 8735253000,
-        "stock_return_pct": -16.490864026745065
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 958061000,
-        "debt": 7013478000,
+        "debt": 5902457000,
         "earnings": 3314579000,
         "fiscal_year": "2023-10-28",
         "market_return_pct": 5.567837129196449,
-        "revenue": 12305539000,
-        "spending": 8482427000,
-        "stock_return_pct": 10.829652125897294
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1991342000,
-        "debt": 7649817000,
+        "debt": 6634313000,
         "earnings": 1635273000,
         "fiscal_year": "2024-11-02",
         "market_return_pct": 39.04743352488554,
-        "revenue": 9427157000,
-        "spending": 7394359000,
-        "stock_return_pct": 40.42473687488323
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2499406000,
-        "debt": 8664610000,
+        "debt": 8145066000,
         "earnings": 2267342000,
         "fiscal_year": "2025-11-01",
         "market_return_pct": 19.4417203698515,
-        "revenue": 11019707000,
-        "spending": 8087211000,
-        "stock_return_pct": 3.8362604222103984
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.250391159944373,
-      "debt_to_ebitda": 1.757049451660309,
-      "debt_to_equity": 0.2718729994014765
+      "current_ratio": 2.1899250755052453,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.24086601053266443
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 68.82235282051282,
+      "book_value_per_share": 69.78573060298467,
       "shareholders_equity": 33815755000,
       "total_assets": 47992712000,
-      "total_liabilities": 14176957000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 38.82725738533701
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -4.621093762089156
+      "eps_growth_cagr_3yr_pct": -4.58825332599776
     },
     "profitability": {
-      "roe_pct": 12.261314543304579,
-      "trend": "declining"
+      "roe_pct": 6.704987068897323,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 261.4206819953326,
-      "graham_number": 84.3067523247009,
-      "graham_upside_pct": -78.40337312685378,
-      "ncav_margin_pct": -103.73699656651316,
-      "pb_ratio": 5.672139704640386,
-      "pe_ttm": 46.08854781582054
+      "graham_multiple": null,
+      "graham_number": 84.61687751191381,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Semiconductors",
-  "last_updated": "2026-09-23T02:59:17Z",
+  "industry": "Semiconductors & Related Devices",
+  "last_updated": "2026-09-23T14:42:27Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,25 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 190144152190,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 68.82235282051282,
-    "current_ratio": 1.250391159944373,
-    "debt_to_ebitda": 1.757049451660309,
-    "debt_to_equity": 0.2718729994014765,
-    "eps_growth_cagr_3yr_pct": -4.621093762089156,
-    "fcf_margin_pct": 38.82725738533701,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 69.78573060298467,
+    "current_ratio": 2.1899250755052453,
+    "debt_to_equity": 0.24086601053266443,
+    "eps_growth_cagr_3yr_pct": -4.58825332599776,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 2,
-    "graham_multiple": 261.4206819953326,
-    "graham_upside_pct": -78.40337312685378,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -103.73699656651316,
-    "pb_ratio": 5.672139704640386,
-    "pe_ttm": 46.08854781582054,
-    "roe_pct": 12.261314543304579,
+    "roe_pct": 6.704987068897323,
     "shareholders_equity": 33815755000,
-    "total_assets": 47992712000,
-    "total_liabilities": 14176957000
+    "total_assets": 47992712000
   },
   "name": "Analog Devices",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 390.37
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Technology",
@@ -160,13 +152,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $190.1B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.25, debt $8.7B vs working capital $3.9B",
+          "detail": "Current ratio 2.19, debt $8.1B vs working capital $3.9B",
           "passed": false
         },
         {
@@ -175,9 +167,9 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -185,17 +177,17 @@
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 46.1",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 261.4",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 2,
       "total": 7
     },
@@ -203,12 +195,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 12.3%",
+          "detail": "ROE 6.7%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.27",
+          "detail": "Debt/equity 0.24",
           "passed": true
         },
         {
@@ -218,14 +210,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.analog.com"
+  "website": null
 }

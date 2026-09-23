@@ -1,0 +1,228 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for NXST: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=nxst.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca39f8290>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0001142417",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 190900000,
+        "debt": 7415100000,
+        "earnings": 834000000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 4648000000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 204000000,
+        "debt": 6951000000,
+        "earnings": 971000000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 5211000000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 135000000,
+        "debt": 6837000000,
+        "earnings": 346000000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 4933000000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 144000000,
+        "debt": 6523000000,
+        "earnings": 722000000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 5407000000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 280000000,
+        "debt": 6333000000,
+        "earnings": 109000000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 4949000000,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 2.071729957805907,
+      "debt_to_ebitda": 4.797727272727273,
+      "debt_to_equity": 3.068313953488372
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 66.99493100901604,
+      "shareholders_equity": 2064000000,
+      "total_assets": 10846000000,
+      "total_liabilities": 8784000000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 15.01313396645787
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -50.11061983039213
+    },
+    "profitability": {
+      "roe_pct": 5.2810077519379846,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": 67.24699133127505,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Television Broadcasting Stations",
+  "last_updated": "2026-09-23T15:24:24Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 66.99493100901604,
+    "current_ratio": 2.071729957805907,
+    "debt_to_ebitda": 4.797727272727273,
+    "debt_to_equity": 3.068313953488372,
+    "eps_growth_cagr_3yr_pct": -50.11061983039213,
+    "fcf_margin_pct": 15.01313396645787,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 1,
+    "roe_pct": 5.2810077519379846,
+    "shareholders_equity": 2064000000,
+    "total_assets": 10846000000,
+    "total_liabilities": 8784000000
+  },
+  "name": "Nexstar Media Group",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Communication Services",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001142417.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-07",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1142417/000119312526339827/nxst-20260630.htm"
+      },
+      {
+        "filed": "2026-08-06",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1142417/000119312526336678/nxst-20260806.htm"
+      },
+      {
+        "filed": "2026-02-27",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1142417/000119312526078361/nxst-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "NXST",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 2.07, debt $6.3B vs working capital $0.8B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -50.1%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 4,
+      "passed": 2,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 5.3%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 3.07",
+          "passed": false
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "30,707,000 shares vs. 32,796,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": null
+}

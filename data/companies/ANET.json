@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for ANET: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=anet.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca17fccb0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001596532",
   "five_year_history": {
     "years": [
       {
         "cash": 620813000,
-        "debt": 56527000,
+        "debt": null,
         "earnings": 840854000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 2948037000,
-        "spending": 2023298000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 671707000,
-        "debt": 43964000,
+        "debt": null,
         "earnings": 1352446000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 4381310000,
-        "spending": 2854204000,
-        "stock_return_pct": -15.58152476349471
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1938606000,
-        "debt": 0,
-        "earnings": 2087321000,
+        "debt": null,
+        "earnings": 2087300000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 5860168000,
-        "spending": 3602919000,
-        "stock_return_pct": 90.80421885299934
+        "revenue": 5860200000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 2762357000,
-        "debt": 0,
+        "cash": 2762400000,
+        "debt": null,
         "earnings": 2852100000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 7003100000,
-        "spending": 4058500000,
-        "stock_return_pct": 90.9310761789601
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1963900000,
-        "debt": 0,
+        "debt": null,
         "earnings": 3511400000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 9005700000,
-        "spending": 5149600000,
-        "stock_return_pct": 18.54700081425857
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.9572040361375103,
-      "debt_to_ebitda": 0.0,
-      "debt_to_equity": 0
+      "current_ratio": 3.0478936110852786,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 11.754468186512034,
+      "book_value_per_share": 9.808324012392754,
       "shareholders_equity": 12370500000,
       "total_assets": 19448600000,
       "total_liabilities": 7078100000
     },
     "cash_flow": {
-      "fcf_margin_pct": 47.21898353265154
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 36.375756498476086
+      "eps_growth_cagr_3yr_pct": 36.97762715526427
     },
     "profitability": {
-      "roe_pct": 30.779416465001596,
+      "roe_pct": 28.385271411826523,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 1115.8462690345684,
-      "graham_number": 27.164070762834736,
-      "graham_upside_pct": -86.76150360015852,
-      "ncav_margin_pct": -96.40292308775219,
-      "pb_ratio": 17.456340579954993,
-      "pe_ttm": 63.9221183800623
+      "graham_multiple": null,
+      "graham_number": 24.635138486860626,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Computer Hardware",
-  "last_updated": "2026-09-23T02:59:28Z",
+  "industry": "Computer Communications Equipment",
+  "last_updated": "2026-09-23T14:44:16Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,25 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 258368976983,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 11.754468186512034,
-    "current_ratio": 2.9572040361375103,
-    "debt_to_ebitda": 0.0,
-    "debt_to_equity": 0,
-    "eps_growth_cagr_3yr_pct": 36.375756498476086,
-    "fcf_margin_pct": 47.21898353265154,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 1115.8462690345684,
-    "graham_upside_pct": -86.76150360015852,
+    "book_value_per_share": 9.808324012392754,
+    "current_ratio": 3.0478936110852786,
+    "eps_growth_cagr_3yr_pct": 36.97762715526427,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 2,
     "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -96.40292308775219,
-    "pb_ratio": 17.456340579954993,
-    "pe_ttm": 63.9221183800623,
-    "roe_pct": 30.779416465001596,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "roe_pct": 28.385271411826523,
     "shareholders_equity": 12370500000,
     "total_assets": 19448600000,
     "total_liabilities": 7078100000
   },
   "name": "Arista Networks",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 205.19
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Technology",
@@ -160,14 +152,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $258.4B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.96, debt $0.0B vs working capital $11.0B",
-          "passed": true
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -181,39 +173,39 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 36.4%/yr",
+          "detail": "EPS 3yr CAGR 37.0%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 63.9",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1115.8",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 4,
+      "evaluated": 2,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 30.8%",
+          "detail": "ROE 28.4%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.00",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "1,275,700,000 shares vs. 1,281,077,000 a year earlier",
+          "detail": "1,275,700,000 shares vs. 1,281,100,000 a year earlier",
           "passed": true
         },
         {
@@ -222,10 +214,10 @@
           "passed": true
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.arista.com"
+  "website": null
 }

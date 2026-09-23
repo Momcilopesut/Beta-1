@@ -1,0 +1,225 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for PVH: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=pvh.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca27bb350>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0000078239",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 1242500000,
+        "debt": 2352400000,
+        "earnings": 952300000,
+        "fiscal_year": "2022-01-30",
+        "market_return_pct": null,
+        "revenue": 9154700000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 550700000,
+        "debt": 2288900000,
+        "earnings": 200400000,
+        "fiscal_year": "2023-01-29",
+        "market_return_pct": -10.962192438487708,
+        "revenue": 9024200000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 707600000,
+        "debt": 2169200000,
+        "earnings": 663600000,
+        "fiscal_year": "2024-02-04",
+        "market_return_pct": 22.95613969395143,
+        "revenue": 9217700000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 748000000,
+        "debt": 2090700000,
+        "earnings": 598500000,
+        "fiscal_year": "2025-02-02",
+        "market_return_pct": 21.36229824383311,
+        "revenue": 8652900000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 701500000,
+        "debt": 2304500000,
+        "earnings": 25300000,
+        "fiscal_year": "2026-02-01",
+        "market_return_pct": 16.334041520986332,
+        "revenue": 8950200000,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.5172123558623012,
+      "debt_to_ebitda": 4.582421952674488,
+      "debt_to_equity": 0.4808755712288463
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 103.86920426020008,
+      "shareholders_equity": 4792300000,
+      "total_assets": 11681000000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 6.015508033340037
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -44.42831418140663
+    },
+    "profitability": {
+      "roe_pct": 0.527930221396824,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": 34.860718435573595,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Men's & Boys' Furnishgs, Work Clothg, & Allied Garments",
+  "last_updated": "2026-09-23T15:41:35Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 103.86920426020008,
+    "current_ratio": 1.5172123558623012,
+    "debt_to_ebitda": 4.582421952674488,
+    "debt_to_equity": 0.4808755712288463,
+    "eps_growth_cagr_3yr_pct": -44.42831418140663,
+    "fcf_margin_pct": 6.015508033340037,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 0,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "roe_pct": 0.527930221396824,
+    "shareholders_equity": 4792300000,
+    "total_assets": 11681000000
+  },
+  "name": "PVH Corp.",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Consumer Cyclical",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000078239.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-02",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/78239/000007823926000056/pvh-20260802.htm"
+      },
+      {
+        "filed": "2026-09-02",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/78239/000007823926000055/pvh-20260902.htm"
+      },
+      {
+        "filed": "2026-03-31",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/78239/000007823926000021/pvh-20260201.htm"
+      }
+    ]
+  },
+  "ticker": "PVH",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.52, debt $2.3B vs working capital $1.2B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -44.4%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 0,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 0.5%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.48",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "48,500,000 shares vs. 56,700,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 60",
+          "passed": true
+        }
+      ],
+      "evaluated": 4,
+      "passed": 3,
+      "total": 4
+    }
+  },
+  "website": null
+}

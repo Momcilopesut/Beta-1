@@ -1,0 +1,226 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for ONTO: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=onto.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1bef5c0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0000704532",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 169602000,
+        "debt": null,
+        "earnings": 142349000,
+        "fiscal_year": "2022-01-01",
+        "market_return_pct": null,
+        "revenue": 788899000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 175872000,
+        "debt": null,
+        "earnings": 223334000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 1005183000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 233508000,
+        "debt": null,
+        "earnings": 121159000,
+        "fiscal_year": "2023-12-30",
+        "market_return_pct": 24.286797583871554,
+        "revenue": 815868000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 212945000,
+        "debt": null,
+        "earnings": 201670000,
+        "fiscal_year": "2024-12-28",
+        "market_return_pct": 25.18356441059519,
+        "revenue": 987321000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 346119000,
+        "debt": null,
+        "earnings": 136759000,
+        "fiscal_year": "2026-01-03",
+        "market_return_pct": 14.816557704912517,
+        "revenue": 1005263000,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 5.791542206754177,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 42.80548614429071,
+      "shareholders_equity": 2100647000,
+      "total_assets": 2367741000,
+      "total_liabilities": 267094000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 29.823240286372823
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -14.768626924831663
+    },
+    "profitability": {
+      "roe_pct": 6.510327532422154,
+      "trend": "declining"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": 51.74440219313954,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Measuring & Controlling Devices, NEC",
+  "last_updated": "2026-09-23T17:29:44Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 42.80548614429071,
+    "current_ratio": 5.791542206754177,
+    "eps_growth_cagr_3yr_pct": -14.768626924831663,
+    "fcf_margin_pct": 29.823240286372823,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 1,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 1,
+    "roe_pct": 6.510327532422154,
+    "shareholders_equity": 2100647000,
+    "total_assets": 2367741000,
+    "total_liabilities": 267094000
+  },
+  "name": "Onto Innovation",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Technology",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000704532.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-10",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/704532/000119312526341337/d125405d8k.htm"
+      },
+      {
+        "filed": "2026-08-06",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/704532/000119312526338401/onto-20260630.htm"
+      },
+      {
+        "filed": "2026-02-24",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/704532/000119312526066937/onto-20260103.htm"
+      }
+    ]
+  },
+  "ticker": "ONTO",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -14.8%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 6.5%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "49,273,000 shares vs. 49,660,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 20",
+          "passed": false
+        }
+      ],
+      "evaluated": 3,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": null
+}

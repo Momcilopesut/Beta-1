@@ -1,100 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for AIG: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=aig.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0839490>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000005272",
   "five_year_history": {
     "years": [
       {
-        "cash": 2198000000,
-        "debt": 30163000000,
-        "earnings": 10367000000,
-        "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
-        "revenue": 51985000000,
-        "spending": 38638000000,
+        "cash": null,
+        "debt": null,
+        "earnings": 1216000000,
+        "fiscal_year": "2024-03-31",
+        "market_return_pct": 10.474981487358509,
+        "revenue": 6763000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 2043000000,
-        "debt": 27179000000,
-        "earnings": 10227000000,
-        "fiscal_year": "2022-12-31",
-        "market_return_pct": -19.48164055920498,
-        "revenue": 29975000000,
-        "spending": 26208000000,
-        "stock_return_pct": 11.220541681322551
+        "cash": null,
+        "debt": null,
+        "earnings": -3977000000,
+        "fiscal_year": "2024-06-30",
+        "market_return_pct": 4.43925233644861,
+        "revenue": 6560000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 1540000000,
-        "debt": 10856000000,
-        "earnings": 3643000000,
-        "fiscal_year": "2023-12-31",
-        "market_return_pct": 23.591245456684877,
-        "revenue": 27959000000,
-        "spending": 25096000000,
-        "stock_return_pct": 8.855154965211893
+        "cash": null,
+        "debt": null,
+        "earnings": 459000000,
+        "fiscal_year": "2024-09-30",
+        "market_return_pct": 5.211427733157289,
+        "revenue": 6751000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 1302000000,
-        "debt": 8922000000,
+        "cash": null,
+        "debt": null,
         "earnings": -1404000000,
         "fiscal_year": "2024-12-31",
-        "market_return_pct": 23.99873056172645,
-        "revenue": 27270000000,
-        "spending": 23404000000,
-        "stock_return_pct": 5.752469494479944
+        "market_return_pct": 2.14723926380369,
+        "revenue": 27251000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 1274000000,
-        "debt": 9191000000,
+        "cash": null,
+        "debt": null,
         "earnings": 3096000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 26774000000,
-        "spending": 22895000000,
-        "stock_return_pct": 17.513736263736266
+        "revenue": 26775000000,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.3584380866266328,
-      "debt_to_ebitda": 1.253204254158713,
-      "debt_to_equity": 0.22476973846229623
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 76.10715638086766,
+      "book_value_per_share": 78.67572658995665,
       "shareholders_equity": 41139000000,
       "total_assets": 161254000000,
       "total_liabilities": 120092000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 12.377679838649435
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -25.21122479821929
+      "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 7.265598676754373,
-      "trend": "improving"
+      "roe_pct": 7.525705534893897,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 13.484703517874653,
-      "graham_number": 96.87111221494767,
-      "graham_upside_pct": 28.8522375830642,
-      "ncav_margin_pct": -182.63567547351803,
-      "pb_ratio": 0.9883042881549525,
-      "pe_ttm": 13.644283121597098
+      "graham_multiple": null,
+      "graham_number": 98.04186297764825,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Insurance - Diversified",
-  "last_updated": "2026-09-23T02:50:33Z",
+  "industry": "Fire, Marine & Casualty Insurance",
+  "last_updated": "2026-09-23T13:23:44Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -103,33 +105,23 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 39860887080,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 76.10715638086766,
-    "current_ratio": 1.3584380866266328,
-    "debt_to_ebitda": 1.253204254158713,
-    "debt_to_equity": 0.22476973846229623,
-    "eps_growth_cagr_3yr_pct": -25.21122479821929,
-    "fcf_margin_pct": 12.377679838649435,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 13.484703517874653,
-    "graham_upside_pct": 28.8522375830642,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -182.63567547351803,
-    "pb_ratio": 0.9883042881549525,
-    "pe_ttm": 13.644283121597098,
-    "roe_pct": 7.265598676754373,
+    "book_value_per_share": 78.67572658995665,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 1,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "roe_pct": 7.525705534893897,
     "shareholders_equity": 41139000000,
     "total_assets": 161254000000,
     "total_liabilities": 120092000000
   },
   "name": "American International Group",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 75.18
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -158,14 +150,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $39.9B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.36, debt $9.2B vs working capital $-15.0B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -173,57 +165,57 @@
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
           "passed": null
         },
         {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -25.2%/yr",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 13.6",
-          "passed": true
-        },
-        {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 13.5",
-          "passed": true
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 2,
+      "passed": 1,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 7.3%",
+          "detail": "ROE 7.5%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.22",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "570,300,000 shares vs. 657,283,000 a year earlier",
+          "detail": "570,349,988 shares vs. 657,283,160 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },
-  "website": "https://www.aig.com"
+  "website": null
 }

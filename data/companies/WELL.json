@@ -1,104 +1,104 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for WELL: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=well.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca306d9d0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000766704",
   "five_year_history": {
     "years": [
       {
         "cash": 269265000,
-        "debt": 14676898000,
-        "earnings": 336138000,
+        "debt": null,
+        "earnings": null,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 4709481000,
-        "spending": 3946125000,
+        "revenue": 4742115000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 631681000,
-        "debt": 14963912000,
-        "earnings": 141214000,
+        "debt": null,
+        "earnings": null,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 5776068000,
-        "spending": 5029848000,
-        "stock_return_pct": -23.574676460300804
+        "revenue": 5860615000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1993646000,
-        "debt": 16118779000,
-        "earnings": 340094000,
+        "debt": null,
+        "earnings": null,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 6478231000,
-        "spending": 5537777000,
-        "stock_return_pct": 37.66590389016018
+        "revenue": 6637995000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 3506586000,
-        "debt": 16758356000,
-        "earnings": 951680000,
+        "debt": null,
+        "earnings": null,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 7853618000,
-        "spending": 6707920000,
-        "stock_return_pct": 39.66090425531916
+        "revenue": 7991118000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 5033678000,
-        "debt": 21380295000,
-        "earnings": 936845000,
+        "debt": null,
+        "earnings": null,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 10667136000,
-        "spending": 10311968000,
-        "stock_return_pct": 47.2744584622709
+        "revenue": 10838034000,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.8419626755055797,
-      "debt_to_ebitda": 8.57373753657222,
-      "debt_to_equity": 0.42488594259688833
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 67.3073642332991,
+      "book_value_per_share": 59.680741766937906,
       "shareholders_equity": 42129498000,
       "total_assets": 67303047000,
       "total_liabilities": 24100108000
     },
     "cash_flow": {
-      "fcf_margin_pct": 26.69768155201171
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 65.685997315607
+      "eps_growth_cagr_3yr_pct": 66.71109926452392
     },
     "profitability": {
-      "roe_pct": 3.1467201261404685,
+      "roe_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 417.3393326009132,
-      "graham_number": 46.20958915962588,
-      "graham_upside_pct": -79.93591717266906,
-      "ncav_margin_pct": -108.7268179166343,
-      "pb_ratio": 3.4973075937638938,
-      "pe_ttm": 119.3316062176166
+      "graham_multiple": null,
+      "graham_number": 43.20318505343076,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "REIT - Healthcare Facilities",
-  "last_updated": "2026-09-23T03:57:52Z",
+  "industry": "Real Estate Investment Trusts",
+  "last_updated": "2026-09-23T12:41:51Z",
   "layered_analysis": {
     "flags": [
-      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
-    "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": false,
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -107,51 +107,25 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 165954939853,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 67.3073642332991,
-    "current_ratio": 0.8419626755055797,
-    "debt_to_ebitda": 8.57373753657222,
-    "debt_to_equity": 0.42488594259688833,
-    "eps_growth_cagr_3yr_pct": 65.685997315607,
-    "fcf_margin_pct": 26.69768155201171,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 417.3393326009132,
-    "graham_upside_pct": -79.93591717266906,
+    "book_value_per_share": 59.680741766937906,
+    "eps_growth_cagr_3yr_pct": 66.71109926452392,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 2,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -108.7268179166343,
-    "pb_ratio": 3.4973075937638938,
-    "pe_ttm": 119.3316062176166,
-    "roe_pct": 3.1467201261404685,
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 0,
     "shareholders_equity": 42129498000,
     "total_assets": 67303047000,
     "total_liabilities": 24100108000
   },
   "name": "Welltower Inc.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 230.31
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Welltower is a REIT focused on senior housing, wellness housing, and post-acute care real estate in the U.S., U.K., and Canada, operating through three segments: Seniors Housing Operating (78% of 2025 revenue), Triple-net (11%), and Outpatient Medical (7%). The filing describes a portfolio of 2,500+ communities, partnerships with 62 operating partners for its Seniors Housing Operating segment, use of RIDEA structures, triple-net master leases with bundling features, and various investment types including loans, construction funding, and unconsolidated joint ventures. Risk factors emphasize operator/tenant dependence, reimbursement program exposure (Medicare/Medicaid), labor cost pressures, competition for acquisitions, and REIT-specific tax and capital structure risks.",
-    "filing_summary_10q": "This 10-Q excerpt consists almost entirely of XBRL taxonomy tags for the quarter ended June 30, 2026 (fiscal Q2 2026), rather than narrative text, so a detailed summary of results is not possible from what was provided. The tagged data references corporate activity during the period and shortly after, including an Amica Senior Lifestyles acquisition (April 2026), prior Barchester Healthcare and HC One Group acquisitions (October 2025), property dispositions (including a completed outpatient medical portfolio sale), several debt transactions (including a 4.25% senior unsecured notes issuance in April 2026 and subsequent notes issued in July 2026), and segment-level data for Seniors Housing Operating, Triple-net, and Outpatient Medical.",
-    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses that Welltower entered into a new Equity Distribution Agreement (at-the-market equity program) with multiple sales agents and forward purchasers permitting the offer and sale of up to $7.5 billion in common stock, replacing a prior ATM agreement from October 2025. It also discloses a prospectus supplement filed the same day to register the resale of 261,753 shares issued as consideration for a recent lease amendment, along with related legal and tax opinions from the company's outside counsel filed as exhibits.",
-    "moat_explanation": "The excerpts describe Welltower as a diversified healthcare/senior-housing REIT with a large portfolio (2,500+ communities), a proprietary 'Data Science platform' and 'Welltower Business System,' and master-lease bundling that protects the landlord in tenant bankruptcy scenarios, but none of these are described with concrete evidence of durable, hard-to-replicate advantages over other capital-rich REITs. The Risk Factors section explicitly notes competition for acquisitions can drive up prices, oversupply risk affects operators, and Welltower has limited control over day-to-day operations since it relies on third-party operators/tenants, undermining a clear moat claim.",
-    "moat_present": false,
-    "moat_type": "none",
-    "red_flags": [
-      "Revenue concentration in Seniors Housing Operating segment (78% of 2025 revenue) with reliance on a small number of operating partners (Care UK 14%, Cogir 12%, Sunrise 10% of that segment's revenue)",
-      "Triple-net segment revenue concentrated with Integra Healthcare Properties at ~16% of segment revenue",
-      "Company explicitly acknowledges it has 'very limited control' over operators'/tenants' businesses and relies on their financial health to receive payments",
-      "Disclosed exposure to Medicaid reimbursement cuts under OBBBA starting 2028 and ongoing labor cost/staffing shortage pressures for operators and tenants",
-      "Very large stock-based compensation expense recognized in 2025 ($1,556,732,000, most tied to Executive & Key Employee LTIP awards)",
-      "Risk factors note competition for acquisitions may increase prices and oversupply may affect operators' ability to maintain occupancy/pricing"
-    ]
-  },
+  "qualitative": null,
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000766704.json",
@@ -178,56 +152,56 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $166.0B",
-          "passed": true
-        },
-        {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.84, debt $21.4B vs working capital $8.1B",
-          "passed": false
-        },
-        {
-          "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years",
-          "passed": true
-        },
-        {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
           "passed": null
         },
         {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 65.7%/yr",
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability",
+          "detail": "No annual net income data available",
+          "passed": null
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 119.3",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 66.7%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 417.3",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 2,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 3.1%",
-          "passed": false
+          "detail": "ROE unavailable",
+          "passed": null
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.42",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -236,14 +210,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 1,
+      "passed": 0,
       "total": 4
     }
   },
-  "website": "https://www.welltower.com"
+  "website": null
 }

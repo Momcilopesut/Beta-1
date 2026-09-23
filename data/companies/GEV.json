@@ -1,92 +1,82 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for GEV: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=gev.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9f0bbc20>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001996810",
   "five_year_history": {
     "years": [
       {
-        "cash": 2067000000,
-        "debt": 1656000000,
-        "earnings": -2736000000,
-        "fiscal_year": "2022-12-31",
-        "market_return_pct": -19.48164055920498,
-        "revenue": 29654000000,
-        "spending": 32535000000,
+        "cash": null,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2024-04-01",
+        "market_return_pct": 10.474981487358509,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 1551000000,
-        "debt": 1709000000,
-        "earnings": -438000000,
-        "fiscal_year": "2023-12-31",
-        "market_return_pct": 23.591245456684877,
-        "revenue": 33239000000,
-        "spending": 34162000000,
-        "stock_return_pct": null
-      },
-      {
-        "cash": 8205000000,
-        "debt": 1623000000,
+        "cash": null,
+        "debt": null,
         "earnings": 1552000000,
         "fiscal_year": "2024-12-31",
-        "market_return_pct": 23.99873056172645,
-        "revenue": 34943000000,
-        "spending": 34156000000,
+        "market_return_pct": 12.241458556764224,
+        "revenue": 34935000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 8848000000,
-        "debt": 0,
+        "cash": null,
+        "debt": null,
         "earnings": 4884000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 38068000000,
-        "spending": 36679000000,
-        "stock_return_pct": 98.69577113671603
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.8495969908651263,
-      "debt_to_ebitda": 0.0,
-      "debt_to_equity": 0.3311867525298988
+      "current_ratio": 0.9815483744996583,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 48.9365671641791,
+      "book_value_per_share": 41.969923424714516,
       "shareholders_equity": 11178000000,
       "total_assets": 63016000000,
-      "total_liabilities": 50721000000
+      "total_liabilities": 50720000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 9.748345066722706
+      "fcf_margin_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 83.39933921186793,
+      "roe_pct": 43.69296833064949,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 574.1913179702444,
-      "graham_number": 140.4678749059621,
-      "graham_upside_pct": -85.21826462664033,
-      "ncav_margin_pct": -104.15067318461098,
-      "pb_ratio": 21.29924228485406,
-      "pe_ttm": 26.958297872340424
+      "graham_multiple": null,
+      "graham_number": 129.24812869485575,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-23T03:57:01Z",
+  "industry": "Electronic & Other Electrical Equipment (No Computer Equip)",
+  "last_updated": "2026-09-23T14:16:42Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -95,32 +85,24 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 253091493408,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 48.9365671641791,
-    "current_ratio": 0.8495969908651263,
-    "debt_to_ebitda": 0.0,
-    "debt_to_equity": 0.3311867525298988,
-    "fcf_margin_pct": 9.748345066722706,
-    "graham_criteria_evaluated": 5,
+    "book_value_per_share": 41.969923424714516,
+    "current_ratio": 0.9815483744996583,
+    "graham_criteria_evaluated": 2,
     "graham_criteria_passed": 1,
-    "graham_multiple": 574.1913179702444,
-    "graham_upside_pct": -85.21826462664033,
     "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -104.15067318461098,
-    "pb_ratio": 21.29924228485406,
-    "pe_ttm": 26.958297872340424,
-    "roe_pct": 83.39933921186793,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "roe_pct": 43.69296833064949,
     "shareholders_equity": 11178000000,
     "total_assets": 63016000000,
-    "total_liabilities": 50721000000
+    "total_liabilities": 50720000000
   },
   "name": "GE Vernova",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 950.28
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -149,24 +131,24 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $253.1B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.85, debt $0.0B vs working capital $-0.8B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 2/5 available years",
+          "detail": "Positive in 2/4 available years",
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth",
@@ -174,17 +156,17 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 27.0",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 574.2",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 5,
+      "evaluated": 2,
       "passed": 1,
       "total": 7
     },
@@ -192,13 +174,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 83.4%",
+          "detail": "ROE 43.7%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.33",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -211,10 +193,10 @@
           "passed": true
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.gevernova.com"
+  "website": null
 }

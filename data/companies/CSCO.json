@@ -1,16 +1,18 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for CSCO: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=csco.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9eb3fd70>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000858877",
   "five_year_history": {
     "years": [
       {
         "cash": 7079000000,
-        "debt": 10561000000,
+        "debt": 9515000000,
         "earnings": 11812000000,
         "fiscal_year": "2022-07-30",
         "market_return_pct": null,
-        "revenue": 51557000000,
-        "spending": 37588000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
@@ -19,19 +21,19 @@
         "earnings": 12613000000,
         "fiscal_year": "2023-07-29",
         "market_return_pct": 10.905604504963714,
-        "revenue": 56998000000,
-        "spending": 41967000000,
-        "stock_return_pct": 14.8115494820366
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 7508000000,
-        "debt": 30973000000,
+        "debt": 30962000000,
         "earnings": 10320000000,
         "fiscal_year": "2024-07-27",
         "market_return_pct": 19.154337739648085,
-        "revenue": 53803000000,
-        "spending": 41622000000,
-        "stock_return_pct": -8.0821654828182
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 8346000000,
@@ -39,9 +41,9 @@
         "earnings": 10180000000,
         "fiscal_year": "2025-07-26",
         "market_return_pct": 17.01932260671515,
-        "revenue": 56654000000,
-        "spending": 44894000000,
-        "stock_return_pct": 43.46282372598161
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 7218000000,
@@ -49,54 +51,52 @@
         "earnings": 13267000000,
         "fiscal_year": "2026-07-25",
         "market_return_pct": 15.983362109558927,
-        "revenue": 63325000000,
-        "spending": 47957000000,
-        "stock_return_pct": 66.2105109914107
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 0.9311258278145695,
-      "debt_to_ebitda": 1.6491512173330356,
+      "debt_to_ebitda": 1.8380009957679861,
       "debt_to_equity": 0.5873123197772696
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 12.720718441689856,
+      "book_value_per_share": 12.754316295315276,
       "shareholders_equity": 50285000000,
       "total_assets": 129637000000,
       "total_liabilities": 79352000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 20.161073825503355
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 2.9428498400178693
+      "eps_growth_cagr_3yr_pct": 2.746874400366228
     },
     "profitability": {
-      "roe_pct": 27.391066469841334,
+      "roe_pct": 26.383613403599483,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 265.0689234506172,
-      "graham_number": 31.011067608061367,
-      "graham_upside_pct": -70.8652126944181,
-      "ncav_margin_pct": -109.69548483653494,
-      "pb_ratio": 8.367451924033013,
-      "pe_ttm": 31.678571428571427
+      "graham_multiple": null,
+      "graham_number": 30.9130578951112,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Communication Equipment",
-  "last_updated": "2026-09-23T02:59:45Z",
+  "industry": "Computer Communications Equipment",
+  "last_updated": "2026-09-23T14:46:47Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,27 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 419526305743,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 12.720718441689856,
+    "book_value_per_share": 12.754316295315276,
     "current_ratio": 0.9311258278145695,
-    "debt_to_ebitda": 1.6491512173330356,
+    "debt_to_ebitda": 1.8380009957679861,
     "debt_to_equity": 0.5873123197772696,
-    "eps_growth_cagr_3yr_pct": 2.9428498400178693,
-    "fcf_margin_pct": 20.161073825503355,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 265.0689234506172,
-    "graham_upside_pct": -70.8652126944181,
+    "eps_growth_cagr_3yr_pct": 2.746874400366228,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 2,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -109.69548483653494,
-    "pb_ratio": 8.367451924033013,
-    "pe_ttm": 31.678571428571427,
-    "roe_pct": 27.391066469841334,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "roe_pct": 26.383613403599483,
     "shareholders_equity": 50285000000,
     "total_assets": 129637000000,
     "total_liabilities": 79352000000
   },
   "name": "Cisco",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 106.44
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Technology",
@@ -160,9 +154,9 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $419.5B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
@@ -175,35 +169,35 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 2.9%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 31.7",
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 2.7%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 265.1",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 4,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 27.4%",
+          "detail": "ROE 26.4%",
           "passed": true
         },
         {
@@ -218,14 +212,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.cisco.com"
+  "website": null
 }

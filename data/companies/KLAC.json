@@ -1,68 +1,70 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for KLAC: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=klac.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca222dfa0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000319201",
   "five_year_history": {
     "years": [
       {
         "cash": 1584908000,
-        "debt": 6774305000,
+        "debt": null,
         "earnings": 3321807000,
         "fiscal_year": "2022-06-30",
         "market_return_pct": null,
         "revenue": 9211883000,
-        "spending": 5557702000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 1927865000,
-        "debt": 6063132000,
+        "debt": 0,
         "earnings": 3387277000,
         "fiscal_year": "2023-06-30",
         "market_return_pct": 17.50298210735586,
         "revenue": 10496056000,
-        "spending": 6501360000,
-        "stock_return_pct": 51.98997179567534
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1977129000,
-        "debt": 6819643000,
+        "debt": 749936000,
         "earnings": 2761896000,
         "fiscal_year": "2024-06-30",
         "market_return_pct": 23.0238224147266,
         "revenue": 9812247000,
-        "spending": 6176563000,
-        "stock_return_pct": 70.68041237113403
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2078908000,
-        "debt": 6088282000,
+        "debt": 0,
         "earnings": 4061643000,
         "fiscal_year": "2025-06-30",
         "market_return_pct": 13.296292221366485,
         "revenue": 12156162000,
-        "spending": 7141935000,
-        "stock_return_pct": 8.202464363372785
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1649842000,
-        "debt": 6151713000,
+        "debt": null,
         "earnings": 4830771000,
         "fiscal_year": "2026-06-30",
         "market_return_pct": 20.865905964230794,
         "revenue": 13579476000,
-        "spending": 7918696000,
-        "stock_return_pct": 236.84269286591496
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 2.876190467341258,
-      "debt_to_ebitda": 1.0160130264496121,
-      "debt_to_equity": 0.9688011628676089
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 4.841587902854407,
+      "book_value_per_share": 4.860002016475823,
       "shareholders_equity": 6349820000,
       "total_assets": 17951535000,
       "total_liabilities": 11601715000
@@ -71,32 +73,30 @@
       "fcf_margin_pct": 27.741379711558828
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 14.86817260421871
+      "eps_growth_cagr_3yr_pct": -46.684357143962295
     },
     "profitability": {
-      "roe_pct": 85.38281163939013,
+      "roe_pct": 76.07729037988479,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 1988.3161874968432,
-      "graham_number": 20.022074776514668,
-      "graham_upside_pct": -89.36805714925941,
-      "ncav_margin_pct": -99.68295935029555,
-      "pb_ratio": 38.89632983612134,
-      "pe_ttm": 51.11834961997828
+      "graham_multiple": null,
+      "graham_number": 20.005528387342935,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Semiconductors",
-  "last_updated": "2026-09-23T03:00:54Z",
+  "industry": "Optical Instruments & Lenses",
+  "last_updated": "2026-09-23T14:54:01Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,26 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 245998649600,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 4.841587902854407,
+    "book_value_per_share": 4.860002016475823,
     "current_ratio": 2.876190467341258,
-    "debt_to_ebitda": 1.0160130264496121,
-    "debt_to_equity": 0.9688011628676089,
-    "eps_growth_cagr_3yr_pct": 14.86817260421871,
+    "eps_growth_cagr_3yr_pct": -46.684357143962295,
     "fcf_margin_pct": 27.741379711558828,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 1988.3161874968432,
-    "graham_upside_pct": -89.36805714925941,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 2,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -99.68295935029555,
-    "pb_ratio": 38.89632983612134,
-    "pe_ttm": 51.11834961997828,
-    "roe_pct": 85.38281163939013,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 2,
+    "roe_pct": 76.07729037988479,
     "shareholders_equity": 6349820000,
     "total_assets": 17951535000,
     "total_liabilities": 11601715000
   },
   "name": "KLA Corporation",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 188.32
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Technology",
@@ -160,14 +153,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $246.0B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.88, debt $6.2B vs working capital $8.1B",
-          "passed": true
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -175,57 +168,57 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 14.9%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 51.1",
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -46.7%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1988.3",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 85.4%",
+          "detail": "ROE 76.1%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.97",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "1,319,633,000 shares vs. 1,337,500,000 a year earlier",
+          "detail": "1,319,633,000 shares vs. 1,337,502,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 2,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.kla.com"
+  "website": null
 }

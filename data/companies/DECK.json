@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for DECK: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=deck.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9f0e84a0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000910521",
   "five_year_history": {
     "years": [
       {
         "cash": 843527000,
-        "debt": 222070000,
-        "earnings": 451949000,
-        "fiscal_year": "2022-03-31",
-        "market_return_pct": null,
-        "revenue": 3150339000,
-        "spending": 2585632000,
+        "debt": null,
+        "earnings": 178547000,
+        "fiscal_year": "2023-09-30",
+        "market_return_pct": -3.5643385670456498,
+        "revenue": 1091907000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 981795000,
-        "debt": 246488000,
-        "earnings": 516822000,
-        "fiscal_year": "2023-03-31",
-        "market_return_pct": -9.354795855105836,
-        "revenue": 3627286000,
-        "spending": 2974535000,
-        "stock_return_pct": 64.21214113521806
+        "debt": null,
+        "earnings": 389919000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 10.566576214091878,
+        "revenue": 1560307000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1502051000,
-        "debt": 266879000,
+        "debt": null,
         "earnings": 759563000,
         "fiscal_year": "2024-03-31",
-        "market_return_pct": 27.545860915019905,
+        "market_return_pct": 10.474981487358509,
         "revenue": 4287763000,
-        "spending": 3360249000,
-        "stock_return_pct": 106.96650206859735
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1889188000,
-        "debt": 276975000,
+        "debt": null,
         "earnings": 966091000,
         "fiscal_year": "2025-03-31",
         "market_return_pct": 7.1299984679025625,
         "revenue": 4985612000,
-        "spending": 3806520000,
-        "stock_return_pct": -27.90172814031468
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1907249000,
-        "debt": 375194000,
+        "debt": null,
         "earnings": 1024071000,
         "fiscal_year": "2026-03-31",
         "market_return_pct": 16.258781887413086,
         "revenue": 5472296000,
-        "spending": 4209393000,
-        "stock_return_pct": -10.482067793578391
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.7472206056423705,
-      "debt_to_ebitda": 0.28027244829966325,
-      "debt_to_equity": 0.20521253587593768
+      "current_ratio": 3.5449722289242036,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 16.64712902222576,
+      "book_value_per_share": 18.32388054363274,
       "shareholders_equity": 2499638000,
       "total_assets": 3687765000,
-      "total_liabilities": 1188127000
+      "total_liabilities": null
     },
     "cash_flow": {
       "fcf_margin_pct": 20.05249716024133
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 29.38872481646566
+      "eps_growth_cagr_3yr_pct": -22.549501759224466
     },
     "profitability": {
-      "roe_pct": 41.09993475622276,
+      "roe_pct": 40.968772278225885,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 54.223583045321064,
-      "graham_number": 51.350805613160155,
-      "graham_upside_pct": -35.67480193766735,
-      "ncav_margin_pct": -84.73552821857002,
-      "pb_ratio": 4.795421474382647,
-      "pe_ttm": 11.307365439093484
+      "graham_multiple": null,
+      "graham_number": 53.79829859639421,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Apparel - Footwear & Accessories",
-  "last_updated": "2026-09-23T02:47:38Z",
+  "industry": "Rubber & Plastics Footwear",
+  "last_updated": "2026-09-23T12:57:22Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,25 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 10871409060,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 16.64712902222576,
-    "current_ratio": 2.7472206056423705,
-    "debt_to_ebitda": 0.28027244829966325,
-    "debt_to_equity": 0.20521253587593768,
-    "eps_growth_cagr_3yr_pct": 29.38872481646566,
+    "book_value_per_share": 18.32388054363274,
+    "current_ratio": 3.5449722289242036,
+    "eps_growth_cagr_3yr_pct": -22.549501759224466,
     "fcf_margin_pct": 20.05249716024133,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 5,
-    "graham_multiple": 54.223583045321064,
-    "graham_upside_pct": -35.67480193766735,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 1,
     "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -84.73552821857002,
-    "pb_ratio": 4.795421474382647,
-    "pe_ttm": 11.307365439093484,
-    "roe_pct": 41.09993475622276,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "roe_pct": 40.968772278225885,
     "shareholders_equity": 2499638000,
-    "total_assets": 3687765000,
-    "total_liabilities": 1188127000
+    "total_assets": 3687765000
   },
   "name": "Deckers Brands",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 79.83
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -160,14 +152,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $10.9B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.75, debt $0.4B vs working capital $2.0B",
-          "passed": true
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -181,35 +173,35 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 29.4%/yr",
-          "passed": true
-        },
-        {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 11.3",
-          "passed": true
-        },
-        {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 54.2",
+          "detail": "EPS 3yr CAGR -22.5%/yr",
           "passed": false
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 5,
+      "evaluated": 2,
+      "passed": 1,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 41.1%",
+          "detail": "ROE 41.0%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.21",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -222,10 +214,10 @@
           "passed": true
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.deckers.com"
+  "website": null
 }

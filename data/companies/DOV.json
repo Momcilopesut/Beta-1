@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for DOV: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=dov.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca296e0c0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000029905",
   "five_year_history": {
     "years": [
       {
-        "cash": 385504000,
-        "debt": 3301950000,
+        "cash": null,
+        "debt": 3124416000,
         "earnings": 1123818000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 7907081000,
-        "spending": 6625573000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 380868000,
-        "debt": 3886675000,
+        "cash": null,
+        "debt": 3678285000,
         "earnings": 1065376000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 7844174000,
-        "spending": 6564533000,
-        "stock_return_pct": -25.43502202643172
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 398561000,
-        "debt": 3678836000,
+        "cash": null,
+        "debt": 2991759000,
         "earnings": 1056828000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 7684476000,
-        "spending": 6465136000,
-        "stock_return_pct": 11.897201092976896
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 1844877000,
-        "debt": 3153953000,
+        "cash": null,
+        "debt": 2529346000,
         "earnings": 2697126000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 7745909000,
-        "spending": 6539554000,
-        "stock_return_pct": 23.812038014783514
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 1676808000,
-        "debt": 3778917000,
+        "cash": null,
+        "debt": 2621295000,
         "earnings": 1093956000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 8092571000,
-        "spending": 6719210000,
-        "stock_return_pct": 4.072494669509603
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.9786871607495637,
-      "debt_to_ebitda": 2.1557619265484576,
-      "debt_to_equity": 0.4231550243224173
+      "current_ratio": 1.7895412685939862,
+      "debt_to_ebitda": 1.4953723406075972,
+      "debt_to_equity": 0.3539800243234287
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 57.168753107399134,
+      "book_value_per_share": 54.983617676611395,
       "shareholders_equity": 7405206000,
       "total_assets": 13422423000,
-      "total_liabilities": 6017217000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 13.811951727084013
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 2.1831390148761454
+      "eps_growth_cagr_3yr_pct": 2.2834886521603703
     },
     "profitability": {
-      "roe_pct": 14.998992797311164,
-      "trend": "improving"
+      "roe_pct": 14.772796327340524,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 72.89516936447576,
-      "graham_number": 101.2511069123906,
-      "graham_upside_pct": -45.72150374590404,
-      "ncav_margin_pct": -106.01147164401516,
-      "pb_ratio": 3.2629712886961117,
-      "pe_ttm": 22.340119760479038
+      "graham_multiple": null,
+      "graham_number": 99.1101573902828,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-23T02:55:54Z",
+  "industry": "Construction, Mining & Materials Handling Machinery & Equip",
+  "last_updated": "2026-09-23T14:12:22Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,26 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 25123207200,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 57.168753107399134,
-    "current_ratio": 1.9786871607495637,
-    "debt_to_ebitda": 2.1557619265484576,
-    "debt_to_equity": 0.4231550243224173,
-    "eps_growth_cagr_3yr_pct": 2.1831390148761454,
-    "fcf_margin_pct": 13.811951727084013,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 54.983617676611395,
+    "current_ratio": 1.7895412685939862,
+    "debt_to_ebitda": 1.4953723406075972,
+    "debt_to_equity": 0.3539800243234287,
+    "eps_growth_cagr_3yr_pct": 2.2834886521603703,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 2,
-    "graham_multiple": 72.89516936447576,
-    "graham_upside_pct": -45.72150374590404,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -106.01147164401516,
-    "pb_ratio": 3.2629712886961117,
-    "pe_ttm": 22.340119760479038,
-    "roe_pct": 14.998992797311164,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": 14.772796327340524,
     "shareholders_equity": 7405206000,
-    "total_assets": 13422423000,
-    "total_liabilities": 6017217000
+    "total_assets": 13422423000
   },
   "name": "Dover Corporation",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 186.54
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -160,13 +153,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $25.1B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.98, debt $3.8B vs working capital $2.0B",
+          "detail": "Current ratio 1.79, debt $2.6B vs working capital $2.0B",
           "passed": false
         },
         {
@@ -175,27 +168,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 2.2%/yr",
+          "detail": "EPS 3yr CAGR 2.3%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 22.3",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 72.9",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 2,
       "total": 7
     },
@@ -203,29 +196,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 15.0%",
+          "detail": "ROE 14.8%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.42",
+          "detail": "Debt/equity 0.35",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "138,029,000 shares vs. 138,696,000 a year earlier",
+          "detail": "137,777,000 shares vs. 138,696,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.dovercorporation.com"
+  "website": null
 }

@@ -1,157 +1,134 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for VEEV: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=veev.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1c0a870>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001393052",
   "five_year_history": {
     "years": [
       {
         "cash": 1138040000,
-        "debt": 54588000,
+        "debt": null,
         "earnings": 427390000,
         "fiscal_year": "2022-01-31",
         "market_return_pct": null,
-        "revenue": 1850777000,
-        "spending": 1345281000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 886465000,
-        "debt": 60976000,
+        "debt": null,
         "earnings": 487706000,
         "fiscal_year": "2023-01-31",
         "market_return_pct": -9.653041719455004,
-        "revenue": 2155060000,
-        "spending": 1695969000,
-        "stock_return_pct": -27.898029931512635
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 703487000,
-        "debt": 55775000,
+        "debt": null,
         "earnings": 525705000,
         "fiscal_year": "2024-01-31",
         "market_return_pct": 18.795512694351498,
-        "revenue": 2363673000,
-        "spending": 1934339000,
-        "stock_return_pct": 21.61243037232482
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1118785000,
-        "debt": 75775000,
+        "debt": null,
         "earnings": 714138000,
         "fiscal_year": "2025-01-31",
         "market_return_pct": 24.631378396288945,
-        "revenue": 2746619000,
-        "spending": 2055184000,
-        "stock_return_pct": 12.46323706667952
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1421233000,
-        "debt": 95859000,
+        "debt": null,
         "earnings": 908906000,
         "fiscal_year": "2026-01-31",
         "market_return_pct": 14.979561995280976,
-        "revenue": 3195311000,
-        "spending": 2278942000,
-        "stock_return_pct": -12.578238875075026
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 5.457760912119235,
-      "debt_to_ebitda": 0.09914670472880725,
-      "debt_to_equity": 0.020412573644789864
+      "current_ratio": 4.885373499745885,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 45.775938747351304,
+      "book_value_per_share": 44.560578374807804,
       "shareholders_equity": 7214752000,
       "total_assets": 8979343000,
       "total_liabilities": 1764591000
     },
     "cash_flow": {
-      "fcf_margin_pct": 43.3790012928319
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 20.90783509536187
+      "eps_growth_cagr_3yr_pct": 21.943656983611138
     },
     "profitability": {
-      "roe_pct": 14.001110530628171,
-      "trend": "improving"
+      "roe_pct": 12.597882782388083,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 239.47081380132505,
-      "graham_number": 75.60602060071336,
-      "graham_upside_pct": -71.02218366459188,
-      "ncav_margin_pct": -85.24502318643559,
-      "pb_ratio": 5.699719266054306,
-      "pe_ttm": 42.01449275362318
+      "graham_multiple": null,
+      "graham_number": 73.85265596494466,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Software - Application",
-  "last_updated": "2026-09-23T03:10:05Z",
+  "industry": "Services-Prepackaged Software",
+  "last_updated": "2026-09-23T14:04:25Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
-    "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
-      "cyclicality": "medium",
-      "rate_sensitivity": "high"
+      "cyclicality": "low",
+      "rate_sensitivity": "low"
     }
   },
-  "market_cap": 42383079055,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 45.775938747351304,
-    "current_ratio": 5.457760912119235,
-    "debt_to_ebitda": 0.09914670472880725,
-    "debt_to_equity": 0.020412573644789864,
-    "eps_growth_cagr_3yr_pct": 20.90783509536187,
-    "fcf_margin_pct": 43.3790012928319,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 239.47081380132505,
-    "graham_upside_pct": -71.02218366459188,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -85.24502318643559,
-    "pb_ratio": 5.699719266054306,
-    "pe_ttm": 42.01449275362318,
-    "roe_pct": 14.001110530628171,
+    "book_value_per_share": 44.560578374807804,
+    "current_ratio": 4.885373499745885,
+    "eps_growth_cagr_3yr_pct": 21.943656983611138,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 0,
+    "roe_pct": 12.597882782388083,
     "shareholders_equity": 7214752000,
     "total_assets": 8979343000,
     "total_liabilities": 1764591000
   },
   "name": "Veeva Systems",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 260.91
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For the fiscal year ended January 31, 2026, Veeva reported total revenues of $3,195 million (up 16% year over year), subscription revenues of $2,684 million (up 17%), and net income of $909 million, up from $714 million the prior year. Growth was driven by expanded use of R&D/Quality and Commercial Cloud products by existing customers and annual price adjustments, with customer count rising to 1,552. General and administrative expenses rose partly due to litigation settlement-related charges, and the effective tax rate increased due to the One Big Beautiful Bill Act's tax provisions.",
-    "filing_summary_10q": "This is the Form 10-Q for the quarterly period ended July 31, 2026 (fiscal Q2 2027), filed by Veeva Systems Inc. The excerpt provided consists primarily of XBRL tags and cover-page information, including references to a recent acquisition (Rise Healthcare Tech Inc./Ostro) closed March 9, 2026, and standard financial statement line items (revenue by subscription and technology service, segment and geographic breakdowns, fair value and investment disclosures). The excerpt does not include the narrative MD&A discussion, so specific quarterly financial results and business commentary are not available from what was provided.",
-    "filing_summary_8k": "This 8-K, dated August 26, 2026, discloses under Item 2.02 that Veeva Systems issued a press release announcing results for its fiscal second quarter ended July 31, 2026, furnished as Exhibit 99.1. The filing itself does not include the financial results in the body of the document, only the announcement that the press release was issued.",
-    "moat_explanation": "The 10-K describes Veeva's deeply embedded, industry-specific Vault platform spanning R&D, quality, and commercial functions for life sciences customers, with applications tied into regulated workflows (GxP, GMP, FDA validation requirements) and long-standing relationships with major pharma/biotech customers. The risk factors themselves note that migrating customers off legacy CRM to Vault CRM 'could cause business disruptions,' implying meaningful switching friction once customers are on the platform. However, the same section acknowledges intense competition (Salesforce, IQVIA, Oracle, and others) and discloses that some large customers have already committed to switching to a competitor, which tempers the strength of the moat somewhat.",
-    "moat_present": true,
-    "moat_type": "switching_costs",
-    "red_flags": [
-      "Revenue concentration in a small number of key customers, whose loss could cause revenue to decline",
-      "Intense competition in the CRM market with disclosed customer defections to Salesforce during the Vault CRM migration",
-      "Heavy dependence on the life sciences industry, exposing the business to drug pricing regulation and healthcare policy changes",
-      "Reliance on third-party infrastructure providers (AWS, Salesforce) for hosting core solutions",
-      "General and administrative expenses increased due to litigation settlement-related charges in the most recent fiscal year",
-      "Macroeconomic and geopolitical factors (tariffs, inflation, currency, geopolitical conflicts) cited as potential negative impacts on the life sciences industry and the business"
-    ]
-  },
-  "sector": "Technology",
+  "qualitative": null,
+  "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001393052.json",
     "sec_filings": [
@@ -177,14 +154,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $42.4B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 5.46, debt $0.1B vs working capital $6.4B",
-          "passed": true
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -198,35 +175,35 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 20.9%/yr",
+          "detail": "EPS 3yr CAGR 21.9%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 42.0",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 239.5",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 4,
+      "evaluated": 2,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 14.0%",
+          "detail": "ROE 12.6%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.02",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -235,14 +212,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 2,
+      "passed": 0,
       "total": 4
     }
   },
-  "website": "https://www.veeva.com"
+  "website": null
 }

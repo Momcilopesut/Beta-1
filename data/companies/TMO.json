@@ -5,98 +5,96 @@
     "years": [
       {
         "cash": 4477000000,
-        "debt": 36339000000,
-        "earnings": 7725000000,
+        "debt": 2537000000,
+        "earnings": null,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 39211000000,
-        "spending": 28893000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 8524000000,
-        "debt": 36073000000,
-        "earnings": 6950000000,
+        "debt": 5579000000,
+        "earnings": null,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 44915000000,
-        "spending": 36390000000,
-        "stock_return_pct": -17.4674779689467
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 8083000000,
-        "debt": 36424000000,
+        "cash": 8077000000,
+        "debt": 3609000000,
         "earnings": 5995000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 42857000000,
-        "spending": 35411000000,
-        "stock_return_pct": -1.1876010096424625
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 4019000000,
-        "debt": 32775000000,
+        "cash": 4009000000,
+        "debt": 2214000000,
         "earnings": 6335000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 42879000000,
-        "spending": 35217000000,
-        "stock_return_pct": -4.395846733437464
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 9852000000,
-        "debt": 39385000000,
-        "earnings": 6737000000,
+        "debt": 3533000000,
+        "earnings": 6704000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 44557000000,
-        "spending": 36447000000,
-        "stock_return_pct": 11.383426561328648
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.5505342093038688,
-      "debt_to_ebitda": 3.616952888235834,
-      "debt_to_equity": 0.8077032593633137
+      "current_ratio": 1.8899861742050168,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.06615237702922838
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 142.01078167115904,
+      "book_value_per_share": 144.44189862153578,
       "shareholders_equity": 53407000000,
       "total_assets": 110343000000,
-      "total_liabilities": 56807000000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 14.123482281123056
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 0.07514562286803361
+      "eps_growth_cagr_3yr_pct": 0.20754776521438867
     },
     "profitability": {
-      "roe_pct": 13.352660055396893,
+      "roe_pct": 12.552661636115117,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 164.01918507995723,
-      "graham_number": 238.284411537287,
-      "graham_upside_pct": -63.81515951872577,
-      "ncav_margin_pct": -111.54070541537831,
-      "pb_ratio": 4.637728886273467,
-      "pe_ttm": 35.36627282491944
+      "graham_multiple": null,
+      "graham_number": 240.11243998340862,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Medical - Diagnostics & Research",
-  "last_updated": "2026-09-23T02:44:18Z",
+  "industry": "Measuring & Controlling Devices, NEC",
+  "last_updated": "2026-09-23T12:27:04Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +103,25 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 243485982777,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 142.01078167115904,
-    "current_ratio": 1.5505342093038688,
-    "debt_to_ebitda": 3.616952888235834,
-    "debt_to_equity": 0.8077032593633137,
-    "eps_growth_cagr_3yr_pct": 0.07514562286803361,
-    "fcf_margin_pct": 14.123482281123056,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 144.44189862153578,
+    "current_ratio": 1.8899861742050168,
+    "debt_to_equity": 0.06615237702922838,
+    "eps_growth_cagr_3yr_pct": 0.20754776521438867,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 2,
-    "graham_multiple": 164.01918507995723,
-    "graham_upside_pct": -63.81515951872577,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -111.54070541537831,
-    "pb_ratio": 4.637728886273467,
-    "pe_ttm": 35.36627282491944,
-    "roe_pct": 13.352660055396893,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": 12.552661636115117,
     "shareholders_equity": 53407000000,
-    "total_assets": 110343000000,
-    "total_liabilities": 56807000000
+    "total_assets": 110343000000
   },
   "name": "Thermo Fisher Scientific Inc.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 658.52
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -160,42 +150,42 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $243.5B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.55, debt $39.4B vs working capital $13.5B",
+          "detail": "Current ratio 1.89, debt $3.5B vs working capital $13.5B",
           "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years",
+          "detail": "Positive in 3/3 available years",
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 0.1%/yr",
+          "detail": "EPS 3yr CAGR 0.2%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 35.4",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 164.0",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 2,
       "total": 7
     },
@@ -203,29 +193,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 13.4%",
+          "detail": "ROE 12.6%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.81",
+          "detail": "Debt/equity 0.07",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "377,000,000 shares vs. 383,000,000 a year earlier",
+          "detail": "378,000,000 shares vs. 383,000,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.thermofisher.com"
+  "website": null
 }

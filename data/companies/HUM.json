@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for HUM: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=hum.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca293a9f0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000049071",
   "five_year_history": {
     "years": [
       {
         "cash": 3394000000,
-        "debt": 13225000000,
+        "debt": 12494000000,
         "earnings": 2933000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 83648000000,
-        "spending": 80229000000,
+        "revenue": 83064000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 5061000000,
-        "debt": 11753000000,
+        "debt": 11126000000,
         "earnings": 2806000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 92922000000,
-        "spending": 89358000000,
-        "stock_return_pct": 10.419091967403967
+        "revenue": 92870000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 4694000000,
-        "debt": 12269000000,
+        "debt": 11656000000,
         "earnings": 2489000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 106440000000,
-        "spending": 103120000000,
-        "stock_return_pct": -8.217653605107484
+        "revenue": 106374000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2221000000,
-        "debt": 12260000000,
+        "debt": 11721000000,
         "earnings": 1207000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 117811000000,
-        "spending": 116184000000,
-        "stock_return_pct": -46.03063178047224
+        "revenue": 117761000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 4200000000,
-        "debt": 12937000000,
+        "debt": 12369000000,
         "earnings": 1188000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 129664000000,
-        "spending": 128211000000,
-        "stock_return_pct": 0.9538449410744502
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.7423392880427695,
-      "debt_to_ebitda": 5.681598594642073,
-      "debt_to_equity": 0.7415291729558112
+      "current_ratio": 2.00250825890126,
+      "debt_to_ebitda": 3.6358024691358026,
+      "debt_to_equity": 0.7005153763379962
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 160.37571028045159,
+      "book_value_per_share": 147.0662951903816,
       "shareholders_equity": 17657000000,
-      "total_assets": 48750000000,
-      "total_liabilities": 31013000000
+      "total_assets": 48909000000,
+      "total_liabilities": 31172000000
     },
     "cash_flow": {
       "fcf_margin_pct": 0.28920903257650543
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -23.67712417994694
+      "eps_growth_cagr_3yr_pct": -23.616654426020823
     },
     "profitability": {
-      "roe_pct": 6.9107229762612885,
-      "trend": "declining"
+      "roe_pct": 6.728209775159994,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 81.2594378418936,
-      "graham_number": 188.72052315668077,
-      "graham_upside_pct": -49.25885570414683,
-      "ncav_margin_pct": -152.72288452121683,
-      "pb_ratio": 2.3268294213293084,
-      "pe_ttm": 34.922816901408446
+      "graham_multiple": null,
+      "graham_number": 180.44522092632567,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Medical - Healthcare Plans",
-  "last_updated": "2026-09-23T02:54:11Z",
+  "industry": "Hospital & Medical Service Plans",
+  "last_updated": "2026-09-23T13:56:49Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,28 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 44661114240,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 160.37571028045159,
-    "current_ratio": 1.7423392880427695,
-    "debt_to_ebitda": 5.681598594642073,
-    "debt_to_equity": 0.7415291729558112,
-    "eps_growth_cagr_3yr_pct": -23.67712417994694,
+    "book_value_per_share": 147.0662951903816,
+    "current_ratio": 2.00250825890126,
+    "debt_to_ebitda": 3.6358024691358026,
+    "debt_to_equity": 0.7005153763379962,
+    "eps_growth_cagr_3yr_pct": -23.616654426020823,
     "fcf_margin_pct": 0.28920903257650543,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 2,
-    "graham_multiple": 81.2594378418936,
-    "graham_upside_pct": -49.25885570414683,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -152.72288452121683,
-    "pb_ratio": 2.3268294213293084,
-    "pe_ttm": 34.922816901408446,
-    "roe_pct": 6.9107229762612885,
+    "roe_pct": 6.728209775159994,
     "shareholders_equity": 17657000000,
-    "total_assets": 48750000000,
-    "total_liabilities": 31013000000
+    "total_assets": 48909000000,
+    "total_liabilities": 31172000000
   },
   "name": "Humana",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 371.928
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -160,14 +155,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $44.7B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.74, debt $12.9B vs working capital $-2.8B",
-          "passed": false
+          "detail": "Current ratio 2.00, debt $12.4B vs working capital $16.4B",
+          "passed": true
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -181,21 +176,21 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -23.7%/yr",
+          "detail": "EPS 3yr CAGR -23.6%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 34.9",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 81.3",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 3,
       "passed": 2,
       "total": 7
     },
@@ -203,12 +198,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 6.9%",
+          "detail": "ROE 6.7%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.74",
+          "detail": "Debt/equity 0.70",
           "passed": true
         },
         {
@@ -218,14 +213,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.humana.com"
+  "website": null
 }

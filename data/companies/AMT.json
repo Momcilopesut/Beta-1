@@ -1,103 +1,104 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for AMT: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=amt.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2d30560>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001053507",
   "five_year_history": {
     "years": [
       {
         "cash": 1949900000,
-        "debt": 52008600000,
-        "earnings": 2567700000,
-        "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
-        "revenue": 9356900000,
-        "spending": 6224900000,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2024-03-31",
+        "market_return_pct": 10.474981487358509,
+        "revenue": 2512600000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 2028400000,
-        "debt": 47051000000,
-        "earnings": 1765800000,
-        "fiscal_year": "2022-12-31",
-        "market_return_pct": -19.48164055920498,
-        "revenue": 9645400000,
-        "spending": 6906800000,
-        "stock_return_pct": -27.569230769230764
+        "cash": 1548900000,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2024-06-30",
+        "market_return_pct": 4.43925233644861,
+        "revenue": 2544700000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1753700000,
-        "debt": 46307000000,
-        "earnings": 1483300000,
-        "fiscal_year": "2023-12-31",
-        "market_return_pct": 23.591245456684877,
-        "revenue": 10012200000,
-        "spending": 6886700000,
-        "stock_return_pct": 3.280468233739256
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2024-09-30",
+        "market_return_pct": 5.211427733157289,
+        "revenue": 2522300000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1999600000,
-        "debt": 43954100000,
-        "earnings": 2255000000,
+        "debt": null,
+        "earnings": null,
         "fiscal_year": "2024-12-31",
-        "market_return_pct": 23.99873056172645,
+        "market_return_pct": 2.14723926380369,
         "revenue": 10127200000,
-        "spending": 5610700000,
-        "stock_return_pct": -16.178419633471965
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1474800000,
-        "debt": 44963900000,
-        "earnings": 2529800000,
+        "debt": null,
+        "earnings": null,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 10645100000,
-        "spending": 5764500000,
-        "stock_return_pct": -4.274576086363886
+        "revenue": 10644600000,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.3519981962685305,
-      "debt_to_ebitda": 6.495608332611019,
-      "debt_to_equity": 12.092373040836627
+      "current_ratio": 0.3965691804796205,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 21.997862972785086,
+      "book_value_per_share": 7.838654871114615,
       "shareholders_equity": 3652500000,
       "total_assets": 63190400000,
       "total_liabilities": 52835100000
     },
     "cash_flow": {
-      "fcf_margin_pct": 35.54311373307907
+      "fcf_margin_pct": 35.544783270390624
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 12.132540555334215
+      "eps_growth_cagr_3yr_pct": 41.155404332154276
     },
     "profitability": {
-      "roe_pct": 90.23194947053561,
+      "roe_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 528.5986440494137,
-      "graham_number": 51.69855269921381,
-      "graham_upside_pct": -70.50011258247429,
-      "ncav_margin_pct": -161.64659467538735,
-      "pb_ratio": 21.958334543108315,
-      "pe_ttm": 24.072802197802194
+      "graham_multiple": null,
+      "graham_number": 30.860922974538948,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "REIT - Specialty",
-  "last_updated": "2026-09-23T03:56:08Z",
+  "industry": "Real Estate Investment Trusts",
+  "last_updated": "2026-09-23T12:39:41Z",
   "layered_analysis": {
     "flags": [
-      "5 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
-    "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,50 +107,27 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 81659490000,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 21.997862972785086,
-    "current_ratio": 0.3519981962685305,
-    "debt_to_ebitda": 6.495608332611019,
-    "debt_to_equity": 12.092373040836627,
-    "eps_growth_cagr_3yr_pct": 12.132540555334215,
-    "fcf_margin_pct": 35.54311373307907,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 528.5986440494137,
-    "graham_upside_pct": -70.50011258247429,
+    "book_value_per_share": 7.838654871114615,
+    "current_ratio": 0.3965691804796205,
+    "eps_growth_cagr_3yr_pct": 41.155404332154276,
+    "fcf_margin_pct": 35.544783270390624,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 2,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -161.64659467538735,
-    "pb_ratio": 21.958334543108315,
-    "pe_ttm": 24.072802197802194,
-    "roe_pct": 90.23194947053561,
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 0,
     "shareholders_equity": 3652500000,
     "total_assets": 63190400000,
     "total_liabilities": 52835100000
   },
   "name": "American Tower Corporation",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 175.25
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "American Tower's FY2025 10-K describes a global REIT operating ~149,686 communications sites plus 30 U.S. data centers, with property operations (towers, DAS, data centers) generating 97% of revenue and services 3%. Total revenue grew 5% year-over-year to $10.6 billion, driven by tenant billings growth, new site additions, and 14% Data Center segment growth, while churn remained around 2%. The filing discusses two ongoing customer disputes (AT&T Mexico arbitration and DISH Wireless SCA default) and notes reliance on a small number of large carrier customers for a substantial share of revenue.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists primarily of structured XBRL tags rather than narrative text, so a detailed factual summary cannot be reliably constructed. The tags indicate the filing covers the quarter ended June 30, 2026, and reference disposals of ATC Philippines and Kirtonkhola Tower Bangladesh Limited assets, as well as an arrangement involving Stonepeak Partners' common and preferred equity interest in the U.S. Data Centers business. No further narrative detail on financial results or operational developments was included in the excerpt.",
-    "filing_summary_8k": "This 8-K, dated September 17-18, 2026, discloses two items: the Board's election of Kristen M. Ludgate as a new director and member of the Compensation and Human Capital Committee, effective immediately, along with background on her prior roles at HP Inc. and 3M; and the Board's declaration of a cash distribution of $1.79 per share, payable October 20, 2026 to stockholders of record as of September 30, 2026.",
-    "moat_explanation": "The 10-K explains that tenants (wireless carriers) rarely relocate because suitable alternative sites may not exist, and repositioning equipment is costly and can degrade network quality, resulting in high lease renewal rates and low (~2%) churn despite competitive pressure. This friction, combined with long-term (5-10 year) non-cancellable leases with contractual escalators, supports a switching-cost-based moat rather than network effects or brand-based advantages.",
-    "moat_present": true,
-    "moat_type": "switching_costs",
-    "red_flags": [
-      "Heavy customer concentration: T-Mobile (18%), AT&T (17%), Verizon (14%) and Telef\u00f3nica (10%) together account for a large share of total revenue, per the company's own disclosure.",
-      "Active arbitration dispute with AT&T Mexico (~$300M of 2025 tenant revenue) over lease calculation and rent abatement, with ~$30M of reserves recorded and further reserves expected until resolved.",
-      "DISH Wireless (a subsidiary of EchoStar) is in default under its Strategic Collocation Agreement and has attempted to be excused from contractual obligations, leading to litigation; EchoStar has also begun decommissioning portions of its network.",
-      "Company acknowledges risk from RAN sharing, spectrum-efficient technologies, and network consolidation among carriers, which could reduce demand for tower space or new equipment additions.",
-      "In data centers, the filing states some competitors have structural advantages (lower costs, better power access, existing relationships), which could pressure rental rates or customer retention in that segment."
-    ]
-  },
+  "qualitative": null,
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001053507.json",
@@ -176,72 +154,72 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $81.7B",
-          "passed": true
-        },
-        {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.35, debt $45.0B vs working capital $-1.5B",
-          "passed": false
-        },
-        {
-          "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years",
-          "passed": true
-        },
-        {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
           "passed": null
         },
         {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 12.1%/yr",
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability",
+          "detail": "No annual net income data available",
+          "passed": null
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.1",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 41.2%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 528.6",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 2,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 90.2%",
-          "passed": true
+          "detail": "ROE unavailable",
+          "passed": null
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 12.09",
-          "passed": false
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "469,142,857 shares vs. 468,120,000 a year earlier",
+          "detail": "468,757,000 shares vs. 468,120,000 a year earlier",
           "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 1,
+      "passed": 0,
       "total": 4
     }
   },
-  "website": "https://www.americantower.com"
+  "website": null
 }

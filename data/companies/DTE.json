@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for DTE: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=dte.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9f800ef0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000936340",
   "five_year_history": {
     "years": [
       {
         "cash": 28000000,
-        "debt": 18251000000,
+        "debt": null,
         "earnings": 907000000,
         "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
-        "revenue": 14964000000,
-        "spending": 13469000000,
+        "market_return_pct": 10.677168290068508,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 33000000,
-        "debt": 19240000000,
+        "debt": null,
         "earnings": 1083000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 19228000000,
-        "spending": 17480000000,
-        "stock_return_pct": -1.6814455412414295
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 26000000,
-        "debt": 20970000000,
+        "debt": null,
         "earnings": 1397000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 12745000000,
-        "spending": 10502000000,
-        "stock_return_pct": -4.909384837913721
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 24000000,
-        "debt": 23241000000,
-        "earnings": 1401000000,
+        "debt": null,
+        "earnings": 1404000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 12457000000,
-        "spending": 10366000000,
-        "stock_return_pct": 8.044022906227626
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 250000000,
-        "debt": 26525000000,
+        "cash": 208000000,
+        "debt": null,
         "earnings": 1462000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 15814000000,
-        "spending": 13440000000,
-        "stock_return_pct": 6.815734989648024
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.7570093457943925,
-      "debt_to_ebitda": 6.194535263895376,
-      "debt_to_equity": 2.29154662935221
+      "current_ratio": 0.8038454427805509,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 58.43269230769231,
+      "book_value_per_share": 59.140988178854286,
       "shareholders_equity": 12303000000,
       "total_assets": 54066000000,
-      "total_liabilities": 41758000000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": -6.336157834829898
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 8.482542850141384
+      "eps_growth_cagr_3yr_pct": 8.394043095201798
     },
     "profitability": {
-      "roe_pct": 10.782089796252018,
-      "trend": "improving"
+      "roe_pct": 11.883280500690889,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 42.27150460019385,
-      "graham_number": 96.34330891700223,
-      "graham_upside_pct": -23.17733121999662,
-      "ncav_margin_pct": -243.3946978398175,
-      "pb_ratio": 2.1471133426619473,
-      "pe_ttm": 19.687598116169546
+      "graham_multiple": null,
+      "graham_number": 96.71931454053154,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Regulated Electric",
-  "last_updated": "2026-09-23T03:02:24Z",
+  "industry": "Electric Services",
+  "last_updated": "2026-09-23T15:09:01Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,24 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 26096316080,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 58.43269230769231,
-    "current_ratio": 0.7570093457943925,
-    "debt_to_ebitda": 6.194535263895376,
-    "debt_to_equity": 2.29154662935221,
-    "eps_growth_cagr_3yr_pct": 8.482542850141384,
-    "fcf_margin_pct": -6.336157834829898,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 59.140988178854286,
+    "current_ratio": 0.8038454427805509,
+    "eps_growth_cagr_3yr_pct": 8.394043095201798,
+    "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 3,
-    "graham_multiple": 42.27150460019385,
-    "graham_upside_pct": -23.17733121999662,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -243.3946978398175,
-    "pb_ratio": 2.1471133426619473,
-    "pe_ttm": 19.687598116169546,
-    "roe_pct": 10.782089796252018,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "roe_pct": 11.883280500690889,
     "shareholders_equity": 12303000000,
-    "total_assets": 54066000000,
-    "total_liabilities": 41758000000
+    "total_assets": 54066000000
   },
   "name": "DTE Energy",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 125.41
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -160,14 +151,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $26.1B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.76, debt $26.5B vs working capital $-1.1B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -175,27 +166,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 8.5%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 19.7",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 8.4%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 42.3",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 3,
       "passed": 3,
       "total": 7
     },
@@ -203,13 +194,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 10.8%",
+          "detail": "ROE 11.9%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 2.29",
-          "passed": false
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -218,14 +209,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },
-  "website": "https://dteenergy.com"
+  "website": null
 }

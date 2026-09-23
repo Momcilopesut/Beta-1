@@ -1,103 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for J: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=j.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca304e3f0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000052988",
   "five_year_history": {
     "years": [
       {
         "cash": 1014249000,
-        "debt": 3824161000,
-        "earnings": 477030000,
-        "fiscal_year": "2021-10-01",
-        "market_return_pct": null,
-        "revenue": 14092632000,
-        "spending": 13404543000,
+        "debt": 2893389000,
+        "earnings": 171609000,
+        "fiscal_year": "2023-12-29",
+        "market_return_pct": 11.188827547487598,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 1140479000,
-        "debt": 4165289000,
-        "earnings": 644039000,
-        "fiscal_year": "2022-09-30",
-        "market_return_pct": -17.745946941783348,
-        "revenue": 9783074000,
-        "spending": 9243190000,
-        "stock_return_pct": -19.428981863889387
+        "debt": 3407671000,
+        "earnings": 162112000,
+        "fiscal_year": "2024-03-29",
+        "market_return_pct": 10.048179083124706,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 770853000,
-        "debt": 3467256000,
-        "earnings": 665777000,
-        "fiscal_year": "2023-09-29",
-        "market_return_pct": 19.681953076880006,
-        "revenue": 10851420000,
-        "spending": 10174936000,
-        "stock_return_pct": 25.819032761310456
+        "debt": 2865244000,
+        "earnings": 146935000,
+        "fiscal_year": "2024-06-28",
+        "market_return_pct": 4.043435869004144,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1144795000,
-        "debt": 2752168000,
+        "debt": 2219009000,
         "earnings": 806093000,
         "fiscal_year": "2024-09-27",
-        "market_return_pct": 33.683447178815385,
-        "revenue": 11500941000,
-        "spending": 10808505000,
-        "stock_return_pct": 13.940306438756538
+        "market_return_pct": 5.007166219543566,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1235448000,
-        "debt": 2709857000,
-        "earnings": 290248000,
+        "debt": 2236456000,
+        "earnings": 289336000,
         "fiscal_year": "2025-09-26",
         "market_return_pct": 15.81010376747686,
-        "revenue": 12029783000,
-        "spending": 11166149000,
-        "stock_return_pct": 14.931986008550336
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.287412651977654,
-      "debt_to_ebitda": 3.1377377453875135,
-      "debt_to_equity": 1.2420513593398539
+      "current_ratio": 1.300940135766551,
+      "debt_to_ebitda": 2.3648858561922315,
+      "debt_to_equity": 0.6142748022622457
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 27.40988582896268,
+      "book_value_per_share": 31.107742726030814,
       "shareholders_equity": 3640807000,
       "total_assets": 11252535000,
-      "total_liabilities": 6585936000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 5.049733648562073
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -21.863601130970046
+      "eps_growth_cagr_3yr_pct": 22.96711836146821
     },
     "profitability": {
-      "roe_pct": 9.811161148375373,
+      "roe_pct": 7.947029326190594,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 259.2783571608776,
-      "graham_number": 38.39227279613006,
-      "graham_upside_pct": -73.17476747056313,
-      "ncav_margin_pct": -113.29278663873146,
-      "pb_ratio": 5.199335418192557,
-      "pe_ttm": 49.867595818815325
+      "graham_multiple": null,
+      "graham_number": 40.81445360382704,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Engineering & Construction",
-  "last_updated": "2026-09-23T03:23:33Z",
+  "industry": "Heavy Construction Other Than Bldg Const - Contractors",
+  "last_updated": "2026-09-23T14:20:19Z",
   "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,51 +105,28 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 16899752720,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 27.40988582896268,
-    "current_ratio": 1.287412651977654,
-    "debt_to_ebitda": 3.1377377453875135,
-    "debt_to_equity": 1.2420513593398539,
-    "eps_growth_cagr_3yr_pct": -21.863601130970046,
-    "fcf_margin_pct": 5.049733648562073,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 2,
-    "graham_multiple": 259.2783571608776,
-    "graham_upside_pct": -73.17476747056313,
+    "book_value_per_share": 31.107742726030814,
+    "current_ratio": 1.300940135766551,
+    "debt_to_ebitda": 2.3648858561922315,
+    "debt_to_equity": 0.6142748022622457,
+    "eps_growth_cagr_3yr_pct": 22.96711836146821,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 3,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -113.29278663873146,
-    "pb_ratio": 5.199335418192557,
-    "pe_ttm": 49.867595818815325,
-    "roe_pct": 9.811161148375373,
+    "roe_pct": 7.947029326190594,
     "shareholders_equity": 3640807000,
-    "total_assets": 11252535000,
-    "total_liabilities": 6585936000
+    "total_assets": 11252535000
   },
   "name": "Jacobs Solutions",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 143.12
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year ended September 26, 2025, Jacobs reported revenues of $12.03 billion, up 4.6% from $11.50 billion in fiscal 2024, with gross profit of $2.98 billion (24.8% margin). Net earnings attributable to Jacobs fell to $289.3 million from $806.1 million a year earlier, largely due to $227.3 million in mark-to-market losses on its retained Amentum stock investment tied to the September 2024 spin-off/merger of its Critical Mission Solutions and Cyber & Intelligence businesses into Amentum Holdings. Backlog grew to $23.1 billion from $21.8 billion. The filing also describes a fiscal 2025 reserve related to an unfavorable interim ruling against a consolidated joint venture and an indemnity reserve tied to a non-U.S. tax matter in the divested business.",
-    "filing_summary_10q": "The excerpt provided is XBRL tagging data (structured financial data tags) for a 10-Q covering periods through June 26, 2026, rather than narrative text, so specific financial results and business commentary cannot be summarized. The data references ongoing matters such as the PA Consulting Group investment, term loan facilities entered into in March 2026, senior notes, and continued reporting of the SpinCo/Amentum-related discontinued operations. No further narrative detail on quarterly results or developments is available from the excerpt given.",
-    "filing_summary_8k": "This 8-K, dated August 10, 2026, discloses under Item 5.02 that Shannon Miller transitioned from her role as President, Strategy, Growth & Digital at Jacobs Solutions Inc. Miller will serve as Special Advisor to the CEO until her departure from the company, which will occur no later than October 3, 2026. No other items or financial information are disclosed in this filing excerpt.",
-    "moat_explanation": "Jacobs' scale (approximately 43,000 employees operating in 40+ countries), deep domain expertise across advanced manufacturing, water, life sciences and infrastructure, and its strategic partnership/majority stake in PA Consulting (a well-regarded innovation and transformation consultancy with blue-chip clients like Diageo, Microsoft and Unilever) support a moat based on intangible assets - reputation, specialized technical/scientific expertise and long-standing client relationships in complex, regulated end markets. The $23.1 billion backlog reported in the 10-K also suggests durable client relationships and repeat business, though the excerpts do not describe patents, proprietary technology licensing, or other harder forms of intangible protection.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Company derives revenue from U.S. federal government agencies (8% of total revenue in fiscal 2025), creating some exposure to government budget/policy risk",
-      "An unfavorable interim ruling against a consolidated joint venture in which the Company holds a 50% interest led to a reserve against related accounts receivable (the 'Consolidated JV Matter') during fiscal 2025",
-      "The Company recorded a $(30.8) million indemnity reserve related to an ongoing non-U.S. tax matter tied to the divested SpinCo/Amentum business",
-      "Significant recent volatility from mark-to-market gains/losses on its retained investment in Amentum stock ($227.3 million loss in fiscal 2025 vs. $186.9 million gain in fiscal 2024) materially affected reported earnings",
-      "The company discloses exposure to litigation, government contract audits/investigations, and potential liabilities under environmental (HSSE) and anti-bribery (FCPA) regulations",
-      "Recent large-scale corporate restructuring (Separation/spin-off of CMS and C&I businesses into Amentum) created transaction costs, integration risk, and continuing financial entanglements (TSA income, indemnities)"
-    ]
-  },
+  "qualitative": null,
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000052988.json",
@@ -177,13 +153,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $16.9B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.29, debt $2.7B vs working capital $1.0B",
+          "detail": "Current ratio 1.30, debt $2.2B vs working capital $1.0B",
           "passed": false
         },
         {
@@ -192,57 +168,57 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -21.9%/yr",
-          "passed": false
+          "detail": "EPS 3yr CAGR 23.0%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 49.9",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 259.3",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 9.8%",
+          "detail": "ROE 7.9%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.24",
-          "passed": false
+          "detail": "Debt/equity 0.61",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "120,084,000 shares vs. 125,881,000 a year earlier",
+          "detail": "121,932,000 shares vs. 125,881,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.jacobs.com"
+  "website": null
 }

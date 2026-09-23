@@ -5,99 +5,96 @@
     "years": [
       {
         "cash": 8017000000,
-        "debt": 48731000000,
+        "debt": 43807000000,
         "earnings": 5963000000,
         "fiscal_year": "2021-10-31",
         "market_return_pct": null,
-        "revenue": 43033000000,
-        "spending": 35370000000,
+        "revenue": 44024000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 4774000000,
-        "debt": 52201000000,
+        "debt": 12592000000,
         "earnings": 7131000000,
         "fiscal_year": "2022-10-30",
         "market_return_pct": -16.048604469176603,
-        "revenue": 51282000000,
-        "spending": 42256000000,
-        "stock_return_pct": 10.333101045296166
+        "revenue": 52577000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 7458000000,
-        "debt": 63692000000,
+        "debt": 17939000000,
         "earnings": 10166000000,
         "fiscal_year": "2023-10-29",
         "market_return_pct": 7.607260298801169,
-        "revenue": 60248000000,
-        "spending": 45657000000,
-        "stock_return_pct": -7.078975291799298
+        "revenue": 61251000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 7324000000,
-        "debt": 65463000000,
+        "debt": 13533000000,
         "earnings": 7100000000,
         "fiscal_year": "2024-10-27",
         "market_return_pct": 39.76034072042159,
-        "revenue": 50518000000,
-        "spending": 39091000000,
-        "stock_return_pct": 12.11256117455139
+        "revenue": 51716000000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 8276000000,
-        "debt": 63936000000,
+        "debt": 13796000000,
         "earnings": 5027000000,
         "fiscal_year": "2025-11-02",
         "market_return_pct": 17.648881772635708,
-        "revenue": 44665000000,
-        "spending": 36249000000,
-        "stock_return_pct": 12.026191342306285
+        "revenue": 45684000000,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.7667986333315255,
-      "debt_to_ebitda": 6.0062000939408176,
-      "debt_to_equity": 2.2929617720614504
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.5316377649325627
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 103.93254262416605,
+      "book_value_per_share": 96.24463735636313,
       "shareholders_equity": 25950000000,
       "total_assets": 105996000000,
       "total_liabilities": 79989000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 7.233852009403336
+      "fcf_margin_pct": 13.350407144733387
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -7.459815638044076
+      "eps_growth_cagr_3yr_pct": -7.374709270152346
     },
     "profitability": {
-      "roe_pct": 18.10750051093399,
+      "roe_pct": 19.371868978805395,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 264.15656989691445,
-      "graham_number": 208.33201818215974,
-      "graham_upside_pct": -70.37034671433614,
-      "ncav_margin_pct": -102.68331380151699,
-      "pb_ratio": 6.777483958556628,
-      "pe_ttm": 38.97560975609756
+      "graham_multiple": null,
+      "graham_number": 200.15451606093268,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Agricultural - Machinery",
-  "last_updated": "2026-09-23T03:48:01Z",
+  "industry": "Farm Machinery & Equipment",
+  "last_updated": "2026-09-23T12:26:38Z",
   "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,51 +103,28 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 189798402266,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 103.93254262416605,
-    "current_ratio": 0.7667986333315255,
-    "debt_to_ebitda": 6.0062000939408176,
-    "debt_to_equity": 2.2929617720614504,
-    "eps_growth_cagr_3yr_pct": -7.459815638044076,
-    "fcf_margin_pct": 7.233852009403336,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 96.24463735636313,
+    "debt_to_equity": 0.5316377649325627,
+    "eps_growth_cagr_3yr_pct": -7.374709270152346,
+    "fcf_margin_pct": 13.350407144733387,
+    "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 2,
-    "graham_multiple": 264.15656989691445,
-    "graham_upside_pct": -70.37034671433614,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -102.68331380151699,
-    "pb_ratio": 6.777483958556628,
-    "pe_ttm": 38.97560975609756,
-    "roe_pct": 18.10750051093399,
+    "roe_pct": 19.371868978805395,
     "shareholders_equity": 25950000000,
     "total_assets": 105996000000,
     "total_liabilities": 79989000000
   },
   "name": "Deere & Company",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 703.12
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Deere's 10-K describes a business organized into four segments (Production & Precision Agriculture, Small Agriculture & Turf, Construction & Forestry, and Financial Services), with PPA generating 45% of fiscal 2025 equipment operations net sales, SAT 26%, and CF 29%. The filing discusses the company's 'Smart Industrial Operating Model' and 'Leap Ambitions' strategy centered on production systems, technology stack, and lifecycle solutions. It also discloses that fiscal 2025 saw unfavorable agricultural market conditions leading to lower sales volumes, increased sales incentives, and elevated receivable write-offs, alongside tariff-related cost impacts of approximately $600 million.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists almost entirely of raw XBRL tagging data (e.g., us-gaap and de: taxonomy elements) rather than narrative text, so it does not describe qualitative business developments or discuss financial results in prose. It does indicate the filing covers a quarterly period ending August 2, 2026 (fiscal third quarter 2026), with segment and geographic revenue breakdowns tagged in the data but not presented as readable figures or discussion in this excerpt.",
-    "filing_summary_8k": "This 8-K, dated August 20, 2026, discloses under Item 2.02 that Deere & Company issued a press release announcing its results of operations for the third quarter of fiscal year 2026. Under Item 7.01, the company also made available an investor presentation reviewing the quarter in connection with its earnings call. The press release and presentation are furnished as exhibits, but their content is not included in the provided excerpt.",
-    "moat_explanation": "The 10-K describes an integrated ecosystem \\u2013 the John Deere Operations Center telematics platform, a 'best-in-class dealer channel,' and enterprise-wide 'Lifecycle Solutions' that manage equipment, service, and technology needs across a machine's full life \\u2013 that ties customers into Deere's dealer and data infrastructure once adopted, creating friction to switch brands. The long operating history (since 1837) and portfolio of associated brand names also suggest some intangible-asset strength, but the excerpts emphasize the integrated technology/dealer relationship most explicitly as a competitive advantage.",
-    "moat_present": true,
-    "moat_type": "switching_costs",
-    "red_flags": [
-      "Company states fiscal 2025 unfavorable market conditions caused lower sales volumes, greater reliance on sales incentives, and elevated receivable write-offs, with some conditions expected to persist into fiscal 2026",
-      "Direct tariff impact of approximately $600 million in fiscal 2025, with ongoing uncertainty from pending litigation over IEEPA tariff authority",
-      "Business is explicitly described as highly cyclical and dependent on the agricultural market business cycle and farm income levels, which are outside the company's control",
-      "Manufacturing shift of skid steer/track loader production to Mexico exposed those products to new tariffs, with no guarantee of USMCA exemption qualification",
-      "Manufacturing processes are dependent on water, and the company flags water scarcity/regulatory restriction risk as a potential disruption to operations",
-      "Significant exposure to international/geopolitical risks including trade barriers, sanctions, and political instability in growth markets like Brazil, Argentina, China, and India"
-    ]
-  },
+  "qualitative": null,
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000315189.json",
@@ -177,14 +151,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $189.8B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.77, debt $63.9B vs working capital $42.4B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -192,27 +166,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -7.5%/yr",
+          "detail": "EPS 3yr CAGR -7.4%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 39.0",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 264.2",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 3,
       "passed": 2,
       "total": 7
     },
@@ -220,13 +194,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 18.1%",
+          "detail": "ROE 19.4%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 2.29",
-          "passed": false
+          "detail": "Debt/equity 0.53",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -235,14 +209,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.deere.com"
+  "website": null
 }

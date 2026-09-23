@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for ON: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=on.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca17894f0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001097864",
   "five_year_history": {
     "years": [
       {
         "cash": 1352600000,
-        "debt": 3097500000,
+        "debt": 3074600000,
         "earnings": 1009600000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 6739800000,
-        "spending": 5452200000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 2919000000,
-        "debt": 3230700000,
+        "debt": 3193500000,
         "earnings": 1902200000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 8326200000,
-        "spending": 5966200000,
-        "stock_return_pct": -8.171378091872798
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2483000000,
-        "debt": 3359800000,
+        "debt": 3336600000,
         "earnings": 2183700000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 8253000000,
-        "spending": 5714300000,
-        "stock_return_pct": 30.591630591630604
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2691300000,
-        "debt": 3366900000,
+        "debt": 3345900000,
         "earnings": 1572800000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 7082300000,
-        "spending": 5314600000,
-        "stock_return_pct": -22.59054634745243
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2147600000,
-        "debt": 3467700000,
+        "debt": 2980500000,
         "earnings": 121000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 5995400000,
-        "spending": 5247800000,
-        "stock_return_pct": -14.115781126090402
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 3.464389362005804,
-      "debt_to_ebitda": 2.4188755580357144,
-      "debt_to_equity": 0.6209843877706512
+      "current_ratio": 4.522093655354508,
+      "debt_to_ebitda": 3.869774084653337,
+      "debt_to_equity": 0.38842479767505506
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 18.545990263899565,
+      "book_value_per_share": 19.709912612674717,
       "shareholders_equity": 7673300000,
       "total_assets": 12524100000,
       "total_liabilities": 4832200000
     },
     "cash_flow": {
-      "fcf_margin_pct": 23.661473796577376
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -59.57551530111594
+      "eps_growth_cagr_3yr_pct": -59.13642526295217
     },
     "profitability": {
-      "roe_pct": 8.375001245884429,
-      "trend": "declining"
+      "roe_pct": 1.5768965112793714,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 185.3694236119866,
-      "graham_number": 11.000572097484051,
-      "graham_upside_pct": -85.05357051972275,
-      "ncav_margin_pct": -96.54176473731411,
-      "pb_ratio": 3.9793979525399306,
-      "pe_ttm": 46.58227848101265
+      "graham_multiple": null,
+      "graham_number": 11.340510561597414,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Semiconductors",
-  "last_updated": "2026-09-23T03:01:19Z",
+  "industry": "Semiconductors & Related Devices",
+  "last_updated": "2026-09-23T14:58:00Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,27 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 28653363200,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 18.545990263899565,
-    "current_ratio": 3.464389362005804,
-    "debt_to_ebitda": 2.4188755580357144,
-    "debt_to_equity": 0.6209843877706512,
-    "eps_growth_cagr_3yr_pct": -59.57551530111594,
-    "fcf_margin_pct": 23.661473796577376,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 185.3694236119866,
-    "graham_upside_pct": -85.05357051972275,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "book_value_per_share": 19.709912612674717,
+    "current_ratio": 4.522093655354508,
+    "debt_to_ebitda": 3.869774084653337,
+    "debt_to_equity": 0.38842479767505506,
+    "eps_growth_cagr_3yr_pct": -59.13642526295217,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -96.54176473731411,
-    "pb_ratio": 3.9793979525399306,
-    "pe_ttm": 46.58227848101265,
-    "roe_pct": 8.375001245884429,
+    "roe_pct": 1.5768965112793714,
     "shareholders_equity": 7673300000,
     "total_assets": 12524100000,
     "total_liabilities": 4832200000
   },
   "name": "ON Semiconductor",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 73.6
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Technology",
@@ -160,13 +154,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $28.7B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 3.46, debt $3.5B vs working capital $4.5B",
+          "detail": "Current ratio 4.52, debt $3.0B vs working capital $4.5B",
           "passed": true
         },
         {
@@ -181,34 +175,34 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -59.6%/yr",
+          "detail": "EPS 3yr CAGR -59.1%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 46.6",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 185.4",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 8.4%",
+          "detail": "ROE 1.6%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.62",
+          "detail": "Debt/equity 0.39",
           "passed": true
         },
         {
@@ -218,14 +212,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.onsemi.com"
+  "website": null
 }

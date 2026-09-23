@@ -5,99 +5,96 @@
     "years": [
       {
         "cash": 2364858000,
-        "debt": 5684811000,
-        "earnings": 6827461000,
-        "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
-        "revenue": 36483939000,
-        "spending": 27165134000,
+        "debt": 601000000,
+        "earnings": 845000000,
+        "fiscal_year": "2024-03-30",
+        "market_return_pct": 10.474981487358509,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 4280852000,
-        "debt": 6691350000,
-        "earnings": 7607337000,
-        "fiscal_year": "2022-12-30",
-        "market_return_pct": -19.48164055920498,
-        "revenue": 41512000000,
-        "spending": 31006000000,
-        "stock_return_pct": 15.47087166009636
+        "debt": 10000000,
+        "earnings": 645000000,
+        "fiscal_year": "2024-06-29",
+        "market_return_pct": 4.224758694652992,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 6383000000,
-        "debt": 6842000000,
-        "earnings": 4524801000,
-        "fiscal_year": "2023-12-31",
-        "market_return_pct": 23.591245456684877,
-        "revenue": 34714000000,
-        "spending": 28484000000,
-        "stock_return_pct": 33.093088536529855
+        "debt": 60000000,
+        "earnings": 250000000,
+        "fiscal_year": "2024-09-28",
+        "market_return_pct": 5.007166219543566,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 3558000000,
-        "debt": 6950000000,
+        "debt": 1025000000,
         "earnings": 2027000000,
         "fiscal_year": "2024-12-31",
-        "market_return_pct": 23.99873056172645,
-        "revenue": 30734000000,
-        "spending": 27755000000,
-        "stock_return_pct": -33.47204012996637
+        "market_return_pct": 2.556564649062945,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2260000000,
-        "debt": 7121000000,
+        "debt": 66000000,
         "earnings": 1744000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 32494000000,
-        "spending": 29835000000,
-        "stock_return_pct": 39.75666181132724
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.507815478459779,
-      "debt_to_ebitda": 1.7204638801642909,
-      "debt_to_equity": 0.3210909584332172
+      "current_ratio": 2.938311688311688,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.0031524646541841806
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 101.954425942156,
+      "book_value_per_share": 92.27961484950022,
       "shareholders_equity": 20936000000,
       "total_assets": 35104000000,
       "total_liabilities": 12980000000
     },
     "cash_flow": {
-      "fcf_margin_pct": -0.5785683510801994
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -36.11494655758586
+      "eps_growth_cagr_3yr_pct": 41.04607835012033
     },
     "profitability": {
-      "roe_pct": 13.529108223483604,
-      "trend": "declining"
+      "roe_pct": 8.330149025601834,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 49.63313522848315,
-      "graham_number": 131.4291771839487,
-      "graham_upside_pct": -46.49956151430892,
-      "ncav_margin_pct": -102.17998695104255,
-      "pb_ratio": 2.5356014292821927,
-      "pe_ttm": 19.574501992031873
+      "graham_multiple": null,
+      "graham_number": 124.95483517069452,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Steel",
-  "last_updated": "2026-09-23T03:35:05Z",
+  "industry": "Steel Works, Blast Furnaces & Rolling Mills (Coke Ovens)",
+  "last_updated": "2026-09-23T12:26:28Z",
   "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,51 +103,28 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 55946854060,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 101.954425942156,
-    "current_ratio": 2.507815478459779,
-    "debt_to_ebitda": 1.7204638801642909,
-    "debt_to_equity": 0.3210909584332172,
-    "eps_growth_cagr_3yr_pct": -36.11494655758586,
-    "fcf_margin_pct": -0.5785683510801994,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 49.63313522848315,
-    "graham_upside_pct": -46.49956151430892,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "book_value_per_share": 92.27961484950022,
+    "current_ratio": 2.938311688311688,
+    "debt_to_equity": 0.0031524646541841806,
+    "eps_growth_cagr_3yr_pct": 41.04607835012033,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 4,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -102.17998695104255,
-    "pb_ratio": 2.5356014292821927,
-    "pe_ttm": 19.574501992031873,
-    "roe_pct": 13.529108223483604,
+    "roe_pct": 8.330149025601834,
     "shareholders_equity": 20936000000,
     "total_assets": 35104000000,
     "total_liabilities": 12980000000
   },
   "name": "Nucor Corporation",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 245.66
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, Nucor reported net sales of $32.49 billion (up 6% from 2024) but net earnings of $1.74 billion, or $7.52 per diluted share, down from $2.03 billion ($8.46 per diluted share) in 2024, primarily due to weaker steel products segment profitability. Steel mills segment earnings rose on higher volumes and metal margins, while gross margins overall fell to 12% from 13%. The filing also describes debt issuance/redemption activity, continued capital spending on new facilities (West Virginia sheet mill, Arizona melt shop, Kentucky plate mill), and roughly $1.2 billion returned to shareholders via dividends and buybacks.",
-    "filing_summary_10q": "For the quarter ended July 4, 2026, Nucor reported net sales of $10.397 billion, up from $8.456 billion in the year-ago quarter, with net earnings attributable to Nucor stockholders of $1.156 billion ($5.04 diluted EPS) versus $603 million ($2.60 diluted EPS) a year earlier. For the six-month period, net sales were $19.893 billion versus $16.286 billion, and net earnings attributable to Nucor stockholders were $1.899 billion versus $759 million in the prior-year period. The excerpt provided is limited to the condensed financial statements and does not include the accompanying MD&A narrative explaining these changes.",
-    "filing_summary_8k": "This 8-K, dated July 27, 2026, discloses under Item 2.02 that Nucor issued a news release reporting financial results for the quarter ended July 4, 2026, and under Item 7.01 that it posted an accompanying investor presentation to its investor relations website; both documents are furnished as exhibits. The filing itself does not restate the financial figures in the excerpt provided beyond referencing the furnished news release and presentation.",
-    "moat_explanation": "The 10-K MD&A describes Nucor's low-cost, highly variable cost structure (EAF production, incentive-based pay that flexes down in downturns) and its integrated raw-material supply chain (DRI facilities, scrap brokerage/processing via DJJ) as strengths that let it keep operating and control input costs when higher-fixed-cost competitors must idle capacity. This is a structural cost-advantage argument rather than network effects, switching costs, or brand-based differentiation, which the excerpts do not describe.",
-    "moat_present": true,
-    "moat_type": "cost_advantage",
-    "red_flags": [
-      "Risk factors cite global steel overcapacity (~704 million net tons per OECD) and China's near-record production/exports as ongoing industry risks",
-      "Circumvention of trade duties via third-country routing is flagged as a continuing risk",
-      "Ferrous scrap price volatility is described as a persistent challenge to maintaining margins",
-      "Steel products segment earnings declined in 2025 due to decreased selling prices and margin compression in joist/deck, metal buildings, and rebar fabrication",
-      "2025 net earnings and EPS declined year-over-year versus 2024",
-      "Critical audit matter flags goodwill impairment risk tied to significant management judgment in a Steel Products segment reporting unit"
-    ]
-  },
+  "qualitative": null,
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000073309.json",
@@ -177,13 +151,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $55.9B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.51, debt $7.1B vs working capital $7.8B",
+          "detail": "Current ratio 2.94, debt $0.1B vs working capital $7.8B",
           "passed": true
         },
         {
@@ -192,57 +166,57 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -36.1%/yr",
-          "passed": false
+          "detail": "EPS 3yr CAGR 41.0%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 19.6",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 49.6",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 4,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 13.5%",
+          "detail": "ROE 8.3%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.32",
+          "detail": "Debt/equity 0.00",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "230,900,000 shares vs. 238,500,000 a year earlier",
+          "detail": "231,000,000 shares vs. 238,500,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.nucor.com"
+  "website": null
 }

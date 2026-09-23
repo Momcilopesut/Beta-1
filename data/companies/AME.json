@@ -1,68 +1,70 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for AME: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=ame.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca25542f0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001037868",
   "five_year_history": {
     "years": [
       {
         "cash": 346772000,
-        "debt": 2720695000,
+        "debt": 2544241000,
         "earnings": 990053000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 5546514000,
-        "spending": 4237844000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 345386000,
-        "debt": 2560600000,
+        "debt": 2385007000,
         "earnings": 1159542000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 6150530000,
-        "spending": 4649838000,
-        "stock_return_pct": -4.978237214363434
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 409804000,
-        "debt": 3374402000,
+        "debt": 3313347000,
         "earnings": 1313188000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 6596950000,
-        "spending": 4889491000,
-        "stock_return_pct": 16.568851989693677
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 373999000,
-        "debt": 2324474000,
+        "debt": 2079721000,
         "earnings": 1376124000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 6941180000,
-        "spending": 5161618000,
-        "stock_return_pct": 10.677227236446237
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 457951000,
-        "debt": 2344442000,
+        "debt": 2283309000,
         "earnings": 1480142000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 7401116000,
-        "spending": 5465498000,
-        "stock_return_pct": 13.896593808942646
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.2137227967522732,
-      "debt_to_ebitda": 0.9940723076701286,
-      "debt_to_equity": 0.20522090732217702
+      "current_ratio": 1.0622952688099419,
+      "debt_to_ebitda": 0.9786500571552011,
+      "debt_to_equity": 0.21482312279125762
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 49.17492598059338,
+      "book_value_per_share": 46.36102384579227,
       "shareholders_equity": 10628786000,
       "total_assets": 16067543000,
       "total_liabilities": 5438757000
@@ -71,32 +73,30 @@
       "fcf_margin_pct": 22.58463453349468
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 8.40138487543931
+      "eps_growth_cagr_3yr_pct": 8.504416556765815
     },
     "profitability": {
-      "roe_pct": 14.549382608647896,
+      "roe_pct": 13.925786068136098,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 178.27237853662487,
-      "graham_number": 84.28118448323275,
-      "graham_upside_pct": -65.65698851585805,
-      "ncav_margin_pct": -104.2992995729725,
-      "pb_ratio": 4.990551487496895,
-      "pe_ttm": 35.721979621542935
+      "graham_multiple": null,
+      "graham_number": 81.70671596505447,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Electrical Equipment & Parts",
-  "last_updated": "2026-09-23T02:55:24Z",
+  "industry": "Industrial Instruments For Measurement, Display, and Control",
+  "last_updated": "2026-09-23T14:07:40Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,28 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 56248708230,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 49.17492598059338,
-    "current_ratio": 1.2137227967522732,
-    "debt_to_ebitda": 0.9940723076701286,
-    "debt_to_equity": 0.20522090732217702,
-    "eps_growth_cagr_3yr_pct": 8.40138487543931,
+    "book_value_per_share": 46.36102384579227,
+    "current_ratio": 1.0622952688099419,
+    "debt_to_ebitda": 0.9786500571552011,
+    "debt_to_equity": 0.21482312279125762,
+    "eps_growth_cagr_3yr_pct": 8.504416556765815,
     "fcf_margin_pct": 22.58463453349468,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 3,
-    "graham_multiple": 178.27237853662487,
-    "graham_upside_pct": -65.65698851585805,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -104.2992995729725,
-    "pb_ratio": 4.990551487496895,
-    "pe_ttm": 35.721979621542935,
-    "roe_pct": 14.549382608647896,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": 13.925786068136098,
     "shareholders_equity": 10628786000,
     "total_assets": 16067543000,
     "total_liabilities": 5438757000
   },
   "name": "Ametek",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 245.41
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -160,13 +155,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $56.2B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.21, debt $2.3B vs working capital $0.2B",
+          "detail": "Current ratio 1.06, debt $2.3B vs working capital $0.2B",
           "passed": false
         },
         {
@@ -175,27 +170,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 8.4%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 35.7",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 8.5%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 178.3",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 3,
       "total": 7
     },
@@ -203,7 +198,7 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 14.5%",
+          "detail": "ROE 13.9%",
           "passed": false
         },
         {
@@ -218,14 +213,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.ametek.com"
+  "website": null
 }

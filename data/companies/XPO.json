@@ -1,0 +1,224 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for XPO: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=xpo.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1ebd490>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0001166003",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 228000000,
+        "debt": 3513000000,
+        "earnings": null,
+        "fiscal_year": "2023-06-30",
+        "market_return_pct": 8.27816996018466,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 460000000,
+        "debt": 2473000000,
+        "earnings": null,
+        "fiscal_year": "2023-09-30",
+        "market_return_pct": -3.5643385670456498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 412000000,
+        "debt": 3335000000,
+        "earnings": 189000000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 10.566576214091878,
+        "revenue": 7744000000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 246000000,
+        "debt": 3325000000,
+        "earnings": 387000000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 310000000,
+        "debt": 3253000000,
+        "earnings": 316000000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.0482315112540193,
+      "debt_to_ebitda": 2.8967052537845057,
+      "debt_to_equity": 1.7479849543256314
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 15.894236793296304,
+      "shareholders_equity": 1861000000,
+      "total_assets": 8194000000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 54.92274831187112
+    },
+    "profitability": {
+      "roe_pct": 16.980118216012897,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": 30.72649777507682,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Transportation Services",
+  "last_updated": "2026-09-23T17:07:13Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 15.894236793296304,
+    "current_ratio": 1.0482315112540193,
+    "debt_to_ebitda": 2.8967052537845057,
+    "debt_to_equity": 1.7479849543256314,
+    "eps_growth_cagr_3yr_pct": 54.92274831187112,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": 16.980118216012897,
+    "shareholders_equity": 1861000000,
+    "total_assets": 8194000000
+  },
+  "name": "XPO, Inc.",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Industrials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001166003.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-03",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1166003/000110465926105055/tm2624375d1_8k.htm"
+      },
+      {
+        "filed": "2026-07-30",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1166003/000116600326000074/xpo-20260630.htm"
+      },
+      {
+        "filed": "2026-02-05",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1166003/000116600326000016/xpo-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "XPO",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.05, debt $3.3B vs working capital $0.1B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 3/3 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 54.9%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 2,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 17.0%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 1.75",
+          "passed": false
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "119,000,000 shares vs. 120,000,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 2,
+      "total": 4
+    }
+  },
+  "website": null
+}

@@ -1,93 +1,95 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for AZO: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=azo.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2ffef00>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000866787",
   "five_year_history": {
     "years": [
       {
         "cash": 1171335000,
-        "debt": 8229162000,
-        "earnings": 2429604000,
-        "fiscal_year": "2022-08-27",
+        "debt": 5269820000,
+        "earnings": 2170314000,
+        "fiscal_year": "2021-08-28",
         "market_return_pct": null,
-        "revenue": 16252230000,
-        "spending": 12981501000,
+        "revenue": 14629585000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 264380000,
-        "debt": 9296349000,
+        "debt": 6122092000,
+        "earnings": 2429604000,
+        "fiscal_year": "2022-08-27",
+        "market_return_pct": null,
+        "revenue": 16252230000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 277054000,
+        "debt": 7668549000,
         "earnings": 2528426000,
         "fiscal_year": "2023-08-26",
         "market_return_pct": 8.551479114751679,
         "revenue": 17457209000,
-        "spending": 13983223000,
-        "stock_return_pct": 13.424748730941005
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 277054000,
-        "debt": 10929767000,
+        "cash": 298172000,
+        "debt": 9024381000,
         "earnings": 2662427000,
         "fiscal_year": "2024-08-31",
         "market_return_pct": 28.117826215423758,
         "revenue": 18490268000,
-        "spending": 14701560000,
-        "stock_return_pct": 29.676367490013856
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 298172000,
-        "debt": 12366969000,
+        "cash": 271803000,
+        "debt": 8799775000,
         "earnings": 2498247000,
         "fiscal_year": "2025-08-30",
         "market_return_pct": 14.435495316491629,
         "revenue": 18938717000,
-        "spending": 15328561000,
-        "stock_return_pct": 31.967826294680457
-      },
-      {
-        "cash": 271803000,
-        "debt": 12288796000,
-        "earnings": 2572777000,
-        "fiscal_year": "2026-08-29",
-        "market_return_pct": 19.269824044647713,
-        "revenue": 20338555000,
-        "spending": 16615241000,
-        "stock_return_pct": -29.452451215068127
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.8903129379223149,
-      "debt_to_ebitda": 3.3004995012507674,
-      "debt_to_equity": -4.536159137987008
+      "current_ratio": 0.8762507751278784,
+      "debt_to_ebitda": 2.083598229369778,
+      "debt_to_equity": -2.5773193611716323
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -168.95528183969418,
+      "book_value_per_share": -209.14173076175067,
       "shareholders_equity": -3414313000,
       "total_assets": 19355324000,
-      "total_liabilities": 22769637000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 0.0
+      "fcf_margin_pct": 9.45196023574353
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 4.550634974930512
+      "eps_growth_cagr_3yr_pct": 7.323782044011162
     },
     "profitability": {
-      "roe_pct": -53.21471482158019,
+      "roe_pct": -73.16982947960543,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -500.3605457631232,
+      "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -130.53115286135437,
-      "pb_ratio": -17.13311338053662,
-      "pe_ttm": 29.204297820823243
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Specialty Retail",
-  "last_updated": "2026-09-23T02:47:24Z",
+  "industry": "Retail-Auto & Home Supply Stores",
+  "last_updated": "2026-09-23T12:55:13Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
@@ -103,32 +105,27 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 47257622247,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": -168.95528183969418,
-    "current_ratio": 0.8903129379223149,
-    "debt_to_ebitda": 3.3004995012507674,
-    "debt_to_equity": -4.536159137987008,
-    "eps_growth_cagr_3yr_pct": 4.550634974930512,
-    "fcf_margin_pct": 0.0,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": -500.3605457631232,
+    "book_value_per_share": -209.14173076175067,
+    "current_ratio": 0.8762507751278784,
+    "debt_to_ebitda": 2.083598229369778,
+    "debt_to_equity": -2.5773193611716323,
+    "eps_growth_cagr_3yr_pct": 7.323782044011162,
+    "fcf_margin_pct": 9.45196023574353,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 2,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -130.53115286135437,
-    "pb_ratio": -17.13311338053662,
-    "pe_ttm": 29.204297820823243,
-    "roe_pct": -53.21471482158019,
+    "roe_pct": -73.16982947960543,
     "shareholders_equity": -3414313000,
-    "total_assets": 19355324000,
-    "total_liabilities": 22769637000
+    "total_assets": 19355324000
   },
   "name": "AutoZone",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 2894.73
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -157,13 +154,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $47.3B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.89, debt $12.3B vs working capital $-1.2B",
+          "detail": "Current ratio 0.88, debt $8.8B vs working capital $-1.2B",
           "passed": false
         },
         {
@@ -178,39 +175,39 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 4.6%/yr",
+          "detail": "EPS 3yr CAGR 7.3%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 29.2",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -500.4",
-          "passed": true
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -53.2%",
+          "detail": "ROE -73.2%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity -4.54",
+          "detail": "Debt/equity -2.58",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "16,865,000 shares vs. 17,245,000 a year earlier",
+          "detail": "17,245,000 shares vs. 17,803,000 a year earlier",
           "passed": true
         },
         {
@@ -224,5 +221,5 @@
       "total": 4
     }
   },
-  "website": "https://www.autozone.com"
+  "website": null
 }

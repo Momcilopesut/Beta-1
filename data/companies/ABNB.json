@@ -1,103 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for ABNB: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=abnb.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2af5040>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001559720",
   "five_year_history": {
     "years": [
       {
         "cash": 6067000000,
-        "debt": 2418000000,
+        "debt": 1983000000,
         "earnings": -352000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 5992000000,
-        "spending": 5563000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 7378000000,
-        "debt": 2341000000,
+        "debt": 1987000000,
         "earnings": 1893000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 8399000000,
-        "spending": 6597000000,
-        "stock_return_pct": -48.645564298156046
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 6874000000,
-        "debt": 2304000000,
+        "debt": 1991000000,
         "earnings": 4792000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 9917000000,
-        "spending": 8399000000,
-        "stock_return_pct": 57.28654970760233
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 6864000000,
-        "debt": 2294000000,
+        "debt": 1995000000,
         "earnings": 2648000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 11102000000,
-        "spending": 8549000000,
-        "stock_return_pct": -2.282867340868526
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 6560000000,
-        "debt": 2271000000,
+        "debt": 1999000000,
         "earnings": 2511000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 12305000000,
-        "spending": 9696000000,
-        "stock_return_pct": 3.2798112776805435
+        "revenue": 12241000000,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.4083020119389786,
-      "debt_to_ebitda": 0.8411111111111111,
-      "debt_to_equity": 0.3200410309013976
+      "current_ratio": 1.3771704886804894,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.2438102207586291
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 13.173986486486486,
+      "book_value_per_share": null,
       "shareholders_equity": 8199000000,
       "total_assets": 22208000000,
       "total_liabilities": 14009000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 37.75700934579439
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 11.346303157849302
+      "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 33.38295496836621,
-      "trend": "declining"
+      "roe_pct": 30.62568605927552,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 449.64651609238683,
-      "graham_number": 34.86115679919956,
-      "graham_upside_pct": -78.45549916618283,
-      "ncav_margin_pct": -95.0143924695206,
-      "pb_ratio": 12.282538787023977,
-      "pe_ttm": 36.60859728506787
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Travel Services",
-  "last_updated": "2026-09-23T03:23:52Z",
+  "industry": "Services-To Dwellings & Other Buildings",
+  "last_updated": "2026-09-23T12:54:28Z",
   "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,51 +105,26 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 96036440308,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 13.173986486486486,
-    "current_ratio": 1.4083020119389786,
-    "debt_to_ebitda": 0.8411111111111111,
-    "debt_to_equity": 0.3200410309013976,
-    "eps_growth_cagr_3yr_pct": 11.346303157849302,
-    "fcf_margin_pct": 37.75700934579439,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 2,
-    "graham_multiple": 449.64651609238683,
-    "graham_upside_pct": -78.45549916618283,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "current_ratio": 1.3771704886804894,
+    "debt_to_equity": 0.2438102207586291,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 0,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -95.0143924695206,
-    "pb_ratio": 12.282538787023977,
-    "pe_ttm": 36.60859728506787,
-    "roe_pct": 33.38295496836621,
+    "roe_pct": 30.62568605927552,
     "shareholders_equity": 8199000000,
     "total_assets": 22208000000,
     "total_liabilities": 14009000000
   },
   "name": "Airbnb",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 161.81
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Airbnb's 2025 10-K describes a global marketplace connecting hosts and guests for stays, experiences, and services in over 220 countries, with continued expansion into services and redesigned experiences launched in May 2025. Revenue grew 10% to $12.2 billion in 2025, driven by increased Nights and Seats Booked and modestly higher average daily rates, while net income declined 5% to $2.5 billion due to higher compensation and marketing expense and lower interest income. The company generated $4.6 billion in free cash flow and repurchased $3.8 billion of Class A shares during the year, and it discusses risks including regulatory restrictions on short-term rentals, brand/trust and safety concerns, and international expansion challenges.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists primarily of XBRL tagging data and the cover page identifying it as Airbnb's Form 10-Q for the quarterly period ended June 30, 2026 (fiscal Q2 2026). It does not include the narrative Management's Discussion and Analysis or financial statement text, so specific results or developments for the quarter cannot be summarized from what was provided.",
-    "filing_summary_8k": "This 8-K, dated August 6, 2026, discloses under Item 2.02 that Airbnb issued a Shareholder Letter announcing financial results for the second quarter ended June 30, 2026, and that it held an associated conference call the same day. The letter, furnished as Exhibit 99.1, includes non-GAAP financial measures reconciled to GAAP equivalents, but the 8-K itself does not state the specific results within the excerpt provided.",
-    "moat_explanation": "The 10-K describes Airbnb as operating a global two-sided marketplace with over 5 million hosts and 2.5 billion cumulative guest arrivals across 220+ countries, where growth in host supply and guest demand reinforce each other. The filing also notes that brand strength allows lower reliance on paid marketing, suggesting some intangible-asset support, but the dominant, most explicitly described dynamic is the scale of the host-guest marketplace itself.",
-    "moat_present": true,
-    "moat_type": "network_effects",
-    "red_flags": [
-      "Regulatory risk explicitly acknowledged: New York City passed regulations resulting in a de facto ban on short-term rentals, and other cities have passed similar restrictions.",
-      "Ongoing civil litigation and regulatory investigations related to allegations of unsafe listings, discriminatory practices, and other third-party misconduct.",
-      "Company states it does not independently verify safety, compliance, or quality of most listings, relying on user reports, which it acknowledges may be incomplete or inaccurate.",
-      "Net income declined 5% in 2025 despite 10% revenue growth, driven by higher compensation and marketing expense and lower interest income, indicating margin pressure.",
-      "Heavy reliance on third-party workers (~13,000) for the majority of community support, described as a service-quality and cost risk.",
-      "Recognition of a $213 million valuation allowance against CAMT credit deferred tax assets following recent tax law changes, adding tax-related uncertainty."
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001559720.json",
@@ -177,13 +151,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $96.0B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.41, debt $2.3B vs working capital $5.1B",
+          "detail": "Current ratio 1.38, debt $2.0B vs working capital $5.1B",
           "passed": false
         },
         {
@@ -197,35 +171,35 @@
           "passed": null
         },
         {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 11.3%/yr",
-          "passed": true
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 36.6",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 449.6",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 2,
+      "evaluated": 2,
+      "passed": 0,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 33.4%",
+          "detail": "ROE 30.6%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.32",
+          "detail": "Debt/equity 0.24",
           "passed": true
         },
         {
@@ -235,14 +209,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.airbnb.com"
+  "website": null
 }

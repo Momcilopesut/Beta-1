@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for DAL: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=dal.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1742690>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000027904",
   "five_year_history": {
     "years": [
       {
         "cash": 7933000000,
-        "debt": 34679000000,
+        "debt": 25084000000,
         "earnings": 280000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 29899000000,
-        "spending": 28013000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 3266000000,
-        "debt": 30610000000,
+        "debt": 21381000000,
         "earnings": 1318000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 50582000000,
-        "spending": 46921000000,
-        "stock_return_pct": -15.91606960081883
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2741000000,
-        "debt": 27281000000,
+        "debt": 18610000000,
         "earnings": 4609000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 58048000000,
-        "spending": 52527000000,
-        "stock_return_pct": 23.097991479001838
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 3069000000,
-        "debt": 22771000000,
+        "debt": 15347000000,
         "earnings": 3457000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 61643000000,
-        "spending": 55648000000,
-        "stock_return_pct": 49.5673671199011
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 4310000000,
-        "debt": 21083000000,
+        "debt": 13308000000,
         "earnings": 5005000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 63364000000,
-        "spending": 57542000000,
-        "stock_return_pct": 14.710743801652901
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.42364004285204143,
-      "debt_to_ebitda": 2.550877192982456,
-      "debt_to_equity": 0.9160669264267706
+      "current_ratio": 0.3970460469157255,
+      "debt_to_ebitda": 1.6101633393829402,
+      "debt_to_equity": 0.6381815566105596
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 33.40735068912711,
-      "shareholders_equity": 20753000000,
-      "total_assets": 81185000000,
-      "total_liabilities": 60432000000
+      "book_value_per_share": 31.709655910316886,
+      "shareholders_equity": 20853000000,
+      "total_assets": 81317000000,
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 6.0649580203269995
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 55.07756920805322
+      "eps_growth_cagr_3yr_pct": 54.924647410248454
     },
     "profitability": {
-      "roe_pct": 19.32832717755546,
-      "trend": "declining"
+      "roe_pct": 24.001342732460557,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 34.67251422850043,
-      "graham_number": 76.17648465702115,
-      "graham_upside_pct": -9.22725851165259,
-      "ncav_margin_pct": -189.63225117356146,
-      "pb_ratio": 2.512022003208801,
-      "pe_ttm": 13.80263157894737
+      "graham_multiple": null,
+      "graham_number": 73.92671503687362,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Airlines, Airports & Air Services",
-  "last_updated": "2026-09-23T02:55:51Z",
+  "industry": "Air Transportation, Scheduled",
+  "last_updated": "2026-09-23T14:12:00Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,26 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 55187722160,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 33.40735068912711,
-    "current_ratio": 0.42364004285204143,
-    "debt_to_ebitda": 2.550877192982456,
-    "debt_to_equity": 0.9160669264267706,
-    "eps_growth_cagr_3yr_pct": 55.07756920805322,
-    "fcf_margin_pct": 6.0649580203269995,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 34.67251422850043,
-    "graham_upside_pct": -9.22725851165259,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "book_value_per_share": 31.709655910316886,
+    "current_ratio": 0.3970460469157255,
+    "debt_to_ebitda": 1.6101633393829402,
+    "debt_to_equity": 0.6381815566105596,
+    "eps_growth_cagr_3yr_pct": 54.924647410248454,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -189.63225117356146,
-    "pb_ratio": 2.512022003208801,
-    "pe_ttm": 13.80263157894737,
-    "roe_pct": 19.32832717755546,
-    "shareholders_equity": 20753000000,
-    "total_assets": 81185000000,
-    "total_liabilities": 60432000000
+    "roe_pct": 24.001342732460557,
+    "shareholders_equity": 20853000000,
+    "total_assets": 81317000000
   },
   "name": "Delta Air Lines",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 83.92
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -160,13 +153,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $55.2B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.42, debt $21.1B vs working capital $-16.7B",
+          "detail": "Current ratio 0.40, debt $13.3B vs working capital $-16.7B",
           "passed": false
         },
         {
@@ -175,40 +168,40 @@
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 55.1%/yr",
+          "detail": "EPS 3yr CAGR 54.9%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 13.8",
-          "passed": true
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 34.7",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 4,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 19.3%",
+          "detail": "ROE 24.0%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.92",
+          "detail": "Debt/equity 0.64",
           "passed": true
         },
         {
@@ -218,14 +211,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.delta.com"
+  "website": null
 }

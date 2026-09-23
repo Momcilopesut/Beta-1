@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for TXT: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=txt.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca3056c00>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000217346",
   "five_year_history": {
     "years": [
       {
-        "cash": 2117000000,
-        "debt": 4148000000,
+        "cash": null,
+        "debt": null,
         "earnings": 746000000,
         "fiscal_year": "2022-01-01",
         "market_return_pct": null,
         "revenue": 12382000000,
-        "spending": 11518000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 2035000000,
-        "debt": 3937000000,
+        "cash": null,
+        "debt": null,
         "earnings": 861000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 12869000000,
-        "spending": 11986000000,
-        "stock_return_pct": -8.290155440414516
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 2181000000,
-        "debt": 4255000000,
+        "cash": null,
+        "debt": null,
         "earnings": 921000000,
         "fiscal_year": "2023-12-30",
         "market_return_pct": 24.286797583871554,
         "revenue": 13683000000,
-        "spending": 12630000000,
-        "stock_return_pct": 13.587570621468933
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 1441000000,
-        "debt": 3959000000,
+        "cash": null,
+        "debt": null,
         "earnings": 824000000,
         "fiscal_year": "2024-12-28",
         "market_return_pct": 25.18356441059519,
         "revenue": 13702000000,
-        "spending": 12847000000,
-        "stock_return_pct": -3.991544391942313
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 2025000000,
-        "debt": 4282000000,
+        "cash": null,
+        "debt": null,
         "earnings": 921000000,
         "fiscal_year": "2026-01-03",
         "market_return_pct": 14.816557704912517,
         "revenue": 14799000000,
-        "spending": 13798000000,
-        "stock_return_pct": 12.744463152441398
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.8607893607893609,
-      "debt_to_ebitda": 3.0761494252873565,
-      "debt_to_equity": 0.47243605661782967
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 46.84273891018222,
+      "book_value_per_share": 45.78836656511495,
       "shareholders_equity": 7875000000,
       "total_assets": 18129000000,
       "total_liabilities": 10254000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 5.9733765794986144
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 8.12803547686045
+      "eps_growth_cagr_3yr_pct": 8.415699402341282
     },
     "profitability": {
-      "roe_pct": 11.927189409368635,
-      "trend": "declining"
+      "roe_pct": 11.695238095238095,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 24.430577639911725,
-      "graham_number": 73.45940050431253,
-      "graham_upside_pct": -5.676167816753299,
-      "ncav_margin_pct": -116.84293377208719,
-      "pb_ratio": 1.6625842513037,
-      "pe_ttm": 14.69433962264151
+      "graham_multiple": null,
+      "graham_number": 72.55699446520708,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-23T02:57:50Z",
+  "industry": "Aircraft & Parts",
+  "last_updated": "2026-09-23T14:29:44Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,24 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 13394347560,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 46.84273891018222,
-    "current_ratio": 1.8607893607893609,
-    "debt_to_ebitda": 3.0761494252873565,
-    "debt_to_equity": 0.47243605661782967,
-    "eps_growth_cagr_3yr_pct": 8.12803547686045,
-    "fcf_margin_pct": 5.9733765794986144,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 24.430577639911725,
-    "graham_upside_pct": -5.676167816753299,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -116.84293377208719,
-    "pb_ratio": 1.6625842513037,
-    "pe_ttm": 14.69433962264151,
-    "roe_pct": 11.927189409368635,
+    "book_value_per_share": 45.78836656511495,
+    "eps_growth_cagr_3yr_pct": 8.415699402341282,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 3,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "roe_pct": 11.695238095238095,
     "shareholders_equity": 7875000000,
     "total_assets": 18129000000,
     "total_liabilities": 10254000000
   },
   "name": "Textron",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 77.88
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -160,14 +151,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $13.4B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.86, debt $4.3B vs working capital $3.6B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -175,41 +166,41 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 8.1%/yr",
+          "detail": "EPS 3yr CAGR 8.4%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 14.7",
-          "passed": true
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 24.4",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 11.9%",
+          "detail": "ROE 11.7%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.47",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -218,14 +209,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },
-  "website": "https://www.textron.com"
+  "website": null
 }

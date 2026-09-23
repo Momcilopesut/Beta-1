@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for SPGI: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=spgi.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9eed5400>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000064040",
   "five_year_history": {
     "years": [
       {
         "cash": 6497000000,
-        "debt": 4702000000,
+        "debt": 4114000000,
         "earnings": 3024000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 8297000000,
-        "spending": 4076000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 1286000000,
-        "debt": 11651000000,
+        "debt": 10956000000,
         "earnings": 3248000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 11181000000,
-        "spending": 6237000000,
-        "stock_return_pct": -29.02761002691077
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1290000000,
-        "debt": 12000000000,
+        "debt": 11459000000,
         "earnings": 2626000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 12497000000,
-        "spending": 8477000000,
-        "stock_return_pct": 30.289006986325905
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1666000000,
-        "debt": 11933000000,
+        "debt": 11398000000,
         "earnings": 3852000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 14208000000,
-        "spending": 8628000000,
-        "stock_return_pct": 14.124979949128072
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1745000000,
-        "debt": 14200000000,
+        "debt": 13088000000,
         "earnings": 4471000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 15336000000,
-        "spending": 8858000000,
-        "stock_return_pct": 4.931429833544176
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.9544109589041095,
-      "debt_to_ebitda": 1.8545122110487136,
-      "debt_to_equity": 0.4981022267206478
+      "current_ratio": 0.8244074898520362,
+      "debt_to_ebitda": 1.7092856210003917,
+      "debt_to_equity": 0.4204709737526906
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 124.03520649966147,
-      "shareholders_equity": 31235000000,
+      "book_value_per_share": 105.15878378378379,
+      "shareholders_equity": 31127000000,
       "total_assets": 61200000000,
       "total_liabilities": 25048000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 35.57642149191445
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 12.694334390249251
+      "eps_growth_cagr_3yr_pct": 12.852521260492766
     },
     "profitability": {
-      "roe_pct": 15.470446794801276,
-      "trend": "improving"
+      "roe_pct": 14.36373566357182,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 92.10183548719755,
-      "graham_number": 202.33862899944677,
-      "graham_upside_pct": -49.72203831640822,
-      "ncav_margin_pct": -115.74181277988056,
-      "pb_ratio": 3.7601460020242916,
-      "pe_ttm": 24.494217894096163
+      "graham_multiple": null,
+      "graham_number": 186.24345580739498,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Financial - Data & Stock Exchanges",
-  "last_updated": "2026-09-23T02:44:28Z",
+  "industry": "Services-Consumer Credit Reporting, Collection Agencies",
+  "last_updated": "2026-09-23T12:28:33Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,27 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 118639312000,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 124.03520649966147,
-    "current_ratio": 0.9544109589041095,
-    "debt_to_ebitda": 1.8545122110487136,
-    "debt_to_equity": 0.4981022267206478,
-    "eps_growth_cagr_3yr_pct": 12.694334390249251,
-    "fcf_margin_pct": 35.57642149191445,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 105.15878378378379,
+    "current_ratio": 0.8244074898520362,
+    "debt_to_ebitda": 1.7092856210003917,
+    "debt_to_equity": 0.4204709737526906,
+    "eps_growth_cagr_3yr_pct": 12.852521260492766,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 3,
-    "graham_multiple": 92.10183548719755,
-    "graham_upside_pct": -49.72203831640822,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -115.74181277988056,
-    "pb_ratio": 3.7601460020242916,
-    "pe_ttm": 24.494217894096163,
-    "roe_pct": 15.470446794801276,
-    "shareholders_equity": 31235000000,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": 14.36373566357182,
+    "shareholders_equity": 31127000000,
     "total_assets": 61200000000,
     "total_liabilities": 25048000000
   },
   "name": "S&P Global Inc.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 402.44
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -160,13 +154,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $118.6B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.95, debt $14.2B vs working capital $-1.3B",
+          "detail": "Current ratio 0.82, debt $13.1B vs working capital $-1.3B",
           "passed": false
         },
         {
@@ -175,27 +169,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 12.7%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.5",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 12.9%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 92.1",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 3,
       "total": 7
     },
@@ -203,12 +197,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 15.5%",
-          "passed": true
+          "detail": "ROE 14.4%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.50",
+          "detail": "Debt/equity 0.42",
           "passed": true
         },
         {
@@ -218,14 +212,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.spglobal.com"
+  "website": null
 }

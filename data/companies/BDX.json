@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for BDX: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=bdx.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca23bd220>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000010795",
   "five_year_history": {
     "years": [
       {
-        "cash": 2392000000,
-        "debt": 18424000000,
+        "cash": 2283000000,
+        "debt": 17610000000,
         "earnings": 2092000000,
         "fiscal_year": "2021-09-30",
         "market_return_pct": null,
         "revenue": 19131000000,
-        "spending": 16881000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 1159000000,
-        "debt": 16951000000,
+        "cash": 1006000000,
+        "debt": 16065000000,
         "earnings": 1779000000,
         "fiscal_year": "2022-09-30",
         "market_return_pct": -16.768420562054338,
         "revenue": 18870000000,
-        "spending": 16588000000,
-        "stock_return_pct": -7.086029489763438
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1416000000,
-        "debt": 16824000000,
+        "debt": 15879000000,
         "earnings": 1484000000,
         "fiscal_year": "2023-09-30",
         "market_return_pct": 19.681953076880006,
         "revenue": 19372000000,
-        "spending": 17261000000,
-        "stock_return_pct": 16.023518666514438
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 1856000000,
-        "debt": 21586000000,
+        "cash": 1717000000,
+        "debt": 20110000000,
         "earnings": 1705000000,
         "fiscal_year": "2024-09-30",
         "market_return_pct": 34.21914475531018,
         "revenue": 20178000000,
-        "spending": 17781000000,
-        "stock_return_pct": -6.745387453874542
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 851000000,
+        "cash": 641000000,
         "debt": 19181000000,
         "earnings": 1678000000,
         "fiscal_year": "2025-09-30",
         "market_return_pct": 16.107780256553255,
-        "revenue": 21839000000,
-        "spending": 19262000000,
-        "stock_return_pct": -22.36467236467236
+        "revenue": 21840000000,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.8654827732879625,
-      "debt_to_ebitda": 3.8057539682539683,
-      "debt_to_equity": 0.6884010484927916
+      "current_ratio": 1.113316492241068,
+      "debt_to_ebitda": 3.804999008133307,
+      "debt_to_equity": 0.7554549035053171
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 88.85759203458666,
+      "book_value_per_share": 93.21303381808517,
       "shareholders_equity": 25390000000,
       "total_assets": 55325000000,
-      "total_liabilities": 29936000000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 12.225834516232428
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -0.5084833631796681
+      "eps_growth_cagr_3yr_pct": -0.3412995832631105
     },
     "profitability": {
-      "roe_pct": 3.793551768274861,
-      "trend": "improving"
+      "roe_pct": 6.608901142181961,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 113.5239105011132,
-      "graham_number": 108.05502113897663,
-      "graham_upside_pct": -40.953540361214955,
-      "ncav_margin_pct": -141.4891356562611,
-      "pb_ratio": 2.059559469200524,
-      "pe_ttm": 55.12048192771084
+      "graham_multiple": null,
+      "graham_number": 110.48188439051107,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Medical - Instruments & Supplies",
-  "last_updated": "2026-09-23T02:53:20Z",
+  "industry": "Surgical & Medical Instruments & Apparatus",
+  "last_updated": "2026-09-23T13:49:11Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,26 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 50423820000,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 88.85759203458666,
-    "current_ratio": 0.8654827732879625,
-    "debt_to_ebitda": 3.8057539682539683,
-    "debt_to_equity": 0.6884010484927916,
-    "eps_growth_cagr_3yr_pct": -0.5084833631796681,
-    "fcf_margin_pct": 12.225834516232428,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 93.21303381808517,
+    "current_ratio": 1.113316492241068,
+    "debt_to_ebitda": 3.804999008133307,
+    "debt_to_equity": 0.7554549035053171,
+    "eps_growth_cagr_3yr_pct": -0.3412995832631105,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 2,
-    "graham_multiple": 113.5239105011132,
-    "graham_upside_pct": -40.953540361214955,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -141.4891356562611,
-    "pb_ratio": 2.059559469200524,
-    "pe_ttm": 55.12048192771084,
-    "roe_pct": 3.793551768274861,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": 6.608901142181961,
     "shareholders_equity": 25390000000,
-    "total_assets": 55325000000,
-    "total_liabilities": 29936000000
+    "total_assets": 55325000000
   },
   "name": "Becton Dickinson",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 183
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -160,13 +153,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $50.4B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.87, debt $19.2B vs working capital $0.9B",
+          "detail": "Current ratio 1.11, debt $19.2B vs working capital $0.9B",
           "passed": false
         },
         {
@@ -175,27 +168,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -0.5%/yr",
+          "detail": "EPS 3yr CAGR -0.3%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 55.1",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 113.5",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 2,
       "total": 7
     },
@@ -203,29 +196,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 3.8%",
+          "detail": "ROE 6.6%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.69",
+          "detail": "Debt/equity 0.76",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "287,118,000 shares vs. 291,009,000 a year earlier",
+          "detail": "288,509,000 shares vs. 291,009,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.bd.com"
+  "website": null
 }

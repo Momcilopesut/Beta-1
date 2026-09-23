@@ -1,68 +1,70 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for EIX: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=eix.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0802900>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000827052",
   "five_year_history": {
     "years": [
       {
         "cash": 390000000,
-        "debt": 29533000000,
-        "earnings": 925000000,
+        "debt": 25247000000,
+        "earnings": null,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 14905000000,
-        "spending": 13428000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 914000000,
-        "debt": 33096000000,
-        "earnings": 824000000,
+        "debt": 29639000000,
+        "earnings": null,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 17220000000,
-        "spending": 15737000000,
-        "stock_return_pct": -6.783882783882787
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 345000000,
-        "debt": 35311000000,
-        "earnings": 1407000000,
+        "debt": 33013000000,
+        "earnings": 1197000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 16338000000,
-        "spending": 13711000000,
-        "stock_return_pct": 13.70638164099341
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 193000000,
-        "debt": 37761000000,
-        "earnings": 1546000000,
+        "debt": 35583000000,
+        "earnings": 1284000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 17599000000,
-        "spending": 14669000000,
-        "stock_return_pct": 10.367708045341443
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 158000000,
-        "debt": 42590000000,
-        "earnings": 4557000000,
+        "debt": 37998000000,
+        "earnings": 4459000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 19317000000,
-        "spending": 12224000000,
-        "stock_return_pct": -24.824649298597194
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.6621889650198342,
-      "debt_to_ebitda": 4.122942884801549,
-      "debt_to_equity": 2.4838838496206286
+      "current_ratio": 0.729498861047836,
+      "debt_to_ebitda": 3.678412391093901,
+      "debt_to_equity": 2.1615564025257408
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 49.592207792207795,
+      "book_value_per_share": 45.68419126952937,
       "shareholders_equity": 17579000000,
       "total_assets": 94026000000,
       "total_liabilities": 74767000000
@@ -71,30 +73,30 @@
       "fcf_margin_pct": -3.7014029093544543
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 93.03122248817375
+      "eps_growth_cagr_3yr_pct": 93.26535131289802
     },
     "profitability": {
-      "roe_pct": 22.06286018136614,
-      "trend": "improving"
+      "roe_pct": 25.365492917685877,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 6.84077639480064,
-      "graham_number": 113.6716751889394,
-      "graham_upside_pct": 106.48805665565742,
-      "ncav_margin_pct": -416.6751463112286,
-      "pb_ratio": 1.2090963546123565,
-      "pe_ttm": 5.65775950668037
+      "graham_multiple": null,
+      "graham_number": 108.9595301300852,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Regulated Electric",
-  "last_updated": "2026-09-23T03:51:54Z",
+  "industry": "Electric Services",
+  "last_updated": "2026-09-23T15:09:23Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -103,33 +105,28 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 21182909700,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 49.592207792207795,
-    "current_ratio": 0.6621889650198342,
-    "debt_to_ebitda": 4.122942884801549,
-    "debt_to_equity": 2.4838838496206286,
-    "eps_growth_cagr_3yr_pct": 93.03122248817375,
+    "book_value_per_share": 45.68419126952937,
+    "current_ratio": 0.729498861047836,
+    "debt_to_ebitda": 3.678412391093901,
+    "debt_to_equity": 2.1615564025257408,
+    "eps_growth_cagr_3yr_pct": 93.26535131289802,
     "fcf_margin_pct": -3.7014029093544543,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 5,
-    "graham_multiple": 6.84077639480064,
-    "graham_upside_pct": 106.48805665565742,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -416.6751463112286,
-    "pb_ratio": 1.2090963546123565,
-    "pe_ttm": 5.65775950668037,
-    "roe_pct": 22.06286018136614,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 3,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": 25.365492917685877,
     "shareholders_equity": 17579000000,
     "total_assets": 94026000000,
     "total_liabilities": 74767000000
   },
   "name": "Edison International",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 55.05
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -158,72 +155,72 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $21.2B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.66, debt $42.6B vs working capital $-2.9B",
+          "detail": "Current ratio 0.73, debt $38.0B vs working capital $-2.9B",
           "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years",
+          "detail": "Positive in 4/4 available years",
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 93.0%/yr",
+          "detail": "EPS 3yr CAGR 93.3%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 5.7",
-          "passed": true
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 6.8",
-          "passed": true
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 5,
+      "evaluated": 4,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 22.1%",
+          "detail": "ROE 25.4%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 2.48",
+          "detail": "Debt/equity 2.16",
           "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "385,000,000 shares vs. 388,000,000 a year earlier",
+          "detail": "386,000,000 shares vs. 388,000,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.edison.com"
+  "website": null
 }

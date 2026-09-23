@@ -1,0 +1,228 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for RBA: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=rba.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca26a4260>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0001046102",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 326113000,
+        "debt": 1737438000,
+        "earnings": 151900000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 1417000000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 494300000,
+        "debt": 581500000,
+        "earnings": 319700000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 1733800000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 576200000,
+        "debt": 3075800000,
+        "earnings": 206500000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 3679600000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 533900000,
+        "debt": 2626200000,
+        "earnings": 413100000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 4284200000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 531500000,
+        "debt": 2334000000,
+        "earnings": 428400000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 4590700000,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.1030902348578493,
+      "debt_to_ebitda": 1.9502005347593583,
+      "debt_to_equity": 0.4189252252575654
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 30.083153347732182,
+      "shareholders_equity": 5571400000,
+      "total_assets": 12143000000,
+      "total_liabilities": 6075300000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 15.666456096020214
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -10.651339758289602
+    },
+    "profitability": {
+      "roe_pct": 7.689270201385648,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": 37.15934254882488,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Services-Business Services, NEC",
+  "last_updated": "2026-09-23T16:58:05Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 30.083153347732182,
+    "current_ratio": 1.1030902348578493,
+    "debt_to_ebitda": 1.9502005347593583,
+    "debt_to_equity": 0.4189252252575654,
+    "eps_growth_cagr_3yr_pct": -10.651339758289602,
+    "fcf_margin_pct": 15.666456096020214,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 1,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 1,
+    "roe_pct": 7.689270201385648,
+    "shareholders_equity": 5571400000,
+    "total_assets": 12143000000,
+    "total_liabilities": 6075300000
+  },
+  "name": "RB Global",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Industrials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001046102.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-15",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046102/000110465926107718/tm2625417d1_8k.htm"
+      },
+      {
+        "filed": "2026-08-04",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046102/000162828026052582/rba-20260630.htm"
+      },
+      {
+        "filed": "2026-02-25",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046102/000162828026011682/rba-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "RBA",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.10, debt $2.3B vs working capital $0.2B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -10.7%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 1,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 7.7%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.42",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "186,900,000 shares vs. 185,300,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": null
+}

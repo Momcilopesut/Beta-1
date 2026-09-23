@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for CBOE: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=cboe.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9e832ba0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001374310",
   "five_year_history": {
     "years": [
       {
         "cash": 341900000,
-        "debt": 1428500000,
+        "debt": 1299300000,
         "earnings": 529000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 3494800000,
-        "spending": 2688900000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 432700000,
-        "debt": 1871300000,
-        "earnings": 235000000,
+        "debt": 1742000000,
+        "earnings": null,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 3958500000,
-        "spending": 3468900000,
-        "stock_return_pct": -3.780674846625772
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 543200000,
-        "debt": 1610800000,
+        "debt": 1439200000,
         "earnings": 761400000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 3773500000,
-        "spending": 2715600000,
-        "stock_return_pct": 42.025982306527446
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 920300000,
-        "debt": 1599300000,
+        "debt": 1441000000,
         "earnings": 764900000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 4094500000,
-        "spending": 2996100000,
-        "stock_return_pct": 9.652076318742996
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2216500000,
-        "debt": 1684700000,
+        "debt": 1442900000,
         "earnings": 1100000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 4714200000,
-        "spending": 3200100000,
-        "stock_return_pct": 28.45445240532241
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.5652449491614948,
-      "debt_to_ebitda": 1.0294531011304613,
-      "debt_to_equity": 0.2764584592413523
+      "current_ratio": 1.8716505100960927,
+      "debt_to_ebitda": 0.9077697389116074,
+      "debt_to_equity": 0.28081272016036435
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 53.73256924546323,
+      "book_value_per_share": 49.20281396468994,
       "shareholders_equity": 5138300000,
       "total_assets": 9305300000,
       "total_liabilities": 4167000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 24.460141699546053
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 67.89836627495833
+      "eps_growth_cagr_3yr_pct": 68.19298103960483
     },
     "profitability": {
-      "roe_pct": 25.745748602687595,
-      "trend": "declining"
+      "roe_pct": 21.40785863028628,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 102.95635495052308,
-      "graham_number": 112.45425813156109,
-      "graham_upside_pct": -57.85546672729412,
-      "ncav_margin_pct": -99.08703750876933,
-      "pb_ratio": 4.965889473497103,
-      "pe_ttm": 20.732711732711735
+      "graham_multiple": null,
+      "graham_number": 107.40390930511586,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Financial - Data & Stock Exchanges",
-  "last_updated": "2026-09-23T02:51:08Z",
+  "industry": "Security & Commodity Brokers, Dealers, Exchanges & Services",
+  "last_updated": "2026-09-23T13:29:10Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,27 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 27924826820,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 53.73256924546323,
-    "current_ratio": 1.5652449491614948,
-    "debt_to_ebitda": 1.0294531011304613,
-    "debt_to_equity": 0.2764584592413523,
-    "eps_growth_cagr_3yr_pct": 67.89836627495833,
-    "fcf_margin_pct": 24.460141699546053,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 49.20281396468994,
+    "current_ratio": 1.8716505100960927,
+    "debt_to_ebitda": 0.9077697389116074,
+    "debt_to_equity": 0.28081272016036435,
+    "eps_growth_cagr_3yr_pct": 68.19298103960483,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 3,
-    "graham_multiple": 102.95635495052308,
-    "graham_upside_pct": -57.85546672729412,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -99.08703750876933,
-    "pb_ratio": 4.965889473497103,
-    "pe_ttm": 20.732711732711735,
-    "roe_pct": 25.745748602687595,
+    "roe_pct": 21.40785863028628,
     "shareholders_equity": 5138300000,
     "total_assets": 9305300000,
     "total_liabilities": 4167000000
   },
   "name": "Cboe Global Markets",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 266.83
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -160,42 +154,42 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $27.9B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.57, debt $1.7B vs working capital $2.1B",
+          "detail": "Current ratio 1.87, debt $1.4B vs working capital $2.1B",
           "passed": false
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years",
+          "detail": "Positive in 5/5 available years",
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 67.9%/yr",
+          "detail": "EPS 3yr CAGR 68.2%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.7",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 103.0",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 3,
       "total": 7
     },
@@ -203,7 +197,7 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 25.7%",
+          "detail": "ROE 21.4%",
           "passed": true
         },
         {
@@ -218,14 +212,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.cboe.com"
+  "website": null
 }

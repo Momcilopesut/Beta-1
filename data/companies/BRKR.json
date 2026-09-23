@@ -1,0 +1,226 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for BRKR: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=brkr.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca25b5520>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0001109354",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 1068200000,
+        "debt": 1221800000,
+        "earnings": 277100000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 645500000,
+        "debt": 1200500000,
+        "earnings": 296600000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 488300000,
+        "debt": 1160300000,
+        "earnings": 427200000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 183400000,
+        "debt": 2061800000,
+        "earnings": 113100000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 298800000,
+        "debt": 1852500000,
+        "earnings": -8600000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.7295966228893058,
+      "debt_to_ebitda": 6.421143847487002,
+      "debt_to_equity": 0.7541217178913088
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 16.19107751999885,
+      "shareholders_equity": 2456500000,
+      "total_assets": 6241400000,
+      "total_liabilities": 3731100000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": null
+    },
+    "profitability": {
+      "roe_pct": -0.35009159373091797,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Laboratory Analytical Instruments",
+  "last_updated": "2026-09-23T16:24:23Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "low"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 16.19107751999885,
+    "current_ratio": 1.7295966228893058,
+    "debt_to_ebitda": 6.421143847487002,
+    "debt_to_equity": 0.7541217178913088,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 1,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 1,
+    "roe_pct": -0.35009159373091797,
+    "shareholders_equity": 2456500000,
+    "total_assets": 6241400000,
+    "total_liabilities": 3731100000
+  },
+  "name": "Bruker",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Healthcare",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001109354.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-14",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1109354/000119312526352279/brkr-20260814.htm"
+      },
+      {
+        "filed": "2026-08-05",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1109354/000119312526335226/brkr-20260630.htm"
+      },
+      {
+        "filed": "2026-02-27",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1109354/000119312526082523/brkr-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "BRKR",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.73, debt $1.9B vs working capital $0.9B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 1,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE -0.4%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.75",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "151,800,000 shares vs. 149,500,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": null
+}

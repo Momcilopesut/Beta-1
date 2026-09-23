@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for WST: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=wst.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2939c70>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000105770",
   "five_year_history": {
     "years": [
       {
         "cash": 762600000,
-        "debt": 325300000,
+        "debt": 208800000,
         "earnings": 661800000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 2830700000,
-        "spending": 2072000000,
+        "revenue": 2831600000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 894300000,
-        "debt": 317900000,
+        "debt": 206700000,
         "earnings": 585900000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 2885500000,
-        "spending": 2122000000,
-        "stock_return_pct": -49.81983326581523
+        "revenue": 2886900000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 853900000,
-        "debt": 309000000,
+        "debt": 72800000,
         "earnings": 593400000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 2951100000,
-        "spending": 2240200000,
-        "stock_return_pct": 48.15806246016571
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 484600000,
-        "debt": 305300000,
+        "debt": 202600000,
         "earnings": 492700000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 2892700000,
-        "spending": 2298100000,
-        "stock_return_pct": -6.059823912357681
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 791300000,
-        "debt": 416700000,
+        "debt": 202800000,
         "earnings": 493700000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 3073700000,
-        "spending": 2456300000,
-        "stock_return_pct": -16.003174990841377
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.822014051522248,
-      "debt_to_ebitda": 0.5301526717557252,
-      "debt_to_equity": 0.1043742893451943
+      "current_ratio": 3.0206138341731563,
+      "debt_to_ebitda": 0.26814756049186833,
+      "debt_to_equity": 0.06385390428211588
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 42.23446327683616,
+      "book_value_per_share": 45.129173876653724,
       "shareholders_equity": 3176000000,
       "total_assets": 4270000000,
       "total_liabilities": 1094000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 15.255229853271302
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -4.65494753425677
+      "eps_growth_cagr_3yr_pct": -4.229866358140244
     },
     "profitability": {
-      "roe_pct": 18.509022698044742,
-      "trend": "declining"
+      "roe_pct": 15.544710327455919,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 414.30177195866514,
-      "graham_number": 80.5629017852994,
-      "graham_upside_pct": -78.29019866196896,
-      "ncav_margin_pct": -96.61430252974735,
-      "pb_ratio": 8.78642632599826,
-      "pe_ttm": 47.15247776365947
+      "graham_multiple": null,
+      "graham_number": 83.03378552737297,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Medical - Instruments & Supplies",
-  "last_updated": "2026-09-23T02:55:11Z",
+  "industry": "Surgical & Medical Instruments & Apparatus",
+  "last_updated": "2026-09-23T14:05:52Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,27 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 26115755622,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 42.23446327683616,
-    "current_ratio": 2.822014051522248,
-    "debt_to_ebitda": 0.5301526717557252,
-    "debt_to_equity": 0.1043742893451943,
-    "eps_growth_cagr_3yr_pct": -4.65494753425677,
-    "fcf_margin_pct": 15.255229853271302,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 45.129173876653724,
+    "current_ratio": 3.0206138341731563,
+    "debt_to_ebitda": 0.26814756049186833,
+    "debt_to_equity": 0.06385390428211588,
+    "eps_growth_cagr_3yr_pct": -4.229866358140244,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 3,
-    "graham_multiple": 414.30177195866514,
-    "graham_upside_pct": -78.29019866196896,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -96.61430252974735,
-    "pb_ratio": 8.78642632599826,
-    "pe_ttm": 47.15247776365947,
-    "roe_pct": 18.509022698044742,
+    "roe_pct": 15.544710327455919,
     "shareholders_equity": 3176000000,
     "total_assets": 4270000000,
     "total_liabilities": 1094000000
   },
   "name": "West Pharmaceutical Services",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 371.09
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -160,13 +154,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $26.1B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.82, debt $0.4B vs working capital $1.3B",
+          "detail": "Current ratio 3.02, debt $0.2B vs working capital $1.3B",
           "passed": true
         },
         {
@@ -175,27 +169,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -4.7%/yr",
+          "detail": "EPS 3yr CAGR -4.2%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 47.2",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 414.3",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 3,
       "total": 7
     },
@@ -203,12 +197,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 18.5%",
+          "detail": "ROE 15.5%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.10",
+          "detail": "Debt/equity 0.06",
           "passed": true
         },
         {
@@ -218,14 +212,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.westpharma.com"
+  "website": null
 }

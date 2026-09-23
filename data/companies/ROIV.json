@@ -1,0 +1,224 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for ROIV: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=roiv.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca239c950>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0001635088",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 2060400000,
+        "debt": 210025000,
+        "earnings": -845262000,
+        "fiscal_year": "2022-03-31",
+        "market_return_pct": null,
+        "revenue": 55286000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 1676813000,
+        "debt": 40720000,
+        "earnings": -1009030000,
+        "fiscal_year": "2023-03-31",
+        "market_return_pct": -9.354795855105836,
+        "revenue": 31530000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 6494953000,
+        "debt": 12000000,
+        "earnings": 4348926000,
+        "fiscal_year": "2024-03-31",
+        "market_return_pct": 27.545860915019905,
+        "revenue": 32713000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 2715411000,
+        "debt": null,
+        "earnings": -171981000,
+        "fiscal_year": "2025-03-31",
+        "market_return_pct": 7.1299984679025625,
+        "revenue": 29053000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 1419232000,
+        "debt": null,
+        "earnings": -299771000,
+        "fiscal_year": "2026-03-31",
+        "market_return_pct": 16.258781887413086,
+        "revenue": 8260000,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 18.37331285289642,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 6.267791425696162,
+      "shareholders_equity": 4527370000,
+      "total_assets": 5708687000,
+      "total_liabilities": 416275000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": -9183.510895883777
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -27.550542391822486
+    },
+    "profitability": {
+      "roe_pct": -6.621305526166406,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Pharmaceutical Preparations",
+  "last_updated": "2026-09-23T16:33:29Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "low"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 6.267791425696162,
+    "current_ratio": 18.37331285289642,
+    "eps_growth_cagr_3yr_pct": -27.550542391822486,
+    "fcf_margin_pct": -9183.510895883777,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 0,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "roe_pct": -6.621305526166406,
+    "shareholders_equity": 4527370000,
+    "total_assets": 5708687000,
+    "total_liabilities": 416275000
+  },
+  "name": "Roivant Sciences",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Healthcare",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001635088.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-18",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1635088/000163508826000095/roiv-20260916.htm"
+      },
+      {
+        "filed": "2026-08-06",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1635088/000163508826000090/roiv-20260630.htm"
+      },
+      {
+        "filed": "2026-05-20",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1635088/000163508826000061/roiv-20260331.htm"
+      }
+    ]
+  },
+  "ticker": "ROIV",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 1/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -27.6%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 0,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE -6.6%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "693,864,530 shares vs. 725,395,624 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": null
+}

@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for PNR: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=pnr.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1efa1b0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000077360",
   "five_year_history": {
     "years": [
       {
-        "cash": 94500000,
-        "debt": 982300000,
+        "cash": null,
+        "debt": 894100000,
         "earnings": 553000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 3764800000,
-        "spending": 3127900000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 108900000,
-        "debt": 2399000000,
+        "cash": null,
+        "debt": 2317300000,
         "earnings": 480900000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 4121800000,
-        "spending": 3526500000,
-        "stock_return_pct": -38.40887306586335
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 170300000,
-        "debt": 2093600000,
+        "cash": null,
+        "debt": 1988300000,
         "earnings": 622700000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 4104500000,
-        "spending": 3365300000,
-        "stock_return_pct": 57.67007558915075
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 118700000,
-        "debt": 1767100000,
+        "cash": null,
+        "debt": 1638700000,
         "earnings": 625400000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 4082800000,
-        "spending": 3279000000,
-        "stock_return_pct": 41.90637337845459
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 101600000,
-        "debt": 1765900000,
+        "cash": null,
+        "debt": 1638600000,
         "earnings": 653800000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 4176000000,
-        "spending": 3318500000,
-        "stock_return_pct": 3.4777424483306834
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.450919289498286,
-      "debt_to_ebitda": 1.8108080393765382,
-      "debt_to_equity": 0.4706745259115035
+      "current_ratio": 1.6072135932450746,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 23.186765615337045,
-      "shareholders_equity": 3869200000,
+      "book_value_per_share": null,
+      "shareholders_equity": null,
       "total_assets": 6868800000,
       "total_liabilities": 2999600000
     },
     "cash_flow": {
-      "fcf_margin_pct": 17.8639846743295
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 10.967724733227469
+      "eps_growth_cagr_3yr_pct": 10.942784716109877
     },
     "profitability": {
-      "roe_pct": 17.12970876339491,
-      "trend": "improving"
+      "roe_pct": null,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 33.11653614543377,
-      "graham_number": 45.62446583924992,
-      "graham_upside_pct": -17.778940639304523,
-      "ncav_margin_pct": -116.25649720283893,
-      "pb_ratio": 2.3931755260982053,
-      "pe_ttm": 13.837905236907732
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-23T02:57:28Z",
+  "industry": "Special Industry Machinery (No Metalworking Machinery)",
+  "last_updated": "2026-09-23T14:26:28Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,22 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 8858312620,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 23.186765615337045,
-    "current_ratio": 1.450919289498286,
-    "debt_to_ebitda": 1.8108080393765382,
-    "debt_to_equity": 0.4706745259115035,
-    "eps_growth_cagr_3yr_pct": 10.967724733227469,
-    "fcf_margin_pct": 17.8639846743295,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 33.11653614543377,
-    "graham_upside_pct": -17.778940639304523,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -116.25649720283893,
-    "pb_ratio": 2.3931755260982053,
-    "pe_ttm": 13.837905236907732,
-    "roe_pct": 17.12970876339491,
-    "shareholders_equity": 3869200000,
+    "current_ratio": 1.6072135932450746,
+    "eps_growth_cagr_3yr_pct": 10.942784716109877,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 3,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 1,
     "total_assets": 6868800000,
     "total_liabilities": 2999600000
   },
   "name": "Pentair",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 55.49
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -160,13 +149,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $8.9B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.45, debt $1.8B vs working capital $0.6B",
+          "detail": "Current ratio 1.61, debt $1.6B vs working capital $0.6B",
           "passed": false
         },
         {
@@ -175,41 +164,41 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 11.0%/yr",
+          "detail": "EPS 3yr CAGR 10.9%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 13.8",
-          "passed": true
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 33.1",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 4,
+      "evaluated": 4,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 17.1%",
-          "passed": true
+          "detail": "ROE unavailable",
+          "passed": null
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.47",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -218,14 +207,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 1,
+      "passed": 1,
       "total": 4
     }
   },
-  "website": "https://www.pentair.com"
+  "website": null
 }

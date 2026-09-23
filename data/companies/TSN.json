@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for TSN: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=tsn.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9f1097f0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000100493",
   "five_year_history": {
     "years": [
       {
         "cash": 2507000000,
-        "debt": 9348000000,
+        "debt": 1067000000,
         "earnings": 3047000000,
-        "fiscal_year": "2021-09-30",
+        "fiscal_year": "2021-10-02",
         "market_return_pct": null,
         "revenue": 47049000000,
-        "spending": 42653000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 1031000000,
-        "debt": 8321000000,
+        "debt": 459000000,
         "earnings": 3238000000,
         "fiscal_year": "2022-10-01",
-        "market_return_pct": -16.768420562054338,
+        "market_return_pct": -17.745946941783348,
         "revenue": 53282000000,
-        "spending": 48872000000,
-        "stock_return_pct": -16.480871548011137
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 573000000,
-        "debt": 9506000000,
+        "debt": 1895000000,
         "earnings": -648000000,
         "fiscal_year": "2023-09-30",
         "market_return_pct": 19.681953076880006,
         "revenue": 52881000000,
-        "spending": 53276000000,
-        "stock_return_pct": -23.418777491278632
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1717000000,
-        "debt": 9787000000,
+        "debt": 74000000,
         "earnings": 800000000,
         "fiscal_year": "2024-09-28",
         "market_return_pct": 33.683447178815385,
         "revenue": 53309000000,
-        "spending": 51900000000,
-        "stock_return_pct": 18.22142998613586
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1229000000,
-        "debt": 8830000000,
+        "debt": 909000000,
         "earnings": 474000000,
         "fiscal_year": "2025-09-27",
         "market_return_pct": 15.81010376747686,
         "revenue": 54441000000,
-        "spending": 53000000000,
-        "stock_return_pct": -9.214273747696431
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.433419178912286,
-      "debt_to_ebitda": 3.1513204853675947,
-      "debt_to_equity": 0.4428342275568339
+      "current_ratio": 1.5520425731726404,
+      "debt_to_ebitda": 0.3713235294117647,
+      "debt_to_equity": 0.05026264860381532
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 52.956318745331814,
+      "book_value_per_share": null,
       "shareholders_equity": 18085000000,
       "total_assets": 36658000000,
-      "total_liabilities": 18431000000
+      "total_liabilities": null
     },
     "cash_flow": {
       "fcf_margin_pct": 2.1619735126099817
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -47.08663160106001
+      "eps_growth_cagr_3yr_pct": -46.97317852013001
     },
     "profitability": {
-      "roe_pct": 3.176315971501695,
+      "roe_pct": 2.620956593862317,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 30.542139697296676,
-      "graham_number": 40.25497923992948,
-      "graham_upside_pct": -22.31767803950312,
-      "ncav_margin_pct": -146.349678359722,
-      "pb_ratio": 0.9842796853432159,
-      "pe_ttm": 31.029940119760482
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Agricultural Farm Products",
-  "last_updated": "2026-09-23T02:49:55Z",
+  "industry": "Poultry Slaughtering and Processing",
+  "last_updated": "2026-09-23T13:17:59Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +105,26 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 18371217021,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 52.956318745331814,
-    "current_ratio": 1.433419178912286,
-    "debt_to_ebitda": 3.1513204853675947,
-    "debt_to_equity": 0.4428342275568339,
-    "eps_growth_cagr_3yr_pct": -47.08663160106001,
+    "current_ratio": 1.5520425731726404,
+    "debt_to_ebitda": 0.3713235294117647,
+    "debt_to_equity": 0.05026264860381532,
+    "eps_growth_cagr_3yr_pct": -46.97317852013001,
     "fcf_margin_pct": 2.1619735126099817,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 1,
-    "graham_multiple": 30.542139697296676,
-    "graham_upside_pct": -22.31767803950312,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -146.349678359722,
-    "pb_ratio": 0.9842796853432159,
-    "pe_ttm": 31.029940119760482,
-    "roe_pct": 3.176315971501695,
+    "munger_quality_passed": 2,
+    "roe_pct": 2.620956593862317,
     "shareholders_equity": 18085000000,
-    "total_assets": 36658000000,
-    "total_liabilities": 18431000000
+    "total_assets": 36658000000
   },
   "name": "Tyson Foods",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 51.82
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Consumer Defensive",
@@ -160,13 +153,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $18.4B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.43, debt $8.8B vs working capital $3.5B",
+          "detail": "Current ratio 1.55, debt $0.9B vs working capital $3.5B",
           "passed": false
         },
         {
@@ -175,27 +168,27 @@
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -47.1%/yr",
+          "detail": "EPS 3yr CAGR -47.0%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 31.0",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 30.5",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 1,
       "total": 7
     },
@@ -203,18 +196,18 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 3.2%",
+          "detail": "ROE 2.6%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.44",
+          "detail": "Debt/equity 0.05",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "348,000,000 shares vs. 356,000,000 a year earlier",
-          "passed": true
+          "detail": "357,000,000 shares vs. 356,000,000 a year earlier",
+          "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
@@ -223,9 +216,9 @@
         }
       ],
       "evaluated": 4,
-      "passed": 3,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.tysonfoods.com"
+  "website": null
 }

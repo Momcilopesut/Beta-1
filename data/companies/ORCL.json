@@ -1,103 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for ORCL: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=orcl.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2c34140>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001341439",
   "five_year_history": {
     "years": [
       {
         "cash": 21383000000,
-        "debt": 75859000000,
+        "debt": 3749000000,
         "earnings": 6717000000,
         "fiscal_year": "2022-05-31",
         "market_return_pct": null,
         "revenue": 42440000000,
-        "spending": 31514000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 9765000000,
-        "debt": 90481000000,
+        "debt": 4061000000,
         "earnings": 8503000000,
         "fiscal_year": "2023-05-31",
         "market_return_pct": 1.1914852396289966,
         "revenue": 49954000000,
-        "spending": 36861000000,
-        "stock_return_pct": 47.30255839822024
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 10454000000,
-        "debt": 94469000000,
+        "debt": 10605000000,
         "earnings": 10467000000,
         "fiscal_year": "2024-05-31",
         "market_return_pct": 26.210362570300344,
         "revenue": 52961000000,
-        "spending": 37608000000,
-        "stock_return_pct": 10.619218425523881
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 10786000000,
-        "debt": 104104000000,
+        "debt": 7271000000,
         "earnings": 12443000000,
         "fiscal_year": "2025-05-31",
         "market_return_pct": 11.760244230805693,
         "revenue": 57399000000,
-        "spending": 39721000000,
-        "stock_return_pct": 41.24925334926189
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 31289000000,
-        "debt": 156189000000,
+        "debt": 7199000000,
         "earnings": 17087000000,
         "fiscal_year": "2026-05-31",
         "market_return_pct": 28.699163541967117,
-        "revenue": 67358000000,
-        "spending": 46587000000,
-        "stock_return_pct": 49.91240258563403
+        "revenue": 67357000000,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.1708128130656228,
-      "debt_to_ebitda": 5.193834796488428,
-      "debt_to_equity": 2.335275265081172
+      "current_ratio": 1.1150033521693323,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.16935635645055047
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 22.655428186109237,
+      "book_value_per_share": 14.058105601811798,
       "shareholders_equity": 42508000000,
       "total_assets": 261759000000,
-      "total_liabilities": 218703000000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": -35.16434573473084
+      "fcf_margin_pct": -35.164867793993196
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 23.545035086408795
+      "eps_growth_cagr_3yr_pct": 23.834995611269672
     },
     "profitability": {
-      "roe_pct": 42.582402124618795,
-      "trend": "declining"
+      "roe_pct": 40.197139362002446,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 152.43108682355953,
-      "graham_number": 55.02633893939792,
-      "graham_upside_pct": -63.0992898743308,
-      "ncav_margin_pct": -138.17613355009271,
-      "pb_ratio": 6.623883064757683,
-      "pe_ttm": 23.012345679012345
+      "graham_multiple": null,
+      "graham_number": 42.94265946954919,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-23T02:45:00Z",
+  "industry": "Services-Prepackaged Software",
+  "last_updated": "2026-09-23T12:32:52Z",
   "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
+    "flags": [],
+    "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,33 +105,26 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 429535686400,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 22.655428186109237,
-    "current_ratio": 1.1708128130656228,
-    "debt_to_ebitda": 5.193834796488428,
-    "debt_to_equity": 2.335275265081172,
-    "eps_growth_cagr_3yr_pct": 23.545035086408795,
-    "fcf_margin_pct": -35.16434573473084,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 14.058105601811798,
+    "current_ratio": 1.1150033521693323,
+    "debt_to_equity": 0.16935635645055047,
+    "eps_growth_cagr_3yr_pct": 23.834995611269672,
+    "fcf_margin_pct": -35.164867793993196,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 3,
-    "graham_multiple": 152.43108682355953,
-    "graham_upside_pct": -63.0992898743308,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 1,
-    "ncav_margin_pct": -138.17613355009271,
-    "pb_ratio": 6.623883064757683,
-    "pe_ttm": 23.012345679012345,
-    "roe_pct": 42.582402124618795,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": 40.197139362002446,
     "shareholders_equity": 42508000000,
-    "total_assets": 261759000000,
-    "total_liabilities": 218703000000
+    "total_assets": 261759000000
   },
   "name": "Oracle Corporation",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 149.12
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Technology",
@@ -161,13 +153,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $429.5B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.17, debt $156.2B vs working capital $4.8B",
+          "detail": "Current ratio 1.12, debt $7.2B vs working capital $4.8B",
           "passed": false
         },
         {
@@ -176,27 +168,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 23.5%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 23.0",
-          "passed": false
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 23.8%/yr",
+          "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 152.4",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 3,
       "total": 7
     },
@@ -204,29 +196,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 42.6%",
+          "detail": "ROE 40.2%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 2.34",
-          "passed": false
+          "detail": "Debt/equity 0.17",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "2,915,000,000 shares vs. 2,866,000,000 a year earlier",
+          "detail": "2,914,000,000 shares vs. 2,866,000,000 a year earlier",
           "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 1,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.oracle.com"
+  "website": null
 }

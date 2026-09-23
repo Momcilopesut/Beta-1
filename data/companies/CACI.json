@@ -1,0 +1,221 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for CACI: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=caci.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca111ecf0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0000016058",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 114804000,
+        "debt": 1732773000,
+        "earnings": 366794000,
+        "fiscal_year": "2022-06-30",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 115776000,
+        "debt": 1696381000,
+        "earnings": 384735000,
+        "fiscal_year": "2023-06-30",
+        "market_return_pct": 17.50298210735586,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 133961000,
+        "debt": 1542637000,
+        "earnings": 419924000,
+        "fiscal_year": "2024-06-30",
+        "market_return_pct": 23.0238224147266,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 106181000,
+        "debt": 2917940000,
+        "earnings": 499830000,
+        "fiscal_year": "2025-06-30",
+        "market_return_pct": 13.296292221366485,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 191756000,
+        "debt": 4901509000,
+        "earnings": 535808000,
+        "fiscal_year": "2026-06-30",
+        "market_return_pct": 20.865905964230794,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.4838883887207566,
+      "debt_to_ebitda": 4.9142122386368765,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": null,
+      "shareholders_equity": null,
+      "total_assets": 11819644000,
+      "total_liabilities": 7356947000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 13.715532356221182
+    },
+    "profitability": {
+      "roe_pct": null,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Services-Computer Integrated Systems Design",
+  "last_updated": "2026-09-23T16:40:26Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "current_ratio": 1.4838883887207566,
+    "debt_to_ebitda": 4.9142122386368765,
+    "eps_growth_cagr_3yr_pct": 13.715532356221182,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 1,
+    "total_assets": 11819644000,
+    "total_liabilities": 7356947000
+  },
+  "name": "CACI International",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Industrials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000016058.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-06",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/16058/000162828026054195/caci-20260630.htm"
+      },
+      {
+        "filed": "2026-08-05",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/16058/000162828026053448/caci-20260805.htm"
+      },
+      {
+        "filed": "2026-04-23",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/16058/000162828026026802/caci-20260331.htm"
+      }
+    ]
+  },
+  "ticker": "CACI",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.48, debt $4.9B vs working capital $0.7B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 13.7%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 2,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "22,176,000 shares vs. 22,393,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 1,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": null
+}

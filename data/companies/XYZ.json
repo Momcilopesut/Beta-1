@@ -1,68 +1,70 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for XYZ: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=xyz.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2c60fb0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001512673",
   "five_year_history": {
     "years": [
       {
         "cash": 4443669000,
-        "debt": 5516240000,
+        "debt": 4559663000,
         "earnings": 166284000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 17661203000,
-        "spending": 17500091000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 7724526000,
-        "debt": 6332764000,
+        "cash": 4544202000,
+        "debt": 4109829000,
         "earnings": -540747000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 17531587000,
-        "spending": 17558865000,
-        "stock_return_pct": -61.09219243390501
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 8166895000,
-        "debt": 6071517000,
+        "cash": 4996465000,
+        "debt": null,
         "earnings": 9772000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 21915623000,
-        "spending": 21533799000,
-        "stock_return_pct": 14.926798217695728
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 12258119000,
-        "debt": 7918613000,
+        "cash": 8075247000,
+        "debt": null,
         "earnings": 2897047000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 24121053000,
-        "spending": 22434505000,
-        "stock_return_pct": 17.682082525616167
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 11335916000,
-        "debt": 8966376000,
+        "cash": 6564092000,
+        "debt": null,
         "earnings": 1305636000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 24193683000,
-        "spending": 21148031000,
-        "stock_return_pct": -23.414519355218253
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.2087963726872766,
-      "debt_to_ebitda": 2.625446791839144,
-      "debt_to_equity": 0.29901691025575616
+      "current_ratio": 2.201065823355283,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 36.818750846814055,
+      "book_value_per_share": null,
       "shareholders_equity": 22204278000,
       "total_assets": 39549887000,
       "total_liabilities": 17380005000
@@ -74,29 +76,27 @@
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 1.615326729763817,
+      "roe_pct": 5.880110130128978,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 286.41493621859524,
-      "graham_number": 42.00641182407233,
-      "graham_upside_pct": -45.81915152318802,
-      "ncav_margin_pct": -88.13100336397561,
-      "pb_ratio": 2.1057205423010354,
-      "pe_ttm": 136.01754385964912
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-23T02:53:08Z",
+  "industry": "Services-Prepackaged Software",
+  "last_updated": "2026-09-23T13:47:23Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,35 +105,27 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 46144380759,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 36.818750846814055,
-    "current_ratio": 2.2087963726872766,
-    "debt_to_ebitda": 2.625446791839144,
-    "debt_to_equity": 0.29901691025575616,
+    "current_ratio": 2.201065823355283,
     "fcf_margin_pct": 10.021938371268234,
-    "graham_criteria_evaluated": 5,
-    "graham_criteria_passed": 2,
-    "graham_multiple": 286.41493621859524,
-    "graham_upside_pct": -45.81915152318802,
+    "graham_criteria_evaluated": 1,
+    "graham_criteria_passed": 0,
     "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -88.13100336397561,
-    "pb_ratio": 2.1057205423010354,
-    "pe_ttm": 136.01754385964912,
-    "roe_pct": 1.615326729763817,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": 5.880110130128978,
     "shareholders_equity": 22204278000,
     "total_assets": 39549887000,
     "total_liabilities": 17380005000
   },
   "name": "Block, Inc.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 77.53
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
-  "sector": "Technology",
+  "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001512673.json",
     "sec_filings": [
@@ -159,14 +151,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $46.1B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.21, debt $9.0B vs working capital $12.5B",
-          "passed": true
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -184,31 +176,31 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 136.0",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 286.4",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 5,
-      "passed": 2,
+      "evaluated": 1,
+      "passed": 0,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 1.6%",
+          "detail": "ROE 5.9%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.30",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -221,10 +213,10 @@
           "passed": true
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.block.xyz"
+  "website": null
 }

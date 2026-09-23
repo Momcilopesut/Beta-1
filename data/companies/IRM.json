@@ -1,101 +1,100 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for IRM: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=irm.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9f3f1e80>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001020569",
   "five_year_history": {
     "years": [
       {
         "cash": 255828000,
-        "debt": 11703010000,
-        "earnings": 450219000,
+        "debt": 9271941000,
+        "earnings": null,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 4491531000,
-        "spending": 3637359000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 141797000,
-        "debt": 13286900000,
-        "earnings": 556981000,
+        "debt": 10568995000,
+        "earnings": null,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 5103574000,
-        "spending": 4053703000,
-        "stock_return_pct": -4.739155360214021
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 222789000,
-        "debt": 14787359000,
-        "earnings": 184234000,
+        "debt": 11933170000,
+        "earnings": null,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 5480289000,
-        "spending": 4558511000,
-        "stock_return_pct": 37.6730190571715
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 155716000,
-        "debt": 16369312000,
-        "earnings": 180156000,
+        "debt": 13719086000,
+        "earnings": null,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 6149909000,
-        "spending": 5140390000,
-        "stock_return_pct": 53.15459711496431
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 158535000,
-        "debt": 19051536000,
-        "earnings": 144591000,
+        "debt": 16431959000,
+        "earnings": null,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 6901737000,
-        "spending": 5496215705,
-        "stock_return_pct": -21.08267529255066
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.7260473245106343,
-      "debt_to_ebitda": 7.716683107445851,
-      "debt_to_equity": -15.313167879336726
+      "current_ratio": 0.7386852279980577,
+      "debt_to_ebitda": 7.509154089304867,
+      "debt_to_equity": -16.750093526345886
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -2.995116561037949,
+      "book_value_per_share": -3.2952560757135205,
       "shareholders_equity": -981007000,
       "total_assets": 21125019000,
-      "total_liabilities": 21769927000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": -13.498471471746894
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -36.569478241497954
+      "eps_growth_cagr_3yr_pct": -36.34769139588404
     },
     "profitability": {
-      "roe_pct": -38.418408314024184,
-      "trend": "declining"
+      "roe_pct": null,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -2316.9091689136935,
+      "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -156.40113424067553,
-      "pb_ratio": -27.458501959529087,
-      "pe_ttm": 84.37857142857142
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "REIT - Specialty",
-  "last_updated": "2026-09-23T03:49:38Z",
+  "industry": "Real Estate Investment Trusts",
+  "last_updated": "2026-09-23T14:38:06Z",
   "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "6 red flag(s) from the filing text - see qualitative.red_flags."
-    ],
-    "munger_quality_pass": false,
+    "flags": [],
+    "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": true,
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -106,50 +105,27 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 35146590567,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": -2.995116561037949,
-    "current_ratio": 0.7260473245106343,
-    "debt_to_ebitda": 7.716683107445851,
-    "debt_to_equity": -15.313167879336726,
-    "eps_growth_cagr_3yr_pct": -36.569478241497954,
-    "fcf_margin_pct": -13.498471471746894,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": -2316.9091689136935,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "book_value_per_share": -3.2952560757135205,
+    "current_ratio": 0.7386852279980577,
+    "debt_to_ebitda": 7.509154089304867,
+    "debt_to_equity": -16.750093526345886,
+    "eps_growth_cagr_3yr_pct": -36.34769139588404,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 1,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -156.40113424067553,
-    "pb_ratio": -27.458501959529087,
-    "pe_ttm": 84.37857142857142,
-    "roe_pct": -38.418408314024184,
     "shareholders_equity": -981007000,
-    "total_assets": 21125019000,
-    "total_liabilities": 21769927000
+    "total_assets": 21125019000
   },
   "name": "Iron Mountain",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 118.13
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, Iron Mountain reported total revenues of $6.90 billion, up 12.2% from $6.15 billion in 2024, driven by organic storage rental and service revenue growth plus ALM acquisitions. Net income attributable to the company fell to $144.6 million from $180.2 million, while Adjusted EBITDA rose 15.1% to $2.57 billion and margin improved to 37.3%. The company completed its multi-year Project Matterhorn transformation program in 2025 (total costs of about $574.4 million since 2022) and continued expanding its Global Data Center Business, ending the year with 488 MW of leased capacity and 852 MW under construction or development, funded in part by new debt issuances including Euro-denominated notes.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists only of XBRL taxonomy tags, entity identifiers, and financial statement line-item references rather than narrative text or reported figures. As a result, the excerpt does not describe specific revenue, income, or operational results for the quarter, and no further factual summary can be drawn from what was given.",
-    "filing_summary_8k": "This 8-K, dated August 5, 2026, discloses under Item 2.02 that Iron Mountain issued its second quarter 2026 earnings press release and furnished supplemental financial information and a conference call slide presentation as exhibits. The filing does not itself contain the financial results, only the announcement that these materials were released and posted to the company's investor website.",
-    "moat_explanation": "The 10-K describes contracted storage rental agreements (one to five years) in Records Management with 'consistently experienced strong customer retention levels,' and data center leases with a weighted average expiration of 10.3 years, indicating that once customers place physical records or IT infrastructure with Iron Mountain, moving them elsewhere involves real friction, cost and risk. The company's emphasis on chain-of-custody, decades-long relationships and diversified cross-selling into an installed base of 240,000 customers further supports durable customer lock-in rather than a brand or scale-based advantage per se.",
-    "moat_present": true,
-    "moat_type": "switching_costs",
-    "red_flags": [
-      "Net income declined 17.1% year-over-year despite 12.2% revenue growth, driven by higher interest expense, restructuring costs, and other expense items",
-      "Total long-term debt of approximately $16.5 billion as of December 31, 2025, with interest expense, net increasing to $829.3 million (up $107.8 million) due to higher average debt outstanding",
-      "Recurring, multi-year restructuring and transformation costs (~$574.4 million cumulative under Project Matterhorn through 2025) that have been excluded from Adjusted EBITDA and Adjusted EPS, indicating ongoing costs not reflected in headline non-GAAP metrics",
-      "Foreign currency transaction losses of $105.6 million in 2025 tied to intercompany balances, reversing a $39.1 million gain in 2024, showing earnings sensitivity to currency movements",
-      "Effective tax rate variability (27.9% in 2025 vs 24.9% in 2024) attributed to REIT/TRS mix, foreign jurisdiction differences, and evolving international tax rules (Pillar Two, OBBBA)",
-      "Heavy growth capital expenditure commitment (~$2.2 billion expected in 2026, largely data center related) funded partly through additional borrowings, increasing reliance on debt markets"
-    ]
-  },
+  "qualitative": null,
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001020569.json",
@@ -176,55 +152,55 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $35.1B",
-          "passed": true
-        },
-        {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.73, debt $19.1B vs working capital $-0.7B",
-          "passed": false
-        },
-        {
-          "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years",
-          "passed": true
-        },
-        {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
           "passed": null
         },
         {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -36.6%/yr",
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.74, debt $16.4B vs working capital $-0.7B",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 84.4",
-          "passed": false
+          "criterion": "Earnings stability",
+          "detail": "No annual net income data available",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -2316.9",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -36.3%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 1,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -38.4%",
-          "passed": false
+          "detail": "ROE unavailable",
+          "passed": null
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity -15.31",
+          "detail": "Debt/equity -16.75",
           "passed": true
         },
         {
@@ -234,14 +210,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 2,
       "passed": 1,
       "total": 4
     }
   },
-  "website": "https://www.ironmountain.com"
+  "website": null
 }

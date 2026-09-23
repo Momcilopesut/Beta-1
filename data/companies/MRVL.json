@@ -1,68 +1,70 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for MRVL: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=mrvl.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1beee10>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001835632",
   "five_year_history": {
     "years": [
       {
         "cash": 613500000,
-        "debt": 4726500000,
+        "debt": 4548000000,
         "earnings": -421000000,
-        "fiscal_year": "2022-01-31",
+        "fiscal_year": "2022-01-29",
         "market_return_pct": null,
         "revenue": 4462400000,
-        "spending": 4810100000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 911000000,
-        "debt": 4737500000,
+        "debt": 4492100000,
         "earnings": -163500000,
-        "fiscal_year": "2023-01-31",
-        "market_return_pct": -9.653041719455004,
+        "fiscal_year": "2023-01-28",
+        "market_return_pct": -8.206810725195155,
         "revenue": 5919600000,
-        "spending": 5681600000,
-        "stock_return_pct": -39.565826330532225
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 950800000,
-        "debt": 4401300000,
+        "debt": 4058600000,
         "earnings": -933400000,
-        "fiscal_year": "2024-01-31",
-        "market_return_pct": 18.795512694351498,
+        "fiscal_year": "2024-02-03",
+        "market_return_pct": 21.857128771445478,
         "revenue": 5507700000,
-        "spending": 6075400000,
-        "stock_return_pct": 56.89455388180767
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 948300000,
-        "debt": 4343100000,
+        "debt": 3934300000,
         "earnings": -885000000,
-        "fiscal_year": "2025-01-31",
-        "market_return_pct": 24.631378396288945,
+        "fiscal_year": "2025-02-01",
+        "market_return_pct": 21.73965813694751,
         "revenue": 5767300000,
-        "spending": 6487600000,
-        "stock_return_pct": 66.70605612998523
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2638800000,
-        "debt": 4790300000,
+        "debt": 3970800000,
         "earnings": 2670100000,
         "fiscal_year": "2026-01-31",
         "market_return_pct": 14.979561995280976,
         "revenue": 8194600000,
-        "spending": 6856200000,
-        "stock_return_pct": -30.07265638844586
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 3.1683536707341466,
-      "debt_to_ebitda": 1.8220996576645112,
-      "debt_to_equity": 0.2852479008828164
+      "current_ratio": 2.0060860114888994,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.27751530569455707
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 20.650323155783376,
+      "book_value_per_share": 16.31702588664614,
       "shareholders_equity": 14308400000,
       "total_assets": 22285300000,
       "total_liabilities": 7976900000
@@ -74,29 +76,27 @@
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 16.217494670753958,
+      "roe_pct": 18.661066226831792,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 1093.1927031496384,
-      "graham_number": 37.95207557059153,
-      "graham_upside_pct": -85.53435143673138,
-      "ncav_margin_pct": -100.65907895231214,
-      "pb_ratio": 12.704885924582873,
-      "pe_ttm": 86.04506247745236
+      "graham_multiple": null,
+      "graham_number": 33.5722886190394,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Semiconductors",
-  "last_updated": "2026-09-23T03:01:05Z",
+  "industry": "Semiconductors & Related Devices",
+  "last_updated": "2026-09-23T14:55:49Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,32 +105,26 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 229765967760,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 20.650323155783376,
-    "current_ratio": 3.1683536707341466,
-    "debt_to_ebitda": 1.8220996576645112,
-    "debt_to_equity": 0.2852479008828164,
+    "book_value_per_share": 16.31702588664614,
+    "current_ratio": 2.0060860114888994,
+    "debt_to_equity": 0.27751530569455707,
     "fcf_margin_pct": 17.040490078832402,
-    "graham_criteria_evaluated": 5,
+    "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 1,
-    "graham_multiple": 1093.1927031496384,
-    "graham_upside_pct": -85.53435143673138,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -100.65907895231214,
-    "pb_ratio": 12.704885924582873,
-    "pe_ttm": 86.04506247745236,
-    "roe_pct": 16.217494670753958,
+    "roe_pct": 18.661066226831792,
     "shareholders_equity": 14308400000,
     "total_assets": 22285300000,
     "total_liabilities": 7976900000
   },
   "name": "Marvell Technology",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 262.36
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Technology",
@@ -159,13 +153,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $229.8B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 3.17, debt $4.8B vs working capital $3.2B",
+          "detail": "Current ratio 2.01, debt $4.0B vs working capital $3.2B",
           "passed": false
         },
         {
@@ -174,9 +168,9 @@
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth",
@@ -184,17 +178,17 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 86.0",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1093.2",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 5,
+      "evaluated": 3,
       "passed": 1,
       "total": 7
     },
@@ -202,12 +196,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 16.2%",
+          "detail": "ROE 18.7%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.29",
+          "detail": "Debt/equity 0.28",
           "passed": true
         },
         {
@@ -226,5 +220,5 @@
       "total": 4
     }
   },
-  "website": "https://www.marvell.com"
+  "website": null
 }

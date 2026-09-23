@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for APO: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=apo.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca10c90d0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001858681",
   "five_year_history": {
     "years": [
       {
-        "cash": 1380000000,
-        "debt": 14193206000,
-        "earnings": 1839000000,
-        "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
-        "revenue": 5951000000,
-        "spending": 3975000000,
+        "cash": 917000000,
+        "debt": null,
+        "earnings": -563000000,
+        "fiscal_year": "2022-09-30",
+        "market_return_pct": -5.320079522862821,
+        "revenue": 2979000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 9452000000,
-        "debt": 7186366000,
+        "cash": 8980000000,
+        "debt": null,
         "earnings": -1961000000,
         "fiscal_year": "2022-12-31",
-        "market_return_pct": -19.48164055920498,
+        "market_return_pct": 7.069264796461168,
         "revenue": 10968000000,
-        "spending": 15343000000,
-        "stock_return_pct": -11.928758801601557
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 15928000000,
-        "debt": 8092000000,
-        "earnings": 4881000000,
+        "cash": null,
+        "debt": null,
+        "earnings": 5047000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 32644000000,
-        "spending": 26498000000,
-        "stock_return_pct": 43.17291111459476
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 16166000000,
-        "debt": 10588000000,
-        "earnings": 4426000000,
+        "cash": null,
+        "debt": null,
+        "earnings": 4577000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 26114000000,
-        "spending": 17815000000,
-        "stock_return_pct": 80.83871674148692
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 19240000000,
-        "debt": 13364000000,
+        "cash": null,
+        "debt": null,
         "earnings": 3492000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 32049000000,
-        "spending": 23791000000,
-        "stock_return_pct": -12.351658997335921
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 3.210928961748634,
-      "debt_to_ebitda": 1.3792961089895759,
-      "debt_to_equity": 0.6534799581072075
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 70.07094594594595,
+      "book_value_per_share": 39.524630239599475,
       "shareholders_equity": 23341000000,
       "total_assets": 460949000000,
       "total_liabilities": 418434000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 23.251895534962088
+      "fcf_margin_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 8.577800651912849,
+      "roe_pct": 14.960798594747441,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 94.02207202807034,
-      "graham_number": 93.79449484651812,
-      "graham_upside_pct": -24.450668669739738,
-      "ncav_margin_pct": -315.6120683762703,
-      "pb_ratio": 3.4988479482052752,
-      "pe_ttm": 26.872294372294377
+      "graham_multiple": null,
+      "graham_number": 70.1907768824799,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Asset Management",
-  "last_updated": "2026-09-23T02:50:47Z",
+  "industry": "Investment Advice",
+  "last_updated": "2026-09-23T13:25:54Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,32 +105,23 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 71506897853,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 70.07094594594595,
-    "current_ratio": 3.210928961748634,
-    "debt_to_ebitda": 1.3792961089895759,
-    "debt_to_equity": 0.6534799581072075,
-    "fcf_margin_pct": 23.251895534962088,
-    "graham_criteria_evaluated": 5,
+    "book_value_per_share": 39.524630239599475,
+    "graham_criteria_evaluated": 2,
     "graham_criteria_passed": 1,
-    "graham_multiple": 94.02207202807034,
-    "graham_upside_pct": -24.450668669739738,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -315.6120683762703,
-    "pb_ratio": 3.4988479482052752,
-    "pe_ttm": 26.872294372294377,
-    "roe_pct": 8.577800651912849,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "roe_pct": 14.960798594747441,
     "shareholders_equity": 23341000000,
     "total_assets": 460949000000,
     "total_liabilities": 418434000000
   },
   "name": "Apollo Global Management",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 124.15
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -159,24 +150,24 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $71.5B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 3.21, debt $13.4B vs working capital $-71.5B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 5/6 available years",
+          "detail": "Positive in 3/6 available years",
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth",
@@ -184,17 +175,17 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 26.9",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 94.0",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 5,
+      "evaluated": 2,
       "passed": 1,
       "total": 7
     },
@@ -202,29 +193,29 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 8.6%",
+          "detail": "ROE 15.0%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.65",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "607,913,669 shares vs. 604,035,992 a year earlier",
-          "passed": false
+          "detail": "593,657,223 shares vs. 604,035,992 a year earlier",
+          "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },
-  "website": "https://www.apollo.com"
+  "website": null
 }

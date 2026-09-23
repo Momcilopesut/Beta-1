@@ -1,0 +1,224 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for SWX: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=swx.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca16b24e0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0001692115",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 106536000,
+        "debt": 4652390000,
+        "earnings": 150889000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 5433972000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 314770000,
+        "debt": 3504477000,
+        "earnings": 198815000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": -40154000,
+        "fiscal_year": "2025-06-30",
+        "market_return_pct": 5.420761670761667,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": null,
+        "debt": 3507120000,
+        "earnings": 262634000,
+        "fiscal_year": "2025-09-30",
+        "market_return_pct": 7.82228696285505,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 576645000,
+        "debt": 3508012000,
+        "earnings": 439826000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 2.362724789096042,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.2819599568984985,
+      "debt_to_ebitda": 4.359891127378481,
+      "debt_to_equity": 0.8856113638595559
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 54.676959908250375,
+      "shareholders_equity": 3961119000,
+      "total_assets": 10429477000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 30.116238259058868
+    },
+    "profitability": {
+      "roe_pct": 11.103579569308572,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": 86.48588390858158,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Natural Gas Transmisison & Distribution",
+  "last_updated": "2026-09-23T17:38:54Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 54.676959908250375,
+    "current_ratio": 1.2819599568984985,
+    "debt_to_ebitda": 4.359891127378481,
+    "debt_to_equity": 0.8856113638595559,
+    "eps_growth_cagr_3yr_pct": 30.116238259058868,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": 11.103579569308572,
+    "shareholders_equity": 3961119000,
+    "total_assets": 10429477000
+  },
+  "name": "Southwest Gas Corp",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Utilities",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001692115.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-05",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1692115/000169211526000112/swx-20260630.htm"
+      },
+      {
+        "filed": "2026-08-05",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1692115/000169211526000109/swx-20260805.htm"
+      },
+      {
+        "filed": "2026-02-25",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1692115/000169211526000062/swx-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "SWX",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.28, debt $3.5B vs working capital $0.3B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 4/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 30.1%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 4,
+      "passed": 2,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 11.1%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.89",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "72,337,000 shares vs. 72,405,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 2,
+      "total": 4
+    }
+  },
+  "website": null
+}

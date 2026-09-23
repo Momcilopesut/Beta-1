@@ -5,64 +5,64 @@
     "years": [
       {
         "cash": 11258000000,
-        "debt": 11407000000,
+        "debt": 7491000000,
         "earnings": 5007000000,
         "fiscal_year": "2021-08-29",
         "market_return_pct": null,
         "revenue": 195929000000,
-        "spending": 189221000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 10203000000,
-        "debt": 10906000000,
+        "debt": 6557000000,
         "earnings": 5844000000,
         "fiscal_year": "2022-08-28",
         "market_return_pct": null,
         "revenue": 226954000000,
-        "spending": 219161000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 13700000000,
-        "debt": 10536000000,
+        "debt": 6458000000,
         "earnings": 6292000000,
         "fiscal_year": "2023-09-03",
         "market_return_pct": 11.576385266870332,
         "revenue": 242290000000,
-        "spending": 234176000000,
-        "stock_return_pct": 2.5740970888411994
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 9906000000,
-        "debt": 9949000000,
+        "debt": 5897000000,
         "earnings": 7367000000,
         "fiscal_year": "2024-09-01",
         "market_return_pct": 22.891995369958156,
         "revenue": 254453000000,
-        "spending": 245168000000,
-        "stock_return_pct": 61.28540744956217
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 14161000000,
-        "debt": 10221000000,
+        "debt": 5788000000,
         "earnings": 8099000000,
         "fiscal_year": "2025-08-31",
         "market_return_pct": 15.974134183451664,
         "revenue": 275235000000,
-        "spending": 264852000000,
-        "stock_return_pct": 6.8577347280239485
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.0724510385756676,
-      "debt_to_ebitda": 0.7979545631977516,
-      "debt_to_equity": 0.24566534363902234
+      "current_ratio": 1.0342783227336423,
+      "debt_to_ebitda": 0.4518697790615973,
+      "debt_to_equity": 0.1984638595528734
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 75.48381138170359,
+      "book_value_per_share": 65.76188024535216,
       "shareholders_equity": 29164000000,
       "total_assets": 77099000000,
       "total_liabilities": 47935000000
@@ -71,33 +71,30 @@
       "fcf_margin_pct": 2.8473849619416134
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 11.467010327399718
+      "eps_growth_cagr_3yr_pct": 11.490584815226379
     },
     "profitability": {
-      "roe_pct": 28.267353253960003,
+      "roe_pct": 27.770539020710466,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 538.2578137228802,
-      "graham_number": 176.00726175658534,
-      "graham_upside_pct": -80.43080889065217,
-      "ncav_margin_pct": -102.39552171404785,
-      "pb_ratio": 11.915270089528185,
-      "pe_ttm": 45.173782019085884
+      "graham_multiple": null,
+      "graham_number": 164.14714856958958,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Discount Stores",
-  "last_updated": "2026-09-23T03:53:38Z",
+  "industry": "Retail-Variety Stores",
+  "last_updated": "2026-09-23T12:26:52Z",
   "layered_analysis": {
-    "flags": [
-      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,44 +103,30 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 398869447390,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 75.48381138170359,
-    "current_ratio": 1.0724510385756676,
-    "debt_to_ebitda": 0.7979545631977516,
-    "debt_to_equity": 0.24566534363902234,
-    "eps_growth_cagr_3yr_pct": 11.467010327399718,
+    "book_value_per_share": 65.76188024535216,
+    "current_ratio": 1.0342783227336423,
+    "debt_to_ebitda": 0.4518697790615973,
+    "debt_to_equity": 0.1984638595528734,
+    "eps_growth_cagr_3yr_pct": 11.490584815226379,
     "fcf_margin_pct": 2.8473849619416134,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 3,
-    "graham_multiple": 538.2578137228802,
-    "graham_upside_pct": -80.43080889065217,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -102.39552171404785,
-    "pb_ratio": 11.915270089528185,
-    "pe_ttm": 45.173782019085884,
-    "roe_pct": 28.267353253960003,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": 27.770539020710466,
     "shareholders_equity": 29164000000,
     "total_assets": 77099000000,
     "total_liabilities": 47935000000
   },
   "name": "Costco Wholesale Corporation",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 899.41
+    "as_of": null,
+    "close": null
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "The provided 10-K excerpts consist only of the Item 1 (Business), Item 1A (Risk Factors), and Item 7 (MD&A) section headers with page numbers, and contain no actual narrative text describing the company's operations, risks, or financial discussion for the period. No substantive content is available to summarize from this filing.",
-    "filing_summary_10q": "For the 36 weeks ended May 10, 2026, Costco reported net sales of $203,374 million and membership fees of $4,057 million, totaling revenue of $207,431 million, with net income of $6,228 million, up from $5,489 million in the comparable prior-year period. Total assets grew to $86,430 million from $77,099 million at fiscal year-end August 31, 2025, and cash and cash equivalents increased to $18,946 million. The company paid cash dividends of $1,806 million declared during the period and repurchased $603 million of common stock, while also reporting increases in merchandise inventories and accounts payable.",
-    "filing_summary_8k": "This 8-K discloses that Costco's Board of Directors declared a quarterly cash dividend of $1.47 per share on July 7, 2026, payable August 7, 2026, to shareholders of record as of July 24, 2026. The filing also references an attached press release dated July 8, 2026, as an exhibit.",
-    "moat_explanation": "The 10-K excerpts provided for Business, Risk Factors, and MD&A sections contain only section headers and page numbers with no substantive text describing Costco's business model, competitive positioning, membership structure, or scale advantages. Without actual narrative content from these sections, there is no textual basis in the provided excerpts to support any specific moat classification.",
-    "moat_present": false,
-    "moat_type": "none",
-    "red_flags": []
-  },
+  "qualitative": null,
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000909832.json",
@@ -170,13 +153,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $398.9B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.07, debt $10.2B vs working capital $1.3B",
+          "detail": "Current ratio 1.03, debt $5.8B vs working capital $1.3B",
           "passed": false
         },
         {
@@ -185,9 +168,9 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -195,17 +178,17 @@
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 45.2",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 538.3",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 4,
       "passed": 3,
       "total": 7
     },
@@ -213,12 +196,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 28.3%",
+          "detail": "ROE 27.8%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.25",
+          "detail": "Debt/equity 0.20",
           "passed": true
         },
         {
@@ -228,14 +211,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },
-  "website": "https://www.costco.com"
+  "website": null
 }

@@ -1,0 +1,225 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for GGG: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=ggg.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca1d61580>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0000042888",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 624302000,
+        "debt": 150000000,
+        "earnings": 439866000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 1987608000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 339196000,
+        "debt": 75000000,
+        "earnings": 460645000,
+        "fiscal_year": "2022-12-30",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 2143521000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 537951000,
+        "debt": 0,
+        "earnings": 506511000,
+        "fiscal_year": "2023-12-29",
+        "market_return_pct": 24.286797583871554,
+        "revenue": 2195606000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 675336000,
+        "debt": 0,
+        "earnings": 486084000,
+        "fiscal_year": "2024-12-27",
+        "market_return_pct": 25.18356441059519,
+        "revenue": 2113316000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 624083000,
+        "debt": 1624000,
+        "earnings": 521839000,
+        "fiscal_year": "2025-12-26",
+        "market_return_pct": 16.01653753718424,
+        "revenue": 2236604000,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 3.1500189401640624,
+      "debt_to_ebitda": 0.002217882359367958,
+      "debt_to_equity": 0.0006119224652035037
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 16.38696101427034,
+      "shareholders_equity": 2653931000,
+      "total_assets": 3274270000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 28.521901954928097
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 5.0081546755695205
+    },
+    "profitability": {
+      "roe_pct": 19.662869908825815,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": 33.69890796878935,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Pumps & Pumping Equipment",
+  "last_updated": "2026-09-23T16:48:11Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 16.38696101427034,
+    "current_ratio": 3.1500189401640624,
+    "debt_to_ebitda": 0.002217882359367958,
+    "debt_to_equity": 0.0006119224652035037,
+    "eps_growth_cagr_3yr_pct": 5.0081546755695205,
+    "fcf_margin_pct": 28.521901954928097,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 4,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 4,
+    "roe_pct": 19.662869908825815,
+    "shareholders_equity": 2653931000,
+    "total_assets": 3274270000
+  },
+  "name": "Graco Inc.",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Industrials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000042888.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-14",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/42888/000119312526389891/d127483d8k.htm"
+      },
+      {
+        "filed": "2026-07-22",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/42888/000004288826000123/ggg-20260626.htm"
+      },
+      {
+        "filed": "2026-02-17",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/42888/000004288826000081/ggg-20251226.htm"
+      }
+    ]
+  },
+  "ticker": "GGG",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 3.15, debt $0.0B vs working capital $1.0B",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 5.0%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 4,
+      "passed": 4,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 19.7%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.00",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "169,219,000 shares vs. 172,405,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 60",
+          "passed": true
+        }
+      ],
+      "evaluated": 4,
+      "passed": 4,
+      "total": 4
+    }
+  },
+  "website": null
+}

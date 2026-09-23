@@ -1,0 +1,223 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for HGV: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=hgv.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca2479f10>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0001674168",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 432000000,
+        "debt": null,
+        "earnings": 176000000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 2335000000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 223000000,
+        "debt": null,
+        "earnings": 352000000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 3835000000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 589000000,
+        "debt": null,
+        "earnings": 313000000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 3978000000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 328000000,
+        "debt": null,
+        "earnings": 47000000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 4981000000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 239000000,
+        "debt": null,
+        "earnings": 81000000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 5047000000,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 16.58429307906829,
+      "shareholders_equity": 1289000000,
+      "total_assets": 11537000000,
+      "total_liabilities": 10097000000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 4.5571626708936
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -32.77861409330632
+    },
+    "profitability": {
+      "roe_pct": 6.283941039565555,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": 18.223623923587276,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Hotels, Rooming Houses, Camps & Other Lodging Places",
+  "last_updated": "2026-09-23T15:36:05Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 16.58429307906829,
+    "eps_growth_cagr_3yr_pct": -32.77861409330632,
+    "fcf_margin_pct": 4.5571626708936,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 1,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "roe_pct": 6.283941039565555,
+    "shareholders_equity": 1289000000,
+    "total_assets": 11537000000,
+    "total_liabilities": 10097000000
+  },
+  "name": "Hilton Grand Vacations",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Consumer Cyclical",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001674168.json",
+    "sec_filings": [
+      {
+        "filed": "2026-07-30",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674168/000167416826000100/hgv-20260630.htm"
+      },
+      {
+        "filed": "2026-07-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674168/000167416826000098/hgv-20260730.htm"
+      },
+      {
+        "filed": "2026-02-26",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674168/000167416826000017/hgv-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "HGV",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/5 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -32.8%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 6.3%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "91,500,000 shares vs. 103,100,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": null
+}

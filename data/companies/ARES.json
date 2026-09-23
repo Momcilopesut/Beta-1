@@ -1,102 +1,104 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for ARES: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=ares.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca10c9700>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001176948",
   "five_year_history": {
     "years": [
       {
-        "cash": 1392846000,
-        "debt": 12494216000,
+        "cash": null,
+        "debt": null,
         "earnings": 408837000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 4212091000,
-        "spending": 3410083000,
+        "revenue": 2288876000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 1114628000,
-        "debt": 13334236000,
+        "cash": null,
+        "debt": null,
         "earnings": 167541000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 3055443000,
-        "spending": 2749085000,
-        "stock_return_pct": -15.786883228743692
+        "revenue": 2880007000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 1497785000,
-        "debt": 15755950000,
+        "cash": null,
+        "debt": null,
         "earnings": 474326000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 3631884000,
-        "spending": 2797858000,
-        "stock_return_pct": 68.70251315020455
+        "revenue": 3236285000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 2735465000,
-        "debt": 13147967000,
+        "cash": null,
+        "debt": null,
         "earnings": 463742000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 3884781000,
-        "spending": 2938691000,
-        "stock_return_pct": 53.3258271262775
+        "revenue": 3690668000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 1499960000,
-        "debt": 14912377000,
-        "earnings": 527361999,
+        "cash": null,
+        "debt": null,
+        "earnings": 527362000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 6470140000,
-        "spending": 4708766000,
-        "stock_return_pct": -8.69909054962436
+        "revenue": 4755618000,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.8256392564620975,
-      "debt_to_ebitda": 7.4393643774603735,
-      "debt_to_equity": 3.748068142899589
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 38.01184216671961,
+      "book_value_per_share": 41.37581489673454,
       "shareholders_equity": 4275463000,
-      "total_assets": 28993001000,
-      "total_liabilities": 20291613000
+      "total_assets": 28633369000,
+      "total_liabilities": 19931981000
     },
     "cash_flow": {
-      "fcf_margin_pct": 49.37730868265602
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 31.092830172370633
+      "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 15.20286777774997,
-      "trend": "improving"
+      "roe_pct": 12.334617326825189,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 387.3922861916428,
-      "graham_number": 40.94291439983645,
-      "graham_upside_pct": -67.1721340604262,
-      "ncav_margin_pct": -231.46620622952972,
-      "pb_ratio": 7.112959712787541,
-      "pe_ttm": 54.46288209606987
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Asset Management",
-  "last_updated": "2026-09-23T02:50:49Z",
+  "industry": "Investment Advice",
+  "last_updated": "2026-09-23T13:26:16Z",
   "layered_analysis": {
     "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
-    "munger_quality_pass": true,
+    "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +107,23 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 40959913312,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 38.01184216671961,
-    "current_ratio": 0.8256392564620975,
-    "debt_to_ebitda": 7.4393643774603735,
-    "debt_to_equity": 3.748068142899589,
-    "eps_growth_cagr_3yr_pct": 31.092830172370633,
-    "fcf_margin_pct": 49.37730868265602,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 387.3922861916428,
-    "graham_upside_pct": -67.1721340604262,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -231.46620622952972,
-    "pb_ratio": 7.112959712787541,
-    "pe_ttm": 54.46288209606987,
-    "roe_pct": 15.20286777774997,
+    "book_value_per_share": 41.37581489673454,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 0,
+    "roe_pct": 12.334617326825189,
     "shareholders_equity": 4275463000,
-    "total_assets": 28993001000,
-    "total_liabilities": 20291613000
+    "total_assets": 28633369000,
+    "total_liabilities": 19931981000
   },
   "name": "Ares Management",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 124.72
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -160,14 +152,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $41.0B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.83, debt $14.9B vs working capital $1.9B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -175,57 +167,57 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
-        },
-        {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 31.1%/yr",
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 54.5",
-          "passed": false
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 387.4",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 2,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 15.2%",
-          "passed": true
+          "detail": "ROE 12.3%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 3.75",
-          "passed": false
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "217,361,945 shares vs. 198,054,451 a year earlier",
-          "passed": false
+          "detail": "Share count unavailable",
+          "passed": null
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 1,
+      "passed": 0,
       "total": 4
     }
   },
-  "website": "https://www.aresmgmt.com"
+  "website": null
 }

@@ -1,102 +1,102 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for CPAY: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=cpay.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca0914fb0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001175454",
   "five_year_history": {
     "years": [
       {
-        "cash": 1520027000,
-        "debt": 5977667000,
-        "earnings": 839497000,
-        "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
-        "revenue": 2833736000,
-        "spending": 1591180000,
+        "cash": null,
+        "debt": null,
+        "earnings": 239702000,
+        "fiscal_year": "2023-06-30",
+        "market_return_pct": 8.27816996018466,
+        "revenue": 948174000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 1435163000,
-        "debt": 7036894000,
-        "earnings": 954327000,
-        "fiscal_year": "2022-12-31",
-        "market_return_pct": -19.48164055920498,
-        "revenue": 3427129000,
-        "spending": 1980488000,
-        "stock_return_pct": -17.941386704789135
+        "cash": null,
+        "debt": null,
+        "earnings": 271496000,
+        "fiscal_year": "2023-09-30",
+        "market_return_pct": -3.5643385670456498,
+        "revenue": 970892000,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1389648000,
-        "debt": 6722905000,
+        "debt": 2126749000,
         "earnings": 981890000,
         "fiscal_year": "2023-12-31",
-        "market_return_pct": 23.591245456684877,
+        "market_return_pct": 10.566576214091878,
         "revenue": 3757719000,
-        "spending": 2100846000,
-        "stock_return_pct": 53.28832752613239
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1553642000,
-        "debt": 7996080000,
+        "debt": 2769974000,
         "earnings": 1003746000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 3974589000,
-        "spending": 2187432000,
-        "stock_return_pct": 20.194629919022596
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 8991940000,
-        "debt": 10116212000,
+        "cash": 2408097000,
+        "debt": 3345530000,
         "earnings": 1069826000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 4528403000,
-        "spending": 2576556000,
-        "stock_return_pct": -11.077950475740208
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.9719851272759242,
-      "debt_to_ebitda": 4.313673752212012,
-      "debt_to_equity": 2.999401166159027
+      "current_ratio": 0.9766773076009201,
+      "debt_to_ebitda": 1.4013213476858404,
+      "debt_to_equity": 0.8613921599726458
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 54.74279088218242,
+      "book_value_per_share": 59.15150349913041,
       "shareholders_equity": 3883864000,
       "total_assets": 26408135000,
-      "total_liabilities": 22179458000
+      "total_liabilities": null
     },
     "cash_flow": {
       "fcf_margin_pct": 28.68881148608019
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 6.513215640094661
+      "eps_growth_cagr_3yr_pct": 60.430104225605554
     },
     "profitability": {
-      "roe_pct": 30.397839212921607,
-      "trend": "declining"
+      "roe_pct": 27.545403237600492,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 171.61123016610526,
-      "graham_number": 137.05334772069176,
-      "graham_upside_pct": -65.12193721320988,
-      "ncav_margin_pct": -131.88805594952206,
-      "pb_ratio": 7.271477242055358,
-      "pe_ttm": 23.600600600600597
+      "graham_multiple": null,
+      "graham_number": 141.43394110261661,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-23T02:51:20Z",
+  "industry": "Services-Business Services, NEC",
+  "last_updated": "2026-09-23T13:31:21Z",
   "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,36 +105,30 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 25683966071,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 54.74279088218242,
-    "current_ratio": 0.9719851272759242,
-    "debt_to_ebitda": 4.313673752212012,
-    "debt_to_equity": 2.999401166159027,
-    "eps_growth_cagr_3yr_pct": 6.513215640094661,
+    "book_value_per_share": 59.15150349913041,
+    "current_ratio": 0.9766773076009201,
+    "debt_to_ebitda": 1.4013213476858404,
+    "debt_to_equity": 0.8613921599726458,
+    "eps_growth_cagr_3yr_pct": 60.430104225605554,
     "fcf_margin_pct": 28.68881148608019,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 171.61123016610526,
-    "graham_upside_pct": -65.12193721320988,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -131.88805594952206,
-    "pb_ratio": 7.271477242055358,
-    "pe_ttm": 23.600600600600597,
-    "roe_pct": 30.397839212921607,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "roe_pct": 27.545403237600492,
     "shareholders_equity": 3883864000,
-    "total_assets": 26408135000,
-    "total_liabilities": 22179458000
+    "total_assets": 26408135000
   },
   "name": "Corpay",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 392.95
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
-  "sector": "Technology",
+  "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001175454.json",
     "sec_filings": [
@@ -160,13 +154,13 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $25.7B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.97, debt $10.1B vs working capital $-0.3B",
+          "detail": "Current ratio 0.98, debt $3.3B vs working capital $-0.3B",
           "passed": false
         },
         {
@@ -181,35 +175,35 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 6.5%/yr",
+          "detail": "EPS 3yr CAGR 60.4%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 23.6",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 171.6",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 30.4%",
+          "detail": "ROE 27.5%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 3.00",
-          "passed": false
+          "detail": "Debt/equity 0.86",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -218,14 +212,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },
-  "website": "https://www.corpay.com"
+  "website": null
 }

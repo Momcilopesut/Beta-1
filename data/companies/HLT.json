@@ -1,93 +1,95 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for HLT: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=hlt.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9f399a30>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001585689",
   "five_year_history": {
     "years": [
       {
         "cash": 1427000000,
-        "debt": 9776000000,
+        "debt": null,
         "earnings": 410000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 5788000000,
-        "spending": 4778000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 1209000000,
-        "debt": 9691000000,
+        "debt": null,
         "earnings": 1255000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 8773000000,
-        "spending": 6679000000,
-        "stock_return_pct": -18.994807359446124
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 800000000,
-        "debt": 10120000000,
+        "debt": null,
         "earnings": 1141000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 10235000000,
-        "spending": 8010000000,
-        "stock_return_pct": 42.50553972776194
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1301000000,
-        "debt": 12003000000,
+        "debt": null,
         "earnings": 1535000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 11174000000,
-        "spending": 8804000000,
-        "stock_return_pct": 37.25773310379297
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 918000000,
-        "debt": 13093000000,
+        "debt": null,
         "earnings": 1457000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 12039000000,
-        "spending": 9346000000,
-        "stock_return_pct": 16.22026217834601
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.6491331757289204,
-      "debt_to_ebitda": 4.7610909090909095,
-      "debt_to_equity": -2.2248135808345233
+      "current_ratio": 0.6645962732919255,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -27.621145374449338,
+      "book_value_per_share": -23.939760311814045,
       "shareholders_equity": -5388000000,
       "total_assets": 16774000000,
       "total_liabilities": 22120000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 16.147520558185896
+      "fcf_margin_pct": 16.845252927984053
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 10.66438567172212
+      "eps_growth_cagr_3yr_pct": 10.548046712372283
     },
     "profitability": {
-      "roe_pct": -28.125,
-      "trend": "improving"
+      "roe_pct": -27.041573867854492,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -498.00247453224574,
+      "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -127.54864555633483,
-      "pb_ratio": -11.108342059336826,
-      "pe_ttm": 44.83139534883721
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Travel Lodging",
-  "last_updated": "2026-09-23T02:48:03Z",
+  "industry": "Hotels & Motels",
+  "last_updated": "2026-09-23T13:01:22Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
@@ -103,32 +105,26 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 69419048600,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": -27.621145374449338,
-    "current_ratio": 0.6491331757289204,
-    "debt_to_ebitda": 4.7610909090909095,
-    "debt_to_equity": -2.2248135808345233,
-    "eps_growth_cagr_3yr_pct": 10.66438567172212,
-    "fcf_margin_pct": 16.147520558185896,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": -498.00247453224574,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -127.54864555633483,
-    "pb_ratio": -11.108342059336826,
-    "pe_ttm": 44.83139534883721,
-    "roe_pct": -28.125,
+    "book_value_per_share": -23.939760311814045,
+    "current_ratio": 0.6645962732919255,
+    "eps_growth_cagr_3yr_pct": 10.548046712372283,
+    "fcf_margin_pct": 16.845252927984053,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "roe_pct": -27.041573867854492,
     "shareholders_equity": -5388000000,
     "total_assets": 16774000000,
     "total_liabilities": 22120000000
   },
   "name": "Hilton Worldwide",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 308.44
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -157,14 +153,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $69.4B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.65, debt $13.1B vs working capital $-1.5B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -172,57 +168,57 @@
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 10.7%/yr",
+          "detail": "EPS 3yr CAGR 10.5%/yr",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 44.8",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -498.0",
-          "passed": true
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -28.1%",
+          "detail": "ROE -27.0%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity -2.22",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "238,000,000 shares vs. 247,500,000 a year earlier",
+          "detail": "238,000,000 shares vs. 250,000,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },
-  "website": "https://www.hilton.com"
+  "website": null
 }

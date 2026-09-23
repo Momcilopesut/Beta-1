@@ -1,103 +1,104 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for XEL: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=xel.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca12da330>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000072903",
   "five_year_history": {
     "years": [
       {
-        "cash": 166000000,
-        "debt": 24736000000,
+        "cash": null,
+        "debt": null,
         "earnings": 1597000000,
         "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
-        "revenue": 13431000000,
-        "spending": 11228000000,
+        "market_return_pct": 10.677168290068508,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 111000000,
-        "debt": 26032000000,
+        "cash": null,
+        "debt": null,
         "earnings": 1736000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 15310000000,
-        "spending": 12882000000,
-        "stock_return_pct": 3.559822747415061
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 129000000,
-        "debt": 27514000000,
+        "cash": null,
+        "debt": null,
         "earnings": 1771000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 14206000000,
-        "spending": 11725000000,
-        "stock_return_pct": -9.470831550420767
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 179000000,
-        "debt": 30208000000,
+        "cash": null,
+        "debt": null,
         "earnings": 1936000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 13441000000,
-        "spending": 11055000000,
-        "stock_return_pct": 6.380967386166689
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 274000000,
-        "debt": 34781000000,
+        "cash": null,
+        "debt": null,
         "earnings": 2018000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 14669000000,
-        "spending": 11790000000,
-        "stock_return_pct": 9.38981042654029
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.7013376383763837,
-      "debt_to_ebitda": 5.834759268579098,
-      "debt_to_equity": 1.676144157625639
+      "current_ratio": 0.7072929891381012,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 38.4912,
+      "book_value_per_share": 37.796515134088715,
       "shareholders_equity": 23609000000,
       "total_assets": 81371000000,
-      "total_liabilities": 57762000000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": -46.52668893585111
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 2.7621211504931686
+      "eps_growth_cagr_3yr_pct": 2.5625825491252474
     },
     "profitability": {
-      "roe_pct": 9.640270687403538,
-      "trend": "improving"
+      "roe_pct": 8.54758778431954,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 36.758772506577536,
-      "graham_number": 54.58222128129269,
-      "graham_upside_pct": -24.25448059770651,
-      "ncav_margin_pct": -217.18874598379108,
-      "pb_ratio": 1.872116223968076,
-      "pe_ttm": 19.634877384196187
+      "graham_multiple": null,
+      "graham_number": 53.92997162587912,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Regulated Electric",
-  "last_updated": "2026-09-23T02:45:36Z",
+  "industry": "Electric & Other Services Combined",
+  "last_updated": "2026-09-23T12:38:36Z",
   "layered_analysis": {
     "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,33 +107,24 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 45011126040,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 38.4912,
-    "current_ratio": 0.7013376383763837,
-    "debt_to_ebitda": 5.834759268579098,
-    "debt_to_equity": 1.676144157625639,
-    "eps_growth_cagr_3yr_pct": 2.7621211504931686,
-    "fcf_margin_pct": -46.52668893585111,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 37.796515134088715,
+    "current_ratio": 0.7072929891381012,
+    "eps_growth_cagr_3yr_pct": 2.5625825491252474,
+    "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 2,
-    "graham_multiple": 36.758772506577536,
-    "graham_upside_pct": -24.25448059770651,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 1,
-    "ncav_margin_pct": -217.18874598379108,
-    "pb_ratio": 1.872116223968076,
-    "pe_ttm": 19.634877384196187,
-    "roe_pct": 9.640270687403538,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 0,
+    "roe_pct": 8.54758778431954,
     "shareholders_equity": 23609000000,
-    "total_assets": 81371000000,
-    "total_liabilities": 57762000000
+    "total_assets": 81371000000
   },
   "name": "Xcel Energy Inc.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 72.06
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -161,14 +153,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $45.0B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.70, debt $34.8B vs working capital $-2.1B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -176,27 +168,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 2.8%/yr",
+          "detail": "EPS 3yr CAGR 2.6%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 19.6",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 36.8",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
+      "evaluated": 3,
       "passed": 2,
       "total": 7
     },
@@ -204,13 +196,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 9.6%",
+          "detail": "ROE 8.5%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.68",
-          "passed": false
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -219,14 +211,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 1,
+      "evaluated": 2,
+      "passed": 0,
       "total": 4
     }
   },
-  "website": "https://my.xcelenergy.com/s"
+  "website": null
 }

@@ -1,103 +1,104 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for PCAR: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=pcar.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbc9ed714f0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0000075362",
   "five_year_history": {
     "years": [
       {
-        "cash": 3428300000,
-        "debt": 10760900000,
+        "cash": null,
+        "debt": null,
         "earnings": 1865500000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 23522300000,
-        "spending": 21214100000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 4690900000,
-        "debt": 11680800000,
+        "cash": null,
+        "debt": null,
         "earnings": 3011600000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 28819700000,
-        "spending": 25141100000,
-        "stock_return_pct": 12.134602311352822
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 7181700000,
-        "debt": 14377100000,
+        "cash": null,
+        "debt": null,
         "earnings": 4600800000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 35127400000,
-        "spending": 29181000000,
-        "stock_return_pct": 46.68081236738405
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 7060800000,
-        "debt": 15895000000,
+        "cash": null,
+        "debt": null,
         "earnings": 4162000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 33663800000,
-        "spending": 28771400000,
-        "stock_return_pct": 7.480884480264511
+        "spending": null,
+        "stock_return_pct": null
       },
       {
-        "cash": 6307900000,
-        "debt": 15636300000,
+        "cash": null,
+        "debt": null,
         "earnings": 2375800000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 28444800000,
-        "spending": 25483100000,
-        "stock_return_pct": 5.277831186310334
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 3.1155413672870456,
-      "debt_to_ebitda": 4.126652767147871,
-      "debt_to_equity": 0.7232017636666945
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 38.56034155597723,
+      "book_value_per_share": 36.598181338262464,
       "shareholders_equity": 19264000000,
       "total_assets": 44336200000,
-      "total_liabilities": 25072200000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 10.649398132523343
+      "fcf_margin_pct": 12.912026099673755
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -7.762968566934481
+      "eps_growth_cagr_3yr_pct": -7.777639865294905
     },
     "profitability": {
-      "roe_pct": 12.726129296599565,
-      "trend": "declining"
+      "roe_pct": 12.332848837209303,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 70.68050166925487,
-      "graham_number": 62.62257369545653,
-      "graham_upside_pct": -45.019689468431494,
-      "ncav_margin_pct": -84.53721260752914,
-      "pb_ratio": 2.953812010058412,
-      "pe_ttm": 23.92857142857143
+      "graham_multiple": null,
+      "graham_number": 60.9409587330244,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-23T02:57:24Z",
+  "industry": "Motor Vehicles & Passenger Car Bodies",
+  "last_updated": "2026-09-23T14:25:45Z",
   "layered_analysis": {
     "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
     "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,33 +107,24 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 59952968147,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 38.56034155597723,
-    "current_ratio": 3.1155413672870456,
-    "debt_to_ebitda": 4.126652767147871,
-    "debt_to_equity": 0.7232017636666945,
-    "eps_growth_cagr_3yr_pct": -7.762968566934481,
-    "fcf_margin_pct": 10.649398132523343,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 70.68050166925487,
-    "graham_upside_pct": -45.019689468431494,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 1,
-    "ncav_margin_pct": -84.53721260752914,
-    "pb_ratio": 2.953812010058412,
-    "pe_ttm": 23.92857142857143,
-    "roe_pct": 12.726129296599565,
+    "book_value_per_share": 36.598181338262464,
+    "eps_growth_cagr_3yr_pct": -7.777639865294905,
+    "fcf_margin_pct": 12.912026099673755,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 0,
+    "roe_pct": 12.332848837209303,
     "shareholders_equity": 19264000000,
-    "total_assets": 44336200000,
-    "total_liabilities": 25072200000
+    "total_assets": 44336200000
   },
   "name": "Paccar",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 113.9
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -161,14 +153,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $60.0B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 3.12, debt $15.6B vs working capital $23.2B",
-          "passed": true
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -176,9 +168,9 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -186,31 +178,31 @@
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 23.9",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 70.7",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 12.7%",
+          "detail": "ROE 12.3%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.72",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -219,14 +211,14 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 1,
+      "evaluated": 2,
+      "passed": 0,
       "total": 4
     }
   },
-  "website": "https://www.paccar.com"
+  "website": null
 }

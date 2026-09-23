@@ -1,102 +1,104 @@
 {
-  "_errors": {},
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for NOW: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=now.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca3022780>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
   "cik": "0001373715",
   "five_year_history": {
     "years": [
       {
         "cash": 1728000000,
-        "debt": 2214000000,
+        "debt": 92000000,
         "earnings": 230000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 5896000000,
-        "spending": 5639000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 1470000000,
-        "debt": 2232000000,
+        "debt": 0,
         "earnings": 325000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 7245000000,
-        "spending": 6890000000,
-        "stock_return_pct": -40.18641195501463
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 1897000000,
-        "debt": 2284000000,
+        "debt": null,
         "earnings": 1731000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 8971000000,
-        "spending": 8209000000,
-        "stock_return_pct": 77.07662588538312
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 2304000000,
-        "debt": 2278000000,
+        "debt": null,
         "earnings": 1425000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 10984000000,
-        "spending": 9620000000,
-        "stock_return_pct": 54.19636363636364
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       },
       {
         "cash": 3726000000,
-        "debt": 2403000000,
+        "debt": null,
         "earnings": 1748000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 13278000000,
-        "spending": 11454000000,
-        "stock_return_pct": -27.74738232242242
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.7005677610466552,
-      "debt_to_ebitda": 0.9379391100702577,
-      "debt_to_equity": 0.6753755193352509
+      "current_ratio": 1.0026812218711099,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 12.116166505324298,
+      "book_value_per_share": 12.537717601547389,
       "shareholders_equity": 12964000000,
       "total_assets": 26038000000,
       "total_liabilities": 13074000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 34.463021539388464
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 74.1454941970654
+      "eps_growth_cagr_3yr_pct": 1.4375682783742239
     },
     "profitability": {
-      "roe_pct": 13.770640499701086,
+      "roe_pct": 13.483492749151496,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 962.1660423725955,
-      "graham_number": 21.464324619352837,
-      "graham_upside_pct": -84.33260976689574,
-      "ncav_margin_pct": -101.83752417794972,
-      "pb_ratio": 11.30720677532758,
-      "pe_ttm": 85.09316770186336
+      "graham_multiple": null,
+      "graham_number": 21.70494733645173,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Software - Application",
-  "last_updated": "2026-09-23T03:01:12Z",
+  "industry": "Services-Prepackaged Software",
+  "last_updated": "2026-09-23T14:56:55Z",
   "layered_analysis": {
     "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
-    "munger_quality_pass": true,
+    "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -105,33 +107,25 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 141639094000,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 12.116166505324298,
-    "current_ratio": 0.7005677610466552,
-    "debt_to_ebitda": 0.9379391100702577,
-    "debt_to_equity": 0.6753755193352509,
-    "eps_growth_cagr_3yr_pct": 74.1454941970654,
-    "fcf_margin_pct": 34.463021539388464,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 962.1660423725955,
-    "graham_upside_pct": -84.33260976689574,
+    "book_value_per_share": 12.537717601547389,
+    "current_ratio": 1.0026812218711099,
+    "eps_growth_cagr_3yr_pct": 1.4375682783742239,
+    "graham_criteria_evaluated": 2,
+    "graham_criteria_passed": 1,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -101.83752417794972,
-    "pb_ratio": 11.30720677532758,
-    "pe_ttm": 85.09316770186336,
-    "roe_pct": 13.770640499701086,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 0,
+    "roe_pct": 13.483492749151496,
     "shareholders_equity": 12964000000,
     "total_assets": 26038000000,
     "total_liabilities": 13074000000
   },
   "name": "ServiceNow",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 137
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Technology",
@@ -160,14 +154,14 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $141.6B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.70, debt $2.4B vs working capital $0.0B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -181,51 +175,51 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 74.1%/yr",
-          "passed": true
-        },
-        {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 85.1",
+          "detail": "EPS 3yr CAGR 1.4%/yr",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 962.2",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 2,
+      "passed": 1,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 13.8%",
+          "detail": "ROE 13.5%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.68",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "1,047,000,000 shares vs. 1,042,115,000 a year earlier",
+          "detail": "1,046,691,000 shares vs. 1,042,113,000 a year earlier",
           "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 2,
+      "passed": 0,
       "total": 4
     }
   },
-  "website": "https://www.servicenow.com"
+  "website": null
 }

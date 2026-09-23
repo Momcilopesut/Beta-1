@@ -1,0 +1,223 @@
+{
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for LFUS: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=lfus.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca3758ce0>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
+  },
+  "cik": "0000889331",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 478473000,
+        "debt": 636897000,
+        "earnings": 283806000,
+        "fiscal_year": "2022-01-01",
+        "market_return_pct": 6.994661079948628,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 562588000,
+        "debt": 1001497000,
+        "earnings": 373306000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 555513000,
+        "debt": 871935000,
+        "earnings": 259485000,
+        "fiscal_year": "2023-12-30",
+        "market_return_pct": 24.286797583871554,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 724924000,
+        "debt": 856114000,
+        "earnings": 100190000,
+        "fiscal_year": "2024-12-28",
+        "market_return_pct": 25.18356441059519,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 563391000,
+        "debt": 802627000,
+        "earnings": -71700000,
+        "fiscal_year": "2025-12-27",
+        "market_return_pct": 16.01653753718424,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 2.6941019466222698,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.3308391391052228
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 95.93274583983553,
+      "shareholders_equity": 2426034000,
+      "total_assets": 3956796000,
+      "total_liabilities": 1530762000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": null
+    },
+    "profitability": {
+      "roe_pct": -2.955440855321896,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
+    }
+  },
+  "industry": "Switchgear & Switchboard Apparatus",
+  "last_updated": "2026-09-23T17:26:29Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": null,
+  "metrics": {
+    "book_value_per_share": 95.93274583983553,
+    "current_ratio": 2.6941019466222698,
+    "debt_to_equity": 0.3308391391052228,
+    "graham_criteria_evaluated": 3,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "roe_pct": -2.955440855321896,
+    "shareholders_equity": 2426034000,
+    "total_assets": 3956796000,
+    "total_liabilities": 1530762000
+  },
+  "name": "Littelfuse",
+  "price": {
+    "as_of": null,
+    "close": null
+  },
+  "qualitative": null,
+  "sector": "Technology",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000889331.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-17",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/889331/000088933126000014/lfus-20260915.htm"
+      },
+      {
+        "filed": "2026-07-29",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/889331/000162828026050481/lfus-20260627.htm"
+      },
+      {
+        "filed": "2026-02-19",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/889331/000162828026009585/lfus-20251227.htm"
+      }
+    ]
+  },
+  "ticker": "LFUS",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 2.69, debt $0.8B vs working capital $0.9B",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 4/5 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 2,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE -3.0%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.33",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "24,817,000 shares vs. 25,039,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 2,
+      "total": 4
+    }
+  },
+  "website": null
+}

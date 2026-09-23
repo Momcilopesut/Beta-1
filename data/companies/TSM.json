@@ -1,100 +1,49 @@
 {
-  "_errors": {},
-  "cik": "0001046179",
-  "five_year_history": {
-    "years": [
-      {
-        "cash": 1064990200000,
-        "debt": 753631900000,
-        "earnings": 592359200000,
-        "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
-        "revenue": 1587415000000,
-        "spending": 937434100000,
-        "stock_return_pct": null
-      },
-      {
-        "cash": 1342814100000,
-        "debt": 888174400000,
-        "earnings": 992923400000,
-        "fiscal_year": "2022-12-31",
-        "market_return_pct": -19.48164055920498,
-        "revenue": 2263891300000,
-        "spending": 1142612400000,
-        "stock_return_pct": -38.08494721968249
-      },
-      {
-        "cash": 1465427800000,
-        "debt": 956257900000,
-        "earnings": 851740000000,
-        "fiscal_year": "2023-12-31",
-        "market_return_pct": 23.591245456684877,
-        "revenue": 2161736000000,
-        "spending": 1240270000000,
-        "stock_return_pct": 36.30017452006982
-      },
-      {
-        "cash": 2127627000000,
-        "debt": 1047042100000,
-        "earnings": 1158380200000,
-        "fiscal_year": "2024-12-31",
-        "market_return_pct": 23.99873056172645,
-        "revenue": 2894308000000,
-        "spending": 1572255000000,
-        "stock_return_pct": 94.51393676745789
-      },
-      {
-        "cash": 2767856400000,
-        "debt": 1064582700000,
-        "earnings": 1735678080000,
-        "fiscal_year": "2025-12-31",
-        "market_return_pct": 16.35271635271634,
-        "revenue": 3848510949000,
-        "spending": 1892815132000,
-        "stock_return_pct": 53.876145627626705
-      }
-    ]
+  "_errors": {
+    "stooq": "Failed to fetch Stooq prices for TSM: Failed to fetch https://stooq.com/q/d/l/ after 2 attempts: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=tsm.us&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7fbca3653710>, 'Connection to stooq.com timed out. (connect timeout=5.0)'))"
   },
+  "cik": "0001046179",
+  "five_year_history": null,
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.457635046900518,
-      "debt_to_ebitda": 0.4015899591885588,
-      "debt_to_equity": 0.15273132543119194
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 1248.46,
-      "shareholders_equity": 5355038700000,
-      "total_assets": 7932842500000,
-      "total_liabilities": 2536623300000
+      "book_value_per_share": null,
+      "shareholders_equity": null,
+      "total_assets": null,
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 28.51970594718451
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 18.807374320164662
+      "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 39.34832282620624,
-      "trend": "improving"
+      "roe_pct": null,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 290.86998332148613,
-      "graham_number": 3058.674724043078,
-      "graham_upside_pct": 576.6979477971412,
-      "ncav_margin_pct": -89.07556727693003,
-      "pb_ratio": 10.057456297051948,
-      "pe_ttm": 28.92082995247479
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": null
     }
   },
-  "industry": "Semiconductors",
-  "last_updated": "2026-09-23T02:44:53Z",
+  "industry": "Semiconductors & Related Devices",
+  "last_updated": "2026-09-23T12:31:47Z",
   "layered_analysis": {
     "flags": [],
-    "munger_quality_pass": true,
+    "munger_quality_pass": null,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
+    "valuation_gate_pass": null
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -103,33 +52,18 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 2344288960000,
+  "market_cap": null,
   "metrics": {
-    "book_value_per_share": 1248.46,
-    "current_ratio": 2.457635046900518,
-    "debt_to_ebitda": 0.4015899591885588,
-    "debt_to_equity": 0.15273132543119194,
-    "eps_growth_cagr_3yr_pct": 18.807374320164662,
-    "fcf_margin_pct": 28.51970594718451,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 290.86998332148613,
-    "graham_upside_pct": 576.6979477971412,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -89.07556727693003,
-    "pb_ratio": 10.057456297051948,
-    "pe_ttm": 28.92082995247479,
-    "roe_pct": 39.34832282620624,
-    "shareholders_equity": 5355038700000,
-    "total_assets": 7932842500000,
-    "total_liabilities": 2536623300000
+    "graham_criteria_evaluated": 0,
+    "graham_criteria_passed": 0,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 0,
+    "munger_quality_passed": 0
   },
   "name": "Taiwan Semiconductor Manufacturing Company Limited",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 452
+    "as_of": null,
+    "close": null
   },
   "qualitative": null,
   "sector": "Technology",
@@ -142,19 +76,19 @@
     "graham_defensive": {
       "criteria": [
         {
-          "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $2344.3B",
-          "passed": true
+          "criterion": "Adequate size",
+          "detail": "Market cap unavailable",
+          "passed": null
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.46, debt $1064.6B vs working capital $2294.7B",
-          "passed": true
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
-          "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years",
-          "passed": true
+          "criterion": "Earnings stability",
+          "detail": "No annual net income data available",
+          "passed": null
         },
         {
           "criterion": "Dividend record",
@@ -162,52 +96,52 @@
           "passed": null
         },
         {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 18.8%/yr",
-          "passed": true
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 28.9",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 290.9",
-          "passed": false
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 4,
+      "evaluated": 0,
+      "passed": 0,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 39.3%",
-          "passed": true
+          "detail": "ROE unavailable",
+          "passed": null
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.15",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "5,186,111,400 shares vs. 5,185,929,000 a year earlier",
-          "passed": false
+          "detail": "Fewer than 2 years of share-count data",
+          "passed": null
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 0,
+      "passed": 0,
       "total": 4
     }
   },
-  "website": "https://www.tsmc.com"
+  "website": null
 }
