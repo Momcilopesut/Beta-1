@@ -17,7 +17,11 @@
     5-year - from a weekly screen of a curated universe of companies. This is pure price return, not a fundamentals
     score; every company's own page still has its full value-investing checklists and layered analysis.</p>
     <form id="search-form" class="search-form" autocomplete="off">
-      <input id="search-input" type="text" placeholder="Search everything scanned, or press Enter to look up any ticker&hellip;" />
+      <div class="search-input-wrap">
+        <input id="search-input" type="text" placeholder="Search everything scanned, or press Enter to look up any ticker&hellip;"
+          role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="search-suggestions" />
+        <ul id="search-suggestions" class="search-suggestions" role="listbox" hidden></ul>
+      </div>
       <button type="submit">Go</button>
     </form>
     <p id="status" class="status">Loading&hellip;</p>

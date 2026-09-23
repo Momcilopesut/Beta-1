@@ -105,6 +105,41 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
 }
 .search-form button:hover { opacity: 0.9; }
 
+.search-input-wrap { position: relative; flex: 1; }
+.search-input-wrap input { width: 100%; }
+.search-suggestions {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin: 0;
+  padding: 0.25rem;
+  list-style: none;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  max-height: 320px;
+  overflow-y: auto;
+}
+.search-suggestions li[data-ticker] {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.search-suggestions li[data-ticker]:hover,
+.search-suggestions li[data-ticker].active {
+  background: var(--border);
+}
+.suggestion-ticker { font-weight: 700; white-space: nowrap; }
+.suggestion-name { color: var(--muted); font-size: 0.85rem; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.suggestion-sector { color: var(--muted); font-size: 0.75rem; white-space: nowrap; }
+.suggestion-empty { padding: 0.5rem 0.6rem; color: var(--muted); font-size: 0.85rem; }
+
 .not-tracked { max-width: 520px; }
 .live-lookup-button {
   padding: 0.6rem 1.2rem;
@@ -136,43 +171,6 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
   margin-bottom: 1rem;
 }
 .sector-count { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1rem;
-}
-
-.mini-badges { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
-.mini-badge {
-  font-size: 0.7rem;
-  padding: 0.1rem 0.45rem;
-  border-radius: 4px;
-  background: var(--border);
-  color: var(--fg);
-}
-.card {
-  display: block;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem;
-  text-decoration: none;
-  color: inherit;
-  transition: border-color 0.15s ease;
-}
-.card:hover { border-color: var(--accent); }
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 0.5rem;
-  margin-bottom: 0.6rem;
-}
-.card-header .ticker { font-weight: 700; }
-.card-header .name { color: var(--muted); font-size: 0.85rem; text-align: right; }
-.ticker-group { display: flex; align-items: baseline; gap: 0.4rem; }
-.card-price { font-size: 1.1rem; font-weight: 700; margin: 0 0 0.5rem; }
 
 /* Homepage performance screen: 5 leaderboards per sector (weekly/monthly/
    quarterly/annual/5-year), each ranking up to 5 tickers by price return. */
@@ -615,7 +613,5 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 @media (max-width: 480px) {
   main { padding: 1rem 0.75rem; }
   .verdicts-detail { flex-direction: column; }
-  .card-header { flex-direction: column; align-items: flex-start; }
-  .card-header .name { text-align: left; }
   .metric-row summary { flex-direction: column; align-items: flex-start; gap: 0.15rem; }
 }

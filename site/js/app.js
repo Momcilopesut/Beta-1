@@ -1,4 +1,5 @@
 import { fetchJSON, formatNumber, escapeHtml, renderDisclaimerFooter, renderError } from "./shared.js";
+import { buildSearchIndex, search as searchIndex } from "./search-index.js";
 
 // Canonical GICS-style sector order (Energy -> Real Estate), so sections
 // appear in the same order finance convention uses rather than
@@ -18,6 +19,7 @@ const SECTOR_ORDER = [
 ];
 
 let allCompanies = [];
+let searchIdx = [];
 let performancePicksBySector = {};
 let performanceWindows = [];
 
@@ -32,6 +34,7 @@ async function main() {
     performancePicksBySector = picks.picks_by_sector;
     performanceWindows = picks.windows;
     allCompanies = watchlist.companies;
+    searchIdx = buildSearchIndex(allCompanies);
     const pickCount = Object.values(performancePicksBySector).reduce(
       (sum, windows) => sum + Object.values(windows).reduce((s, list) => s + list.length, 0),
       0
@@ -52,71 +55,112 @@ function renderNoPicksYet() {
   return `<p class="status">No sector had a company with enough price history to rank yet. Check back after the pipeline's next run, or search for any ticker above.</p>`;
 }
 
+// Typeahead suggestion box: as you type, a dropdown of up to 8 ranked
+// matches (see site/js/search-index.js) appears under the input - arrow
+// keys + Enter or a click jump straight to that company's page. Enter with
+// nothing highlighted keeps the old behavior: jump to a single exact
+// tracked match, or to the ticker as typed (company.html offers a live
+// lookup if it isn't tracked).
 function wireSearch() {
   const form = document.getElementById("search-form");
   const input = document.getElementById("search-input");
-  const cardsEl = document.getElementById("cards");
-  if (!form || !input) return;
+  const suggestionsEl = document.getElementById("search-suggestions");
+  if (!form || !input || !suggestionsEl) return;
+
+  let currentMatches = [];
+  let activeIndex = -1;
+
+  function goToTicker(ticker) {
+    window.location.href = `company.html?ticker=${encodeURIComponent(ticker)}`;
+  }
+
+  function closeSuggestions() {
+    suggestionsEl.hidden = true;
+    suggestionsEl.innerHTML = "";
+    input.setAttribute("aria-expanded", "false");
+    currentMatches = [];
+    activeIndex = -1;
+  }
+
+  function setActive(index) {
+    const items = suggestionsEl.querySelectorAll("li[data-ticker]");
+    items.forEach((el) => el.classList.remove("active"));
+    activeIndex = index;
+    if (index >= 0 && index < items.length) {
+      items[index].classList.add("active");
+      items[index].scrollIntoView({ block: "nearest" });
+    }
+  }
+
+  function renderSuggestions(query, matches) {
+    currentMatches = matches;
+    activeIndex = -1;
+    if (!matches.length) {
+      suggestionsEl.innerHTML = `<li class="suggestion-empty">No tracked match for "${escapeHtml(query)}" — press Enter to look it up.</li>`;
+    } else {
+      suggestionsEl.innerHTML = matches
+        .map(
+          (m, i) => `
+            <li role="option" data-index="${i}" data-ticker="${escapeHtml(m.ticker)}">
+              <span class="suggestion-ticker">${escapeHtml(m.ticker)}</span>
+              <span class="suggestion-name">${escapeHtml(m.name)}</span>
+              <span class="suggestion-sector">${escapeHtml(m.sector || "")}</span>
+            </li>
+          `
+        )
+        .join("");
+    }
+    suggestionsEl.hidden = false;
+    input.setAttribute("aria-expanded", "true");
+  }
 
   input.addEventListener("input", () => {
-    const query = input.value.trim().toLowerCase();
+    const query = input.value.trim();
     if (!query) {
-      cardsEl.innerHTML = Object.keys(performancePicksBySector).length
-        ? renderPerformanceScreen(performancePicksBySector, performanceWindows)
-        : renderNoPicksYet();
+      closeSuggestions();
       return;
     }
-    const matches = allCompanies.filter(
-      (c) => c.ticker.toLowerCase().includes(query) || c.name.toLowerCase().includes(query)
-    );
-    cardsEl.innerHTML = matches.length
-      ? renderBySector(matches)
-      : `<p class="status">No tracked company matches "${escapeHtml(input.value.trim())}". Press Enter to run a live lookup instead.</p>`;
+    renderSuggestions(query, searchIndex(searchIdx, query, 8));
+  });
+
+  input.addEventListener("keydown", (event) => {
+    if (suggestionsEl.hidden) return;
+    if (event.key === "ArrowDown" && currentMatches.length) {
+      event.preventDefault();
+      setActive(Math.min(activeIndex + 1, currentMatches.length - 1));
+    } else if (event.key === "ArrowUp" && currentMatches.length) {
+      event.preventDefault();
+      setActive(Math.max(activeIndex - 1, 0));
+    } else if (event.key === "Escape") {
+      closeSuggestions();
+    } else if (event.key === "Enter" && activeIndex >= 0 && currentMatches[activeIndex]) {
+      event.preventDefault();
+      goToTicker(currentMatches[activeIndex].ticker);
+    }
+  });
+
+  // mousedown (not click) fires before the input's blur, so the dropdown
+  // is still populated when this handler reads it.
+  suggestionsEl.addEventListener("mousedown", (event) => {
+    const li = event.target.closest("li[data-ticker]");
+    if (li) goToTicker(li.dataset.ticker);
+  });
+
+  input.addEventListener("blur", () => {
+    setTimeout(closeSuggestions, 100);
   });
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const query = input.value.trim();
     if (!query) return;
-    // Jump straight to a single tracked match; otherwise go to the ticker
-    // as typed - company.html resolves it statically if tracked, or offers
-    // a live lookup if not.
+    if (activeIndex >= 0 && currentMatches[activeIndex]) {
+      goToTicker(currentMatches[activeIndex].ticker);
+      return;
+    }
     const exact = allCompanies.find((c) => c.ticker.toLowerCase() === query.toLowerCase());
-    const target = exact ? exact.ticker : query.toUpperCase();
-    window.location.href = `company.html?ticker=${encodeURIComponent(target)}`;
+    goToTicker(exact ? exact.ticker : query.toUpperCase());
   });
-}
-
-// Search results: grouped by sector, sorted alphabetically by ticker -
-// an arbitrary subset matching the query, not the performance screen, so it
-// keeps showing the fundamentals badges rather than a rank-by-return list.
-function renderBySector(companies) {
-  const bySector = new Map();
-  for (const company of companies) {
-    const sector = company.sector || "Uncategorized";
-    if (!bySector.has(sector)) bySector.set(sector, []);
-    bySector.get(sector).push(company);
-  }
-
-  for (const list of bySector.values()) {
-    list.sort((a, b) => a.ticker.localeCompare(b.ticker));
-  }
-
-  const orderedSectors = [
-    ...SECTOR_ORDER.filter((s) => bySector.has(s)),
-    ...[...bySector.keys()].filter((s) => !SECTOR_ORDER.includes(s)).sort(),
-  ];
-
-  return orderedSectors
-    .map(
-      (sector) => `
-        <section class="sector-group">
-          <h2 class="sector-heading">${escapeHtml(sector)} <span class="sector-count">(${bySector.get(sector).length})</span></h2>
-          <div class="card-grid">${bySector.get(sector).map((c) => renderCard(c)).join("")}</div>
-        </section>
-      `
-    )
-    .join("");
 }
 
 // Default homepage view: for each sector, 5 independently-ranked leaderboards
@@ -187,53 +231,6 @@ function renderPerfRow(company, rank, windowKey) {
       </a>
     </li>
   `;
-}
-
-function renderCard(company) {
-  const ticker = escapeHtml(company.ticker);
-  const grahamBadge =
-    company.graham_criteria_total
-      ? `<span class="mini-badge" title="Defensive checklist criteria passed">Defensive ${company.graham_criteria_passed}/${company.graham_criteria_total}</span>`
-      : "";
-  const mungerBadge =
-    company.munger_quality_total !== undefined && company.munger_quality_total !== null
-      ? `<span class="mini-badge" title="Quality checklist (return on equity, debt, dilution, margins)">Quality ${company.munger_quality_passed}/${company.munger_quality_total}</span>`
-      : "";
-  const bookValueBadge =
-    company.book_value_per_share !== undefined && company.book_value_per_share !== null
-      ? `<span class="mini-badge" title="Net worth per share (assets minus liabilities)">Book value $${formatNumber(company.book_value_per_share, { decimals: 2 })}</span>`
-      : "";
-  const layeredBadge = renderLayeredBadge(company);
-  const price = company.price?.close;
-  const priceLine =
-    price !== undefined && price !== null
-      ? `<p class="card-price">$${formatNumber(price, { decimals: 2 })}</p>`
-      : "";
-  return `
-    <a class="card" href="company.html?ticker=${encodeURIComponent(company.ticker)}">
-      <div class="card-header">
-        <span class="ticker-group"><span class="ticker">${ticker}</span></span>
-        <span class="name">${escapeHtml(company.name)}</span>
-      </div>
-      ${priceLine}
-      <div class="mini-badges">${grahamBadge}${mungerBadge}${bookValueBadge}${layeredBadge}</div>
-    </a>
-  `;
-}
-
-function renderLayeredBadge(company) {
-  const {
-    qualitative_moat_present: moat,
-    munger_quality_pass: munger,
-    valuation_gate_pass: value,
-  } = company;
-  if (moat === undefined && munger === undefined && value === undefined) return "";
-  const parts = [];
-  if (munger === true) parts.push("quality");
-  if (moat === true) parts.push("moat");
-  if (value === true) parts.push("value");
-  if (!parts.length) return `<span class="mini-badge" title="Layered analysis: no gates passed yet">layered: —</span>`;
-  return `<span class="mini-badge" title="Layered analysis gates passed">${escapeHtml(parts.join(" + "))} ✓</span>`;
 }
 
 main();
