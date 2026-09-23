@@ -6,10 +6,21 @@
 # pipeline prefers the sector reported by FMP's /profile endpoint when
 # available and only falls back to this value if that call fails.
 #
-# Curated (not the full S&P 500) to stay well inside a free-tier API
-# budget - 8 companies per sector, picked for a real moat/growth thesis
-# rather than just size, so the weekly top-5-per-sector selection has a
-# genuine pool to choose from.
+# Originally an 8-per-sector curated set (still the first block below).
+# Being expanded in staged tranches toward full S&P 1500 coverage (S&P 500 +
+# S&P 400 MidCap + S&P 600 SmallCap) so most searched tickers are already
+# tracked - see README's "Weekly Screener" section. Each tranche is its own
+# commit, only added once the previous one is confirmed to actually
+# complete a real weekly-screen.yml run within GitHub Actions' time/API
+# rate limits. Source for the S&P 500/400/600 constituent lists: GICS
+# sector, mapped to this file's existing Morningstar-style sector names
+# (Consumer Discretionary -> Consumer Cyclical, Consumer Staples -> Consumer
+# Defensive, Health Care -> Healthcare, Financials -> Financial Services,
+# Information Technology -> Technology, Materials -> Basic Materials, all
+# others unchanged).
+#
+# Tranche 1 (S&P 500 net-new, below the original curated set): companies
+# already in the curated set above are not duplicated.
 
 companies:
   # --- Energy ---
@@ -297,3 +308,1278 @@ companies:
   - ticker: WELL
     name: Welltower Inc.
     sector: Real Estate
+
+  # ============================================================
+  # Tranche 1: S&P 500 net-new (source: datasets/s-and-p-500-companies)
+  # ============================================================
+  # --- Basic Materials ---
+  - ticker: AMCR
+    name: Amcor
+    sector: Basic Materials
+  - ticker: AVY
+    name: Avery Dennison
+    sector: Basic Materials
+  - ticker: BALL
+    name: Ball Corporation
+    sector: Basic Materials
+  - ticker: CF
+    name: CF Industries
+    sector: Basic Materials
+  - ticker: CRH
+    name: CRH plc
+    sector: Basic Materials
+  - ticker: CTVA
+    name: Corteva
+    sector: Basic Materials
+  - ticker: DOW
+    name: Dow Inc.
+    sector: Basic Materials
+  - ticker: IFF
+    name: International Flavors & Fragrances
+    sector: Basic Materials
+  - ticker: IP
+    name: International Paper
+    sector: Basic Materials
+  - ticker: LYB
+    name: LyondellBasell
+    sector: Basic Materials
+  - ticker: MLM
+    name: Martin Marietta Materials
+    sector: Basic Materials
+  - ticker: MOS
+    name: Mosaic Company (The)
+    sector: Basic Materials
+  - ticker: NEM
+    name: Newmont
+    sector: Basic Materials
+  - ticker: PKG
+    name: Packaging Corporation of America
+    sector: Basic Materials
+  - ticker: PPG
+    name: PPG Industries
+    sector: Basic Materials
+  - ticker: STLD
+    name: Steel Dynamics
+    sector: Basic Materials
+  - ticker: SW
+    name: Smurfit Westrock
+    sector: Basic Materials
+  - ticker: VMC
+    name: Vulcan Materials Company
+    sector: Basic Materials
+  # --- Communication Services ---
+  - ticker: APP
+    name: AppLovin
+    sector: Communication Services
+  - ticker: CHTR
+    name: Charter Communications
+    sector: Communication Services
+  - ticker: ECHO
+    name: EchoStar
+    sector: Communication Services
+  - ticker: FOX
+    name: Fox Corporation (Class B)
+    sector: Communication Services
+  - ticker: FOXA
+    name: Fox Corporation (Class A)
+    sector: Communication Services
+  - ticker: GOOG
+    name: Alphabet Inc. (Class C)
+    sector: Communication Services
+  - ticker: LYV
+    name: Live Nation Entertainment
+    sector: Communication Services
+  - ticker: NWS
+    name: News Corp (Class B)
+    sector: Communication Services
+  - ticker: NWSA
+    name: News Corp (Class A)
+    sector: Communication Services
+  - ticker: OMC
+    name: Omnicom Group
+    sector: Communication Services
+  - ticker: PSKY
+    name: Paramount Skydance Corporation
+    sector: Communication Services
+  - ticker: RDDT
+    name: Reddit
+    sector: Communication Services
+  - ticker: T
+    name: AT&T
+    sector: Communication Services
+  - ticker: TKO
+    name: TKO Group Holdings
+    sector: Communication Services
+  - ticker: TTWO
+    name: Take-Two Interactive
+    sector: Communication Services
+  - ticker: WBD
+    name: Warner Bros. Discovery
+    sector: Communication Services
+  # --- Consumer Cyclical ---
+  - ticker: ABNB
+    name: Airbnb
+    sector: Consumer Cyclical
+  - ticker: APTV
+    name: Aptiv
+    sector: Consumer Cyclical
+  - ticker: AZO
+    name: AutoZone
+    sector: Consumer Cyclical
+  - ticker: BBY
+    name: Best Buy
+    sector: Consumer Cyclical
+  - ticker: BKNG
+    name: Booking Holdings
+    sector: Consumer Cyclical
+  - ticker: CCL
+    name: Carnival Corporation
+    sector: Consumer Cyclical
+  - ticker: CVNA
+    name: Carvana
+    sector: Consumer Cyclical
+  - ticker: DASH
+    name: DoorDash
+    sector: Consumer Cyclical
+  - ticker: DECK
+    name: Deckers Brands
+    sector: Consumer Cyclical
+  - ticker: DHI
+    name: D. R. Horton
+    sector: Consumer Cyclical
+  - ticker: DPZ
+    name: "Domino's"
+    sector: Consumer Cyclical
+  - ticker: DRI
+    name: Darden Restaurants
+    sector: Consumer Cyclical
+  - ticker: EBAY
+    name: eBay Inc.
+    sector: Consumer Cyclical
+  - ticker: EXPE
+    name: Expedia Group
+    sector: Consumer Cyclical
+  - ticker: F
+    name: Ford Motor Company
+    sector: Consumer Cyclical
+  - ticker: GM
+    name: General Motors
+    sector: Consumer Cyclical
+  - ticker: GPC
+    name: Genuine Parts Company
+    sector: Consumer Cyclical
+  - ticker: GRMN
+    name: Garmin
+    sector: Consumer Cyclical
+  - ticker: HAS
+    name: Hasbro
+    sector: Consumer Cyclical
+  - ticker: HLT
+    name: Hilton Worldwide
+    sector: Consumer Cyclical
+  - ticker: LEN
+    name: Lennar
+    sector: Consumer Cyclical
+  - ticker: LOW
+    name: "Lowe's"
+    sector: Consumer Cyclical
+  - ticker: LULU
+    name: Lululemon Athletica
+    sector: Consumer Cyclical
+  - ticker: LVS
+    name: Las Vegas Sands
+    sector: Consumer Cyclical
+  - ticker: MAR
+    name: Marriott International
+    sector: Consumer Cyclical
+  - ticker: MGM
+    name: MGM Resorts
+    sector: Consumer Cyclical
+  - ticker: NCLH
+    name: Norwegian Cruise Line Holdings
+    sector: Consumer Cyclical
+  - ticker: NVR
+    name: NVR, Inc.
+    sector: Consumer Cyclical
+  - ticker: ORLY
+    name: "O'Reilly Automotive"
+    sector: Consumer Cyclical
+  - ticker: PHM
+    name: PulteGroup
+    sector: Consumer Cyclical
+  - ticker: RCL
+    name: Royal Caribbean Group
+    sector: Consumer Cyclical
+  - ticker: RL
+    name: Ralph Lauren Corporation
+    sector: Consumer Cyclical
+  - ticker: ROST
+    name: Ross Stores
+    sector: Consumer Cyclical
+  - ticker: TPR
+    name: Tapestry, Inc.
+    sector: Consumer Cyclical
+  - ticker: TSCO
+    name: Tractor Supply
+    sector: Consumer Cyclical
+  - ticker: TSLA
+    name: Tesla, Inc.
+    sector: Consumer Cyclical
+  - ticker: ULTA
+    name: Ulta Beauty
+    sector: Consumer Cyclical
+  - ticker: WSM
+    name: Williams-Sonoma, Inc.
+    sector: Consumer Cyclical
+  - ticker: WYNN
+    name: Wynn Resorts
+    sector: Consumer Cyclical
+  - ticker: YUM
+    name: Yum! Brands
+    sector: Consumer Cyclical
+  # --- Consumer Defensive ---
+  - ticker: ADM
+    name: Archer Daniels Midland
+    sector: Consumer Defensive
+  - ticker: BF.B
+    name: Brown–Forman
+    sector: Consumer Defensive
+  - ticker: BG
+    name: Bunge Global
+    sector: Consumer Defensive
+  - ticker: CASY
+    name: "Casey's"
+    sector: Consumer Defensive
+  - ticker: CHD
+    name: Church & Dwight
+    sector: Consumer Defensive
+  - ticker: CLX
+    name: Clorox
+    sector: Consumer Defensive
+  - ticker: DG
+    name: Dollar General
+    sector: Consumer Defensive
+  - ticker: DLTR
+    name: Dollar Tree
+    sector: Consumer Defensive
+  - ticker: EL
+    name: Estée Lauder Companies (The)
+    sector: Consumer Defensive
+  - ticker: GIS
+    name: General Mills
+    sector: Consumer Defensive
+  - ticker: HRL
+    name: Hormel Foods
+    sector: Consumer Defensive
+  - ticker: HSY
+    name: Hershey Company (The)
+    sector: Consumer Defensive
+  - ticker: KDP
+    name: Keurig Dr Pepper
+    sector: Consumer Defensive
+  - ticker: KHC
+    name: Kraft Heinz
+    sector: Consumer Defensive
+  - ticker: KMB
+    name: Kimberly-Clark
+    sector: Consumer Defensive
+  - ticker: KR
+    name: Kroger
+    sector: Consumer Defensive
+  - ticker: KVUE
+    name: Kenvue
+    sector: Consumer Defensive
+  - ticker: MKC
+    name: McCormick & Company
+    sector: Consumer Defensive
+  - ticker: MO
+    name: Altria
+    sector: Consumer Defensive
+  - ticker: PM
+    name: Philip Morris International
+    sector: Consumer Defensive
+  - ticker: SJM
+    name: J.M. Smucker Company (The)
+    sector: Consumer Defensive
+  - ticker: STZ
+    name: Constellation Brands
+    sector: Consumer Defensive
+  - ticker: SYY
+    name: Sysco
+    sector: Consumer Defensive
+  - ticker: TGT
+    name: Target Corporation
+    sector: Consumer Defensive
+  - ticker: TSN
+    name: Tyson Foods
+    sector: Consumer Defensive
+  # --- Energy ---
+  - ticker: APA
+    name: APA Corporation
+    sector: Energy
+  - ticker: BKR
+    name: Baker Hughes
+    sector: Energy
+  - ticker: DVN
+    name: Devon Energy
+    sector: Energy
+  - ticker: EQT
+    name: EQT Corporation
+    sector: Energy
+  - ticker: EXE
+    name: Expand Energy
+    sector: Energy
+  - ticker: HAL
+    name: Halliburton
+    sector: Energy
+  - ticker: KMI
+    name: Kinder Morgan
+    sector: Energy
+  - ticker: MPC
+    name: Marathon Petroleum
+    sector: Energy
+  - ticker: OKE
+    name: Oneok
+    sector: Energy
+  - ticker: TPL
+    name: Texas Pacific Land Corporation
+    sector: Energy
+  - ticker: TRGP
+    name: Targa Resources
+    sector: Energy
+  - ticker: VLO
+    name: Valero Energy
+    sector: Energy
+  - ticker: WMB
+    name: Williams Companies
+    sector: Energy
+  # --- Financial Services ---
+  - ticker: ACGL
+    name: Arch Capital Group
+    sector: Financial Services
+  - ticker: AFL
+    name: Aflac
+    sector: Financial Services
+  - ticker: AIG
+    name: American International Group
+    sector: Financial Services
+  - ticker: AIZ
+    name: Assurant
+    sector: Financial Services
+  - ticker: AJG
+    name: Arthur J. Gallagher & Co.
+    sector: Financial Services
+  - ticker: ALL
+    name: Allstate
+    sector: Financial Services
+  - ticker: AMP
+    name: Ameriprise Financial
+    sector: Financial Services
+  - ticker: AON
+    name: Aon plc
+    sector: Financial Services
+  - ticker: APO
+    name: Apollo Global Management
+    sector: Financial Services
+  - ticker: ARES
+    name: Ares Management
+    sector: Financial Services
+  - ticker: BAC
+    name: Bank of America
+    sector: Financial Services
+  - ticker: BEN
+    name: Franklin Resources
+    sector: Financial Services
+  - ticker: BNY
+    name: BNY Mellon
+    sector: Financial Services
+  - ticker: BRO
+    name: Brown & Brown
+    sector: Financial Services
+  - ticker: BX
+    name: Blackstone Inc.
+    sector: Financial Services
+  - ticker: C
+    name: Citigroup
+    sector: Financial Services
+  - ticker: CB
+    name: Chubb Limited
+    sector: Financial Services
+  - ticker: CBOE
+    name: Cboe Global Markets
+    sector: Financial Services
+  - ticker: CFG
+    name: Citizens Financial Group
+    sector: Financial Services
+  - ticker: CINF
+    name: Cincinnati Financial
+    sector: Financial Services
+  - ticker: CME
+    name: CME Group
+    sector: Financial Services
+  - ticker: COF
+    name: Capital One
+    sector: Financial Services
+  - ticker: COIN
+    name: Coinbase
+    sector: Financial Services
+  - ticker: CPAY
+    name: Corpay
+    sector: Financial Services
+  - ticker: EG
+    name: Everest Group
+    sector: Financial Services
+  - ticker: ERIE
+    name: Erie Indemnity
+    sector: Financial Services
+  - ticker: FDS
+    name: FactSet
+    sector: Financial Services
+  - ticker: FIS
+    name: Fidelity National Information Services
+    sector: Financial Services
+  - ticker: FISV
+    name: Fiserv
+    sector: Financial Services
+  - ticker: FITB
+    name: Fifth Third Bancorp
+    sector: Financial Services
+  - ticker: GL
+    name: Globe Life
+    sector: Financial Services
+  - ticker: GPN
+    name: Global Payments
+    sector: Financial Services
+  - ticker: GS
+    name: Goldman Sachs
+    sector: Financial Services
+  - ticker: HBAN
+    name: Huntington Bancshares
+    sector: Financial Services
+  - ticker: HIG
+    name: Hartford (The)
+    sector: Financial Services
+  - ticker: HOOD
+    name: Robinhood Markets
+    sector: Financial Services
+  - ticker: IBKR
+    name: Interactive Brokers
+    sector: Financial Services
+  - ticker: ICE
+    name: Intercontinental Exchange
+    sector: Financial Services
+  - ticker: IVZ
+    name: Invesco
+    sector: Financial Services
+  - ticker: JKHY
+    name: Jack Henry & Associates
+    sector: Financial Services
+  - ticker: KEY
+    name: KeyCorp
+    sector: Financial Services
+  - ticker: KKR
+    name: KKR & Co.
+    sector: Financial Services
+  - ticker: L
+    name: Loews Corporation
+    sector: Financial Services
+  - ticker: MCO
+    name: "Moody's Corporation"
+    sector: Financial Services
+  - ticker: MET
+    name: MetLife
+    sector: Financial Services
+  - ticker: MRSH
+    name: Marsh McLennan
+    sector: Financial Services
+  - ticker: MS
+    name: Morgan Stanley
+    sector: Financial Services
+  - ticker: MSCI
+    name: MSCI
+    sector: Financial Services
+  - ticker: MTB
+    name: M&T Bank
+    sector: Financial Services
+  - ticker: NDAQ
+    name: Nasdaq, Inc.
+    sector: Financial Services
+  - ticker: NTRS
+    name: Northern Trust
+    sector: Financial Services
+  - ticker: PFG
+    name: Principal Financial Group
+    sector: Financial Services
+  - ticker: PNC
+    name: PNC Financial Services
+    sector: Financial Services
+  - ticker: PRU
+    name: Prudential Financial
+    sector: Financial Services
+  - ticker: PYPL
+    name: PayPal
+    sector: Financial Services
+  - ticker: RF
+    name: Regions Financial Corporation
+    sector: Financial Services
+  - ticker: RJF
+    name: Raymond James Financial
+    sector: Financial Services
+  - ticker: SCHW
+    name: Charles Schwab Corporation
+    sector: Financial Services
+  - ticker: STT
+    name: State Street Corporation
+    sector: Financial Services
+  - ticker: SYF
+    name: Synchrony Financial
+    sector: Financial Services
+  - ticker: TFC
+    name: Truist Financial
+    sector: Financial Services
+  - ticker: TROW
+    name: T. Rowe Price
+    sector: Financial Services
+  - ticker: TRV
+    name: Travelers Companies (The)
+    sector: Financial Services
+  - ticker: USB
+    name: U.S. Bancorp
+    sector: Financial Services
+  - ticker: WFC
+    name: Wells Fargo
+    sector: Financial Services
+  - ticker: WRB
+    name: W. R. Berkley Corporation
+    sector: Financial Services
+  - ticker: WTW
+    name: Willis Towers Watson
+    sector: Financial Services
+  - ticker: XYZ
+    name: Block, Inc.
+    sector: Financial Services
+  # --- Healthcare ---
+  - ticker: A
+    name: Agilent Technologies
+    sector: Healthcare
+  - ticker: ALGN
+    name: Align Technology
+    sector: Healthcare
+  - ticker: AMGN
+    name: Amgen
+    sector: Healthcare
+  - ticker: BAX
+    name: Baxter International
+    sector: Healthcare
+  - ticker: BDX
+    name: Becton Dickinson
+    sector: Healthcare
+  - ticker: BIIB
+    name: Biogen
+    sector: Healthcare
+  - ticker: BMY
+    name: Bristol Myers Squibb
+    sector: Healthcare
+  - ticker: BSX
+    name: Boston Scientific
+    sector: Healthcare
+  - ticker: CAH
+    name: Cardinal Health
+    sector: Healthcare
+  - ticker: CI
+    name: Cigna
+    sector: Healthcare
+  - ticker: CNC
+    name: Centene Corporation
+    sector: Healthcare
+  - ticker: COO
+    name: Cooper Companies (The)
+    sector: Healthcare
+  - ticker: COR
+    name: Cencora
+    sector: Healthcare
+  - ticker: CRL
+    name: Charles River Laboratories
+    sector: Healthcare
+  - ticker: CVS
+    name: CVS Health
+    sector: Healthcare
+  - ticker: DGX
+    name: Quest Diagnostics
+    sector: Healthcare
+  - ticker: DHR
+    name: Danaher Corporation
+    sector: Healthcare
+  - ticker: DVA
+    name: DaVita
+    sector: Healthcare
+  - ticker: DXCM
+    name: Dexcom
+    sector: Healthcare
+  - ticker: ELV
+    name: Elevance Health
+    sector: Healthcare
+  - ticker: EW
+    name: Edwards Lifesciences
+    sector: Healthcare
+  - ticker: GEHC
+    name: GE HealthCare
+    sector: Healthcare
+  - ticker: GILD
+    name: Gilead Sciences
+    sector: Healthcare
+  - ticker: HCA
+    name: HCA Healthcare
+    sector: Healthcare
+  - ticker: HSIC
+    name: Henry Schein
+    sector: Healthcare
+  - ticker: HUM
+    name: Humana
+    sector: Healthcare
+  - ticker: IDXX
+    name: Idexx Laboratories
+    sector: Healthcare
+  - ticker: ILMN
+    name: Illumina, Inc.
+    sector: Healthcare
+  - ticker: INCY
+    name: Incyte
+    sector: Healthcare
+  - ticker: IQV
+    name: IQVIA
+    sector: Healthcare
+  - ticker: LH
+    name: Labcorp
+    sector: Healthcare
+  - ticker: MCK
+    name: McKesson Corporation
+    sector: Healthcare
+  - ticker: MDT
+    name: Medtronic
+    sector: Healthcare
+  - ticker: MRK
+    name: Merck & Co.
+    sector: Healthcare
+  - ticker: MRNA
+    name: Moderna
+    sector: Healthcare
+  - ticker: MTD
+    name: Mettler Toledo
+    sector: Healthcare
+  - ticker: PFE
+    name: Pfizer
+    sector: Healthcare
+  - ticker: PODD
+    name: Insulet Corporation
+    sector: Healthcare
+  - ticker: REGN
+    name: Regeneron Pharmaceuticals
+    sector: Healthcare
+  - ticker: RMD
+    name: ResMed|
+    sector: Healthcare
+  - ticker: RVTY
+    name: Revvity
+    sector: Healthcare
+  - ticker: SOLV
+    name: Solventum
+    sector: Healthcare
+  - ticker: STE
+    name: Steris
+    sector: Healthcare
+  - ticker: SYK
+    name: Stryker Corporation
+    sector: Healthcare
+  - ticker: TECH
+    name: Bio-Techne
+    sector: Healthcare
+  - ticker: UHS
+    name: Universal Health Services
+    sector: Healthcare
+  - ticker: VEEV
+    name: Veeva Systems
+    sector: Healthcare
+  - ticker: VRTX
+    name: Vertex Pharmaceuticals
+    sector: Healthcare
+  - ticker: VTRS
+    name: Viatris
+    sector: Healthcare
+  - ticker: WAT
+    name: Waters Corporation
+    sector: Healthcare
+  - ticker: WST
+    name: West Pharmaceutical Services
+    sector: Healthcare
+  - ticker: ZBH
+    name: Zimmer Biomet
+    sector: Healthcare
+  - ticker: ZTS
+    name: Zoetis
+    sector: Healthcare
+  # --- Industrials ---
+  - ticker: ADP
+    name: Automatic Data Processing
+    sector: Industrials
+  - ticker: ALLE
+    name: Allegion
+    sector: Industrials
+  - ticker: AME
+    name: Ametek
+    sector: Industrials
+  - ticker: AOS
+    name: A. O. Smith
+    sector: Industrials
+  - ticker: AXON
+    name: Axon Enterprise
+    sector: Industrials
+  - ticker: BA
+    name: Boeing
+    sector: Industrials
+  - ticker: BE
+    name: Bloom Energy
+    sector: Industrials
+  - ticker: BR
+    name: Broadridge Financial Solutions
+    sector: Industrials
+  - ticker: CARR
+    name: Carrier Global
+    sector: Industrials
+  - ticker: CHRW
+    name: C.H. Robinson
+    sector: Industrials
+  - ticker: CMI
+    name: Cummins
+    sector: Industrials
+  - ticker: CPRT
+    name: Copart
+    sector: Industrials
+  - ticker: CSX
+    name: CSX Corporation
+    sector: Industrials
+  - ticker: CTAS
+    name: Cintas
+    sector: Industrials
+  - ticker: DAL
+    name: Delta Air Lines
+    sector: Industrials
+  - ticker: DOV
+    name: Dover Corporation
+    sector: Industrials
+  - ticker: EFX
+    name: Equifax
+    sector: Industrials
+  - ticker: EME
+    name: Emcor
+    sector: Industrials
+  - ticker: EMR
+    name: Emerson Electric
+    sector: Industrials
+  - ticker: EXPD
+    name: Expeditors International
+    sector: Industrials
+  - ticker: FAST
+    name: Fastenal
+    sector: Industrials
+  - ticker: FDX
+    name: FedEx
+    sector: Industrials
+  - ticker: FDXF
+    name: FedEx Freight
+    sector: Industrials
+  - ticker: FERG
+    name: Ferguson Enterprises
+    sector: Industrials
+  - ticker: FIX
+    name: Comfort Systems USA
+    sector: Industrials
+  - ticker: FTV
+    name: Fortive
+    sector: Industrials
+  - ticker: GD
+    name: General Dynamics
+    sector: Industrials
+  - ticker: GEV
+    name: GE Vernova
+    sector: Industrials
+  - ticker: GNRC
+    name: Generac
+    sector: Industrials
+  - ticker: GWW
+    name: W. W. Grainger
+    sector: Industrials
+  - ticker: HII
+    name: Huntington Ingalls Industries
+    sector: Industrials
+  - ticker: HONA
+    name: Honeywell Aerospace
+    sector: Industrials
+  - ticker: HUBB
+    name: Hubbell Incorporated
+    sector: Industrials
+  - ticker: HWM
+    name: Howmet Aerospace
+    sector: Industrials
+  - ticker: IEX
+    name: IDEX Corporation
+    sector: Industrials
+  - ticker: IR
+    name: Ingersoll Rand
+    sector: Industrials
+  - ticker: ITW
+    name: Illinois Tool Works
+    sector: Industrials
+  - ticker: J
+    name: Jacobs Solutions
+    sector: Industrials
+  - ticker: JBHT
+    name: J.B. Hunt
+    sector: Industrials
+  - ticker: JCI
+    name: Johnson Controls
+    sector: Industrials
+  - ticker: LDOS
+    name: Leidos
+    sector: Industrials
+  - ticker: LHX
+    name: L3Harris
+    sector: Industrials
+  - ticker: LII
+    name: Lennox International
+    sector: Industrials
+  - ticker: LUV
+    name: Southwest Airlines
+    sector: Industrials
+  - ticker: MAS
+    name: Masco
+    sector: Industrials
+  - ticker: MMM
+    name: 3M
+    sector: Industrials
+  - ticker: NDSN
+    name: Nordson Corporation
+    sector: Industrials
+  - ticker: NOC
+    name: Northrop Grumman
+    sector: Industrials
+  - ticker: NSC
+    name: Norfolk Southern
+    sector: Industrials
+  - ticker: ODFL
+    name: Old Dominion
+    sector: Industrials
+  - ticker: OTIS
+    name: Otis Worldwide
+    sector: Industrials
+  - ticker: PAYX
+    name: Paychex
+    sector: Industrials
+  - ticker: PCAR
+    name: Paccar
+    sector: Industrials
+  - ticker: PH
+    name: Parker Hannifin
+    sector: Industrials
+  - ticker: PNR
+    name: Pentair
+    sector: Industrials
+  - ticker: PWR
+    name: Quanta Services
+    sector: Industrials
+  - ticker: ROK
+    name: Rockwell Automation
+    sector: Industrials
+  - ticker: ROL
+    name: Rollins, Inc.
+    sector: Industrials
+  - ticker: RSG
+    name: Republic Services
+    sector: Industrials
+  - ticker: SNA
+    name: Snap-on
+    sector: Industrials
+  - ticker: SWK
+    name: Stanley Black & Decker
+    sector: Industrials
+  - ticker: TDG
+    name: TransDigm Group
+    sector: Industrials
+  - ticker: TT
+    name: Trane Technologies
+    sector: Industrials
+  - ticker: TXT
+    name: Textron
+    sector: Industrials
+  - ticker: UAL
+    name: United Airlines Holdings
+    sector: Industrials
+  - ticker: UBER
+    name: Uber
+    sector: Industrials
+  - ticker: UPS
+    name: United Parcel Service
+    sector: Industrials
+  - ticker: URI
+    name: United Rentals
+    sector: Industrials
+  - ticker: VLTO
+    name: Veralto
+    sector: Industrials
+  - ticker: VRSK
+    name: Verisk Analytics
+    sector: Industrials
+  - ticker: VRT
+    name: Vertiv
+    sector: Industrials
+  - ticker: WAB
+    name: Wabtec
+    sector: Industrials
+  - ticker: WM
+    name: Waste Management
+    sector: Industrials
+  - ticker: XYL
+    name: Xylem Inc.
+    sector: Industrials
+  # --- Real Estate ---
+  - ticker: ARE
+    name: Alexandria Real Estate Equities
+    sector: Real Estate
+  - ticker: BXP
+    name: BXP, Inc.
+    sector: Real Estate
+  - ticker: CBRE
+    name: CBRE Group
+    sector: Real Estate
+  - ticker: CCI
+    name: Crown Castle
+    sector: Real Estate
+  - ticker: CPT
+    name: Camden Property Trust
+    sector: Real Estate
+  - ticker: CSGP
+    name: CoStar Group
+    sector: Real Estate
+  - ticker: DOC
+    name: Healthpeak Properties
+    sector: Real Estate
+  - ticker: ESS
+    name: Essex Property Trust
+    sector: Real Estate
+  - ticker: EXR
+    name: Extra Space Storage
+    sector: Real Estate
+  - ticker: FRT
+    name: Federal Realty Investment Trust
+    sector: Real Estate
+  - ticker: HST
+    name: Host Hotels & Resorts
+    sector: Real Estate
+  - ticker: INVH
+    name: Invitation Homes
+    sector: Real Estate
+  - ticker: IRM
+    name: Iron Mountain
+    sector: Real Estate
+  - ticker: KIM
+    name: Kimco Realty
+    sector: Real Estate
+  - ticker: MAA
+    name: Mid-America Apartment Communities
+    sector: Real Estate
+  - ticker: REG
+    name: Regency Centers
+    sector: Real Estate
+  - ticker: SBAC
+    name: SBA Communications
+    sector: Real Estate
+  - ticker: UDR
+    name: UDR, Inc.
+    sector: Real Estate
+  - ticker: VICI
+    name: Vici Properties
+    sector: Real Estate
+  - ticker: VMRK
+    name: Vivmark Residential
+    sector: Real Estate
+  - ticker: VTR
+    name: Ventas
+    sector: Real Estate
+  - ticker: WY
+    name: Weyerhaeuser
+    sector: Real Estate
+  # --- Technology ---
+  - ticker: ACN
+    name: Accenture
+    sector: Technology
+  - ticker: ADBE
+    name: Adobe Inc.
+    sector: Technology
+  - ticker: ADI
+    name: Analog Devices
+    sector: Technology
+  - ticker: ADSK
+    name: Autodesk
+    sector: Technology
+  - ticker: AKAM
+    name: Akamai Technologies
+    sector: Technology
+  - ticker: AMAT
+    name: Applied Materials
+    sector: Technology
+  - ticker: AMD
+    name: Advanced Micro Devices
+    sector: Technology
+  - ticker: ANET
+    name: Arista Networks
+    sector: Technology
+  - ticker: APH
+    name: Amphenol
+    sector: Technology
+  - ticker: CDNS
+    name: Cadence Design Systems
+    sector: Technology
+  - ticker: CDW
+    name: CDW Corporation
+    sector: Technology
+  - ticker: CIEN
+    name: Ciena
+    sector: Technology
+  - ticker: COHR
+    name: Coherent Corp.
+    sector: Technology
+  - ticker: CRWD
+    name: CrowdStrike
+    sector: Technology
+  - ticker: CSCO
+    name: Cisco
+    sector: Technology
+  - ticker: CTSH
+    name: Cognizant
+    sector: Technology
+  - ticker: DDOG
+    name: Datadog
+    sector: Technology
+  - ticker: DELL
+    name: Dell Technologies
+    sector: Technology
+  - ticker: FFIV
+    name: F5, Inc.
+    sector: Technology
+  - ticker: FICO
+    name: Fair Isaac
+    sector: Technology
+  - ticker: FLEX
+    name: Flex Ltd.
+    sector: Technology
+  - ticker: FSLR
+    name: First Solar
+    sector: Technology
+  - ticker: FTNT
+    name: Fortinet
+    sector: Technology
+  - ticker: GDDY
+    name: GoDaddy
+    sector: Technology
+  - ticker: GEN
+    name: Gen Digital
+    sector: Technology
+  - ticker: GLW
+    name: Corning Inc.
+    sector: Technology
+  - ticker: HPE
+    name: Hewlett Packard Enterprise
+    sector: Technology
+  - ticker: HPQ
+    name: HP Inc.
+    sector: Technology
+  - ticker: IBM
+    name: IBM
+    sector: Technology
+  - ticker: INTC
+    name: Intel
+    sector: Technology
+  - ticker: INTU
+    name: Intuit
+    sector: Technology
+  - ticker: IT
+    name: Gartner
+    sector: Technology
+  - ticker: JBL
+    name: Jabil
+    sector: Technology
+  - ticker: KEYS
+    name: Keysight Technologies
+    sector: Technology
+  - ticker: KLAC
+    name: KLA Corporation
+    sector: Technology
+  - ticker: LITE
+    name: Lumentum
+    sector: Technology
+  - ticker: LRCX
+    name: Lam Research
+    sector: Technology
+  - ticker: MCHP
+    name: Microchip Technology
+    sector: Technology
+  - ticker: MPWR
+    name: Monolithic Power Systems
+    sector: Technology
+  - ticker: MRVL
+    name: Marvell Technology
+    sector: Technology
+  - ticker: MSI
+    name: Motorola Solutions
+    sector: Technology
+  - ticker: MU
+    name: Micron Technology
+    sector: Technology
+  - ticker: NOW
+    name: ServiceNow
+    sector: Technology
+  - ticker: NTAP
+    name: NetApp
+    sector: Technology
+  - ticker: NXPI
+    name: NXP Semiconductors
+    sector: Technology
+  - ticker: "ON"
+    name: ON Semiconductor
+    sector: Technology
+  - ticker: P
+    name: Everpure
+    sector: Technology
+  - ticker: PANW
+    name: Palo Alto Networks
+    sector: Technology
+  - ticker: PLTR
+    name: Palantir Technologies
+    sector: Technology
+  - ticker: PTC
+    name: PTC Inc.
+    sector: Technology
+  - ticker: Q
+    name: Qnity Electronics
+    sector: Technology
+  - ticker: QCOM
+    name: Qualcomm
+    sector: Technology
+  - ticker: ROP
+    name: Roper Technologies
+    sector: Technology
+  - ticker: SMCI
+    name: Supermicro
+    sector: Technology
+  - ticker: SNDK
+    name: Sandisk
+    sector: Technology
+  - ticker: SNPS
+    name: Synopsys
+    sector: Technology
+  - ticker: STX
+    name: Seagate Technology
+    sector: Technology
+  - ticker: SWKS
+    name: Skyworks Solutions
+    sector: Technology
+  - ticker: TDY
+    name: Teledyne Technologies
+    sector: Technology
+  - ticker: TEL
+    name: TE Connectivity
+    sector: Technology
+  - ticker: TER
+    name: Teradyne
+    sector: Technology
+  - ticker: TRMB
+    name: Trimble Inc.
+    sector: Technology
+  - ticker: TXN
+    name: Texas Instruments
+    sector: Technology
+  - ticker: TYL
+    name: Tyler Technologies
+    sector: Technology
+  - ticker: VRSN
+    name: Verisign
+    sector: Technology
+  - ticker: WDAY
+    name: Workday, Inc.
+    sector: Technology
+  - ticker: WDC
+    name: Western Digital
+    sector: Technology
+  - ticker: ZBRA
+    name: Zebra Technologies
+    sector: Technology
+  # --- Utilities ---
+  - ticker: AEE
+    name: Ameren
+    sector: Utilities
+  - ticker: AES
+    name: AES Corporation
+    sector: Utilities
+  - ticker: ATO
+    name: Atmos Energy
+    sector: Utilities
+  - ticker: AWK
+    name: American Water Works
+    sector: Utilities
+  - ticker: CMS
+    name: CMS Energy
+    sector: Utilities
+  - ticker: CNP
+    name: CenterPoint Energy
+    sector: Utilities
+  - ticker: D
+    name: Dominion Energy
+    sector: Utilities
+  - ticker: DTE
+    name: DTE Energy
+    sector: Utilities
+  - ticker: EIX
+    name: Edison International
+    sector: Utilities
+  - ticker: ES
+    name: Eversource Energy
+    sector: Utilities
+  - ticker: ETR
+    name: Entergy
+    sector: Utilities
+  - ticker: EVRG
+    name: Evergy
+    sector: Utilities
+  - ticker: EXC
+    name: Exelon
+    sector: Utilities
+  - ticker: FE
+    name: FirstEnergy
+    sector: Utilities
+  - ticker: LNT
+    name: Alliant Energy
+    sector: Utilities
+  - ticker: NI
+    name: NiSource
+    sector: Utilities
+  - ticker: NRG
+    name: NRG Energy
+    sector: Utilities
+  - ticker: PCG
+    name: PG&E Corporation
+    sector: Utilities
+  - ticker: PEG
+    name: Public Service Enterprise Group
+    sector: Utilities
+  - ticker: PNW
+    name: Pinnacle West Capital
+    sector: Utilities
+  - ticker: PPL
+    name: PPL Corporation
+    sector: Utilities
+  - ticker: VST
+    name: Vistra Corp.
+    sector: Utilities
+  - ticker: WEC
+    name: WEC Energy Group
+    sector: Utilities
