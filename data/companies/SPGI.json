@@ -87,15 +87,14 @@
     }
   },
   "industry": "Financial - Data & Stock Exchanges",
-  "last_updated": "2026-09-23T02:23:52Z",
+  "last_updated": "2026-09-23T02:44:28Z",
   "layered_analysis": {
     "flags": [
-      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -134,22 +133,7 @@
     "as_of": "2026-09-22",
     "close": 402.44
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "S&P Global operates five segments (Market Intelligence, Ratings, Energy, Mobility, and Indices) providing benchmarks, data, analytics and workflow tools to capital, energy/commodity, and automotive markets, with roughly 44,500 employees worldwide as of December 31, 2025. The filing notes the completed May 2023 sale of the Engineering Solutions business and a April 2025 board decision to pursue a full spin-off of the Mobility segment into a separate public company, expected mid-2026. Risk factors emphasize cybersecurity threats, competitive pressure from free/low-cost data sources, and risks tied to AI adoption and technology transformation, including cloud migration.",
-    "filing_summary_10q": "This Form 10-Q covers the quarter and six months ended June 30, 2026. The filing's disclosures reference the Mobility segment being classified within a disposal group related to the previously announced spin-off, along with divestitures of businesses such as Fincentric, Centennial, and Enterprise Data Management/ThinkFolio, and the OSTTRA joint venture. It also details debt activity, including redemption of 4.00% notes due March 2026, issuance of new senior notes (5.05% due 2029, 5.45% due 2031, and 6.05% due 2036) in May 2026, and an existing five-year revolving credit facility expiring December 2029, along with various interest rate and foreign exchange hedging arrangements.",
-    "filing_summary_8k": "This Form 8-K, dated July 28, 2026, discloses that S&P Global issued an earnings release covering results of operations and financial condition for the second quarter ended June 30, 2026, along with certain 2026 guidance, furnished as Exhibit 99.1. It also references unaudited pro forma condensed consolidated financial statements (Exhibit 99.2) covering periods through March 31, 2026 and the years 2023-2025, incorporated by reference from a prior Form 8-K/A. The information was furnished under Items 2.02 and 7.01 and is not deemed 'filed' under the Exchange Act.",
-    "moat_explanation": "The 10-K describes Ratings as having 'played a leading role for over 150 years' with a 'well-established position in corporate markets and strong investor reputation,' and characterizes the company overall as a 'highly differentiated provider of benchmarks, data, analytics and workflow solutions.' This reflects durable brand strength and reputational/regulatory positioning built over decades rather than a cost or scale advantage described in the excerpts.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Company acknowledges 'increased availability of free or relatively inexpensive information sources' could materially reduce demand for its products",
-      "Extensive cybersecurity risk disclosure, including exposure to state-sponsored attacks and reliance on third-party vendors/data partners",
-      "Company states inability to innovate or keep pace with competitors' new/enhanced products could have a material adverse effect on the business",
-      "AI is described as introducing new and evolving risks that could adversely affect the business if the company's approach is unsuccessful",
-      "Board announced (April 2025) a planned full separation/spin-off of the Mobility segment, creating structural and execution uncertainty"
-    ]
-  },
+  "qualitative": null,
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000064040.json",

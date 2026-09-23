@@ -87,16 +87,15 @@
     }
   },
   "industry": "Oil & Gas Equipment & Services",
-  "last_updated": "2026-09-23T02:27:31Z",
+  "last_updated": "2026-09-23T02:42:37Z",
   "layered_analysis": {
     "flags": [
       "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -135,23 +134,7 @@
     "as_of": "2026-09-22",
     "close": 52.12
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, SLB reported global revenue of $35.7 billion, down 2% year on year, with international revenue declining 5% (due to lower activity in Saudi Arabia, Mexico and Sub-Saharan Africa) partly offset by 12% North America growth driven by the ChampionX acquisition. The company completed the $4.9 billion all-stock acquisition of ChampionX in Q3 2025, generated $6.5 billion of operating cash flow and $4.1 billion of free cash flow, and returned $4.0 billion to shareholders via dividends and buybacks. The filing also details various 2025 charges (workforce reductions, merger/integration costs, a $210 million goodwill impairment, and equity-method investment impairments) and notes continued growth in Digital and Data Center Solutions businesses.",
-    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL data tags (segment, debt instrument, and equity identifiers) covering periods including the quarter and six months ended June 30, 2026, referencing segments such as Well Construction, Reservoir Performance, Production Systems and Digital & Integration, as well as the ChampionX acquisition and various outstanding senior notes. No narrative discussion of financial results, business developments, or risks was included in the excerpt, so a substantive summary of the quarter's results cannot be provided from this text alone.",
-    "filing_summary_8k": "This Form 8-K, dated August 31, 2026, discloses that SLB has signed an agreement to acquire Kelvion, a global provider of thermal management and heat exchange technologies, from Apollo-managed funds (the majority owner) and funds advised by Triton (a minority holder). The transaction is valued at approximately $3.4 billion in cash, with SLB also assuming approximately $0.7 billion of Kelvion's debt. The filing includes a related press release as an exhibit and standard forward-looking-statement cautionary language regarding the pending transaction.",
-    "moat_explanation": "The 10-K describes premium, proprietary technologies (e.g., higher uptake of 'premium technologies' improving evaluation/intervention margins, the Lumi data and AI platform, Performance Live remote-operations centers, and achievement of fully autonomous drilling) that support pricing power and margin expansion, alongside sustained R&D spending (~2% of revenue). This points to a technology/intangible-asset-based edge rather than clear evidence of network effects or switching costs in the excerpts provided.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Full-year 2025 revenue declined 2% with organic (ex-ChampionX) revenue down 6%, driven by activity declines in Saudi Arabia, Mexico and offshore Sub-Saharan Africa",
-      "Company recorded a $210 million goodwill impairment in Q4 2025 and multiple equity-method investment impairments ($69M and $52M) during the year",
-      "Recurring workforce reduction and merger/integration charges across every quarter of 2025, totaling over $1.1 billion in pretax charges and credits for the year",
-      "A significant loss on one particular project in the SLB Capturi carbon-capture business dragged down 'All Other' segment profitability",
-      "Business exposed to volatile commodity prices, geopolitical uncertainty and an oversupplied oil market per management's own characterization of 2025",
-      "Operational disruption examples cited, including a pipeline disruption in Ecuador that interrupted APS revenue and the divestiture of the Palliser APS project reducing revenue"
-    ]
-  },
+  "qualitative": null,
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000087347.json",

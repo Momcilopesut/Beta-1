@@ -87,15 +87,14 @@
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-23T02:28:47Z",
+  "last_updated": "2026-09-23T02:42:51Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -134,23 +133,7 @@
     "as_of": "2026-09-22",
     "close": 328.35
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, Sherwin-Williams reported consolidated net sales of $23.574 billion, up 2.1% from 2024, driven mainly by higher sales in the Paint Stores and Consumer Brands Groups, including a contribution from the October 2025 Suvinil acquisition. Diluted EPS decreased 2.7% to $10.26 due in part to acquisition-related amortization, restructuring costs, and a trademark impairment, while adjusted diluted EPS rose slightly. The company generated $3.452 billion in operating cash flow, invested about $1.15 billion in the Suvinil acquisition and $797.6 million in capital expenditures, and returned $2.446 billion to shareholders via dividends and buybacks, while noting continued 'softer-for-longer' demand expectations for 2026.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the six months ended June 30, 2026) consists only of XBRL taxonomy tags rather than narrative text, so specific financial results cannot be summarized from it. The tagged data references items such as the October 2025 Suvinil acquisition, a 2025 European coil and industrial coatings acquisition, a mid-2026 paint manufacturing business transaction, repayment of 3.95% senior notes due 2026, ongoing litigation matters (including cases referred to as Owens/Sifuentes/Burton, Gibson v. American Cyanamid, and Beal v. Mitchell), and an accelerated share repurchase agreement, but the underlying narrative descriptions of these items were not included in the excerpt.",
-    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses under Item 2.02 that Sherwin-Williams issued a press release announcing its financial results for the second quarter ended June 30, 2026, furnished as Exhibit 99.1. The filing itself does not include the specific financial figures, which are contained only in the referenced press release exhibit.",
-    "moat_explanation": "The 10-K states that customer recognition of Sherwin-Williams' trademarks and trade names (Sherwin-Williams, Valspar, Krylon, Minwax, Dutch Boy, etc.) 'collectively contribute significantly to our sales,' and the company operates an extensive proprietary store network (4,853 Paint Stores Group locations plus hundreds more in other segments) that reinforces brand presence and distribution reach. However, the Risk Factors and Business sections also describe intense competition from numerous local, regional, national and international rivals across all three segments based on price, technical expertise and product breadth, indicating the brand/scale advantage is real but not unassailable.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Company describes numerous competitors of various sizes across all three segments with competition based partly on price, suggesting limited pricing power in commoditized product lines",
-      "Significant customer concentration acknowledged in Consumer Brands Group and Performance Coatings Group ('sales to certain customers that, individually, may be a significant portion of the sales')",
-      "Heavy reliance on petrochemical-derived raw materials (resins, latex, solvents, titanium dioxide) with company-acknowledged exposure to shortages, tariffs, and price volatility",
-      "Cyclical exposure to construction, housing and industrial end markets, with company noting a 'softer-for-longer demand environment' expected to continue into 2026",
-      "2025 income before taxes declined despite higher sales, with Consumer Brands and Performance Coatings segment profits down, and a trademark impairment of $17.8 million recorded due to restructuring",
-      "High leverage, with total debt of $10.871 billion and net debt at 2.4x EBITDA, plus a negative net working capital position of $912.9 million at year-end 2025"
-    ]
-  },
+  "qualitative": null,
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000089800.json",

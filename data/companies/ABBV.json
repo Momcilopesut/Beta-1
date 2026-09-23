@@ -87,14 +87,12 @@
     }
   },
   "industry": "Drug Manufacturers - General",
-  "last_updated": "2026-09-23T02:27:46Z",
+  "last_updated": "2026-09-23T02:44:14Z",
   "layered_analysis": {
-    "flags": [
-      "5 red flag(s) from the filing text - see qualitative.red_flags."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": true,
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -132,22 +130,7 @@
     "as_of": "2026-09-22",
     "close": 265.32
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "AbbVie's 2025 Form 10-K describes a diversified biopharmaceutical portfolio spanning immunology, neuroscience, oncology, and aesthetics, with 2025 worldwide net revenues of $61.2 billion (up 9%), operating earnings of $15.1 billion, and diluted EPS of $2.36. Growth was driven primarily by Skyrizi (+50%) and Rinvoq (+39%), which offset a 49% decline in Humira revenue from biosimilar competition. The filing also discusses IRA-driven Medicare price-setting affecting several products, a September 2025 patent litigation settlement extending Rinvoq exclusivity to 2037, and continued investment in R&D and U.S. manufacturing capacity.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended June 30, 2026) consists only of XBRL taxonomy tags, entity identifiers, and context references rather than narrative or financial statement text. As a result, the excerpt does not contain descriptive information about the quarter's business developments or financial results that can be summarized.",
-    "filing_summary_8k": "This 8-K, dated September 3, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that AbbVie issued a press release announcing the completion of its acquisition of Apogee Therapeutics, Inc. The filing includes forward-looking cautionary language regarding integration risks, the acquired pipeline assets (including zumilokibart/APG777 and APG273), and potential impacts on AbbVie's adjusted diluted EPS guidance, but provides no additional financial detail in the excerpt itself.",
-    "moat_explanation": "AbbVie's business is built on patent-protected biologics and small molecules (Skyrizi, Rinvoq, Humira, etc.) and it describes extensive intellectual property protection and regulatory exclusivity as central to product profitability, including a 2025 litigation settlement pushing Rinvoq generic entry out to 2037. However, the excerpts also show this moat is time-limited and erodes sharply upon patent expiration, as illustrated by Humira's 49% revenue decline in 2025 following biosimilar entry after loss of exclusivity.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Skyrizi and Rinvoq together accounted for approximately 42% of total net revenues in 2025, creating significant product concentration risk",
-      "Humira net revenues fell 49% in 2025 due to continued biosimilar competition following loss of exclusivity, demonstrating rapid revenue erosion once patent protection ends",
-      "Under the Inflation Reduction Act, multiple AbbVie products (Imbruvica, Vraylar, Linzess, and Botox) have been selected for government-set Medicare pricing beginning 2026-2028, which the company states could accelerate revenue erosion ahead of patent expiration",
-      "The 10-K acknowledges ongoing and potential future patent challenges (ANDA filings, inter partes review) that could weaken or invalidate AbbVie's intellectual property protections",
-      "The company explicitly states that a high rate of R&D failure is inherent to its industry and that promising pipeline products may fail to reach market or be commercially successful"
-    ]
-  },
+  "qualitative": null,
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001551152.json",

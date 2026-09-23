@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/7084/000000708426000011/adm-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/7084/000000708426000042/adm-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/7084/000119312526345800/d176752d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, ADM reported total revenues of $80.3 billion, down $5.3 billion from 2024, driven by lower sales volumes and prices across its Ag Services and Oilseeds and Carbohydrate Solutions segments, partially offset by growth in Nutrition. Earnings before income taxes fell 44% to $1.3 billion and total segment operating profit fell 23% to $3.2 billion, reflecting compressed margins from oversupply, trade-policy uncertainty, and logistical/weather challenges, along with impairment and restructuring charges. The filing also discusses equity earnings from affiliates including Wilmar, which included a one-time remeasurement gain and a penalty charge, and notes the effective tax rate declined to 14.5% from 21.1%.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter and six months ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, showing the company's segment structure (Ag Services and Oilseeds, Carbohydrate Solutions, Nutrition), fair value measurement categories for commodity, foreign exchange, and interest rate derivatives, and comparative period tagging against 2025. No descriptive discussion of quarterly results, drivers, or major developments was included in the excerpt provided.",
+    "filing_summary_8k": "This 8-K, dated August 6, 2026, discloses that ADM's Board of Directors accepted the resignation of director Lei Z. Schlitz, effective December 31, 2026, after she tendered her resignation due to a voluntary change in her principal employment. The filing states her departure was not the result of any disagreement with the company regarding its operations, policies, or practices, and she was asked to remain on the Board through year-end.",
+    "moat_explanation": "The Business section provided is boilerplate cross-references to the proxy statement and exhibit lists, containing no description of brand strength, patents, network effects, or switching costs. The MD&A/risk excerpts describe ADM as an agricultural commodity merchandising and processing company where revenues and costs move together with commodity prices, margins compress with supply/demand and trade-policy shifts, and results are affected by weather, logistics, and competition \u2014 this reads as a scale commodity-processing business rather than a business with a clearly durable competitive advantage as described in the excerpts.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Earnings before income taxes fell 44% ($1.0 billion) to $1.3 billion in 2025, driven by lower pricing and execution margins",
+      "Total segment operating profit fell 23% ($1.0 billion) to $3.2 billion, led by weakness in Ag Services and Oilseeds and Carbohydrate Solutions",
+      "2025 impairments included $372 million tied to alternative protein market investments, $283 million of restructuring/exit charges, and $179 million related to previously capitalized software",
+      "Company recorded a $163 million penalty charge related to its Wilmar equity investment, and previously recorded a $461 million Wilmar impairment in 2024",
+      "Margins and volumes were negatively affected by evolving U.S. biofuel and trade policy, EU deforestation regulation delays, tariffs, and the Russia-Ukraine conflict's impact on Black Sea operations",
+      "Reliance on expiring/uncertain government incentives (e.g., transition from Blenders' Tax Credit to the 45Z Clean Fuel Production Credit) introduces policy-dependent earnings volatility"
+    ]
+  }
+}

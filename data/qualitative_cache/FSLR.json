@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1274494/000127449426000021/fslr-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1274494/000127449426000170/fslr-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1274494/000127449426000169/fslr-20260730.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "First Solar's FY2025 10-K describes it as the largest thin-film PV module manufacturer, using proprietary CdTe technology manufactured in the U.S., Malaysia, Vietnam, and India, with a sixth U.S. facility under construction. Net sales rose 24% to $5.2 billion in 2025 versus $4.2 billion in 2024, while gross margin fell to 40.6% from 44.2% due to a more U.S.-weighted product mix, tariffs, and logistics costs, partly offset by Section 45X manufacturing credits. The filing also discloses termination of supply agreements with a major customer (BP Solar/Lightsource) triggering $384.6 million in termination payment claims and related litigation filed in September 2025, alongside extensive discussion of tariff, trade-policy, and tax-incentive uncertainty affecting the business.",
+    "filing_summary_10q": "The excerpt for First Solar's most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, so detailed discussion of quarterly results is not available in the provided excerpt. Visible disclosures reference balance sheet and financing items (including a revolving credit facility amended in February 2026 and various India-based working capital facilities), warranty obligation ranges, hedging activity, stock-based compensation, and references to legal contingencies including a 'Series 7 Modules Manufacturing Issue' and a workplace injury matter. The excerpt does not include the filing's MD&A narrative on quarterly revenue, margins, or business developments.",
+    "filing_summary_8k": "This 8-K, dated July 30, 2026, discloses under Item 2.02 that First Solar issued a press release and held a conference call on that date regarding its financial results for the second quarter ended June 30, 2026. The press release is furnished as Exhibit 99.1; the 8-K itself does not include the underlying financial results text, and the information is explicitly stated as furnished rather than filed.",
+    "moat_explanation": "First Solar describes proprietary, patented CdTe thin-film module technology developed through more than $2 billion in cumulative R&D, including two independently certified world records for CdTe cell efficiency, a vertically integrated continuous manufacturing process, and industry-leading power-output warranties (up to 30 years) that it explicitly calls a competitive advantage. The excerpts frame this technology and IP position, rather than network effects or switching costs, as the basis for its differentiation from crystalline-silicon competitors.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company states the solar industry faces structural oversupply, with competitors (often Chinese, state-backed) pricing near or below manufacturing cost, pressuring average selling prices globally",
+      "96% of 2025 net sales came from the United States, indicating heavy geographic concentration and dependence on U.S. policy (IRA/OBBBA) and tariff conditions",
+      "Business is materially exposed to shifting U.S. trade policy (IEEPA/Section 122/Section 232 tariffs) and to changes or curtailment of tax credits (45X, ITC, PTC) under the 2025 'One Big Beautiful Bill,' which the company says could adversely affect results",
+      "Key raw materials, particularly CdTe, tellurium, and substrate glass, are single-sourced or sourced from a limited supplier base, and China has tightened export controls on tellurium and rare earths used in production",
+      "During 2025 the company terminated master supply agreements with a customer (BP Solar/Lightsource) after alleged contract breaches and is now in litigation seeking unpaid termination payments and receivables, indicating customer concentration and counterparty performance risk",
+      "Gross margin declined 3.6 percentage points year-over-year in 2025 due to higher costs from U.S.-weighted production mix, tariffs/duties, and logistics, which the company attributes partly to policy-driven cost pressure"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1841666/000184166626000015/apa-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1841666/000184166626000053/apa-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1841666/000184166626000050/apa8k-20260805.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "APA Corporation's 10-K describes an independent E&P company operating in the U.S. (Permian Basin), Egypt, and the North Sea, with exploration activity in Suriname, Uruguay, and Alaska. For 2025, the company reported net income of $1.4 billion (versus $804 million in 2024, a year that included $1.1 billion of impairments), $4.5 billion of operating cash flow, and lower oil and NGL prices offset partly by higher natural gas prices and volumes. The filing discusses a cost-reduction program ($350 million in annualized savings achieved, targeting $450 million by end-2026), continued share repurchases and dividends, portfolio activity including sales of non-core Permian assets and new Egypt exploration acreage, and a new Egypt gas sales agreement effective 2025.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists only of XBRL taxonomy tags and context data (covering the quarter and six months ended June 30, 2026) rather than narrative text, so a substantive description of period results is not supported. Visible tags reference debt activity including repayment/redemption of notes due 2026 and issuance of notes due 2030, credit agreements and commercial paper balances, ongoing litigation matters (including an Australian operations divestiture dispute and a Delaware litigation matter), and continued oil, natural gas, and NGL segment reporting for the U.S., Egypt, and North Sea. The provided excerpts don't describe specific quarterly financial results or business developments in narrative form.",
+    "filing_summary_8k": "This 8-K, dated August 5, 2026, reports under Item 2.02 that APA Corporation issued a press release announcing its financial and operating results for the fiscal quarter ended June 30, 2026, furnished as Exhibit 99.1. The filing does not itself contain the substantive results, only the disclosure that the press release was issued and furnished.",
+    "moat_explanation": "The excerpts describe APA as a commodity oil, gas, and NGL producer whose revenues and margins depend heavily on volatile market-determined prices for crude oil, natural gas, and NGLs, factors largely outside the company's control (OPEC+ actions, pipeline capacity, weather, regulation). Nothing in the Business/Risk Factors/MD&A excerpts points to brand strength, patents, network effects, switching costs, or a durable cost advantage versus peers; the company competes as a price-taker in a cyclical, capital-intensive industry.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Heavy dependence on volatile, largely uncontrollable commodity prices, with 2025 oil and gas prices down 14% and 3% respectively versus 2024",
+      "Significant concentration risk in Egypt, where substantially all natural gas production is sold to a single buyer (EGPC) under a government-set pricing agreement",
+      "History of large non-cash impairments ($1.1 billion in 2024, including $796 million in the North Sea and $315 million in the U.S.) tied to commodity price and asset value declines",
+      "Frontier exploration exposure in Alaska, Suriname, and Uruguay involving heightened regulatory, permitting, litigation, and execution risk with uncertain commercial outcomes",
+      "Insurance coverage explicitly stated as inadequate to cover all operational, environmental, and political risks the company faces",
+      "Derivative/hedging activities that do not use hedge accounting, introducing earnings volatility even when exposures are economically hedged"
+    ]
+  }
+}

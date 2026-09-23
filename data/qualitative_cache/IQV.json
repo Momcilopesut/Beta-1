@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1478242/000162828026008322/iqv-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1478242/000162828026050211/iqv-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1478242/000119312526386633/d516985d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "IQVIA's FY2025 10-K describes a global provider of clinical research, commercial insights and healthcare intelligence with three segments (Technology & Analytics Solutions, Research & Development Solutions, Contract Sales & Medical Solutions). Total revenues grew 5.9% to $16,310 million in 2025, driven by 7.6% growth in Technology & Analytics Solutions and 4.3% growth in Research & Development Solutions, while segment profit for Research & Development Solutions declined 3.9%. The company generated $2,654 million in operating cash flow, spent $1,714 million (net of cash) on acquisitions, held $1,980 million in cash, and reported total indebtedness of $15,800 million as of December 31, 2025, along with an increase in R&D Solutions backlog to $32.7 billion.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the six months ended June 30, 2026) consists only of XBRL tagging metadata (entity identifiers, dates, segment and debt-instrument tags, hedging and fair-value tags) rather than narrative financial disclosures. It confirms the filing covers Q2 2026, references the Commercial Solutions and Research and Development Solutions segments, various senior notes and credit facility instruments, an equity repurchase program, and a series of individually immaterial business acquisitions, but does not provide descriptive text on quarterly results, so a substantive narrative summary cannot be derived from this excerpt.",
+    "filing_summary_8k": "This 8-K, dated September 9, 2026, discloses that IQVIA's subsidiary IQVIA Inc. priced an offering of $2,000,000,000 in senior notes due 2034 bearing interest at 6.375% per annum, with closing expected on or about September 23, 2026. Proceeds are intended to redeem in full the Issuer's 5.000% Senior Notes due 2026, repay a portion of outstanding revolving credit facility indebtedness, and pay related fees and expenses.",
+    "moat_explanation": "The 10-K describes one of the largest proprietary healthcare data assets in the industry (over 1.2 billion non-identified patient records, ~68 petabytes of data from ~150,000 suppliers, coverage of ~90% of world pharmaceutical sales), built over many years and integrated with analytics, tokenization technology and domain expertise that the filing says differentiates IQVIA's capabilities. This scale of proprietary, hard-to-replicate data and specialized regulatory/clinical expertise supports an intangible-assets moat, though the Risk Factors section also states the biopharmaceutical services industry is 'highly competitive,' tempering the strength of any moat claim.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Risk factors note most R&D Solutions client contracts can be terminated on 30-90 days' notice, and contract loss/delay is described as a regular occurrence in the business.",
+      "Company depends on third-party data suppliers who could restrict data use, raise prices, or refuse to license data, potentially materially harming operating results.",
+      "Risk factors explicitly flag potential adverse effects from client or therapeutic concentration and from client consolidation reducing purchased service volumes.",
+      "High leverage: $15,800 million of total indebtedness as of December 31, 2025, with credit agreement amendments and refinancings ongoing, and a subsequent 8-K disclosing a new $2 billion senior notes offering at 6.375% partly to refinance existing notes.",
+      "Restructuring costs increased to $105 million in 2025 from $67 million in 2024, described as ongoing efforts to reduce overcapacity amid changing market conditions.",
+      "Management itself describes 2025 as 'a year of industry uncertainty resulting from a variety of macroeconomic factors that together slowed customer decision-making,' with Research & Development Solutions segment profit declining 3.9% year-over-year."
+    ]
+  }
+}

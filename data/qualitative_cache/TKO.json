@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1973266/000119312526071651/tko-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1973266/000119312526330592/tko-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1973266/000119312526330561/tko-20260803.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K's MD&A covers fiscal year 2025 results for TKO, formed from UFC and WWE and expanded via the February 2025 Endeavor Asset Acquisition (IMG, On Location, PBR). Total revenue was $4,735.2 million, down 3% from 2024, driven by a 31% decline in the IMG segment (largely due to non-recurring 2024 Paris Olympics hospitality revenue) offset by growth in UFC (+7%) and WWE (+22%) revenue, the latter aided by new Netflix and ESPN media-rights agreements. Operating income rose sharply to $835.0 million from $30.9 million, partly because the prior year included a $375.0 million antitrust litigation settlement charge; net income attributable to TKO was $195.4 million versus $9.3 million in 2024.",
+    "filing_summary_10q": "The most recent 10-Q excerpt provided consists only of XBRL data tags (e.g., segment, share class, and debt facility identifiers) covering the quarter ended June 30, 2026, with no narrative text included. As a result, the excerpts do not describe specific revenue, expense, or business developments for the quarter beyond what can be inferred from tag names, such as references to segments (UFC, WWE, IMG, Corporate and Other), an accelerated share repurchase agreement, a 2031 First Lien Term Loan, and a new revolving credit facility.",
+    "filing_summary_8k": "This Form 8-K, dated August 3, 2026, discloses that TKO Group Holdings announced its financial results for the quarterly period ended June 30, 2026. It also states the company provided supplemental financial information for fiscal years 2023, 2024, and 2025 to retrospectively reflect the Professional Bull Riders, On Location, and IMG-brand acquisitions as a merger of entities under common control. The press release and supplemental historical financial information were furnished as exhibits but are not deemed 'filed' under the Exchange Act.",
+    "moat_explanation": "The MD&A describes TKO as a 'premium sports and entertainment company' built around long-established, widely recognized brands (UFC, WWE) that command lucrative new media-rights deals with Netflix and ESPN and generate high Adjusted EBITDA margins (57% for UFC, 52% for WWE), suggesting brand strength that is difficult for competitors to replicate. The Business and Risk Factors sections were not populated with substantive text in the excerpts provided, so this assessment relies solely on brand and margin evidence in the MD&A.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Prior year included a $375.0 million charge for legal settlement of a UFC antitrust lawsuit, indicating material litigation exposure",
+      "WWE recorded an impairment charge on assets held for sale in the prior year",
+      "IMG segment revenue fell 31% year-over-year, largely due to non-recurring Olympics-related hospitality revenue and loss of FA Cup media rights, showing reliance on non-recurring or lost contracts",
+      "Company has significant ongoing related-party cost and service arrangements with Endeavor Group Holdings (Services Agreement/Transition Services Agreement), creating potential conflicts or dependency",
+      "September 2025 debt refinancing increased term loan principal by $1.0 billion, raising leverage",
+      "Revenue and cost figures reflect complex acquisition accounting (common control acquisition of IMG/On Location/PBR) that may complicate comparability of historical results"
+    ]
+  }
+}

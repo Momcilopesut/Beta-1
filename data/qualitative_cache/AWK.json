@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1410636/000141063626000034/awk-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1410636/000141063626000120/awk-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1410636/000141063626000143/awk-20260915.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, American Water reported GAAP diluted EPS of $5.69 (up from $5.39 in 2024) and adjusted diluted EPS of $5.64, driven mainly by new rates from capital and acquisition investment, partly offset by higher production, employee, depreciation and financing costs. The company invested $3.2 billion in its Regulated Businesses in 2025 and plans $46-48 billion over the next decade. Major disclosed developments include a stock-for-stock merger agreement with Essential Utilities (announced October 26, 2025, expected to close by Q1 2027), a pending $315 million acquisition of Nexus Regulated Utilities assets, ongoing PFAS multi-district litigation with $159 million in settlement payments received, and numerous state general rate case outcomes across its 14-state footprint.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated September 15, 2026, discloses that American Water, Essential Utilities and certain affiliates filed a joint petition for a non-unanimous settlement with the Pennsylvania Public Utility Commission regarding approval of the previously announced merger between the two companies. The settlement was reached with several parties to the proceeding, including the Bureau of Investigation and Enforcement and consumer/small business advocates, though one or more parties did not join. The filing states the settlement will next be reviewed by administrative law judges, who will issue a recommended decision, before final PaPUC review and approval.",
+    "moat_explanation": "AWK operates as a regulated water/wastewater utility holding company whose subsidiaries hold exclusive service territories authorized by state PUCs, with rates, financing and acquisitions all subject to regulatory approval \u2014 a structure that limits the number of competitors that can efficiently serve a given territory. The company's ability to earn returns depends on PUC-authorized rate bases and returns on equity rather than open market competition, consistent with an efficient-scale/regulated-monopoly moat rather than brand, network effects, or switching costs as described in the excerpts.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Regulatory lag risk explicitly acknowledged: rate cases may not be approved timely or in sufficient amounts to recover costs or earn authorized returns",
+      "Significant ongoing PFAS-related litigation (MDL) and estimated ~$2 billion in capital expenditures plus ~$50 million/year in operating costs to comply with new PFAS drinking water standards",
+      "Large planned capital investment ($46-48 billion over 10 years) funded partly through additional debt and equity, with risks around financing costs and interest rate increases noted",
+      "Pending merger with Essential Utilities carries closing-condition, regulatory-approval, integration, and potential termination-fee risks, plus ~$150 million in estimated merger-related costs",
+      "California water supply constrained by historical multi-year droughts and regulatory disputes (e.g., Carmel River diversion litigation, CART calculation dispute) requiring costly alternative supply projects",
+      "Aging infrastructure requiring increased capital and O&M spending, with risk of service disruptions and property damage if not addressed"
+    ]
+  }
+}

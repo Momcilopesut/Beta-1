@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/abnb-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1559720/000155972026000027/abnb-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1559720/000119312526337928/d70413d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Airbnb's 2025 10-K describes a global marketplace connecting hosts and guests for stays, experiences, and services in over 220 countries, with continued expansion into services and redesigned experiences launched in May 2025. Revenue grew 10% to $12.2 billion in 2025, driven by increased Nights and Seats Booked and modestly higher average daily rates, while net income declined 5% to $2.5 billion due to higher compensation and marketing expense and lower interest income. The company generated $4.6 billion in free cash flow and repurchased $3.8 billion of Class A shares during the year, and it discusses risks including regulatory restrictions on short-term rentals, brand/trust and safety concerns, and international expansion challenges.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists primarily of XBRL tagging data and the cover page identifying it as Airbnb's Form 10-Q for the quarterly period ended June 30, 2026 (fiscal Q2 2026). It does not include the narrative Management's Discussion and Analysis or financial statement text, so specific results or developments for the quarter cannot be summarized from what was provided.",
+    "filing_summary_8k": "This 8-K, dated August 6, 2026, discloses under Item 2.02 that Airbnb issued a Shareholder Letter announcing financial results for the second quarter ended June 30, 2026, and that it held an associated conference call the same day. The letter, furnished as Exhibit 99.1, includes non-GAAP financial measures reconciled to GAAP equivalents, but the 8-K itself does not state the specific results within the excerpt provided.",
+    "moat_explanation": "The 10-K describes Airbnb as operating a global two-sided marketplace with over 5 million hosts and 2.5 billion cumulative guest arrivals across 220+ countries, where growth in host supply and guest demand reinforce each other. The filing also notes that brand strength allows lower reliance on paid marketing, suggesting some intangible-asset support, but the dominant, most explicitly described dynamic is the scale of the host-guest marketplace itself.",
+    "moat_present": true,
+    "moat_type": "network_effects",
+    "red_flags": [
+      "Regulatory risk explicitly acknowledged: New York City passed regulations resulting in a de facto ban on short-term rentals, and other cities have passed similar restrictions.",
+      "Ongoing civil litigation and regulatory investigations related to allegations of unsafe listings, discriminatory practices, and other third-party misconduct.",
+      "Company states it does not independently verify safety, compliance, or quality of most listings, relying on user reports, which it acknowledges may be incomplete or inaccurate.",
+      "Net income declined 5% in 2025 despite 10% revenue growth, driven by higher compensation and marketing expense and lower interest income, indicating margin pressure.",
+      "Heavy reliance on third-party workers (~13,000) for the majority of community support, described as a service-quality and cost risk.",
+      "Recognition of a $213 million valuation allowance against CAMT credit deferred tax assets following recent tax law changes, adding tax-related uncertainty."
+    ]
+  }
+}

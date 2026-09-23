@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1474735/000143774926004568/gnrc20251231_10k.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1474735/000143774926025669/gnrc20260630_10q.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1474735/000143774926030550/gnrc20260915_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Generac reported net sales of $4.209 billion, down 2.0% from $4.295 billion in 2024, with gross margin slipping to 38.3% from 38.8%. Net income attributable to the company fell about 49.6% to $159.6 million, driven by lower residential product sales amid reduced power outage activity, higher input costs, and a rise in operating expenses that included $142.3 million of legal provisions and settlement-related costs (versus $10.5 million in 2024). The filing also describes a July 2025 amendment extending and repricing its Term Loan A and revolving credit facilities, and notes impacts from newly enacted U.S. tariffs and the One Big Beautiful Bill Act on the solar/storage market and tax provisions.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL tag data and footnote references rather than narrative discussion, so specific financial results cannot be summarized from what was given. It references segment reporting for Residential and Commercial & Industrial businesses, a 2026 acquisition (Chilicon) and prior Enercon acquisition, several immaterial business dispositions in early-to-mid 2026, a Saudi Arabia joint venture entity, and references to ongoing patent lawsuits, class action lawsuits, and government inquiries as legal matters affecting the period.",
+    "filing_summary_8k": "This 8-K, dated September 16, 2026, discloses that Generac and Amazon.com, Inc. entered into a Transaction Agreement under which Generac issued Amazon's subsidiary a warrant to acquire up to 1,693,745 shares of common stock at an exercise price of about $200.93 per share, with 307,954 shares vesting immediately and the remainder vesting based on payments (up to $8 billion) Generac receives from Amazon for backup power generators for Amazon data centers. The companies simultaneously executed a long-term supply agreement, with initial generator deliveries expected to total $2.4 billion in 2027 and 2028, and the filing notes registration rights granted for the warrant shares.",
+    "moat_explanation": "The excerpts describe Generac relying on patents, trademarks, and a 'strong brand reputation' that it believes underpins market share and pricing, plus some proprietary supplier relationships and in-house engine/alternator design where it claims a 'design and cost advantage.' However, the Risk Factors section also notes the company has been subject to third-party patent infringement claims and adverse rulings/settlements, indicating its IP protection is imperfect and contested rather than an unassailable barrier.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Demand for the majority of products is described as significantly affected by unpredictable power outage activity, causing substantial period-to-period variability and past periods of excess inventory",
+      "2025 operating expenses included $142.3 million of legal provisions, settlements, patent-related costs and other litigation costs, up sharply from $10.5 million in 2024",
+      "Company disclosed it settled at least one product liability case for an amount exceeding its insurance coverage",
+      "Reliance on a small number of outside manufacturers and single-source suppliers for certain components, with acknowledged past delivery impairments",
+      "Gross profit margin declined (38.3% vs 38.8%) and Domestic segment Adjusted EBITDA margin fell from 19.1% to 17.1%, attributed to input costs, unfavorable mix, and an inventory provision",
+      "Exposure to tariffs and commodity (steel, copper, aluminum) price volatility that the company states has created inflationary pressure negatively impacting consumer demand and margins"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049213/tsla-20260722.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes Tesla's two segments (automotive; energy generation and storage) and its strategic pivot toward AI-enabled products such as FSD (Supervised), the Robotaxi service launched in June 2025, and the Optimus robot, alongside its existing vehicle and energy storage lines. For fiscal 2025, the company reported total revenue of $94.83 billion (down $2.86 billion year-over-year) and net income attributable to common stockholders of $3.79 billion (down $3.30 billion), while ending the year with $44.06 billion in cash and investments. Management highlights ongoing investments in manufacturing capacity, battery cell development, and AI compute infrastructure, alongside risks from tariffs, trade policy, and the phase-out of EV tax credits under the OBBBA.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated July 22, 2026, discloses under Item 2.02 that Tesla released its financial results for the quarter ended June 30, 2026 via a Second Quarter 2026 Update posted on its website, which is furnished as Exhibit 99.1. The filing does not itself contain the detailed financial results, and the information is furnished rather than filed under the Exchange Act.",
+    "moat_explanation": "The 10-K repeatedly cites the Tesla brand, proprietary AI/FSD software, and in-house battery/powertrain technology as differentiators ('our capabilities and advancements in AI differentiate us from our competitors'), plus a vertically integrated direct-sales and service model that competitors haven't replicated. These are brand and proprietary-technology advantages rather than a clearly quantified cost or network-effect edge, though vertical integration and the growing Supercharger/NACS network are noted as complementary strengths.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "2025 revenue declined $2.86B and net income attributable to common stockholders declined $3.30B year-over-year",
+      "Heavy reliance on a very limited number of qualified battery cell suppliers (Panasonic, CATL) with limited ability to switch suppliers",
+      "2025 U.S. tariff changes and retaliatory measures have already impacted supply chain costs, with energy storage business seen as more exposed than automotive",
+      "Removal of EV tax credits under OBBBA may reduce future consumer demand for electric vehicles",
+      "Company acknowledges history of launch and production ramp delays for new products, including Robotaxi/Cybercab and Optimus, with no guarantee of successful scaling",
+      "Automotive sales are described as cyclical, exposing the business to demand volatility"
+    ]
+  }
+}

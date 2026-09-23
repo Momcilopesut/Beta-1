@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000020/lulu-20260201.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000127/lulu-20260802.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1397187/000139718726000129/lulu-20260908.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2025 (ended February 1, 2026), lululemon reported net revenue growth of 5% to $11.1 billion, driven by 29% growth in China Mainland and 16% growth in Rest of World, which offset a 1% revenue decline in the Americas. Gross margin fell 260 basis points and operating margin fell 380 basis points, primarily due to new U.S. tariffs and the removal of the de minimis import exemption, which reduced gross profit by roughly $275 million. Diluted EPS declined 9% to $13.26, and the company repurchased $1.2 billion of stock while increasing its buyback authorization by $1.0 billion in December 2025. Management outlined a three-pillar action plan (product creation, product activation, enterprise efficiency) to address declining Americas trends.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended August 2, 2026) consists almost entirely of XBRL tagging metadata rather than narrative text, so specific quarterly financial results and MD&A commentary are not available in what was given. The metadata references topics including segment revenue by region and product category, foreign currency derivative activity, a pending derivative litigation matter, and IEEPA-related tariff refund claims, but no descriptive text on these items was included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated September 8, 2026, discloses that lululemon's board appointed Heidi O'Neill as a director (expanding the board from 11 to 12 members) and that she commenced service as Chief Executive Officer that same day, with interim co-CEOs Meghan Frank and Andre Maestrini stepping down from that role. The filing also discloses board-adopted amendments to the company's bylaws covering stockholder meeting and nomination procedures, quorum rules, and the addition of emergency bylaw provisions, effective immediately.",
+    "moat_explanation": "The 10-K describes a premium brand image, proprietary fabric development protected via trademarks and trade secrets, and a vertical retail/omni-channel model that gives direct guest feedback used to differentiate products from competitors. Management explicitly states it believes it competes on brand image, technical innovation, and quality rather than on cost, which points to an intangible-assets style moat rather than scale, switching-cost, or network-effect advantages, though the filing also acknowledges a highly competitive market with frequent new entrants.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Americas comparable sales declined 3% with lower traffic, conversion, and average order value, prompting a stated turnaround action plan",
+      "Tariff increases and removal of the de minimis exemption reduced 2025 gross profit by approximately $275 million, with continued margin pressure expected in 2026",
+      "Manufacturing concentration risk: ~51 vendors with the top 5 producing 47% of products (largest single vendor 15%), and heavy country concentration (40% of products from Vietnam)",
+      "Ongoing legal proceedings and contingencies disclosed, including a pending derivative action referenced in the 10-Q XBRL tags",
+      "Costs tied to a proxy contest ($5.1 million) and executive transition costs ($15.2 million) disclosed in SG&A",
+      "Operating margin fell 380 basis points and diluted EPS declined 9% year over year, driven largely by tariff and de minimis impacts"
+    ]
+  }
+}

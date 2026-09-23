@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1031296/000103129626000046/fe-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1031296/000103129626000123/fe-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1031296/000103129626000122/fe-20260728.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "FirstEnergy's 10-K describes a regulated electric utility system serving over six million customers across Ohio, Pennsylvania, New Jersey, West Virginia, Maryland and New York, organized into Distribution, Integrated, and Stand-Alone Transmission segments with a combined rate base of roughly $21.3 billion. The filing details a $36 billion 2026-2030 Energize365 capital investment plan, ongoing state and federal rate proceedings (including an Ohio base rate order that produced a $352 million impairment and a separate ~$250 million PUCO penalty later converted to ~$275 million in customer refunds), and continuing legal/regulatory matters tied to the 2021 HB 6 Deferred Prosecution Agreement and related securities litigation.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL data tags rather than narrative text, covering the quarter and six months ended June 30, 2026 for FirstEnergy Corp. and its JCP&L subsidiary. It references revenue categories by customer class (residential, commercial, industrial, wholesale), segment identifiers (Regulated Distribution, Integrated), the Valley Link and Grid Growth transmission agreements, and restatement adjustments to certain prior-year JCP&L financial statement line items, but the excerpt does not include readable narrative disclosure describing results of operations or business developments.",
+    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses that FirstEnergy issued a news release announcing its financial results for the three and six months ended June 30, 2026 (furnished under Item 2.02) and made available its 2Q 2026 Strategic and Financial Highlights presentation (furnished under Item 7.01 as a Regulation FD disclosure). The filing states that both GAAP and non-GAAP financial measures are presented in the accompanying exhibits, with reconciliations provided where possible, but the 8-K itself does not include the underlying financial results or figures.",
+    "moat_explanation": "FE's excerpts describe a regulated, capital-intensive electric transmission and distribution business serving over six million customers across defined service territories in six states, with rates set by state and federal regulators on a cost-based basis. This regulatory framework and the massive fixed infrastructure (24,000+ miles of transmission lines, tens of billions in rate base) create a natural limit on competition within each territory, consistent with an efficient-scale moat rather than brand, network, or switching-cost dynamics.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Company states it believes it is probable that FE will incur a loss in the In re FirstEnergy Corp. Securities Litigation, with the amount not yet estimable",
+      "Ongoing obligations and scrutiny tied to the 2021 Deferred Prosecution Agreement related to HB 6, including a January 2025 indictment of two former senior officers and continuing PUCO audits/investigations",
+      "PUCO assessed approximately $250 million in penalties related to HB 6 audits, later converted via stipulation to approximately $275 million in customer restitution/refunds",
+      "The Ohio Companies recognized a $352 million pre-tax impairment charge after the PUCO's November 2025 rate order disallowed recovery of certain previously capitalized amounts",
+      "Regulatory/legislative uncertainty in Ohio (HB 15 repealing ESP authority) and New Jersey (new executive order) that the company says could affect rate case outcomes and create uncertainty around rate strategy",
+      "Company acknowledges that denial of or delay in base rate or transmission rate recovery requests could adversely affect results of operations, cash flows and financial condition"
+    ]
+  }
+}

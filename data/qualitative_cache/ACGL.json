@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/947484/000094748426000017/acgl-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/947484/000094748426000124/acgl-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/947484/000094748426000118/acgl-20260728.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Arch Capital's 2025 Form 10-K reports approximately $26.9 billion in capital, $16.5 billion of net premiums written, and net income available to common shareholders of $4.4 billion, with book value per share rising 22.6% to $65.11. The insurance, reinsurance, and mortgage segments each contributed underwriting income ($375 million, $1.6 billion, and $1.0 billion respectively), with insurance segment growth driven largely by the August 2024 MCE acquisition from Allianz. The filing notes increased competition and softening reinsurance pricing heading into 2026, alongside $1.9 billion of share repurchases during 2025.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, so it does not include a discussion of quarterly results. It indicates the filing covers Arch's insurance, reinsurance, and mortgage segments, investment portfolio categories (fixed maturities, short-term investments, equities, and other investments), and an updated share repurchase authorization referenced as of April 19, 2026. No further descriptive detail on the quarter's financial performance is available in the excerpt given.",
+    "filing_summary_8k": "This Form 8-K, dated July 28, 2026, discloses under Item 2.02 that Arch Capital issued a press release reporting earnings and made available a financial supplement for the quarter ended June 30, 2026, attached as exhibits. The filing does not include the actual financial results in its body, only the announcement of their release.",
+    "moat_explanation": "The 10-K describes Arch's insurance/reinsurance subsidiaries as licensed or admitted across numerous U.S. states and international jurisdictions, its mortgage units as GSE-eligible insurers approved by Fannie Mae and Freddie Mac and APRA-authorized in Australia, and its Lloyd's syndicate access via a managing agency \\u2014 regulatory licenses and approvals that are not trivial for new entrants to replicate. However, the Risk Factors section explicitly states the industry is highly competitive with many rivals having greater financial resources, and highly cyclical with periods of excess capacity and falling rates (e.g., Jan 2026 property-cat renewal rates down 10-20%), which tempers the durability of any pricing-power advantage.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company states it operates in a highly competitive industry against firms with greater financial, marketing and management resources",
+      "Highly cyclical market described, with January 2026 reinsurance renewals seeing rates down 10-20% in property catastrophe/short-tail lines",
+      "Reliance on natural catastrophe and climate-related loss exposure that could cause large losses and volatility",
+      "Loss reserving and underwriting results depend on probabilistic modeling subject to inherent uncertainty",
+      "Exposure to reinsurance counterparty credit risk and potential unavailability of reinsurance/retrocessional coverage",
+      "New Bermuda corporate income tax (CIT Act effective 2025) and potential further international tax changes could increase taxation"
+    ]
+  }
+}

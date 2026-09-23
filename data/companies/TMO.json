@@ -87,15 +87,14 @@
     }
   },
   "industry": "Medical - Diagnostics & Research",
-  "last_updated": "2026-09-23T02:26:00Z",
+  "last_updated": "2026-09-23T02:44:18Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -134,23 +133,7 @@
     "as_of": "2026-09-22",
     "close": 658.52
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, Thermo Fisher reported revenues of $44.556 billion (up 4% year-over-year), GAAP operating margin of 17.4% and adjusted operating margin of 22.7%, with growth led by the Laboratory Products and Biopharma Services and Life Sciences Solutions segments; revenue declined in China and was flat in the academic/government market. The company completed acquisitions including the Olink proteomics business (2024) and a filtration/separation business from Solventum (September 2025), and disclosed an agreement to acquire Clario Holdings. Free cash flow was $6.337 billion, and the company repurchased $3.00 billion of stock and paid $0.64 billion in dividends during the year, while total debt rose to $39.384 billion partly due to acquisition-related issuance.",
-    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL taxonomy tags and context references (e.g., entity identifiers, reporting period June 27, 2026, and a long list of outstanding senior notes with various coupons and maturities) rather than narrative disclosure. No prose description of quarterly financial results, business developments, or MD&A commentary was included in the excerpt, so the substantive content of the quarter's results cannot be summarized from what was provided.",
-    "filing_summary_8k": "This 8-K, dated July 23, 2026, discloses under Item 2.02 that Thermo Fisher announced its financial results for the fiscal quarter ended June 27, 2026, with the full press release furnished as Exhibit 99.1. The filing itself does not include the actual financial figures in the excerpt provided, only the announcement and standard cover-page/exhibit information under Item 9.01.",
-    "moat_explanation": "The 10-K describes a company-wide 'Practical Process Improvement (PPI) Business System' explicitly credited with 'optimized price realization, reduced costs..., global sourcing initiatives, a lower cost structure following restructuring actions..., and low cost region manufacturing,' alongside cross-selling infrastructure leveraging 'depth in product offerings' across four large segments generating $44.6 billion in revenue. This suggests a scale- and process-driven cost structure that smaller competitors may struggle to match, though the excerpts also candidly acknowledge that competitors 'may achieve cost or quality advantages that we cannot match,' so the moat is not unqualified.",
-    "moat_present": true,
-    "moat_type": "cost_advantage",
-    "red_flags": [
-      "Company states it 'compete[s] directly with certain of our larger customers and product suppliers,' creating risk that key customers/suppliers could abruptly discontinue purchasing or supplying.",
-      "Reliance on sole or limited source suppliers for certain materials, which the filing says could cause production interruptions and delays.",
-      "Large goodwill ($49.36 billion) and intangible assets (~$15.83 billion combined) from acquisitions, with disclosed risk of material impairment charges if acquired businesses underperform.",
-      "Revenue declined in China and in the academic/government market during 2025 due to customer hesitancy and macro conditions.",
-      "Exposure to U.S. federal government funding disruptions, including an October 2025 government shutdown that could delay or reduce government customer spending.",
-      "Ongoing exposure to tariffs, trade policy volatility, and cybersecurity/AI-related risks explicitly flagged as able to disrupt operations or harm competitive position."
-    ]
-  },
+  "qualitative": null,
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000097745.json",

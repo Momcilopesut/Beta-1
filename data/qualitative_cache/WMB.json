@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/107263/000010726326000006/wmb-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/107263/000010726326000026/wmb-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/107263/000119312526387930/d116217d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes Williams as a FERC-regulated energy infrastructure company operating interstate natural gas pipelines (including Transco and NWP), gathering/processing, NGL, and marketing segments, plus minor upstream operations. It details multiple pipeline expansion projects, a 2024 Transco rate case that was settled in late 2025 (effective March 2026), and various PHMSA safety and cybersecurity regulatory developments. Reported 2025 total revenues were $11,950 million (up from $10,503 million in 2024), with net income attributable to Williams of $2,618 million, alongside a $212 million asset impairment recorded in 2025 that had no 2024 counterpart.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (for the quarter ended June 30, 2026) consists primarily of XBRL tagging and entity/context metadata for Williams Companies, Transco, and Northwest Pipeline as co-registrants, without narrative discussion of quarterly results, segment performance, or financial highlights. As a result, the provided excerpts don't describe the substantive business or financial content of this filing beyond confirming it covers the second quarter of fiscal year 2026.",
+    "filing_summary_8k": "This 8-K, dated September 10, 2026, discloses that Williams completed a registered public offering of $2.75 billion in aggregate senior unsecured notes across four tranches (2029, 2033, 2036, and 2056 maturities) with coupons ranging from 5.000% to 6.400%. The notes were issued under a supplemented indenture with The Bank of New York Mellon Trust Company as trustee, and the filing describes standard terms including semi-annual interest payments, make-whole redemption provisions, and customary covenants and events of default.",
+    "moat_explanation": "Williams' interstate pipelines (Transco and NWP) operate under FERC certificates of public convenience and necessity that are required to own and operate jurisdictional pipeline facilities, and the excerpts describe an extensive FERC rate-making and regulatory framework (SFV rate design, rate case settlements, PHMSA safety mandates) that governs entry and operation. This regulatory licensing structure, combined with large-scale, already-built transmission and storage infrastructure, creates a barrier that new entrants cannot easily replicate, though the excerpts also show profitability is capped/negotiated through FERC-approved rates rather than being purely a free-market advantage.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Revenues and returns on Transco/NWP are subject to FERC rate case proceedings and can be collected 'subject to refund,' creating regulatory rate risk (e.g., Transco's 2024 rate case remained unresolved until a late-2025 settlement).",
+      "Company recorded a $212 million impairment or write-off of certain assets in 2025 with no comparable charge in 2024.",
+      "Interest expense is large and rising ($1,442 million in 2025 vs $1,364 million in 2024), reflecting a heavy debt load, and the company issued an additional $2.75 billion in new senior notes in September 2026 per the 8-K.",
+      "PHMSA Mega Rule and new pipeline safety/class-location regulations have already increased remediation and compliance costs and are expected to continue doing so, with 2026 Gas Integrity Management costs estimated at ~$210 million.",
+      "Net gain/loss from commodity derivatives is highly volatile between periods (e.g., a $250 million loss in 2024 vs a $956 million gain in 2023), indicating commodity price exposure can swing reported results materially.",
+      "A prior period included a large one-time litigation gain ($534 million Energy Transfer judgment in 2023) that did not recur in 2024 or 2025, showing part of past earnings was non-recurring."
+    ]
+  }
+}

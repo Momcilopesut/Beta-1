@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026057358/lite-20260627.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026030777/lite-20260328.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026055726/lite-20260811.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2026 (ended June 27, 2026), Lumentum describes itself as a global leader in optical and photonic products serving cloud, AI/ML, telecom, industrial, and consumer markets, and states it now operates as a single reportable segment after a first-quarter FY2026 reorganization. The filing notes increasing demand from AI and cloud customers outpacing current supply, customer concentration (two customers each over 10% of revenue), and heavy international revenue exposure. It also reports a fiscal 2026 net loss of $6,935.1 million driven largely by a loss on debt extinguishment, cash and cash equivalents rising to $2,043.5 million, and a partial release of U.S. deferred tax asset valuation allowances.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (quarter ended March 28, 2026, fiscal Q3 2026) consists primarily of XBRL data tags rather than narrative text, so detailed financial results and discussion cannot be summarized from what was given. The tags reference items such as a Greensboro, North Carolina manufacturing facility, a San Jose property classified as held for sale, the Cloud Light Technology acquisition, outstanding convertible notes (2026, 2028, 2029, 2032) and related fair value disclosures, and property/equipment and intangible asset categories, but the provided excerpts don't describe the quarter's actual revenue, income, or business developments in prose form.",
+    "filing_summary_8k": "This 8-K, dated August 11, 2026, discloses under Item 2.02 that Lumentum Holdings Inc. reported results for its fourth quarter and full fiscal year ended June 27, 2026, and furnished a press release (Exhibit 99.1) titled 'Lumentum Announces Fourth Quarter and Full Fiscal Year 2026 Results.' The company also noted it posted a related investor slide presentation on its website. The filing does not itself contain the financial results, only the announcement and furnished exhibit references.",
+    "moat_explanation": "The 10-K describes Lumentum as 'a global leader in optical and photonic technologies and an industry-leading provider of optical and photonic products based on revenue and market share,' with a strategy centered on 'technology leadership through innovation,' photonic integration R&D, and a broad, hard-to-replicate portfolio built through years of internal development plus acquisitions (Oclaro, NeoPhotonics, Cloud Light). This points to proprietary technology/know-how and market-leading positioning as the primary durable advantage, though the excerpts do not detail specific patents or quantify competitive barriers precisely.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "High customer concentration: Customer A represented 26.6% and Customer B 15.0% of fiscal 2026 net revenue, together over 40%",
+      "Heavy reliance on international operations (79.2% of fiscal 2026 revenue from customers outside the U.S.), exposing the company to tariff, export control, and geopolitical/trade policy risk explicitly discussed",
+      "Company states current AI/cloud demand is 'outpacing our current supply,' requiring supply allocation decisions, indicating capacity constraints",
+      "Fiscal 2026 net loss of $6,935.1 million, driven by a $7,756.6 million loss on debt extinguishment, alongside large convertible note conversions/repurchases",
+      "Substantial convertible debt and term loan obligations ($1.55 billion in convertible notes principal plus term loans) with contractual obligations totaling ~$4.1 billion",
+      "Company acknowledges margin pressure historically from underutilized manufacturing capacity and potential inability to pass tariff-related cost increases on to customers"
+    ]
+  }
+}

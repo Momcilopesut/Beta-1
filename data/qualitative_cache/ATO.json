@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/731802/000073180225000056/ato-20250930.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/731802/000073180226000102/ato-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/731802/000119312526341096/d138079d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year ended September 30, 2025, Atmos Energy reported consolidated net income of $1,198.8 million ($7.46 diluted EPS), up from $1,042.9 million in fiscal 2024, driven by rate outcomes tied to safety and reliability spending and a Texas legislative benefit. Distribution segment operating income rose 12.8% and pipeline/storage segment operating income rose 19.1%, aided by GRIP and formula rate mechanism increases. The company invested $3.6 billion in capital expenditures (87% for safety/reliability) and completed $1.8 billion in long-term debt and equity financing, ending the year with about $4.9 billion in total liquidity and a 60.3% equity capitalization.",
+    "filing_summary_10q": "The excerpt provided is limited to XBRL taxonomy tags rather than narrative text, covering the quarter and nine months ended June 30, 2026 (fiscal Q3 2026) versus the comparable prior-year periods. It references segment reporting for Distribution and Pipeline and Storage, various series of unsecured senior notes maturing between 2027 and 2056 (including notes issued or redeemed during the period, e.g., 5.45% notes due 2056 and 4.75% notes due 2032), and multiple revolving credit and commercial paper facilities. No narrative discussion of financial results, business developments, or risks is included in the excerpt, so specific quarterly performance cannot be summarized from what was provided.",
+    "filing_summary_8k": "This 8-K, dated August 4, 2026, discloses board and management changes: James H. Jeffries IV, a partner at McGuire Woods LLP (which has provided energy/regulatory advisory services to the company), was elected to the Board of Directors effective September 1, 2026. Separately, John S. McDill, Senior Vice President of Utility Operations, notified the company of his planned retirement in early 2027, and Jeff D. Martinez, current President of the Mid-Tex Division, was named his successor effective October 1, 2026, with an increase in base salary from $380,000 to $500,000. The filing also notes two news releases furnished as exhibits announcing these changes.",
+    "moat_explanation": "Atmos operates as a regulated natural gas distributor and intrastate pipeline (APT) under non-exclusive franchise agreements in eight states, with rates set by state and federal regulators to allow a reasonable return on invested capital. The capital-intensive nature of building and maintaining over 81,000 miles of distribution and transmission lines, combined with the franchise/regulatory approval process, limits the number of competing providers in each service area, consistent with an efficient-scale dynamic rather than brand, network, or switching-cost advantages.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Company acknowledges 'regulatory lag' risk if rate mechanisms are modified or terminated, which could delay recovery of invested capital.",
+      "Faces competition from alternative energy sources (electricity, propane) for residential/commercial customers and risk of industrial customers bypassing the system for lower-cost alternatives.",
+      "Significant capital expenditure plan (~$26 billion fiscal 2026-2030) with full recovery through rates 'not assured.'",
+      "Exposure to pipeline integrity, safety incidents (leaks, explosions) and associated liability, remediation, and regulatory penalty costs, some of which may exceed insurance coverage.",
+      "Cybersecurity and IT system risks are highlighted as potentially disrupting operations or exposing sensitive data, with no assurance current measures are sufficient.",
+      "Concentration of significant operations in Texas (Mid-Tex/APT) exposes the company to state-specific regulatory and economic conditions."
+    ]
+  }
+}

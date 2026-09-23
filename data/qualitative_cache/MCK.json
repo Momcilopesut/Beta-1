@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/927653/000092765326000069/mck-20260331.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/927653/000092765326000234/mck-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/927653/000092765326000247/mck-20260825.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year ended March 31, 2026, McKesson reported revenues of $403.4 billion (up 12%) and net income attributable to McKesson of $4.8 billion, with diluted EPS rising to $38.38 from $25.72. The company adopted a new four-segment structure (North American Pharmaceutical, Oncology & Multispecialty, Prescription Technology Solutions, Medical-Surgical Solutions), completed acquisitions of PRISM Vision and Core Ventures, divested its Norway operations, raised its dividend, repurchased $4.8 billion of stock, and announced plans to separate the Medical-Surgical Solutions segment, including a minority investment from Apollo Funds. The filing also describes restructuring charges, debt issuances/repayments, and litigation risks including opioid-related claims.",
+    "filing_summary_10q": "The excerpt provided is the XBRL data/tagging portion of the Form 10-Q for the quarter ended June 30, 2026, covering the first quarter of fiscal 2027. It references balance sheet and income statement line items, segment reporting (North American Pharmaceutical, Oncology & Multispecialty, Prescription Technology Solutions, Medical-Surgical Solutions, Corporate), debt instruments, hedging activity, and prior acquisitions (PRISM Vision, Core Ventures) and the Norway divestiture, but does not include narrative discussion of quarterly results in the excerpt given.",
+    "filing_summary_8k": "This Form 8-K, dated August 25, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that McKesson discovered a cybersecurity incident affecting its information systems, with an investigation in its early stages. As of the filing date, the company states it has not determined the incident to be material or to have had a material impact on its financial condition or results of operations.",
+    "moat_explanation": "The 10-K describes McKesson operating one of a small number of national-scale pharmaceutical distribution networks (27 U.S. distribution centers plus Canadian operations) in a business with extremely thin gross margins (3.61% in fiscal 2026), heavy regulatory requirements (DEA, FDA, state boards of pharmacy) needed to purchase, store, and distribute controlled substances, and capital-intensive logistics/technology investment. These characteristics - thin margins, regulatory complexity, and scale requirements - are consistent with an efficient-scale dynamic where the market realistically supports only a few large distributors, rather than a moat based on brand or switching costs per se.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Ongoing costly litigation related to distribution of controlled substances (opioids), including claims from governmental entities, with outcomes described as difficult to predict and potentially material",
+      "Extensive, frequently changing healthcare, environmental, DEA/FDA, and anti-kickback regulatory exposure that could increase costs or restrict operations",
+      "Extremely thin gross profit margin (3.61% in fiscal 2026, down from 3.71%) indicating limited pricing power and sensitivity to cost or volume shifts",
+      "Company acknowledges cybersecurity incidents could compromise technology systems or cause material data breaches; a cybersecurity incident was disclosed in an August 2026 8-K, though materiality had not yet been determined",
+      "Customer concentration/counterparty risk evidenced by a prior-year credit related to the bankruptcy of customer Rite Aid Corporation",
+      "Announced separation of the Medical-Surgical Solutions segment into an independent company, introducing execution and structural uncertainty"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/726958/000072695826000046/casy-20260430.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/726958/000072695826000085/casy-20260731.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/726958/000072695826000084/casy-20260902.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year ended April 30, 2026, Casey's operated 2,944 convenience stores across 19 states, with total revenue of about $17.56 billion, up 10.2% year-over-year, driven substantially by a full year of contribution from the prior-year Fikes acquisition and store growth. Net income rose 30.7% to $714.4 million and EBITDA grew 23.6% to about $1.48 billion, aided by improved fuel margins per gallon and higher-margin prepared food and grocery sales. The filing also notes increased operating expenses, higher interest expense from acquisition-related debt, and details of the Company's long-term debt structure, including new term loans and senior notes.",
+    "filing_summary_10q": "For the three months ended July 31, 2026, Casey's reported total revenue of $5.68 billion versus $4.57 billion in the prior-year quarter, with net income of $273.7 million compared to $215.4 million a year earlier. The Company operated 2,959 stores as of July 31, 2026, and generated $384.1 million in operating cash flow, while spending on property/equipment and acquisitions increased versus the prior-year period. The filing also notes early adoption of a new accounting standard (ASU 2026-02) affecting accounting for renewable identification numbers (RINs), which had no material retrospective effect.",
+    "filing_summary_8k": "This 8-K discloses two items: the Company's announcement, via press release dated September 8, 2026, of financial results for the first quarter ended July 31, 2026, and the results of votes taken at the September 2, 2026 annual shareholders' meeting. At the meeting, all eleven director nominees were elected, KPMG LLP's appointment as auditor was ratified, the advisory say-on-pay vote passed, and a shareholder proposal regarding special meeting rights was voted down.",
+    "moat_explanation": "The 10-K describes Casey's deliberate strategy of locating stores in towns with populations under 20,000 that are typically not served by national-chain convenience stores, and notes ~71% of stores are in such areas; this suggests the local market often supports only one strong operator, limiting direct competition. The Company also operates its own three distribution centers and a fuel terminal with a self-owned trucking fleet, giving it a logistics/self-distribution footprint that would be costly for a new entrant to replicate at a similar scale, reinforcing the efficient-scale dynamic rather than a pure cost or brand-based advantage.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Business is described as 'highly competitive' both for in-store products and fuel, competing against grocery, dollar stores, drug chains, and expanded fuel stations.",
+      "Company explicitly flags exposure to commodity cost inflation, particularly cheese (its largest food cost), which could compress margins if it cannot pass costs to consumers.",
+      "Significant debt load taken on to fund the Fikes acquisition, with long-term debt and finance lease obligations of about $2.43 billion as of fiscal year-end and a current ratio of only 1.01 to 1.",
+      "Company acknowledges reliance on third-party IT/software vendors and warns that cyber/data-security incidents (including AI-related risks) could materially harm operations and reputation.",
+      "Litigation, food-safety, and foodborne illness risks are cited as capable of damaging brand value and sales, given high guest traffic volumes.",
+      "A shareholder proposal on special meeting rights received substantial support (about 39% for) at the 2026 annual meeting, indicating some governance friction, though it did not pass."
+    ]
+  }
+}

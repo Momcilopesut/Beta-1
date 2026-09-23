@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1126328/000110465926017031/pfg-20251231x10k.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1126328/000110465926088071/pfg-20260630x10q.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1126328/000110465926106416/tm2625118d1_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Principal Financial Group's 10-K describes a global financial services company organized into Retirement and Income Solutions, Principal Asset Management, and Benefits and Protection segments, with $1,814.6 billion in assets under administration and $781.0 billion in AUM as of December 31, 2025. The Risk Factors section highlights sensitivity to interest rates, credit spreads, market conditions, investment portfolio credit/liquidity risk, and derivative counterparty exposure. The MD&A discusses profitability drivers tied to AUM, fee revenue, and insurance margins, and details critical accounting estimates for investment valuation, goodwill (tested with no impairment identified), insurance reserves, and pension benefit assumptions.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists primarily of XBRL taxonomy tags and metadata for the quarter ended June 30, 2026, rather than narrative text. It does not contain readable disclosure of business results, financial performance, or developments for the period, so no substantive summary can be provided from this excerpt.",
+    "filing_summary_8k": "This 8-K, dated September 9, 2026, discloses that Principal Financial Group and related subsidiaries entered into an Amended and Restated Five-Year Credit Facility with a bank syndicate led by Wells Fargo, refinancing an existing 2022 credit facility. The new facility allows borrowing up to $900 million (expandable to $1.3 billion subject to conditions), matures September 9, 2031 (with possible extensions), and includes financial covenants such as a minimum statutory surplus and a maximum Total Debt to Total Capital ratio of 35%. As of the filing date, no amounts were outstanding under the facility.",
+    "moat_explanation": "The 10-K describes PFG as a leading provider of defined contribution, nonqualified, and defined benefit retirement plans, ESOP consulting, and Total Retirement Solutions bundling administrative and investment services, with over 42,000 defined contribution plans and 1,600 defined benefit plans under administration. Once plan sponsors integrate PFG's recordkeeping, trust, and investment platforms into their employee benefit infrastructure, moving to a competitor would require significant operational effort, which supports a switching-costs moat; the excerpts do not describe patented technology, a low-cost structure, or network effects as strongly.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Profitability is significantly exposed to interest rate movements (both prolonged low rates and rising rates), which the company states can compress margins and increase reserve requirements",
+      "Investment portfolio includes less-liquid privately placed fixed maturities, mortgage loans, and real estate (~41% of invested assets), creating potential difficulty selling assets at favorable prices in stressed markets",
+      "Commercial mortgage loan portfolio, including balloon maturities, carries delinquency/default risk that could adversely affect profitability",
+      "Widening credit spreads could cause unrealized losses and higher allowances for credit losses on the investment portfolio",
+      "A downgrade in financial strength or credit ratings could increase surrenders/withdrawals, reduce new sales, and raise cost of capital",
+      "Reliance on capital and credit markets for liquidity, with access potentially constrained by market disruption or negative rating actions"
+    ]
+  }
+}

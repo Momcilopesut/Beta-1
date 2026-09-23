@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/745732/000074573226000006/rost-20260131.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/745732/000074573226000041/rost-20260801.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/745732/000074573226000043/rost-20260911.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2025 (ended January 31, 2026), Ross Stores reported sales of $22.75 billion, up 8% from $21.13 billion, with 5% comparable store sales growth driven by higher basket and traffic. Operating income was $2.71 billion (11.9% of sales, down from 12.2%), net earnings were $2.15 billion, and diluted EPS was $6.61, including an estimated $0.16 per share unfavorable tariff-related impact. The company ended the year with 2,267 stores after opening 90 net new locations, held $4.6 billion in cash, repurchased $1.05 billion of stock, raised its dividend, and disclosed a new $2.55 billion two-year buyback program approved in March 2026, alongside ongoing wage-and-hour litigation and a pending COVID-19 insurance coverage lawsuit.",
+    "filing_summary_10q": "For the quarter ended August 1, 2026, Ross Stores reported sales of $6.26 billion versus $5.53 billion a year earlier, and six-month sales of $12.28 billion versus $10.51 billion. Net earnings for the quarter were $851.3 million (diluted EPS $2.66) compared to $508.0 million (diluted EPS $1.56) in the prior-year quarter, with six-month net earnings of $1.50 billion versus $987.2 million. The balance sheet shows total assets of $15.98 billion and cash and cash equivalents of $4.29 billion as of August 1, 2026.",
+    "filing_summary_8k": "This 8-K, dated September 11, 2026, discloses a Board of Directors change: director Sharon D. Garrett will retire effective October 1, 2026, and the Board has appointed Shelley H. Bransten and Christian B. Johnson as new independent directors effective the same date, expanding the Board to ten members and adding both new directors to the Audit Committee. The filing also references a September 17, 2026 press release announcing these board updates, furnished under Regulation FD.",
+    "moat_explanation": "The excerpts describe an off-price retail model built on opportunistic bulk/packaway purchasing, a growing network of eight distribution centers, and rising accounts payable leverage (91% vs 87% prior year), all of which point to scale-driven purchasing and logistics cost advantages that let Ross sell brand-name goods at a discount. The filing does not describe patents, network effects, or high customer switching costs, so cost advantage tied to scale/buying power is the best-supported category.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Ongoing wage-and-hour class/representative action litigation in California, with no resolution disclosed",
+      "Unresolved COVID-19 business-interruption insurance lawsuit against various insurers, pending since 2020",
+      "Fiscal 2025 earnings included an estimated unfavorable tariff-related impact of approximately $0.16 per share, and merchandise margin decreased 20 basis points due to tariff-related costs",
+      "Cost of goods sold as a percentage of sales rose due to distribution cost deleveraging from opening a new distribution center in Buckeye, Arizona",
+      "Management cites ongoing macroeconomic uncertainty (tariffs, inflation, geopolitical conditions) as a factor that could affect results"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1324404/000132440426000007/cf-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1324404/000132440426000019/cf-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1324404/000110465926105054/tm2624720d1_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K covers fiscal year 2025 results across CF Industries' Ammonia, Granular Urea, UAN, AN, and Other segments, with net sales and gross margins up year-over-year in most segments due to higher average selling prices amid strong global nitrogen demand and supply disruptions abroad. The filing discusses a November 2025 incident that idled AN production at the Yazoo City complex (expected resumption Q4 2026 at earliest), progress on decarbonization projects (including a completed Donaldsonville CCS unit and the Blue Point joint venture with JERA and Mitsui to build a ~$3.7 billion low-carbon ammonia facility), and financing activity including a $1 billion senior notes issuance and redemption of existing 2026 notes, plus ongoing share repurchase programs.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated August 31, 2026, discloses under Item 5.02 that the company's Vice President and Corporate Controller and Chief Accounting Officer, Richard A. Hoker, informed CF Industries that he intends to retire from the company effective March 3, 2027.",
+    "moat_explanation": "The 10-K describes CF as operating the world's largest ammonia production network with large-scale, integrated manufacturing complexes (e.g., Donaldsonville, the largest ammonia complex in the world) and an extensive North American storage, transportation and distribution system, which the company characterizes as 'advantaged production' and an 'unmatched distribution and logistics network.' This scale-driven cost and logistics positioning is the clearest moat signal in the excerpts, though the filing itself does not quantify a cost gap versus specific competitors.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "A November 2025 incident at the Yazoo City complex idled the AN upgrade area entirely, with production not expected to resume until Q4 2026 at the earliest, pending investigation and equipment rebuild.",
+      "Segment gross margins are highly sensitive to natural gas costs; the filing repeatedly attributes cost of sales increases to higher realized natural gas costs across Ammonia, Granular Urea, UAN, and AN segments.",
+      "Heavy, multi-year capital commitments are underway, including an estimated $3.7 billion Blue Point ATR ammonia facility and ~$550 million of additional scalable infrastructure, with 2026 capital expenditures projected at approximately $1.3 billion, creating execution and funding risk.",
+      "The Blue Point joint venture depends on capital contributions and offtake commitments from partners JERA and Mitsui, and results are affected by conditional ownership terms and VIE consolidation accounting.",
+      "Selling price increases in 2025 were attributed partly to supply disruptions from geopolitical issues (e.g., outages in Egypt, Iran, and Russia), indicating results are exposed to external, unpredictable supply-side shocks."
+    ]
+  }
+}

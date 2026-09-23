@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026029401/sndk-20260403.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026062267/sndk-20260910.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Sandisk's FY2026 10-K reports net revenue of $20,248 million, up 175% from $7,355 million in FY2025, driven by large increases in Datacenter (+437%) and Edge (+195%) revenue, with gross margin rising to 71.5% from 30.1%. Net income was $11,433 million in FY2026 versus a net loss of $1,641 million in FY2025, when the company recorded a $1.8 billion goodwill impairment following its February 2025 spin-off from Western Digital. The filing also describes new long-term 'New Business Model' customer agreements intended to reduce revenue cyclicality, the March 2026 early repayment of its Term Loan Facility, and ongoing monitoring of potential U.S. tariff actions.",
+    "filing_summary_10q": "This is the Q3 FY2026 Form 10-Q (period ended April 3, 2026), presented largely in structured XBRL data covering the quarter and year-to-date periods. It discloses revenue disaggregated by end market (Datacenter, Edge, Consumer) and geography (Asia, Americas, EMEA), customer concentration metrics (top-ten-customer and single-customer revenue risk), related-party balances and transactions with Western Digital and the Flash Ventures joint ventures with Kioxia, and Term B Loan and revolving credit facility balances. It also notes a subsequent event dated April 8, 2026 involving the company's investment in Nanya Technology Corporation, though the excerpt does not describe the nature or financial impact of that event.",
+    "filing_summary_8k": "This 8-K, dated September 10, 2026, discloses compensation adjustments approved by the Compensation and Talent Committee for two named executive officers, Chief Technology Officer Alper Ilkbahar and Chief Legal Officer Bernard Shek, effective October 1, 2026, including updated base salaries and short-term incentive target percentages. The filing states there were no changes to the CEO's base salary or to the STI targets of the CEO, CFO, or CTO, and it lists current compensation figures for all four named executives.",
+    "moat_explanation": "The 10-K describes a vertically integrated manufacturing model and a long-standing joint venture (Flash Ventures) with Kioxia across eight Japanese fabs, which the company states 'helps us reduce product costs' and provides scale and cost-efficient wafer supply not easily replicated by smaller competitors. The filing also emphasizes 'leadership in driving cost efficiency' and large-scale manufacturing as a differentiator versus competitors, though it also acknowledges intense competition and declining average selling prices, which tempers the durability of this advantage.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "Company discloses declining average selling prices and volatile demand as an industry-wide competitive risk",
+      "Reliance on a limited number of qualified suppliers (e.g., DRAM) creates supply chain vulnerability",
+      "Guarantees of certain Flash Ventures obligations with Kioxia may negatively impact financial position, and contractual restrictions prevent the company from manufacturing flash independently or working with third parties while the JV operates",
+      "Customer concentration risk disclosed via top-ten-customer and single-customer revenue concentration metrics in the 10-Q",
+      "Pending U.S. Section 232/301 trade investigations could increase tariffs and costs on products currently exempt",
+      "FY2025 goodwill impairment of $1.8 billion recorded shortly after the WDC separation, indicating the reporting unit's fair value fell below carrying value at that time"
+    ]
+  }
+}

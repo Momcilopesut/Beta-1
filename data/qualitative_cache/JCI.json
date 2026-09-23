@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/833444/000083344425000097/jci-20250930.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/833444/000083344426000087/jci-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/833444/000083344426000083/jci-20260729.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Johnson Controls' fiscal 2025 10-K describes a global building systems and fire/security business subject to extensive environmental, safety, and industry-specific regulation, with regulatory compliance capital expenditures deemed not material in fiscal 2025. It reports approximately 87,000 employees worldwide (down from 2024 due to divestitures including the Residential & Light Commercial HVAC business), ongoing R&D investment in energy efficiency, decarbonization, and the OpenBlue platform, and a multi-year restructuring plan addressing stranded costs from prior portfolio changes. Risk factors emphasize dependence on new product development, execution of its operating model, product quality/recall risk, and supply chain reliance on materials like steel, copper, and aluminum.",
+    "filing_summary_10q": "This is a Form 10-Q (period ended June 30, 2026) presented largely as XBRL data tags covering segments (Americas, EMEA, APAC), debt instruments, fair value measurements, restructuring activity under 'Various 2023 Restructuring Plans,' and divestiture-related items including the ADT UK residential security business, ADT Spain, ADT Mexico, and the discontinued Residential & Light Commercial HVAC business. It also references ongoing litigation matters, including aqueous film-forming foam (AFFF) and related municipal/water provider litigation, and a case captioned 'State of Wisconsin v. Tyco Fire Products LP and Johnson Controls Inc.' The excerpt does not include narrative discussion of quarterly financial results.",
+    "filing_summary_8k": "This Form 8-K, dated July 29, 2026, discloses under Item 2.02 that Johnson Controls issued a press release on that date containing its results of operations for the three and nine months ended June 30, 2026, furnished as Exhibit 99.1. The filing excerpt does not include the substantive financial results themselves, only the cover disclosure and exhibit listing.",
+    "moat_explanation": "The 10-K notes the Company owns numerous U.S. and non-U.S. patents and trademarks that are 'material to its business,' and highlights industry-specific licensing laws (e.g., for alarm and fire suppression businesses) that create regulatory barriers to entry. However, the filing also explicitly states no single patent or group of patents is critical to the business, so the evidence for a durable moat is only moderate.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "The Company itself acknowledges past product recalls, field corrective actions, and quality issues, with risk of recurrence.",
+      "Legacy firefighting foam products contained PFAS/PFOS/PFOA, subject to increasing environmental regulation and remediation/litigation exposure (referenced via Note 20, Commitments and Contingencies).",
+      "Ongoing multi-year restructuring plan tied to 'stranded costs' from prior portfolio optimization/divestitures, with acknowledged risk of higher-than-expected costs, customer/employee attrition, and execution delays.",
+      "Workforce declined year-over-year primarily due to divestitures (including the R&LC HVAC business), indicating portfolio churn.",
+      "Company competes in a market subject to rapid technological change (AI/ML, liquid cooling) where new entrants or competitor innovation could erode market acceptance of its offerings."
+    ]
+  }
+}

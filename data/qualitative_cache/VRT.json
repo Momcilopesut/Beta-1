@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026050609/vrt-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1674101/000119312526379306/d472406d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Vertiv reported net sales of $10,229.9 million, up 27.7% from $8,011.8 million in 2024, driven by higher volumes across all three geographic segments (Americas, Asia Pacific, EMEA), with the Americas showing the largest gains. Operating profit rose to $1,829.7 million and net income increased to $1,332.8 million, aided by lower interest expense and absence of a prior-year warrant fair-value loss, though income tax expense also rose. The filing highlights a combined order backlog that grew to $15.0 billion from $7.2 billion, continued capacity expansion (including new facilities and the Great Lakes and PurgeRite acquisitions), an extended Term Loan maturity to 2032, and ongoing exposure to tariffs, trade uncertainty, and AI-driven demand trends.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the six months ended June 30, 2026) consists primarily of XBRL tagging data rather than narrative disclosure, so detailed financial results cannot be summarized from it. It does indicate continued activity around the PurgeRite (closed December 2025) and Great Lakes (closed July 2025) acquisitions, restructuring charges, segment reporting for Americas, Asia Pacific and EMEA, and a debt refinancing in March 2026 involving new senior notes (due 2036, 2046, 2056, and 2066) and an amended revolving credit facility.",
+    "filing_summary_8k": "This 8-K, dated September 1-2, 2026, discloses that Vertiv's subsidiaries (Vertiv Corporation and a merger sub) entered into an Agreement and Plan of Merger to acquire Utility Innovation Holdings, Inc. Under the agreement, Target's equity holders would receive approximately $1.45 billion in upfront cash at closing, plus up to an additional $1.15 billion in contingent cash consideration payable in two tranches based on EBITDA targets. The filing states the acquisition is expected to close in the fourth quarter of 2026, subject to customary closing conditions including HSR antitrust clearance, and that Vertiv expects to fund it from existing resources; a related press release was furnished as an exhibit.",
+    "moat_explanation": "The 10-K notes that customer decisions to purchase Vertiv's products, especially large or new-to-market solutions, involve a lengthy contracting, design and qualification process, and that services (lifecycle management, predictive analytics) are embedded across the operational life of customer infrastructure. This suggests real friction for customers to re-qualify a new vendor for mission-critical power/cooling systems once Vertiv is installed, though the excerpts also describe a highly competitive market with large, well-resourced rivals (Schneider Electric, Eaton, Legrand, Huawei) competing on price and technology, which limits the strength of any moat claim.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Highly competitive industry with large, well-resourced global competitors (Schneider Electric, Eaton, Legrand, Huawei) competing on price and technology",
+      "Large customers (hyperscale/cloud/colocation providers) have significant purchasing leverage and can demand more favorable terms, pricing, and stringent performance/service commitments",
+      "Long-term fixed-price contracts carry risk of cost overruns, unanticipated technical problems, and penalties for missed deadlines",
+      "Revenue and order timing are unpredictable due to long, variable sales cycles and customer ability to cancel or defer large orders, including from backlog",
+      "Exposure to new U.S. tariffs and retaliatory foreign tariffs that could raise costs and affect financial performance",
+      "Business dependent on continued growth of customers' data center and communication infrastructure capital spending, including AI-driven demand, which could slow or reverse"
+    ]
+  }
+}

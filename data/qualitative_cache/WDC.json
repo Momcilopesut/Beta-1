@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/106040/000162828026057139/wdc-20260703.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/106040/000162828026029054/wdc-20260403.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/106040/000119312526389859/d23939d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2026 (ended July 3, 2026), Western Digital reported net revenue of $12.92 billion, up 36% year-over-year, driven by higher exabytes sold and pricing, with Cloud representing 89% of revenue. Gross margin improved to 48.9% from 38.8%, and the company reported net income from continuing operations of $9.42 billion, which included a $6.50 billion mark-to-market gain on its retained Sandisk shares (fully monetized during the year). The filing describes the prior-year separation of the HDD business (Western Digital) from the Flash business (Sandisk), along with debt reduction, share repurchases ($2.59 billion), and dividend payments during fiscal 2026.",
+    "filing_summary_10q": "The provided excerpt for the most recent 10-Q (covering the quarter ended April 3, 2026) consists primarily of XBRL data tags rather than narrative text, so a detailed summary of results is not supported by what's given. From the tagged data, the filing appears to include disaggregated revenue by end market (Cloud, Client, Consumer) and geography, customer revenue concentration disclosures, and information on debt instruments including the Term Loan A-3, senior notes, a bridge loan, and the 3.00% Convertible Notes due 2028, as well as fair value measurements of cash equivalents and investments.",
+    "filing_summary_8k": "This 8-K, dated September 14, 2026, discloses that Western Digital issued a notice calling all outstanding 3.00% Convertible Senior Notes due 2028 for redemption on November 16, 2026, at a redemption price equal to 100% of principal plus accrued interest. The company stated it expects holders of substantially all notes to convert before the redemption date, with conversion obligations settled in cash up to the principal amount and any remainder in common stock at a conversion rate of 26.5231 shares per $1,000 of principal. The filing also notes that no changes are anticipated to the related capped call transactions entered into when the notes were issued, and a press release on the matter was furnished as an exhibit.",
+    "moat_explanation": "The 10-K describes Western Digital as vertically integrated, designing and manufacturing substantially all of its own recording heads and magnetic media, which it says provides control over cost structure and performance versus relying on outside suppliers. It also cites a platform strategy that shares components across product families to lower costs and ease customer qualification, and states the company competes on 'areal density and cost leadership' against a small set of HDD rivals (Seagate, Toshiba). However, the filing also notes patents 'cannot alone ensure our future success,' so the strongest, most explicit competitive claim in the text is cost/manufacturing efficiency rather than IP or brand.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "High customer concentration: top 10 customers were 73% of net revenue in fiscal 2026, with three customers each accounting for 10% or more (16%, 15%, 13%)",
+      "Heavy dependence on the Cloud end market (89% of net revenue), making results sensitive to hyperscaler capex cycles and AI infrastructure demand shifts",
+      "Reliance on a limited number of sole/single-source suppliers for critical components, with no long-term contracts or guaranteed capacity in some cases",
+      "Long-term customer agreements commit the company to fixed/formula-based pricing and volumes, which could prevent capturing upside in rising-price environments or expose it to penalties if it cannot fulfill commitments",
+      "Ongoing technology transition risk (e.g., HAMR ramp) where failure to execute could pressure gross margins or market position",
+      "A disclosed litigation matter referenced in the financial statement notes, though details are not included in the excerpts provided"
+    ]
+  }
+}

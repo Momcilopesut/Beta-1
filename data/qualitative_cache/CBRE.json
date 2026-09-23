@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1138118/000113811826000005/cbre-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1138118/000113811826000024/cbre-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1138118/000113811826000021/cbre-20260729.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "CBRE's 2025 10-K reports total revenue of $40.6 billion (up 13.4% year-over-year) and net income attributable to CBRE of $1.157 billion, with growth spread across Advisory Services, Building Operations & Experience (BOE), and Project Management segments, partially offset by a 15.3% revenue decline in the Real Estate Investments (REI) segment. The company completed a corporate reorganization into four segments (Advisory Services, BOE, Project Management, REI), acquired Pearce (~$1.2 billion) and the remaining stake in Industrious (~$468 million), and repurchased $956 million of shares during the year. The filing also discusses a UK pension buy-out settlement charge, an increased Telford fire safety remediation provision, and an increase in the effective tax rate to 19.9% from 15.0%.",
+    "filing_summary_10q": "The excerpt provided for CBRE's most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, so a detailed discussion of quarterly results cannot be summarized from what was given. The tagged data references the November 2025 acquisition of Pearce Services and the January 2025 acquisition of full ownership of Industrious, details on senior notes and warehouse line of credit borrowings (with several banking counterparties such as JPMorgan, TD Bank, Bank of America, and Scotiabank), and fair value measurements of debt and investments as of June 30, 2026 and December 31, 2025. No further descriptive commentary on quarterly financial performance was included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated July 29, 2026, discloses under Item 2.02 that CBRE Group, Inc. issued a press release on that date reporting its financial results for the second quarter of 2026, furnished as Exhibit 99.1. The filing does not include the content of the press release itself, only the notice that results were released and furnished, not deemed 'filed' under the Exchange Act.",
+    "moat_explanation": "CBRE describes a revenue mix increasingly weighted toward 'resilient' business lines such as facilities management, property management, and project management, which are described as 'contractually based outsourcing services' to occupiers and owners of real estate. These multi-year, integrated outsourcing relationships (as opposed to one-off transactional leasing/sales work) suggest meaningful friction for large occupiers to switch providers once operations are embedded, and the filing notes resilient revenue lines now account for the majority of total revenue ($33.1B of $40.6B in 2025).",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Telford's fire safety remediation provision increased sharply to $132 million in 2025 from $33 million in 2024, indicated as a legacy/ongoing liability in the REI segment.",
+      "REI segment revenue declined 15.3% year-over-year, driven by lower incentive fees, carried interest, and development fees.",
+      "A non-cash pension buy-out settlement loss of $147 million was recorded in the U.K. within Advisory Services in 2025.",
+      "Cost of revenue (excluding pass-through costs) rose as a percentage of total revenue in both the consolidated results and the Advisory Services and BOE segments, attributed to higher commission payouts and compensation growing faster than some revenue lines.",
+      "Management decided to wind down certain BOE segment businesses and the legacy Telford Homes construction self-delivery business in 2025, indicating exits from underperforming operations."
+    ]
+  }
+}

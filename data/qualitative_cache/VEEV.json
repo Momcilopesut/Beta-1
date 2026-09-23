@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1393052/000139305226000014/veev-20260131.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1393052/000139305226000036/veev-20260731.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1393052/000139305226000032/veev-20260826.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For the fiscal year ended January 31, 2026, Veeva reported total revenues of $3,195 million (up 16% year over year), subscription revenues of $2,684 million (up 17%), and net income of $909 million, up from $714 million the prior year. Growth was driven by expanded use of R&D/Quality and Commercial Cloud products by existing customers and annual price adjustments, with customer count rising to 1,552. General and administrative expenses rose partly due to litigation settlement-related charges, and the effective tax rate increased due to the One Big Beautiful Bill Act's tax provisions.",
+    "filing_summary_10q": "This is the Form 10-Q for the quarterly period ended July 31, 2026 (fiscal Q2 2027), filed by Veeva Systems Inc. The excerpt provided consists primarily of XBRL tags and cover-page information, including references to a recent acquisition (Rise Healthcare Tech Inc./Ostro) closed March 9, 2026, and standard financial statement line items (revenue by subscription and technology service, segment and geographic breakdowns, fair value and investment disclosures). The excerpt does not include the narrative MD&A discussion, so specific quarterly financial results and business commentary are not available from what was provided.",
+    "filing_summary_8k": "This 8-K, dated August 26, 2026, discloses under Item 2.02 that Veeva Systems issued a press release announcing results for its fiscal second quarter ended July 31, 2026, furnished as Exhibit 99.1. The filing itself does not include the financial results in the body of the document, only the announcement that the press release was issued.",
+    "moat_explanation": "The 10-K describes Veeva's deeply embedded, industry-specific Vault platform spanning R&D, quality, and commercial functions for life sciences customers, with applications tied into regulated workflows (GxP, GMP, FDA validation requirements) and long-standing relationships with major pharma/biotech customers. The risk factors themselves note that migrating customers off legacy CRM to Vault CRM 'could cause business disruptions,' implying meaningful switching friction once customers are on the platform. However, the same section acknowledges intense competition (Salesforce, IQVIA, Oracle, and others) and discloses that some large customers have already committed to switching to a competitor, which tempers the strength of the moat somewhat.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Revenue concentration in a small number of key customers, whose loss could cause revenue to decline",
+      "Intense competition in the CRM market with disclosed customer defections to Salesforce during the Vault CRM migration",
+      "Heavy dependence on the life sciences industry, exposing the business to drug pricing regulation and healthcare policy changes",
+      "Reliance on third-party infrastructure providers (AWS, Salesforce) for hosting core solutions",
+      "General and administrative expenses increased due to litigation settlement-related charges in the most recent fiscal year",
+      "Macroeconomic and geopolitical factors (tariffs, inflation, currency, geopolitical conflicts) cited as potential negative impacts on the life sciences industry and the business"
+    ]
+  }
+}

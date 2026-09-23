@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000016/tgt-20260131.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000042/tgt-20260801.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000034/tgt-20260819.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Target's fiscal 2025 10-K reports Net Sales of $104.8 billion, down 1.7% from the prior year, with comparable sales down 2.6% driven by a 2.2% traffic decline. Operating income fell 8.1% to $5.1 billion, partly aided by $593 million in interchange fee litigation settlement gains, while the company incurred $250 million in business transformation costs including workforce reductions. The filing also discusses ongoing tariff uncertainty, including a February 2026 Supreme Court ruling on IEEPA tariffs whose financial impact the company says it cannot yet estimate, and notes ended 2025 with approximately 1,995 stores and $5.5 billion in cash.",
+    "filing_summary_10q": "The 10-Q for the quarter ended August 1, 2026 shows Net sales of $26.5 billion for the quarter (up from $25.2 billion a year earlier) and $52.0 billion for the six months, with operating income rising to $2.56 billion for the quarter from $1.32 billion in the prior-year quarter. Net earnings were $1.88 billion for the quarter versus $935 million a year earlier, and diluted EPS was $4.11 versus $2.05. The balance sheet shows total assets of $61.2 billion and cash and cash equivalents of $5.4 billion as of August 1, 2026, with six-month operating cash flow of $4.5 billion versus $2.4 billion in the prior-year period.",
+    "filing_summary_8k": "This 8-K, dated August 19, 2026, discloses under Item 2.02 that Target issued a news release containing its financial results for the three months ended August 1, 2026, attached as an exhibit; the filing itself does not include the substantive financial details, only the announcement of the results release.",
+    "moat_explanation": "The excerpts describe Target's owned and exclusive brand portfolio (~30% of merchandise sales, carrying higher margins) and registered trademarks (Target, 'Expect More. Pay Less.', Bullseye Design) as differentiators, alongside a loyalty program (Target Circle) and store network used as fulfillment hubs. However, the Risk Factors section explicitly acknowledges intense competition across many retail formats and states that the company's ability to differentiate is not assured, undercutting a strong moat claim; the brand/owned-label assets are the most concrete supportable factor but the excerpts also show declining comparable sales and traffic, suggesting any advantage is modest rather than dominant.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Comparable sales decreased 2.6% in fiscal 2025, driven by a 2.2% decline in traffic",
+      "Net Sales declined 1.7% and operating income declined 8.1% year-over-year in fiscal 2025",
+      "Company acknowledges unprecedented tariff volatility and inability to estimate financial effects of a Supreme Court ruling on IEEPA tariffs that could 'materially affect' financial position, results, and cash flows",
+      "Company experienced consumer boycotts and litigation related to reactions to DEI initiative changes and prior Pride Month merchandise, indicating reputational/political exposure",
+      "Business transformation initiative incurred $250 million in costs in 2025 including workforce reductions and facility exits, with uncertain future costs and benefits",
+      "Termination of Ulta Beauty shop-in-shop partnership announced for August 2026, ending a commercial relationship"
+    ]
+  }
+}

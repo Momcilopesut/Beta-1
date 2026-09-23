@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1403568/000110465926035243/ulta-20260131x10k.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1403568/000110465926102442/ulta-20260801x10q.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1403568/000110465926102438/ulta-20260827x8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2025 (ended January 31, 2026), Ulta Beauty reported net sales of $12.4 billion, up 9.7%, driven by a 5.4% comparable sales increase, the acquisition of Space NK, and new store openings (ending with 1,591 stores including 86 Space NK locations). Gross profit rose to 39.1% of sales, but SG&A expenses grew faster than sales, contributing to a net income decline to $1.15 billion from $1.20 billion the prior year. The filing also notes the Space NK acquisition, an equity-method loss from the Mexico joint venture, and continued share repurchases and store investment activity.",
+    "filing_summary_10q": "For the 13 weeks ended August 1, 2026, Ulta Beauty reported net sales of $3.04 billion, up from $2.79 billion a year earlier, with net income of $282.0 million versus $260.9 million in the prior-year quarter. For the 26-week period, net sales were $6.2 billion and net income was $622.5 million, both increased from the prior-year period. The balance sheet shows cash and equivalents of $158.5 million, short-term debt increased to $339.6 million, and total stockholders' equity of $2.64 billion as of August 1, 2026.",
+    "filing_summary_8k": "This 8-K, dated August 27, 2026, discloses under Item 2.02 that Ulta Beauty issued a press release announcing its consolidated financial results for the second fiscal quarter ended August 1, 2026, furnished as an exhibit to the filing. The filing itself does not include the detailed financial results, only the announcement of their release.",
+    "moat_explanation": "The 10-K describes Ulta as the largest specialty beauty retailer in the U.S., with a differentiated assortment of ~600 brands, exclusive private-label and limited-time product partnerships, and a loyalty program with over 46 million members generating ~95% of sales, which the company says gives it a deep, proprietary understanding of guest preferences. These brand-reputation, exclusivity, and guest-data advantages support an intangible-assets style moat, though the excerpts don't quantify how durable this advantage is against competitors.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Top ten brand partners (e.g., L'Or\u00e9al, Est\u00e9e Lauder) represented approximately 51% of net sales in fiscal 2025, indicating meaningful vendor concentration risk",
+      "Gross margin and SG&A trends show deleverage in some periods (e.g., fiscal 2024 gross margin declined and fiscal 2025 SG&A rose 17.4%, outpacing sales growth), pressuring net income despite higher revenue",
+      "Comparable sales growth slowed sharply to 0.7% in fiscal 2024 before recovering to 5.4% in fiscal 2025, showing sales volatility",
+      "New Space NK acquisition and Mexico joint venture introduce integration and equity-method losses (equity net loss of affiliate of $3.9 million in fiscal 2025 tied to the Mexico JV)",
+      "Company acknowledges persistent inflationary and macroeconomic pressures that could impact its ability to grow sales and maintain historical profitability levels",
+      "Company began carrying outstanding borrowings under its credit facilities ($62.3 million at fiscal 2025 year-end and increased further in the following quarter) after previously being debt-free on that facility"
+    ]
+  }
+}

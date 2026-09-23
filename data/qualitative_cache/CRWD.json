@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000010/crwd-20260131.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000031/crwd-20260731.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000029/crwd-20260826.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2026 (ended January 31, 2026), CrowdStrike reported total revenue of $4.81 billion, up 22% year-over-year, with subscription revenue comprising 95% of the total. Annual Recurring Revenue grew 24% to $5.25 billion and dollar-based net retention was 115%, but the company recorded a net loss of $162.5 million (versus a $15.2 million net loss in fiscal 2025) as operating expenses grew faster than gross profit. The filing discusses the 'July 19 Incident' - a faulty Falcon sensor content update that caused Windows system crashes - as an ongoing source of litigation, customer relationship harm, and elevated costs.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended July 31, 2026) consists primarily of XBRL tagging metadata rather than narrative disclosure, so specific financial results and MD&A commentary are not available in the text given. The metadata references items such as customer concentration risk categories, the company's $300 million senior notes, an acquisition-related reference to 'XM Cyber Ltd' in July 2026, and a subsequent event dated August 26, 2026, but no descriptive text accompanies these tags in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated August 26, 2026, discloses under Item 2.02 that CrowdStrike issued a press release announcing financial results for the fiscal quarter ended July 31, 2026, furnished as Exhibit 99.1. The filing itself does not include the financial results text; it only states that the results announcement occurred and is incorporated by reference to the exhibit.",
+    "moat_explanation": "The Business section repeatedly states that as more data flows into the Falcon platform/Security Cloud, the AI models improve, creating 'a powerful network effect that increases the overall value we provide' to all customers. This crowdsourced-data dynamic, combined with a single lightweight sensor architecture, is the most explicitly and repeatedly articulated competitive advantage in the excerpts, though the company also describes switching-cost-like benefits from platform consolidation and land-and-expand sales.",
+    "moat_present": true,
+    "moat_type": "network_effects",
+    "red_flags": [
+      "The 'July 19 Incident' (a faulty content update causing Windows system crashes) has caused customer churn, contract non-renewals, elongated sales cycles, negative media coverage, and ongoing securities/derivative litigation and government inquiries, per the company's own risk factor disclosure.",
+      "The company reported a net loss of $162.5 million in fiscal 2026 (widening from a $15.2 million loss in fiscal 2025), with loss from operations increasing from (3)% to (6)% of revenue, alongside an accumulated deficit of $1.3 billion.",
+      "Operating expenses grew faster than gross profit (total opex rose to 81% of revenue in fiscal 2026 from 78% in fiscal 2025), which the company attributes partly to increased legal/professional costs tied to the July 19 Incident.",
+      "The company discloses it has agreed to and expects to continue agreeing to customer commitment packages (discounts, extra modules, extended terms) following the July 19 Incident, which it states is expected to result in increased contraction and decreased upsell dollar values.",
+      "The 10-Q XBRL metadata references customer concentration risk categories (one end user and two end users) tied to finance receivables, though the excerpt provided does not include narrative detail explaining the magnitude or nature of this concentration."
+    ]
+  }
+}

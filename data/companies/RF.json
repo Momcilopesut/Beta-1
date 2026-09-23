@@ -1,0 +1,229 @@
+{
+  "_errors": {},
+  "cik": "0001281761",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 29411000000,
+        "debt": 2407000000,
+        "earnings": 2521000000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 6603000000,
+        "spending": 3388000000,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 11227000000,
+        "debt": 2284000000,
+        "earnings": 2245000000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 7481000000,
+        "spending": 4605000000,
+        "stock_return_pct": -1.1009174311926697
+      },
+      {
+        "cash": 6801000000,
+        "debt": 2330000000,
+        "earnings": 2074000000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 9153000000,
+        "spending": 6546000000,
+        "stock_return_pct": -9.554730983302406
+      },
+      {
+        "cash": 10712000000,
+        "debt": 6493000000,
+        "earnings": 1893000000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 9373000000,
+        "spending": 7019000000,
+        "stock_return_pct": 20.615384615384613
+      },
+      {
+        "cash": 10907000000,
+        "debt": 4884000000,
+        "earnings": 2156000000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 9608000000,
+        "spending": 6865000000,
+        "stock_return_pct": 15.221088435374158
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.3266098272380525,
+      "debt_to_ebitda": 1.727626459143969,
+      "debt_to_equity": 0.40488322717622083
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 22.144028103044498,
+      "shareholders_equity": 19043000000,
+      "total_assets": 159553000000,
+      "total_liabilities": 140450000000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 22.38759367194005
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 0.14471800220119402
+    },
+    "profitability": {
+      "roe_pct": 11.792209850616159,
+      "trend": "declining"
+    },
+    "valuation": {
+      "graham_multiple": 14.237868069823989,
+      "graham_number": 33.925445622065716,
+      "graham_upside_pct": 21.55301190277935,
+      "ncav_margin_pct": -524.357589631247,
+      "pb_ratio": 1.2651348195329088,
+      "pe_ttm": 11.254032258064518
+    }
+  },
+  "industry": "Banks - Regional",
+  "last_updated": "2026-09-23T02:52:40Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": true
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 23817835800,
+  "metrics": {
+    "book_value_per_share": 22.144028103044498,
+    "current_ratio": 0.3266098272380525,
+    "debt_to_ebitda": 1.727626459143969,
+    "debt_to_equity": 0.40488322717622083,
+    "eps_growth_cagr_3yr_pct": 0.14471800220119402,
+    "fcf_margin_pct": 22.38759367194005,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 14.237868069823989,
+    "graham_upside_pct": 21.55301190277935,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -524.357589631247,
+    "pb_ratio": 1.2651348195329088,
+    "pe_ttm": 11.254032258064518,
+    "roe_pct": 11.792209850616159,
+    "shareholders_equity": 19043000000,
+    "total_assets": 159553000000,
+    "total_liabilities": 140450000000
+  },
+  "name": "Regions Financial Corporation",
+  "price": {
+    "as_of": "2026-09-22",
+    "close": 27.91
+  },
+  "qualitative": null,
+  "sector": "Financial Services",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001281761.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-11",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1281761/000128176126000060/rf-20260811.htm"
+      },
+      {
+        "filed": "2026-08-06",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1281761/000128176126000055/rf-20260630.htm"
+      },
+      {
+        "filed": "2026-02-24",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1281761/000128176126000019/rf-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "RF",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $23.8B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.33, debt $4.9B vs working capital $-92.3B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 0.1%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 11.3",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 14.2",
+          "passed": true
+        }
+      ],
+      "evaluated": 6,
+      "passed": 4,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 11.8%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.40",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "880,000,000 shares vs. 918,000,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 20",
+          "passed": false
+        }
+      ],
+      "evaluated": 4,
+      "passed": 2,
+      "total": 4
+    }
+  },
+  "website": "https://www.regions.com"
+}

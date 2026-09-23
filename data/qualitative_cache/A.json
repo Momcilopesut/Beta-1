@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1090872/000109087225000087/a-20251031.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1090872/000109087226000064/a-20260731.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1090872/000119312526384426/a-20260902.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Agilent's fiscal 2025 10-K describes a global life sciences, diagnostics and applied markets company reorganized in November 2024 into three segments: Life Sciences and Diagnostics Markets, Agilent CrossLab, and Applied Markets. Net revenue was $6,948 million in fiscal 2025, up 7% from $6,510 million in 2024 (which itself was down 5% from 2023), with growth in 2025 aided partly by the BIOVECTRA acquisition. Net income was $1,303 million in 2025 versus $1,289 million in 2024 and $1,240 million in 2023, with 2025 benefiting from tax items and 2023 affected by impairment charges tied to exiting the Resolution Bioscience business. The filing also discusses share repurchase programs, dividends, and tariff-related cost pressures the company expects to substantially mitigate in fiscal 2026.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL taxonomy tags and context references rather than narrative text, covering the quarter ended July 31, 2026 and the nine-month period from November 2025. From the tags, it appears the filing references a business combination involving an entity called 'Biocare' around June 24, 2026, and senior notes due 2032 issued around June 25, 2026, along with standard segment (Life Sciences and Diagnostics Markets, Agilent CrossLab, Applied Markets), geographic (Americas, Europe, Asia Pacific), and end-market revenue breakdowns. No prose discussion of results, drivers, or management commentary was included in the excerpt provided, so specific financial outcomes or explanations cannot be summarized from this material.",
+    "filing_summary_8k": "This 8-K, dated September 2, 2026, discloses that Board Chairperson Boon Hwee Koh notified the company of his retirement from the Board effective September 4, 2026, after 23 years of service, stated to not be due to any disagreement with the company. The Board appointed Glenn Boehnlein, former CFO of Stryker Corporation, to fill the resulting vacancy as a Class III director effective September 4, 2026, assigning him to the Audit and Finance Committee and Compensation Committee. The company also noted it issued a September 8, 2026 press release (furnished as Exhibit 99.1) announcing these board changes.",
+    "moat_explanation": "The 10-K describes Agilent's CrossLab segment as spanning 'the entire lab with its extensive services and consumables portfolio,' built around annual instrument service and software maintenance contracts tied to an installed base of instruments, which creates recurring, sticky revenue. The specialty CDMO business (BIOVECTRA, nucleic acid solutions) operates under pharmaceutical GMP conditions and provides validated companion diagnostics tied to specific approved therapies, both of which would be costly and time-consuming for customers to re-qualify with another supplier.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Fiscal 2024 net revenue declined 5% versus 2023, driven by pressure on customers' capital expenditure spending, particularly in the Life Sciences and Diagnostics Markets and Applied Markets segments serving the pharmaceutical market.",
+      "Recent U.S. and international tariff/trade policy changes adversely impacted costs of revenue beginning in the second half of fiscal 2025, with the company stating mitigation is not expected to be complete until fiscal 2026.",
+      "The company noted that customers receiving funding from the U.S. federal government have not seen capital spending normalize, unlike other customer segments.",
+      "Fiscal 2023 net income was impacted by asset impairment charges related to the exit of the Resolution Bioscience business.",
+      "Item 1A Risk Factors was not populated with substantive text in the provided excerpt, so specific company-acknowledged risks beyond MD&A commentary could not be reviewed."
+    ]
+  }
+}

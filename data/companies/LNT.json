@@ -1,0 +1,232 @@
+{
+  "_errors": {},
+  "cik": "0000352541",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 39000000,
+        "debt": 7883000000,
+        "earnings": 674000000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 3669000000,
+        "spending": 2874000000,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 20000000,
+        "debt": 8718000000,
+        "earnings": 686000000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 4205000000,
+        "spending": 3277000000,
+        "stock_return_pct": -10.18382951033024
+      },
+      {
+        "cash": 62000000,
+        "debt": 9509000000,
+        "earnings": 703000000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 4027000000,
+        "spending": 3084000000,
+        "stock_return_pct": -6.03151602970476
+      },
+      {
+        "cash": 81000000,
+        "debt": 10406000000,
+        "earnings": 690000000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 3981000000,
+        "spending": 3095000000,
+        "stock_return_pct": 13.993831919814953
+      },
+      {
+        "cash": 556000000,
+        "debt": 12346000000,
+        "earnings": 810000000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 4362000000,
+        "spending": 3337000000,
+        "stock_return_pct": 9.925600270544479
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.4662004662004662,
+      "debt_to_ebitda": 6.598610368786745,
+      "debt_to_equity": 1.6095098950723867
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 29.125725338491296,
+      "shareholders_equity": 7334000000,
+      "total_assets": 25815000000,
+      "total_liabilities": 18481000000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": -30.12379642365887
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 4.885624628838681
+    },
+    "profitability": {
+      "roe_pct": 11.043525277101919,
+      "trend": "declining"
+    },
+    "valuation": {
+      "graham_multiple": 45.22701191146075,
+      "graham_number": 45.4344118853273,
+      "graham_upside_pct": -29.689860901690967,
+      "ncav_margin_pct": -200.56404222108873,
+      "pb_ratio": 2.218657192190198,
+      "pe_ttm": 20.384858044164037
+    }
+  },
+  "industry": "Regulated Electric",
+  "last_updated": "2026-09-23T03:02:40Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 16689859740,
+  "metrics": {
+    "book_value_per_share": 29.125725338491296,
+    "current_ratio": 0.4662004662004662,
+    "debt_to_ebitda": 6.598610368786745,
+    "debt_to_equity": 1.6095098950723867,
+    "eps_growth_cagr_3yr_pct": 4.885624628838681,
+    "fcf_margin_pct": -30.12379642365887,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 45.22701191146075,
+    "graham_upside_pct": -29.689860901690967,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 0,
+    "ncav_margin_pct": -200.56404222108873,
+    "pb_ratio": 2.218657192190198,
+    "pe_ttm": 20.384858044164037,
+    "roe_pct": 11.043525277101919,
+    "shareholders_equity": 7334000000,
+    "total_assets": 25815000000,
+    "total_liabilities": 18481000000
+  },
+  "name": "Alliant Energy",
+  "price": {
+    "as_of": "2026-09-22",
+    "close": 64.62
+  },
+  "qualitative": null,
+  "sector": "Utilities",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000352541.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-21",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/352541/000119312526360020/d440334d8k.htm"
+      },
+      {
+        "filed": "2026-07-31",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/352541/000035254126000043/lnt-20260630.htm"
+      },
+      {
+        "filed": "2026-02-20",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/352541/000035254126000007/lnt-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "LNT",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $16.7B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.47, debt $12.3B vs working capital $-0.4B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 4.9%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 20.4",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 45.2",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 11.0%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 1.61",
+          "passed": false
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "257,800,000 shares vs. 256,800,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 20",
+          "passed": false
+        }
+      ],
+      "evaluated": 4,
+      "passed": 0,
+      "total": 4
+    }
+  },
+  "website": "https://www.alliantenergy.com"
+}

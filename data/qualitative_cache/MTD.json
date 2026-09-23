@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1037646/000103764626000011/mtd-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1037646/000103764626000051/mtd-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1037646/000103764626000054/mtd-20260730.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Mettler-Toledo's 2025 10-K describes a global precision instruments and services business organized into five reportable segments, with net sales of $4.0 billion (up 4% in USD, 3% in local currency) versus $3.9 billion in 2024. Gross margin declined slightly to 59.4% from 60.1%, which the company attributes to increased tariff costs, unfavorable mix, and lower volume tied to prior-year shipping-delay recovery, partly offset by pricing and cost-savings initiatives. The filing discusses segment-level results (U.S., Swiss, Western European, Chinese, and Other Operations), a difficult 2025 environment from global trade disputes/tariffs and geopolitical uncertainty, and continued investment in R&D, service expansion, and bolt-on acquisitions.",
+    "filing_summary_10q": "The most recent 10-Q excerpt provided is largely raw XBRL tag data (e.g., debt instrument details for various senior notes, revenue disaggregation by segment, product/service type, and geography) for the quarter and six months ended June 30, 2026, without accompanying narrative text. Based on the tags, it covers the period from January 1 to June 30, 2026, and includes disclosures on outstanding senior notes (with rates ranging from roughly 0.85% to 4.24%) and revenue split among U.S., Swiss, Western European, Chinese, and Other Operations segments. The excerpt does not include discussion of quarterly results, so the provided text does not describe the period's business developments or financial performance in narrative form.",
+    "filing_summary_8k": "This 8-K, dated August 3, 2026, discloses that Mettler-Toledo's Board of Directors appointed Natalia Shuman as an independent director effective August 3, 2026, increasing board size from nine to ten members. The company issued a press release announcing the appointment (furnished as Exhibit 99.1 under Item 7.01) and stated that Ms. Shuman's compensation will be consistent with the company's other independent directors, with no undisclosed related-party arrangements noted.",
+    "moat_explanation": "The 10-K describes the largest installed base of weighing instruments in the world, a large global service and calibration network that the company says 'helps significantly in customer retention,' and instruments/software built to meet FDA 21 CFR Part 11 and other regulatory compliance requirements that customers rely on for validated processes. These factors (installed base, certified service relationships, and regulatory validation needs) create friction for customers to switch to a competitor, though the excerpts also note that customers can and sometimes do switch to lower-cost competitors during downturns.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Significant business concentration in China: 16% of external sales, 29% of total segment profit, and ~29% of global production in 2025, exposing results to Chinese economic weakness and geopolitical/trade tensions",
+      "Company estimates it incurred ~$50 million of costs from 2025 incremental tariffs before mitigation, and gross margin declined from 60.1% (2024) to 59.4% (2025) partly due to tariff costs",
+      "U.S. Operations segment profit declined 5% in 2025, attributed in part to higher tariff costs and lower sales volume",
+      "Many products are manufactured at single locations with limited alternate facilities, and some raw materials/components are sourced from limited or single suppliers",
+      "Heavy reliance on a single company-wide ERP system (Blue Ocean, >95% of users implemented), which the company states increases the consequences of any system disruption",
+      "Explicit acknowledgment of ongoing uncertainty from global trade disputes/tariffs, geopolitical conflicts (Ukraine, Middle East), and volatile/softening demand in core end-markets like pharma, food, and chemical"
+    ]
+  }
+}

@@ -87,15 +87,14 @@
     }
   },
   "industry": "Consumer Electronics",
-  "last_updated": "2026-09-23T02:28:51Z",
+  "last_updated": "2026-09-23T02:44:51Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -134,23 +133,7 @@
     "as_of": "2026-09-22",
     "close": 339.75
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Apple's fiscal 2025 10-K reports total net sales of $416.2 billion, up 6% year-over-year, driven by growth in Services (up 14%) and iPhone, Mac, and iPad, partially offset by declines in Wearables, Home and Accessories. Total gross margin percentage rose to 46.9% from 46.2%, though product margins faced pressure from tariffs and product mix. The filing discusses new U.S. tariffs on imports from several countries beginning in fiscal Q2 2025, a lower effective tax rate partly due to a prior-year State Aid Decision impact, and a capital return program including an increased $100 billion share repurchase authorization and a raised quarterly dividend to $0.26 per share.",
-    "filing_summary_10q": "This Q3 fiscal 2026 10-Q (quarter ended June 27, 2026) shows total net sales of $109.4 billion for the quarter, up from $94.0 billion a year earlier, with net income of $29.8 billion versus $23.4 billion in the prior-year quarter. For the nine months ended June 27, 2026, net sales were $364.4 billion and net income was $101.5 billion, both higher than the comparable 2025 period. The balance sheet shows total assets of $383.3 billion and shareholders' equity of $107.5 billion as of June 27, 2026, up from $73.7 billion at fiscal year-end 2025.",
-    "filing_summary_8k": "This 8-K, dated July 30, 2026, discloses under Item 2.02 that Apple issued a press release announcing its financial results for the third fiscal quarter ended June 27, 2026, attached as an exhibit; the 8-K itself does not include the detailed financial figures beyond referencing the attached press release.",
-    "moat_explanation": "The 10-K describes Apple's integrated ecosystem (proprietary hardware, operating systems, software, and services), a large portfolio of patents, trademarks, and copyrights, and a strong brand/third-party ecosystem as principal competitive factors. However, the filing itself acknowledges the Company holds only a 'minority market share' in smartphones, PCs, tablets, and wearables, and faces intense price-based competition, tempering the strength of this moat.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Company explicitly states it has a minority market share in global smartphone, PC, tablet, and wearables markets and faces aggressive price competition",
-      "Reliance on single or limited-source suppliers and custom components creates supply concentration risk",
-      "Majority of manufacturing performed by outsourcing partners concentrated in China mainland, India, Japan, South Korea, Taiwan, and Vietnam, exposing the Company to geopolitical and trade risk",
-      "New U.S. tariffs beginning fiscal Q2 2025 (including on China, India, Japan, South Korea, Taiwan, Vietnam, EU) already impacting costs and gross margin, with uncertain further impact",
-      "Section 232 investigation into semiconductor and related imports adds regulatory uncertainty",
-      "Company states gross margins will be subject to volatility and downward pressure going forward"
-    ]
-  },
+  "qualitative": null,
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",

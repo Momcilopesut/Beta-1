@@ -1,0 +1,228 @@
+{
+  "_errors": {},
+  "cik": "0000732717",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 19223000000,
+        "debt": 195832000000,
+        "earnings": 20081000000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 134038000000,
+        "spending": 108141000000,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 3701000000,
+        "debt": 154679000000,
+        "earnings": -8524000000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 120741000000,
+        "spending": 125328000000,
+        "stock_return_pct": -0.8616047388260643
+      },
+      {
+        "cash": 6722000000,
+        "debt": 154899000000,
+        "earnings": 14400000000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 122428000000,
+        "spending": 97660000000,
+        "stock_return_pct": -6.300923411189571
+      },
+      {
+        "cash": 3298000000,
+        "debt": 140923000000,
+        "earnings": 10948000000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 122336000000,
+        "spending": 98075000000,
+        "stock_return_pct": 31.999999999999996
+      },
+      {
+        "cash": 18234000000,
+        "debt": 173986000000,
+        "earnings": 21889000000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 125648000000,
+        "spending": 100648000000,
+        "stock_return_pct": 9.090909090909092
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.9710014611666854,
+      "debt_to_ebitda": 3.791701172470906,
+      "debt_to_equity": 1.4748469812755787
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 18.223407321994813,
+      "shareholders_equity": 110533000000,
+      "total_assets": 420198000000,
+      "total_liabilities": 291706000000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 15.473385967146314
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": null
+    },
+    "profitability": {
+      "roe_pct": 19.48045180074545,
+      "trend": "improving"
+    },
+    "valuation": {
+      "graham_multiple": 13.082441754153328,
+      "graham_number": 35.30553867064551,
+      "graham_upside_pct": 40.54752655511747,
+      "ncav_margin_pct": -241.15568418327067,
+      "pb_ratio": 1.5780174568106917,
+      "pe_ttm": 8.290429042904291
+    }
+  },
+  "industry": "Telecommunications Services",
+  "last_updated": "2026-09-23T02:47:11Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": true
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 172132036800,
+  "metrics": {
+    "book_value_per_share": 18.223407321994813,
+    "current_ratio": 0.9710014611666854,
+    "debt_to_ebitda": 3.791701172470906,
+    "debt_to_equity": 1.4748469812755787,
+    "fcf_margin_pct": 15.473385967146314,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 13.082441754153328,
+    "graham_upside_pct": 40.54752655511747,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -241.15568418327067,
+    "pb_ratio": 1.5780174568106917,
+    "pe_ttm": 8.290429042904291,
+    "roe_pct": 19.48045180074545,
+    "shareholders_equity": 110533000000,
+    "total_assets": 420198000000,
+    "total_liabilities": 291706000000
+  },
+  "name": "AT&T",
+  "price": {
+    "as_of": "2026-09-22",
+    "close": 25.12
+  },
+  "qualitative": null,
+  "sector": "Communication Services",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000732717.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-09",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/732717/000119312526386534/d123248d8k.htm"
+      },
+      {
+        "filed": "2026-07-22",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000297/t-20260630.htm"
+      },
+      {
+        "filed": "2026-02-09",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "T",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $172.1B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.97, debt $174.0B vs working capital $-5.0B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 4/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 8.3",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 13.1",
+          "passed": true
+        }
+      ],
+      "evaluated": 5,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 19.5%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 1.47",
+          "passed": false
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "7,179,000,000 shares vs. 7,204,000,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 100",
+          "passed": true
+        }
+      ],
+      "evaluated": 4,
+      "passed": 3,
+      "total": 4
+    }
+  },
+  "website": "https://www.att.com"
+}

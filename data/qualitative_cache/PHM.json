@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/822416/000082241626000007/phm-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/822416/000082241626000036/phm-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/822416/000082241626000038/phm-20260811.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, PulteGroup reported home sale revenues of $16.7 billion, down 3% from 2024, and net income of $2.2 billion, down from $3.1 billion, as home sale gross margin fell to 26.3% from 28.9%. Management attributes the decline to weakened consumer demand from affordability challenges, elevated mortgage rates, increased sales incentives, and higher land costs, resulting in $77.4 million of land impairments and $48.4 million of land-option deposit write-offs in 2025. The company continued shareholder returns, raising its dividend and repurchasing $1.2 billion of stock, while maintaining a debt-to-capitalization ratio of 11.2%.",
+    "filing_summary_10q": "The Form 10-Q covers the quarter and six months ended June 30, 2026. Home sale revenues were $3.81 billion for the quarter (down from $4.27 billion a year earlier) and $7.11 billion for the six months (down from $8.02 billion), with home sale cost of revenues also declining. The balance sheet shows cash and equivalents of $1.34 billion (down from $1.98 billion at year-end 2025), higher house and land inventory of $13.7 billion, and increased notes payable of $1.82 billion, alongside continued share repurchase activity during the period.",
+    "filing_summary_8k": "This 8-K, dated August 11, 2026, discloses that Pulte Mortgage LLC entered into a new Master Repurchase Agreement with Truist Bank (as Agent) and other Buyers to finance mortgage loan originations, providing a maximum aggregate commitment of $625 million and expiring August 10, 2027. The filing also reports this arrangement as the creation of a direct financial obligation under Item 2.03.",
+    "moat_explanation": "The Risk Factors section explicitly describes homebuilding as a highly competitive, cyclical industry where PulteGroup competes with numerous national, regional, and local builders as well as resales and rentals, and where suitable land is scarce and contested. The excerpts do not describe any patented technology, exclusive brand power, network effects, or high customer switching costs that would insulate PulteGroup from this competition; its captive Pulte Mortgage financial services arm and land-option strategy are described as risk-management and operational tools rather than durable competitive barriers.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Home sale gross margin declined from 28.9% to 26.3% in 2025, with sequential quarterly deterioration (27.5% to 24.7%) attributed to elevated incentives and higher land costs",
+      "Homebuilding income before income taxes fell 27% year-over-year in 2025, with Texas segment income down 53% and West down 31%",
+      "Land-related charges rose to $126.9 million in 2025 (impairments and deposit/pre-acquisition write-offs) versus $34.6 million in 2024, reflecting weakening demand assumptions",
+      "Net new orders (units) declined 4% and backlog dollars declined 19% in 2025, indicating softening demand",
+      "Goodwill impairment of $28.6 million and property/equipment impairments of $49.6 million recorded in 2025 tied to expected divestiture of manufacturing assets",
+      "Company faces near-term debt refinancing needs, including $251.9 million of senior notes due March 2026 and the need to renew Pulte Mortgage's repurchase agreement, with no assurance of comparable terms"
+    ]
+  }
+}

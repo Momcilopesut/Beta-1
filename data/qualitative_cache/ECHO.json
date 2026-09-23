@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1415404/000110465926021817/tmb-20251231x10k.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1415404/000110465926089370/sats-20260630x10q.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1415404/000141540426000042/sats-20260807x8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The FY2025 10-K describes a going-concern qualification due to insufficient cash, cash flow, and committed financing to meet obligations over the next twelve months, alongside $25.980 billion in total debt. Following an FCC review that deemed the company's spectrum underutilized, EchoStar agreed to sell material spectrum licenses to AT&T (~$22.65 billion) and SpaceX (~$20 billion, later increased), transitioning its wireless business to a 'Hybrid MNO' model dependent on AT&T's network. The filing also reports continued declines in Pay-TV (DISH TV and SLING TV) subscribers, rising programming costs, and $17.632 billion in non-cash impairment charges tied to 5G network abandonment and Broadband/Satellite segment assets.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (quarter ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, so detailed financial results cannot be summarized from it. It references subsequent events as of July 28, 2026 tied to the AT&T License Purchase Agreement, including repayment/redemption of certain debt instruments (an intercompany loan tranche and senior notes), and references a new DISH DBS financing term loan due 2029 and associated mandatorily redeemable preferred shares entered into in March 2026. The provided excerpts do not include prose discussion of quarterly revenue, subscriber trends, or overall results.",
+    "filing_summary_8k": "This 8-K, dated August 7, 2026 and filed jointly by EchoStar Corporation and its subsidiary Hughes Satellite Systems Corporation (HSSC), discloses under Item 7.01 (Regulation FD) that HSSC held confidential discussions with holders of its 5.25% Senior Secured Notes due 2026 and 6.625% Senior Notes due 2026 regarding a potential transaction, but these discussions did not result in an agreement. Pursuant to confidentiality agreements with those noteholders, HSSC is publicly furnishing 'cleansing materials' (a presentation and Q4 2025 financial models under various assumptions) that were previously shared confidentially, noting these materials reflect assumptions as of the fourth quarter of 2025 that may have since changed and should not be relied upon for investment decisions.",
+    "moat_explanation": "The excerpts describe a Pay-TV business with a subscriber base in sustained decline amid cord-cutting and OTT competition, rising programming costs the company has struggled to fully pass through, and a wireless business that depends on AT&T's network under a 'Hybrid MNO' arrangement rather than its own independent infrastructure. While the company holds FCC spectrum licenses (an intangible/regulatory asset), the excerpts show the FCC itself deemed this spectrum underutilized and forced the company to sell a material portion of its licenses or face revocation, undermining rather than supporting a durable competitive advantage. No excerpt describes network effects, cost leadership, switching costs, or scale barriers that competitors cannot replicate.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Going concern doubt: the company states it lacks sufficient cash on hand, projected cash flows, or committed financing to meet obligations over the next twelve months",
+      "Total debt, finance lease and other obligations of $25.980 billion as of December 31, 2025, with $2.0B, $1.377B and $2.750B of debt maturing at various points in 2026",
+      "The company elected not to make scheduled interest payments on certain senior notes during 2025 (later cured within grace periods) amid the FCC review",
+      "FCC review found the company's spectrum 'underutilized' and required a material sale of spectrum licenses (AT&T and SpaceX transactions) or face wide-ranging license revocation",
+      "Continued decline in Pay-TV (DISH TV and SLING TV) subscribers, with programming costs rising faster than the company's ability to raise subscriber rates",
+      "Recorded non-cash asset impairment and other charges totaling $17.632 billion during 2025 related to 5G network decommissioning and Broadband/Satellite segment assets"
+    ]
+  }
+}

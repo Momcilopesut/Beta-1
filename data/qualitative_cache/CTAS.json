@@ -1,0 +1,22 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/723254/000072325426000028/ctas-20260531.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/723254/000072325426000012/ctas-20260228.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/723254/000095010326013001/dp252376_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year ended May 31, 2026, Cintas reported total revenue of $11.3 billion (up 8.9%, or 8.3% organically), driven by growth in both the Uniform Rental and Facility Services segment (up 8.1%) and First Aid and Safety Services segment (up 14.3%). Net income rose 10.4% to $2.0 billion and diluted EPS increased 11.6% to $4.91, with gross margin improving to 50.6% from 50.0%. The filing discloses a March 10, 2026 Agreement and Plan of Merger to acquire UniFirst Corporation for approximately $5.5 billion in cash and stock, not yet closed as of the filing date, alongside continued share buybacks, dividend increases, and new credit/bridge financing arrangements related to the transaction.",
+    "filing_summary_10q": "This is Cintas' Form 10-Q for the quarterly period ended February 28, 2026 (fiscal Q3 2026), covering the three- and nine-month periods versus the comparable prior-year periods. The excerpt provided consists primarily of XBRL tagging data rather than narrative text, but it references segment-level revenue (Uniform Rental and Facility Services, First Aid and Safety Services, Fire Protection, Uniform Direct Sales), outstanding senior notes and revolving credit facility balances, ongoing share buyback program activity, and a subsequent event disclosure tied to the UniFirst Corporation merger agreement dated March 10, 2026. No detailed narrative financial results are available in the excerpt to summarize further.",
+    "filing_summary_8k": "This Form 8-K, dated August 26, 2026, discloses under Item 5.02 that director Melanie W. Barstad notified Cintas of her decision not to stand for re-election at the Company's 2026 Annual Meeting of Shareholders, while continuing to serve until that meeting. The filing states her decision was not the result of any disagreement with the Company regarding its operations, policies, or procedures.",
+    "moat_explanation": "The 10-K describes a route-based service model where sales representatives visit over one million customers on a recurring basis, building 'close personal relationships' and using the existing distribution system as 'a platform from which we launch additional products and services,' which implies embedded, recurring service relationships that create friction to switch providers. However, the same section also describes the primary markets as 'local in nature and highly fragmented' with competition from national, regional, local and online providers on the basis of price, quality and convenience, which tempers the strength of any moat and means the excerpts do not clearly support a stronger category like network effects or intangible assets.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Pending ~$5.5 billion acquisition of UniFirst is subject to HSR Act antitrust clearance and other closing conditions, and the 10-K states the transaction had not closed as of the filing date, creating completion and integration uncertainty.",
+      "The company incurred $16.1 million in transaction expenses related to the UniFirst deal and entered into a $2.85 billion bridge loan commitment plus a new $2.0 billion revolving credit facility, indicating a meaningful increase in near-term financing needs and leverage tied to the deal.",
+      "$1.0 billion of senior notes (3.70%, originally maturing 2027) is now classified as debt due within one year, concentrating near-term refinancing/repayment obligations.",
+      "Markets are described as 'highly fragmented' with competition from national, regional, local and online providers, and businesses may choose to bring services in-house instead of outsourcing, which could pressure pricing and growth."
+    ]
+  }
+}

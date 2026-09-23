@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1996862/000162828026009842/bg-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1996862/000162828026050540/bg-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1996862/000162828026062880/bg-20260917.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The excerpts describe increased 2025 capital expenditures ($1,723 million vs. $1,376 million in 2024), attributed partly to the Viterra Acquisition and North America projects, with planned 2026 capex of $1.5-1.7 billion. The MD&A also details the annual goodwill impairment test, noting that the Grain Merchandising and Global Cotton reporting units (both affected by the Viterra Acquisition) had fair values exceeding carrying values by only about 9% and 15%, respectively. Other disclosures cover a Q4 2025 U.S. pension plan settlement resulting in a $118 million pre-tax loss, an increase in deferred tax valuation allowances, and ongoing non-income tax and labor claims and lawsuits primarily in Brazil and Argentina.",
+    "filing_summary_10q": "This excerpt consists almost entirely of XBRL tagging metadata rather than narrative text, so a substantive financial or operational summary cannot be drawn from it. It does indicate the period covered is the quarter ended June 30, 2026, and references several corporate events, including the Viterra Limited acquisition (which closed July 2, 2025), a transaction involving International Flavors & Fragrances Inc. dated March 1, 2026, and held-for-sale or disposal treatment for the European Margarines and Spreads Business and Bunge Ib\u00e9rica S.A., alongside the company's segment structure (Soybean Processing and Refining, Softseed Processing and Refining, Tropical Oils and Specialty Ingredients, and Grain Merchandising and Milling).",
+    "filing_summary_8k": "This 8-K, dated September 17, 2026, reports that Bunge Limited Finance Corp. and Bunge Finance Europe B.V., both subsidiaries of Bunge Global SA, agreed with lenders to extend the maturities of three revolving credit facilities: a $1.1 billion 364-day facility extended to October 1, 2027; a $4.2 billion 5-year facility extended by 12 months to October 3, 2031; and a $3.5 billion 3-year facility extended by 12 months to October 3, 2029. No financial statements were filed with this report beyond the standard cover-page exhibit.",
+    "moat_explanation": "The provided 10-K excerpts (an exhibit index misidentified as Item 1 Business, a cybersecurity-governance passage in Risk Factors, and MD&A sections on capex, goodwill testing, and tax/contingency accounting) contain no discussion of market share, brand strength, cost structure versus competitors, customer switching costs, or barriers to entry. The only strategy-related language ('strengthen our oilseeds platform,' 'increase participation in biofuels and plant-based proteins') is aspirational and not tied to any described competitive advantage, so the excerpts do not support a durable moat classification.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Goodwill impairment risk: as of the 2025 annual test, the Grain Merchandising reporting unit's estimated fair value exceeded carrying value by only ~9% and Global Cotton by only ~15%, indicating limited cushion against further declines in commodity prices, volumes, or higher discount rates.",
+      "The company discloses it is party to 'a large number of claims and lawsuits,' primarily non-income tax and labor claims in Brazil and non-income tax claims in Argentina, which could materially affect results if assumptions change.",
+      "Valuation allowances against deferred tax assets increased by $295 million in 2025, primarily tied to purchase accounting from the Viterra acquisition.",
+      "A pension plan settlement (U.S. Pension Plan lump sum buyout) generated a $118 million pre-tax settlement loss in Q4 2025.",
+      "Capital expenditures rose sharply (from $1,376 million to $1,723 million) largely due to Viterra acquisition integration, and goodwill fair-value estimates are described as sensitive to commodity prices, throughput volumes, and discount rates."
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000033/mrna-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000150/mrna-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1682852/000119312526378505/d108896d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Moderna reported total revenue of $1.9 billion, down from $3.2 billion in 2024, primarily due to a 42% decline in net COVID vaccine sales; net loss was $2.8 billion, narrower than 2024's $3.6 billion loss. The company now has three commercial products (Spikevax, mNEXSPIKE, and mRESVIA) and highlighted 2025 developments including the U.S. launch of mNEXSPIKE, expansion of U.S. and international (UK, Canada, Australia) manufacturing capacity, a new $1.5 billion five-year credit facility, and pipeline progress in oncology (intismeran autogene with Merck), rare disease (propionic acidemia collaboration with Recordati), and infectious disease (flu, flu+COVID, norovirus candidates).",
+    "filing_summary_10q": "The provided 10-Q excerpt consists only of XBRL taxonomy tags and data-point identifiers (e.g., revenue categories, fair value hierarchies, geographic segments) covering the quarter and six months ended June 30, 2026, with no narrative text describing business developments, financial results, or MD&A commentary. Based on the excerpt provided, no substantive summary of the quarter's results or events can be given.",
+    "filing_summary_8k": "This 8-K, dated August 27, 2026, discloses that Moderna completed a private offering of $3.0 billion aggregate principal amount of 0.00% Convertible Senior Notes due 2032, including full exercise of the initial purchasers' option for additional notes, resulting in net proceeds of approximately $2,957.3 million. The company used $328.8 million of proceeds for capped call transactions intended to reduce potential share dilution from note conversion, and stated it expects to use remaining proceeds for general corporate purposes, including possible investment in its oncology business and debt repayment. The filing also details the notes' conversion terms, redemption provisions, and events of default under the governing indenture.",
+    "moat_explanation": "The 10-K describes a 'broad intellectual property portfolio' and a proprietary mRNA platform (chemistry, delivery/LNP technology, manufacturing process science) built over years, plus regulatory approvals for three commercial products (Spikevax, mNEXSPIKE, mRESVIA) that competitors would need to replicate. However, the Risk Factors section also states Moderna competes against larger, better-resourced companies (Pfizer, Sanofi, GSK) that have exploited scale, bundling and purchasing power advantages, and that Moderna has been excluded from some European COVID sales due to a competitor's exclusive government contract, indicating the intangible-asset moat is real but not dominant or unchallenged.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Total revenue fell 40% in 2025 ($1.9B vs $3.2B in 2024), driven by a 42% decline in net product sales, largely lower COVID vaccine demand",
+      "Company remains unprofitable, with a net loss of $2.8 billion in 2025 (though narrower than 2024's $3.6 billion loss)",
+      "Excerpts note exclusion from many European COVID vaccine markets due to a competitor's exclusive contract with the European Commission through year-end 2026",
+      "Prior FDA Refusal-to-File letter for the seasonal flu vaccine candidate required an amended BLA submission, showing regulatory execution risk",
+      "Company describes 'commercial challenges' in the RSV market due to more limited-than-expected ACIP recommendations",
+      "Heavy revenue concentration in COVID vaccines (COVID accounted for $1.81B of $1.818B total net product sales in 2025), with reliance on evolving regulatory/ACIP guidance and vaccination rate uncertainty"
+    ]
+  }
+}

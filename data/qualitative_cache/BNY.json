@@ -1,0 +1,22 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1390777/000139077726000033/bk-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1390777/000139077726000086/bk-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1390777/000139077726000097/bk-20260922.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes BNY as a global financial services company with roughly $59.3 trillion in assets under custody/administration and $2.2 trillion in assets under management as of December 31, 2025, operating through Securities Services, Market and Wealth Services, Investment and Wealth Management, and an Other segment. It operates through several U.S. and non-U.S. banking and trust subsidiaries and reports approximately 48,100 full-time employees globally, about 60% based outside the U.S. The filing states that competition across all its business lines is intense, including from technology and fintech firms, and incorporates detailed Risk Factors and MD&A discussion by reference to the Annual Report rather than including it directly in the 10-K.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, covering items such as securities holdings by type (U.S. Treasury, agency and non-agency mortgage-backed securities, collateralized loan obligations, foreign covered bonds) and their credit ratings, loan categories (commercial, commercial real estate, financial institutions, wealth management, residential mortgages, capital call financing), and assets pledged as collateral including at the Federal Reserve discount window and Federal Home Loan Bank. No narrative discussion of quarterly financial results, business developments, or management commentary was included in the provided excerpt.",
+    "filing_summary_8k": "This 8-K, dated September 22, 2026, discloses under Item 5.03 that BNY filed a Certificate of Elimination with the Delaware Secretary of State removing the Certificate of Designations for its Series F Noncumulative Perpetual Preferred Stock, after all outstanding shares of that series were redeemed on September 20, 2026. The filing includes the Certificate of Elimination as an exhibit and does not disclose any other events.",
+    "moat_explanation": "The 10-K describes BNY as a global custody, trust and clearing institution operating continuously since 1784, with $59.3 trillion in assets under custody/administration and $2.2 trillion in assets under management, businesses (custody, corporate trust, clearing, collateral management) that typically require deep, long-term institutional integration that is costly and risky for clients to unwind. However, the excerpts also explicitly state that competition across all business lines is 'intense' and that fintech firms not subject to the same regulation may erode BNY's competitive position, which tempers the strength of any moat claim.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "The Business section explicitly states competition in financial services 'continues to be intense' across all of BNY's segments.",
+      "Management identifies fintech firms not subject to the same regulatory burden as a potential threat to competitive position.",
+      "The Risk Factors and MD&A sections are incorporated entirely by reference to the Annual Report rather than provided in the excerpt, limiting visibility into specific risks disclosed by the company.",
+      "The 10-Q excerpt provided contains only XBRL tagging data with no narrative discussion of results, limiting assessment of recent period performance or issues."
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000025/eme-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000110/eme-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/105634/000010563426000115/eme-20260728.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, EMCOR reported record consolidated revenues of $16.99 billion, up 16.6% from $14.57 billion in 2024, with growth across nearly all segments except a slight decline in U.S. industrial services. Operating income rose to $1.71 billion (10.1% of revenues), aided by a $144.9 million gain on the December 2025 sale of its United Kingdom operations and stronger contribution from U.S. construction segments, while net income reached $1.27 billion ($28.19 diluted EPS). The period included the $876.8 million acquisition of Miller Electric Company and nine other acquisitions, alongside continued share repurchases; the U.S. building services segment saw some contract losses upon rebid, and the industrial services segment saw project deferrals and cancellations.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter and six months ended June 30, 2026) consists mainly of XBRL tagging data and details of the company's 2023 Revolving Credit Facility interest rate terms (based on a base rate or Adjusted Term SOFR plus a margin depending on leverage ratio), without narrative discussion of financial results or business developments for the period.",
+    "filing_summary_8k": "This Form 8-K, dated July 28, 2026, discloses under Item 1.04 (Mine Safety) that the U.S. Mine Safety and Health Administration issued an imminent danger order to MOR PPM, Inc., a wholly-owned indirect subsidiary of EMCOR Group, at the Sivells Bend mine in Cooke County, Texas. The order followed an MSHA inspector's observation of a worker welding approximately 25 feet above ground on a platform being lifted by an extended-boom forklift; the filing states there were no injuries.",
+    "moat_explanation": "The excerpts describe EMCOR as a diversified electrical, mechanical, building, and industrial services contractor that competes for project work across many market sectors (data centers, healthcare, commercial, industrial, etc.) and grows partly through acquisitions like Miller Electric. While the company cites productivity investments (virtual design, prefabrication, automation) and scale/diversification benefits, the filings describe a project-bid, service-contract business with contracts lost upon rebid, rather than pointing to patents, brand power, network effects, or high customer switching costs that would constitute a durable moat.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "United States building services segment lost certain facilities maintenance contracts that were not renewed upon rebid, reducing commercial and government site-based services revenue",
+      "United States industrial services segment revenue declined due to lower turnaround project demand and deferral, delay, or cancellation of previously planned turnaround projects",
+      "2024 results included an $11.0 million reserve related to a specific customer bankruptcy in the commercial site-based services division",
+      "Operating margin in the electrical construction segment was negatively impacted by reduced labor productivity and availability in new geographies where the company is building out its workforce",
+      "Company identifies dependence on sophisticated information technology systems and risk of disruption, failure, or breaches as a named risk factor",
+      "A subsidiary (MOR PPM) received an MSHA imminent danger order in July 2026 after an inspector observed an unsafe welding practice at a mine site, though no injuries occurred"
+    ]
+  }
+}

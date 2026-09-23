@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/31791/000003179126000012/revv-20251228.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/31791/000003179126000027/revv-20260705.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/31791/000003179126000022/pki-20260804.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025 (ended December 28, 2025), Revvity reported revenue of $2,856.1 million, up 4% year-over-year, with growth in both the Diagnostics segment (driven by Immunodiagnostics and Reproductive Health) and Life Sciences segment (driven by Software). Consolidated gross margin declined about 104 basis points due to tariffs, unfavorable foreign exchange, and product mix shift, while operating margin declined slightly. The company repurchased $820.8 million of common stock, paid $32.8 million in dividends, and noted that its Life Sciences Solutions reporting unit's fair value exceeded its carrying value by only 10-20% in the latest goodwill impairment test.",
+    "filing_summary_10q": "This 10-Q, covering the quarter ended July 5, 2026, is presented largely as structured XBRL data rather than narrative text in the excerpt provided, so specific results and commentary cannot be summarized. The data indicates the filing covers Life Sciences and Diagnostics segment revenue by geography (Americas, Europe, Asia) and by sub-category (Life Sciences Solutions, Software, Immunodiagnostics, Reproductive Health), along with details on outstanding senior notes, a revolving credit facility, a stock repurchase program, and quarterly dividend declarations. The provided excerpts don't describe the specific financial results or narrative discussion for the quarter.",
+    "filing_summary_8k": "This Form 8-K, dated August 4, 2026, announces Revvity's financial results for the second quarter ended July 5, 2026, with the press release furnished as an exhibit. It also discloses that the company signed a definitive agreement on July 31, 2026 to sell substantially all assets of its Immunodiagnostics business in China (China IDX) for up to $200 million, subject to adjustments and closing conditions, which management believes is probable to close by the end of 2027; unaudited pro forma financial statements reflecting this probable sale are included as an exhibit.",
+    "moat_explanation": "The Business section describes an extensive portfolio of proprietary, branded assay and detection technologies (e.g., HTRF, AlphaLISA, DELFIA, LANCE Ultra), a patented CRISPR-based Pin-point base-editing platform, and licensed technologies such as CHOSOURCE with a track record of over 100 regulatory filings, all of which suggest differentiated intellectual property. However, the Risk Factors section also notes 'aggressive competition from numerous competitors' and pressure to keep innovating, indicating the moat is not unassailable.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Consolidated gross margin declined ~104 bps in fiscal 2025 due to tariffs, unfavorable FX, and product mix shift",
+      "Diagnostics segment operating margin fell ~194 bps partly due to China diagnostic testing policy changes",
+      "Life Sciences Solutions reporting unit's fair value exceeded carrying value by only 10-20% in the November 2025 goodwill impairment test, indicating limited cushion against future impairment",
+      "Restructuring actions in fiscal 2025 (workforce reductions, facility consolidations) affected approximately 5% of the workforce",
+      "Company acknowledges 'aggressive competition from numerous competitors' and reliance on continual new product introduction to avoid losing market share",
+      "Significant litigation matters and settlements costs of $12.2 million in fiscal 2025"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000004/nrg-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000020/nrg-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000018/nrg-20260804.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "whole_document_fallback",
+    "filing_summary_10k": "The 10-K excerpt provided is primarily raw XBRL tagging data rather than narrative text, so it does not describe NRG's business, risk factors, or MD&A discussion in prose form. It does indicate the company reports through segments including Texas, East, West Services and Other, and Vivint Smart Home, and references several corporate transactions during the covered periods: the 2023 acquisition of Vivint, the April 2025 Texas Generation Portfolio transaction, prior divestitures of Airtron, the South Texas Project interest, and the Gregory facility, and a subsequent-event agreement (dated January 2026) related to acquiring an LS Power portfolio. No further detail on the substance or financial impact of these items is present in the excerpt.",
+    "filing_summary_10q": "The most recent 10-Q excerpt covers the quarter and six months ended June 30, 2026, and, like the 10-K excerpt, consists mostly of XBRL tags rather than descriptive text. It references the same four operating segments (Texas, East, West and Other, Vivint Smart Home) and includes data points related to the LS Power Portfolio transaction as of June 30, 2026 and January 2026. The excerpt does not include narrative discussion of quarterly financial results, revenue drivers, or management commentary.",
+    "filing_summary_8k": "This 8-K, dated August 4, 2026, discloses under Item 2.02 that NRG Energy issued a press release announcing its financial results for the quarter ended June 30, 2026, furnished as Exhibit 99.1. No additional items or details of the results themselves are included in the filing body provided.",
+    "moat_explanation": "The provided 10-K excerpt consists almost entirely of XBRL data tags and financial statement metadata rather than narrative Business, Risk Factors, or MD&A prose, so it does not contain a description of NRG's competitive position, market share, brand strength, cost structure, or customer switching dynamics. The only substantive facts discernible are segment names (Texas, East, West Services and Other, Vivint Smart Home) and a series of acquisitions/divestitures (Vivint in 2023, Texas Generation Portfolio sale in April 2025, pending LS Power Portfolio acquisition in January 2026, and disposals of Airtron, the South Texas Project stake, and the Gregory facility), none of which by themselves establish a durable competitive moat.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "The excerpts reference litigation-related XBRL tags (e.g., 'case' and 'defendant' elements) but provide no narrative detail on the nature, scope, or potential financial impact of any legal proceedings.",
+      "Significant portfolio restructuring is evident (sale of the Texas Generation Portfolio, divestitures of Airtron, the South Texas Project interest, and the Gregory facility, alongside a pending large LS Power Portfolio acquisition), which the excerpts do not explain in terms of strategic rationale or integration risk.",
+      "The company carries meaningful commodity, interest rate, and foreign exchange derivative exposure per the fair value and hedging tags, but the excerpts do not include narrative discussion of how these exposures are managed or their potential earnings impact."
+    ]
+  }
+}

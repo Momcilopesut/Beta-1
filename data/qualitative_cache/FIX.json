@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1035983/000110465926017530/fix-20251231x10k.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1035983/000110465926086258/fix-20260630x10q.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1035983/000110465926089781/tm2621841d1_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Comfort Systems USA reported revenue of $9.10 billion (up 29.5% from 2024), gross profit margin improving to 24.1% from 21.0%, and net income of $1.02 billion versus $522.4 million in 2024. Growth was driven largely by same-store activity in the technology/data center sector, supplemented by several acquisitions (Century, Right Way, Feyen Zylstra, Meisner). Backlog nearly doubled year-over-year to $11.94 billion, and management described 2025 as an 'unprecedented' demand environment expected to remain strong into 2026.",
+    "filing_summary_10q": "The excerpt provided consists mainly of XBRL tags and a partial balance sheet as of June 30, 2026 versus December 31, 2025, with no accompanying MD&A narrative text. Total assets grew from $6.44 billion to $8.49 billion, cash and equivalents rose from $981.9 million to $1.85 billion, and billed accounts receivable increased from $2.58 billion to $3.28 billion over the period; goodwill and identifiable intangible assets also increased, consistent with continued acquisition activity (including R.C. Hunt Electric, noted as a 2026 acquisition in the XBRL tags). The excerpt does not include the results of operations, cash flow statement, or risk factor discussion for this quarter.",
+    "filing_summary_8k": "This 8-K, dated August 3, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that Comfort Systems USA posted an investor presentation slideshow to its website for use with analysts and investors, which includes non-GAAP financial measures. The filing states this information is furnished, not filed, and refers readers to risk discussions in the company's most recent Form 10-K; no other financial results or events are described in the excerpt.",
+    "moat_explanation": "The 10-K describes purchasing economies from combined spend across 50 operating units, centralized fabrication and administrative functions, and management's assertion that its balance sheet strength and surety relationships (needed to bond large projects) represent competitive advantages relative to most industry participants. However, the Risk Factors section explicitly describes the industry as 'highly fragmented and competitive' with 'low barriers to entry,' where smaller competitors can win bids on price alone, which meaningfully limits how durable this cost/scale advantage is.",
+    "moat_present": true,
+    "moat_type": "cost_advantage",
+    "red_flags": [
+      "One customer represented approximately 12.8% of 2025 consolidated revenue, creating customer concentration risk",
+      "Company explicitly states its markets have low barriers to entry and are highly fragmented, with price often the deciding factor in bids",
+      "Fixed-price contracts expose the company to cost overrun risk if cost estimates prove inaccurate",
+      "Significant goodwill and intangible assets carried on the balance sheet with disclosed risk of future impairment charges",
+      "Revenue recognized via cost-to-cost method relies on subjective estimates that can result in revisions to previously recorded revenue or profit",
+      "Backlog ($11.94 billion) is described as subject to unexpected adjustments and cancellations, limiting its predictive value"
+    ]
+  }
+}

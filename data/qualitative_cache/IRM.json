@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1020569/000102056926000013/irm-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1020569/000102056926000071/irm-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1020569/000102056926000068/irm-20260805.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Iron Mountain reported total revenues of $6.90 billion, up 12.2% from $6.15 billion in 2024, driven by organic storage rental and service revenue growth plus ALM acquisitions. Net income attributable to the company fell to $144.6 million from $180.2 million, while Adjusted EBITDA rose 15.1% to $2.57 billion and margin improved to 37.3%. The company completed its multi-year Project Matterhorn transformation program in 2025 (total costs of about $574.4 million since 2022) and continued expanding its Global Data Center Business, ending the year with 488 MW of leased capacity and 852 MW under construction or development, funded in part by new debt issuances including Euro-denominated notes.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists only of XBRL taxonomy tags, entity identifiers, and financial statement line-item references rather than narrative text or reported figures. As a result, the excerpt does not describe specific revenue, income, or operational results for the quarter, and no further factual summary can be drawn from what was given.",
+    "filing_summary_8k": "This 8-K, dated August 5, 2026, discloses under Item 2.02 that Iron Mountain issued its second quarter 2026 earnings press release and furnished supplemental financial information and a conference call slide presentation as exhibits. The filing does not itself contain the financial results, only the announcement that these materials were released and posted to the company's investor website.",
+    "moat_explanation": "The 10-K describes contracted storage rental agreements (one to five years) in Records Management with 'consistently experienced strong customer retention levels,' and data center leases with a weighted average expiration of 10.3 years, indicating that once customers place physical records or IT infrastructure with Iron Mountain, moving them elsewhere involves real friction, cost and risk. The company's emphasis on chain-of-custody, decades-long relationships and diversified cross-selling into an installed base of 240,000 customers further supports durable customer lock-in rather than a brand or scale-based advantage per se.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Net income declined 17.1% year-over-year despite 12.2% revenue growth, driven by higher interest expense, restructuring costs, and other expense items",
+      "Total long-term debt of approximately $16.5 billion as of December 31, 2025, with interest expense, net increasing to $829.3 million (up $107.8 million) due to higher average debt outstanding",
+      "Recurring, multi-year restructuring and transformation costs (~$574.4 million cumulative under Project Matterhorn through 2025) that have been excluded from Adjusted EBITDA and Adjusted EPS, indicating ongoing costs not reflected in headline non-GAAP metrics",
+      "Foreign currency transaction losses of $105.6 million in 2025 tied to intercompany balances, reversing a $39.1 million gain in 2024, showing earnings sensitivity to currency movements",
+      "Effective tax rate variability (27.9% in 2025 vs 24.9% in 2024) attributed to REIT/TRS mix, foreign jurisdiction differences, and evolving international tax rules (Pillar Two, OBBBA)",
+      "Heavy growth capital expenditure commitment (~$2.2 billion expected in 2026, largely data center related) funded partly through additional borrowings, increasing reliance on debt markets"
+    ]
+  }
+}

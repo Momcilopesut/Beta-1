@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000144/aes-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/874761/000114036126036994/ef20082051_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, AES reported total revenue of about $12.23 billion, roughly flat versus 2024, while net income attributable to AES fell 46% to $910 million, largely due to a prior-year gain on the sale of AES Brasil, lower Energy Infrastructure segment margins, higher day-one lease losses, and unrealized FX losses. Adjusted EBITDA rose to $2,871 million from $2,639 million, helped by new renewables projects, better hydrology, and higher utility retail rates following 2024 rate settlements at AES Indiana and AES Ohio. The filing describes a 34,740 MW generation portfolio, a 12.0 GW renewables backlog (5.7 GW under construction), continued U.S. utility rate-base growth, and asset impairments including $264 million at the Maritza plant.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists only of XBRL tag data for the quarter and six months ended June 30, 2026 (with comparative 2025 periods), without narrative text describing results or business developments. It does reference entities named 'Horizon Parent, L.P.' and 'AES Corp' as of March 1, 2026, consistent with the merger structure disclosed elsewhere, but no substantive financial or operational commentary is included in the excerpt to summarize.",
+    "filing_summary_8k": "This 8-K, dated September 17, 2026, discloses that the Public Utilities Commission of Ohio (PUCO) approved the previously announced merger of AES with Horizon Parent, L.P. and its subsidiary Horizon Merger Sub, Inc., under a Merger Agreement entered into on March 1, 2026. The PUCO approval satisfies one condition to closing, but the filing states the merger remains subject to additional regulatory approvals and customary closing conditions before AES becomes jointly owned by investment vehicles affiliated with Global Infrastructure Management, LLC, EQT Infrastructure VI, and other investors.",
+    "moat_explanation": "AES Indiana and AES Ohio operate as the sole regulated distributors of electricity in their territories, and its El Salvador utilities face 'limited competition due to significant barriers to enter the market,' reflecting regulator-granted franchise rights rather than a competitive-market advantage. The 10-K also describes a large (12.0 GW) contracted renewables backlog with long-term PPAs, but this reflects contract-based revenue visibility rather than a distinct structural cost or scale advantage.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Net income attributable to AES fell 46% ($1,679M to $910M) and net income from continuing operations fell 75%, driven by one-time gains in the prior year, impairments, and derivative/FX losses.",
+      "Asset impairment expense of $224 million in 2025, including a $264 million Maritza impairment tied to PPA expiration and write-offs of development intangibles at AES Clean Energy Development.",
+      "Company explicitly flags that U.S. renewable tax credit incentives have been 'curtailed by the passage of H.R.1 (the 2025 Act),' which it says could materially and adversely affect its U.S. renewables growth strategy.",
+      "Significant international/developing-country exposure creates risks including currency controls, expropriation, high inflation, and counterparties/governments not honoring contracts, per the Risk Factors section.",
+      "Interconnection backlogs for U.S. renewables/storage average over four years, with regulatory changes (e.g., PJM accelerated processes) that could further delay or raise costs for projects.",
+      "A pending going-private merger (disclosed in the 8-K) remains subject to additional regulatory approvals beyond the PUCO approval already obtained, introducing closing and integration uncertainty not present in the 10-K narrative."
+    ]
+  }
+}

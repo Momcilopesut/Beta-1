@@ -1,0 +1,20 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/831001/000083100126000011/c-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/831001/000083100126000045/c-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/831001/000110465926083383/c-20260714x8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "whole_document_fallback",
+    "filing_summary_10k": "The provided 10-K excerpt is composed almost entirely of XBRL taxonomy tags and data-point references rather than narrative text, so it does not contain readable Business, Risk Factors, or MD&A discussion. It does indicate that Citigroup reports through segments including Markets, Banking, Services, Wealth, and US Personal Banking, and discloses discontinued or held-for-sale operations for the Poland consumer banking business, AO Citibank (Russia), and a planned disposal of Grupo Financiero Banamex (Mexico) around December 2025. No further descriptive content on business results or strategy is available in this excerpt.",
+    "filing_summary_10q": "The most recent 10-Q excerpt, covering the quarter ended June 30, 2026, is likewise mostly XBRL tags rather than narrative text. It shows continued progress on the disposal of Grupo Financiero Banamex (with dated references around April 2026), completion or advancement of the Poland consumer banking business disposal (June 2026), and discontinued operations related to AO Citibank. No narrative discussion of quarterly financial results or business developments is provided in this excerpt.",
+    "filing_summary_8k": "This 8-K, dated July 14, 2026, discloses under Item 2.02 that Citigroup announced its financial results for the quarter ended June 30, 2026, with the related press release furnished as Exhibit 99.1 and a Quarterly Financial Data Supplement furnished as Exhibit 99.2. The filing also lists Citigroup's registered securities under Section 12(b) as Exhibit 99.3, but includes no other substantive items or additional narrative disclosure.",
+    "moat_explanation": "The 10-K excerpt provided consists almost entirely of XBRL taxonomy tags and context references rather than narrative Business, Risk Factors, or MD&A text, so there is no descriptive discussion of competitive positioning, brand strength, scale, or customer lock-in to support a moat classification. The only substantive clues are structural (segment names such as Markets, Banking, Services, Wealth, and US Personal Banking, and various fee-based revenue line items), which indicate a large diversified financial institution but do not themselves establish a durable competitive advantage.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Excerpts show multiple ongoing divestitures/discontinued operations, including the planned disposal of Grupo Financiero Banamex (Mexico), disposal of the Poland consumer banking business, and discontinued operations tied to AO Citibank (Russia), suggesting continued restructuring and business exits.",
+      "The 10-K excerpt lacks any narrative Business, Risk Factors, or MD&A discussion, limiting the ability to independently verify competitive positioning or emerging risks from this filing alone."
+    ]
+  }
+}

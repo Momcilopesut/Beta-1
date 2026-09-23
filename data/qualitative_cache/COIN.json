@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000015/coin-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000088/coin-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000101/coin-20260901.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Coinbase reported net revenue of $6.9 billion (up from $6.3 billion in 2024), comprising $4.1 billion in transaction revenue and $2.8 billion in subscription and services revenue, while net income fell to $1.3 billion from $2.6 billion the prior year. The filing describes the August 2025 acquisition of Deribit, the launch of U.S. perpetual-style futures and an 'Everything Exchange' strategy adding stocks, commodity futures, and prediction markets, and continued growth in USDC/stablecoin adoption. It also discusses a Data Theft Incident (disclosed via an earlier 8-K) that added $345 million in other operating expenses during 2025, and notes results remain highly sensitive to crypto asset price volatility and trading volume.",
+    "filing_summary_10q": "This Form 10-Q covers the quarterly period ended June 30, 2026, and is presented largely as structured XBRL financial data covering categories such as bank servicing revenue, subscription and circulation revenue (including stablecoin and blockchain infrastructure services), crypto asset holdings (Bitcoin, Ethereum, Solana, and payment stablecoins), convertible senior notes due 2026, and stock-based compensation. The data references customer concentration risk in both revenue from contracts with customers and accounts receivable, and includes details on the Deribit acquisition finalized in 2025 and a subsequent acquisition of GM Echo Ltd. in October 2025. No narrative discussion of quarterly results was included in the excerpt provided.",
+    "filing_summary_8k": "This Form 8-K, dated September 1, 2026, discloses under Item 5.02 that Coinbase's Board of Directors increased its size from nine to ten members and appointed Anthony Armstrong as a new director, effective immediately, who will serve on the Audit and Compliance Committee. The filing notes Armstrong will be compensated under the company's standard non-employee director program and has entered into the company's standard indemnification agreement, with no other material related-party arrangements disclosed.",
+    "moat_explanation": "The 10-K explicitly positions Coinbase as 'the most trusted crypto platform,' emphasizing its compliance infrastructure, one-to-one custody of customer assets, and educational/trust-building practices as key differentiators from competitors. This regulatory/compliance-driven trust and brand reputation, built over years of operating as a registered, audited platform in a heavily scrutinized industry, is harder for new entrants to replicate quickly, though the excerpts do not describe patents or exclusive licenses that would create a stronger legal barrier.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Revenue is significantly concentrated: Bitcoin and Ethereum trading pairs drove ~45-46% of total trading volume in 2025 and 2024, and stablecoin revenue tied to a single partner (Circle/USDC) is a large and growing share of subscription revenue",
+      "The company explicitly states operating results are highly volatile and unpredictable due to crypto asset price swings, mirroring risk described as largely outside management's control",
+      "A 'Data Theft Incident' disclosed via 8-K in May 2025 resulted in $345 million of other operating expense in 2025 for customer reimbursements and legal costs",
+      "Net income declined 51% year-over-year (from $2.6 billion to $1.3 billion) in fiscal 2025 despite higher net revenue, partly due to the Data Theft Incident and unfavorable fair-value changes on crypto investments",
+      "Subscription and services revenue is sensitive to declining interest rates, which the company flags as a risk to future revenue given multiple 2024-2025 Federal Funds Rate decreases",
+      "The 10-Q XBRL data references customer concentration risk in both revenue and accounts receivable, indicating reliance on a small number of large customers in some periods"
+    ]
+  }
+}

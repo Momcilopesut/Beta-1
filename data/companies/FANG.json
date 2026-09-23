@@ -87,17 +87,15 @@
     }
   },
   "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-09-23T02:29:03Z",
+  "last_updated": "2026-09-23T02:42:40Z",
   "layered_analysis": {
     "flags": [
-      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
       "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -136,22 +134,7 @@
     "as_of": "2026-09-22",
     "close": 184.5
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, Diamondback Energy reported oil, natural gas and NGL revenues of $13.5 billion, up 33% from $10.1 billion in 2024, driven mainly by a 54% increase in combined production volumes (partly from the Endeavor and Double Eagle acquisitions) partially offset by lower average oil prices. Operating cash flow rose to $8.76 billion from $6.41 billion, while investing activities used $7.8 billion, largely for drilling/completion costs and the Double Eagle and Sitio acquisitions. Financing activities included $2.2 billion of share repurchases, $1.2 billion of dividends, debt repayments, and new note and term loan issuances, and the company raised its repurchase program to $8.0 billion in July 2025.",
-    "filing_summary_10q": "This Q2 2026 10-Q excerpt consists mainly of XBRL tagging data rather than narrative discussion, covering the six months ended June 30, 2026. It references corporate actions including a divestiture of non-Permian assets, repayment of the Viper 2025 Term Loan, issuance of 2035 senior notes, and prior-period transactions such as the Endeavor Acquisition, Double Eagle Acquisition, and Viper's Sitio Acquisition, but does not include descriptive financial results text in the provided excerpt.",
-    "filing_summary_8k": "This 8-K, dated August 3, 2026, discloses under Item 2.02 that Diamondback Energy issued a press release announcing its second quarter 2026 financial and operating results, including the second quarter 2026 base cash dividend, along with a supplemental stockholder letter; both documents are furnished as exhibits but their contents are not included in this excerpt.",
-    "moat_explanation": "The provided excerpts focus almost entirely on cash flow, capital expenditures, debt structure, and commodity price/production tables rather than competitive positioning. There is no discussion in these excerpts of cost structure versus peers, brand strength, patents, network effects, or customer switching costs that would support a durable competitive advantage; oil and gas sales are described as commodity-priced and hedged, consistent with a business exposed to market pricing rather than a differentiated moat.",
-    "moat_present": false,
-    "moat_type": "none",
-    "red_flags": [
-      "Revenues and cash flow are explicitly tied to volatile oil and natural gas prices, which the company hedges but does not eliminate exposure to.",
-      "Substantial debt load, including ~$13.5 billion in senior notes plus term loans, with large future interest and principal payment obligations extending to 2064.",
-      "Company states any credit rating downgrade could require posting additional letters of credit or cash collateral under contractual arrangements.",
-      "Future dividends (base and variable) are explicitly discretionary and not guaranteed, dependent on commodity prices and other factors.",
-      "Capital expenditure plans are large ($3.60-3.90 billion for 2026) and the company notes it can adjust rig cadence/capex only in response to commodity price and market conditions, indicating sensitivity to price swings."
-    ]
-  },
+  "qualitative": null,
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001539838.json",

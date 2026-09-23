@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1110803/000111080326000024/ilmn-20251228.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1110803/000111080326000160/ilmn-20260628.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1110803/000119312526354010/d51146d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "whole_document_fallback",
+    "filing_summary_10k": "Illumina's fiscal 2025 10-K describes the company as a global provider of sequencing- and array-based genomic analysis tools, serving research and clinical customers, with consumables (74% of revenue), instruments (11%), and services (15%) making up its 2025 revenue mix. The filing discusses the June 2024 spin-off of GRAIL, ongoing restructuring actions (severance and impairment charges), a pending securities class action, and risk factors including China regulatory listing, tariffs, and potential NIH funding cuts. It also references the subsequent acquisition of SomaLogic and certain Standard BioTools assets announced in early 2026.",
+    "filing_summary_10q": "The excerpt provided for Illumina's most recent 10-Q (period ended June 28, 2026) consists largely of structured XBRL data tags rather than narrative MD&A text, limiting what can be summarized. It indicates the company completed its acquisition of SomaLogic, Inc. on January 30, 2026, continues to carry GRAIL-related contingent value right and payment right obligations, has term notes outstanding across several maturities (2026, 2027, 2030, 2031), and maintains active share repurchase programs (a 2024 program and a newer 2026 program). No detailed income statement or narrative results commentary was included in the provided excerpt.",
+    "filing_summary_8k": "This 8-K, dated August 17, 2026, discloses that Illumina completed a public offering of $300 million aggregate principal amount of 4.950% notes due 2029, issued under an existing 2021 indenture. The company states it expects to use the net proceeds, together with cash on hand, to repay its 4.650% notes due September 9, 2026, of which $500 million principal was outstanding as of June 28, 2026.",
+    "moat_explanation": "The 10-K describes Illumina's business model as selling proprietary sequencing and array instruments that then require ongoing purchases of proprietary consumables (reagents, flow cells, library prep), with consumables making up 74% of 2025 revenue versus 11% for instruments\u2014an installed-base/razor-blade dynamic that creates real switching friction once labs standardize workflows, informatics (BaseSpace, DRAGEN), and validated protocols on Illumina's proprietary SBS chemistry. The excerpts also reference an extensive trademark/technology portfolio and unique platform architecture, but do not provide direct evidence of network effects, cost leadership, or regulatory barriers, so switching costs tied to the installed instrument base and consumables ecosystem is the best-supported category.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company discloses inclusion on a Chinese regulatory 'unreliable entities list,' creating uncertainty about China market access",
+      "Exposure to reductions or cancellations of NIH and other government research funding that could reduce customer demand",
+      "Ongoing tariff and trade-policy uncertainty affecting costs and international operations",
+      "Pending securities class action litigation disclosed in the filing",
+      "Continued restructuring activity (severance and asset impairment charges) suggesting cost/margin pressure",
+      "Contractual and litigation risks tied to the GRAIL divestiture, including obligations related to contingent value rights"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1013237/000162828025045769/fds-20250831.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1013237/000162828026046549/fds-20260531.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1013237/000095015726000966/form8-k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025 (ended August 31, 2025), FactSet reported revenues of $2,321.7 million (up 5.4%), driven by growth in workstations, CGS, and front office solutions across all three segments (Americas, EMEA, Asia Pacific). Operating margin was 32.2% (up from 31.8%), net income rose 11.2% to $597.0 million, and diluted EPS was $15.55. The company had approximately 8,996 clients and 237,324 users as of August 31, 2025, with annual ASV retention above 95%, and returned $460.4 million to shareholders via buybacks and dividends; the filing also references a previously disclosed Sales Tax Dispute that affected prior-year results.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (quarter ended May 31, 2026) consists mainly of structured XBRL tagging data rather than narrative discussion, so detailed financial results cannot be summarized from it. It references items such as a credit agreement, a 2025 senior notes/revolving facility structure, an interest rate swap hedge, prior acquisitions (Platform Group Limited/Irwin and Liquid Holdings/LiquidityBook), and ongoing 'Sales Tax Matters,' but no further descriptive text was included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated August 28, 2026, discloses that FactSet entered into Amendment No. 1 to its April 2025 credit agreement with PNC Bank as administrative agent. The amendment extends the term loan facility's maturity to August 28, 2029 and the revolving credit facility's maturity to August 28, 2031 while increasing revolving commitments from $1.0 billion to $1.5 billion, removes a 0.10% credit spread adjustment on certain borrowings, and eliminates term loan amortization requirements, among other conforming changes.",
+    "moat_explanation": "FactSet's platform is deeply embedded in clients' daily investment workflows (research, portfolio construction, risk, performance reporting), and the 10-K reports annual ASV retention above 95% (91% on a per-client basis), indicating that once clients adopt the Hosted Platform or CGS Identifier Platform they rarely leave. Contracts require notice to modify or terminate, reinforcing the friction of switching to an alternative provider.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company disclosed a 'Sales Tax Dispute' that resulted in charges in the prior fiscal year, indicating ongoing tax/litigation exposure (Note 12, Commitments and Contingencies).",
+      "Cost of services grew 8.5% in fiscal 2025, outpacing 5.4% revenue growth, though overall operating margin still improved slightly.",
+      "The company relies on a single cloud provider for the majority of its cloud computing support, creating a concentration/operational risk if that relationship is disrupted.",
+      "Two third-party data suppliers each represented more than 10% of total data costs, indicating some data-sourcing concentration risk.",
+      "Client count growth was partly driven by recent acquisitions (Irwin, LiquidityBook), and organic growth was somewhat offset by existing client cancellations."
+    ]
+  }
+}

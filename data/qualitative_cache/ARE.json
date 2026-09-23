@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1035443/000103544326000013/are-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1035443/000103544326000066/are-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1035443/000110465926099706/tm2623699d1_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Alexandria Real Estate Equities is a life science-focused REIT operating Megacampus properties in clusters such as Greater Boston, San Francisco Bay Area, San Diego, Seattle, Maryland, Research Triangle, and New York City, with 340 properties and 90.9% occupancy as of December 31, 2025. The filing discloses $2.20 billion in real estate impairment charges during 2025 tied to weaker tenant demand, oversupply in some submarkets, and a strategic shift toward recycling capital into higher-value projects, alongside numerous property dispositions across multiple markets. It also describes ongoing litigation with New York City Health + Hospitals Corporation and the NYC Economic Development Corporation over a stalled development option, with potential exposure up to $178.1 million.",
+    "filing_summary_10q": "The provided excerpt for the most recent 10-Q consists only of XBRL taxonomy and context tags (dates, entity identifiers, and data point references) rather than narrative disclosure text, so it does not contain descriptive information about the quarter's business or financial results that can be summarized.",
+    "filing_summary_8k": "This 8-K, dated August 21, 2026, discloses that Alexandria Real Estate Equities issued and sold $1.0 billion aggregate principal amount of 7.250% Series A Fixed-to-Fixed Reset Rate Junior Subordinated Notes due 2057 under an effective shelf registration statement. The notes are junior subordinated, unsecured, guaranteed by Alexandria Real Estate Equities, L.P., pay interest semi-annually starting February 15, 2027, and include company redemption options and standard default provisions as set out in a supplemental indenture.",
+    "moat_explanation": "The 10-K describes Alexandria as the 'preeminent and longest-tenured' owner/operator/developer of life science real estate, having pioneered the niche since 1994, with a diligent underwriting process that produces a high-quality tenant base (53% investment-grade or large-cap) and historically longer lease terms and higher occupancy (10-year average 95%). This track record, brand position, and specialized tenant-underwriting expertise support a reputation-based intangible-asset moat, though the same filing shows this advantage is currently under pressure (see red flags).",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Recognized $2.20 billion of real estate impairment charges in 2025 across multiple markets (Greater Boston, San Diego, San Francisco Bay, Research Triangle, NYC, Seattle, Canada) tied to declining tenant demand and oversubscribed submarkets",
+      "Occupancy fell to 90.9% versus a stated 10-year average of 95%, and several properties were sold or held for sale at reduced values with no gain recognized",
+      "South San Francisco joint-venture properties were sold at a loss in carrying value due to 'significant new supply, lower life science tenant demand, and ongoing challenges leasing both laboratory and office space'",
+      "Ongoing litigation with New York City Health + Hospitals Corporation and the NYC Economic Development Corporation exposes the company to potential losses of up to $178.1 million tied to a stalled development option",
+      "Impairment charges on investments in privately held (non-NAV) companies rose to 18% of their carrying value in 2025, up from 10% in 2024, reflecting deteriorating conditions among some life-science investees",
+      "Company is exiting the Montreal submarket and disposing of multiple non-Megacampus/non-core assets, indicating strategic retrenchment from previously acquired positions"
+    ]
+  }
+}

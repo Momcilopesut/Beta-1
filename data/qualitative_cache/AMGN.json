@@ -1,0 +1,22 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000124/amgn-20260804.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The provided 10-K excerpts consist mainly of governance/compensation disclosures (equity plan tables, exhibit index), a detailed account of ongoing Repatha/PCSK9 patent litigation with Sanofi and Regeneron across Germany, the Unified Patent Court, the EPO, and Japan, and MD&A discussion of tax contingencies (including an IRS dispute) and accounting policies for valuing acquired intangible assets and testing them for impairment. The excerpts do not include a narrative description of overall annual financial results or the core business/product portfolio.",
+    "filing_summary_10q": "The excerpt for the most recent 10-Q (period ended June 30, 2026) consists only of XBRL structured data tags rather than narrative text, listing reporting periods (three and six months ended June 30, 2026 and 2025) and disaggregating product revenue by named products including Repatha, Prolia, EVENITY, TEPEZZA, Otezla, Enbrel, BLINCYTO, Nplate, TEZSPIRE, Xgeva, Aranesp, KRYSTEXXA, Kyprolis, Vectibix, UPLIZNA, and IMDELLTRA/IMDYLLTRA, split between U.S. and non-U.S. geographies. No narrative discussion of results, trends, or events is present in the excerpt provided.",
+    "filing_summary_8k": "This 8-K, dated August 4, 2026, discloses under Item 2.02 that Amgen issued a press release announcing unaudited results of operations for the three and six months ended June 30, 2026, along with unaudited financial position as of that date. The filing describes the non-GAAP financial measures included in that press release (e.g., non-GAAP EPS, operating income/margin, tax rate, free cash flow) and explains the categories of items excluded from GAAP results (acquisition-related charges, restructuring costs, and other items such as investment gains/losses and certain legal-proceeding-related amounts), but does not itself state the actual financial results.",
+    "moat_explanation": "The excerpts do not include a Business (Item 1) description of products, market share, or brand strength, but the Risk Factors section details years of patent litigation (Repatha/PCSK9 patents such as EP'124, EP'797, EP'004) that Amgen has actively filed and defended against Sanofi and Regeneron across Germany, the Unified Patent Court, the EPO, and Japan. This pattern indicates Amgen holds patented biologic products that competitors are contesting, consistent with a patent-based intangible-asset moat, though the litigation outcomes are mixed (some claims upheld, others invalidated), so the durability of this protection is uncertain from what's shown.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Extensive, multi-jurisdictional patent litigation over Repatha/PCSK9 patents with mixed outcomes, including instances where Amgen's or Regeneron's patents were invalidated or narrowed on appeal.",
+      "Company discloses an ongoing tax dispute with the IRS and risk of additional tax liabilities from OECD minimum tax rules and new tax legislation (OB3).",
+      "Management states that an adverse determination in one or more pending legal proceedings 'could have a material adverse effect on our consolidated results of operations, financial position or cash flows.'",
+      "Significant reliance on estimates and assumptions (discounted cash flow models, IPR&D impairment testing) for acquisition-related intangible assets and contingent consideration, which the company itself flags as subject to material revision."
+    ]
+  }
+}

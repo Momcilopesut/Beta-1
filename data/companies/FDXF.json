@@ -1,0 +1,170 @@
+{
+  "_errors": {},
+  "cik": "0002082247",
+  "five_year_history": null,
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.5166163141993958,
+      "debt_to_ebitda": 6.435793731041456,
+      "debt_to_equity": -12.806841046277667
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": -3.3242980206286807,
+      "shareholders_equity": -497000000,
+      "total_assets": 6884000000,
+      "total_liabilities": 7381000000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": -2.410460488914156
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -29.40592483415353
+    },
+    "profitability": {
+      "roe_pct": 80.03866602223296,
+      "trend": "improving"
+    },
+    "valuation": {
+      "graham_multiple": -1100.792473549239,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": -133.01923780653394,
+      "pb_ratio": -35.7970312112676,
+      "pe_ttm": 30.750943201199032
+    }
+  },
+  "industry": "Integrated Freight & Logistics",
+  "last_updated": "2026-09-23T02:56:09Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 17791124512,
+  "metrics": {
+    "book_value_per_share": -3.3242980206286807,
+    "current_ratio": 1.5166163141993958,
+    "debt_to_ebitda": 6.435793731041456,
+    "debt_to_equity": -12.806841046277667,
+    "eps_growth_cagr_3yr_pct": -29.40592483415353,
+    "fcf_margin_pct": -2.410460488914156,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": -1100.792473549239,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -133.01923780653394,
+    "pb_ratio": -35.7970312112676,
+    "pe_ttm": 30.750943201199032,
+    "roe_pct": 80.03866602223296,
+    "shareholders_equity": -497000000,
+    "total_assets": 6884000000,
+    "total_liabilities": 7381000000
+  },
+  "name": "FedEx Freight",
+  "price": {
+    "as_of": "2026-09-22",
+    "close": 119
+  },
+  "qualitative": null,
+  "sector": "Industrials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0002082247.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-02",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2082247/000110465926104793/tm2624680d1_8k.htm"
+      },
+      {
+        "filed": "2026-08-05",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2082247/000162828026053359/fdxf-20260531.htm"
+      }
+    ]
+  },
+  "ticker": "FDXF",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $17.8B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.52, debt $6.4B vs working capital $0.5B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 4/4 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -29.4%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 30.8",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -1100.8",
+          "passed": true
+        }
+      ],
+      "evaluated": 6,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 80.0%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity -12.81",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "149,505,248 shares vs. 121,500,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 100",
+          "passed": true
+        }
+      ],
+      "evaluated": 4,
+      "passed": 3,
+      "total": 4
+    }
+  },
+  "website": "https://www.fedexfreight.com"
+}

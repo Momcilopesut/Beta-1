@@ -1,0 +1,20 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1065088/000106508826000027/ebay-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1065088/000106508826000177/ebay-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1065088/000106508826000174/ebay-20260805.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K excerpts provided contain only the titles and page numbers for Item 1 (Business), Item 1A (Risk Factors), and Item 7 (MD&A), without any of the underlying narrative text. As a result, the provided excerpts do not describe eBay's business operations, risks, or financial results for the period, and no further factual summary can be given based on what was supplied.",
+    "filing_summary_10q": "The most recent 10-Q excerpt is composed almost entirely of XBRL taxonomy tags and date/context references (covering the quarter ended June 30, 2026) rather than narrative financial statement text or MD&A discussion. It does reference items such as a Depop Limited transaction, senior notes, interest rate swaps, and foreign exchange hedging instruments, but without accompanying descriptive text, the specific business or financial implications cannot be summarized from what was provided.",
+    "filing_summary_8k": "This Form 8-K, dated August 5, 2026, discloses under Item 2.02 that eBay Inc. announced its financial results for the quarter ended June 30, 2026, via a press release furnished as Exhibit 99.1. The filing itself does not include the specific financial figures or results from that press release, only the disclosure that results were announced and the associated exhibit list.",
+    "moat_explanation": "The provided 10-K excerpts consist only of section titles and page numbers (e.g., 'Item 1. Business,' 'Item 1A. Risk Factors,' 'Item 7. MD&A') with no actual narrative text describing eBay's business model, competitive position, brand, network effects, or cost structure. Because no substantive content was provided, there is no basis in these excerpts to support any specific moat classification.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "The 10-K excerpts contain no substantive text (only section headers and page numbers), so no company-specific risks, litigation, concentration issues, or margin pressures can be identified from what was provided.",
+      "The 10-Q excerpt consists almost entirely of XBRL tag metadata rather than narrative disclosure, so no operational or financial details or risks can be confirmed from it."
+    ]
+  }
+}

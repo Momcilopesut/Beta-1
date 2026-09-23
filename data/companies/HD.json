@@ -87,15 +87,14 @@
     }
   },
   "industry": "Home Improvement",
-  "last_updated": "2026-09-23T02:29:35Z",
+  "last_updated": "2026-09-23T02:43:29Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -134,23 +133,7 @@
     "as_of": "2026-09-22",
     "close": 305.35
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal 2025 (ended February 1, 2026), Home Depot reported net sales of $164.7 billion (up 3.2%) and net earnings of $14.2 billion, with growth driven largely by the SRS and GMS acquisitions contributing about $6.3 billion of incremental sales. Comparable sales rose a modest 0.3% amid continued macroeconomic pressure on home improvement demand, while gross margin and ROIC both declined slightly year over year. The company completed the GMS acquisition for about $5.5 billion, paid $9.2 billion in dividends, invested $3.7 billion in capital expenditures, and noted it experienced increased costs from tariffs during the year, which it says it partially mitigated through supply-chain diversification and pricing actions.",
-    "filing_summary_10q": "This is Home Depot's Form 10-Q for the fiscal quarter ended August 2, 2026 (Q2 fiscal 2026). The excerpt provided is largely structured/XBRL cover-page and index data rather than narrative discussion, but it indicates the filing covers segment reporting, goodwill/intangible assets, debt and derivatives, stockholders' equity, and acquisitions, including references to the completed GMS acquisition and a smaller acquisition of Mingledorff's, Inc. in May 2026. The provided text does not include the actual MD&A narrative discussing quarterly results, so specific sales or earnings figures for the quarter are not available in these excerpts.",
-    "filing_summary_8k": "This 8-K, dated August 20, 2026, discloses executive leadership changes under Item 5.02: three named executives (William D. Bastek, Jordan Broggi, and Richard V. McPhail) had their responsibilities expanded to cover areas including private brands/merchandising, loyalty/credit/payments, and cross-business Pro coordination (Home Depot Pro, HD Supply, SRS, Construction Resources), as previously announced July 30, 2026. In connection with these expanded roles, the Board's compensation committee granted each executive a restricted stock award with a grant-date fair value of $500,000, vesting on the second anniversary of the grant date subject to continued employment.",
-    "moat_explanation": "The 10-K explicitly states Home Depot's brand is 'one of the most recognized brands in North America' with trademarks it believes have 'significant value,' and lists brand, product authority, and proprietary/exclusive brand relationships as 'distinct competitive advantages.' The filing also describes scale, supply chain network, and Pro relationships as advantages, suggesting a cost-advantage/scale component alongside the brand, but the excerpts emphasize brand and proprietary product differentiation most explicitly as durable differentiators; no single patent is described as essential, and the industry is repeatedly characterized as 'highly competitive, highly fragmented, and evolving,' tempering the strength of any moat claim.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Comparable sales were roughly flat (0.3%) with comparable customer transactions down 1.0%, and management attributes softness to macroeconomic uncertainty and high interest rates pressuring home improvement demand",
-      "Company acknowledges experiencing 'increased costs as a result of tariffs' in fiscal 2025 and cannot predict future trade-policy impacts with certainty",
-      "ROIC declined from 31.3% to 25.7% and inventory turnover declined from 4.7x to 4.4x, partly due to higher debt from the SRS/GMS acquisitions",
-      "Share repurchases remain paused with no plans to resume in fiscal 2026 as the company works to reduce debt following large acquisition-related borrowing (aggregate senior notes outstanding of $48.8 billion)",
-      "Risk factors note an 'aging store base that requires maintenance, investment, and space reallocation' and warn that a growing shift to online/direct fulfillment could reduce in-store cross-selling traffic and pressure margins",
-      "Gross margin declined slightly (33.3% vs 33.4%) due to the inclusion of lower-margin SRS/GMS distribution businesses"
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000354950.json",

@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026037074/rl-20260328.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026053992/rl-20260627.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1037038/000095014226002493/eh260826627_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For Fiscal 2026 (ended March 28, 2026), Ralph Lauren reported net revenues of $8.115 billion, up 14.6% (11.8% constant currency) versus Fiscal 2025, with growth across all three reportable segments (North America, Europe, Asia). Gross margin improved 130 basis points to 69.9%, driven by AUR growth and product elevation, partially offsetting tariff and input cost pressures, while net income rose to $941.1 million from $742.9 million. The filing discusses ongoing tariff and trade policy uncertainty (including invalidated and subsequently reinstated U.S. tariffs), a multi-year Next Generation Transformation technology/process project that incurred $83.9 million in charges during the year, and macroeconomic risks including inflation, currency volatility, and geopolitical conflicts.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 27, 2026, the company's fiscal Q1 2027) consists primarily of XBRL tagging metadata and cover-page information rather than narrative discussion. It confirms the filing is a quarterly report from Ralph Lauren Corporation for the period ended June 27, 2026, and references data points such as segment revenue by channel (retail, wholesale, licensing), customer concentration among three largest wholesale customers, debt instruments, and stock-based compensation, but the excerpt does not include the narrative MD&A text describing financial results for the quarter.",
+    "filing_summary_8k": "This 8-K, dated September 3, 2026 (reporting an event as of August 31, 2026), discloses an executive leadership change: Halide Alagoz, currently Chief Product & Merchandising Officer, will become Chief Operating & Product Officer effective November 29, 2026, following the retirement of Robert (Bob) Ranftl from his role as Chief Operating Officer, which he announced on August 31, 2026. The filing notes this is part of a broader expansion of roles for several enterprise leaders and includes a press release announcing these changes as an exhibit.",
+    "moat_explanation": "The 10-K describes Ralph Lauren as a nearly 60-year-old globally recognized luxury lifestyle brand with a distinctive image across multiple product categories, and the MD&A shows the company achieving mid-teens to high-single-digit average unit retail (AUR) growth across all segments alongside gross margin expansion to 69.9%, indicating pricing power tied to brand strength rather than lowest-cost positioning. This combination of longstanding brand reputation and demonstrated ability to raise prices while growing volume supports an intangible-assets moat classification.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Significant uncertainty from U.S. tariff policy changes (IEEPA tariffs invalidated by Supreme Court, followed by new tariffs under Trade Act authority), with company stating profitability will be negatively impacted if tariffs increase significantly across its supply chain",
+      "Company acknowledges many retailers are resorting to promotional activity to offset traffic declines, and states its own gross margins could be adversely impacted if it had to apply similar promotional strategies over a prolonged period",
+      "Department store sector has experienced consolidations, restructurings, bankruptcies, and increased store closures, which is relevant given wholesale distribution to department stores is a key channel",
+      "Multi-year Next Generation Transformation project has already incurred $83.9 million in charges in Fiscal 2026 (cumulative $114.2 million across three years) with no assurance of anticipated benefits or timing, and could be dilutive to earnings if execution falters",
+      "Approximately 59% of net revenues are earned outside the U.S., creating material exposure to foreign currency fluctuations that the company states its hedging activities may not completely mitigate",
+      "Company cites ongoing military conflicts, inflation, high interest rates, and potential global economic slowdown as factors that could reduce consumer spending on discretionary luxury goods"
+    ]
+  }
+}

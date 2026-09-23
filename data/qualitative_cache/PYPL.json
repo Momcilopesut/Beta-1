@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1633917/000163391726000024/pypl-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1633917/000163391726000082/pypl-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1633917/000163391726000080/pypl-20260728.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, PayPal reported net revenues of $33.2 billion (up 4% year-over-year), driven by 7% growth in total payment volume to $1.79 trillion, though the number of payment transactions declined 4% to 25.4 billion. Operating income rose 14% to $6.1 billion and net income increased 26% to $5.2 billion, aided by lower income tax expense from discrete tax adjustments. Transaction and credit losses increased 19%, driven partly by higher fraud-related losses and growth in loan originations, while active accounts grew 1% to 439 million as of December 31, 2025.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses under Item 2.02 that PayPal issued a press release announcing its financial results for the quarter ended June 30, 2026, furnished as Exhibit 99.1. The filing does not include the underlying financial figures in the excerpt provided, and no other items (such as management changes or agreements) are disclosed in this report.",
+    "moat_explanation": "The 10-K describes PayPal as operating 'a global, two-sided network at scale that connects consumers and merchants with 439 million active accounts across approximately 200 markets,' explicitly citing this two-sided platform and scale as a core competitive strength that lets it use data from both sides of transactions to improve fraud protection and product experiences. The filing also cites trusted brands (PayPal, Venmo) and regulatory licenses as advantages, but the network/scale characteristic is the most prominently and repeatedly emphasized differentiator versus a highly competitive field of banks, card networks, and fintech point solutions.",
+    "moat_present": true,
+    "moat_type": "network_effects",
+    "red_flags": [
+      "Transaction losses rose ~20% in 2025, attributed to an increase in fraud incidents impacting PayPal products and services.",
+      "Credit losses on consumer and merchant loan portfolios increased, with merchant loan net charge-off rate rising from 5.3% to 7.3% and >90-day delinquencies increasing.",
+      "Braintree (unbranded processing) experienced declining transaction volumes/negotiated lower revenue in the first half of 2025 amid a strategic shift toward 'profitable growth,' indicating pricing/competitive pressure with large merchants.",
+      "The company describes a highly competitive landscape from banks, card networks, BNPL providers, crypto/stablecoin players, and point solutions, which could pressure pricing and market share.",
+      "Ongoing exposure to claims, regulatory proceedings, and investigations across multiple jurisdictions, with inherent uncertainty in estimating related losses.",
+      "Revenue share from its U.S. credit-card partner institution is contingent on a minimum return threshold; if unmet, PayPal's revenue share could drop to zero or require a payment to the partner."
+    ]
+  }
+}

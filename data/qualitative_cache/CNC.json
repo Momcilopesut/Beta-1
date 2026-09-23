@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000153/cnc-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000172/cnc-20260916.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Centene reported total revenues of $194.8 billion (up 19% year-over-year) and membership of 27.6 million across Medicaid, Medicare, Commercial, and Other segments. The company experienced a higher health benefits ratio (91.9% vs 88.3% in 2024) due to elevated medical cost trends, recorded a $6.7 billion non-cash goodwill impairment and a $513 million impairment tied to the planned divestiture of remaining Magellan Health businesses, resulting in a GAAP diluted loss per share of $(13.53) versus adjusted diluted EPS of $2.08. The filing also discusses regulatory developments including the OBBBA, changes to Medicare Part D under the Inflation Reduction Act, and multiple state Medicaid contract transitions and bid protests.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended June 30, 2026) consists primarily of XBRL data tags rather than narrative disclosure. It indicates the filing covers Centene's Medicaid, Medicare, Commercial, and Other reportable segments and references the Magellan Health business as a disposal group classified as held for sale as of the reporting date. No further descriptive detail on quarterly financial results or business developments is available in the excerpt provided.",
+    "filing_summary_8k": "This 8-K, dated September 16, 2026, discloses under Item 7.01 (Regulation FD) that Centene management participated in the Deutsche Bank 2026 Healthcare Summit and related investor discussions, during which they reaffirmed full-year 2026 guidance of GAAP diluted EPS greater than $3.11 and adjusted diluted EPS greater than $4.80. The filing notes this guidance was effective only through September 25, 2026 unless updated, and includes standard forward-looking statement disclaimers.",
+    "moat_explanation": "The excerpts describe Centene as the nation's largest Medicaid and Marketplace insurer and largest stand-alone PDP provider, operating under multi-year state-awarded managed care contracts (e.g., 4-8 year terms) that are typically limited to a small number of qualified MCOs per state through competitive bid processes. This scale and the regulatory/bid-based nature of state contracting act as a natural limiter on the number of competitors able to serve these populations, though the filing also emphasizes thin margins and dependence on state/CMS rate adequacy, which tempers the durability of this advantage.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "HBR rose sharply to 91.9% in 2025 from 88.3% in 2024, reflecting accelerated medical cost trend and narrow margins",
+      "Company recorded a $6.7 billion non-cash goodwill impairment and $513 million Magellan-related impairment in 2025, driving a GAAP diluted loss per share of $(13.53)",
+      "Mid-2025 negative adjustment to expected Marketplace risk adjustment revenue due to higher-than-anticipated membership morbidity",
+      "Two Medicare Advantage contracts received CMS termination notices for plan year 2025 due to low Star ratings",
+      "OBBBA and expiration of Enhanced APTCs expected to reduce Medicaid and Marketplace membership and increase morbidity of remaining risk pools beginning 2026-2027",
+      "Loss of the Florida Children's Medical Services contract and ongoing bid protests (e.g., Arizona ALTCS, Pennsylvania Community HealthChoices) creating uncertainty over future state contract revenue"
+    ]
+  }
+}

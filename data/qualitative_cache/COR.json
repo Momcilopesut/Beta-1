@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1140859/000114085925000131/cor-20250930.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1140859/000114085926000034/cor-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1140859/000110465926097096/tm2623151d1_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Cencora's fiscal 2025 10-K reports revenue of $321.3 billion, up 9.3% year-over-year, driven by growth in both the U.S. Healthcare Solutions and International Healthcare Solutions segments, including higher GLP-1 product sales. Gross profit rose 15.8% partly due to antitrust litigation settlement gains, while operating expenses increased due to the January 2025 acquisition of RCA and a larger PharmaLex goodwill impairment ($723.9 million). The filing discloses significant customer concentration (Walgreens/Boots ~25% of revenue, Evernorth ~13%) and notes the August 2025 acquisition of Walgreens Boots Alliance by Sycamore Partners as a source of uncertainty for the company's long-term distribution agreements.",
+    "filing_summary_10q": "The most recent 10-Q, for the quarterly period ended June 30, 2026, is presented largely as structured financial data (XBRL tags) with limited narrative text provided in these excerpts. It references ongoing debt activity (term loans, senior notes, revolving credit and receivables securitization facilities), share repurchase programs (March 2024 and May 2026 programs), the February 2026 OneOncology transaction, and continuing opioid-related multidistrict litigation and a shareholder securities litigation matter. The excerpts do not include the accompanying MD&A discussion of quarterly results, so a fuller narrative summary cannot be provided from what was given.",
+    "filing_summary_8k": "This 8-K, dated August 13, 2026, discloses that board member Lorence H. Kim, M.D. informed Cencora of his intent to resign from the Board effective immediately, in connection with his new role as Chief Financial Officer of Commonwealth Fusion Systems, Inc. The filing states his resignation was not due to any disagreement with the company regarding its operations, policies, or practices.",
+    "moat_explanation": "The excerpts describe pharmaceutical distribution as a low-margin, high-volume business (U.S. Healthcare Solutions gross margin of only 2.72%) that requires massive scale to operate profitably, and reference 'three largest national distributors' in the litigation context, implying the market realistically supports only a handful of efficient players. Continued industry consolidation and the difficulty new entrants would face replicating this scale support an efficient-scale moat rather than brand, network, or patent-based advantages.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Walgreens and Boots together accounted for ~25% of fiscal 2025 revenue and ~38% of accounts receivable, net, creating significant customer concentration risk",
+      "Evernorth Health Services accounted for ~13% of fiscal 2025 revenue; top ten customers represented ~66% of revenue",
+      "Goodwill impairments related to PharmaLex of $723.9 million in fiscal 2025 and $418.0 million in fiscal 2024",
+      "Ongoing opioid-related litigation and legal expenses, plus disclosed shareholder securities litigation referenced in the 10-Q data",
+      "Loss/termination of a key oncology customer contract in June 2025 following non-renewal notice",
+      "New ownership of Walgreens Boots Alliance (Sycamore Partners) creates uncertainty about the future of a contractual relationship representing a large share of revenue"
+    ]
+  }
+}

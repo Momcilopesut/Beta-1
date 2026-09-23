@@ -1,0 +1,22 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000157/intc-20260627.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/50863/000119312526346806/d117670d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K excerpts provided only list section headings (Business, Risk Factors, Management's Discussion and Analysis) with corresponding page ranges, functioning as a table of contents rather than substantive filing text. No descriptions of products, revenue drivers, risks, or financial results are included in what was provided, so a content summary cannot be given beyond noting the filing's structure.",
+    "filing_summary_10q": "The excerpt is raw XBRL tag data from a 10-Q covering a fiscal quarter ended June 27, 2026, rather than narrative text. It references reporting segments including Client Computing and Physical AI Group, Datacenter and AI, Intel Foundry, and All Other; a completed sale/disposal of the Altera business; ongoing 2024 and 2025 Restructuring Plans; issuance of multiple senior notes and credit facility activity; and government-related and joint arrangements including Department of Commerce funding, Ireland SCIP, and Arizona SCIP entities. No narrative discussion of results or business commentary was included in the excerpt provided.",
+    "filing_summary_8k": "This 8-K, dated August 10, 2026, discloses that Intel Corporation entered into an underwriting agreement with J.P. Morgan, Goldman Sachs, Morgan Stanley, and Citigroup to sell 210,526,315 shares of common stock at $95.00 per share under a shelf registration statement. The underwriters were granted a 30-day option to purchase up to an additional 31,578,947 shares, which they exercised in full on August 11, 2026. The filing also furnishes related launch and pricing press releases and a legal validity opinion as exhibits.",
+    "moat_explanation": "The provided 10-K excerpts for Business, Risk Factors, and MD&A consist only of section headings and page number references (a table of contents), with no actual descriptive text about products, market position, competitive dynamics, customer relationships, or cost structure. There is no substantive content in these excerpts to support any specific moat classification.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "The 8-K discloses a large common stock offering (over 240 million shares at $95.00/share after the underwriters' option was fully exercised), which represents material dilution to existing shareholders.",
+      "The 10-Q XBRL data references both a '2024 Restructuring Plan' and a '2025 Restructuring Plan,' suggesting the company has undertaken multiple rounds of restructuring.",
+      "The 10-Q data indicates a disposal/sale of the Altera business (equity method investee), reflecting a divestiture of a prior business unit.",
+      "The 10-Q references large government-related arrangements (Department of Commerce, Ireland SCIP, Arizona SCIP variable interest entities), indicating reliance on government funding or support structures tied to manufacturing facilities."
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1413329/000162828026005939/pm-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1413329/000162828026049493/pm-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1413329/000162828026062621/pm-20260918.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "PMI's 2025 10-K describes a global tobacco and smoke-free products company with net revenues of $40.6 billion, net earnings attributable to PMI of $11.3 billion, and total shipment volume of 786.5 billion units (607.4 billion cigarettes, 179.1 billion smoke-free products) in 2025. The filing notes FDA authorization of IQOS devices/consumables and ZYN/General snus as Modified Risk Tobacco Products, full U.S. commercialization rights for IQOS as of April 2024, and a reorganization effective January 1, 2026 replacing four geographic segments with three new segments (International Smoke-Free, International Combustibles, and U.S.). Total debt stood at $48.8 billion, and the Board approved an 8.9% dividend increase during 2025.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated September 18, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that PMI's Board of Directors declared a regular quarterly dividend of $1.60 per common share, as announced in an attached press release. No other items or financial statements are included in this filing.",
+    "moat_explanation": "The excerpts describe globally recognized brands (Marlboro, Parliament, IQOS, ZYN) with leading market share positions in ~170 markets, plus first-ever FDA Modified Risk Tobacco Product and marketing authorizations for IQOS devices/consumables and ZYN/General snus, which are regulatory approvals competitors have not obtained. This combination of entrenched brand equity and hard-to-replicate regulatory clearances supports an intangible-assets moat classification.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Sales to a single distributor in the Europe Region and a single distributor in the EA, AU & PMI GTR Region each represented 10% or more of consolidated net revenues in 2025",
+      "Significant cash ($2.3 billion) held in Russia subject to capital controls and foreign currency exchange constraints that could negatively impact financial condition",
+      "Goodwill impairment charges recorded ($41 million in 2025, $665 million in 2023) and a $2,316 million impairment related to the RBH equity investment in 2024",
+      "Company acknowledges intense competition from major rivals (Altria, BAT, Japan Tobacco, Imperial Brands) and risk of unfair competition from market participants circumventing regulations",
+      "Exposure to foreign currency devaluation risk in jurisdictions including Argentina and Russia due to capital controls"
+    ]
+  }
+}

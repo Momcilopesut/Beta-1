@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1099219/000109921926000013/met-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1099219/000109921926000050/met-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1099219/000109921926000052/met-20260817.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "MetLife's 10-K describes itself as a global financial services company offering insurance, annuities, employee benefits, and asset management, organized (after a Q4 2025 Strategic Reorganization) into six segments: Group Benefits, RIS, Asia, Latin America, EMEA, and MIM. The filing notes completion of the PineBridge Investments acquisition on December 30, 2025 to expand asset management, and outlines a 'New Frontier' strategy targeting growth in Group Benefits, retirement, asset management, and international markets. MD&A discusses interest rate, credit spread, equity market, and inflation sensitivities, along with capital/liquidity targets including a $3.0-4.0 billion holding company cash range and ~$4.4 billion returned to shareholders in 2025.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists only of XBRL taxonomy and cover-page tags (no narrative text) for the quarter and six months ended June 30, 2026, referencing the same six segments (Group Benefits, RIS, Asia, Latin America, EMEA, MIM) and the completed PineBridge acquisition. No descriptive discussion of quarterly results, revenues, or developments is included in the excerpt, so a substantive summary of period performance cannot be provided from this text.",
+    "filing_summary_8k": "This 8-K, dated August 17, 2026, discloses under Item 8.01 that MetLife issued a news release announcing declared dividends on several series of its preferred stock: a quarterly dividend on Series A floating rate preferred, a semi-annual dividend on Series D fixed-to-floating preferred, and quarterly dividends on Series E and Series F non-cumulative preferred stock. The filing attaches the news release as an exhibit and includes standard cover-page and signature information; it does not disclose any other operational or financial events.",
+    "moat_explanation": "The Business section describes MetLife as holding 'leading market positions' across the U.S., Asia, Latin America, and EMEA and explicitly cites its 'trusted global brand' and 'position as a leader in attractive markets' as 'the powers of our business.' It also notes long-standing employer relationships in Group Benefits and operations across nine Asian jurisdictions plus other regions requiring extensive local regulatory licensing, which supports a brand/regulatory-license-based intangible asset moat rather than a cost or network-effect advantage.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Highly competitive life insurance and institutional asset management industries, as acknowledged in the MD&A's 'Competitive Pressures' section",
+      "Significant sensitivity to interest rate movements (rising and declining) that can materially affect adjusted earnings, derivative gains/losses, and reserves",
+      "Exposure to counterparty and reinsurer default risk, including collateral realization limitations",
+      "Real estate, mortgage loan, and alternative investment exposure sensitive to commercial property and credit market stress",
+      "Currency exchange rate volatility affecting non-U.S. operations and product attractiveness",
+      "Reliance on continued regulatory approval and compliance across many jurisdictions, with regulation cited as a factor that could limit profitability or growth"
+    ]
+  }
+}

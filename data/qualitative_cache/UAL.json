@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/100517/000010051726000023/ual-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/100517/000010051726000139/ual-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/100517/000010051726000135/ual-20260715.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The provided 10-K excerpts are largely structural (table of contents, audit reports, and boilerplate forward-looking-statement disclaimers) rather than substantive business narrative. They identify United Airlines Holdings, Inc. as the holding company for United Airlines, Inc., note that United's revenues, expenses, assets, and liabilities make up nearly all of UAL's consolidated financials, and describe a critical audit matter regarding the $1.0 billion China route authority intangible asset impairment test. Market risk disclosures cover exposure to interest rates, fuel prices, and foreign currency, including specific dollar sensitivities for 2026.",
+    "filing_summary_10q": "The most recent 10-Q excerpt (covering the quarter ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, referencing passenger, cargo, and other revenue by geographic region (domestic, Atlantic, Pacific, Latin America), frequent flyer program and Chase/partner agreement revenue categories, fair value measurements of investment securities, and transactions in early 2026 involving Azul Linhas Aereas Brasileiras. No discussion-and-analysis narrative or specific financial results are included in the provided text.",
+    "filing_summary_8k": "This 8-K, dated July 15, 2026, discloses under Item 2.02 that United Airlines Holdings issued a press release announcing second-quarter 2026 financial results, and under Item 7.01 that it posted an investor update on its website providing additional business outlook and guidance information. The actual financial results and guidance figures are furnished as Exhibits 99.1 and 99.2 and are not included in the text provided.",
+    "moat_explanation": "The only concrete competitive-position detail in the excerpts is the auditor's critical-audit-matter discussion of a $1.0 billion China route authority, an indefinite-lived intangible asset representing a government-granted international route right that competitors cannot simply replicate, which supports a narrow intangible_assets/regulatory-license moat claim. However, the Business and Risk Factors excerpts themselves are largely table-of-contents and boilerplate forward-looking-statement language rather than substantive discussion of brand, scale, network effects, or switching costs, so this read rests on limited evidence.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "The China route authority intangible asset ($1.0B carrying value) is subject to significant judgment in its impairment test, per the auditor's critical audit matter, indicating estimation risk concentrated in a single asset",
+      "Company carries $8.5 billion in variable-rate debt and $12.7 billion in fixed-rate debt, exposing it to material interest rate risk (a 100bp increase would raise projected annual interest expense by $63 million)",
+      "$5.4 billion of the variable-rate debt is from non-U.S. entities and could be affected by changes in foreign tax laws",
+      "The company does not hedge aircraft fuel price risk, so a $1/barrel change in fuel price would change projected 2026 fuel expense by approximately $116 million",
+      "Meaningful unhedged foreign currency exposure across several currencies (Canadian dollar, euro, yen, renminbi, real, peso) that can affect reported results",
+      "The 10-Q XBRL data references transactions involving Azul Linhas Aereas Brasileiras in early 2026, though the excerpts provide no narrative detail on the nature or risk of this exposure"
+    ]
+  }
+}

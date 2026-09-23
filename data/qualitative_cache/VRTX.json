@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000056/vrtx-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000259/vrtx-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000264/vrtx-20260827.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Vertex reported total revenues of $12.0 billion, up 9% from $11.0 billion in 2024, driven by continued TRIKAFTA/KAFTRIO demand and contributions from newly launched ALYFTREK, JOURNAVX and CASGEVY. R&D and SG&A expenses rose to $5.7 billion from $5.1 billion, while acquired in-process R&D expense fell sharply to $133.0 million from $4.6 billion (which had included the Alpine acquisition in 2024). Cash, cash equivalents and marketable securities increased to $12.3 billion. The filing also discloses a Royalty Pharma arbitration over ALYFTREK royalty rates and a December 2024 FDA-required boxed warning label change for TRIKAFTA.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists only of XBRL data tags identifying reporting periods, financial statement line items, and disclosure categories (e.g., product and collaborative/royalty revenue, CRISPR JDCA amounts, stock-based compensation, marketable securities, and foreign currency hedging) rather than narrative text. As a result, no substantive description of the quarter's business developments or financial results can be drawn from what was given.",
+    "filing_summary_8k": "This 8-K, dated August 27, 2026, discloses a management change: Vertex appointed Jonathan Poole as Executive Vice President and Chief Financial Officer effective January 1, 2027. Charles F. Wagner, Jr., previously Executive Vice President and Chief Operating & Financial Officer, will step down as CFO on that date but remain Executive Vice President and Chief Operating Officer. The filing describes Poole's prior finance roles and the terms of his new employment and change-of-control agreements, including base salary, target bonus, and severance provisions.",
+    "moat_explanation": "The 10-K describes patent- and regulatory-protected franchises: Vertex's five CF medicines (led by TRIKAFTA/KAFTRIO) treat nearly three-quarters of people with CF in the U.S., Europe, Australia and Canada, and CASGEVY is a proprietary gene-edited cell therapy developed under an exclusive CRISPR collaboration and protected by regulatory approvals across multiple countries. These are durable, hard-to-replicate regulatory/IP positions rather than scale or network effects, though the Risk Factors section also notes active and potential competition and pricing pressure that could erode this advantage over time.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Substantially all net product revenues are concentrated in CF medicines, creating high dependence on a single disease franchise",
+      "Royalty Pharma initiated confidential arbitration in October 2025 disputing the royalty burden on ALYFTREK and alleging unpaid royalties/damages under the CFF Agreement",
+      "FDA required a boxed warning label change for TRIKAFTA (and similar language for ALYFTREK) regarding liver injury/failure risk",
+      "Company states it is experiencing an ongoing violation of its intellectual property rights in Russia, contributing to declining ex-U.S. revenue there",
+      "CASGEVY manufacturing cost as a percentage of revenue is significantly higher than for CF medicines, and commercial uptake/reimbursement remains uncertain",
+      "Clinical development risk acknowledged, including a T1D program (VX-264) that failed its efficacy endpoint and a temporary postponement of dosing completion in the zimislecel T1D trial pending an internal manufacturing analysis"
+    ]
+  }
+}

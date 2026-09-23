@@ -87,15 +87,14 @@
     }
   },
   "industry": "Specialty Retail",
-  "last_updated": "2026-09-23T02:26:06Z",
+  "last_updated": "2026-09-23T02:43:27Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -133,23 +132,7 @@
     "as_of": "2026-09-22",
     "close": 254.98
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Amazon's FY2025 10-K reports consolidated net sales of $716.9 billion, up 12% year-over-year, with growth across North America (+10%), International (+13%), and AWS (+20%) segments. Operating cash flow rose to $139.5 billion and cash capital expenditures increased substantially to $128.3 billion, driven largely by AI and technology infrastructure investment expected to continue rising in 2026. The filing also discusses a 2025 U.S. tax law change that reduced cash taxes paid, and notes investments in Anthropic convertible notes as part of acquisition/investment activity.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL tagging data rather than narrative text, referencing items such as senior notes of various maturities, a credit agreement and term loan, share repurchase and equity activity, and investment-related entities including Anthropic and OpenAI Group PBC. No descriptive business or results-of-operations narrative was included in the excerpt, so a substantive summary of quarterly performance cannot be provided from this text.",
-    "filing_summary_8k": "This 8-K, dated September 14, 2026, discloses that Amazon closed a sale of British Pound-denominated notes across four tranches (2029, 2032, 2038, and 2045 maturities) totaling roughly \u00a34.242 billion in aggregate public offering price, with estimated net proceeds of about \u00a34.235 billion. The notes were issued under an existing indenture and registration statement, with the underwriting agreement, officers' certificate, and related note forms filed as exhibits.",
-    "moat_explanation": "The 10-K's MD&A explicitly describes Amazon's strategy of reducing variable costs per unit and leveraging fixed costs through direct sourcing, supplier discounts, and an optimized fulfillment network, which supports lower prices for customers. The Business section also notes the company's massive scale (hundreds of millions of products, a large owned/operated fulfillment and logistics network, and AWS shared infrastructure) that would be costly for smaller competitors to replicate.",
-    "moat_present": true,
-    "moat_type": "cost_advantage",
-    "red_flags": [
-      "Company states it faces 'intense competition' from well-resourced rivals across nearly every business line, including some with greater brand recognition and resources",
-      "Significant reliance on China-based sellers for third-party seller/advertising revenue and China-based suppliers for components and finished goods, exposing the company to tariff, trade-dispute, and regulatory risk",
-      "Regulatory and ownership restrictions in China and India create structural risk to those operations, including potential license revocation or forced restructuring",
-      "Cash capital expenditures increased sharply (from $77.7B to $128.3B year-over-year) primarily for AI/technology infrastructure, which the filing says is expected to keep rising and can pressure short-term free cash flow",
-      "Business is exposed to fraudulent or unlawful seller activity, with the company acknowledging its A-to-z Guarantee reimbursement costs will grow as third-party sales grow",
-      "Results are described as sensitive to currency fluctuations, tariff policy changes, and global economic/geopolitical conditions that are difficult to predict or quantify"
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",

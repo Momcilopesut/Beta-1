@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1701605/000170160526000007/bkr-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1701605/000170160526000023/bkr-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1701605/000119312526385823/d539011d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The provided 10-K excerpts consist mainly of exhibit listings, corporate governance items, and Risk Factors rather than a full business description or MD&A narrative. The Risk Factors section describes a highly competitive operating environment, reliance on relationships with GE Vernova and GE Aerospace (including a joint venture), risks tied to a pending merger agreement with Chart Industries signed July 28, 2025, uncertainty around the pace of energy transition affecting demand for clean-energy offerings, and supply chain/raw material cost pressures. No substantive MD&A financial results content was included in the excerpt.",
+    "filing_summary_10q": "The 10-Q excerpt (for the quarter ended June 30, 2026) is presented mainly as XBRL tag data rather than narrative text, but indicates the company reports through two segments, Oilfield Services and Equipment and Industrial and Energy Technology, with revenue split between products and services. It references financing activity tied to the Chart Industries acquisition (a bridge loan facility and a term loan credit agreement), senior notes in USD and EUR, an interest rate swap and other hedging instruments, a held-for-sale classification for Waygate Technologies, and a disclosed customer concentration risk in U.S. accounts receivable. No narrative discussion of results of operations is included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated September 9, 2026, discloses under Item 7.01 (Regulation FD) that CEO Lorenzo Simonelli was scheduled to present at the Barclays 2026 CEO Energy-Power Conference, discussing the company's positioning across energy, industrial, and infrastructure markets and the integration of its recently completed acquisition of Chart Industries. The filing states he would present updated fiscal-year 2026 financial guidance incorporating Chart, with an investor presentation furnished as an exhibit; it notes the information is furnished, not filed, under Exchange Act rules.",
+    "moat_explanation": "The excerpts mostly describe Baker Hughes operating in a 'highly competitive environment' where maintaining any competitive advantage depends on continual investment in new technology, and do not affirmatively demonstrate durable structural advantages such as scale-based cost leadership, switching costs, or network effects. The company also discloses substantial reliance on GE Vernova and GE Aerospace as suppliers and joint-venture partners, which points to dependency rather than a self-sustaining moat.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Company states it operates in a highly competitive environment where technology/pricing advantages could erode if it fails to innovate",
+      "Extensive dependence on GE Vernova and GE Aerospace as suppliers and joint-venture partners (Aero JV), with disclosed risk that loss of or disruption to these relationships could adversely affect results",
+      "Pending merger with Chart Industries carries integration, regulatory, financing and reputational risks, including possible failure to realize anticipated synergies",
+      "Disclosed uncertainty/slowdown in energy transition demand could impair returns on clean-energy technology investments (geothermal, CCUS, hydrogen)",
+      "Supply chain disruptions and raw material/transportation cost increases that may not be fully passed on to customers",
+      "10-Q excerpt discloses customer concentration risk in accounts receivable (US) and a pending divestiture (Waygate Technologies held for sale)"
+    ]
+  }
+}

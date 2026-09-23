@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/723125/000110465926101067/tm2624017d1_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025 (ended August 28, 2025), Micron reported revenue of $37.378 billion, up 49% from $25.111 billion in 2024, driven by higher DRAM and NAND sales including strong AI-related demand for HBM and data center products. Gross margin improved to 40% from 22% in 2024, and net income rose to $8.539 billion from $778 million, aided by a $1.05 billion tax benefit from Singapore incentive arrangements. The filing notes a 2023 Chinese cybersecurity review that restricted sales of Micron products to critical infrastructure operators in China, and describes ongoing large capital expenditures for new fabs in Idaho and planned facilities in New York supported by CHIPS Act incentives.",
+    "filing_summary_10q": "The most recent 10-Q excerpt provided consists primarily of XBRL tagging metadata (e.g., dates, account labels, debt instrument identifiers, litigation party names) for the quarter ended May 28, 2026, rather than narrative text describing financial results or business developments. The data indicate the filing covers a fiscal third quarter (Q3 2026) and reference items such as debt refinancing activity, a revolving credit facility, multiple pending patent-related legal proceedings (including Netlist and Yangtze Memory Technologies matters), stock repurchase activity, and a declared dividend, but the excerpts do not provide sufficient narrative detail to summarize specific revenue, margin, or profit figures for the quarter.",
+    "filing_summary_8k": "This 8-K, dated August 24, 2026 with the disclosed event occurring August 26, 2026, reports executive leadership changes at Micron: Manish Bhatia was appointed President and Chief Operating Officer, and Dr. Scott DeBoer was appointed President and Chief Technology and Products Officer, both effective immediately. The filing also states that Sumit Sadana transitioned from Executive Vice President and Chief Business Officer to the role of Senior Advisor to the CEO, with a related press release filed as an exhibit.",
+    "moat_explanation": "The excerpts describe a capital-intensive industry where Micron must invest tens of billions of dollars in leading-edge fabs (e.g., Idaho and a planned 20-plus-year, up-to-four-fab New York site) and relies on government incentives (CHIPS Act) to fund this buildout, consistent with a market that can only support a small number of efficient, well-capitalized players. However, the filing also shows gross margin swinging from -9% (2023) to 40% (2025) largely due to industry-wide supply/demand and pricing conditions rather than company-specific pricing power, suggesting the moat is more about capital barriers to entry than sustained differentiation.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "China's Cyberspace Administration determined Micron products pose a cybersecurity risk and barred critical information infrastructure operators in China from purchasing them, impacting data center/networking sales there",
+      "Extreme historical cyclicality: consolidated gross margin was negative 9% in 2023 with a $5.8 billion net loss, showing limited pricing power during downturns",
+      "Heavy reliance on government incentives (e.g., CHIPS Act, Singapore tax incentives) that are conditional and subject to reduction, termination, or clawback",
+      "Very large ongoing capital expenditure commitments (~$4.5 billion per quarter baseline) that increase financial and execution risk if demand softens",
+      "Numerous pending patent infringement lawsuits disclosed in the 10-Q (e.g., Netlist, Yangtze Memory Technologies, Advanced Memory Technologies, Nextech Semiconductor) that could result in liabilities or injunctions",
+      "Foreign currency exposure across multiple currencies with a hypothetical 10% adverse FX move estimated to cause losses of approximately $572 million"
+    ]
+  }
+}

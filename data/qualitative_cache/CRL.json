@@ -1,0 +1,21 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1100682/000110068226000022/crl-20251227.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1100682/000110068226000118/crl-20260627.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1100682/000110068226000115/crl-20260805.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The provided 10-K excerpts consist mainly of governance-related disclosures (insider trading policy, code of ethics, board nomination procedures, cybersecurity risk oversight) and the exhibit/signature pages, rather than the Business, Risk Factor, or MD&A narrative content typically found in those sections. The exhibit list notes a May 2025 Cooperation Agreement with activist investor Elliott Investment Management, a December 2024 Executive Separation Plan, and that the report was signed by an Interim Chief Financial Officer. The excerpts do not describe the company's operations, segment results, or financial performance for the fiscal year.",
+    "filing_summary_10q": "This 10-Q, covering the quarter ended June 27, 2026, is provided only as raw XBRL tag data without narrative text. The tags indicate the company completed an acquisition of Pathoquest (April 2026) and a transaction involving K.F. Cambodia (January 2026), and disclosed two divestitures during the quarter: a European Discovery business (May 2026) and a CDMO and Cell Solutions business (May 2026). The filing also reflects the company's three reportable segments (Research Models and Services, Discovery and Safety Assessment, and Manufacturing Support) and standard balance sheet, debt, and fair value line items, but no descriptive discussion of results is included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated August 5, 2026, discloses under Item 2.02 that Charles River Laboratories issued a press release reporting financial results for the second quarter ended June 27, 2026. The press release is attached as Exhibit 99.1 and is noted to contain forward-looking, safe-harbor language, but the specific financial results are not included in the excerpt provided.",
+    "moat_explanation": "The 10-K excerpts provided (Item 1 Business, Item 1A Risk Factors, and Item 7 MD&A) contain only governance, cybersecurity-oversight, and exhibit-index material rather than any description of Charles River's products, market position, customer relationships, cost structure, or competitive dynamics. There is no substantive discussion in these excerpts of scale, brand, patents, switching costs, or network effects that would support classifying a durable competitive advantage.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "The 10-K exhibit list references a Cooperation Agreement dated May 2025 between the Company and activist investor Elliott Investment Management L.P. and affiliates, indicating shareholder activism involvement.",
+      "The CFO signing the 10-K is listed as 'Interim Chief Financial Officer,' suggesting a leadership transition in the finance function.",
+      "An Executive Separation Plan dated December 2024 is referenced as an exhibit, though the excerpts do not explain the circumstances."
+    ]
+  }
+}

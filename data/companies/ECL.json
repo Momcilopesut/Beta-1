@@ -87,15 +87,14 @@
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-23T02:27:33Z",
+  "last_updated": "2026-09-23T02:42:58Z",
   "layered_analysis": {
     "flags": [
-      "4 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -134,21 +133,7 @@
     "as_of": "2026-09-22",
     "close": 276.22
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Ecolab's 10-K describes a global water, hygiene and infection prevention company with about $16 billion in 2025 sales across four reportable segments: Global Water, Global Institutional & Specialty, Global Pest Elimination, and Global Life Sciences. The company reported 2025 net sales of $16.1 billion (up 2% reported, 3% organic), gross margin improvement to 44.5%, and adjusted diluted EPS growth of 13% to $7.53, while reported diluted EPS declined slightly to $7.28 due to special charges. The filing also discusses the December 2025 acquisition of Ovivo's electronics business for $1.6 billion and details on goodwill, intangible assets, and critical accounting estimates including pension assumptions and tax positions.",
-    "filing_summary_10q": "The excerpt provided is primarily XBRL tagging data from Ecolab's Form 10-Q for the quarter ended June 30, 2026, without narrative text describing business or financial results. It references items such as debt issuances (senior notes across various maturities), the One Ecolab restructuring initiative, the Ovivo Electronics and CoolIT Systems transactions, and goodwill impairment testing across reporting units, but does not provide sufficient prose detail to summarize specific quarterly financial performance.",
-    "filing_summary_8k": "This Form 8-K, dated July 28, 2026, discloses that Ecolab announced its second quarter 2026 earnings results, with a news release and supplemental data furnished as exhibits under Item 2.02. The filing includes standard forward-looking statement cautions referencing risks related to the company's restructuring plan and other factors described in its most recent 10-K, but does not itself detail specific financial figures within the provided text.",
-    "moat_explanation": "The 10-K describes Ecolab as a global leader with a broad portfolio of branded products (Ecolab, Kay, Nalco, Purolite, Bioquell), extensive patented technologies like 3D TRASAR, and long-standing customer relationships built through embedded, on-site service and digital monitoring systems across 170 countries. The MD&A notes the Nalco trade name and customer relationship intangibles are valued in the billions and have shown consistent retention, supporting a durable brand/intangible asset moat, with some switching-cost elements from integrated on-site programs and dispensing systems, though intangible assets/brand strength is the most directly supported category.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Specialty segment (QSR/food retail) business remains largely dependent upon a limited number of major QSR chains, franchisees and large food retail customers, indicating customer concentration risk",
-      "Ongoing IRS audit for tax years 2019-2020 and multiple foreign/state tax audits create some uncertainty around unrecognized tax benefits",
-      "Significant reliance on actuarial and discount rate assumptions for large pension/postretirement obligations, which could materially affect reported results if assumptions change",
-      "Reported diluted EPS decreased slightly year-over-year (from $7.37 to $7.28) despite adjusted EPS growth, reflecting the impact of special charges and acquisition-related costs"
-    ]
-  },
+  "qualitative": null,
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000031462.json",

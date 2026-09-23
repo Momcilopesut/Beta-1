@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1579241/000157924126000007/alle-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1579241/000157924126000028/alle-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1579241/000110465926105920/tm2624796d1_8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Allegion reported net revenues of $4,067.3 million, up 7.8% from 2024, driven by pricing, acquisitions, volume growth and favorable currency movements. Operating income rose to $859.5 million (21.1% margin) from $780.7 million (20.7%), and net earnings increased to $643.8 million from $597.5 million. The company completed several acquisitions in 2025 (including ELATEC for a total of ~$631.6 million in aggregate consideration), amended its revolving credit facility to $1.0 billion, paid $175.3 million in dividends, and repurchased approximately $80.0 million of shares; the effective tax rate rose to 16.2% from 14.5%.",
+    "filing_summary_10q": "For the quarter ended June 30, 2026, Allegion reported net revenues of $1,151.5 million (up from $1,022.0 million a year earlier) and net earnings of $184.6 million (up from $159.7 million). For the six months ended June 30, 2026, net revenues were $2,185.1 million and net earnings were $322.7 million, compared to $1,963.9 million and $307.9 million in the prior-year period. The balance sheet shows total assets of $5,360.8 million and total equity of $2,118.6 million as of June 30, 2026, with cash flow statements showing continued acquisition spending, share repurchases of $160.6 million, and dividend payments of $94.0 million during the six-month period.",
+    "filing_summary_8k": "This 8-K, dated September 2, 2026, discloses that Timothy P. Eckersley, President, International and Senior Vice President, will step down and retire from Allegion effective December 31, 2026. The Board appointed Serge Zappone, currently Vice President and General Manager of Allegion APAC, to succeed him as President, International and Senior Vice President, effective January 1, 2027, reporting to CEO John H. Stone. The company issued a press release on September 8, 2026 announcing these leadership changes, attached as an exhibit to the filing.",
+    "moat_explanation": "Allegion holds a portfolio of long-established security product brands (CISA, Interflex, LCN, Schlage, SimonsVoss, Von Duprin, AXA, Gainsborough) sold across commercial, institutional and residential markets, plus a permitted-use brand license from Stanley Black & Decker (Stanley Access Technologies), suggesting brand-based intangible value. Segment operating margins (27.9% Americas) are notably higher than International (9.0%), consistent with stronger brand/scale position in its core North American market, though the excerpts do not describe patents, licensing barriers, or other specifics that would support a broader or stronger moat claim.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company sources approximately 20-25% of COGS from Mexico and faces ongoing US tariff actions on imports, with uncertain future mitigation and potential demand impact.",
+      "Allegion International segment operating margin (9.0%) is much lower than Allegion Americas (27.9%), indicating weaker competitive/profitability position internationally.",
+      "Company discloses involvement in various litigation, claims and administrative proceedings including environmental, asbestos-related and product liability matters.",
+      "Complex global tax structure with transfer pricing risk, uncertain tax positions ($54.8 million unrecognized tax benefits), and exposure to OECD global minimum tax reforms that could materially increase effective tax rate.",
+      "Incorporation in Ireland creates legal/governance differences and takeover-deterrent provisions that could limit shareholder recourse or acquisition premiums.",
+      "Recent acquisition activity (~$631.6 million in 2025) increased debt and reduced cash on hand, contributing to higher net cash used in investing activities and lower interest income."
+    ]
+  }
+}

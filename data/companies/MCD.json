@@ -87,14 +87,12 @@
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-23T02:28:44Z",
+  "last_updated": "2026-09-23T02:43:43Z",
   "layered_analysis": {
-    "flags": [
-      "4 red flag(s) from the filing text - see qualitative.red_flags."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": true,
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -132,21 +130,7 @@
     "as_of": "2026-09-22",
     "close": 250.35
   },
-  "qualitative": {
-    "extraction_confidence": "whole_document_fallback",
-    "filing_summary_10k": "McDonald's FY2025 10-K reports consolidated revenues of $26.9 billion (up 4%, 2% constant currency) and systemwide sales of $139.4 billion (up 7%, 5% constant currency), with operating income of $12.4 billion and operating margin improving to 46.1% from 45.2%. Global comparable sales rose 3.1%, with growth across the U.S. (2.1%), International Operated Markets (3.2%), and International Developmental Licensed Markets (4.6%). The Company opened nearly 2,300 new restaurants systemwide, generated $7.2 billion in free cash flow (up 8%), and returned $7.1 billion to shareholders via dividends and buybacks, while results were affected by restructuring charges tied to 'Accelerating the Organization.'",
-    "filing_summary_10q": "For the quarter ended June 30, 2026, McDonald's reported total revenues of $7,099 million versus $6,843 million a year earlier, and net income of $2,362 million versus $2,253 million, with diluted EPS of $3.32 versus $3.14. For the six months ended June 30, 2026, revenues were $13,616 million (vs. $12,799 million) and net income was $4,345 million (vs. $4,121 million). The balance sheet as of June 30, 2026 showed total assets of $59,920 million, long-term debt of $39,863 million, and a shareholders' deficit of $(1,023) million; the Company declared dividends of $1.86 per share for the quarter.",
-    "filing_summary_8k": "This 8-K, dated August 3-4, 2026, discloses a management transition: Joseph M. Erlinger, EVP and President of McDonald's USA, notified the Company of his intent to leave that role effective August 4, 2026, and will serve in an advisory capacity until early 2027 with no change to his compensation. The Board appointed Skye Anderson, previously Chief Operating Officer of McDonald's USA with over 26 years at the Company, as EVP and President of McDonald's USA effective August 4, 2026. A press release announcing the transition was issued and furnished as an exhibit.",
-    "moat_explanation": "The excerpts describe McDonald's global brand strength (the Company considers the McDonald's trademark and Golden Arches Logo to be of material importance), a heavily franchised model (~95% of 45,356 restaurants) supported by long-term (generally 20-year) franchise/license agreements, Company ownership of real estate combined with franchisee co-investment, and scale advantages (global supply chain, loyalty programs in 70 markets, systemwide sales of $139.4 billion). These points collectively support brand/intangible-asset strength as the primary durable advantage, with elements of switching costs (long-term franchise agreements, real estate control) and scale reinforcing it, though brand is the most explicitly emphasized factor in the excerpts.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "The Company acknowledges increased restructuring charges in 2025 and 2024 associated with 'Accelerating the Organization,' which reduced reported earnings and cash flow growth rates.",
-      "2024 results were impacted by net charges including transaction costs, property sale gains, and non-cash impairment charges tied to the sale of the South Korea business and acquisition-related costs in Israel, indicating portfolio restructuring activity.",
-      "The Company operates in over 100 countries and is subject to varying foreign laws, regulations, and currency translation effects, which the filing notes have increased compliance costs.",
-      "Competition is broad and intense, spanning quick-service restaurants, fast casual, convenience stores, cafes, and delivery/takeaway providers, per the Competition section."
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000063908.json",

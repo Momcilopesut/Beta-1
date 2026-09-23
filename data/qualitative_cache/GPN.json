@@ -1,0 +1,22 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1123360/000112336026000008/gpn-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1123360/000112336026000084/gpn-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1123360/000112336026000082/gpn-20260805.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes Global Payments as a global payments technology company operating primarily through a Merchant Solutions segment, offering card/debit processing, point-of-sale and embedded software, and other commerce-enablement services. It discloses a company-wide 'business transformation' program begun in 2024 to consolidate technology and operations, with incremental expenses expected through the first half of 2027. It also describes several recent portfolio changes: the January 2026 acquisition of Worldpay Holdco (paired with divestiture of the Issuer Solutions business to FIS), the September 2025 sale of Heartland Payroll Solutions to Acrisure, and the December 2024 sale of AdvancedMD.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists almost entirely of XBRL data tags rather than narrative text, covering the quarter and six months ended June 30, 2026. It references the January 2026 acquisition of Worldpay Holdco (with GTCR and FIS as counterparties) and the divestiture of the Issuer Solutions business, along with a realignment into three reportable segments (Enterprise, Platforms, and Small and Medium-Sized Businesses). It also lists numerous outstanding senior notes, convertible notes, a term loan, commercial paper, and revolving credit facility balances as of the reporting dates, along with interest rate swap and fair value disclosures, but no descriptive discussion of results is included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated August 5, 2026, discloses that Global Payments issued a press release announcing financial results for the quarter ended June 30, 2026 (furnished as Exhibit 99.1), along with supplemental non-GAAP financial information (Exhibit 99.2). The supplemental information recasts historical 2025 financial results to reflect the January 2026 Worldpay acquisition and the company's new three-segment structure (Enterprise, Platforms, and SMB) adopted following that acquisition. The filing states this information is furnished, not filed, under the Exchange Act.",
+    "moat_explanation": "The 10-K describes payment technology deeply embedded into merchants' point-of-sale systems and into business management software owned by technology partners across many vertical markets, as well as integrated/embedded payment stacks tied into shopping carts and ordering platforms. This kind of deep technical integration into a customer's or partner's operating software creates friction and cost for a merchant or software partner to switch providers, which is the excerpts' strongest support for a durable competitive position; the excerpts do not provide enough detail on cost structure, patents, or network-effect dynamics to support other moat categories.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company disclosed an ongoing multi-year 'business transformation program' with incremental expenses expected through the first half of 2027, including changes to asset recoverability and useful-life estimates, signaling operational disruption risk",
+      "Company states it 'continues to assess our business portfolio to evaluate potential assets for disposition,' indicating an unsettled and still-changing business mix",
+      "Multiple large, near-simultaneous M&A transactions (Worldpay acquisition, Issuer Solutions divestiture, Heartland Payroll Solutions sale, AdvancedMD sale) create integration and transition complexity, including reliance on transition services agreements with counterparties",
+      "Under the sponsorship model used in some markets, the company is restricted by card network standards from performing funds settlement or accessing merchant settlement funds directly, reflecting dependence on third-party financial institution sponsors"
+    ]
+  }
+}

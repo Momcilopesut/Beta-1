@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/765880/000162828026005044/peak-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/765880/000162828026053373/peak-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/765880/000162828026052608/peak-20260804.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Healthpeak reported net income applicable to common shares of $70.5 million, down from $242.4 million in 2024, attributed partly to impairment charges on lab joint ventures and fewer property dispositions, while Nareit FFO rose to $1.27 billion. The portfolio comprised 689 properties across outpatient medical (507), lab (145), and senior housing (34) segments, following the March 2024 merger with Physicians Realty Trust. During 2025 the company made several acquisitions and dispositions (including the Gateway Crossing lab campus), issued and repaid senior unsecured notes, repurchased shares, and in December 2025 confidentially submitted a draft S-11 for a planned IPO of Janus Living, a new senior-housing REIT it would continue to consolidate.",
+    "filing_summary_10q": "This 10-Q (structured XBRL data provided, limited narrative) covers the quarter and six months ended June 30, 2026. It references the completion of Janus Living, Inc. IPO-related transactions in March and June 2026 (including a follow-on offering and over-allotment), continued senior housing property acquisitions and dispositions across several states, and various debt facilities including term loans maturing in 2027-2031 and a revolving credit facility. The excerpt does not include narrative discussion of overall financial results, so specific revenue or earnings figures for the quarter are not available from this data.",
+    "filing_summary_8k": "This Form 8-K, dated August 4, 2026, discloses that Healthpeak issued a press release and supplemental report presenting its financial results for the three and six months ended June 30, 2026, furnished as exhibits under Items 2.02 and 7.01. The filing also furnishes non-GAAP financial measure reconciliations for both Healthpeak and its Janus Living subsidiary. The information is furnished, not filed, under the Exchange Act and no specific financial figures are included in the 8-K body itself.",
+    "moat_explanation": "The 10-K describes outpatient medical and lab buildings as requiring specialized, costly-to-replicate infrastructure (additional plumbing/electrical for exam rooms, x-ray/MRI accommodations, heavy floor loads, fume hoods, and lab bench systems), with 79% of outpatient buildings on/adjacent to hospital campuses and 96% affiliated with hospital systems, which creates friction for tenants (hospitals, physician groups, biotech/pharma companies) to relocate. The company also cites decades of relationships with hospital systems and life science tenants and 'scale' as competitive advantages, reinforcing tenant stickiness, though these relationship claims are more qualitative than the physical switching-cost evidence.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Tenant concentration: HCA Healthcare represents 15% of outpatient medical segment revenue and 7% of total revenue; CommonSpirit Health represents 6% of segment revenue",
+      "Net income applicable to common shares fell sharply from $242.4 million in 2024 to $70.5 million in 2025, driven partly by other-than-temporary impairment charges on lab unconsolidated joint ventures and fewer real estate dispositions",
+      "Lab segment tenants face funding/regulatory risk from potential NIH grant funding cuts, drug pricing policy changes, and competition from international biotech hubs like China, which the filing says has already adversely impacted tenant capital-raising ability",
+      "Exposure to Medicaid/ACA policy changes (including the One Big Beautiful Bill Act) that could pressure hospital and outpatient medical tenant reimbursement, with facilities in non-expansion states flagged as facing higher risk",
+      "Macroeconomic pressures (elevated interest rates, inflation, tariffs, higher construction/labor costs) explicitly acknowledged as adversely affecting borrowing costs, development yields, and tenant/operator liquidity",
+      "Complex proposed Janus Living spin-off/IPO structure (senior housing assets contributed to a newly formed externally-managed entity) introduces execution and structural uncertainty, contingent on SEC review and market conditions"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026050247/be-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026050150/be-20260728.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "whole_document_fallback",
+    "filing_summary_10k": "The excerpt provided for this fiscal year 2025 Form 10-K (period ended December 31, 2025) consists almost entirely of XBRL data tags and standard cover-page/filer information rather than narrative business or financial discussion. It confirms Bloom Energy Corporation is a Delaware-incorporated company trading as BE on the NYSE, with approximately 280.5 million Class A shares outstanding as of February 2, 2026, and a non-affiliate market value of roughly $3.9 billion based on the June 30, 2025 closing price. The excerpts do not include the actual Business, Risk Factors, or MD&A narrative needed to describe the company's operating results or developments during the year.",
+    "filing_summary_10q": "The excerpt provided for this Form 10-Q (covering the quarter ended June 30, 2026) is limited to XBRL taxonomy tags and financial-statement line-item labels rather than narrative text. It indicates revenue is reported across product, installation, service, and electricity categories, and references convertible notes, term loans, and related-party/joint-venture structures (including Brookfield and Bolt US JV entities), as well as customer and geographic (Asia Pacific) concentration risk categories. The excerpts do not include the company's actual discussion of quarterly results, trends, or business developments.",
+    "filing_summary_8k": "This Form 8-K, dated July 28, 2026, discloses that Bloom Energy Corporation announced its financial results for the second quarter ended June 30, 2026, via a press release (furnished as Exhibit 99.1) and an accompanying investor presentation (Exhibit 99.2), reported under Items 2.02 and 7.01. The filing itself does not state specific financial figures; it only reports that results were announced and furnishes the related materials, which are explicitly noted as not \"filed\" for liability purposes under the Exchange Act.",
+    "moat_explanation": "The 10-K excerpt provided consists almost entirely of XBRL taxonomy tags, cover-page data, and boilerplate legal/forward-looking-statement language rather than the actual Business, Risk Factors, or MD&A narrative text. There is no substantive description of Bloom Energy's products, technology, customer relationships, competitive position, or market structure to support any moat classification, so a durable competitive advantage cannot be assessed from what was provided.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "XBRL tags show revenue and accounts receivable concentration tracked across three named customers (CustomerOne/Two/Three), implying customer concentration risk, though the excerpts contain no actual percentages or narrative context.",
+      "Numerous convertible senior notes (multiple tranches maturing 2025 through 2030), secured term loans, and both recourse and non-recourse debt structures appear in the tags, suggesting significant reliance on debt financing, but the excerpts don't provide leverage ratios or repayment risk discussion.",
+      "A geographic revenue concentration risk tag for the Asia Pacific region is present, but the excerpts don't quantify how much revenue is concentrated there.",
+      "Extensive related-party and joint-venture structures with SK Ecoplant and Brookfield-affiliated entities appear throughout the tags, which could indicate dependence on a small number of strategic partners, though the excerpts don't explain the nature of these arrangements or associated risks."
+    ]
+  }
+}

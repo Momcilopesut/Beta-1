@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1280452/000143774926006113/mpwr20251231_10k.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1280452/000162828026053275/mpwr-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1280452/000162828026061318/mpwr-20260910.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Monolithic Power Systems reported revenue of $2.79 billion, up 26.4% from $2.21 billion in 2024, with growth across all end markets led by storage and computing and automotive; gross margin was 55.2%, roughly flat versus 2024. The filing discloses a restatement of the 2024 annual financial statements and 2025 quarterly financial statements due to an error in accounting for deferred income taxes tied to a foreign tax incentive, and management concluded internal control over financial reporting was not effective as of December 31, 2025 due to a related material weakness. The company also notes a $3.6 billion valuation allowance against certain deferred tax assets and describes ongoing macroeconomic, tariff, and litigation risks.",
+    "filing_summary_10q": "The 10-Q for the quarter ended June 30, 2026 shows revenue of $980.6 million for the quarter, up from $664.6 million a year earlier, and six-month revenue of $1.78 billion versus $1.30 billion in the prior-year period. Total assets grew to $4.69 billion from $4.19 billion at December 31, 2025, with increases in cash and short-term investments, receivables, and inventories, and stockholders' equity rose to $3.90 billion. The excerpt provided is limited to financial statement data and does not include the narrative MD&A discussion.",
+    "filing_summary_8k": "This 8-K, dated September 10, 2026, discloses that the company issued a press release announcing a third-quarter cash dividend of $2.00 per share, payable to stockholders of record as of September 30, 2026, with payment on October 15, 2026. No other items are reported in this filing.",
+    "moat_explanation": "The 10-K describes a large portfolio of proprietary process and packaging technologies (2,231 patents/applications, 654 issued in the U.S.) combined with trade-secret-protected manufacturing processes and deep, hard-to-replicate analog/mixed-signal design expertise developed since 1997. The company states these technologies let it differentiate products on integration, efficiency, and size versus larger, better-resourced competitors, though it also acknowledges it does not rely on any single patent and faces intense competition from many larger rivals.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Material weakness in internal control over financial reporting related to accounting for deferred income taxes, effective as of December 31, 2024 and 2025",
+      "Restatement of 2024 annual financial statements and 2025 quarterly financial statements due to the deferred tax error",
+      "High customer concentration: three distributors accounted for 26%, 18% and 10% of 2025 total revenue",
+      "Heavy geographic concentration, with 92% of 2025 revenue from customers in Asia",
+      "Ongoing patent infringement litigation risk described as characteristic of the industry, with potential for costly litigation or required royalty payments",
+      "Dependence on key personnel, including founder/CEO Michael Hsing, for proprietary process technology and continued innovation"
+    ]
+  }
+}

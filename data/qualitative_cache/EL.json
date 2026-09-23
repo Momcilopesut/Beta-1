@@ -1,0 +1,21 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1001250/000100125026000041/el-20260630.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1001250/000100125026000019/el-20260331.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1001250/000100125026000045/el-20260908.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The provided 10-K excerpts consist mainly of administrative content: cross-references to the 2026 Proxy Statement for executive compensation and related-party information, a table of equity compensation plan securities outstanding as of June 30, 2026, a description of the Audit Committee's and CISO's oversight of cybersecurity risk, a note on dividends declared through August 12, 2026, and a lengthy exhibit index listing debt indentures, employment agreements, and equity plan documents. The excerpts do not include a substantive business description, risk factor discussion, or results-of-operations narrative.",
+    "filing_summary_10q": "This is the Form 10-Q for the quarter and nine months ended March 31, 2026 (fiscal Q3 2026), presented here as structured XBRL data rather than narrative text. It identifies four product segments (skin care, makeup, fragrance, hair care), references an ongoing Restructuring Program that began February 5, 2024 with charges continuing through the period and further amounts anticipated in fiscal 2027 and 2028, and separately tags a Securities Class Action and a Talcum Litigation matter as legal proceedings. It also reflects the company's use of interest rate swaps, currency swaps, and foreign exchange forward contracts for hedging purposes.",
+    "filing_summary_8k": "This Form 8-K, dated September 8, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that the Board of Directors has nominated two new director candidates, Jean-Fr\u00e9d\u00e9ric Dufour (CEO of Rolex SA) and Matthew E. Rubel (non-executive Chairman of Holley Inc.), to stand for election as Class III directors at the company's next annual meeting, expected to be held November 17, 2026. No financial results or other operational events are disclosed in this filing.",
+    "moat_explanation": "The 10-K excerpts provided (Business, Risk Factors, and MD&A sections) contain only administrative and governance content - proxy statement cross-references, equity compensation plan tables, cybersecurity oversight structure, and an exhibit index - with no substantive discussion of products, brands, market share, customer relationships, or competitive positioning. There is nothing in these excerpts describing scale advantages, patents, switching costs, network effects, or brand strength that would support a moat classification.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "A Securities Class Action and Talcum Litigation are both identified as distinct, ongoing legal matters in the most recent 10-Q's financial data tags, indicating active litigation exposure.",
+      "An extended, multi-year Restructuring Program (originating February 2024 and still generating charges through fiscal Q3 2026, with further amounts forecast into fiscal 2027-2028) suggests sustained cost-cutting and operational disruption.",
+      "The 10-K excerpts supplied contain no actual Risk Factors narrative or MD&A results discussion, only boilerplate/governance content, limiting visibility into company-specific risks the filing itself may disclose elsewhere."
+    ]
+  }
+}

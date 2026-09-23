@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1467858/000146785826000051/gm-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1467858/000119312526344698/d145571d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, GM reported total net sales and revenue of $185.0 billion, down 1.3% from 2024, with GMNA revenue down 2.0% amid decreased wholesale volumes offset partly by favorable pricing and mix. The company recorded $7.9 billion in GMNA charges related to EV capacity and manufacturing footprint realignment following slowing EV demand tied to policy changes, plus tariff-related cost impacts of $3.1 billion for the year. GM Financial revenue grew 7.5% to $17.1 billion, while Automotive China JVs posted an equity loss of $0.3 billion amid competitive pressure. Effective tax rate was 10.8% (18.9% adjusted), and the company issued 2026 guidance of $11.00-$13.00 diluted EPS.",
+    "filing_summary_10q": "The provided excerpt for the most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL structured data tags rather than narrative text, identifying reporting periods, segments (GMNA, GMI, Corporate, GM Financial), revenue categories (Vehicles and Parts, Used Vehicles, Services and Other), and financing receivable credit-quality breakdowns (FICO bands, past-due categories) for GM Financial's consumer and commercial portfolios. No descriptive discussion of quarterly financial results, business developments, or management commentary is present in the excerpt to summarize.",
+    "filing_summary_8k": "On August 7, 2026, General Motors and its subsidiary General Motors LLC entered into a Master IPU Agreement with Procura Auto Parts LLC, establishing a supply-chain financing program in which a paying agent advances funds to GM suppliers to acquire and hold inventory, funded by a bank syndicate including JPMorgan Chase and Banco Santander. The program has a maximum facility limit of $4.5 billion, a twelve-month availability period, and GM will pay interest at SOFR plus 1.55% along with a ticking fee on unused capacity; the filing notes the arrangement will be accounted for as a product financing arrangement with IPUs reflected as unsecured debt on GM's balance sheet.",
+    "moat_explanation": "The excerpts describe GM as competing on product mix (trucks/SUVs) and cost discipline within a highly competitive, commoditized industry, but do not describe a structural advantage that competitors cannot replicate. The MD&A explicitly notes intense competition from domestic rivals in China causing equity losses, margin pressure from tariffs and material costs, and EV-related restructuring charges of $7.9 billion, all of which point to competitive vulnerability rather than a durable moat.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "EV strategic realignment charges of $7.9 billion in GMNA for 2025, with additional material charges expected in 2026 due to ongoing supplier negotiations",
+      "Tariff impacts to EBIT-adjusted of $3.1 billion in 2025, with an estimated $3.0-4.0 billion impact expected in 2026 amid a 'highly dynamic' and evolving trade/tariff environment",
+      "Automotive China JVs reported equity losses of $0.3 billion in 2025 (following a much larger $4.4 billion loss in 2024) due to intense competition from domestic Chinese competitors and ongoing restructuring",
+      "Increased warranty-related costs and campaigns of $1.3 billion in 2025, alongside a $0.5 billion charge related to legal matters tied to the former OnStar Smart Driver program",
+      "Company faces various product liability, warranty, emissions, privacy, stockholder, and labor litigation, plus governmental investigations, per the Risk Factors section",
+      "Pension funding requirements could increase significantly due to market performance, declining interest rates, or regulatory changes, per disclosed risk factors"
+    ]
+  }
+}

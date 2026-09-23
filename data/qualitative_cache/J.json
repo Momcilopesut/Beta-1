@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/52988/000162828025053316/jec-20250926.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/52988/000162828026052573/jec-20260626.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/52988/000119312526352551/d151187d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year ended September 26, 2025, Jacobs reported revenues of $12.03 billion, up 4.6% from $11.50 billion in fiscal 2024, with gross profit of $2.98 billion (24.8% margin). Net earnings attributable to Jacobs fell to $289.3 million from $806.1 million a year earlier, largely due to $227.3 million in mark-to-market losses on its retained Amentum stock investment tied to the September 2024 spin-off/merger of its Critical Mission Solutions and Cyber & Intelligence businesses into Amentum Holdings. Backlog grew to $23.1 billion from $21.8 billion. The filing also describes a fiscal 2025 reserve related to an unfavorable interim ruling against a consolidated joint venture and an indemnity reserve tied to a non-U.S. tax matter in the divested business.",
+    "filing_summary_10q": "The excerpt provided is XBRL tagging data (structured financial data tags) for a 10-Q covering periods through June 26, 2026, rather than narrative text, so specific financial results and business commentary cannot be summarized. The data references ongoing matters such as the PA Consulting Group investment, term loan facilities entered into in March 2026, senior notes, and continued reporting of the SpinCo/Amentum-related discontinued operations. No further narrative detail on quarterly results or developments is available from the excerpt given.",
+    "filing_summary_8k": "This 8-K, dated August 10, 2026, discloses under Item 5.02 that Shannon Miller transitioned from her role as President, Strategy, Growth & Digital at Jacobs Solutions Inc. Miller will serve as Special Advisor to the CEO until her departure from the company, which will occur no later than October 3, 2026. No other items or financial information are disclosed in this filing excerpt.",
+    "moat_explanation": "Jacobs' scale (approximately 43,000 employees operating in 40+ countries), deep domain expertise across advanced manufacturing, water, life sciences and infrastructure, and its strategic partnership/majority stake in PA Consulting (a well-regarded innovation and transformation consultancy with blue-chip clients like Diageo, Microsoft and Unilever) support a moat based on intangible assets - reputation, specialized technical/scientific expertise and long-standing client relationships in complex, regulated end markets. The $23.1 billion backlog reported in the 10-K also suggests durable client relationships and repeat business, though the excerpts do not describe patents, proprietary technology licensing, or other harder forms of intangible protection.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company derives revenue from U.S. federal government agencies (8% of total revenue in fiscal 2025), creating some exposure to government budget/policy risk",
+      "An unfavorable interim ruling against a consolidated joint venture in which the Company holds a 50% interest led to a reserve against related accounts receivable (the 'Consolidated JV Matter') during fiscal 2025",
+      "The Company recorded a $(30.8) million indemnity reserve related to an ongoing non-U.S. tax matter tied to the divested SpinCo/Amentum business",
+      "Significant recent volatility from mark-to-market gains/losses on its retained investment in Amentum stock ($227.3 million loss in fiscal 2025 vs. $186.9 million gain in fiscal 2024) materially affected reported earnings",
+      "The company discloses exposure to litigation, government contract audits/investigations, and potential liabilities under environmental (HSSE) and anti-bribery (FCPA) regulations",
+      "Recent large-scale corporate restructuring (Separation/spin-off of CMS and C&I businesses into Amentum) created transaction costs, integration risk, and continuing financial entanglements (TSA income, indemnities)"
+    ]
+  }
+}

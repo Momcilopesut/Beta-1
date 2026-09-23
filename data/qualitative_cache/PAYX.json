@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/723531/000119312526307785/payx-20260531.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/723531/000119312526126204/payx-20260228.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/723531/000119312526310277/payx-20260716.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Paychex describes itself as an HCM company serving about 840,000 total customers (about 800,000 payroll clients) across the U.S. and parts of Europe as of May 31, 2026, with payroll client retention of 82-83%. The filing highlights the April 2025 acquisition of Paycor HCM, expansion of AI capabilities via its WISE engine (approximately 600 AI features/agents), and a broad suite of payroll, HR, benefits, retirement, PEO, and insurance solutions marketed through direct, indirect, and digital channels. Risk factors emphasize technology/AI risks, cybersecurity and data privacy exposure, reliance on third-party providers, and business continuity risk from catastrophic events.",
+    "filing_summary_10q": "For the quarter ended February 28, 2026, Paychex reported total revenue of $1,808.9 million (up from $1,509.0 million a year earlier) and net income of $560.3 million (up from $519.3 million). For the nine months ended February 28, 2026, total revenue was $4,906.5 million versus $4,144.4 million in the prior-year period, with net income of $1,339.5 million versus $1,360.1 million. The filing notes a substantial increase in interest expense year-over-year and includes disclosures related to debt facilities, credit agreements, and other financial instruments, alongside references to the Paycor HCM acquisition completed April 14, 2025.",
+    "filing_summary_8k": "This 8-K, dated July 16, 2026, discloses that director Kara Wilson notified the Board she will not stand for re-election at the 2026 Annual Meeting, and the Board decided to reduce its size from 11 to 10 directors effective upon expiration of her term. The filing states her departure was not due to any disagreement with the Company regarding its operations, policies, or practices.",
+    "moat_explanation": "The 10-K describes payroll processing deeply integrated with HR, benefits, retirement, and insurance solutions across the employee life cycle, with clients citing satisfaction via retention rates of 82-83% of the beginning client base. This embedded, multi-service integration (payroll tied to HCM software, benefits administration, retirement recordkeeping, etc.) creates real friction for customers to switch providers, even though contracts are terminable on 30 days' notice.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company acknowledges cyberattacks, unauthorized access, and data breaches as material risks given the large volume of sensitive personal and financial data (bank accounts, SSNs, health/tax data) it holds.",
+      "Heavy reliance on third-party service providers and vendors (including banks) for core operations, with risk of adverse impact if those providers fail to perform.",
+      "AI/generative AI integration (WISE) is flagged as carrying risk of inaccurate outputs, bias, hallucinations, and potential legal/regulatory liability.",
+      "Business continuity risk from catastrophes, natural disasters, and climate-related weather events is explicitly discussed as untested against future severity.",
+      "10-Q shows interest expense rose sharply (from $22.6M to $68.1M quarter-over-quarter, and $41.7M to $204.8M for nine months), consistent with new debt likely tied to the Paycor acquisition, which is a cost the company itself reports."
+    ]
+  }
+}

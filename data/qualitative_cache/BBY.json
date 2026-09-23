@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/764478/000076447826000009/bby-20260131.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/764478/000076447826000042/bby-20260801.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/764478/000076447826000037/bby-20260827.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2026 (ended January 31, 2026), Best Buy reported revenue of $41.7 billion, up 0.4%, with comparable sales growth of 0.5% driven by computing and mobile phones, partially offset by declines in home theater and appliances. Operating income rose to $1,389 million from $1,262 million, aided by lower goodwill/intangible impairments, though restructuring charges increased due to a labor and store optimization initiative and a Best Buy Health restructuring; the filing also flags ongoing tariff uncertainty following a Supreme Court ruling on IEEPA tariffs. Total store count fell to 1,068 from 1,125 two years earlier, and the company continued scaling newer initiatives like Best Buy Ads and Best Buy Marketplace.",
+    "filing_summary_10q": "The most recent 10-Q (for the quarter ended August 1, 2026, fiscal Q2 2027) is provided only as raw XBRL data without narrative text. The tags indicate continued restructuring activity across a fiscal 2026 labor and store optimization initiative, a Best Buy Health optimization and China sourcing initiative, and a 2024 resource optimization initiative, as well as a subsequent event related to an IEEPA tariff refund disclosed after quarter-end. No further descriptive detail on results or business developments is available from the excerpt provided.",
+    "filing_summary_8k": "This Form 8-K, dated August 27, 2026, discloses under Item 2.02 that Best Buy issued a news release announcing results of operations for the second quarter ended August 1, 2026, and held an earnings conference call the same day. The release is furnished as Exhibit 99 and is not deemed 'filed' for liability purposes under the Exchange Act. No additional financial details are included in the body of the 8-K itself beyond the announcement of the release and call.",
+    "moat_explanation": "The excerpts describe Best Buy as operating in a highly competitive, price-conscious retail sector where it explicitly maintains price-matching policies and states its higher-cost service model 'creates additional margin pressure' versus lower-cost competitors. It has no long-term supplier contracts and depends heavily on a handful of vendors (five suppliers ~55% of purchases), which undercuts claims of a durable structural advantage; the cited 'competitive advantages' (stores, staff, vendor partnerships) are asserted but not shown to be difficult for rivals to replicate.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Vendor concentration: 20 largest suppliers ~80% of merchandise purchased, with five suppliers (Apple, Samsung, HP, LG, Sony) ~55% of total purchases, and no long-term contracts securing supply terms",
+      "Goodwill and intangible asset impairments at Best Buy Health tied to a customer base change and pressures in Medicaid/Medicare Advantage markets",
+      "Management acknowledges a higher cost structure than some competitors, creating margin pressure",
+      "Ongoing tariff and trade policy uncertainty (IEEPA tariffs ruled unauthorized by the Supreme Court, with unresolved refund process) affecting cost structure",
+      "Net store count decline (1,068 stores vs. 1,125 two years prior) alongside restructuring initiatives involving labor and store optimization",
+      "Comparable sales declines in appliances and consumer electronics/home theater categories in the most recent fiscal year"
+    ]
+  }
+}

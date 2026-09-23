@@ -87,15 +87,14 @@
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-23T02:27:52Z",
+  "last_updated": "2026-09-23T02:44:47Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -134,23 +133,7 @@
     "as_of": "2026-09-22",
     "close": 498
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2026 (ended June 30, 2026), Microsoft reported revenue of $331.8 billion (up 18%) and net income of $133.7 billion (up 31%), driven largely by growth in Microsoft Cloud revenue (up 27% to $214.4 billion) and Azure (up 41%). Commercial remaining performance obligation grew 84% to $678 billion. Results were affected by a $5.0 billion net gain from the company's OpenAI investment (versus a $3.6 billion loss the prior year) tied to an OpenAI recapitalization, while gross margin percentage declined slightly due to continued AI infrastructure investment; the company also disclosed an ongoing IRS transfer-pricing dispute seeking $28.9 billion in additional taxes, which it is contesting.",
-    "filing_summary_10q": "The provided 10-Q excerpt consists primarily of XBRL data tags rather than narrative text, covering the fiscal third quarter ended March 31, 2026. It references the company's three reportable segments (Productivity and Business Processes, Intelligent Cloud, More Personal Computing), the OpenAI investment, various long-term debt issuances, and an ongoing share repurchase program (approved in 2024), but does not contain readable discussion of quarterly results or developments beyond these structured data references.",
-    "filing_summary_8k": "This 8-K, dated September 2, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that Microsoft posted investor presentation materials announcing a change to its reportable segments and investor metrics effective fiscal year 2027. Beginning in FY2027, the company will report financial performance under two new segments, \"Agents and Infra\" and \"Devices and Consumer,\" replacing the prior three-segment structure. The presentation materials were furnished as Exhibit 99.1 and are not deemed \"filed\" for Exchange Act liability purposes.",
-    "moat_explanation": "The MD&A highlights an 84% increase in commercial remaining performance obligation to $678 billion, multi-year enterprise contracts, and growing Microsoft 365 Commercial seat counts, all of which indicate that commercial customers are locked into long-duration, subscription-based agreements across an integrated suite of cloud and productivity products. This pattern of recurring, multi-year commitments and seat-based subscription growth (Microsoft 365, Azure, Dynamics 365, LinkedIn) suggests meaningful switching costs for enterprise customers, though the excerpts (largely MD&A) don't fully detail contractual lock-in mechanics found in Business/Risk Factors sections.",
-    "moat_present": true,
-    "moat_type": "switching_costs",
-    "red_flags": [
-      "IRS has proposed additional tax payment of $28.9 billion plus penalties/interest related to transfer pricing for tax years 2004-2013, which the company is contesting",
-      "Gross margin percentage and Microsoft Cloud gross margin percentage declined, explicitly attributed to continued heavy AI infrastructure investment",
-      "XBOX segment revenue declined (content/services down 5%, hardware down 29%) and included impairment and other related expenses",
-      "Windows OEM and Devices revenue decreased slightly, indicating softness in the devices business",
-      "Company acknowledges investments in cloud/AI infrastructure will continue to increase operating costs and may decrease operating margins",
-      "Effective tax rate increased year-over-year due to shifts in earnings mix between U.S. and foreign jurisdictions"
-    ]
-  },
+  "qualitative": null,
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",

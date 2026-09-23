@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000159/stx-20260703.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000088/stx-20260403.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1137789/000119312526385961/d109585d8k.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The excerpts cover Seagate's fiscal year ended July 3, 2026, focusing on liquidity and capital commitments: approximately $2.1 billion in inventory purchase obligations, $465 million in capital expenditure commitments, $3.6 billion in long-term debt principal due beyond one year, and $225 million accrued for legal settlements. The company redeemed and refinanced various senior notes during and after the fiscal year, declared a quarterly dividend of $0.74 per share, and expects capital expenditures to rise in fiscal 2027 to support HAMR hard-drive technology volume ramp, still within a targeted 4-6% of revenue range. The excerpts do not include the Business or substantive Risk Factors narrative.",
+    "filing_summary_10q": "This 10-Q excerpt is composed of XBRL data tags and context references rather than narrative text, covering the quarter ended April 3, 2026. It identifies details of multiple outstanding debt instruments, including several tranches of senior notes (rates from about 3.125% to 9.625%, maturities 2029-2034) and a 3.50% convertible senior note due 2028, along with fair value and carrying amount disclosures. No narrative discussion of business operations, revenue, or results of operations is present in the provided excerpt.",
+    "filing_summary_8k": "This 8-K, dated September 8-9, 2026, discloses that Seagate HDD Cayman redeemed and settled its outstanding 3.50% Exchangeable Senior Notes due 2028. On the redemption date, the company paid approximately $150.97 million in cash and delivered 1,647,862 ordinary shares to settle exchanges of about $150.51 million principal amount of notes submitted for exchange, with the remainder redeemed for cash at principal plus accrued interest. The filing also references a related press release issued September 9, 2026 under Regulation FD disclosure.",
+    "moat_explanation": "The provided 10-K excerpts consist almost entirely of the exhibit index, debt/liquidity disclosures, and critical accounting policy boilerplate rather than a substantive Business or Risk Factors discussion of competitive position. The only hint of technology differentiation is a passing reference to capital expenditures 'supporting volume ramp of hard drives utilizing HAMR technology,' which is too thin to establish a durable competitive advantage under any moat category.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Substantial debt load, including $3.6 billion in long-term principal payment obligations and total debt/interest commitments exceeding several billion dollars",
+      "Several outstanding notes carry high coupons (8.25%-9.625%), which can indicate elevated borrowing costs or credit risk",
+      "$225 million accrued for legal settlements, with $150 million expected to be paid within one year",
+      "Large unconditional purchase obligations (~$2.1 billion) primarily for inventory components, creating fixed commitments regardless of demand",
+      "Capital expenditures expected to rise in fiscal 2027 to support HAMR technology ramp, indicating execution/technology-transition risk"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1474432/000147443226000027/pstg-20260201.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1474432/000147443226000088/pstg-20260802.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1474432/000147443226000084/pstg-20260826.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2026, Everpure (formerly Pure Storage) reported total revenue of $3.66 billion, up 16% year-over-year, split between product revenue ($1.97 billion, up 16%) and subscription services revenue ($1.69 billion, up 15%). Subscription ARR grew 16% to $1.92 billion with Net Dollar Retention of 113%, and total Remaining Performance Obligations reached $3.7 billion, up 40%. The company held $1.5 billion in cash and marketable securities, established a new $500 million revolving credit facility, repurchased $342.5 million of stock, and entered a definitive agreement in February 2026 to acquire 1touch, a data intelligence and governance company.",
+    "filing_summary_10q": "This 10-Q covers the quarter ended August 2, 2026, filed by Everpure, Inc. (formerly Pure Storage) under ticker P. The provided excerpt is largely XBRL tagging data and cover-page information rather than narrative disclosure, but it confirms the company completed its previously announced acquisition of 1touch on May 7, 2026, and had 333,227,251 Class A shares outstanding as of August 31, 2026. Detailed financial results and MD&A narrative for the quarter were not included in the excerpt provided.",
+    "filing_summary_8k": "This 8-K, dated August 26, 2026, discloses under Item 2.02 that Everpure issued a press release and planned a conference call regarding its financial results for the quarter ended August 2, 2026, with the press release furnished as Exhibit 99.1. The filing notes that non-GAAP financial measures are referenced in the press release and reconciled to GAAP figures within it, and this information is furnished rather than filed for Exchange Act purposes.",
+    "moat_explanation": "The 10-K describes a subscription-based Evergreen architecture that locks customers into continuous, non-disruptive hardware/software refreshes rather than discrete purchases, and reports Subscription Net Dollar Retention of 113%-117% and $3.7 billion of largely non-cancelable Remaining Performance Obligations, both of which suggest customers renew and expand rather than switch providers. The company also frames its platform as unifying data management across on-premises, cloud and edge environments, which would raise the operational cost/risk of migrating away once adopted, though the excerpts don't quantify actual switching costs or competitor comparisons directly.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company expects product gross margin to sequentially decline in the next quarter due to higher component costs.",
+      "A single hyperscaler customer is called out repeatedly as a major growth driver (design win, incremental investment to scale supply chain for it), suggesting meaningful customer concentration risk.",
+      "Full valuation allowance maintained against U.S. deferred tax assets, including NOL carryforwards, indicating a history of not consistently generating U.S. taxable income.",
+      "Prior-year restructuring and impairment charges (workforce reduction and lease abandonment) reflect earlier cost-cutting and facility downsizing.",
+      "Reliance on third-party contract manufacturers and supply chain partners for hardware production and hyperscaler shipments, with company noting inventory build-up to mitigate tariffs and supply disruptions."
+    ]
+  }
+}

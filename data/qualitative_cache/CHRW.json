@@ -1,0 +1,24 @@
+{
+  "filing_urls": {
+    "10-K": "https://www.sec.gov/Archives/edgar/data/1043277/000104327726000009/chrw-20251231.htm",
+    "10-Q": "https://www.sec.gov/Archives/edgar/data/1043277/000104327726000031/chrw-20260630.htm",
+    "8-K": "https://www.sec.gov/Archives/edgar/data/1043277/000104327726000027/chrw-20260729.htm"
+  },
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "C.H. Robinson's FY2025 10-K reports total revenues of $16.2 billion, down 8.4% from 2024, primarily due to the divestiture of its Europe Surface Transportation business plus lower ocean pricing/volume and lower fuel surcharges. Adjusted gross profits decreased slightly to $2.7 billion while operating income rose 18.8% to $795.0 million and net income rose 26.1% to $587.1 million, driven by cost reductions and headcount declines (down 11.5%). The filing describes soft freight demand, tightening North American truckload capacity late in the year, depressed global ocean/air freight pricing, and continued restructuring and cost-optimization efforts, including a Kansas City lease impairment.",
+    "filing_summary_10q": "The excerpt provided is XBRL tagging data from the Q2 2026 10-Q (covering the six months ended June 30, 2026) rather than narrative text, so it does not describe specific financial results, business developments, or management commentary for the period. It confirms the filing covers segments (NAST, Global Forwarding, Corporate/Other), ongoing 2025 Restructuring Program activity, debt facilities, and stock compensation plans, but the provided text does not support a substantive summary of results or trends.",
+    "filing_summary_8k": "This 8-K, dated July 29, 2026, furnishes (under Item 2.02) C.H. Robinson's press release and earnings conference call slides announcing financial results for the quarter ended June 30, 2026. The filing itself does not include the actual financial results text, only the cover information and exhibit list (Exhibits 99.1 and 99.2), and states this information is furnished, not filed, under the Exchange Act.",
+    "moat_explanation": "The 10-K describes a scale-based network of 75,000 customers and 450,000 contract carriers, one of the largest proprietary datasets on shipments/routings/carriers, and a proprietary Navisphere technology platform combined with century-long customer relationships and branded produce programs. These are best characterized as intangible/data and relationship advantages combined with scale rather than a classic switching-cost or network-effect moat, though the company itself states competitive advantages include scale, relationships, and technology; the industry is described as 'highly competitive and fragmented' with many alternative brokers and technology platforms, which tempers the durability of any advantage.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company describes the transportation services industry as 'highly competitive and fragmented' with many traditional and non-traditional competitors, including technology-driven matching platforms",
+      "2025 excerpts note tariffs and shifting U.S. trade policy adversely impacted Global Forwarding volumes and demand, particularly in Q2 2025",
+      "Ocean freight rates and adjusted gross profit per shipment declined significantly in 2025 due to excess vessel capacity and weak global demand",
+      "Company acknowledges risk that contracted rates could require providing transportation services at a loss if market conditions shift below agreed pricing",
+      "Multiple years of restructuring programs (2024 and 2025) with severance charges and facility impairments (e.g., Kansas City lease) indicate cost pressure and headcount reductions",
+      "Sourcing business is dependent on weather-driven produce supply and price volatility outside the company's control"
+    ]
+  }
+}
