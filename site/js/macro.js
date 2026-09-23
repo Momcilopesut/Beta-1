@@ -1,4 +1,5 @@
 import { fetchJSON, escapeHtml, renderDisclaimerFooter } from "./shared.js";
+import { macroGlossaryEntry } from "./macro-glossary.js";
 
 async function main() {
   const content = document.getElementById("content");
@@ -40,13 +41,40 @@ function renderCycleContext(cycle) {
 
 function renderSeriesCard(series) {
   const value = series.latest_value === null || series.latest_value === undefined ? "—" : series.latest_value;
+  const entry = macroGlossaryEntry(series.series_id);
   return `
     <div class="series-card">
       <h3>${escapeHtml(series.label)}</h3>
       <p class="series-value">${value} <span class="series-date">(${escapeHtml(series.as_of || "—")})</span></p>
+      ${renderMood(series.mood)}
       ${renderSparkline(series.history)}
+      ${renderSeriesInfo(entry)}
       <p><a href="${escapeHtml(series.source_url)}" target="_blank" rel="noopener">View on FRED &rarr;</a></p>
     </div>
+  `;
+}
+
+function renderMood(mood) {
+  if (!mood) return "";
+  const sentimentClass = mood.sentiment ? ` mood-${escapeHtml(mood.sentiment)}` : "";
+  return `
+    <p class="series-mood${sentimentClass}" title="${escapeHtml(mood.detail)}">
+      <span class="mood-emoji" aria-hidden="true">${escapeHtml(mood.emoji)}</span> ${escapeHtml(mood.label)}
+    </p>
+  `;
+}
+
+function renderSeriesInfo(entry) {
+  if (!entry) return "";
+  return `
+    <details class="series-info">
+      <summary>What is this?</summary>
+      <div class="metric-info">
+        <p><strong>What it is:</strong> ${escapeHtml(entry.explanation)}</p>
+        <p><strong>Why it matters:</strong> ${escapeHtml(entry.significance)}</p>
+        <p><strong>How its volatility affects the economy:</strong> ${escapeHtml(entry.volatilityImpact)}</p>
+      </div>
+    </details>
   `;
 }
 

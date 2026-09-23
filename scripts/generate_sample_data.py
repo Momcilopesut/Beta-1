@@ -10,6 +10,7 @@ This is NOT a substitute for a real pipeline run - it exists purely so
 Usage: python scripts/generate_sample_data.py
 """
 
+import math
 import random
 import sys
 from datetime import datetime, timedelta, timezone
@@ -19,6 +20,7 @@ from urllib.parse import quote
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from pipeline.build import writer  # noqa: E402
+from pipeline.main import build_macro_doc  # noqa: E402
 from pipeline.scoring import aggregation, macro_regime, performance, value_investing  # noqa: E402
 from pipeline.utils.config import macro_series, screening_config, watchlist  # noqa: E402
 from pipeline.utils.paths import DATA_DIR  # noqa: E402
@@ -53,6 +55,12 @@ MACRO_BASE_VALUES = {
     "UNRATE": 4.1,
     "FEDFUNDS": 4.25,
     "GDPC1": 23500.0,
+    "PAYEMS": 161_500.0,
+    "ICSA": 220_000.0,
+    "PCEPI": 124.5,
+    "INDPRO": 103.5,
+    "UMCSENT": 68.0,
+    "M2SL": 21_800.0,
 }
 
 
@@ -274,15 +282,33 @@ def synth_qualitative(name: str) -> dict | None:
     }
 
 
-def synth_macro_data() -> dict:
+def synth_macro_data(series_cfg: list[dict]) -> dict:
+    """One history per configured series, spaced at that series' own
+    obs_per_year cadence (daily/weekly/monthly/quarterly) rather than a
+    fixed weekly interval - real pipeline.scoring.macro_mood.compute_mood
+    needs a real ~1-year-back observation to compare against, so the
+    sample data has to actually span a year at each series' real
+    frequency, not just look busy."""
     end_date = datetime(2026, 9, 12, tzinfo=timezone.utc)
     out = {}
-    for series_id, base in MACRO_BASE_VALUES.items():
+    for cfg in series_cfg:
+        series_id = cfg["id"]
+        base = MACRO_BASE_VALUES[series_id]
+        history_limit = cfg.get("history_limit", 24)
+        obs_per_year = cfg.get("obs_per_year", 12)
+        interval_days = 365.25 / obs_per_year
+        # Keep total drift across the window roughly constant regardless of
+        # how many points it's spread over (260 daily steps vs. 5 quarterly
+        # ones), so a daily series doesn't random-walk far more than a
+        # quarterly one just because it has more steps.
+        step_scale = math.sqrt(15 / history_limit)
+
         history = []
         value = base * 0.97
-        for i in range(15):
-            value += random.uniform(-0.015, 0.02) * base
-            date = (end_date - timedelta(weeks=(14 - i))).strftime("%Y-%m-%d")
+        for i in range(history_limit):
+            value += random.uniform(-0.015, 0.02) * base * step_scale
+            days_back = round((history_limit - 1 - i) * interval_days)
+            date = (end_date - timedelta(days=days_back)).strftime("%Y-%m-%d")
             history.append({"date": date, "value": round(value, 3)})
         history[-1] = {"date": end_date.strftime("%Y-%m-%d"), "value": round(base, 3)}
         out[series_id] = history
@@ -293,26 +319,12 @@ def main() -> None:
     companies = watchlist()
     generated_at = writer.now_iso()
 
-    macro_data = synth_macro_data()
+    macro_data = synth_macro_data(macro_series()["series"])
     regime_info = macro_regime.classify_regime(macro_data)
-    series_labels = {s["id"]: s["label"] for s in macro_series()["series"]}
-    macro_doc = {
-        "generated_at": generated_at,
-        "regime": regime_info["regime"],
-        "signals": regime_info["signals"],
-        "cycle_context": macro_regime.cycle_context(regime_info["regime"]),
-        "series": [
-            {
-                "series_id": sid,
-                "label": series_labels.get(sid, sid),
-                "latest_value": obs[-1]["value"],
-                "as_of": obs[-1]["date"],
-                "history": obs,
-                "source_url": f"https://fred.stlouisfed.org/series/{sid}",
-            }
-            for sid, obs in macro_data.items()
-        ],
-    }
+    # Reuses the real build_macro_doc (same function main.run_full calls) so
+    # sample data gets the same mood computation, shape, and source URLs as
+    # a real pipeline run - never a hand-duplicated second copy of that logic.
+    macro_doc = build_macro_doc(macro_data, regime_info, generated_at)
     writer.write_macro(DATA_DIR, macro_doc)
 
     summaries = []

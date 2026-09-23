@@ -1,38 +1,184 @@
-# FRED series pulled each run, and the rule thresholds used by
-# pipeline/scoring/macro_regime.py to classify the current macro regime.
-# See https://fred.stlouisfed.org/series/<id> for each series' definition.
+# FRED series pulled each run: history_limit/obs_per_year set how much
+# history is fetched and how far back "one year ago" lands for each
+# series' own native calendar frequency (daily/weekly/monthly/quarterly -
+# a flat observation count would quietly starve daily series of a real
+# year's history while over-fetching quarterly ones). regime_rules drives
+# pipeline/scoring/macro_regime.py; each series' `mood` block drives
+# pipeline/scoring/macro_mood.py (the per-series emoji summarizing its
+# trajectory over the past year). See https://fred.stlouisfed.org/series/<id>
+# for each series' definition.
 
 series:
+  # --- Daily (Treasury yields) ---
   - id: DGS1MO
     label: 1-Month Treasury Yield
     unit: percent
+    history_limit: 261
+    obs_per_year: 260
+    mood:
+      # Direction is genuinely ambiguous for a yield (rising can mean
+      # strong growth or inflation fear; falling can mean easing
+      # expectations or flight-to-safety), so mood reads how much it
+      # moved, not which way.
+      direction: context
+      metric: level_change
+      thresholds: { calm: 0.50, elevated: 1.25 }
   - id: DGS3MO
     label: 3-Month Treasury Yield
     unit: percent
+    history_limit: 261
+    obs_per_year: 260
+    mood:
+      direction: context
+      metric: level_change
+      thresholds: { calm: 0.50, elevated: 1.25 }
   - id: DGS2
     label: 2-Year Treasury Yield
     unit: percent
+    history_limit: 261
+    obs_per_year: 260
+    mood:
+      direction: context
+      metric: level_change
+      thresholds: { calm: 0.50, elevated: 1.25 }
   - id: DGS10
     label: 10-Year Treasury Yield
     unit: percent
+    history_limit: 261
+    obs_per_year: 260
+    mood:
+      direction: context
+      metric: level_change
+      thresholds: { calm: 0.75, elevated: 1.50 }
   - id: DGS30
     label: 30-Year Treasury Yield
     unit: percent
+    history_limit: 261
+    obs_per_year: 260
+    mood:
+      direction: context
+      metric: level_change
+      thresholds: { calm: 0.75, elevated: 1.50 }
   - id: T10Y2Y
     label: 10Y-2Y Treasury Spread
     unit: percent
+    history_limit: 261
+    obs_per_year: 260
+    mood:
+      # Same volatility-based reading as the other yields, EXCEPT: when
+      # the curve is inverted (value < 0) that structural fact overrides
+      # the banding below entirely - the same "curve inverted" concept
+      # macro_regime.classify_regime already treats as a recession-risk
+      # signal, reused here rather than reinvented.
+      direction: context
+      metric: level_change
+      thresholds: { calm: 0.30, elevated: 0.75 }
+
+  # --- Weekly ---
+  - id: ICSA
+    label: Initial Jobless Claims
+    unit: claims (SA)
+    history_limit: 53
+    obs_per_year: 52
+    mood:
+      # Fewer new claims than a year ago is a healthier labor market.
+      direction: lower_better
+      metric: pct_change
+      thresholds: { favorable: -10.0, unfavorable: 20.0 }
+
+  # --- Monthly ---
   - id: CPIAUCSL
     label: CPI (All Urban Consumers)
     unit: index (1982-84=100)
+    history_limit: 13
+    obs_per_year: 12
+    mood:
+      # Not "lower is better" - the Fed targets ~2% inflation, not 0%, and
+      # outright deflation (yoy < 0) carries its own well-documented risks
+      # (macro_mood.py handles that case as a special "deflationary" read).
+      direction: target
+      metric: pct_change
+      thresholds: { near: 1.0, far: 3.0 }
+  - id: PCEPI
+    label: PCE Price Index (Fed's preferred inflation gauge)
+    unit: index (2017=100)
+    history_limit: 13
+    obs_per_year: 12
+    mood:
+      direction: target
+      metric: pct_change
+      thresholds: { near: 1.0, far: 3.0 }
   - id: UNRATE
     label: Unemployment Rate
     unit: percent
+    history_limit: 13
+    obs_per_year: 12
+    mood:
+      direction: lower_better
+      metric: level_change
+      thresholds: { favorable: -0.3, unfavorable: 0.5 }
   - id: FEDFUNDS
     label: Effective Federal Funds Rate
     unit: percent
+    history_limit: 13
+    obs_per_year: 12
+    mood:
+      # Whether hiking or cutting is "good" depends entirely on where the
+      # economy is in its cycle - not something a single series can judge
+      # on its own - so mood here reads pace of change, not direction.
+      direction: context
+      metric: level_change
+      thresholds: { calm: 0.50, elevated: 1.50 }
+  - id: PAYEMS
+    label: Nonfarm Payrolls
+    unit: thousands of persons
+    history_limit: 13
+    obs_per_year: 12
+    mood:
+      direction: higher_better
+      metric: pct_change
+      thresholds: { favorable: 1.5, unfavorable: 0.0 }
+  - id: INDPRO
+    label: Industrial Production Index
+    unit: index (2017=100)
+    history_limit: 13
+    obs_per_year: 12
+    mood:
+      direction: higher_better
+      metric: pct_change
+      thresholds: { favorable: 2.0, unfavorable: -1.0 }
+  - id: UMCSENT
+    label: Consumer Sentiment (U. of Michigan)
+    unit: index (1966 Q1=100)
+    history_limit: 13
+    obs_per_year: 12
+    mood:
+      direction: higher_better
+      metric: pct_change
+      thresholds: { favorable: 10.0, unfavorable: -10.0 }
+  - id: M2SL
+    label: M2 Money Supply
+    unit: billions of dollars
+    history_limit: 13
+    obs_per_year: 12
+    mood:
+      # Both an unusually sharp expansion and an outright contraction in
+      # the money supply are historically notable (post-2020 stimulus vs.
+      # 2023's record M2 contraction); neither direction alone is "good."
+      direction: context
+      metric: pct_change
+      thresholds: { calm: 5.0, elevated: 10.0 }
+
+  # --- Quarterly ---
   - id: GDPC1
     label: Real GDP
     unit: billions of chained 2017 dollars
+    history_limit: 5
+    obs_per_year: 4
+    mood:
+      direction: higher_better
+      metric: pct_change
+      thresholds: { favorable: 2.0, unfavorable: 0.0 }
 
 # Regime classification thresholds (all rule-based, no ML).
 # Evaluated in pipeline/scoring/macro_regime.py, in this priority order:

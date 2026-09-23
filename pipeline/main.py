@@ -34,7 +34,7 @@ import sys
 from pipeline.build import qualitative_cache, writer
 from pipeline.fetch import filing_text, fmp, fred, sec_edgar, stooq
 from pipeline.narrative.qualitative_client import QualitativeError, generate_qualitative_assessment
-from pipeline.scoring import aggregation, history, macro_regime, performance, value_investing
+from pipeline.scoring import aggregation, history, macro_mood, macro_regime, performance, value_investing
 from pipeline.scoring.fundamentals import build_metrics, normalize_price_rows
 from pipeline.utils.config import macro_series, screening_config, watchlist
 
@@ -65,8 +65,10 @@ def selected_companies(args) -> list[dict]:
 
 
 def fetch_macro() -> tuple[dict, dict]:
-    ids = [s["id"] for s in macro_series()["series"]]
-    macro_data = fred.fetch_all(ids)
+    series_cfg = macro_series()["series"]
+    ids = [s["id"] for s in series_cfg]
+    limits = {s["id"]: s["history_limit"] for s in series_cfg if "history_limit" in s}
+    macro_data = fred.fetch_all(ids, limit=limits)
     regime_info = macro_regime.classify_regime(macro_data)
     return macro_data, regime_info
 
@@ -86,7 +88,9 @@ def fetch_benchmark() -> list[dict]:
 
 
 def build_macro_doc(macro_data: dict, regime_info: dict, generated_at: str) -> dict:
-    series_cfg = {s["id"]: s for s in macro_series()["series"]}
+    macro_cfg = macro_series()
+    series_cfg = {s["id"]: s for s in macro_cfg["series"]}
+    regime_rules = macro_cfg["regime_rules"]
     series_out = []
     for series_id, observations in macro_data.items():
         if series_id == "_errors":
@@ -101,6 +105,7 @@ def build_macro_doc(macro_data: dict, regime_info: dict, generated_at: str) -> d
                 "as_of": latest["date"] if latest else None,
                 "history": observations,
                 "source_url": f"https://fred.stlouisfed.org/series/{series_id}",
+                "mood": macro_mood.compute_mood(series_id, observations, cfg, regime_rules),
             }
         )
     return {

@@ -532,6 +532,19 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 .sparkline { color: var(--accent); display: block; margin: 0.5rem 0; }
 .regime-tag { color: var(--accent); }
 
+.series-mood { margin: 0.25rem 0; font-size: 0.85rem; font-weight: 600; cursor: default; }
+.mood-emoji { font-size: 1rem; }
+.series-mood.mood-favorable { color: var(--strong); }
+.series-mood.mood-neutral { color: var(--cautious); }
+.series-mood.mood-unfavorable { color: var(--weak); }
+.series-mood.mood-alarm { color: var(--weak); }
+
+.series-info { margin-top: 0.4rem; font-size: 0.8rem; }
+.series-info summary { cursor: pointer; color: var(--accent); list-style: none; }
+.series-info summary::-webkit-details-marker { display: none; }
+.series-info .metric-info { margin-top: 0.4rem; color: var(--muted); }
+.series-info .metric-info p { margin: 0.35rem 0; }
+
 /* Key Metrics Reference (company page) + full glossary page - shared look. */
 .key-metrics-reference { margin-bottom: 1.5rem; }
 .metric-rows { display: flex; flex-direction: column; gap: 0.4rem; }

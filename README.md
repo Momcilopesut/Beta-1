@@ -29,7 +29,8 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
 - **Data sources**: [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs)
   (fundamentals, prices), [SEC EDGAR](https://www.sec.gov/edgar/sec-api-documentation)
   (filings + XBRL fundamentals fallback), [FRED](https://fred.stlouisfed.org/docs/api/fred/)
-  (treasury yields, CPI, unemployment, Fed funds rate).
+  (16 series spanning yields, inflation, the labor market, GDP, and more — see "Macro
+  Overview" below).
 - **Assets vs. Liabilities** (see the dedicated section below): the company's actual
   net worth (assets minus liabilities), computed straight from the balance sheet, is
   the headline figure on every company page — not buried under a dozen other metrics.
@@ -277,6 +278,41 @@ simplicity. See `required_margin_of_safety_pct` in the output.
 Each company page shows these three gates (and the checklists behind them)
 separately — deliberately not combined into a single blended score.
 
+## Macro Overview
+
+The macro page (`site/macro.html`) tracks 16 FRED series across the indicators that
+move the broad economy most: the full Treasury yield curve plus the 10Y-2Y spread,
+both inflation gauges (CPI and the Fed's own preferred PCE Price Index), the labor
+market (unemployment rate, nonfarm payrolls, initial jobless claims), the Fed funds
+rate, real GDP, industrial production, consumer sentiment, and M2 money supply.
+
+Each series carries a rule-based **mood** — an emoji + short label summarizing
+whether its trajectory over the past year reads as favorable, mixed, or concerning
+(`pipeline/scoring/macro_mood.py`). Mood is deliberately not a single "up = good"
+rule: a series' `mood.direction` in `config/macro_series.yaml` classifies it as
+`higher_better` (payrolls, GDP, industrial production, consumer sentiment —
+growth is generically good), `lower_better` (unemployment, jobless claims — fewer
+is generically better), `target` (CPI and PCE — the Fed targets ~2%, not 0%, and
+outright deflation is flagged as its own concerning case), or `context` (Treasury
+yields, the Fed funds rate, M2 — direction is genuinely ambiguous among economists,
+so mood instead reads how much the series moved, calm vs. volatile). One
+structural exception: the 10Y-2Y spread's mood overrides its ordinary banding
+entirely when the curve is inverted, reusing the same "yield curve inverted"
+concept `macro_regime.py`'s regime classifier already treats as a recession-risk
+signal, rather than a second copy of that rule. Every threshold lives in each
+series' own `mood` block in `config/macro_series.yaml` — no ML, fully inspectable
+and tunable without touching code.
+
+Fetch history is sized per series to its own calendar frequency
+(`history_limit`/`obs_per_year` in `config/macro_series.yaml`) rather than one flat
+observation count — a flat count would starve the daily Treasury-yield series of a
+real year of history while over-fetching the quarterly GDP series.
+
+Tapping any series card ("What is this?") expands its glossary entry
+(`site/js/macro-glossary.js`) — what the series is, why it's economically
+significant, and how its volatility specifically affects the broader economy —
+the same tap-to-expand pattern the company page's Key Metrics Reference uses.
+
 ## Metrics Glossary
 
 Every metric this tool scores on (`site/js/metrics-glossary.js`) carries a short
@@ -291,8 +327,9 @@ linked from the nav on every page) with the full reference, no per-company numbe
 - `config/watchlist.yaml` — the screening universe. Edit freely.
 - `config/sector_macro_sensitivity.yaml` — how much each sector's macro adjustment
   moves under each regime.
-- `config/macro_series.yaml` — which FRED series are pulled and the regime
-  classification thresholds.
+- `config/macro_series.yaml` — which FRED series are pulled, how much history each
+  one fetches, the regime classification thresholds, and each series' mood
+  direction/thresholds (see "Macro Overview" above).
 - `config/screening.yaml` — `top_n_per_sector`, how many companies the weekly screen
   surfaces per sector, per timeframe (see "Weekly Screener" above).
 

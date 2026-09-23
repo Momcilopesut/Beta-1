@@ -36,13 +36,24 @@ def fetch_series(series_id: str, limit: int = 24) -> list[dict]:
     return cleaned
 
 
-def fetch_all(series_ids: list[str], limit: int = 24) -> dict:
-    """Returns {<series_id>: [...observations], "_errors": {<series_id>: str}}."""
+def fetch_all(series_ids: list[str], limit: int | dict[str, int] = 24) -> dict:
+    """Returns {<series_id>: [...observations], "_errors": {<series_id>: str}}.
+
+    `limit` is either one count applied to every series, or a
+    {series_id: count} mapping - series' native calendar frequency varies
+    wildly (daily Treasury yields vs. quarterly GDP), so a single flat
+    count either starves the daily series of a real year of history or
+    over-fetches the quarterly ones. Series missing from a mapping fall
+    back to 24.
+    """
+    per_series = limit if isinstance(limit, dict) else {}
+    default_limit = limit if isinstance(limit, int) else 24
+
     result: dict = {}
     errors: dict[str, str] = {}
     for sid in series_ids:
         try:
-            result[sid] = fetch_series(sid, limit=limit)
+            result[sid] = fetch_series(sid, limit=per_series.get(sid, default_limit))
         except Exception as exc:  # noqa: BLE001
             errors[sid] = str(exc)
             result[sid] = []
