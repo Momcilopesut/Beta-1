@@ -117,6 +117,45 @@ def build_macro_doc(macro_data: dict, regime_info: dict, generated_at: str) -> d
     }
 
 
+def digest_entry_from_doc(company_doc: dict) -> dict | None:
+    """One finalists-digest entry from an already-finalized company_doc - no
+    new fetching, just gathering the AI filing summaries finalize_company
+    already generated (see _run_qualitative) into one rolled-up place
+    instead of company-page by company-page. Returns None when this company
+    has no filing summary at all (skip_ai runs, or no 10-K was found for
+    it), so the digest never carries an empty-looking entry."""
+    qualitative = company_doc.get("qualitative") or {}
+    filing_summaries = {
+        "filing_summary_10k": qualitative.get("filing_summary_10k"),
+        "filing_summary_10q": qualitative.get("filing_summary_10q"),
+        "filing_summary_8k": qualitative.get("filing_summary_8k"),
+    }
+    if not any(filing_summaries.values()):
+        return None
+    return {
+        "ticker": company_doc["ticker"],
+        "name": company_doc["name"],
+        "sector": company_doc["sector"],
+        # Shaped like a full "qualitative" object (just these 3 keys) so the
+        # frontend can pass it straight into the same renderFilingCard the
+        # company page itself uses (site/js/shared.js), no remapping needed.
+        "qualitative": filing_summaries,
+        "sec_filings": company_doc.get("sources", {}).get("sec_filings", []),
+    }
+
+
+def build_filings_digest(entries: list[dict], generated_at: str) -> dict:
+    """entries: digest_entry_from_doc results (already filtered to non-None
+    by the caller). A single rolled-up read of this week's top picks' AI
+    filing summaries - reuses data finalize_company already generated, so
+    this costs no extra fetching and no extra Anthropic spend."""
+    return {
+        "generated_at": generated_at,
+        "tickers_covered": len(entries),
+        "entries": sorted(entries, key=lambda e: e["ticker"]),
+    }
+
+
 def fetch_and_score_company(company_cfg: dict, regime_info: dict, benchmark_prices: list[dict] | None = None) -> dict:
     """Fetch + score one company."""
     ticker = company_cfg["ticker"]
@@ -300,29 +339,32 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
 
 def _process_company(
     company_cfg: dict, regime_info: dict, benchmark_prices: list[dict], skip_ai: bool, out_dir
-) -> tuple[dict | None, bool, dict]:
+) -> tuple[dict | None, bool, dict, dict | None]:
     """Fetch, score, finalize, and write one company end-to-end. Used for
     both the cheap screen (skip_ai=True, whole universe) and the AI-enriched
     finalist pass (skip_ai=False) - the same work either way, just whether
     finalize_company spends the Anthropic call. Returns (summary,
-    qualitative_failed, errors); summary is None if fetching or finalizing
-    failed outright for this ticker (already logged), in which case the
-    other fields are empty/zero and the caller should just skip it."""
+    qualitative_failed, errors, company_doc); summary and company_doc are
+    None if fetching or finalizing failed outright for this ticker (already
+    logged), in which case the other fields are empty/zero and the caller
+    should just skip it. company_doc lets callers pull the AI filing
+    summaries back out for the finalists digest (build_filings_digest)
+    without a second read from disk."""
     ticker = company_cfg["ticker"]
     try:
         state = fetch_and_score_company(company_cfg, regime_info, benchmark_prices)
     except Exception:
         logger.exception("Failed to process %s entirely, skipping", ticker)
-        return None, False, {}
+        return None, False, {}, None
 
     try:
         company_doc, summary, qualitative_failed = finalize_company(state, regime_info, skip_ai, out_dir)
     except Exception:
         logger.exception("Failed to finalize %s entirely, skipping", ticker)
-        return None, False, state["errors"]
+        return None, False, state["errors"], None
 
     writer.write_company(out_dir, ticker, company_doc)
-    return summary, qualitative_failed, state["errors"]
+    return summary, qualitative_failed, state["errors"], company_doc
 
 
 def run_full(args) -> int:
@@ -375,7 +417,7 @@ def run_full(args) -> int:
     # below.
     summaries = []
     for company_cfg in companies:
-        summary, _qualitative_failed, errs = _process_company(
+        summary, _qualitative_failed, errs, _company_doc = _process_company(
             company_cfg, regime_info, benchmark_prices, skip_ai=True, out_dir=out_dir
         )
         _track_errors(errs)
@@ -398,11 +440,12 @@ def run_full(args) -> int:
     # the universe). A ticker can lead more than one window (and appear in
     # more than one of picks_by_sector's window lists within its sector), so
     # enrichment patches every slot it occupies, not just the first found.
+    digest_entries = []
     if not args.skip_ai and finalist_tickers:
         summaries_by_ticker = {s["ticker"]: s for s in summaries}
         companies_by_ticker = {c["ticker"]: c for c in companies}
         for ticker in finalist_tickers:
-            summary, qualitative_failed, errs = _process_company(
+            summary, qualitative_failed, errs, company_doc = _process_company(
                 companies_by_ticker[ticker], regime_info, benchmark_prices, skip_ai=False, out_dir=out_dir
             )
             _track_errors(errs)
@@ -415,6 +458,9 @@ def run_full(args) -> int:
                     for i, pick in enumerate(picks):
                         if pick["ticker"] == ticker:
                             picks[i] = summary
+            digest_entry = digest_entry_from_doc(company_doc)
+            if digest_entry:
+                digest_entries.append(digest_entry)
         summaries = list(summaries_by_ticker.values())
 
     if fmp_error_count:
@@ -437,6 +483,7 @@ def run_full(args) -> int:
 
     writer.write_watchlist(out_dir, summaries, generated_at)
     writer.write_performance_picks(out_dir, picks_by_sector, generated_at, len(companies), top_n_per_sector)
+    writer.write_filings_digest(out_dir, build_filings_digest(digest_entries, generated_at))
     writer.write_meta(
         out_dir,
         {

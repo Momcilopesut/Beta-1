@@ -20,7 +20,7 @@ from urllib.parse import quote
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from pipeline.build import writer  # noqa: E402
-from pipeline.main import build_macro_doc  # noqa: E402
+from pipeline.main import build_filings_digest, build_macro_doc, digest_entry_from_doc  # noqa: E402
 from pipeline.scoring import aggregation, macro_regime, performance, value_investing  # noqa: E402
 from pipeline.utils.config import macro_series, screening_config, watchlist  # noqa: E402
 from pipeline.utils.paths import DATA_DIR  # noqa: E402
@@ -328,6 +328,7 @@ def main() -> None:
     writer.write_macro(DATA_DIR, macro_doc)
 
     summaries = []
+    company_docs = {}
     for company_cfg in companies:
         ticker = company_cfg["ticker"]
         sector = company_cfg["sector"]
@@ -385,6 +386,7 @@ def main() -> None:
             },
         }
         writer.write_company(DATA_DIR, ticker, company_doc)
+        company_docs[ticker] = company_doc
 
         summaries.append(
             {
@@ -409,6 +411,21 @@ def main() -> None:
     top_n_per_sector = screening_config()["top_n_per_sector"]
     picks_by_sector = performance.select_top_performers(summaries, top_n_per_sector)
     writer.write_performance_picks(DATA_DIR, picks_by_sector, generated_at, len(companies), top_n_per_sector)
+
+    # Same finalist definition run_full uses (the union of every window's
+    # per-sector picks) and the same real digest_entry_from_doc/
+    # build_filings_digest the real pipeline calls - so sample data's
+    # filings digest matches a live run's shape exactly, not a hand-rolled
+    # second copy of that logic.
+    finalist_tickers = {
+        pick["ticker"] for windows in picks_by_sector.values() for picks in windows.values() for pick in picks
+    }
+    digest_entries = [
+        entry
+        for ticker in finalist_tickers
+        if (entry := digest_entry_from_doc(company_docs[ticker])) is not None
+    ]
+    writer.write_filings_digest(DATA_DIR, build_filings_digest(digest_entries, generated_at))
     writer.write_meta(
         DATA_DIR,
         {

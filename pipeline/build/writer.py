@@ -60,5 +60,9 @@ def write_macro(base_dir: Path, macro_doc: dict) -> None:
     _write_json(base_dir / "macro.json", macro_doc)
 
 
+def write_filings_digest(base_dir: Path, digest_doc: dict) -> None:
+    _write_json(base_dir / "filings_digest.json", digest_doc)
+
+
 def write_meta(base_dir: Path, meta_doc: dict) -> None:
     _write_json(base_dir / "meta.json", meta_doc)

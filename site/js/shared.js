@@ -45,6 +45,28 @@ export function renderError(container, message) {
   container.querySelector(".error").textContent = message;
 }
 
+// --- SEC filing cards: shared by the company page's own Recent Filings
+// section and the cross-company Filings Digest page, so the "which
+// qualitative field holds this form's summary" mapping and the card markup
+// only exist once. ---
+
+export const FILING_SUMMARY_KEY = { "10-K": "filing_summary_10k", "10-Q": "filing_summary_10q", "8-K": "filing_summary_8k" };
+
+export function renderFilingCard(filing, qualitative) {
+  const summary = qualitative?.[FILING_SUMMARY_KEY[filing.form]];
+  const body = summary
+    ? `<p>${escapeHtml(summary)}</p>`
+    : qualitative
+      ? `<p class="meta">No excerpt was available to summarize this filing.</p>`
+      : `<p class="meta">AI summary only runs for this week's per-sector finalists (cost control — this layer reads real filing text and spends extra AI budget per company).</p>`;
+  return `
+    <div class="filing-card">
+      <h4><a href="${escapeHtml(filing.url)}" target="_blank" rel="noopener">${escapeHtml(filing.form)}</a> <span class="meta">filed ${escapeHtml(filing.filed)}</span></h4>
+      ${body}
+    </div>
+  `;
+}
+
 // --- On-demand lookup config (api/lookup.py, deployed separately to
 // Vercel - see README "On-demand lookup"). Stored per-browser in
 // localStorage, never sent anywhere but the configured API itself. ---

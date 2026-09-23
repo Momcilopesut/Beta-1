@@ -47,8 +47,9 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
   company that reads the company's own 10-K text — the only AI call in this pipeline,
   and the only place it isn't grounded solely in pre-computed metrics. The same call
   also writes short, neutral summaries of the company's latest 10-K, 10-Q, and 8-K,
-  shown on its detail page's Recent Filings section. Only runs for tickers that make
-  at least one timeframe's top-5 list — see "Weekly Screener" below.
+  shown on its detail page's Recent Filings section and rolled up across every
+  finalist on the **Filings Digest** page (see below). Only runs for tickers that
+  make at least one timeframe's top-5 list — see "Weekly Screener" below.
 - **Economic-cycle context**: the macro page frames the current regime against classic
   business-cycle/sector-rotation theory (which sectors have historically led/lagged in
   this phase) — textbook reference, explicitly not a prediction.
@@ -312,6 +313,19 @@ Tapping any series card ("What is this?") expands its glossary entry
 (`site/js/macro-glossary.js`) — what the series is, why it's economically
 significant, and how its volatility specifically affects the broader economy —
 the same tap-to-expand pattern the company page's Key Metrics Reference uses.
+
+## Filings Digest
+
+`site/filings-digest.html` rolls up this week's per-sector finalists' AI-summarized
+SEC filings (`qualitative.filing_summary_10k`/`_10q`/`_8k`, see "Layered analysis"
+above) into a single page, instead of reading them one company page at a time. It
+does no new fetching and spends no extra Anthropic budget — it's built directly from
+`build_filings_digest`/`digest_entry_from_doc` in `pipeline/main.py`, which just
+gather the filing summaries `finalize_company` already generated for that week's
+finalists and write them to `data/filings_digest.json` alongside everything else the
+weekly screen produces. A company that isn't a finalist that week (or has no 10-K on
+file at all) simply doesn't appear — see its own company page for its filing list
+either way.
 
 ## Metrics Glossary
 

@@ -4,6 +4,7 @@ import {
   escapeHtml,
   renderDisclaimerFooter,
   lookupTicker,
+  renderFilingCard,
 } from "./shared.js";
 import { METRIC_GLOSSARY, glossaryEntry } from "./metrics-glossary.js";
 
@@ -125,23 +126,6 @@ function render(doc) {
         }
       </ul>
     </section>
-  `;
-}
-
-const FILING_SUMMARY_KEY = { "10-K": "filing_summary_10k", "10-Q": "filing_summary_10q", "8-K": "filing_summary_8k" };
-
-function renderFilingCard(filing, qualitative) {
-  const summary = qualitative?.[FILING_SUMMARY_KEY[filing.form]];
-  const body = summary
-    ? `<p>${escapeHtml(summary)}</p>`
-    : qualitative
-      ? `<p class="meta">No excerpt was available to summarize this filing.</p>`
-      : `<p class="meta">AI summary only runs for this week's per-sector finalists (cost control — this layer reads real filing text and spends extra AI budget per company).</p>`;
-  return `
-    <div class="filing-card">
-      <h4><a href="${escapeHtml(filing.url)}" target="_blank" rel="noopener">${escapeHtml(filing.form)}</a> <span class="meta">filed ${escapeHtml(filing.filed)}</span></h4>
-      ${body}
-    </div>
   `;
 }
 

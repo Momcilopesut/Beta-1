@@ -440,6 +440,10 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 .filing-card h4 { margin: 0 0 0.5rem; font-size: 0.9rem; display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
 .filing-card p { margin: 0; font-size: 0.85rem; }
 
+.digest-intro { margin-bottom: 1.5rem; }
+.digest-entry h3 { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+.digest-entry h3 a { color: var(--fg); }
+
 .balance-sheet-basics { margin-bottom: 1.5rem; }
 .basics-list { list-style: none; padding: 0; margin: 0.5rem 0 1rem; font-size: 0.95rem; }
 .basics-list li { padding: 0.3rem 0; border-bottom: 1px solid var(--border); }

@@ -9,7 +9,7 @@ tests can't see."""
 from unittest.mock import patch
 
 from pipeline.fetch.filing_text import FilingTextError
-from pipeline.main import fetch_and_score_company, finalize_company
+from pipeline.main import digest_entry_from_doc, fetch_and_score_company, finalize_company
 from pipeline.narrative.qualitative_schema import QualitativeAssessment
 
 
@@ -156,6 +156,11 @@ def test_full_layered_pipeline_wiring(
     # The 10-Q/8-K text was fetched and passed through to the Anthropic call
     # as filing_texts, alongside the 10-K sections.
     mock_qualitative.assert_called_once_with("AAPL", mock_filing_sections.return_value, {"10-Q": "10-Q plain text.", "8-K": "8-K plain text."})
+
+    digest_entry = digest_entry_from_doc(company_doc)
+    assert digest_entry["ticker"] == "AAPL"
+    assert digest_entry["qualitative"]["filing_summary_10k"] == "Revenue grew and the company returned cash to shareholders."
+    assert digest_entry["sec_filings"] == company_doc["sources"]["sec_filings"]
 
     # The cache file should now exist and be reused on a second call without
     # calling the Anthropic-backed qualitative function, or re-fetching any
