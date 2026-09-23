@@ -1,0 +1,229 @@
+{
+  "_errors": {},
+  "cik": "0001177609",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 31467000,
+        "fiscal_year": "2024-05-04",
+        "market_return_pct": 3.4267219581268327,
+        "revenue": 811863000,
+        "spending": null,
+        "stock_return_pct": -20.0430677488819
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 33000000,
+        "fiscal_year": "2024-08-03",
+        "market_return_pct": 4.226564180797582,
+        "revenue": 830069000,
+        "spending": null,
+        "stock_return_pct": -52.22015054208964
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 1687000,
+        "fiscal_year": "2024-11-02",
+        "market_return_pct": 7.157065115406265,
+        "revenue": 843710000,
+        "spending": null,
+        "stock_return_pct": 38.64720335308572
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 253611000,
+        "fiscal_year": "2025-02-01",
+        "market_return_pct": 5.390165312412456,
+        "revenue": 3876527000,
+        "spending": null,
+        "stock_return_pct": -2.2412175544668047
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 358641000,
+        "fiscal_year": "2026-01-31",
+        "market_return_pct": 14.979561995280976,
+        "revenue": 4764147000,
+        "spending": null,
+        "stock_return_pct": 104.35060780550222
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 2.0091309698261854,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 39.83886013077879,
+      "shareholders_equity": 2193290000,
+      "total_assets": 4937019000,
+      "total_liabilities": 2743729000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 8.641358043737945
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 120.92812670228214
+    },
+    "profitability": {
+      "roe_pct": 16.351736432482706,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 200.63557079196812,
+      "graham_number": 76.15472449912824,
+      "graham_upside_pct": -66.51214788306221,
+      "ncav_margin_pct": -106.60556465217338,
+      "pb_ratio": 5.708245648933793,
+      "pe_ttm": 35.1483771251932
+    }
+  },
+  "industry": "Specialty Retail",
+  "last_updated": "2026-09-23T21:26:47Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 12574715771,
+  "metrics": {
+    "book_value_per_share": 39.83886013077879,
+    "current_ratio": 2.0091309698261854,
+    "eps_growth_cagr_3yr_pct": 120.92812670228214,
+    "fcf_margin_pct": 8.641358043737945,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 200.63557079196812,
+    "graham_upside_pct": -66.51214788306221,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -106.60556465217338,
+    "pb_ratio": 5.708245648933793,
+    "pe_ttm": 35.1483771251932,
+    "roe_pct": 16.351736432482706,
+    "shareholders_equity": 2193290000,
+    "total_assets": 4937019000,
+    "total_liabilities": 2743729000
+  },
+  "name": "Five Below",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 227.41
+  },
+  "qualitative": null,
+  "sector": "Consumer Cyclical",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001177609.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-23",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1177609/000117760926000050/five-20260921.htm"
+      },
+      {
+        "filed": "2026-09-03",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1177609/000117760926000027/five-20260801.htm"
+      },
+      {
+        "filed": "2026-03-19",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1177609/000117760926000010/five-20260131.htm"
+      }
+    ]
+  },
+  "ticker": "FIVE",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $12.6B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 120.9%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 35.1",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 200.6",
+          "passed": false
+        }
+      ],
+      "evaluated": 5,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 16.4%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "55,436,972 shares vs. 55,156,342 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": "https://www.fivebelow.com"
+}

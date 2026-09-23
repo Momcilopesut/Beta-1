@@ -5,64 +5,64 @@
     "years": [
       {
         "cash": 1732100000,
-        "debt": 250200000,
+        "debt": 0,
         "earnings": 418000000,
         "fiscal_year": "2022-03-31",
         "market_return_pct": null,
         "revenue": 3504800000,
-        "spending": 3030400000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 827400000,
-        "debt": 3487000000,
+        "debt": 1733000000,
         "earnings": -1124700000,
         "fiscal_year": "2023-03-31",
         "market_return_pct": -9.354795855105836,
         "revenue": 5349900000,
-        "spending": 6500500000,
+        "spending": null,
         "stock_return_pct": -22.401457005333686
       },
       {
         "cash": 754000000,
-        "debt": 3534000000,
+        "debt": 3058300000,
         "earnings": -3744200000,
         "fiscal_year": "2024-03-31",
         "market_return_pct": 27.545860915019905,
         "revenue": 5349600000,
-        "spending": 6493500000,
+        "spending": null,
         "stock_return_pct": 25.733445096395645
       },
       {
         "cash": 1456100000,
-        "debt": 4105900000,
+        "debt": 2512600000,
         "earnings": -4478900000,
         "fiscal_year": "2025-03-31",
         "market_return_pct": 7.1299984679025625,
         "revenue": 5633600000,
-        "spending": 6373000000,
+        "spending": null,
         "stock_return_pct": 38.166666666666664
       },
       {
         "cash": 1545500000,
-        "debt": 2958300000,
+        "debt": 2488000000,
         "earnings": -298200000,
         "fiscal_year": "2026-03-31",
         "market_return_pct": 16.258781887413086,
         "revenue": 6656400000,
-        "spending": 6765000000,
+        "spending": null,
         "stock_return_pct": -4.704463208685163
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.0623293576663313,
-      "debt_to_ebitda": 2.8724147975531604,
-      "debt_to_equity": 0.8160680634076045
+      "current_ratio": 1.235900803461063,
+      "debt_to_ebitda": 26.38388123011665,
+      "debt_to_equity": 0.7086502036514853
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 19.379162191192265,
+      "book_value_per_share": 18.776830045268426,
       "shareholders_equity": 3510900000,
       "total_assets": 9383200000,
       "total_liabilities": 5872300000
@@ -74,20 +74,20 @@
       "eps_growth_cagr_3yr_pct": -38.69161210354716
     },
     "profitability": {
-      "roe_pct": -9.123786200415752,
+      "roe_pct": -8.49354866273605,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": -1259.9965148084145,
+      "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -106.95496671675049,
-      "pb_ratio": 10.605721649484538,
-      "pe_ttm": -118.8034682080925
+      "ncav_margin_pct": -106.92833612492112,
+      "pb_ratio": 10.988010196747272,
+      "pe_ttm": null
     }
   },
   "industry": "Electronic Gaming & Multimedia",
-  "last_updated": "2026-09-23T02:47:15Z",
+  "last_updated": "2026-09-23T21:10:38Z",
   "layered_analysis": {
     "flags": [],
     "munger_quality_pass": true,
@@ -103,32 +103,30 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 38429999400,
+  "market_cap": 38577713600,
   "metrics": {
-    "book_value_per_share": 19.379162191192265,
-    "current_ratio": 1.0623293576663313,
-    "debt_to_ebitda": 2.8724147975531604,
-    "debt_to_equity": 0.8160680634076045,
+    "book_value_per_share": 18.776830045268426,
+    "current_ratio": 1.235900803461063,
+    "debt_to_ebitda": 26.38388123011665,
+    "debt_to_equity": 0.7086502036514853,
     "eps_growth_cagr_3yr_pct": -38.69161210354716,
     "fcf_margin_pct": 6.933177092722794,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 2,
-    "graham_multiple": -1259.9965148084145,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 1,
     "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -106.95496671675049,
-    "pb_ratio": 10.605721649484538,
-    "pe_ttm": -118.8034682080925,
-    "roe_pct": -9.123786200415752,
+    "ncav_margin_pct": -106.92833612492112,
+    "pb_ratio": 10.988010196747272,
+    "roe_pct": -8.49354866273605,
     "shareholders_equity": 3510900000,
     "total_assets": 9383200000,
     "total_liabilities": 5872300000
   },
   "name": "Take-Two Interactive",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 205.53
+    "as_of": "2026-09-23",
+    "close": 206.32
   },
   "qualitative": null,
   "sector": "Technology",
@@ -158,12 +156,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $38.4B",
+          "detail": "Market cap $38.6B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.06, debt $3.0B vs working capital $0.6B",
+          "detail": "Current ratio 1.24, debt $2.5B vs working capital $0.6B",
           "passed": false
         },
         {
@@ -182,36 +180,36 @@
           "passed": false
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E -118.8",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -1260.0",
-          "passed": true
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 6,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 1,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -9.1%",
+          "detail": "ROE -8.5%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.82",
+          "detail": "Debt/equity 0.71",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "185,300,000 shares vs. 175,100,000 a year earlier",
-          "passed": false
+          "detail": "Share count unavailable",
+          "passed": null
         },
         {
           "criterion": "Margins stable or improving (not declining)",
@@ -219,7 +217,7 @@
           "passed": true
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 2,
       "total": 4
     }

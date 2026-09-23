@@ -1,0 +1,228 @@
+{
+  "_errors": {},
+  "cik": "0000104889",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 145886000,
+        "debt": 667501000,
+        "earnings": 122788000,
+        "fiscal_year": "2023-06-30",
+        "market_return_pct": 8.27816996018466,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -4.088345864661656
+      },
+      {
+        "cash": 169319000,
+        "debt": 726360000,
+        "earnings": -23031000,
+        "fiscal_year": "2023-09-30",
+        "market_return_pct": -3.5643385670456498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 2.0158185763281273
+      },
+      {
+        "cash": 169897000,
+        "debt": 811833000,
+        "earnings": 205288000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 10.566576214091878,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 20.42195540308747
+      },
+      {
+        "cash": 260852000,
+        "debt": 721615000,
+        "earnings": 724634000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 24.194513289462442
+      },
+      {
+        "cash": 266988000,
+        "debt": 705618000,
+        "earnings": 292291000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 25.997797963115875
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.7507853380518432,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.1471869671101006
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 1110.6278234680876,
+      "shareholders_equity": 4794025000,
+      "total_assets": 8395713000,
+      "total_liabilities": 3528562000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": null
+    },
+    "profitability": {
+      "roe_pct": 6.09698530983881,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 17.829413066781314,
+      "graham_number": 1288.8084446818639,
+      "graham_upside_pct": 12.336977754309263,
+      "ncav_margin_pct": -122.16124155898993,
+      "pb_ratio": 1.032992309176527,
+      "pe_ttm": 17.259966902361967
+    }
+  },
+  "industry": "Conglomerates",
+  "last_updated": "2026-09-23T21:18:44Z",
+  "layered_analysis": {
+    "flags": [
+      "Positive but thin margin of safety - 12% is below the 15% convention used here."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 4952190955,
+  "metrics": {
+    "book_value_per_share": 1110.6278234680876,
+    "current_ratio": 1.7507853380518432,
+    "debt_to_equity": 0.1471869671101006,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 17.829413066781314,
+    "graham_upside_pct": 12.336977754309263,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -122.16124155898993,
+    "pb_ratio": 1.032992309176527,
+    "pe_ttm": 17.259966902361967,
+    "roe_pct": 6.09698530983881,
+    "shareholders_equity": 4794025000,
+    "total_assets": 8395713000,
+    "total_liabilities": 3528562000
+  },
+  "name": "Graham Holdings",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 1147.27
+  },
+  "qualitative": null,
+  "sector": "Industrials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000104889.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-05",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/104889/000162828026053479/ghc-20260805.htm"
+      },
+      {
+        "filed": "2026-07-30",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/104889/000162828026050826/ghc-20260630.htm"
+      },
+      {
+        "filed": "2026-02-25",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/104889/000162828026011405/ghc-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "GHC",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $5.0B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.75, debt $0.7B vs working capital $1.0B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 17.3",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 17.8",
+          "passed": true
+        }
+      ],
+      "evaluated": 5,
+      "passed": 2,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 6.1%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.15",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "4,373,000 shares vs. 4,405,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 2,
+      "total": 4
+    }
+  },
+  "website": "https://www.ghco.com"
+}

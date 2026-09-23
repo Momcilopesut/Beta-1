@@ -1,0 +1,230 @@
+{
+  "_errors": {},
+  "cik": "0001773383",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 462967000,
+        "debt": 273918000,
+        "earnings": 15026000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": 7.069264796461168,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 10.025854639471401
+      },
+      {
+        "cash": 555348000,
+        "debt": 0,
+        "earnings": 107959000,
+        "fiscal_year": "2023-03-31",
+        "market_return_pct": 7.049656146222833,
+        "revenue": 1158530000,
+        "spending": null,
+        "stock_return_pct": 10.443864229765014
+      },
+      {
+        "cash": 778983000,
+        "debt": null,
+        "earnings": 154632000,
+        "fiscal_year": "2024-03-31",
+        "market_return_pct": 27.545860915019905,
+        "revenue": 1430530000,
+        "spending": null,
+        "stock_return_pct": 8.132387706855804
+      },
+      {
+        "cash": 1017039000,
+        "debt": null,
+        "earnings": 483684000,
+        "fiscal_year": "2025-03-31",
+        "market_return_pct": 7.1299984679025625,
+        "revenue": 1698683000,
+        "spending": null,
+        "stock_return_pct": 3.082641014429376
+      },
+      {
+        "cash": 1097220000,
+        "debt": null,
+        "earnings": 162669000,
+        "fiscal_year": "2026-03-31",
+        "market_return_pct": 16.258781887413086,
+        "revenue": 2018387000,
+        "spending": null,
+        "stock_return_pct": -21.569459172852604
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.3533208333120892,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 9.03588502296426,
+      "shareholders_equity": 2611390000,
+      "total_assets": 4415725000,
+      "total_liabilities": 1804335000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 26.2425887602328
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 13.430717340071553
+    },
+    "profitability": {
+      "roe_pct": 6.229211262967231,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 701.6099514037527,
+      "graham_number": 10.477881609801466,
+      "graham_upside_pct": -82.09215243582044,
+      "ncav_margin_pct": -98.11282577140302,
+      "pb_ratio": 6.475292663784421,
+      "pe_ttm": 108.35185185185185
+    }
+  },
+  "industry": "Software - Application",
+  "last_updated": "2026-09-23T21:24:40Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 17054245138,
+  "metrics": {
+    "book_value_per_share": 9.03588502296426,
+    "current_ratio": 1.3533208333120892,
+    "eps_growth_cagr_3yr_pct": 13.430717340071553,
+    "fcf_margin_pct": 26.2425887602328,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 701.6099514037527,
+    "graham_upside_pct": -82.09215243582044,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -98.11282577140302,
+    "pb_ratio": 6.475292663784421,
+    "pe_ttm": 108.35185185185185,
+    "roe_pct": 6.229211262967231,
+    "shareholders_equity": 2611390000,
+    "total_assets": 4415725000,
+    "total_liabilities": 1804335000
+  },
+  "name": "Dynatrace",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 58.51
+  },
+  "qualitative": null,
+  "sector": "Technology",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001773383.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-27",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1773383/000177338326000057/dt-20260826.htm"
+      },
+      {
+        "filed": "2026-08-05",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1773383/000177338326000050/dt-20260630.htm"
+      },
+      {
+        "filed": "2026-05-20",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1773383/000177338326000019/dt-20260331.htm"
+      }
+    ]
+  },
+  "ticker": "DT",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $17.1B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 13.4%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 108.4",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 701.6",
+          "passed": false
+        }
+      ],
+      "evaluated": 5,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 6.2%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "303,727,000 shares vs. 303,602,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 60",
+          "passed": true
+        }
+      ],
+      "evaluated": 3,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": "https://www.dynatrace.com"
+}

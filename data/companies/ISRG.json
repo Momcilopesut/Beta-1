@@ -5,97 +5,96 @@
     "years": [
       {
         "cash": 1290900000,
-        "debt": 87000000,
+        "debt": null,
         "earnings": 1704600000,
         "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
+        "market_return_pct": 10.677168290068508,
         "revenue": 5710100000,
-        "spending": 3889100000,
-        "stock_return_pct": null
+        "spending": null,
+        "stock_return_pct": 8.425372683927822
       },
       {
         "cash": 1581200000,
-        "debt": 0,
+        "debt": null,
         "earnings": 1322300000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 6222200000,
-        "spending": 4645100000,
+        "spending": null,
         "stock_return_pct": -26.148065683273025
       },
       {
         "cash": 2750100000,
-        "debt": 0,
+        "debt": null,
         "earnings": 1798000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 7124100000,
-        "spending": 5357300000,
+        "spending": null,
         "stock_return_pct": 24.733371019408327
       },
       {
         "cash": 2027400000,
-        "debt": 146000000,
+        "debt": null,
         "earnings": 2322600000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 8352100000,
-        "spending": 6003200000,
+        "spending": null,
         "stock_return_pct": 57.70137168408967
       },
       {
         "cash": 3368000000,
-        "debt": 302800000,
+        "debt": null,
         "earnings": 2856000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 10064700000,
-        "spending": 7119200000,
+        "spending": null,
         "stock_return_pct": 8.506398957774538
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 4.962660564771959,
-      "debt_to_ebitda": 0.08358637442720698,
-      "debt_to_equity": 0
+      "current_ratio": 4.874638620277141,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 51.61551480959098,
+      "book_value_per_share": 50.45317875095309,
       "shareholders_equity": 17824000000,
-      "total_assets": 20631200000,
-      "total_liabilities": 2689500000
+      "total_assets": 20458700000,
+      "total_liabilities": 2517000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 24.74688763698868
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 29.077045384344856
+      "eps_growth_cagr_3yr_pct": 29.189521389942353
     },
     "profitability": {
-      "roe_pct": 17.83495225621692,
+      "roe_pct": 16.02333931777379,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 356.4534566656803,
-      "graham_number": 96.38875798414655,
-      "graham_upside_pct": -76.02806387024135,
-      "ncav_margin_pct": -95.00878447945747,
-      "pb_ratio": 7.8455397833601195,
-      "pe_ttm": 45.433898305084746
+      "graham_multiple": 399.53731503352435,
+      "graham_number": 94.51982134623942,
+      "graham_upside_pct": -76.26918871548094,
+      "ncav_margin_pct": -94.83869885806762,
+      "pb_ratio": 7.894448077614453,
+      "pe_ttm": 50.60991105463786
     }
   },
   "industry": "Medical - Instruments & Supplies",
-  "last_updated": "2026-09-23T03:03:00Z",
+  "last_updated": "2026-09-23T21:09:10Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -106,51 +105,32 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 142049551020,
+  "market_cap": 140710627400,
   "metrics": {
-    "book_value_per_share": 51.61551480959098,
-    "current_ratio": 4.962660564771959,
-    "debt_to_ebitda": 0.08358637442720698,
-    "debt_to_equity": 0,
-    "eps_growth_cagr_3yr_pct": 29.077045384344856,
-    "fcf_margin_pct": 24.74688763698868,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 356.4534566656803,
-    "graham_upside_pct": -76.02806387024135,
+    "book_value_per_share": 50.45317875095309,
+    "current_ratio": 4.874638620277141,
+    "eps_growth_cagr_3yr_pct": 29.189521389942353,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 399.53731503352435,
+    "graham_upside_pct": -76.26918871548094,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -95.00878447945747,
-    "pb_ratio": 7.8455397833601195,
-    "pe_ttm": 45.433898305084746,
-    "roe_pct": 17.83495225621692,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -94.83869885806762,
+    "pb_ratio": 7.894448077614453,
+    "pe_ttm": 50.60991105463786,
+    "roe_pct": 16.02333931777379,
     "shareholders_equity": 17824000000,
-    "total_assets": 20631200000,
-    "total_liabilities": 2689500000
+    "total_assets": 20458700000,
+    "total_liabilities": 2517000000
   },
   "name": "Intuitive Surgical Inc.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 402.09
+    "as_of": "2026-09-23",
+    "close": 398.3
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "The 10-K describes Intuitive's da Vinci surgical system and Ion endoluminal platforms, including the newly launched da Vinci 5 system and phased international rollout, alongside a broad instruments/accessories and services business. It discusses competitive pressures (including from GLP-1 weight-loss drugs reducing bariatric procedures and a growing list of robotic-surgery competitors), regulatory clearances obtained across the U.S., Japan, South Korea, and Europe, and operational headwinds such as China market softness (anti-corruption campaign, provincial pricing limits, procurement quotas) and approximately $63.0 million of tariff-related cost increases in 2025.",
-    "filing_summary_10q": null,
-    "filing_summary_8k": "This 8-K, dated July 23, 2026, discloses that Intuitive Surgical's Board amended and restated the company's bylaws. The changes address shareholder director-nomination and proposal procedures (including universal proxy compliance, disclosure requirements, and proxy card color rules), special meeting record-date logistics, and a shift to a majority-of-votes-cast standard for non-election corporate actions, along with other technical conforming amendments. No financial results or operational events are reported in this filing.",
-    "moat_explanation": "The 10-K describes a highly integrated ecosystem in which da Vinci systems, proprietary instruments, accessories, service contracts, and multi-year surgeon training/learning pathways are all interlocked (e.g., instrument memory chips tied to specific system generations, service substantially sourced through Intuitive contracts, and progressive surgeon training programs). This creates real friction for hospitals and surgeons to switch to competing platforms once they have invested in systems, training, and consumable/instrument relationships, which is the strongest moat signal supported by the excerpts.",
-    "moat_present": true,
-    "moat_type": "switching_costs",
-    "red_flags": [
-      "Company states GLP-1 weight-loss drugs have already reduced the number of bariatric procedures performed on its systems",
-      "Growing list of named robotic-assisted surgery competitors (Johnson & Johnson, Medtronic, multiple Chinese entrants) explicitly disclosed as increasing competitive pressure, especially in China",
-      "China anti-corruption/systematic governance campaign and provincial pricing limits have led to canceled/delayed tenders and fewer systems placed than anticipated in 2025",
-      "Tariffs and trade measures increased cost of revenues by approximately $63.0 million in 2025, with further increases expected in 2026",
-      "Third-party remanufactured/reprocessed instrument offerings could reduce revenue and pose safety/reputational risk if uptake grows",
-      "Reliance on Mexicali, Mexico and German manufacturing/import sources exposes the company to tariff and supply-chain disruption risk"
-    ]
-  },
+  "qualitative": null,
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001035267.json",
@@ -178,13 +158,13 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $142.0B",
+          "detail": "Market cap $140.7B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 4.96, debt $0.3B vs working capital $7.8B",
-          "passed": true
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -198,35 +178,35 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 29.1%/yr",
+          "detail": "EPS 3yr CAGR 29.2%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 45.4",
+          "detail": "P/E 50.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 356.5",
+          "detail": "P/E x P/B = 399.5",
           "passed": false
         }
       ],
-      "evaluated": 6,
-      "passed": 4,
+      "evaluated": 5,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 17.8%",
+          "detail": "ROE 16.0%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.00",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -239,8 +219,8 @@
           "passed": true
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },

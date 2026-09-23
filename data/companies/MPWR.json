@@ -4,98 +4,97 @@
   "five_year_history": {
     "years": [
       {
-        "cash": 189265000,
-        "debt": 0,
-        "earnings": 242023000,
-        "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
-        "revenue": 1207798000,
-        "spending": 945381000,
-        "stock_return_pct": null
-      },
-      {
-        "cash": 288607000,
-        "debt": 1664000,
-        "earnings": 437672000,
-        "fiscal_year": "2022-12-31",
-        "market_return_pct": -19.48164055920498,
-        "revenue": 1794148000,
-        "spending": 1267363000,
-        "stock_return_pct": -28.321812985222866
-      },
-      {
-        "cash": 527843000,
-        "debt": 5565000,
-        "earnings": 427374000,
-        "fiscal_year": "2023-12-31",
-        "market_return_pct": 23.591245456684877,
-        "revenue": 1821072000,
-        "spending": 1339336000,
-        "stock_return_pct": 70.80964904838663
-      },
-      {
         "cash": 691816000,
-        "debt": 15793000,
-        "earnings": 1786700000,
+        "debt": null,
+        "earnings": 1592058000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 2207100000,
-        "spending": 1667742000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -2.0364238410595954
       },
       {
+        "cash": 637354000,
+        "debt": null,
+        "earnings": 135052000,
+        "fiscal_year": "2025-03-31",
+        "market_return_pct": -4.553985803985813,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -1.9807334798039593
+      },
+      {
+        "cash": 787382000,
+        "debt": null,
+        "earnings": 135009000,
+        "fiscal_year": "2025-06-30",
+        "market_return_pct": 10.450669479254195,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 26.104348425807782
+      },
+      {
+        "cash": 1081251000,
+        "debt": null,
+        "earnings": 179766000,
+        "fiscal_year": "2025-09-30",
+        "market_return_pct": 7.82228696285505,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 25.877109026771304
+      },
+      {
         "cash": 1099302000,
-        "debt": 24103000,
-        "earnings": 615927000,
+        "debt": null,
+        "earnings": 621483000,
         "fiscal_year": "2025-12-31",
-        "market_return_pct": 16.35271635271634,
-        "revenue": 2790459000,
-        "spending": 2061823000,
-        "stock_return_pct": 53.17897583234746
+        "market_return_pct": 2.362724789096042,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -1.551094890510946
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 4.975330063823719,
-      "debt_to_ebitda": 0.030855829041578495,
-      "debt_to_equity": 0
+      "current_ratio": 5.912314377377391,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 79.30746365894377,
+      "book_value_per_share": 71.86164865799809,
       "shareholders_equity": 3531497000,
-      "total_assets": 4194198999,
+      "total_assets": 4194199000,
       "total_liabilities": 662702000
     },
     "cash_flow": {
-      "fcf_margin_pct": 23.873814307968686
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 11.015293496436662
+      "eps_growth_cagr_3yr_pct": 66.02680720013805
     },
     "profitability": {
-      "roe_pct": 21.780775964032305,
+      "roe_pct": 17.598287638358464,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 1465.5154856770403,
-      "graham_number": 151.24892691329194,
-      "graham_upside_pct": -89.0448547092399,
-      "ncav_margin_pct": -97.75807055520015,
-      "pb_ratio": 17.408449801613376,
-      "pe_ttm": 84.18414634146342
+      "graham_multiple": 1988.1157908372727,
+      "graham_number": 144.19836351079627,
+      "graham_upside_pct": -89.36174437569284,
+      "ncav_margin_pct": -97.71647278797792,
+      "pb_ratio": 18.862216847416267,
+      "pe_ttm": 105.40202177293935
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-23T03:39:02Z",
+  "last_updated": "2026-09-23T21:16:42Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -106,51 +105,32 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 67829860600,
+  "market_cap": 66594241100,
   "metrics": {
-    "book_value_per_share": 79.30746365894377,
-    "current_ratio": 4.975330063823719,
-    "debt_to_ebitda": 0.030855829041578495,
-    "debt_to_equity": 0,
-    "eps_growth_cagr_3yr_pct": 11.015293496436662,
-    "fcf_margin_pct": 23.873814307968686,
+    "book_value_per_share": 71.86164865799809,
+    "current_ratio": 5.912314377377391,
+    "eps_growth_cagr_3yr_pct": 66.02680720013805,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 1465.5154856770403,
-    "graham_upside_pct": -89.0448547092399,
+    "graham_multiple": 1988.1157908372727,
+    "graham_upside_pct": -89.36174437569284,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -97.75807055520015,
-    "pb_ratio": 17.408449801613376,
-    "pe_ttm": 84.18414634146342,
-    "roe_pct": 21.780775964032305,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -97.71647278797792,
+    "pb_ratio": 18.862216847416267,
+    "pe_ttm": 105.40202177293935,
+    "roe_pct": 17.598287638358464,
     "shareholders_equity": 3531497000,
-    "total_assets": 4194198999,
+    "total_assets": 4194199000,
     "total_liabilities": 662702000
   },
   "name": "Monolithic Power Systems",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 1380.62
+    "as_of": "2026-09-23",
+    "close": 1355.47
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, Monolithic Power Systems reported revenue of $2.79 billion, up 26.4% from $2.21 billion in 2024, with growth across all end markets led by storage and computing and automotive; gross margin was 55.2%, roughly flat versus 2024. The filing discloses a restatement of the 2024 annual financial statements and 2025 quarterly financial statements due to an error in accounting for deferred income taxes tied to a foreign tax incentive, and management concluded internal control over financial reporting was not effective as of December 31, 2025 due to a related material weakness. The company also notes a $3.6 billion valuation allowance against certain deferred tax assets and describes ongoing macroeconomic, tariff, and litigation risks.",
-    "filing_summary_10q": "The 10-Q for the quarter ended June 30, 2026 shows revenue of $980.6 million for the quarter, up from $664.6 million a year earlier, and six-month revenue of $1.78 billion versus $1.30 billion in the prior-year period. Total assets grew to $4.69 billion from $4.19 billion at December 31, 2025, with increases in cash and short-term investments, receivables, and inventories, and stockholders' equity rose to $3.90 billion. The excerpt provided is limited to financial statement data and does not include the narrative MD&A discussion.",
-    "filing_summary_8k": "This 8-K, dated September 10, 2026, discloses that the company issued a press release announcing a third-quarter cash dividend of $2.00 per share, payable to stockholders of record as of September 30, 2026, with payment on October 15, 2026. No other items are reported in this filing.",
-    "moat_explanation": "The 10-K describes a large portfolio of proprietary process and packaging technologies (2,231 patents/applications, 654 issued in the U.S.) combined with trade-secret-protected manufacturing processes and deep, hard-to-replicate analog/mixed-signal design expertise developed since 1997. The company states these technologies let it differentiate products on integration, efficiency, and size versus larger, better-resourced competitors, though it also acknowledges it does not rely on any single patent and faces intense competition from many larger rivals.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Material weakness in internal control over financial reporting related to accounting for deferred income taxes, effective as of December 31, 2024 and 2025",
-      "Restatement of 2024 annual financial statements and 2025 quarterly financial statements due to the deferred tax error",
-      "High customer concentration: three distributors accounted for 26%, 18% and 10% of 2025 total revenue",
-      "Heavy geographic concentration, with 92% of 2025 revenue from customers in Asia",
-      "Ongoing patent infringement litigation risk described as characteristic of the industry, with potential for costly litigation or required royalty payments",
-      "Dependence on key personnel, including founder/CEO Michael Hsing, for proprietary process technology and continued innovation"
-    ]
-  },
+  "qualitative": null,
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001280452.json",
@@ -178,13 +158,13 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $67.8B",
+          "detail": "Market cap $66.6B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 4.98, debt $0.0B vs working capital $1.8B",
-          "passed": true
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -192,23 +172,23 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 11.0%/yr",
+          "detail": "EPS 3yr CAGR 66.0%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 84.2",
+          "detail": "P/E 105.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1465.5",
+          "detail": "P/E x P/B = 1988.1",
           "passed": false
         }
       ],
@@ -220,27 +200,27 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 21.8%",
+          "detail": "ROE 17.6%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.00",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "48,309,000 shares vs. 48,835,000 a year earlier",
-          "passed": true
+          "detail": "48,309,000 shares vs. 48,042,000 a year earlier",
+          "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },

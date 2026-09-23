@@ -1,0 +1,227 @@
+{
+  "_errors": {},
+  "cik": "0001466085",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 35972000,
+        "debt": null,
+        "earnings": -1001000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 2.14723926380369,
+        "revenue": 160963000,
+        "spending": null,
+        "stock_return_pct": -3.219512195121952
+      },
+      {
+        "cash": 16084000,
+        "debt": null,
+        "earnings": 8354000,
+        "fiscal_year": "2025-03-31",
+        "market_return_pct": -4.553985803985813,
+        "revenue": 161243000,
+        "spending": null,
+        "stock_return_pct": 7.006048387096778
+      },
+      {
+        "cash": 22852000,
+        "debt": null,
+        "earnings": 8046000,
+        "fiscal_year": "2025-06-30",
+        "market_return_pct": 10.450669479254195,
+        "revenue": 162188000,
+        "spending": null,
+        "stock_return_pct": -16.6745171926519
+      },
+      {
+        "cash": 21228000,
+        "debt": null,
+        "earnings": 6893000,
+        "fiscal_year": "2025-09-30",
+        "market_return_pct": 7.82228696285505,
+        "revenue": 167138000,
+        "spending": null,
+        "stock_return_pct": -7.348784624081405
+      },
+      {
+        "cash": 23564000,
+        "debt": null,
+        "earnings": 33265000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 2.362724789096042,
+        "revenue": 167127000,
+        "spending": null,
+        "stock_return_pct": 6.650396583282488
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 14.676630914679786,
+      "shareholders_equity": 3459936000,
+      "total_assets": 6021750000,
+      "total_liabilities": 2432324000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 51.829448593783134
+    },
+    "profitability": {
+      "roe_pct": 0.9614339687208087,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 103.45718073649505,
+      "graham_number": 6.799366689717604,
+      "graham_upside_pct": -53.365111867506144,
+      "ncav_margin_pct": null,
+      "pb_ratio": 0.9934160015850004,
+      "pe_ttm": 104.14285714285714
+    }
+  },
+  "industry": "REIT - Residential",
+  "last_updated": "2026-09-23T21:24:07Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 3436724700,
+  "metrics": {
+    "book_value_per_share": 14.676630914679786,
+    "eps_growth_cagr_3yr_pct": 51.829448593783134,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 103.45718073649505,
+    "graham_upside_pct": -53.365111867506144,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 0,
+    "pb_ratio": 0.9934160015850004,
+    "pe_ttm": 104.14285714285714,
+    "roe_pct": 0.9614339687208087,
+    "shareholders_equity": 3459936000,
+    "total_assets": 6021750000,
+    "total_liabilities": 2432324000
+  },
+  "name": "Independence Realty Trust",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 14.58
+  },
+  "qualitative": null,
+  "sector": "Real Estate",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001466085.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-23",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1466085/000143774926031071/irt20260921c_8k.htm"
+      },
+      {
+        "filed": "2026-08-04",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1466085/000143774926025677/irt20260630_10q.htm"
+      },
+      {
+        "filed": "2026-02-17",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1466085/000143774926004376/irt20251231_10k.htm"
+      }
+    ]
+  },
+  "ticker": "IRT",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $3.4B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 51.8%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 104.1",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 103.5",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 1.0%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "Share count unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 1,
+      "passed": 0,
+      "total": 4
+    }
+  },
+  "website": "https://www.irtliving.com"
+}

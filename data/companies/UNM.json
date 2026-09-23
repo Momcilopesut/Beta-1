@@ -1,0 +1,228 @@
+{
+  "_errors": {},
+  "cik": "0000005513",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": null,
+        "debt": 3442200000,
+        "earnings": 981000000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 12007800000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": null,
+        "debt": 3427800000,
+        "earnings": 1407200000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 11984100000,
+        "spending": null,
+        "stock_return_pct": 66.99226699226699
+      },
+      {
+        "cash": null,
+        "debt": 3430400000,
+        "earnings": 1283800000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 12385900000,
+        "spending": null,
+        "stock_return_pct": 11.381915671459911
+      },
+      {
+        "cash": null,
+        "debt": 3465200000,
+        "earnings": 1779100000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 12887300000,
+        "spending": null,
+        "stock_return_pct": 59.80306345733041
+      },
+      {
+        "cash": null,
+        "debt": 3767600000,
+        "earnings": 738500000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 13075500000,
+        "spending": null,
+        "stock_return_pct": 6.120772285362178
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.3388403737712585
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 70.23766597818496,
+      "shareholders_equity": 11119100000,
+      "total_assets": 63519400000,
+      "total_liabilities": 52400300000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 4.247638713624718
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -15.028579521634578
+    },
+    "profitability": {
+      "roe_pct": 6.641724600012592,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 29.75075120201098,
+      "graham_number": 82.1467209257565,
+      "graham_upside_pct": -13.035442593948229,
+      "ncav_margin_pct": null,
+      "pb_ratio": 1.3448624564110405,
+      "pe_ttm": 22.12177985948478
+    }
+  },
+  "industry": "Insurance - Life",
+  "last_updated": "2026-09-23T21:29:49Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 14953679220,
+  "metrics": {
+    "book_value_per_share": 70.23766597818496,
+    "debt_to_equity": 0.3388403737712585,
+    "eps_growth_cagr_3yr_pct": -15.028579521634578,
+    "fcf_margin_pct": 4.247638713624718,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 29.75075120201098,
+    "graham_upside_pct": -13.035442593948229,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "pb_ratio": 1.3448624564110405,
+    "pe_ttm": 22.12177985948478,
+    "roe_pct": 6.641724600012592,
+    "shareholders_equity": 11119100000,
+    "total_assets": 63519400000,
+    "total_liabilities": 52400300000
+  },
+  "name": "Unum",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 94.46
+  },
+  "qualitative": null,
+  "sector": "Financial Services",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000005513.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-26",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/5513/000000551326000082/unm-20260826.htm"
+      },
+      {
+        "filed": "2026-07-29",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/5513/000000551326000075/unm-20260630.htm"
+      },
+      {
+        "filed": "2026-02-17",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/5513/000000551326000008/unm-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "UNM",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $15.0B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -15.0%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 22.1",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 29.8",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 6.6%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.34",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "172,921,600 shares vs. 188,069,200 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 2,
+      "total": 4
+    }
+  },
+  "website": "https://www.unum.com"
+}

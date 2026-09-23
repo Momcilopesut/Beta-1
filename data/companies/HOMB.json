@@ -1,0 +1,224 @@
+{
+  "_errors": {},
+  "cik": "0001331520",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 3650315000,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 724790000,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -6.406570841889126
+      },
+      {
+        "cash": 1000213000,
+        "debt": null,
+        "earnings": 392929000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 11.14523913997367
+      },
+      {
+        "cash": 910347000,
+        "debt": null,
+        "earnings": 402241000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 11.72522700355311
+      },
+      {
+        "cash": 667337000,
+        "debt": null,
+        "earnings": 475441000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -1.8374558303886912
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 21.479024979951227,
+      "shareholders_equity": 4296871000,
+      "total_assets": 22881879000,
+      "total_liabilities": 18585008000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 15.355718896672844
+    },
+    "profitability": {
+      "roe_pct": 11.06481902761335,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 16.06789209118204,
+      "graham_number": 34.12770325612105,
+      "graham_upside_pct": 18.334616005967586,
+      "ncav_margin_pct": null,
+      "pb_ratio": 1.3427052683685405,
+      "pe_ttm": 11.966804979253112
+    }
+  },
+  "industry": "Banks - Regional",
+  "last_updated": "2026-09-23T21:20:47Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": true
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 5808750920,
+  "metrics": {
+    "book_value_per_share": 21.479024979951227,
+    "eps_growth_cagr_3yr_pct": 15.355718896672844,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 6,
+    "graham_multiple": 16.06789209118204,
+    "graham_upside_pct": 18.334616005967586,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "pb_ratio": 1.3427052683685405,
+    "pe_ttm": 11.966804979253112,
+    "roe_pct": 11.06481902761335,
+    "shareholders_equity": 4296871000,
+    "total_assets": 22881879000,
+    "total_liabilities": 18585008000
+  },
+  "name": "Home BancShares",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 28.84
+  },
+  "qualitative": null,
+  "sector": "Financial Services",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001331520.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-07",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1331520/000133152026000112/homb-20260630.htm"
+      },
+      {
+        "filed": "2026-07-15",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1331520/000133152026000106/homb-20260715.htm"
+      },
+      {
+        "filed": "2026-02-27",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1331520/000133152026000051/homb-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "HOMB",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $5.8B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 3/3 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 15.4%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 12.0",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 16.1",
+          "passed": true
+        }
+      ],
+      "evaluated": 6,
+      "passed": 6,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 11.1%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "197,651,000 shares vs. 200,069,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": "https://www.homebancshares.com"
+}

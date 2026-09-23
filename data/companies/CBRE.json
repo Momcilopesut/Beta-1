@@ -5,97 +5,96 @@
     "years": [
       {
         "cash": 2430951000,
-        "debt": 4197227000,
+        "debt": 1538123000,
         "earnings": 1837000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 27746000000,
-        "spending": 26109000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 1318000000,
-        "debt": 3493000000,
+        "debt": 1086000000,
         "earnings": 1407000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 30828000000,
-        "spending": 29316000000,
+        "spending": null,
         "stock_return_pct": -29.07566122937979
       },
       {
         "cash": 1265000000,
-        "debt": 4826000000,
+        "debt": 2804000000,
         "earnings": 986000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 31949000000,
-        "spending": 30832000000,
+        "spending": null,
         "stock_return_pct": 21.127858627858636
       },
       {
         "cash": 1114000000,
-        "debt": 5694000000,
+        "debt": 3245000000,
         "earnings": 968000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 35767000000,
-        "spending": 34354000000,
+        "spending": null,
         "stock_return_pct": 40.838875777730095
       },
       {
         "cash": 1864000000,
-        "debt": 9991000000,
+        "debt": 5050000000,
         "earnings": 1157000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 40550000000,
-        "spending": 39256000000,
+        "spending": null,
         "stock_return_pct": 22.469342676517634
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.1409384112397278,
-      "debt_to_ebitda": 4.496399639963997,
-      "debt_to_equity": 1.2594665396522982
+      "current_ratio": 1.0948863636363637,
+      "debt_to_ebitda": 2.034649476228848,
+      "debt_to_equity": 0.5688218067132237
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 31.164067182391328,
+      "book_value_per_share": 30.658692441369773,
       "shareholders_equity": 8878000000,
       "total_assets": 30877000000,
       "total_liabilities": 21251000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 2.942046855733662
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -3.8132881109372074
+      "eps_growth_cagr_3yr_pct": -3.5428381522206065
     },
     "profitability": {
-      "roe_pct": 15.158311729923394,
-      "trend": "declining"
+      "roe_pct": 13.03221446271683,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 158.98238926947056,
-      "graham_number": 52.15959226281167,
-      "graham_upside_pct": -63.034908569638446,
-      "ncav_margin_pct": -118.99633078451733,
-      "pb_ratio": 4.94619389031555,
-      "pe_ttm": 32.14236902050114
+      "graham_multiple": 157.64422274376042,
+      "graham_number": 51.534544072240095,
+      "graham_upside_pct": -62.22084592607573,
+      "ncav_margin_pct": -119.65015215416257,
+      "pb_ratio": 4.449309123696779,
+      "pe_ttm": 35.43116883116883
     }
   },
   "industry": "Real Estate - Services",
-  "last_updated": "2026-09-23T03:15:27Z",
+  "last_updated": "2026-09-23T21:15:48Z",
   "layered_analysis": {
     "flags": [
-      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -106,50 +105,34 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 40860522424,
+  "market_cap": 39486487635,
   "metrics": {
-    "book_value_per_share": 31.164067182391328,
-    "current_ratio": 1.1409384112397278,
-    "debt_to_ebitda": 4.496399639963997,
-    "debt_to_equity": 1.2594665396522982,
-    "eps_growth_cagr_3yr_pct": -3.8132881109372074,
-    "fcf_margin_pct": 2.942046855733662,
+    "book_value_per_share": 30.658692441369773,
+    "current_ratio": 1.0948863636363637,
+    "debt_to_ebitda": 2.034649476228848,
+    "debt_to_equity": 0.5688218067132237,
+    "eps_growth_cagr_3yr_pct": -3.5428381522206065,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 158.98238926947056,
-    "graham_upside_pct": -63.034908569638446,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "graham_multiple": 157.64422274376042,
+    "graham_upside_pct": -62.22084592607573,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -118.99633078451733,
-    "pb_ratio": 4.94619389031555,
-    "pe_ttm": 32.14236902050114,
-    "roe_pct": 15.158311729923394,
+    "ncav_margin_pct": -119.65015215416257,
+    "pb_ratio": 4.449309123696779,
+    "pe_ttm": 35.43116883116883,
+    "roe_pct": 13.03221446271683,
     "shareholders_equity": 8878000000,
     "total_assets": 30877000000,
     "total_liabilities": 21251000000
   },
   "name": "CBRE Group",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 141.105
+    "as_of": "2026-09-23",
+    "close": 136.41
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "CBRE's 2025 10-K reports total revenue of $40.6 billion (up 13.4% year-over-year) and net income attributable to CBRE of $1.157 billion, with growth spread across Advisory Services, Building Operations & Experience (BOE), and Project Management segments, partially offset by a 15.3% revenue decline in the Real Estate Investments (REI) segment. The company completed a corporate reorganization into four segments (Advisory Services, BOE, Project Management, REI), acquired Pearce (~$1.2 billion) and the remaining stake in Industrious (~$468 million), and repurchased $956 million of shares during the year. The filing also discusses a UK pension buy-out settlement charge, an increased Telford fire safety remediation provision, and an increase in the effective tax rate to 19.9% from 15.0%.",
-    "filing_summary_10q": "The excerpt provided for CBRE's most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, so a detailed discussion of quarterly results cannot be summarized from what was given. The tagged data references the November 2025 acquisition of Pearce Services and the January 2025 acquisition of full ownership of Industrious, details on senior notes and warehouse line of credit borrowings (with several banking counterparties such as JPMorgan, TD Bank, Bank of America, and Scotiabank), and fair value measurements of debt and investments as of June 30, 2026 and December 31, 2025. No further descriptive commentary on quarterly financial performance was included in the excerpt.",
-    "filing_summary_8k": "This 8-K, dated July 29, 2026, discloses under Item 2.02 that CBRE Group, Inc. issued a press release on that date reporting its financial results for the second quarter of 2026, furnished as Exhibit 99.1. The filing does not include the content of the press release itself, only the notice that results were released and furnished, not deemed 'filed' under the Exchange Act.",
-    "moat_explanation": "CBRE describes a revenue mix increasingly weighted toward 'resilient' business lines such as facilities management, property management, and project management, which are described as 'contractually based outsourcing services' to occupiers and owners of real estate. These multi-year, integrated outsourcing relationships (as opposed to one-off transactional leasing/sales work) suggest meaningful friction for large occupiers to switch providers once operations are embedded, and the filing notes resilient revenue lines now account for the majority of total revenue ($33.1B of $40.6B in 2025).",
-    "moat_present": true,
-    "moat_type": "switching_costs",
-    "red_flags": [
-      "Telford's fire safety remediation provision increased sharply to $132 million in 2025 from $33 million in 2024, indicated as a legacy/ongoing liability in the REI segment.",
-      "REI segment revenue declined 15.3% year-over-year, driven by lower incentive fees, carried interest, and development fees.",
-      "A non-cash pension buy-out settlement loss of $147 million was recorded in the U.K. within Advisory Services in 2025.",
-      "Cost of revenue (excluding pass-through costs) rose as a percentage of total revenue in both the consolidated results and the Advisory Services and BOE segments, attributed to higher commission payouts and compensation growing faster than some revenue lines.",
-      "Management decided to wind down certain BOE segment businesses and the legacy Telford Homes construction self-delivery business in 2025, indicating exits from underperforming operations."
-    ]
-  },
+  "qualitative": null,
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001138118.json",
@@ -177,12 +160,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $40.9B",
+          "detail": "Market cap $39.5B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.14, debt $10.0B vs working capital $1.2B",
+          "detail": "Current ratio 1.09, debt $5.0B vs working capital $1.2B",
           "passed": false
         },
         {
@@ -197,17 +180,17 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -3.8%/yr",
+          "detail": "EPS 3yr CAGR -3.5%/yr",
           "passed": false
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 32.1",
+          "detail": "P/E 35.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 159.0",
+          "detail": "P/E x P/B = 157.6",
           "passed": false
         }
       ],
@@ -219,26 +202,26 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 15.2%",
-          "passed": true
-        },
-        {
-          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.26",
+          "detail": "ROE 13.0%",
           "passed": false
         },
         {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.57",
+          "passed": true
+        },
+        {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "300,751,541 shares vs. 308,034,000 a year earlier",
+          "detail": "300,751,541 shares vs. 308,033,612 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 3,
       "passed": 2,
       "total": 4
     }

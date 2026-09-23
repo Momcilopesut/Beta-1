@@ -1,0 +1,219 @@
+{
+  "_errors": {},
+  "cik": "0000897723",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 650026000,
+        "debt": 330322000,
+        "earnings": 249546000,
+        "fiscal_year": "2021-10-02",
+        "market_return_pct": null,
+        "revenue": 6756643000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 529857000,
+        "debt": 346737000,
+        "earnings": 240384000,
+        "fiscal_year": "2022-10-01",
+        "market_return_pct": -17.745946941783348,
+        "revenue": 7890475000,
+        "spending": null,
+        "stock_return_pct": 17.611026033690656
+      },
+      {
+        "cash": 667570000,
+        "debt": 338272000,
+        "earnings": 309970000,
+        "fiscal_year": "2023-09-30",
+        "market_return_pct": 19.681953076880006,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 17.795138888888896
+      },
+      {
+        "cash": 625860000,
+        "debt": 317323000,
+        "earnings": 222536000,
+        "fiscal_year": "2024-09-28",
+        "market_return_pct": 33.683447178815385,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 26.879145173176127
+      },
+      {
+        "cash": 926267000,
+        "debt": 300474000,
+        "earnings": 245893000,
+        "fiscal_year": "2025-09-27",
+        "market_return_pct": 15.81010376747686,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 65.68897923624219
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.7241077740550634,
+      "debt_to_ebitda": 0.633865925228992,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": null,
+      "shareholders_equity": null,
+      "total_assets": 5858173000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 5.390943948033455
+    },
+    "profitability": {
+      "roe_pct": null,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": null,
+      "pb_ratio": null,
+      "pe_ttm": 49.75112107623318
+    }
+  },
+  "industry": "Hardware, Equipment & Parts",
+  "last_updated": "2026-09-23T21:25:02Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 11892727086,
+  "metrics": {
+    "current_ratio": 1.7241077740550634,
+    "debt_to_ebitda": 0.633865925228992,
+    "eps_growth_cagr_3yr_pct": 5.390943948033455,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 3,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 1,
+    "pe_ttm": 49.75112107623318,
+    "total_assets": 5858173000
+  },
+  "name": "Sanmina Corporation",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 221.89
+  },
+  "qualitative": null,
+  "sector": "Technology",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000897723.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-15",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/897723/000089772326000041/sanm-20260914.htm"
+      },
+      {
+        "filed": "2026-07-27",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/897723/000089772326000037/sanm-20260627.htm"
+      },
+      {
+        "filed": "2025-11-13",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/897723/000089772325000042/sanm-20250927.htm"
+      }
+    ]
+  },
+  "ticker": "SANM",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $11.9B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.72, debt $0.3B vs working capital $2.0B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 5.4%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 49.8",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 5,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "55,178,000 shares vs. 56,970,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 1,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": "https://www.sanmina.com"
+}

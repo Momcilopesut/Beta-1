@@ -1,0 +1,230 @@
+{
+  "_errors": {},
+  "cik": "0001521036",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 98508000,
+        "debt": 174763000,
+        "earnings": -71279000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 415652000,
+        "debt": 558066000,
+        "earnings": 28067000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 76.39321564555209
+      },
+      {
+        "cash": 713656000,
+        "debt": 823000,
+        "earnings": 326661000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 23.822605965463108
+      },
+      {
+        "cash": 912814000,
+        "debt": 974000,
+        "earnings": 312442000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 41.77496038034864
+      },
+      {
+        "cash": 359121000,
+        "debt": 738000,
+        "earnings": 233559000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -25.609210820478424
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 2.699198306035349,
+      "debt_to_ebitda": 0.0019373638201244322,
+      "debt_to_equity": 0.0006771903391182027
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 16.696145960322045,
+      "shareholders_equity": 1089797000,
+      "total_assets": 2227399000,
+      "total_liabilities": 1137602000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 104.28264039023381
+    },
+    "profitability": {
+      "roe_pct": 21.43142254933717,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 175.53704068896346,
+      "graham_number": 35.7912251649159,
+      "graham_upside_pct": -64.1980342453577,
+      "ncav_margin_pct": -103.64180611850995,
+      "pb_ratio": 5.987609370304745,
+      "pe_ttm": 29.316715542521994
+    }
+  },
+  "industry": "Drug Manufacturers - Specialty & Generic",
+  "last_updated": "2026-09-23T21:28:05Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "low"
+    }
+  },
+  "market_cap": 6508655018,
+  "metrics": {
+    "book_value_per_share": 16.696145960322045,
+    "current_ratio": 2.699198306035349,
+    "debt_to_ebitda": 0.0019373638201244322,
+    "debt_to_equity": 0.0006771903391182027,
+    "eps_growth_cagr_3yr_pct": 104.28264039023381,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 175.53704068896346,
+    "graham_upside_pct": -64.1980342453577,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -103.64180611850995,
+    "pb_ratio": 5.987609370304745,
+    "pe_ttm": 29.316715542521994,
+    "roe_pct": 21.43142254933717,
+    "shareholders_equity": 1089797000,
+    "total_assets": 2227399000,
+    "total_liabilities": 1137602000
+  },
+  "name": "Lantheus Holdings",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 99.97
+  },
+  "qualitative": null,
+  "sector": "Healthcare",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001521036.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-21",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1521036/000119312526396654/d148743d8k.htm"
+      },
+      {
+        "filed": "2026-08-06",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1521036/000119312526336795/lnth-20260630.htm"
+      },
+      {
+        "filed": "2026-02-26",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1521036/000119312526073498/lnth-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "LNTH",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $6.5B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 2.70, debt $0.0B vs working capital $0.6B",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 4/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 104.3%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 29.3",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 175.5",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 21.4%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.00",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "68,443,000 shares vs. 71,651,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 3,
+      "total": 4
+    }
+  },
+  "website": "https://www.lantheus.com"
+}

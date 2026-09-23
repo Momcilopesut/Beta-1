@@ -5,89 +5,89 @@
     "years": [
       {
         "cash": 1349000000,
-        "debt": 2509000000,
+        "debt": 2440000000,
         "earnings": 427000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 5195000000,
-        "spending": 4610000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 944000000,
-        "debt": 1949000000,
+        "debt": 1880000000,
         "earnings": 355000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 5522000000,
-        "spending": 4900000000,
+        "spending": null,
         "stock_return_pct": -7.796864576384263
       },
       {
         "cash": 1019000000,
-        "debt": 2390000000,
+        "debt": 2268000000,
         "earnings": 609000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 7364000000,
-        "spending": 6712000000,
+        "spending": null,
         "stock_return_pct": 2.8036537939766744
       },
       {
         "cash": 1121000000,
-        "debt": 2125000000,
+        "debt": 1978000000,
         "earnings": 890000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 8562000000,
-        "spending": 7553000000,
+        "spending": null,
         "stock_return_pct": 2.0673880531362667
       },
       {
         "cash": 1479000000,
-        "debt": 2063000000,
+        "debt": 1408000000,
         "earnings": 957000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 9035000000,
-        "spending": 7812000000,
+        "spending": null,
         "stock_return_pct": 17.376314428546813
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.6130690161527166,
-      "debt_to_ebitda": 1.1473859844271412,
-      "debt_to_equity": 0.2931580462527589
+      "current_ratio": 1.625,
+      "debt_to_ebitda": 0.7830923248053393,
+      "debt_to_equity": 0.12264808362369338
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 44.11789601990892,
+      "book_value_per_share": 49.16765919952687,
       "shareholders_equity": 11480000000,
       "total_assets": 17634000000,
       "total_liabilities": 5885000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 10.071942446043165
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 25.88542237709388
+      "eps_growth_cagr_3yr_pct": 25.99210498948732
     },
     "profitability": {
-      "roe_pct": 9.165154264972777,
+      "roe_pct": 8.33623693379791,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 62.79155272115371,
-      "graham_number": 62.45898618742099,
-      "graham_upside_pct": -42.08717089715253,
-      "ncav_margin_pct": -104.94012428897823,
-      "pb_ratio": 2.4452899529795604,
-      "pe_ttm": 25.678571428571427
+      "graham_multiple": 61.23700109011847,
+      "graham_number": 65.85277170627117,
+      "graham_upside_pct": -39.384414850634045,
+      "ncav_margin_pct": -104.90420107295932,
+      "pb_ratio": 2.2095825135609757,
+      "pe_ttm": 27.714285714285715
     }
   },
   "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-23T02:58:13Z",
+  "last_updated": "2026-09-23T21:15:44Z",
   "layered_analysis": {
     "flags": [
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
@@ -105,33 +105,32 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 25181572950,
+  "market_cap": 25366027680,
   "metrics": {
-    "book_value_per_share": 44.11789601990892,
-    "current_ratio": 1.6130690161527166,
-    "debt_to_ebitda": 1.1473859844271412,
-    "debt_to_equity": 0.2931580462527589,
-    "eps_growth_cagr_3yr_pct": 25.88542237709388,
-    "fcf_margin_pct": 10.071942446043165,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 62.79155272115371,
-    "graham_upside_pct": -42.08717089715253,
+    "book_value_per_share": 49.16765919952687,
+    "current_ratio": 1.625,
+    "debt_to_ebitda": 0.7830923248053393,
+    "debt_to_equity": 0.12264808362369338,
+    "eps_growth_cagr_3yr_pct": 25.99210498948732,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 61.23700109011847,
+    "graham_upside_pct": -39.384414850634045,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -104.94012428897823,
-    "pb_ratio": 2.4452899529795604,
-    "pe_ttm": 25.678571428571427,
-    "roe_pct": 9.165154264972777,
+    "ncav_margin_pct": -104.90420107295932,
+    "pb_ratio": 2.2095825135609757,
+    "pe_ttm": 27.714285714285715,
+    "roe_pct": 8.33623693379791,
     "shareholders_equity": 11480000000,
     "total_assets": 17634000000,
     "total_liabilities": 5885000000
   },
   "name": "Xylem Inc.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 107.85
+    "as_of": "2026-09-23",
+    "close": 108.64
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -161,12 +160,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $25.2B",
+          "detail": "Market cap $25.4B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.61, debt $2.1B vs working capital $1.8B",
+          "detail": "Current ratio 1.62, debt $1.4B vs working capital $1.8B",
           "passed": false
         },
         {
@@ -175,45 +174,45 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 25.9%/yr",
+          "detail": "EPS 3yr CAGR 26.0%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 25.7",
+          "detail": "P/E 27.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 62.8",
+          "detail": "P/E x P/B = 61.2",
           "passed": false
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 7,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 9.2%",
+          "detail": "ROE 8.3%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.29",
+          "detail": "Debt/equity 0.12",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "244,000,000 shares vs. 243,500,000 a year earlier",
+          "detail": "243,994,000 shares vs. 243,521,000 a year earlier",
           "passed": false
         },
         {

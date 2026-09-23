@@ -9,8 +9,8 @@
         "earnings": 5893000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 25979000000,
-        "spending": 18340000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
@@ -19,8 +19,8 @@
         "earnings": 6552000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 26323000000,
-        "spending": 16757000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 16.74445481619771
       },
       {
@@ -29,8 +29,8 @@
         "earnings": 6717000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 28190000000,
-        "spending": 20293000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 13.23103868413037
       },
       {
@@ -39,8 +39,8 @@
         "earnings": 4090000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 33424000000,
-        "spending": 26166000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -12.357510339957631
       },
       {
@@ -49,51 +49,52 @@
         "earnings": 7711000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 36741000000,
-        "spending": 26065000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 25.579343155310013
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.370912085326641,
-      "debt_to_ebitda": 3.4465694628542574,
-      "debt_to_equity": 4.90280629705681
+      "current_ratio": 1.1399819529993331,
+      "debt_to_ebitda": 3.8326665262862356,
+      "debt_to_equity": 6.306768306768307
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 21.644444444444446,
+      "book_value_per_share": 16.014590183206042,
       "shareholders_equity": 8658000000,
       "total_assets": 90586000000,
-      "total_liabilities": 81928000000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 22.04621539968972
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 5.5681637144215035
+      "eps_growth_cagr_3yr_pct": 5.524568667280372
     },
     "profitability": {
-      "roe_pct": 89.3168177755076,
+      "roe_pct": 89.06213906213907,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 479.3786786916045,
-      "graham_number": 83.538673678722,
-      "graham_upside_pct": -79.63663375616176,
-      "ncav_margin_pct": -123.83843657733604,
-      "pb_ratio": 18.95359342915811,
-      "pe_ttm": 25.292231812577068
+      "graham_multiple": 723.6421589075802,
+      "graham_number": 71.60636432544243,
+      "graham_upside_pct": -82.3668732730571,
+      "ncav_margin_pct": null,
+      "pb_ratio": 25.357501837658813,
+      "pe_ttm": 28.537596626844692
     }
   },
   "industry": "Drug Manufacturers - General",
-  "last_updated": "2026-09-23T03:26:27Z",
+  "last_updated": "2026-09-23T21:29:32Z",
   "layered_analysis": {
     "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
       "4 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
-    "munger_quality_pass": true,
+    "munger_quality_pass": false,
     "overall": "Layers disagree - see flags for specifics.",
     "qualitative_moat_present": true,
     "required_margin_of_safety_pct": 15.0,
@@ -106,33 +107,30 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 221409809920,
+  "market_cap": 219170021720,
   "metrics": {
-    "book_value_per_share": 21.644444444444446,
-    "current_ratio": 1.370912085326641,
-    "debt_to_ebitda": 3.4465694628542574,
-    "debt_to_equity": 4.90280629705681,
-    "eps_growth_cagr_3yr_pct": 5.5681637144215035,
-    "fcf_margin_pct": 22.04621539968972,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 479.3786786916045,
-    "graham_upside_pct": -79.63663375616176,
+    "book_value_per_share": 16.014590183206042,
+    "current_ratio": 1.1399819529993331,
+    "debt_to_ebitda": 3.8326665262862356,
+    "debt_to_equity": 6.306768306768307,
+    "eps_growth_cagr_3yr_pct": 5.524568667280372,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 723.6421589075802,
+    "graham_upside_pct": -82.3668732730571,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -123.83843657733604,
-    "pb_ratio": 18.95359342915811,
-    "pe_ttm": 25.292231812577068,
-    "roe_pct": 89.3168177755076,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 1,
+    "pb_ratio": 25.357501837658813,
+    "pe_ttm": 28.537596626844692,
+    "roe_pct": 89.06213906213907,
     "shareholders_equity": 8658000000,
-    "total_assets": 90586000000,
-    "total_liabilities": 81928000000
+    "total_assets": 90586000000
   },
   "name": "Amgen",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 410.24
+    "as_of": "2026-09-23",
+    "close": 406.09
   },
   "qualitative": {
     "extraction_confidence": "section_match",
@@ -176,12 +174,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $221.4B",
+          "detail": "Market cap $219.2B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.37, debt $54.6B vs working capital $3.6B",
+          "detail": "Current ratio 1.14, debt $54.6B vs working capital $3.6B",
           "passed": false
         },
         {
@@ -190,40 +188,40 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 5.6%/yr",
+          "detail": "EPS 3yr CAGR 5.5%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 25.3",
+          "detail": "P/E 28.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 479.4",
+          "detail": "P/E x P/B = 723.6",
           "passed": false
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 7,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 89.3%",
+          "detail": "ROE 89.1%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 4.90",
+          "detail": "Debt/equity 6.31",
           "passed": false
         },
         {
@@ -233,12 +231,12 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 3,
+      "passed": 1,
       "total": 4
     }
   },

@@ -5,89 +5,89 @@
     "years": [
       {
         "cash": 4992000000,
-        "debt": 6302000000,
+        "debt": 5652000000,
         "earnings": 1166000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 12190000000,
-        "spending": 10274000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 2877000000,
-        "debt": 6132000000,
-        "earnings": -459000000,
+        "debt": 5571000000,
+        "earnings": -429000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 11949000000,
-        "spending": 10328000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -23.895517574975813
       },
       {
         "cash": 3002000000,
-        "debt": 9436000000,
-        "earnings": -2521000000,
+        "debt": 8874000000,
+        "earnings": -2494000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 11775000000,
-        "spending": 11125000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -13.32627118644069
       },
       {
         "cash": 3619000000,
-        "debt": 8972000000,
+        "debt": 8476000000,
         "earnings": 3348000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 18557000000,
-        "spending": 12809000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -9.019799560009773
       },
       {
-        "cash": 7650000000,
-        "debt": 5712000000,
+        "cash": 7647000000,
+        "debt": 5115000000,
         "earnings": 7085000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 22097000000,
-        "spending": 11744000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 168.2697474476088
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.546115575966322,
-      "debt_to_ebitda": 0.4436849464036042,
-      "debt_to_equity": 0.1543457389732874
+      "current_ratio": 2.2874649859943976,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.15103197803171228
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 33.25258215962441,
+      "book_value_per_share": 32.1412626172713,
       "shareholders_equity": 33867000000,
       "total_assets": 57121000000,
       "total_liabilities": 23079000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 33.031633253382815
+      "fcf_margin_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 25.02164691158601,
-      "trend": "improving"
+      "roe_pct": 20.9200696843535,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 61.26202299271901,
-      "graham_number": 69.25210222059566,
-      "graham_upside_pct": -45.58219218875086,
-      "ncav_margin_pct": -107.46721236721768,
-      "pb_ratio": 3.8270712147738184,
-      "pe_ttm": 16.00754716981132
+      "graham_multiple": 74.32273930123915,
+      "graham_number": 67.978746919888,
+      "graham_upside_pct": -44.97875603408499,
+      "ncav_margin_pct": -107.69144027399528,
+      "pb_ratio": 3.843968467300026,
+      "pe_ttm": 19.33489827856025
     }
   },
   "industry": "Gold",
-  "last_updated": "2026-09-23T03:25:24Z",
+  "last_updated": "2026-09-23T21:29:42Z",
   "layered_analysis": {
     "flags": [
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
@@ -105,32 +105,30 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 134092878407,
+  "market_cap": 130183680082,
   "metrics": {
-    "book_value_per_share": 33.25258215962441,
-    "current_ratio": 2.546115575966322,
-    "debt_to_ebitda": 0.4436849464036042,
-    "debt_to_equity": 0.1543457389732874,
-    "fcf_margin_pct": 33.031633253382815,
-    "graham_criteria_evaluated": 5,
-    "graham_criteria_passed": 2,
-    "graham_multiple": 61.26202299271901,
-    "graham_upside_pct": -45.58219218875086,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -107.46721236721768,
-    "pb_ratio": 3.8270712147738184,
-    "pe_ttm": 16.00754716981132,
-    "roe_pct": 25.02164691158601,
+    "book_value_per_share": 32.1412626172713,
+    "current_ratio": 2.2874649859943976,
+    "debt_to_equity": 0.15103197803171228,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 74.32273930123915,
+    "graham_upside_pct": -44.97875603408499,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -107.69144027399528,
+    "pb_ratio": 3.843968467300026,
+    "pe_ttm": 19.33489827856025,
+    "roe_pct": 20.9200696843535,
     "shareholders_equity": 33867000000,
     "total_assets": 57121000000,
     "total_liabilities": 23079000000
   },
   "name": "Newmont",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 127.26
+    "as_of": "2026-09-23",
+    "close": 123.55
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -160,12 +158,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $134.1B",
+          "detail": "Market cap $130.2B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.55, debt $5.7B vs working capital $7.4B",
+          "detail": "Current ratio 2.29, debt $5.1B vs working capital $7.4B",
           "passed": true
         },
         {
@@ -174,9 +172,9 @@
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth",
@@ -185,24 +183,24 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 16.0",
+          "detail": "P/E 19.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 61.3",
+          "detail": "P/E x P/B = 74.3",
           "passed": false
         }
       ],
-      "evaluated": 5,
-      "passed": 2,
+      "evaluated": 6,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 25.0%",
+          "detail": "ROE 20.9%",
           "passed": true
         },
         {
@@ -217,12 +215,12 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },

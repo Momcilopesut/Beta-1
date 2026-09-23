@@ -1,0 +1,221 @@
+{
+  "_errors": {},
+  "cik": "0001090425",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 99788000,
+        "debt": 3013595000,
+        "earnings": 388090000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 52619000,
+        "debt": 3312805000,
+        "earnings": 438647000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -22.176422093981856
+      },
+      {
+        "cash": 44605000,
+        "debt": 3341127000,
+        "earnings": 495763000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 12.870762711864398
+      },
+      {
+        "cash": 49461000,
+        "debt": 3210864000,
+        "earnings": 361867000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 14.2562177381511
+      },
+      {
+        "cash": 64812000,
+        "debt": 3418907000,
+        "earnings": 587152000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 3.975685887957946
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.5789648671419558,
+      "debt_to_ebitda": 3.1069928779860976,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": null,
+      "shareholders_equity": null,
+      "total_assets": 6931954000,
+      "total_liabilities": 5907175000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 10.213005991495127
+    },
+    "profitability": {
+      "roe_pct": null,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": -137.22274660490012,
+      "pb_ratio": null,
+      "pe_ttm": 24.994800693240904
+    }
+  },
+  "industry": "REIT - Specialty",
+  "last_updated": "2026-09-23T21:24:11Z",
+  "layered_analysis": {
+    "flags": [],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 14634739499,
+  "metrics": {
+    "current_ratio": 0.5789648671419558,
+    "debt_to_ebitda": 3.1069928779860976,
+    "eps_growth_cagr_3yr_pct": 10.213005991495127,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 3,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -137.22274660490012,
+    "pe_ttm": 24.994800693240904,
+    "total_assets": 6931954000,
+    "total_liabilities": 5907175000
+  },
+  "name": "Lamar Advertising Company",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 144.22
+  },
+  "qualitative": null,
+  "sector": "Real Estate",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001090425.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-01",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1090425/000119312526378592/d81164d8k.htm"
+      },
+      {
+        "filed": "2026-08-06",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1090425/000109042526000024/lamr-20260630.htm"
+      },
+      {
+        "filed": "2026-02-20",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1090425/000109042526000008/lamr-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "LAMR",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $14.6B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.58, debt $3.4B vs working capital $-0.3B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 10.2%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 25.0",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 5,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "101,634,142 shares vs. 102,561,151 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 1,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": "https://www.lamar.com"
+}

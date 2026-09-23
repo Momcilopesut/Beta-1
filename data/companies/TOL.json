@@ -1,0 +1,226 @@
+{
+  "_errors": {},
+  "cik": "0000794170",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 1638494000,
+        "debt": null,
+        "earnings": 475409000,
+        "fiscal_year": "2024-10-31",
+        "market_return_pct": 3.2370508886912077,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 2.6136921028659446
+      },
+      {
+        "cash": 1346754000,
+        "debt": null,
+        "earnings": 177703000,
+        "fiscal_year": "2025-01-31",
+        "market_return_pct": 5.834974676420945,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -7.2589456432668635
+      },
+      {
+        "cash": 1300068000,
+        "debt": null,
+        "earnings": 352447000,
+        "fiscal_year": "2025-04-30",
+        "market_return_pct": -7.856169618822919,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -25.72711876886827
+      },
+      {
+        "cash": 1303039000,
+        "debt": null,
+        "earnings": 369621000,
+        "fiscal_year": "2025-07-31",
+        "market_return_pct": 13.98276048616873,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 17.339149400218094
+      },
+      {
+        "cash": 1258997000,
+        "debt": null,
+        "earnings": 446716000,
+        "fiscal_year": "2025-10-31",
+        "market_return_pct": 7.907226933299567,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 14.016559648529899
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 89.75509783281062,
+      "shareholders_equity": 8270663000,
+      "total_assets": 14519866000,
+      "total_liabilities": 6233802000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 37.808437863313294
+    },
+    "profitability": {
+      "roe_pct": 5.401211486914653,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 44.5121300737882,
+      "graham_number": 96.17308787634478,
+      "graham_upside_pct": -28.902869907337347,
+      "ncav_margin_pct": null,
+      "pb_ratio": 1.5071010256372435,
+      "pe_ttm": 29.534934497816597
+    }
+  },
+  "industry": "Residential Construction",
+  "last_updated": "2026-09-23T21:19:20Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 12645691590,
+  "metrics": {
+    "book_value_per_share": 89.75509783281062,
+    "eps_growth_cagr_3yr_pct": 37.808437863313294,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 44.5121300737882,
+    "graham_upside_pct": -28.902869907337347,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "pb_ratio": 1.5071010256372435,
+    "pe_ttm": 29.534934497816597,
+    "roe_pct": 5.401211486914653,
+    "shareholders_equity": 8270663000,
+    "total_assets": 14519866000,
+    "total_liabilities": 6233802000
+  },
+  "name": "Toll Brothers",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 135.27
+  },
+  "qualitative": null,
+  "sector": "Consumer Cyclical",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000794170.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-28",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/794170/000079417026000102/tol-20260731.htm"
+      },
+      {
+        "filed": "2026-08-18",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/794170/000079417026000096/tol-20260818.htm"
+      },
+      {
+        "filed": "2025-12-19",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/794170/000079417025000112/tol-20251031.htm"
+      }
+    ]
+  },
+  "ticker": "TOL",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $12.6B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 37.8%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 29.5",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 44.5",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 4,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 5.4%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "97,531,000 shares vs. 99,170,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": "https://www.tollbrothers.com"
+}

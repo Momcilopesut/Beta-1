@@ -5,64 +5,64 @@
     "years": [
       {
         "cash": 4496000000,
-        "debt": 27806000000,
+        "debt": null,
         "earnings": 9109000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 31405000000,
-        "spending": 18396000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 3207000000,
-        "debt": 43123000000,
+        "debt": null,
         "earnings": 9048000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 31762000000,
-        "spending": 19516000000,
+        "spending": null,
         "stock_return_pct": 6.53684210526315
       },
       {
         "cash": 3060000000,
-        "debt": 47909000000,
-        "earnings": 7791000000,
+        "debt": null,
+        "earnings": 7813000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 35174000000,
-        "spending": 23618000000,
+        "spending": null,
         "stock_return_pct": -5.582452326845165
       },
       {
         "cash": 4216000000,
-        "debt": 45695000000,
-        "earnings": 7034000000,
+        "debt": null,
+        "earnings": 7057000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 37878000000,
-        "spending": 24476000000,
+        "spending": null,
         "stock_return_pct": 25.941816659690236
       },
       {
         "cash": 4872000000,
-        "debt": 48835000000,
+        "debt": null,
         "earnings": 11348000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 40648000000,
-        "spending": 25715000000,
+        "spending": null,
         "stock_return_pct": 33.27793934358123
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.9798055911385728,
-      "debt_to_ebitda": 2.884694902238762,
-      "debt_to_equity": -5.722125131073051
+      "current_ratio": 0.9581547174263578,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -4.259606234129332,
+      "book_value_per_share": -6.412109474952372,
       "shareholders_equity": -9994000000,
       "total_assets": 69185000000,
       "total_liabilities": 77213000000
@@ -71,30 +71,30 @@
       "fcf_margin_pct": 26.23499311159221
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 7.697050326921184
+      "eps_growth_cagr_3yr_pct": 7.709372585660357
     },
     "profitability": {
-      "roe_pct": -112.18983750322413,
+      "roe_pct": -113.54812887732639,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": -946.7139283839166,
+      "graham_multiple": -782.3503236276664,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -117.82491908808919,
-      "pb_ratio": -34.63769616544215,
-      "pe_ttm": 27.331896551724135
+      "ncav_margin_pct": -117.76794360787679,
+      "pb_ratio": -29.762436331675005,
+      "pe_ttm": 26.28650137741047
     }
   },
   "industry": "Tobacco",
-  "last_updated": "2026-09-23T03:27:03Z",
+  "last_updated": "2026-09-23T21:11:48Z",
   "layered_analysis": {
     "flags": [
-      "5 red flag(s) from the filing text - see qualitative.red_flags."
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
     ],
-    "munger_quality_pass": true,
+    "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": true,
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -105,49 +105,32 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 296494380300,
+  "market_cap": 297445132400,
   "metrics": {
-    "book_value_per_share": -4.259606234129332,
-    "current_ratio": 0.9798055911385728,
-    "debt_to_ebitda": 2.884694902238762,
-    "debt_to_equity": -5.722125131073051,
-    "eps_growth_cagr_3yr_pct": 7.697050326921184,
+    "book_value_per_share": -6.412109474952372,
+    "current_ratio": 0.9581547174263578,
+    "eps_growth_cagr_3yr_pct": 7.709372585660357,
     "fcf_margin_pct": 26.23499311159221,
     "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": -946.7139283839166,
+    "graham_criteria_passed": 5,
+    "graham_multiple": -782.3503236276664,
     "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -117.82491908808919,
-    "pb_ratio": -34.63769616544215,
-    "pe_ttm": 27.331896551724135,
-    "roe_pct": -112.18983750322413,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -117.76794360787679,
+    "pb_ratio": -29.762436331675005,
+    "pe_ttm": 26.28650137741047,
+    "roe_pct": -113.54812887732639,
     "shareholders_equity": -9994000000,
     "total_assets": 69185000000,
     "total_liabilities": 77213000000
   },
   "name": "Philip Morris International",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 190.23
+    "as_of": "2026-09-23",
+    "close": 190.84
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "PMI's 2025 10-K describes a global tobacco and smoke-free products company with net revenues of $40.6 billion, net earnings attributable to PMI of $11.3 billion, and total shipment volume of 786.5 billion units (607.4 billion cigarettes, 179.1 billion smoke-free products) in 2025. The filing notes FDA authorization of IQOS devices/consumables and ZYN/General snus as Modified Risk Tobacco Products, full U.S. commercialization rights for IQOS as of April 2024, and a reorganization effective January 1, 2026 replacing four geographic segments with three new segments (International Smoke-Free, International Combustibles, and U.S.). Total debt stood at $48.8 billion, and the Board approved an 8.9% dividend increase during 2025.",
-    "filing_summary_10q": null,
-    "filing_summary_8k": "This 8-K, dated September 18, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that PMI's Board of Directors declared a regular quarterly dividend of $1.60 per common share, as announced in an attached press release. No other items or financial statements are included in this filing.",
-    "moat_explanation": "The excerpts describe globally recognized brands (Marlboro, Parliament, IQOS, ZYN) with leading market share positions in ~170 markets, plus first-ever FDA Modified Risk Tobacco Product and marketing authorizations for IQOS devices/consumables and ZYN/General snus, which are regulatory approvals competitors have not obtained. This combination of entrenched brand equity and hard-to-replicate regulatory clearances supports an intangible-assets moat classification.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Sales to a single distributor in the Europe Region and a single distributor in the EA, AU & PMI GTR Region each represented 10% or more of consolidated net revenues in 2025",
-      "Significant cash ($2.3 billion) held in Russia subject to capital controls and foreign currency exchange constraints that could negatively impact financial condition",
-      "Goodwill impairment charges recorded ($41 million in 2025, $665 million in 2023) and a $2,316 million impairment related to the RBH equity investment in 2024",
-      "Company acknowledges intense competition from major rivals (Altria, BAT, Japan Tobacco, Imperial Brands) and risk of unfair competition from market participants circumventing regulations",
-      "Exposure to foreign currency devaluation risk in jurisdictions including Argentina and Russia due to capital controls"
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001413329.json",
@@ -175,13 +158,13 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $296.5B",
+          "detail": "Market cap $297.4B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.98, debt $48.8B vs working capital $-1.1B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -189,9 +172,9 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -200,30 +183,30 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 27.3",
+          "detail": "P/E 26.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -946.7",
+          "detail": "P/E x P/B = -782.4",
           "passed": true
         }
       ],
       "evaluated": 6,
-      "passed": 4,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -112.2%",
+          "detail": "ROE -113.5%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity -5.72",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -236,8 +219,8 @@
           "passed": true
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 3,
+      "passed": 1,
       "total": 4
     }
   },

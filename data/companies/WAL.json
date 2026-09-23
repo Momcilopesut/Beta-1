@@ -1,0 +1,226 @@
+{
+  "_errors": {},
+  "cik": "0001212545",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 516400000,
+        "debt": null,
+        "earnings": 899200000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 37600000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 1043400000,
+        "debt": null,
+        "earnings": 1057300000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 44100000,
+        "spending": null,
+        "stock_return_pct": -44.67254993032977
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 722400000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 98600000,
+        "spending": null,
+        "stock_return_pct": 8.596373404969786
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 787700000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 68000000,
+        "spending": null,
+        "stock_return_pct": 29.158936301793442
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 969000000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 135800000,
+        "spending": null,
+        "stock_return_pct": 0.6344266219774801
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 70.14609893465189,
+      "shareholders_equity": 7653000000,
+      "total_assets": 92774000000,
+      "total_liabilities": 84828000000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -3.451061539437017
+    },
+    "profitability": {
+      "roe_pct": 12.66170129361035,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 9.333097952903044,
+      "graham_number": 117.38163179662736,
+      "graham_upside_pct": 55.266708725697576,
+      "ncav_margin_pct": null,
+      "pb_ratio": 1.0777505969423753,
+      "pe_ttm": 8.65979381443299
+    }
+  },
+  "industry": "Banks - Regional",
+  "last_updated": "2026-09-23T21:21:31Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": true
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 8254413216,
+  "metrics": {
+    "book_value_per_share": 70.14609893465189,
+    "eps_growth_cagr_3yr_pct": -3.451061539437017,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 9.333097952903044,
+    "graham_upside_pct": 55.266708725697576,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 0,
+    "pb_ratio": 1.0777505969423753,
+    "pe_ttm": 8.65979381443299,
+    "roe_pct": 12.66170129361035,
+    "shareholders_equity": 7653000000,
+    "total_assets": 92774000000,
+    "total_liabilities": 84828000000
+  },
+  "name": "Western Alliance Bancorporation",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 75.6
+  },
+  "qualitative": null,
+  "sector": "Financial Services",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001212545.json",
+    "sec_filings": [
+      {
+        "filed": "2026-07-31",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1212545/000162828026051418/wal-20260630.htm"
+      },
+      {
+        "filed": "2026-07-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1212545/000162828026051146/wal-20260730.htm"
+      },
+      {
+        "filed": "2026-02-23",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1212545/000162828026010336/wal-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "WAL",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $8.3B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -3.5%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 8.7",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 9.3",
+          "passed": true
+        }
+      ],
+      "evaluated": 5,
+      "passed": 4,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 12.7%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "109,500,000 shares vs. 109,300,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 0,
+      "total": 4
+    }
+  },
+  "website": "https://www.westernalliancebancorporation.com"
+}

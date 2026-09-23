@@ -1,0 +1,227 @@
+{
+  "_errors": {},
+  "cik": "0000105016",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 118268000,
+        "debt": null,
+        "earnings": 418945000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 6280192000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 147505000,
+        "debt": null,
+        "earnings": 601167000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 7274344000,
+        "spending": null,
+        "stock_return_pct": -20.2889286627461
+      },
+      {
+        "cash": 210112000,
+        "debt": null,
+        "earnings": 536337000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 7283767000,
+        "spending": null,
+        "stock_return_pct": 68.22774659182038
+      },
+      {
+        "cash": 526271000,
+        "debt": null,
+        "earnings": 536286000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 7618317000,
+        "spending": null,
+        "stock_return_pct": 12.949280198302981
+      },
+      {
+        "cash": 433283000,
+        "debt": null,
+        "earnings": 496994000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 7239290000,
+        "spending": null,
+        "stock_return_pct": -28.897001413830214
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 4.116390012009886,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 67.52833737111801,
+      "shareholders_equity": 2781376000,
+      "total_assets": 4414805000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 7.391097745773411
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -7.364421782350039
+    },
+    "profitability": {
+      "roe_pct": 17.868637681492903,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 127.97727805245066,
+      "graham_number": 136.42762912223608,
+      "graham_upside_pct": -58.07000365054059,
+      "ncav_margin_pct": null,
+      "pb_ratio": 4.818273522889389,
+      "pe_ttm": 26.560816326530613
+    }
+  },
+  "industry": "Industrial - Distribution",
+  "last_updated": "2026-09-23T21:23:47Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 13401430338,
+  "metrics": {
+    "book_value_per_share": 67.52833737111801,
+    "current_ratio": 4.116390012009886,
+    "eps_growth_cagr_3yr_pct": -7.364421782350039,
+    "fcf_margin_pct": 7.391097745773411,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 127.97727805245066,
+    "graham_upside_pct": -58.07000365054059,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "pb_ratio": 4.818273522889389,
+    "pe_ttm": 26.560816326530613,
+    "roe_pct": 17.868637681492903,
+    "shareholders_equity": 2781376000,
+    "total_assets": 4414805000
+  },
+  "name": "Watsco",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 325.37
+  },
+  "qualitative": null,
+  "sector": "Industrials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000105016.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-17",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/105016/000119312526394393/wso-20260912.htm"
+      },
+      {
+        "filed": "2026-08-07",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/105016/000119312526340204/wso-20260630.htm"
+      },
+      {
+        "filed": "2026-02-27",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/105016/000119312526082486/wso-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "WSO",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $13.4B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -7.4%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 26.6",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 128.0",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 17.9%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "37,899,859 shares vs. 37,510,332 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 60",
+          "passed": true
+        }
+      ],
+      "evaluated": 3,
+      "passed": 2,
+      "total": 4
+    }
+  },
+  "website": "https://www.watsco.com"
+}

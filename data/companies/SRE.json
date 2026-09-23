@@ -5,98 +5,97 @@
     "years": [
       {
         "cash": 559000000,
-        "debt": 24645000000,
+        "debt": null,
         "earnings": 1318000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 13061000000,
-        "spending": 10013000000,
+        "revenue": 12857000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 370000000,
-        "debt": 28919000000,
+        "debt": null,
         "earnings": 2139000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 15554000000,
-        "spending": 12028000000,
+        "revenue": 14439000000,
+        "spending": null,
         "stock_return_pct": 16.827940731781062
       },
       {
         "cash": 236000000,
-        "debt": 31076000000,
+        "debt": null,
         "earnings": 3075000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 15802000000,
-        "spending": 12732000000,
+        "revenue": 16720000000,
+        "spending": null,
         "stock_return_pct": -1.8765368189465548
       },
       {
         "cash": 1565000000,
-        "debt": 35848000000,
+        "debt": null,
         "earnings": 2862000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 12957000000,
-        "spending": 10126000000,
+        "revenue": 13185000000,
+        "spending": null,
         "stock_return_pct": 15.695067264574
       },
       {
-        "cash": 2000000,
-        "debt": 36287000000,
+        "cash": 29000000,
+        "debt": null,
         "earnings": 1837000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 13712000000,
-        "spending": 10459000000,
+        "revenue": 13702000000,
+        "spending": null,
         "stock_return_pct": 0.6497948016415953
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.6417100203573851,
-      "debt_to_ebitda": 6.239167812929849,
-      "debt_to_equity": 1.1210518269377772
+      "current_ratio": 1.5911665296428246,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 66.21327812757058,
-      "shareholders_equity": 31614000000,
+      "book_value_per_share": 48.33177465884191,
+      "shareholders_equity": 31594000000,
       "total_assets": 110878000000,
-      "total_liabilities": 68879000000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": -44.10005834305718
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -6.105533742224745
+      "eps_growth_cagr_3yr_pct": -5.991259679106841
     },
     "profitability": {
-      "roe_pct": 7.142074363992172,
-      "trend": "improving"
+      "roe_pct": 5.814395138317402,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 37.793307269950965,
-      "graham_number": 64.00739476141354,
-      "graham_upside_pct": -20.959008691759035,
-      "ncav_margin_pct": -164.30806219338737,
-      "pb_ratio": 1.6194464834123221,
-      "pe_ttm": 23.337175792507207
+      "graham_multiple": 46.955746224380924,
+      "graham_number": 54.6857253496362,
+      "graham_upside_pct": -30.777562848561775,
+      "ncav_margin_pct": null,
+      "pb_ratio": 1.6345354698360448,
+      "pe_ttm": 28.727272727272727
     }
   },
   "industry": "Diversified Utilities",
-  "last_updated": "2026-09-23T03:13:49Z",
+  "last_updated": "2026-09-23T21:09:45Z",
   "layered_analysis": {
     "flags": [
       "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -107,51 +106,30 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 52937192860,
+  "market_cap": 51655927140,
   "metrics": {
-    "book_value_per_share": 66.21327812757058,
-    "current_ratio": 1.6417100203573851,
-    "debt_to_ebitda": 6.239167812929849,
-    "debt_to_equity": 1.1210518269377772,
-    "eps_growth_cagr_3yr_pct": -6.105533742224745,
-    "fcf_margin_pct": -44.10005834305718,
+    "book_value_per_share": 48.33177465884191,
+    "current_ratio": 1.5911665296428246,
+    "eps_growth_cagr_3yr_pct": -5.991259679106841,
     "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 2,
-    "graham_multiple": 37.793307269950965,
-    "graham_upside_pct": -20.959008691759035,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 1,
-    "ncav_margin_pct": -164.30806219338737,
-    "pb_ratio": 1.6194464834123221,
-    "pe_ttm": 23.337175792507207,
-    "roe_pct": 7.142074363992172,
-    "shareholders_equity": 31614000000,
-    "total_assets": 110878000000,
-    "total_liabilities": 68879000000
+    "graham_criteria_passed": 3,
+    "graham_multiple": 46.955746224380924,
+    "graham_upside_pct": -30.777562848561775,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 0,
+    "pb_ratio": 1.6345354698360448,
+    "pe_ttm": 28.727272727272727,
+    "roe_pct": 5.814395138317402,
+    "shareholders_equity": 31594000000,
+    "total_assets": 110878000000
   },
   "name": "Sempra",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 80.98
+    "as_of": "2026-09-23",
+    "close": 79
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Sempra's 2025 Form 10-K reports earnings attributable to common shares of $1,796 million, down from $2,817 million in 2024, primarily due to a $651 million regulatory disallowance charge at SDG&E, tax expenses from classifying SI Partners and Ecogas as held for sale, and a swing to losses at the Sempra Infrastructure segment. The company invested $12.6 billion in capital expenditures and investments during 2025, entered agreements to sell a 45% interest in SI Partners to KKR (~$9.99 billion) and to sell Ecogas (~$500 million), both expected to close in 2026, and continued to grow rate base at SDG&E, SoCalGas and Oncor amid ongoing CPUC and PUCT rate proceedings.",
-    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL data tags for the quarter ended June 30, 2026, with no narrative business or financial discussion included. It confirms the filing covers Sempra, SDG&E and SoCalGas for the six months ended June 30, 2026, and references items such as natural gas and electricity revenue categories, related-party balances, and various LNG joint venture and financing arrangements, but the excerpts do not provide substantive descriptive text about quarterly results or developments.",
-    "filing_summary_8k": "This 8-K, dated August 21, 2026, discloses that Southern California Gas Company closed a previously announced public offering of $500,000,000 aggregate principal amount of 5.500% First Mortgage Bonds, Series GGG, due 2036, issued under a Supplemental Indenture dated the same day. The bonds pay interest semiannually starting March 1, 2027, and are redeemable prior to maturity at the company's option under terms described in the bond form; net proceeds to the company were 98.755% of the principal amount before offering expenses.",
-    "moat_explanation": "The excerpts describe SDG&E, SoCalGas and Oncor as regulated utilities operating exclusive service territories under CPUC, FERC and PUCT oversight, with returns tied to a regulator-approved rate base rather than market competition \\u2014 a structure characteristic of efficient-scale, capital-intensive natural monopolies where new entrants are effectively precluded by regulation and infrastructure cost. However, the same excerpts show that regulators can and do disallow cost recovery (e.g., a $651 million WMP-related disallowance), meaning the moat comes with regulatory constraint on economics rather than pricing power.",
-    "moat_present": true,
-    "moat_type": "efficient_scale",
-    "red_flags": [
-      "CPUC issued a Track 2 GRC final decision disallowing recovery of certain wildfire mitigation plan (WMP) costs, resulting in a $651 million ($464 million after-tax) charge to SDG&E in Q4 2025",
-      "Sempra Infrastructure segment swung to a $160 million loss in 2025 from $911 million earnings in 2024, driven largely by tax charges from classifying SI Partners and Ecogas as held for sale and foreign currency/inflation effects in Mexico",
-      "Pending sales of a 45% equity interest in SI Partners to KKR (~$9.99 billion) and of Ecogas (~$500 million) are subject to closing conditions and not yet completed as of the filing",
-      "FERC found the TO5 adder refund provision triggered, requiring SDG&E to refund customers the California ISO adder retroactively from June 1, 2019",
-      "Wildfire-related liability risk is significant enough that 2025 legislation established an $18 billion Continuation Account and a task force to evaluate replacing the existing Wildfire Fund",
-      "Effective income tax rate was volatile (39% in 2025 vs. 8% in 2024), reflecting large one-time tax impacts tied to held-for-sale reclassifications and foreign currency/inflation effects"
-    ]
-  },
+  "qualitative": null,
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001032208.json",
@@ -179,13 +157,13 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $52.9B",
+          "detail": "Market cap $51.7B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.64, debt $36.3B vs working capital $12.9B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -193,55 +171,55 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -6.1%/yr",
+          "detail": "EPS 3yr CAGR -6.0%/yr",
           "passed": false
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 23.3",
+          "detail": "P/E 28.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 37.8",
+          "detail": "P/E x P/B = 47.0",
           "passed": false
         }
       ],
       "evaluated": 6,
-      "passed": 2,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 7.1%",
+          "detail": "ROE 5.8%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.12",
-          "passed": false
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "652,697,000 shares vs. 637,943,000 a year earlier",
+          "detail": "653,826,000 shares vs. 637,943,000 a year earlier",
           "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 1,
+      "evaluated": 2,
+      "passed": 0,
       "total": 4
     }
   },

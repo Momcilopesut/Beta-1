@@ -1,0 +1,229 @@
+{
+  "_errors": {},
+  "cik": "0001575515",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 245287000,
+        "debt": null,
+        "earnings": 244157000,
+        "fiscal_year": "2022-01-02",
+        "market_return_pct": null,
+        "revenue": 6099869000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 293233000,
+        "debt": null,
+        "earnings": 261164000,
+        "fiscal_year": "2023-01-01",
+        "market_return_pct": -20.282179565008057,
+        "revenue": 6404223000,
+        "spending": null,
+        "stock_return_pct": 3.8629492777964467
+      },
+      {
+        "cash": 201794000,
+        "debt": null,
+        "earnings": 258856000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 24.113754529699065,
+        "revenue": 6837384000,
+        "spending": null,
+        "stock_return_pct": 58.60284605433376
+      },
+      {
+        "cash": 265159000,
+        "debt": null,
+        "earnings": 380601000,
+        "fiscal_year": "2024-12-29",
+        "market_return_pct": 24.451496879297586,
+        "revenue": 7719290000,
+        "spending": null,
+        "stock_return_pct": 159.58401305057095
+      },
+      {
+        "cash": 257282000,
+        "debt": null,
+        "earnings": 523670000,
+        "fiscal_year": "2025-12-28",
+        "market_return_pct": 16.937540376049775,
+        "revenue": 8806159000,
+        "spending": null,
+        "stock_return_pct": -36.62215239591515
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.9300656979822072,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 15.046753201489047,
+      "shareholders_equity": 1403074000,
+      "total_assets": 4158649000,
+      "total_liabilities": 2755575000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 5.311407618236283
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 30.486487293550148
+    },
+    "profitability": {
+      "roe_pct": 37.32304924758067,
+      "trend": "improving"
+    },
+    "valuation": {
+      "graham_multiple": 54.63504370836876,
+      "graham_number": 42.399420264290214,
+      "graham_upside_pct": -35.82651693008897,
+      "ncav_margin_pct": -131.58110487066438,
+      "pb_ratio": 4.390980506908402,
+      "pe_ttm": 12.44256120527307
+    }
+  },
+  "industry": "Grocery Stores",
+  "last_updated": "2026-09-23T21:27:34Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "low"
+    }
+  },
+  "market_cap": 6160870584,
+  "metrics": {
+    "book_value_per_share": 15.046753201489047,
+    "current_ratio": 0.9300656979822072,
+    "eps_growth_cagr_3yr_pct": 30.486487293550148,
+    "fcf_margin_pct": 5.311407618236283,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 54.63504370836876,
+    "graham_upside_pct": -35.82651693008897,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -131.58110487066438,
+    "pb_ratio": 4.390980506908402,
+    "pe_ttm": 12.44256120527307,
+    "roe_pct": 37.32304924758067,
+    "shareholders_equity": 1403074000,
+    "total_assets": 4158649000,
+    "total_liabilities": 2755575000
+  },
+  "name": "Sprouts Farmers Market",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 66.07
+  },
+  "qualitative": null,
+  "sector": "Consumer Defensive",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001575515.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-01",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1575515/000157551526000041/sfm-20260831.htm"
+      },
+      {
+        "filed": "2026-07-29",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1575515/000157551526000037/sfm-20260628.htm"
+      },
+      {
+        "filed": "2026-02-19",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1575515/000157551526000008/sfm-20251228.htm"
+      }
+    ]
+  },
+  "ticker": "SFM",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $6.2B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 30.5%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 12.4",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 54.6",
+          "passed": false
+        }
+      ],
+      "evaluated": 5,
+      "passed": 4,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 37.3%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "98,704,000 shares vs. 101,379,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 100",
+          "passed": true
+        }
+      ],
+      "evaluated": 3,
+      "passed": 3,
+      "total": 4
+    }
+  },
+  "website": "https://www.sprouts.com"
+}

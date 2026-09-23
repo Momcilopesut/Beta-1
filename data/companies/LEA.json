@@ -1,0 +1,227 @@
+{
+  "_errors": {},
+  "cik": "0000842162",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 1318300000,
+        "debt": null,
+        "earnings": 373900000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 19263100000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 1114900000,
+        "debt": null,
+        "earnings": 327700000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 20891500000,
+        "spending": null,
+        "stock_return_pct": -32.21098660836294
+      },
+      {
+        "cash": 1196300000,
+        "debt": null,
+        "earnings": 572500000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 23466900000,
+        "spending": null,
+        "stock_return_pct": 14.328334139654892
+      },
+      {
+        "cash": 1052900000,
+        "debt": null,
+        "earnings": 506600000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 23306000000,
+        "spending": null,
+        "stock_return_pct": -33.21108681853445
+      },
+      {
+        "cash": 1033000000,
+        "debt": null,
+        "earnings": 436800000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 23259100000,
+        "spending": null,
+        "stock_return_pct": 21.01372756071805
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.3521907148276897,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 102.08056950865492,
+      "shareholders_equity": 5035100000,
+      "total_assets": 14843100000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 2.266639723807026
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 14.215074523775883
+    },
+    "profitability": {
+      "roe_pct": 8.675100792437092,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 17.799552718733153,
+      "graham_number": 136.81748584756846,
+      "graham_upside_pct": 12.431165952476347,
+      "ncav_margin_pct": null,
+      "pb_ratio": 1.1920975812118926,
+      "pe_ttm": 14.93128834355828
+    }
+  },
+  "industry": "Auto - Parts",
+  "last_updated": "2026-09-23T21:18:57Z",
+  "layered_analysis": {
+    "flags": [
+      "Positive but thin margin of safety - 12% is below the 15% convention used here."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 6096072719,
+  "metrics": {
+    "book_value_per_share": 102.08056950865492,
+    "current_ratio": 1.3521907148276897,
+    "eps_growth_cagr_3yr_pct": 14.215074523775883,
+    "fcf_margin_pct": 2.266639723807026,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 6,
+    "graham_multiple": 17.799552718733153,
+    "graham_upside_pct": 12.431165952476347,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "pb_ratio": 1.1920975812118926,
+    "pe_ttm": 14.93128834355828,
+    "roe_pct": 8.675100792437092,
+    "shareholders_equity": 5035100000,
+    "total_assets": 14843100000
+  },
+  "name": "Lear",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 121.69
+  },
+  "qualitative": null,
+  "sector": "Consumer Cyclical",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000842162.json",
+    "sec_filings": [
+      {
+        "filed": "2026-07-31",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/842162/000084216226000068/lear-20260704.htm"
+      },
+      {
+        "filed": "2026-07-31",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/842162/000084216226000065/lear-20260731.htm"
+      },
+      {
+        "filed": "2026-02-13",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/842162/000084216226000011/lear-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "LEA",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $6.1B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 14.2%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 14.9",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 17.8",
+          "passed": true
+        }
+      ],
+      "evaluated": 6,
+      "passed": 6,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 8.7%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "53,590,776 shares vs. 56,476,105 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 60",
+          "passed": true
+        }
+      ],
+      "evaluated": 3,
+      "passed": 2,
+      "total": 4
+    }
+  },
+  "website": "https://www.lear.com"
+}

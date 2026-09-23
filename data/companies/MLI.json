@@ -1,0 +1,228 @@
+{
+  "_errors": {},
+  "cik": "0000089439",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 87924000,
+        "debt": 1875000,
+        "earnings": 138363000,
+        "fiscal_year": "2024-03-30",
+        "market_return_pct": 9.85672508468157,
+        "revenue": 849654000,
+        "spending": null,
+        "stock_return_pct": 13.528413910093306
+      },
+      {
+        "cash": 461018000,
+        "debt": 1218000,
+        "earnings": 160165000,
+        "fiscal_year": "2024-06-29",
+        "market_return_pct": 4.224758694652992,
+        "revenue": 997745000,
+        "spending": null,
+        "stock_return_pct": 6.350392230108327
+      },
+      {
+        "cash": 1170893000,
+        "debt": 185000,
+        "earnings": 168699000,
+        "fiscal_year": "2024-09-28",
+        "market_return_pct": 5.007166219543566,
+        "revenue": 997831000,
+        "spending": null,
+        "stock_return_pct": 26.624517035475936
+      },
+      {
+        "cash": 1037229000,
+        "debt": 0,
+        "earnings": 604879000,
+        "fiscal_year": "2024-12-28",
+        "market_return_pct": 4.119201357901545,
+        "revenue": 3768766000,
+        "spending": null,
+        "stock_return_pct": 10.901525658807213
+      },
+      {
+        "cash": 1367003000,
+        "debt": null,
+        "earnings": 765191000,
+        "fiscal_year": "2025-12-27",
+        "market_return_pct": 16.01653753718424,
+        "revenue": 4178547000,
+        "spending": null,
+        "stock_return_pct": 47.74887443721862
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 5.919979958076556,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 14.512821485684862,
+      "shareholders_equity": 3209966000,
+      "total_assets": 3733029000,
+      "total_liabilities": 497123000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 69.44743574118365
+    },
+    "profitability": {
+      "roe_pct": 23.83797834618809,
+      "trend": "declining"
+    },
+    "valuation": {
+      "graham_multiple": 36.55869473892237,
+      "graham_number": 47.32920870155615,
+      "graham_upside_pct": -21.549463448439997,
+      "ncav_margin_pct": -85.39687855361144,
+      "pb_ratio": 4.1570138556109315,
+      "pe_ttm": 8.794460641399416
+    }
+  },
+  "industry": "Manufacturing - Metal Fabrication",
+  "last_updated": "2026-09-23T21:23:06Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 13343849730,
+  "metrics": {
+    "book_value_per_share": 14.512821485684862,
+    "current_ratio": 5.919979958076556,
+    "eps_growth_cagr_3yr_pct": 69.44743574118365,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 36.55869473892237,
+    "graham_upside_pct": -21.549463448439997,
+    "margin_trend_score": 20,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -85.39687855361144,
+    "pb_ratio": 4.1570138556109315,
+    "pe_ttm": 8.794460641399416,
+    "roe_pct": 23.83797834618809,
+    "shareholders_equity": 3209966000,
+    "total_assets": 3733029000,
+    "total_liabilities": 497123000
+  },
+  "name": "Mueller Industries",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 60.33
+  },
+  "qualitative": null,
+  "sector": "Industrials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000089439.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-10",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/89439/000008943926000036/mli-20260806.htm"
+      },
+      {
+        "filed": "2026-07-22",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/89439/000008943926000032/mli-20260627.htm"
+      },
+      {
+        "filed": "2026-02-25",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/89439/000008943926000008/mli-20251227.htm"
+      }
+    ]
+  },
+  "ticker": "MLI",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $13.3B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 69.4%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 8.8",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 36.6",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 5,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 23.8%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "111,492,000 shares vs. 113,965,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 20",
+          "passed": false
+        }
+      ],
+      "evaluated": 3,
+      "passed": 2,
+      "total": 4
+    }
+  },
+  "website": "https://www.muellerindustries.com"
+}

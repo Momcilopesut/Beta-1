@@ -5,96 +5,94 @@
     "years": [
       {
         "cash": 361348000,
-        "debt": 9226611000,
+        "debt": null,
         "earnings": 571247000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 2108249000,
-        "spending": 1596077000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 825193000,
-        "debt": 10566462000,
+        "debt": null,
         "earnings": 521660000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 2576040000,
-        "spending": 1962577000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -34.66541083602441
       },
       {
         "cash": 618190000,
-        "debt": 11698525000,
+        "debt": null,
         "earnings": 103639000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 2842456000,
-        "spending": 2152007000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -11.23086428228186
       },
       {
         "cash": 552146000,
-        "debt": 12751501000,
+        "debt": null,
         "earnings": 322949000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 3049706000,
-        "spending": 2280004000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -24.561132163019106
       },
       {
         "cash": 549062000,
-        "debt": 12761098000,
-        "earnings": -1430535000,
+        "debt": null,
+        "earnings": -1429570000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 2970717000,
-        "spending": 4172992000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -49.83085597129677
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.10996452235815733,
-      "debt_to_ebitda": 86.10553092717421,
-      "debt_to_equity": 0.8237684049403188
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 101.73990338677142,
+      "book_value_per_share": 88.78212763598367,
       "shareholders_equity": 15470070000,
       "total_assets": 34081835000,
       "total_liabilities": 14925399000
     },
     "cash_flow": {
-      "fcf_margin_pct": 47.59948524211495
+      "fcf_margin_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": -5.7036751010766364,
+      "roe_pct": -9.240876091704822,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -6.305355656172822,
+      "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -249.04905399194425,
-      "pb_ratio": 0.6521974188464738,
-      "pe_ttm": -9.667863554757632
+      "ncav_margin_pct": null,
+      "pb_ratio": 0.5841265734544188,
+      "pe_ttm": null
     }
   },
   "industry": "REIT - Office",
-  "last_updated": "2026-09-23T03:45:20Z",
+  "last_updated": "2026-09-23T21:15:45Z",
   "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": true,
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": null
   },
@@ -105,49 +103,26 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 9384385650,
+  "market_cap": 9037590340,
   "metrics": {
-    "book_value_per_share": 101.73990338677142,
-    "current_ratio": 0.10996452235815733,
-    "debt_to_ebitda": 86.10553092717421,
-    "debt_to_equity": 0.8237684049403188,
-    "fcf_margin_pct": 47.59948524211495,
-    "graham_criteria_evaluated": 5,
+    "book_value_per_share": 88.78212763598367,
+    "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 2,
-    "graham_multiple": -6.305355656172822,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -249.04905399194425,
-    "pb_ratio": 0.6521974188464738,
-    "pe_ttm": -9.667863554757632,
-    "roe_pct": -5.7036751010766364,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "pb_ratio": 0.5841265734544188,
+    "roe_pct": -9.240876091704822,
     "shareholders_equity": 15470070000,
     "total_assets": 34081835000,
     "total_liabilities": 14925399000
   },
   "name": "Alexandria Real Estate Equities",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 53.85
+    "as_of": "2026-09-23",
+    "close": 51.86
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Alexandria Real Estate Equities is a life science-focused REIT operating Megacampus properties in clusters such as Greater Boston, San Francisco Bay Area, San Diego, Seattle, Maryland, Research Triangle, and New York City, with 340 properties and 90.9% occupancy as of December 31, 2025. The filing discloses $2.20 billion in real estate impairment charges during 2025 tied to weaker tenant demand, oversupply in some submarkets, and a strategic shift toward recycling capital into higher-value projects, alongside numerous property dispositions across multiple markets. It also describes ongoing litigation with New York City Health + Hospitals Corporation and the NYC Economic Development Corporation over a stalled development option, with potential exposure up to $178.1 million.",
-    "filing_summary_10q": "The provided excerpt for the most recent 10-Q consists only of XBRL taxonomy and context tags (dates, entity identifiers, and data point references) rather than narrative disclosure text, so it does not contain descriptive information about the quarter's business or financial results that can be summarized.",
-    "filing_summary_8k": "This 8-K, dated August 21, 2026, discloses that Alexandria Real Estate Equities issued and sold $1.0 billion aggregate principal amount of 7.250% Series A Fixed-to-Fixed Reset Rate Junior Subordinated Notes due 2057 under an effective shelf registration statement. The notes are junior subordinated, unsecured, guaranteed by Alexandria Real Estate Equities, L.P., pay interest semi-annually starting February 15, 2027, and include company redemption options and standard default provisions as set out in a supplemental indenture.",
-    "moat_explanation": "The 10-K describes Alexandria as the 'preeminent and longest-tenured' owner/operator/developer of life science real estate, having pioneered the niche since 1994, with a diligent underwriting process that produces a high-quality tenant base (53% investment-grade or large-cap) and historically longer lease terms and higher occupancy (10-year average 95%). This track record, brand position, and specialized tenant-underwriting expertise support a reputation-based intangible-asset moat, though the same filing shows this advantage is currently under pressure (see red flags).",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Recognized $2.20 billion of real estate impairment charges in 2025 across multiple markets (Greater Boston, San Diego, San Francisco Bay, Research Triangle, NYC, Seattle, Canada) tied to declining tenant demand and oversubscribed submarkets",
-      "Occupancy fell to 90.9% versus a stated 10-year average of 95%, and several properties were sold or held for sale at reduced values with no gain recognized",
-      "South San Francisco joint-venture properties were sold at a loss in carrying value due to 'significant new supply, lower life science tenant demand, and ongoing challenges leasing both laboratory and office space'",
-      "Ongoing litigation with New York City Health + Hospitals Corporation and the NYC Economic Development Corporation exposes the company to potential losses of up to $178.1 million tied to a stalled development option",
-      "Impairment charges on investments in privately held (non-NAV) companies rose to 18% of their carrying value in 2025, up from 10% in 2024, reflecting deteriorating conditions among some life-science investees",
-      "Company is exiting the Montreal submarket and disposing of multiple non-Megacampus/non-core assets, indicating strategic retrenchment from previously acquired positions"
-    ]
-  },
+  "qualitative": null,
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001035443.json",
@@ -175,13 +150,13 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $9.4B",
+          "detail": "Market cap $9.0B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.11, debt $12.8B vs working capital $-1.2B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -189,9 +164,9 @@
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth",
@@ -199,17 +174,17 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E -9.7",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -6.3",
-          "passed": true
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 5,
+      "evaluated": 3,
       "passed": 2,
       "total": 7
     },
@@ -217,27 +192,27 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -5.7%",
+          "detail": "ROE -9.2%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.82",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "170,394,000 shares vs. 172,071,000 a year earlier",
+          "detail": "170,307,000 shares vs. 172,071,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },

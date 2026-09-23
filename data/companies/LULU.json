@@ -4,65 +4,65 @@
   "five_year_history": {
     "years": [
       {
-        "cash": 1259871000,
-        "debt": 881052000,
+        "cash": null,
+        "debt": null,
         "earnings": 975322000,
         "fiscal_year": "2022-01-30",
         "market_return_pct": null,
         "revenue": 6256617000,
-        "spending": 4923262000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 1154867000,
-        "debt": 1070334000,
+        "cash": null,
+        "debt": null,
         "earnings": 854800000,
         "fiscal_year": "2023-01-29",
         "market_return_pct": -10.962192438487708,
         "revenue": 8110518000,
-        "spending": 6782110000,
+        "spending": null,
         "stock_return_pct": -9.339046021093006
       },
       {
-        "cash": 2243971000,
-        "debt": 1403282000,
+        "cash": null,
+        "debt": null,
         "earnings": 1550190000,
         "fiscal_year": "2024-01-28",
         "market_return_pct": 22.636610998776806,
         "revenue": 9619278000,
-        "spending": 7486602000,
+        "spending": null,
         "stock_return_pct": 59.28814567566676
       },
       {
-        "cash": 1984336000,
-        "debt": 1575791000,
+        "cash": null,
+        "debt": null,
         "earnings": 1814616000,
         "fiscal_year": "2025-02-02",
         "market_return_pct": 21.678506727461478,
         "revenue": 10588126000,
-        "spending": 8082429000,
+        "spending": null,
         "stock_return_pct": -14.875827299321559
       },
       {
-        "cash": 1807202000,
-        "debt": 1798441000,
+        "cash": null,
+        "debt": null,
         "earnings": 1579183000,
         "fiscal_year": "2026-02-01",
         "market_return_pct": 16.334041520986332,
         "revenue": 11102600000,
-        "spending": 8891985000,
+        "spending": null,
         "stock_return_pct": -56.352823612566716
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.1899840757172173,
-      "debt_to_ebitda": 0.6644053607837618,
-      "debt_to_equity": 0.44688984370010354
+      "current_ratio": 2.258327205453848,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 42.4380768481284,
+      "book_value_per_share": 46.98976260635257,
       "shareholders_equity": 4961840000,
       "total_assets": 8456743000,
       "total_liabilities": 3494903000
@@ -71,33 +71,30 @@
       "fcf_margin_pct": 8.301433898366147
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 25.58334310354895
+      "eps_growth_cagr_3yr_pct": 25.676965842053367
     },
     "profitability": {
-      "roe_pct": 29.725987149905574,
+      "roe_pct": 31.82656030827274,
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 20.833511786193064,
-      "graham_number": 112.56530902071889,
-      "graham_upside_pct": 8.517602449357833,
-      "ncav_margin_pct": -92.99024088998839,
-      "pb_ratio": 2.4442672171789215,
-      "pe_ttm": 8.523418241577652
+      "graham_multiple": 16.78938019012837,
+      "graham_number": 118.4035289744579,
+      "graham_upside_pct": 15.76410732739333,
+      "ncav_margin_pct": -92.89086514977018,
+      "pb_ratio": 2.176644322654499,
+      "pe_ttm": 7.71342383107089
     }
   },
   "industry": "Apparel - Retail",
-  "last_updated": "2026-09-23T03:30:06Z",
+  "last_updated": "2026-09-23T21:11:07Z",
   "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Positive but thin margin of safety - 9% is below the 15% convention used here."
-    ],
+    "flags": [],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
+    "valuation_gate_pass": true
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -106,51 +103,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 11778947707,
+  "market_cap": 11614294528,
   "metrics": {
-    "book_value_per_share": 42.4380768481284,
-    "current_ratio": 2.1899840757172173,
-    "debt_to_ebitda": 0.6644053607837618,
-    "debt_to_equity": 0.44688984370010354,
-    "eps_growth_cagr_3yr_pct": 25.58334310354895,
+    "book_value_per_share": 46.98976260635257,
+    "current_ratio": 2.258327205453848,
+    "eps_growth_cagr_3yr_pct": 25.676965842053367,
     "fcf_margin_pct": 8.301433898366147,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 6,
-    "graham_multiple": 20.833511786193064,
-    "graham_upside_pct": 8.517602449357833,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 16.78938019012837,
+    "graham_upside_pct": 15.76410732739333,
     "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -92.99024088998839,
-    "pb_ratio": 2.4442672171789215,
-    "pe_ttm": 8.523418241577652,
-    "roe_pct": 29.725987149905574,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -92.89086514977018,
+    "pb_ratio": 2.176644322654499,
+    "pe_ttm": 7.71342383107089,
+    "roe_pct": 31.82656030827274,
     "shareholders_equity": 4961840000,
     "total_assets": 8456743000,
     "total_liabilities": 3494903000
   },
   "name": "Lululemon Athletica",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 103.73
+    "as_of": "2026-09-23",
+    "close": 102.28
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal 2025 (ended February 1, 2026), lululemon reported net revenue growth of 5% to $11.1 billion, driven by 29% growth in China Mainland and 16% growth in Rest of World, which offset a 1% revenue decline in the Americas. Gross margin fell 260 basis points and operating margin fell 380 basis points, primarily due to new U.S. tariffs and the removal of the de minimis import exemption, which reduced gross profit by roughly $275 million. Diluted EPS declined 9% to $13.26, and the company repurchased $1.2 billion of stock while increasing its buyback authorization by $1.0 billion in December 2025. Management outlined a three-pillar action plan (product creation, product activation, enterprise efficiency) to address declining Americas trends.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended August 2, 2026) consists almost entirely of XBRL tagging metadata rather than narrative text, so specific quarterly financial results and MD&A commentary are not available in what was given. The metadata references topics including segment revenue by region and product category, foreign currency derivative activity, a pending derivative litigation matter, and IEEPA-related tariff refund claims, but no descriptive text on these items was included in the excerpt.",
-    "filing_summary_8k": "This 8-K, dated September 8, 2026, discloses that lululemon's board appointed Heidi O'Neill as a director (expanding the board from 11 to 12 members) and that she commenced service as Chief Executive Officer that same day, with interim co-CEOs Meghan Frank and Andre Maestrini stepping down from that role. The filing also discloses board-adopted amendments to the company's bylaws covering stockholder meeting and nomination procedures, quorum rules, and the addition of emergency bylaw provisions, effective immediately.",
-    "moat_explanation": "The 10-K describes a premium brand image, proprietary fabric development protected via trademarks and trade secrets, and a vertical retail/omni-channel model that gives direct guest feedback used to differentiate products from competitors. Management explicitly states it believes it competes on brand image, technical innovation, and quality rather than on cost, which points to an intangible-assets style moat rather than scale, switching-cost, or network-effect advantages, though the filing also acknowledges a highly competitive market with frequent new entrants.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Americas comparable sales declined 3% with lower traffic, conversion, and average order value, prompting a stated turnaround action plan",
-      "Tariff increases and removal of the de minimis exemption reduced 2025 gross profit by approximately $275 million, with continued margin pressure expected in 2026",
-      "Manufacturing concentration risk: ~51 vendors with the top 5 producing 47% of products (largest single vendor 15%), and heavy country concentration (40% of products from Vietnam)",
-      "Ongoing legal proceedings and contingencies disclosed, including a pending derivative action referenced in the 10-Q XBRL tags",
-      "Costs tied to a proxy contest ($5.1 million) and executive transition costs ($15.2 million) disclosed in SG&A",
-      "Operating margin fell 380 basis points and diluted EPS declined 9% year over year, driven largely by tariff and de minimis impacts"
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001397187.json",
@@ -178,13 +157,13 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $11.8B",
+          "detail": "Market cap $11.6B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.19, debt $1.8B vs working capital $2.4B",
-          "passed": true
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -198,35 +177,35 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 25.6%/yr",
+          "detail": "EPS 3yr CAGR 25.7%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 8.5",
+          "detail": "P/E 7.7",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 20.8",
+          "detail": "P/E x P/B = 16.8",
           "passed": true
         }
       ],
-      "evaluated": 6,
-      "passed": 6,
+      "evaluated": 5,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 29.7%",
+          "detail": "ROE 31.8%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.45",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -239,8 +218,8 @@
           "passed": false
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },

@@ -5,52 +5,52 @@
     "years": [
       {
         "cash": 6897000000,
-        "debt": 37194000000,
+        "debt": null,
         "earnings": 3826000000,
         "fiscal_year": "2022-05-31",
         "market_return_pct": null,
-        "revenue": 93512000000,
-        "spending": 86989000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 6856000000,
-        "debt": 38332000000,
+        "debt": null,
         "earnings": 3972000000,
         "fiscal_year": "2023-05-31",
         "market_return_pct": 1.1914852396289966,
-        "revenue": 90155000000,
-        "spending": 84817000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -2.936297279362974
       },
       {
         "cash": 6501000000,
-        "debt": 37719000000,
+        "debt": null,
         "earnings": 4331000000,
         "fiscal_year": "2024-05-31",
         "market_return_pct": 26.210362570300344,
-        "revenue": 87693000000,
-        "spending": 81338000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 16.504301259044038
       },
       {
         "cash": 5502000000,
-        "debt": 37416000000,
+        "debt": 19151000000,
         "earnings": 4092000000,
         "fiscal_year": "2025-05-31",
         "market_return_pct": 11.760244230805693,
-        "revenue": 87926000000,
-        "spending": 81844000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -14.117359413202937
       },
       {
         "cash": 13311000000,
-        "debt": 42943000000,
+        "debt": 23293000000,
         "earnings": 4433000000,
         "fiscal_year": "2026-05-31",
         "market_return_pct": 28.699163541967117,
-        "revenue": 94720000000,
-        "spending": 88097000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 92.7290326254057
       }
     ]
@@ -58,36 +58,36 @@
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 1.4754124365482233,
-      "debt_to_ebitda": 3.906750363901019,
-      "debt_to_equity": 1.3569374664265175
+      "debt_to_ebitda": 2.369100895036615,
+      "debt_to_equity": 0.7360255316459696
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 131.31535269709545,
+      "book_value_per_share": 133.76803230863817,
       "shareholders_equity": 31647000000,
       "total_assets": 98937000000,
-      "total_liabilities": 67290000000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 5.4011824324324325
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 5.920576768603714
+      "eps_growth_cagr_3yr_pct": 6.216255240021917
     },
     "profitability": {
-      "roe_pct": 15.112216901552461,
+      "roe_pct": 14.007646854362182,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 36.3261320732181,
-      "graham_number": 234.11054083904511,
-      "graham_upside_pct": -20.89256577716932,
-      "ncav_margin_pct": -156.2560228281853,
-      "pb_ratio": 2.2536587986223022,
-      "pe_ttm": 16.11873638344227
+      "graham_multiple": 34.24371433636228,
+      "graham_number": 236.2867590128949,
+      "graham_upside_pct": -18.94107752559352,
+      "ncav_margin_pct": null,
+      "pb_ratio": 2.179145457768509,
+      "pe_ttm": 15.714285714285714
     }
   },
   "industry": "Integrated Freight & Logistics",
-  "last_updated": "2026-09-23T02:56:06Z",
+  "last_updated": "2026-09-23T21:14:52Z",
   "layered_analysis": {
     "flags": [
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
@@ -105,33 +105,30 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 70013836777,
+  "market_cap": 68963416302,
   "metrics": {
-    "book_value_per_share": 131.31535269709545,
+    "book_value_per_share": 133.76803230863817,
     "current_ratio": 1.4754124365482233,
-    "debt_to_ebitda": 3.906750363901019,
-    "debt_to_equity": 1.3569374664265175,
-    "eps_growth_cagr_3yr_pct": 5.920576768603714,
-    "fcf_margin_pct": 5.4011824324324325,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 36.3261320732181,
-    "graham_upside_pct": -20.89256577716932,
+    "debt_to_ebitda": 2.369100895036615,
+    "debt_to_equity": 0.7360255316459696,
+    "eps_growth_cagr_3yr_pct": 6.216255240021917,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 34.24371433636228,
+    "graham_upside_pct": -18.94107752559352,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -156.2560228281853,
-    "pb_ratio": 2.2536587986223022,
-    "pe_ttm": 16.11873638344227,
-    "roe_pct": 15.112216901552461,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "pb_ratio": 2.179145457768509,
+    "pe_ttm": 15.714285714285714,
+    "roe_pct": 14.007646854362182,
     "shareholders_equity": 31647000000,
-    "total_assets": 98937000000,
-    "total_liabilities": 67290000000
+    "total_assets": 98937000000
   },
   "name": "FedEx",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 295.94
+    "as_of": "2026-09-23",
+    "close": 291.5
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -161,12 +158,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $70.0B",
+          "detail": "Market cap $69.0B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.48, debt $42.9B vs working capital $9.0B",
+          "detail": "Current ratio 1.48, debt $23.3B vs working capital $9.0B",
           "passed": false
         },
         {
@@ -175,41 +172,41 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 5.9%/yr",
+          "detail": "EPS 3yr CAGR 6.2%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 16.1",
+          "detail": "P/E 15.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 36.3",
+          "detail": "P/E x P/B = 34.2",
           "passed": false
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 7,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 15.1%",
-          "passed": true
+          "detail": "ROE 14.0%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.36",
-          "passed": false
+          "detail": "Debt/equity 0.74",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -218,12 +215,12 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },

@@ -5,89 +5,89 @@
     "years": [
       {
         "cash": 261036000000,
-        "debt": 487762000000,
+        "debt": null,
         "earnings": 21635000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 64989000000,
-        "spending": 37945000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 241825000000,
-        "debt": 434548000000,
+        "debt": null,
         "earnings": 11261000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 68711000000,
-        "spending": 55225000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -10.239184420337216
       },
       {
         "cash": 241577000000,
-        "debt": 583135000000,
+        "debt": null,
         "earnings": 8516000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 108418000000,
-        "spending": 97679000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 13.081717048168215
       },
       {
         "cash": 182092000000,
-        "debt": 616935000000,
+        "debt": null,
         "earnings": 14276000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 126853000000,
-        "spending": 108456000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 47.46845222765902
       },
       {
         "cash": 164259000000,
-        "debt": 609534000000,
+        "debt": null,
         "earnings": 17176000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 125097000000,
-        "spending": 103245000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 53.50494219552233
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.832635135964392,
-      "debt_to_ebitda": 25.36132146126321,
-      "debt_to_equity": 6.0441739583842535
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 409.0036654448517,
+      "book_value_per_share": 429.20423010764847,
       "shareholders_equity": 124972000000,
       "total_assets": 1809320000000,
       "total_liabilities": 1684348000000
     },
     "cash_flow": {
-      "fcf_margin_pct": -37.745109794799234
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 19.33377273574457
+      "eps_growth_cagr_3yr_pct": 19.517790861873507
     },
     "profitability": {
-      "roe_pct": 16.9651523975927,
-      "trend": "improving"
+      "roe_pct": 13.743878628812853,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 33.58033448647942,
-      "graham_number": 691.4290704380682,
-      "graham_upside_pct": -27.17889915237989,
-      "ncav_margin_pct": -340.8162295223707,
-      "pb_ratio": 2.321470637597562,
-      "pe_ttm": 14.465112736136502
+      "graham_multiple": 39.804765033425454,
+      "graham_number": 703.9901451762671,
+      "graham_upside_pct": -24.816294461930553,
+      "ncav_margin_pct": null,
+      "pb_ratio": 2.181618759361137,
+      "pe_ttm": 18.245518316445832
     }
   },
   "industry": "Financial - Capital Markets",
-  "last_updated": "2026-09-23T03:56:19Z",
+  "last_updated": "2026-09-23T21:12:53Z",
   "layered_analysis": {
     "flags": [
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
@@ -105,33 +105,28 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 280106196430,
+  "market_cap": 276232754520,
   "metrics": {
-    "book_value_per_share": 409.0036654448517,
-    "current_ratio": 0.832635135964392,
-    "debt_to_ebitda": 25.36132146126321,
-    "debt_to_equity": 6.0441739583842535,
-    "eps_growth_cagr_3yr_pct": 19.33377273574457,
-    "fcf_margin_pct": -37.745109794799234,
+    "book_value_per_share": 429.20423010764847,
+    "eps_growth_cagr_3yr_pct": 19.517790861873507,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 33.58033448647942,
-    "graham_upside_pct": -27.17889915237989,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -340.8162295223707,
-    "pb_ratio": 2.321470637597562,
-    "pe_ttm": 14.465112736136502,
-    "roe_pct": 16.9651523975927,
+    "graham_multiple": 39.804765033425454,
+    "graham_upside_pct": -24.816294461930553,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "pb_ratio": 2.181618759361137,
+    "pe_ttm": 18.245518316445832,
+    "roe_pct": 13.743878628812853,
     "shareholders_equity": 124972000000,
     "total_assets": 1809320000000,
     "total_liabilities": 1684348000000
   },
   "name": "Goldman Sachs",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 949.49
+    "as_of": "2026-09-23",
+    "close": 936.36
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -161,13 +156,13 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $280.1B",
+          "detail": "Market cap $276.2B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.83, debt $609.5B vs working capital $-208.2B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -175,23 +170,23 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 19.3%/yr",
+          "detail": "EPS 3yr CAGR 19.5%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 14.5",
-          "passed": true
+          "detail": "P/E 18.2",
+          "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 33.6",
+          "detail": "P/E x P/B = 39.8",
           "passed": false
         }
       ],
@@ -203,13 +198,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 17.0%",
-          "passed": true
+          "detail": "ROE 13.7%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 6.04",
-          "passed": false
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -218,12 +213,12 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },

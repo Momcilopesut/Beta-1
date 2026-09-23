@@ -5,97 +5,96 @@
     "years": [
       {
         "cash": 9254000000,
-        "debt": 37789000000,
-        "earnings": 6489000000,
+        "debt": 26033000000,
+        "earnings": null,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 50971000000,
-        "spending": 44093000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 7004000000,
-        "debt": 36993000000,
-        "earnings": 6705000000,
+        "debt": 25714000000,
+        "earnings": null,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 59427000000,
-        "spending": 51523000000,
+        "spending": null,
         "stock_return_pct": 15.87501209248331
       },
       {
         "cash": 6978000000,
-        "debt": 37878000000,
-        "earnings": 10335000000,
+        "debt": 24472000000,
+        "earnings": null,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 67060000000,
-        "spending": 54094000000,
+        "spending": null,
         "stock_return_pct": 22.186508599098335
       },
       {
         "cash": 6889000000,
-        "debt": 38409000000,
-        "earnings": 10792000000,
+        "debt": 27351000000,
+        "earnings": null,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 64809000000,
-        "spending": 51737000000,
+        "spending": null,
         "stock_return_pct": 23.931536332889213
       },
       {
         "cash": 9980000000,
-        "debt": 43330000000,
-        "earnings": 8873000000,
+        "debt": 30696000000,
+        "earnings": null,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 67589000000,
-        "spending": 56379000000,
+        "spending": null,
         "stock_return_pct": 57.91983680670416
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.3684342799698417,
-      "debt_to_ebitda": 3.2163004750593824,
-      "debt_to_equity": 2.3277133281773654
+      "current_ratio": 1.4356638765796816,
+      "debt_to_ebitda": 2.2885260568105568,
+      "debt_to_equity": 1.4399099352659723
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 42.124239791485664,
+      "book_value_per_share": 46.37625528419935,
       "shareholders_equity": 21318000000,
       "total_assets": 98585000000,
       "total_liabilities": 77267000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 11.026942253917058
+      "fcf_margin_pct": 13.194454718963144
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 14.080425802972375
+      "eps_growth_cagr_3yr_pct": 14.168748532167829
     },
     "profitability": {
-      "roe_pct": 54.14401919256289,
-      "trend": "declining"
+      "roe_pct": null,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 664.015398340591,
-      "graham_number": 133.84069998072064,
-      "graham_upside_pct": -83.43576193602547,
-      "ncav_margin_pct": -106.67219663915444,
-      "pb_ratio": 19.18060345449858,
-      "pe_ttm": 34.61910882604969
+      "graham_multiple": 755.8732540894766,
+      "graham_number": 140.09850335622886,
+      "graham_upside_pct": -82.74691468729478,
+      "ncav_margin_pct": -106.63924731706507,
+      "pb_ratio": 17.509391282755416,
+      "pe_ttm": 43.16959064327486
     }
   },
   "industry": "Agricultural - Machinery",
-  "last_updated": "2026-09-23T03:41:13Z",
+  "last_updated": "2026-09-23T21:08:44Z",
   "layered_analysis": {
     "flags": [
-      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -106,50 +105,34 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 372199302370,
+  "market_cap": 374046456740,
   "metrics": {
-    "book_value_per_share": 42.124239791485664,
-    "current_ratio": 1.3684342799698417,
-    "debt_to_ebitda": 3.2163004750593824,
-    "debt_to_equity": 2.3277133281773654,
-    "eps_growth_cagr_3yr_pct": 14.080425802972375,
-    "fcf_margin_pct": 11.026942253917058,
+    "book_value_per_share": 46.37625528419935,
+    "current_ratio": 1.4356638765796816,
+    "debt_to_ebitda": 2.2885260568105568,
+    "debt_to_equity": 1.4399099352659723,
+    "eps_growth_cagr_3yr_pct": 14.168748532167829,
+    "fcf_margin_pct": 13.194454718963144,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 664.015398340591,
-    "graham_upside_pct": -83.43576193602547,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -106.67219663915444,
-    "pb_ratio": 19.18060345449858,
-    "pe_ttm": 34.61910882604969,
-    "roe_pct": 54.14401919256289,
+    "graham_multiple": 755.8732540894766,
+    "graham_upside_pct": -82.74691468729478,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -106.63924731706507,
+    "pb_ratio": 17.509391282755416,
+    "pe_ttm": 43.16959064327486,
     "shareholders_equity": 21318000000,
     "total_assets": 98585000000,
     "total_liabilities": 77267000000
   },
   "name": "Caterpillar Inc.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 808.01
+    "as_of": "2026-09-23",
+    "close": 812.02
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, Caterpillar reported total sales and revenues of $67.589 billion, up 4% from $64.809 billion in 2024, driven by higher sales volume partially offset by unfavorable price realization. Consolidated operating profit fell 15% to $11.151 billion (16.5% margin, down from 20.2%), primarily due to higher manufacturing costs linked to tariffs and unfavorable pricing. Power & Energy sales grew 12% while Construction Industries sales declined 2% and Resource Industries was roughly flat; the company also disclosed a pending acquisition of RPMGlobal Holdings Limited for approximately $790 million and maintained its quarterly dividend of $1.51 per share while continuing share repurchases under a $20 billion authorization.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter and six months ended June 30, 2026) consists almost entirely of XBRL taxonomy tags and structured data identifiers rather than narrative text, so it does not contain descriptive discussion of results, segment performance, or business developments. It does indicate the filing covers Machinery, Power & Energy and Financial Products segments, pension/OPEB and hedging activity, an accelerated share repurchase (ASR) program, and a subsequent event in July 2026, but no substantive prose is available to summarize beyond these structural references.",
-    "filing_summary_8k": "This 8-K, dated August 27, 2026, discloses that Caterpillar and related borrowing subsidiaries entered into new and amended credit agreements: a new $3.5 billion 364-day unsecured revolving credit facility (replacing a 2025 facility of the same type), and amended/extended three-year ($3.0 billion, expiring 2029) and five-year ($5.0 billion, expiring 2031) unsecured revolving credit facilities. The facilities are for general corporate purposes, include financial covenants (minimum consolidated net worth of $9 billion for Caterpillar and specific interest coverage/leverage ratios for Cat Financial), and as of the filing date no amounts had been drawn under any of these facilities.",
-    "moat_explanation": "The 10-K describes Caterpillar as backed by 'one of the largest independent global dealer networks' and states that Cat Financial's dealer-funded marketing programs provide 'a significant competitive advantage' in financing Caterpillar products, suggesting a durable brand/distribution-network advantage that would be costly for rivals to replicate. However, the excerpts also describe an intensely competitive landscape with numerous global and regional competitors across every segment, which somewhat tempers the strength of this advantage.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Company explicitly attributes 2025 operating profit decline (down 15%) and margin compression in Construction Industries (24.2% to 18.7%) and Resource Industries (20.4% to 15.9%) to unfavorable manufacturing costs 'largely reflecting the impact of higher tariffs'",
-      "Effective tax rate increased from 19.7% to 24.0% year-over-year due to changes in U.S. tax incentives",
-      "Unfavorable price realization reduced sales and profit across multiple segments in 2025",
-      "Construction and Resource Industries operate in markets with many global and regional/local competitors (e.g., numerous Chinese manufacturers), which could pressure pricing and share",
-      "Company expects to incur $300-350 million in restructuring costs in 2026"
-    ]
-  },
+  "qualitative": null,
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000018230.json",
@@ -177,37 +160,37 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $372.2B",
+          "detail": "Market cap $374.0B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.37, debt $43.3B vs working capital $15.9B",
+          "detail": "Current ratio 1.44, debt $30.7B vs working capital $15.9B",
           "passed": false
         },
         {
-          "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years",
-          "passed": true
-        },
-        {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
+          "criterion": "Earnings stability",
+          "detail": "No annual net income data available",
           "passed": null
         },
         {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 14.1%/yr",
+          "detail": "EPS 3yr CAGR 14.2%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 34.6",
+          "detail": "P/E 43.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 664.0",
+          "detail": "P/E x P/B = 755.9",
           "passed": false
         }
       ],
@@ -219,27 +202,27 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 54.1%",
-          "passed": true
+          "detail": "ROE unavailable",
+          "passed": null
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 2.33",
+          "detail": "Debt/equity 1.44",
           "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "469,000,000 shares vs. 489,400,000 a year earlier",
+          "detail": "472,300,000 shares vs. 489,400,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },

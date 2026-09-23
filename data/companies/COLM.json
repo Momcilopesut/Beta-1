@@ -1,0 +1,228 @@
+{
+  "_errors": {},
+  "cik": "0001050797",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 763404000,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 430241000,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -10.119047619047619
+      },
+      {
+        "cash": 350319000,
+        "debt": null,
+        "earnings": 251400000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -9.431377026718435
+      },
+      {
+        "cash": 531869000,
+        "debt": null,
+        "earnings": 223273000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 5.8119011598588175
+      },
+      {
+        "cash": 442028000,
+        "debt": null,
+        "earnings": 177224000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -34.361968306922435
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 2.592615277847148,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 33.40567107416662,
+      "shareholders_equity": 1710143000,
+      "total_assets": 2928493000,
+      "total_liabilities": 1218350000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -13.17463778567598
+    },
+    "profitability": {
+      "roe_pct": 10.363109985539221,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 29.78691770925502,
+      "graham_number": 49.348489554461004,
+      "graham_upside_pct": -13.088253690628736,
+      "ncav_margin_pct": -74.05528114316759,
+      "pb_ratio": 1.6997114015143762,
+      "pe_ttm": 17.52469135802469
+    }
+  },
+  "industry": "Apparel - Manufacturers",
+  "last_updated": "2026-09-23T21:18:34Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 2903774624,
+  "metrics": {
+    "book_value_per_share": 33.40567107416662,
+    "current_ratio": 2.592615277847148,
+    "eps_growth_cagr_3yr_pct": -13.17463778567598,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 29.78691770925502,
+    "graham_upside_pct": -13.088253690628736,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -74.05528114316759,
+    "pb_ratio": 1.6997114015143762,
+    "pe_ttm": 17.52469135802469,
+    "roe_pct": 10.363109985539221,
+    "shareholders_equity": 1710143000,
+    "total_assets": 2928493000,
+    "total_liabilities": 1218350000
+  },
+  "name": "Columbia Sportswear",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 56.78
+  },
+  "qualitative": null,
+  "sector": "Consumer Cyclical",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001050797.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-06",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1050797/000105079726000136/colm-20260630.htm"
+      },
+      {
+        "filed": "2026-07-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1050797/000105079726000129/colm-20260730.htm"
+      },
+      {
+        "filed": "2026-02-25",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1050797/000105079726000028/colm-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "COLM",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $2.9B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 4/4 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -13.2%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 17.5",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 29.8",
+          "passed": false
+        }
+      ],
+      "evaluated": 5,
+      "passed": 2,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 10.4%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "54,762,000 shares vs. 58,502,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": "https://www.columbia.com"
+}

@@ -1,0 +1,228 @@
+{
+  "_errors": {},
+  "cik": "0000737758",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": null,
+        "debt": 691242000,
+        "earnings": 409900000,
+        "fiscal_year": "2021-10-31",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": null,
+        "debt": 990800000,
+        "earnings": 443300000,
+        "fiscal_year": "2022-10-31",
+        "market_return_pct": -16.048604469176603,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 8.11115668580805
+      },
+      {
+        "cash": null,
+        "debt": 1031500000,
+        "earnings": 329700000,
+        "fiscal_year": "2023-10-31",
+        "market_return_pct": 8.28305843970897,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -23.323532201460687
+      },
+      {
+        "cash": null,
+        "debt": 921800000,
+        "earnings": 418900000,
+        "fiscal_year": "2024-10-31",
+        "market_return_pct": 35.97321855571497,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -0.4453240969816915
+      },
+      {
+        "cash": null,
+        "debt": 921500000,
+        "earnings": 316100000,
+        "fiscal_year": "2025-10-31",
+        "market_return_pct": 19.945835678109166,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -7.144632206759444
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.8688075405523894,
+      "debt_to_ebitda": 1.6669681620839363,
+      "debt_to_equity": 0.6340741760132114
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 15.35229389342096,
+      "shareholders_equity": 1453300000,
+      "total_assets": 3438800000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -8.952087994044444
+    },
+    "profitability": {
+      "roe_pct": 21.750498864652858,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 191.66458109422658,
+      "graham_number": 33.09081990444253,
+      "graham_upside_pct": -65.73739914636309,
+      "ncav_margin_pct": null,
+      "pb_ratio": 6.290916567288241,
+      "pe_ttm": 30.466876971608833
+    }
+  },
+  "industry": "Manufacturing - Tools & Accessories",
+  "last_updated": "2026-09-23T21:23:37Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 9197265110,
+  "metrics": {
+    "book_value_per_share": 15.35229389342096,
+    "current_ratio": 1.8688075405523894,
+    "debt_to_ebitda": 1.6669681620839363,
+    "debt_to_equity": 0.6340741760132114,
+    "eps_growth_cagr_3yr_pct": -8.952087994044444,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 191.66458109422658,
+    "graham_upside_pct": -65.73739914636309,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "pb_ratio": 6.290916567288241,
+    "pe_ttm": 30.466876971608833,
+    "roe_pct": 21.750498864652858,
+    "shareholders_equity": 1453300000,
+    "total_assets": 3438800000
+  },
+  "name": "Toro",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 96.58
+  },
+  "qualitative": null,
+  "sector": "Industrials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000737758.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-21",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/737758/000162828026062886/ttc-20260921.htm"
+      },
+      {
+        "filed": "2026-09-03",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/737758/000073775826000043/ttc-20260731.htm"
+      },
+      {
+        "filed": "2025-12-17",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/737758/000073775825000115/ttc-20251031.htm"
+      }
+    ]
+  },
+  "ticker": "TTC",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $9.2B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.87, debt $0.9B vs working capital $0.8B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -9.0%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 30.5",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 191.7",
+          "passed": false
+        }
+      ],
+      "evaluated": 7,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 21.8%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.63",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "99,800,000 shares vs. 104,400,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 3,
+      "total": 4
+    }
+  },
+  "website": "https://www.thetorocompany.com"
+}

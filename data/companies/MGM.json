@@ -5,94 +5,95 @@
     "years": [
       {
         "cash": 4703059000,
-        "debt": 24692632000,
+        "debt": 12770797000,
         "earnings": 1254370000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 9680140000,
-        "spending": 7401441000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 5911893000,
-        "debt": 33994990000,
+        "debt": 8719290000,
         "earnings": 1473093000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 13127485000,
-        "spending": 11688113000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -25.289661319073087
       },
       {
         "cash": 2927833000,
-        "debt": 31615601000,
+        "debt": 6343810000,
         "earnings": 1142180000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 16164249000,
-        "spending": 14272752000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 35.63972561884878
       },
       {
         "cash": 2415532000,
-        "debt": 31610449000,
+        "debt": 6362098000,
         "earnings": 746558000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 17240545000,
-        "spending": 15750089000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -23.812664907651712
       },
       {
         "cash": 2062994000,
-        "debt": 56155625000,
-        "earnings": 206250000,
+        "debt": 6230141000,
+        "earnings": 205862000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 17537683000,
-        "spending": 16535903000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 5.310245310245321
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.3349567801614333,
-      "debt_to_ebitda": 27.805678326221273,
-      "debt_to_equity": 11.873360583186642
+      "current_ratio": 1.2335683394611838,
+      "debt_to_ebitda": 3.084878791269842,
+      "debt_to_equity": 2.5639316075405043
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 13.290625073813667,
+      "book_value_per_share": 9.658135785117755,
       "shareholders_equity": 2429917000,
       "total_assets": 41373786000,
       "total_liabilities": 38097468000
     },
     "cash_flow": {
-      "fcf_margin_pct": 9.509369054053492
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 14.720275960810092
+      "eps_growth_cagr_3yr_pct": -39.83701324007897
     },
     "profitability": {
-      "roe_pct": 16.962497618892492,
-      "trend": "declining"
+      "roe_pct": 8.471976614839107,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 91.56317023261707,
-      "graham_number": 15.174323029506844,
-      "graham_upside_pct": -60.99145750769449,
-      "ncav_margin_pct": -445.0003901214166,
-      "pb_ratio": 3.93086103569333,
-      "pe_ttm": 23.29341317365269
+      "graham_multiple": 195.17530579429257,
+      "graham_number": 12.851230366214498,
+      "graham_upside_pct": -66.04694751330383,
+      "ncav_margin_pct": -454.57107465582834,
+      "pb_ratio": 3.9189757570320305,
+      "pe_ttm": 49.80263157894737
     }
   },
   "industry": "Gambling, Resorts & Casinos",
-  "last_updated": "2026-09-23T02:48:17Z",
+  "last_updated": "2026-09-23T21:11:10Z",
   "layered_analysis": {
     "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
-    "munger_quality_pass": true,
+    "munger_quality_pass": false,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
@@ -105,33 +106,32 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 9787232026,
+  "market_cap": 9523052241,
   "metrics": {
-    "book_value_per_share": 13.290625073813667,
-    "current_ratio": 1.3349567801614333,
-    "debt_to_ebitda": 27.805678326221273,
-    "debt_to_equity": 11.873360583186642,
-    "eps_growth_cagr_3yr_pct": 14.720275960810092,
-    "fcf_margin_pct": 9.509369054053492,
+    "book_value_per_share": 9.658135785117755,
+    "current_ratio": 1.2335683394611838,
+    "debt_to_ebitda": 3.084878791269842,
+    "debt_to_equity": 2.5639316075405043,
+    "eps_growth_cagr_3yr_pct": -39.83701324007897,
     "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 2,
-    "graham_multiple": 91.56317023261707,
-    "graham_upside_pct": -60.99145750769449,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 2,
-    "ncav_margin_pct": -445.0003901214166,
-    "pb_ratio": 3.93086103569333,
-    "pe_ttm": 23.29341317365269,
-    "roe_pct": 16.962497618892492,
+    "graham_criteria_passed": 1,
+    "graham_multiple": 195.17530579429257,
+    "graham_upside_pct": -66.04694751330383,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -454.57107465582834,
+    "pb_ratio": 3.9189757570320305,
+    "pe_ttm": 49.80263157894737,
+    "roe_pct": 8.471976614839107,
     "shareholders_equity": 2429917000,
     "total_assets": 41373786000,
     "total_liabilities": 38097468000
   },
   "name": "MGM Resorts",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 38.9
+    "as_of": "2026-09-23",
+    "close": 37.85
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -161,12 +161,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $9.8B",
+          "detail": "Market cap $9.5B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.33, debt $56.2B vs working capital $0.8B",
+          "detail": "Current ratio 1.23, debt $6.2B vs working capital $0.8B",
           "passed": false
         },
         {
@@ -181,49 +181,49 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 14.7%/yr",
-          "passed": true
+          "detail": "EPS 3yr CAGR -39.8%/yr",
+          "passed": false
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 23.3",
+          "detail": "P/E 49.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 91.6",
+          "detail": "P/E x P/B = 195.2",
           "passed": false
         }
       ],
       "evaluated": 6,
-      "passed": 2,
+      "passed": 1,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 17.0%",
-          "passed": true
+          "detail": "ROE 8.5%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 11.87",
+          "detail": "Debt/equity 2.56",
           "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "264,864,864 shares vs. 310,232,000 a year earlier",
+          "detail": "277,275,000 shares vs. 310,232,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 2,
+      "evaluated": 3,
+      "passed": 1,
       "total": 4
     }
   },

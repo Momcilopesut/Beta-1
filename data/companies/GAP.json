@@ -1,0 +1,228 @@
+{
+  "_errors": {},
+  "cik": "0000039911",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 877000000,
+        "debt": 1484000000,
+        "earnings": 256000000,
+        "fiscal_year": "2022-01-29",
+        "market_return_pct": null,
+        "revenue": 16670000000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 1215000000,
+        "debt": 1486000000,
+        "earnings": -202000000,
+        "fiscal_year": "2023-01-28",
+        "market_return_pct": -8.206810725195155,
+        "revenue": 15616000000,
+        "spending": null,
+        "stock_return_pct": -25.717501406865505
+      },
+      {
+        "cash": 1873000000,
+        "debt": 1488000000,
+        "earnings": 502000000,
+        "fiscal_year": "2024-02-03",
+        "market_return_pct": 21.857128771445478,
+        "revenue": 14889000000,
+        "spending": null,
+        "stock_return_pct": 50.07575757575757
+      },
+      {
+        "cash": 2335000000,
+        "debt": 1490000000,
+        "earnings": 844000000,
+        "fiscal_year": "2025-02-01",
+        "market_return_pct": 21.73965813694751,
+        "revenue": 15086000000,
+        "spending": null,
+        "stock_return_pct": 21.5042907622413
+      },
+      {
+        "cash": 2616000000,
+        "debt": 1492000000,
+        "earnings": 816000000,
+        "fiscal_year": "2026-01-31",
+        "market_return_pct": 14.979561995280976,
+        "revenue": 15366000000,
+        "spending": null,
+        "stock_return_pct": 16.244287494806812
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.7506060606060605,
+      "debt_to_ebitda": 0.9261328367473619,
+      "debt_to_equity": 0.39252828203104445
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 10.820731965609705,
+      "shareholders_equity": 3801000000,
+      "total_assets": 12632000000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 5.3559807366913965
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": null
+    },
+    "profitability": {
+      "roe_pct": 21.468034727703238,
+      "trend": "improving"
+    },
+    "valuation": {
+      "graham_multiple": 19.647486738338046,
+      "graham_number": 22.772430249137773,
+      "graham_upside_pct": 7.013300042940659,
+      "ncav_margin_pct": null,
+      "pb_ratio": 1.96659524213628,
+      "pe_ttm": 9.990610328638498
+    }
+  },
+  "industry": "Apparel - Retail",
+  "last_updated": "2026-09-23T21:33:39Z",
+  "layered_analysis": {
+    "flags": [
+      "Positive but thin margin of safety - 7% is below the 15% convention used here."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 7660353120,
+  "metrics": {
+    "book_value_per_share": 10.820731965609705,
+    "current_ratio": 1.7506060606060605,
+    "debt_to_ebitda": 0.9261328367473619,
+    "debt_to_equity": 0.39252828203104445,
+    "fcf_margin_pct": 5.3559807366913965,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 19.647486738338046,
+    "graham_upside_pct": 7.013300042940659,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 4,
+    "pb_ratio": 1.96659524213628,
+    "pe_ttm": 9.990610328638498,
+    "roe_pct": 21.468034727703238,
+    "shareholders_equity": 3801000000,
+    "total_assets": 12632000000
+  },
+  "name": "Gap Inc.",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 21.28
+  },
+  "qualitative": null,
+  "sector": "Consumer Cyclical",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000039911.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-15",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026062054/gps-20260915.htm"
+      },
+      {
+        "filed": "2026-08-28",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026059345/gap-20260801.htm"
+      },
+      {
+        "filed": "2026-03-17",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026018573/gap-20260131.htm"
+      }
+    ]
+  },
+  "ticker": "GAP",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $7.7B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.75, debt $1.5B vs working capital $2.5B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 4/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 10.0",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 19.6",
+          "passed": true
+        }
+      ],
+      "evaluated": 6,
+      "passed": 4,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 21.5%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.39",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "384,000,000 shares vs. 384,000,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 100",
+          "passed": true
+        }
+      ],
+      "evaluated": 4,
+      "passed": 4,
+      "total": 4
+    }
+  },
+  "website": "https://www.gapinc.com"
+}

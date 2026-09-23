@@ -5,64 +5,64 @@
     "years": [
       {
         "cash": 111900000,
-        "debt": 3577100000,
-        "earnings": 666300000,
+        "debt": 971300000,
+        "earnings": 666200000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 2462500000,
-        "spending": 1551100000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 112500000,
-        "debt": 3955500000,
-        "earnings": 954300000,
+        "debt": 1392900000,
+        "earnings": 953900000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 2497000000,
-        "spending": 1090500000,
+        "spending": null,
         "stock_return_pct": -22.86975910462117
       },
       {
         "cash": 302700000,
-        "debt": 3095400000,
-        "earnings": 614400000,
+        "debt": 14500000,
+        "earnings": 614600000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 2681400000,
-        "spending": 1549700000,
+        "spending": null,
         "stock_return_pct": 34.89400294751162
       },
       {
         "cash": 291200000,
-        "debt": 3245800000,
-        "earnings": 957500000,
+        "debt": 514200000,
+        "earnings": 958200000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 2881700000,
-        "spending": 1627800000,
+        "spending": null,
         "stock_return_pct": 15.736616522396849
       },
       {
         "cash": 2178200000,
-        "debt": 5037300000,
+        "debt": 1508900000,
         "earnings": 908300000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 3072700000,
-        "spending": 1702900000,
+        "spending": null,
         "stock_return_pct": -18.785172276077407
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.005464480874317,
-      "debt_to_ebitda": 2.9692307692307693,
-      "debt_to_equity": -3.883179142136249
+      "current_ratio": 1.2021910185627962,
+      "debt_to_ebitda": 0.9412388497286507,
+      "debt_to_equity": 4.883171521035599
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -9.09283931180253,
+      "book_value_per_share": 2.358385441694301,
       "shareholders_equity": 309000000,
       "total_assets": 6195500000,
       "total_liabilities": 5885700000
@@ -71,30 +71,32 @@
       "fcf_margin_pct": 38.7899892602597
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 2.529305744106747
+      "eps_growth_cagr_3yr_pct": 2.5985568006018145
     },
     "profitability": {
-      "roe_pct": -211.96888090963495,
+      "roe_pct": 293.9482200647249,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -498.6625261235417,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": -113.85082794690315,
-      "pb_ratio": -18.909385078082423,
-      "pe_ttm": 26.37116564417178
+      "graham_multiple": 1931.3301834080467,
+      "graham_number": 18.54326285741075,
+      "graham_upside_pct": -89.20648262083193,
+      "ncav_margin_pct": -113.862115001109,
+      "pb_ratio": 72.8464469644013,
+      "pe_ttm": 26.512345679012345
     }
   },
   "industry": "Software - Services",
-  "last_updated": "2026-09-23T02:58:04Z",
+  "last_updated": "2026-09-23T21:15:40Z",
   "layered_analysis": {
-    "flags": [],
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
     "munger_quality_pass": true,
     "overall": "Incomplete: one or more layers has insufficient data for this company.",
     "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
+    "valuation_gate_pass": false
   },
   "macro_context": {
     "regime": "Neutral/Expansion",
@@ -103,32 +105,33 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 22379025907,
+  "market_cap": 22360804064,
   "metrics": {
-    "book_value_per_share": -9.09283931180253,
-    "current_ratio": 1.005464480874317,
-    "debt_to_ebitda": 2.9692307692307693,
-    "debt_to_equity": -3.883179142136249,
-    "eps_growth_cagr_3yr_pct": 2.529305744106747,
+    "book_value_per_share": 2.358385441694301,
+    "current_ratio": 1.2021910185627962,
+    "debt_to_ebitda": 0.9412388497286507,
+    "debt_to_equity": 4.883171521035599,
+    "eps_growth_cagr_3yr_pct": 2.5985568006018145,
     "fcf_margin_pct": 38.7899892602597,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": -498.6625261235417,
+    "graham_multiple": 1931.3301834080467,
+    "graham_upside_pct": -89.20648262083193,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -113.85082794690315,
-    "pb_ratio": -18.909385078082423,
-    "pe_ttm": 26.37116564417178,
-    "roe_pct": -211.96888090963495,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -113.862115001109,
+    "pb_ratio": 72.8464469644013,
+    "pe_ttm": 26.512345679012345,
+    "roe_pct": 293.9482200647249,
     "shareholders_equity": 309000000,
     "total_assets": 6195500000,
     "total_liabilities": 5885700000
   },
   "name": "Verisk Analytics",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 171.94
+    "as_of": "2026-09-23",
+    "close": 171.8
   },
   "qualitative": null,
   "sector": "Technology",
@@ -163,7 +166,7 @@
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.01, debt $5.0B vs working capital $0.5B",
+          "detail": "Current ratio 1.20, debt $1.5B vs working capital $0.5B",
           "passed": false
         },
         {
@@ -172,27 +175,27 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 2.5%/yr",
+          "detail": "EPS 3yr CAGR 2.6%/yr",
           "passed": false
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 26.4",
+          "detail": "P/E 26.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -498.7",
-          "passed": true
+          "detail": "P/E x P/B = 1931.3",
+          "passed": false
         }
       ],
-      "evaluated": 6,
+      "evaluated": 7,
       "passed": 3,
       "total": 7
     },
@@ -200,27 +203,27 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -212.0%",
-          "passed": false
-        },
-        {
-          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity -3.88",
+          "detail": "ROE 293.9%",
           "passed": true
         },
         {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 4.88",
+          "passed": false
+        },
+        {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "139,110,064 shares vs. 142,842,000 a year earlier",
+          "detail": "140,082,773 shares vs. 142,842,261 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },

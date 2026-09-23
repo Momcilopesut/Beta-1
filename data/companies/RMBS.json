@@ -1,0 +1,227 @@
+{
+  "_errors": {},
+  "cik": "0000917273",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 107891000,
+        "debt": null,
+        "earnings": 18334000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 125338000,
+        "debt": null,
+        "earnings": -14310000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 21.878189860496768
+      },
+      {
+        "cash": 94767000,
+        "debt": null,
+        "earnings": 333904000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 82.1608040201005
+      },
+      {
+        "cash": 99774000,
+        "debt": null,
+        "earnings": 179821000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -18.98850574712644
+      },
+      {
+        "cash": 182822000,
+        "debt": null,
+        "earnings": 230455000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 73.83654937570942
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 8.2009056678886,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 12.617563057783931,
+      "shareholders_equity": 1364425000,
+      "total_assets": 1529545000,
+      "total_liabilities": 165120000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": null
+    },
+    "profitability": {
+      "roe_pct": 16.89026512999982,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 402.134153000739,
+      "graham_number": 24.474860697627925,
+      "graham_upside_pct": -76.34593534587037,
+      "ncav_margin_pct": -92.63829647186743,
+      "pb_ratio": 8.20047417446177,
+      "pe_ttm": 49.03791469194313
+    }
+  },
+  "industry": "Semiconductors",
+  "last_updated": "2026-09-23T21:26:32Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 11222521752,
+  "metrics": {
+    "book_value_per_share": 12.617563057783931,
+    "current_ratio": 8.2009056678886,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 1,
+    "graham_multiple": 402.134153000739,
+    "graham_upside_pct": -76.34593534587037,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -92.63829647186743,
+    "pb_ratio": 8.20047417446177,
+    "pe_ttm": 49.03791469194313,
+    "roe_pct": 16.89026512999982,
+    "shareholders_equity": 1364425000,
+    "total_assets": 1529545000,
+    "total_liabilities": 165120000
+  },
+  "name": "Rambus",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 103.47
+  },
+  "qualitative": null,
+  "sector": "Technology",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000917273.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-04",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/917273/000119312526383630/d80115d8k.htm"
+      },
+      {
+        "filed": "2026-07-28",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/917273/000119312526321000/rmbs-20260630.htm"
+      },
+      {
+        "filed": "2026-02-18",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/rmbs-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "RMBS",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $11.2B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 4/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 49.0",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 402.1",
+          "passed": false
+        }
+      ],
+      "evaluated": 4,
+      "passed": 1,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 16.9%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "109,235,000 shares vs. 109,041,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": "https://www.rambus.com"
+}

@@ -1,0 +1,226 @@
+{
+  "_errors": {},
+  "cik": "0000714310",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 473840000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 568851000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -17.745454545454542
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 498511000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -4.5977011494252995
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 380271000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -16.033364226135298
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 597983000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 28.91832229580573
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 14.128889182817826,
+      "shareholders_equity": 7807698000,
+      "total_assets": 64132725000,
+      "total_liabilities": 56325027000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -3.955572058502743
+    },
+    "profitability": {
+      "roe_pct": 7.658889982681195,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 11.607206240424501,
+      "graham_number": 17.91867759293456,
+      "graham_upside_pct": 39.22826412536567,
+      "ncav_margin_pct": null,
+      "pb_ratio": 0.9108996350294286,
+      "pe_ttm": 12.742574257425742
+    }
+  },
+  "industry": "Banks - Regional",
+  "last_updated": "2026-09-23T21:21:29Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": true
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 7131665970,
+  "metrics": {
+    "book_value_per_share": 14.128889182817826,
+    "eps_growth_cagr_3yr_pct": -3.955572058502743,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 11.607206240424501,
+    "graham_upside_pct": 39.22826412536567,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 0,
+    "pb_ratio": 0.9108996350294286,
+    "pe_ttm": 12.742574257425742,
+    "roe_pct": 7.658889982681195,
+    "shareholders_equity": 7807698000,
+    "total_assets": 64132725000,
+    "total_liabilities": 56325027000
+  },
+  "name": "Valley Bank",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 12.87
+  },
+  "qualitative": null,
+  "sector": "Financial Services",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000714310.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-25",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/714310/000119312526364239/d149125d8k.htm"
+      },
+      {
+        "filed": "2026-08-06",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/714310/000071431026000041/vly-20260630.htm"
+      },
+      {
+        "filed": "2026-02-27",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/714310/000071431026000017/vly-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "VLY",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $7.1B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -4.0%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 12.7",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 11.6",
+          "passed": true
+        }
+      ],
+      "evaluated": 6,
+      "passed": 5,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 7.7%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "563,832,550 shares vs. 517,991,801 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 0,
+      "total": 4
+    }
+  },
+  "website": "https://www.valley.com"
+}

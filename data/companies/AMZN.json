@@ -5,89 +5,89 @@
     "years": [
       {
         "cash": 36220000000,
-        "debt": 116395000000,
+        "debt": 50235000000,
         "earnings": 33364000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 469822000000,
-        "spending": 444943000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 53888000000,
-        "debt": 140118000000,
+        "debt": 70149000000,
         "earnings": -2722000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 513983000000,
-        "spending": 501735000000,
+        "spending": null,
         "stock_return_pct": -49.61612284069098
       },
       {
         "cash": 73387000000,
-        "debt": 135611000000,
+        "debt": 66808000000,
         "earnings": 30425000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 574785000000,
-        "spending": 537933000000,
+        "spending": null,
         "stock_return_pct": 78.48809523809524
       },
       {
         "cash": 78779000000,
-        "debt": 130900000000,
+        "debt": 57640000000,
         "earnings": 59248000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 637959000000,
-        "spending": 569366000000,
+        "spending": null,
         "stock_return_pct": 46.32828653371572
       },
       {
         "cash": 86810000000,
-        "debt": 152987000000,
+        "debt": 68396000000,
         "earnings": 77670000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 716924000000,
-        "spending": 636949000000,
+        "spending": null,
         "stock_return_pct": 5.209900177765626
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.0331158765552857,
-      "debt_to_ebitda": 1.0497903671833722,
-      "debt_to_equity": 0.4046843841775135
+      "current_ratio": 1.0508153482718285,
+      "debt_to_ebitda": 0.469330478758809,
+      "debt_to_equity": 0.16638731100920778
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 51.284864261807364,
+      "book_value_per_share": 38.10986925756325,
       "shareholders_equity": 411065000000,
       "total_assets": 818042000000,
-      "total_liabilities": 406977000000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 1.07333552789417
+      "fcf_margin_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": 30.499089745974313,
-      "trend": "improving"
+      "roe_pct": 18.89482198679041,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 100.61262456130656,
-      "graham_number": 91.71695514212709,
-      "graham_upside_pct": -64.02974541449247,
-      "ncav_margin_pct": -106.46818066818994,
-      "pb_ratio": 4.971837279286465,
-      "pe_ttm": 20.236507936507934
+      "graham_multiple": 227.396309905931,
+      "graham_number": 78.4096592134948,
+      "graham_upside_pct": -68.54428562863771,
+      "ncav_margin_pct": null,
+      "pb_ratio": 6.540825378206463,
+      "pe_ttm": 34.76569037656904
     }
   },
   "industry": "Specialty Retail",
-  "last_updated": "2026-09-23T02:43:27Z",
+  "last_updated": "2026-09-23T21:08:51Z",
   "layered_analysis": {
     "flags": [
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
@@ -105,32 +105,29 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 2742845358000,
+  "market_cap": 2681422317000,
   "metrics": {
-    "book_value_per_share": 51.284864261807364,
-    "current_ratio": 1.0331158765552857,
-    "debt_to_ebitda": 1.0497903671833722,
-    "debt_to_equity": 0.4046843841775135,
-    "fcf_margin_pct": 1.07333552789417,
+    "book_value_per_share": 38.10986925756325,
+    "current_ratio": 1.0508153482718285,
+    "debt_to_ebitda": 0.469330478758809,
+    "debt_to_equity": 0.16638731100920778,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 1,
-    "graham_multiple": 100.61262456130656,
-    "graham_upside_pct": -64.02974541449247,
-    "margin_trend_score": 100,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -106.46818066818994,
-    "pb_ratio": 4.971837279286465,
-    "pe_ttm": 20.236507936507934,
-    "roe_pct": 30.499089745974313,
+    "graham_multiple": 227.396309905931,
+    "graham_upside_pct": -68.54428562863771,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "pb_ratio": 6.540825378206463,
+    "pe_ttm": 34.76569037656904,
+    "roe_pct": 18.89482198679041,
     "shareholders_equity": 411065000000,
-    "total_assets": 818042000000,
-    "total_liabilities": 406977000000
+    "total_assets": 818042000000
   },
   "name": "Amazon.com Inc.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 254.98
+    "as_of": "2026-09-23",
+    "close": 249.27
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -160,12 +157,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $2742.8B",
+          "detail": "Market cap $2681.4B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.03, debt $153.0B vs working capital $11.1B",
+          "detail": "Current ratio 1.05, debt $68.4B vs working capital $11.1B",
           "passed": false
         },
         {
@@ -185,12 +182,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.2",
+          "detail": "P/E 34.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 100.6",
+          "detail": "P/E x P/B = 227.4",
           "passed": false
         }
       ],
@@ -202,12 +199,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 30.5%",
+          "detail": "ROE 18.9%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.40",
+          "detail": "Debt/equity 0.17",
           "passed": true
         },
         {
@@ -217,12 +214,12 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },

@@ -1,0 +1,227 @@
+{
+  "_errors": {},
+  "cik": "0001867072",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 2134000000,
+        "debt": 3000000000,
+        "earnings": null,
+        "fiscal_year": "2022-03-31",
+        "market_return_pct": -4.909887148391443,
+        "revenue": 4431000000,
+        "spending": null,
+        "stock_return_pct": -27.513812154696144
+      },
+      {
+        "cash": 1847000000,
+        "debt": 3000000000,
+        "earnings": null,
+        "fiscal_year": "2023-03-31",
+        "market_return_pct": -9.354795855105836,
+        "revenue": 17026000000,
+        "spending": null,
+        "stock_return_pct": 12.500000000000005
+      },
+      {
+        "cash": 1553000000,
+        "debt": 2900000000,
+        "earnings": null,
+        "fiscal_year": "2024-03-31",
+        "market_return_pct": 27.545860915019905,
+        "revenue": 16052000000,
+        "spending": null,
+        "stock_return_pct": 46.00271002710028
+      },
+      {
+        "cash": 1786000000,
+        "debt": 3029000000,
+        "earnings": null,
+        "fiscal_year": "2025-03-31",
+        "market_return_pct": 7.1299984679025625,
+        "revenue": 15057000000,
+        "spending": null,
+        "stock_return_pct": 45.70765661252899
+      },
+      {
+        "cash": 2623000000,
+        "debt": 5700000000,
+        "earnings": null,
+        "fiscal_year": "2026-03-31",
+        "market_return_pct": 16.258781887413086,
+        "revenue": 15092000000,
+        "spending": null,
+        "stock_return_pct": -58.21656050955415
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.8764864436340574,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 4.851063829787234
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 5.394405335056776,
+      "shareholders_equity": 1175000000,
+      "total_assets": 12551000000,
+      "total_liabilities": 11259000000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": null
+    },
+    "profitability": {
+      "roe_pct": null,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 31.983485043606805,
+      "graham_number": 10.157165058861692,
+      "graham_upside_pct": -16.125804633677195,
+      "ncav_margin_pct": -317.26610309897137,
+      "pb_ratio": 2.244918438238298,
+      "pe_ttm": 14.24705882352941
+    }
+  },
+  "industry": "Information Technology Services",
+  "last_updated": "2026-09-23T21:24:47Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 2670463389,
+  "metrics": {
+    "book_value_per_share": 5.394405335056776,
+    "current_ratio": 0.8764864436340574,
+    "debt_to_equity": 4.851063829787234,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 31.983485043606805,
+    "graham_upside_pct": -16.125804633677195,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -317.26610309897137,
+    "pb_ratio": 2.244918438238298,
+    "pe_ttm": 14.24705882352941,
+    "shareholders_equity": 1175000000,
+    "total_assets": 12551000000,
+    "total_liabilities": 11259000000
+  },
+  "name": "Kyndryl",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 12.11
+  },
+  "qualitative": null,
+  "sector": "Technology",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001867072.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-05",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1867072/000110465926091129/kd-20260630x10q.htm"
+      },
+      {
+        "filed": "2026-08-05",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1867072/000110465926090725/kd-20260805x8k.htm"
+      },
+      {
+        "filed": "2026-05-29",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1867072/000110465926067881/kd-20260331x10k.htm"
+      }
+    ]
+  },
+  "ticker": "KD",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $2.7B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.88, debt $5.7B vs working capital $-0.8B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability",
+          "detail": "No annual net income data available",
+          "passed": null
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 14.2",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 32.0",
+          "passed": false
+        }
+      ],
+      "evaluated": 4,
+      "passed": 2,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 4.85",
+          "passed": false
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "233,800,000 shares vs. 239,100,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": "https://www.kyndryl.com"
+}

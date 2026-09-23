@@ -5,89 +5,89 @@
     "years": [
       {
         "cash": 12480000000,
-        "debt": 12281000000,
+        "debt": null,
         "earnings": 977000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 15790000000,
-        "spending": 14069000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 9492000000,
-        "debt": 9473000000,
+        "debt": null,
         "earnings": 539000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 23814000000,
-        "spending": 22797000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -21.405228758169937
       },
       {
         "cash": 9288000000,
-        "debt": 9200000000,
+        "debt": null,
         "earnings": 465000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 26091000000,
-        "spending": 25867000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -15.414315414315416
       },
       {
         "cash": 7509000000,
-        "debt": 8058000000,
+        "debt": null,
         "earnings": 465000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 27483000000,
-        "spending": 27162000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 18.047752808988754
       },
       {
-        "cash": 2831000000,
-        "debt": 5981000000,
+        "cash": 3231000000,
+        "debt": null,
         "earnings": 441000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 28063000000,
-        "spending": 27635000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 22.93277810826889
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.4885438649381972,
-      "debt_to_ebitda": 3.0085513078470827,
-      "debt_to_equity": 0.9727478113527253
+      "current_ratio": 0.5168940573207582,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 14.336032388663968,
+      "book_value_per_share": 16.31411735062062,
       "shareholders_equity": 7981000000,
       "total_assets": 29061000000,
-      "total_liabilities": 21080000000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": -2.9611944553326444
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -3.4117820646152652
+      "eps_growth_cagr_3yr_pct": -3.1641996800259364
     },
     "profitability": {
-      "roe_pct": 11.26741603284647,
+      "roe_pct": 5.525623355469239,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 74.40710384038269,
-      "graham_number": 16.263449743853553,
-      "graham_upside_pct": -61.35111752886513,
-      "ncav_margin_pct": -174.97857354980832,
-      "pb_ratio": 2.9352612256424737,
-      "pe_ttm": 25.34939759036144
+      "graham_multiple": 130.68448506871567,
+      "graham_number": 17.028900020473476,
+      "graham_upside_pct": -58.50657889748179,
+      "ncav_margin_pct": null,
+      "pb_ratio": 2.515612651176544,
+      "pe_ttm": 51.949367088607595
     }
   },
   "industry": "Airlines, Airports & Air Services",
-  "last_updated": "2026-09-23T02:56:59Z",
+  "last_updated": "2026-09-23T21:15:18Z",
   "layered_analysis": {
     "flags": [
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
@@ -105,33 +105,28 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 20585872640,
+  "market_cap": 20077096320,
   "metrics": {
-    "book_value_per_share": 14.336032388663968,
-    "current_ratio": 0.4885438649381972,
-    "debt_to_ebitda": 3.0085513078470827,
-    "debt_to_equity": 0.9727478113527253,
-    "eps_growth_cagr_3yr_pct": -3.4117820646152652,
-    "fcf_margin_pct": -2.9611944553326444,
-    "graham_criteria_evaluated": 6,
+    "book_value_per_share": 16.31411735062062,
+    "current_ratio": 0.5168940573207582,
+    "eps_growth_cagr_3yr_pct": -3.1641996800259364,
+    "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 1,
-    "graham_multiple": 74.40710384038269,
-    "graham_upside_pct": -61.35111752886513,
+    "graham_multiple": 130.68448506871567,
+    "graham_upside_pct": -58.50657889748179,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -174.97857354980832,
-    "pb_ratio": 2.9352612256424737,
-    "pe_ttm": 25.34939759036144,
-    "roe_pct": 11.26741603284647,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "pb_ratio": 2.515612651176544,
+    "pe_ttm": 51.949367088607595,
+    "roe_pct": 5.525623355469239,
     "shareholders_equity": 7981000000,
-    "total_assets": 29061000000,
-    "total_liabilities": 21080000000
+    "total_assets": 29061000000
   },
   "name": "Southwest Airlines",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 42.08
+    "as_of": "2026-09-23",
+    "close": 41.04
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -161,13 +156,13 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $20.6B",
+          "detail": "Market cap $20.1B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.49, debt $6.0B vs working capital $-5.3B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -181,21 +176,21 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -3.4%/yr",
+          "detail": "EPS 3yr CAGR -3.2%/yr",
           "passed": false
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 25.3",
+          "detail": "P/E 51.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 74.4",
+          "detail": "P/E x P/B = 130.7",
           "passed": false
         }
       ],
-      "evaluated": 6,
+      "evaluated": 5,
       "passed": 1,
       "total": 7
     },
@@ -203,13 +198,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 11.3%",
+          "detail": "ROE 5.5%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.97",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -218,12 +213,12 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },

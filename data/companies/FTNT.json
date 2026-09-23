@@ -10,7 +10,7 @@
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 3342200000,
-        "spending": 2691800000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
@@ -20,7 +20,7 @@
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 4417400000,
-        "spending": 3447800000,
+        "spending": null,
         "stock_return_pct": -31.983861992209235
       },
       {
@@ -30,7 +30,7 @@
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 5304800000,
-        "spending": 4063700000,
+        "spending": null,
         "stock_return_pct": 18.183677643689915
       },
       {
@@ -40,7 +40,7 @@
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 5955800000,
-        "spending": 4152400000,
+        "spending": null,
         "stock_return_pct": 63.516787815853235
       },
       {
@@ -50,44 +50,44 @@
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 6799600000,
-        "spending": 4719000000,
+        "spending": null,
         "stock_return_pct": -15.95046570702795
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.2824946289869443,
-      "debt_to_ebitda": 0.41198362486043916,
-      "debt_to_equity": 0.32035329765972537
+      "current_ratio": 1.1720699245133095,
+      "debt_to_ebitda": 0.4454330039790763,
+      "debt_to_equity": 0.8050909090909091
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 2.107759206413915,
+      "book_value_per_share": 1.6866252862272961,
       "shareholders_equity": 1237500000,
       "total_assets": 10389200000,
       "total_liabilities": 9151700000
     },
     "cash_flow": {
-      "fcf_margin_pct": 32.73427848696982
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 31.21657277007244
+      "eps_growth_cagr_3yr_pct": 31.674951451459886
     },
     "profitability": {
-      "roe_pct": 187.94700225993708,
+      "roe_pct": 149.76969696969698,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 5037.422658956671,
-      "graham_number": 10.757136256091764,
-      "graham_upside_pct": -93.8269618638289,
-      "ncav_margin_pct": -102.54307663721715,
-      "pb_ratio": 82.675478047837,
-      "pe_ttm": 60.93006993006993
+      "graham_multiple": 7827.255927204175,
+      "graham_number": 9.583149108465143,
+      "graham_upside_pct": -94.63849775737656,
+      "ncav_margin_pct": -102.47933610160827,
+      "pb_ratio": 105.97493198967273,
+      "pe_ttm": 73.85950413223141
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-23T03:00:21Z",
+  "last_updated": "2026-09-23T21:16:28Z",
   "layered_analysis": {
     "flags": [
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
@@ -105,33 +105,32 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 127856941172,
+  "market_cap": 131143978337,
   "metrics": {
-    "book_value_per_share": 2.107759206413915,
-    "current_ratio": 1.2824946289869443,
-    "debt_to_ebitda": 0.41198362486043916,
-    "debt_to_equity": 0.32035329765972537,
-    "eps_growth_cagr_3yr_pct": 31.21657277007244,
-    "fcf_margin_pct": 32.73427848696982,
+    "book_value_per_share": 1.6866252862272961,
+    "current_ratio": 1.1720699245133095,
+    "debt_to_ebitda": 0.4454330039790763,
+    "debt_to_equity": 0.8050909090909091,
+    "eps_growth_cagr_3yr_pct": 31.674951451459886,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 5037.422658956671,
-    "graham_upside_pct": -93.8269618638289,
+    "graham_multiple": 7827.255927204175,
+    "graham_upside_pct": -94.63849775737656,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -102.54307663721715,
-    "pb_ratio": 82.675478047837,
-    "pe_ttm": 60.93006993006993,
-    "roe_pct": 187.94700225993708,
+    "ncav_margin_pct": -102.47933610160827,
+    "pb_ratio": 105.97493198967273,
+    "pe_ttm": 73.85950413223141,
+    "roe_pct": 149.76969696969698,
     "shareholders_equity": 1237500000,
     "total_assets": 10389200000,
     "total_liabilities": 9151700000
   },
   "name": "Fortinet",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 174.26
+    "as_of": "2026-09-23",
+    "close": 178.74
   },
   "qualitative": null,
   "sector": "Technology",
@@ -161,12 +160,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $127.9B",
+          "detail": "Market cap $131.1B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.28, debt $1.0B vs working capital $0.9B",
+          "detail": "Current ratio 1.17, debt $1.0B vs working capital $0.9B",
           "passed": false
         },
         {
@@ -181,17 +180,17 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 31.2%/yr",
+          "detail": "EPS 3yr CAGR 31.7%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 60.9",
+          "detail": "P/E 73.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 5037.4",
+          "detail": "P/E x P/B = 7827.3",
           "passed": false
         }
       ],
@@ -203,17 +202,17 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 187.9%",
+          "detail": "ROE 149.8%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.32",
+          "detail": "Debt/equity 0.81",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "748,000,000 shares vs. 771,900,000 a year earlier",
+          "detail": "764,600,000 shares vs. 771,900,000 a year earlier",
           "passed": true
         },
         {

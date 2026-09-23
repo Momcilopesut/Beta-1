@@ -1,0 +1,227 @@
+{
+  "_errors": {},
+  "cik": "0000356309",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 4749000,
+        "debt": null,
+        "earnings": 117890000,
+        "fiscal_year": "2021-09-30",
+        "market_return_pct": null,
+        "revenue": 852105000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 1107000,
+        "debt": null,
+        "earnings": 274922000,
+        "fiscal_year": "2022-09-30",
+        "market_return_pct": -16.768420562054338,
+        "revenue": 1198985000,
+        "spending": null,
+        "stock_return_pct": 11.174949727089919
+      },
+      {
+        "cash": 954000,
+        "debt": null,
+        "earnings": 264724000,
+        "fiscal_year": "2023-09-30",
+        "market_return_pct": 19.681953076880006,
+        "revenue": 1111520000,
+        "spending": null,
+        "stock_return_pct": 4.987080103359172
+      },
+      {
+        "cash": 1017000,
+        "debt": null,
+        "earnings": 289775000,
+        "fiscal_year": "2024-09-30",
+        "market_return_pct": 34.21914475531018,
+        "revenue": 1229949000,
+        "spending": null,
+        "stock_return_pct": 16.17031749938469
+      },
+      {
+        "cash": 591000,
+        "debt": null,
+        "earnings": 335627000,
+        "fiscal_year": "2025-09-30",
+        "market_return_pct": 16.107780256553255,
+        "revenue": 1351305000,
+        "spending": null,
+        "stock_return_pct": 2.0127118644067705
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.7298065335739231,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 23.570655505335644,
+      "shareholders_equity": 2391666000,
+      "total_assets": 7578775000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 5.325401783370709
+    },
+    "profitability": {
+      "roe_pct": 14.033188580679742,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 34.742241989496016,
+      "graham_number": 42.02417594358363,
+      "graham_upside_pct": -19.524749246297148,
+      "ncav_margin_pct": null,
+      "pb_ratio": 2.215466599483373,
+      "pe_ttm": 15.681681681681681
+    }
+  },
+  "industry": "Regulated Gas",
+  "last_updated": "2026-09-23T21:28:00Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 5270146840,
+  "metrics": {
+    "book_value_per_share": 23.570655505335644,
+    "current_ratio": 0.7298065335739231,
+    "eps_growth_cagr_3yr_pct": 5.325401783370709,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 34.742241989496016,
+    "graham_upside_pct": -19.524749246297148,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 0,
+    "pb_ratio": 2.215466599483373,
+    "pe_ttm": 15.681681681681681,
+    "roe_pct": 14.033188580679742,
+    "shareholders_equity": 2391666000,
+    "total_assets": 7578775000
+  },
+  "name": "New Jersey Resources",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 52.22
+  },
+  "qualitative": null,
+  "sector": "Utilities",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000356309.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-20",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/356309/000114036126033890/ef20079101_8k.htm"
+      },
+      {
+        "filed": "2026-08-04",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/356309/000035630926000037/njr-20260630.htm"
+      },
+      {
+        "filed": "2025-11-20",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/356309/000035630925000093/njr-20250930.htm"
+      }
+    ]
+  },
+  "ticker": "NJR",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $5.3B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 5.3%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 15.7",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 34.7",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 4,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 14.0%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "100,788,000 shares vs. 99,289,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 0,
+      "total": 4
+    }
+  },
+  "website": "https://www.njresources.com"
+}

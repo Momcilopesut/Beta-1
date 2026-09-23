@@ -1,0 +1,226 @@
+{
+  "_errors": {},
+  "cik": "0001562401",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 48198000,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 69155000,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -30.887411144232974
+      },
+      {
+        "cash": 59385000,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 21.2342402123424
+      },
+      {
+        "cash": 199413000,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 2.4083196496989667
+      },
+      {
+        "cash": 108516000,
+        "debt": null,
+        "earnings": null,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -14.216996258685194
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 19.58279414221282,
+      "shareholders_equity": 7033748000,
+      "total_assets": 13242120000,
+      "total_liabilities": 5532614000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 18.451678589516685
+    },
+    "profitability": {
+      "roe_pct": null,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 41.400270064325134,
+      "graham_number": 22.801824147987595,
+      "graham_upside_pct": -26.279262373140654,
+      "ncav_margin_pct": null,
+      "pb_ratio": 1.5794477425122424,
+      "pe_ttm": 26.21186440677966
+    }
+  },
+  "industry": "REIT - Residential",
+  "last_updated": "2026-09-23T21:23:54Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 11109437400,
+  "metrics": {
+    "book_value_per_share": 19.58279414221282,
+    "eps_growth_cagr_3yr_pct": 18.451678589516685,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 41.400270064325134,
+    "graham_upside_pct": -26.279262373140654,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 0,
+    "pb_ratio": 1.5794477425122424,
+    "pe_ttm": 26.21186440677966,
+    "shareholders_equity": 7033748000,
+    "total_assets": 13242120000,
+    "total_liabilities": 5532614000
+  },
+  "name": "American Homes 4 Rent",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 30.93
+  },
+  "qualitative": null,
+  "sector": "Real Estate",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001562401.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-09",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1562401/000156240126000050/amh-20260909.htm"
+      },
+      {
+        "filed": "2026-07-31",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1562401/000156240126000047/amh-20260630.htm"
+      },
+      {
+        "filed": "2026-02-20",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1562401/000156240126000010/amh-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "AMH",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $11.1B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability",
+          "detail": "No annual net income data available",
+          "passed": null
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 18.5%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 26.2",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 41.4",
+          "passed": false
+        }
+      ],
+      "evaluated": 5,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "370,906,582 shares vs. 367,989,537 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 1,
+      "passed": 0,
+      "total": 4
+    }
+  },
+  "website": "https://www.amh.com"
+}

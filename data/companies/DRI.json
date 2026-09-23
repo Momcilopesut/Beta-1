@@ -5,52 +5,52 @@
     "years": [
       {
         "cash": 420600000,
-        "debt": 4887300000,
+        "debt": 901000000,
         "earnings": 952800000,
         "fiscal_year": "2022-05-29",
         "market_return_pct": null,
         "revenue": 9630000000,
-        "spending": 8467800000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 367800000,
-        "debt": 4793900000,
+        "debt": null,
         "earnings": 981900000,
         "fiscal_year": "2023-05-28",
         "market_return_pct": 1.7557455258760564,
         "revenue": 10487800000,
-        "spending": 9286000000,
+        "spending": null,
         "stock_return_pct": 28.303999999999995
       },
       {
         "cash": 194800000,
-        "debt": 5427800000,
+        "debt": null,
         "earnings": 1027600000,
         "fiscal_year": "2024-05-26",
         "market_return_pct": 26.091199009948102,
         "revenue": 11390000000,
-        "spending": 10075800000,
+        "spending": null,
         "stock_return_pct": -7.519640852974188
       },
       {
         "cash": 240000000,
-        "debt": 6229700000,
+        "debt": 0,
         "earnings": 1049600000,
         "fiscal_year": "2025-05-25",
         "market_return_pct": 11.577735414582593,
         "revenue": 12076700000,
-        "spending": 10714400000,
+        "spending": null,
         "stock_return_pct": 44.31634304207121
       },
       {
         "cash": 219500000,
-        "debt": 6053600000,
+        "debt": 693600000,
         "earnings": 1206700000,
         "fiscal_year": "2026-05-31",
         "market_return_pct": 28.31599424849869,
         "revenue": 13210900000,
-        "spending": 11628100000,
+        "spending": null,
         "stock_return_pct": -5.671572062602202
       }
     ]
@@ -58,36 +58,36 @@
   "fundamentals": {
     "balance_sheet": {
       "current_ratio": 0.3137352765022959,
-      "debt_to_ebitda": 2.8236391622743597,
-      "debt_to_equity": 2.742287655719139
+      "debt_to_ebitda": 0.3235225523578525,
+      "debt_to_equity": 0.31420158550396377
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 19.31321084864392,
+      "book_value_per_share": 19.35080032850164,
       "shareholders_equity": 2207500000,
       "total_assets": 12862400000,
       "total_liabilities": 10654900000
     },
     "cash_flow": {
-      "fcf_margin_pct": 8.471035281472119
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 9.07675623265849
+      "eps_growth_cagr_3yr_pct": 9.114765771480716
     },
     "profitability": {
-      "roe_pct": 56.011604293588626,
-      "trend": "improving"
+      "roe_pct": 54.66364665911665,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 225.31968115606233,
-      "graham_number": 67.41931602462566,
-      "graham_upside_pct": -68.39966438967627,
-      "ncav_margin_pct": -139.9037991614453,
-      "pb_ratio": 11.046842582106455,
-      "pe_ttm": 20.396749521988525
+      "graham_multiple": 227.33804080457452,
+      "graham_number": 67.22632978767737,
+      "graham_upside_pct": -68.54025467374356,
+      "ncav_margin_pct": -139.84030862976442,
+      "pb_ratio": 11.042954108996602,
+      "pe_ttm": 20.586705202312135
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-23T02:47:45Z",
+  "last_updated": "2026-09-23T21:10:53Z",
   "layered_analysis": {
     "flags": [
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
@@ -105,33 +105,32 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 24436042890,
+  "market_cap": 24486667361,
   "metrics": {
-    "book_value_per_share": 19.31321084864392,
+    "book_value_per_share": 19.35080032850164,
     "current_ratio": 0.3137352765022959,
-    "debt_to_ebitda": 2.8236391622743597,
-    "debt_to_equity": 2.742287655719139,
-    "eps_growth_cagr_3yr_pct": 9.07675623265849,
-    "fcf_margin_pct": 8.471035281472119,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 225.31968115606233,
-    "graham_upside_pct": -68.39966438967627,
-    "margin_trend_score": 100,
+    "debt_to_ebitda": 0.3235225523578525,
+    "debt_to_equity": 0.31420158550396377,
+    "eps_growth_cagr_3yr_pct": 9.114765771480716,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 227.33804080457452,
+    "graham_upside_pct": -68.54025467374356,
+    "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -139.9037991614453,
-    "pb_ratio": 11.046842582106455,
-    "pe_ttm": 20.396749521988525,
-    "roe_pct": 56.011604293588626,
+    "munger_quality_passed": 4,
+    "ncav_margin_pct": -139.84030862976442,
+    "pb_ratio": 11.042954108996602,
+    "pe_ttm": 20.586705202312135,
+    "roe_pct": 54.66364665911665,
     "shareholders_equity": 2207500000,
     "total_assets": 12862400000,
     "total_liabilities": 10654900000
   },
   "name": "Darden Restaurants",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 213.35
+    "as_of": "2026-09-23",
+    "close": 213.69
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -161,12 +160,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $24.4B",
+          "detail": "Market cap $24.5B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.31, debt $6.1B vs working capital $-2.1B",
+          "detail": "Current ratio 0.31, debt $0.7B vs working capital $-2.1B",
           "passed": false
         },
         {
@@ -175,9 +174,9 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -186,44 +185,44 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.4",
+          "detail": "P/E 20.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 225.3",
+          "detail": "P/E x P/B = 227.3",
           "passed": false
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 7,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 56.0%",
+          "detail": "ROE 54.7%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 2.74",
-          "passed": false
+          "detail": "Debt/equity 0.31",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "115,200,000 shares vs. 118,400,000 a year earlier",
+          "detail": "116,300,000 shares vs. 118,400,000 a year earlier",
           "passed": true
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 100",
+          "detail": "Margin trend score 60",
           "passed": true
         }
       ],
       "evaluated": 4,
-      "passed": 3,
+      "passed": 4,
       "total": 4
     }
   },

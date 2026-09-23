@@ -1,0 +1,229 @@
+{
+  "_errors": {},
+  "cik": "0001591698",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 139756000,
+        "debt": null,
+        "earnings": 90777000,
+        "fiscal_year": "2022-06-30",
+        "market_return_pct": null,
+        "revenue": 852651000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 288767000,
+        "debt": null,
+        "earnings": 140822000,
+        "fiscal_year": "2023-06-30",
+        "market_return_pct": 17.50298210735586,
+        "revenue": 1174598000,
+        "spending": null,
+        "stock_return_pct": 5.796353629170975
+      },
+      {
+        "cash": 401811000,
+        "debt": null,
+        "earnings": 206766000,
+        "fiscal_year": "2024-06-30",
+        "market_return_pct": 23.0238224147266,
+        "revenue": 1402515000,
+        "spending": null,
+        "stock_return_pct": -28.46691594862624
+      },
+      {
+        "cash": 398070000,
+        "debt": null,
+        "earnings": 227127000,
+        "fiscal_year": "2025-06-30",
+        "market_return_pct": 13.296292221366485,
+        "revenue": 1595221000,
+        "spending": null,
+        "stock_return_pct": 37.265151515151516
+      },
+      {
+        "cash": 271917000,
+        "debt": null,
+        "earnings": 269741000,
+        "fiscal_year": "2026-06-30",
+        "market_return_pct": 20.865905964230794,
+        "revenue": 1771326000,
+        "spending": null,
+        "stock_return_pct": -42.30917821071803
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.088537113499119,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 23.020861559678792,
+      "shareholders_equity": 1221417000,
+      "total_assets": 4884358000,
+      "total_liabilities": 3662941000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 28.06372175421125
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 25.484066790069647
+    },
+    "profitability": {
+      "roe_pct": 22.084267698910367,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 182.0125030196657,
+      "graham_number": 50.4817726972463,
+      "graham_upside_pct": -64.84066534528048,
+      "ncav_margin_pct": -99.21087370458746,
+      "pb_ratio": 6.236951628755782,
+      "pe_ttm": 29.182926829268297
+    }
+  },
+  "industry": "Software - Application",
+  "last_updated": "2026-09-23T21:23:19Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 7687861878,
+  "metrics": {
+    "book_value_per_share": 23.020861559678792,
+    "current_ratio": 1.088537113499119,
+    "eps_growth_cagr_3yr_pct": 25.484066790069647,
+    "fcf_margin_pct": 28.06372175421125,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 182.0125030196657,
+    "graham_upside_pct": -64.84066534528048,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -99.21087370458746,
+    "pb_ratio": 6.236951628755782,
+    "pe_ttm": 29.182926829268297,
+    "roe_pct": 22.084267698910367,
+    "shareholders_equity": 1221417000,
+    "total_assets": 4884358000,
+    "total_liabilities": 3662941000
+  },
+  "name": "Paylocity",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 143.58
+  },
+  "qualitative": null,
+  "sector": "Technology",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001591698.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-17",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1591698/000159169826000131/pcty-20260917.htm"
+      },
+      {
+        "filed": "2026-08-05",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1591698/000159169826000069/pcty-20260630.htm"
+      },
+      {
+        "filed": "2026-05-08",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1591698/000159169826000037/pcty-20260331.htm"
+      }
+    ]
+  },
+  "ticker": "PCTY",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $7.7B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 25.5%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 29.2",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 182.0",
+          "passed": false
+        }
+      ],
+      "evaluated": 5,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 22.1%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "54,770,000 shares vs. 56,550,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 60",
+          "passed": true
+        }
+      ],
+      "evaluated": 3,
+      "passed": 3,
+      "total": 4
+    }
+  },
+  "website": "https://www.paylocity.com"
+}

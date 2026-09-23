@@ -10,7 +10,7 @@
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 18408850000,
-        "spending": 14107745000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
@@ -20,7 +20,7 @@
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 22260774000,
-        "spending": 17168952000,
+        "spending": null,
         "stock_return_pct": 57.402932173352674
       },
       {
@@ -29,18 +29,18 @@
         "earnings": 2450882000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 18795316000,
-        "spending": 15644135000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 21.709314227226194
       },
       {
         "cash": 589464000,
-        "debt": 3345339000,
+        "debt": 3231007000,
         "earnings": 1537134000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 17540390000,
-        "spending": 15597353000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -4.07030527289547
       },
       {
@@ -49,45 +49,45 @@
         "earnings": 1185595000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 18176581000,
-        "spending": 16700595000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 48.54913649513456
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 3.183236086470284,
+      "current_ratio": 3.055322784171923,
       "debt_to_ebitda": 2.077149477945877,
-      "debt_to_equity": 0.44398617680793484
+      "debt_to_equity": 0.4701437349380642
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 64.84255905593606,
+      "book_value_per_share": 62.494254440902054,
       "shareholders_equity": 8957182000,
-      "total_assets": 16412854000,
-      "total_liabilities": 7482443000
+      "total_assets": 16419780000,
+      "total_liabilities": 7489369000
     },
     "cash_flow": {
-      "fcf_margin_pct": 2.7590942433013117
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -27.516581570935617
+      "eps_growth_cagr_3yr_pct": -27.445943360831993
     },
     "profitability": {
-      "roe_pct": 17.595900934057727,
-      "trend": "declining"
+      "roe_pct": 13.23624997236854,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 75.81861006586138,
-      "graham_number": 108.17042008628636,
-      "graham_upside_pct": -53.77134916608131,
-      "ncav_margin_pct": -102.97659868226042,
-      "pb_ratio": 3.5869567649433116,
-      "pe_ttm": 21.137308039747065
+      "graham_multiple": 109.93111531334304,
+      "graham_number": 105.9948328557254,
+      "graham_upside_pct": -54.75913062626429,
+      "ncav_margin_pct": -102.9934124184727,
+      "pb_ratio": 3.748984640204921,
+      "pe_ttm": 29.32290362953692
     }
   },
   "industry": "Steel",
-  "last_updated": "2026-09-23T03:56:57Z",
+  "last_updated": "2026-09-23T21:32:31Z",
   "layered_analysis": {
     "flags": [
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
@@ -105,33 +105,32 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 33537341417,
+  "market_cap": 33580339846,
   "metrics": {
-    "book_value_per_share": 64.84255905593606,
-    "current_ratio": 3.183236086470284,
+    "book_value_per_share": 62.494254440902054,
+    "current_ratio": 3.055322784171923,
     "debt_to_ebitda": 2.077149477945877,
-    "debt_to_equity": 0.44398617680793484,
-    "eps_growth_cagr_3yr_pct": -27.516581570935617,
-    "fcf_margin_pct": 2.7590942433013117,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 75.81861006586138,
-    "graham_upside_pct": -53.77134916608131,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 3,
-    "ncav_margin_pct": -102.97659868226042,
-    "pb_ratio": 3.5869567649433116,
-    "pe_ttm": 21.137308039747065,
-    "roe_pct": 17.595900934057727,
+    "debt_to_equity": 0.4701437349380642,
+    "eps_growth_cagr_3yr_pct": -27.445943360831993,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 109.93111531334304,
+    "graham_upside_pct": -54.75913062626429,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -102.9934124184727,
+    "pb_ratio": 3.748984640204921,
+    "pe_ttm": 29.32290362953692,
+    "roe_pct": 13.23624997236854,
     "shareholders_equity": 8957182000,
-    "total_assets": 16412854000,
-    "total_liabilities": 7482443000
+    "total_assets": 16419780000,
+    "total_liabilities": 7489369000
   },
   "name": "Steel Dynamics",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 233.99
+    "as_of": "2026-09-23",
+    "close": 234.29
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -161,54 +160,54 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $33.5B",
+          "detail": "Market cap $33.6B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 3.18, debt $4.2B vs working capital $4.4B",
+          "detail": "Current ratio 3.06, debt $4.2B vs working capital $4.4B",
           "passed": true
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years",
+          "detail": "Positive in 5/5 available years",
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -27.5%/yr",
+          "detail": "EPS 3yr CAGR -27.4%/yr",
           "passed": false
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 21.1",
+          "detail": "P/E 29.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 75.8",
+          "detail": "P/E x P/B = 109.9",
           "passed": false
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 7,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 17.6%",
-          "passed": true
+          "detail": "ROE 13.2%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.44",
+          "detail": "Debt/equity 0.47",
           "passed": true
         },
         {
@@ -218,12 +217,12 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 3,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },

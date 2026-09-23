@@ -1,0 +1,229 @@
+{
+  "_errors": {},
+  "cik": "0000109563",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": null,
+        "debt": 649150000,
+        "earnings": 257414000,
+        "fiscal_year": "2022-06-30",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": null,
+        "debt": 596926000,
+        "earnings": 346739000,
+        "fiscal_year": "2023-06-30",
+        "market_return_pct": 17.50298210735586,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 50.59789955287513
+      },
+      {
+        "cash": null,
+        "debt": 572279000,
+        "earnings": 385762000,
+        "fiscal_year": "2024-06-30",
+        "market_return_pct": 23.0238224147266,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 31.36090588966373
+      },
+      {
+        "cash": null,
+        "debt": 572300000,
+        "earnings": 392988000,
+        "fiscal_year": "2025-06-30",
+        "market_return_pct": 13.296292221366485,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 22.181340341655712
+      },
+      {
+        "cash": null,
+        "debt": 262300000,
+        "earnings": 414525000,
+        "fiscal_year": "2026-06-30",
+        "market_return_pct": 20.865905964230794,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 45.472144547214455
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 2.5778913180854035,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.140889024245481
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 50.73043693787076,
+      "shareholders_equity": 1861749000,
+      "total_assets": 3009973000,
+      "total_liabilities": 1148224000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 7.3957968526833895
+    },
+    "profitability": {
+      "roe_pct": 22.26535370772322,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 200.18467024819165,
+      "graham_number": 111.79763593461138,
+      "graham_upside_pct": -66.47445469319237,
+      "ncav_margin_pct": -96.48221814907609,
+      "pb_ratio": 6.573371335405579,
+      "pe_ttm": 30.453881278538816
+    }
+  },
+  "industry": "Industrial - Distribution",
+  "last_updated": "2026-09-23T21:22:18Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 12324884465,
+  "metrics": {
+    "book_value_per_share": 50.73043693787076,
+    "current_ratio": 2.5778913180854035,
+    "debt_to_equity": 0.140889024245481,
+    "eps_growth_cagr_3yr_pct": 7.3957968526833895,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 200.18467024819165,
+    "graham_upside_pct": -66.47445469319237,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -96.48221814907609,
+    "pb_ratio": 6.573371335405579,
+    "pe_ttm": 30.453881278538816,
+    "roe_pct": 22.26535370772322,
+    "shareholders_equity": 1861749000,
+    "total_assets": 3009973000,
+    "total_liabilities": 1148224000
+  },
+  "name": "Applied Industrial Technologies",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 333.47
+  },
+  "qualitative": null,
+  "sector": "Industrials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000109563.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-14",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/109563/000010956326000035/ait-20260811.htm"
+      },
+      {
+        "filed": "2026-08-13",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/109563/000010956326000033/ait-20260630.htm"
+      },
+      {
+        "filed": "2026-04-28",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/109563/000010956326000021/ait-20260331.htm"
+      }
+    ]
+  },
+  "ticker": "AIT",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $12.3B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 2.58, debt $0.3B vs working capital $1.0B",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 7.4%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 30.5",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 200.2",
+          "passed": false
+        }
+      ],
+      "evaluated": 7,
+      "passed": 5,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 22.3%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.14",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "37,857,000 shares vs. 38,816,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 3,
+      "total": 4
+    }
+  },
+  "website": "https://www.applied.com"
+}

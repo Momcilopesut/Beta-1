@@ -1,0 +1,228 @@
+{
+  "_errors": {},
+  "cik": "0001261333",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 509059000,
+        "debt": null,
+        "earnings": -69976000,
+        "fiscal_year": "2022-01-31",
+        "market_return_pct": null,
+        "revenue": 2107213000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 721895000,
+        "debt": null,
+        "earnings": -97454000,
+        "fiscal_year": "2023-01-31",
+        "market_return_pct": -9.653041719455004,
+        "revenue": 2515915000,
+        "spending": null,
+        "stock_return_pct": -51.78500437306194
+      },
+      {
+        "cash": 797060000,
+        "debt": null,
+        "earnings": 73980000,
+        "fiscal_year": "2024-01-31",
+        "market_return_pct": 18.795512694351498,
+        "revenue": 2761882000,
+        "spending": null,
+        "stock_return_pct": 0.4617414248021127
+      },
+      {
+        "cash": 648623000,
+        "debt": null,
+        "earnings": 1067885000,
+        "fiscal_year": "2025-01-31",
+        "market_return_pct": 24.631378396288945,
+        "revenue": 2976739000,
+        "spending": null,
+        "stock_return_pct": 58.782009192383455
+      },
+      {
+        "cash": 602442000,
+        "debt": null,
+        "earnings": 309085000,
+        "fiscal_year": "2026-01-31",
+        "market_return_pct": 14.979561995280976,
+        "revenue": 3219500000,
+        "spending": null,
+        "stock_return_pct": -45.68386229711569
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.7310150788856374,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 10.26107458451107,
+      "shareholders_equity": 1917820000,
+      "total_assets": 4229550000,
+      "total_liabilities": 2311730000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 32.879701817052336
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": null
+    },
+    "profitability": {
+      "roe_pct": 16.116475998790296,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 317.972867650321,
+      "graham_number": 18.484961013326984,
+      "graham_upside_pct": -73.39910632705859,
+      "ncav_margin_pct": -106.32046037010335,
+      "pb_ratio": 6.772195195315514,
+      "pe_ttm": 46.9527027027027
+    }
+  },
+  "industry": "Software - Application",
+  "last_updated": "2026-09-23T21:24:39Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 13268768050,
+  "metrics": {
+    "book_value_per_share": 10.26107458451107,
+    "current_ratio": 0.7310150788856374,
+    "fcf_margin_pct": 32.879701817052336,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 1,
+    "graham_multiple": 317.972867650321,
+    "graham_upside_pct": -73.39910632705859,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -106.32046037010335,
+    "pb_ratio": 6.772195195315514,
+    "pe_ttm": 46.9527027027027,
+    "roe_pct": 16.116475998790296,
+    "shareholders_equity": 1917820000,
+    "total_assets": 4229550000,
+    "total_liabilities": 2311730000
+  },
+  "name": "Docusign",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 69.49
+  },
+  "qualitative": null,
+  "sector": "Technology",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001261333.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-04",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1261333/000126133326000099/docu-20260731.htm"
+      },
+      {
+        "filed": "2026-09-03",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1261333/000126133326000088/docu-20260903.htm"
+      },
+      {
+        "filed": "2026-03-18",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1261333/000126133326000021/docu-20260131.htm"
+      }
+    ]
+  },
+  "ticker": "DOCU",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $13.3B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 3/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 47.0",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 318.0",
+          "passed": false
+        }
+      ],
+      "evaluated": 4,
+      "passed": 1,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 16.1%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "209,118,000 shares vs. 210,339,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 60",
+          "passed": true
+        }
+      ],
+      "evaluated": 3,
+      "passed": 3,
+      "total": 4
+    }
+  },
+  "website": "https://www.DocuSign.com"
+}

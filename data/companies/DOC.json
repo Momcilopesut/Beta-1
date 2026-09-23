@@ -5,98 +5,97 @@
     "years": [
       {
         "cash": 158287000,
-        "debt": 6374536000,
-        "earnings": 505540000,
-        "fiscal_year": "2021-12-31",
-        "market_return_pct": null,
-        "revenue": 1896184000,
-        "spending": 1555868000,
-        "stock_return_pct": null
+        "debt": null,
+        "earnings": 353970000,
+        "fiscal_year": "2022-09-30",
+        "market_return_pct": -5.320079522862821,
+        "revenue": 520406000,
+        "spending": null,
+        "stock_return_pct": -11.539945966808176
       },
       {
         "cash": 72032000,
-        "debt": 6706128000,
+        "debt": null,
         "earnings": 500449000,
         "fiscal_year": "2022-12-31",
-        "market_return_pct": -19.48164055920498,
+        "market_return_pct": 7.069264796461168,
         "revenue": 2061178000,
-        "spending": 1704593000,
-        "stock_return_pct": -30.534774175671934
+        "spending": null,
+        "stock_return_pct": 9.380453752181495
       },
       {
         "cash": 117635000,
-        "debt": 7083042000,
+        "debt": null,
         "earnings": 306009000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 2181003000,
-        "spending": 1747093000,
+        "spending": null,
         "stock_return_pct": -20.10370961308336
       },
       {
         "cash": 119818000,
-        "debt": 9023269000,
+        "debt": null,
         "earnings": 243142000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 2700449000,
-        "spending": 2229228000,
+        "spending": null,
         "stock_return_pct": 1.198202695956058
       },
       {
-        "cash": 537702000,
-        "debt": 10440414000,
+        "cash": 467457000,
+        "debt": null,
         "earnings": 71347000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 2822512000,
-        "spending": 2278380000,
+        "spending": null,
         "stock_return_pct": -20.6709422792304
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.516130364795429,
-      "debt_to_ebitda": 6.665866879489226,
-      "debt_to_equity": 1.3155779342872622
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 13.768149764091117,
+      "book_value_per_share": 10.8771537183316,
       "shareholders_equity": 7500094000,
       "total_assets": 20336018000,
       "total_liabilities": 12033567000
     },
     "cash_flow": {
-      "fcf_margin_pct": 44.35619759986849
+      "fcf_margin_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -52.27593913804323
     },
     "profitability": {
-      "roe_pct": 3.2984483077073183,
-      "trend": "declining"
+      "roe_pct": 0.9512814106063204,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 106.62621447464868,
-      "graham_number": 5.565818625252265,
-      "graham_upside_pct": -72.9814629842123,
-      "ncav_margin_pct": -177.16057576657596,
-      "pb_ratio": 1.811610440103254,
-      "pe_ttm": 58.85714285714286
+      "graham_multiple": 385.60675969221717,
+      "graham_number": 4.947079528999518,
+      "graham_upside_pct": -75.84433823730704,
+      "ncav_margin_pct": null,
+      "pb_ratio": 1.8828455063096543,
+      "pe_ttm": 204.79999999999998
     }
   },
   "industry": "REIT - Healthcare Facilities",
-  "last_updated": "2026-09-23T03:05:55Z",
+  "last_updated": "2026-09-23T21:15:52Z",
   "layered_analysis": {
     "flags": [
       "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -107,51 +106,30 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 14202052000,
+  "market_cap": 14119321600,
   "metrics": {
-    "book_value_per_share": 13.768149764091117,
-    "current_ratio": 2.516130364795429,
-    "debt_to_ebitda": 6.665866879489226,
-    "debt_to_equity": 1.3155779342872622,
+    "book_value_per_share": 10.8771537183316,
     "eps_growth_cagr_3yr_pct": -52.27593913804323,
-    "fcf_margin_pct": 44.35619759986849,
     "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 2,
-    "graham_multiple": 106.62621447464868,
-    "graham_upside_pct": -72.9814629842123,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 385.60675969221717,
+    "graham_upside_pct": -75.84433823730704,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "ncav_margin_pct": -177.16057576657596,
-    "pb_ratio": 1.811610440103254,
-    "pe_ttm": 58.85714285714286,
-    "roe_pct": 3.2984483077073183,
+    "pb_ratio": 1.8828455063096543,
+    "pe_ttm": 204.79999999999998,
+    "roe_pct": 0.9512814106063204,
     "shareholders_equity": 7500094000,
     "total_assets": 20336018000,
     "total_liabilities": 12033567000
   },
   "name": "Healthpeak Properties",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 20.6
+    "as_of": "2026-09-23",
+    "close": 20.48
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, Healthpeak reported net income applicable to common shares of $70.5 million, down from $242.4 million in 2024, attributed partly to impairment charges on lab joint ventures and fewer property dispositions, while Nareit FFO rose to $1.27 billion. The portfolio comprised 689 properties across outpatient medical (507), lab (145), and senior housing (34) segments, following the March 2024 merger with Physicians Realty Trust. During 2025 the company made several acquisitions and dispositions (including the Gateway Crossing lab campus), issued and repaid senior unsecured notes, repurchased shares, and in December 2025 confidentially submitted a draft S-11 for a planned IPO of Janus Living, a new senior-housing REIT it would continue to consolidate.",
-    "filing_summary_10q": "This 10-Q (structured XBRL data provided, limited narrative) covers the quarter and six months ended June 30, 2026. It references the completion of Janus Living, Inc. IPO-related transactions in March and June 2026 (including a follow-on offering and over-allotment), continued senior housing property acquisitions and dispositions across several states, and various debt facilities including term loans maturing in 2027-2031 and a revolving credit facility. The excerpt does not include narrative discussion of overall financial results, so specific revenue or earnings figures for the quarter are not available from this data.",
-    "filing_summary_8k": "This Form 8-K, dated August 4, 2026, discloses that Healthpeak issued a press release and supplemental report presenting its financial results for the three and six months ended June 30, 2026, furnished as exhibits under Items 2.02 and 7.01. The filing also furnishes non-GAAP financial measure reconciliations for both Healthpeak and its Janus Living subsidiary. The information is furnished, not filed, under the Exchange Act and no specific financial figures are included in the 8-K body itself.",
-    "moat_explanation": "The 10-K describes outpatient medical and lab buildings as requiring specialized, costly-to-replicate infrastructure (additional plumbing/electrical for exam rooms, x-ray/MRI accommodations, heavy floor loads, fume hoods, and lab bench systems), with 79% of outpatient buildings on/adjacent to hospital campuses and 96% affiliated with hospital systems, which creates friction for tenants (hospitals, physician groups, biotech/pharma companies) to relocate. The company also cites decades of relationships with hospital systems and life science tenants and 'scale' as competitive advantages, reinforcing tenant stickiness, though these relationship claims are more qualitative than the physical switching-cost evidence.",
-    "moat_present": true,
-    "moat_type": "switching_costs",
-    "red_flags": [
-      "Tenant concentration: HCA Healthcare represents 15% of outpatient medical segment revenue and 7% of total revenue; CommonSpirit Health represents 6% of segment revenue",
-      "Net income applicable to common shares fell sharply from $242.4 million in 2024 to $70.5 million in 2025, driven partly by other-than-temporary impairment charges on lab unconsolidated joint ventures and fewer real estate dispositions",
-      "Lab segment tenants face funding/regulatory risk from potential NIH grant funding cuts, drug pricing policy changes, and competition from international biotech hubs like China, which the filing says has already adversely impacted tenant capital-raising ability",
-      "Exposure to Medicaid/ACA policy changes (including the One Big Beautiful Bill Act) that could pressure hospital and outpatient medical tenant reimbursement, with facilities in non-expansion states flagged as facing higher risk",
-      "Macroeconomic pressures (elevated interest rates, inflation, tariffs, higher construction/labor costs) explicitly acknowledged as adversely affecting borrowing costs, development yields, and tenant/operator liquidity",
-      "Complex proposed Janus Living spin-off/IPO structure (senior housing assets contributed to a newly formed externally-managed entity) introduces execution and structural uncertainty, contingent on SEC review and market conditions"
-    ]
-  },
+  "qualitative": null,
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000765880.json",
@@ -179,13 +157,13 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $14.2B",
+          "detail": "Market cap $14.1B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.52, debt $10.4B vs working capital $0.1B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -193,9 +171,9 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
@@ -204,30 +182,30 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 58.9",
+          "detail": "P/E 204.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 106.6",
+          "detail": "P/E x P/B = 385.6",
           "passed": false
         }
       ],
       "evaluated": 6,
-      "passed": 2,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 3.3%",
+          "detail": "ROE 1.0%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.32",
-          "passed": false
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -236,11 +214,11 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
+      "evaluated": 2,
       "passed": 0,
       "total": 4
     }

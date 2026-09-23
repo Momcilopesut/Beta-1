@@ -1,0 +1,227 @@
+{
+  "_errors": {},
+  "cik": "0000039263",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 443079000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 1371595000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 579150000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 1696101000,
+        "spending": null,
+        "stock_return_pct": 6.05219322598556
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 597973000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 1987206000,
+        "spending": null,
+        "stock_return_pct": -18.519072550486158
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 582542000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 2063710000,
+        "spending": null,
+        "stock_return_pct": 23.232972278318343
+      },
+      {
+        "cash": null,
+        "debt": null,
+        "earnings": 648557000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 2235244000,
+        "spending": null,
+        "stock_return_pct": -5.675977653631288
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": null,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 73.58206600499109,
+      "shareholders_equity": 4573036000,
+      "total_assets": 53041424000,
+      "total_liabilities": 48468388000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": 5.696335612577419
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 4.034788335921613
+    },
+    "profitability": {
+      "roe_pct": 14.182197559783042,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 32.6004056674651,
+      "graham_number": 128.1542708313461,
+      "graham_upside_pct": -16.923200550145133,
+      "ncav_margin_pct": null,
+      "pb_ratio": 2.096434747966121,
+      "pe_ttm": 15.55040322580645
+    }
+  },
+  "industry": "Banks - Regional",
+  "last_updated": "2026-09-23T21:20:17Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 9587073888,
+  "metrics": {
+    "book_value_per_share": 73.58206600499109,
+    "eps_growth_cagr_3yr_pct": 4.034788335921613,
+    "fcf_margin_pct": 5.696335612577419,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 32.6004056674651,
+    "graham_upside_pct": -16.923200550145133,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "pb_ratio": 2.096434747966121,
+    "pe_ttm": 15.55040322580645,
+    "roe_pct": 14.182197559783042,
+    "shareholders_equity": 4573036000,
+    "total_assets": 53041424000,
+    "total_liabilities": 48468388000
+  },
+  "name": "Frost Bank",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 154.26
+  },
+  "qualitative": null,
+  "sector": "Financial Services",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000039263.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-17",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/39263/000003926326000049/cfr-20260817.htm"
+      },
+      {
+        "filed": "2026-07-30",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/39263/000003926326000046/cfr-20260630.htm"
+      },
+      {
+        "filed": "2026-02-05",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/39263/000003926326000011/cfr-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "CFR",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $9.6B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 4.0%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 15.6",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 32.6",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 4,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 14.2%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "64,099,238 shares vs. 64,262,646 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 1,
+      "total": 4
+    }
+  },
+  "website": "https://www.frostbank.com"
+}

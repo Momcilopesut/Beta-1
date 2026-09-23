@@ -4,33 +4,33 @@
   "five_year_history": {
     "years": [
       {
-        "cash": 4827000000,
+        "cash": null,
         "debt": 38101000000,
         "earnings": 19868000000,
         "fiscal_year": "2021-12-25",
         "market_return_pct": null,
         "revenue": 79024000000,
-        "spending": 59568000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 11144000000,
+        "cash": null,
         "debt": 42051000000,
         "earnings": 8014000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.869672715081922,
         "revenue": 63054000000,
-        "spending": 60718000000,
+        "spending": null,
         "stock_return_pct": -49.11436272622256
       },
       {
-        "cash": 7079000000,
-        "debt": 49278000000,
+        "cash": null,
+        "debt": 49266000000,
         "earnings": 1689000000,
         "fiscal_year": "2023-12-30",
         "market_return_pct": 24.286797583871554,
         "revenue": 54228000000,
-        "spending": 54135000000,
+        "spending": null,
         "stock_return_pct": 90.12485811577753
       },
       {
@@ -40,7 +40,7 @@
         "fiscal_year": "2024-12-28",
         "market_return_pct": 25.18356441059519,
         "revenue": 53101000000,
-        "spending": 64779000000,
+        "spending": null,
         "stock_return_pct": -59.601990049751244
       },
       {
@@ -50,22 +50,22 @@
         "fiscal_year": "2025-12-27",
         "market_return_pct": 16.01653753718424,
         "revenue": 52853000000,
-        "spending": 52876000000,
+        "spending": null,
         "stock_return_pct": 78.32512315270937
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.6039529015979814,
-      "debt_to_ebitda": 3.987417615338526,
-      "debt_to_equity": 0.5772886157501542
+      "current_ratio": 2.017038796516231,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.4076355649670549
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 20.208268025078368,
+      "book_value_per_share": 22.65681998413957,
       "shareholders_equity": 114281000000,
       "total_assets": 211429000000,
-      "total_liabilities": 85069000000
+      "total_liabilities": null
     },
     "cash_flow": {
       "fcf_margin_pct": -9.36370688513424
@@ -74,20 +74,20 @@
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": -10.761857323644579,
+      "roe_pct": -0.23363463742879392,
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": -423.91023010864063,
+      "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -103.42232980803965,
-      "pb_ratio": 7.221464439925979,
-      "pe_ttm": -58.70142180094786
+      "ncav_margin_pct": null,
+      "pb_ratio": 5.411174210936201,
+      "pe_ttm": null
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-23T03:12:24Z",
+  "last_updated": "2026-09-23T21:28:38Z",
   "layered_analysis": {
     "flags": [
       "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
@@ -107,31 +107,26 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 624749808663,
+  "market_cap": 618394368982,
   "metrics": {
-    "book_value_per_share": 20.208268025078368,
-    "current_ratio": 1.6039529015979814,
-    "debt_to_ebitda": 3.987417615338526,
-    "debt_to_equity": 0.5772886157501542,
+    "book_value_per_share": 22.65681998413957,
+    "current_ratio": 2.017038796516231,
+    "debt_to_equity": 0.4076355649670549,
     "fcf_margin_pct": -9.36370688513424,
-    "graham_criteria_evaluated": 5,
-    "graham_criteria_passed": 2,
-    "graham_multiple": -423.91023010864063,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 1,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -103.42232980803965,
-    "pb_ratio": 7.221464439925979,
-    "pe_ttm": -58.70142180094786,
-    "roe_pct": -10.761857323644579,
+    "pb_ratio": 5.411174210936201,
+    "roe_pct": -0.23363463742879392,
     "shareholders_equity": 114281000000,
-    "total_assets": 211429000000,
-    "total_liabilities": 85069000000
+    "total_assets": 211429000000
   },
   "name": "Intel",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 123.86
+    "as_of": "2026-09-23",
+    "close": 122.6
   },
   "qualitative": {
     "extraction_confidence": "section_match",
@@ -175,12 +170,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $624.7B",
+          "detail": "Market cap $618.4B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.60, debt $46.6B vs working capital $32.1B",
+          "detail": "Current ratio 2.02, debt $46.6B vs working capital $32.1B",
           "passed": false
         },
         {
@@ -189,9 +184,9 @@
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: no",
+          "passed": false
         },
         {
           "criterion": "Earnings growth",
@@ -199,35 +194,35 @@
           "passed": null
         },
         {
-          "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E -58.7",
-          "passed": false
+          "criterion": "Moderate P/E",
+          "detail": "P/E unavailable",
+          "passed": null
         },
         {
-          "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -423.9",
-          "passed": true
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 5,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 1,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -10.8%",
+          "detail": "ROE -0.2%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.58",
+          "detail": "Debt/equity 0.41",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "4,856,000,000 shares vs. 4,280,000,000 a year earlier",
+          "detail": "4,530,000,000 shares vs. 4,280,000,000 a year earlier",
           "passed": false
         },
         {

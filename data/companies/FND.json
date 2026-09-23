@@ -1,0 +1,230 @@
+{
+  "_errors": {},
+  "cik": "0001507079",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": null,
+        "debt": 197865000,
+        "earnings": 71452000,
+        "fiscal_year": "2023-06-29",
+        "market_return_pct": 8.523656180331935,
+        "revenue": 1135899000,
+        "spending": null,
+        "stock_return_pct": 7.243928194297782
+      },
+      {
+        "cash": null,
+        "debt": 407654000,
+        "earnings": 65923000,
+        "fiscal_year": "2023-09-28",
+        "market_return_pct": -2.188947981100644,
+        "revenue": 1107812000,
+        "spending": null,
+        "stock_return_pct": -11.884600236313517
+      },
+      {
+        "cash": null,
+        "debt": 197042000,
+        "earnings": 245980000,
+        "fiscal_year": "2023-12-28",
+        "market_return_pct": 11.241015588537294,
+        "revenue": 4413884000,
+        "spending": null,
+        "stock_return_pct": 27.26561626997431
+      },
+      {
+        "cash": null,
+        "debt": 194527000,
+        "earnings": 205872000,
+        "fiscal_year": "2024-12-26",
+        "market_return_pct": 26.149069625962372,
+        "revenue": 4455770000,
+        "spending": null,
+        "stock_return_pct": -11.25647554658004
+      },
+      {
+        "cash": null,
+        "debt": 193589000,
+        "earnings": 208647000,
+        "fiscal_year": "2025-12-25",
+        "market_return_pct": 14.795290517843467,
+        "revenue": 4684088000,
+        "spending": null,
+        "stock_return_pct": -38.003364005144945
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.3270316747583355,
+      "debt_to_ebitda": 0.3786730043229075,
+      "debt_to_equity": 0.08036620176716057
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 22.620309810412653,
+      "shareholders_equity": 2408836000,
+      "total_assets": 5469358000,
+      "total_liabilities": 3060522000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 46.55156635177242
+    },
+    "profitability": {
+      "roe_pct": 8.66173537758486,
+      "trend": "improving"
+    },
+    "valuation": {
+      "graham_multiple": 51.70989309549139,
+      "graham_number": 31.26015649048844,
+      "graham_upside_pct": -34.036386388502976,
+      "ncav_margin_pct": -130.36902701358093,
+      "pb_ratio": 2.0950199354999675,
+      "pe_ttm": 24.682291666666668
+    }
+  },
+  "industry": "Home Improvement",
+  "last_updated": "2026-09-23T21:18:40Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 5046561100,
+  "metrics": {
+    "book_value_per_share": 22.620309810412653,
+    "current_ratio": 1.3270316747583355,
+    "debt_to_ebitda": 0.3786730043229075,
+    "debt_to_equity": 0.08036620176716057,
+    "eps_growth_cagr_3yr_pct": 46.55156635177242,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 51.70989309549139,
+    "graham_upside_pct": -34.036386388502976,
+    "margin_trend_score": 100,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -130.36902701358093,
+    "pb_ratio": 2.0950199354999675,
+    "pe_ttm": 24.682291666666668,
+    "roe_pct": 8.66173537758486,
+    "shareholders_equity": 2408836000,
+    "total_assets": 5469358000,
+    "total_liabilities": 3060522000
+  },
+  "name": "Floor & Decor",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 47.39
+  },
+  "qualitative": null,
+  "sector": "Consumer Cyclical",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001507079.json",
+    "sec_filings": [
+      {
+        "filed": "2026-07-30",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1507079/000162828026051069/fnd-20260625.htm"
+      },
+      {
+        "filed": "2026-07-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1507079/000162828026051055/fnd-20260730.htm"
+      },
+      {
+        "filed": "2026-02-19",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1507079/000162828026009770/fnd-20251225.htm"
+      }
+    ]
+  },
+  "ticker": "FND",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $5.0B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.33, debt $0.2B vs working capital $0.4B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Dividend record",
+          "detail": "Dividend data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 46.6%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 24.7",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 51.7",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 8.7%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.08",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "108,419,000 shares vs. 108,319,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 100",
+          "passed": true
+        }
+      ],
+      "evaluated": 4,
+      "passed": 2,
+      "total": 4
+    }
+  },
+  "website": "https://www.flooranddecor.com"
+}

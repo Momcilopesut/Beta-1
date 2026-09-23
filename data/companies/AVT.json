@@ -1,0 +1,230 @@
+{
+  "_errors": {},
+  "cik": "0000008858",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 153693000,
+        "debt": 1611822000,
+        "earnings": 692379000,
+        "fiscal_year": "2022-07-02",
+        "market_return_pct": null,
+        "revenue": 24310708000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 288230000,
+        "debt": 3058665000,
+        "earnings": 770828000,
+        "fiscal_year": "2023-07-01",
+        "market_return_pct": 16.273213723638644,
+        "revenue": 26536881000,
+        "spending": null,
+        "stock_return_pct": 19.351786136740003
+      },
+      {
+        "cash": 310941000,
+        "debt": 2899340000,
+        "earnings": 498699000,
+        "fiscal_year": "2024-06-29",
+        "market_return_pct": 22.77116044035374,
+        "revenue": 23757129000,
+        "spending": null,
+        "stock_return_pct": 2.061446977205152
+      },
+      {
+        "cash": 192428000,
+        "debt": 2662013000,
+        "earnings": 240217000,
+        "fiscal_year": "2025-06-28",
+        "market_return_pct": 12.989232295762731,
+        "revenue": 22200754000,
+        "spending": null,
+        "stock_return_pct": 2.2722858807535338
+      },
+      {
+        "cash": 155396000,
+        "debt": 3212816000,
+        "earnings": 334389000,
+        "fiscal_year": "2026-06-27",
+        "market_return_pct": 18.55230846790588,
+        "revenue": 27632683000,
+        "spending": null,
+        "stock_return_pct": 64.01443220660845
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.77702989778544,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.6396842371224069
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 61.19557327144175,
+      "shareholders_equity": 5022503000,
+      "total_assets": 15425393000,
+      "total_liabilities": 10402890000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": -1.2828902644017592
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -21.40623238065398
+    },
+    "profitability": {
+      "roe_pct": 6.657815834057241,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 41.6934078498642,
+      "graham_number": 74.30592572881271,
+      "graham_upside_pct": -26.53887718357617,
+      "ncav_margin_pct": -64.69470811476317,
+      "pb_ratio": 1.652897335422199,
+      "pe_ttm": 25.224438902743145
+    }
+  },
+  "industry": "Technology Distributors",
+  "last_updated": "2026-09-23T21:24:27Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "medium",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 8296735793,
+  "metrics": {
+    "book_value_per_share": 61.19557327144175,
+    "current_ratio": 1.77702989778544,
+    "debt_to_equity": 0.6396842371224069,
+    "eps_growth_cagr_3yr_pct": -21.40623238065398,
+    "fcf_margin_pct": -1.2828902644017592,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 41.6934078498642,
+    "graham_upside_pct": -26.53887718357617,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -64.69470811476317,
+    "pb_ratio": 1.652897335422199,
+    "pe_ttm": 25.224438902743145,
+    "roe_pct": 6.657815834057241,
+    "shareholders_equity": 5022503000,
+    "total_assets": 15425393000,
+    "total_liabilities": 10402890000
+  },
+  "name": "Avnet",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 101.15
+  },
+  "qualitative": null,
+  "sector": "Technology",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000008858.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-21",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/8858/000110465926099682/tm2623221d4_8k.htm"
+      },
+      {
+        "filed": "2026-08-14",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/8858/000110465926096346/avt-20260627x10k.htm"
+      },
+      {
+        "filed": "2026-05-01",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/8858/000000885826000042/avt-20260328x10q.htm"
+      }
+    ]
+  },
+  "ticker": "AVT",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $8.3B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.78, debt $3.2B vs working capital $5.8B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -21.4%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 25.2",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 41.7",
+          "passed": false
+        }
+      ],
+      "evaluated": 7,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 6.7%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.64",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "83,415,000 shares vs. 87,413,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 60",
+          "passed": true
+        }
+      ],
+      "evaluated": 4,
+      "passed": 3,
+      "total": 4
+    }
+  },
+  "website": "https://www.avnet.com"
+}

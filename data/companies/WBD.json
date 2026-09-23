@@ -5,89 +5,89 @@
     "years": [
       {
         "cash": 3905000000,
-        "debt": 14759000000,
+        "debt": null,
         "earnings": 1006000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 12191000000,
-        "spending": 10179000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 3731000000,
-        "debt": 48999000000,
+        "debt": null,
         "earnings": -7371000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 33817000000,
-        "spending": 41187000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -59.728122344944765
       },
       {
         "cash": 3780000000,
-        "debt": 43669000000,
+        "debt": null,
         "earnings": -3126000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 41321000000,
-        "spending": 42869000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 22.995780590717295
       },
       {
         "cash": 5312000000,
-        "debt": 39505000000,
+        "debt": null,
         "earnings": -11311000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
-        "revenue": 39321000000,
-        "spending": 49353000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": -9.34819897084048
       },
       {
         "cash": 4566000000,
-        "debt": 32567000000,
+        "debt": null,
         "earnings": 727000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
-        "revenue": 37296000000,
-        "spending": 35987000000,
+        "revenue": null,
+        "spending": null,
         "stock_return_pct": 172.65846736045413
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.7767453385368271,
-      "debt_to_ebitda": 4.657085657085657,
-      "debt_to_equity": 0.97518119252086
+      "current_ratio": 1.05648,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 13.538430904022302,
+      "book_value_per_share": 14.306349858109918,
       "shareholders_equity": 35919000000,
       "total_assets": 100085000000,
       "total_liabilities": 62919000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 8.279708279708279
+      "fcf_margin_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
-      "roe_pct": -9.222951082247931,
-      "trend": "declining"
+      "roe_pct": 2.0239984409365515,
+      "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -57.22862911127064,
-      "graham_number": 9.398843633593737,
-      "graham_upside_pct": -69.51396810381533,
-      "ncav_margin_pct": -164.22454726257106,
-      "pb_ratio": 2.3574556915768317,
-      "pe_ttm": -24.2755905511811
+      "graham_multiple": 228.05826864780687,
+      "graham_number": 9.661725147413748,
+      "graham_upside_pct": -68.58997026198391,
+      "ncav_margin_pct": -164.37070195400082,
+      "pb_ratio": 2.15009421026866,
+      "pe_ttm": 106.0689655172414
     }
   },
   "industry": "Entertainment",
-  "last_updated": "2026-09-23T03:20:22Z",
+  "last_updated": "2026-09-23T21:34:13Z",
   "layered_analysis": {
     "flags": [
       "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
@@ -106,32 +106,29 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 77295024523,
+  "market_cap": 77119524954,
   "metrics": {
-    "book_value_per_share": 13.538430904022302,
-    "current_ratio": 0.7767453385368271,
-    "debt_to_ebitda": 4.657085657085657,
-    "debt_to_equity": 0.97518119252086,
-    "fcf_margin_pct": 8.279708279708279,
-    "graham_criteria_evaluated": 5,
-    "graham_criteria_passed": 2,
-    "graham_multiple": -57.22862911127064,
-    "graham_upside_pct": -69.51396810381533,
-    "margin_trend_score": 20,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 1,
-    "ncav_margin_pct": -164.22454726257106,
-    "pb_ratio": 2.3574556915768317,
-    "pe_ttm": -24.2755905511811,
-    "roe_pct": -9.222951082247931,
+    "book_value_per_share": 14.306349858109918,
+    "current_ratio": 1.05648,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 1,
+    "graham_multiple": 228.05826864780687,
+    "graham_upside_pct": -68.58997026198391,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 0,
+    "ncav_margin_pct": -164.37070195400082,
+    "pb_ratio": 2.15009421026866,
+    "pe_ttm": 106.0689655172414,
+    "roe_pct": 2.0239984409365515,
     "shareholders_equity": 35919000000,
     "total_assets": 100085000000,
     "total_liabilities": 62919000000
   },
   "name": "Warner Bros. Discovery",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 30.83
+    "as_of": "2026-09-23",
+    "close": 30.76
   },
   "qualitative": null,
   "sector": "Communication Services",
@@ -161,13 +158,13 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $77.3B",
+          "detail": "Market cap $77.1B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.78, debt $32.6B vs working capital $0.7B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -186,30 +183,30 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E -24.3",
+          "detail": "P/E 106.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -57.2",
-          "passed": true
+          "detail": "P/E x P/B = 228.1",
+          "passed": false
         }
       ],
-      "evaluated": 5,
-      "passed": 2,
+      "evaluated": 4,
+      "passed": 1,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE -9.2%",
+          "detail": "ROE 2.0%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.98",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -218,12 +215,12 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 20",
-          "passed": false
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 1,
+      "evaluated": 2,
+      "passed": 0,
       "total": 4
     }
   },

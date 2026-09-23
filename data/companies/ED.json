@@ -5,98 +5,97 @@
     "years": [
       {
         "cash": 992000000,
-        "debt": 25362000000,
+        "debt": 23044000000,
         "earnings": 1346000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
-        "revenue": 13673000000,
-        "spending": 10873000000,
+        "revenue": 13676000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 1282000000,
-        "debt": 24415000000,
+        "debt": 23441000000,
         "earnings": 1660000000,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
-        "revenue": 15665000000,
-        "spending": 13050000000,
+        "revenue": 15670000000,
+        "spending": null,
         "stock_return_pct": 11.708860759493682
       },
       {
         "cash": 1189000000,
-        "debt": 25010000000,
+        "debt": 22240000000,
         "earnings": 2519000000,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
-        "revenue": 14646000000,
-        "spending": 12336000000,
+        "revenue": 14663000000,
+        "spending": null,
         "stock_return_pct": -3.0427027594166467
       },
       {
         "cash": 1324000000,
-        "debt": 27825000000,
+        "debt": 24710000000,
         "earnings": 1820000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 15256000000,
-        "spending": 12524000000,
+        "spending": null,
         "stock_return_pct": -3.4411860188291232
       },
       {
         "cash": 1629000000,
-        "debt": 28753000000,
+        "debt": 25801000000,
         "earnings": 2023000000,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 16918000000,
-        "spending": 13987000000,
+        "spending": null,
         "stock_return_pct": 11.307856102207765
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.268210683601046,
-      "debt_to_ebitda": 5.61143637782982,
-      "debt_to_equity": 1.1011314592324741
+      "current_ratio": 1.0205624433020866,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 1.066597767672592
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 69.73698481561821,
+      "book_value_per_share": 65.63921353368245,
       "shareholders_equity": 24190000000,
       "total_assets": 74603000000,
-      "total_liabilities": 50413000000
+      "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 0.2127911100602908
+      "fcf_margin_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 6.542657701264254
+      "eps_growth_cagr_3yr_pct": 6.569042175811535
     },
     "profitability": {
-      "roe_pct": 8.89709349573104,
+      "roe_pct": 8.362959900785448,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 25.306086174581395,
-      "graham_number": 94.23908433483945,
-      "graham_upside_pct": -9.24587409973089,
-      "ncav_margin_pct": -214.09756943621954,
-      "pb_ratio": 1.4890233679381004,
-      "pe_ttm": 16.99509001636661
+      "graham_multiple": 28.440478724968635,
+      "graham_number": 91.2667310547732,
+      "graham_upside_pct": -11.054740225345284,
+      "ncav_margin_pct": null,
+      "pb_ratio": 1.5632423741236048,
+      "pe_ttm": 18.19326241134752
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-09-23T03:17:47Z",
+  "last_updated": "2026-09-23T21:09:49Z",
   "layered_analysis": {
     "flags": [
       "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": false,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -107,50 +106,31 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 38268155200,
+  "market_cap": 37814863300,
   "metrics": {
-    "book_value_per_share": 69.73698481561821,
-    "current_ratio": 1.268210683601046,
-    "debt_to_ebitda": 5.61143637782982,
-    "debt_to_equity": 1.1011314592324741,
-    "eps_growth_cagr_3yr_pct": 6.542657701264254,
-    "fcf_margin_pct": 0.2127911100602908,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 25.306086174581395,
-    "graham_upside_pct": -9.24587409973089,
+    "book_value_per_share": 65.63921353368245,
+    "current_ratio": 1.0205624433020866,
+    "debt_to_equity": 1.066597767672592,
+    "eps_growth_cagr_3yr_pct": 6.569042175811535,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 28.440478724968635,
+    "graham_upside_pct": -11.054740225345284,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 1,
-    "ncav_margin_pct": -214.09756943621954,
-    "pb_ratio": 1.4890233679381004,
-    "pe_ttm": 16.99509001636661,
-    "roe_pct": 8.89709349573104,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 0,
+    "pb_ratio": 1.5632423741236048,
+    "pe_ttm": 18.19326241134752,
+    "roe_pct": 8.362959900785448,
     "shareholders_equity": 24190000000,
-    "total_assets": 74603000000,
-    "total_liabilities": 50413000000
+    "total_assets": 74603000000
   },
   "name": "Consolidated Edison Inc.",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 103.84
+    "as_of": "2026-09-23",
+    "close": 102.61
   },
-  "qualitative": {
-    "extraction_confidence": "whole_document_fallback",
-    "filing_summary_10k": "The provided 10-K excerpt for fiscal year 2025 consists almost entirely of XBRL data tags (covering debt instruments/debentures, tax-exempt debt, property categories such as electric transmission, gas transmission, steam plant, and equity-method investments including Mountain Valley Pipeline and New York Transco) rather than narrative text. It confirms Consolidated Edison, Inc. and its regulated utility subsidiary Consolidated Edison Company of New York, Inc. (CECONY) report electricity, gas, steam and non-utility revenue lines, and reference multi-year electric and gas rate plans running through 2028. No further narrative detail on business developments or financial results is available in the excerpt provided.",
-    "filing_summary_10q": "The provided 10-Q excerpt, covering the quarter and six months ended June 30, 2026, is also composed mainly of XBRL tags rather than narrative disclosure. It references a subsequent event in which Rockland Electric Company entered a new electric rate plan with the New Jersey Board of Public Utilities effective July 2026, tracks routine and major-event storm costs for Rockland Electric, and reflects continued equity-method activity in the Mountain Valley Pipeline joint venture during the first half of 2026. Detailed financial results and management discussion are not present in the excerpt provided.",
-    "filing_summary_8k": "The 8-K, dated September 4, 2026, discloses that CECONY, the New York State Department of Public Service, and other parties entered into a Joint Proposal for a three-year CECONY steam rate plan covering November 2026 through October 2029, subject to NYSPSC approval. The proposal specifies base rate increases, capital expenditure levels, an authorized 9.5% return on common equity, a 48% common equity ratio, and various reconciliation and adjustment mechanisms, and it also notes an ongoing NYSDPS audit of CECONY's income tax accounting with any resulting adjustment to be trued up with customers.",
-    "moat_explanation": "The excerpts (largely XBRL tags rather than narrative prose) show Consolidated Edison operating as a rate-regulated electric, gas and steam utility subject to NYSPSC (and NJ Board of Public Utilities) oversight, with multi-year rate plans, authorized rates of return on equity (e.g., 9.5% in the CECONY steam Joint Proposal), and defined rate bases and equity ratios. This regulated, franchise-based distribution model is consistent with an efficient-scale moat, since duplicating electric/gas/steam distribution infrastructure in a service territory is generally uneconomic, limiting competition to the incumbent utility. However, the 10-K excerpt provided contains almost no narrative business/risk-factor discussion (mostly XBRL taxonomy tags), so this read rests on structural inferences from the rate-plan and asset-category tags rather than explicit qualitative discussion.",
-    "moat_present": true,
-    "moat_type": "efficient_scale",
-    "red_flags": [
-      "The 8-K discloses an ongoing NYSDPS 'focused operations audit' investigating CECONY's income tax accounting, with any ordered adjustment to be refunded to or collected from customers",
-      "The proposed steam rate Joint Proposal includes potential negative revenue adjustments (penalties) of $4.3-$4.7 million per year if service, reliability, safety or other performance targets are not met",
-      "The rate plan and its financial terms are subject to approval by the NYSPSC and are not yet finalized",
-      "The 10-Q excerpt references storm cost categories (routine, major event, non-major) for Rockland Electric Company, indicating recurring weather-related cost exposure",
-      "The provided 10-K and 10-Q excerpts consist almost entirely of XBRL data tags rather than descriptive text, limiting the ability to identify additional risks that may be discussed in the full filings"
-    ]
-  },
+  "qualitative": null,
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001047862.json",
@@ -178,12 +158,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $38.3B",
+          "detail": "Market cap $37.8B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.27, debt $28.8B vs working capital $0.1B",
+          "detail": "Current ratio 1.02, debt $25.8B vs working capital $0.1B",
           "passed": false
         },
         {
@@ -192,40 +172,40 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 6.5%/yr",
+          "detail": "EPS 3yr CAGR 6.6%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 17.0",
+          "detail": "P/E 18.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 25.3",
+          "detail": "P/E x P/B = 28.4",
           "passed": false
         }
       ],
-      "evaluated": 6,
-      "passed": 3,
+      "evaluated": 7,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 8.9%",
+          "detail": "ROE 8.4%",
           "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 1.10",
+          "detail": "Debt/equity 1.07",
           "passed": false
         },
         {
@@ -235,12 +215,12 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 1,
+      "evaluated": 3,
+      "passed": 0,
       "total": 4
     }
   },

@@ -5,64 +5,64 @@
     "years": [
       {
         "cash": 431560000,
-        "debt": 1846756000,
+        "debt": null,
         "earnings": 985837000,
         "fiscal_year": "2022-01-29",
         "market_return_pct": null,
         "revenue": 8630889000,
-        "spending": 7380306000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
         "cash": 737877000,
-        "debt": 1903176000,
+        "debt": null,
         "earnings": 1242408000,
         "fiscal_year": "2023-01-28",
         "market_return_pct": -8.206810725195155,
         "revenue": 10208580000,
-        "spending": 8559369000,
+        "spending": null,
         "stock_return_pct": 40.921885015188266
       },
       {
         "cash": 766594000,
-        "debt": 1911092000,
+        "debt": null,
         "earnings": 1291005000,
         "fiscal_year": "2024-02-03",
         "market_return_pct": 21.857128771445478,
         "revenue": 11207303000,
-        "spending": 9520764000,
+        "spending": null,
         "stock_return_pct": -0.06723752645006265
       },
       {
         "cash": 703201000,
-        "debt": 1923234000,
+        "debt": null,
         "earnings": 1201118000,
         "fiscal_year": "2025-02-01",
         "market_return_pct": 21.73965813694751,
         "revenue": 11295654000,
-        "spending": 9716993000,
+        "spending": null,
         "stock_return_pct": -18.439435616329924
       },
       {
         "cash": 424243000,
-        "debt": 2182061000,
+        "debt": null,
         "earnings": 1153479000,
         "fiscal_year": "2026-01-31",
         "market_return_pct": 14.979561995280976,
         "revenue": 12392820000,
-        "spending": 10844007000,
+        "spending": null,
         "stock_return_pct": 57.06902826640787
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.345087271257602,
-      "debt_to_ebitda": 1.1797570806424145,
-      "debt_to_equity": 0.9547194676029157
+      "current_ratio": 1.4135173458038377,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 60.96063918096292,
+      "book_value_per_share": 65.56634278018922,
       "shareholders_equity": 2803451000,
       "total_assets": 6999294000,
       "total_liabilities": 4195843000
@@ -71,31 +71,30 @@
       "fcf_margin_pct": 8.617497873768844
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 2.093502804591152
+      "eps_growth_cagr_3yr_pct": 2.2135848660400415
     },
     "profitability": {
-      "roe_pct": 45.39944570764854,
+      "roe_pct": 41.14496739910917,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 182.65387387307257,
-      "graham_number": 187.82417814015116,
-      "graham_upside_pct": -66.08814896541524,
-      "ncav_margin_pct": -104.44097802197858,
-      "pb_ratio": 9.085534657139258,
-      "pe_ttm": 20.103811252268603
+      "graham_multiple": 175.91197243919353,
+      "graham_number": 194.48707707683602,
+      "graham_upside_pct": -64.2362080364767,
+      "ncav_margin_pct": -104.52305049052622,
+      "pb_ratio": 8.294041987717995,
+      "pe_ttm": 21.2094383775351
     }
   },
   "industry": "Specialty Retail",
-  "last_updated": "2026-09-23T03:46:03Z",
+  "last_updated": "2026-09-23T21:11:22Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -106,51 +105,33 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 23810059790,
+  "market_cap": 23378017215,
   "metrics": {
-    "book_value_per_share": 60.96063918096292,
-    "current_ratio": 1.345087271257602,
-    "debt_to_ebitda": 1.1797570806424145,
-    "debt_to_equity": 0.9547194676029157,
-    "eps_growth_cagr_3yr_pct": 2.093502804591152,
+    "book_value_per_share": 65.56634278018922,
+    "current_ratio": 1.4135173458038377,
+    "eps_growth_cagr_3yr_pct": 2.2135848660400415,
     "fcf_margin_pct": 8.617497873768844,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": 182.65387387307257,
-    "graham_upside_pct": -66.08814896541524,
+    "graham_multiple": 175.91197243919353,
+    "graham_upside_pct": -64.2362080364767,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -104.44097802197858,
-    "pb_ratio": 9.085534657139258,
-    "pe_ttm": 20.103811252268603,
-    "roe_pct": 45.39944570764854,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -104.52305049052622,
+    "pb_ratio": 8.294041987717995,
+    "pe_ttm": 21.2094383775351,
+    "roe_pct": 41.14496739910917,
     "shareholders_equity": 2803451000,
     "total_assets": 6999294000,
     "total_liabilities": 4195843000
   },
   "name": "Ulta Beauty",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 553.86
+    "as_of": "2026-09-23",
+    "close": 543.81
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal 2025 (ended January 31, 2026), Ulta Beauty reported net sales of $12.4 billion, up 9.7%, driven by a 5.4% comparable sales increase, the acquisition of Space NK, and new store openings (ending with 1,591 stores including 86 Space NK locations). Gross profit rose to 39.1% of sales, but SG&A expenses grew faster than sales, contributing to a net income decline to $1.15 billion from $1.20 billion the prior year. The filing also notes the Space NK acquisition, an equity-method loss from the Mexico joint venture, and continued share repurchases and store investment activity.",
-    "filing_summary_10q": "For the 13 weeks ended August 1, 2026, Ulta Beauty reported net sales of $3.04 billion, up from $2.79 billion a year earlier, with net income of $282.0 million versus $260.9 million in the prior-year quarter. For the 26-week period, net sales were $6.2 billion and net income was $622.5 million, both increased from the prior-year period. The balance sheet shows cash and equivalents of $158.5 million, short-term debt increased to $339.6 million, and total stockholders' equity of $2.64 billion as of August 1, 2026.",
-    "filing_summary_8k": "This 8-K, dated August 27, 2026, discloses under Item 2.02 that Ulta Beauty issued a press release announcing its consolidated financial results for the second fiscal quarter ended August 1, 2026, furnished as an exhibit to the filing. The filing itself does not include the detailed financial results, only the announcement of their release.",
-    "moat_explanation": "The 10-K describes Ulta as the largest specialty beauty retailer in the U.S., with a differentiated assortment of ~600 brands, exclusive private-label and limited-time product partnerships, and a loyalty program with over 46 million members generating ~95% of sales, which the company says gives it a deep, proprietary understanding of guest preferences. These brand-reputation, exclusivity, and guest-data advantages support an intangible-assets style moat, though the excerpts don't quantify how durable this advantage is against competitors.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Top ten brand partners (e.g., L'Or\u00e9al, Est\u00e9e Lauder) represented approximately 51% of net sales in fiscal 2025, indicating meaningful vendor concentration risk",
-      "Gross margin and SG&A trends show deleverage in some periods (e.g., fiscal 2024 gross margin declined and fiscal 2025 SG&A rose 17.4%, outpacing sales growth), pressuring net income despite higher revenue",
-      "Comparable sales growth slowed sharply to 0.7% in fiscal 2024 before recovering to 5.4% in fiscal 2025, showing sales volatility",
-      "New Space NK acquisition and Mexico joint venture introduce integration and equity-method losses (equity net loss of affiliate of $3.9 million in fiscal 2025 tied to the Mexico JV)",
-      "Company acknowledges persistent inflationary and macroeconomic pressures that could impact its ability to grow sales and maintain historical profitability levels",
-      "Company began carrying outstanding borrowings under its credit facilities ($62.3 million at fiscal 2025 year-end and increased further in the following quarter) after previously being debt-free on that facility"
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001403568.json",
@@ -178,13 +159,13 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $23.8B",
+          "detail": "Market cap $23.4B",
           "passed": true
         },
         {
-          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 1.35, debt $2.2B vs working capital $0.9B",
-          "passed": false
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
         },
         {
           "criterion": "Earnings stability (positive net income every year)",
@@ -198,21 +179,21 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 2.1%/yr",
+          "detail": "EPS 3yr CAGR 2.2%/yr",
           "passed": false
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.1",
+          "detail": "P/E 21.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 182.7",
+          "detail": "P/E x P/B = 175.9",
           "passed": false
         }
       ],
-      "evaluated": 6,
+      "evaluated": 5,
       "passed": 2,
       "total": 7
     },
@@ -220,13 +201,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 45.4%",
+          "detail": "ROE 41.1%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.95",
-          "passed": true
+          "detail": "Debt/equity unavailable",
+          "passed": null
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -239,8 +220,8 @@
           "passed": true
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },

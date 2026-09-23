@@ -1,0 +1,227 @@
+{
+  "_errors": {},
+  "cik": "0001584509",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 532591000,
+        "debt": 58850000,
+        "earnings": -90833000,
+        "fiscal_year": "2021-10-01",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 305716000,
+        "debt": 65047000,
+        "earnings": 194484000,
+        "fiscal_year": "2022-09-30",
+        "market_return_pct": -17.745946941783348,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -12.814556716995737
+      },
+      {
+        "cash": 1927088000,
+        "debt": 1596942000,
+        "earnings": 674108000,
+        "fiscal_year": "2023-09-29",
+        "market_return_pct": 19.681953076880006,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 11.23445825932505
+      },
+      {
+        "cash": 672483000,
+        "debt": null,
+        "earnings": 262522000,
+        "fiscal_year": "2024-09-27",
+        "market_return_pct": 33.683447178815385,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 53.45309381237524
+      },
+      {
+        "cash": 639095000,
+        "debt": null,
+        "earnings": 326394000,
+        "fiscal_year": "2025-10-03",
+        "market_return_pct": 17.10326001364901,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 1.456815816857446
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.9932808379117394,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 11.941426171938353,
+      "shareholders_equity": 3148059000,
+      "total_assets": 13304629000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 17.606914407753237
+    },
+    "profitability": {
+      "roe_pct": 10.36810301204647,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 213.49379656401956,
+      "graham_number": 18.105031025096526,
+      "graham_upside_pct": -67.5362542135619,
+      "ncav_margin_pct": null,
+      "pb_ratio": 4.670296428332506,
+      "pe_ttm": 45.71311475409836
+    }
+  },
+  "industry": "Specialty Business Services",
+  "last_updated": "2026-09-23T21:18:21Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 14664920264,
+  "metrics": {
+    "book_value_per_share": 11.941426171938353,
+    "current_ratio": 0.9932808379117394,
+    "eps_growth_cagr_3yr_pct": 17.606914407753237,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 213.49379656401956,
+    "graham_upside_pct": -67.5362542135619,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 0,
+    "pb_ratio": 4.670296428332506,
+    "pe_ttm": 45.71311475409836,
+    "roe_pct": 10.36810301204647,
+    "shareholders_equity": 3148059000,
+    "total_assets": 13304629000
+  },
+  "name": "Aramark",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 55.77
+  },
+  "qualitative": null,
+  "sector": "Industrials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001584509.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-11",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1584509/000158450926000122/cik0-20260703.htm"
+      },
+      {
+        "filed": "2026-08-11",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1584509/000158450926000118/cik0-20260811.htm"
+      },
+      {
+        "filed": "2025-11-25",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1584509/000158450925000219/cik0-20251003.htm"
+      }
+    ]
+  },
+  "ticker": "ARMK",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $14.7B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition",
+          "detail": "Balance sheet data unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 4/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 17.6%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 45.7",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 213.5",
+          "passed": false
+        }
+      ],
+      "evaluated": 6,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 10.4%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "267,349,000 shares vs. 266,200,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 2,
+      "passed": 0,
+      "total": 4
+    }
+  },
+  "website": "https://www.aramark.com"
+}

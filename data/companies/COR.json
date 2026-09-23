@@ -5,97 +5,96 @@
     "years": [
       {
         "cash": 2547142000,
-        "debt": 8751586000,
+        "debt": 6683924000,
         "earnings": 1539932000,
         "fiscal_year": "2021-09-30",
         "market_return_pct": null,
         "revenue": 213988843000,
-        "spending": 211313832000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 3533169000,
-        "debt": 7589593000,
+        "cash": 3388189000,
+        "debt": 5702833000,
         "earnings": 1698820000,
         "fiscal_year": "2022-09-30",
         "market_return_pct": -16.768420562054338,
         "revenue": 238587006000,
-        "spending": 235835331000,
+        "spending": null,
         "stock_return_pct": 13.294265383005449
       },
       {
-        "cash": 2689773000,
-        "debt": 6818413000,
+        "cash": 2592051000,
+        "debt": 4787457000,
         "earnings": 1745293000,
         "fiscal_year": "2023-09-30",
         "market_return_pct": 19.681953076880006,
         "revenue": 262173411000,
-        "spending": 259726898000,
+        "spending": null,
         "stock_return_pct": 32.98603413877188
       },
       {
-        "cash": 3231244000,
-        "debt": 6652799000,
+        "cash": 3132648000,
+        "debt": 4388076000,
         "earnings": 1509120000,
         "fiscal_year": "2024-09-30",
         "market_return_pct": 34.21914475531018,
         "revenue": 293958599000,
-        "spending": 290918467000,
+        "spending": null,
         "stock_return_pct": 25.06528865922099
       },
       {
-        "cash": 4394549000,
-        "debt": 10747809000,
+        "cash": 4356138000,
+        "debt": 7660773000,
         "earnings": 1554169000,
         "fiscal_year": "2025-09-30",
         "market_return_pct": 16.107780256553255,
         "revenue": 321332819000,
-        "spending": 317685140000,
+        "spending": null,
         "stock_return_pct": 38.85285231917538
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.9347608953093532,
-      "debt_to_ebitda": 2.2789636341083037,
-      "debt_to_equity": 3.842478657523309
+      "current_ratio": 0.9034691461454554,
+      "debt_to_ebitda": 2.0819150925244507,
+      "debt_to_equity": 5.080024190676642
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 16.770081854753116,
+      "book_value_per_share": 7.902538404319951,
       "shareholders_equity": 1508019000,
       "total_assets": 76590112000,
-      "total_liabilities": 74843027000
+      "total_liabilities": null
     },
     "cash_flow": {
       "fcf_margin_pct": 0.9980739004440128
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -0.5345496836891228
+      "eps_growth_cagr_3yr_pct": -0.3327811631230859
     },
     "profitability": {
-      "roe_pct": 106.4296376190522,
+      "roe_pct": 103.06030626935072,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 462.93817759758343,
-      "graham_number": 55.01055599328369,
-      "graham_upside_pct": -82.50467322034041,
-      "ncav_margin_pct": -137.67213561237995,
-      "pb_ratio": 19.905620205194566,
-      "pe_ttm": 23.25665680473373
+      "graham_multiple": 1550.2746965375143,
+      "graham_number": 37.621066282253395,
+      "graham_upside_pct": -87.95277754507063,
+      "ncav_margin_pct": null,
+      "pb_ratio": 39.51641662750934,
+      "pe_ttm": 39.23115577889447
     }
   },
   "industry": "Medical - Distribution",
-  "last_updated": "2026-09-23T03:27:21Z",
+  "last_updated": "2026-09-23T21:13:53Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -106,51 +105,33 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 61175834096,
+  "market_cap": 60757527817,
   "metrics": {
-    "book_value_per_share": 16.770081854753116,
-    "current_ratio": 0.9347608953093532,
-    "debt_to_ebitda": 2.2789636341083037,
-    "debt_to_equity": 3.842478657523309,
-    "eps_growth_cagr_3yr_pct": -0.5345496836891228,
+    "book_value_per_share": 7.902538404319951,
+    "current_ratio": 0.9034691461454554,
+    "debt_to_ebitda": 2.0819150925244507,
+    "debt_to_equity": 5.080024190676642,
+    "eps_growth_cagr_3yr_pct": -0.3327811631230859,
     "fcf_margin_pct": 0.9980739004440128,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 1,
-    "graham_multiple": 462.93817759758343,
-    "graham_upside_pct": -82.50467322034041,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 1550.2746965375143,
+    "graham_upside_pct": -87.95277754507063,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -137.67213561237995,
-    "pb_ratio": 19.905620205194566,
-    "pe_ttm": 23.25665680473373,
-    "roe_pct": 106.4296376190522,
+    "pb_ratio": 39.51641662750934,
+    "pe_ttm": 39.23115577889447,
+    "roe_pct": 103.06030626935072,
     "shareholders_equity": 1508019000,
-    "total_assets": 76590112000,
-    "total_liabilities": 74843027000
+    "total_assets": 76590112000
   },
   "name": "Cencora",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 314.43
+    "as_of": "2026-09-23",
+    "close": 312.28
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Cencora's fiscal 2025 10-K reports revenue of $321.3 billion, up 9.3% year-over-year, driven by growth in both the U.S. Healthcare Solutions and International Healthcare Solutions segments, including higher GLP-1 product sales. Gross profit rose 15.8% partly due to antitrust litigation settlement gains, while operating expenses increased due to the January 2025 acquisition of RCA and a larger PharmaLex goodwill impairment ($723.9 million). The filing discloses significant customer concentration (Walgreens/Boots ~25% of revenue, Evernorth ~13%) and notes the August 2025 acquisition of Walgreens Boots Alliance by Sycamore Partners as a source of uncertainty for the company's long-term distribution agreements.",
-    "filing_summary_10q": "The most recent 10-Q, for the quarterly period ended June 30, 2026, is presented largely as structured financial data (XBRL tags) with limited narrative text provided in these excerpts. It references ongoing debt activity (term loans, senior notes, revolving credit and receivables securitization facilities), share repurchase programs (March 2024 and May 2026 programs), the February 2026 OneOncology transaction, and continuing opioid-related multidistrict litigation and a shareholder securities litigation matter. The excerpts do not include the accompanying MD&A discussion of quarterly results, so a fuller narrative summary cannot be provided from what was given.",
-    "filing_summary_8k": "This 8-K, dated August 13, 2026, discloses that board member Lorence H. Kim, M.D. informed Cencora of his intent to resign from the Board effective immediately, in connection with his new role as Chief Financial Officer of Commonwealth Fusion Systems, Inc. The filing states his resignation was not due to any disagreement with the company regarding its operations, policies, or practices.",
-    "moat_explanation": "The excerpts describe pharmaceutical distribution as a low-margin, high-volume business (U.S. Healthcare Solutions gross margin of only 2.72%) that requires massive scale to operate profitably, and reference 'three largest national distributors' in the litigation context, implying the market realistically supports only a handful of efficient players. Continued industry consolidation and the difficulty new entrants would face replicating this scale support an efficient-scale moat rather than brand, network, or patent-based advantages.",
-    "moat_present": true,
-    "moat_type": "efficient_scale",
-    "red_flags": [
-      "Walgreens and Boots together accounted for ~25% of fiscal 2025 revenue and ~38% of accounts receivable, net, creating significant customer concentration risk",
-      "Evernorth Health Services accounted for ~13% of fiscal 2025 revenue; top ten customers represented ~66% of revenue",
-      "Goodwill impairments related to PharmaLex of $723.9 million in fiscal 2025 and $418.0 million in fiscal 2024",
-      "Ongoing opioid-related litigation and legal expenses, plus disclosed shareholder securities litigation referenced in the 10-Q data",
-      "Loss/termination of a key oncology customer contract in June 2025 following non-renewal notice",
-      "New ownership of Walgreens Boots Alliance (Sycamore Partners) creates uncertainty about the future of a contractual relationship representing a large share of revenue"
-    ]
-  },
+  "qualitative": null,
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001140859.json",
@@ -178,12 +159,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $61.2B",
+          "detail": "Market cap $60.8B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.93, debt $10.7B vs working capital $-5.6B",
+          "detail": "Current ratio 0.90, debt $7.7B vs working capital $-5.6B",
           "passed": false
         },
         {
@@ -192,40 +173,40 @@
           "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -0.5%/yr",
+          "detail": "EPS 3yr CAGR -0.3%/yr",
           "passed": false
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 23.3",
+          "detail": "P/E 39.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 462.9",
+          "detail": "P/E x P/B = 1550.3",
           "passed": false
         }
       ],
-      "evaluated": 6,
-      "passed": 1,
+      "evaluated": 7,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 106.4%",
+          "detail": "ROE 103.1%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 3.84",
+          "detail": "Debt/equity 5.08",
           "passed": false
         },
         {

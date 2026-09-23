@@ -1,0 +1,227 @@
+{
+  "_errors": {},
+  "cik": "0000089089",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 268626000,
+        "debt": 3966320000,
+        "earnings": 802939000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 4143143000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 191938000,
+        "debt": 4341744000,
+        "earnings": 565338000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 4108661000,
+        "spending": null,
+        "stock_return_pct": -2.6060008451894556
+      },
+      {
+        "cash": 221557000,
+        "debt": 4712496000,
+        "earnings": 537317000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 4099778000,
+        "spending": null,
+        "stock_return_pct": -0.10124385305178968
+      },
+      {
+        "cash": 218766000,
+        "debt": 4835298000,
+        "earnings": 518648000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 4186379000,
+        "spending": null,
+        "stock_return_pct": 15.563920660199798
+      },
+      {
+        "cash": 243581000,
+        "debt": 5139817000,
+        "earnings": 542614000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 4309234000,
+        "spending": null,
+        "stock_return_pct": -2.317714858431464
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.552220452082864,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 3.1373423566674865
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 11.991489588080247,
+      "shareholders_equity": 1638271000,
+      "total_assets": 18654512000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 2.4872005314336976
+    },
+    "profitability": {
+      "roe_pct": 33.12113807788821,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 133.00271381464538,
+      "graham_number": 32.019874449798536,
+      "graham_upside_pct": -58.86978233808794,
+      "ncav_margin_pct": null,
+      "pb_ratio": 6.492104206752118,
+      "pe_ttm": 20.486842105263158
+    }
+  },
+  "industry": "Personal Products & Services",
+  "last_updated": "2026-09-23T21:19:14Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 10635789150,
+  "metrics": {
+    "book_value_per_share": 11.991489588080247,
+    "current_ratio": 0.552220452082864,
+    "debt_to_equity": 3.1373423566674865,
+    "eps_growth_cagr_3yr_pct": 2.4872005314336976,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 133.00271381464538,
+    "graham_upside_pct": -58.86978233808794,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 4,
+    "munger_quality_passed": 3,
+    "pb_ratio": 6.492104206752118,
+    "pe_ttm": 20.486842105263158,
+    "roe_pct": 33.12113807788821,
+    "shareholders_equity": 1638271000,
+    "total_assets": 18654512000
+  },
+  "name": "Service Corp Intl",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 77.85
+  },
+  "qualitative": null,
+  "sector": "Consumer Cyclical",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000089089.json",
+    "sec_filings": [
+      {
+        "filed": "2026-08-05",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/89089/000008908926000085/sci-20260805.htm"
+      },
+      {
+        "filed": "2026-07-30",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/89089/000008908926000081/sci-20260630.htm"
+      },
+      {
+        "filed": "2026-02-12",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/89089/000162828026007695/sci-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "SCI",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $10.6B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.55, debt $5.1B vs working capital $-0.3B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 2.5%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 20.5",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 133.0",
+          "passed": false
+        }
+      ],
+      "evaluated": 7,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 33.1%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 3.14",
+          "passed": false
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "142,689,000 shares vs. 146,782,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend score 60",
+          "passed": true
+        }
+      ],
+      "evaluated": 4,
+      "passed": 3,
+      "total": 4
+    }
+  },
+  "website": "https://www.sci-corp.com"
+}

@@ -1,0 +1,221 @@
+{
+  "_errors": {},
+  "cik": "0000825542",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 244100000,
+        "debt": 2294500000,
+        "earnings": 512500000,
+        "fiscal_year": "2021-09-30",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 86800000,
+        "debt": 2970500000,
+        "earnings": -437500000,
+        "fiscal_year": "2022-09-30",
+        "market_return_pct": -16.768420562054338,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -70.79119978136103
+      },
+      {
+        "cash": 31900000,
+        "debt": 2609700000,
+        "earnings": -380100000,
+        "fiscal_year": "2023-09-30",
+        "market_return_pct": 19.681953076880006,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 20.888888888888886
+      },
+      {
+        "cash": 71600000,
+        "debt": 2226800000,
+        "earnings": -34900000,
+        "fiscal_year": "2024-09-30",
+        "market_return_pct": 34.21914475531018,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 67.76315789473685
+      },
+      {
+        "cash": 36600000,
+        "debt": 2106400000,
+        "earnings": 145200000,
+        "fiscal_year": "2025-09-30",
+        "market_return_pct": 16.107780256553255,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -34.31372549019608
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 1.27119102338786,
+      "debt_to_ebitda": null,
+      "debt_to_equity": null
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": null,
+      "shareholders_equity": null,
+      "total_assets": 2742000000,
+      "total_liabilities": 3099500000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": null
+    },
+    "profitability": {
+      "roe_pct": null,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": null,
+      "graham_number": null,
+      "graham_upside_pct": null,
+      "ncav_margin_pct": -170.2001460786998,
+      "pb_ratio": null,
+      "pe_ttm": 21.388663967611333
+    }
+  },
+  "industry": "Agricultural Inputs",
+  "last_updated": "2026-09-23T21:18:08Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": null
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 3073751732,
+  "metrics": {
+    "current_ratio": 1.27119102338786,
+    "graham_criteria_evaluated": 5,
+    "graham_criteria_passed": 2,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 1,
+    "munger_quality_passed": 0,
+    "ncav_margin_pct": -170.2001460786998,
+    "pe_ttm": 21.388663967611333,
+    "total_assets": 2742000000,
+    "total_liabilities": 3099500000
+  },
+  "name": "Scotts Miracle-Gro Company",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 52.83
+  },
+  "qualitative": null,
+  "sector": "Basic Materials",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000825542.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-15",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/825542/000082554226000050/smg-20260915.htm"
+      },
+      {
+        "filed": "2026-08-05",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/825542/000082554226000041/smg-20260627.htm"
+      },
+      {
+        "filed": "2025-11-25",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/825542/000082554225000022/smg-20250930.htm"
+      }
+    ]
+  },
+  "ticker": "SMG",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $3.1B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 1.27, debt $2.1B vs working capital $0.2B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 3/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 21.4",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B",
+          "detail": "P/E or P/B unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 5,
+      "passed": 2,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity unavailable",
+          "passed": null
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "58,700,000 shares vs. 56,800,000 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 1,
+      "passed": 0,
+      "total": 4
+    }
+  },
+  "website": "https://scottsmiraclegro.com"
+}

@@ -5,12 +5,12 @@
     "years": [
       {
         "cash": 5197000000,
-        "debt": 9048000000,
+        "debt": 8049000000,
         "earnings": 4169000000,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 25371000000,
-        "spending": 21109000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
@@ -20,7 +20,7 @@
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 27518000000,
-        "spending": 23681000000,
+        "spending": null,
         "stock_return_pct": -62.233534839325486
       },
       {
@@ -30,17 +30,17 @@
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 29771000000,
-        "spending": 24743000000,
+        "spending": null,
         "stock_return_pct": -13.704015725919682
       },
       {
-        "cash": 6561000000,
+        "cash": 6662000000,
         "debt": 9879000000,
         "earnings": 4147000000,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 31797000000,
-        "spending": 26472000000,
+        "spending": null,
         "stock_return_pct": 38.870810283110956
       },
       {
@@ -50,19 +50,19 @@
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 33172000000,
-        "spending": 27107000000,
+        "spending": null,
         "stock_return_pct": -31.59929701230228
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.2879808288228731,
+      "current_ratio": 1.2867170510087633,
       "debt_to_ebitda": 1.4210301650540695,
-      "debt_to_equity": 0.7175075681130172
+      "debt_to_equity": 0.49303909952606634
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 22.145251396648046,
+      "book_value_per_share": 22.96323984006752,
       "shareholders_equity": 20256000000,
       "total_assets": 80173000000,
       "total_liabilities": 59917000000
@@ -71,31 +71,30 @@
       "fcf_margin_pct": 16.773182201856986
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 37.50688670741411
+      "eps_growth_cagr_3yr_pct": 37.304148651932614
     },
     "profitability": {
-      "roe_pct": 24.419039079429126,
+      "roe_pct": 25.834320695102686,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 23.699506908328804,
-      "graham_number": 52.15883562809097,
-      "graham_upside_pct": -1.3824246018321635,
-      "ncav_margin_pct": -100.33865928991594,
-      "pb_ratio": 2.3883224016145306,
-      "pe_ttm": 9.923076923076923
+      "graham_multiple": 22.19492131091209,
+      "graham_number": 52.86965452442657,
+      "graham_upside_pct": 0.6849257749506267,
+      "ncav_margin_pct": -100.34111007129414,
+      "pb_ratio": 2.2866982344702804,
+      "pe_ttm": 9.706099815157115
     }
   },
   "industry": "Financial - Credit Services",
-  "last_updated": "2026-09-23T03:15:04Z",
+  "last_updated": "2026-09-23T21:13:24Z",
   "layered_analysis": {
     "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+      "Positive but thin margin of safety - 1% is below the 15% convention used here."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -106,51 +105,35 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 45245332290,
+  "market_cap": 44920257110,
   "metrics": {
-    "book_value_per_share": 22.145251396648046,
-    "current_ratio": 1.2879808288228731,
+    "book_value_per_share": 22.96323984006752,
+    "current_ratio": 1.2867170510087633,
     "debt_to_ebitda": 1.4210301650540695,
-    "debt_to_equity": 0.7175075681130172,
-    "eps_growth_cagr_3yr_pct": 37.50688670741411,
+    "debt_to_equity": 0.49303909952606634,
+    "eps_growth_cagr_3yr_pct": 37.304148651932614,
     "fcf_margin_pct": 16.773182201856986,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 23.699506908328804,
-    "graham_upside_pct": -1.3824246018321635,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 6,
+    "graham_multiple": 22.19492131091209,
+    "graham_upside_pct": 0.6849257749506267,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -100.33865928991594,
-    "pb_ratio": 2.3883224016145306,
-    "pe_ttm": 9.923076923076923,
-    "roe_pct": 24.419039079429126,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -100.34111007129414,
+    "pb_ratio": 2.2866982344702804,
+    "pe_ttm": 9.706099815157115,
+    "roe_pct": 25.834320695102686,
     "shareholders_equity": 20256000000,
     "total_assets": 80173000000,
     "total_liabilities": 59917000000
   },
   "name": "PayPal",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 52.89
+    "as_of": "2026-09-23",
+    "close": 52.51
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, PayPal reported net revenues of $33.2 billion (up 4% year-over-year), driven by 7% growth in total payment volume to $1.79 trillion, though the number of payment transactions declined 4% to 25.4 billion. Operating income rose 14% to $6.1 billion and net income increased 26% to $5.2 billion, aided by lower income tax expense from discrete tax adjustments. Transaction and credit losses increased 19%, driven partly by higher fraud-related losses and growth in loan originations, while active accounts grew 1% to 439 million as of December 31, 2025.",
-    "filing_summary_10q": null,
-    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses under Item 2.02 that PayPal issued a press release announcing its financial results for the quarter ended June 30, 2026, furnished as Exhibit 99.1. The filing does not include the underlying financial figures in the excerpt provided, and no other items (such as management changes or agreements) are disclosed in this report.",
-    "moat_explanation": "The 10-K describes PayPal as operating 'a global, two-sided network at scale that connects consumers and merchants with 439 million active accounts across approximately 200 markets,' explicitly citing this two-sided platform and scale as a core competitive strength that lets it use data from both sides of transactions to improve fraud protection and product experiences. The filing also cites trusted brands (PayPal, Venmo) and regulatory licenses as advantages, but the network/scale characteristic is the most prominently and repeatedly emphasized differentiator versus a highly competitive field of banks, card networks, and fintech point solutions.",
-    "moat_present": true,
-    "moat_type": "network_effects",
-    "red_flags": [
-      "Transaction losses rose ~20% in 2025, attributed to an increase in fraud incidents impacting PayPal products and services.",
-      "Credit losses on consumer and merchant loan portfolios increased, with merchant loan net charge-off rate rising from 5.3% to 7.3% and >90-day delinquencies increasing.",
-      "Braintree (unbranded processing) experienced declining transaction volumes/negotiated lower revenue in the first half of 2025 amid a strategic shift toward 'profitable growth,' indicating pricing/competitive pressure with large merchants.",
-      "The company describes a highly competitive landscape from banks, card networks, BNPL providers, crypto/stablecoin players, and point solutions, which could pressure pricing and market share.",
-      "Ongoing exposure to claims, regulatory proceedings, and investigations across multiple jurisdictions, with inherent uncertainty in estimating related losses.",
-      "Revenue share from its U.S. credit-card partner institution is contingent on a minimum return threshold; if unmet, PayPal's revenue share could drop to zero or require a payment to the partner."
-    ]
-  },
+  "qualitative": null,
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001633917.json",
@@ -178,7 +161,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $45.2B",
+          "detail": "Market cap $44.9B",
           "passed": true
         },
         {
@@ -192,40 +175,40 @@
           "passed": true
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 37.5%/yr",
+          "detail": "EPS 3yr CAGR 37.3%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 9.9",
+          "detail": "P/E 9.7",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 23.7",
-          "passed": false
+          "detail": "P/E x P/B = 22.2",
+          "passed": true
         }
       ],
-      "evaluated": 6,
-      "passed": 4,
+      "evaluated": 7,
+      "passed": 6,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 24.4%",
+          "detail": "ROE 25.8%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.72",
+          "detail": "Debt/equity 0.49",
           "passed": true
         },
         {
@@ -235,12 +218,12 @@
         },
         {
           "criterion": "Margins stable or improving (not declining)",
-          "detail": "Margin trend score 60",
-          "passed": true
+          "detail": "Margin trend unavailable",
+          "passed": null
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },

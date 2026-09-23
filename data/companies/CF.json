@@ -4,98 +4,97 @@
   "five_year_history": {
     "years": [
       {
-        "cash": 1628000000,
-        "debt": 3716000000,
-        "earnings": 917000000,
+        "cash": null,
+        "debt": 3465000000,
+        "earnings": null,
         "fiscal_year": "2021-12-31",
         "market_return_pct": null,
         "revenue": 6538000000,
-        "spending": 4400000000,
+        "spending": null,
         "stock_return_pct": null
       },
       {
-        "cash": 2323000000,
-        "debt": 3225000000,
-        "earnings": 3346000000,
+        "cash": null,
+        "debt": 2965000000,
+        "earnings": null,
         "fiscal_year": "2022-12-31",
         "market_return_pct": -19.48164055920498,
         "revenue": 11186000000,
-        "spending": 5584000000,
+        "spending": null,
         "stock_return_pct": 20.372986719412264
       },
       {
-        "cash": 2032000000,
-        "debt": 3232000000,
-        "earnings": 1525000000,
+        "cash": null,
+        "debt": 2968000000,
+        "earnings": null,
         "fiscal_year": "2023-12-31",
         "market_return_pct": 23.591245456684877,
         "revenue": 6631000000,
-        "spending": 4275000000,
+        "spending": null,
         "stock_return_pct": -4.213615023474182
       },
       {
-        "cash": 1614000000,
-        "debt": 3246000000,
-        "earnings": 1218000000,
+        "cash": null,
+        "debt": 2971000000,
+        "earnings": null,
         "fiscal_year": "2024-12-31",
         "market_return_pct": 23.99873056172645,
         "revenue": 5936000000,
-        "spending": 4190000000,
+        "spending": null,
         "stock_return_pct": 4.546011518196292
       },
       {
-        "cash": 1982000000,
-        "debt": 3947000000,
-        "earnings": 1455000000,
+        "cash": null,
+        "debt": 3215000000,
+        "earnings": null,
         "fiscal_year": "2025-12-31",
         "market_return_pct": 16.35271635271634,
         "revenue": 7084000000,
-        "spending": 4724000000,
+        "spending": null,
         "stock_return_pct": -9.353023909985925
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 4.860103626943006,
-      "debt_to_ebitda": 1.2096230462764328,
-      "debt_to_equity": 0.6285664578983995
+      "current_ratio": 3.3652762119503947,
+      "debt_to_ebitda": 1.005315822388993,
+      "debt_to_equity": 0.6645307978503514
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 58.072916666666664,
+      "book_value_per_share": 31.968149731994178,
       "shareholders_equity": 4838000000,
       "total_assets": 14088000000,
-      "total_liabilities": 6313000000
+      "total_liabilities": null
     },
     "cash_flow": {
       "fcf_margin_pct": 25.43760587238848
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -18.288690863497937
+      "eps_growth_cagr_3yr_pct": -18.18627213243168
     },
     "profitability": {
-      "roe_pct": 40.410068826105785,
+      "roe_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 28.751757680572197,
-      "graham_number": 108.32189442813488,
-      "graham_upside_pct": -10.188297464443345,
-      "ncav_margin_pct": -118.23272731605188,
-      "pb_ratio": 3.22298121085595,
-      "pe_ttm": 8.92085798816568
+      "graham_multiple": 50.75428491522308,
+      "graham_number": 80.32416709596014,
+      "graham_upside_pct": -33.418296505338084,
+      "ncav_margin_pct": null,
+      "pb_ratio": 3.773756098222406,
+      "pe_ttm": 13.44927536231884
     }
   },
   "industry": "Agricultural Inputs",
-  "last_updated": "2026-09-23T03:23:11Z",
+  "last_updated": "2026-09-23T21:10:01Z",
   "layered_analysis": {
     "flags": [
-      "5 red flag(s) from the filing text - see qualitative.red_flags.",
       "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
     ],
     "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
     "required_margin_of_safety_pct": 15.0,
     "valuation_gate_pass": false
   },
@@ -106,50 +105,32 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 18529193690,
+  "market_cap": 18538411430,
   "metrics": {
-    "book_value_per_share": 58.072916666666664,
-    "current_ratio": 4.860103626943006,
-    "debt_to_ebitda": 1.2096230462764328,
-    "debt_to_equity": 0.6285664578983995,
-    "eps_growth_cagr_3yr_pct": -18.288690863497937,
+    "book_value_per_share": 31.968149731994178,
+    "current_ratio": 3.3652762119503947,
+    "debt_to_ebitda": 1.005315822388993,
+    "debt_to_equity": 0.6645307978503514,
+    "eps_growth_cagr_3yr_pct": -18.18627213243168,
     "fcf_margin_pct": 25.43760587238848,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 28.751757680572197,
-    "graham_upside_pct": -10.188297464443345,
+    "graham_multiple": 50.75428491522308,
+    "graham_upside_pct": -33.418296505338084,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 4,
-    "munger_quality_passed": 4,
-    "ncav_margin_pct": -118.23272731605188,
-    "pb_ratio": 3.22298121085595,
-    "pe_ttm": 8.92085798816568,
-    "roe_pct": 40.410068826105785,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "pb_ratio": 3.773756098222406,
+    "pe_ttm": 13.44927536231884,
     "shareholders_equity": 4838000000,
-    "total_assets": 14088000000,
-    "total_liabilities": 6313000000
+    "total_assets": 14088000000
   },
   "name": "CF Industries",
   "price": {
-    "as_of": "2026-09-22",
-    "close": 120.61
+    "as_of": "2026-09-23",
+    "close": 120.64
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "The 10-K covers fiscal year 2025 results across CF Industries' Ammonia, Granular Urea, UAN, AN, and Other segments, with net sales and gross margins up year-over-year in most segments due to higher average selling prices amid strong global nitrogen demand and supply disruptions abroad. The filing discusses a November 2025 incident that idled AN production at the Yazoo City complex (expected resumption Q4 2026 at earliest), progress on decarbonization projects (including a completed Donaldsonville CCS unit and the Blue Point joint venture with JERA and Mitsui to build a ~$3.7 billion low-carbon ammonia facility), and financing activity including a $1 billion senior notes issuance and redemption of existing 2026 notes, plus ongoing share repurchase programs.",
-    "filing_summary_10q": null,
-    "filing_summary_8k": "This 8-K, dated August 31, 2026, discloses under Item 5.02 that the company's Vice President and Corporate Controller and Chief Accounting Officer, Richard A. Hoker, informed CF Industries that he intends to retire from the company effective March 3, 2027.",
-    "moat_explanation": "The 10-K describes CF as operating the world's largest ammonia production network with large-scale, integrated manufacturing complexes (e.g., Donaldsonville, the largest ammonia complex in the world) and an extensive North American storage, transportation and distribution system, which the company characterizes as 'advantaged production' and an 'unmatched distribution and logistics network.' This scale-driven cost and logistics positioning is the clearest moat signal in the excerpts, though the filing itself does not quantify a cost gap versus specific competitors.",
-    "moat_present": true,
-    "moat_type": "cost_advantage",
-    "red_flags": [
-      "A November 2025 incident at the Yazoo City complex idled the AN upgrade area entirely, with production not expected to resume until Q4 2026 at the earliest, pending investigation and equipment rebuild.",
-      "Segment gross margins are highly sensitive to natural gas costs; the filing repeatedly attributes cost of sales increases to higher realized natural gas costs across Ammonia, Granular Urea, UAN, and AN segments.",
-      "Heavy, multi-year capital commitments are underway, including an estimated $3.7 billion Blue Point ATR ammonia facility and ~$550 million of additional scalable infrastructure, with 2026 capital expenditures projected at approximately $1.3 billion, creating execution and funding risk.",
-      "The Blue Point joint venture depends on capital contributions and offtake commitments from partners JERA and Mitsui, and results are affected by conditional ownership terms and VIE consolidation accounting.",
-      "Selling price increases in 2025 were attributed partly to supply disruptions from geopolitical issues (e.g., outages in Egypt, Iran, and Russia), indicating results are exposed to external, unpredictable supply-side shocks."
-    ]
-  },
+  "qualitative": null,
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001324404.json",
@@ -182,32 +163,32 @@
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 4.86, debt $3.9B vs working capital $2.1B",
+          "detail": "Current ratio 3.37, debt $3.2B vs working capital $2.1B",
           "passed": false
         },
         {
-          "criterion": "Earnings stability (positive net income every year)",
-          "detail": "Positive in 6/6 available years",
-          "passed": true
-        },
-        {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
+          "criterion": "Earnings stability",
+          "detail": "No annual net income data available",
           "passed": null
         },
         {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -18.3%/yr",
+          "detail": "EPS 3yr CAGR -18.2%/yr",
           "passed": false
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 8.9",
+          "detail": "P/E 13.4",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 28.8",
+          "detail": "P/E x P/B = 50.8",
           "passed": false
         }
       ],
@@ -219,12 +200,12 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 40.4%",
-          "passed": true
+          "detail": "ROE unavailable",
+          "passed": null
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.63",
+          "detail": "Debt/equity 0.66",
           "passed": true
         },
         {
@@ -238,8 +219,8 @@
           "passed": true
         }
       ],
-      "evaluated": 4,
-      "passed": 4,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },

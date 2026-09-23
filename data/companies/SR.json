@@ -1,0 +1,229 @@
+{
+  "_errors": {},
+  "cik": "0001126956",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 4300000,
+        "debt": 2994900000,
+        "earnings": 271700000,
+        "fiscal_year": "2021-09-30",
+        "market_return_pct": null,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 6500000,
+        "debt": 3239700000,
+        "earnings": 220800000,
+        "fiscal_year": "2022-09-30",
+        "market_return_pct": -16.768420562054338,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 1.8796992481202985
+      },
+      {
+        "cash": 5600000,
+        "debt": 3710600000,
+        "earnings": 217500000,
+        "fiscal_year": "2023-09-30",
+        "market_return_pct": 19.681953076880006,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": -9.22509225092251
+      },
+      {
+        "cash": 4500000,
+        "debt": 3746400000,
+        "earnings": 250900000,
+        "fiscal_year": "2024-09-30",
+        "market_return_pct": 34.21914475531018,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 18.928950159066822
+      },
+      {
+        "cash": 5700000,
+        "debt": 3856900000,
+        "earnings": 271700000,
+        "fiscal_year": "2025-09-30",
+        "market_return_pct": 16.107780256553255,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 21.147272997473603
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.31691909283528213,
+      "debt_to_ebitda": 4.691521712687021,
+      "debt_to_equity": 1.1379300171121733
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 57.33396358855196,
+      "shareholders_equity": 3389400000,
+      "total_assets": 11575300000,
+      "total_liabilities": null
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": 3.425615419066008
+    },
+    "profitability": {
+      "roe_pct": 8.016168053342774,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 23.90431428225642,
+      "graham_number": 75.08236790248674,
+      "graham_upside_pct": -2.9818220668216346,
+      "ncav_margin_pct": null,
+      "pb_ratio": 1.3498107431639819,
+      "pe_ttm": 17.709382151029747
+    }
+  },
+  "industry": "Regulated Gas",
+  "last_updated": "2026-09-23T21:25:22Z",
+  "layered_analysis": {
+    "flags": [
+      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": false,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "low",
+      "rate_sensitivity": "high"
+    }
+  },
+  "market_cap": 4575049152,
+  "metrics": {
+    "book_value_per_share": 57.33396358855196,
+    "current_ratio": 0.31691909283528213,
+    "debt_to_ebitda": 4.691521712687021,
+    "debt_to_equity": 1.1379300171121733,
+    "eps_growth_cagr_3yr_pct": 3.425615419066008,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 23.90431428225642,
+    "graham_upside_pct": -2.9818220668216346,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 0,
+    "pb_ratio": 1.3498107431639819,
+    "pe_ttm": 17.709382151029747,
+    "roe_pct": 8.016168053342774,
+    "shareholders_equity": 3389400000,
+    "total_assets": 11575300000
+  },
+  "name": "Spire",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 77.39
+  },
+  "qualitative": null,
+  "sector": "Utilities",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001126956.json",
+    "sec_filings": [
+      {
+        "filed": "2026-09-01",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1126956/000119312526378491/sr-20260831.htm"
+      },
+      {
+        "filed": "2026-08-05",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1126956/000119312526334335/sr-20260630.htm"
+      },
+      {
+        "filed": "2025-11-14",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1126956/000119312525282583/sr-20250930.htm"
+      }
+    ]
+  },
+  "ticker": "SR",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $4.6B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.32, debt $3.9B vs working capital $-1.7B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 6/6 available years",
+          "passed": true
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR 3.4%/yr",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 17.7",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 23.9",
+          "passed": false
+        }
+      ],
+      "evaluated": 7,
+      "passed": 4,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 8.0%",
+          "passed": false
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 1.14",
+          "passed": false
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "59 shares vs. 56 a year earlier",
+          "passed": false
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 0,
+      "total": 4
+    }
+  },
+  "website": "https://www.spireenergy.com"
+}

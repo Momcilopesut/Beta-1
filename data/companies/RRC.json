@@ -1,0 +1,229 @@
+{
+  "_errors": {},
+  "cik": "0000315852",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 214422000,
+        "debt": 2925787000,
+        "earnings": 411778000,
+        "fiscal_year": "2021-12-31",
+        "market_return_pct": null,
+        "revenue": 2930223000,
+        "spending": null,
+        "stock_return_pct": null
+      },
+      {
+        "cash": 207000,
+        "debt": 1841960000,
+        "earnings": 1183370000,
+        "fiscal_year": "2022-12-31",
+        "market_return_pct": -19.48164055920498,
+        "revenue": 4147212000,
+        "spending": null,
+        "stock_return_pct": 40.3252944475603
+      },
+      {
+        "cash": 211974000,
+        "debt": 1774229000,
+        "earnings": 871142000,
+        "fiscal_year": "2023-12-31",
+        "market_return_pct": 23.591245456684877,
+        "revenue": 3374872000,
+        "spending": null,
+        "stock_return_pct": 23.10151878497203
+      },
+      {
+        "cash": 304490000,
+        "debt": 1697883000,
+        "earnings": 266340000,
+        "fiscal_year": "2024-12-31",
+        "market_return_pct": 23.99873056172645,
+        "revenue": 2417084000,
+        "spending": null,
+        "stock_return_pct": 16.818181818181806
+      },
+      {
+        "cash": 204000,
+        "debt": 1198334000,
+        "earnings": 658024000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 16.35271635271634,
+        "revenue": 3115515000,
+        "spending": null,
+        "stock_return_pct": -2.0011117287381848
+      }
+    ]
+  },
+  "fundamentals": {
+    "balance_sheet": {
+      "current_ratio": 0.6722811093364309,
+      "debt_to_ebitda": null,
+      "debt_to_equity": 0.2774768499919304
+    },
+    "balance_sheet_basics": {
+      "book_value_per_share": 18.48121346879721,
+      "shareholders_equity": 4318681000,
+      "total_assets": 7421948000,
+      "total_liabilities": 3103267000
+    },
+    "cash_flow": {
+      "fcf_margin_pct": null
+    },
+    "growth": {
+      "eps_growth_cagr_3yr_pct": -16.40263793870981
+    },
+    "profitability": {
+      "roe_pct": 15.23668916504831,
+      "trend": "stable"
+    },
+    "valuation": {
+      "graham_multiple": 29.68318889293508,
+      "graham_number": 33.75450800043378,
+      "graham_upside_pct": -12.936528242368384,
+      "ncav_margin_pct": -129.34722914369027,
+      "pb_ratio": 2.0978059728305936,
+      "pe_ttm": 14.14963503649635
+    }
+  },
+  "industry": "Oil & Gas Exploration & Production",
+  "last_updated": "2026-09-23T21:20:06Z",
+  "layered_analysis": {
+    "flags": [
+      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
+    ],
+    "munger_quality_pass": true,
+    "overall": "Incomplete: one or more layers has insufficient data for this company.",
+    "qualitative_moat_present": null,
+    "required_margin_of_safety_pct": 15.0,
+    "valuation_gate_pass": false
+  },
+  "macro_context": {
+    "regime": "Neutral/Expansion",
+    "sector_sensitivity": {
+      "cyclicality": "high",
+      "rate_sensitivity": "medium"
+    }
+  },
+  "market_cap": 9059773600,
+  "metrics": {
+    "book_value_per_share": 18.48121346879721,
+    "current_ratio": 0.6722811093364309,
+    "debt_to_equity": 0.2774768499919304,
+    "eps_growth_cagr_3yr_pct": -16.40263793870981,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 29.68318889293508,
+    "graham_upside_pct": -12.936528242368384,
+    "margin_trend_score": 60,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -129.34722914369027,
+    "pb_ratio": 2.0978059728305936,
+    "pe_ttm": 14.14963503649635,
+    "roe_pct": 15.23668916504831,
+    "shareholders_equity": 4318681000,
+    "total_assets": 7421948000,
+    "total_liabilities": 3103267000
+  },
+  "name": "Range Resources",
+  "price": {
+    "as_of": "2026-09-23",
+    "close": 38.77
+  },
+  "qualitative": null,
+  "sector": "Energy",
+  "sources": {
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000315852.json",
+    "sec_filings": [
+      {
+        "filed": "2026-07-22",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/315852/000031585226000018/rrc-20260721.htm"
+      },
+      {
+        "filed": "2026-07-21",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/315852/000119312526310446/rrc-20260630.htm"
+      },
+      {
+        "filed": "2026-02-24",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/315852/000119312526067292/rrc-20251231.htm"
+      }
+    ]
+  },
+  "ticker": "RRC",
+  "value_investing": {
+    "graham_defensive": {
+      "criteria": [
+        {
+          "criterion": "Adequate size (market cap >= $2B)",
+          "detail": "Market cap $9.1B",
+          "passed": true
+        },
+        {
+          "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
+          "detail": "Current ratio 0.67, debt $1.2B vs working capital $-0.2B",
+          "passed": false
+        },
+        {
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 5/6 available years",
+          "passed": false
+        },
+        {
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
+        },
+        {
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -16.4%/yr",
+          "passed": false
+        },
+        {
+          "criterion": "Moderate P/E (<= 15)",
+          "detail": "P/E 14.1",
+          "passed": true
+        },
+        {
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 29.7",
+          "passed": false
+        }
+      ],
+      "evaluated": 7,
+      "passed": 3,
+      "total": 7
+    },
+    "munger_quality": {
+      "criteria": [
+        {
+          "criterion": "Strong return on equity (>= 15%)",
+          "detail": "ROE 15.2%",
+          "passed": true
+        },
+        {
+          "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
+          "detail": "Debt/equity 0.28",
+          "passed": true
+        },
+        {
+          "criterion": "Not diluting shareholders (share count flat or falling)",
+          "detail": "239,789,000 shares vs. 242,745,000 a year earlier",
+          "passed": true
+        },
+        {
+          "criterion": "Margins stable or improving (not declining)",
+          "detail": "Margin trend unavailable",
+          "passed": null
+        }
+      ],
+      "evaluated": 3,
+      "passed": 3,
+      "total": 4
+    }
+  },
+  "website": "https://www.rangeresources.com"
+}
