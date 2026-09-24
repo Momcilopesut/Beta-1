@@ -21,7 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from pipeline.build import writer  # noqa: E402
 from pipeline.main import build_filings_digest, build_macro_doc, digest_entry_from_doc  # noqa: E402
-from pipeline.scoring import aggregation, capital_efficiency, macro_regime, performance, value_investing  # noqa: E402
+from pipeline.scoring import capital_efficiency, macro_regime, performance, plain_analysis, value_investing  # noqa: E402
 from pipeline.utils.config import capital_efficiency_config, macro_series, screening_config, watchlist  # noqa: E402
 from pipeline.utils.paths import DATA_DIR  # noqa: E402
 
@@ -389,7 +389,7 @@ def main() -> None:
         five_year_history = synth_five_year_history(market_cap, close_price)
 
         qualitative_out = synth_qualitative(company_cfg["name"])
-        layered_analysis = aggregation.build_layered_analysis(qualitative_out, metrics, checklist)
+        plain_analysis_doc = plain_analysis.build_plain_analysis(metrics)
 
         company_doc = {
             "ticker": ticker,
@@ -413,7 +413,7 @@ def main() -> None:
             "five_year_history": five_year_history,
             "value_investing": checklist,
             "qualitative": qualitative_out,
-            "layered_analysis": layered_analysis,
+            "plain_analysis": plain_analysis_doc,
             "sources": {"sec_filings": synth_sec_filings(ticker), "sec_companyfacts_url": None},
             "_errors": {
                 "_sample_data": "Synthetic demo data from scripts/generate_sample_data.py, not a real fetch."
@@ -436,9 +436,6 @@ def main() -> None:
                 "graham_criteria_total": checklist["graham_defensive"]["total"],
                 "munger_quality_passed": checklist["munger_quality"]["passed"],
                 "munger_quality_total": checklist["munger_quality"]["total"],
-                "qualitative_moat_present": layered_analysis["qualitative_moat_present"],
-                "munger_quality_pass": layered_analysis["munger_quality_pass"],
-                "valuation_gate_pass": layered_analysis["valuation_gate_pass"],
                 "last_updated": generated_at,
             }
         )

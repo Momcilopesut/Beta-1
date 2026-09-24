@@ -1,10 +1,10 @@
-"""End-to-end integration test for the layered-analysis wiring in
-pipeline/main.py (qualitative -> aggregation). Mocks every network/API
-boundary (FMP, SEC EDGAR, Stooq, filing text, and the Anthropic moat-read
-call) and exercises the real fetch_and_score_company -> finalize_company
-call chain used by the actual pipeline, to catch wiring bugs (wrong argument
-order, missing dict keys, tuple-unpacking mismatches) that per-module unit
-tests can't see."""
+"""End-to-end integration test for pipeline/main.py's fetch -> score ->
+finalize wiring (qualitative layer, plain-language analysis, filings
+digest). Mocks every network/API boundary (FMP, SEC EDGAR, Stooq, filing
+text, and the Anthropic moat-read/filing-summary call) and exercises the
+real fetch_and_score_company -> finalize_company call chain used by the
+actual pipeline, to catch wiring bugs (wrong argument order, missing dict
+keys, tuple-unpacking mismatches) that per-module unit tests can't see."""
 
 from unittest.mock import patch
 
@@ -123,7 +123,7 @@ def test_use_fmp_false_never_calls_fmp_and_still_scores_correctly(mock_sec, mock
     passes use_fmp=False - this proves FMP is genuinely never touched (not
     just that its data happens to go unused), and that every metric still
     computes correctly from SEC EDGAR XBRL + Stooq alone, matching the same
-    fixture values test_full_layered_pipeline_wiring checks with FMP mocked
+    fixture values test_full_pipeline_wiring checks with FMP mocked
     as merely empty rather than skipped outright."""
     mock_sec.return_value = _sec_data()
     mock_stooq.return_value = _stooq_prices()
@@ -157,7 +157,7 @@ def test_use_fmp_false_never_calls_fmp_and_still_scores_correctly(mock_sec, mock
 @patch("pipeline.main.stooq.fetch_daily_prices")
 @patch("pipeline.main.sec_edgar.fetch_company")
 @patch("pipeline.main.fmp.fetch_company")
-def test_full_layered_pipeline_wiring(
+def test_full_pipeline_wiring(
     mock_fmp, mock_sec, mock_stooq, mock_qualitative, mock_filing_sections, mock_plain_text, tmp_path
 ):
     mock_fmp.return_value = _empty_fmp_data()
@@ -174,7 +174,7 @@ def test_full_layered_pipeline_wiring(
     assert state["latest_10k"]["form"] == "10-K"
     assert set(state["latest_filings"]) == {"10-K", "10-Q", "8-K"}
 
-    company_doc, summary, qualitative_failed = finalize_company(state, regime_info, skip_ai=False, out_dir=tmp_path)
+    company_doc, _summary, qualitative_failed = finalize_company(state, regime_info, skip_ai=False, out_dir=tmp_path)
 
     assert qualitative_failed is False
     assert company_doc["metrics"]["total_assets"] == 2_000_000_000
@@ -183,8 +183,15 @@ def test_full_layered_pipeline_wiring(
     assert company_doc["qualitative"]["moat_present"] is True
     assert company_doc["qualitative"]["filing_summary_10q"] == "Quarterly revenue grew 8% year over year."
     assert company_doc["qualitative"]["filing_summary_8k"] == "The company announced a new CEO."
-    assert company_doc["layered_analysis"]["qualitative_moat_present"] is True
-    assert company_doc["layered_analysis"]["munger_quality_pass"] == summary["munger_quality_pass"]
+    # This fixture is a healthy, if badly overpriced, company: positive net
+    # worth, low debt, strong liquidity/ROIC/gross margin/free cash flow,
+    # and an improving margin trend (7 positives) - but priced far above
+    # the fair-value estimate given its stooq-mocked $128 price vs. a
+    # ~$32.86 Graham number (1 worry). eps_growth_cagr_3yr_pct is skipped
+    # entirely (only 2 annual statements here, needs 4), proving a missing
+    # metric doesn't get forced into either list.
+    assert len(company_doc["plain_analysis"]["positives"]) == 7
+    assert len(company_doc["plain_analysis"]["worries"]) == 1
 
     # The 10-Q/8-K text was fetched and passed through to the Anthropic call
     # as filing_texts, alongside the 10-K sections.

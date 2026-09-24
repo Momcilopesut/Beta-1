@@ -105,11 +105,11 @@ function render(doc) {
 
     ${renderKeyMetricsReference(doc.metrics)}
 
-    ${renderBalanceSheetBasics(doc.fundamentals, doc.layered_analysis)}
+    ${renderPlainAnalysis(doc.plain_analysis)}
+
+    ${renderBalanceSheetBasics(doc.fundamentals)}
 
     ${renderFiveYearHistory(doc.five_year_history)}
-
-    ${renderLayeredAnalysis(doc)}
 
     ${renderValueInvesting(doc.value_investing)}
 
@@ -164,9 +164,10 @@ function fmtDollars(v) {
 const MARGIN_TREND_LABELS = { 20: "Declining", 60: "Stable", 100: "Improving" };
 
 // Green/yellow/red read on each metric, reusing the same thresholds this
-// app's own checklists already score against (pipeline/scoring/
-// value_investing.py, aggregation.py's margin-of-safety convention) rather
-// than inventing new ones - so a metric colored green here is the same
+// app's own checklists and plain-language analysis already score against
+// (pipeline/scoring/value_investing.py, pipeline/scoring/plain_analysis.py's
+// margin-of-safety convention) rather than inventing new ones - so a
+// metric colored green here is the same
 // "green" as a passing checklist row. Returns "good" | "neutral" | "bad" |
 // null. null means no data, or - for total_assets/total_liabilities/
 // book_value_per_share - a metric that's pure scale with no inherent
@@ -182,7 +183,7 @@ function metricSentiment(key, value) {
       return value <= 15 ? "good" : value <= 25 ? "neutral" : "bad";
     case "pb_ratio": // <=1.5x book is classic deep-value territory
       return value <= 1.5 ? "good" : value <= 3 ? "neutral" : "bad";
-    case "graham_upside_pct": // mirrors aggregation.py's own margin-of-safety flags
+    case "graham_upside_pct": // mirrors plain_analysis.py's own margin-of-safety check
       return value >= 15 ? "good" : value >= 0 ? "neutral" : "bad";
     case "graham_multiple": // 22.5 is this tool's own combined P/E x P/B ceiling
       return value <= 22.5 ? "good" : value <= 35 ? "neutral" : "bad";
@@ -278,7 +279,7 @@ function renderKeyMetricsReference(metrics) {
   `;
 }
 
-function renderBalanceSheetBasics(fundamentals, layered) {
+function renderBalanceSheetBasics(fundamentals) {
   const basics = fundamentals?.balance_sheet_basics;
   const valuation = fundamentals?.valuation;
   if (!basics && !valuation) return "";
@@ -297,11 +298,6 @@ function renderBalanceSheetBasics(fundamentals, layered) {
       ${
         valuation?.ncav_margin_pct !== null && valuation?.ncav_margin_pct !== undefined && valuation.ncav_margin_pct > 0
           ? `<p class="meta">The strictest test here also passes: even just the current assets, after paying off every liability, are worth ${fmt(valuation.ncav_margin_pct, 0, "%")} more than the whole stock costs today.</p>`
-          : ""
-      }
-      ${
-        layered?.required_margin_of_safety_pct !== undefined && layered?.required_margin_of_safety_pct !== null
-          ? `<p class="meta">Required margin of safety: ${formatNumber(layered.required_margin_of_safety_pct, { decimals: 0, suffix: "%" })} (this tool's convention — a real discount to estimated fair value, not just trading below it by any amount).</p>`
           : ""
       }
     </section>
@@ -832,77 +828,31 @@ function renderValueInvesting(valueInvesting) {
   `;
 }
 
-function gateLabel(pass) {
-  if (pass === true) return "Pass";
-  if (pass === false) return "Fail";
-  return "Not evaluated";
-}
-
-function gateClass(pass) {
-  if (pass === true) return "gate-pass";
-  if (pass === false) return "gate-fail";
-  return "gate-unknown";
-}
-
-function renderMungerQuality(munger, mungerQualityPass) {
-  if (!munger) return "";
+// Short, plain-English positives/worries computed straight from the
+// metrics above (pipeline.scoring.plain_analysis) - no AI, no jargon, one
+// simple sentence per clear signal. Replaces the old "Layered Analysis"
+// section, which blended the quality checklist, the AI moat read, and the
+// valuation gate into one combined verdict.
+function renderPlainAnalysis(plainAnalysis) {
+  if (!plainAnalysis) return "";
+  const { positives = [], worries = [] } = plainAnalysis;
+  if (!positives.length && !worries.length) return "";
+  const list = (items, className) =>
+    items.length ? `<ul class="plain-analysis-list ${className}">${items.map((t) => `<li>${escapeHtml(t)}</li>`).join("")}</ul>` : "";
   return `
-    <div class="layered-card">
-      <h4>Quality Checklist <span class="layered-gate ${gateClass(mungerQualityPass)}">${gateLabel(mungerQualityPass)}</span></h4>
-      <p class="checklist-note">${munger.evaluated ? `${munger.passed}/${munger.evaluated} evaluated criteria pass` : "Not enough data to evaluate."}</p>
-      <ul class="checklist">${renderChecklistRows(munger.criteria)}</ul>
-      <p class="meta">Return on equity, debt discipline, dilution, and margin trend — does the business actually earn good returns on capital, not just look statistically cheap.</p>
-    </div>
-  `;
-}
-
-const MOAT_LABELS = {
-  network_effects: "Network effects",
-  cost_advantage: "Cost advantage",
-  intangible_assets: "Intangible assets (brand/patents/licenses)",
-  switching_costs: "Switching costs",
-  efficient_scale: "Efficient scale",
-  none: "None identified",
-};
-
-function renderBuffettMoat(qualitative) {
-  if (!qualitative) {
-    return `
-      <div class="layered-card">
-        <h4>Moat Read (10-K) <span class="layered-gate gate-unknown">Not run</span></h4>
-        <p class="meta">Only runs for this week's per-sector finalists (cost control — this layer reads real
-        filing text and spends extra AI budget per company).</p>
-      </div>
-    `;
-  }
-  const redFlags = (qualitative.red_flags || [])
-    .map((f) => `<li>${escapeHtml(f)}</li>`)
-    .join("");
-  return `
-    <div class="layered-card">
-      <h4>Moat Read (10-K) <span class="layered-gate ${gateClass(qualitative.moat_present)}">${qualitative.moat_present ? "Moat found" : "No moat found"}</span></h4>
-      <p><strong>${escapeHtml(MOAT_LABELS[qualitative.moat_type] || qualitative.moat_type)}</strong></p>
-      <p>${escapeHtml(qualitative.moat_explanation)}</p>
-      ${redFlags ? `<p class="checklist-label">Red flags from the filing</p><ul>${redFlags}</ul>` : `<p class="meta">No red flags called out in the excerpts.</p>`}
-      <p class="meta">Grounded in this company's own 10-K text (extraction: ${escapeHtml(qualitative.extraction_confidence)}) —
-      unlike the rest of this page, these claims are prompt-grounded, not code-verified against a fixed metric list.</p>
-    </div>
-  `;
-}
-
-function renderLayeredAnalysis(doc) {
-  const layered = doc.layered_analysis;
-  if (!layered) return "";
-  const flags = (layered.flags || []).map((f) => `<li>${escapeHtml(f)}</li>`).join("");
-  return `
-    <section class="layered-analysis">
-      <h3>Layered Analysis <span class="attribution">(each gate stays visible separately, deliberately not blended into one score)</span></h3>
-      <p class="layered-overall">${escapeHtml(layered.overall)}</p>
-      ${flags ? `<ul class="layered-flags">${flags}</ul>` : ""}
-      <div class="layered-columns">
-        ${renderMungerQuality(doc.value_investing?.munger_quality, layered.munger_quality_pass)}
-        ${renderBuffettMoat(doc.qualitative)}
-      </div>
+    <section class="plain-analysis">
+      <h3>What This Means, in Plain Words</h3>
+      <p class="meta">A short, jargon-free read on the numbers above - what looks good, and what's worth worrying about.</p>
+      ${
+        positives.length
+          ? `<p class="plain-analysis-heading plain-analysis-good">👍 What's good</p>${list(positives, "plain-analysis-good")}`
+          : ""
+      }
+      ${
+        worries.length
+          ? `<p class="plain-analysis-heading plain-analysis-bad">⚠️ What to worry about</p>${list(worries, "plain-analysis-bad")}`
+          : ""
+      }
     </section>
   `;
 }

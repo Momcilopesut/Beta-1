@@ -46,7 +46,7 @@ import sys
 from pipeline.build import qualitative_cache, writer
 from pipeline.fetch import filing_text, fmp, fred, sec_edgar, stooq
 from pipeline.narrative.qualitative_client import QualitativeError, generate_qualitative_assessment
-from pipeline.scoring import aggregation, capital_efficiency, history, macro_mood, macro_regime, performance, value_investing
+from pipeline.scoring import capital_efficiency, history, macro_mood, macro_regime, performance, plain_analysis, value_investing
 from pipeline.scoring.fundamentals import build_metrics, normalize_price_rows
 from pipeline.utils.config import capital_efficiency_config, macro_series, screening_config, watchlist
 
@@ -314,7 +314,7 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
     else:
         qualitative_out, qualitative_failed = _run_qualitative(state, out_dir)
 
-    layered_analysis = aggregation.build_layered_analysis(qualitative_out, metrics, state["checklist"])
+    plain_analysis_doc = plain_analysis.build_plain_analysis(metrics)
     returns = performance.compute_returns(state["raw"]["price_history"])
 
     company_doc = {
@@ -339,7 +339,7 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
         "five_year_history": state["five_year_history"],
         "value_investing": state["checklist"],
         "qualitative": qualitative_out,
-        "layered_analysis": layered_analysis,
+        "plain_analysis": plain_analysis_doc,
         "sources": {"sec_filings": state["recent_filings"], "sec_companyfacts_url": state["companyfacts_url"]},
         "_errors": state["errors"],
     }
@@ -355,9 +355,6 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
         "graham_criteria_total": state["checklist"]["graham_defensive"]["total"],
         "munger_quality_passed": state["checklist"]["munger_quality"]["passed"],
         "munger_quality_total": state["checklist"]["munger_quality"]["total"],
-        "qualitative_moat_present": layered_analysis["qualitative_moat_present"],
-        "munger_quality_pass": layered_analysis["munger_quality_pass"],
-        "valuation_gate_pass": layered_analysis["valuation_gate_pass"],
         "last_updated": generated_at,
     }
 

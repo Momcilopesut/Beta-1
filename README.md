@@ -35,21 +35,24 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
   net worth (assets minus liabilities), computed straight from the balance sheet, is
   the headline figure on every company page — not buried under a dozen other metrics.
 - **Scoring**: deterministic, config-driven, and deliberately small — see "Assets vs.
-  Liabilities" and "Layered analysis" below. A rule-based macro regime classifier
-  (`pipeline/scoring/macro_regime.py`) provides cycle context alongside the scores.
+  Liabilities" and "Plain-Language Analysis" below. A rule-based macro regime
+  classifier (`pipeline/scoring/macro_regime.py`) provides cycle context alongside
+  the scores.
 - **Value-investing checklists** (`pipeline/scoring/value_investing.py`): a Defensive
   Checklist and a Quality Checklist, computed from the same fetched statements — no
   extra API calls, simple pass/fail arithmetic. Shown on every company's own detail
   page; the weekly screen itself ranks by price return instead (see "Weekly
   Screener" below).
-- **Layered analysis** (a quality checklist read → a qualitative moat read →
-  a fair-value margin-of-safety gate, see "Layered analysis" below): a deeper pass per
-  company that reads the company's own 10-K text — the only AI call in this pipeline,
-  and the only place it isn't grounded solely in pre-computed metrics. The same call
-  also writes short, neutral summaries of the company's latest 10-K, 10-Q, and 8-K,
-  shown on its detail page's Recent Filings section and rolled up across every
-  finalist on the **Filings Digest** page (see below). Only runs for tickers that
-  make at least one timeframe's top-5 list — see "Weekly Screener" below.
+- **Plain-Language Analysis** (see the dedicated section below): a short, jargon-free
+  "what's good / what to worry about" summary on every company page, written straight
+  from the metrics above it — no AI, no blended score, one plain sentence per clear
+  signal.
+- **10-K read** (`pipeline/narrative/qualitative_client.py`): the only AI call in this
+  pipeline. Reads the company's own most recent 10-K and writes short, neutral
+  summaries of the company's latest 10-K, 10-Q, and 8-K, shown on its detail page's
+  Recent Filings section and rolled up across every finalist on the **Filings
+  Digest** page (see below). Only runs for tickers that make at least one timeframe's
+  top-5 list — see "Weekly Screener" below.
 - **Economic-cycle context**: the macro page frames the current regime against classic
   business-cycle/sector-rotation theory (which sectors have historically led/lagged in
   this phase) — textbook reference, explicitly not a prediction.
@@ -113,7 +116,7 @@ Anything not in the tracked universe is reachable through the search box instead
 about 5 minutes, rather than waiting for it to be added to a future tranche.
 
 Every scanned company — not just the picks — still gets a full `data/companies/
-{ticker}.json` and detail page, complete with its own Layered Analysis;
+{ticker}.json` and detail page, complete with its own Plain-Language Analysis;
 `data/performance_picks.json` holds just the ranked selection the homepage
 renders (plus each window's key/label), and `data/watchlist.json` keeps covering the
 whole universe so the search box can still find anything scanned. Run it locally with
@@ -260,67 +263,78 @@ calls per company):
   enough to a fiscal year end) shows as genuinely missing, never a guessed or
   zero-filled number — the same rule the rest of this pipeline follows.
 
-## Layered analysis
+## Plain-Language Analysis
 
-A deeper pass per company, deliberately kept as separate layers rather than one
-blended score — a great quality checklist with a broken moat should get flagged, not
-averaged away, and a great business at a bad price still isn't a buy. Every company
-detail page shows each layer, plus an `overall` synthesis and a `flags` list
-explaining any disagreement between them. Exactly three investors, nothing else —
-easy-to-check fundamentals throughout, not exotic ratios (no ROIC, no DCF, no
-EV/EBITDA — see "Assets vs. Liabilities" above for why).
+A short "what's good / what to worry about" summary on every company page, computed
+straight from the metrics above it (`pipeline/scoring/plain_analysis.py`) — no AI
+call, no blended score, and deliberately written in plain, everyday words rather than
+finance terminology, the way you'd explain it to someone who's never read a balance
+sheet. This replaced an earlier "Layered Analysis" section that combined the quality
+checklist, an AI-generated moat read, and the valuation gate into one page section
+with a blended `overall` verdict and `flags` list — this section does something
+narrower instead: it only looks at plain numbers already sitting in the metrics dict,
+never AI-generated text, and never blends more than one number into a single
+judgment.
 
-1. **Quality checklist** (`pipeline/scoring/value_investing.py::munger_quality_checklist`) —
-   return on equity ≥ 15%, debt/equity ≤ 1.0, no shareholder dilution, and margins
-   stable or improving. Pure arithmetic, no AI.
-2. **Moat read** (`pipeline/narrative/qualitative_client.py`) — Claude reads
-   excerpts from the company's own most recent 10-K (Business, Risk Factors, and
-   Management's Discussion and Analysis, extracted by
-   `pipeline/fetch/filing_text.py`) and classifies the moat (network effects / cost
-   advantage / intangible assets / switching costs / efficient scale / none — the
-   classic moat-investing categories) and lists any red flags the filing
-   itself raises. **This is the only AI call in the whole pipeline, and the one place
-   it reads raw text instead of only pre-computed metrics** — there's no mechanical
-   fact-checking possible for free-form filing prose the way there would be for a
-   fixed metrics dict, so this layer's grounding is prompt discipline only, not
-   code-verified. `qualitative.extraction_confidence` tells you whether the
-   filing-text extraction itself found a clean Item 7 section match or fell back to a
-   raw document prefix, so you know how much to trust it.
+Nine independent checks, each gated by its own threshold, matching the same bands
+`site/js/company.js::metricSentiment` uses to color the Key Metrics Reference table
+green/red:
 
-   The same call also writes short, neutral 2-4 sentence summaries of the company's
-   latest 10-K, 10-Q, and 8-K (`qualitative.filing_summary_10k`/`_10q`/`_8k`, shown on
-   the company page's Recent Filings section, one Anthropic call handles all of it
-   rather than three) — grounded the same way, and left `null` (never guessed) for a
-   filing type the company hasn't recently filed. `pipeline/fetch/sec_edgar.py::
-   latest_filings_by_form` finds each of the three independently, so a burst of
-   recent 8-Ks (a company can file 10-20+/year, vs. one 10-K and ~3 10-Qs) can't crowd
-   out the latest 10-Q/10-K. Results are cached by all three filing URLs together
-   under `data/qualitative_cache/` — a weekly refresh skips the filing fetch and the
-   Claude call entirely only when none of the three have changed since the last run,
-   so a fresh 10-Q or 8-K correctly invalidates the cache even when the 10-K itself
-   hasn't. Only runs for a company that has a 10-K on file — cost control against the
-   whole universe happens one level up, in the weekly screen's two-phase design (see
-   "Weekly Screener" above): this layer, filing summaries included, only ever runs
-   for that week's per-sector finalists. Every company (finalist or not) still gets
-   its latest 10-K/10-Q/8-K listed with a direct SEC link on its own page — it's just
-   the AI summary of each that's finalists-only.
-3. **Valuation gate** — not a separate module or AI call, just the fair-value
-   estimate's margin of safety already computed in `fundamentals.py`
-   (`graham_upside_pct = sqrt(22.5 × EPS × book value/share)` vs. price). No growth
-   projection or discount-rate assumption, unlike a DCF (see "Assets vs.
-   Liabilities" above for why that trade-off was made deliberately).
+| What it checks | Metric | Good (👍) | Worry (⚠️) |
+| --- | --- | --- | --- |
+| Does it own more than it owes? | `shareholders_equity` | > $0 | ≤ $0 |
+| Has it borrowed too much? | `debt_to_equity` | ≤ 1.0 | > 2.0 |
+| Can it pay its bills soon? | `current_ratio` | ≥ 2.0 | < 1.0 |
+| Does it earn a good return on everything it uses to run the business? | `roic_pct` | ≥ 15% | < 0% |
+| Room to raise prices / absorb rising costs? | `gross_margin_pct` | ≥ 40% | < 15% |
+| Is its profit per share growing? | `eps_growth_cagr_3yr_pct` | ≥ 10%/yr | < 0%/yr |
+| Real cash left over after running the business? | `fcf_margin_pct` | ≥ 15% | < 0% |
+| Is its profit margin getting better or worse? | `margin_trend_score` | Improving | Declining |
+| Is the price fair for what it roughly owns and earns? | `graham_upside_pct` | ≥ 15% | < 0% |
 
-`pipeline/scoring/aggregation.py` combines the three gates (quality checklist
-present/absent, qualitative moat present/absent, valuation margin of safety) into
-the `overall` summary and `flags` — e.g. a company with a strong quality checklist
-but no moat gets flagged explicitly rather than the checklist quietly winning out in
-an average. The required margin of safety is a single flat number, a 15% convention
-used throughout this tool — an earlier version of this pipeline scaled it
-dynamically with data coverage and filing red flags, which has been removed for
-simplicity. See `required_margin_of_safety_pct` in the output.
+A metric with no data, or a reading that's genuinely in between (e.g. debt/equity of
+1.5 — above the "good" bar but not yet at the "worry" one), produces neither a
+positive nor a worry — a company doesn't have to be praised or criticized on every
+single number just to fill out a list. A company with too little data, or one that's
+simply unremarkable on every check, can end up with an empty (or short) list on
+either side; that's the honest answer, not a bug.
 
-Each company page shows these three gates (and the checklists behind them)
-separately — deliberately not combined into a single blended score.
+## 10-K Filing Summaries
+
+`pipeline/narrative/qualitative_client.py` — **the only AI call in the whole
+pipeline**. Claude reads excerpts from the company's own most recent 10-K (Business,
+Risk Factors, and Management's Discussion and Analysis, extracted by
+`pipeline/fetch/filing_text.py`) and writes short, neutral 2-4 sentence summaries of
+the company's latest 10-K, 10-Q, and 8-K (`qualitative.filing_summary_10k`/`_10q`/
+`_8k`, shown on the company page's Recent Filings section, one Anthropic call handles
+all of it rather than three) — grounded in the filing text itself, not code-verified
+against a fixed metrics dict the way the checklists and Plain-Language Analysis above
+are, and left `null` (never guessed) for a filing type the company hasn't recently
+filed. `qualitative.extraction_confidence` tells you whether the filing-text
+extraction itself found a clean section match or fell back to a raw document prefix,
+so you know how much to trust it.
+
+The same call also classifies the company's moat (network effects / cost advantage /
+intangible assets / switching costs / efficient scale / none) and lists any red
+flags the filing raises (`qualitative.moat_present`/`moat_type`/`moat_explanation`/
+`red_flags`) — this data is still fetched and stored in every finalist's JSON, it
+just isn't shown anywhere on the site any more (it was the AI-read half of the old
+Layered Analysis section above; the Plain-Language Analysis section replacing it is
+metrics-only by design). It's there in the raw output for anyone who wants it, e.g.
+`data/companies/{ticker}.json`, even though the UI itself doesn't surface it.
+
+`pipeline/fetch/sec_edgar.py::latest_filings_by_form` finds each of the three filing
+types independently, so a burst of recent 8-Ks (a company can file 10-20+/year, vs.
+one 10-K and ~3 10-Qs) can't crowd out the latest 10-Q/10-K. Results are cached by
+all three filing URLs together under `data/qualitative_cache/` — a weekly refresh
+skips the filing fetch and the Claude call entirely only when none of the three have
+changed since the last run, so a fresh 10-Q or 8-K correctly invalidates the cache
+even when the 10-K itself hasn't. Only runs for a company that has a 10-K on file —
+cost control against the whole universe happens one level up, in the weekly screen's
+two-phase design (see "Weekly Screener" above): this call, filing summaries
+included, only ever runs for that week's per-sector finalists. Every company
+(finalist or not) still gets its latest 10-K/10-Q/8-K listed with a direct SEC link
+on its own page — it's just the AI summary of each that's finalists-only.
 
 ## Macro Overview
 
@@ -393,8 +407,8 @@ growth it buys, which Expected Growth already captures).
 ## Filings Digest
 
 `site/filings-digest.html` rolls up this week's per-sector finalists' AI-summarized
-SEC filings (`qualitative.filing_summary_10k`/`_10q`/`_8k`, see "Layered analysis"
-above) into a single page, instead of reading them one company page at a time. It
+SEC filings (`qualitative.filing_summary_10k`/`_10q`/`_8k`, see "10-K Filing
+Summaries" above) into a single page, instead of reading them one company page at a time. It
 does no new fetching and spends no extra Anthropic budget — it's built directly from
 `build_filings_digest`/`digest_entry_from_doc` in `pipeline/main.py`, which just
 gather the filing summaries `finalize_company` already generated for that week's

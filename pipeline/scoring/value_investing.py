@@ -5,9 +5,9 @@ pass/fail arithmetic: a business's return on the capital it's given matters
 more than how statistically cheap it looks ("if a business earns 18% on
 capital over 20 or 30 years, even if you pay an expensive looking price,
 you'll end up with a fine result"). Both are explicit pass/fail checklists,
-each rendered as its own checklist on the company detail page and combined
-with the qualitative moat read into the Layered Analysis section (see
-pipeline/scoring/aggregation.py).
+each rendered as its own checklist on the company detail page - see
+pipeline/scoring/plain_analysis.py for the separate, metrics-only plain-
+language positives/worries summary shown alongside them.
 
 Every criterion is computed from data already fetched (income/balance/cash
 flow statements, quote) - no new API calls. A criterion is `passed: None`
