@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -765.531297314983,
+      "graham_multiple": -745.3832088169859,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -130.49452290168804,
-      "pb_ratio": -13.2548971173085,
-      "pe_ttm": 57.75460122699387
+      "ncav_margin_pct": -130.90391607932267,
+      "pb_ratio": -13.07930563446385,
+      "pe_ttm": 56.98950920245399
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-24T04:53:41Z",
+  "last_updated": "2026-09-24T15:51:05Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 107319600000,
+  "market_cap": 105940200000,
   "metrics": {
     "book_value_per_share": -7.102280701754386,
     "current_ratio": 0.7230177074355559,
@@ -108,13 +108,13 @@
     "fcf_margin_pct": 6.567270145544906,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": -765.531297314983,
+    "graham_multiple": -745.3832088169859,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -130.49452290168804,
-    "pb_ratio": -13.2548971173085,
-    "pe_ttm": 57.75460122699387,
+    "ncav_margin_pct": -130.90391607932267,
+    "pb_ratio": -13.07930563446385,
+    "pe_ttm": 56.98950920245399,
     "reinvestment_rate_pct": -3.287954588065588,
     "roe_pct": -22.928142677173135,
     "shareholders_equity": -8096600000,
@@ -133,8 +133,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 94.14
+    "as_of": "2026-09-24",
+    "close": 92.8929
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -142,14 +142,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000829224.json",
     "sec_filings": [
       {
-        "filed": "2026-07-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000130/sbux-20260628.htm"
+        "filed": "2026-09-24",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000145/sbux-20260922.htm"
       },
       {
         "filed": "2026-07-29",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000129/sbux-20260729.htm"
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000130/sbux-20260628.htm"
       },
       {
         "filed": "2025-11-14",
@@ -164,7 +164,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $107.3B",
+          "detail": "Market cap $105.9B",
           "passed": true
         },
         {
@@ -189,12 +189,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 57.8",
+          "detail": "P/E 57.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -765.5",
+          "detail": "P/E x P/B = -745.4",
           "passed": true
         }
       ],

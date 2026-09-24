@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 227.55512175740847,
+      "graham_multiple": 219.35588089694966,
       "graham_number": 67.22632978767737,
-      "graham_upside_pct": -68.55526409422366,
-      "ncav_margin_pct": -139.82130084892958,
-      "pb_ratio": 11.048225208809965,
-      "pe_ttm": 20.596531791907513
+      "graham_upside_pct": -67.97297358915824,
+      "ncav_margin_pct": -140.55870775395707,
+      "pb_ratio": 10.847354963961495,
+      "pe_ttm": 20.222061657032754
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-24T04:55:31Z",
+  "last_updated": "2026-09-24T15:52:51Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 24486667361,
+  "market_cap": 24007681979,
   "metrics": {
     "book_value_per_share": 19.35080032850164,
     "current_ratio": 0.3137352765022959,
@@ -107,22 +107,22 @@
     "eps_growth_cagr_3yr_pct": 9.114765771480716,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 227.55512175740847,
-    "graham_upside_pct": -68.55526409422366,
+    "graham_multiple": 219.35588089694966,
+    "graham_upside_pct": -67.97297358915824,
     "gross_margin_pct": 20.302174719360526,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -139.82130084892958,
-    "pb_ratio": 11.048225208809965,
-    "pe_ttm": 20.596531791907513,
+    "ncav_margin_pct": -140.55870775395707,
+    "pb_ratio": 10.847354963961495,
+    "pe_ttm": 20.222061657032754,
     "reinvestment_rate_pct": -41.9100306460388,
     "roe_pct": 54.66364665911665,
     "roic_pct": 51.590084078777174,
     "shareholders_equity": 2207500000,
     "total_assets": 12862400000,
     "total_liabilities": 10654900000,
-    "value_creation_pct": 41.90443605053978
+    "value_creation_pct": 41.90975604098031
   },
   "name": "Darden Restaurants",
   "plain_analysis": {
@@ -138,8 +138,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 213.792
+    "as_of": "2026-09-24",
+    "close": 209.905
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -147,14 +147,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000940944.json",
     "sec_filings": [
       {
+        "filed": "2026-09-24",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/940944/000094094426000032/dri-20260924.htm"
+      },
+      {
         "filed": "2026-07-24",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/940944/000094094426000025/dri-20260531.htm"
-      },
-      {
-        "filed": "2026-06-25",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/940944/000094094426000016/dri-20260624.htm"
       },
       {
         "filed": "2026-03-27",
@@ -169,7 +169,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $24.5B",
+          "detail": "Market cap $24.0B",
           "passed": true
         },
         {
@@ -194,12 +194,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.6",
+          "detail": "P/E 20.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 227.6",
+          "detail": "P/E x P/B = 219.4",
           "passed": false
         }
       ],

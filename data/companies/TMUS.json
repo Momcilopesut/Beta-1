@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 51.15547509894814,
+      "graham_multiple": 51.29452856202186,
       "graham_number": 109.86588409409279,
-      "graham_upside_pct": -33.67989611608548,
+      "graham_upside_pct": -33.76985014070422,
       "ncav_margin_pct": null,
-      "pb_ratio": 3.0015164672327415,
-      "pe_ttm": 17.04320987654321
+      "pb_ratio": 3.005593137552235,
+      "pe_ttm": 17.066358024691358
     }
   },
   "industry": "Telecommunications Services",
-  "last_updated": "2026-09-24T04:54:24Z",
+  "last_updated": "2026-09-24T16:11:16Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 177698779410,
+  "market_cap": 177918677090,
   "metrics": {
     "book_value_per_share": 55.19210099577791,
     "current_ratio": 0.9984081632653061,
@@ -107,19 +107,19 @@
     "eps_growth_cagr_3yr_pct": 67.7257264346652,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 51.15547509894814,
-    "graham_upside_pct": -33.67989611608548,
+    "graham_multiple": 51.29452856202186,
+    "graham_upside_pct": -33.76985014070422,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "pb_ratio": 3.0015164672327415,
-    "pe_ttm": 17.04320987654321,
+    "pb_ratio": 3.005593137552235,
+    "pe_ttm": 17.066358024691358,
     "reinvestment_rate_pct": -12.950240661625765,
     "roe_pct": 18.56662669121497,
     "roic_pct": 10.440836950902895,
     "shareholders_equity": 59203000000,
     "total_assets": 219237000000,
-    "value_creation_pct": 3.603252629621803
+    "value_creation_pct": 3.600602290250495
   },
   "name": "T-Mobile US Inc.",
   "plain_analysis": {
@@ -134,10 +134,25 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 165.66
+    "as_of": "2026-09-24",
+    "close": 165.885
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, T-Mobile reported total revenues of $88.3 billion (up 8% year-over-year) but net income declined slightly to $11.0 billion from $11.3 billion, driven by higher operating expenses including UScellular merger-related costs, workforce transformation charges, and a software impairment. The filing describes completion of the UScellular Wireless Business acquisition (August 2025), the Vistar and Blis advertising technology acquisitions, and new Lumos and Metronet fiber joint ventures. It also discusses ongoing network and workforce restructuring initiatives and notes the One Big Beautiful Bill Act's tax provisions did not materially affect 2025 results.",
+    "filing_summary_10q": "This 10-Q covers the quarter and six months ended June 30, 2026. The excerpt (largely XBRL tagging data rather than narrative text) references financial statement line items including receivables, debt fair values, and spectrum license transactions with Comcast and Grain Management, as well as two new joint ventures (with Wren House and Oak Hill) entered into in April 2026 and a subsequent-event spectrum auction license matter disclosed in July 2026. The provided excerpt does not include narrative MD&A discussion of quarterly results.",
+    "filing_summary_8k": "This 8-K, dated September 1, 2026, discloses a Chief Financial Officer transition: Peter Osvaldik will retire as CFO in February 2027, remaining as Strategic Advisor through July 2027, while Jessica Uhl will join as CFO Designate in mid-September 2026 and become CFO after the company files its FY2026 Form 10-K. The filing details the terms of Ms. Uhl's offer letter, including base salary, incentive awards, a sign-on bonus, equity grants, and severance and retirement provisions, and references an associated press release announcing the transition.",
+    "moat_explanation": "The 10-K describes T-Mobile's extensive FCC-licensed spectrum holdings (an average of 394 MHz of low- and mid-band spectrum plus large mmWave holdings), which are scarce, government-allocated assets that new entrants cannot easily replicate, along with ongoing acquisitions (Comcast, Grain, UScellular) to expand this position. However, the Business and Risk Factors sections also emphasize that the wireless industry 'remains competitive' with intensifying pricing pressure from AT&T, Verizon, cable MVNOs and others, so the moat, while present via regulated spectrum access and network scale, is only moderately durable rather than dominant.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Prior cyberattacks (August 2021 and January 2023) led to mass arbitration claims, multiple class action lawsuits, and an FCC investigation, with the company acknowledging ongoing cybersecurity risk from third parties and AI-enabled threats.",
+      "Company explicitly states industry competition is intensifying with pricing/margin pressure as the market reaches saturation.",
+      "Significant integration, restructuring and merger-related costs disclosed for the UScellular Acquisition (up to $2.6 billion to achieve $1.2 billion in run-rate synergies) and a new 2025 Workforce Transformation and Network Restructuring Initiative, indicating execution risk.",
+      "A $278 million impairment expense was recorded in 2025 related to capitalized software development costs for the company's billing system.",
+      "Reliance on numerous third-party providers (cloud, SaaS, retail partners) for critical systems, which the company states it cannot fully control or assess for security effectiveness."
+    ]
+  },
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001283699.json",
@@ -165,7 +180,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $177.7B",
+          "detail": "Market cap $177.9B",
           "passed": true
         },
         {
@@ -190,12 +205,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 17.0",
+          "detail": "P/E 17.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 51.2",
+          "detail": "P/E x P/B = 51.3",
           "passed": false
         }
       ],

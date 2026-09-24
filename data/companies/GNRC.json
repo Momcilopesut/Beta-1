@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 331.3816561619923,
+      "graham_multiple": 321.35536265812055,
       "graham_number": 51.96318216694538,
-      "graham_upside_pct": -73.94284316169623,
-      "ncav_margin_pct": -104.01251851366018,
-      "pb_ratio": 4.470046409967702,
-      "pe_ttm": 74.13382899628253
+      "graham_upside_pct": -73.53947338479205,
+      "ncav_margin_pct": -104.0746330685106,
+      "pb_ratio": 4.401904091813546,
+      "pe_ttm": 73.00371747211896
     }
   },
   "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-24T05:15:40Z",
+  "last_updated": "2026-09-24T15:56:53Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 11739596154,
+  "market_cap": 11568876924,
   "metrics": {
     "book_value_per_share": 44.61251220016771,
     "current_ratio": 2.0261538689393803,
@@ -108,22 +108,22 @@
     "fcf_margin_pct": 6.370126773904547,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 5,
-    "graham_multiple": 331.3816561619923,
-    "graham_upside_pct": -73.94284316169623,
+    "graham_multiple": 321.35536265812055,
+    "graham_upside_pct": -73.53947338479205,
     "gross_margin_pct": 38.291297500419915,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -104.01251851366018,
-    "pb_ratio": 4.470046409967702,
-    "pe_ttm": 74.13382899628253,
+    "ncav_margin_pct": -104.0746330685106,
+    "pb_ratio": 4.401904091813546,
+    "pe_ttm": 73.00371747211896,
     "reinvestment_rate_pct": 95.18653320529235,
     "roe_pct": 6.0611102627162365,
     "roic_pct": 6.702306374388909,
     "shareholders_equity": 2632422000,
     "total_assets": 5573679000,
     "total_liabilities": 2934633000,
-    "value_creation_pct": -2.7609046170896274
+    "value_creation_pct": -2.7542659420099067
   },
   "name": "Generac",
   "plain_analysis": {
@@ -140,26 +140,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 199.42
+    "as_of": "2026-09-24",
+    "close": 196.38
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, Generac reported net sales of $4.209 billion, down 2.0% from $4.295 billion in 2024, with gross margin slipping to 38.3% from 38.8%. Net income attributable to the company fell about 49.6% to $159.6 million, driven by lower residential product sales amid reduced power outage activity, higher input costs, and a rise in operating expenses that included $142.3 million of legal provisions and settlement-related costs (versus $10.5 million in 2024). The filing also describes a July 2025 amendment extending and repricing its Term Loan A and revolving credit facilities, and notes impacts from newly enacted U.S. tariffs and the One Big Beautiful Bill Act on the solar/storage market and tax provisions.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL tag data and footnote references rather than narrative discussion, so specific financial results cannot be summarized from what was given. It references segment reporting for Residential and Commercial & Industrial businesses, a 2026 acquisition (Chilicon) and prior Enercon acquisition, several immaterial business dispositions in early-to-mid 2026, a Saudi Arabia joint venture entity, and references to ongoing patent lawsuits, class action lawsuits, and government inquiries as legal matters affecting the period.",
-    "filing_summary_8k": "This 8-K, dated September 16, 2026, discloses that Generac and Amazon.com, Inc. entered into a Transaction Agreement under which Generac issued Amazon's subsidiary a warrant to acquire up to 1,693,745 shares of common stock at an exercise price of about $200.93 per share, with 307,954 shares vesting immediately and the remainder vesting based on payments (up to $8 billion) Generac receives from Amazon for backup power generators for Amazon data centers. The companies simultaneously executed a long-term supply agreement, with initial generator deliveries expected to total $2.4 billion in 2027 and 2028, and the filing notes registration rights granted for the warrant shares.",
-    "moat_explanation": "The excerpts describe Generac relying on patents, trademarks, and a 'strong brand reputation' that it believes underpins market share and pricing, plus some proprietary supplier relationships and in-house engine/alternator design where it claims a 'design and cost advantage.' However, the Risk Factors section also notes the company has been subject to third-party patent infringement claims and adverse rulings/settlements, indicating its IP protection is imperfect and contested rather than an unassailable barrier.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Demand for the majority of products is described as significantly affected by unpredictable power outage activity, causing substantial period-to-period variability and past periods of excess inventory",
-      "2025 operating expenses included $142.3 million of legal provisions, settlements, patent-related costs and other litigation costs, up sharply from $10.5 million in 2024",
-      "Company disclosed it settled at least one product liability case for an amount exceeding its insurance coverage",
-      "Reliance on a small number of outside manufacturers and single-source suppliers for certain components, with acknowledged past delivery impairments",
-      "Gross profit margin declined (38.3% vs 38.8%) and Domestic segment Adjusted EBITDA margin fell from 19.1% to 17.1%, attributed to input costs, unfavorable mix, and an inventory provision",
-      "Exposure to tariffs and commodity (steel, copper, aluminum) price volatility that the company states has created inflationary pressure negatively impacting consumer demand and margins"
-    ]
-  },
+  "qualitative": null,
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001474735.json",
@@ -187,7 +171,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $11.7B",
+          "detail": "Market cap $11.6B",
           "passed": true
         },
         {
@@ -212,12 +196,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 74.1",
+          "detail": "P/E 73.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 331.4",
+          "detail": "P/E x P/B = 321.4",
           "passed": false
         }
       ],

@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 11.004591918810473,
+      "graham_multiple": 11.108916744819552,
       "graham_number": 136.06885217398903,
-      "graham_upside_pct": 42.98954621058117,
+      "graham_upside_pct": 42.31654866017052,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.3414592923308268,
-      "pe_ttm": 8.203448275862069
+      "pb_ratio": 1.3478028892365528,
+      "pe_ttm": 8.242241379310345
     }
   },
   "industry": "Insurance - Diversified",
-  "last_updated": "2026-09-24T04:56:49Z",
+  "last_updated": "2026-09-24T16:08:09Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,19 +98,19 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 33247952400,
+  "market_cap": 33416917404,
   "metrics": {
     "book_value_per_share": 70.93767253619494,
     "eps_growth_cagr_3yr_pct": 45.06349306453876,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 5,
-    "graham_multiple": 11.004591918810473,
-    "graham_upside_pct": 42.98954621058117,
+    "graham_multiple": 11.108916744819552,
+    "graham_upside_pct": 42.31654866017052,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
-    "pb_ratio": 1.3414592923308268,
-    "pe_ttm": 8.203448275862069,
+    "pb_ratio": 1.3478028892365528,
+    "pe_ttm": 8.242241379310345,
     "roe_pct": 18.17318020325539,
     "shareholders_equity": 24206000000,
     "total_assets": 79241000000,
@@ -126,10 +126,26 @@
     "worries": []
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 95.16
+    "as_of": "2026-09-24",
+    "close": 95.61
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Arch Capital's 2025 Form 10-K reports approximately $26.9 billion in capital, $16.5 billion of net premiums written, and net income available to common shareholders of $4.4 billion, with book value per share rising 22.6% to $65.11. The insurance, reinsurance, and mortgage segments each contributed underwriting income ($375 million, $1.6 billion, and $1.0 billion respectively), with insurance segment growth driven largely by the August 2024 MCE acquisition from Allianz. The filing notes increased competition and softening reinsurance pricing heading into 2026, alongside $1.9 billion of share repurchases during 2025.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, so it does not include a discussion of quarterly results. It indicates the filing covers Arch's insurance, reinsurance, and mortgage segments, investment portfolio categories (fixed maturities, short-term investments, equities, and other investments), and an updated share repurchase authorization referenced as of April 19, 2026. No further descriptive detail on the quarter's financial performance is available in the excerpt given.",
+    "filing_summary_8k": "This Form 8-K, dated July 28, 2026, discloses under Item 2.02 that Arch Capital issued a press release reporting earnings and made available a financial supplement for the quarter ended June 30, 2026, attached as exhibits. The filing does not include the actual financial results in its body, only the announcement of their release.",
+    "moat_explanation": "The 10-K describes Arch's insurance/reinsurance subsidiaries as licensed or admitted across numerous U.S. states and international jurisdictions, its mortgage units as GSE-eligible insurers approved by Fannie Mae and Freddie Mac and APRA-authorized in Australia, and its Lloyd's syndicate access via a managing agency \\u2014 regulatory licenses and approvals that are not trivial for new entrants to replicate. However, the Risk Factors section explicitly states the industry is highly competitive with many rivals having greater financial resources, and highly cyclical with periods of excess capacity and falling rates (e.g., Jan 2026 property-cat renewal rates down 10-20%), which tempers the durability of any pricing-power advantage.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company states it operates in a highly competitive industry against firms with greater financial, marketing and management resources",
+      "Highly cyclical market described, with January 2026 reinsurance renewals seeing rates down 10-20% in property catastrophe/short-tail lines",
+      "Reliance on natural catastrophe and climate-related loss exposure that could cause large losses and volatility",
+      "Loss reserving and underwriting results depend on probabilistic modeling subject to inherent uncertainty",
+      "Exposure to reinsurance counterparty credit risk and potential unavailability of reinsurance/retrocessional coverage",
+      "New Bermuda corporate income tax (CIT Act effective 2025) and potential further international tax changes could increase taxation"
+    ]
+  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000947484.json",
@@ -157,7 +173,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $33.2B",
+          "detail": "Market cap $33.4B",
           "passed": true
         },
         {
@@ -187,7 +203,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 11.0",
+          "detail": "P/E x P/B = 11.1",
           "passed": true
         }
       ],

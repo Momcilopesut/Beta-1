@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 30.23575470715895,
+      "graham_multiple": 28.2361088965737,
       "graham_number": 66.1733064094723,
-      "graham_upside_pct": -13.735749694339319,
-      "ncav_margin_pct": -74.920988933536,
-      "pb_ratio": 2.0023156552257526,
-      "pe_ttm": 15.1003937007874
+      "graham_upside_pct": -10.733432605595162,
+      "ncav_margin_pct": -74.0481459745251,
+      "pb_ratio": 1.9349714446862865,
+      "pe_ttm": 14.592519685039369
     }
   },
   "industry": "Hardware, Equipment & Parts",
-  "last_updated": "2026-09-24T05:09:39Z",
+  "last_updated": "2026-09-24T16:07:00Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,23 +98,23 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 3526116066,
+  "market_cap": 3399302756,
   "metrics": {
     "book_value_per_share": 38.310642879806714,
     "current_ratio": 10.06414042754113,
     "eps_growth_cagr_3yr_pct": 4.906809364746811,
     "fcf_margin_pct": 23.72539044067807,
     "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 30.23575470715895,
-    "graham_upside_pct": -13.735749694339319,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 28.2361088965737,
+    "graham_upside_pct": -10.733432605595162,
     "gross_margin_pct": 76.31057575110167,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -74.920988933536,
-    "pb_ratio": 2.0023156552257526,
-    "pe_ttm": 15.1003937007874,
+    "ncav_margin_pct": -74.0481459745251,
+    "pb_ratio": 1.9349714446862865,
+    "pe_ttm": 14.592519685039369,
     "roe_pct": 13.746302566866115,
     "shareholders_equity": 1761019000,
     "total_assets": 1963762000,
@@ -133,8 +133,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 76.71
+    "as_of": "2026-09-24",
+    "close": 74.13
   },
   "qualitative": null,
   "sector": "Technology",
@@ -164,7 +164,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $3.5B",
+          "detail": "Market cap $3.4B",
           "passed": true
         },
         {
@@ -189,17 +189,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 15.1",
-          "passed": false
+          "detail": "P/E 14.6",
+          "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 30.2",
+          "detail": "P/E x P/B = 28.2",
           "passed": false
         }
       ],
       "evaluated": 6,
-      "passed": 4,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {

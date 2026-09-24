@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -899.2083665295366,
+      "graham_multiple": -892.623305911622,
       "graham_number": null,
       "graham_upside_pct": null,
       "ncav_margin_pct": null,
-      "pb_ratio": -24.31744174968974,
-      "pe_ttm": 36.97791798107256
+      "pb_ratio": -24.22823768935561,
+      "pe_ttm": 36.8422712933754
     }
   },
   "industry": "Travel Lodging",
-  "last_updated": "2026-09-24T04:55:44Z",
+  "last_updated": "2026-09-24T16:15:22Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,19 +98,19 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 91701072838,
+  "market_cap": 91532878582,
   "metrics": {
     "book_value_per_share": -14.461225141188496,
     "current_ratio": 0.426768278161467,
     "eps_growth_cagr_3yr_pct": 9.516775967882673,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": -899.2083665295366,
+    "graham_multiple": -892.623305911622,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "pb_ratio": -24.31744174968974,
-    "pe_ttm": 36.97791798107256,
+    "pb_ratio": -24.22823768935561,
+    "pe_ttm": 36.8422712933754,
     "roe_pct": -68.97374701670644,
     "shareholders_equity": -3771000000,
     "total_assets": 27540000000
@@ -124,10 +124,26 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 351.66
+    "as_of": "2026-09-24",
+    "close": 350.37
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Marriott reported systemwide growth to 9,805 properties (1,779,936 rooms) across 145 countries, with worldwide RevPAR up 2.0% driven by ADR growth. Net fee revenues rose 5% to $5,303 million, aided by franchise and management fee growth, while debt increased to $16,204 million partly due to new Senior Notes issuances. The filing also discusses the 2025 termination of the Sonder Holdings licensing agreement, the citizenM brand acquisition, and ongoing matters related to the 2018 Starwood data security incident.",
+    "filing_summary_10q": "The excerpt provided is the XBRL data/cover page portion of Marriott's Form 10-Q for the quarterly period ended June 30, 2026, and does not include the narrative financial results or MD&A text. It confirms the filing covers Q2 2026 (three and six months ended June 30, 2026) with comparative 2025 periods, and references segment-level fee, owned/leased, and reimbursement revenue data across U.S. & Canada, EMEA, Greater China, and APEC segments, as well as debt securities (multiple Senior Notes series) outstanding. No further descriptive detail on quarterly business or financial performance is included in the excerpt given.",
+    "filing_summary_8k": "This Form 8-K, dated August 11, 2026, discloses that Marriott entered into a Terms Agreement to issue $250 million of 4.875% Series NN Notes due 2029 and $1.0 billion of 5.650% Series YY Notes due 2036, with the notes issued on August 13, 2026. Net proceeds were approximately $1.233 billion, intended for general corporate purposes including working capital, capital expenditures, acquisitions, stock repurchases, or debt repayment. The filing includes related exhibits such as the Terms Agreement, forms of notes, and a legal opinion.",
+    "moat_explanation": "The excerpts describe a large, globally recognized portfolio of hotel brands (Luxury, Premium, Select, Midscale) combined with the Marriott Bonvoy loyalty program, which drove approximately 75% of U.S. and 68% of global room nights in 2025, and co-branded credit card agreements with major issuers. These brand and loyalty-driven demand generation advantages, achieved with an asset-light franchise/management model, most closely fit the intangible assets category (brand strength) with some switching-cost-like loyalty reinforcement, though the filing itself frames brand recognition as the primary competitive asset.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company explicitly acknowledges highly competitive industry including from Airbnb, Vrbo, and major hotel chains, plus online travel intermediaries that increase distribution costs",
+      "Risk factors disclose ongoing disagreements/litigation and arbitration with hotel owners, and premature termination risk on management/franchise agreements",
+      "Ongoing legal proceedings and financial exposure related to the 2018 Starwood data security incident, with the company stating it cannot reasonably estimate the total possible financial impact beyond amounts already recorded",
+      "Termination of licensing agreement with Sonder Holdings Inc. during 2025, resulting in $23 million of expenses and removal of Sonder properties from the portfolio",
+      "Debt increased by $1,757 million in 2025 to $16,204 million, with a current ratio of only 0.4 to 1.0 at year-end 2025",
+      "Risk factors note AI-driven changes in travel booking by intermediaries could erode brand loyalty and increase distribution costs"
+    ]
+  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001048286.json",
@@ -155,7 +171,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $91.7B",
+          "detail": "Market cap $91.5B",
           "passed": true
         },
         {
@@ -180,12 +196,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 37.0",
+          "detail": "P/E 36.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -899.2",
+          "detail": "P/E x P/B = -892.6",
           "passed": true
         }
       ],
