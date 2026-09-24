@@ -555,7 +555,7 @@ reasonable for a private deployment you don't share.
 1. Create a free [Vercel](https://vercel.com) account and import this repository as a
    new project (Vercel auto-detects `api/lookup.py` as a Python serverless function,
    serves everything else — `site/`, `data/`, etc. — as plain static files, and reads
-   `vercel.json` for the function's config and the `/` → `/site/index.html` rewrite —
+   `vercel.json` for the function's config and the `/` → `/site/index.html` redirect —
    no build settings to change, no framework preset needed).
 2. Before deploying, enable **Fluid Compute** (project **Settings → Functions**) so
    `vercel.json`'s `maxDuration: 300` actually takes effect instead of failing or

@@ -4,7 +4,7 @@
       "maxDuration": 300
     }
   },
-  "rewrites": [
-    { "source": "/", "destination": "/site/index.html" }
+  "redirects": [
+    { "source": "/", "destination": "/site/index.html", "permanent": false }
   ]
 }
