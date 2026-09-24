@@ -68,13 +68,16 @@
       "total_liabilities": 3924228000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": -4.560975532684706,
+      "roic_pct": 1.218211028612436,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Medical - Diagnostics & Research",
-  "last_updated": "2026-09-23T21:13:54Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T04:58:21Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,11 +112,22 @@
     "ncav_margin_pct": -118.71062888959693,
     "pb_ratio": 4.183560596897584,
     "roe_pct": -4.560975532684706,
+    "roic_pct": 1.218211028612436,
     "shareholders_equity": 3164630000,
     "total_assets": 7135422000,
-    "total_liabilities": 3924228000
+    "total_liabilities": 3924228000,
+    "value_creation_pct": -8.741665203132342
   },
   "name": "Charles River Laboratories",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth."
+    ],
+    "worries": [
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 277.33

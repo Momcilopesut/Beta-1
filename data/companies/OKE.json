@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 5.46697510915787
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 12.173263216522322
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 15.090060040026684,
+      "roic_pct": 8.136645975446708,
       "trend": "stable"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Oil & Gas Midstream",
-  "last_updated": "2026-09-23T21:12:05Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:56:43Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -122,11 +114,25 @@
     "munger_quality_passed": 1,
     "pb_ratio": 2.5382997398345566,
     "pe_ttm": 16.70479704797048,
+    "reinvestment_rate_pct": 5.46697510915787,
     "roe_pct": 15.090060040026684,
+    "roic_pct": 8.136645975446708,
     "shareholders_equity": 22485000000,
-    "total_assets": 66641000000
+    "total_assets": 66641000000,
+    "value_creation_pct": 1.755331161011286
   },
   "name": "Oneok",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 90.54

@@ -68,37 +68,29 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -5.991259679106841
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 5.814395138317402,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 46.955746224380924,
+      "graham_multiple": 46.9795242952618,
       "graham_number": 54.6857253496362,
-      "graham_upside_pct": -30.777562848561775,
+      "graham_upside_pct": -30.795083080693235,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.6345354698360448,
-      "pe_ttm": 28.727272727272727
+      "pb_ratio": 1.6349492762841045,
+      "pe_ttm": 28.734545454545454
     }
   },
   "industry": "Diversified Utilities",
-  "last_updated": "2026-09-23T21:09:45Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:54:32Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -113,21 +105,30 @@
     "eps_growth_cagr_3yr_pct": -5.991259679106841,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 46.955746224380924,
-    "graham_upside_pct": -30.777562848561775,
+    "graham_multiple": 46.9795242952618,
+    "graham_upside_pct": -30.795083080693235,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "pb_ratio": 1.6345354698360448,
-    "pe_ttm": 28.727272727272727,
+    "pb_ratio": 1.6349492762841045,
+    "pe_ttm": 28.734545454545454,
     "roe_pct": 5.814395138317402,
     "shareholders_equity": 31594000000,
     "total_assets": 110878000000
   },
   "name": "Sempra",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 79
+    "close": 79.02
   },
   "qualitative": null,
   "sector": "Utilities",

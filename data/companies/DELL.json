@@ -62,40 +62,35 @@
       "debt_to_equity": -12.75425101214575
     },
     "balance_sheet_basics": {
-      "book_value_per_share": -3.71989497190277,
+      "book_value_per_share": -3.718474209223215,
       "shareholders_equity": -2470000000,
       "total_assets": 101286000000,
       "total_liabilities": 103756000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 7.532279941517378
+      "fcf_margin_pct": 7.532279941517378,
+      "reinvestment_rate_pct": 63.58742651604433
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 91.81012921933427
     },
     "profitability": {
+      "gross_margin_pct": 19.999471542567246,
       "roe_pct": -240.3238866396761,
+      "roic_pct": 38.04696779657731,
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": -9362.815409711018,
+      "graham_multiple": -9359.239411245968,
       "graham_number": null,
       "graham_upside_pct": null,
       "ncav_margin_pct": -112.64196659189693,
       "pb_ratio": -147.80793655546557,
-      "pe_ttm": 63.344470046082954
+      "pe_ttm": 63.32027649769586
     }
   },
   "industry": "Computer Hardware",
-  "last_updated": "2026-09-23T21:16:22Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:01:13Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -105,7 +100,7 @@
   },
   "market_cap": 365085603292,
   "metrics": {
-    "book_value_per_share": -3.71989497190277,
+    "book_value_per_share": -3.718474209223215,
     "current_ratio": 0.9104300684379396,
     "debt_to_ebitda": 2.8183038110574343,
     "debt_to_equity": -12.75425101214575,
@@ -113,22 +108,39 @@
     "fcf_margin_pct": 7.532279941517378,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 5,
-    "graham_multiple": -9362.815409711018,
+    "graham_multiple": -9359.239411245968,
+    "gross_margin_pct": 19.999471542567246,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
     "ncav_margin_pct": -112.64196659189693,
     "pb_ratio": -147.80793655546557,
-    "pe_ttm": 63.344470046082954,
+    "pe_ttm": 63.32027649769586,
+    "reinvestment_rate_pct": 63.58742651604433,
     "roe_pct": -240.3238866396761,
+    "roic_pct": 38.04696779657731,
     "shareholders_equity": -2470000000,
     "total_assets": 101286000000,
-    "total_liabilities": 103756000000
+    "total_liabilities": 103756000000,
+    "value_creation_pct": 28.878140002221805
   },
   "name": "Dell Technologies",
+  "plain_analysis": {
+    "positives": [
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "If this company had to sell everything it owns and pay off everything it owes, there would be nothing left over - it actually owes more than it owns.",
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "The share of each sale it gets to keep as profit has been getting worse over the last few years."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 549.83
+    "close": 549.62
   },
   "qualitative": null,
   "sector": "Technology",
@@ -188,7 +200,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -9362.8",
+          "detail": "P/E x P/B = -9359.2",
           "passed": true
         }
       ],

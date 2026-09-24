@@ -68,13 +68,16 @@
       "total_liabilities": 20898000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 9.093276796312644
     },
     "profitability": {
+      "gross_margin_pct": 37.78517110266159,
       "roe_pct": 7.281445138269402,
+      "roic_pct": 7.7930397740605155,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Rental & Leasing Services",
-  "last_updated": "2026-09-23T21:15:39Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:00:19Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,6 +108,7 @@
     "graham_criteria_passed": 4,
     "graham_multiple": 724.4061727611424,
     "graham_upside_pct": -82.37617434448549,
+    "gross_margin_pct": 37.78517110266159,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
@@ -122,11 +116,24 @@
     "pb_ratio": 7.209034384303077,
     "pe_ttm": 100.4858812074002,
     "roe_pct": 7.281445138269402,
+    "roic_pct": 7.7930397740605155,
     "shareholders_equity": 8968000000,
     "total_assets": 29866000000,
-    "total_liabilities": 20898000000
+    "total_liabilities": 20898000000,
+    "value_creation_pct": -1.9282918194512515
   },
   "name": "United Rentals",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 1031.99

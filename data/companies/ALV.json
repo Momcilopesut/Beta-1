@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 6.620434581599629
+      "fcf_margin_pct": 6.620434581599629,
+      "reinvestment_rate_pct": 44.57370923913044
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 25.339284440909804
     },
     "profitability": {
+      "gross_margin_pct": 19.17706888580675,
       "roe_pct": 28.576982892690513,
+      "roic_pct": 21.93781553307625,
       "trend": "improving"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Auto - Parts",
-  "last_updated": "2026-09-23T21:18:18Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:03:19Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,16 +110,33 @@
     "graham_criteria_passed": 5,
     "graham_multiple": 39.70718640305668,
     "graham_upside_pct": -24.723970854606637,
+    "gross_margin_pct": 19.17706888580675,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
     "pb_ratio": 3.2859933288491447,
     "pe_ttm": 12.083769633507853,
+    "reinvestment_rate_pct": 44.57370923913044,
     "roe_pct": 28.576982892690513,
+    "roic_pct": 21.93781553307625,
     "shareholders_equity": 2572000000,
-    "total_assets": 8644000000
+    "total_assets": 8644000000,
+    "value_creation_pct": 12.874538608767336
   },
   "name": "Autoliv",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 115.4

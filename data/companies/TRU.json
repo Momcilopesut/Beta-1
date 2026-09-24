@@ -68,13 +68,16 @@
       "total_liabilities": 6567600000
     },
     "cash_flow": {
-      "fcf_margin_pct": 14.457094159036776
+      "fcf_margin_pct": 14.457094159036776,
+      "reinvestment_rate_pct": -20.594238040259082
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 10.258605154081817,
+      "roic_pct": 16.573017055914576,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Financial - Data & Stock Exchanges",
-  "last_updated": "2026-09-23T21:23:36Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:08:21Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -122,12 +115,26 @@
     "ncav_margin_pct": -133.2717798461309,
     "pb_ratio": 3.081447107586953,
     "pe_ttm": 30.581896551724142,
+    "reinvestment_rate_pct": -20.594238040259082,
     "roe_pct": 10.258605154081817,
+    "roic_pct": 16.573017055914576,
     "shareholders_equity": 4439200000,
     "total_assets": 11112900000,
-    "total_liabilities": 6567600000
+    "total_liabilities": 6567600000,
+    "value_creation_pct": 6.755221056807917
   },
   "name": "TransUnion",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 70.95

@@ -68,13 +68,16 @@
       "total_liabilities": 4771400000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": -75.08324838296531
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 4.530504261422341
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 8.51063829787234,
+      "roic_pct": 7.446094846174798,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Hardware, Equipment & Parts",
-  "last_updated": "2026-09-23T21:17:00Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:01:57Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -122,12 +115,25 @@
     "ncav_margin_pct": -105.95987576339783,
     "pb_ratio": 2.7382028283177506,
     "pe_ttm": 32.89459745762712,
+    "reinvestment_rate_pct": -75.08324838296531,
     "roe_pct": 8.51063829787234,
+    "roic_pct": 7.446094846174798,
     "shareholders_equity": 10513900000,
     "total_assets": 15285300000,
-    "total_liabilities": 4771400000
+    "total_liabilities": 4771400000,
+    "value_creation_pct": -1.7252891415358746
   },
   "name": "Teledyne Technologies",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 621.05

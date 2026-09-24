@@ -68,37 +68,29 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 5.834499340033372
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": null,
+      "roic_pct": 5.421685507406219,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 28.858785369051606,
+      "graham_multiple": 28.855650333572097,
       "graham_number": 81.27856507330047,
-      "graham_upside_pct": -11.701721810645875,
+      "graham_upside_pct": -11.696925337280168,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.5832359164987573,
-      "pe_ttm": 18.22772277227723
+      "pb_ratio": 1.5831499178069321,
+      "pe_ttm": 18.22673267326733
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-09-23T21:17:31Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:02:32Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,20 +107,31 @@
     "eps_growth_cagr_3yr_pct": 5.834499340033372,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 28.858785369051606,
-    "graham_upside_pct": -11.701721810645875,
+    "graham_multiple": 28.855650333572097,
+    "graham_upside_pct": -11.696925337280168,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "pb_ratio": 1.5832359164987573,
-    "pe_ttm": 18.22772277227723,
+    "pb_ratio": 1.5831499178069321,
+    "pe_ttm": 18.22673267326733,
+    "roic_pct": 5.421685507406219,
     "shareholders_equity": 7046458000,
-    "total_assets": 30031599000
+    "total_assets": 30031599000,
+    "value_creation_pct": 0.12117880010869087
   },
   "name": "Pinnacle West Capital",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 92.05
+    "close": 92.045
   },
   "qualitative": null,
   "sector": "Utilities",

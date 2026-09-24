@@ -68,37 +68,29 @@
       "total_liabilities": 40970248000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 33.234053078207104
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 6.2568756467229685,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 211.09670621131053,
+      "graham_multiple": 211.22279054847996,
       "graham_number": 43.734651423912716,
-      "graham_upside_pct": -67.35245489406337,
+      "graham_upside_pct": -67.36220042991589,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.3479702318218325,
-      "pe_ttm": 89.90604026845638
+      "pb_ratio": 2.348671327740561,
+      "pe_ttm": 89.93288590604027
     }
   },
   "industry": "REIT - Industrial",
-  "last_updated": "2026-09-23T21:09:50Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:54:36Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -112,22 +104,31 @@
     "eps_growth_cagr_3yr_pct": 33.234053078207104,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 3,
-    "graham_multiple": 211.09670621131053,
-    "graham_upside_pct": -67.35245489406337,
+    "graham_multiple": 211.22279054847996,
+    "graham_upside_pct": -67.36220042991589,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 1,
     "munger_quality_passed": 0,
-    "pb_ratio": 2.3479702318218325,
-    "pe_ttm": 89.90604026845638,
+    "pb_ratio": 2.348671327740561,
+    "pe_ttm": 89.93288590604027,
     "roe_pct": 6.2568756467229685,
     "shareholders_equity": 53193178000,
     "total_assets": 98724256000,
     "total_liabilities": 40970248000
   },
   "name": "Prologis Inc.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 133.96
+    "close": 134
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -187,7 +188,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 211.1",
+          "detail": "P/E x P/B = 211.2",
           "passed": false
         }
       ],

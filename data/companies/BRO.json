@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 23.41579125720095
+      "fcf_margin_pct": 23.41579125720095,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 10.064241629820891
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": null,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Insurance - Brokers",
-  "last_updated": "2026-09-23T21:12:29Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T04:57:03Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -119,6 +112,13 @@
     "total_assets": 29991000000
   },
   "name": "Brown & Brown",
+  "plain_analysis": {
+    "positives": [
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 61.7

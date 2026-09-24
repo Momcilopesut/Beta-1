@@ -68,13 +68,16 @@
       "total_liabilities": 10729000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 9.586749351832387
+      "fcf_margin_pct": 9.586749351832387,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -11.176320062438394
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 14.820755340961703,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Residential Construction",
-  "last_updated": "2026-09-23T21:10:50Z",
-  "layered_analysis": {
-    "flags": [
-      "Positive but thin margin of safety - 7% is below the 15% convention used here."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:55:29Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -125,6 +118,14 @@
     "total_liabilities": 10729000000
   },
   "name": "D. R. Horton",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 140.17

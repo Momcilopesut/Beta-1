@@ -68,13 +68,16 @@
       "total_liabilities": 4089000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -12.051678550103173
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": -44.66019417475729,
+      "roic_pct": -15.541784759251254,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Medical - Instruments & Supplies",
-  "last_updated": "2026-09-23T21:22:13Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:06:58Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -119,11 +112,23 @@
     "ncav_margin_pct": -205.96605794751702,
     "pb_ratio": 1.4560723728752798,
     "roe_pct": -44.66019417475729,
+    "roic_pct": -15.541784759251254,
     "shareholders_equity": 1339000000,
     "total_assets": 5429000000,
-    "total_liabilities": 4089000000
+    "total_liabilities": 4089000000,
+    "value_creation_pct": -20.093381312163793
   },
   "name": "Dentsply Sirona",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "Counting all the money it uses to run the business, it isn't making any profit right now.",
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 9.78

@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 12.811413938174502
+      "fcf_margin_pct": 12.811413938174502,
+      "reinvestment_rate_pct": 23.654966270558685
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -16.762013813238276
     },
     "profitability": {
+      "gross_margin_pct": 45.011889518931774,
       "roe_pct": 31.90993001318592,
+      "roic_pct": 33.20144136759416,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Industrial - Distribution",
-  "last_updated": "2026-09-23T21:14:51Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:59:25Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,16 +110,34 @@
     "graham_criteria_passed": 4,
     "graham_multiple": 694.0686744097037,
     "graham_upside_pct": -81.99512804306633,
+    "gross_margin_pct": 45.011889518931774,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
     "pb_ratio": 14.836925967965819,
     "pe_ttm": 46.77981651376147,
+    "reinvestment_rate_pct": 23.654966270558685,
     "roe_pct": 31.90993001318592,
+    "roic_pct": 33.20144136759416,
     "shareholders_equity": 3943600000,
-    "total_assets": 5052900000
+    "total_assets": 5052900000,
+    "value_creation_pct": 23.262674048356537
   },
   "name": "Fastenal",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 50.99

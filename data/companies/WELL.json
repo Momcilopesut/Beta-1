@@ -68,39 +68,29 @@
       "total_liabilities": 24100108000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 66.71109926452392
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": null,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 636.965014289308,
+      "graham_multiple": 637.3530104601834,
       "graham_number": 43.20318505343076,
-      "graham_upside_pct": -81.20538345437389,
+      "graham_upside_pct": -81.21110504765123,
       "ncav_margin_pct": null,
-      "pb_ratio": 3.8516612427116983,
-      "pe_ttm": 165.37410071942446
+      "pb_ratio": 3.8528341503855565,
+      "pe_ttm": 165.4244604316547
     }
   },
   "industry": "REIT - Healthcare Facilities",
-  "last_updated": "2026-09-23T21:31:11Z",
-  "layered_analysis": {
-    "flags": [
-      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": false,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:15:32Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,21 +104,30 @@
     "eps_growth_cagr_3yr_pct": 66.71109926452392,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 3,
-    "graham_multiple": 636.965014289308,
-    "graham_upside_pct": -81.20538345437389,
+    "graham_multiple": 637.3530104601834,
+    "graham_upside_pct": -81.21110504765123,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 1,
     "munger_quality_passed": 0,
-    "pb_ratio": 3.8516612427116983,
-    "pe_ttm": 165.37410071942446,
+    "pb_ratio": 3.8528341503855565,
+    "pe_ttm": 165.4244604316547,
     "shareholders_equity": 42129498000,
     "total_assets": 67303047000,
     "total_liabilities": 24100108000
   },
   "name": "Welltower Inc.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 229.87
+    "close": 229.94
   },
   "qualitative": {
     "extraction_confidence": "section_match",
@@ -204,7 +203,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 637.0",
+          "detail": "P/E x P/B = 637.4",
           "passed": false
         }
       ],

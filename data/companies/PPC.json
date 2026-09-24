@@ -68,13 +68,16 @@
       "total_liabilities": 6649799000
     },
     "cash_flow": {
-      "fcf_margin_pct": 3.531007587868514
+      "fcf_margin_pct": 3.531007587868514,
+      "reinvestment_rate_pct": -82.37458754228916
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 13.561569550562623
     },
     "profitability": {
+      "gross_margin_pct": 12.748405153914142,
       "roe_pct": 29.411529734650344,
+      "roic_pct": 38.269859893956095,
       "trend": "improving"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Packaged Foods",
-  "last_updated": "2026-09-23T21:19:46Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
-  },
+  "last_updated": "2026-09-24T05:04:36Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,18 +110,36 @@
     "graham_criteria_passed": 6,
     "graham_multiple": 10.879956037255502,
     "graham_upside_pct": 43.806225947611516,
+    "gross_margin_pct": 12.748405153914142,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
     "ncav_margin_pct": -136.6690765289197,
     "pb_ratio": 1.787730742277958,
     "pe_ttm": 6.08590308370044,
+    "reinvestment_rate_pct": -82.37458754228916,
     "roe_pct": 29.411529734650344,
+    "roic_pct": 38.269859893956095,
     "shareholders_equity": 3680050000,
     "total_assets": 10343530000,
-    "total_liabilities": 6649799000
+    "total_liabilities": 6649799000,
+    "value_creation_pct": 26.372063220173118
   },
   "name": "Pilgrim's Pride",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It keeps very little of each dollar it makes in sales after paying the direct cost of making or providing what it sells, so even a small rise in costs could hurt its profits a lot."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 27.63

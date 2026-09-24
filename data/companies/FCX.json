@@ -68,36 +68,29 @@
       "total_liabilities": 27401000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": null,
+      "roic_pct": 17.700978811230268,
       "trend": "stable"
     },
     "valuation": {
       "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -113.05910250202136,
-      "pb_ratio": 5.514903001182073,
+      "ncav_margin_pct": -113.05820292893449,
+      "pb_ratio": 5.515282920099211,
       "pe_ttm": null
     }
   },
   "industry": "Copper",
-  "last_updated": "2026-09-23T21:27:13Z",
-  "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": true,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:17:55Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -116,16 +109,28 @@
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -113.05910250202136,
-    "pb_ratio": 5.514903001182073,
+    "ncav_margin_pct": -113.05820292893449,
+    "pb_ratio": 5.515282920099211,
+    "roic_pct": 17.700978811230268,
     "shareholders_equity": 18899000000,
     "total_assets": 58167000000,
-    "total_liabilities": 27401000000
+    "total_liabilities": 27401000000,
+    "value_creation_pct": 8.524793205409118
   },
   "name": "Freeport-McMoRan Inc.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 72.58
+    "close": 72.585
   },
   "qualitative": {
     "extraction_confidence": "whole_document_fallback",

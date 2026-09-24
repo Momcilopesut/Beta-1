@@ -68,34 +68,29 @@
       "total_liabilities": 15521000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 19.95373752130509
+      "fcf_margin_pct": 19.95373752130509,
+      "reinvestment_rate_pct": 4.5029911290334645
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 6.690461655968871
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": null,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
       "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -135.12682277561996,
+      "ncav_margin_pct": -135.11309014419047,
       "pb_ratio": null,
-      "pe_ttm": 25.338738738738737
+      "pe_ttm": 25.34864864864865
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-23T21:11:25Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T04:56:00Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,15 +109,22 @@
     "margin_trend_score": 60,
     "munger_quality_evaluated": 1,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -135.12682277561996,
-    "pe_ttm": 25.338738738738737,
+    "ncav_margin_pct": -135.11309014419047,
+    "pe_ttm": 25.34864864864865,
+    "reinvestment_rate_pct": 4.5029911290334645,
     "total_assets": 8197000000,
     "total_liabilities": 15521000000
   },
   "name": "Yum! Brands",
+  "plain_analysis": {
+    "positives": [
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 140.63
+    "close": 140.685
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",

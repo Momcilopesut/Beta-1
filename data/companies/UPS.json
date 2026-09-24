@@ -68,36 +68,29 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 20.281828251829523
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -20.790615963625015
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 34.33783200838109,
+      "roic_pct": 55.889457232168226,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 61.57754947293815,
+      "graham_multiple": 61.56469738855408,
       "graham_number": 57.92102312136904,
-      "graham_upside_pct": -39.55226140537566,
+      "graham_upside_pct": -39.545952279126354,
       "ncav_margin_pct": null,
-      "pb_ratio": 4.215703658343501,
-      "pe_ttm": 14.606707317073171
+      "pb_ratio": 4.2152636976194,
+      "pe_ttm": 14.60518292682927
     }
   },
   "industry": "Integrated Freight & Logistics",
-  "last_updated": "2026-09-23T21:15:38Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:00:18Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,21 +107,36 @@
     "eps_growth_cagr_3yr_pct": -20.790615963625015,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 61.57754947293815,
-    "graham_upside_pct": -39.55226140537566,
+    "graham_multiple": 61.56469738855408,
+    "graham_upside_pct": -39.545952279126354,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "pb_ratio": 4.215703658343501,
-    "pe_ttm": 14.606707317073171,
+    "pb_ratio": 4.2152636976194,
+    "pe_ttm": 14.60518292682927,
+    "reinvestment_rate_pct": 20.281828251829523,
     "roe_pct": 34.33783200838109,
+    "roic_pct": 55.889457232168226,
     "shareholders_equity": 16227000000,
-    "total_assets": 73090000000
+    "total_assets": 73090000000,
+    "value_creation_pct": 46.003308066736544
   },
   "name": "United Parcel Service",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 95.82
+    "close": 95.81
   },
   "qualitative": null,
   "sector": "Industrials",

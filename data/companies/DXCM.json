@@ -68,13 +68,16 @@
       "total_liabilities": 3593900000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 90.36477300275813
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 36.597938323358605
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 30.455207574654043,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Medical - Devices",
-  "last_updated": "2026-09-23T21:13:59Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:58:26Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -120,12 +113,22 @@
     "ncav_margin_pct": -98.6727425261004,
     "pb_ratio": 12.056030558430445,
     "pe_ttm": 41.97607655502393,
+    "reinvestment_rate_pct": 90.36477300275813,
     "roe_pct": 30.455207574654043,
     "shareholders_equity": 2746000000,
     "total_assets": 6339900000,
     "total_liabilities": 3593900000
   },
   "name": "Dexcom",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 87.73

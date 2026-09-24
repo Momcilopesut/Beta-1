@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 13.464941695398148
+      "fcf_margin_pct": 13.464941695398148,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 13.003183326841972,
       "roe_pct": -5.356219970598,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-23T21:08:38Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T04:53:20Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -112,6 +107,7 @@
     "fcf_margin_pct": 13.464941695398148,
     "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 2,
+    "gross_margin_pct": 13.003183326841972,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
@@ -121,6 +117,16 @@
     "total_assets": 16374211000
   },
   "name": "Albemarle Corporation",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year."
+    ],
+    "worries": [
+      "It keeps very little of each dollar it makes in sales after paying the direct cost of making or providing what it sells, so even a small rise in costs could hurt its profits a lot."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 113.47

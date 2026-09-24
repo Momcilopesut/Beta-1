@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 12.394419070262154
+      "fcf_margin_pct": 12.394419070262154,
+      "reinvestment_rate_pct": 35.97154022854666
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 91.70627964342006
     },
     "profitability": {
+      "gross_margin_pct": 44.41907026215354,
       "roe_pct": null,
+      "roic_pct": null,
       "trend": "improving"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-23T21:24:41Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:09:24Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -111,13 +106,24 @@
     "fcf_margin_pct": 12.394419070262154,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
+    "gross_margin_pct": 44.41907026215354,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
     "pe_ttm": 97.3741935483871,
+    "reinvestment_rate_pct": 35.97154022854666,
     "total_assets": 8350500000
   },
   "name": "Entegris",
+  "plain_analysis": {
+    "positives": [
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years."
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 150.93

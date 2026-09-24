@@ -68,13 +68,16 @@
       "total_liabilities": 13074000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": -47.583547864225785
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 1.4375682783742239
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 13.483492749151496,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Software - Application",
-  "last_updated": "2026-09-23T21:16:45Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:01:40Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -121,12 +113,21 @@
     "ncav_margin_pct": -101.788185909782,
     "pb_ratio": 11.228518975624807,
     "pe_ttm": 84.2994011976048,
+    "reinvestment_rate_pct": -47.583547864225785,
     "roe_pct": 13.483492749151496,
     "shareholders_equity": 12964000000,
     "total_assets": 26038000000,
     "total_liabilities": 13074000000
   },
   "name": "ServiceNow",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 140.78

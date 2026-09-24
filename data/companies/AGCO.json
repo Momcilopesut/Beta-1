@@ -68,13 +68,16 @@
       "total_liabilities": 7355100000
     },
     "cash_flow": {
-      "fcf_margin_pct": 7.341797262447927
+      "fcf_margin_pct": 7.341797262447927,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -6.347803954107523
     },
     "profitability": {
+      "gross_margin_pct": 25.459234278912913,
       "roe_pct": 17.000117000116997,
+      "roic_pct": 11.487227680478428,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Agricultural - Machinery",
-  "last_updated": "2026-09-23T21:31:01Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:12:38Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -116,6 +109,7 @@
     "graham_criteria_passed": 3,
     "graham_multiple": 24.885417244250757,
     "graham_upside_pct": -4.913514508228397,
+    "gross_margin_pct": 25.459234278912913,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
@@ -123,11 +117,24 @@
     "pb_ratio": 1.9940238176482978,
     "pe_ttm": 12.48,
     "roe_pct": 17.000117000116997,
+    "roic_pct": 11.487227680478428,
     "shareholders_equity": 4273500000,
     "total_assets": 11927800000,
-    "total_liabilities": 7355100000
+    "total_liabilities": 7355100000,
+    "value_creation_pct": 3.7448694551001074
   },
   "name": "AGCO",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 121.68

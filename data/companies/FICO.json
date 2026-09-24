@@ -68,13 +68,16 @@
       "total_liabilities": 3613917000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": -51.54159397947863
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 23.23712626480905
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": -37.344024232092856,
+      "roic_pct": 96.78232537587633,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Software - Application",
-  "last_updated": "2026-09-23T21:16:24Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:01:16Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -119,12 +114,27 @@
     "ncav_margin_pct": -115.31106507000548,
     "pb_ratio": -10.882051673460177,
     "pe_ttm": 33.14318010550113,
+    "reinvestment_rate_pct": -51.54159397947863,
     "roe_pct": -37.344024232092856,
+    "roic_pct": 96.78232537587633,
     "shareholders_equity": -1745784000,
     "total_assets": 1868133000,
-    "total_liabilities": 3613917000
+    "total_liabilities": 3613917000,
+    "value_creation_pct": 88.04405909219159
   },
   "name": "Fair Isaac",
+  "plain_analysis": {
+    "positives": [
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "If this company had to sell everything it owns and pay off everything it owes, there would be nothing left over - it actually owes more than it owns.",
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 879.62

@@ -68,13 +68,16 @@
       "total_liabilities": 580371000
     },
     "cash_flow": {
-      "fcf_margin_pct": 2.215969971110418
+      "fcf_margin_pct": 2.215969971110418,
+      "reinvestment_rate_pct": 184.702559923442
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 8.175785218096186,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-23T21:18:29Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:03:30Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -121,12 +113,22 @@
     "ncav_margin_pct": -102.40709694024892,
     "pb_ratio": 7.955315054075131,
     "pe_ttm": 98.33333333333333,
+    "reinvestment_rate_pct": 184.702559923442,
     "roe_pct": 8.175785218096186,
     "shareholders_equity": 779656000,
     "total_assets": 1360027000,
     "total_liabilities": 580371000
   },
   "name": "Cava Group",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 53.1

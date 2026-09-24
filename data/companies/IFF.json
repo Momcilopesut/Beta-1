@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 2.3507805325987143
+      "fcf_margin_pct": 2.3507805325987143,
+      "reinvestment_rate_pct": 697.8926336974434
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 36.16161616161616,
       "roe_pct": null,
+      "roic_pct": -1.7019082897073874,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-23T21:10:05Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T04:54:53Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -112,14 +107,28 @@
     "fcf_margin_pct": 2.3507805325987143,
     "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 2,
+    "gross_margin_pct": 36.16161616161616,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
     "pb_ratio": 1.5450687670432386,
+    "reinvestment_rate_pct": 697.8926336974434,
+    "roic_pct": -1.7019082897073874,
     "shareholders_equity": 14154000000,
-    "total_assets": 25539000000
+    "total_assets": 25539000000,
+    "value_creation_pct": -9.520274020482887
   },
   "name": "International Flavors & Fragrances",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth."
+    ],
+    "worries": [
+      "Counting all the money it uses to run the business, it isn't making any profit right now.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 85.71

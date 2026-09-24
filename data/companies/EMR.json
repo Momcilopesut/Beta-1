@@ -68,36 +68,29 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 3.1666393483252175
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 3.140715905729218,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 586.8302640879668,
+      "graham_multiple": 586.5266199488991,
       "graham_number": 30.270277659336458,
-      "graham_upside_pct": -80.41899368695488,
+      "graham_upside_pct": -80.41392581084668,
       "ncav_margin_pct": null,
-      "pb_ratio": 4.251567991322355,
-      "pe_ttm": 138.0267857142857
+      "pb_ratio": 4.250467902573711,
+      "pe_ttm": 137.99107142857142
     }
   },
   "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-23T21:14:49Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:59:23Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -113,21 +106,31 @@
     "eps_growth_cagr_3yr_pct": 3.1666393483252175,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 586.8302640879668,
-    "graham_upside_pct": -80.41899368695488,
+    "graham_multiple": 586.5266199488991,
+    "graham_upside_pct": -80.41392581084668,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "pb_ratio": 4.251567991322355,
-    "pe_ttm": 138.0267857142857,
+    "pb_ratio": 4.250467902573711,
+    "pe_ttm": 137.99107142857142,
     "roe_pct": 3.140715905729218,
     "shareholders_equity": 20282000000,
     "total_assets": 41964000000
   },
   "name": "Emerson Electric",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 154.59
+    "close": 154.55
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -187,7 +190,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 586.8",
+          "detail": "P/E x P/B = 586.5",
           "passed": false
         }
       ],

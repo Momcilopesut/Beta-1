@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": -0.7147665337261232
+      "fcf_margin_pct": -0.7147665337261232,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -11.145241287231201
     },
     "profitability": {
+      "gross_margin_pct": 17.90897312477833,
       "roe_pct": 27.72628251676562,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Auto - Dealerships",
-  "last_updated": "2026-09-23T21:18:19Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:03:20Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,6 +108,7 @@
     "graham_criteria_passed": 3,
     "graham_multiple": 22.576412890178002,
     "graham_upside_pct": -0.16937512973298852,
+    "gross_margin_pct": 17.90897312477833,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
@@ -125,6 +119,17 @@
     "total_assets": 14392200000
   },
   "name": "AutoNation",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "After paying for everything it needs to run and grow the business, it's actually spending more cash than it's bringing in.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 165.05

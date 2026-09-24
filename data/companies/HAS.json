@@ -68,13 +68,16 @@
       "total_liabilities": 4986500000
     },
     "cash_flow": {
-      "fcf_margin_pct": 15.46618461022382
+      "fcf_margin_pct": 15.46618461022382,
+      "reinvestment_rate_pct": -579.8834661185385
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": null,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Leisure",
-  "last_updated": "2026-09-23T21:11:03Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T04:55:38Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,10 +109,17 @@
     "munger_quality_evaluated": 1,
     "munger_quality_passed": 1,
     "ncav_margin_pct": -119.68997018491257,
+    "reinvestment_rate_pct": -579.8834661185385,
     "total_assets": 5552000000,
     "total_liabilities": 4986500000
   },
   "name": "Hasbro",
+  "plain_analysis": {
+    "positives": [
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 86.52

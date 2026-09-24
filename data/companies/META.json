@@ -68,13 +68,16 @@
       "total_liabilities": 148778000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 87.92040886814968
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 39.8395285030712
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 27.82966539773433,
+      "roic_pct": 24.40064072329069,
       "trend": "stable"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Internet Content & Information",
-  "last_updated": "2026-09-23T21:33:14Z",
-  "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:17:22Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -123,12 +115,28 @@
     "ncav_margin_pct": -102.11312102282102,
     "pb_ratio": 8.725642514313465,
     "pe_ttm": 31.67730949340145,
+    "reinvestment_rate_pct": 87.92040886814968,
     "roe_pct": 27.82966539773433,
+    "roic_pct": 24.40064072329069,
     "shareholders_equity": 217243000000,
     "total_assets": 366021000000,
-    "total_liabilities": 148778000000
+    "total_liabilities": 148778000000,
+    "value_creation_pct": 14.740022410216731
   },
   "name": "Meta Platforms Inc.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 744.1

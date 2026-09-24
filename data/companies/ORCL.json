@@ -68,36 +68,29 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": -35.164867793993196
+      "fcf_margin_pct": -35.164867793993196,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 23.834995611269672
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 40.197139362002446,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 254.97695068796094,
+      "graham_multiple": 254.94167562824623,
       "graham_number": 42.94265946954919,
-      "graham_upside_pct": -70.29423113617239,
+      "graham_upside_pct": -70.29217608471173,
       "ncav_margin_pct": null,
-      "pb_ratio": 10.283035573539099,
-      "pe_ttm": 24.7958833619211
+      "pb_ratio": 10.282324240143033,
+      "pe_ttm": 24.79416809605489
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-23T21:09:31Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:54:19Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,21 +107,32 @@
     "fcf_margin_pct": -35.164867793993196,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 254.97695068796094,
-    "graham_upside_pct": -70.29423113617239,
+    "graham_multiple": 254.94167562824623,
+    "graham_upside_pct": -70.29217608471173,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "pb_ratio": 10.283035573539099,
-    "pe_ttm": 24.7958833619211,
+    "pb_ratio": 10.282324240143033,
+    "pe_ttm": 24.79416809605489,
     "roe_pct": 40.197139362002446,
     "shareholders_equity": 42508000000,
     "total_assets": 261759000000
   },
   "name": "Oracle Corporation",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+    ],
+    "worries": [
+      "After paying for everything it needs to run and grow the business, it's actually spending more cash than it's bringing in.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 144.56
+    "close": 144.55
   },
   "qualitative": null,
   "sector": "Technology",
@@ -188,7 +192,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 255.0",
+          "detail": "P/E x P/B = 254.9",
           "passed": false
         }
       ],

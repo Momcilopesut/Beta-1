@@ -62,42 +62,35 @@
       "debt_to_equity": 1.4649811101424004
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 3.136716019575231,
+      "book_value_per_share": 3.1372065146525694,
       "shareholders_equity": 3441000000,
       "total_assets": 13201000000,
       "total_liabilities": 8998000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 4.374569432142506
+      "fcf_margin_pct": 4.374569432142506,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 20.627890955614607,
       "roe_pct": 40.88927637314734,
+      "roic_pct": null,
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 154.2940528242255,
-      "graham_number": 24.420649729721376,
-      "graham_upside_pct": -61.81290112631529,
+      "graham_multiple": 154.3181801194286,
+      "graham_number": 24.422559010028404,
+      "graham_upside_pct": -61.815886475878045,
       "ncav_margin_pct": -103.49091091078255,
-      "pb_ratio": 20.38756444667248,
-      "pe_ttm": 7.568047337278108
+      "pb_ratio": 20.387564446672478,
+      "pe_ttm": 7.56923076923077
     }
   },
   "industry": "Auto - Dealerships",
-  "last_updated": "2026-09-23T21:10:46Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:55:26Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -107,29 +100,40 @@
   },
   "market_cap": 70153609261,
   "metrics": {
-    "book_value_per_share": 3.136716019575231,
+    "book_value_per_share": 3.1372065146525694,
     "current_ratio": 4.311389071757735,
     "debt_to_equity": 1.4649811101424004,
     "fcf_margin_pct": 4.374569432142506,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": 154.2940528242255,
-    "graham_upside_pct": -61.81290112631529,
+    "graham_multiple": 154.3181801194286,
+    "graham_upside_pct": -61.815886475878045,
+    "gross_margin_pct": 20.627890955614607,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
     "ncav_margin_pct": -103.49091091078255,
-    "pb_ratio": 20.38756444667248,
-    "pe_ttm": 7.568047337278108,
+    "pb_ratio": 20.387564446672478,
+    "pe_ttm": 7.56923076923077,
     "roe_pct": 40.88927637314734,
     "shareholders_equity": 3441000000,
     "total_assets": 13201000000,
     "total_liabilities": 8998000000
   },
   "name": "Carvana",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 63.95
+    "close": 63.96
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",

@@ -68,13 +68,16 @@
       "total_liabilities": 30522000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 31.5978990854494
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -5.416268377977785
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 21.95288753799392,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Railroads",
-  "last_updated": "2026-09-23T21:14:44Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:59:17Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -120,12 +113,23 @@
     "ncav_margin_pct": -131.99788004706414,
     "pb_ratio": 6.642727304956686,
     "pe_ttm": 30.642857142857142,
+    "reinvestment_rate_pct": 31.5978990854494,
     "roe_pct": 21.95288753799392,
     "shareholders_equity": 13160000000,
     "total_assets": 43682000000,
     "total_liabilities": 30522000000
   },
   "name": "CSX Corporation",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 47.19

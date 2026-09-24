@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 6.015508033340037
+      "fcf_margin_pct": 6.015508033340037,
+      "reinvestment_rate_pct": 915.188938291242
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -44.42831418140663
     },
     "profitability": {
+      "gross_margin_pct": 57.52497150901655,
       "roe_pct": 0.527930221396824,
+      "roic_pct": 0.6029481601807112,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Apparel - Manufacturers",
-  "last_updated": "2026-09-23T21:19:11Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:04:07Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,16 +110,32 @@
     "graham_criteria_passed": 1,
     "graham_multiple": 105.22945920454902,
     "graham_upside_pct": -53.75949272373843,
+    "gross_margin_pct": 57.52497150901655,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
     "pb_ratio": 0.7258166704651212,
     "pe_ttm": 144.98076923076923,
+    "reinvestment_rate_pct": 915.188938291242,
     "roe_pct": 0.527930221396824,
+    "roic_pct": 0.6029481601807112,
     "shareholders_equity": 4792300000,
-    "total_assets": 11681000000
+    "total_assets": 11681000000,
+    "value_creation_pct": -6.673758107691053
   },
   "name": "PVH Corp.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 75.39

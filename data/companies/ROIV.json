@@ -68,13 +68,16 @@
       "total_liabilities": 416275000
     },
     "cash_flow": {
-      "fcf_margin_pct": -9183.510895883777
+      "fcf_margin_pct": -9183.510895883777,
+      "reinvestment_rate_pct": -5.208702980102533
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -27.550542391822486
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": -6.621305526166406,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Biotechnology",
-  "last_updated": "2026-09-23T21:33:02Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:13:01Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -116,12 +111,23 @@
     "munger_quality_passed": 1,
     "ncav_margin_pct": -82.13595692865316,
     "pb_ratio": 5.874477547074791,
+    "reinvestment_rate_pct": -5.208702980102533,
     "roe_pct": -6.621305526166406,
     "shareholders_equity": 4527370000,
     "total_assets": 5708687000,
     "total_liabilities": 416275000
   },
   "name": "Roivant Sciences",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "After paying for everything it needs to run and grow the business, it's actually spending more cash than it's bringing in."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 36.82

@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 166.05763790153932
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": -16.07877520739192,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Paper, Lumber & Forest Products",
-  "last_updated": "2026-09-23T21:26:05Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:14:35Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -120,6 +115,14 @@
     "total_assets": 37964000000
   },
   "name": "International Paper",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 35.7

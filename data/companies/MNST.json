@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 23.701720558216607
+      "fcf_margin_pct": 23.701720558216607,
+      "reinvestment_rate_pct": 74.70089796315106
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 55.84764218214752,
       "roe_pct": null,
+      "roic_pct": null,
       "trend": "improving"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Beverages - Non-Alcoholic",
-  "last_updated": "2026-09-23T21:26:37Z",
-  "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": true,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:14:58Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -112,14 +105,26 @@
     "fcf_margin_pct": 23.701720558216607,
     "graham_criteria_evaluated": 1,
     "graham_criteria_passed": 1,
+    "gross_margin_pct": 55.84764218214752,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
     "pb_ratio": 5.210857609158978,
+    "reinvestment_rate_pct": 74.70089796315106,
     "shareholders_equity": 8254108000,
     "total_assets": 9988945000
   },
   "name": "Monster Beverage Corporation",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years."
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 43.91

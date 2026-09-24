@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 4.67264930816498
+      "fcf_margin_pct": 4.67264930816498,
+      "reinvestment_rate_pct": -38.00381090645132
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -17.15316139602163
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 13.209876543209875,
+      "roic_pct": 21.551445986456283,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Department Stores",
-  "last_updated": "2026-09-23T21:19:01Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
-  },
+  "last_updated": "2026-09-24T05:03:56Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -120,11 +115,26 @@
     "munger_quality_passed": 2,
     "pb_ratio": 1.195178725728395,
     "pe_ttm": 9.586206896551724,
+    "reinvestment_rate_pct": -38.00381090645132,
     "roe_pct": 13.209876543209875,
+    "roic_pct": 21.551445986456283,
     "shareholders_equity": 4860000000,
-    "total_assets": 16238000000
+    "total_assets": 16238000000,
+    "value_creation_pct": 11.591445986456282
   },
   "name": "Macy's",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 22.24

@@ -68,36 +68,29 @@
       "total_liabilities": 21251000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -3.5428381522206065
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 13.03221446271683,
+      "roic_pct": 11.641077157710113,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 157.64422274376042,
+      "graham_multiple": 157.5286774530002,
       "graham_number": 51.534544072240095,
-      "graham_upside_pct": -62.22084592607573,
-      "ncav_margin_pct": -119.65015215416257,
-      "pb_ratio": 4.449309123696779,
-      "pe_ttm": 35.43116883116883
+      "graham_upside_pct": -62.206993200175944,
+      "ncav_margin_pct": -119.65735740209236,
+      "pb_ratio": 4.447678264843434,
+      "pe_ttm": 35.41818181818182
     }
   },
   "industry": "Real Estate - Services",
-  "last_updated": "2026-09-23T21:15:48Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:00:30Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,23 +107,36 @@
     "eps_growth_cagr_3yr_pct": -3.5428381522206065,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 157.64422274376042,
-    "graham_upside_pct": -62.22084592607573,
+    "graham_multiple": 157.5286774530002,
+    "graham_upside_pct": -62.206993200175944,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -119.65015215416257,
-    "pb_ratio": 4.449309123696779,
-    "pe_ttm": 35.43116883116883,
+    "ncav_margin_pct": -119.65735740209236,
+    "pb_ratio": 4.447678264843434,
+    "pe_ttm": 35.41818181818182,
     "roe_pct": 13.03221446271683,
+    "roic_pct": 11.641077157710113,
     "shareholders_equity": 8878000000,
     "total_assets": 30877000000,
-    "total_liabilities": 21251000000
+    "total_liabilities": 21251000000,
+    "value_creation_pct": 2.8104432723489374
   },
   "name": "CBRE Group",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 136.41
+    "close": 136.36
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -190,7 +196,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 157.6",
+          "detail": "P/E x P/B = 157.5",
           "passed": false
         }
       ],

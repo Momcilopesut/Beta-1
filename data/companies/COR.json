@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 0.9980739004440128
+      "fcf_margin_pct": 0.9980739004440128,
+      "reinvestment_rate_pct": 32.58762300047563
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -0.3327811631230859
     },
     "profitability": {
+      "gross_margin_pct": 3.572165157521616,
       "roe_pct": 103.06030626935072,
+      "roic_pct": 37.9180512855307,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Medical - Distribution",
-  "last_updated": "2026-09-23T21:13:53Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:58:20Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,16 +110,34 @@
     "graham_criteria_passed": 2,
     "graham_multiple": 1550.2746965375143,
     "graham_upside_pct": -87.95277754507063,
+    "gross_margin_pct": 3.572165157521616,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
     "pb_ratio": 39.51641662750934,
     "pe_ttm": 39.23115577889447,
+    "reinvestment_rate_pct": 32.58762300047563,
     "roe_pct": 103.06030626935072,
+    "roic_pct": 37.9180512855307,
     "shareholders_equity": 1508019000,
-    "total_assets": 76590112000
+    "total_assets": 76590112000,
+    "value_creation_pct": 29.07326897098718
   },
   "name": "Cencora",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It has borrowed a lot of money - what it owes is more than twice what the business itself is worth, which makes it riskier if things go wrong.",
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "It keeps very little of each dollar it makes in sales after paying the direct cost of making or providing what it sells, so even a small rise in costs could hurt its profits a lot.",
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 312.28

@@ -8,10 +8,10 @@
         "debt": null,
         "earnings": 184087000,
         "fiscal_year": "2022-09-30",
-        "market_return_pct": -19.537744137325134,
+        "market_return_pct": -19.306885956985358,
         "revenue": null,
         "spending": null,
-        "stock_return_pct": -29.544717205580177
+        "stock_return_pct": -28.968600087221972
       },
       {
         "cash": 620127000,
@@ -68,13 +68,16 @@
       "total_liabilities": 595814000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 54.66447435654506
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 13.120393055532652
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 9.724021251015708,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Software - Application",
-  "last_updated": "2026-09-23T21:24:38Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:09:20Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -121,12 +113,23 @@
     "ncav_margin_pct": -85.64599354298575,
     "pb_ratio": 2.1050971933117184,
     "pe_ttm": 22.14885496183206,
+    "reinvestment_rate_pct": 54.66447435654506,
     "roe_pct": 9.724021251015708,
     "shareholders_equity": 2622557000,
     "total_assets": 3227760000,
     "total_liabilities": 595814000
   },
   "name": "Dolby",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 58.03

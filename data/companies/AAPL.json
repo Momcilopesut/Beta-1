@@ -18,10 +18,10 @@
         "debt": 110087000000,
         "earnings": 99803000000,
         "fiscal_year": "2022-09-24",
-        "market_return_pct": -17.11157667094682,
+        "market_return_pct": -16.87375745526839,
         "revenue": null,
         "spending": null,
-        "stock_return_pct": 2.389055268173169
+        "stock_return_pct": 3.480773199422166
       },
       {
         "cash": 29965000000,
@@ -68,13 +68,16 @@
       "total_liabilities": 285508000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 6.00992732268328
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 6.880679389561806
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 151.91298333175104,
+      "roic_pct": 87.39376845077544,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Consumer Electronics",
-  "last_updated": "2026-09-23T21:09:27Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:54:14Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -122,12 +115,26 @@
     "ncav_margin_pct": -102.79658728924599,
     "pb_ratio": 66.70731617593206,
     "pe_ttm": 45.1769436997319,
+    "reinvestment_rate_pct": 6.00992732268328,
     "roe_pct": 151.91298333175104,
+    "roic_pct": 87.39376845077544,
     "shareholders_equity": 73733000000,
     "total_assets": 359241000000,
-    "total_liabilities": 285508000000
+    "total_liabilities": 285508000000,
+    "value_creation_pct": 77.61294373931224
   },
   "name": "Apple Inc.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 337.02

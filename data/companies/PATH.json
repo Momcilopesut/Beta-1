@@ -68,13 +68,16 @@
       "total_liabilities": 1096613000
     },
     "cash_flow": {
-      "fcf_margin_pct": 21.865523553122742
+      "fcf_margin_pct": 21.865523553122742,
+      "reinvestment_rate_pct": -124.98428937273633
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 83.17467334586718,
       "roe_pct": 13.556696550972418,
+      "roic_pct": null,
       "trend": "declining"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-23T21:24:58Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:09:41Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,18 +107,32 @@
     "graham_criteria_passed": 1,
     "graham_multiple": 83.51954597719086,
     "graham_upside_pct": -48.096434014814946,
+    "gross_margin_pct": 83.17467334586718,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
     "ncav_margin_pct": -83.45860713469048,
     "pb_ratio": 3.3305340420352185,
     "pe_ttm": 25.076923076923073,
+    "reinvestment_rate_pct": -124.98428937273633,
     "roe_pct": 13.556696550972418,
     "shareholders_equity": 2082587000,
     "total_assets": 3179200000,
     "total_liabilities": 1096613000
   },
   "name": "UiPath",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": [
+      "The share of each sale it gets to keep as profit has been getting worse over the last few years.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 13.04

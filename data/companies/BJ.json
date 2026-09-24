@@ -68,13 +68,16 @@
       "total_liabilities": 5312816000
     },
     "cash_flow": {
-      "fcf_margin_pct": 1.5286564360412231
+      "fcf_margin_pct": 1.5286564360412231,
+      "reinvestment_rate_pct": 63.672488151982364
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 5.219303307115797
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 26.317868240705224,
+      "roic_pct": 22.84380705069462,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Discount Stores",
-  "last_updated": "2026-09-23T21:19:32Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:04:25Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -123,12 +116,27 @@
     "ncav_margin_pct": -129.23444168843122,
     "pb_ratio": 5.171774140646934,
     "pe_ttm": 20.54337899543379,
+    "reinvestment_rate_pct": 63.672488151982364,
     "roe_pct": 26.317868240705224,
+    "roic_pct": 22.84380705069462,
     "shareholders_equity": 2197659000,
     "total_assets": 7510475000,
-    "total_liabilities": 5312816000
+    "total_liabilities": 5312816000,
+    "value_creation_pct": 13.314336182130202
   },
   "name": "BJ's Wholesale Club",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 89.98

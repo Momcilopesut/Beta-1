@@ -68,13 +68,16 @@
       "total_liabilities": 10676000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 5.351996706463566
+      "fcf_margin_pct": 5.351996706463566,
+      "reinvestment_rate_pct": 43.5842706509661
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -14.650555881486781
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 14.19300816411974,
+      "roic_pct": 9.723811448648984,
       "trend": "stable"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Regulated Gas",
-  "last_updated": "2026-09-23T21:31:37Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Positive but thin margin of safety - 7% is below the 15% convention used here."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:14:19Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -124,12 +116,25 @@
     "ncav_margin_pct": -213.43374171046005,
     "pb_ratio": 1.6442967744483983,
     "pe_ttm": 11.851132686084142,
+    "reinvestment_rate_pct": 43.5842706509661,
     "roe_pct": 14.19300816411974,
+    "roic_pct": 9.723811448648984,
     "shareholders_equity": 4777000000,
     "total_assets": 15462000000,
-    "total_liabilities": 10676000000
+    "total_liabilities": 10676000000,
+    "value_creation_pct": 4.330580571363613
   },
   "name": "UGI Corp",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 36.62

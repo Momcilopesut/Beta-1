@@ -68,13 +68,16 @@
       "total_liabilities": 5986000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 22.487762935380307
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 3.0180455204013246
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 19.329476338822133,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Medical - Diagnostics & Research",
-  "last_updated": "2026-09-23T21:30:22Z",
-  "layered_analysis": {
-    "flags": [
-      "5 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:12:34Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -121,12 +113,21 @@
     "ncav_margin_pct": -102.98658110166316,
     "pb_ratio": 6.914178629770063,
     "pe_ttm": 36.17505470459518,
+    "reinvestment_rate_pct": 22.487762935380307,
     "roe_pct": 19.329476338822133,
     "shareholders_equity": 6741000000,
     "total_assets": 12727000000,
     "total_liabilities": 5986000000
   },
   "name": "Agilent Technologies",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 165.32

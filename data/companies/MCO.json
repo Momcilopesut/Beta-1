@@ -68,36 +68,29 @@
       "total_liabilities": 11625000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 22.48000431974093
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 60.65614208189443,
+      "roic_pct": 30.422835927889334,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 701.7418842877915,
+      "graham_multiple": 701.9788541716816,
       "graham_number": 84.84835848526677,
-      "graham_upside_pct": -82.09383592164889,
-      "ncav_margin_pct": -107.8456630505215,
-      "pb_ratio": 20.244405525407007,
-      "pe_ttm": 34.66349670811997
+      "graham_upside_pct": -82.0968585054192,
+      "ncav_margin_pct": -107.844338692401,
+      "pb_ratio": 20.24782338431179,
+      "pe_ttm": 34.669348939283104
     }
   },
   "industry": "Financial - Data & Stock Exchanges",
-  "last_updated": "2026-09-23T21:13:10Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:57:36Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -113,23 +106,36 @@
     "eps_growth_cagr_3yr_pct": 22.48000431974093,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 701.7418842877915,
-    "graham_upside_pct": -82.09383592164889,
+    "graham_multiple": 701.9788541716816,
+    "graham_upside_pct": -82.0968585054192,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -107.8456630505215,
-    "pb_ratio": 20.244405525407007,
-    "pe_ttm": 34.66349670811997,
+    "ncav_margin_pct": -107.844338692401,
+    "pb_ratio": 20.24782338431179,
+    "pe_ttm": 34.669348939283104,
     "roe_pct": 60.65614208189443,
+    "roic_pct": 30.422835927889334,
     "shareholders_equity": 4054000000,
     "total_assets": 15830000000,
-    "total_liabilities": 11625000000
+    "total_liabilities": 11625000000,
+    "value_creation_pct": 21.244843958632853
   },
   "name": "Moody's Corporation",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 473.85
+    "close": 473.93
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -189,7 +195,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 701.7",
+          "detail": "P/E x P/B = 702.0",
           "passed": false
         }
       ],

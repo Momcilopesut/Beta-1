@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 36.41428805470118
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 22.96711836146821
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 7.947029326190594,
+      "roic_pct": 11.22616157418752,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Engineering & Construction",
-  "last_updated": "2026-09-23T21:15:11Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:59:41Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -121,11 +114,25 @@
     "munger_quality_passed": 2,
     "pb_ratio": 4.5364911637227685,
     "pe_ttm": 59.294117647058826,
+    "reinvestment_rate_pct": 36.41428805470118,
     "roe_pct": 7.947029326190594,
+    "roic_pct": 11.22616157418752,
     "shareholders_equity": 3640807000,
-    "total_assets": 11252535000
+    "total_assets": 11252535000,
+    "value_creation_pct": 2.4447354735011384
   },
   "name": "Jacobs Solutions",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 141.12

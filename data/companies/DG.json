@@ -68,36 +68,29 @@
       "total_liabilities": 22451768000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -13.760458357934102
     },
     "profitability": {
+      "gross_margin_pct": 30.660930299520633,
       "roe_pct": 17.766890876627503,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 55.03170003971929,
+      "graham_multiple": 54.99976256031815,
       "graham_number": 77.11379955584064,
-      "graham_upside_pct": -36.058209323515214,
-      "ncav_margin_pct": -154.70102409223688,
-      "pb_ratio": 3.1257640569823972,
-      "pe_ttm": 17.605839416058394
+      "graham_upside_pct": -36.03964703202369,
+      "ncav_margin_pct": -154.71690379068355,
+      "pb_ratio": 3.124856911526391,
+      "pe_ttm": 17.6007299270073
     }
   },
   "industry": "Discount Stores",
-  "last_updated": "2026-09-23T21:11:34Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:56:10Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -112,23 +105,33 @@
     "eps_growth_cagr_3yr_pct": -13.760458357934102,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 55.03170003971929,
-    "graham_upside_pct": -36.058209323515214,
+    "graham_multiple": 54.99976256031815,
+    "graham_upside_pct": -36.03964703202369,
+    "gross_margin_pct": 30.660930299520633,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -154.70102409223688,
-    "pb_ratio": 3.1257640569823972,
-    "pe_ttm": 17.605839416058394,
+    "ncav_margin_pct": -154.71690379068355,
+    "pb_ratio": 3.124856911526391,
+    "pe_ttm": 17.6007299270073,
     "roe_pct": 17.766890876627503,
     "shareholders_equity": 8511962000,
     "total_assets": 30963730000,
     "total_liabilities": 22451768000
   },
   "name": "Dollar General",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 120.6
+    "close": 120.565
   },
   "qualitative": null,
   "sector": "Consumer Defensive",

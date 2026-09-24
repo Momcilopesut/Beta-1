@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 148.2120895018365
+      "fcf_margin_pct": 148.2120895018365,
+      "reinvestment_rate_pct": -764.9245608331976
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 19.37125755947049
     },
     "profitability": {
+      "gross_margin_pct": 295.1941610627266,
       "roe_pct": -7.629309785333074,
+      "roic_pct": 3.26103862187744,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "REIT - Specialty",
-  "last_updated": "2026-09-23T21:16:02Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:00:47Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,16 +109,33 @@
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 5,
     "graham_multiple": -183.1817010394501,
+    "gross_margin_pct": 295.1941610627266,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
     "pb_ratio": -3.727440934773306,
     "pe_ttm": 49.14409221902017,
+    "reinvestment_rate_pct": -764.9245608331976,
     "roe_pct": -7.629309785333074,
+    "roic_pct": 3.26103862187744,
     "shareholders_equity": -4853519000,
-    "total_assets": 11575012000
+    "total_assets": 11575012000,
+    "value_creation_pct": -2.552516879074982
   },
   "name": "SBA Communications",
+  "plain_analysis": {
+    "positives": [
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": [
+      "If this company had to sell everything it owns and pay off everything it owes, there would be nothing left over - it actually owes more than it owns.",
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 170.53

@@ -68,36 +68,29 @@
       "total_liabilities": 9935000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 4.4189852700491
+      "fcf_margin_pct": 4.4189852700491,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": null,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
       "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -138.44268802047236,
+      "ncav_margin_pct": -138.40778771359945,
       "pb_ratio": null,
-      "pe_ttm": 10.073226544622425
+      "pe_ttm": 10.082379862700229
     }
   },
   "industry": "Aluminum",
-  "last_updated": "2026-09-23T21:17:37Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:02:37Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,15 +107,19 @@
     "margin_trend_score": 60,
     "munger_quality_evaluated": 1,
     "munger_quality_passed": 0,
-    "ncav_margin_pct": -138.44268802047236,
-    "pe_ttm": 10.073226544622425,
+    "ncav_margin_pct": -138.40778771359945,
+    "pe_ttm": 10.082379862700229,
     "total_assets": 16129000000,
     "total_liabilities": 9935000000
   },
   "name": "Alcoa",
+  "plain_analysis": {
+    "positives": [],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 44.02
+    "close": 44.06
   },
   "qualitative": null,
   "sector": "Basic Materials",

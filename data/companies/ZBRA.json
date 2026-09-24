@@ -68,13 +68,16 @@
       "total_liabilities": 4914000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 15.40029651593773
+      "fcf_margin_pct": 15.40029651593773,
+      "reinvestment_rate_pct": -170.11933174224342
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -2.4059043989460127
     },
     "profitability": {
+      "gross_margin_pct": 48.054114158636025,
       "roe_pct": 11.677814938684504,
+      "roic_pct": 8.780385582564962,
       "trend": "improving"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Communication Equipment",
-  "last_updated": "2026-09-23T21:17:09Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:02:09Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,18 +110,36 @@
     "graham_criteria_passed": 2,
     "graham_multiple": 221.89520154722013,
     "graham_upside_pct": -68.1567560723185,
+    "gross_margin_pct": 48.054114158636025,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
     "ncav_margin_pct": -117.76314181668278,
     "pb_ratio": 4.892196508695652,
     "pe_ttm": 45.35696821515892,
+    "reinvestment_rate_pct": -170.11933174224342,
     "roe_pct": 11.677814938684504,
+    "roic_pct": 8.780385582564962,
     "shareholders_equity": 3588000000,
     "total_assets": 8502000000,
-    "total_liabilities": 4914000000
+    "total_liabilities": 4914000000,
+    "value_creation_pct": 0.05557711102754226
   },
   "name": "Zebra Technologies",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 371.02

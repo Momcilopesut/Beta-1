@@ -68,13 +68,16 @@
       "total_liabilities": 776265000
     },
     "cash_flow": {
-      "fcf_margin_pct": 19.9343918582219
+      "fcf_margin_pct": 19.9343918582219,
+      "reinvestment_rate_pct": 26.566473137379493
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 54.69088909060458,
       "roe_pct": -4.084862048308524,
+      "roic_pct": 14.115242231510445,
       "trend": "declining"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-23T21:24:52Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:09:35Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,17 +107,34 @@
     "fcf_margin_pct": 19.9343918582219,
     "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 2,
+    "gross_margin_pct": 54.69088909060458,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
     "ncav_margin_pct": -97.9643985960843,
     "pb_ratio": 15.87388815950629,
+    "reinvestment_rate_pct": 26.566473137379493,
     "roe_pct": -4.084862048308524,
+    "roic_pct": 14.115242231510445,
     "shareholders_equity": 1327095000,
     "total_assets": 2103360000,
-    "total_liabilities": 776265000
+    "total_liabilities": 776265000,
+    "value_creation_pct": 4.3866418615012
   },
   "name": "MACOM Technology Solutions",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The share of each sale it gets to keep as profit has been getting worse over the last few years."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 275.84

@@ -68,13 +68,16 @@
       "total_liabilities": 9764600000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -23.044127576570705
     },
     "profitability": {
+      "gross_margin_pct": 28.675794609038867,
       "roe_pct": 8.944605792544829,
+      "roic_pct": 5.487763021446983,
       "trend": "improving"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Packaged Foods",
-  "last_updated": "2026-09-23T21:19:44Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
-  },
+  "last_updated": "2026-09-24T05:04:36Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,6 +109,7 @@
     "graham_criteria_passed": 4,
     "graham_multiple": 12.216234941716687,
     "graham_upside_pct": 35.713349973044636,
+    "gross_margin_pct": 28.675794609038867,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
@@ -121,11 +117,23 @@
     "pb_ratio": 0.887896775212491,
     "pe_ttm": 13.758620689655173,
     "roe_pct": 8.944605792544829,
+    "roic_pct": 5.487763021446983,
     "shareholders_equity": 3753100000,
     "total_assets": 13528400000,
-    "total_liabilities": 9764600000
+    "total_liabilities": 9764600000,
+    "value_creation_pct": -0.2930033542188708
   },
   "name": "Post Holdings",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 75.81

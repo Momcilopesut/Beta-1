@@ -48,13 +48,16 @@
       "total_liabilities": 4526945000
     },
     "cash_flow": {
-      "fcf_margin_pct": 3.0570701636272437
+      "fcf_margin_pct": 3.0570701636272437,
+      "reinvestment_rate_pct": 228.03586215785518
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 11.756085946361445,
       "roe_pct": 10.168500825304722,
+      "roic_pct": 5.223456380993195,
       "trend": "declining"
     },
     "valuation": {
@@ -67,18 +70,7 @@
     }
   },
   "industry": "Medical - Healthcare Information Services",
-  "last_updated": "2026-09-23T21:21:43Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:06:27Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -97,18 +89,33 @@
     "graham_criteria_passed": 1,
     "graham_multiple": 377.3885794224418,
     "graham_upside_pct": -75.58274254718947,
+    "gross_margin_pct": 11.756085946361445,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 0,
     "ncav_margin_pct": -114.79491368607977,
     "pb_ratio": 5.88612520791546,
     "pe_ttm": 64.11494252873564,
+    "reinvestment_rate_pct": 228.03586215785518,
     "roe_pct": 10.168500825304722,
+    "roic_pct": 5.223456380993195,
     "shareholders_equity": 1875065000,
     "total_assets": 6413311000,
-    "total_liabilities": 4526945000
+    "total_liabilities": 4526945000,
+    "value_creation_pct": -3.803974259361519
   },
   "name": "BrightSpring Health Services",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "It keeps very little of each dollar it makes in sales after paying the direct cost of making or providing what it sells, so even a small rise in costs could hurt its profits a lot.",
+      "The share of each sale it gets to keep as profit has been getting worse over the last few years.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 55.78

@@ -68,13 +68,16 @@
       "total_liabilities": 49510000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 206.60722620765335
     },
     "profitability": {
+      "gross_margin_pct": 71.06808435754708,
       "roe_pct": 76.33333969089534,
+      "roic_pct": 71.33233260959281,
       "trend": "declining"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-23T21:09:27Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:54:13Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -105,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 5465710860000,
+  "market_cap": 5462077710000,
   "metrics": {
     "book_value_per_share": 6.5266804979253115,
     "current_ratio": 3.905263812455306,
@@ -116,6 +109,7 @@
     "graham_criteria_passed": 5,
     "graham_multiple": 1590.1686121584867,
     "graham_upside_pct": -88.1048569100083,
+    "gross_margin_pct": 71.06808435754708,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
@@ -123,11 +117,28 @@
     "pb_ratio": 34.552020751082374,
     "pe_ttm": 46.02244897959183,
     "roe_pct": 76.33333969089534,
+    "roic_pct": 71.33233260959281,
     "shareholders_equity": 157293000000,
     "total_assets": 206803000000,
-    "total_liabilities": 49510000000
+    "total_liabilities": 49510000000,
+    "value_creation_pct": 61.38774995266442
   },
   "name": "NVIDIA Corporation",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The share of each sale it gets to keep as profit has been getting worse over the last few years.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 225.51
@@ -160,7 +171,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $5465.7B",
+          "detail": "Market cap $5462.1B",
           "passed": true
         },
         {

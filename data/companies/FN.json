@@ -68,13 +68,16 @@
       "total_liabilities": 1456705000
     },
     "cash_flow": {
-      "fcf_margin_pct": 0.09096987199362565
+      "fcf_margin_pct": 0.09096987199362565,
+      "reinvestment_rate_pct": 81.6905140530651
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 24.699625485659205
     },
     "profitability": {
+      "gross_margin_pct": 11.990936625543487,
       "roe_pct": 19.273743244388523,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Hardware, Equipment & Parts",
-  "last_updated": "2026-09-23T21:24:43Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:09:25Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,18 +108,31 @@
     "graham_criteria_passed": 3,
     "graham_multiple": 179.77908402718285,
     "graham_upside_pct": -64.62294495186094,
+    "gross_margin_pct": 11.990936625543487,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
     "ncav_margin_pct": -88.14427766266554,
     "pb_ratio": 5.852855298876728,
     "pe_ttm": 30.71647509578544,
+    "reinvestment_rate_pct": 81.6905140530651,
     "roe_pct": 19.273743244388523,
     "shareholders_equity": 2454256000,
     "total_assets": 3910961000,
     "total_liabilities": 1456705000
   },
   "name": "Fabrinet",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+    ],
+    "worries": [
+      "It keeps very little of each dollar it makes in sales after paying the direct cost of making or providing what it sells, so even a small rise in costs could hurt its profits a lot.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 400.85

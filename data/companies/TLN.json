@@ -68,13 +68,16 @@
       "total_liabilities": 9812000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 23.47927160015498
+      "fcf_margin_pct": 23.47927160015498,
+      "reinvestment_rate_pct": 393.3130390664637
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 115.2937514643495
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": -20.03659652333028,
+      "roic_pct": -1.6456679107281516,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Independent Power Producers",
-  "last_updated": "2026-09-23T21:27:38Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:10:58Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -120,12 +113,27 @@
     "munger_quality_passed": 1,
     "ncav_margin_pct": -158.80935122011493,
     "pb_ratio": 13.166119440128085,
+    "reinvestment_rate_pct": 393.3130390664637,
     "roe_pct": -20.03659652333028,
+    "roic_pct": -1.6456679107281516,
     "shareholders_equity": 1093000000,
     "total_assets": 10905000000,
-    "total_liabilities": 9812000000
+    "total_liabilities": 9812000000,
+    "value_creation_pct": -8.287606280826123
   },
   "name": "Talen Energy",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": [
+      "It has borrowed a lot of money - what it owes is more than twice what the business itself is worth, which makes it riskier if things go wrong.",
+      "Counting all the money it uses to run the business, it isn't making any profit right now.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 300.34

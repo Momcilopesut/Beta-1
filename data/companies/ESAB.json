@@ -68,13 +68,16 @@
       "total_liabilities": 2554565000
     },
     "cash_flow": {
-      "fcf_margin_pct": 7.503108998770472
+      "fcf_margin_pct": 7.503108998770472,
+      "reinvestment_rate_pct": 13.514375411206109
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -0.1809958707592152
     },
     "profitability": {
+      "gross_margin_pct": 36.88027144593508,
       "roe_pct": 10.469151077542428,
+      "roic_pct": 10.118880144182734,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-23T21:22:40Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:07:26Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,18 +110,33 @@
     "graham_criteria_passed": 3,
     "graham_multiple": 35.45277715990021,
     "graham_upside_pct": -20.335262655181037,
+    "gross_margin_pct": 36.88027144593508,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
     "ncav_margin_pct": -130.88233481483275,
     "pb_ratio": 1.9324475297316763,
     "pe_ttm": 18.346049046321525,
+    "reinvestment_rate_pct": 13.514375411206109,
     "roe_pct": 10.469151077542428,
+    "roic_pct": 10.118880144182734,
     "shareholders_equity": 2166040000,
     "total_assets": 4766094000,
-    "total_liabilities": 2554565000
+    "total_liabilities": 2554565000,
+    "value_creation_pct": 2.4648138284325007
   },
   "name": "ESAB",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 67.33

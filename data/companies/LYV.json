@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 1.323779316122283
+      "fcf_margin_pct": 1.323779316122283,
+      "reinvestment_rate_pct": 52.049108346136045
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -24.60525588708462
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 183.010770939496,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Entertainment",
-  "last_updated": "2026-09-23T21:10:27Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T04:55:10Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,11 +110,21 @@
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
     "pb_ratio": 146.96738960912447,
+    "reinvestment_rate_pct": 52.049108346136045,
     "roe_pct": 183.010770939496,
     "shareholders_equity": 271007000,
     "total_assets": 22912533000
   },
   "name": "Live Nation Entertainment",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 169.03

@@ -68,36 +68,29 @@
       "total_liabilities": 12136000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 24.11534805112496
+      "fcf_margin_pct": 24.11534805112496,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 10.268140283428306
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 80.24617232062444,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 105.67234439138349,
+      "graham_multiple": 105.73137921950116,
       "graham_number": 33.043364531516424,
-      "graham_upside_pct": -53.8564941607088,
-      "ncav_margin_pct": -118.14068634497859,
-      "pb_ratio": 8.883501092530771,
-      "pe_ttm": 11.895348837209303
+      "graham_upside_pct": -53.86937800988911,
+      "ncav_margin_pct": -118.13562123640817,
+      "pb_ratio": 8.885982170897627,
+      "pe_ttm": 11.898671096345515
     }
   },
   "industry": "Drug Manufacturers - Specialty & Generic",
-  "last_updated": "2026-09-23T21:14:32Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:59:02Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,23 +107,35 @@
     "fcf_margin_pct": 24.11534805112496,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 105.67234439138349,
-    "graham_upside_pct": -53.8564941607088,
+    "graham_multiple": 105.73137921950116,
+    "graham_upside_pct": -53.86937800988911,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -118.14068634497859,
-    "pb_ratio": 8.883501092530771,
-    "pe_ttm": 11.895348837209303,
+    "ncav_margin_pct": -118.13562123640817,
+    "pb_ratio": 8.885982170897627,
+    "pe_ttm": 11.898671096345515,
     "roe_pct": 80.24617232062444,
     "shareholders_equity": 3331000000,
     "total_assets": 15467000000,
     "total_liabilities": 12136000000
   },
   "name": "Zoetis",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": [
+      "It has borrowed a lot of money - what it owes is more than twice what the business itself is worth, which makes it riskier if things go wrong.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 71.61
+    "close": 71.63
   },
   "qualitative": null,
   "sector": "Healthcare",

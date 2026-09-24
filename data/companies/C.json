@@ -68,36 +68,29 @@
       "total_liabilities": 2443380000000
     },
     "cash_flow": {
-      "fcf_margin_pct": -87.00733352889411
+      "fcf_margin_pct": -87.00733352889411,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -0.04764174136978605
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 6.738863164241536,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 20.518583774073356,
+      "graham_multiple": 20.527916412594596,
       "graham_number": 138.15325783646077,
-      "graham_upside_pct": 4.717090757568983,
+      "graham_upside_pct": 4.6932842046535,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.0871287848159839,
-      "pe_ttm": 18.874105865522175
+      "pb_ratio": 1.0873759906337999,
+      "pe_ttm": 18.878397711015737
     }
   },
   "industry": "Banks - Diversified",
-  "last_updated": "2026-09-23T21:12:32Z",
-  "layered_analysis": {
-    "flags": [
-      "Positive but thin margin of safety - 5% is below the 15% convention used here."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:57:06Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -112,22 +105,31 @@
     "fcf_margin_pct": -87.00733352889411,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 20.518583774073356,
-    "graham_upside_pct": 4.717090757568983,
+    "graham_multiple": 20.527916412594596,
+    "graham_upside_pct": 4.6932842046535,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "pb_ratio": 1.0871287848159839,
-    "pe_ttm": 18.874105865522175,
+    "pb_ratio": 1.0873759906337999,
+    "pe_ttm": 18.878397711015737,
     "roe_pct": 6.738863164241536,
     "shareholders_equity": 212291000000,
     "total_assets": 2657202000000,
     "total_liabilities": 2443380000000
   },
   "name": "Citigroup",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "After paying for everything it needs to run and grow the business, it's actually spending more cash than it's bringing in."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 131.93
+    "close": 131.96
   },
   "qualitative": null,
   "sector": "Financial Services",

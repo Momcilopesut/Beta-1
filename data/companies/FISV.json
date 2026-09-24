@@ -68,13 +68,16 @@
       "total_liabilities": 54324000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 20.284999764073042
+      "fcf_margin_pct": 20.284999764073042,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 17.481865339726866
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 13.49255583126551,
+      "roic_pct": 17.959950691554806,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Information Technology Services",
-  "last_updated": "2026-09-23T21:12:46Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
-  },
+  "last_updated": "2026-09-24T04:57:18Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -121,11 +116,25 @@
     "pb_ratio": 0.947374411831188,
     "pe_ttm": 7.247634069400632,
     "roe_pct": 13.49255583126551,
+    "roic_pct": 17.959950691554806,
     "shareholders_equity": 25792000000,
     "total_assets": 80133000000,
-    "total_liabilities": 54324000000
+    "total_liabilities": 54324000000,
+    "value_creation_pct": 8.479339619727279
   },
   "name": "Fiserv",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 45.95

@@ -68,36 +68,29 @@
       "total_liabilities": 1965593000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 24.16776392045321
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 11.781334717337412,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 17.890230899715277,
+      "graham_multiple": 17.91208156137359,
       "graham_number": 91.84746789265463,
-      "graham_upside_pct": 12.145870442801744,
+      "graham_upside_pct": 12.077447092928164,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.3674340101613873,
-      "pe_ttm": 13.083067092651758
+      "pb_ratio": 1.3682688294594103,
+      "pe_ttm": 13.091054313099042
     }
   },
   "industry": "Banks - Diversified",
-  "last_updated": "2026-09-23T21:13:36Z",
-  "layered_analysis": {
-    "flags": [
-      "Positive but thin margin of safety - 12% is below the 15% convention used here."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:58:02Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -111,22 +104,29 @@
     "eps_growth_cagr_3yr_pct": 24.16776392045321,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 6,
-    "graham_multiple": 17.890230899715277,
-    "graham_upside_pct": 12.145870442801744,
+    "graham_multiple": 17.91208156137359,
+    "graham_upside_pct": 12.077447092928164,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "pb_ratio": 1.3674340101613873,
-    "pe_ttm": 13.083067092651758,
+    "pb_ratio": 1.3682688294594103,
+    "pe_ttm": 13.091054313099042,
     "roe_pct": 11.781334717337412,
     "shareholders_equity": 181117000000,
     "total_assets": 2148631000000,
     "total_liabilities": 1965593000000
   },
   "name": "Wells Fargo",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 81.9
+    "close": 81.95
   },
   "qualitative": null,
   "sector": "Financial Services",

@@ -68,13 +68,16 @@
       "total_liabilities": 169696000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 64.31310002147042
+      "fcf_margin_pct": 64.31310002147042,
+      "reinvestment_rate_pct": 133.66971523964077
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 14.677308555508839
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 14.174922201878292,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Financial - Data & Stock Exchanges",
-  "last_updated": "2026-09-23T21:12:38Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
-  },
+  "last_updated": "2026-09-24T04:57:10Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -121,12 +114,22 @@
     "ncav_margin_pct": -124.02992313982554,
     "pb_ratio": 0.6282009411101288,
     "pe_ttm": 24.265232974910393,
+    "reinvestment_rate_pct": 133.66971523964077,
     "roe_pct": 14.174922201878292,
     "shareholders_equity": 28728200000,
     "total_assets": 198424200000,
     "total_liabilities": 169696000000
   },
   "name": "CME Group",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount."
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 270.8

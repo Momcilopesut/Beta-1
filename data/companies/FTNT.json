@@ -68,13 +68,16 @@
       "total_liabilities": 9151700000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 31.674951451459886
     },
     "profitability": {
+      "gross_margin_pct": 80.45620330607683,
       "roe_pct": 149.76969696969698,
+      "roic_pct": -643.8238655699869,
       "trend": "improving"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-23T21:16:28Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:01:18Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -116,6 +109,7 @@
     "graham_criteria_passed": 3,
     "graham_multiple": 7827.255927204175,
     "graham_upside_pct": -94.63849775737656,
+    "gross_margin_pct": 80.45620330607683,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
@@ -123,11 +117,27 @@
     "pb_ratio": 105.97493198967273,
     "pe_ttm": 73.85950413223141,
     "roe_pct": 149.76969696969698,
+    "roic_pct": -643.8238655699869,
     "shareholders_equity": 1237500000,
     "total_assets": 10389200000,
-    "total_liabilities": 9151700000
+    "total_liabilities": 9151700000,
+    "value_creation_pct": -653.7207867865538
   },
   "name": "Fortinet",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years."
+    ],
+    "worries": [
+      "Counting all the money it uses to run the business, it isn't making any profit right now.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 178.74

@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 21.436794842274924
+      "fcf_margin_pct": 21.436794842274924,
+      "reinvestment_rate_pct": 60.63678110649465
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 66.08335252129865,
       "roe_pct": 31.215571061329417,
+      "roic_pct": null,
       "trend": "improving"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Medical - Diagnostics & Research",
-  "last_updated": "2026-09-23T21:32:44Z",
-  "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:15:13Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,16 +107,30 @@
     "graham_criteria_passed": 1,
     "graham_multiple": 663.6002927424219,
     "graham_upside_pct": -81.58643095624822,
+    "gross_margin_pct": 66.08335252129865,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
     "pb_ratio": 14.161726037458687,
     "pe_ttm": 46.85871559633027,
+    "reinvestment_rate_pct": 60.63678110649465,
     "roe_pct": 31.215571061329417,
     "shareholders_equity": 2723000000,
     "total_assets": 6644000000
   },
   "name": "Illumina, Inc.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 255.38

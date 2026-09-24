@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 97.78113456588049
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -2.911316042746237
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 12.219710669077758,
+      "roic_pct": 6.709484067608357,
       "trend": "stable"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Medical - Devices",
-  "last_updated": "2026-09-23T21:33:00Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:13:05Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -122,11 +114,25 @@
     "munger_quality_passed": 1,
     "pb_ratio": 6.103067846870605,
     "pe_ttm": 52.107317073170734,
+    "reinvestment_rate_pct": 97.78113456588049,
     "roe_pct": 12.219710669077758,
+    "roic_pct": 6.709484067608357,
     "shareholders_equity": 796320000,
-    "total_assets": 2395925000
+    "total_assets": 2395925000,
+    "value_creation_pct": -1.244170713168102
   },
   "name": "Haemonetics",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 106.82

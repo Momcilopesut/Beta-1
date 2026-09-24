@@ -68,13 +68,16 @@
       "total_liabilities": 3992395000
     },
     "cash_flow": {
-      "fcf_margin_pct": 11.33260474677039
+      "fcf_margin_pct": 11.33260474677039,
+      "reinvestment_rate_pct": 57.899922278195945
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 61.78475841689988
     },
     "profitability": {
+      "gross_margin_pct": 24.12640753464128,
       "roe_pct": 41.75795724717757,
+      "roic_pct": 64.7140003995327,
       "trend": "improving"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Engineering & Construction",
-  "last_updated": "2026-09-23T21:33:20Z",
-  "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:10:30Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -118,18 +110,35 @@
     "graham_criteria_passed": 4,
     "graham_multiple": 1315.5715023131654,
     "graham_upside_pct": -86.92221990348315,
+    "gross_margin_pct": 24.12640753464128,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
     "ncav_margin_pct": -99.79351114756537,
     "pb_ratio": 23.367799364539156,
     "pe_ttm": 56.298476454293635,
+    "reinvestment_rate_pct": 57.899922278195945,
     "roe_pct": 41.75795724717757,
+    "roic_pct": 64.7140003995327,
     "shareholders_equity": 2448774000,
     "total_assets": 6441169000,
-    "total_liabilities": 3992395000
+    "total_liabilities": 3992395000,
+    "value_creation_pct": 54.76573922730267
   },
   "name": "Comfort Systems USA",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 1625.9

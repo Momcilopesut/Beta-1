@@ -68,13 +68,16 @@
       "total_liabilities": 8352386000
     },
     "cash_flow": {
-      "fcf_margin_pct": 4.769948504404071
+      "fcf_margin_pct": 4.769948504404071,
+      "reinvestment_rate_pct": 26.37449971774145
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 2.020746456075817
     },
     "profitability": {
+      "gross_margin_pct": 36.42418993089817,
       "roe_pct": 42.46271151705754,
+      "roic_pct": 27.703404285604382,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Specialty Retail",
-  "last_updated": "2026-09-23T21:11:20Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:55:54Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,18 +110,33 @@
     "graham_criteria_passed": 3,
     "graham_multiple": 102.1651425596114,
     "graham_upside_pct": -53.07115275494524,
+    "gross_margin_pct": 36.42418993089817,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
     "ncav_margin_pct": -128.7950418705737,
     "pb_ratio": 6.517813368621849,
     "pe_ttm": 15.674757281553397,
+    "reinvestment_rate_pct": 26.37449971774145,
     "roe_pct": 42.46271151705754,
+    "roic_pct": 27.703404285604382,
     "shareholders_equity": 2581293000,
     "total_assets": 10933679000,
-    "total_liabilities": 8352386000
+    "total_liabilities": 8352386000,
+    "value_creation_pct": 18.391378190953382
   },
   "name": "Tractor Supply",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 32.29

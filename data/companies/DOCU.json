@@ -68,13 +68,16 @@
       "total_liabilities": 2311730000
     },
     "cash_flow": {
-      "fcf_margin_pct": 32.879701817052336
+      "fcf_margin_pct": 32.879701817052336,
+      "reinvestment_rate_pct": -81.12687325666383
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 79.40481441217581,
       "roe_pct": 16.116475998790296,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Software - Application",
-  "last_updated": "2026-09-23T21:24:39Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:09:22Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,18 +107,31 @@
     "graham_criteria_passed": 1,
     "graham_multiple": 317.972867650321,
     "graham_upside_pct": -73.39910632705859,
+    "gross_margin_pct": 79.40481441217581,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
     "ncav_margin_pct": -106.32046037010335,
     "pb_ratio": 6.772195195315514,
     "pe_ttm": 46.9527027027027,
+    "reinvestment_rate_pct": -81.12687325666383,
     "roe_pct": 16.116475998790296,
     "shareholders_equity": 1917820000,
     "total_assets": 4229550000,
     "total_liabilities": 2311730000
   },
   "name": "Docusign",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 69.49

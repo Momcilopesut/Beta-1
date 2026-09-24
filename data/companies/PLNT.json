@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 19.238919634118343
+      "fcf_margin_pct": 19.238919634118343,
+      "reinvestment_rate_pct": 16.933186906069935
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": -45.3841007338792,
+      "roic_pct": 17.231856321393575,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Leisure",
-  "last_updated": "2026-09-23T21:19:10Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:04:05Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -116,11 +111,26 @@
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
     "pb_ratio": -6.746704874093008,
+    "reinvestment_rate_pct": 16.933186906069935,
     "roe_pct": -45.3841007338792,
+    "roic_pct": 17.231856321393575,
     "shareholders_equity": -482777000,
-    "total_assets": 3103395000
+    "total_assets": 3103395000,
+    "value_creation_pct": 11.579487021766415
   },
   "name": "Planet Fitness",
+  "plain_analysis": {
+    "positives": [
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "If this company had to sell everything it owns and pay off everything it owes, there would be nothing left over - it actually owes more than it owns."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 41

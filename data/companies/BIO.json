@@ -68,13 +68,16 @@
       "total_liabilities": 3122900000
     },
     "cash_flow": {
-      "fcf_margin_pct": 14.501393620315886
+      "fcf_margin_pct": 14.501393620315886,
+      "reinvestment_rate_pct": -502.64488971564055
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 51.86977392381542,
       "roe_pct": 10.195073521519802,
+      "roic_pct": 0.4434116344298837,
       "trend": "declining"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Medical - Devices",
-  "last_updated": "2026-09-23T21:21:39Z",
-  "layered_analysis": {
-    "flags": [
-      "Positive but thin margin of safety - 8% is below the 15% convention used here."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:06:24Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -116,18 +109,34 @@
     "graham_criteria_passed": 4,
     "graham_multiple": 19.133319911494027,
     "graham_upside_pct": 8.441643895536387,
+    "gross_margin_pct": 51.86977392381542,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
     "ncav_margin_pct": -102.06718324851893,
     "pb_ratio": 1.406416172759472,
     "pe_ttm": 13.604308797127468,
+    "reinvestment_rate_pct": -502.64488971564055,
     "roe_pct": 10.195073521519802,
+    "roic_pct": 0.4434116344298837,
     "shareholders_equity": 7453600000,
     "total_assets": 10576500000,
-    "total_liabilities": 3122900000
+    "total_liabilities": 3122900000,
+    "value_creation_pct": -8.80623573811214
   },
   "name": "Bio-Rad Laboratories",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much."
+    ],
+    "worries": [
+      "The share of each sale it gets to keep as profit has been getting worse over the last few years.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 378.88
