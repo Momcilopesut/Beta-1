@@ -68,8 +68,9 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
   available) and lists its latest 10-K/10-Q/8-K with a direct SEC link each.
 - **On-demand lookup** (`api/lookup.py`, optional): searching a ticker outside the
   screening universe immediately runs a live analysis through the exact same pipeline
-  code, no extra click - the search *is* the request. Backed by a small server
-  deployed separately (see "On-demand lookup deployment" below).
+  code, no extra click - the search *is* the request. Backed by a small Python server
+  function — deploy the whole repo to Vercel and it runs on the same origin as the
+  site with zero browser configuration (see "On-demand lookup deployment" below).
   The static site works fully without this — it's an opt-in extra.
 
 ## Weekly Screener
@@ -507,9 +508,20 @@ required.
 
 Searching a ticker that isn't tracked immediately runs a live analysis via
 `api/lookup.py`, a small Flask app deployed as a [Vercel](https://vercel.com) Python
-serverless function — GitHub Pages can't run server code, so this needs separate
-hosting. Skipping this section is fine; the rest of the site works without it, and an
+serverless function — GitHub Pages can't run server code, so this needs a deployment
+that can. Skipping this section is fine; the rest of the site works without it, and an
 untracked search will just say live lookup isn't configured.
+
+**Recommended: deploy this whole repo to Vercel — not just `api/lookup.py`.**
+Vercel serves plain static files directly from the repo alongside the Python function
+(no build step, no config beyond `vercel.json`, which already exists), so one Vercel
+deployment gives you the entire site *and* working on-demand search at one URL, same
+origin, zero browser configuration — `site/js/shared.js::lookupTicker` tries same-origin
+`/api/lookup` first and only falls back to asking for a separately-hosted API's URL (the
+older flow below) when that 404s, e.g. because the site itself is still on GitHub Pages.
+If you're currently on GitHub Pages, switching your primary URL to the Vercel one (steps
+below) is the fix for "search doesn't work" - GitHub Pages fundamentally can't run the
+server code a live lookup needs, no matter how it's configured.
 
 This runs the **full pipeline** for that one ticker, right then — qualitative (10-K
 moat reasoning plus 10-K/10-Q/8-K summaries) and the complete fundamentals scoring,
@@ -532,29 +544,36 @@ at the cost of that layer showing as not evaluated) as a fallback - the quantita
 Moat Signal (see "Moat Signal" above) needs no AI call, so it's computed either way. A
 Pro plan raises the ceiling further if you have one, but isn't required.
 
-**Why a separate deployment, and why it's gated:** every live lookup spends real FMP/
-Anthropic API budget (it runs the full pipeline for one ticker, right then). Left
-open with no key, anyone who finds the URL could run up your usage. Set
-`SEARCH_API_KEY` to require a shared secret; if you leave it unset, the endpoint is
-open to anyone with the URL — only reasonable for a private deployment you don't share.
+**Why it's gated:** every live lookup spends real FMP/Anthropic API budget (it runs
+the full pipeline for one ticker, right then). Left open with no key, anyone who
+finds the URL could run up your usage. Set `SEARCH_API_KEY` to require a shared
+secret; if you leave it unset, the endpoint is open to anyone with the URL — only
+reasonable for a private deployment you don't share.
 
-**Setup:**
+**Setup (deploy the whole repo — this replaces GitHub Pages as your main URL):**
 
 1. Create a free [Vercel](https://vercel.com) account and import this repository as a
-   new project (Vercel auto-detects `api/lookup.py` as a Python serverless function
-   and `vercel.json` for its config — no build settings to change).
+   new project (Vercel auto-detects `api/lookup.py` as a Python serverless function,
+   serves everything else — `site/`, `data/`, etc. — as plain static files, and reads
+   `vercel.json` for the function's config and the `/` → `/site/index.html` rewrite —
+   no build settings to change, no framework preset needed).
 2. Before deploying, enable **Fluid Compute** (project **Settings → Functions**) so
    `vercel.json`'s `maxDuration: 300` actually takes effect instead of failing or
    silently capping at 60s.
 3. In the Vercel project's **Settings → Environment Variables**, add the same keys as
    the GitHub Actions secrets (these are separate stores — copy the values over):
    `FMP_API_KEY`, `FRED_API_KEY`, `ANTHROPIC_API_KEY`, `SEC_EDGAR_USER_AGENT`, plus a
-   new `SEARCH_API_KEY` (any string you choose — this is the shared secret from above).
-4. Deploy. Note the resulting URL (e.g. `https://your-project.vercel.app`).
-5. On the live site, search for a ticker that isn't tracked — it now runs
-   automatically, no extra click. The first time, it'll prompt for the Vercel URL and
-   your `SEARCH_API_KEY` value, then remember both in the browser's local storage (per
-   browser/device — visitors without the key just get a 401 from the API).
+   new `SEARCH_API_KEY` (any string you choose — this is the shared secret from above;
+   leave it unset for a private deployment you're not sharing the URL to).
+4. Deploy. Note the resulting URL (e.g. `https://your-project.vercel.app`) — this is
+   now your main site, replacing the GitHub Pages one.
+5. On the live site, search for a ticker that isn't tracked — **if you left
+   `SEARCH_API_KEY` unset, this just works immediately**, no prompt at all
+   (`lookupTicker` calls same-origin `/api/lookup`, which now genuinely exists on this
+   domain). If you did set `SEARCH_API_KEY`, the first same-origin attempt gets a 401
+   and falls back to the older prompt flow once — enter this exact same
+   `https://your-project.vercel.app` URL and your `SEARCH_API_KEY` value when asked,
+   and it's remembered (with the key, sent as a header) for every search after that.
 
 Local dev: `python api/lookup.py` runs a dev server at `http://localhost:5328`; point
 `lookupApiBase` (see `site/js/shared.js`) at that instead of a Vercel URL to test

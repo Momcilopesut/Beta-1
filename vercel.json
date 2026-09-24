@@ -3,5 +3,8 @@
     "api/lookup.py": {
       "maxDuration": 300
     }
-  }
+  },
+  "rewrites": [
+    { "source": "/", "destination": "/site/index.html" }
+  ]
 }

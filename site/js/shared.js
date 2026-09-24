@@ -116,20 +116,56 @@ export function ensureLookupConfig() {
   return getLookupConfig();
 }
 
+// Tries one lookup URL. Returns the parsed JSON on success. On failure:
+// with allowFallback, a 404 (this origin has no /api/lookup at all - a
+// plain static host like GitHub Pages or the local dev server) or a 401
+// (it exists but wants a search key this attempt didn't send) returns
+// null so the caller can try somewhere else, instead of throwing; any
+// other failure - or any failure at all once allowFallback is false,
+// meaning there's nowhere left to fall back to - throws a real error.
+async function _tryLookup(url, ticker, skipAi, headers, allowFallback) {
+  url.searchParams.set("ticker", ticker);
+  if (skipAi) url.searchParams.set("ai", "0");
+  let res;
+  try {
+    res = await fetch(url, { headers });
+  } catch {
+    if (allowFallback) return null;
+    throw new Error("Could not reach the live lookup API.");
+  }
+  if (res.ok) return res.json();
+  if (allowFallback && (res.status === 404 || res.status === 401)) return null;
+  const body = await res.json().catch(() => null);
+  throw new Error((body && body.error) || `Live lookup returned ${res.status}`);
+}
+
 export async function lookupTicker(ticker, { skipAi = false } = {}) {
+  // Same-origin first, with zero prompting: if this whole site is
+  // deployed together with api/lookup.py on one Vercel project (the
+  // recommended, zero-config setup - see README's "On-demand lookup
+  // deployment"), /api/lookup already lives on this exact origin, no
+  // manually-typed URL required at all. Sends any search key already on
+  // file (harmless if this origin doesn't need one) in case this IS that
+  // same deployment and it's configured with one.
+  const stored = getLookupConfig();
+  const sameOriginHeaders = stored.searchKey ? { "X-Search-Key": stored.searchKey } : {};
+  const sameOriginResult = await _tryLookup(
+    new URL("/api/lookup", window.location.origin),
+    ticker,
+    skipAi,
+    sameOriginHeaders,
+    true
+  );
+  if (sameOriginResult) return sameOriginResult;
+
+  // Fallback: a separately-deployed API this browser has (or will now be
+  // prompted to) configure a URL for - the original flow, still needed
+  // when the static site itself is hosted somewhere without server code
+  // (GitHub Pages) and the API lives on its own separate deployment.
   const { apiBase, searchKey } = ensureLookupConfig();
   if (!apiBase) {
     throw new Error("Live lookup isn't configured.");
   }
-  const url = new URL("/api/lookup", apiBase);
-  url.searchParams.set("ticker", ticker);
-  if (skipAi) url.searchParams.set("ai", "0");
-
   const headers = searchKey ? { "X-Search-Key": searchKey } : {};
-  const res = await fetch(url, { headers });
-  const body = await res.json().catch(() => null);
-  if (!res.ok) {
-    throw new Error((body && body.error) || `Live lookup returned ${res.status}`);
-  }
-  return body;
+  return _tryLookup(new URL("/api/lookup", apiBase), ticker, skipAi, headers, false);
 }
