@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 78157.8118946502,
+      "graham_multiple": 76157.07986583478,
       "graham_number": 2.5353788276650966,
-      "graham_upside_pct": -98.30329998817835,
+      "graham_upside_pct": -98.28115736574009,
       "ncav_margin_pct": null,
-      "pb_ratio": 826.4026152281826,
-      "pe_ttm": 94.57594936708861
+      "pb_ratio": 815.7566603709635,
+      "pe_ttm": 93.35759493670885
     }
   },
   "industry": "Software - Application",
-  "last_updated": "2026-09-24T05:09:17Z",
+  "last_updated": "2026-09-24T16:06:37Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 6193061199,
+  "market_cap": 6113160224,
   "metrics": {
     "book_value_per_share": 0.1808198537207437,
     "current_ratio": 1.9546773629913243,
     "fcf_margin_pct": 20.03489089204099,
     "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 1,
-    "graham_multiple": 78157.8118946502,
-    "graham_upside_pct": -98.30329998817835,
+    "graham_multiple": 76157.07986583478,
+    "graham_upside_pct": -98.28115736574009,
     "gross_margin_pct": 81.15047013998597,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "pb_ratio": 826.4026152281826,
-    "pe_ttm": 94.57594936708861,
+    "pb_ratio": 815.7566603709635,
+    "pe_ttm": 93.35759493670885,
     "reinvestment_rate_pct": 961.281238385479,
     "roe_pct": 942.8476114224713,
     "shareholders_equity": 7494000,
@@ -130,8 +130,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 149.43
+    "as_of": "2026-09-24",
+    "close": 147.505
   },
   "qualitative": null,
   "sector": "Technology",
@@ -139,9 +139,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001169561.json",
     "sec_filings": [
       {
-        "filed": "2026-08-06",
+        "filed": "2026-09-24",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1169561/000116956126000027/cvlt-20260806.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1169561/000116956126000030/cvlt-20260922.htm"
       },
       {
         "filed": "2026-07-29",
@@ -161,7 +161,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $6.2B",
+          "detail": "Market cap $6.1B",
           "passed": true
         },
         {
@@ -186,12 +186,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 94.6",
+          "detail": "P/E 93.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 78157.8",
+          "detail": "P/E x P/B = 76157.1",
           "passed": false
         }
       ],

@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 384.1094977913456,
+      "graham_multiple": 380.5579340964612,
       "graham_number": 31.86042829619771,
-      "graham_upside_pct": -75.79730454558059,
+      "graham_upside_pct": -75.68463077448088,
       "ncav_margin_pct": null,
-      "pb_ratio": 14.210067261044161,
-      "pe_ttm": 27.030800821355232
+      "pb_ratio": 14.144219942377823,
+      "pe_ttm": 26.90554414784394
     }
   },
   "industry": "Apparel - Retail",
-  "last_updated": "2026-09-24T05:11:30Z",
+  "last_updated": "2026-09-24T15:51:06Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 145423293271,
+  "market_cap": 144964840926,
   "metrics": {
     "book_value_per_share": 9.263854813754557,
     "current_ratio": 1.1377890876431405,
@@ -106,13 +106,13 @@
     "eps_growth_cagr_3yr_pct": 17.920914155588186,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 384.1094977913456,
-    "graham_upside_pct": -75.79730454558059,
+    "graham_multiple": 380.5579340964612,
+    "graham_upside_pct": -75.68463077448088,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "pb_ratio": 14.210067261044161,
-    "pe_ttm": 27.030800821355232,
+    "pb_ratio": 14.144219942377823,
+    "pe_ttm": 26.90554414784394,
     "roe_pct": 53.915603532875366,
     "shareholders_equity": 10190000000,
     "total_assets": 35767000000
@@ -129,25 +129,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 131.64
+    "as_of": "2026-09-24",
+    "close": 131.03
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal 2026 (ended January 31, 2026), TJX reported net sales of $60.4 billion, up 7% from $56.4 billion, with consolidated comp sales up 5% and diluted EPS of $4.87 versus $4.26 a year earlier. Pre-tax margin improved to 12.1% from 11.5%, aided partly by a $419 million net gain from a credit card interchange fee litigation settlement recorded in SG&A, offset by related one-time compensation expenses. The filing also discusses ongoing uncertainty around U.S. tariffs, including a Supreme Court ruling invalidating certain IEEPA tariffs followed by a new executive order imposing a global tariff, and notes store count grew about 3% with continued expansion planned across all segments in fiscal 2027.",
-    "filing_summary_10q": null,
-    "filing_summary_8k": "This 8-K discloses that on September 16, 2026, TJX's Board of Directors elected Craig A. Pintoff, an Executive Vice President and Chief Administrative Officer at United Rentals, Inc., as a new independent director and member of the Audit and Finance Committee, effective immediately. The filing describes his compensation under the company's standard non-employee director program and states there are no related-party transactions or arrangements connected to his appointment.",
-    "moat_explanation": "The 10-K describes a low-cost operating structure (lean advertising spend, no-frills store fixtures, cost-effective distribution) combined with an opportunistic buying strategy leveraging roughly 21,000 global vendors and substantial buying power to acquire brand-name merchandise at prices 20%-60% below full-price retailers. This scale-driven, flexible sourcing and inventory model is presented as a structural cost and pricing advantage versus traditional retailers, though the filing also notes larger competitors with greater resources.",
-    "moat_present": true,
-    "moat_type": "cost_advantage",
-    "red_flags": [
-      "Company acknowledges it operates in 'highly competitive markets' against larger, better-resourced competitors and 'may not be able to compete effectively'",
-      "Heavy reliance on merchandise sourced from China, India, and southeastern Asia exposes the company to tariffs, trade restrictions, and supply chain disruption risks explicitly discussed in Risk Factors",
-      "Tariff uncertainty is called out as an ongoing issue, including a Supreme Court ruling invalidating certain IEEPA tariffs followed by a new executive order imposing different tariffs, creating unresolved uncertainty for cost structure",
-      "Fiscal 2026 results benefited from a one-time $419 million net gain from a credit card interchange fee litigation settlement, which inflates period-over-period margin and EPS comparisons and is not a recurring business driver",
-      "General corporate expense increased in fiscal 2026 due to higher administrative costs and settlement-related expenses"
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000109198.json",
@@ -175,7 +160,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $145.4B",
+          "detail": "Market cap $145.0B",
           "passed": true
         },
         {
@@ -200,12 +185,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 27.0",
+          "detail": "P/E 26.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 384.1",
+          "detail": "P/E x P/B = 380.6",
           "passed": false
         }
       ],

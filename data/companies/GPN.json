@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 14.113293014204054,
+      "graham_multiple": 13.935758549071254,
       "graham_number": 106.06115835417762,
-      "graham_upside_pct": 26.26328375497336,
-      "ncav_margin_pct": -176.2838498254393,
-      "pb_ratio": 0.97112897169166,
-      "pe_ttm": 14.532871972318338
+      "graham_upside_pct": 27.065003419405322,
+      "ncav_margin_pct": -176.76822074202585,
+      "pb_ratio": 0.9650016103226531,
+      "pe_ttm": 14.441176470588234
     }
   },
   "industry": "Financial - Credit Services",
-  "last_updated": "2026-09-24T05:15:31Z",
+  "last_updated": "2026-09-24T15:54:40Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 20853386736,
+  "market_cap": 20699468882,
   "metrics": {
     "book_value_per_share": 86.49726498600494,
     "current_ratio": 1.6900810852419603,
     "eps_growth_cagr_3yr_pct": 143.56933796914083,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 6,
-    "graham_multiple": 14.113293014204054,
-    "graham_upside_pct": 26.26328375497336,
+    "graham_multiple": 13.935758549071254,
+    "graham_upside_pct": 27.065003419405322,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -176.2838498254393,
-    "pb_ratio": 0.97112897169166,
-    "pe_ttm": 14.532871972318338,
+    "ncav_margin_pct": -176.76822074202585,
+    "pb_ratio": 0.9650016103226531,
+    "pe_ttm": 14.441176470588234,
     "roe_pct": 6.117004904632915,
     "shareholders_equity": 22888767000,
     "total_assets": 53338484000,
@@ -128,24 +128,10 @@
     "worries": []
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 84
+    "as_of": "2026-09-24",
+    "close": 83.47
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "The 10-K describes Global Payments as a global payments technology company operating primarily through a Merchant Solutions segment, offering card/debit processing, point-of-sale and embedded software, and other commerce-enablement services. It discloses a company-wide 'business transformation' program begun in 2024 to consolidate technology and operations, with incremental expenses expected through the first half of 2027. It also describes several recent portfolio changes: the January 2026 acquisition of Worldpay Holdco (paired with divestiture of the Issuer Solutions business to FIS), the September 2025 sale of Heartland Payroll Solutions to Acrisure, and the December 2024 sale of AdvancedMD.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists almost entirely of XBRL data tags rather than narrative text, covering the quarter and six months ended June 30, 2026. It references the January 2026 acquisition of Worldpay Holdco (with GTCR and FIS as counterparties) and the divestiture of the Issuer Solutions business, along with a realignment into three reportable segments (Enterprise, Platforms, and Small and Medium-Sized Businesses). It also lists numerous outstanding senior notes, convertible notes, a term loan, commercial paper, and revolving credit facility balances as of the reporting dates, along with interest rate swap and fair value disclosures, but no descriptive discussion of results is included in the excerpt.",
-    "filing_summary_8k": "This 8-K, dated August 5, 2026, discloses that Global Payments issued a press release announcing financial results for the quarter ended June 30, 2026 (furnished as Exhibit 99.1), along with supplemental non-GAAP financial information (Exhibit 99.2). The supplemental information recasts historical 2025 financial results to reflect the January 2026 Worldpay acquisition and the company's new three-segment structure (Enterprise, Platforms, and SMB) adopted following that acquisition. The filing states this information is furnished, not filed, under the Exchange Act.",
-    "moat_explanation": "The 10-K describes payment technology deeply embedded into merchants' point-of-sale systems and into business management software owned by technology partners across many vertical markets, as well as integrated/embedded payment stacks tied into shopping carts and ordering platforms. This kind of deep technical integration into a customer's or partner's operating software creates friction and cost for a merchant or software partner to switch providers, which is the excerpts' strongest support for a durable competitive position; the excerpts do not provide enough detail on cost structure, patents, or network-effect dynamics to support other moat categories.",
-    "moat_present": true,
-    "moat_type": "switching_costs",
-    "red_flags": [
-      "Company disclosed an ongoing multi-year 'business transformation program' with incremental expenses expected through the first half of 2027, including changes to asset recoverability and useful-life estimates, signaling operational disruption risk",
-      "Company states it 'continues to assess our business portfolio to evaluate potential assets for disposition,' indicating an unsettled and still-changing business mix",
-      "Multiple large, near-simultaneous M&A transactions (Worldpay acquisition, Issuer Solutions divestiture, Heartland Payroll Solutions sale, AdvancedMD sale) create integration and transition complexity, including reliance on transition services agreements with counterparties",
-      "Under the sponsorship model used in some markets, the company is restricted by card network standards from performing funds settlement or accessing merchant settlement funds directly, reflecting dependence on third-party financial institution sponsors"
-    ]
-  },
+  "qualitative": null,
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001123360.json",
@@ -173,7 +159,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $20.9B",
+          "detail": "Market cap $20.7B",
           "passed": true
         },
         {
@@ -198,12 +184,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 14.5",
+          "detail": "P/E 14.4",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 14.1",
+          "detail": "P/E x P/B = 13.9",
           "passed": true
         }
       ],

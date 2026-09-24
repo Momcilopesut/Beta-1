@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 361.6755572860408,
+      "graham_multiple": 349.73378164305717,
       "graham_number": 17.37960178759185,
-      "graham_upside_pct": -75.05797676866841,
-      "ncav_margin_pct": -107.12132548903229,
-      "pb_ratio": 26.834997577049812,
-      "pe_ttm": 13.477756286266926
+      "graham_upside_pct": -74.63572418623488,
+      "ncav_margin_pct": -107.24188499818696,
+      "pb_ratio": 26.388261107627052,
+      "pe_ttm": 13.25338491295938
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-24T05:09:37Z",
+  "last_updated": "2026-09-24T16:06:58Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,22 +98,22 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 18835897600,
+  "market_cap": 18489888000,
   "metrics": {
     "book_value_per_share": 2.596609140728698,
     "current_ratio": 1.7983040139089623,
     "fcf_margin_pct": 29.46072341596155,
     "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 2,
-    "graham_multiple": 361.6755572860408,
-    "graham_upside_pct": -75.05797676866841,
+    "graham_multiple": 349.73378164305717,
+    "graham_upside_pct": -74.63572418623488,
     "gross_margin_pct": 86.79715932287733,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -107.12132548903229,
-    "pb_ratio": 26.834997577049812,
-    "pe_ttm": 13.477756286266926,
+    "ncav_margin_pct": -107.24188499818696,
+    "pb_ratio": 26.388261107627052,
+    "pe_ttm": 13.25338491295938,
     "reinvestment_rate_pct": 13.800275343923884,
     "roe_pct": 214.47652530370854,
     "shareholders_equity": 702565000,
@@ -133,8 +133,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 69.68
+    "as_of": "2026-09-24",
+    "close": 68.52
   },
   "qualitative": null,
   "sector": "Technology",
@@ -142,14 +142,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001618732.json",
     "sec_filings": [
       {
+        "filed": "2026-09-24",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1618732/000119312526400318/ntnx-20260924.htm"
+      },
+      {
         "filed": "2026-09-18",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1618732/000119312526394793/ntnx-20260731.htm"
-      },
-      {
-        "filed": "2026-08-26",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1618732/000117184326005752/f8k_082626.htm"
       },
       {
         "filed": "2026-05-29",
@@ -164,7 +164,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $18.8B",
+          "detail": "Market cap $18.5B",
           "passed": true
         },
         {
@@ -189,12 +189,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 13.5",
+          "detail": "P/E 13.3",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 361.7",
+          "detail": "P/E x P/B = 349.7",
           "passed": false
         }
       ],

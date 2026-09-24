@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 5046.148318043597,
+      "graham_multiple": 7059.787855637297,
       "graham_number": 7.327176153820707,
-      "graham_upside_pct": -93.32254064173817,
-      "ncav_margin_pct": -100.45152162304254,
-      "pb_ratio": 25.292823976341733,
-      "pe_ttm": 199.5090909090909
+      "graham_upside_pct": -94.3545907093292,
+      "ncav_margin_pct": -100.38173566155957,
+      "pb_ratio": 29.916662452940432,
+      "pe_ttm": 235.98179999999996
     }
   },
   "industry": "Computer Hardware",
-  "last_updated": "2026-09-24T05:01:44Z",
+  "last_updated": "2026-09-24T16:10:05Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 36474800650,
+  "market_cap": 42819581088,
   "metrics": {
     "book_value_per_share": 4.33838467790859,
     "current_ratio": 1.60393091063304,
@@ -108,15 +108,15 @@
     "fcf_margin_pct": 16.81046662387659,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 5046.148318043597,
-    "graham_upside_pct": -93.32254064173817,
+    "graham_multiple": 7059.787855637297,
+    "graham_upside_pct": -94.3545907093292,
     "gross_margin_pct": 70.38120388998382,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -100.45152162304254,
-    "pb_ratio": 25.292823976341733,
-    "pe_ttm": 199.5090909090909,
+    "ncav_margin_pct": -100.38173566155957,
+    "pb_ratio": 29.916662452940432,
+    "pe_ttm": 235.98179999999996,
     "reinvestment_rate_pct": 322.11658071707416,
     "roe_pct": 13.016889078266933,
     "roic_pct": 16.30583640113928,
@@ -141,10 +141,25 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 109.73
+    "as_of": "2026-09-24",
+    "close": 129.78999
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2026, Everpure (formerly Pure Storage) reported total revenue of $3.66 billion, up 16% year-over-year, split between product revenue ($1.97 billion, up 16%) and subscription services revenue ($1.69 billion, up 15%). Subscription ARR grew 16% to $1.92 billion with Net Dollar Retention of 113%, and total Remaining Performance Obligations reached $3.7 billion, up 40%. The company held $1.5 billion in cash and marketable securities, established a new $500 million revolving credit facility, repurchased $342.5 million of stock, and entered a definitive agreement in February 2026 to acquire 1touch, a data intelligence and governance company.",
+    "filing_summary_10q": "This 10-Q covers the quarter ended August 2, 2026, filed by Everpure, Inc. (formerly Pure Storage) under ticker P. The provided excerpt is largely XBRL tagging data and cover-page information rather than narrative disclosure, but it confirms the company completed its previously announced acquisition of 1touch on May 7, 2026, and had 333,227,251 Class A shares outstanding as of August 31, 2026. Detailed financial results and MD&A narrative for the quarter were not included in the excerpt provided.",
+    "filing_summary_8k": "This 8-K, dated August 26, 2026, discloses under Item 2.02 that Everpure issued a press release and planned a conference call regarding its financial results for the quarter ended August 2, 2026, with the press release furnished as Exhibit 99.1. The filing notes that non-GAAP financial measures are referenced in the press release and reconciled to GAAP figures within it, and this information is furnished rather than filed for Exchange Act purposes.",
+    "moat_explanation": "The 10-K describes a subscription-based Evergreen architecture that locks customers into continuous, non-disruptive hardware/software refreshes rather than discrete purchases, and reports Subscription Net Dollar Retention of 113%-117% and $3.7 billion of largely non-cancelable Remaining Performance Obligations, both of which suggest customers renew and expand rather than switch providers. The company also frames its platform as unifying data management across on-premises, cloud and edge environments, which would raise the operational cost/risk of migrating away once adopted, though the excerpts don't quantify actual switching costs or competitor comparisons directly.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Company expects product gross margin to sequentially decline in the next quarter due to higher component costs.",
+      "A single hyperscaler customer is called out repeatedly as a major growth driver (design win, incremental investment to scale supply chain for it), suggesting meaningful customer concentration risk.",
+      "Full valuation allowance maintained against U.S. deferred tax assets, including NOL carryforwards, indicating a history of not consistently generating U.S. taxable income.",
+      "Prior-year restructuring and impairment charges (workforce reduction and lease abandonment) reflect earlier cost-cutting and facility downsizing.",
+      "Reliance on third-party contract manufacturers and supply chain partners for hardware production and hyperscaler shipments, with company noting inventory build-up to mitigate tariffs and supply disruptions."
+    ]
+  },
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001474432.json",
@@ -172,7 +187,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $36.5B",
+          "detail": "Market cap $42.8B",
           "passed": true
         },
         {
@@ -197,12 +212,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 199.5",
+          "detail": "P/E 236.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 5046.1",
+          "detail": "P/E x P/B = 7059.8",
           "passed": false
         }
       ],

@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 3693.739509984774,
+      "graham_multiple": 3669.499447411061,
       "graham_number": 47.9686779071418,
-      "graham_upside_pct": -92.19526563070211,
+      "graham_upside_pct": -92.16952971691641,
       "ncav_margin_pct": null,
-      "pb_ratio": 15.926212885341355,
-      "pe_ttm": 231.92830188679247
+      "pb_ratio": 15.873869203936255,
+      "pe_ttm": 231.16603773584907
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-24T05:17:39Z",
+  "last_updated": "2026-09-24T15:58:17Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 1002183066000,
+  "market_cap": 996712403000,
   "metrics": {
     "book_value_per_share": 38.591095348580524,
     "current_ratio": 2.850026441036489,
@@ -107,19 +107,19 @@
     "fcf_margin_pct": 19.443401945783652,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 3693.739509984774,
-    "graham_upside_pct": -92.19526563070211,
+    "graham_multiple": 3669.499447411061,
+    "graham_upside_pct": -92.16952971691641,
     "gross_margin_pct": 49.51644100580271,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "pb_ratio": 15.926212885341355,
-    "pe_ttm": 231.92830188679247,
+    "pb_ratio": 15.873869203936255,
+    "pe_ttm": 231.16603773584907,
     "roe_pct": 6.881061604152447,
     "roic_pct": 6.329137060003437,
     "shareholders_equity": 62999000000,
     "total_assets": 76926000000,
-    "value_creation_pct": -3.6178846654152563
+    "value_creation_pct": -3.617813598874794
   },
   "name": "Advanced Micro Devices",
   "plain_analysis": {
@@ -138,26 +138,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 614.61
+    "as_of": "2026-09-24",
+    "close": 612.59
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal 2025, AMD reported net revenue of $34.6 billion, up 34% from $25.8 billion in 2024, driven by 32% growth in Data Center (led by EPYC processors and Instinct GPUs) and 51% growth in Client and Gaming, partially offset by a 3% decline in Embedded segment revenue. Gross margin rose to 50% from 49%, despite roughly $440 million in net inventory charges tied to U.S. export restrictions on MI308 GPUs sold to China. During the year AMD acquired ZT Systems, later selling its manufacturing business to Sanmina, and entered a multiyear GPU supply agreement with OpenAI that included issuance of a stock warrant. Cash and short-term investments grew to $10.6 billion, and the company repurchased $1.3 billion of stock.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the fiscal quarter ended June 27, 2026) consists almost entirely of XBRL tagging metadata rather than narrative text, so specific financial results and MD&A commentary are not available in what was provided. The tags reference AMD's three reportable segments (Data Center, Client and Gaming, Embedded), outstanding senior notes and commercial paper, the ZT Systems and ZT Manufacturing entities, and equity-related items tied to named individuals (Householder, Hu, Norrod, Su) around May 2026. Because no descriptive text was included, the provided excerpts don't describe the quarter's actual revenue, margins, or business developments in prose form.",
-    "filing_summary_8k": "This Form 8-K, dated August 17, 2026, discloses a change to AMD's Board of Directors: Joe Householder notified the company of his intent to retire from the Board effective August 19, 2026, a decision described as not related to any disagreement with the company. In connection with this, the Board appointed Tim Ryan as a new independent director effective the same date, and reassigned committee roles, with KC McClure becoming Chair of the Audit and Finance Committee and joining the Nominating and Corporate Governance Committee, while Nora Denzel joined the Audit and Finance Committee. The filing includes a related press release as an exhibit but does not disclose any financial results.",
-    "moat_explanation": "The 10-K describes a broad patent and IP portfolio, brand recognition (AMD Ryzen, EPYC, Instinct), and differentiated technology such as chiplet design and Infinity Fabric, plus deep co-engineering relationships for semi-custom SoCs used in game consoles. However, the Risk Factors section also stresses that Intel and Nvidia hold stronger market positions, financial resources and ecosystem lock-in (e.g., Nvidia's proprietary software), which tempers the durability of any advantage.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Risk factors explicitly note that Intel and Nvidia use pricing, incentives, and ecosystem/software advantages to limit AMD's market share and margins",
-      "Dependence on third-party manufacturers (foundries) for production, with risk of insufficient capacity or yield issues",
-      "U.S. export controls led to material inventory and related charges (~$440M net for 2025) tied to MI308 GPU sales to China, and future regulatory changes (e.g., a possible 15% revenue-share requirement) remain unresolved",
-      "Semi-custom SoC revenue depends heavily on the success of a small number of customer products (e.g., game consoles from Sony/Microsoft)",
-      "Loss of a significant customer is cited as a risk that could materially affect results, indicating customer concentration",
-      "Goodwill and intangible asset impairment risk following multiple 2025 acquisitions (e.g., ZT Systems) is acknowledged as a potential adverse financial impact"
-    ]
-  },
+  "qualitative": null,
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000002488.json",
@@ -185,7 +169,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $1002.2B",
+          "detail": "Market cap $996.7B",
           "passed": true
         },
         {
@@ -210,12 +194,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 231.9",
+          "detail": "P/E 231.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 3693.7",
+          "detail": "P/E x P/B = 3669.5",
           "passed": false
         }
       ],

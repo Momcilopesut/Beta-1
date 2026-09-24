@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 115.74940074804532,
+      "graham_multiple": 114.07281575014466,
       "graham_number": 40.03296270162479,
-      "graham_upside_pct": -55.910834029047585,
+      "graham_upside_pct": -55.58801564053163,
       "ncav_margin_pct": null,
-      "pb_ratio": 6.42485660539811,
-      "pe_ttm": 18.015873015873016
+      "pb_ratio": 6.378156105843455,
+      "pe_ttm": 17.884920634920636
     }
   },
   "industry": "Specialty Retail",
-  "last_updated": "2026-09-24T04:55:23Z",
+  "last_updated": "2026-09-24T16:11:08Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 19137643600,
+  "market_cap": 18997483545,
   "metrics": {
     "book_value_per_share": 14.132611134653278,
     "current_ratio": 1.1074358640447974,
@@ -106,14 +106,14 @@
     "fcf_margin_pct": 3.017437816315272,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 115.74940074804532,
-    "graham_upside_pct": -55.910834029047585,
+    "graham_multiple": 114.07281575014466,
+    "graham_upside_pct": -55.58801564053163,
     "gross_margin_pct": 22.482070470845024,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "pb_ratio": 6.42485660539811,
-    "pe_ttm": 18.015873015873016,
+    "pb_ratio": 6.378156105843455,
+    "pe_ttm": 17.884920634920636,
     "reinvestment_rate_pct": 46.419079350877794,
     "roe_pct": 36.06612685560054,
     "shareholders_equity": 2964000000,
@@ -130,10 +130,26 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-23",
-    "close": 90.8
+    "as_of": "2026-09-24",
+    "close": 90.14
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2026 (ended January 31, 2026), Best Buy reported revenue of $41.7 billion, up 0.4%, with comparable sales growth of 0.5% driven by computing and mobile phones, partially offset by declines in home theater and appliances. Operating income rose to $1,389 million from $1,262 million, aided by lower goodwill/intangible impairments, though restructuring charges increased due to a labor and store optimization initiative and a Best Buy Health restructuring; the filing also flags ongoing tariff uncertainty following a Supreme Court ruling on IEEPA tariffs. Total store count fell to 1,068 from 1,125 two years earlier, and the company continued scaling newer initiatives like Best Buy Ads and Best Buy Marketplace.",
+    "filing_summary_10q": "The most recent 10-Q (for the quarter ended August 1, 2026, fiscal Q2 2027) is provided only as raw XBRL data without narrative text. The tags indicate continued restructuring activity across a fiscal 2026 labor and store optimization initiative, a Best Buy Health optimization and China sourcing initiative, and a 2024 resource optimization initiative, as well as a subsequent event related to an IEEPA tariff refund disclosed after quarter-end. No further descriptive detail on results or business developments is available from the excerpt provided.",
+    "filing_summary_8k": "This Form 8-K, dated August 27, 2026, discloses under Item 2.02 that Best Buy issued a news release announcing results of operations for the second quarter ended August 1, 2026, and held an earnings conference call the same day. The release is furnished as Exhibit 99 and is not deemed 'filed' for liability purposes under the Exchange Act. No additional financial details are included in the body of the 8-K itself beyond the announcement of the release and call.",
+    "moat_explanation": "The excerpts describe Best Buy as operating in a highly competitive, price-conscious retail sector where it explicitly maintains price-matching policies and states its higher-cost service model 'creates additional margin pressure' versus lower-cost competitors. It has no long-term supplier contracts and depends heavily on a handful of vendors (five suppliers ~55% of purchases), which undercuts claims of a durable structural advantage; the cited 'competitive advantages' (stores, staff, vendor partnerships) are asserted but not shown to be difficult for rivals to replicate.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Vendor concentration: 20 largest suppliers ~80% of merchandise purchased, with five suppliers (Apple, Samsung, HP, LG, Sony) ~55% of total purchases, and no long-term contracts securing supply terms",
+      "Goodwill and intangible asset impairments at Best Buy Health tied to a customer base change and pressures in Medicaid/Medicare Advantage markets",
+      "Management acknowledges a higher cost structure than some competitors, creating margin pressure",
+      "Ongoing tariff and trade policy uncertainty (IEEPA tariffs ruled unauthorized by the Supreme Court, with unresolved refund process) affecting cost structure",
+      "Net store count decline (1,068 stores vs. 1,125 two years prior) alongside restructuring initiatives involving labor and store optimization",
+      "Comparable sales declines in appliances and consumer electronics/home theater categories in the most recent fiscal year"
+    ]
+  },
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000764478.json",
@@ -161,7 +177,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $19.1B",
+          "detail": "Market cap $19.0B",
           "passed": true
         },
         {
@@ -186,12 +202,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 18.0",
+          "detail": "P/E 17.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 115.7",
+          "detail": "P/E x P/B = 114.1",
           "passed": false
         }
       ],
