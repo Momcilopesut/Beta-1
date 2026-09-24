@@ -102,16 +102,45 @@ export function setLookupConfig(apiBase, searchKey) {
   if (searchKey) storage.setItem(LOOKUP_SEARCH_KEY, searchKey);
 }
 
+function clearLookupConfig() {
+  const storage = safeLocalStorage();
+  if (!storage) return;
+  storage.removeItem(LOOKUP_BASE_KEY);
+  storage.removeItem(LOOKUP_SEARCH_KEY);
+}
+
+function isParseableUrl(value) {
+  try {
+    new URL(value);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 // Prompts once (native prompt() - deliberately minimal, this is a
 // single-user personal tool) if no API base is configured yet. Returns the
-// config, possibly still incomplete if the user cancels.
+// config, possibly still incomplete if the user cancels. A saved apiBase
+// that isn't actually a valid URL (e.g. a mobile keyboard mangled or
+// truncated what was typed into the prompt below) is treated as unset -
+// cleared and re-prompted - rather than crashing every future search with
+// a raw "cannot be parsed as a URL" error.
 export function ensureLookupConfig() {
   let { apiBase, searchKey } = getLookupConfig();
+  if (apiBase && !isParseableUrl(apiBase)) {
+    clearLookupConfig();
+    apiBase = null;
+    searchKey = null;
+  }
   if (!apiBase) {
     apiBase = window.prompt(
       "Live ticker lookup isn't configured yet.\n\nEnter your deployed lookup API base URL " +
         "(e.g. https://your-project.vercel.app):"
     );
+    if (apiBase && !isParseableUrl(apiBase)) {
+      window.alert(`"${apiBase}" doesn't look like a full URL (needs to start with https://) - try again next search.`);
+      apiBase = null;
+    }
     if (apiBase) {
       searchKey = window.prompt("Enter your search key (leave blank if the API has none configured):") || "";
       setLookupConfig(apiBase, searchKey);
