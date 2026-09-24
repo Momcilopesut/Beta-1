@@ -15,11 +15,16 @@ def _fmp_data() -> dict:
     # total_assets = 100B, total_liabilities = 40B -> shareholders_equity = 60B
     # shares_outstanding = 1B -> book_value_per_share = 60.0
     # current_assets = 30B, current_liabilities = 15B -> current_ratio = 2.0
+    # incomeBeforeTax = 5B, incomeTaxExpense = 1B -> effective tax rate 20% ->
+    # NOPAT = 5.5B * 0.8 = 4.4B; invested_capital = 10B + 60B - 5B(cash) = 65B
+    # -> roic_pct = 4.4B / 65B * 100
     income_row = {
         "revenue": 20_000_000_000,
         "operatingIncome": 5_500_000_000,
         "grossProfit": 8_000_000_000,
         "netIncome": 4_000_000_000,
+        "incomeBeforeTax": 5_000_000_000,
+        "incomeTaxExpense": 1_000_000_000,
     }
     income_stmts = [
         {**income_row, "epsdiluted": 1.331},
@@ -61,6 +66,7 @@ def test_balance_sheet_basics_are_exact():
     assert metrics["eps_growth_cagr_3yr_pct"] == pytest.approx(10.0)
     assert metrics["fcf_margin_pct"] == pytest.approx(3_000_000_000 / 20_000_000_000 * 100)
     assert metrics["roe_pct"] == pytest.approx(4_000_000_000 / 60_000_000_000 * 100)
+    assert metrics["roic_pct"] == pytest.approx(4_400_000_000 / 65_000_000_000 * 100)
 
 
 def test_ncav_margin_reflects_current_assets_minus_all_liabilities():
@@ -82,3 +88,4 @@ def test_balance_sheet_basics_none_without_balance_sheet_data():
     assert metrics["shareholders_equity"] is None
     assert metrics["ncav_margin_pct"] is None
     assert metrics["roe_pct"] is None
+    assert metrics["roic_pct"] is None

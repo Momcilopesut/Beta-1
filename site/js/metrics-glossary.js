@@ -127,6 +127,16 @@ export const METRIC_GLOSSARY = [
       "Can be inflated by leverage alone - a company that borrows heavily to shrink its equity base can show a high ROE without actually running the business better, which is exactly why this tool also separately checks debt/equity rather than trusting ROE in isolation.",
   },
   {
+    key: "roic_pct",
+    label: "ROIC (Return on Invested Capital)",
+    explanation:
+      "Net operating profit after tax (NOPAT) divided by invested capital (total debt plus equity, minus cash) - how much profit the company generates per dollar of ALL the capital it's funded with, borrowed money included, not just shareholders' own money.",
+    significance:
+      "The broader complement to ROE: since it's measured against debt-plus-equity rather than equity alone, a company can't flatter this one the same way it can flatter ROE, by borrowing to shrink its equity base. Also the same figure this tool sums across the whole tracked universe for the market-wide capital-efficiency read on the macro page (see \"Market Capital Efficiency\" there), where it's compared directly against the cost of that capital (WACC).",
+    volatilityImpact:
+      "Moves with both profitability (the NOPAT side) and financing decisions (the invested-capital side) - a large debt-funded acquisition can pull this down immediately even before the acquired business has had a chance to contribute any profit, then recover as it does. A sustained gap below the cost of capital, not one weak year, is the real warning sign.",
+  },
+  {
     key: "total_assets",
     label: "Total Assets",
     explanation: "Everything the company owns, per the latest balance sheet - cash, receivables, inventory, property, equipment, goodwill, and more.",

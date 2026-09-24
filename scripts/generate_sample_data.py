@@ -233,6 +233,7 @@ def to_display(metrics: dict, close_price: float) -> dict:
             "profitability": {
                 "trend": MARGIN_TREND_LABEL[metrics["margin_trend_score"]],
                 "roe_pct": metrics["roe_pct"],
+                "roic_pct": metrics["roic_pct"],
             },
         },
     }
@@ -346,6 +347,18 @@ def main() -> None:
         metrics["shareholders_equity"] = round(balance0["totalStockholdersEquity"], 0)
         metrics["book_value_per_share"] = round(balance0["totalStockholdersEquity"] / shares_outstanding, 2)
 
+        # Reuses the real per-company NOPAT/invested-capital formula (same
+        # one the market-wide capital-efficiency aggregate sums across the
+        # whole universe, see below) rather than a hand-picked random range -
+        # roic_pct needs to be internally consistent with the synthetic
+        # balance/income statements above it, not just plausible on its own.
+        ce_inputs = capital_efficiency.company_capital_efficiency_inputs(raw, {"market_cap": market_cap})
+        metrics["roic_pct"] = (
+            round(ce_inputs["nopat"] / ce_inputs["invested_capital"] * 100, 2)
+            if ce_inputs and ce_inputs["nopat"] is not None and ce_inputs["invested_capital"]
+            else None
+        )
+
         checklist = value_investing.build_checklist(metrics, {"market_cap": market_cap}, raw)
         metrics["graham_criteria_passed"] = checklist["graham_defensive"]["passed"]
         metrics["graham_criteria_evaluated"] = checklist["graham_defensive"]["evaluated"]
@@ -389,7 +402,6 @@ def main() -> None:
         }
         writer.write_company(DATA_DIR, ticker, company_doc)
         company_docs[ticker] = company_doc
-        ce_inputs = capital_efficiency.company_capital_efficiency_inputs(raw, {"market_cap": market_cap})
         if ce_inputs:
             capital_efficiency_inputs.append(ce_inputs)
 

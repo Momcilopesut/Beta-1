@@ -160,9 +160,8 @@ def build_metrics(
         debt_to_equity = total_debt / total_equity
 
     # Munger/Buffett's own quality bar: return on the equity shareholders
-    # have put in. Simple two-input math (net income / equity), not the
-    # multi-input ROIC formula this pipeline cut earlier for being too
-    # complex to verify by hand.
+    # have put in. Simple two-input math (net income / equity) - see
+    # roic_pct below for the broader, debt-inclusive version of this idea.
     roe_pct = _first_of(key_metrics, "roeTTM", "returnOnEquityTTM")
     if roe_pct is not None:
         roe_pct = roe_pct * 100
@@ -192,6 +191,34 @@ def build_metrics(
         if operating_income_0 is not None and d_and_a_0 is not None:
             ebitda_0 = operating_income_0 + d_and_a_0
     debt_to_ebitda = total_debt / ebitda_0 if total_debt is not None and ebitda_0 and ebitda_0 > 0 else None
+
+    # Return on invested capital: NOPAT (operating income after an implied
+    # effective tax rate) over invested capital (total debt + equity, net of
+    # cash) - the broader, debt-inclusive complement to roe_pct above. The
+    # same two-input NOPAT/invested-capital formula already powers the
+    # market-wide aggregate on the macro page
+    # (pipeline.scoring.capital_efficiency.company_capital_efficiency_inputs),
+    # duplicated here in the same simple form rather than importing it -
+    # matching every other metric in this module, each computed locally
+    # from the same shared raw field names.
+    income_before_tax = _first_of(income0, "incomeBeforeTax")
+    income_tax_expense = _first_of(income0, "incomeTaxExpense")
+    effective_tax_rate = (
+        income_tax_expense / income_before_tax if income_tax_expense is not None and income_before_tax else None
+    )
+    operating_income_ttm = _first_of(income0, "operatingIncome")
+    nopat = (
+        operating_income_ttm * (1 - effective_tax_rate)
+        if operating_income_ttm is not None and effective_tax_rate is not None
+        else None
+    )
+    cash_and_equivalents = _first_of(balance0, "cashAndCashEquivalents", "cashAndShortTermInvestments")
+    invested_capital = (
+        total_debt + total_equity - cash_and_equivalents
+        if total_debt is not None and total_equity is not None and cash_and_equivalents is not None
+        else None
+    )
+    roic_pct = nopat / invested_capital * 100 if nopat is not None and invested_capital else None
 
     shares_outstanding = (
         _first_of(quote, "sharesOutstanding")
@@ -243,6 +270,7 @@ def build_metrics(
         "eps_growth_cagr_3yr_pct": eps_growth_cagr_3yr_pct,
         "margin_trend_score": _MARGIN_TREND_SCORE[margin_trend],
         "roe_pct": roe_pct,
+        "roic_pct": roic_pct,
         "total_assets": total_assets,
         "total_liabilities": total_liabilities,
         "shareholders_equity": total_equity,
@@ -283,6 +311,7 @@ def build_metrics(
             "profitability": {
                 "trend": margin_trend,
                 "roe_pct": roe_pct,
+                "roic_pct": roic_pct,
             },
         },
     }

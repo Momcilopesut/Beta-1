@@ -198,6 +198,8 @@ function metricSentiment(key, value) {
       return value >= 10 ? "good" : value >= 0 ? "neutral" : "bad";
     case "roe_pct": // 15% is the quality checklist's own bar
       return value >= 15 ? "good" : value >= 0 ? "neutral" : "bad";
+    case "roic_pct": // same bands as the macro page's market-wide ROIC read (config/capital_efficiency.yaml's roic_bands)
+      return value >= 15 ? "good" : value >= 0 ? "neutral" : "bad";
     case "margin_trend_score": // already categorical: 20 declining / 60 stable / 100 improving
       return value >= 100 ? "good" : value >= 60 ? "neutral" : "bad";
     case "shareholders_equity": // negative net worth is unambiguous - liabilities exceed assets
@@ -223,6 +225,7 @@ function formatMetricValue(key, value) {
     case "fcf_margin_pct":
     case "eps_growth_cagr_3yr_pct":
     case "roe_pct":
+    case "roic_pct":
       return fmt(value, 1, "%");
     case "margin_trend_score":
       return MARGIN_TREND_LABELS[value] || String(value);
