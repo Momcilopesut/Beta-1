@@ -200,6 +200,10 @@ function metricSentiment(key, value) {
       return value >= 15 ? "good" : value >= 0 ? "neutral" : "bad";
     case "roic_pct": // same bands as the macro page's market-wide ROIC read (config/capital_efficiency.yaml's roic_bands)
       return value >= 15 ? "good" : value >= 0 ? "neutral" : "bad";
+    case "gross_margin_pct": // 40%+ is a genuinely high-margin business; under 15% leaves little room to absorb cost inflation
+      return value >= 40 ? "good" : value >= 15 ? "neutral" : "bad";
+    case "reinvestment_rate_pct": // no inherent good/bad direction on its own - see roic_pct above for what the reinvested capital actually earns (same convention as the macro page's aggregate read)
+      return "neutral";
     case "margin_trend_score": // already categorical: 20 declining / 60 stable / 100 improving
       return value >= 100 ? "good" : value >= 60 ? "neutral" : "bad";
     case "shareholders_equity": // negative net worth is unambiguous - liabilities exceed assets
@@ -226,6 +230,8 @@ function formatMetricValue(key, value) {
     case "eps_growth_cagr_3yr_pct":
     case "roe_pct":
     case "roic_pct":
+    case "gross_margin_pct":
+    case "reinvestment_rate_pct":
       return fmt(value, 1, "%");
     case "margin_trend_score":
       return MARGIN_TREND_LABELS[value] || String(value);

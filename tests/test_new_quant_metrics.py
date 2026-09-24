@@ -67,6 +67,7 @@ def test_balance_sheet_basics_are_exact():
     assert metrics["fcf_margin_pct"] == pytest.approx(3_000_000_000 / 20_000_000_000 * 100)
     assert metrics["roe_pct"] == pytest.approx(4_000_000_000 / 60_000_000_000 * 100)
     assert metrics["roic_pct"] == pytest.approx(4_400_000_000 / 65_000_000_000 * 100)
+    assert metrics["gross_margin_pct"] == pytest.approx(8_000_000_000 / 20_000_000_000 * 100)
 
 
 def test_ncav_margin_reflects_current_assets_minus_all_liabilities():
@@ -89,3 +90,28 @@ def test_balance_sheet_basics_none_without_balance_sheet_data():
     assert metrics["ncav_margin_pct"] is None
     assert metrics["roe_pct"] is None
     assert metrics["roic_pct"] is None
+    assert metrics["reinvestment_rate_pct"] is None
+
+
+def test_reinvestment_rate_reflects_capex_depreciation_and_working_capital_change():
+    # nopat = 4.4B (see _fmp_data()'s own comment). capex = 2B, depreciation
+    # = 1B (already in the fixture). Working capital: period 0 (the shared
+    # fixture's balance0) = 30B - 15B = 15B; period 1 (added here) = 25B -
+    # 12B = 13B -> change_in_working_capital = 15B - 13B = 2B.
+    # reinvestment_rate_pct = (2B - 1B + 2B) / 4.4B * 100
+    fmp_data = _fmp_data()
+    fmp_data["cash_flow"][0]["capitalExpenditure"] = -2_000_000_000  # outflow, sign per FMP's own convention
+    fmp_data["balance_sheet"].append(
+        {"totalCurrentAssets": 25_000_000_000, "totalCurrentLiabilities": 12_000_000_000}
+    )
+    metrics = build_metrics("TEST", fmp_data, {"cik": None, "submissions": None, "company_facts": None})["metrics"]
+
+    assert metrics["reinvestment_rate_pct"] == pytest.approx(3_000_000_000 / 4_400_000_000 * 100)
+
+
+def test_reinvestment_rate_none_without_a_second_balance_sheet_period():
+    fmp_data = _fmp_data()
+    fmp_data["cash_flow"][0]["capitalExpenditure"] = -2_000_000_000
+    metrics = build_metrics("TEST", fmp_data, {"cik": None, "submissions": None, "company_facts": None})["metrics"]
+
+    assert metrics["reinvestment_rate_pct"] is None

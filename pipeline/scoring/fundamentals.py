@@ -147,6 +147,16 @@ def build_metrics(
     net_income = _first_of(income0, "netIncome") if income_stmts else None
     margin_trend = _margin_trend(income_stmts)
 
+    # Price increase capability: gross margin LEVEL (how much of every
+    # revenue dollar survives direct costs), not just margin_trend_score's
+    # direction - a rough proxy for how much room a company has to raise
+    # prices, or absorb cost inflation, before its margin actually gets
+    # squeezed. A high-margin business (software, branded consumer goods)
+    # has real pricing power; a low-margin one (a commodity distributor)
+    # has little, regardless of which way its margin has recently moved.
+    gross_profit = _first_of(income0, "grossProfit")
+    gross_margin_pct = gross_profit / revenue * 100 if gross_profit is not None and revenue else None
+
     # --- The core "assets vs liabilities" numbers ---
     total_assets = _first_of(balance0, "totalAssets")
     total_liabilities = _first_of(balance0, "totalLiabilities")
@@ -220,6 +230,42 @@ def build_metrics(
     )
     roic_pct = nopat / invested_capital * 100 if nopat is not None and invested_capital else None
 
+    # Capital absorption: what share of after-tax operating profit (NOPAT,
+    # already computed above) gets plowed back into the business - capex
+    # plus growth in working capital, net of the depreciation already
+    # baked into NOPAT - rather than being free for shareholders. Same
+    # "reinvestment rate" formula and field name as the market-wide
+    # aggregate on the macro page
+    # (pipeline.scoring.capital_efficiency.aggregate_capital_efficiency),
+    # duplicated here per-company rather than imported (see roic_pct above).
+    cashflow0 = cashflow_stmts[0] if cashflow_stmts else {}
+    capex = _first_of(cashflow0, "capitalExpenditure")
+    if capex is not None:
+        capex = abs(capex)  # sign convention varies by source; magnitude is what this formula wants
+    depreciation = _first_of(cashflow0, "depreciationAndAmortization")
+    change_in_working_capital = None
+    if len(balance_stmts) >= 2:
+        working_capital_0 = (
+            current_assets - current_liabilities
+            if current_assets is not None and current_liabilities is not None
+            else None
+        )
+        balance1 = balance_stmts[1]
+        current_assets_1 = _first_of(balance1, "totalCurrentAssets")
+        current_liabilities_1 = _first_of(balance1, "totalCurrentLiabilities")
+        working_capital_1 = (
+            current_assets_1 - current_liabilities_1
+            if current_assets_1 is not None and current_liabilities_1 is not None
+            else None
+        )
+        if working_capital_0 is not None and working_capital_1 is not None:
+            change_in_working_capital = working_capital_0 - working_capital_1
+    reinvestment_rate_pct = (
+        (capex - depreciation + change_in_working_capital) / nopat * 100
+        if nopat and capex is not None and depreciation is not None and change_in_working_capital is not None
+        else None
+    )
+
     shares_outstanding = (
         _first_of(quote, "sharesOutstanding")
         or _first_of(key_metrics, "sharesOutstandingTTM")
@@ -269,8 +315,10 @@ def build_metrics(
         "fcf_margin_pct": fcf_margin_pct,
         "eps_growth_cagr_3yr_pct": eps_growth_cagr_3yr_pct,
         "margin_trend_score": _MARGIN_TREND_SCORE[margin_trend],
+        "gross_margin_pct": gross_margin_pct,
         "roe_pct": roe_pct,
         "roic_pct": roic_pct,
+        "reinvestment_rate_pct": reinvestment_rate_pct,
         "total_assets": total_assets,
         "total_liabilities": total_liabilities,
         "shareholders_equity": total_equity,
@@ -304,12 +352,14 @@ def build_metrics(
             },
             "cash_flow": {
                 "fcf_margin_pct": fcf_margin_pct,
+                "reinvestment_rate_pct": reinvestment_rate_pct,
             },
             "growth": {
                 "eps_growth_cagr_3yr_pct": eps_growth_cagr_3yr_pct,
             },
             "profitability": {
                 "trend": margin_trend,
+                "gross_margin_pct": gross_margin_pct,
                 "roe_pct": roe_pct,
                 "roic_pct": roic_pct,
             },

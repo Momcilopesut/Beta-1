@@ -117,6 +117,16 @@ export const METRIC_GLOSSARY = [
       "Margins can move for reasons unrelated to competitive position - a one-off commodity input spike, a temporary promotion, a currency swing. A single 'declining' reading is worth less than a multi-year pattern, which is why this tool checks a 3-year window rather than one quarter.",
   },
   {
+    key: "gross_margin_pct",
+    label: "Price Increase Capability (Gross Margin)",
+    explanation:
+      "Gross profit divided by revenue - how much of every revenue dollar is left after the direct costs of producing what's sold, before any other expenses.",
+    significance:
+      "A rough proxy for pricing power: a high gross margin means a company has real room to raise prices, or absorb rising input costs, without its profitability collapsing. A low-margin business has far less cushion - any cost increase it can't pass through eats straight into profit.",
+    volatilityImpact:
+      "Commodity input costs, supplier contract renewals, and one-off pricing actions can all move this quarter to quarter even for a fundamentally stable business. A sustained multi-year level matters more than any one quarter - see Margin Trend for the direction this has recently been moving.",
+  },
+  {
     key: "roe_pct",
     label: "ROE (Return on Equity)",
     explanation:
@@ -135,6 +145,16 @@ export const METRIC_GLOSSARY = [
       "The broader complement to ROE: since it's measured against debt-plus-equity rather than equity alone, a company can't flatter this one the same way it can flatter ROE, by borrowing to shrink its equity base. Also the same figure this tool sums across the whole tracked universe for the market-wide capital-efficiency read on the macro page (see \"Market Capital Efficiency\" there), where it's compared directly against the cost of that capital (WACC).",
     volatilityImpact:
       "Moves with both profitability (the NOPAT side) and financing decisions (the invested-capital side) - a large debt-funded acquisition can pull this down immediately even before the acquired business has had a chance to contribute any profit, then recover as it does. A sustained gap below the cost of capital, not one weak year, is the real warning sign.",
+  },
+  {
+    key: "reinvestment_rate_pct",
+    label: "Capital Absorption (Reinvestment Rate)",
+    explanation:
+      "The share of after-tax operating profit (NOPAT) that gets plowed back into the business as capital expenditure and working-capital growth, rather than being free for shareholders to keep as a dividend, buyback, or debt paydown.",
+    significance:
+      "A growing company usually needs to reinvest to keep growing, so a high reinvestment rate isn't automatically bad - what matters is what that absorbed capital actually earns. Pair this with ROIC above: high reinvestment at a high ROIC compounds value, while high reinvestment at a low or falling ROIC means capital is being absorbed with little to show for it.",
+    volatilityImpact:
+      "Lumpy by nature - a single large plant, acquisition, or inventory build can spike this in one year even for a business that normally reinvests modestly, then fall back once that investment cycle ends. A negative reading (shrinking working capital, minimal capex) can mean a mature, cash-generative business or one starving itself of investment - worth checking which.",
   },
   {
     key: "total_assets",

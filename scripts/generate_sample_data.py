@@ -226,12 +226,14 @@ def to_display(metrics: dict, close_price: float) -> dict:
             },
             "cash_flow": {
                 "fcf_margin_pct": metrics["fcf_margin_pct"],
+                "reinvestment_rate_pct": metrics["reinvestment_rate_pct"],
             },
             "growth": {
                 "eps_growth_cagr_3yr_pct": metrics["eps_growth_cagr_3yr_pct"],
             },
             "profitability": {
                 "trend": MARGIN_TREND_LABEL[metrics["margin_trend_score"]],
+                "gross_margin_pct": metrics["gross_margin_pct"],
                 "roe_pct": metrics["roe_pct"],
                 "roic_pct": metrics["roic_pct"],
             },
@@ -341,21 +343,38 @@ def main() -> None:
         raw = synth_raw_statements(market_cap, close_price)
 
         balance0 = raw["balance_stmts"][0]
+        income0 = raw["income_stmts"][0]
         shares_outstanding = market_cap / close_price
         metrics["total_assets"] = round(balance0["totalAssets"], 0)
         metrics["total_liabilities"] = round(balance0["totalLiabilities"], 0)
         metrics["shareholders_equity"] = round(balance0["totalStockholdersEquity"], 0)
         metrics["book_value_per_share"] = round(balance0["totalStockholdersEquity"] / shares_outstanding, 2)
+        metrics["gross_margin_pct"] = round(income0["grossProfit"] / income0["revenue"] * 100, 2)
 
-        # Reuses the real per-company NOPAT/invested-capital formula (same
-        # one the market-wide capital-efficiency aggregate sums across the
-        # whole universe, see below) rather than a hand-picked random range -
-        # roic_pct needs to be internally consistent with the synthetic
-        # balance/income statements above it, not just plausible on its own.
+        # Reuses the real per-company NOPAT/invested-capital/reinvestment-rate
+        # formulas (same ones the market-wide capital-efficiency aggregate
+        # sums across the whole universe, see below) rather than hand-picked
+        # random ranges - roic_pct and reinvestment_rate_pct need to be
+        # internally consistent with the synthetic balance/income/cashflow
+        # statements above them, not just plausible on their own.
         ce_inputs = capital_efficiency.company_capital_efficiency_inputs(raw, {"market_cap": market_cap})
         metrics["roic_pct"] = (
             round(ce_inputs["nopat"] / ce_inputs["invested_capital"] * 100, 2)
             if ce_inputs and ce_inputs["nopat"] is not None and ce_inputs["invested_capital"]
+            else None
+        )
+        metrics["reinvestment_rate_pct"] = (
+            round(
+                (ce_inputs["capex"] - ce_inputs["depreciation"] + ce_inputs["change_in_working_capital"])
+                / ce_inputs["nopat"]
+                * 100,
+                2,
+            )
+            if ce_inputs
+            and ce_inputs["nopat"]
+            and ce_inputs["capex"] is not None
+            and ce_inputs["depreciation"] is not None
+            and ce_inputs["change_in_working_capital"] is not None
             else None
         )
 
