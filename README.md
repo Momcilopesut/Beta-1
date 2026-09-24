@@ -69,9 +69,9 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
 - **On-demand lookup** (`api/lookup.py`, optional): searching a ticker outside the
   screening universe immediately runs a live analysis through the exact same pipeline
   code, no extra click - the search *is* the request. Backed by a small Python server
-  function — deploy the whole repo to Vercel and it runs on the same origin as the
-  site with zero browser configuration (see "On-demand lookup deployment" below).
-  The static site works fully without this — it's an opt-in extra.
+  function on Vercel; this repo ships with a working deployment already wired in as a
+  fallback, so it works from GitHub Pages too with zero setup (see "On-demand lookup
+  deployment" below). The static site works fully without this — it's an opt-in extra.
 
 ## Weekly Screener
 
@@ -512,16 +512,22 @@ serverless function — GitHub Pages can't run server code, so this needs a depl
 that can. Skipping this section is fine; the rest of the site works without it, and an
 untracked search will just say live lookup isn't configured.
 
-**Recommended: deploy this whole repo to Vercel — not just `api/lookup.py`.**
-Vercel serves plain static files directly from the repo alongside the Python function
-(no build step, no config beyond `vercel.json`, which already exists), so one Vercel
-deployment gives you the entire site *and* working on-demand search at one URL, same
-origin, zero browser configuration — `site/js/shared.js::lookupTicker` tries same-origin
-`/api/lookup` first and only falls back to asking for a separately-hosted API's URL (the
-older flow below) when that 404s, e.g. because the site itself is still on GitHub Pages.
-If you're currently on GitHub Pages, switching your primary URL to the Vercel one (steps
-below) is the fix for "search doesn't work" - GitHub Pages fundamentally can't run the
-server code a live lookup needs, no matter how it's configured.
+**This repo already has a working Vercel deployment wired in as a built-in fallback,
+so search works out of the box from GitHub Pages too — no setup required to use it.**
+`site/js/shared.js::lookupTicker` tries, in order: (1) same-origin `/api/lookup` — the
+zero-config path when the whole repo is deployed to one Vercel project (recommended
+setup below); (2) `DEFAULT_API_BASE` in `shared.js`, a specific always-on Vercel
+deployment of this repo, tried automatically with no prompt at all when (1) 404s (e.g.
+because you're on GitHub Pages, which can't run `/api/lookup` itself); (3) only if
+*both* of those fail does it fall back to the older manual flow, prompting for a
+separately-hosted API's URL. If you fork this repo to deploy your own copy, replace
+`DEFAULT_API_BASE` with your own Vercel URL (or clear it to `""` to disable step 2 and
+get the manual prompt instead).
+
+**Deploying the whole repo to one Vercel project is still worth doing anyway** — it
+gives you a single URL with the site and search on the same origin (no cross-origin
+request at all for step 1 above), and lets you set your own `SEARCH_API_KEY` rather
+than relying on the shared fallback deployment's budget.
 
 This runs the **full pipeline** for that one ticker, right then — qualitative (10-K
 moat reasoning plus 10-K/10-Q/8-K summaries) and the complete fundamentals scoring,

@@ -74,6 +74,14 @@ export function renderFilingCard(filing, qualitative) {
 const LOOKUP_BASE_KEY = "lookupApiBase";
 const LOOKUP_SEARCH_KEY = "lookupSearchKey";
 
+// The always-on Vercel deployment of this exact repo - used as a built-in
+// fallback lookup API so a static host that can't run api/lookup.py itself
+// (GitHub Pages, this site's actual production home) still gets on-demand
+// search with zero per-browser configuration. Someone forking this repo to
+// their own Vercel project should replace this with their own URL (or set
+// it to "" to fall back to the manual prompt below).
+const DEFAULT_API_BASE = "https://beta-1-puce.vercel.app";
+
 function safeLocalStorage() {
   try {
     return window.localStorage;
@@ -158,10 +166,26 @@ export async function lookupTicker(ticker, { skipAi = false } = {}) {
   );
   if (sameOriginResult) return sameOriginResult;
 
-  // Fallback: a separately-deployed API this browser has (or will now be
-  // prompted to) configure a URL for - the original flow, still needed
-  // when the static site itself is hosted somewhere without server code
-  // (GitHub Pages) and the API lives on its own separate deployment.
+  // Built-in fallback: the always-on Vercel deployment above, tried before
+  // ever prompting - this is what makes search work from GitHub Pages (or
+  // any other static-only host) with zero configuration. Skipped when it
+  // IS this origin (already covered by the same-origin attempt) so a
+  // genuine 502 from that deployment surfaces immediately instead of
+  // being retried against itself.
+  if (DEFAULT_API_BASE && new URL(DEFAULT_API_BASE).origin !== window.location.origin) {
+    const defaultResult = await _tryLookup(
+      new URL("/api/lookup", DEFAULT_API_BASE),
+      ticker,
+      skipAi,
+      sameOriginHeaders,
+      true
+    );
+    if (defaultResult) return defaultResult;
+  }
+
+  // Last resort: a separately-deployed API this browser has (or will now
+  // be prompted to) configure a URL for - the original manual flow, for
+  // anyone who forked this repo and cleared DEFAULT_API_BASE above.
   const { apiBase, searchKey } = ensureLookupConfig();
   if (!apiBase) {
     throw new Error("Live lookup isn't configured.");
