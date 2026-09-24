@@ -9,7 +9,12 @@ import {
 import { METRIC_GLOSSARY, glossaryEntry } from "./metrics-glossary.js";
 
 function tickerFromQuery() {
-  return new URLSearchParams(window.location.search).get("ticker");
+  // Every other ticker entry point (the search box, the API's own
+  // validation) trims and uppercases first - this one didn't, so a
+  // hand-typed or bookmarked URL like ?ticker= amzn  skipped that and
+  // could miss a tracked company's JSON file on a case/whitespace
+  // mismatch alone.
+  return new URLSearchParams(window.location.search).get("ticker")?.trim().toUpperCase() || null;
 }
 
 async function main() {
