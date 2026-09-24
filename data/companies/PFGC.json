@@ -68,13 +68,16 @@
       "total_liabilities": 13949800000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": -60.46624931890256
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -3.3947811778366144
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 7.33370073275774,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Food Distribution",
-  "last_updated": "2026-09-23T21:19:42Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:04:35Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -123,12 +115,22 @@
     "ncav_margin_pct": -142.93468023751396,
     "pb_ratio": 2.9192790756393774,
     "pe_ttm": 39.646288209606986,
+    "reinvestment_rate_pct": -60.46624931890256,
     "roe_pct": 7.33370073275774,
     "shareholders_equity": 4899300000,
     "total_assets": 18849100000,
     "total_liabilities": 13949800000
   },
   "name": "Performance Food Group",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 90.79

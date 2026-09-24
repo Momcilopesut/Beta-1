@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 7.418348010255267
+      "fcf_margin_pct": 7.418348010255267,
+      "reinvestment_rate_pct": 25.1028605884335
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 5.601826190477133
     },
     "profitability": {
+      "gross_margin_pct": 39.06476424032995,
       "roe_pct": 45.66381156316916,
+      "roic_pct": 32.920059228900435,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Industrial - Distribution",
-  "last_updated": "2026-09-23T21:15:00Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:59:33Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,16 +110,32 @@
     "graham_criteria_passed": 5,
     "graham_multiple": 575.0227355650055,
     "graham_upside_pct": -80.21897686620622,
+    "gross_margin_pct": 39.06476424032995,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
     "pb_ratio": 16.019741426964668,
     "pe_ttm": 35.89463276836158,
+    "reinvestment_rate_pct": 25.1028605884335,
     "roe_pct": 45.66381156316916,
+    "roic_pct": 32.920059228900435,
     "shareholders_equity": 3736000000,
-    "total_assets": 8962000000
+    "total_assets": 8962000000,
+    "value_creation_pct": 23.35667211307082
   },
   "name": "W. W. Grainger",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 1270.67

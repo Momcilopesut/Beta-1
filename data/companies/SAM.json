@@ -68,13 +68,16 @@
       "total_liabilities": 347315000
     },
     "cash_flow": {
-      "fcf_margin_pct": 10.971789226837334
+      "fcf_margin_pct": 10.971789226837334,
+      "reinvestment_rate_pct": -55.16480349454934
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 22.048504986734873
     },
     "profitability": {
+      "gross_margin_pct": 48.47750171247342,
       "roe_pct": 12.817152715413338,
+      "roic_pct": null,
       "trend": "improving"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Beverages - Alcoholic",
-  "last_updated": "2026-09-23T21:19:47Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:04:38Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,18 +108,31 @@
     "graham_criteria_passed": 2,
     "graham_multiple": 34.98631990994501,
     "graham_upside_pct": -19.805953583456667,
+    "gross_margin_pct": 48.47750171247342,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
     "ncav_margin_pct": -95.97624617496784,
     "pb_ratio": 2.063418831828709,
     "pe_ttm": 16.95551061678463,
+    "reinvestment_rate_pct": -55.16480349454934,
     "roe_pct": 12.817152715413338,
     "shareholders_equity": 846280000,
     "total_assets": 1193595000,
     "total_liabilities": 347315000
   },
   "name": "Boston Beer Company",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 167.69

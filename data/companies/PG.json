@@ -68,13 +68,16 @@
       "total_liabilities": 72210000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 17.403943377148636
+      "fcf_margin_pct": 17.403943377148636,
+      "reinvestment_rate_pct": -3.6495732628542834
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 3.9127071473470387
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 29.544659461250944,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Household & Personal Products",
-  "last_updated": "2026-09-23T21:08:58Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:53:44Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -123,12 +116,24 @@
     "ncav_margin_pct": -113.42192763753035,
     "pb_ratio": 6.310648942147999,
     "pe_ttm": 22.273413897280964,
+    "reinvestment_rate_pct": -3.6495732628542834,
     "roe_pct": 29.544659461250944,
     "shareholders_equity": 54311000000,
     "total_assets": 126521000000,
     "total_liabilities": 72210000000
   },
   "name": "Procter & Gamble Co.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 147.45

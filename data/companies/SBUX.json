@@ -68,13 +68,16 @@
       "total_liabilities": 40108900000
     },
     "cash_flow": {
-      "fcf_margin_pct": 6.567270145544906
+      "fcf_margin_pct": 6.567270145544906,
+      "reinvestment_rate_pct": -3.287954588065588
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -16.7980082334351
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": -22.928142677173135,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-23T21:08:55Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T04:53:41Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -122,12 +115,23 @@
     "ncav_margin_pct": -130.49452290168804,
     "pb_ratio": -13.2548971173085,
     "pe_ttm": 57.75460122699387,
+    "reinvestment_rate_pct": -3.287954588065588,
     "roe_pct": -22.928142677173135,
     "shareholders_equity": -8096600000,
     "total_assets": 32019700000,
     "total_liabilities": 40108900000
   },
   "name": "Starbucks Corporation",
+  "plain_analysis": {
+    "positives": [
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth."
+    ],
+    "worries": [
+      "If this company had to sell everything it owns and pay off everything it owes, there would be nothing left over - it actually owes more than it owns.",
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 94.14

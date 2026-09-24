@@ -68,13 +68,16 @@
       "total_liabilities": 2433500000
     },
     "cash_flow": {
-      "fcf_margin_pct": 3.3247215994098362
+      "fcf_margin_pct": 3.3247215994098362,
+      "reinvestment_rate_pct": -25.81483700805254
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 60.28565543291708
     },
     "profitability": {
+      "gross_margin_pct": 27.38800774175367,
       "roe_pct": 11.79530803415715,
+      "roic_pct": 11.750943510373013,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Misc Industrial & Commercial Machinery & Equipment",
-  "last_updated": "2026-09-23T21:30:55Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:13:51Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,18 +110,34 @@
     "graham_criteria_passed": 5,
     "graham_multiple": 305.0156631317597,
     "graham_upside_pct": -72.83997357349192,
+    "gross_margin_pct": 27.38800774175367,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
     "ncav_margin_pct": -100.53466549780707,
     "pb_ratio": 5.962357487748143,
     "pe_ttm": 51.1568894952251,
+    "reinvestment_rate_pct": -25.81483700805254,
     "roe_pct": 11.79530803415715,
+    "roic_pct": 11.750943510373013,
     "shareholders_equity": 1992555000,
     "total_assets": 4426055000,
-    "total_liabilities": 2433500000
+    "total_liabilities": 2433500000,
+    "value_creation_pct": 2.081377340107201
   },
   "name": "Moog Inc.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 374.98

@@ -68,13 +68,16 @@
       "total_liabilities": 22727200000
     },
     "cash_flow": {
-      "fcf_margin_pct": 18.9571633318467
+      "fcf_margin_pct": 18.9571633318467,
+      "reinvestment_rate_pct": 175.9251501692373
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 29.723406718129517
     },
     "profitability": {
+      "gross_margin_pct": 36.88162219037268,
       "roe_pct": 31.836786425211173,
+      "roic_pct": null,
       "trend": "improving"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Hardware, Equipment & Parts",
-  "last_updated": "2026-09-23T21:16:14Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:01:03Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,18 +108,32 @@
     "graham_criteria_passed": 4,
     "graham_multiple": 185.91720481525226,
     "graham_upside_pct": -65.21183923519459,
+    "gross_margin_pct": 36.88162219037268,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
     "ncav_margin_pct": -102.42749797878142,
     "pb_ratio": 7.555219176091284,
     "pe_ttm": 24.607784431137723,
+    "reinvestment_rate_pct": 175.9251501692373,
     "roe_pct": 31.836786425211173,
     "shareholders_equity": 13413100000,
     "total_assets": 36236900000,
     "total_liabilities": 22727200000
   },
   "name": "Amphenol",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 82.19

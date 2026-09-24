@@ -18,10 +18,10 @@
         "debt": 4206000000,
         "earnings": 2428000000,
         "fiscal_year": "2022-09-30",
-        "market_return_pct": -19.537744137325134,
+        "market_return_pct": -19.306885956985358,
         "revenue": 16281000000,
         "spending": null,
-        "stock_return_pct": -23.387712599791747
+        "stock_return_pct": -23.83712905452036
       },
       {
         "cash": 1661000000,
@@ -68,34 +68,29 @@
       "total_liabilities": 12351000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 18.555207971266366
+      "fcf_margin_pct": 18.555207971266366,
+      "reinvestment_rate_pct": 3.194323365844451
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -6.225079756818797
     },
     "profitability": {
+      "gross_margin_pct": 35.216081566446526,
       "roe_pct": null,
+      "roic_pct": null,
       "trend": "improving"
     },
     "valuation": {
       "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -107.06474778257122,
+      "ncav_margin_pct": -107.0621125430384,
       "pb_ratio": null,
-      "pe_ttm": 34.80357142857142
+      "pe_ttm": 34.81655844155844
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-23T21:17:01Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:01:58Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -111,18 +106,29 @@
     "fcf_margin_pct": 18.555207971266366,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
+    "gross_margin_pct": 35.216081566446526,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -107.06474778257122,
-    "pe_ttm": 34.80357142857142,
+    "ncav_margin_pct": -107.0621125430384,
+    "pe_ttm": 34.81655844155844,
+    "reinvestment_rate_pct": 3.194323365844451,
     "total_assets": 25081000000,
     "total_liabilities": 12351000000
   },
   "name": "TE Connectivity",
+  "plain_analysis": {
+    "positives": [
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 214.39
+    "close": 214.47
   },
   "qualitative": null,
   "sector": "Technology",

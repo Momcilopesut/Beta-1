@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 11.863941846111645
+      "fcf_margin_pct": 11.863941846111645,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -3.211872110381242
     },
     "profitability": {
+      "gross_margin_pct": 43.73885612398848,
       "roe_pct": -50.66354410616706,
+      "roic_pct": 49.97237334821343,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Specialty Retail",
-  "last_updated": "2026-09-23T21:18:23Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:03:23Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -113,16 +108,31 @@
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
     "graham_multiple": -14.66215223937418,
+    "gross_margin_pct": 43.73885612398848,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
     "pb_ratio": -2.6791594279937545,
     "pe_ttm": 5.472668810289389,
     "roe_pct": -50.66354410616706,
+    "roic_pct": 49.97237334821343,
     "shareholders_equity": -1281000000,
-    "total_assets": 5069000000
+    "total_assets": 5069000000,
+    "value_creation_pct": 42.32853995547755
   },
   "name": "Bath & Body Works, Inc.",
+  "plain_analysis": {
+    "positives": [
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "If this company had to sell everything it owns and pay off everything it owes, there would be nothing left over - it actually owes more than it owns.",
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 17.02

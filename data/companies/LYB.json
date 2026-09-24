@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 1.2735051238682717
+      "fcf_margin_pct": 1.2735051238682717,
+      "reinvestment_rate_pct": 72.43251440703669
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": null,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -82,20 +85,12 @@
       "graham_number": null,
       "graham_upside_pct": null,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.9215022794524894,
+      "pb_ratio": 1.9223033059154928,
       "pe_ttm": null
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-23T21:10:09Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": null,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T04:54:55Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -113,14 +108,21 @@
     "margin_trend_score": 60,
     "munger_quality_evaluated": 0,
     "munger_quality_passed": 0,
-    "pb_ratio": 1.9215022794524894,
+    "pb_ratio": 1.9223033059154928,
+    "reinvestment_rate_pct": 72.43251440703669,
     "shareholders_equity": 10082000000,
     "total_assets": 34003000000
   },
   "name": "LyondellBasell",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 59.97
+    "close": 59.995
   },
   "qualitative": null,
   "sector": "Basic Materials",

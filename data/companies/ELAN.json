@@ -68,34 +68,29 @@
       "total_liabilities": 6811000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 6.023329798515376
+      "fcf_margin_pct": 6.023329798515376,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 43.21635789956093
     },
     "profitability": {
+      "gross_margin_pct": 54.99469777306468,
       "roe_pct": -3.543607759279059,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
       "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -129.73449647812254,
-      "pb_ratio": 1.722386543928517,
+      "ncav_margin_pct": -129.7213279677248,
+      "pb_ratio": 1.723149674873988,
       "pe_ttm": null
     }
   },
   "industry": "Drug Manufacturers - Specialty & Generic",
-  "last_updated": "2026-09-23T21:21:48Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:06:32Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -111,20 +106,30 @@
     "fcf_margin_pct": 6.023329798515376,
     "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 2,
+    "gross_margin_pct": 54.99469777306468,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -129.73449647812254,
-    "pb_ratio": 1.722386543928517,
+    "ncav_margin_pct": -129.7213279677248,
+    "pb_ratio": 1.723149674873988,
     "roe_pct": -3.543607759279059,
     "shareholders_equity": 6547000000,
     "total_assets": 13358000000,
     "total_liabilities": 6811000000
   },
   "name": "Elanco",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 22.57
+    "close": 22.58
   },
   "qualitative": null,
   "sector": "Healthcare",

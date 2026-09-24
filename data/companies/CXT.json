@@ -68,13 +68,16 @@
       "total_liabilities": 1859600000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 70.94138842228092
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -11.526962978974641
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 11.580207501995211,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-23T21:24:35Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:09:18Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -121,12 +113,22 @@
     "ncav_margin_pct": -136.11974366741757,
     "pb_ratio": 2.2243562168236233,
     "pe_ttm": 19.368000000000002,
+    "reinvestment_rate_pct": 70.94138842228092,
     "roe_pct": 11.580207501995211,
     "shareholders_equity": 1253000000,
     "total_assets": 3116400000,
     "total_liabilities": 1859600000
   },
   "name": "Crane NXT",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 48.42

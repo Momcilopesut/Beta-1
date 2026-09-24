@@ -68,13 +68,16 @@
       "total_liabilities": 1430171000
     },
     "cash_flow": {
-      "fcf_margin_pct": 15.157285682920213
+      "fcf_margin_pct": 15.157285682920213,
+      "reinvestment_rate_pct": -76.12562900791886
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 51.951891750554836
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": -23.653092857666383,
+      "roic_pct": 47.76918479767822,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-23T21:19:29Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:04:22Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -120,12 +115,28 @@
     "ncav_margin_pct": -143.60333112714468,
     "pb_ratio": -3.619215435215171,
     "pe_ttm": 15.761674718196456,
+    "reinvestment_rate_pct": -76.12562900791886,
     "roe_pct": -23.653092857666383,
+    "roic_pct": 47.76918479767822,
     "shareholders_equity": -736762000,
     "total_assets": 693409000,
-    "total_liabilities": 1430171000
+    "total_liabilities": 1430171000,
+    "value_creation_pct": 40.91647337844369
   },
   "name": "Wingstop",
+  "plain_analysis": {
+    "positives": [
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "If this company had to sell everything it owns and pay off everything it owes, there would be nothing left over - it actually owes more than it owns."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 97.88

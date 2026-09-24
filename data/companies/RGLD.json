@@ -68,13 +68,16 @@
       "total_liabilities": 2332177000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 22.604524567885708
     },
     "profitability": {
+      "gross_margin_pct": 69.32072809424041,
       "roe_pct": 6.514915895058494,
+      "roic_pct": 6.707069823118383,
       "trend": "improving"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Gold",
-  "last_updated": "2026-09-23T21:33:54Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:16:54Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -116,6 +109,7 @@
     "graham_criteria_passed": 4,
     "graham_multiple": 113.06979834300265,
     "graham_upside_pct": -55.391466073944414,
+    "gross_margin_pct": 69.32072809424041,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
@@ -123,11 +117,27 @@
     "pb_ratio": 2.992471520352432,
     "pe_ttm": 37.784753363228695,
     "roe_pct": 6.514915895058494,
+    "roic_pct": 6.707069823118383,
     "shareholders_equity": 7157130000,
     "total_assets": 9537524000,
-    "total_liabilities": 2332177000
+    "total_liabilities": 2332177000,
+    "value_creation_pct": -2.853854809382325
   },
   "name": "Royal Gold",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 252.78

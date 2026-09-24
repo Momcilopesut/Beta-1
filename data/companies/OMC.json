@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 16.144141640468042
+      "fcf_margin_pct": 16.144141640468042,
+      "reinvestment_rate_pct": -3688.2022836868805
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": -0.45243985455511465,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Advertising Agencies",
-  "last_updated": "2026-09-23T21:10:31Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T04:55:13Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -116,11 +109,21 @@
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
     "pb_ratio": 1.7861094934367165,
+    "reinvestment_rate_pct": -3688.2022836868805,
     "roe_pct": -0.45243985455511465,
     "shareholders_equity": 12045800000,
     "total_assets": 54415300000
   },
   "name": "Omnicom Group",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 75.49

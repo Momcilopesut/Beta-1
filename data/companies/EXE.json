@@ -68,13 +68,16 @@
       "total_liabilities": 9709000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 15.168261299901022
+      "fcf_margin_pct": 15.168261299901022,
+      "reinvestment_rate_pct": 45.54100796284731
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -39.005602482842995
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 9.791150823554743,
+      "roic_pct": 8.574521676170514,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-09-23T21:12:01Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
-  },
+  "last_updated": "2026-09-24T04:56:39Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -123,12 +116,27 @@
     "ncav_margin_pct": -133.71200857791678,
     "pb_ratio": 1.0846210461061472,
     "pe_ttm": 11.498018494055483,
+    "reinvestment_rate_pct": 45.54100796284731,
     "roe_pct": 9.791150823554743,
+    "roic_pct": 8.574521676170514,
     "shareholders_equity": 18578000000,
     "total_assets": 28287000000,
-    "total_liabilities": 9709000000
+    "total_liabilities": 9709000000,
+    "value_creation_pct": 0.5974870373719341
   },
   "name": "Expand Energy",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 87.04

@@ -68,36 +68,29 @@
       "total_liabilities": 10654900000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": -41.9100306460388
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 9.114765771480716
     },
     "profitability": {
+      "gross_margin_pct": 20.302174719360526,
       "roe_pct": 54.66364665911665,
+      "roic_pct": 51.590084078777174,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 227.33804080457452,
+      "graham_multiple": 227.55512175740847,
       "graham_number": 67.22632978767737,
-      "graham_upside_pct": -68.54025467374356,
-      "ncav_margin_pct": -139.84030862976442,
-      "pb_ratio": 11.042954108996602,
-      "pe_ttm": 20.586705202312135
+      "graham_upside_pct": -68.55526409422366,
+      "ncav_margin_pct": -139.82130084892958,
+      "pb_ratio": 11.048225208809965,
+      "pe_ttm": 20.596531791907513
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-23T21:10:53Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:55:31Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,23 +107,39 @@
     "eps_growth_cagr_3yr_pct": 9.114765771480716,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 227.33804080457452,
-    "graham_upside_pct": -68.54025467374356,
+    "graham_multiple": 227.55512175740847,
+    "graham_upside_pct": -68.55526409422366,
+    "gross_margin_pct": 20.302174719360526,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -139.84030862976442,
-    "pb_ratio": 11.042954108996602,
-    "pe_ttm": 20.586705202312135,
+    "ncav_margin_pct": -139.82130084892958,
+    "pb_ratio": 11.048225208809965,
+    "pe_ttm": 20.596531791907513,
+    "reinvestment_rate_pct": -41.9100306460388,
     "roe_pct": 54.66364665911665,
+    "roic_pct": 51.590084078777174,
     "shareholders_equity": 2207500000,
     "total_assets": 12862400000,
-    "total_liabilities": 10654900000
+    "total_liabilities": 10654900000,
+    "value_creation_pct": 41.90443605053978
   },
   "name": "Darden Restaurants",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 213.69
+    "close": 213.792
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -190,7 +199,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 227.3",
+          "detail": "P/E x P/B = 227.6",
           "passed": false
         }
       ],

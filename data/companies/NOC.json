@@ -68,13 +68,16 @@
       "total_liabilities": 34703000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 7.882442675311055
+      "fcf_margin_pct": 7.882442675311055,
+      "reinvestment_rate_pct": 33.23146215409889
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -2.5984458859345416
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 25.080964375674704,
+      "roic_pct": 13.309886956916102,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-23T21:15:21Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:59:52Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -123,12 +116,26 @@
     "ncav_margin_pct": -126.56812201918856,
     "pb_ratio": 4.382875244987405,
     "pe_ttm": 17.689821182943604,
+    "reinvestment_rate_pct": 33.23146215409889,
     "roe_pct": 25.080964375674704,
+    "roic_pct": 13.309886956916102,
     "shareholders_equity": 16674000000,
     "total_assets": 51377000000,
-    "total_liabilities": 34703000000
+    "total_liabilities": 34703000000,
+    "value_creation_pct": 5.110859231666975
   },
   "name": "Northrop Grumman",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 514.42

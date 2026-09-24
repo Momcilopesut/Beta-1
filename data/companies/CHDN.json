@@ -68,13 +68,16 @@
       "total_liabilities": 6428700000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 37.93205902743389,
+      "roic_pct": 8.33643118550083,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Gambling, Resorts & Casinos",
-  "last_updated": "2026-09-23T21:18:31Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:03:31Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,11 +112,23 @@
     "ncav_margin_pct": -206.72990299330095,
     "pb_ratio": 5.554205755947311,
     "roe_pct": 37.93205902743389,
+    "roic_pct": 8.33643118550083,
     "shareholders_equity": 1009700000,
     "total_assets": 7484500000,
-    "total_liabilities": 6428700000
+    "total_liabilities": 6428700000,
+    "value_creation_pct": 3.134809722751325
   },
   "name": "Churchill Downs Inc.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It has borrowed a lot of money - what it owes is more than twice what the business itself is worth, which makes it riskier if things go wrong.",
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 80.46

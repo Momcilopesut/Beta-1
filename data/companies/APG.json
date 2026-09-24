@@ -68,13 +68,16 @@
       "total_liabilities": 5528000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 8.38073568448995
+      "fcf_margin_pct": 8.38073568448995,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 31.437239287068643,
       "roe_pct": 8.86150234741784,
+      "roic_pct": 7.708927045152432,
       "trend": "improving"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Engineering & Construction",
-  "last_updated": "2026-09-23T21:22:20Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:07:06Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -111,17 +106,30 @@
     "fcf_margin_pct": 8.38073568448995,
     "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 1,
+    "gross_margin_pct": 31.437239287068643,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
     "ncav_margin_pct": -114.0660637521177,
     "pb_ratio": 4.795863389829813,
     "roe_pct": 8.86150234741784,
+    "roic_pct": 7.708927045152432,
     "shareholders_equity": 3408000000,
     "total_assets": 8936000000,
-    "total_liabilities": 5528000000
+    "total_liabilities": 5528000000,
+    "value_creation_pct": -0.8125970632378383
   },
   "name": "APi Group",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years."
+    ],
+    "worries": [
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 37.82

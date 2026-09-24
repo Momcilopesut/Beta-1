@@ -68,13 +68,16 @@
       "total_liabilities": 162778000000
     },
     "cash_flow": {
-      "fcf_margin_pct": -2.098074064138247
+      "fcf_margin_pct": -2.098074064138247,
+      "reinvestment_rate_pct": -263.66837152085645
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 4.794160714485319,
       "roe_pct": 40.97909790979098,
+      "roic_pct": 121.44311393184853,
       "trend": "declining"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-23T21:14:37Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:59:10Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,18 +109,35 @@
     "graham_criteria_passed": 1,
     "graham_multiple": 2335.713527231649,
     "graham_upside_pct": -90.1851996194038,
+    "gross_margin_pct": 4.794160714485319,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
     "ncav_margin_pct": -121.71831862723579,
     "pb_ratio": 28.972988283571695,
     "pe_ttm": 80.61693548387098,
+    "reinvestment_rate_pct": -263.66837152085645,
     "roe_pct": 40.97909790979098,
+    "roic_pct": 121.44311393184853,
     "shareholders_equity": 5454000000,
     "total_assets": 168235000000,
-    "total_liabilities": 162778000000
+    "total_liabilities": 162778000000,
+    "value_creation_pct": 111.98931122263238
   },
   "name": "Boeing",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It keeps very little of each dollar it makes in sales after paying the direct cost of making or providing what it sells, so even a small rise in costs could hurt its profits a lot.",
+      "After paying for everything it needs to run and grow the business, it's actually spending more cash than it's bringing in.",
+      "The share of each sale it gets to keep as profit has been getting worse over the last few years.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 199.93

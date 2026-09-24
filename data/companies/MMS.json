@@ -68,13 +68,16 @@
       "total_liabilities": 2395604000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 18.75499898968378
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 19.057785530171113,
+      "roic_pct": 13.599455157219035,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Specialty Business Services",
-  "last_updated": "2026-09-23T21:23:07Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
-  },
+  "last_updated": "2026-09-24T05:07:52Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -121,11 +116,23 @@
     "pb_ratio": 1.6823567438972304,
     "pe_ttm": 9.762250453720508,
     "roe_pct": 19.057785530171113,
+    "roic_pct": 13.599455157219035,
     "shareholders_equity": 1674035000,
     "total_assets": 4069639000,
-    "total_liabilities": 2395604000
+    "total_liabilities": 2395604000,
+    "value_creation_pct": 6.833689276667244
   },
   "name": "Maximus Inc.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 53.79

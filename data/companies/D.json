@@ -68,37 +68,29 @@
       "total_liabilities": 82440000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -5.490773120603187
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 1.9495925454733005,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 174.07572892873534,
+      "graham_multiple": 173.96191675202627,
       "graham_number": 21.991792459538427,
-      "graham_upside_pct": -64.04807510292883,
-      "ncav_margin_pct": -238.24188274910597,
-      "pb_ratio": 1.8497502665306194,
-      "pe_ttm": 94.1076923076923
+      "graham_upside_pct": -64.03631650116365,
+      "ncav_margin_pct": -238.28709677453497,
+      "pb_ratio": 1.849145476513771,
+      "pe_ttm": 94.07692307692307
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-09-23T21:17:16Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:02:18Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -113,23 +105,33 @@
     "eps_growth_cagr_3yr_pct": -5.490773120603187,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 174.07572892873534,
-    "graham_upside_pct": -64.04807510292883,
+    "graham_multiple": 173.96191675202627,
+    "graham_upside_pct": -64.03631650116365,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 1,
     "munger_quality_passed": 0,
-    "ncav_margin_pct": -238.24188274910597,
-    "pb_ratio": 1.8497502665306194,
-    "pe_ttm": 94.1076923076923,
+    "ncav_margin_pct": -238.28709677453497,
+    "pb_ratio": 1.849145476513771,
+    "pe_ttm": 94.07692307692307,
     "roe_pct": 1.9495925454733005,
     "shareholders_equity": 29083000000,
     "total_assets": 115857000000,
     "total_liabilities": 82440000000
   },
   "name": "Dominion Energy",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 61.17
+    "close": 61.15
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -189,7 +191,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 174.1",
+          "detail": "P/E x P/B = 174.0",
           "passed": false
         }
       ],

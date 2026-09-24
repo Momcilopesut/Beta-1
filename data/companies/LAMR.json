@@ -68,13 +68,16 @@
       "total_liabilities": 5907175000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": -16.94964451350031
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 10.213005991495127
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": null,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "REIT - Specialty",
-  "last_updated": "2026-09-23T21:24:11Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:08:55Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,10 +110,19 @@
     "munger_quality_passed": 1,
     "ncav_margin_pct": -137.22274660490012,
     "pe_ttm": 24.994800693240904,
+    "reinvestment_rate_pct": -16.94964451350031,
     "total_assets": 6931954000,
     "total_liabilities": 5907175000
   },
   "name": "Lamar Advertising Company",
+  "plain_analysis": {
+    "positives": [
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 144.22

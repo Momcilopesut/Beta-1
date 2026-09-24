@@ -68,13 +68,16 @@
       "total_liabilities": 11495000000
     },
     "cash_flow": {
-      "fcf_margin_pct": -1.4000792497688548
+      "fcf_margin_pct": -1.4000792497688548,
+      "reinvestment_rate_pct": 16.137774257253845
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -13.0088271154301
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 11.599901695748342,
+      "roic_pct": 17.44802846347142,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Medical - Healthcare Plans",
-  "last_updated": "2026-09-23T21:22:03Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:06:46Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -123,12 +116,28 @@
     "ncav_margin_pct": -90.39970606307627,
     "pb_ratio": 2.4293718358319,
     "pe_ttm": 21.22982062780269,
+    "reinvestment_rate_pct": 16.137774257253845,
     "roe_pct": 11.599901695748342,
+    "roic_pct": 17.44802846347142,
     "shareholders_equity": 4069000000,
     "total_assets": 15564000000,
-    "total_liabilities": 11495000000
+    "total_liabilities": 11495000000,
+    "value_creation_pct": 10.235742679322229
   },
   "name": "Molina Healthcare",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "After paying for everything it needs to run and grow the business, it's actually spending more cash than it's bringing in.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 189.37

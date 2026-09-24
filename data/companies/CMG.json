@@ -68,36 +68,29 @@
       "total_liabilities": 6163924000
     },
     "cash_flow": {
-      "fcf_margin_pct": 12.138507736423515
+      "fcf_margin_pct": 12.138507736423515,
+      "reinvestment_rate_pct": -1.8962833768450882
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 21.220189645996967
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 54.25553600340846,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 419.5760290475543,
+      "graham_multiple": 419.832611233302,
       "graham_number": 7.574717998353725,
-      "graham_upside_pct": -76.84280648623135,
-      "ncav_margin_pct": -111.34758192448948,
-      "pb_ratio": 14.622949346200302,
-      "pe_ttm": 28.692982456140353
+      "graham_upside_pct": -76.84988386811207,
+      "ncav_margin_pct": -111.34411383710426,
+      "pb_ratio": 14.627419829033135,
+      "pe_ttm": 28.701754385964914
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-23T21:08:54Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:53:40Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -113,23 +106,33 @@
     "fcf_margin_pct": 12.138507736423515,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 3,
-    "graham_multiple": 419.5760290475543,
-    "graham_upside_pct": -76.84280648623135,
+    "graham_multiple": 419.832611233302,
+    "graham_upside_pct": -76.84988386811207,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -111.34758192448948,
-    "pb_ratio": 14.622949346200302,
-    "pe_ttm": 28.692982456140353,
+    "ncav_margin_pct": -111.34411383710426,
+    "pb_ratio": 14.627419829033135,
+    "pe_ttm": 28.701754385964914,
+    "reinvestment_rate_pct": -1.8962833768450882,
     "roe_pct": 54.25553600340846,
     "shareholders_equity": 2830607000,
     "total_assets": 8994531000,
     "total_liabilities": 6163924000
   },
   "name": "Chipotle Mexican Grill Inc.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 32.71
+    "close": 32.72
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -189,7 +192,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 419.6",
+          "detail": "P/E x P/B = 419.8",
           "passed": false
         }
       ],

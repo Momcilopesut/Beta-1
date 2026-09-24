@@ -68,13 +68,16 @@
       "total_liabilities": 3662941000
     },
     "cash_flow": {
-      "fcf_margin_pct": 28.06372175421125
+      "fcf_margin_pct": 28.06372175421125,
+      "reinvestment_rate_pct": -66.78083169608755
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 25.484066790069647
     },
     "profitability": {
+      "gross_margin_pct": 69.1855705838451,
       "roe_pct": 22.084267698910367,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Software - Application",
-  "last_updated": "2026-09-23T21:23:19Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:08:05Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,18 +108,31 @@
     "graham_criteria_passed": 3,
     "graham_multiple": 182.0125030196657,
     "graham_upside_pct": -64.84066534528048,
+    "gross_margin_pct": 69.1855705838451,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
     "ncav_margin_pct": -99.21087370458746,
     "pb_ratio": 6.236951628755782,
     "pe_ttm": 29.182926829268297,
+    "reinvestment_rate_pct": -66.78083169608755,
     "roe_pct": 22.084267698910367,
     "shareholders_equity": 1221417000,
     "total_assets": 4884358000,
     "total_liabilities": 3662941000
   },
   "name": "Paylocity",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 143.58

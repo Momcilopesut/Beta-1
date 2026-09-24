@@ -62,43 +62,35 @@
       "debt_to_equity": 0.3616456345521442
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 14.364753720134344,
+      "book_value_per_share": 14.357542498387287,
       "shareholders_equity": 7901171000,
       "total_assets": 13393119000,
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 43.41865176885777
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -21.81034655991424
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 6.052229473327435,
+      "roic_pct": 5.12972821707148,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 31.75127950196156,
-      "graham_number": 16.768722493727118,
-      "graham_upside_pct": -15.819666196149013,
+      "graham_multiple": 31.735340104621216,
+      "graham_number": 16.764512948664244,
+      "graham_upside_pct": -15.798528635538705,
       "ncav_margin_pct": null,
       "pb_ratio": 1.3867275686097669,
-      "pe_ttm": 22.896551724137932
+      "pe_ttm": 22.885057471264368
     }
   },
   "industry": "Packaged Foods",
-  "last_updated": "2026-09-23T21:11:39Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:56:14Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -108,28 +100,43 @@
   },
   "market_cap": 10956771650,
   "metrics": {
-    "book_value_per_share": 14.364753720134344,
+    "book_value_per_share": 14.357542498387287,
     "current_ratio": 2.466443993174951,
     "debt_to_ebitda": 2.9083077524366314,
     "debt_to_equity": 0.3616456345521442,
     "eps_growth_cagr_3yr_pct": -21.81034655991424,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 31.75127950196156,
-    "graham_upside_pct": -15.819666196149013,
+    "graham_multiple": 31.735340104621216,
+    "graham_upside_pct": -15.798528635538705,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
     "pb_ratio": 1.3867275686097669,
-    "pe_ttm": 22.896551724137932,
+    "pe_ttm": 22.885057471264368,
+    "reinvestment_rate_pct": 43.41865176885777,
     "roe_pct": 6.052229473327435,
+    "roic_pct": 5.12972821707148,
     "shareholders_equity": 7901171000,
-    "total_assets": 13393119000
+    "total_assets": 13393119000,
+    "value_creation_pct": -2.770076331736978
   },
   "name": "Hormel Foods",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 19.92
+    "close": 19.91
   },
   "qualitative": null,
   "sector": "Consumer Defensive",
@@ -189,7 +196,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 31.8",
+          "detail": "P/E x P/B = 31.7",
           "passed": false
         }
       ],

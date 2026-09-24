@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 21.109074865947193
+      "fcf_margin_pct": 21.109074865947193,
+      "reinvestment_rate_pct": -50.91626677008312
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 65.34957812135467
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 100.77881619937695,
+      "roic_pct": 75.2934506104713,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Travel Services",
-  "last_updated": "2026-09-23T21:10:57Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:55:33Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -122,11 +115,28 @@
     "munger_quality_passed": 2,
     "pb_ratio": 23.099473380062303,
     "pe_ttm": 26.405708460754333,
+    "reinvestment_rate_pct": -50.91626677008312,
     "roe_pct": 100.77881619937695,
+    "roic_pct": 75.2934506104713,
     "shareholders_equity": 1284000000,
-    "total_assets": 24452000000
+    "total_assets": 24452000000,
+    "value_creation_pct": 67.04652487185008
   },
   "name": "Expedia Group",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It has borrowed a lot of money - what it owes is more than twice what the business itself is worth, which makes it riskier if things go wrong.",
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 259.04

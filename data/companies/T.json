@@ -68,34 +68,29 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 17.3553849681005,
+      "roic_pct": 17.841565659334247,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 11.40642711294547,
+      "graham_multiple": 11.424468117818451,
       "graham_number": 35.53341641351836,
-      "graham_upside_pct": 40.448286219440156,
+      "graham_upside_pct": 40.33734760473286,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.3705746412392976,
-      "pe_ttm": 8.322368421052632
+      "pb_ratio": 1.371658099453716,
+      "pe_ttm": 8.328947368421053
     }
   },
   "industry": "Telecommunications Services",
-  "last_updated": "2026-09-23T21:30:48Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
-  },
+  "last_updated": "2026-09-24T05:15:22Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -111,21 +106,35 @@
     "debt_to_equity": 0.07123826991643674,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 5,
-    "graham_multiple": 11.40642711294547,
-    "graham_upside_pct": 40.448286219440156,
+    "graham_multiple": 11.424468117818451,
+    "graham_upside_pct": 40.33734760473286,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "pb_ratio": 1.3705746412392976,
-    "pe_ttm": 8.322368421052632,
+    "pb_ratio": 1.371658099453716,
+    "pe_ttm": 8.328947368421053,
     "roe_pct": 17.3553849681005,
+    "roic_pct": 17.841565659334247,
     "shareholders_equity": 126491000000,
-    "total_assets": 420198000000
+    "total_assets": 420198000000,
+    "value_creation_pct": 8.373307654979602
   },
   "name": "AT&T",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 25.3
+    "close": 25.32
   },
   "qualitative": null,
   "sector": "Communication Services",

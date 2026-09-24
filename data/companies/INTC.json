@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": -9.36370688513424
+      "fcf_margin_pct": -9.36370688513424,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": 34.76623843490436,
       "roe_pct": -0.23363463742879392,
+      "roic_pct": -0.025218858170064244,
       "trend": "declining"
     },
     "valuation": {
@@ -87,19 +90,7 @@
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-23T21:28:38Z",
-  "layered_analysis": {
-    "flags": [
-      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "4 red flag(s) from the filing text - see qualitative.red_flags."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": false,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:18:02Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,15 +106,31 @@
     "fcf_margin_pct": -9.36370688513424,
     "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 1,
+    "gross_margin_pct": 34.76623843490436,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
     "pb_ratio": 5.411174210936201,
     "roe_pct": -0.23363463742879392,
+    "roic_pct": -0.025218858170064244,
     "shareholders_equity": 114281000000,
-    "total_assets": 211429000000
+    "total_assets": 211429000000,
+    "value_creation_pct": -9.28747300071541
   },
   "name": "Intel",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year."
+    ],
+    "worries": [
+      "Counting all the money it uses to run the business, it isn't making any profit right now.",
+      "After paying for everything it needs to run and grow the business, it's actually spending more cash than it's bringing in.",
+      "The share of each sale it gets to keep as profit has been getting worse over the last few years.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 122.6

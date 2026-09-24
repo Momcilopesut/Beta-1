@@ -68,13 +68,16 @@
       "total_liabilities": 7805000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": 39.12132106551321
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 146.931241347485,
+      "roic_pct": 87.7011058094692,
       "trend": "stable"
     },
     "valuation": {
@@ -87,20 +90,7 @@
     }
   },
   "industry": "Computer Hardware",
-  "last_updated": "2026-09-23T21:31:05Z",
-  "layered_analysis": {
-    "flags": [
-      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "5 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": false,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:17:41Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -124,12 +114,25 @@
     "ncav_margin_pct": -101.23407378352853,
     "pb_ratio": 96.62565962135672,
     "pe_ttm": 66.46474820143885,
+    "reinvestment_rate_pct": 39.12132106551321,
     "roe_pct": 146.931241347485,
+    "roic_pct": 87.7011058094692,
     "shareholders_equity": 2167000000,
     "total_assets": 9972000000,
-    "total_liabilities": 7805000000
+    "total_liabilities": 7805000000,
+    "value_creation_pct": 77.90960997201238
   },
   "name": "Seagate Technology",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 923.86

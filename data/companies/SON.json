@@ -68,13 +68,16 @@
       "total_liabilities": 7530502000
     },
     "cash_flow": {
-      "fcf_margin_pct": 4.59862160653502
+      "fcf_margin_pct": 4.59862160653502,
+      "reinvestment_rate_pct": 103.68641848771321
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 122.0311360565057
     },
     "profitability": {
+      "gross_margin_pct": 20.939815418860018,
       "roe_pct": 27.754400324747824,
+      "roic_pct": 10.228613250310433,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Packaging & Containers",
-  "last_updated": "2026-09-23T21:18:09Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
-  },
+  "last_updated": "2026-09-24T05:03:09Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,18 +110,31 @@
     "graham_criteria_passed": 6,
     "graham_multiple": 6.964201236088152,
     "graham_upside_pct": 79.74449702648343,
+    "gross_margin_pct": 20.939815418860018,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
     "ncav_margin_pct": -197.57190409755387,
     "pb_ratio": 1.3851373977366717,
     "pe_ttm": 5.027805362462761,
+    "reinvestment_rate_pct": 103.68641848771321,
     "roe_pct": 27.754400324747824,
+    "roic_pct": 10.228613250310433,
     "shareholders_equity": 3613881000,
     "total_assets": 11162334000,
-    "total_liabilities": 7530502000
+    "total_liabilities": 7530502000,
+    "value_creation_pct": 4.886241970440006
   },
   "name": "Sonoco",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 50.63

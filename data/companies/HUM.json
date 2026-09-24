@@ -68,36 +68,29 @@
       "total_liabilities": 31172000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 0.28920903257650543
+      "fcf_margin_pct": 0.28920903257650543,
+      "reinvestment_rate_pct": 150.36465493196263
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -23.616654426020823
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 6.728209775159994,
+      "roic_pct": 8.64982050088713,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 97.06095570112107,
+      "graham_multiple": 97.07131522356228,
       "graham_number": 180.44522092632567,
-      "graham_upside_pct": -51.85302819618825,
-      "ncav_margin_pct": -96.53085277296817,
-      "pb_ratio": 2.5483745239848217,
-      "pe_ttm": 38.08739837398374
+      "graham_upside_pct": -51.85559740492912,
+      "ncav_margin_pct": -96.53103789288424,
+      "pb_ratio": 2.548510517075381,
+      "pe_ttm": 38.08943089430895
     }
   },
   "industry": "Medical - Healthcare Plans",
-  "last_updated": "2026-09-23T21:14:06Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:58:33Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -115,23 +108,38 @@
     "fcf_margin_pct": 0.28920903257650543,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 97.06095570112107,
-    "graham_upside_pct": -51.85302819618825,
+    "graham_multiple": 97.07131522356228,
+    "graham_upside_pct": -51.85559740492912,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -96.53085277296817,
-    "pb_ratio": 2.5483745239848217,
-    "pe_ttm": 38.08739837398374,
+    "ncav_margin_pct": -96.53103789288424,
+    "pb_ratio": 2.548510517075381,
+    "pe_ttm": 38.08943089430895,
+    "reinvestment_rate_pct": 150.36465493196263,
     "roe_pct": 6.728209775159994,
+    "roic_pct": 8.64982050088713,
     "shareholders_equity": 17657000000,
     "total_assets": 48909000000,
-    "total_liabilities": 31172000000
+    "total_liabilities": 31172000000,
+    "value_creation_pct": 0.8370148251591845
   },
   "name": "Humana",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 374.78
+    "close": 374.8
   },
   "qualitative": null,
   "sector": "Healthcare",

@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 8.74476709415908
+      "fcf_margin_pct": 8.74476709415908,
+      "reinvestment_rate_pct": -215.59876021414485
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -43.62040735317784
     },
     "profitability": {
+      "gross_margin_pct": 75.50003322479898,
       "roe_pct": null,
+      "roic_pct": null,
       "trend": "improving"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Household & Personal Products",
-  "last_updated": "2026-09-23T21:33:53Z",
-  "layered_analysis": {
-    "flags": [
-      "The qualitative layer found no durable moat in the filing text - current quality may not be durable.",
-      "3 red flag(s) from the filing text - see qualitative.red_flags."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": false,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:13:17Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,13 +106,24 @@
     "fcf_margin_pct": 8.74476709415908,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
+    "gross_margin_pct": 75.50003322479898,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
     "pe_ttm": 197.66,
+    "reinvestment_rate_pct": -215.59876021414485,
     "total_assets": 19762000000
   },
   "name": "Est\u00e9e Lauder Companies (The)",
+  "plain_analysis": {
+    "positives": [
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 98.83

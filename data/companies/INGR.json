@@ -68,13 +68,16 @@
       "total_liabilities": 3531000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 29.08366533864542
+      "fcf_margin_pct": 29.08366533864542,
+      "reinvestment_rate_pct": 42.462448647723384
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -5.14951188026499
     },
     "profitability": {
+      "gross_margin_pct": 24.473534433693796,
       "roe_pct": 3.86055217594759,
+      "roic_pct": 15.251036279786161,
       "trend": "declining"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Packaged Foods",
-  "last_updated": "2026-09-23T21:19:39Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:04:33Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -118,18 +110,37 @@
     "graham_criteria_passed": 4,
     "graham_multiple": 54.03025813213248,
     "graham_upside_pct": -35.46835472614612,
+    "gross_margin_pct": 24.473534433693796,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
     "ncav_margin_pct": -100.42582082862639,
     "pb_ratio": 1.428604222456715,
     "pe_ttm": 37.8203125,
+    "reinvestment_rate_pct": 42.462448647723384,
     "roe_pct": 3.86055217594759,
+    "roic_pct": 15.251036279786161,
     "shareholders_equity": 4274000000,
     "total_assets": 7897000000,
-    "total_liabilities": 3531000000
+    "total_liabilities": 3531000000,
+    "value_creation_pct": 7.549115731799891
   },
   "name": "Ingredion",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "The share of each sale it gets to keep as profit has been getting worse over the last few years.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 96.82

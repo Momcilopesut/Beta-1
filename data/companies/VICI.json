@@ -68,36 +68,29 @@
       "total_liabilities": 18501581000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 27.13904027900833
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 9.98463538631337,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 8.524446139339837,
+      "graham_multiple": 8.535239992186517,
       "graham_number": 38.50405947764293,
-      "graham_upside_pct": 62.464385981615756,
+      "graham_upside_pct": 62.36162545917324,
       "ncav_margin_pct": null,
-      "pb_ratio": 0.9387681191424884,
-      "pe_ttm": 9.080459770114942
+      "pb_ratio": 0.9393622761799203,
+      "pe_ttm": 9.086206896551724
     }
   },
   "industry": "REIT - Diversified",
-  "last_updated": "2026-09-23T21:16:04Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
-  },
+  "last_updated": "2026-09-24T05:00:49Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -111,22 +104,30 @@
     "eps_growth_cagr_3yr_pct": 27.13904027900833,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 6,
-    "graham_multiple": 8.524446139339837,
-    "graham_upside_pct": 62.464385981615756,
+    "graham_multiple": 8.535239992186517,
+    "graham_upside_pct": 62.36162545917324,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "pb_ratio": 0.9387681191424884,
-    "pe_ttm": 9.080459770114942,
+    "pb_ratio": 0.9393622761799203,
+    "pe_ttm": 9.086206896551724,
     "roe_pct": 9.98463538631337,
     "shareholders_equity": 27797640000,
     "total_assets": 46724168000,
     "total_liabilities": 18501581000
   },
   "name": "Vici Properties",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount."
+    ],
+    "worries": []
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 23.7
+    "close": 23.715
   },
   "qualitative": null,
   "sector": "Real Estate",

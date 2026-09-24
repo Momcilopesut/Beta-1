@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 14.611441459913882
+      "fcf_margin_pct": 14.611441459913882,
+      "reinvestment_rate_pct": 28.316349783593324
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 10.78299915886336
     },
     "profitability": {
+      "gross_margin_pct": 49.45663317613287,
       "roe_pct": 16.807220002959017,
+      "roic_pct": 18.822917591866265,
       "trend": "improving"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-23T21:23:48Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:08:32Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,16 +110,35 @@
     "graham_criteria_passed": 4,
     "graham_multiple": 206.7021643267607,
     "graham_upside_pct": -67.0072324647789,
+    "gross_margin_pct": 49.45663317613287,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
     "pb_ratio": 5.883626777136657,
     "pe_ttm": 35.13176007866274,
+    "reinvestment_rate_pct": 28.316349783593324,
     "roe_pct": 16.807220002959017,
+    "roic_pct": 18.822917591866265,
     "shareholders_equity": 2027700000,
-    "total_assets": 2881200000
+    "total_assets": 2881200000,
+    "value_creation_pct": 8.954927687449587
   },
   "name": "Watts Water Technologies",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 357.29

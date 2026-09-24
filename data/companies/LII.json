@@ -68,13 +68,16 @@
       "total_liabilities": 2918700000
     },
     "cash_flow": {
-      "fcf_margin_pct": 53.45606694560669
+      "fcf_margin_pct": 53.45606694560669,
+      "reinvestment_rate_pct": -0.5123738867085998
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 3.887332412441835
     },
     "profitability": {
+      "gross_margin_pct": 32.57740585774059,
       "roe_pct": 12.251741036884189,
+      "roic_pct": 13.610179750077853,
       "trend": "declining"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-23T21:15:17Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:59:46Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -118,18 +110,34 @@
     "graham_criteria_passed": 4,
     "graham_multiple": 1019.1703216439461,
     "graham_upside_pct": -85.14174269733208,
+    "gross_margin_pct": 32.57740585774059,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
     "ncav_margin_pct": -107.83257773023418,
     "pb_ratio": 11.140417922035937,
     "pe_ttm": 91.48402948402948,
+    "reinvestment_rate_pct": -0.5123738867085998,
     "roe_pct": 12.251741036884189,
+    "roic_pct": 13.610179750077853,
     "shareholders_equity": 1163100000,
     "total_assets": 4081800000,
-    "total_liabilities": 2918700000
+    "total_liabilities": 2918700000,
+    "value_creation_pct": 3.413590994567622
   },
   "name": "Lennox International",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "The share of each sale it gets to keep as profit has been getting worse over the last few years.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 372.34

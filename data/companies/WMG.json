@@ -68,13 +68,16 @@
       "total_liabilities": 9072000000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": -79.00147986603318
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 56.414219474497685,
+      "roic_pct": 12.542863004464591,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Entertainment",
-  "last_updated": "2026-09-23T21:18:17Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:03:18Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -116,12 +111,25 @@
     "munger_quality_passed": 1,
     "ncav_margin_pct": -21705656.65005628,
     "pb_ratio": 4.48748686244204e-05,
+    "reinvestment_rate_pct": -79.00147986603318,
     "roe_pct": 56.414219474497685,
+    "roic_pct": 12.542863004464591,
     "shareholders_equity": 647000000,
     "total_assets": 9829000000,
-    "total_liabilities": 9072000000
+    "total_liabilities": 9072000000,
+    "value_creation_pct": 4.801905507608625
   },
   "name": "Warner Music Group",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It has borrowed a lot of money - what it owes is more than twice what the business itself is worth, which makes it riskier if things go wrong.",
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 27.16

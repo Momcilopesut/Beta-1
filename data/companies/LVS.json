@@ -68,13 +68,16 @@
       "total_liabilities": 19986000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 50.83584543710605
+      "fcf_margin_pct": 50.83584543710605,
+      "reinvestment_rate_pct": 306.1351725434372
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 5.78172329317348
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 24.842767295597483,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Gambling, Resorts & Casinos",
-  "last_updated": "2026-09-23T21:11:08Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:55:43Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -121,12 +114,22 @@
     "ncav_margin_pct": -159.70041203143845,
     "pb_ratio": 15.964408428276728,
     "pe_ttm": 67.56896551724138,
+    "reinvestment_rate_pct": 306.1351725434372,
     "roe_pct": 24.842767295597483,
     "shareholders_equity": 1590000000,
     "total_assets": 21920000000,
     "total_liabilities": 19986000000
   },
   "name": "Las Vegas Sands",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 39.19

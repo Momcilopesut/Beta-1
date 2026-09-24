@@ -68,13 +68,16 @@
       "total_liabilities": 4898100000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 25.853438682213326
     },
     "profitability": {
+      "gross_margin_pct": 69.86505638055333,
       "roe_pct": 33.12099669177166,
+      "roic_pct": 45.03649810786423,
       "trend": "improving"
     },
     "valuation": {
@@ -87,18 +90,7 @@
     }
   },
   "industry": "Apparel - Manufacturers",
-  "last_updated": "2026-09-23T21:29:20Z",
-  "layered_analysis": {
-    "flags": [
-      "6 red flag(s) from the filing text - see qualitative.red_flags.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Layers disagree - see flags for specifics.",
-    "qualitative_moat_present": true,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:11:10Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,6 +109,7 @@
     "graham_criteria_passed": 4,
     "graham_multiple": 161.80874857118332,
     "graham_upside_pct": -62.71018235952728,
+    "gross_margin_pct": 69.86505638055333,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
@@ -124,11 +117,28 @@
     "pb_ratio": 7.244881592172873,
     "pe_ttm": 22.334215751158176,
     "roe_pct": 33.12099669177166,
+    "roic_pct": 45.03649810786423,
     "shareholders_equity": 2841400000,
     "total_assets": 7739500000,
-    "total_liabilities": 4898100000
+    "total_liabilities": 4898100000,
+    "value_creation_pct": 35.4456997656119
   },
   "name": "Ralph Lauren Corporation",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "The share of each sale it gets to keep as profit has been getting better over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 337.47

@@ -68,13 +68,16 @@
       "total_liabilities": 6687537000
     },
     "cash_flow": {
-      "fcf_margin_pct": 24.952091751554597
+      "fcf_margin_pct": 24.952091751554597,
+      "reinvestment_rate_pct": 236.20086224238736
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -62.64316479089136
     },
     "profitability": {
+      "gross_margin_pct": 80.92773839192819,
       "roe_pct": -0.3183876290785538,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Software - Application",
-  "last_updated": "2026-09-23T21:24:29Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:09:13Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -111,17 +106,29 @@
     "fcf_margin_pct": 24.952091751554597,
     "graham_criteria_evaluated": 3,
     "graham_criteria_passed": 1,
+    "gross_margin_pct": 80.92773839192819,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
     "ncav_margin_pct": -80.90954509780153,
     "pb_ratio": 1.1091337481370034,
+    "reinvestment_rate_pct": 236.20086224238736,
     "roe_pct": -0.3183876290785538,
     "shareholders_equity": 3530602000,
     "total_assets": 10218139000,
     "total_liabilities": 6687537000
   },
   "name": "Bill Holdings",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 45.92

@@ -68,13 +68,16 @@
       "total_liabilities": 36440000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 7.430375465103169
+      "fcf_margin_pct": 7.430375465103169,
+      "reinvestment_rate_pct": -97.11682110018319
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 18.520698450068668,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Independent Power Producers",
-  "last_updated": "2026-09-23T21:34:17Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:12:22Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -120,12 +113,22 @@
     "ncav_margin_pct": -158.869401891243,
     "pb_ratio": 9.085263459711594,
     "pe_ttm": 63.28899082568807,
+    "reinvestment_rate_pct": -97.11682110018319,
     "roe_pct": 18.520698450068668,
     "shareholders_equity": 5097000000,
     "total_assets": 41550000000,
     "total_liabilities": 36440000000
   },
   "name": "Vistra Corp.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 137.97

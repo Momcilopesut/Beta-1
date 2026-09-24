@@ -68,13 +68,16 @@
       "total_liabilities": 5438757000
     },
     "cash_flow": {
-      "fcf_margin_pct": 22.58463453349468
+      "fcf_margin_pct": 22.58463453349468,
+      "reinvestment_rate_pct": -39.42685020404191
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 8.504416556765815
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 13.925786068136098,
+      "roic_pct": 12.624767156537105,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Electrical Equipment & Parts",
-  "last_updated": "2026-09-23T21:14:34Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:59:07Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -123,12 +116,26 @@
     "ncav_margin_pct": -104.28115686022797,
     "pb_ratio": 5.315887777192993,
     "pe_ttm": 38.50781249999999,
+    "reinvestment_rate_pct": -39.42685020404191,
     "roe_pct": 13.925786068136098,
+    "roic_pct": 12.624767156537105,
     "shareholders_equity": 10628786000,
     "total_assets": 16067543000,
-    "total_liabilities": 5438757000
+    "total_liabilities": 5438757000,
+    "value_creation_pct": 3.051726614837163
   },
   "name": "Ametek",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 246.45

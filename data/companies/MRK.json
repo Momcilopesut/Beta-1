@@ -68,36 +68,29 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 19.012167171709404
+      "fcf_margin_pct": 19.012167171709404,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 8.433903046142621
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 34.69946393947458,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 141.2620535623896,
+      "graham_multiple": 141.31929682127438,
       "graham_number": 59.09828894904184,
-      "graham_upside_pct": -60.090296495784834,
+      "graham_upside_pct": -60.09838029232204,
       "ncav_margin_pct": null,
-      "pb_ratio": 6.944811925541574,
-      "pe_ttm": 20.340659340659343
+      "pb_ratio": 6.946218897163442,
+      "pe_ttm": 20.344780219780223
     }
   },
   "industry": "Drug Manufacturers - General",
-  "last_updated": "2026-09-23T21:14:13Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:58:41Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,21 +107,31 @@
     "fcf_margin_pct": 19.012167171709404,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 141.2620535623896,
-    "graham_upside_pct": -60.090296495784834,
+    "graham_multiple": 141.31929682127438,
+    "graham_upside_pct": -60.09838029232204,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "pb_ratio": 6.944811925541574,
-    "pe_ttm": 20.340659340659343,
+    "pb_ratio": 6.946218897163442,
+    "pe_ttm": 20.344780219780223,
     "roe_pct": 34.69946393947458,
     "shareholders_equity": 52606000000,
     "total_assets": 136866000000
   },
   "name": "Merck & Co.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 148.08
+    "close": 148.11
   },
   "qualitative": null,
   "sector": "Healthcare",

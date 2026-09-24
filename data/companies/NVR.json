@@ -68,36 +68,29 @@
       "total_liabilities": 1992061000
     },
     "cash_flow": {
-      "fcf_margin_pct": 10.623947654189637
+      "fcf_margin_pct": 10.623947654189637,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": -3.8957481088154444
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 34.66653074140417,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 61.53169589336649,
+      "graham_multiple": 61.624398851634965,
       "graham_number": 3774.3176270397676,
-      "graham_upside_pct": -39.52974269395608,
+      "graham_upside_pct": -39.57524319094365,
       "ncav_margin_pct": null,
-      "pb_ratio": 4.30364310526437,
-      "pe_ttm": 14.297583323788798
+      "pb_ratio": 4.306883795181674,
+      "pe_ttm": 14.308349559042492
     }
   },
   "industry": "Residential Construction",
-  "last_updated": "2026-09-23T21:11:12Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:55:47Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -112,22 +105,31 @@
     "fcf_margin_pct": 10.623947654189637,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 3,
-    "graham_multiple": 61.53169589336649,
-    "graham_upside_pct": -39.52974269395608,
+    "graham_multiple": 61.624398851634965,
+    "graham_upside_pct": -39.57524319094365,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
-    "pb_ratio": 4.30364310526437,
-    "pe_ttm": 14.297583323788798,
+    "pb_ratio": 4.306883795181674,
+    "pe_ttm": 14.308349559042492,
     "roe_pct": 34.66653074140417,
     "shareholders_equity": 3864869000,
     "total_assets": 5856930000,
     "total_liabilities": 1992061000
   },
   "name": "NVR, Inc.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
-    "close": 6241.61
+    "close": 6246.31
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -187,7 +189,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 61.5",
+          "detail": "P/E x P/B = 61.6",
           "passed": false
         }
       ],

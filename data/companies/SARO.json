@@ -58,13 +58,16 @@
       "total_liabilities": 3890100000
     },
     "cash_flow": {
-      "fcf_margin_pct": 3.8646844963466473
+      "fcf_margin_pct": 3.8646844963466473,
+      "reinvestment_rate_pct": 63.420702405089216
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 10.400624449117482,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -77,18 +80,7 @@
     }
   },
   "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-23T21:23:26Z",
-  "layered_analysis": {
-    "flags": [
-      "The quality checklist (return on equity, debt discipline, no dilution, stable margins) mostly fails - a statistically cheap stock isn't automatically a good value if it doesn't actually earn good returns on capital.",
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": false,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:08:13Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -113,12 +105,23 @@
     "ncav_margin_pct": -113.29790716476089,
     "pb_ratio": 2.8013833977290235,
     "pe_ttm": 27.204819277108435,
+    "reinvestment_rate_pct": 63.420702405089216,
     "roe_pct": 10.400624449117482,
     "shareholders_equity": 2667311000,
     "total_assets": 6557411000,
     "total_liabilities": 3890100000
   },
   "name": "StandardAero",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 22.58

@@ -8,10 +8,10 @@
         "debt": 636897000,
         "earnings": 283806000,
         "fiscal_year": "2022-01-01",
-        "market_return_pct": 6.994661079948628,
+        "market_return_pct": 7.301644677390202,
         "revenue": null,
         "spending": null,
-        "stock_return_pct": 11.446380507153984
+        "stock_return_pct": 10.959097320169246
       },
       {
         "cash": 562588000,
@@ -68,13 +68,16 @@
       "total_liabilities": 1530762000
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": -2.955440855321896,
+      "roic_pct": -27.98898970188977,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Hardware, Equipment & Parts",
-  "last_updated": "2026-09-23T21:24:48Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T05:09:31Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -116,11 +111,24 @@
     "ncav_margin_pct": -100.89328709695467,
     "pb_ratio": 4.403397362411244,
     "roe_pct": -2.955440855321896,
+    "roic_pct": -27.98898970188977,
     "shareholders_equity": 2426034000,
     "total_assets": 3956796000,
-    "total_liabilities": 1530762000
+    "total_liabilities": 1530762000,
+    "value_creation_pct": -37.25576184238621
   },
   "name": "Littelfuse",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year."
+    ],
+    "worries": [
+      "Counting all the money it uses to run the business, it isn't making any profit right now.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 422.43

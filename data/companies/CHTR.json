@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 8.065870668565378
+      "fcf_margin_pct": 8.065870668565378,
+      "reinvestment_rate_pct": 40.47274282708946
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 5.610772798941088
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 31.06390930609194,
+      "roic_pct": 9.044942050985142,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Telecommunications Services",
-  "last_updated": "2026-09-23T21:10:22Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": true
-  },
+  "last_updated": "2026-09-24T04:55:05Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -120,11 +115,25 @@
     "munger_quality_passed": 2,
     "pb_ratio": 1.9679141661318051,
     "pe_ttm": 3.220381110190555,
+    "reinvestment_rate_pct": 40.47274282708946,
     "roe_pct": 31.06390930609194,
+    "roic_pct": 9.044942050985142,
     "shareholders_equity": 16054000000,
-    "total_assets": 154213000000
+    "total_assets": 154213000000,
+    "value_creation_pct": 7.627978496466776
   },
   "name": "Charter Communications",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It has borrowed a lot of money - what it owes is more than twice what the business itself is worth, which makes it riskier if things go wrong.",
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 116.61

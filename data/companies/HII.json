@@ -68,13 +68,16 @@
       "total_liabilities": 7676000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 6.360140980454982
+      "fcf_margin_pct": 6.360140980454982,
+      "reinvestment_rate_pct": 47.305936073059364
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 2.146574918873223
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 11.92588212103292,
+      "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-23T21:15:01Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:59:34Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -121,12 +114,21 @@
     "ncav_margin_pct": -139.74091541665499,
     "pb_ratio": 2.0956752494382025,
     "pe_ttm": 17.530864197530864,
+    "reinvestment_rate_pct": 47.305936073059364,
     "roe_pct": 11.92588212103292,
     "shareholders_equity": 5073000000,
     "total_assets": 12749000000,
     "total_liabilities": 7676000000
   },
   "name": "Huntington Ingalls Industries",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 269.8

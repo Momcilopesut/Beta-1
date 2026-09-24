@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 28.521901954928097
+      "fcf_margin_pct": 28.521901954928097,
+      "reinvestment_rate_pct": -29.258620234033057
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 5.0081546755695205
     },
     "profitability": {
+      "gross_margin_pct": 52.45376472544984,
       "roe_pct": 19.662869908825815,
+      "roic_pct": 25.030591605121273,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-23T21:22:51Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:07:36Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -117,16 +110,34 @@
     "graham_criteria_passed": 5,
     "graham_multiple": 121.68878545450514,
     "graham_upside_pct": -57.00024503153075,
+    "gross_margin_pct": 52.45376472544984,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
     "pb_ratio": 4.782460880437359,
     "pe_ttm": 25.444805194805195,
+    "reinvestment_rate_pct": -29.258620234033057,
     "roe_pct": 19.662869908825815,
+    "roic_pct": 25.030591605121273,
     "shareholders_equity": 2653931000,
-    "total_assets": 3274270000
+    "total_assets": 3274270000,
+    "value_creation_pct": 15.07186583781739
   },
   "name": "Graco Inc.",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 78.37

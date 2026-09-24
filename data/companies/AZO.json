@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": 9.45196023574353
+      "fcf_margin_pct": 9.45196023574353,
+      "reinvestment_rate_pct": 32.78963670327319
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 7.323782044011162
     },
     "profitability": {
+      "gross_margin_pct": 52.62486365892685,
       "roe_pct": -73.16982947960543,
+      "roic_pct": 56.27099345535294,
       "trend": "stable"
     },
     "valuation": {
@@ -87,15 +90,7 @@
     }
   },
   "industry": "Specialty Retail",
-  "last_updated": "2026-09-23T21:10:42Z",
-  "layered_analysis": {
-    "flags": [],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": null
-  },
+  "last_updated": "2026-09-24T04:55:22Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -114,16 +109,32 @@
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
     "graham_multiple": -266.8323196060351,
+    "gross_margin_pct": 52.62486365892685,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
     "pb_ratio": -13.595278138149608,
     "pe_ttm": 19.62683785462829,
+    "reinvestment_rate_pct": 32.78963670327319,
     "roe_pct": -73.16982947960543,
+    "roic_pct": 56.27099345535294,
     "shareholders_equity": -3414313000,
-    "total_assets": 19355324000
+    "total_assets": 19355324000,
+    "value_creation_pct": 47.89824885314012
   },
   "name": "AutoZone",
+  "plain_analysis": {
+    "positives": [
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "If this company had to sell everything it owns and pay off everything it owes, there would be nothing left over - it actually owes more than it owns.",
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 2843.34

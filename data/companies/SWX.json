@@ -68,13 +68,16 @@
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": null
+      "fcf_margin_pct": null,
+      "reinvestment_rate_pct": null
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 30.116238259058868
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": 11.103579569308572,
+      "roic_pct": 4.879792229089665,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Regulated Gas",
-  "last_updated": "2026-09-23T21:25:23Z",
-  "layered_analysis": {
-    "flags": [
-      "Positive but thin margin of safety - 5% is below the 15% convention used here."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T05:10:06Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -122,10 +115,22 @@
     "pb_ratio": 1.505935958000757,
     "pe_ttm": 13.542763157894738,
     "roe_pct": 11.103579569308572,
+    "roic_pct": 4.879792229089665,
     "shareholders_equity": 3961119000,
-    "total_assets": 10429477000
+    "total_assets": 10429477000,
+    "value_creation_pct": -1.3896537989624909
   },
   "name": "Southwest Gas Corp",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+    ],
+    "worries": [
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 82.34

@@ -68,13 +68,16 @@
       "total_liabilities": 46411000000
     },
     "cash_flow": {
-      "fcf_margin_pct": 52.328382787960116
+      "fcf_margin_pct": 52.328382787960116,
+      "reinvestment_rate_pct": -2.3776662408018128
     },
     "growth": {
       "eps_growth_cagr_3yr_pct": 17.359895932136805
     },
     "profitability": {
+      "gross_margin_pct": null,
       "roe_pct": null,
+      "roic_pct": 94.15010352772497,
       "trend": "stable"
     },
     "valuation": {
@@ -87,17 +90,7 @@
     }
   },
   "industry": "Financial - Credit Services",
-  "last_updated": "2026-09-23T21:09:16Z",
-  "layered_analysis": {
-    "flags": [
-      "Trading above the fair-value estimate (a simple estimate from earnings and book value) - no margin of safety by that measure."
-    ],
-    "munger_quality_pass": true,
-    "overall": "Incomplete: one or more layers has insufficient data for this company.",
-    "qualitative_moat_present": null,
-    "required_margin_of_safety_pct": 15.0,
-    "valuation_gate_pass": false
-  },
+  "last_updated": "2026-09-24T04:54:03Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -123,11 +116,27 @@
     "ncav_margin_pct": -133.3099607958029,
     "pb_ratio": 8.86740411846452,
     "pe_ttm": 33.893462469733656,
+    "reinvestment_rate_pct": -2.3776662408018128,
+    "roic_pct": 94.15010352772497,
     "shareholders_equity": 7737000000,
     "total_assets": 54157000000,
-    "total_liabilities": 46411000000
+    "total_liabilities": 46411000000,
+    "value_creation_pct": 84.56111143069613
   },
   "name": "Mastercard Incorporated",
+  "plain_analysis": {
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
+    "worries": [
+      "It has borrowed a lot of money - what it owes is more than twice what the business itself is worth, which makes it riskier if things go wrong.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
+  },
   "price": {
     "as_of": "2026-09-23",
     "close": 559.92
