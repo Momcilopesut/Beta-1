@@ -26,6 +26,11 @@ let performanceWindows = [];
 async function main() {
   const status = document.getElementById("status");
   const cardsEl = document.getElementById("cards");
+  // Wired up immediately, before the background data fetch below - an
+  // untracked-ticker lookup (the whole point of the search box) doesn't
+  // depend on this page's own performance-screen data at all, and a slow
+  // or failed fetch shouldn't leave the search box inert in the meantime.
+  wireSearch();
   try {
     const [picks, watchlist] = await Promise.all([
       fetchJSON("../data/performance_picks.json"),
@@ -48,7 +53,6 @@ async function main() {
     status.textContent = "";
   }
   renderDisclaimerFooter();
-  wireSearch();
 }
 
 function renderNoPicksYet() {
