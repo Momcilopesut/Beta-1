@@ -18,6 +18,19 @@ that's clearly good gets one positive sentence, a metric that's clearly
 bad gets one worry sentence, and a metric with no data or an unclear,
 in-between reading gets neither - a company doesn't have to be praised or
 criticized on every single number just to fill out a list.
+
+The 10th check (moat) is this pipeline's replacement for the old AI-read
+moat classification: instead of asking Claude to read the 10-K and
+classify the moat type, it checks whether the business earns more than
+its own cost of capital (value_creation_pct - pipeline.scoring.
+capital_efficiency.company_value_creation_pct), a quantitative proxy for
+"does this business have a durable edge over its competitors" that costs
+no AI call at all. It won't name what KIND of moat (network effects vs.
+cost advantage vs. switching costs, etc.) - that classification genuinely
+needs to read the business's own filing text, which is exactly what an
+AI call is for - but it answers the more fundamental question this
+pipeline actually cares about: is that edge, if it exists, still showing
+up in the numbers.
 """
 
 
@@ -154,6 +167,31 @@ def build_plain_analysis(metrics: dict) -> dict:
                 "Using simple math based on its profit and what it owns, the stock looks priced above "
                 "what the business is roughly worth - you'd be paying more than the simple math says "
                 "it's worth."
+            )
+
+    # 10. Moat: does this business earn more than its money actually costs
+    # to raise (through debt or investors)? A business that doesn't have
+    # some real edge over its competitors - a moat - usually sees them
+    # copy what works until its profit gets competed down to roughly what
+    # its capital costs. Earning meaningfully more than that, year after
+    # year, is what a durable edge actually looks like in numbers - see
+    # pipeline.scoring.capital_efficiency.company_value_creation_pct for
+    # the ROIC-minus-cost-of-capital math behind this. A dead zone around
+    # zero (+/-0.5 percentage points, matching the same market-wide read
+    # on the macro page) reads as neither, rather than a hair-trigger flip.
+    value_creation_pct = metrics.get("value_creation_pct")
+    if value_creation_pct is not None:
+        if value_creation_pct > 0.5:
+            add_positive(
+                "This business makes more profit on the money it uses than that money actually costs to "
+                "raise, whether borrowed or put in by investors. That's a real edge over competitors - "
+                "something people call a 'moat.'"
+            )
+        elif value_creation_pct < -0.5:
+            add_worry(
+                "This business makes less profit on the money it uses than that money actually costs to "
+                "raise. That usually means competitors aren't held back from doing the same thing it "
+                "does - no real moat protecting it."
             )
 
     return {"positives": positives, "worries": worries}

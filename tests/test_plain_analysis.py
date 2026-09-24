@@ -120,7 +120,27 @@ def test_overpriced_stock_is_a_worry():
     assert len(result["worries"]) == 1
 
 
-def test_healthy_company_across_every_metric_produces_nine_positives_and_no_worries():
+def test_moat_signal_above_cost_of_capital_is_a_positive():
+    result = build_plain_analysis({"value_creation_pct": 5.0})
+    assert len(result["positives"]) == 1
+    assert "moat" in result["positives"][0].lower()
+
+
+def test_moat_signal_below_cost_of_capital_is_a_worry():
+    result = build_plain_analysis({"value_creation_pct": -5.0})
+    assert len(result["worries"]) == 1
+    assert "moat" in result["worries"][0].lower()
+
+
+def test_moat_signal_dead_zone_is_neither():
+    # +/-0.5 percentage points around zero, matching the same dead zone
+    # used for the market-wide read on the macro page - not a hair-trigger
+    # flip between "moat" and "no moat" on a rounding-error-sized gap.
+    result = build_plain_analysis({"value_creation_pct": 0.2})
+    assert result == {"positives": [], "worries": []}
+
+
+def test_healthy_company_across_every_metric_produces_ten_positives_and_no_worries():
     metrics = {
         "shareholders_equity": 500_000_000,
         "debt_to_equity": 0.4,
@@ -131,13 +151,14 @@ def test_healthy_company_across_every_metric_produces_nine_positives_and_no_worr
         "fcf_margin_pct": 22.0,
         "margin_trend_score": 100,
         "graham_upside_pct": 30.0,
+        "value_creation_pct": 6.0,
     }
     result = build_plain_analysis(metrics)
-    assert len(result["positives"]) == 9
+    assert len(result["positives"]) == 10
     assert result["worries"] == []
 
 
-def test_struggling_company_across_every_metric_produces_nine_worries_and_no_positives():
+def test_struggling_company_across_every_metric_produces_ten_worries_and_no_positives():
     metrics = {
         "shareholders_equity": -50_000_000,
         "debt_to_equity": 3.0,
@@ -148,18 +169,23 @@ def test_struggling_company_across_every_metric_produces_nine_worries_and_no_pos
         "fcf_margin_pct": -10.0,
         "margin_trend_score": 20,
         "graham_upside_pct": -35.0,
+        "value_creation_pct": -6.0,
     }
     result = build_plain_analysis(metrics)
     assert result["positives"] == []
-    assert len(result["worries"]) == 9
+    assert len(result["worries"]) == 10
 
 
 def test_sentences_are_plain_english_not_metric_jargon():
     # Loose smoke test for the "no fancy jargon" requirement - the raw
     # metric keys/acronyms this pipeline uses internally (ROIC, P/E, EPS
-    # growth CAGR, gross margin, current ratio, debt/equity) should never
-    # leak into the generated sentences themselves. \b word-boundary regex
-    # so a short term like "EPS" doesn't false-positive on "keEPS".
+    # growth CAGR, gross margin, current ratio, debt/equity, WACC) should
+    # never leak into the generated sentences themselves. "moat" itself is
+    # deliberately NOT banned - it's the one finance-adjacent word this
+    # pipeline keeps, since it's the actual feature name the reader asked
+    # for and is explained in plain terms right where it's used. \b
+    # word-boundary regex so a short term like "EPS" doesn't false-positive
+    # on "keEPS".
     import re
 
     metrics = {
@@ -172,9 +198,20 @@ def test_sentences_are_plain_english_not_metric_jargon():
         "fcf_margin_pct": 20.0,
         "margin_trend_score": 100,
         "graham_upside_pct": 25.0,
+        "value_creation_pct": 5.0,
     }
     result = build_plain_analysis(metrics)
-    banned_terms = ["ROIC", "P/E", "CAGR", "EPS", "gross margin", "current ratio", "debt/equity", "debt-to-equity"]
+    banned_terms = [
+        "ROIC",
+        "P/E",
+        "CAGR",
+        "EPS",
+        "gross margin",
+        "current ratio",
+        "debt/equity",
+        "debt-to-equity",
+        "WACC",
+    ]
     for sentence in result["positives"] + result["worries"]:
         for term in banned_terms:
             pattern = r"\b" + re.escape(term.lower()) + r"\b"

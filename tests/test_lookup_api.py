@@ -23,9 +23,17 @@ def client():
 
 def _mock_pipeline():
     return (
-        patch("lookup.fetch_and_score_company", return_value={"metrics": {}, "display": {"price": {}}}),
+        patch(
+            "lookup.fetch_and_score_company",
+            return_value={
+                "metrics": {},
+                "display": {"price": {}},
+                "raw": {"income_stmts": [], "balance_stmts": [], "cashflow_stmts": []},
+                "profile": {},
+            },
+        ),
         patch("lookup.finalize_company", return_value=({"ticker": "MSFT"}, {}, False)),
-        patch("lookup._regime", return_value={"regime": "Neutral/Expansion", "signals": {}}),
+        patch("lookup._macro", return_value=({}, {"regime": "Neutral/Expansion", "signals": {}})),
     )
 
 
@@ -109,7 +117,7 @@ def test_upstream_failure_returns_502_with_ticker_in_message(client, monkeypatch
     monkeypatch.delenv("SEARCH_API_KEY", raising=False)
     with (
         patch("lookup.fetch_and_score_company", side_effect=RuntimeError("boom")),
-        patch("lookup._regime", return_value={"regime": "Neutral/Expansion", "signals": {}}),
+        patch("lookup._macro", return_value=({}, {"regime": "Neutral/Expansion", "signals": {}})),
     ):
         resp = client.get("/api/lookup?ticker=ZZZZ")
     assert resp.status_code == 502

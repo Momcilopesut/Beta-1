@@ -25,7 +25,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from flask import Flask, jsonify, request  # noqa: E402
 
-from pipeline.main import fetch_and_score_company, fetch_benchmark, fetch_macro, finalize_company  # noqa: E402
+from pipeline.main import (  # noqa: E402
+    _risk_free_rate_pct,
+    fetch_and_score_company,
+    fetch_benchmark,
+    fetch_macro,
+    finalize_company,
+)
+from pipeline.scoring import capital_efficiency  # noqa: E402
+from pipeline.utils.config import capital_efficiency_config  # noqa: E402
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -58,13 +66,12 @@ def _valid_ticker(ticker: str) -> bool:
     return ticker.replace(".", "").replace("-", "").isalnum()
 
 
-def _regime() -> dict:
+def _macro() -> tuple[dict, dict]:
     try:
-        _macro_data, regime_info = fetch_macro()
-        return regime_info
+        return fetch_macro()
     except Exception:  # noqa: BLE001
         logger.exception("Macro fetch failed; using a neutral regime")
-        return {"regime": "Neutral/Expansion", "signals": {}}
+        return {}, {"regime": "Neutral/Expansion", "signals": {}}
 
 
 @app.route("/api/lookup", methods=["GET", "OPTIONS"])
@@ -82,15 +89,25 @@ def lookup():
     skip_ai = request.args.get("ai") == "0"
 
     try:
-        regime_info = _regime()
+        macro_data, regime_info = _macro()
         benchmark_prices = fetch_benchmark()
         state = fetch_and_score_company({"ticker": ticker}, regime_info, benchmark_prices)
-        # Full parity with the batch pipeline - identical scoring and the
-        # same Buffett moat read, subject to this function's timeout
-        # (vercel.json's maxDuration - see README's "On-demand lookup
-        # deployment" section for raising it if you have Vercel headroom for
-        # it, e.g. Fluid Compute or a Pro plan, or pass ?ai=0 to skip it).
-        company_doc, _summary, _qual_failed = finalize_company(state, regime_info, skip_ai, Path(tempfile.gettempdir()))
+        # Full parity with the batch pipeline - identical scoring, the same
+        # 10-K filing summaries (subject to this function's timeout -
+        # vercel.json's maxDuration, see README's "On-demand lookup
+        # deployment" section for raising it, or pass ?ai=0 to skip it), and
+        # the same quantitative Moat Signal (value_creation_pct - needs no
+        # AI call, so it's unaffected by ?ai=0 either way). ce_inputs/
+        # risk_free_rate_pct/ce_cfg feed just that last one; a fetch_macro
+        # failure above still gets a company_doc back, just without a moat
+        # read for this ticker (None propagates gracefully, same "null not
+        # zero" convention as everywhere else).
+        ce_inputs = capital_efficiency.company_capital_efficiency_inputs(state["raw"], state["profile"])
+        ce_cfg = capital_efficiency_config()
+        risk_free_rate_pct = _risk_free_rate_pct(macro_data, ce_cfg["risk_free_rate_series"])
+        company_doc, _summary, _qual_failed = finalize_company(
+            state, regime_info, skip_ai, Path(tempfile.gettempdir()), ce_inputs, risk_free_rate_pct, ce_cfg
+        )
     except Exception as exc:  # noqa: BLE001
         logger.exception("Lookup failed for %s", ticker)
         return _error(f"Analysis failed for {ticker}: {exc}", 502)

@@ -205,6 +205,8 @@ function metricSentiment(key, value) {
       return value >= 40 ? "good" : value >= 15 ? "neutral" : "bad";
     case "reinvestment_rate_pct": // no inherent good/bad direction on its own - see roic_pct above for what the reinvested capital actually earns (same convention as the macro page's aggregate read)
       return "neutral";
+    case "value_creation_pct": // +/-0.5pp dead zone around zero, same convention as the macro page's aggregate value_creation read
+      return value > 0.5 ? "good" : value < -0.5 ? "bad" : "neutral";
     case "margin_trend_score": // already categorical: 20 declining / 60 stable / 100 improving
       return value >= 100 ? "good" : value >= 60 ? "neutral" : "bad";
     case "shareholders_equity": // negative net worth is unambiguous - liabilities exceed assets
@@ -233,6 +235,7 @@ function formatMetricValue(key, value) {
     case "roic_pct":
     case "gross_margin_pct":
     case "reinvestment_rate_pct":
+    case "value_creation_pct":
       return fmt(value, 1, "%");
     case "margin_trend_score":
       return MARGIN_TREND_LABELS[value] || String(value);

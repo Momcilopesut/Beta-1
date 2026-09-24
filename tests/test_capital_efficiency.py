@@ -162,3 +162,33 @@ def test_aggregate_capital_efficiency_bad_sentiment_when_value_destroying():
     assert result["sentiment"]["roic"] == "bad"
     assert result["value_creation_pct"] < -0.5
     assert result["sentiment"]["value_creation"] == "bad"
+
+
+def test_company_value_creation_pct_matches_aggregate_math_for_one_company():
+    # Same company_input the aggregate test above uses for its first entry -
+    # proves the per-company formula (this pipeline's quantitative Moat
+    # Signal) produces identical WACC/value-creation numbers to the
+    # aggregate, since the aggregate is the same formula run over summed
+    # totals rather than a single company's own numbers.
+    ce_inputs = _company_input(100, 500, 40, 10, 10, 200, 2000, 20)
+    result = capital_efficiency.company_value_creation_pct(20.0, ce_inputs, risk_free_rate_pct=4.0, cfg=CFG)
+    assert result == pytest.approx(11.1)  # 20.0 roic - 8.9 wacc
+
+
+def test_company_value_creation_pct_none_without_risk_free_rate():
+    ce_inputs = _company_input(100, 500, 40, 10, 10, 200, 2000, 20)
+    assert capital_efficiency.company_value_creation_pct(20.0, ce_inputs, None, CFG) is None
+
+
+def test_company_value_creation_pct_none_without_roic():
+    ce_inputs = _company_input(100, 500, 40, 10, 10, 200, 2000, 20)
+    assert capital_efficiency.company_value_creation_pct(None, ce_inputs, 4.0, CFG) is None
+
+
+def test_company_value_creation_pct_none_without_ce_inputs():
+    assert capital_efficiency.company_value_creation_pct(20.0, None, 4.0, CFG) is None
+
+
+def test_company_value_creation_pct_none_without_market_cap():
+    ce_inputs = _company_input(100, 500, 40, 10, 10, 200, None, 20)
+    assert capital_efficiency.company_value_creation_pct(20.0, ce_inputs, 4.0, CFG) is None

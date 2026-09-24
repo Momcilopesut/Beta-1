@@ -215,6 +215,63 @@ def test_full_pipeline_wiring(
     mock_plain_text.assert_not_called()
 
 
+@patch("pipeline.main.stooq.fetch_daily_prices")
+@patch("pipeline.main.sec_edgar.fetch_company")
+@patch("pipeline.main.fmp.fetch_company")
+def test_moat_signal_flows_through_when_capital_efficiency_inputs_supplied(mock_fmp, mock_sec, mock_stooq, tmp_path):
+    """value_creation_pct (the quantitative Moat Signal that replaced the
+    old AI moat read - see pipeline.scoring.plain_analysis) needs no AI
+    call, but it does need ce_inputs/risk_free_rate_pct/ce_cfg threaded in
+    from run_full - this proves that wiring actually reaches
+    company_doc["metrics"] and the plain-language analysis, using the
+    same real per-company inputs run_full computes
+    (capital_efficiency.company_capital_efficiency_inputs from state["raw"]/
+    state["profile"]) rather than a hand-built stub. The exact WACC/value-
+    creation math itself is already covered precisely in
+    tests/test_capital_efficiency.py; this only checks the wiring."""
+    from pipeline.scoring import capital_efficiency
+    from pipeline.utils.config import capital_efficiency_config
+
+    mock_fmp.return_value = _empty_fmp_data()
+    mock_sec.return_value = _sec_data()
+    mock_stooq.return_value = _stooq_prices()
+
+    regime_info = {"regime": "Neutral/Expansion", "signals": {}}
+    company_cfg = {"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology"}
+
+    state = fetch_and_score_company(company_cfg, regime_info, use_fmp=False)
+    ce_inputs = capital_efficiency.company_capital_efficiency_inputs(state["raw"], state["profile"])
+    ce_cfg = capital_efficiency_config()
+
+    company_doc, _summary, _qualitative_failed = finalize_company(
+        state, regime_info, skip_ai=True, out_dir=tmp_path, ce_inputs=ce_inputs, risk_free_rate_pct=4.0, ce_cfg=ce_cfg
+    )
+
+    assert company_doc["metrics"]["value_creation_pct"] is not None
+    assert -100 < company_doc["metrics"]["value_creation_pct"] < 100  # sanity bound, not the real assertion
+    has_moat_sentence = any("moat" in s.lower() for s in company_doc["plain_analysis"]["positives"] + company_doc["plain_analysis"]["worries"])
+    assert has_moat_sentence
+
+
+def test_finalize_company_without_capital_efficiency_inputs_leaves_moat_signal_none(tmp_path):
+    """Every capital-efficiency arg is optional (default None) - a caller
+    that doesn't wire them (or one where company_capital_efficiency_inputs
+    itself returned None, e.g. too little statement data) still gets a
+    complete company_doc back, just without a Moat Signal - "null not
+    zero", never a crash."""
+    with (
+        patch("pipeline.main.fmp.fetch_company", return_value=_empty_fmp_data()),
+        patch("pipeline.main.sec_edgar.fetch_company", return_value=_sec_data()),
+        patch("pipeline.main.stooq.fetch_daily_prices", return_value=_stooq_prices()),
+    ):
+        regime_info = {"regime": "Neutral/Expansion", "signals": {}}
+        state = fetch_and_score_company({"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology"}, regime_info)
+        company_doc, *_ = finalize_company(state, regime_info, skip_ai=True, out_dir=tmp_path)
+
+    assert company_doc["metrics"].get("value_creation_pct") is None
+    assert not any("moat" in s.lower() for s in company_doc["plain_analysis"]["positives"] + company_doc["plain_analysis"]["worries"])
+
+
 @patch("pipeline.main.filing_text.fetch_filing_sections")
 @patch("pipeline.main.stooq.fetch_daily_prices")
 @patch("pipeline.main.sec_edgar.fetch_company")

@@ -290,7 +290,15 @@ def _run_qualitative(state: dict, out_dir) -> tuple[dict | None, bool]:
     return qualitative_dict, False
 
 
-def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> tuple[dict, dict, bool]:
+def finalize_company(
+    state: dict,
+    regime_info: dict,
+    skip_ai: bool,
+    out_dir,
+    ce_inputs: dict | None = None,
+    risk_free_rate_pct: float | None = None,
+    ce_cfg: dict | None = None,
+) -> tuple[dict, dict, bool]:
     """Returns (company_doc, watchlist_summary, qualitative_failed).
 
     qualitative_failed is True only when this call actually attempted
@@ -300,6 +308,16 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
     report an honest sources_status["anthropic"] instead of just "ok"
     whenever --skip-ai wasn't passed, regardless of whether the call
     actually succeeded.
+
+    ce_inputs/risk_free_rate_pct/ce_cfg (all optional, default None) feed
+    the quantitative Moat Signal (value_creation_pct - see
+    pipeline.scoring.capital_efficiency.company_value_creation_pct): the
+    same NOPAT/invested-capital/WACC inputs the market-wide capital-
+    efficiency aggregate already computes per company, reused here rather
+    than a second AI-read moat classification - this metric costs no
+    Anthropic spend at all, unlike the old AI moat read it replaces.
+    Missing any of the three simply leaves value_creation_pct None, same
+    "null not zero" convention as everywhere else in this pipeline.
     """
     ticker, name, sector = state["ticker"], state["name"], state["sector"]
     metrics, display, profile = state["metrics"], state["display"], state["profile"]
@@ -307,6 +325,9 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
     macro_adj = macro_regime.sector_adjustment(regime_info["regime"], sector)
 
     generated_at = writer.now_iso()
+    metrics["value_creation_pct"] = capital_efficiency.company_value_creation_pct(
+        metrics.get("roic_pct"), ce_inputs, risk_free_rate_pct, ce_cfg
+    )
     clean_metrics = {k: v for k, v in metrics.items() if v is not None}
 
     if skip_ai:
@@ -362,7 +383,14 @@ def finalize_company(state: dict, regime_info: dict, skip_ai: bool, out_dir) -> 
 
 
 def _process_company(
-    company_cfg: dict, regime_info: dict, benchmark_prices: list[dict], skip_ai: bool, out_dir, use_fmp: bool = True
+    company_cfg: dict,
+    regime_info: dict,
+    benchmark_prices: list[dict],
+    skip_ai: bool,
+    out_dir,
+    use_fmp: bool = True,
+    risk_free_rate_pct: float | None = None,
+    ce_cfg: dict | None = None,
 ) -> tuple[dict | None, bool, dict, dict | None, dict | None]:
     """Fetch, score, finalize, and write one company end-to-end. Used for
     both the cheap screen (skip_ai=True, whole universe) and the enriched
@@ -380,7 +408,9 @@ def _process_company(
     market-wide aggregate on the macro page
     (pipeline.scoring.capital_efficiency) - computed here, once per company,
     from the same raw statements already fetched for scoring, regardless of
-    skip_ai/use_fmp (it needs no AI call and no FMP data)."""
+    skip_ai/use_fmp (it needs no AI call and no FMP data) - and passed into
+    finalize_company too, so the same inputs also power that company's own
+    quantitative Moat Signal (value_creation_pct), no second computation."""
     ticker = company_cfg["ticker"]
     try:
         state = fetch_and_score_company(company_cfg, regime_info, benchmark_prices, use_fmp=use_fmp)
@@ -393,7 +423,9 @@ def _process_company(
     )
 
     try:
-        company_doc, summary, qualitative_failed = finalize_company(state, regime_info, skip_ai, out_dir)
+        company_doc, summary, qualitative_failed = finalize_company(
+            state, regime_info, skip_ai, out_dir, capital_efficiency_inputs, risk_free_rate_pct, ce_cfg
+        )
     except Exception:
         logger.exception("Failed to finalize %s entirely, skipping", ticker)
         return None, False, state["errors"], None, None
@@ -431,6 +463,13 @@ def run_full(args) -> int:
     out_dir = writer.output_dir(args.dry_run)
     macro_doc = build_macro_doc(macro_data, regime_info, generated_at)
 
+    # Computed here (not after the company loop, where the market-wide
+    # aggregate below used to be the only consumer) so every company's own
+    # finalize_company call can compute its quantitative Moat Signal
+    # (value_creation_pct) too - see finalize_company's docstring.
+    ce_cfg = capital_efficiency_config()
+    risk_free_rate_pct = _risk_free_rate_pct(macro_data, ce_cfg["risk_free_rate_series"])
+
     fmp_error_count = 0
     sec_error_count = 0
     stooq_error_count = 0
@@ -447,8 +486,10 @@ def run_full(args) -> int:
 
     # Phase 1: cheap (no AI spend) screen over the WHOLE universe - see
     # module docstring. Every company still gets a full company_doc/detail
-    # page; only the moat read is missing until (if) it becomes a finalist
-    # below. use_fmp=True here too: Stooq (the free price source this was
+    # page, including its quantitative Moat Signal (needs no AI call, so
+    # unlike the old AI moat read this isn't finalist-gated); only the AI
+    # filing summaries are missing until (if) it becomes a finalist below.
+    # use_fmp=True here too: Stooq (the free price source this was
     # designed to lean on for the whole universe) turned out to be blocked
     # from GitHub Actions runners in practice - see pipeline.fetch.stooq's
     # module docstring - so FMP is back to covering price for every company,
@@ -457,7 +498,14 @@ def run_full(args) -> int:
     capital_efficiency_inputs = []
     for company_cfg in companies:
         summary, _qualitative_failed, errs, _company_doc, ce_inputs = _process_company(
-            company_cfg, regime_info, benchmark_prices, skip_ai=True, out_dir=out_dir, use_fmp=True
+            company_cfg,
+            regime_info,
+            benchmark_prices,
+            skip_ai=True,
+            out_dir=out_dir,
+            use_fmp=True,
+            risk_free_rate_pct=risk_free_rate_pct,
+            ce_cfg=ce_cfg,
         )
         _track_errors(errs)
         if ce_inputs:
@@ -487,7 +535,14 @@ def run_full(args) -> int:
         companies_by_ticker = {c["ticker"]: c for c in companies}
         for ticker in finalist_tickers:
             summary, qualitative_failed, errs, company_doc, _ce_inputs = _process_company(
-                companies_by_ticker[ticker], regime_info, benchmark_prices, skip_ai=False, out_dir=out_dir, use_fmp=True
+                companies_by_ticker[ticker],
+                regime_info,
+                benchmark_prices,
+                skip_ai=False,
+                out_dir=out_dir,
+                use_fmp=True,
+                risk_free_rate_pct=risk_free_rate_pct,
+                ce_cfg=ce_cfg,
             )
             _track_errors(errs)
             if summary is None:
@@ -522,8 +577,6 @@ def run_full(args) -> int:
         elif total_qualitative_failed:
             sources_status["anthropic"] = "degraded"
 
-    ce_cfg = capital_efficiency_config()
-    risk_free_rate_pct = _risk_free_rate_pct(macro_data, ce_cfg["risk_free_rate_series"])
     macro_doc["capital_efficiency"] = capital_efficiency.aggregate_capital_efficiency(
         capital_efficiency_inputs, risk_free_rate_pct, ce_cfg
     )

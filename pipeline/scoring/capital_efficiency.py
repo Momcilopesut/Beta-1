@@ -103,6 +103,48 @@ def company_capital_efficiency_inputs(raw: dict, profile: dict) -> dict | None:
     }
 
 
+def company_value_creation_pct(
+    roic_pct: float | None, ce_inputs: dict | None, risk_free_rate_pct: float | None, cfg: dict | None
+) -> float | None:
+    """ROIC minus this one company's own WACC - the per-company version of
+    the market-wide value_creation_pct computed in
+    aggregate_capital_efficiency below, same formula and same cost-of-
+    capital assumptions, just not summed across companies first.
+
+    This is this pipeline's quantitative stand-in for "does this business
+    have a moat", without an AI call: a business earning more than what
+    its own capital costs to raise (through debt or investors) is
+    creating economic value competitors haven't competed away yet, which
+    is what a durable competitive advantage actually means in numbers,
+    not just a company that "looks" well-run. roic_pct: already computed
+    in pipeline.scoring.fundamentals from the same nopat/invested_capital
+    ce_inputs carries, passed in separately rather than recomputed here.
+    ce_inputs: pipeline.scoring.capital_efficiency.
+    company_capital_efficiency_inputs's own output for this company.
+    risk_free_rate_pct/cfg: see aggregate_capital_efficiency below. Any
+    missing input leaves this None - "null not zero", same as everywhere
+    else in this pipeline."""
+    if roic_pct is None or not ce_inputs or risk_free_rate_pct is None or not cfg:
+        return None
+
+    cost_of_equity_pct = risk_free_rate_pct + cfg["equity_risk_premium_pct"]
+    total_debt = ce_inputs.get("total_debt")
+    interest_expense = ce_inputs.get("interest_expense")
+    cost_of_debt_pct = None
+    if interest_expense is not None and total_debt:
+        pretax_cost_of_debt_pct = interest_expense / total_debt * 100
+        cost_of_debt_pct = pretax_cost_of_debt_pct * (1 - cfg["assumed_tax_rate_pct"] / 100)
+
+    market_cap = ce_inputs.get("market_cap")
+    if not market_cap or total_debt is None:
+        return None
+    equity_weight = market_cap / (market_cap + total_debt)
+    debt_weight = 1 - equity_weight
+    wacc_pct = equity_weight * cost_of_equity_pct + debt_weight * (cost_of_debt_pct or 0)
+
+    return roic_pct - wacc_pct
+
+
 def _banded_sentiment(value: float | None, bands: dict) -> str | None:
     if value is None:
         return None

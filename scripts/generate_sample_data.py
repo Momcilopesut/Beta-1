@@ -236,6 +236,7 @@ def to_display(metrics: dict, close_price: float) -> dict:
                 "gross_margin_pct": metrics["gross_margin_pct"],
                 "roe_pct": metrics["roe_pct"],
                 "roic_pct": metrics["roic_pct"],
+                "value_creation_pct": metrics["value_creation_pct"],
             },
         },
     }
@@ -334,6 +335,9 @@ def main() -> None:
     summaries = []
     company_docs = {}
     capital_efficiency_inputs = []
+    ce_cfg = capital_efficiency_config()
+    risk_free_observations = macro_data.get(ce_cfg["risk_free_rate_series"]) or []
+    risk_free_rate_pct = risk_free_observations[-1]["value"] if risk_free_observations else None
     for company_cfg in companies:
         ticker = company_cfg["ticker"]
         sector = company_cfg["sector"]
@@ -377,6 +381,14 @@ def main() -> None:
             and ce_inputs["change_in_working_capital"] is not None
             else None
         )
+        # Moat Signal: reuses the same per-company WACC/value-creation
+        # formula finalize_company calls in the real pipeline, so sample
+        # company pages show a real, internally-consistent Moat Signal too,
+        # not just "-".
+        value_creation_pct = capital_efficiency.company_value_creation_pct(
+            metrics["roic_pct"], ce_inputs, risk_free_rate_pct, ce_cfg
+        )
+        metrics["value_creation_pct"] = round(value_creation_pct, 2) if value_creation_pct is not None else None
 
         checklist = value_investing.build_checklist(metrics, {"market_cap": market_cap}, raw)
         metrics["graham_criteria_passed"] = checklist["graham_defensive"]["passed"]
@@ -440,9 +452,6 @@ def main() -> None:
             }
         )
 
-    ce_cfg = capital_efficiency_config()
-    risk_free_observations = macro_data.get(ce_cfg["risk_free_rate_series"]) or []
-    risk_free_rate_pct = risk_free_observations[-1]["value"] if risk_free_observations else None
     macro_doc["capital_efficiency"] = capital_efficiency.aggregate_capital_efficiency(
         capital_efficiency_inputs, risk_free_rate_pct, ce_cfg
     )

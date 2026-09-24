@@ -157,6 +157,16 @@ export const METRIC_GLOSSARY = [
       "Lumpy by nature - a single large plant, acquisition, or inventory build can spike this in one year even for a business that normally reinvests modestly, then fall back once that investment cycle ends. A negative reading (shrinking working capital, minimal capex) can mean a mature, cash-generative business or one starving itself of investment - worth checking which.",
   },
   {
+    key: "value_creation_pct",
+    label: "Moat Signal (Value Created Above Cost of Capital)",
+    explanation:
+      "ROIC minus this company's own cost of capital (WACC - a blend of what it costs to raise money through debt and through investors, using the 10-year Treasury yield plus a standard risk premium). This is a numbers-only stand-in for \"does this business have a moat\" - no AI reading of the filing text needed.",
+    significance:
+      "A business earning more than its capital actually costs is creating real economic value competitors haven't managed to compete away yet - that's what a durable edge looks like in the numbers. Earning less than that cost means the business isn't really being rewarded for using that capital, whatever the filing text might say about its competitive position. This won't say WHAT KIND of moat a company has (network effects vs. cost advantage vs. switching costs, etc.) - that classification genuinely needs someone (or an AI) to read the business's own story - it only answers whether an edge, if one exists, is still showing up in the numbers.",
+    volatilityImpact:
+      "Moves with both profitability (the ROIC side) and financing conditions (the cost-of-capital side, which rises and falls with interest rates market-wide, not anything company-specific). A rate environment shift can nudge this even when the underlying business hasn't changed at all - a sustained gap, not one quarter, is the real signal.",
+  },
+  {
     key: "total_assets",
     label: "Total Assets",
     explanation: "Everything the company owns, per the latest balance sheet - cash, receivables, inventory, property, equipment, goodwill, and more.",

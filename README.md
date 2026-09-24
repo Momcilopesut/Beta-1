@@ -89,7 +89,9 @@ and the run's GitHub Actions time before that tradeoff is settled:
 
 1. **Cheap screen, whole universe** (`pipeline/main.py::run_full`, phase 1) — every
    company gets fetched and scored (full fundamentals scoring included, for its own
-   detail page), with the AI qualitative (moat read) layer skipped entirely.
+   detail page - including its quantitative Moat Signal, see "Moat Signal" below,
+   which needs no AI call so it's available here too), with the AI qualitative
+   (10-K filing-summary/moat-classification) layer skipped entirely.
    Fundamentals lean on SEC EDGAR XBRL where possible; price/quote/profile currently
    come from FMP for every company in this phase, not just finalists - the free-tier
    design this pipeline was meant to have here is unfinished (see "Data source limits
@@ -276,7 +278,7 @@ narrower instead: it only looks at plain numbers already sitting in the metrics 
 never AI-generated text, and never blends more than one number into a single
 judgment.
 
-Nine independent checks, each gated by its own threshold, matching the same bands
+Ten independent checks, each gated by its own threshold, matching the same bands
 `site/js/company.js::metricSentiment` uses to color the Key Metrics Reference table
 green/red:
 
@@ -291,6 +293,7 @@ green/red:
 | Real cash left over after running the business? | `fcf_margin_pct` | ≥ 15% | < 0% |
 | Is its profit margin getting better or worse? | `margin_trend_score` | Improving | Declining |
 | Is the price fair for what it roughly owns and earns? | `graham_upside_pct` | ≥ 15% | < 0% |
+| Does it earn more than its money actually costs to raise? ("moat") | `value_creation_pct` | > 0.5pp | < -0.5pp |
 
 A metric with no data, or a reading that's genuinely in between (e.g. debt/equity of
 1.5 — above the "good" bar but not yet at the "worry" one), produces neither a
@@ -298,6 +301,46 @@ positive nor a worry — a company doesn't have to be praised or criticized on e
 single number just to fill out a list. A company with too little data, or one that's
 simply unremarkable on every check, can end up with an empty (or short) list on
 either side; that's the honest answer, not a bug.
+
+**The moat check (`value_creation_pct`) is this pipeline's quantitative stand-in for
+"does this business have a moat", built specifically to cost no AI spend** — see
+"Moat Signal" below for the full formula and why it replaced an AI-read moat
+classification.
+
+## Moat Signal (quantitative, no AI)
+
+`pipeline/scoring/capital_efficiency.py::company_value_creation_pct` — ROIC minus
+this one company's own WACC (weighted average cost of capital: a blend of the cost of
+raising money through debt and through investors, using the 10-year Treasury yield
+plus `config/capital_efficiency.yaml`'s equity risk premium). A business earning more
+than its capital actually costs is creating economic value competitors haven't
+managed to compete away yet — that's what a durable competitive edge looks like in
+the numbers, without reading a single word of the filing.
+
+This is the per-company version of the exact same formula the market-wide aggregate
+on the macro page already computes (`aggregate_capital_efficiency`'s own
+`value_creation_pct`) — same cost-of-capital assumptions, just not summed across
+companies first. It needs `risk_free_rate_pct` (from the same FRED fetch the rest of
+the macro page uses) and `capital_efficiency.company_capital_efficiency_inputs` (NOPAT,
+invested capital, total debt, market cap, interest expense — all already computed for
+every company, not just finalists, so this metric is available for the **whole
+tracked universe**, unlike the AI-read moat classification it replaced, which only
+ever ran for that week's finalists). Shown on the Key Metrics Reference table as
+"Moat Signal (Value Created Above Cost of Capital)" and fed into the Plain-Language
+Analysis section above as a positive/worry sentence, the same ±0.5 percentage-point
+dead zone as the macro page's own read (a gap that small isn't worth calling a real
+signal either way).
+
+**What this deliberately doesn't do:** name what *kind* of moat a company has —
+network effects, cost advantage, intangible assets, switching costs, or efficient
+scale. That classification genuinely needs to read the business's own story, which is
+exactly what the (optional) 10-K Filing Summaries AI call below still does internally
+(`qualitative.moat_present`/`moat_type`/`moat_explanation`/`red_flags`) — that data is
+still fetched and stored in every finalist's JSON (e.g.
+`data/companies/{ticker}.json`), it's just not shown anywhere on the site any more.
+The Moat Signal above answers a narrower, more fundamental question instead — is
+whatever edge a company has, if any, still showing up in the numbers — and it answers
+it for every company in the tracked universe, at zero ongoing AI cost.
 
 ## 10-K Filing Summaries
 
@@ -314,14 +357,10 @@ filed. `qualitative.extraction_confidence` tells you whether the filing-text
 extraction itself found a clean section match or fell back to a raw document prefix,
 so you know how much to trust it.
 
-The same call also classifies the company's moat (network effects / cost advantage /
-intangible assets / switching costs / efficient scale / none) and lists any red
-flags the filing raises (`qualitative.moat_present`/`moat_type`/`moat_explanation`/
-`red_flags`) — this data is still fetched and stored in every finalist's JSON, it
-just isn't shown anywhere on the site any more (it was the AI-read half of the old
-Layered Analysis section above; the Plain-Language Analysis section replacing it is
-metrics-only by design). It's there in the raw output for anyone who wants it, e.g.
-`data/companies/{ticker}.json`, even though the UI itself doesn't surface it.
+The same call also classifies the company's moat type (network effects / cost
+advantage / intangible assets / switching costs / efficient scale / none) and lists
+any red flags the filing raises — see "Moat Signal" above for why this data is still
+fetched but no longer shown on the site.
 
 `pipeline/fetch/sec_edgar.py::latest_filings_by_form` finds each of the three filing
 types independently, so a burst of recent 8-Ks (a company can file 10-20+/year, vs.
@@ -488,9 +527,10 @@ what a Vercel Hobby (free) plan allows *by default* (60s). Enable **Fluid Comput
 it's free and raises Hobby's ceiling to 300s to match. Skip this and the deploy will
 either fail or silently cap at 60s, and most real lookups (10-K fetch + a Claude call)
 won't reliably finish in that window. If you still see timeouts after enabling it,
-`?ai=0` skips the qualitative moat read (the slowest step, at the cost of that layer
-showing as not evaluated) as a fallback. A Pro plan raises the ceiling further if you
-have one, but isn't required.
+`?ai=0` skips the AI-read 10-K filing summaries/moat classification (the slowest step,
+at the cost of that layer showing as not evaluated) as a fallback - the quantitative
+Moat Signal (see "Moat Signal" above) needs no AI call, so it's computed either way. A
+Pro plan raises the ceiling further if you have one, but isn't required.
 
 **Why a separate deployment, and why it's gated:** every live lookup spends real FMP/
 Anthropic API budget (it runs the full pipeline for one ticker, right then). Left
