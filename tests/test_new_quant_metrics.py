@@ -93,6 +93,23 @@ def test_balance_sheet_basics_none_without_balance_sheet_data():
     assert metrics["reinvestment_rate_pct"] is None
 
 
+def test_shareholders_equity_derived_from_assets_minus_liabilities_when_not_reported():
+    # A real gap seen in production: a source reports Assets and
+    # Liabilities for a period but no StockholdersEquity concept for that
+    # same period (e.g. an inconsistently-tagged SEC XBRL filing). The
+    # balance sheet identity still holds, so equity - and everything that
+    # depends on it - should be derived rather than left None.
+    fmp_data = _fmp_data()
+    del fmp_data["balance_sheet"][0]["totalStockholdersEquity"]
+    metrics = build_metrics("TEST", fmp_data, {"cik": None, "submissions": None, "company_facts": None})["metrics"]
+
+    assert metrics["total_assets"] == 100_000_000_000
+    assert metrics["total_liabilities"] == 40_000_000_000
+    assert metrics["shareholders_equity"] == 60_000_000_000
+    assert metrics["roe_pct"] == pytest.approx(4_000_000_000 / 60_000_000_000 * 100)
+    assert metrics["book_value_per_share"] == pytest.approx(60.0)
+
+
 def test_reinvestment_rate_reflects_capex_depreciation_and_working_capital_change():
     # nopat = 4.4B (see _fmp_data()'s own comment). capex = 2B, depreciation
     # = 1B (already in the fixture). Working capital: period 0 (the shared

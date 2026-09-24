@@ -161,6 +161,16 @@ def build_metrics(
     total_assets = _first_of(balance0, "totalAssets")
     total_liabilities = _first_of(balance0, "totalLiabilities")
     total_equity = _first_of(balance0, "totalStockholdersEquity")
+    if total_equity is None and total_assets is not None and total_liabilities is not None:
+        # The balance sheet identity (assets = liabilities + equity) holds
+        # regardless of source - a real gap seen in practice: some
+        # companies' SEC XBRL facts (or FMP's payload) report Assets and
+        # Liabilities but not a StockholdersEquity concept for a given
+        # period, which otherwise silently cascades to None for every
+        # equity-based metric (P/B, ROE, ROIC, debt/equity, Graham Number,
+        # the Moat Signal) even though the two numbers needed to derive it
+        # exactly were already in hand.
+        total_equity = total_assets - total_liabilities
     total_debt = _first_of(balance0, "totalDebt")
     current_assets = _first_of(balance0, "totalCurrentAssets")
     current_liabilities = _first_of(balance0, "totalCurrentLiabilities")
