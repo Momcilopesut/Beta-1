@@ -1,0 +1,27 @@
+{
+  "GFS": {
+    "generated_at": "2026-09-25",
+    "verdict": "GlobalFoundries doesn't try to make the smallest, fastest chips - it deliberately makes chips for jobs where being reliable and power-efficient matters more than being cutting-edge, like the radio chips in phones, the chips in cars, and chips the military trusts. That's a real edge today, but it's narrower and more fragile than it looks: it depends on bigger rivals staying uninterested in this part of the market, on a small group of big customers staying loyal, and on government policy continuing to favor it.",
+    "moat_sources": [
+      "It picked a fight it can win: the biggest chip factories (TSMC, Samsung, Intel) are racing to build the tiniest, fastest chips. GlobalFoundries doesn't compete there at all - it focuses on chips that need to be dependable and power-efficient instead, a market the giants have mostly left alone.",
+      "Once a customer designs a chip to be built a specific way at a GlobalFoundries factory, switching to a different chipmaker means redesigning that chip almost from scratch - expensive and slow. About 9 out of 10 of its newest customer deals lock the customer in this way.",
+      "Governments in the US, Germany, and Singapore want chip factories on their own soil for security reasons, and GlobalFoundries has factories in all three. The US government alone has committed over a billion and a half dollars to help it expand - money a foreign competitor simply can't get.",
+      "A meaningful share of its business comes from long-standing customers like AMD, who have supply agreements that keep them buying certain chip types from GlobalFoundries even as their other business moves elsewhere."
+    ],
+    "inversion_risks": [
+      "Just its 10 biggest customers make up roughly two-thirds of everything it ships. If even two or three of them decide to build their own chip factory or switch suppliers, that's a serious hit - this isn't thousands of small customers spreading the risk around.",
+      "Chinese chip factories (like SMIC) are racing to build the exact same kind of reliable, not-cutting-edge chips GlobalFoundries specializes in, and are currently running near full capacity. If they build enough extra factories, they could undercut GlobalFoundries on price for any customer not required to avoid Chinese-made chips.",
+      "The government money and 'buy American/European' preference helping GlobalFoundries today depends on political decisions that can change. Subsidies get renegotiated and trade rules shift with elections - this part of the edge isn't guaranteed to last.",
+      "GlobalFoundries was already fined $500,000 in 2024 for shipping chips to a Chinese company on the US restricted list without the right permission - a screening error, not a deliberate choice, but still a real crack in the 'trusted, rule-following option' reputation that's part of why security-conscious customers pick it.",
+      "The lock-in only holds until a customer's product line gets redesigned. As an older phone or chip design gets replaced by a newer one, that old product naturally fades out - and the customer's next product is a fresh decision where any foundry can compete again."
+    ],
+    "sources": [
+      { "title": "GlobalFoundries Investor Day Recap (SEC 6-K)", "url": "https://www.sec.gov/Archives/edgar/data/0001709048/000170904826000120/investordayrecappressrelea.htm" },
+      { "title": "GlobalFoundries (GFS): AI Networking and Specialty Foundry Upside", "url": "https://tickerspark.ai/research/gfs" },
+      { "title": "Trailing-edge foundry roadmaps for GlobalFoundries, UMC, and SMIC", "url": "https://www.tomshardware.com/tech-industry/semiconductors/the-trailing-edge-foundry-roadmap-examined" },
+      { "title": "AMD and GlobalFoundries Renew Wafer Supply Agreement", "url": "https://www.techpowerup.com/290184/amd-and-globalfoundries-renew-wafer-supply-agreement" },
+      { "title": "TSMC and GlobalFoundries finalize CHIPS Act funding agreements", "url": "https://www.datacenterdynamics.com/en/news/tsmc-and-globalfoundries-finalize-chips-act-funding-agreements/" },
+      { "title": "GlobalFoundries fined $500K over export violations", "url": "https://www.manufacturingdive.com/news/commerce-department-globalfoundries-500k-fine-sj-semiconductor-entity-list/733768/" }
+    ]
+  }
+}

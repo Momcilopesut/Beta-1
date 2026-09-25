@@ -74,6 +74,10 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
   function on Vercel; this repo ships with a working deployment already wired in as a
   fallback, so it works from GitHub Pages too with zero setup (see "On-demand lookup
   deployment" below). The static site works fully without this — it's an opt-in extra.
+- **Moat Deep-Dives** (see the dedicated section below): a hand-written, one-off
+  reverse-engineering + Munger-style inversion analysis for a specific company, done
+  on request rather than automatically — separate from, and complementary to, the
+  automated Moat Signal and 10-K Filing Summaries.
 
 ## Weekly Screener
 
@@ -344,6 +348,29 @@ still fetched and stored in every finalist's JSON (e.g.
 The Moat Signal above answers a narrower, more fundamental question instead — is
 whatever edge a company has, if any, still showing up in the numbers — and it answers
 it for every company in the tracked universe, at zero ongoing AI cost.
+
+## Moat Deep-Dives (hand-written, on request)
+
+`data/moat_deep_dives.json` — a small, hand-curated file, separate from the
+pipeline entirely: `{TICKER: {generated_at, verdict, moat_sources[], inversion_risks[],
+sources[]}}`. Unlike everything else on this page, nothing here is computed
+automatically or refreshed on a schedule — each entry is a one-off reverse-engineering
+exercise (why does this business's edge actually exist) followed by a Munger-style
+inversion (what would have to go wrong for that edge to break), done by hand in a
+Claude Code session when specifically asked for, using real research rather than only
+the numbers already in the pipeline. `site/js/company.js::renderMoatDeepDive` renders
+it as a "Moat Deep-Dive" section (right after Plain-Language Analysis) whenever the
+current ticker has an entry — present or not, absent for almost every ticker; that's
+the normal case, not a bug. Looked up by ticker regardless of whether the company is
+in the tracked universe or was reached through the on-demand lookup, since the two are
+unrelated (this file doesn't care where the rest of the page's data came from).
+
+This exists because it answers a different question than either of the two moat
+features above: the Moat Signal is a fast, zero-cost, whole-universe number; a 10-K
+Filing Summary is a cheap, automated, one-paragraph AI read. Neither actually
+reasons through *why* an edge exists or stress-tests it against a real competitive
+threat — that takes real research and judgment, which is exactly what this is for,
+spent deliberately on one company at a time instead of automatically on all 906.
 
 ## 10-K Filing Summaries
 

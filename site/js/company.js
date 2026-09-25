@@ -29,9 +29,18 @@ async function main() {
 
   document.title = `${ticker} – Company Detail`;
 
+  // A hand-written, one-off qualitative moat analysis (reverse-engineering +
+  // Munger-style inversion), done manually in a Claude Code session rather
+  // than by the automated pipeline - see README's "Moat Deep-Dives" section.
+  // Kept separate from data/companies/*.json since it applies whether or
+  // not the ticker is even in the tracked universe. Missing file/entry is
+  // the normal case (only a handful of tickers will ever have one).
+  const deepDives = await fetchJSON("../data/moat_deep_dives.json").catch(() => ({}));
+  const deepDive = deepDives[ticker];
+
   try {
     const doc = await fetchJSON(`../data/companies/${encodeURIComponent(ticker)}.json`);
-    content.innerHTML = render(doc);
+    content.innerHTML = render(doc, deepDive);
     wireDetailPage(content, doc);
     renderDisclaimerFooter();
   } catch {
@@ -40,7 +49,7 @@ async function main() {
     // here would just be friction between "click search" and "get an
     // answer" (see README's "On-demand lookup" section for the budget/cost
     // tradeoff this implies - every untracked search spends real API spend).
-    await runLiveLookup(content, ticker);
+    await runLiveLookup(content, ticker, deepDive);
     renderDisclaimerFooter();
     return;
   }
@@ -54,7 +63,7 @@ function wireDetailPage(content, doc) {
   }
 }
 
-async function runLiveLookup(content, ticker) {
+async function runLiveLookup(content, ticker, deepDive) {
   const safeTicker = escapeHtml(ticker);
   const startedAt = Date.now();
   content.innerHTML = `<p class="status">Analyzing ${safeTicker} live&hellip; <span id="live-lookup-elapsed">this can take a few minutes</span>.</p>`;
@@ -70,14 +79,14 @@ async function runLiveLookup(content, ticker) {
 
   try {
     const doc = await lookupTicker(ticker);
-    content.innerHTML = render(doc);
+    content.innerHTML = render(doc, deepDive);
     wireDetailPage(content, doc);
   } catch (err) {
     content.innerHTML = `
       <p class="error">Live analysis failed for ${safeTicker}: ${escapeHtml(err.message)}</p>
       <button id="run-live-lookup" class="live-lookup-button">Try again</button>
     `;
-    document.getElementById("run-live-lookup").addEventListener("click", () => runLiveLookup(content, ticker));
+    document.getElementById("run-live-lookup").addEventListener("click", () => runLiveLookup(content, ticker, deepDive));
   } finally {
     clearInterval(timer);
   }
@@ -95,7 +104,7 @@ function renderWebsiteLink(website) {
   return `<p class="meta"><a href="${escapeHtml(website)}" target="_blank" rel="noopener">Company website ↗</a> <span class="meta">(investor relations is usually linked from there — this is the company's general site, not a verified IR-specific URL)</span></p>`;
 }
 
-function render(doc) {
+function render(doc, deepDive) {
   const onDemandBanner = doc.on_demand
     ? `<p class="on-demand-banner">Live on-demand analysis — not part of the tracked watchlist, computed just now.</p>`
     : "";
@@ -113,6 +122,8 @@ function render(doc) {
     ${renderKeyMetricsReference(doc.metrics)}
 
     ${renderPlainAnalysis(doc.plain_analysis)}
+
+    ${renderMoatDeepDive(deepDive)}
 
     ${renderFiveYearHistory(doc.five_year_history)}
 
@@ -820,6 +831,41 @@ function renderPlainAnalysis(plainAnalysis) {
           ? `<p class="plain-analysis-heading plain-analysis-bad">⚠️ What to worry about</p>${list(worries, "plain-analysis-bad")}`
           : ""
       }
+    </section>
+  `;
+}
+
+// A hand-written deep-dive, distinct from everything else on this page:
+// every other section is either raw fetched data or derived by a fixed
+// formula, run automatically for the whole tracked universe. This is a
+// one-off human/AI reasoning exercise for a single company, done on
+// request (see README's "Moat Deep-Dives" section) - reverse-engineering
+// why the edge exists, then Munger-style inversion: what would have to
+// break for it to go away. Absent for almost every ticker; that's normal.
+function renderMoatDeepDive(deepDive) {
+  if (!deepDive) return "";
+  const { verdict, moat_sources = [], inversion_risks = [], generated_at, sources = [] } = deepDive;
+  const list = (items, className) =>
+    items.length ? `<ul class="plain-analysis-list ${className}">${items.map((t) => `<li>${escapeHtml(t)}</li>`).join("")}</ul>` : "";
+  const sourceLinks = sources.length
+    ? `<p class="meta">Sources: ${sources
+        .map((s) => `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.title)}</a>`)
+        .join(" · ")}</p>`
+    : "";
+  return `
+    <section class="moat-deep-dive">
+      <h3>Moat Deep-Dive <span class="attribution">(hand-written, on request - not the automated pipeline)</span></h3>
+      <p class="meta">Reverse-engineering why this business's edge exists, then inverting it: what would actually have to
+      go wrong for that edge to break. Written ${escapeHtml(generated_at || "")}, a one-time analysis, not refreshed
+      automatically like the rest of this page.</p>
+      ${verdict ? `<p>${escapeHtml(verdict)}</p>` : ""}
+      ${moat_sources.length ? `<p class="plain-analysis-heading plain-analysis-good">Why the edge exists</p>${list(moat_sources, "plain-analysis-good")}` : ""}
+      ${
+        inversion_risks.length
+          ? `<p class="plain-analysis-heading plain-analysis-bad">What would break it (inversion)</p>${list(inversion_risks, "plain-analysis-bad")}`
+          : ""
+      }
+      ${sourceLinks}
     </section>
   `;
 }
