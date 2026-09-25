@@ -108,15 +108,13 @@ function render(doc) {
       ${renderWebsiteLink(doc.website)}
     </section>
 
+    ${renderBalanceSheetBasics(doc.fundamentals)}
+
     ${renderKeyMetricsReference(doc.metrics)}
 
     ${renderPlainAnalysis(doc.plain_analysis)}
 
-    ${renderBalanceSheetBasics(doc.fundamentals)}
-
     ${renderFiveYearHistory(doc.five_year_history)}
-
-    ${renderValueInvesting(doc.value_investing)}
 
     <section class="macro">
       <h3>Macro Context</h3>
@@ -795,43 +793,6 @@ function renderFiveYearHistory(fiveYearHistory) {
       <p class="meta">How the stock did each year, compared to just owning the whole stock market (the S&amp;P 500).</p>
       ${comparisonChart || `<p class="meta">Not enough price history yet to compare this stock's yearly return to the market.</p>`}
       ${comparisonChart ? renderReturnTargetChecker() : ""}
-    </section>
-  `;
-}
-
-function renderChecklistIcon(passed) {
-  if (passed === true) return '<span class="check-pass" title="Passed">✓</span>';
-  if (passed === false) return '<span class="check-fail" title="Failed">✗</span>';
-  return '<span class="check-unknown" title="Not enough data to evaluate">?</span>';
-}
-
-function renderChecklistRows(criteria) {
-  return (criteria || [])
-    .map(
-      (c) =>
-        `<li>${renderChecklistIcon(c.passed)}<span class="checklist-text"><span class="checklist-label">${escapeHtml(c.criterion)}</span><span class="checklist-detail">${escapeHtml(c.detail || "")}</span></span></li>`
-    )
-    .join("");
-}
-
-function renderValueInvesting(valueInvesting) {
-  if (!valueInvesting) return "";
-  const graham = valueInvesting.graham_defensive;
-  const munger = valueInvesting.munger_quality;
-
-  return `
-    <section class="value-investing">
-      <h3>Value Investing Checklists</h3>
-      <div class="checklist-columns">
-        <div class="checklist-card">
-          <h4>Defensive Checklist ${graham ? `<span class="checklist-score">${graham.passed}/${graham.evaluated} evaluated</span>` : ""}</h4>
-          <ul class="checklist">${renderChecklistRows(graham?.criteria)}</ul>
-        </div>
-        <div class="checklist-card">
-          <h4>Quality Checklist ${munger ? `<span class="checklist-score">${munger.passed}/${munger.evaluated} evaluated</span>` : ""}</h4>
-          <ul class="checklist">${renderChecklistRows(munger?.criteria)}</ul>
-        </div>
-      </div>
     </section>
   `;
 }

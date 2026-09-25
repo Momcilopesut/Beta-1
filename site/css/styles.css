@@ -449,27 +449,7 @@ section h3 { border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
 
 .attribution { font-size: 0.75rem; color: var(--muted); font-weight: 400; }
 
-.checklist-columns { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-.checklist-card {
-  flex: 1;
-  min-width: 260px;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem;
-}
-.checklist-card h4 { margin: 0 0 0.5rem; font-size: 0.95rem; }
-.checklist-score { font-size: 0.75rem; color: var(--muted); font-weight: 400; }
-.checklist-note { font-size: 0.8rem; color: var(--muted); margin: 0.25rem 0 0.5rem; }
-.checklist { list-style: none; padding: 0; margin: 0; font-size: 0.85rem; }
-.checklist li { display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
-.checklist li:last-child { border-bottom: none; }
-.checklist-text { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
 .checklist-label { font-weight: 500; }
-.checklist-detail { font-size: 0.75rem; color: var(--muted); }
-.check-pass { color: var(--strong); font-weight: 700; }
-.check-fail { color: var(--weak); font-weight: 700; }
-.check-unknown { color: var(--muted); font-weight: 700; }
 
 .plain-analysis { margin-bottom: 2rem; }
 .plain-analysis-heading {

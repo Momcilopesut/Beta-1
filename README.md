@@ -40,9 +40,11 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
   the scores.
 - **Value-investing checklists** (`pipeline/scoring/value_investing.py`): a Defensive
   Checklist and a Quality Checklist, computed from the same fetched statements — no
-  extra API calls, simple pass/fail arithmetic. Shown on every company's own detail
-  page; the weekly screen itself ranks by price return instead (see "Weekly
-  Screener" below).
+  extra API calls, simple pass/fail arithmetic. Still computed and written to every
+  company's JSON (feeding the Key Metrics Reference's good/bad sentiment bands), but
+  no longer rendered as its own section on the company page — "Assets vs. Liabilities"
+  and "Plain-Language Analysis" carry that same information in plainer form. The
+  weekly screen itself ranks by price return instead (see "Weekly Screener" below).
 - **Plain-Language Analysis** (see the dedicated section below): a short, jargon-free
   "what's good / what to worry about" summary on every company page, written straight
   from the metrics above it — no AI, no blended score, one plain sentence per clear
