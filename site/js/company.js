@@ -4,7 +4,7 @@ import {
   escapeHtml,
   renderDisclaimerFooter,
   lookupTicker,
-  renderFilingCard,
+  renderFilingsSection,
 } from "./shared.js";
 import { METRIC_GLOSSARY, glossaryEntry } from "./metrics-glossary.js";
 
@@ -144,9 +144,7 @@ function renderRecentFilings(doc) {
   return `
     <section class="recent-filings">
       <h3>Recent Filings <span class="attribution">(latest 10-K, 10-Q, and 8-K, each with a short AI summary when available)</span></h3>
-      <div class="filings-grid">
-        ${filings.map((f) => renderFilingCard(f, doc.qualitative)).join("")}
-      </div>
+      ${renderFilingsSection(filings, doc.qualitative)}
     </section>
   `;
 }

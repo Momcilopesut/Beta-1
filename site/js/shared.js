@@ -54,13 +54,33 @@ export const FILING_SUMMARY_KEY = { "10-K": "filing_summary_10k", "10-Q": "filin
 
 export function renderFilingCard(filing, qualitative) {
   const summary = qualitative?.[FILING_SUMMARY_KEY[filing.form]];
-  const body = summary ? `<p>${escapeHtml(summary)}</p>` : "";
   return `
     <div class="filing-card">
       <h4><a href="${escapeHtml(filing.url)}" target="_blank" rel="noopener">${escapeHtml(filing.form)}</a> <span class="meta">filed ${escapeHtml(filing.filed)}</span></h4>
-      ${body}
+      <p>${escapeHtml(summary)}</p>
     </div>
   `;
+}
+
+function renderFilingListRow(filing) {
+  return `<li><a href="${escapeHtml(filing.url)}" target="_blank" rel="noopener">${escapeHtml(filing.form)}</a> <span class="meta">filed ${escapeHtml(filing.filed)}</span></li>`;
+}
+
+// Splits a company's filings into two treatments: ones with an AI summary
+// get the fuller card (renderFilingCard, above), ones without just get a
+// plain document-link row - no point giving an empty card the same visual
+// weight as one with real content. Shared by the company page's Recent
+// Filings section and the cross-company Filings Digest page.
+export function renderFilingsSection(filings, qualitative) {
+  const withSummary = filings.filter((f) => qualitative?.[FILING_SUMMARY_KEY[f.form]]);
+  const withoutSummary = filings.filter((f) => !qualitative?.[FILING_SUMMARY_KEY[f.form]]);
+  const cards = withSummary.length
+    ? `<div class="filings-grid">${withSummary.map((f) => renderFilingCard(f, qualitative)).join("")}</div>`
+    : "";
+  const list = withoutSummary.length
+    ? `<ul class="filings-list">${withoutSummary.map(renderFilingListRow).join("")}</ul>`
+    : "";
+  return cards + list;
 }
 
 // --- On-demand lookup config (api/lookup.py, deployed separately to

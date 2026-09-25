@@ -1,4 +1,4 @@
-import { fetchJSON, escapeHtml, renderFilingCard, renderDisclaimerFooter } from "./shared.js";
+import { fetchJSON, escapeHtml, renderFilingsSection, renderDisclaimerFooter } from "./shared.js";
 
 async function main() {
   const content = document.getElementById("content");
@@ -35,12 +35,11 @@ function render(doc) {
 
 function renderEntry(entry) {
   const filings = entry.sec_filings || [];
-  const cards = filings.map((f) => renderFilingCard(f, entry.qualitative)).join("");
   return `
     <section class="digest-entry">
       <h3><a href="company.html?ticker=${encodeURIComponent(entry.ticker)}">${escapeHtml(entry.ticker)} &mdash; ${escapeHtml(entry.name)}</a>
       <span class="meta">${escapeHtml(entry.sector || "—")}</span></h3>
-      <div class="filings-grid">${cards}</div>
+      ${renderFilingsSection(filings, entry.qualitative)}
     </section>
   `;
 }
