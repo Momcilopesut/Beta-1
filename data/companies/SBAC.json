@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -176.28707252337637,
+      "graham_multiple": -173.8926375231685,
       "graham_number": null,
       "graham_upside_pct": null,
       "ncav_margin_pct": null,
-      "pb_ratio": -3.6566210870710507,
-      "pe_ttm": 48.21037463976945
+      "pb_ratio": -3.6317029925091466,
+      "pe_ttm": 47.88184438040346
     }
   },
   "industry": "REIT - Specialty",
-  "last_updated": "2026-09-25T16:16:40Z",
+  "last_updated": "2026-09-25T21:47:50Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 17722968206,
+  "market_cap": 17622367450,
   "metrics": {
     "book_value_per_share": -45.74988658012665,
     "current_ratio": 0.2887767282318156,
@@ -108,19 +108,19 @@
     "fcf_margin_pct": 148.2120895018365,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 5,
-    "graham_multiple": -176.28707252337637,
+    "graham_multiple": -173.8926375231685,
     "gross_margin_pct": 295.1941610627266,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "pb_ratio": -3.6566210870710507,
-    "pe_ttm": 48.21037463976945,
+    "pb_ratio": -3.6317029925091466,
+    "pe_ttm": 47.88184438040346,
     "reinvestment_rate_pct": -764.9245608331976,
     "roe_pct": -7.629309785333074,
     "roic_pct": 3.26103862187744,
     "shareholders_equity": -4853519000,
     "total_assets": 11575012000,
-    "value_creation_pct": -2.5900480287082837
+    "value_creation_pct": -2.616425692594133
   },
   "name": "SBA Communications",
   "plain_analysis": {
@@ -138,7 +138,7 @@
   },
   "price": {
     "as_of": "2026-09-25",
-    "close": 167.29
+    "close": 166.15
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -146,14 +146,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001034054.json",
     "sec_filings": [
       {
+        "filed": "2026-09-25",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1034054/000119312526402918/d152825d8k.htm"
+      },
+      {
         "filed": "2026-08-06",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1034054/000103405426000011/sbac-20260630x10q.htm"
-      },
-      {
-        "filed": "2026-08-03",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1034054/000119312526330639/d154311d8k.htm"
       },
       {
         "filed": "2026-02-27",
@@ -168,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $17.7B",
+          "detail": "Market cap $17.6B",
           "passed": true
         },
         {
@@ -193,12 +193,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 48.2",
+          "detail": "P/E 47.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -176.3",
+          "detail": "P/E x P/B = -173.9",
           "passed": true
         }
       ],

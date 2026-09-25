@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 303.1532650880513,
+      "graham_multiple": 307.84950319078166,
       "graham_number": 75.55936582570361,
-      "graham_upside_pct": -72.75667358006001,
-      "ncav_margin_pct": -111.4936322447291,
-      "pb_ratio": 7.957295005736482,
-      "pe_ttm": 38.097527472527474
+      "graham_upside_pct": -72.96527037614813,
+      "ncav_margin_pct": -111.40562776155004,
+      "pb_ratio": 8.018692558692226,
+      "pe_ttm": 38.39148351648352
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-25T16:09:04Z",
+  "last_updated": "2026-09-25T22:02:25Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 78296051600,
+  "market_cap": 78659106620,
   "metrics": {
     "book_value_per_share": 34.85480930392251,
     "current_ratio": 1.0760474822483603,
@@ -107,20 +107,20 @@
     "fcf_margin_pct": 11.841777976767903,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 303.1532650880513,
-    "graham_upside_pct": -72.75667358006001,
+    "graham_multiple": 307.84950319078166,
+    "graham_upside_pct": -72.96527037614813,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -111.4936322447291,
-    "pb_ratio": 7.957295005736482,
-    "pe_ttm": 38.097527472527474,
+    "ncav_margin_pct": -111.40562776155004,
+    "pb_ratio": 8.018692558692226,
+    "pe_ttm": 38.39148351648352,
     "roe_pct": 21.24288696933721,
     "roic_pct": 22.50278591157897,
     "shareholders_equity": 9770800000,
     "total_assets": 24696300000,
     "total_liabilities": 14891800000,
-    "value_creation_pct": 12.198384676094017
+    "value_creation_pct": 12.130038230227896
   },
   "name": "Ecolab Inc.",
   "plain_analysis": {
@@ -137,9 +137,23 @@
   },
   "price": {
     "as_of": "2026-09-25",
-    "close": 277.35
+    "close": 279.49
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "Ecolab's 10-K describes a global water, hygiene and infection prevention company with about $16 billion in 2025 sales across four reportable segments: Global Water, Global Institutional & Specialty, Global Pest Elimination, and Global Life Sciences. The company reported 2025 net sales of $16.1 billion (up 2% reported, 3% organic), gross margin improvement to 44.5%, and adjusted diluted EPS growth of 13% to $7.53, while reported diluted EPS declined slightly to $7.28 due to special charges. The filing also discusses the December 2025 acquisition of Ovivo's electronics business for $1.6 billion and details on goodwill, intangible assets, and critical accounting estimates including pension assumptions and tax positions.",
+    "filing_summary_10q": "The excerpt provided is primarily XBRL tagging data from Ecolab's Form 10-Q for the quarter ended June 30, 2026, without narrative text describing business or financial results. It references items such as debt issuances (senior notes across various maturities), the One Ecolab restructuring initiative, the Ovivo Electronics and CoolIT Systems transactions, and goodwill impairment testing across reporting units, but does not provide sufficient prose detail to summarize specific quarterly financial performance.",
+    "filing_summary_8k": "This Form 8-K, dated July 28, 2026, discloses that Ecolab announced its second quarter 2026 earnings results, with a news release and supplemental data furnished as exhibits under Item 2.02. The filing includes standard forward-looking statement cautions referencing risks related to the company's restructuring plan and other factors described in its most recent 10-K, but does not itself detail specific financial figures within the provided text.",
+    "moat_explanation": "The 10-K describes Ecolab as a global leader with a broad portfolio of branded products (Ecolab, Kay, Nalco, Purolite, Bioquell), extensive patented technologies like 3D TRASAR, and long-standing customer relationships built through embedded, on-site service and digital monitoring systems across 170 countries. The MD&A notes the Nalco trade name and customer relationship intangibles are valued in the billions and have shown consistent retention, supporting a durable brand/intangible asset moat, with some switching-cost elements from integrated on-site programs and dispensing systems, though intangible assets/brand strength is the most directly supported category.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Specialty segment (QSR/food retail) business remains largely dependent upon a limited number of major QSR chains, franchisees and large food retail customers, indicating customer concentration risk",
+      "Ongoing IRS audit for tax years 2019-2020 and multiple foreign/state tax audits create some uncertainty around unrecognized tax benefits",
+      "Significant reliance on actuarial and discount rate assumptions for large pension/postretirement obligations, which could materially affect reported results if assumptions change",
+      "Reported diluted EPS decreased slightly year-over-year (from $7.37 to $7.28) despite adjusted EPS growth, reflecting the impact of special charges and acquisition-related costs"
+    ]
+  },
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000031462.json",
@@ -167,7 +181,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $78.3B",
+          "detail": "Market cap $78.7B",
           "passed": true
         },
         {
@@ -192,12 +206,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 38.1",
+          "detail": "P/E 38.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 303.2",
+          "detail": "P/E x P/B = 307.8",
           "passed": false
         }
       ],

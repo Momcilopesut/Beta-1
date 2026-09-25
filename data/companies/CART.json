@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 109.25667870855678,
+      "graham_multiple": 107.18692715701911,
       "graham_number": 19.788075228047887,
-      "graham_upside_pct": -54.61971051932603,
-      "ncav_margin_pct": -87.86475142209586,
-      "pb_ratio": 4.008959659068704,
-      "pe_ttm": 27.253124999999997
+      "graham_upside_pct": -54.183664672266985,
+      "ncav_margin_pct": -87.74814738968489,
+      "pb_ratio": 3.970805358907863,
+      "pe_ttm": 26.99375
     }
   },
   "industry": "Software - Services",
-  "last_updated": "2026-09-25T16:20:01Z",
+  "last_updated": "2026-09-25T21:51:47Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 10249650189,
+  "market_cap": 10150937667,
   "metrics": {
     "book_value_per_share": 10.876886700857845,
     "current_ratio": 2.3980370774263906,
@@ -106,15 +106,15 @@
     "fcf_margin_pct": 24.31854623196152,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": 109.25667870855678,
-    "graham_upside_pct": -54.61971051932603,
+    "graham_multiple": 107.18692715701911,
+    "graham_upside_pct": -54.183664672266985,
     "gross_margin_pct": 73.70390165686798,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -87.86475142209586,
-    "pb_ratio": 4.008959659068704,
-    "pe_ttm": 27.253124999999997,
+    "ncav_margin_pct": -87.74814738968489,
+    "pb_ratio": 3.970805358907863,
+    "pe_ttm": 26.99375,
     "reinvestment_rate_pct": -161.60031625382962,
     "roe_pct": 17.752184273232725,
     "shareholders_equity": 2518000000,
@@ -136,7 +136,7 @@
   },
   "price": {
     "as_of": "2026-09-25",
-    "close": 43.605
+    "close": 43.19
   },
   "qualitative": null,
   "sector": "Technology",
@@ -144,14 +144,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001579091.json",
     "sec_filings": [
       {
+        "filed": "2026-09-25",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000047/cart-20260921.htm"
+      },
+      {
         "filed": "2026-08-07",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000042/cart-20260630.htm"
-      },
-      {
-        "filed": "2026-08-06",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000040/cart-20260806.htm"
       },
       {
         "filed": "2026-02-26",
@@ -191,12 +191,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 27.3",
+          "detail": "P/E 27.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 109.3",
+          "detail": "P/E x P/B = 107.2",
           "passed": false
         }
       ],

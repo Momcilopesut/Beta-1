@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 1405.9083214634315,
+      "graham_multiple": 1369.6962550696858,
       "graham_number": 33.5722886190394,
-      "graham_upside_pct": -87.3493523931572,
-      "ncav_margin_pct": -100.65157869443293,
-      "pb_ratio": 16.263993318610048,
-      "pe_ttm": 86.44299674267101
+      "graham_upside_pct": -87.183214240269,
+      "ncav_margin_pct": -100.66013573310151,
+      "pb_ratio": 16.053170585110845,
+      "pe_ttm": 85.32247557003258
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-25T16:17:28Z",
+  "last_updated": "2026-09-25T21:48:43Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 232708541520,
+  "market_cap": 229393767210,
   "metrics": {
     "book_value_per_share": 16.31702588664614,
     "current_ratio": 2.0060860114888994,
@@ -106,21 +106,21 @@
     "fcf_margin_pct": 17.040490078832402,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 1405.9083214634315,
-    "graham_upside_pct": -87.3493523931572,
+    "graham_multiple": 1369.6962550696858,
+    "graham_upside_pct": -87.183214240269,
     "gross_margin_pct": 51.017743391989846,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -100.65157869443293,
-    "pb_ratio": 16.263993318610048,
-    "pe_ttm": 86.44299674267101,
+    "ncav_margin_pct": -100.66013573310151,
+    "pb_ratio": 16.053170585110845,
+    "pe_ttm": 85.32247557003258,
     "roe_pct": 18.661066226831792,
     "roic_pct": 7.41295305166174,
     "shareholders_equity": 14308400000,
     "total_assets": 22285300000,
     "total_liabilities": 7976900000,
-    "value_creation_pct": -2.5274301674980624
+    "value_creation_pct": -2.593829803665116
   },
   "name": "Marvell Technology",
   "plain_analysis": {
@@ -139,7 +139,7 @@
   },
   "price": {
     "as_of": "2026-09-25",
-    "close": 265.38
+    "close": 261.94
   },
   "qualitative": null,
   "sector": "Technology",
@@ -147,14 +147,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001835632.json",
     "sec_filings": [
       {
+        "filed": "2026-09-25",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1835632/000162828026063592/mrvl-20260925.htm"
+      },
+      {
         "filed": "2026-08-28",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm"
-      },
-      {
-        "filed": "2026-08-27",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000022/mrvl-20260827.htm"
       },
       {
         "filed": "2026-03-11",
@@ -169,7 +169,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $232.7B",
+          "detail": "Market cap $229.4B",
           "passed": true
         },
         {
@@ -194,12 +194,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 86.4",
+          "detail": "P/E 85.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1405.9",
+          "detail": "P/E x P/B = 1369.7",
           "passed": false
         }
       ],

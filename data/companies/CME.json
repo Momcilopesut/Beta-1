@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 14.123245549613932,
+      "graham_multiple": 14.540234158057938,
       "graham_number": 329.001891663931,
-      "graham_upside_pct": 26.218787563849837,
-      "ncav_margin_pct": -124.96471720350173,
-      "pb_ratio": 0.6046782027687082,
-      "pe_ttm": 23.35663082437276
+      "graham_upside_pct": 24.39575456137742,
+      "ncav_margin_pct": -124.60414090390488,
+      "pb_ratio": 0.6135398260886517,
+      "pe_ttm": 23.698924731182796
     }
   },
   "industry": "Financial - Data & Stock Exchanges",
-  "last_updated": "2026-09-25T16:13:08Z",
+  "last_updated": "2026-09-25T21:44:00Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 93748394925,
+  "market_cap": 95101527710,
   "metrics": {
     "book_value_per_share": 431.0722609257068,
     "current_ratio": 1.031582683860616,
@@ -106,14 +106,14 @@
     "fcf_margin_pct": 64.31310002147042,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 5,
-    "graham_multiple": 14.123245549613932,
-    "graham_upside_pct": 26.218787563849837,
+    "graham_multiple": 14.540234158057938,
+    "graham_upside_pct": 24.39575456137742,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "ncav_margin_pct": -124.96471720350173,
-    "pb_ratio": 0.6046782027687082,
-    "pe_ttm": 23.35663082437276,
+    "ncav_margin_pct": -124.60414090390488,
+    "pb_ratio": 0.6135398260886517,
+    "pe_ttm": 23.698924731182796,
     "reinvestment_rate_pct": 133.66971523964077,
     "roe_pct": 14.174922201878292,
     "shareholders_equity": 28728200000,
@@ -132,7 +132,7 @@
   },
   "price": {
     "as_of": "2026-09-25",
-    "close": 260.66
+    "close": 264.48
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -140,9 +140,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001156375.json",
     "sec_filings": [
       {
-        "filed": "2026-09-09",
+        "filed": "2026-09-25",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1156375/000119312526386091/d157844d8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1156375/000115637526000060/cme-20260924.htm"
       },
       {
         "filed": "2026-07-24",
@@ -162,7 +162,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $93.7B",
+          "detail": "Market cap $95.1B",
           "passed": true
         },
         {
@@ -187,12 +187,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 23.4",
+          "detail": "P/E 23.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 14.1",
+          "detail": "P/E x P/B = 14.5",
           "passed": true
         }
       ],

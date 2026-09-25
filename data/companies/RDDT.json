@@ -52,7 +52,7 @@
       "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 15.249795520922795,
+      "book_value_per_share": 15.211006386847227,
       "shareholders_equity": 2929038000,
       "total_assets": 3239173000,
       "total_liabilities": 310135000
@@ -71,16 +71,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 591.1884074691336,
-      "graham_number": 29.982919236765436,
-      "graham_upside_pct": -80.49130116678676,
-      "ncav_margin_pct": -90.42712233518098,
-      "pb_ratio": 10.078167919637778,
-      "pe_ttm": 58.660305343511446
+      "graham_multiple": 563.3733365109392,
+      "graham_number": 29.944762922832503,
+      "graham_upside_pct": -80.01550792656667,
+      "ncav_margin_pct": -90.20613116419074,
+      "pb_ratio": 9.8507617569318,
+      "pe_ttm": 57.19083969465649
     }
   },
   "industry": "Internet Content & Information",
-  "last_updated": "2026-09-25T16:32:37Z",
+  "last_updated": "2026-09-25T21:41:54Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -88,21 +88,21 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 29519336807,
+  "market_cap": 28853255515,
   "metrics": {
-    "book_value_per_share": 15.249795520922795,
+    "book_value_per_share": 15.211006386847227,
     "current_ratio": 11.559828666005611,
     "fcf_margin_pct": 31.063207092284877,
     "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 1,
-    "graham_multiple": 591.1884074691336,
-    "graham_upside_pct": -80.49130116678676,
+    "graham_multiple": 563.3733365109392,
+    "graham_upside_pct": -80.01550792656667,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -90.42712233518098,
-    "pb_ratio": 10.078167919637778,
-    "pe_ttm": 58.660305343511446,
+    "ncav_margin_pct": -90.20613116419074,
+    "pb_ratio": 9.8507617569318,
+    "pe_ttm": 57.19083969465649,
     "reinvestment_rate_pct": 182.4749814310353,
     "roe_pct": 18.085152872717934,
     "shareholders_equity": 2929038000,
@@ -122,25 +122,9 @@
   },
   "price": {
     "as_of": "2026-09-25",
-    "close": 153.69
+    "close": 149.84
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For the year ended December 31, 2025, Reddit reported revenue of $2.2 billion (up 69% year over year), gross margin of 91.2%, and net income of $529.7 million versus a net loss of $484.3 million in 2024. Daily active uniques reached 121.4 million in Q4 2025 (up 19% year over year) and ARPU rose 42% to $5.98. The filing attributes revenue growth mainly to higher ad impressions and pricing, plus new content licensing agreements, while noting macroeconomic conditions and advertising market uncertainty as ongoing considerations.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (quarter ended June 30, 2026) consists mainly of XBRL tags, cover-page information, and a partial list of forward-looking statement topics; it does not include the actual narrative financial results or MD&A discussion for the quarter. As of July 29, 2026, the company had approximately 146.1 million Class A and 46.3 million Class B shares outstanding. No further period-specific financial or operational details are available from the excerpt given.",
-    "filing_summary_8k": "This 8-K, dated August 12, 2026, discloses that Chief Legal Officer and Corporate Secretary Benjamin Lee notified Reddit of his intent to step down effective September 14, 2026, remaining as an employee through September 25, 2026 to assist with the transition. Reddit expects to appoint Paul Cappuccio as the new Chief Legal Officer and Corporate Secretary. No financial results or other events are described in this filing.",
-    "moat_explanation": "The 10-K describes a large, self-reinforcing community ecosystem (over 100,000 active communities, growing corpus of posts/comments) where user-generated content and engagement compound over time, and where new subreddits spur further subreddit creation, a classic network-effect dynamic. The filing also notes Reddit's content is heavily cited by AI/LLM providers, suggesting some data-scale advantage, but the network-effect language around community growth and engagement is the most consistently emphasized theme.",
-    "moat_present": true,
-    "moat_type": "network_effects",
-    "red_flags": [
-      "Excerpts describe intense competition from much larger, better-resourced companies (Google, Meta, TikTok, Snap, Pinterest, Discord, Twitch) that could draw users away",
-      "Risk factors flag competition from AI/LLM tools (including those trained on Reddit content) that could let users get answers without visiting Reddit directly",
-      "Company states it generates a majority of revenue from advertising, making it vulnerable to loss of advertisers or reduced ad budgets",
-      "10-K states the company is still in early stages of monetizing its platform and of content licensing, with no assurance of successful scaling",
-      "History of net losses in prior years (2023 and 2024) before turning profitable in 2025, per MD&A figures",
-      "Multi-class stock structure concentrates voting control with pre-IPO holders and a principal stockholder, limiting other shareholders' influence on corporate matters"
-    ]
-  },
+  "qualitative": null,
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001713445.json",
@@ -168,7 +152,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $29.5B",
+          "detail": "Market cap $28.9B",
           "passed": true
         },
         {
@@ -193,12 +177,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 58.7",
+          "detail": "P/E 57.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 591.2",
+          "detail": "P/E x P/B = 563.4",
           "passed": false
         }
       ],
