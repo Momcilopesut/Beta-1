@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 139.98829653616707,
+      "graham_multiple": 137.60122604483382,
       "graham_number": 58.99369948740933,
-      "graham_upside_pct": -59.90913795684979,
-      "ncav_margin_pct": -113.44929231836068,
-      "pb_ratio": 6.297808943578086,
-      "pe_ttm": 22.228095166163143
+      "graham_upside_pct": -59.562890199870225,
+      "ncav_margin_pct": -113.56544814691789,
+      "pb_ratio": 6.243883175110014,
+      "pe_ttm": 22.03776435045317
     }
   },
   "industry": "Household & Personal Products",
-  "last_updated": "2026-09-24T15:51:07Z",
+  "last_updated": "2026-09-25T16:34:37Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 349806280570,
+  "market_cap": 346264262469,
   "metrics": {
     "book_value_per_share": 23.36526739987083,
     "current_ratio": 0.6773143122964801,
@@ -108,14 +108,14 @@
     "fcf_margin_pct": 17.403943377148636,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 139.98829653616707,
-    "graham_upside_pct": -59.90913795684979,
+    "graham_multiple": 137.60122604483382,
+    "graham_upside_pct": -59.562890199870225,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -113.44929231836068,
-    "pb_ratio": 6.297808943578086,
-    "pe_ttm": 22.228095166163143,
+    "ncav_margin_pct": -113.56544814691789,
+    "pb_ratio": 6.243883175110014,
+    "pe_ttm": 22.03776435045317,
     "reinvestment_rate_pct": -3.6495732628542834,
     "roe_pct": 29.544659461250944,
     "shareholders_equity": 54311000000,
@@ -135,10 +135,26 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 147.14999
+    "as_of": "2026-09-25",
+    "close": 145.89
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "P&G's fiscal 2026 10-K describes a global consumer goods business with five reportable segments (Beauty, Grooming, Health Care, Fabric & Home Care, and Baby, Feminine & Family Care) generating $87.0 billion in net sales, up 3% year-over-year, with organic sales growth of 1% and operating income down 3% to $19.7 billion. The filing discusses several recent developments including completion of a limited market portfolio restructuring (with Argentina liquidation charges), a prior Gillette intangible impairment, a new focused portfolio/productivity restructuring plan, dissolution of the Glad joint venture with Clorox, partial recovery of previously paid IEEPA tariffs following a Supreme Court ruling, and a pending $3.8 billion agreement to acquire Thorne announced after fiscal year-end.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended March 31, 2026, fiscal Q3 2026) consists solely of XBRL taxonomy and context tags rather than narrative text, listing the company's five reportable segments, various outstanding notes/debt instruments, and data points such as Gillette intangible asset sensitivity analysis inputs and stock-based compensation and pension categories. No descriptive discussion of quarterly financial results or business developments was included in the excerpt supplied, so a substantive summary of the quarter's results cannot be provided from this text alone.",
+    "filing_summary_8k": "This 8-K, dated July 29, 2026, discloses under Item 7.01 (Regulation FD Disclosure) that P&G issued a press release announcing its fourth-quarter and full fiscal year 2026 results and held an related conference call. The company furnished informational slides referenced on that call as an exhibit; the filing itself does not include the underlying financial results text, only the announcement and exhibit listing.",
+    "moat_explanation": "The 10-K describes P&G as holding leadership or top-two market share positions across nearly all its categories (e.g., >50% share in grooming, ~35%+ in fabric care, ~30% in oral care and baby care) built on long-standing brand names like Tide, Pampers, Gillette, Crest and Always, along with owned patents and trademarks described as central to its marketing and manufacturing processes. The excerpts attribute competitive success explicitly to brand equity, trademarks and patents rather than to a stated low-cost structure, network effects, or switching-cost mechanics, supporting an intangible-assets moat classification.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Customer concentration: Walmart and affiliates represent ~16% of total sales, and top ten customers account for ~42-43% of net sales",
+      "Company recorded a $1.3 billion pre-tax non-cash impairment on the Gillette indefinite-lived intangible asset, indicating a decline in that asset's estimated fair value",
+      "Ongoing multi-year restructuring programs (including a plan to cut up to 7,000 non-manufacturing roles and $1.5-2.0 billion in restructuring costs) signal cost-structure and organizational pressure",
+      "Operating income and operating margin declined year-over-year in fiscal 2026 despite higher net sales, indicating margin pressure",
+      "Significant exposure to tariffs, foreign currency fluctuations, and geopolitical disruptions (e.g., Russia/Ukraine, Middle East conflict, IEEPA tariff litigation) that the company itself flags as adversely affecting results",
+      "Reliance on single-source/sole suppliers and sole manufacturing plant arrangements for certain materials and products, creating supply chain concentration risk"
+    ]
+  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000080424.json",
@@ -166,7 +182,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $349.8B",
+          "detail": "Market cap $346.3B",
           "passed": true
         },
         {
@@ -191,12 +207,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 22.2",
+          "detail": "P/E 22.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 140.0",
+          "detail": "P/E x P/B = 137.6",
           "passed": false
         }
       ],

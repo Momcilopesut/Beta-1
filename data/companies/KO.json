@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 346.4159398222213,
+      "graham_multiple": 340.6622034782815,
       "graham_number": 22.614515049605092,
-      "graham_upside_pct": -74.51454888194614,
+      "graham_upside_pct": -74.30022722926861,
       "ncav_margin_pct": null,
-      "pb_ratio": 11.867971567696541,
-      "pe_ttm": 29.189144736842106
+      "pb_ratio": 11.768999358758744,
+      "pe_ttm": 28.945723684210527
     }
   },
   "industry": "Beverages - Non-Alcoholic",
-  "last_updated": "2026-09-24T15:51:08Z",
+  "last_updated": "2026-09-25T16:27:10Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 380452902619,
+  "market_cap": 378667331681,
   "metrics": {
     "book_value_per_share": 7.476846358608408,
     "current_ratio": 1.4587660354306657,
@@ -106,14 +106,14 @@
     "fcf_margin_pct": 11.046911829123298,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 346.4159398222213,
-    "graham_upside_pct": -74.51454888194614,
+    "graham_multiple": 340.6622034782815,
+    "graham_upside_pct": -74.30022722926861,
     "gross_margin_pct": 61.62574831563797,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "pb_ratio": 11.867971567696541,
-    "pe_ttm": 29.189144736842106,
+    "pb_ratio": 11.768999358758744,
+    "pe_ttm": 28.945723684210527,
     "reinvestment_rate_pct": 89.17008848330468,
     "roe_pct": 40.74419472162641,
     "shareholders_equity": 32169000000,
@@ -132,10 +132,26 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 88.735
+    "as_of": "2026-09-25",
+    "close": 87.995
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The provided 10-K excerpts consist mainly of Risk Factors covering regulatory compliance, foreign currency and interest rate exposure, counterparty/financial institution risk, impairment risk, cybersecurity, and data privacy, plus a brief MD&A introduction. Critical accounting estimate disclosures describe a $960 million impairment charge recorded in Q4 2025 on the BodyArmor trademark (following a $760 million charge in 2024), leaving a remaining carrying value of $2,440 million, and note $28.8 billion of 2025 net operating revenues came from outside the United States. The excerpts also describe pension plan assumptions, with total net periodic pension cost of $121 million in 2025 and an expected $87 million in 2026.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q, covering the fiscal quarter ended July 3, 2026, consists almost entirely of XBRL data tags (e.g., relating to hedging instruments, debt notes, segment revenue by geography and product type, and fair value disclosures) rather than narrative text. As a result, this excerpt does not contain descriptive discussion of the quarter's business results or developments that can be summarized.",
+    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses under Item 2.02 (Results of Operations and Financial Condition) that Coca-Cola issued a press release, attached as Exhibit 99.1, reporting its second quarter 2026 financial results. The excerpt itself does not include the substantive financial figures from that press release, only the notice that the release was furnished.",
+    "moat_explanation": "The excerpts reference material indefinite-lived intangible assets and trademarks (e.g., the BodyArmor trademark with a remaining carrying value of $2,440 million) that the company tests annually for impairment, implying brand-based assets are a core part of the business. However, the provided excerpts are dominated by risk-factor and accounting-estimate language rather than an affirmative description of brand strength, distribution scale, or bottling-network advantages, so the support for a durable moat is limited to this intangible-asset framing.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Recorded a $960 million additional impairment charge on the BodyArmor trademark in Q4 2025 (following a $760 million impairment in 2024), with remaining carrying value of $2,440 million still at risk of further write-down",
+      "Significant reliance on and financial interdependence with third-party bottling partners, whose credit downgrades or financial distress could raise the company's own borrowing costs or reduce equity income",
+      "Extensive foreign currency exposure ($28.8 billion of 2025 net operating revenues from outside the U.S.) subject to exchange rate volatility, tariffs, and geopolitical/economic disruption",
+      "Acknowledged cybersecurity and data-privacy risks, including reliance on third-party bottlers/vendors with differing security controls",
+      "Exposure to evolving environmental regulation (plastics, water use, emissions) that could raise compliance and capital costs or restrict operations",
+      "Pension and other long-lived asset valuations depend on judgment-heavy assumptions (discount rates, growth rates) that could trigger material impairment charges in future periods"
+    ]
+  },
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000021344.json",
@@ -163,7 +179,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $380.5B",
+          "detail": "Market cap $378.7B",
           "passed": true
         },
         {
@@ -188,12 +204,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 29.2",
+          "detail": "P/E 28.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 346.4",
+          "detail": "P/E x P/B = 340.7",
           "passed": false
         }
       ],

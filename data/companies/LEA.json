@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 16.84157106410353,
+      "graham_multiple": 18.028464648154923,
       "graham_number": 136.81748584756846,
-      "graham_upside_pct": 15.584595630285087,
+      "graham_upside_pct": 11.715102349610895,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.1595742516891423,
-      "pe_ttm": 14.523926380368097
+      "pb_ratio": 1.1997386044130207,
+      "pe_ttm": 15.026993865030674
     }
   },
   "industry": "Auto - Parts",
-  "last_updated": "2026-09-24T16:01:08Z",
+  "last_updated": "2026-09-25T16:19:32Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,22 +98,22 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 5932637455,
+  "market_cap": 6123374549,
   "metrics": {
     "book_value_per_share": 102.08056950865492,
     "current_ratio": 1.3521907148276897,
     "eps_growth_cagr_3yr_pct": 14.215074523775883,
     "fcf_margin_pct": 2.266639723807026,
     "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 6,
-    "graham_multiple": 16.84157106410353,
-    "graham_upside_pct": 15.584595630285087,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 18.028464648154923,
+    "graham_upside_pct": 11.715102349610895,
     "gross_margin_pct": 6.468006070742203,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "pb_ratio": 1.1595742516891423,
-    "pe_ttm": 14.523926380368097,
+    "pb_ratio": 1.1997386044130207,
+    "pe_ttm": 15.026993865030674,
     "reinvestment_rate_pct": 36.61274747577974,
     "roe_pct": 8.675100792437092,
     "shareholders_equity": 5035100000,
@@ -123,16 +123,15 @@
   "plain_analysis": {
     "positives": [
       "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
-      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
-      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount."
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
     ],
     "worries": [
       "It keeps very little of each dollar it makes in sales after paying the direct cost of making or providing what it sells, so even a small rise in costs could hurt its profits a lot."
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 118.37
+    "as_of": "2026-09-25",
+    "close": 122.47
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -140,14 +139,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000842162.json",
     "sec_filings": [
       {
-        "filed": "2026-07-31",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/842162/000084216226000068/lear-20260704.htm"
+        "filed": "2026-09-24",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/842162/000084216226000080/lear-20260924.htm"
       },
       {
         "filed": "2026-07-31",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/842162/000084216226000065/lear-20260731.htm"
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/842162/000084216226000068/lear-20260704.htm"
       },
       {
         "filed": "2026-02-13",
@@ -162,7 +161,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $5.9B",
+          "detail": "Market cap $6.1B",
           "passed": true
         },
         {
@@ -187,17 +186,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 14.5",
-          "passed": true
+          "detail": "P/E 15.0",
+          "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 16.8",
+          "detail": "P/E x P/B = 18.0",
           "passed": true
         }
       ],
       "evaluated": 6,
-      "passed": 6,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {

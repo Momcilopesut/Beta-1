@@ -59,11 +59,11 @@
     "balance_sheet": {
       "current_ratio": 0.5789648671419558,
       "debt_to_ebitda": 3.1069928779860976,
-      "debt_to_equity": null
+      "debt_to_equity": 3.336238349927155
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": 10.124128080971454,
+      "shareholders_equity": 1024779000,
       "total_assets": 6931954000,
       "total_liabilities": 5907175000
     },
@@ -76,21 +76,21 @@
     },
     "profitability": {
       "gross_margin_pct": null,
-      "roe_pct": null,
-      "roic_pct": null,
+      "roe_pct": 57.29547541469917,
+      "roic_pct": 17.063512488595663,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": -137.6403345644423,
-      "pb_ratio": null,
-      "pe_ttm": 24.67244367417678
+      "graham_multiple": 351.7396708835404,
+      "graham_number": 36.25417118225321,
+      "graham_upside_pct": -74.70815086421673,
+      "ncav_margin_pct": -137.544249505651,
+      "pb_ratio": 14.158582235779615,
+      "pe_ttm": 24.842859618717505
     }
   },
   "industry": "REIT - Specialty",
-  "last_updated": "2026-09-24T16:06:13Z",
+  "last_updated": "2026-09-25T16:25:25Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,34 +98,48 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 14472379332,
+  "market_cap": 14509417745,
   "metrics": {
+    "book_value_per_share": 10.124128080971454,
     "current_ratio": 0.5789648671419558,
     "debt_to_ebitda": 3.1069928779860976,
+    "debt_to_equity": 3.336238349927155,
     "eps_growth_cagr_3yr_pct": 10.213005991495127,
-    "graham_criteria_evaluated": 5,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
+    "graham_multiple": 351.7396708835404,
+    "graham_upside_pct": -74.70815086421673,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 1,
-    "munger_quality_passed": 1,
-    "ncav_margin_pct": -137.6403345644423,
-    "pe_ttm": 24.67244367417678,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -137.544249505651,
+    "pb_ratio": 14.158582235779615,
+    "pe_ttm": 24.842859618717505,
     "reinvestment_rate_pct": -16.94964451350031,
+    "roe_pct": 57.29547541469917,
+    "roic_pct": 17.063512488595663,
+    "shareholders_equity": 1024779000,
     "total_assets": 6931954000,
-    "total_liabilities": 5907175000
+    "total_liabilities": 5907175000,
+    "value_creation_pct": 8.881475656467208
   },
   "name": "Lamar Advertising Company",
   "plain_analysis": {
     "positives": [
-      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
     ],
     "worries": [
-      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon."
+      "It has borrowed a lot of money - what it owes is more than twice what the business itself is worth, which makes it riskier if things go wrong.",
+      "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 142.36
+    "as_of": "2026-09-25",
+    "close": 143.3433
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -180,16 +194,16 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.7",
+          "detail": "P/E 24.8",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 351.7",
+          "passed": false
         }
       ],
-      "evaluated": 5,
+      "evaluated": 6,
       "passed": 3,
       "total": 7
     },
@@ -197,13 +211,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 57.3%",
+          "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 3.34",
+          "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -216,8 +230,8 @@
           "passed": null
         }
       ],
-      "evaluated": 1,
-      "passed": 1,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },

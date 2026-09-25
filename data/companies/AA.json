@@ -59,11 +59,11 @@
     "balance_sheet": {
       "current_ratio": 1.4388318863456986,
       "debt_to_ebitda": null,
-      "debt_to_equity": null
+      "debt_to_equity": 0.3937681627381337
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": 23.470171747737183,
+      "shareholders_equity": 6194000000,
       "total_assets": 16129000000,
       "total_liabilities": 9935000000
     },
@@ -76,21 +76,21 @@
     },
     "profitability": {
       "gross_margin_pct": null,
-      "roe_pct": null,
+      "roe_pct": 18.67936712948014,
       "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": -139.78229021929235,
-      "pb_ratio": null,
-      "pe_ttm": 9.734027459954234
+      "graham_multiple": 18.002507592251764,
+      "graham_number": 48.038574469859725,
+      "graham_upside_pct": 11.795611984779441,
+      "ncav_margin_pct": -139.3820601969093,
+      "pb_ratio": 1.8308344933241847,
+      "pe_ttm": 9.83295194508009
     }
   },
   "industry": "Aluminum",
-  "last_updated": "2026-09-24T15:59:50Z",
+  "last_updated": "2026-09-25T16:18:21Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,28 +98,38 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 11234606130,
+  "market_cap": 11321696100,
   "metrics": {
+    "book_value_per_share": 23.470171747737183,
     "current_ratio": 1.4388318863456986,
+    "debt_to_equity": 0.3937681627381337,
     "fcf_margin_pct": 4.4189852700491,
-    "graham_criteria_evaluated": 5,
-    "graham_criteria_passed": 3,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 18.002507592251764,
+    "graham_upside_pct": 11.795611984779441,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 1,
-    "munger_quality_passed": 0,
-    "ncav_margin_pct": -139.78229021929235,
-    "pe_ttm": 9.734027459954234,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -139.3820601969093,
+    "pb_ratio": 1.8308344933241847,
+    "pe_ttm": 9.83295194508009,
+    "roe_pct": 18.67936712948014,
+    "shareholders_equity": 6194000000,
     "total_assets": 16129000000,
     "total_liabilities": 9935000000
   },
   "name": "Alcoa",
   "plain_analysis": {
-    "positives": [],
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth."
+    ],
     "worries": []
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 42.5377
+    "as_of": "2026-09-25",
+    "close": 42.97
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -149,7 +159,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $11.2B",
+          "detail": "Market cap $11.3B",
           "passed": true
         },
         {
@@ -174,30 +184,30 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 9.7",
+          "detail": "P/E 9.8",
           "passed": true
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 18.0",
+          "passed": true
         }
       ],
-      "evaluated": 5,
-      "passed": 3,
+      "evaluated": 6,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 18.7%",
+          "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.39",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -210,8 +220,8 @@
           "passed": null
         }
       ],
-      "evaluated": 1,
-      "passed": 0,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },

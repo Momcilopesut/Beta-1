@@ -59,11 +59,11 @@
     "balance_sheet": {
       "current_ratio": 3.0057362963372762,
       "debt_to_ebitda": 1.3101538308875103,
-      "debt_to_equity": null
+      "debt_to_equity": 0.42496627681395627
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": 35.43474932234553,
+      "shareholders_equity": 1367012000,
       "total_assets": 2554374000,
       "total_liabilities": 1187362000
     },
@@ -76,21 +76,21 @@
     },
     "profitability": {
       "gross_margin_pct": 12.768840002261559,
-      "roe_pct": null,
-      "roic_pct": null,
+      "roe_pct": 6.359344321776253,
+      "roic_pct": 15.876008809747319,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": -104.5438373193607,
-      "pb_ratio": null,
-      "pe_ttm": 82.10407239819004
+      "graham_multiple": 432.4696290785903,
+      "graham_number": 41.97609927153346,
+      "graham_upside_pct": -77.19062149022797,
+      "ncav_margin_pct": -104.48013520403194,
+      "pb_ratio": 5.193489541181789,
+      "pe_ttm": 83.27149321266968
     }
   },
   "industry": "Security & Protection Services",
-  "last_updated": "2026-09-24T16:05:09Z",
+  "last_updated": "2026-09-25T16:24:26Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,38 +98,52 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 7009346437,
+  "market_cap": 7104119503,
   "metrics": {
+    "book_value_per_share": 35.43474932234553,
     "current_ratio": 3.0057362963372762,
     "debt_to_ebitda": 1.3101538308875103,
+    "debt_to_equity": 0.42496627681395627,
     "eps_growth_cagr_3yr_pct": 13.537268617702747,
     "fcf_margin_pct": 15.757776504762605,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
+    "graham_multiple": 432.4696290785903,
+    "graham_upside_pct": -77.19062149022797,
     "gross_margin_pct": 12.768840002261559,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 0,
-    "munger_quality_passed": 0,
-    "ncav_margin_pct": -104.5438373193607,
-    "pe_ttm": 82.10407239819004,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -104.48013520403194,
+    "pb_ratio": 5.193489541181789,
+    "pe_ttm": 83.27149321266968,
     "reinvestment_rate_pct": 21.901075450713986,
+    "roe_pct": 6.359344321776253,
+    "roic_pct": 15.876008809747319,
+    "shareholders_equity": 1367012000,
     "total_assets": 2554374000,
-    "total_liabilities": 1187362000
+    "total_liabilities": 1187362000,
+    "value_creation_pct": 6.530251080501488
   },
   "name": "MSA Safety",
   "plain_analysis": {
     "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
       "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
       "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
-      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
+      "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
     ],
     "worries": [
-      "It keeps very little of each dollar it makes in sales after paying the direct cost of making or providing what it sells, so even a small rise in costs could hurt its profits a lot."
+      "It keeps very little of each dollar it makes in sales after paying the direct cost of making or providing what it sells, so even a small rise in costs could hurt its profits a lot.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 181.45
+    "as_of": "2026-09-25",
+    "close": 184.03
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -159,7 +173,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $7.0B",
+          "detail": "Market cap $7.1B",
           "passed": true
         },
         {
@@ -184,16 +198,16 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 82.1",
+          "detail": "P/E 83.3",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 432.5",
+          "passed": false
         }
       ],
-      "evaluated": 6,
+      "evaluated": 7,
       "passed": 4,
       "total": 7
     },
@@ -201,13 +215,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 6.4%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.42",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -220,8 +234,8 @@
           "passed": null
         }
       ],
-      "evaluated": 0,
-      "passed": 0,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },

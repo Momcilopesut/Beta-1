@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 25.181424025307994,
+      "graham_multiple": 25.53115346363844,
       "graham_number": 99.03012639128828,
-      "graham_upside_pct": -5.474035802712473,
+      "graham_upside_pct": -6.123683390569455,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.6464731024040449,
-      "pe_ttm": 15.294160583941606
+      "pb_ratio": 1.6578671080284701,
+      "pe_ttm": 15.4
     }
   },
   "industry": "Entertainment",
-  "last_updated": "2026-09-24T15:51:42Z",
+  "last_updated": "2026-09-25T16:35:09Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 181899422500,
+  "market_cap": 182976063469,
   "metrics": {
     "book_value_per_share": 63.62994928191098,
     "current_ratio": 0.7103506820443768,
@@ -108,19 +108,19 @@
     "fcf_margin_pct": 10.671961874503575,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 25.181424025307994,
-    "graham_upside_pct": -5.474035802712473,
+    "graham_multiple": 25.53115346363844,
+    "graham_upside_pct": -6.123683390569455,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "pb_ratio": 1.6464731024040449,
-    "pe_ttm": 15.294160583941606,
+    "pb_ratio": 1.6578671080284701,
+    "pe_ttm": 15.4,
     "reinvestment_rate_pct": 11.003588928182708,
     "roe_pct": 11.289808772265152,
     "roic_pct": 13.433000675959603,
     "shareholders_equity": 109869000000,
     "total_assets": 197514000000,
-    "value_creation_pct": 5.981545501860288
+    "value_creation_pct": 5.847559123301404
   },
   "name": "The Walt Disney Company",
   "plain_analysis": {
@@ -136,10 +136,26 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 104.765
+    "as_of": "2026-09-25",
+    "close": 105.49
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal 2025, Disney reported total revenues of $94.4 billion, up 3% from $91.4 billion in fiscal 2024, with net income attributable to Disney rising to $12.4 billion from $5.0 billion, largely due to a lower effective tax rate (including a non-cash benefit from a change in Hulu's tax classification) and the prior year's comparison to Star India and goodwill impairments. Entertainment, Sports and Experiences segment operating income all grew, with Direct-to-Consumer swinging to a much larger profit. Disney+ and Hulu paid subscriber counts grew year over year, while domestic and international Linear Networks affiliate and advertising revenue declined. The Company completed the Star India transaction in November 2024, now reporting a 37% equity interest in that India joint venture.",
+    "filing_summary_10q": "The excerpt provided consists almost entirely of raw XBRL tagging data rather than narrative text. It indicates this is Disney's Form 10-Q for the fiscal quarter ended June 27, 2026 (fiscal Q3 2026), referencing the Entertainment, Sports and Experiences segments, the India joint venture, and details of bank credit facility terms (SOFR-based borrowing rates), but it does not contain readable discussion of financial results, revenue, or earnings for the period.",
+    "filing_summary_8k": "This Form 8-K, dated August 5, 2026, discloses under Item 2.02 that Disney issued an earnings release on that date covering results for the fiscal quarter ended June 27, 2026, furnished as an exhibit. The filing itself does not include the earnings figures in the body of the document, only the cover information and reference to the attached earnings release exhibit.",
+    "moat_explanation": "The 10-K describes an extensive proprietary content library (~5,300 live-action and 460 animated titles) and globally recognized brands/franchises (Disney, Pixar, Marvel, Star Wars, National Geographic, ESPN) that underpin Linear Networks, DTC, Content Sales/Licensing and Experiences revenue, along with a multi-year affiliate/licensing contract structure. These IP and brand assets, rather than low-cost production or network effects, are what the excerpts point to as the main source of competitive advantage.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Domestic and international Linear Networks affiliate fees and advertising revenue declined year over year due to fewer subscribers and lower average viewership, reflecting industry-wide cord-cutting acknowledged in Risk Factors",
+      "Fiscal 2024 and 2025 included substantial restructuring/impairment charges, including goodwill impairment related to general entertainment linear networks and impairments of equity investments (A+E, Tata Play)",
+      "Equity in the income of investees declined due to losses from the new India joint venture and lower A+E income, indicating volatility in equity-method investments",
+      "The Company acknowledges DTC streaming services initially experienced significant losses and there is no assurance the DTC model will be as profitable as historic business models",
+      "Risk Factors note dependence on third-party distributors, licensees and advertisers, and that a contraction in these relationships could adversely affect revenue",
+      "Company discloses exposure to foreign currency fluctuations, inflation, and uncontrollable events (weather, geopolitical, cyber incidents) that have previously disrupted operations (e.g., COVID-19 park closures, hurricanes)"
+    ]
+  },
   "sector": "Communication Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001744489.json",
@@ -167,7 +183,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $181.9B",
+          "detail": "Market cap $183.0B",
           "passed": true
         },
         {
@@ -192,12 +208,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 15.3",
+          "detail": "P/E 15.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 25.2",
+          "detail": "P/E x P/B = 25.5",
           "passed": false
         }
       ],

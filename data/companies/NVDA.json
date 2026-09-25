@@ -81,16 +81,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 1544.2476154795995,
+      "graham_multiple": 1584.9548325839842,
       "graham_number": 26.82473718224031,
-      "graham_upside_pct": -87.92929074281585,
-      "ncav_margin_pct": -98.57918873254374,
-      "pb_ratio": 34.04946818993852,
-      "pe_ttm": 45.35306122448979
+      "graham_upside_pct": -88.08530817169748,
+      "ncav_margin_pct": -98.59755313153235,
+      "pb_ratio": 34.49533037070944,
+      "pe_ttm": 45.9469387755102
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-24T16:12:45Z",
+  "last_updated": "2026-09-25T16:09:55Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 5381567106000,
+  "market_cap": 5462562130000,
   "metrics": {
     "book_value_per_share": 6.5266804979253115,
     "current_ratio": 3.905263812455306,
@@ -107,21 +107,21 @@
     "eps_growth_cagr_3yr_pct": 206.60722620765335,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 5,
-    "graham_multiple": 1544.2476154795995,
-    "graham_upside_pct": -87.92929074281585,
+    "graham_multiple": 1584.9548325839842,
+    "graham_upside_pct": -88.08530817169748,
     "gross_margin_pct": 71.06808435754708,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -98.57918873254374,
-    "pb_ratio": 34.04946818993852,
-    "pe_ttm": 45.35306122448979,
+    "ncav_margin_pct": -98.59755313153235,
+    "pb_ratio": 34.49533037070944,
+    "pe_ttm": 45.9469387755102,
     "roe_pct": 76.33333969089534,
     "roic_pct": 71.33233260959281,
     "shareholders_equity": 157293000000,
     "total_assets": 206803000000,
     "total_liabilities": 49510000000,
-    "value_creation_pct": 61.38798024051568
+    "value_creation_pct": 61.237980755913654
   },
   "name": "NVIDIA Corporation",
   "plain_analysis": {
@@ -140,26 +140,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 222.23
+    "as_of": "2026-09-25",
+    "close": 225.14
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2026 (ended January 25, 2026), NVIDIA reported revenue of $215.9 billion, up 65% year-over-year, driven primarily by Data Center compute and networking demand tied to the Blackwell architecture. Gross margin fell to 71.1% from 75.0%, partly due to a $4.5 billion charge related to H20 export licensing issues in China. Operating income rose 60% to $130.4 billion and net income rose 65% to $120.1 billion; the filing also discloses large capital expenditures, sizable investments in private AI companies/infrastructure, and revenue concentration among a small number of direct and indirect customers.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended July 26, 2026, NVIDIA's fiscal Q2 2027) consists primarily of XBRL data tags rather than narrative text, so it does not contain discussion of revenue, profit, or business developments for the quarter. Visible items include references to outstanding notes payable across multiple maturities, customer concentration risk categories for accounts receivable, and land/power/shell guarantees related to AI cloud infrastructure, but no quantified results or MD&A-style commentary is included in the excerpt.",
-    "filing_summary_8k": "This 8-K, dated September 2, 2026, discloses that NVIDIA entered into a definitive agreement to acquire Hugging Face, Inc., a platform and community for open-source AI models, datasets, and applications, for a purchase price of approximately $11.9 billion plus an equity-based retention program of up to about $1.0 billion for Hugging Face employees. The transaction is expected to close in the first half of 2027 subject to customary closing conditions and regulatory approvals. The filing also adds a supplemental risk factor noting that government restrictions on open-source AI models, including those affecting models originating in China, could impact the Hugging Face platform and NVIDIA's broader business.",
-    "moat_explanation": "The 10-K describes a large, self-reinforcing developer ecosystem (over 7.5 million CUDA developers, 6,000 supported applications, hundreds of software libraries/SDKs) and states explicitly that 'the large and growing number of developers and installed base across our platforms strengthens our ecosystem and increases the value of our platform for our customers.' This ecosystem effect, combined with the CUDA software stack that ties hardware, libraries, and third-party developer tools together, supports a network-effects-based moat; switching costs (CUDA lock-in) are a secondary factor also visible in the excerpts.",
-    "moat_present": true,
-    "moat_type": "network_effects",
-    "red_flags": [
-      "Revenue is highly concentrated: for fiscal 2026, one direct customer represented 22% of total revenue and another 14%, with the company noting this concentration trend may continue.",
-      "The company incurred a $4.5 billion charge in Q1 FY2026 tied to U.S. export licensing requirements for H20 chips into China, and future China-related shipments (e.g., H200) remain uncertain and subject to a 25% import tariff.",
-      "Gross margin declined from 75.0% to 71.1% year-over-year, attributed to the Hopper-to-Blackwell product transition and the H20-related charge.",
-      "The company discloses $4.0 billion in unrecognized tax benefits and is currently under IRS examination for fiscal years 2023 and 2024, with uncertain timing of resolution.",
-      "Supply chain is described as 'mainly concentrated in Asia,' which the filing flags as a risk even as the company begins diversifying to the U.S. and Latin America.",
-      "The 10-K notes that rising high-quality open-source AI models could reduce demand for NVIDIA's products if deployed on competitors' platforms."
-    ]
-  },
+  "qualitative": null,
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
@@ -187,7 +171,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $5381.6B",
+          "detail": "Market cap $5462.6B",
           "passed": true
         },
         {
@@ -212,12 +196,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 45.4",
+          "detail": "P/E 45.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1544.2",
+          "detail": "P/E x P/B = 1585.0",
           "passed": false
         }
       ],

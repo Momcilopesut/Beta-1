@@ -62,8 +62,8 @@
       "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": 14.816593658890564,
+      "shareholders_equity": 3116900000,
       "total_assets": 11600700000,
       "total_liabilities": 8483800000
     },
@@ -76,21 +76,21 @@
     },
     "profitability": {
       "gross_margin_pct": null,
-      "roe_pct": null,
+      "roe_pct": 12.323141582983093,
       "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": -155.77671735155337,
-      "pb_ratio": null,
-      "pe_ttm": 33.30163043478261
+      "graham_multiple": 147.8113020050242,
+      "graham_number": 24.767054275348723,
+      "graham_upside_pct": -60.98447656687347,
+      "ncav_margin_pct": -153.8392935683118,
+      "pb_ratio": 4.284385565363021,
+      "pe_ttm": 34.5
     }
   },
   "industry": "Furnishings, Fixtures & Appliances",
-  "last_updated": "2026-09-24T16:01:21Z",
+  "last_updated": "2026-09-25T16:19:46Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,32 +98,41 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 12889093634,
+  "market_cap": 13440251220,
   "metrics": {
+    "book_value_per_share": 14.816593658890564,
     "current_ratio": 0.8267952977255303,
     "eps_growth_cagr_3yr_pct": -10.071137395478157,
-    "graham_criteria_evaluated": 5,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
+    "graham_multiple": 147.8113020050242,
+    "graham_upside_pct": -60.98447656687347,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 1,
+    "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "ncav_margin_pct": -155.77671735155337,
-    "pe_ttm": 33.30163043478261,
+    "ncav_margin_pct": -153.8392935683118,
+    "pb_ratio": 4.284385565363021,
+    "pe_ttm": 34.5,
     "reinvestment_rate_pct": -82.6519099354586,
+    "roe_pct": 12.323141582983093,
+    "shareholders_equity": 3116900000,
     "total_assets": 11600700000,
     "total_liabilities": 8483800000
   },
   "name": "Somnigroup International",
   "plain_analysis": {
-    "positives": [],
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
     "worries": [
       "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
-      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 61.275
+    "as_of": "2026-09-25",
+    "close": 63.48
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -153,7 +162,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $12.9B",
+          "detail": "Market cap $13.4B",
           "passed": true
         },
         {
@@ -178,16 +187,16 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 33.3",
+          "detail": "P/E 34.5",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 147.8",
+          "passed": false
         }
       ],
-      "evaluated": 5,
+      "evaluated": 6,
       "passed": 3,
       "total": 7
     },
@@ -195,8 +204,8 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 12.3%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
@@ -214,7 +223,7 @@
           "passed": null
         }
       ],
-      "evaluated": 1,
+      "evaluated": 2,
       "passed": 0,
       "total": 4
     }

@@ -62,8 +62,8 @@
       "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": 10.17286401375598,
+      "shareholders_equity": 9151000000,
       "total_assets": 38137000000,
       "total_liabilities": 28986000000
     },
@@ -76,21 +76,21 @@
     },
     "profitability": {
       "gross_margin_pct": null,
-      "roe_pct": null,
+      "roe_pct": 20.57698612173533,
       "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": -93.25221924223344,
-      "pb_ratio": null,
-      "pe_ttm": 58.59024390243903
+      "graham_multiple": 681.1552393289896,
+      "graham_number": 21.661563947104433,
+      "graham_upside_pct": -81.8252599344679,
+      "ncav_margin_pct": -93.17339412632202,
+      "pb_ratio": 11.715972988416567,
+      "pe_ttm": 58.13902439024391
     }
   },
   "industry": "Financial - Capital Markets",
-  "last_updated": "2026-09-24T16:15:45Z",
+  "last_updated": "2026-09-25T16:29:15Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,27 +98,37 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 108465290482,
+  "market_cap": 107212868817,
   "metrics": {
+    "book_value_per_share": 10.17286401375598,
     "current_ratio": 1.261860901602308,
-    "graham_criteria_evaluated": 3,
+    "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 1,
+    "graham_multiple": 681.1552393289896,
+    "graham_upside_pct": -81.8252599344679,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 1,
-    "munger_quality_passed": 0,
-    "ncav_margin_pct": -93.25221924223344,
-    "pe_ttm": 58.59024390243903,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 1,
+    "ncav_margin_pct": -93.17339412632202,
+    "pb_ratio": 11.715972988416567,
+    "pe_ttm": 58.13902439024391,
+    "roe_pct": 20.57698612173533,
+    "shareholders_equity": 9151000000,
     "total_assets": 38137000000,
     "total_liabilities": 28986000000
   },
   "name": "Robinhood Markets",
   "plain_analysis": {
-    "positives": [],
-    "worries": []
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 120.11
+    "as_of": "2026-09-25",
+    "close": 119.185
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -148,7 +158,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $108.5B",
+          "detail": "Market cap $107.2B",
           "passed": true
         },
         {
@@ -173,16 +183,16 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 58.6",
+          "detail": "P/E 58.1",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 681.2",
+          "passed": false
         }
       ],
-      "evaluated": 3,
+      "evaluated": 4,
       "passed": 1,
       "total": 7
     },
@@ -190,8 +200,8 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 20.6%",
+          "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
@@ -209,8 +219,8 @@
           "passed": null
         }
       ],
-      "evaluated": 1,
-      "passed": 0,
+      "evaluated": 2,
+      "passed": 1,
       "total": 4
     }
   },

@@ -4,16 +4,6 @@
   "five_year_history": {
     "years": [
       {
-        "cash": 222800000,
-        "debt": null,
-        "earnings": 286900000,
-        "fiscal_year": "2021-07-31",
-        "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
-      },
-      {
         "cash": 193300000,
         "debt": null,
         "earnings": 332800000,
@@ -52,45 +42,55 @@
         "revenue": null,
         "spending": null,
         "stock_return_pct": -3.8091419406575713
+      },
+      {
+        "cash": 250400000,
+        "debt": null,
+        "earnings": 453800000,
+        "fiscal_year": "2026-07-31",
+        "market_return_pct": 18.185989115301847,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 30.943448659163536
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 1.9304014791336503,
+      "current_ratio": 2.0764830244994403,
       "debt_to_ebitda": null,
       "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 12.539787403886649,
-      "shareholders_equity": 1453500000,
-      "total_assets": 2977200000,
-      "total_liabilities": 1523700000
+      "book_value_per_share": 15.222138179140495,
+      "shareholders_equity": 1764400000,
+      "total_assets": 3986800000,
+      "total_liabilities": 2222400000
     },
     "cash_flow": {
       "fcf_margin_pct": null,
-      "reinvestment_rate_pct": 7.661361913803175
+      "reinvestment_rate_pct": 26.35979949941708
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": 4.666106145705373
+      "eps_growth_cagr_3yr_pct": 9.905875595793212
     },
     "profitability": {
       "gross_margin_pct": null,
-      "roe_pct": 25.24939800481596,
+      "roe_pct": 25.719791430514622,
       "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 193.4678758616708,
-      "graham_number": 29.335011685556243,
-      "graham_upside_pct": -65.89745212095298,
-      "ncav_margin_pct": -100.62182386928278,
-      "pb_ratio": 6.859765419415204,
-      "pe_ttm": 28.20327868852459
+      "graham_multiple": 131.463529166735,
+      "graham_number": 36.3127762608155,
+      "graham_upside_pct": -58.62970519986842,
+      "ncav_margin_pct": -105.43246875665173,
+      "pb_ratio": 5.7662727119559065,
+      "pe_ttm": 22.7987012987013
     }
   },
   "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-24T16:04:35Z",
+  "last_updated": "2026-09-25T16:23:52Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,45 +98,51 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 9970664220,
+  "market_cap": 10159599150,
   "metrics": {
-    "book_value_per_share": 12.539787403886649,
-    "current_ratio": 1.9304014791336503,
-    "eps_growth_cagr_3yr_pct": 4.666106145705373,
+    "book_value_per_share": 15.222138179140495,
+    "current_ratio": 2.0764830244994403,
+    "eps_growth_cagr_3yr_pct": 9.905875595793212,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 193.4678758616708,
-    "graham_upside_pct": -65.89745212095298,
+    "graham_multiple": 131.463529166735,
+    "graham_upside_pct": -58.62970519986842,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -100.62182386928278,
-    "pb_ratio": 6.859765419415204,
-    "pe_ttm": 28.20327868852459,
-    "reinvestment_rate_pct": 7.661361913803175,
-    "roe_pct": 25.24939800481596,
-    "shareholders_equity": 1453500000,
-    "total_assets": 2977200000,
-    "total_liabilities": 1523700000
+    "ncav_margin_pct": -105.43246875665173,
+    "pb_ratio": 5.7662727119559065,
+    "pe_ttm": 22.7987012987013,
+    "reinvestment_rate_pct": 26.35979949941708,
+    "roe_pct": 25.719791430514622,
+    "shareholders_equity": 1764400000,
+    "total_assets": 3986800000,
+    "total_liabilities": 2222400000
   },
   "name": "Donaldson Company",
   "plain_analysis": {
     "positives": [
-      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year."
     ],
     "worries": [
       "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 86.02
+    "as_of": "2026-09-25",
+    "close": 87.775
   },
   "qualitative": null,
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000029644.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-25",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/29644/000002964426000085/dci-20260731.htm"
+      },
       {
         "filed": "2026-08-26",
         "form": "8-K",
@@ -146,11 +152,6 @@
         "filed": "2026-06-02",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/29644/000002964426000052/dci-20260430.htm"
-      },
-      {
-        "filed": "2025-09-26",
-        "form": "10-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/29644/000002964425000098/dci-20250731.htm"
       }
     ]
   },
@@ -160,7 +161,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $10.0B",
+          "detail": "Market cap $10.2B",
           "passed": true
         },
         {
@@ -180,17 +181,17 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR 4.7%/yr",
+          "detail": "EPS 3yr CAGR 9.9%/yr",
           "passed": true
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 28.2",
+          "detail": "P/E 22.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 193.5",
+          "detail": "P/E x P/B = 131.5",
           "passed": false
         }
       ],
@@ -202,7 +203,7 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 25.2%",
+          "detail": "ROE 25.7%",
           "passed": true
         },
         {
@@ -212,7 +213,7 @@
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "120,400,000 shares vs. 122,600,000 a year earlier",
+          "detail": "117,900,000 shares vs. 120,400,000 a year earlier",
           "passed": true
         },
         {

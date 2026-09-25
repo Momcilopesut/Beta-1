@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 567.7684782782776,
+      "graham_multiple": 564.7906767069658,
       "graham_number": 27.29248467582754,
-      "graham_upside_pct": -80.09300898918488,
-      "ncav_margin_pct": -159.24297139996207,
-      "pb_ratio": 9.02797434461448,
-      "pe_ttm": 62.88990825688073
+      "graham_upside_pct": -80.04059918397869,
+      "ncav_margin_pct": -159.39894236459557,
+      "pb_ratio": 9.004268503884639,
+      "pe_ttm": 62.72477064220183
     }
   },
   "industry": "Independent Power Producers",
-  "last_updated": "2026-09-24T16:09:33Z",
+  "last_updated": "2026-09-25T16:27:53Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 46278293733,
+  "market_cap": 46143150119,
   "metrics": {
     "book_value_per_share": 15.186130882370664,
     "current_ratio": 0.7769595395293719,
     "fcf_margin_pct": 7.430375465103169,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": 567.7684782782776,
-    "graham_upside_pct": -80.09300898918488,
+    "graham_multiple": 564.7906767069658,
+    "graham_upside_pct": -80.04059918397869,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -159.24297139996207,
-    "pb_ratio": 9.02797434461448,
-    "pe_ttm": 62.88990825688073,
+    "ncav_margin_pct": -159.39894236459557,
+    "pb_ratio": 9.004268503884639,
+    "pe_ttm": 62.72477064220183,
     "reinvestment_rate_pct": -97.11682110018319,
     "roe_pct": 18.520698450068668,
     "shareholders_equity": 5097000000,
@@ -130,8 +130,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 137.1
+    "as_of": "2026-09-25",
+    "close": 136.74
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -139,14 +139,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001692819.json",
     "sec_filings": [
       {
+        "filed": "2026-09-24",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1692819/000114036126037577/ef20082680_8k.htm"
+      },
+      {
         "filed": "2026-08-10",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000019/vistra-20260630.htm"
-      },
-      {
-        "filed": "2026-08-07",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000017/vistra-20260807.htm"
       },
       {
         "filed": "2026-02-27",
@@ -161,7 +161,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $46.3B",
+          "detail": "Market cap $46.1B",
           "passed": true
         },
         {
@@ -186,12 +186,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 62.9",
+          "detail": "P/E 62.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 567.8",
+          "detail": "P/E x P/B = 564.8",
           "passed": false
         }
       ],

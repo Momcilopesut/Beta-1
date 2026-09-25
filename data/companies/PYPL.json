@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 21.855716403122717,
+      "graham_multiple": 24.61613333698684,
       "graham_number": 52.86965452442657,
-      "graham_upside_pct": 1.4632421708066703,
-      "ncav_margin_pct": -100.34374692640662,
-      "pb_ratio": 2.269157155650158,
-      "pe_ttm": 9.631645101663585
+      "graham_upside_pct": -4.394838111344349,
+      "ncav_margin_pct": -100.32390035883643,
+      "pb_ratio": 2.408196769495458,
+      "pe_ttm": 10.22181146025878
     }
   },
   "industry": "Financial - Credit Services",
-  "last_updated": "2026-09-24T15:55:09Z",
+  "last_updated": "2026-09-25T16:32:04Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 44567379448,
+  "market_cap": 47311270866,
   "metrics": {
     "book_value_per_share": 22.96323984006752,
     "current_ratio": 1.2867170510087633,
@@ -107,15 +107,15 @@
     "eps_growth_cagr_3yr_pct": 37.304148651932614,
     "fcf_margin_pct": 16.773182201856986,
     "graham_criteria_evaluated": 7,
-    "graham_criteria_passed": 6,
-    "graham_multiple": 21.855716403122717,
-    "graham_upside_pct": 1.4632421708066703,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 24.61613333698684,
+    "graham_upside_pct": -4.394838111344349,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -100.34374692640662,
-    "pb_ratio": 2.269157155650158,
-    "pe_ttm": 9.631645101663585,
+    "ncav_margin_pct": -100.32390035883643,
+    "pb_ratio": 2.408196769495458,
+    "pe_ttm": 10.22181146025878,
     "roe_pct": 25.834320695102686,
     "shareholders_equity": 20256000000,
     "total_assets": 80173000000,
@@ -129,13 +129,31 @@
       "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
       "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
     ],
-    "worries": []
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 52.1072
+    "as_of": "2026-09-25",
+    "close": 55.3
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, PayPal reported net revenues of $33.2 billion (up 4% year-over-year), driven by 7% growth in total payment volume to $1.79 trillion, though the number of payment transactions declined 4% to 25.4 billion. Operating income rose 14% to $6.1 billion and net income increased 26% to $5.2 billion, aided by lower income tax expense from discrete tax adjustments. Transaction and credit losses increased 19%, driven partly by higher fraud-related losses and growth in loan originations, while active accounts grew 1% to 439 million as of December 31, 2025.",
+    "filing_summary_10q": null,
+    "filing_summary_8k": "This 8-K, dated July 28, 2026, discloses under Item 2.02 that PayPal issued a press release announcing its financial results for the quarter ended June 30, 2026, furnished as Exhibit 99.1. The filing does not include the underlying financial figures in the excerpt provided, and no other items (such as management changes or agreements) are disclosed in this report.",
+    "moat_explanation": "The 10-K describes PayPal as operating 'a global, two-sided network at scale that connects consumers and merchants with 439 million active accounts across approximately 200 markets,' explicitly citing this two-sided platform and scale as a core competitive strength that lets it use data from both sides of transactions to improve fraud protection and product experiences. The filing also cites trusted brands (PayPal, Venmo) and regulatory licenses as advantages, but the network/scale characteristic is the most prominently and repeatedly emphasized differentiator versus a highly competitive field of banks, card networks, and fintech point solutions.",
+    "moat_present": true,
+    "moat_type": "network_effects",
+    "red_flags": [
+      "Transaction losses rose ~20% in 2025, attributed to an increase in fraud incidents impacting PayPal products and services.",
+      "Credit losses on consumer and merchant loan portfolios increased, with merchant loan net charge-off rate rising from 5.3% to 7.3% and >90-day delinquencies increasing.",
+      "Braintree (unbranded processing) experienced declining transaction volumes/negotiated lower revenue in the first half of 2025 amid a strategic shift toward 'profitable growth,' indicating pricing/competitive pressure with large merchants.",
+      "The company describes a highly competitive landscape from banks, card networks, BNPL providers, crypto/stablecoin players, and point solutions, which could pressure pricing and market share.",
+      "Ongoing exposure to claims, regulatory proceedings, and investigations across multiple jurisdictions, with inherent uncertainty in estimating related losses.",
+      "Revenue share from its U.S. credit-card partner institution is contingent on a minimum return threshold; if unmet, PayPal's revenue share could drop to zero or require a payment to the partner."
+    ]
+  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001633917.json",
@@ -163,7 +181,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $44.6B",
+          "detail": "Market cap $47.3B",
           "passed": true
         },
         {
@@ -188,17 +206,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 9.6",
+          "detail": "P/E 10.2",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 21.9",
-          "passed": true
+          "detail": "P/E x P/B = 24.6",
+          "passed": false
         }
       ],
       "evaluated": 7,
-      "passed": 6,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {

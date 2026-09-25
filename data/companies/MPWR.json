@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 1931.2956621285007,
+      "graham_multiple": 2039.5452170788342,
       "graham_number": 144.19836351079627,
-      "graham_upside_pct": -89.20638615596303,
-      "ncav_margin_pct": -97.6831247716402,
-      "pb_ratio": 18.590722937043413,
-      "pe_ttm": 103.88491446345257
+      "graham_upside_pct": -89.49672854265117,
+      "ncav_margin_pct": -97.745447464779,
+      "pb_ratio": 19.104627094402176,
+      "pe_ttm": 106.75660964230173
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-24T16:11:24Z",
+  "last_updated": "2026-09-25T16:17:27Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 65303596000,
+  "market_cap": 67356247400,
   "metrics": {
     "book_value_per_share": 71.86164865799809,
     "current_ratio": 5.912314377377391,
     "eps_growth_cagr_3yr_pct": 66.02680720013805,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 1931.2956621285007,
-    "graham_upside_pct": -89.20638615596303,
+    "graham_multiple": 2039.5452170788342,
+    "graham_upside_pct": -89.49672854265117,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -97.6831247716402,
-    "pb_ratio": 18.590722937043413,
-    "pe_ttm": 103.88491446345257,
+    "ncav_margin_pct": -97.745447464779,
+    "pb_ratio": 19.104627094402176,
+    "pe_ttm": 106.75660964230173,
     "reinvestment_rate_pct": 44.669252493353454,
     "roe_pct": 17.598287638358464,
     "shareholders_equity": 3531497000,
@@ -131,26 +131,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 1335.96
+    "as_of": "2026-09-25",
+    "close": 1372.89
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, Monolithic Power Systems reported revenue of $2.79 billion, up 26.4% from $2.21 billion in 2024, with growth across all end markets led by storage and computing and automotive; gross margin was 55.2%, roughly flat versus 2024. The filing discloses a restatement of the 2024 annual financial statements and 2025 quarterly financial statements due to an error in accounting for deferred income taxes tied to a foreign tax incentive, and management concluded internal control over financial reporting was not effective as of December 31, 2025 due to a related material weakness. The company also notes a $3.6 billion valuation allowance against certain deferred tax assets and describes ongoing macroeconomic, tariff, and litigation risks.",
-    "filing_summary_10q": "The 10-Q for the quarter ended June 30, 2026 shows revenue of $980.6 million for the quarter, up from $664.6 million a year earlier, and six-month revenue of $1.78 billion versus $1.30 billion in the prior-year period. Total assets grew to $4.69 billion from $4.19 billion at December 31, 2025, with increases in cash and short-term investments, receivables, and inventories, and stockholders' equity rose to $3.90 billion. The excerpt provided is limited to financial statement data and does not include the narrative MD&A discussion.",
-    "filing_summary_8k": "This 8-K, dated September 10, 2026, discloses that the company issued a press release announcing a third-quarter cash dividend of $2.00 per share, payable to stockholders of record as of September 30, 2026, with payment on October 15, 2026. No other items are reported in this filing.",
-    "moat_explanation": "The 10-K describes a large portfolio of proprietary process and packaging technologies (2,231 patents/applications, 654 issued in the U.S.) combined with trade-secret-protected manufacturing processes and deep, hard-to-replicate analog/mixed-signal design expertise developed since 1997. The company states these technologies let it differentiate products on integration, efficiency, and size versus larger, better-resourced competitors, though it also acknowledges it does not rely on any single patent and faces intense competition from many larger rivals.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Material weakness in internal control over financial reporting related to accounting for deferred income taxes, effective as of December 31, 2024 and 2025",
-      "Restatement of 2024 annual financial statements and 2025 quarterly financial statements due to the deferred tax error",
-      "High customer concentration: three distributors accounted for 26%, 18% and 10% of 2025 total revenue",
-      "Heavy geographic concentration, with 92% of 2025 revenue from customers in Asia",
-      "Ongoing patent infringement litigation risk described as characteristic of the industry, with potential for costly litigation or required royalty payments",
-      "Dependence on key personnel, including founder/CEO Michael Hsing, for proprietary process technology and continued innovation"
-    ]
-  },
+  "qualitative": null,
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001280452.json",
@@ -178,7 +162,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $65.3B",
+          "detail": "Market cap $67.4B",
           "passed": true
         },
         {
@@ -203,12 +187,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 103.9",
+          "detail": "P/E 106.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1931.3",
+          "detail": "P/E x P/B = 2039.5",
           "passed": false
         }
       ],

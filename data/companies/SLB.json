@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 65.16825706786328,
+      "graham_multiple": 64.87980518946263,
       "graham_number": 30.4987753837224,
-      "graham_upside_pct": -41.2411609985119,
-      "ncav_margin_pct": -110.468043244129,
-      "pb_ratio": 2.9504942512181622,
-      "pe_ttm": 22.08723404255319
+      "graham_upside_pct": -41.11068665046843,
+      "ncav_margin_pct": -110.49128759580067,
+      "pb_ratio": 2.9439571769692443,
+      "pe_ttm": 22.038297872340426
     }
   },
   "industry": "Oil & Gas Equipment & Services",
-  "last_updated": "2026-09-24T15:50:40Z",
+  "last_updated": "2026-09-25T16:31:30Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 76975093086,
+  "market_cap": 76886041999,
   "metrics": {
     "book_value_per_share": 17.591967846936196,
     "current_ratio": 1.3255213640377692,
@@ -106,14 +106,14 @@
     "eps_growth_cagr_3yr_pct": -0.5610216224331555,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 2,
-    "graham_multiple": 65.16825706786328,
-    "graham_upside_pct": -41.2411609985119,
+    "graham_multiple": 64.87980518946263,
+    "graham_upside_pct": -41.11068665046843,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -110.468043244129,
-    "pb_ratio": 2.9504942512181622,
-    "pe_ttm": 22.08723404255319,
+    "ncav_margin_pct": -110.49128759580067,
+    "pb_ratio": 2.9439571769692443,
+    "pe_ttm": 22.038297872340426,
     "roe_pct": 12.922746945497721,
     "shareholders_equity": 26109000000,
     "total_assets": 54868000000,
@@ -131,10 +131,26 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 51.905
+    "as_of": "2026-09-25",
+    "close": 51.79
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, SLB reported global revenue of $35.7 billion, down 2% year on year, with international revenue declining 5% (due to lower activity in Saudi Arabia, Mexico and Sub-Saharan Africa) partly offset by 12% North America growth driven by the ChampionX acquisition. The company completed the $4.9 billion all-stock acquisition of ChampionX in Q3 2025, generated $6.5 billion of operating cash flow and $4.1 billion of free cash flow, and returned $4.0 billion to shareholders via dividends and buybacks. The filing also details various 2025 charges (workforce reductions, merger/integration costs, a $210 million goodwill impairment, and equity-method investment impairments) and notes continued growth in Digital and Data Center Solutions businesses.",
+    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL data tags (segment, debt instrument, and equity identifiers) covering periods including the quarter and six months ended June 30, 2026, referencing segments such as Well Construction, Reservoir Performance, Production Systems and Digital & Integration, as well as the ChampionX acquisition and various outstanding senior notes. No narrative discussion of financial results, business developments, or risks was included in the excerpt, so a substantive summary of the quarter's results cannot be provided from this text alone.",
+    "filing_summary_8k": "This Form 8-K, dated August 31, 2026, discloses that SLB has signed an agreement to acquire Kelvion, a global provider of thermal management and heat exchange technologies, from Apollo-managed funds (the majority owner) and funds advised by Triton (a minority holder). The transaction is valued at approximately $3.4 billion in cash, with SLB also assuming approximately $0.7 billion of Kelvion's debt. The filing includes a related press release as an exhibit and standard forward-looking-statement cautionary language regarding the pending transaction.",
+    "moat_explanation": "The 10-K describes premium, proprietary technologies (e.g., higher uptake of 'premium technologies' improving evaluation/intervention margins, the Lumi data and AI platform, Performance Live remote-operations centers, and achievement of fully autonomous drilling) that support pricing power and margin expansion, alongside sustained R&D spending (~2% of revenue). This points to a technology/intangible-asset-based edge rather than clear evidence of network effects or switching costs in the excerpts provided.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Full-year 2025 revenue declined 2% with organic (ex-ChampionX) revenue down 6%, driven by activity declines in Saudi Arabia, Mexico and offshore Sub-Saharan Africa",
+      "Company recorded a $210 million goodwill impairment in Q4 2025 and multiple equity-method investment impairments ($69M and $52M) during the year",
+      "Recurring workforce reduction and merger/integration charges across every quarter of 2025, totaling over $1.1 billion in pretax charges and credits for the year",
+      "A significant loss on one particular project in the SLB Capturi carbon-capture business dragged down 'All Other' segment profitability",
+      "Business exposed to volatile commodity prices, geopolitical uncertainty and an oversupplied oil market per management's own characterization of 2025",
+      "Operational disruption examples cited, including a pipeline disruption in Ecuador that interrupted APS revenue and the divestiture of the Palliser APS project reducing revenue"
+    ]
+  },
   "sector": "Energy",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000087347.json",
@@ -162,7 +178,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $77.0B",
+          "detail": "Market cap $76.9B",
           "passed": true
         },
         {
@@ -187,12 +203,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 22.1",
+          "detail": "P/E 22.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 65.2",
+          "detail": "P/E x P/B = 64.9",
           "passed": false
         }
       ],

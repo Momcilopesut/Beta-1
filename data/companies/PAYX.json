@@ -62,7 +62,7 @@
       "debt_to_equity": 1.2198066986158336
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 10.50120885780102,
+      "book_value_per_share": 10.492429454129075,
       "shareholders_equity": 3735100000,
       "total_assets": 16174500000,
       "total_liabilities": 12439400000
@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 207.3208075075267,
-      "graham_number": 33.99110919901787,
-      "graham_upside_pct": -67.05649428278943,
-      "ncav_margin_pct": -110.42552311860534,
-      "pb_ratio": 9.82553545950577,
-      "pe_ttm": 21.100204498977508
+      "graham_multiple": 201.14859508845436,
+      "graham_number": 33.97689730817915,
+      "graham_upside_pct": -66.55488009825854,
+      "ncav_margin_pct": -110.57984196609858,
+      "pb_ratio": 9.682219017447993,
+      "pe_ttm": 20.77505112474438
     }
   },
   "industry": "Staffing & Employment Services",
-  "last_updated": "2026-09-24T15:57:19Z",
+  "last_updated": "2026-09-25T16:15:58Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,9 +98,9 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 36646005066,
+  "market_cap": 36156941133,
   "metrics": {
-    "book_value_per_share": 10.50120885780102,
+    "book_value_per_share": 10.492429454129075,
     "current_ratio": 1.2591439347425664,
     "debt_to_ebitda": 1.5428194101114083,
     "debt_to_equity": 1.2198066986158336,
@@ -108,21 +108,21 @@
     "fcf_margin_pct": 35.65417690417691,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 207.3208075075267,
-    "graham_upside_pct": -67.05649428278943,
+    "graham_multiple": 201.14859508845436,
+    "graham_upside_pct": -66.55488009825854,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -110.42552311860534,
-    "pb_ratio": 9.82553545950577,
-    "pe_ttm": 21.100204498977508,
+    "ncav_margin_pct": -110.57984196609858,
+    "pb_ratio": 9.682219017447993,
+    "pe_ttm": 20.77505112474438,
     "reinvestment_rate_pct": -20.668098367290312,
     "roe_pct": 47.123236325667314,
     "roic_pct": 26.546239072822754,
     "shareholders_equity": 3735100000,
     "total_assets": 16174500000,
     "total_liabilities": 12439400000,
-    "value_creation_pct": 17.687608916118613
+    "value_creation_pct": 17.567625226206033
   },
   "name": "Paychex",
   "plain_analysis": {
@@ -137,14 +137,19 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 103.18
+    "as_of": "2026-09-25",
+    "close": 101.59
   },
   "qualitative": null,
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000723531.json",
     "sec_filings": [
+      {
+        "filed": "2026-09-24",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/723531/000072353126000006/payx-20260831.htm"
+      },
       {
         "filed": "2026-09-23",
         "form": "8-K",
@@ -154,11 +159,6 @@
         "filed": "2026-07-17",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/723531/000119312526307785/payx-20260531.htm"
-      },
-      {
-        "filed": "2026-03-26",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/723531/000119312526126204/payx-20260228.htm"
       }
     ]
   },
@@ -168,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $36.6B",
+          "detail": "Market cap $36.2B",
           "passed": true
         },
         {
@@ -193,12 +193,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 21.1",
+          "detail": "P/E 20.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 207.3",
+          "detail": "P/E x P/B = 201.1",
           "passed": false
         }
       ],

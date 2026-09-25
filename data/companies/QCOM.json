@@ -59,11 +59,11 @@
     "balance_sheet": {
       "current_ratio": 2.8164916885389326,
       "debt_to_ebitda": 1.0611879343698503,
-      "debt_to_equity": null
+      "debt_to_equity": 0.6984344053569744
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": 20.196190476190477,
+      "shareholders_equity": 21206000000,
       "total_assets": 50143000000,
       "total_liabilities": 28937000000
     },
@@ -76,21 +76,21 @@
     },
     "profitability": {
       "gross_margin_pct": null,
-      "roe_pct": null,
-      "roic_pct": null,
+      "roe_pct": 26.129397340375366,
+      "roic_pct": 17.72707872035479,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": -101.56462929124652,
-      "pb_ratio": null,
-      "pe_ttm": 38.67213572854291
+      "graham_multiple": 413.1112727388757,
+      "graham_number": 47.71389285552554,
+      "graham_upside_pct": -76.66231701857394,
+      "ncav_margin_pct": -101.48272368375082,
+      "pb_ratio": 10.123196265207959,
+      "pe_ttm": 40.808383233532936
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-24T15:59:05Z",
+  "last_updated": "2026-09-25T16:32:32Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,33 +98,47 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 202909665000,
+  "market_cap": 214617900000,
   "metrics": {
+    "book_value_per_share": 20.196190476190477,
     "current_ratio": 2.8164916885389326,
     "debt_to_ebitda": 1.0611879343698503,
+    "debt_to_equity": 0.6984344053569744,
     "eps_growth_cagr_3yr_pct": -23.904480364790935,
-    "graham_criteria_evaluated": 5,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
+    "graham_multiple": 413.1112727388757,
+    "graham_upside_pct": -76.66231701857394,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 1,
-    "munger_quality_passed": 1,
-    "ncav_margin_pct": -101.56462929124652,
-    "pe_ttm": 38.67213572854291,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 3,
+    "ncav_margin_pct": -101.48272368375082,
+    "pb_ratio": 10.123196265207959,
+    "pe_ttm": 40.808383233532936,
+    "roe_pct": 26.129397340375366,
+    "roic_pct": 17.72707872035479,
+    "shareholders_equity": 21206000000,
     "total_assets": 50143000000,
-    "total_liabilities": 28937000000
+    "total_liabilities": 28937000000,
+    "value_creation_pct": 8.04110206702123
   },
   "name": "Qualcomm",
   "plain_analysis": {
     "positives": [
-      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year."
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
     ],
     "worries": [
-      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 193.7474
+    "as_of": "2026-09-25",
+    "close": 204.45
   },
   "qualitative": null,
   "sector": "Technology",
@@ -154,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $202.9B",
+          "detail": "Market cap $214.6B",
           "passed": true
         },
         {
@@ -179,16 +193,16 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 38.7",
+          "detail": "P/E 40.8",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 413.1",
+          "passed": false
         }
       ],
-      "evaluated": 5,
+      "evaluated": 6,
       "passed": 3,
       "total": 7
     },
@@ -196,13 +210,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 26.1%",
+          "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.70",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -215,8 +229,8 @@
           "passed": null
         }
       ],
-      "evaluated": 1,
-      "passed": 1,
+      "evaluated": 3,
+      "passed": 3,
       "total": 4
     }
   },

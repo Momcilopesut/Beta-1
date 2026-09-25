@@ -59,11 +59,11 @@
     "balance_sheet": {
       "current_ratio": 1.8931229150628688,
       "debt_to_ebitda": 2.4553336429787893,
-      "debt_to_equity": null
+      "debt_to_equity": 0.7073595004460304
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": 58.45040529776954,
+      "shareholders_equity": 22420000000,
       "total_assets": 47844000000,
       "total_liabilities": 25424000000
     },
@@ -76,21 +76,21 @@
     },
     "profitability": {
       "gross_margin_pct": 64.53772137777159,
-      "roe_pct": null,
-      "roic_pct": null,
+      "roe_pct": 3.786797502230152,
+      "roic_pct": 3.6566915878189077,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
-      "ncav_margin_pct": -110.23900914428107,
-      "pb_ratio": null,
-      "pe_ttm": 123.47954545454543
+      "graham_multiple": 589.0896114771583,
+      "graham_number": 53.78935826201678,
+      "graham_upside_pct": -80.45657947619273,
+      "ncav_margin_pct": -110.10601289114392,
+      "pb_ratio": 4.708778469505373,
+      "pe_ttm": 125.10454999999999
     }
   },
   "industry": "Medical - Devices",
-  "last_updated": "2026-09-24T15:56:14Z",
+  "last_updated": "2026-09-25T16:14:50Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,35 +98,49 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 104128448303,
+  "market_cap": 105414627871,
   "metrics": {
+    "book_value_per_share": 58.45040529776954,
     "current_ratio": 1.8931229150628688,
     "debt_to_ebitda": 2.4553336429787893,
+    "debt_to_equity": 0.7073595004460304,
     "eps_growth_cagr_3yr_pct": 9.1889422202885,
     "fcf_margin_pct": 59.72667689304142,
-    "graham_criteria_evaluated": 6,
+    "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
+    "graham_multiple": 589.0896114771583,
+    "graham_upside_pct": -80.45657947619273,
     "gross_margin_pct": 64.53772137777159,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 1,
-    "munger_quality_passed": 1,
-    "ncav_margin_pct": -110.23900914428107,
-    "pe_ttm": 123.47954545454543,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -110.10601289114392,
+    "pb_ratio": 4.708778469505373,
+    "pe_ttm": 125.10454999999999,
     "reinvestment_rate_pct": -86.10816885428596,
+    "roe_pct": 3.786797502230152,
+    "roic_pct": 3.6566915878189077,
+    "shareholders_equity": 22420000000,
     "total_assets": 47844000000,
-    "total_liabilities": 25424000000
+    "total_liabilities": 25424000000,
+    "value_creation_pct": -5.510345857109827
   },
   "name": "Stryker Corporation",
   "plain_analysis": {
     "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
       "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
       "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
     ],
-    "worries": []
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 271.655
+    "as_of": "2026-09-25",
+    "close": 275.23001
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -156,7 +170,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $104.1B",
+          "detail": "Market cap $105.4B",
           "passed": true
         },
         {
@@ -181,16 +195,16 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 123.5",
+          "detail": "P/E 125.1",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 589.1",
+          "passed": false
         }
       ],
-      "evaluated": 6,
+      "evaluated": 7,
       "passed": 4,
       "total": 7
     },
@@ -198,13 +212,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 3.8%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.71",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -217,8 +231,8 @@
           "passed": true
         }
       ],
-      "evaluated": 1,
-      "passed": 1,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },

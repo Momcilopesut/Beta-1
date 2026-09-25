@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 85.87692816386878,
+      "graham_multiple": 70.1619869128808,
       "graham_number": 12.413117582082204,
-      "graham_upside_pct": -48.81378595399674,
-      "ncav_margin_pct": -181.95629120504026,
-      "pb_ratio": 5.559660763818002,
-      "pe_ttm": 15.446433121019108
+      "graham_upside_pct": -43.370813950354915,
+      "ncav_margin_pct": -190.67125102118206,
+      "pb_ratio": 5.02528829622367,
+      "pe_ttm": 13.961783439490446
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-24T15:58:37Z",
+  "last_updated": "2026-09-25T16:17:12Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 14401764184,
+  "market_cap": 13111830609,
   "metrics": {
     "book_value_per_share": 4.361938799903704,
     "current_ratio": 0.3988929889298893,
@@ -106,15 +106,15 @@
     "debt_to_equity": 3.1390271926464957,
     "eps_growth_cagr_3yr_pct": -9.809258041160362,
     "graham_criteria_evaluated": 7,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 85.87692816386878,
-    "graham_upside_pct": -48.81378595399674,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 70.1619869128808,
+    "graham_upside_pct": -43.370813950354915,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -181.95629120504026,
-    "pb_ratio": 5.559660763818002,
-    "pe_ttm": 15.446433121019108,
+    "ncav_margin_pct": -190.67125102118206,
+    "pb_ratio": 5.02528829622367,
+    "pe_ttm": 13.961783439490446,
     "reinvestment_rate_pct": -50.763200760146596,
     "roe_pct": 37.26541554959786,
     "shareholders_equity": 2611000000,
@@ -134,8 +134,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 24.2509
+    "as_of": "2026-09-25",
+    "close": 21.92
   },
   "qualitative": null,
   "sector": "Technology",
@@ -165,7 +165,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $14.4B",
+          "detail": "Market cap $13.1B",
           "passed": true
         },
         {
@@ -190,17 +190,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 15.4",
-          "passed": false
+          "detail": "P/E 14.0",
+          "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 85.9",
+          "detail": "P/E x P/B = 70.2",
           "passed": false
         }
       ],
       "evaluated": 7,
-      "passed": 3,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {

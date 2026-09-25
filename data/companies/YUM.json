@@ -59,11 +59,11 @@
     "balance_sheet": {
       "current_ratio": 1.345646437994723,
       "debt_to_ebitda": 0.013669064748201438,
-      "debt_to_equity": null
+      "debt_to_equity": -0.005188421627525942
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": -26.837562774805384,
+      "shareholders_equity": -7324000000,
       "total_assets": 8197000000,
       "total_liabilities": 15521000000
     },
@@ -76,21 +76,21 @@
     },
     "profitability": {
       "gross_margin_pct": null,
-      "roe_pct": null,
-      "roic_pct": null,
+      "roe_pct": -21.28618241398143,
+      "roic_pct": -24.16571743955282,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
+      "graham_multiple": -130.38877913050067,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -135.69281132178784,
-      "pb_ratio": null,
-      "pe_ttm": 24.936936936936938
+      "ncav_margin_pct": -135.44693661693051,
+      "pb_ratio": -5.192721901365375,
+      "pe_ttm": 25.109909909909913
     }
   },
   "industry": "Restaurants",
-  "last_updated": "2026-09-24T15:53:19Z",
+  "last_updated": "2026-09-25T16:11:52Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,33 +98,46 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 38234145456,
+  "market_cap": 38457398130,
   "metrics": {
+    "book_value_per_share": -26.837562774805384,
     "current_ratio": 1.345646437994723,
     "debt_to_ebitda": 0.013669064748201438,
+    "debt_to_equity": -0.005188421627525942,
     "eps_growth_cagr_3yr_pct": 6.690461655968871,
     "fcf_margin_pct": 19.95373752130509,
-    "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
+    "graham_criteria_evaluated": 7,
+    "graham_criteria_passed": 5,
+    "graham_multiple": -130.38877913050067,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 1,
-    "munger_quality_passed": 1,
-    "ncav_margin_pct": -135.69281132178784,
-    "pe_ttm": 24.936936936936938,
+    "munger_quality_evaluated": 3,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -135.44693661693051,
+    "pb_ratio": -5.192721901365375,
+    "pe_ttm": 25.109909909909913,
     "reinvestment_rate_pct": 4.5029911290334645,
+    "roe_pct": -21.28618241398143,
+    "roic_pct": -24.16571743955282,
+    "shareholders_equity": -7324000000,
     "total_assets": 8197000000,
-    "total_liabilities": 15521000000
+    "total_liabilities": 15521000000,
+    "value_creation_pct": -34.26573754536644
   },
   "name": "Yum! Brands",
   "plain_analysis": {
     "positives": [
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
       "After paying for everything it needs to run and grow the business, it still has real cash left over from its sales."
     ],
-    "worries": []
+    "worries": [
+      "If this company had to sell everything it owns and pay off everything it owes, there would be nothing left over - it actually owes more than it owns.",
+      "Counting all the money it uses to run the business, it isn't making any profit right now.",
+      "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
+    ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 138.4
+    "as_of": "2026-09-25",
+    "close": 139.36
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -154,7 +167,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $38.2B",
+          "detail": "Market cap $38.5B",
           "passed": true
         },
         {
@@ -179,30 +192,30 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.9",
+          "detail": "P/E 25.1",
           "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = -130.4",
+          "passed": true
         }
       ],
-      "evaluated": 6,
-      "passed": 4,
+      "evaluated": 7,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE -21.3%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity -0.01",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -215,8 +228,8 @@
           "passed": null
         }
       ],
-      "evaluated": 1,
-      "passed": 1,
+      "evaluated": 3,
+      "passed": 2,
       "total": 4
     }
   },

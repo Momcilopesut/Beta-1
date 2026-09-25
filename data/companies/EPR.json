@@ -62,8 +62,8 @@
       "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": 30.403390873976793,
+      "shareholders_equity": 2329171000,
       "total_assets": 5699762000,
       "total_liabilities": 3370591000
     },
@@ -76,21 +76,21 @@
     },
     "profitability": {
       "gross_margin_pct": null,
-      "roe_pct": null,
+      "roe_pct": 11.804028128462873,
       "roic_pct": null,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": null,
-      "graham_number": null,
-      "graham_upside_pct": null,
+      "graham_multiple": 31.999801388763274,
+      "graham_number": 47.36845201713359,
+      "graham_upside_pct": -16.14719062288265,
       "ncav_margin_pct": null,
-      "pb_ratio": null,
-      "pe_ttm": 17.231707317073173
+      "pb_ratio": 1.8580164375136048,
+      "pe_ttm": 17.222560975609756
     }
   },
   "industry": "REIT - Specialty",
-  "last_updated": "2026-09-24T16:06:03Z",
+  "last_updated": "2026-09-25T16:25:16Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,28 +98,37 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 4324980281,
+  "market_cap": 4310826357,
   "metrics": {
+    "book_value_per_share": 30.403390873976793,
     "eps_growth_cagr_3yr_pct": 17.34356237183958,
-    "graham_criteria_evaluated": 5,
+    "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
+    "graham_multiple": 31.999801388763274,
+    "graham_upside_pct": -16.14719062288265,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 1,
+    "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "pe_ttm": 17.231707317073173,
+    "pb_ratio": 1.8580164375136048,
+    "pe_ttm": 17.222560975609756,
+    "roe_pct": 11.804028128462873,
+    "shareholders_equity": 2329171000,
     "total_assets": 5699762000,
     "total_liabilities": 3370591000
   },
   "name": "EPR Properties",
   "plain_analysis": {
     "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
       "The profit behind each share of stock has been growing at a healthy pace over the last few years."
     ],
-    "worries": []
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 56.52
+    "as_of": "2026-09-25",
+    "close": 56.49
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -178,12 +187,12 @@
           "passed": false
         },
         {
-          "criterion": "Moderate P/E x P/B",
-          "detail": "P/E or P/B unavailable",
-          "passed": null
+          "criterion": "Moderate P/E x P/B (<= 22.5)",
+          "detail": "P/E x P/B = 32.0",
+          "passed": false
         }
       ],
-      "evaluated": 5,
+      "evaluated": 6,
       "passed": 3,
       "total": 7
     },
@@ -191,8 +200,8 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 11.8%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
@@ -210,7 +219,7 @@
           "passed": null
         }
       ],
-      "evaluated": 1,
+      "evaluated": 2,
       "passed": 0,
       "total": 4
     }

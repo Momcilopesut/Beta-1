@@ -59,11 +59,11 @@
     "balance_sheet": {
       "current_ratio": 1.0775507874914403,
       "debt_to_ebitda": 0.9982945982390735,
-      "debt_to_equity": null
+      "debt_to_equity": 0.6639848057189586
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
+      "book_value_per_share": 80.78105178646948,
+      "shareholders_equity": 37909000000,
       "total_assets": 99627000000,
       "total_liabilities": 61718000000
     },
@@ -76,21 +76,21 @@
     },
     "profitability": {
       "gross_margin_pct": null,
-      "roe_pct": null,
-      "roic_pct": null,
+      "roe_pct": 52.910918251602524,
+      "roic_pct": 43.3230035175418,
       "trend": "stable"
     },
     "valuation": {
       "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -113.95864917681149,
-      "pb_ratio": null,
+      "ncav_margin_pct": -113.93768413958118,
+      "pb_ratio": 4.533241297327812,
       "pe_ttm": null
     }
   },
   "industry": "Financial - Credit Services",
-  "last_updated": "2026-09-24T15:51:22Z",
+  "last_updated": "2026-09-25T16:09:43Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,27 +98,39 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 682293737346,
+  "market_cap": 685589046045,
   "metrics": {
+    "book_value_per_share": 80.78105178646948,
     "current_ratio": 1.0775507874914403,
     "debt_to_ebitda": 0.9982945982390735,
+    "debt_to_equity": 0.6639848057189586,
     "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 3,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 0,
-    "munger_quality_passed": 0,
-    "ncav_margin_pct": -113.95864917681149,
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 2,
+    "ncav_margin_pct": -113.93768413958118,
+    "pb_ratio": 4.533241297327812,
+    "roe_pct": 52.910918251602524,
+    "roic_pct": 43.3230035175418,
+    "shareholders_equity": 37909000000,
     "total_assets": 99627000000,
-    "total_liabilities": 61718000000
+    "total_liabilities": 61718000000,
+    "value_creation_pct": 33.5710411019784
   },
   "name": "Visa Inc.",
   "plain_analysis": {
-    "positives": [],
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "For every $100 it uses to run the business - its own money and borrowed money together - it makes back more than $15 in profit each year. That's a strong return.",
+      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+    ],
     "worries": []
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 365.64999
+    "as_of": "2026-09-25",
+    "close": 366.2
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -148,7 +160,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $682.3B",
+          "detail": "Market cap $685.6B",
           "passed": true
         },
         {
@@ -190,13 +202,13 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE 52.9%",
+          "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity unavailable",
-          "passed": null
+          "detail": "Debt/equity 0.66",
+          "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
@@ -209,8 +221,8 @@
           "passed": null
         }
       ],
-      "evaluated": 0,
-      "passed": 0,
+      "evaluated": 2,
+      "passed": 2,
       "total": 4
     }
   },

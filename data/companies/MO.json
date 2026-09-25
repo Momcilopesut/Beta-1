@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": -558.9122559838572,
+      "graham_multiple": -540.963140072787,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -128.0397460332397,
-      "pb_ratio": -33.135024025519705,
-      "pe_ttm": 16.86771844660194
+      "ncav_margin_pct": -128.50112842738034,
+      "pb_ratio": -32.59862713324386,
+      "pe_ttm": 16.594660194174757
     }
   },
   "industry": "Tobacco",
-  "last_updated": "2026-09-24T16:15:17Z",
+  "last_updated": "2026-09-25T16:12:16Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 115913625773,
+  "market_cap": 114527738285,
   "metrics": {
     "book_value_per_share": -2.0973275874638517,
     "current_ratio": 0.6480227223071882,
@@ -108,21 +108,21 @@
     "fcf_margin_pct": 38.97933760041239,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 5,
-    "graham_multiple": -558.9122559838572,
+    "graham_multiple": -540.963140072787,
     "gross_margin_pct": 62.468319085871386,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -128.0397460332397,
-    "pb_ratio": -33.135024025519705,
-    "pe_ttm": 16.86771844660194,
+    "ncav_margin_pct": -128.50112842738034,
+    "pb_ratio": -32.59862713324386,
+    "pe_ttm": 16.594660194174757,
     "reinvestment_rate_pct": 13.598470214925754,
     "roe_pct": -198.37235865219873,
     "roic_pct": 41.303520474595004,
     "shareholders_equity": -3502000000,
     "total_assets": 35017000000,
     "total_liabilities": 38469000000,
-    "value_creation_pct": 33.151576486848505
+    "value_creation_pct": 33.04694343050956
   },
   "name": "Altria",
   "plain_analysis": {
@@ -140,26 +140,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 69.495
+    "as_of": "2026-09-25",
+    "close": 68.37
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Altria's FY2025 10-K describes a leading U.S. tobacco portfolio (Marlboro, Copenhagen, Skoal, on!, NJOY) facing declining cigarette and MST volumes as consumers shift to discount brands and alternative nicotine categories, compounded by illicit flavored disposable e-vapor products. Reported net earnings fell to $6.9 billion ($4.12 diluted EPS) from $11.3 billion in 2024, largely due to asset impairment, exit, and implementation charges, including non-cash impairments of e-vapor goodwill and intangibles. The company continues an 'Optimize & Accelerate' cost initiative targeting at least $600 million in cumulative savings by 2029 and reaffirmed progress toward its 2028 adjusted EPS growth and dividend goals.",
-    "filing_summary_10q": "The most recent 10-Q excerpt provided consists primarily of XBRL tag data covering the quarter and six months ended June 30, 2026, rather than narrative text. It references Altria's reportable segments (smokeable products, oral tobacco, and other), the Horizon joint venture with JTIUH, NJOY, equity investments in AB InBev and Cronos, pension/postretirement plans, and the ongoing 'Initiative' exit and implementation costs, but the excerpt does not contain descriptive discussion of quarterly results or developments beyond these data tags.",
-    "filing_summary_8k": "This 8-K, dated August 27, 2026, discloses that Altria's Board of Directors increased its size from 10 to 11 members and elected Steven W. Presley as a new independent director, effective that date, appointing him to the Compensation and Talent Development, Innovation, and Finance Committees. It also notes that on August 28, 2026, Altria issued a press release regarding this election, furnished under Item 7.01 (Regulation FD Disclosure) and not deemed 'filed' under the Exchange Act.",
-    "moat_explanation": "The 10-K describes Altria's portfolio as 'leading' with premium brands such as Marlboro (in cigarettes), Copenhagen and Skoal (MST), and states PM USA is 'the most profitable U.S. cigarette manufacturer' and USSTC is 'the leading global MST manufacturer.' The excerpts also describe a stringent FDA PMTA authorization regime for smoke-free products, which creates a regulatory barrier that legitimate, compliant competitors must clear, though the filing notes this barrier is being undermined by illicit, non-compliant e-vapor products flooding the market.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Domestic cigarette industry and shipment volumes declined an estimated 6.5%-8% in recent quarters, with discount brand share rising to 32.9% of the category, pressuring premium brand sales",
-      "Illicit flavored disposable e-vapor products (~70% of the e-vapor category) have evaded FDA regulation and materially harmed NJOY's sales, contributing to non-cash goodwill and intangible asset impairments in the e-vapor reporting unit",
-      "An ITC ruling from a patent lawsuit imposed bans on importing and selling/marketing NJOY ACE products in the U.S., currently under appeal but in effect during the appeal",
-      "Competitors not party to the tobacco Master Settlement Agreement avoid significant settlement payments, giving them a cost advantage over PM USA",
-      "Skoal trademark and the e-vapor reporting unit were flagged in the 2025 annual impairment test as not substantially exceeding carrying value, unlike other reporting units",
-      "Reported net earnings fell 38.3% year-over-year in 2025, driven largely by asset impairment, exit, and implementation charges"
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000764180.json",
@@ -187,7 +171,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $115.9B",
+          "detail": "Market cap $114.5B",
           "passed": true
         },
         {
@@ -212,12 +196,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 16.9",
+          "detail": "P/E 16.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -558.9",
+          "detail": "P/E x P/B = -541.0",
           "passed": true
         }
       ],

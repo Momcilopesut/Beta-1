@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 182.22066540616999,
+      "graham_multiple": 181.68599314874783,
       "graham_number": 165.1439169235324,
-      "graham_upside_pct": -64.86075346861875,
-      "ncav_margin_pct": -115.57880967824391,
-      "pb_ratio": 5.664710346584129,
-      "pe_ttm": 32.167693360711844
+      "graham_upside_pct": -64.80908691537411,
+      "ncav_margin_pct": -115.60171578691676,
+      "pb_ratio": 5.6563935388322655,
+      "pe_ttm": 32.120465434633815
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-09-24T16:10:05Z",
+  "last_updated": "2026-09-25T16:09:00Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 217324854000,
+  "market_cap": 217401183000,
   "metrics": {
     "book_value_per_share": 82.96452444093565,
     "current_ratio": 0.8767601000131596,
@@ -108,21 +108,21 @@
     "fcf_margin_pct": 14.973812746425,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 182.22066540616999,
-    "graham_upside_pct": -64.86075346861875,
+    "graham_multiple": 181.68599314874783,
+    "graham_upside_pct": -64.80908691537411,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -115.57880967824391,
-    "pb_ratio": 5.664710346584129,
-    "pe_ttm": 32.167693360711844,
+    "ncav_margin_pct": -115.60171578691676,
+    "pb_ratio": 5.6563935388322655,
+    "pe_ttm": 32.120465434633815,
     "reinvestment_rate_pct": 17.66695840323644,
     "roe_pct": 18.036344620211793,
     "roic_pct": 12.44554767357455,
     "shareholders_equity": 38245000000,
     "total_assets": 86817000000,
     "total_liabilities": 47076000000,
-    "value_creation_pct": 3.2297635692873836
+    "value_creation_pct": 3.093583154979866
   },
   "name": "Linde plc",
   "plain_analysis": {
@@ -138,26 +138,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-24",
-    "close": 469.97
+    "as_of": "2026-09-25",
+    "close": 469.28
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Linde plc's 2025 10-K describes it as the largest industrial gas company worldwide, serving diverse end markets (healthcare, chemicals and energy, manufacturing, metals and mining, food and beverage, electronics) through on-site, merchant, and packaged gas distribution plus an Engineering segment. For 2025, sales were $33,986 million (up 3% from $33,005 million in 2024), reported operating profit was $8,923 million, and net income attributable to Linde plc was $6,898 million with diluted EPS of $14.61. The filing notes growth was driven by higher pricing and productivity initiatives that offset cost inflation, with roughly 64% of 2025 sales generated outside the United States.",
-    "filing_summary_10q": "The most recent 10-Q excerpt provided consists primarily of XBRL data tags (covering the quarter and six months ended June 30, 2026, compared to 2025 periods) rather than narrative text, so it does not contain a discussion of results of operations. It does indicate the filing covers Linde's four reportable segments (Americas, EMEA, APAC, Engineering) and includes disclosures on debt instruments, derivative/hedging activity, and fair value measurements, along with a reference to RusChemAlliance-related matters, but the excerpt does not provide sufficient narrative detail to summarize specific quarterly results or developments.",
-    "filing_summary_8k": "This 8-K, dated July 31, 2026, discloses under Item 2.02 that Linde plc issued a press release on that date reporting its results of operations for the quarter ended June 30, 2026, furnished as Exhibit 99.1. The filing excerpt does not include the actual financial results, only the notice of the earnings release and standard cover-page/signature information.",
-    "moat_explanation": "The 10-K describes on-site industrial gas plants built by Linde directly on or adjacent to customer sites, supplied via dedicated pipelines, under total-requirement contracts typically lasting 10-20 years with minimum purchase requirements and price escalation clauses. This dedicated infrastructure and long contract duration create real friction for customers to switch suppliers, and the filing also notes pipeline networks provide a competitive advantage in reliable, economic supply to larger customers.",
-    "moat_present": true,
-    "moat_type": "switching_costs",
-    "red_flags": [
-      "Energy is described as the single largest cost item, and the company acknowledges energy/raw material price and supply disruptions could reduce profitability",
-      "Significant customer end-markets (chemicals and energy, metals and mining) are described as cyclical, creating exposure to industry downturns",
-      "Goodwill and indefinite-lived intangible assets carry a net value of approximately $28 billion and $2 billion respectively, and the filing flags impairment risk from negative industry/economic trends or market cap declines",
-      "Substantial international operations expose the company to currency fluctuation, trade/tariff, and geopolitical risks as stated in the risk factors",
-      "The company acknowledges its IT systems have been and will likely continue to be subject to cyberattacks and disruptions",
-      "Pension benefit obligations require significant actuarial estimates and are sensitive to discount rate and investment return assumptions"
-    ]
-  },
+  "qualitative": null,
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001707925.json",
@@ -185,7 +169,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $217.3B",
+          "detail": "Market cap $217.4B",
           "passed": true
         },
         {
@@ -210,12 +194,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 32.2",
+          "detail": "P/E 32.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 182.2",
+          "detail": "P/E x P/B = 181.7",
           "passed": false
         }
       ],
