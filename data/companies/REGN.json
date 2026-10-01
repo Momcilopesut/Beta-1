@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 45.00204804484287,
+      "graham_multiple": 39.127839669862205,
       "graham_number": 557.2157479589732,
-      "graham_upside_pct": -29.2909309224185,
-      "ncav_margin_pct": -88.22250854906444,
-      "pb_ratio": 2.3687692920411174,
-      "pe_ttm": 18.99807135969142
+      "graham_upside_pct": -24.168730970050316,
+      "ncav_margin_pct": -87.36934124059925,
+      "pb_ratio": 2.208765244765156,
+      "pe_ttm": 17.71480231436837
     }
   },
   "industry": "Biotechnology",
-  "last_updated": "2026-09-25T21:45:44Z",
+  "last_updated": "2026-10-01T23:33:10Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 81185456880,
+  "market_cap": 75701595820,
   "metrics": {
     "book_value_per_share": 332.6790847246094,
     "current_ratio": 4.125515062723194,
@@ -107,20 +107,20 @@
     "eps_growth_cagr_3yr_pct": 2.765976893685007,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 45.00204804484287,
-    "graham_upside_pct": -29.2909309224185,
+    "graham_multiple": 39.127839669862205,
+    "graham_upside_pct": -24.168730970050316,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -88.22250854906444,
-    "pb_ratio": 2.3687692920411174,
-    "pe_ttm": 18.99807135969142,
+    "ncav_margin_pct": -87.36934124059925,
+    "pb_ratio": 2.208765244765156,
+    "pe_ttm": 17.71480231436837,
     "roe_pct": 14.412497720503312,
     "roic_pct": 10.22894421427882,
     "shareholders_equity": 31256900000,
     "total_assets": 40558700000,
     "total_liabilities": 9301800000,
-    "value_creation_pct": 0.2920142176835796
+    "value_creation_pct": 0.20198411258301263
   },
   "name": "Regeneron Pharmaceuticals",
   "plain_analysis": {
@@ -134,8 +134,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 788.04
+    "as_of": "2026-10-01",
+    "close": 734.81
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -143,14 +143,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000872589.json",
     "sec_filings": [
       {
-        "filed": "2026-07-30",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/872589/000087258926000025/regn-20260630.htm"
+        "filed": "2026-09-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/872589/000110465926112340/tm2626090d1_8k.htm"
       },
       {
         "filed": "2026-07-30",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/872589/000087258926000023/regn-20260730.htm"
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/872589/000087258926000025/regn-20260630.htm"
       },
       {
         "filed": "2026-02-04",
@@ -165,7 +165,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $81.2B",
+          "detail": "Market cap $75.7B",
           "passed": true
         },
         {
@@ -190,12 +190,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 19.0",
+          "detail": "P/E 17.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 45.0",
+          "detail": "P/E x P/B = 39.1",
           "passed": false
         }
       ],

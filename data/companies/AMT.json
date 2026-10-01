@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 674.9821373072103,
+      "graham_multiple": 612.830097588741,
       "graham_number": 30.860922974538948,
-      "graham_upside_pct": -81.74233983639654,
-      "ncav_margin_pct": -163.6014724034879,
-      "pb_ratio": 21.563648710045175,
-      "pe_ttm": 31.30185185185185
+      "graham_upside_pct": -80.83886565594256,
+      "ncav_margin_pct": -166.74876990166118,
+      "pb_ratio": 20.546892629946612,
+      "pe_ttm": 29.825925925925926
     }
   },
   "industry": "REIT - Specialty",
-  "last_updated": "2026-09-25T21:41:15Z",
+  "last_updated": "2026-10-01T23:51:38Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 78761218800,
+  "market_cap": 75047517600,
   "metrics": {
     "book_value_per_share": 7.838654871114615,
     "current_ratio": 0.3965691804796205,
@@ -106,14 +106,14 @@
     "fcf_margin_pct": 35.544783270390624,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 3,
-    "graham_multiple": 674.9821373072103,
-    "graham_upside_pct": -81.74233983639654,
+    "graham_multiple": 612.830097588741,
+    "graham_upside_pct": -80.83886565594256,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 1,
     "munger_quality_passed": 0,
-    "ncav_margin_pct": -163.6014724034879,
-    "pb_ratio": 21.563648710045175,
-    "pe_ttm": 31.30185185185185,
+    "ncav_margin_pct": -166.74876990166118,
+    "pb_ratio": 20.546892629946612,
+    "pe_ttm": 29.825925925925926,
     "reinvestment_rate_pct": -15.210023520659623,
     "shareholders_equity": 3652500000,
     "total_assets": 63190400000,
@@ -132,10 +132,25 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 169.03
+    "as_of": "2026-10-01",
+    "close": 161.06
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "American Tower's FY2025 10-K describes a global REIT operating ~149,686 communications sites plus 30 U.S. data centers, with property operations (towers, DAS, data centers) generating 97% of revenue and services 3%. Total revenue grew 5% year-over-year to $10.6 billion, driven by tenant billings growth, new site additions, and 14% Data Center segment growth, while churn remained around 2%. The filing discusses two ongoing customer disputes (AT&T Mexico arbitration and DISH Wireless SCA default) and notes reliance on a small number of large carrier customers for a substantial share of revenue.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists primarily of structured XBRL tags rather than narrative text, so a detailed factual summary cannot be reliably constructed. The tags indicate the filing covers the quarter ended June 30, 2026, and reference disposals of ATC Philippines and Kirtonkhola Tower Bangladesh Limited assets, as well as an arrangement involving Stonepeak Partners' common and preferred equity interest in the U.S. Data Centers business. No further narrative detail on financial results or operational developments was included in the excerpt.",
+    "filing_summary_8k": "This 8-K, dated September 17-18, 2026, discloses two items: the Board's election of Kristen M. Ludgate as a new director and member of the Compensation and Human Capital Committee, effective immediately, along with background on her prior roles at HP Inc. and 3M; and the Board's declaration of a cash distribution of $1.79 per share, payable October 20, 2026 to stockholders of record as of September 30, 2026.",
+    "moat_explanation": "The 10-K explains that tenants (wireless carriers) rarely relocate because suitable alternative sites may not exist, and repositioning equipment is costly and can degrade network quality, resulting in high lease renewal rates and low (~2%) churn despite competitive pressure. This friction, combined with long-term (5-10 year) non-cancellable leases with contractual escalators, supports a switching-cost-based moat rather than network effects or brand-based advantages.",
+    "moat_present": true,
+    "moat_type": "switching_costs",
+    "red_flags": [
+      "Heavy customer concentration: T-Mobile (18%), AT&T (17%), Verizon (14%) and Telef\u00f3nica (10%) together account for a large share of total revenue, per the company's own disclosure.",
+      "Active arbitration dispute with AT&T Mexico (~$300M of 2025 tenant revenue) over lease calculation and rent abatement, with ~$30M of reserves recorded and further reserves expected until resolved.",
+      "DISH Wireless (a subsidiary of EchoStar) is in default under its Strategic Collocation Agreement and has attempted to be excused from contractual obligations, leading to litigation; EchoStar has also begun decommissioning portions of its network.",
+      "Company acknowledges risk from RAN sharing, spectrum-efficient technologies, and network consolidation among carriers, which could reduce demand for tower space or new equipment additions.",
+      "In data centers, the filing states some competitors have structural advantages (lower costs, better power access, existing relationships), which could pressure rental rates or customer retention in that segment."
+    ]
+  },
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001053507.json",
@@ -163,7 +178,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $78.8B",
+          "detail": "Market cap $75.0B",
           "passed": true
         },
         {
@@ -188,12 +203,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 31.3",
+          "detail": "P/E 29.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 675.0",
+          "detail": "P/E x P/B = 612.8",
           "passed": false
         }
       ],

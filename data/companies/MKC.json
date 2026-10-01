@@ -62,7 +62,7 @@
       "debt_to_equity": 0.6301577617013858
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 21.337053452662666,
+      "book_value_per_share": 21.337053452619912,
       "shareholders_equity": 5736500000,
       "total_assets": 13200400000,
       "total_liabilities": 7432300000
@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 36.761565179037646,
-      "graham_number": 37.5052696146393,
-      "graham_upside_pct": -21.766229422946797,
-      "ncav_margin_pct": -141.07615285147236,
-      "pb_ratio": 2.2467957024317964,
-      "pe_ttm": 16.3617747440273
+      "graham_multiple": 31.16467427406027,
+      "graham_number": 37.50526961460173,
+      "graham_upside_pct": -15.031106446303285,
+      "ncav_margin_pct": -144.61238712495782,
+      "pb_ratio": 2.068701758563584,
+      "pe_ttm": 15.064846416382252
     }
   },
   "industry": "Packaged Foods",
-  "last_updated": "2026-09-25T21:43:07Z",
+  "last_updated": "2026-10-01T23:30:09Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,30 +98,30 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 12888743547,
+  "market_cap": 11867107638,
   "metrics": {
-    "book_value_per_share": 21.337053452662666,
+    "book_value_per_share": 21.337053452619912,
     "current_ratio": 0.6982234994448436,
     "debt_to_ebitda": 2.776207664541894,
     "debt_to_equity": 0.6301577617013858,
     "eps_growth_cagr_3yr_pct": 5.153167622194932,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 36.761565179037646,
-    "graham_upside_pct": -21.766229422946797,
+    "graham_multiple": 31.16467427406027,
+    "graham_upside_pct": -15.031106446303285,
     "gross_margin_pct": 37.89599871350672,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -141.07615285147236,
-    "pb_ratio": 2.2467957024317964,
-    "pe_ttm": 16.3617747440273,
+    "ncav_margin_pct": -144.61238712495782,
+    "pb_ratio": 2.068701758563584,
+    "pe_ttm": 15.064846416382252,
     "roe_pct": 13.761004096574567,
     "roic_pct": 9.088202195633597,
     "shareholders_equity": 5736500000,
     "total_assets": 13200400000,
     "total_liabilities": 7432300000,
-    "value_creation_pct": 0.19881913966422893
+    "value_creation_pct": 0.19966907947263302
   },
   "name": "McCormick & Company",
   "plain_analysis": {
@@ -135,8 +135,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 47.94
+    "as_of": "2026-10-01",
+    "close": 44.14
   },
   "qualitative": null,
   "sector": "Consumer Defensive",
@@ -144,14 +144,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000063754.json",
     "sec_filings": [
       {
-        "filed": "2026-08-28",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/63754/000006375426000305/mkc-20260825.htm"
+        "filed": "2026-10-01",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/63754/000006375426000329/mkc-20260831.htm"
       },
       {
-        "filed": "2026-06-25",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/63754/000006375426000274/mkc-20260531.htm"
+        "filed": "2026-10-01",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/63754/000006375426000326/mkc-20261001.htm"
       },
       {
         "filed": "2026-01-22",
@@ -166,7 +166,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $12.9B",
+          "detail": "Market cap $11.9B",
           "passed": true
         },
         {
@@ -191,12 +191,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 16.4",
+          "detail": "P/E 15.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 36.8",
+          "detail": "P/E x P/B = 31.2",
           "passed": false
         }
       ],

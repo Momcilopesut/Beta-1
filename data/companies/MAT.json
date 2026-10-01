@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 18.22386370340507,
+      "graham_multiple": 23.339210945121035,
       "graham_number": 14.767127026000356,
-      "graham_upside_pct": 11.114575063960547,
+      "graham_upside_pct": -1.814314986699755,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.700345447119811,
-      "pe_ttm": 10.71774193548387
+      "pb_ratio": 1.9242434555817876,
+      "pe_ttm": 12.129032258064516
     }
   },
   "industry": "Leisure",
-  "last_updated": "2026-09-25T21:51:16Z",
+  "last_updated": "2026-10-01T23:50:58Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 3862074000,
+  "market_cap": 4370624000,
   "metrics": {
     "book_value_per_share": 7.816058802940147,
     "current_ratio": 2.1470495452556677,
@@ -106,20 +106,20 @@
     "debt_to_equity": 1.0441669861104643,
     "eps_growth_cagr_3yr_pct": 4.074180535193794,
     "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 5,
-    "graham_multiple": 18.22386370340507,
-    "graham_upside_pct": 11.114575063960547,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 23.339210945121035,
+    "graham_upside_pct": -1.814314986699755,
     "gross_margin_pct": 48.725517860926246,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "pb_ratio": 1.700345447119811,
-    "pe_ttm": 10.71774193548387,
+    "pb_ratio": 1.9242434555817876,
+    "pe_ttm": 12.129032258064516,
     "roe_pct": 17.804543386438628,
     "roic_pct": 13.235756244106422,
     "shareholders_equity": 2233048000,
     "total_assets": 6640382000,
-    "value_creation_pct": 6.888080011181906
+    "value_creation_pct": 6.525563076060653
   },
   "name": "Mattel",
   "plain_analysis": {
@@ -129,11 +129,13 @@
       "It keeps a big chunk of every dollar it makes in sales, after paying the direct cost of making or providing what it sells - that gives it room to handle rising costs without hurting its profits much.",
       "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
     ],
-    "worries": []
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 13.29
+    "as_of": "2026-10-01",
+    "close": 15.04
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -141,14 +143,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000063276.json",
     "sec_filings": [
       {
+        "filed": "2026-09-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/63276/000119312526408403/d158681d8k.htm"
+      },
+      {
         "filed": "2026-08-06",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/63276/000162828026054347/mat-20260630.htm"
-      },
-      {
-        "filed": "2026-08-04",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/63276/000162828026052674/mat-20260804.htm"
       },
       {
         "filed": "2026-02-23",
@@ -163,7 +165,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $3.9B",
+          "detail": "Market cap $4.4B",
           "passed": true
         },
         {
@@ -188,17 +190,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 10.7",
+          "detail": "P/E 12.1",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 18.2",
-          "passed": true
+          "detail": "P/E x P/B = 23.3",
+          "passed": false
         }
       ],
       "evaluated": 6,
-      "passed": 5,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {

@@ -62,7 +62,7 @@
       "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 3.6620692432468562,
+      "book_value_per_share": 3.66206924330347,
       "shareholders_equity": 2124000000,
       "total_assets": 3145000000,
       "total_liabilities": 1021000000
@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 456.59197505750603,
-      "graham_number": 6.792795629555654,
-      "graham_upside_pct": -77.80132147204034,
-      "ncav_margin_pct": -90.71444599400745,
-      "pb_ratio": 8.35593156967985,
-      "pe_ttm": 54.64285714285714
+      "graham_multiple": 416.6228178052024,
+      "graham_number": 6.79279562960816,
+      "graham_upside_pct": -76.7608770796847,
+      "ncav_margin_pct": -90.279235286084,
+      "pb_ratio": 7.981826136534839,
+      "pe_ttm": 52.19642857142857
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-09-25T21:53:43Z",
+  "last_updated": "2026-10-01T23:42:11Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 17747998654,
+  "market_cap": 16953398714,
   "metrics": {
-    "book_value_per_share": 3.6620692432468562,
+    "book_value_per_share": 3.66206924330347,
     "current_ratio": 2.754385964912281,
     "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 1,
-    "graham_multiple": 456.59197505750603,
-    "graham_upside_pct": -77.80132147204034,
+    "graham_multiple": 416.6228178052024,
+    "graham_upside_pct": -76.7608770796847,
     "gross_margin_pct": 25.889809848854217,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -90.71444599400745,
-    "pb_ratio": 8.35593156967985,
-    "pe_ttm": 54.64285714285714,
+    "ncav_margin_pct": -90.279235286084,
+    "pb_ratio": 7.981826136534839,
+    "pe_ttm": 52.19642857142857,
     "roe_pct": 16.101694915254235,
     "shareholders_equity": 2124000000,
     "total_assets": 3145000000,
@@ -130,8 +130,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 30.6
+    "as_of": "2026-10-01",
+    "close": 29.23
   },
   "qualitative": null,
   "sector": "Technology",
@@ -139,14 +139,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001650164.json",
     "sec_filings": [
       {
+        "filed": "2026-10-01",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1650164/000165016426000191/tost-20260928.htm"
+      },
+      {
         "filed": "2026-08-05",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1650164/000165016426000164/tost-20260630.htm"
-      },
-      {
-        "filed": "2026-08-04",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1650164/000165016426000162/tost-20260804.htm"
       },
       {
         "filed": "2026-02-18",
@@ -161,7 +161,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $17.7B",
+          "detail": "Market cap $17.0B",
           "passed": true
         },
         {
@@ -186,12 +186,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 54.6",
+          "detail": "P/E 52.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 456.6",
+          "detail": "P/E x P/B = 416.6",
           "passed": false
         }
       ],

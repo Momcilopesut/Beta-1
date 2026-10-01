@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 46.059295516411645,
+      "graham_multiple": 45.488633118569204,
       "graham_number": 130.46894211303317,
-      "graham_upside_pct": -30.107171954233046,
-      "ncav_margin_pct": -150.07829602550652,
-      "pb_ratio": 1.4138306278943522,
-      "pe_ttm": 32.57766143106457
+      "graham_upside_pct": -29.670129851203075,
+      "ncav_margin_pct": -150.39143722215138,
+      "pb_ratio": 1.4050448373101265,
+      "pe_ttm": 32.37521815008726
     }
   },
   "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-09-25T21:39:39Z",
+  "last_updated": "2026-10-01T23:25:57Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 52512697710,
+  "market_cap": 52186374630,
   "metrics": {
     "book_value_per_share": 132.03137371412836,
     "current_ratio": 0.41630434782608694,
@@ -107,20 +107,20 @@
     "eps_growth_cagr_3yr_pct": -38.48028199276532,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 2,
-    "graham_multiple": 46.059295516411645,
-    "graham_upside_pct": -30.107171954233046,
+    "graham_multiple": 45.488633118569204,
+    "graham_upside_pct": -29.670129851203075,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -150.07829602550652,
-    "pb_ratio": 1.4138306278943522,
-    "pe_ttm": 32.57766143106457,
+    "ncav_margin_pct": -150.39143722215138,
+    "pb_ratio": 1.4050448373101265,
+    "pe_ttm": 32.37521815008726,
     "roe_pct": 4.50070323488045,
     "roic_pct": 2.034954888883472,
     "shareholders_equity": 36972000000,
     "total_assets": 71059000000,
     "total_liabilities": 28092000000,
-    "value_creation_pct": -6.2313321100672585
+    "value_creation_pct": -6.308062274943747
   },
   "name": "Diamondback Energy Inc.",
   "plain_analysis": {
@@ -136,8 +136,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 186.67
+    "as_of": "2026-10-01",
+    "close": 185.51
   },
   "qualitative": null,
   "sector": "Energy",
@@ -145,14 +145,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001539838.json",
     "sec_filings": [
       {
+        "filed": "2026-09-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1539838/000110465926112325/tm2626600d1_8k.htm"
+      },
+      {
         "filed": "2026-08-05",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1539838/000153983826000142/fang-20260630.htm"
-      },
-      {
-        "filed": "2026-08-03",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1539838/000153983826000137/fang-20260803.htm"
       },
       {
         "filed": "2026-02-25",
@@ -167,7 +167,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $52.5B",
+          "detail": "Market cap $52.2B",
           "passed": true
         },
         {
@@ -192,12 +192,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 32.6",
+          "detail": "P/E 32.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 46.1",
+          "detail": "P/E x P/B = 45.5",
           "passed": false
         }
       ],

@@ -8,10 +8,10 @@
         "debt": null,
         "earnings": 907000000,
         "fiscal_year": "2021-12-31",
-        "market_return_pct": 10.677168290068508,
+        "market_return_pct": 10.806270996640537,
         "revenue": null,
         "spending": null,
-        "stock_return_pct": 7.0092203025691635
+        "stock_return_pct": 5.778249712414831
       },
       {
         "cash": 33000000,
@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 35.47150499765507,
+      "graham_multiple": 36.54861213799728,
       "graham_number": 96.71931454053154,
-      "graham_upside_pct": -20.356295668205252,
+      "graham_upside_pct": -21.538643189314882,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.0533982224433065,
-      "pe_ttm": 17.274537695590325
+      "pb_ratio": 2.0843412292538406,
+      "pe_ttm": 17.534850640113795
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-09-25T21:49:28Z",
+  "last_updated": "2026-10-01T23:37:21Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,20 +98,20 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 25270206720,
+  "market_cap": 25651007760,
   "metrics": {
     "book_value_per_share": 59.140988178854286,
     "current_ratio": 0.8038454427805509,
     "eps_growth_cagr_3yr_pct": 8.394043095201798,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 35.47150499765507,
-    "graham_upside_pct": -20.356295668205252,
+    "graham_multiple": 36.54861213799728,
+    "graham_upside_pct": -21.538643189314882,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "pb_ratio": 2.0533982224433065,
-    "pe_ttm": 17.274537695590325,
+    "pb_ratio": 2.0843412292538406,
+    "pe_ttm": 17.534850640113795,
     "roe_pct": 11.883280500690889,
     "shareholders_equity": 12303000000,
     "total_assets": 54066000000
@@ -127,8 +127,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 121.44
+    "as_of": "2026-10-01",
+    "close": 123.27
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -136,9 +136,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000936340.json",
     "sec_filings": [
       {
-        "filed": "2026-09-08",
+        "filed": "2026-09-28",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/936340/000093634026000156/dte-20260908.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/936340/000093634026000159/dte-20260928.htm"
       },
       {
         "filed": "2026-07-28",
@@ -158,7 +158,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $25.3B",
+          "detail": "Market cap $25.7B",
           "passed": true
         },
         {
@@ -183,12 +183,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 17.3",
+          "detail": "P/E 17.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 35.5",
+          "detail": "P/E x P/B = 36.5",
           "passed": false
         }
       ],

@@ -4,16 +4,6 @@
   "five_year_history": {
     "years": [
       {
-        "cash": 1243962000,
-        "debt": 2736175000,
-        "earnings": 127850000,
-        "fiscal_year": "2021-07-31",
-        "market_return_pct": null,
-        "revenue": 1909710000,
-        "spending": null,
-        "stock_return_pct": null
-      },
-      {
         "cash": 1107427000,
         "debt": 2670300000,
         "earnings": 347923000,
@@ -52,45 +42,55 @@
         "revenue": 2964347000,
         "spending": null,
         "stock_return_pct": -17.444096478215485
+      },
+      {
+        "cash": 231349000,
+        "debt": 3102460000,
+        "earnings": 147535000,
+        "fiscal_year": "2026-07-31",
+        "market_return_pct": 18.185989115301847,
+        "revenue": 2838204000,
+        "spending": null,
+        "stock_return_pct": -0.5856515373352825
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 0.6295116530924799,
-      "debt_to_ebitda": 3.6428957597936473,
-      "debt_to_equity": 7.3492870419011584
+      "current_ratio": 0.7989735549093429,
+      "debt_to_ebitda": 4.27247225439337,
+      "debt_to_equity": 12.898593505095063
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 11.912910330569026,
-      "shareholders_equity": 424499000,
-      "total_assets": 5777885000,
-      "total_liabilities": 5023981000
+      "book_value_per_share": 6.749683979070415,
+      "shareholders_equity": 240527000,
+      "total_assets": 5526448000,
+      "total_liabilities": 4969050000
     },
     "cash_flow": {
       "fcf_margin_pct": null,
       "reinvestment_rate_pct": null
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -4.146136900293007
+      "eps_growth_cagr_3yr_pct": -14.920740868041115
     },
     "profitability": {
       "gross_margin_pct": null,
-      "roe_pct": 65.96105055606726,
-      "roic_pct": 13.358739521646552,
+      "roe_pct": 61.3382281407077,
+      "roic_pct": 10.167707854737577,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 206.5224264382457,
-      "graham_number": 44.92599284107873,
-      "graham_upside_pct": -66.99287867087008,
-      "ncav_margin_pct": -181.94074398721028,
-      "pb_ratio": 11.425419668503343,
-      "pe_ttm": 18.07569721115538
+      "graham_multiple": 694.6826530435836,
+      "graham_number": 25.013910227308074,
+      "graham_upside_pct": -82.00308638944666,
+      "ncav_margin_pct": -182.6292198178724,
+      "pb_ratio": 20.592075189147167,
+      "pe_ttm": 33.73543689320388
     }
   },
   "industry": "Gambling, Resorts & Casinos",
-  "last_updated": "2026-09-25T21:51:18Z",
+  "last_updated": "2026-10-01T23:39:20Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,29 +98,29 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 4850079224,
+  "market_cap": 4952703779,
   "metrics": {
-    "book_value_per_share": 11.912910330569026,
-    "current_ratio": 0.6295116530924799,
-    "debt_to_ebitda": 3.6428957597936473,
-    "debt_to_equity": 7.3492870419011584,
-    "eps_growth_cagr_3yr_pct": -4.146136900293007,
+    "book_value_per_share": 6.749683979070415,
+    "current_ratio": 0.7989735549093429,
+    "debt_to_ebitda": 4.27247225439337,
+    "debt_to_equity": 12.898593505095063,
+    "eps_growth_cagr_3yr_pct": -14.920740868041115,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 206.5224264382457,
-    "graham_upside_pct": -66.99287867087008,
+    "graham_multiple": 694.6826530435836,
+    "graham_upside_pct": -82.00308638944666,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -181.94074398721028,
-    "pb_ratio": 11.425419668503343,
-    "pe_ttm": 18.07569721115538,
-    "roe_pct": 65.96105055606726,
-    "roic_pct": 13.358739521646552,
-    "shareholders_equity": 424499000,
-    "total_assets": 5777885000,
-    "total_liabilities": 5023981000,
-    "value_creation_pct": 5.462422262294306
+    "ncav_margin_pct": -182.6292198178724,
+    "pb_ratio": 20.592075189147167,
+    "pe_ttm": 33.73543689320388,
+    "roe_pct": 61.3382281407077,
+    "roic_pct": 10.167707854737577,
+    "shareholders_equity": 240527000,
+    "total_assets": 5526448000,
+    "total_liabilities": 4969050000,
+    "value_creation_pct": 1.8242972513279216
   },
   "name": "Vail Resorts",
   "plain_analysis": {
@@ -136,8 +136,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 136.11
+    "as_of": "2026-10-01",
+    "close": 138.99
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -145,19 +145,19 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000812011.json",
     "sec_filings": [
       {
-        "filed": "2026-09-02",
+        "filed": "2026-09-28",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/812011/000081201126000049/mtn-20260731.htm"
+      },
+      {
+        "filed": "2026-09-28",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/812011/000081201126000035/mtn-20260902.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/812011/000081201126000048/mtn-20260928.htm"
       },
       {
         "filed": "2026-06-08",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/812011/000081201126000026/mtn-20260430.htm"
-      },
-      {
-        "filed": "2025-09-29",
-        "form": "10-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/812011/000081201125000104/mtn-20250731.htm"
       }
     ]
   },
@@ -167,12 +167,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $4.9B",
+          "detail": "Market cap $5.0B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 0.63, debt $3.1B vs working capital $-0.6B",
+          "detail": "Current ratio 0.80, debt $3.1B vs working capital $-0.2B",
           "passed": false
         },
         {
@@ -187,17 +187,17 @@
         },
         {
           "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -4.1%/yr",
+          "detail": "EPS 3yr CAGR -14.9%/yr",
           "passed": false
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 18.1",
+          "detail": "P/E 33.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 206.5",
+          "detail": "P/E x P/B = 694.7",
           "passed": false
         }
       ],
@@ -209,17 +209,17 @@
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 66.0%",
+          "detail": "ROE 61.3%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 7.35",
+          "detail": "Debt/equity 12.90",
           "passed": false
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "37,204,000 shares vs. 37,957,000 a year earlier",
+          "detail": "35,792,000 shares vs. 37,204,000 a year earlier",
           "passed": true
         },
         {

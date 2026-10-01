@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 10.36760868454231,
+      "graham_multiple": 10.004729425379745,
       "graham_number": 119.31178952481508,
-      "graham_upside_pct": 47.316692832220134,
-      "ncav_margin_pct": -116.14266715268566,
-      "pb_ratio": 1.7742320825750884,
-      "pe_ttm": 5.843434343434343
+      "graham_upside_pct": 49.96454188639402,
+      "ncav_margin_pct": -116.4328131309202,
+      "pb_ratio": 1.7429053523851592,
+      "pe_ttm": 5.740259740259741
     }
   },
   "industry": "Oil & Gas Drilling",
-  "last_updated": "2026-09-25T21:52:20Z",
+  "last_updated": "2026-10-01T23:40:36Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 5608701662,
+  "market_cap": 5509671617,
   "metrics": {
     "book_value_per_share": 45.647917651479155,
     "current_ratio": 1.771688837478311,
@@ -107,20 +107,20 @@
     "fcf_margin_pct": 8.556352891515408,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 10.36760868454231,
-    "graham_upside_pct": 47.316692832220134,
+    "graham_multiple": 10.004729425379745,
+    "graham_upside_pct": 49.96454188639402,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -116.14266715268566,
-    "pb_ratio": 1.7742320825750884,
-    "pe_ttm": 5.843434343434343,
+    "ncav_margin_pct": -116.4328131309202,
+    "pb_ratio": 1.7429053523851592,
+    "pe_ttm": 5.740259740259741,
     "roe_pct": 31.007067137809187,
     "roic_pct": 23.12812586158367,
     "shareholders_equity": 3169600000,
     "total_assets": 5304800000,
     "total_liabilities": 2133100000,
-    "value_creation_pct": 14.599503407315446
+    "value_creation_pct": 14.532409726656208
   },
   "name": "Valaris",
   "plain_analysis": {
@@ -135,8 +135,8 @@
     "worries": []
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 80.99
+    "as_of": "2026-10-01",
+    "close": 79.56
   },
   "qualitative": null,
   "sector": "Energy",
@@ -144,14 +144,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000314808.json",
     "sec_filings": [
       {
+        "filed": "2026-09-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/314808/000114036126038106/ef20083020_8k.htm"
+      },
+      {
         "filed": "2026-08-06",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/314808/000031480826000141/val-20260630.htm"
-      },
-      {
-        "filed": "2026-08-05",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/314808/000031480826000139/val-20260805.htm"
       },
       {
         "filed": "2026-02-20",
@@ -166,7 +166,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $5.6B",
+          "detail": "Market cap $5.5B",
           "passed": true
         },
         {
@@ -191,12 +191,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 5.8",
+          "detail": "P/E 5.7",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 10.4",
+          "detail": "P/E x P/B = 10.0",
           "passed": true
         }
       ],

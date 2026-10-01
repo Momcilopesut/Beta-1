@@ -18,10 +18,10 @@
         "debt": 4206000000,
         "earnings": 2428000000,
         "fiscal_year": "2022-09-30",
-        "market_return_pct": -19.306885956985358,
+        "market_return_pct": null,
         "revenue": 16281000000,
         "spending": null,
-        "stock_return_pct": -23.83712905452036
+        "stock_return_pct": null
       },
       {
         "cash": 1661000000,
@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 176.40864980204992,
+      "graham_multiple": 175.07152369461662,
       "graham_number": 78.06594317835112,
-      "graham_upside_pct": -64.28658988135271,
-      "ncav_margin_pct": -106.92900533924445,
-      "pb_ratio": 4.9713037320125695,
-      "pe_ttm": 35.48538961038961
+      "graham_upside_pct": -64.15046694601804,
+      "ncav_margin_pct": -106.95541549001398,
+      "pb_ratio": 4.952427378576591,
+      "pe_ttm": 35.35064935064935
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-25T21:49:09Z",
+  "last_updated": "2026-10-01T23:36:58Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 63404226153,
+  "market_cap": 63143279548,
   "metrics": {
     "book_value_per_share": 43.970357029765836,
     "current_ratio": 1.555859375,
@@ -108,22 +108,22 @@
     "fcf_margin_pct": 18.555207971266366,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 2,
-    "graham_multiple": 176.40864980204992,
-    "graham_upside_pct": -64.28658988135271,
+    "graham_multiple": 175.07152369461662,
+    "graham_upside_pct": -64.15046694601804,
     "gross_margin_pct": 35.216081566446526,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -106.92900533924445,
-    "pb_ratio": 4.9713037320125695,
-    "pe_ttm": 35.48538961038961,
+    "ncav_margin_pct": -106.95541549001398,
+    "pb_ratio": 4.952427378576591,
+    "pe_ttm": 35.35064935064935,
     "reinvestment_rate_pct": 3.194323365844451,
     "roe_pct": 14.469756480754123,
     "roic_pct": 10.75791559985047,
     "shareholders_equity": 12730000000,
     "total_assets": 25081000000,
     "total_liabilities": 12351000000,
-    "value_creation_pct": 1.416792706068101
+    "value_creation_pct": 1.3190715488467486
   },
   "name": "TE Connectivity",
   "plain_analysis": {
@@ -140,8 +140,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 218.59
+    "as_of": "2026-10-01",
+    "close": 217.76
   },
   "qualitative": null,
   "sector": "Technology",
@@ -171,7 +171,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $63.4B",
+          "detail": "Market cap $63.1B",
           "passed": true
         },
         {
@@ -196,12 +196,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 35.5",
+          "detail": "P/E 35.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 176.4",
+          "detail": "P/E x P/B = 175.1",
           "passed": false
         }
       ],

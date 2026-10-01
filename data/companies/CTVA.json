@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 106.48411130400926,
+      "graham_multiple": 2.7289450086046223,
       "graham_number": 36.093512203043055,
-      "graham_upside_pct": -54.03271497320039,
+      "graham_upside_pct": 187.14011299159154,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.169823969516236,
-      "pe_ttm": 49.074999999999996
+      "pb_ratio": 0.34735974652087476,
+      "pe_ttm": 7.85625
     }
   },
   "industry": "Agricultural Inputs",
-  "last_updated": "2026-09-25T21:41:29Z",
+  "last_updated": "2026-10-01T23:28:05Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 52522434600,
+  "market_cap": 8407067400,
   "metrics": {
     "book_value_per_share": 36.18726730975605,
     "current_ratio": 1.4296907216494845,
     "debt_to_equity": 0.03702783300198807,
     "eps_growth_cagr_3yr_pct": 0.42017300210008823,
     "graham_criteria_evaluated": 7,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 106.48411130400926,
-    "graham_upside_pct": -54.03271497320039,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 2.7289450086046223,
+    "graham_upside_pct": 187.14011299159154,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "pb_ratio": 2.169823969516236,
-    "pe_ttm": 49.074999999999996,
+    "pb_ratio": 0.34735974652087476,
+    "pe_ttm": 7.85625,
     "roe_pct": 4.531146454605699,
     "shareholders_equity": 24144000000,
     "total_assets": 42845000000
@@ -121,15 +121,14 @@
   "plain_analysis": {
     "positives": [
       "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
-      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth."
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount."
     ],
-    "worries": [
-      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
-    ]
+    "worries": []
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 78.52
+    "as_of": "2026-10-01",
+    "close": 12.57
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -137,9 +136,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001755672.json",
     "sec_filings": [
       {
-        "filed": "2026-09-25",
+        "filed": "2026-10-01",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1755672/000119312526401618/d181849d8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1755672/000175567226000028/ctva-20261001.htm"
       },
       {
         "filed": "2026-07-31",
@@ -159,7 +158,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $52.5B",
+          "detail": "Market cap $8.4B",
           "passed": true
         },
         {
@@ -184,17 +183,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 49.1",
-          "passed": false
+          "detail": "P/E 7.9",
+          "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 106.5",
-          "passed": false
+          "detail": "P/E x P/B = 2.7",
+          "passed": true
         }
       ],
       "evaluated": 7,
-      "passed": 3,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {

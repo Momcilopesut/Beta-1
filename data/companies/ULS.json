@@ -42,7 +42,7 @@
       "debt_to_equity": 0.3890649762282092
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 6.278711017060571,
+      "book_value_per_share": 6.278711016612876,
       "shareholders_equity": 1262000000,
       "total_assets": 2921000000,
       "total_liabilities": 1627000000
@@ -61,16 +61,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 434.26533807515347,
-      "graham_number": 15.034413743614367,
-      "graham_upside_pct": -77.23782930565577,
-      "ncav_margin_pct": -104.72286855596955,
-      "pb_ratio": 10.519675108557845,
-      "pe_ttm": 41.28124999999999
+      "graham_multiple": 440.20281275678485,
+      "graham_number": 15.034413743078362,
+      "graham_upside_pct": -77.39185903296487,
+      "ncav_margin_pct": -104.69090929473002,
+      "pb_ratio": 10.591345870839936,
+      "pe_ttm": 41.5625
     }
   },
   "industry": "Specialty Business Services",
-  "last_updated": "2026-09-25T21:56:30Z",
+  "last_updated": "2026-10-01T23:45:26Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -78,9 +78,9 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 13275829987,
+  "market_cap": 13366278489,
   "metrics": {
-    "book_value_per_share": 6.278711017060571,
+    "book_value_per_share": 6.278711016612876,
     "current_ratio": 1.3157894736842106,
     "debt_to_ebitda": 0.6915492957746479,
     "debt_to_equity": 0.3890649762282092,
@@ -88,21 +88,21 @@
     "fcf_margin_pct": 13.200131018670161,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 434.26533807515347,
-    "graham_upside_pct": -77.23782930565577,
+    "graham_multiple": 440.20281275678485,
+    "graham_upside_pct": -77.39185903296487,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -104.72286855596955,
-    "pb_ratio": 10.519675108557845,
-    "pe_ttm": 41.28124999999999,
+    "ncav_margin_pct": -104.69090929473002,
+    "pb_ratio": 10.591345870839936,
+    "pe_ttm": 41.5625,
     "reinvestment_rate_pct": 17.74668221444833,
     "roe_pct": 25.752773375594295,
     "roic_pct": 26.280535855003944,
     "shareholders_equity": 1262000000,
     "total_assets": 2921000000,
     "total_liabilities": 1627000000,
-    "value_creation_pct": 16.46360999805067
+    "value_creation_pct": 16.355137750246982
   },
   "name": "UL Solutions",
   "plain_analysis": {
@@ -117,8 +117,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 66.05
+    "as_of": "2026-10-01",
+    "close": 66.5
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -126,14 +126,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001901440.json",
     "sec_filings": [
       {
-        "filed": "2026-08-04",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000023/uls-20260630.htm"
+        "filed": "2026-10-01",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1901440/000162828026064246/uls-20261001.htm"
       },
       {
         "filed": "2026-08-04",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000021/uls-20260804.htm"
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000023/uls-20260630.htm"
       },
       {
         "filed": "2026-02-19",
@@ -148,7 +148,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $13.3B",
+          "detail": "Market cap $13.4B",
           "passed": true
         },
         {
@@ -173,12 +173,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 41.3",
+          "detail": "P/E 41.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 434.3",
+          "detail": "P/E x P/B = 440.2",
           "passed": false
         }
       ],

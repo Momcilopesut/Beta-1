@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 54.72774804146123,
+      "graham_multiple": 50.91973898766861,
       "graham_number": 26.25036269856777,
-      "graham_upside_pct": -35.88089228488576,
+      "graham_upside_pct": -33.52655685346222,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.109526889946576,
-      "pe_ttm": 49.325301204819276
+      "pb_ratio": 1.0702300167071395,
+      "pe_ttm": 47.578313253012055
     }
   },
   "industry": "Airlines, Airports & Air Services",
-  "last_updated": "2026-09-25T21:54:50Z",
+  "last_updated": "2026-10-01T23:43:24Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 4561903260,
+  "market_cap": 4400331210,
   "metrics": {
     "book_value_per_share": 36.898610003017836,
     "current_ratio": 0.4956746091971468,
@@ -107,18 +107,18 @@
     "eps_growth_cagr_3yr_pct": 22.637096421991476,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 54.72774804146123,
-    "graham_upside_pct": -35.88089228488576,
+    "graham_multiple": 50.91973898766861,
+    "graham_upside_pct": -33.52655685346222,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
-    "pb_ratio": 1.109526889946576,
-    "pe_ttm": 49.325301204819276,
+    "pb_ratio": 1.0702300167071395,
+    "pe_ttm": 47.578313253012055,
     "roe_pct": 2.428363283147159,
     "roic_pct": 2.512521144979933,
     "shareholders_equity": 4118000000,
     "total_assets": 20361000000,
-    "value_creation_pct": -2.46450775487815
+    "value_creation_pct": -2.4256152483830458
   },
   "name": "Alaska Air Group",
   "plain_analysis": {
@@ -133,8 +133,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 40.94
+    "as_of": "2026-10-01",
+    "close": 39.49
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -142,14 +142,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000766421.json",
     "sec_filings": [
       {
+        "filed": "2026-09-29",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/766421/000076642126000043/alk-20260929.htm"
+      },
+      {
         "filed": "2026-08-04",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/766421/000076642126000041/alk-20260630.htm"
-      },
-      {
-        "filed": "2026-07-21",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/766421/000076642126000036/alk-20260721.htm"
       },
       {
         "filed": "2026-02-12",
@@ -164,7 +164,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $4.6B",
+          "detail": "Market cap $4.4B",
           "passed": true
         },
         {
@@ -189,12 +189,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 49.3",
+          "detail": "P/E 47.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 54.7",
+          "detail": "P/E x P/B = 50.9",
           "passed": false
         }
       ],

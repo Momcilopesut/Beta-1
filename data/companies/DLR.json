@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 136.58904519446477,
+      "graham_multiple": 133.36581842376884,
       "graham_number": 72.49183527904172,
-      "graham_upside_pct": -59.41333896252073,
+      "graham_upside_pct": -58.92581150261107,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.7377458249604385,
-      "pe_ttm": 49.891061452513966
+      "pb_ratio": 2.70525032555438,
+      "pe_ttm": 49.298882681564244
     }
   },
   "industry": "REIT - Specialty",
-  "last_updated": "2026-09-25T21:41:19Z",
+  "last_updated": "2026-10-01T23:55:16Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,19 +98,19 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 66081413717,
+  "market_cap": 65297064593,
   "metrics": {
     "book_value_per_share": 65.23980362661351,
     "eps_growth_cagr_3yr_pct": 15.724065450765746,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 3,
-    "graham_multiple": 136.58904519446477,
-    "graham_upside_pct": -59.41333896252073,
+    "graham_multiple": 133.36581842376884,
+    "graham_upside_pct": -58.92581150261107,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "pb_ratio": 2.7377458249604385,
-    "pe_ttm": 49.891061452513966,
+    "pb_ratio": 2.70525032555438,
+    "pe_ttm": 49.298882681564244,
     "roe_pct": 5.707965784893549,
     "shareholders_equity": 22925663000,
     "total_assets": 49410468000,
@@ -127,10 +127,26 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 178.61
+    "as_of": "2026-10-01",
+    "close": 176.49
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Digital Realty reported total operating revenues of about $6.11 billion, up 10.0% from 2024, driven by growth in both stabilized and non-stabilized portfolios and higher fee income from construction/development and joint-venture management fees. The company completed several capital markets and portfolio transactions during the year, including multiple euro-denominated notes offerings, debt redemptions, contributions of data centers to joint ventures (including a new fund with Blackstone-related and other partners), and non-core asset sales, while recording $78.6 million of impairments on certain non-core U.S. properties. Portfolio occupancy stood at approximately 84.7% across 310 data centers globally as of December 31, 2025.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended June 30, 2026) consists primarily of XBRL tagging data rather than narrative discussion, so detailed financial results and management commentary are not available in this excerpt. It does reference items such as interest expense figures, a Teraco-related term loan and acquisition-related dates in 2026, involvement with Digital Core REIT and the Ascenty joint venture, and details on secured/unsecured debt and revolving credit facilities. No further descriptive detail on quarterly performance is available from the text supplied.",
+    "filing_summary_8k": "This 8-K, dated August 19, 2026, discloses that in connection with Digital Realty's acquisition of Columbia Capital, the company is registering the resale of shares of common stock issued as consideration in that transaction via a prospectus supplement filed with the SEC. The filing attaches a legal opinion from Venable LLP regarding certain Maryland law matters related to those shares as Exhibit 5.1, along with a related consent, and states the report does not constitute an offer to sell securities in any jurisdiction where such an offer would be unlawful.",
+    "moat_explanation": "The 10-K describes a global data center platform with over 232,000 cross connects and 'densely connected data communities' that the company says are 'difficult for competitors to replicate,' indicating that added customers and interconnections increase the value of the platform for existing tenants. The filing also cites large scale (300+ facilities, ~2.9 GW capacity) and high replication cost as reinforcing factors, though these are secondary to the interconnection/network-density narrative.",
+    "moat_present": true,
+    "moat_type": "network_effects",
+    "red_flags": [
+      "Customer concentration: largest customer accounted for ~11.7% of annualized recurring revenue, with no other customer above ~9.0%",
+      "Recorded impairment charges on non-core properties in secondary U.S. markets in both 2025 ($78.6M) and 2024 ($191.2M)",
+      "Equity in earnings of unconsolidated entities fell ~$88.2M year-over-year due to FX remeasurement volatility tied to the Ascenty joint venture",
+      "Company acknowledges rising utility/power costs and risk that new energy taxation or regulation could raise costs it cannot fully pass through to customers",
+      "Transactions and integration expenses rose ~97% year-over-year, reflecting increased placement fees and deal-related costs",
+      "Geographic revenue concentration, with Northern Virginia alone representing 21.4% of total annualized rent"
+    ]
+  },
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001297996.json",
@@ -158,7 +174,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $66.1B",
+          "detail": "Market cap $65.3B",
           "passed": true
         },
         {
@@ -183,12 +199,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 49.9",
+          "detail": "P/E 49.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 136.6",
+          "detail": "P/E x P/B = 133.4",
           "passed": false
         }
       ],

@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 1173.6888147739253,
+      "graham_multiple": 1051.4325684045289,
       "graham_number": 43.854855922423226,
-      "graham_upside_pct": -86.15430450135025,
-      "ncav_margin_pct": -109.9607527751292,
-      "pb_ratio": 21.936723443397227,
-      "pe_ttm": 53.50337837837838
+      "graham_upside_pct": -85.37147472483298,
+      "ncav_margin_pct": -110.52392953065286,
+      "pb_ratio": 20.762803312167883,
+      "pe_ttm": 50.64020270270271
     }
   },
   "industry": "Hardware, Equipment & Parts",
-  "last_updated": "2026-09-25T21:48:36Z",
+  "last_updated": "2026-10-01T23:36:21Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 33190262570,
+  "market_cap": 31417265024,
   "metrics": {
     "book_value_per_share": 14.438801711535282,
     "current_ratio": 1.0004375091147732,
@@ -107,21 +107,21 @@
     "eps_growth_cagr_3yr_pct": -4.9779916366686106,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 1173.6888147739253,
-    "graham_upside_pct": -86.15430450135025,
+    "graham_multiple": 1051.4325684045289,
+    "graham_upside_pct": -85.37147472483298,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -109.9607527751292,
-    "pb_ratio": 21.936723443397227,
-    "pe_ttm": 53.50337837837838,
+    "ncav_margin_pct": -110.52392953065286,
+    "pb_ratio": 20.762803312167883,
+    "pe_ttm": 50.64020270270271,
     "reinvestment_rate_pct": -138.86995959174527,
     "roe_pct": 43.423661599471245,
     "roic_pct": 44.282739303586986,
     "shareholders_equity": 1513000000,
     "total_assets": 18543000000,
     "total_liabilities": 17026000000,
-    "value_creation_pct": 34.78548330886882
+    "value_creation_pct": 34.71905789981041
   },
   "name": "Jabil",
   "plain_analysis": {
@@ -136,8 +136,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 316.74
+    "as_of": "2026-10-01",
+    "close": 299.79
   },
   "qualitative": null,
   "sector": "Technology",
@@ -145,14 +145,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000898293.json",
     "sec_filings": [
       {
+        "filed": "2026-09-30",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/898293/000162828026063890/jbl-20260930.htm"
+      },
+      {
         "filed": "2026-06-30",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/898293/000162828026046138/jbl-20260531.htm"
-      },
-      {
-        "filed": "2026-06-17",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/898293/000162828026043719/jbl-20260617.htm"
       },
       {
         "filed": "2025-10-17",
@@ -167,7 +167,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $33.2B",
+          "detail": "Market cap $31.4B",
           "passed": true
         },
         {
@@ -192,12 +192,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 53.5",
+          "detail": "P/E 50.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1173.7",
+          "detail": "P/E x P/B = 1051.4",
           "passed": false
         }
       ],

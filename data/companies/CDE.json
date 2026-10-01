@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 120.64815718365215,
+      "graham_multiple": 100.70776300957152,
       "graham_number": 8.300118561381451,
-      "graham_upside_pct": -56.815199992812424,
+      "graham_upside_pct": -52.732810014912005,
       "ncav_margin_pct": null,
-      "pb_ratio": 5.963358445601954,
-      "pe_ttm": 20.23157894736842
+      "pb_ratio": 5.448312919082742,
+      "pe_ttm": 18.48421052631579
     }
   },
   "industry": "Gold",
-  "last_updated": "2026-09-25T22:03:13Z",
+  "last_updated": "2026-10-01T23:57:28Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 19806874070,
+  "market_cap": 18096186716,
   "metrics": {
     "book_value_per_share": 3.2230160530053285,
     "current_ratio": 2.474098549132125,
@@ -106,18 +106,18 @@
     "debt_to_equity": 0.00513001459983562,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": 120.64815718365215,
-    "graham_upside_pct": -56.815199992812424,
+    "graham_multiple": 100.70776300957152,
+    "graham_upside_pct": -52.732810014912005,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "pb_ratio": 5.963358445601954,
-    "pe_ttm": 20.23157894736842,
+    "pb_ratio": 5.448312919082742,
+    "pe_ttm": 18.48421052631579,
     "roe_pct": 17.6837603767645,
     "roic_pct": 21.858152401003345,
     "shareholders_equity": 3313051000,
     "total_assets": 4695682000,
-    "value_creation_pct": 11.686880226568638
+    "value_creation_pct": 11.577807735614723
   },
   "name": "Coeur Mining",
   "plain_analysis": {
@@ -133,8 +133,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 19.22
+    "as_of": "2026-10-01",
+    "close": 17.56
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -142,9 +142,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000215466.json",
     "sec_filings": [
       {
-        "filed": "2026-08-05",
+        "filed": "2026-09-28",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/215466/000021546626000038/cde-20260805.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/215466/000021546626000045/cde-20260928.htm"
       },
       {
         "filed": "2026-08-05",
@@ -164,7 +164,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $19.8B",
+          "detail": "Market cap $18.1B",
           "passed": true
         },
         {
@@ -189,12 +189,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.2",
+          "detail": "P/E 18.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 120.6",
+          "detail": "P/E x P/B = 100.7",
           "passed": false
         }
       ],

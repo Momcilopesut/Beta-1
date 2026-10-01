@@ -18,10 +18,10 @@
         "debt": 76000000,
         "earnings": 866000000,
         "fiscal_year": "2022-09-30",
-        "market_return_pct": -16.768420562054338,
+        "market_return_pct": -16.67133258678611,
         "revenue": 5429000000,
         "spending": null,
-        "stock_return_pct": -15.970988039771361
+        "stock_return_pct": -18.507476591978374
       },
       {
         "cash": 3472000000,
@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": -221.63887904458412,
+      "graham_multiple": -214.1732226856487,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -141.45241830926636,
-      "pb_ratio": -6.369983192752426,
-      "pe_ttm": 34.79426433915212
+      "ncav_margin_pct": -142.16870449200093,
+      "pb_ratio": -6.261781363927318,
+      "pe_ttm": 34.20324189526185
     }
   },
   "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-25T21:47:14Z",
+  "last_updated": "2026-10-01T23:34:48Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 62433084320,
+  "market_cap": 61372583264,
   "metrics": {
     "book_value_per_share": -175.22809185273496,
     "current_ratio": 3.213565536205316,
@@ -108,21 +108,21 @@
     "fcf_margin_pct": 20.563922545578077,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 6,
-    "graham_multiple": -221.63887904458412,
+    "graham_multiple": -214.1732226856487,
     "gross_margin_pct": 60.140414449099765,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -141.45241830926636,
-    "pb_ratio": -6.369983192752426,
-    "pe_ttm": 34.79426433915212,
+    "ncav_margin_pct": -142.16870449200093,
+    "pb_ratio": -6.261781363927318,
+    "pe_ttm": 34.20324189526185,
     "reinvestment_rate_pct": 30.282373315767963,
     "roe_pct": -21.41234771835639,
     "roic_pct": -26.562165117449705,
     "shareholders_equity": -9686000000,
     "total_assets": 22909000000,
     "total_liabilities": 32588000000,
-    "value_creation_pct": -36.721986427638285
+    "value_creation_pct": -36.831416647660376
   },
   "name": "TransDigm Group",
   "plain_analysis": {
@@ -141,8 +141,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 1116.2
+    "as_of": "2026-10-01",
+    "close": 1097.24
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -150,9 +150,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001260221.json",
     "sec_filings": [
       {
-        "filed": "2026-09-21",
+        "filed": "2026-09-29",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1260221/000126022126000062/tdg-20260921.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1260221/000119312526406037/d317756d8k.htm"
       },
       {
         "filed": "2026-08-04",
@@ -172,7 +172,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $62.4B",
+          "detail": "Market cap $61.4B",
           "passed": true
         },
         {
@@ -197,12 +197,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 34.8",
+          "detail": "P/E 34.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -221.6",
+          "detail": "P/E x P/B = -214.2",
           "passed": true
         }
       ],

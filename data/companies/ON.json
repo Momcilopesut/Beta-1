@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 1042.6820665139533,
+      "graham_multiple": 1121.9291506661093,
       "graham_number": 11.340510561597414,
-      "graham_upside_pct": -85.3102194797961,
-      "ncav_margin_pct": -96.70302959412331,
-      "pb_ratio": 3.9168108716197723,
-      "pe_ttm": 266.2068965517242
+      "graham_upside_pct": -85.8385232747285,
+      "ncav_margin_pct": -96.82160195637262,
+      "pb_ratio": 4.0629302409237225,
+      "pe_ttm": 276.1379310344828
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-09-25T21:48:50Z",
+  "last_updated": "2026-10-01T23:36:38Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 30054886400,
+  "market_cap": 31176104960,
   "metrics": {
     "book_value_per_share": 19.709912612674717,
     "current_ratio": 4.522093655354508,
@@ -107,21 +107,21 @@
     "eps_growth_cagr_3yr_pct": -59.13642526295217,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 1042.6820665139533,
-    "graham_upside_pct": -85.3102194797961,
+    "graham_multiple": 1121.9291506661093,
+    "graham_upside_pct": -85.8385232747285,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -96.70302959412331,
-    "pb_ratio": 3.9168108716197723,
-    "pe_ttm": 266.2068965517242,
+    "ncav_margin_pct": -96.82160195637262,
+    "pb_ratio": 4.0629302409237225,
+    "pe_ttm": 276.1379310344828,
     "reinvestment_rate_pct": -1547.5230419174566,
     "roe_pct": 1.5768965112793714,
     "roic_pct": 0.9318161782374839,
     "shareholders_equity": 7673300000,
     "total_assets": 12524100000,
     "total_liabilities": 4832200000,
-    "value_creation_pct": -8.329729603227932
+    "value_creation_pct": -8.460280033141949
   },
   "name": "ON Semiconductor",
   "plain_analysis": {
@@ -137,8 +137,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 77.2
+    "as_of": "2026-10-01",
+    "close": 80.08
   },
   "qualitative": null,
   "sector": "Technology",
@@ -146,9 +146,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001097864.json",
     "sec_filings": [
       {
-        "filed": "2026-08-13",
+        "filed": "2026-10-01",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1097864/000114036126032594/ef20080111_8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1097864/000114036126038294/ef20083030_8k.htm"
       },
       {
         "filed": "2026-08-03",
@@ -168,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $30.1B",
+          "detail": "Market cap $31.2B",
           "passed": true
         },
         {
@@ -193,12 +193,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 266.2",
+          "detail": "P/E 276.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1042.7",
+          "detail": "P/E x P/B = 1121.9",
           "passed": false
         }
       ],

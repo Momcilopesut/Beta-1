@@ -8,10 +8,10 @@
         "debt": 7727000000,
         "earnings": 13608000000,
         "fiscal_year": "2021-12-31",
-        "market_return_pct": 10.677168290068508,
+        "market_return_pct": 10.806270996640537,
         "revenue": null,
         "spending": null,
-        "stock_return_pct": -4.550021530070334
+        "stock_return_pct": -2.8771724842996917
       },
       {
         "cash": 2154000000,
@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 258.6672616343221,
+      "graham_multiple": 249.11992972724684,
       "graham_number": 31.823062444880858,
-      "graham_upside_pct": -70.50689300752468,
-      "ncav_margin_pct": -116.47176432610303,
-      "pb_ratio": 10.404225352112677,
-      "pe_ttm": 24.861751152073733
+      "graham_upside_pct": -69.94705595912659,
+      "ncav_margin_pct": -116.7844307374305,
+      "pb_ratio": 10.210411700975081,
+      "pe_ttm": 24.398617511520737
     }
   },
   "industry": "Specialty Retail",
-  "last_updated": "2026-09-25T22:05:40Z",
+  "last_updated": "2026-10-01T23:29:03Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 47907600000,
+  "market_cap": 47015160000,
   "metrics": {
     "book_value_per_share": 10.370786516853933,
     "current_ratio": 1.096829846883761,
@@ -106,21 +106,21 @@
     "debt_to_equity": 0.16251354279523295,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 258.6672616343221,
-    "graham_upside_pct": -70.50689300752468,
+    "graham_multiple": 249.11992972724684,
+    "graham_upside_pct": -69.94705595912659,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -116.47176432610303,
-    "pb_ratio": 10.404225352112677,
-    "pe_ttm": 24.861751152073733,
+    "ncav_margin_pct": -116.7844307374305,
+    "pb_ratio": 10.210411700975081,
+    "pe_ttm": 24.398617511520737,
     "reinvestment_rate_pct": -46.49641839674078,
     "roe_pct": 44.00866738894908,
     "roic_pct": 56.31915989891307,
     "shareholders_equity": 4615000000,
     "total_assets": 17610000000,
     "total_liabilities": 12995000000,
-    "value_creation_pct": 46.29607269362551
+    "value_creation_pct": 46.19073163864974
   },
   "name": "eBay Inc.",
   "plain_analysis": {
@@ -135,22 +135,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 107.9
+    "as_of": "2026-10-01",
+    "close": 105.89
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "The 10-K excerpts provided contain only the titles and page numbers for Item 1 (Business), Item 1A (Risk Factors), and Item 7 (MD&A), without any of the underlying narrative text. As a result, the provided excerpts do not describe eBay's business operations, risks, or financial results for the period, and no further factual summary can be given based on what was supplied.",
-    "filing_summary_10q": "The most recent 10-Q excerpt is composed almost entirely of XBRL taxonomy tags and date/context references (covering the quarter ended June 30, 2026) rather than narrative financial statement text or MD&A discussion. It does reference items such as a Depop Limited transaction, senior notes, interest rate swaps, and foreign exchange hedging instruments, but without accompanying descriptive text, the specific business or financial implications cannot be summarized from what was provided.",
-    "filing_summary_8k": "This Form 8-K, dated August 5, 2026, discloses under Item 2.02 that eBay Inc. announced its financial results for the quarter ended June 30, 2026, via a press release furnished as Exhibit 99.1. The filing itself does not include the specific financial figures or results from that press release, only the disclosure that results were announced and the associated exhibit list.",
-    "moat_explanation": "The provided 10-K excerpts consist only of section titles and page numbers (e.g., 'Item 1. Business,' 'Item 1A. Risk Factors,' 'Item 7. MD&A') with no actual narrative text describing eBay's business model, competitive position, brand, network effects, or cost structure. Because no substantive content was provided, there is no basis in these excerpts to support any specific moat classification.",
-    "moat_present": false,
-    "moat_type": "none",
-    "red_flags": [
-      "The 10-K excerpts contain no substantive text (only section headers and page numbers), so no company-specific risks, litigation, concentration issues, or margin pressures can be identified from what was provided.",
-      "The 10-Q excerpt consists almost entirely of XBRL tag metadata rather than narrative disclosure, so no operational or financial details or risks can be confirmed from it."
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001065088.json",
@@ -178,7 +166,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $47.9B",
+          "detail": "Market cap $47.0B",
           "passed": true
         },
         {
@@ -203,12 +191,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.9",
+          "detail": "P/E 24.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 258.7",
+          "detail": "P/E x P/B = 249.1",
           "passed": false
         }
       ],

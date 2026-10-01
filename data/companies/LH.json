@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 86.23947380518426,
+      "graham_multiple": 83.45488795705667,
       "graham_number": 158.15949472179506,
-      "graham_upside_pct": -48.92149117627081,
-      "ncav_margin_pct": -122.83985650732221,
-      "pb_ratio": 2.9132699134550686,
-      "pe_ttm": 29.602294455066918
+      "graham_upside_pct": -48.07633134543827,
+      "ncav_margin_pct": -123.21777140159963,
+      "pb_ratio": 2.86585071579387,
+      "pe_ttm": 29.120458891013385
     }
   },
   "industry": "Medical - Diagnostics & Research",
-  "last_updated": "2026-09-25T21:45:35Z",
+  "last_updated": "2026-10-01T23:33:00Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 25390480000,
+  "market_cap": 24977200000,
   "metrics": {
     "book_value_per_share": 106.28606658446363,
     "current_ratio": 1.4239419160616256,
@@ -108,15 +108,15 @@
     "fcf_margin_pct": 8.644107886494119,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 86.23947380518426,
-    "graham_upside_pct": -48.92149117627081,
+    "graham_multiple": 83.45488795705667,
+    "graham_upside_pct": -48.07633134543827,
     "gross_margin_pct": 28.759936065139012,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -122.83985650732221,
-    "pb_ratio": 2.9132699134550686,
-    "pe_ttm": 29.602294455066918,
+    "ncav_margin_pct": -123.21777140159963,
+    "pb_ratio": 2.86585071579387,
+    "pe_ttm": 29.120458891013385,
     "roe_pct": 10.168449383976427,
     "shareholders_equity": 8619800000,
     "total_assets": 18392700000,
@@ -134,8 +134,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 309.64
+    "as_of": "2026-10-01",
+    "close": 304.6
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -143,9 +143,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000920148.json",
     "sec_filings": [
       {
-        "filed": "2026-09-22",
+        "filed": "2026-09-30",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/920148/000092014826000205/lh-20260922.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/920148/000092014826000207/lh-20260930.htm"
       },
       {
         "filed": "2026-08-05",
@@ -165,7 +165,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $25.4B",
+          "detail": "Market cap $25.0B",
           "passed": true
         },
         {
@@ -190,12 +190,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 29.6",
+          "detail": "P/E 29.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 86.2",
+          "detail": "P/E x P/B = 83.5",
           "passed": false
         }
       ],

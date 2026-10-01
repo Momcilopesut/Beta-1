@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 21.45117038061242,
+      "graham_multiple": 20.460489418192225,
       "graham_number": 48.2172255348777,
-      "graham_upside_pct": 2.4155172788396353,
+      "graham_upside_pct": 4.865649271156376,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.8498672843093973,
-      "pe_ttm": 11.596059113300493
+      "pb_ratio": 1.8066460860778693,
+      "pe_ttm": 11.32512315270936
     }
   },
   "industry": "Telecommunications Services",
-  "last_updated": "2026-09-25T21:41:02Z",
+  "last_updated": "2026-10-01T23:27:33Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 196585364800,
+  "market_cap": 191992248800,
   "metrics": {
     "book_value_per_share": 25.450474420156127,
     "current_ratio": 0.9126503126503126,
@@ -107,18 +107,18 @@
     "eps_growth_cagr_3yr_pct": -7.0765828174263685,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 5,
-    "graham_multiple": 21.45117038061242,
-    "graham_upside_pct": 2.4155172788396353,
+    "graham_multiple": 20.460489418192225,
+    "graham_upside_pct": 4.865649271156376,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "pb_ratio": 1.8498672843093973,
-    "pe_ttm": 11.596059113300493,
+    "pb_ratio": 1.8066460860778693,
+    "pe_ttm": 11.32512315270936,
     "roe_pct": 16.241571386690122,
     "roic_pct": 21.577739159612648,
     "shareholders_equity": 105741000000,
     "total_assets": 404258000000,
-    "value_creation_pct": 12.278446764608237
+    "value_creation_pct": 12.19737779824285
   },
   "name": "Verizon Communications Inc.",
   "plain_analysis": {
@@ -134,8 +134,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 47.08
+    "as_of": "2026-10-01",
+    "close": 45.98
   },
   "qualitative": null,
   "sector": "Communication Services",
@@ -143,14 +143,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000732712.json",
     "sec_filings": [
       {
+        "filed": "2026-09-29",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/732712/000119312526407520/d130372d8k.htm"
+      },
+      {
         "filed": "2026-07-31",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000046/vz-20260630.htm"
-      },
-      {
-        "filed": "2026-07-24",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/732712/000119312526315236/d174102d8k.htm"
       },
       {
         "filed": "2026-02-17",
@@ -165,7 +165,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $196.6B",
+          "detail": "Market cap $192.0B",
           "passed": true
         },
         {
@@ -190,12 +190,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 11.6",
+          "detail": "P/E 11.3",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 21.5",
+          "detail": "P/E x P/B = 20.5",
           "passed": true
         }
       ],

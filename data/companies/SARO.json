@@ -71,16 +71,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 77.29500706881561,
+      "graham_multiple": 66.99034841785988,
       "graham_number": 12.268910512303627,
-      "graham_upside_pct": -46.04700742170788,
-      "ncav_margin_pct": -113.20434229464824,
-      "pb_ratio": 2.8212337672434895,
-      "pe_ttm": 27.397590361445783
+      "graham_upside_pct": -42.04576989936879,
+      "ncav_margin_pct": -114.18359677752956,
+      "pb_ratio": 2.6264520163827916,
+      "pe_ttm": 25.506024096385545
     }
   },
   "industry": "Aerospace & Defense",
-  "last_updated": "2026-09-25T21:56:14Z",
+  "last_updated": "2026-10-01T23:45:08Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -88,7 +88,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 7560412643,
+  "market_cap": 7038431647,
   "metrics": {
     "book_value_per_share": 8.06030335522969,
     "current_ratio": 2.200393212376466,
@@ -97,14 +97,14 @@
     "fcf_margin_pct": 3.8646844963466473,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 1,
-    "graham_multiple": 77.29500706881561,
-    "graham_upside_pct": -46.04700742170788,
+    "graham_multiple": 66.99034841785988,
+    "graham_upside_pct": -42.04576989936879,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -113.20434229464824,
-    "pb_ratio": 2.8212337672434895,
-    "pe_ttm": 27.397590361445783,
+    "ncav_margin_pct": -114.18359677752956,
+    "pb_ratio": 2.6264520163827916,
+    "pe_ttm": 25.506024096385545,
     "reinvestment_rate_pct": 63.420702405089216,
     "roe_pct": 10.400624449117482,
     "shareholders_equity": 2667311000,
@@ -123,8 +123,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 22.74
+    "as_of": "2026-10-01",
+    "close": 21.17
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -132,14 +132,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0002025410.json",
     "sec_filings": [
       {
+        "filed": "2026-09-28",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2025410/000119312526405454/saro-20260928.htm"
+      },
+      {
         "filed": "2026-08-07",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/2025410/000202541026000009/saro-20260630.htm"
-      },
-      {
-        "filed": "2026-08-06",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/2025410/000202541026000007/saro-20260806.htm"
       },
       {
         "filed": "2026-02-26",
@@ -154,7 +154,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $7.6B",
+          "detail": "Market cap $7.0B",
           "passed": true
         },
         {
@@ -179,12 +179,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 27.4",
+          "detail": "P/E 25.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 77.3",
+          "detail": "P/E x P/B = 67.0",
           "passed": false
         }
       ],

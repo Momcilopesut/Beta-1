@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 6164.919645537385,
+      "graham_multiple": 5582.9163444528795,
       "graham_number": 22.480133718149325,
-      "graham_upside_pct": -93.95873969574875,
-      "ncav_margin_pct": -99.06774741697,
-      "pb_ratio": 17.89286290930202,
-      "pe_ttm": 344.5462962962963
+      "graham_upside_pct": -93.65165239102275,
+      "ncav_margin_pct": -99.0203594683254,
+      "pb_ratio": 17.02733515576829,
+      "pe_ttm": 327.8796296296296
     }
   },
   "industry": "Auto - Manufacturers",
-  "last_updated": "2026-09-25T22:00:47Z",
+  "last_updated": "2026-10-01T23:29:35Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 1469666080781,
+  "market_cap": 1398574227689,
   "metrics": {
     "book_value_per_share": 20.796560164027746,
     "current_ratio": 2.1644068865485275,
@@ -107,21 +107,21 @@
     "fcf_margin_pct": 6.559313275754795,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 6164.919645537385,
-    "graham_upside_pct": -93.95873969574875,
+    "graham_multiple": 5582.9163444528795,
+    "graham_upside_pct": -93.65165239102275,
     "gross_margin_pct": 18.026511436616154,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -99.06774741697,
-    "pb_ratio": 17.89286290930202,
-    "pe_ttm": 344.5462962962963,
+    "ncav_margin_pct": -99.0203594683254,
+    "pb_ratio": 17.02733515576829,
+    "pe_ttm": 327.8796296296296,
     "roe_pct": 4.619111971462313,
     "roic_pct": 4.733900486203297,
     "shareholders_equity": 82137000000,
     "total_assets": 137806000000,
     "total_liabilities": 54941000000,
-    "value_creation_pct": -5.43524304346871
+    "value_creation_pct": -5.544568543478294
   },
   "name": "Tesla, Inc.",
   "plain_analysis": {
@@ -137,39 +137,23 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 372.11
+    "as_of": "2026-10-01",
+    "close": 354.11
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "The 10-K describes Tesla's two segments (automotive; energy generation and storage) and its strategic pivot toward AI-enabled products such as FSD (Supervised), the Robotaxi service launched in June 2025, and the Optimus robot, alongside its existing vehicle and energy storage lines. For fiscal 2025, the company reported total revenue of $94.83 billion (down $2.86 billion year-over-year) and net income attributable to common stockholders of $3.79 billion (down $3.30 billion), while ending the year with $44.06 billion in cash and investments. Management highlights ongoing investments in manufacturing capacity, battery cell development, and AI compute infrastructure, alongside risks from tariffs, trade policy, and the phase-out of EV tax credits under the OBBBA.",
-    "filing_summary_10q": null,
-    "filing_summary_8k": "This 8-K, dated July 22, 2026, discloses under Item 2.02 that Tesla released its financial results for the quarter ended June 30, 2026 via a Second Quarter 2026 Update posted on its website, which is furnished as Exhibit 99.1. The filing does not itself contain the detailed financial results, and the information is furnished rather than filed under the Exchange Act.",
-    "moat_explanation": "The 10-K repeatedly cites the Tesla brand, proprietary AI/FSD software, and in-house battery/powertrain technology as differentiators ('our capabilities and advancements in AI differentiate us from our competitors'), plus a vertically integrated direct-sales and service model that competitors haven't replicated. These are brand and proprietary-technology advantages rather than a clearly quantified cost or network-effect edge, though vertical integration and the growing Supercharger/NACS network are noted as complementary strengths.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "2025 revenue declined $2.86B and net income attributable to common stockholders declined $3.30B year-over-year",
-      "Heavy reliance on a very limited number of qualified battery cell suppliers (Panasonic, CATL) with limited ability to switch suppliers",
-      "2025 U.S. tariff changes and retaliatory measures have already impacted supply chain costs, with energy storage business seen as more exposed than automotive",
-      "Removal of EV tax credits under OBBBA may reduce future consumer demand for electric vehicles",
-      "Company acknowledges history of launch and production ramp delays for new products, including Robotaxi/Cybercab and Optimus, with no guarantee of successful scaling",
-      "Automotive sales are described as cyclical, exposing the business to demand volatility"
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json",
     "sec_filings": [
       {
+        "filed": "2026-09-29",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026063820/tsla-20260929.htm"
+      },
+      {
         "filed": "2026-07-23",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm"
-      },
-      {
-        "filed": "2026-07-22",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049213/tsla-20260722.htm"
       },
       {
         "filed": "2026-01-29",
@@ -184,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $1469.7B",
+          "detail": "Market cap $1398.6B",
           "passed": true
         },
         {
@@ -209,12 +193,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 344.5",
+          "detail": "P/E 327.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 6164.9",
+          "detail": "P/E x P/B = 5582.9",
           "passed": false
         }
       ],

@@ -62,7 +62,7 @@
       "debt_to_equity": 0.09749963012279923
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 60.72614962142737,
+      "book_value_per_share": 60.72614962092797,
       "shareholders_equity": 2027700000,
       "total_assets": 2881200000,
       "total_liabilities": null
@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 207.28109684475714,
-      "graham_number": 117.87985912412313,
-      "graham_upside_pct": -67.05333879534835,
+      "graham_multiple": 209.25552322536993,
+      "graham_number": 117.87985912363843,
+      "graham_upside_pct": -67.20914097092036,
       "ncav_margin_pct": null,
-      "pb_ratio": 5.891860462593086,
-      "pe_ttm": 35.18092428711898
+      "pb_ratio": 5.91985499235587,
+      "pe_ttm": 35.34808259587021
     }
   },
   "industry": "Industrial - Machinery",
-  "last_updated": "2026-09-25T21:56:37Z",
+  "last_updated": "2026-10-01T23:45:34Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,9 +98,9 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 11946925460,
+  "market_cap": 12003689968,
   "metrics": {
-    "book_value_per_share": 60.72614962142737,
+    "book_value_per_share": 60.72614962092797,
     "current_ratio": 2.509953161592506,
     "debt_to_ebitda": 0.39156268568033276,
     "debt_to_equity": 0.09749963012279923,
@@ -108,20 +108,20 @@
     "fcf_margin_pct": 14.611441459913882,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 207.28109684475714,
-    "graham_upside_pct": -67.05333879534835,
+    "graham_multiple": 209.25552322536993,
+    "graham_upside_pct": -67.20914097092036,
     "gross_margin_pct": 49.45663317613287,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "pb_ratio": 5.891860462593086,
-    "pe_ttm": 35.18092428711898,
+    "pb_ratio": 5.91985499235587,
+    "pe_ttm": 35.34808259587021,
     "reinvestment_rate_pct": 28.316349783593324,
     "roe_pct": 16.807220002959017,
     "roic_pct": 18.822917591866265,
     "shareholders_equity": 2027700000,
     "total_assets": 2881200000,
-    "value_creation_pct": 8.738382536735795
+    "value_creation_pct": 8.629720743236536
   },
   "name": "Watts Water Technologies",
   "plain_analysis": {
@@ -140,8 +140,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 357.79
+    "as_of": "2026-10-01",
+    "close": 359.49
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -149,14 +149,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000795403.json",
     "sec_filings": [
       {
+        "filed": "2026-10-01",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/795403/000110465926112656/wts-20260928x8k.htm"
+      },
+      {
         "filed": "2026-08-06",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/795403/000110465926091726/wts-20260628x10q.htm"
-      },
-      {
-        "filed": "2026-08-05",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/795403/000110465926091165/wts-20260805x8k.htm"
       },
       {
         "filed": "2026-02-23",
@@ -171,7 +171,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $11.9B",
+          "detail": "Market cap $12.0B",
           "passed": true
         },
         {
@@ -196,12 +196,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 35.2",
+          "detail": "P/E 35.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 207.3",
+          "detail": "P/E x P/B = 209.3",
           "passed": false
         }
       ],

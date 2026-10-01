@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 129.86219657326404,
+      "graham_multiple": 149.8640471332749,
       "graham_number": 107.40390930511586,
-      "graham_upside_pct": -58.375417856405896,
-      "ncav_margin_pct": -99.05590132335355,
-      "pb_ratio": 5.244212255526146,
-      "pe_ttm": 24.762955854126677
+      "graham_upside_pct": -61.25260315844155,
+      "ncav_margin_pct": -99.1211595601029,
+      "pb_ratio": 5.63362087784092,
+      "pe_ttm": 26.60172744721689
     }
   },
   "industry": "Financial - Data & Stock Exchanges",
-  "last_updated": "2026-09-25T21:43:56Z",
+  "last_updated": "2026-10-01T23:57:36Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 27003871620,
+  "market_cap": 29009042260,
   "metrics": {
     "book_value_per_share": 49.20281396468994,
     "current_ratio": 1.8716505100960927,
@@ -107,21 +107,21 @@
     "eps_growth_cagr_3yr_pct": 68.19298103960483,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 129.86219657326404,
-    "graham_upside_pct": -58.375417856405896,
+    "graham_multiple": 149.8640471332749,
+    "graham_upside_pct": -61.25260315844155,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -99.05590132335355,
-    "pb_ratio": 5.244212255526146,
-    "pe_ttm": 24.762955854126677,
+    "ncav_margin_pct": -99.1211595601029,
+    "pb_ratio": 5.63362087784092,
+    "pe_ttm": 26.60172744721689,
     "reinvestment_rate_pct": 89.67753824799696,
     "roe_pct": 21.40785863028628,
     "roic_pct": 23.601514993182647,
     "shareholders_equity": 5138300000,
     "total_assets": 9305300000,
     "total_liabilities": 4167000000,
-    "value_creation_pct": 13.937873130275182
+    "value_creation_pct": 13.799084583103445
   },
   "name": "Cboe Global Markets",
   "plain_analysis": {
@@ -137,8 +137,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-09-25",
-    "close": 258.03
+    "as_of": "2026-10-01",
+    "close": 277.19
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -146,14 +146,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001374310.json",
     "sec_filings": [
       {
-        "filed": "2026-07-31",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1374310/000162828026051239/cboe-20260630.htm"
+        "filed": "2026-09-29",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1374310/000110465926111989/tm2626203d1_8k.htm"
       },
       {
         "filed": "2026-07-31",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1374310/000162828026051217/cboe-20260731.htm"
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1374310/000162828026051239/cboe-20260630.htm"
       },
       {
         "filed": "2026-02-20",
@@ -168,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $27.0B",
+          "detail": "Market cap $29.0B",
           "passed": true
         },
         {
@@ -193,12 +193,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.8",
+          "detail": "P/E 26.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 129.9",
+          "detail": "P/E x P/B = 149.9",
           "passed": false
         }
       ],
