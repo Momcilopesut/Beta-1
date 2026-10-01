@@ -188,6 +188,10 @@ for just the small finalist subset phase 2 enriches:
   unchanged regardless of which source populated it. Free, no API key, no documented
   daily cap (just a ~10 req/sec fair-use guideline this pipeline stays well under).
   This part of the plan works fine - zero failures across a real 906-company run.
+  Recognizes both a domestic filer's 10-K and a foreign private issuer's 20-F as
+  "annual report" forms (e.g. GlobalFoundries, which never files a 10-K at all) - an
+  on-demand lookup for a ticker that only has 20-Fs would otherwise synthesize empty
+  statement rows and cascade to a near-blank Key Metrics Reference on its page.
 - **Stooq** (`pipeline/fetch/stooq.py`) — was meant to be the free price history
   source covering phase 1's whole scanned universe. **In practice it's blocked from
   GitHub Actions runners almost entirely** - a real run against 906 companies saw 95%+

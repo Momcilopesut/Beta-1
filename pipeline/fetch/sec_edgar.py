@@ -154,6 +154,13 @@ _BALANCE_CONCEPTS: dict[str, tuple[str, ...]] = {
 }
 _LONG_TERM_DEBT_CONCEPTS = ("LongTermDebtNoncurrent",)
 _CURRENT_DEBT_CONCEPTS = ("DebtCurrent", "LongTermDebtCurrent")
+# Annual-report form types whose XBRL facts carry a full fiscal year of
+# data (fp == "FY") - "10-K" for a domestic filer, "20-F" for a foreign
+# private issuer (e.g. GlobalFoundries, which never files a 10-K at all).
+# Without this, every statement-derived metric silently went blank for any
+# foreign-domiciled ticker once FMP's own statement endpoints were dropped
+# in favor of this XBRL fallback (see README's "SEC EDGAR XBRL" section).
+_ANNUAL_REPORT_FORMS = ("10-K", "20-F")
 _CASHFLOW_CONCEPTS: dict[str, tuple[str, ...]] = {
     "operatingCashFlow": ("NetCashProvidedByUsedInOperatingActivities",),
     "depreciationAndAmortization": (
@@ -171,7 +178,11 @@ def _annual_facts_by_end(company_facts: dict, tags: tuple[str, ...], unit: str =
     keeping the most-recently-filed value if a figure was restated."""
     for tag in tags:
         facts = xbrl_concept(company_facts, "us-gaap", tag, unit)
-        annual = [f for f in facts if f.get("form") == "10-K" and f.get("fp") == "FY" and f.get("end")]
+        annual = [
+            f
+            for f in facts
+            if f.get("form") in _ANNUAL_REPORT_FORMS and f.get("fp") == "FY" and f.get("end")
+        ]
         if annual:
             annual.sort(key=lambda f: f.get("filed", ""))
             return {f["end"]: f["val"] for f in annual}

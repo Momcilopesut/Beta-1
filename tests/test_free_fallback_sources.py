@@ -88,6 +88,40 @@ def test_xbrl_fundamentals_handles_missing_company_facts():
     assert result == {"income_stmts": [], "balance_stmts": [], "cashflow_stmts": []}
 
 
+def test_xbrl_fundamentals_synthesizes_rows_for_20f_foreign_private_issuer():
+    """A foreign private issuer (e.g. GlobalFoundries) never files a 10-K -
+    its annual report is a Form 20-F. Its XBRL facts are tagged with
+    form="20-F" instead of "10-K", so the annual-report form filter must
+    recognize both or every statement-derived metric silently goes blank."""
+
+    def concept(tag: str, val: float, unit: str = "USD") -> tuple[str, dict]:
+        return tag, {
+            "units": {
+                unit: [{"form": "20-F", "fp": "FY", "end": "2025-12-31", "filed": "2026-02-01", "val": val}]
+            }
+        }
+
+    company_facts = {
+        "facts": {
+            "us-gaap": dict(
+                [
+                    concept("Revenues", 8_000_000_000),
+                    concept("NetIncomeLoss", 500_000_000),
+                    concept("Assets", 20_000_000_000),
+                    concept("Liabilities", 9_000_000_000),
+                    concept("StockholdersEquity", 11_000_000_000),
+                ]
+            )
+        }
+    }
+
+    result = sec_edgar.xbrl_fundamentals(company_facts)
+
+    assert result["income_stmts"][0]["revenue"] == 8_000_000_000
+    assert result["balance_stmts"][0]["totalAssets"] == 20_000_000_000
+    assert result["balance_stmts"][0]["totalStockholdersEquity"] == 11_000_000_000
+
+
 def test_latest_shares_outstanding():
     assert sec_edgar.latest_shares_outstanding(_company_facts()) == 50_000_000
     assert sec_edgar.latest_shares_outstanding(None) is None
