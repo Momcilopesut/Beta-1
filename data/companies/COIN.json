@@ -62,7 +62,7 @@
       "debt_to_equity": 0.48716222163125433
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 56.06953926762478,
+      "book_value_per_share": 56.069539267490065,
       "shareholders_equity": 14793058000,
       "total_assets": 29671832000,
       "total_liabilities": 14878774000
@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 143.6045974900093,
-      "graham_number": 74.9263813297488,
-      "graham_upside_pct": -60.41714758848919,
-      "ncav_margin_pct": -88.96767562160201,
-      "pb_ratio": 3.3759863639417897,
-      "pe_ttm": 42.53707865168539
+      "graham_multiple": 134.21936537815557,
+      "graham_number": 74.9263813296588,
+      "graham_upside_pct": -59.05662222423017,
+      "ncav_margin_pct": -88.58847714982548,
+      "pb_ratio": 3.263804240069903,
+      "pe_ttm": 41.12359550561798
     }
   },
   "industry": "Financial - Data & Stock Exchanges",
-  "last_updated": "2026-10-01T23:56:24Z",
+  "last_updated": "2026-10-02T22:06:12Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,28 +98,28 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 49941162089,
+  "market_cap": 48281645424,
   "metrics": {
-    "book_value_per_share": 56.06953926762478,
+    "book_value_per_share": 56.069539267490065,
     "current_ratio": 2.3431541467107952,
     "debt_to_ebitda": 4.437931261696602,
     "debt_to_equity": 0.48716222163125433,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": 143.6045974900093,
-    "graham_upside_pct": -60.41714758848919,
+    "graham_multiple": 134.21936537815557,
+    "graham_upside_pct": -59.05662222423017,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -88.96767562160201,
-    "pb_ratio": 3.3759863639417897,
-    "pe_ttm": 42.53707865168539,
+    "ncav_margin_pct": -88.58847714982548,
+    "pb_ratio": 3.263804240069903,
+    "pe_ttm": 41.12359550561798,
     "roe_pct": 8.519719181794596,
     "roic_pct": 11.093654219161413,
     "shareholders_equity": 14793058000,
     "total_assets": 29671832000,
     "total_liabilities": 14878774000,
-    "value_creation_pct": 2.1012743208852545
+    "value_creation_pct": 2.1835891040608146
   },
   "name": "Coinbase",
   "plain_analysis": {
@@ -134,34 +134,18 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-01",
-    "close": 189.29
+    "as_of": "2026-10-02",
+    "close": 183
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, Coinbase reported net revenue of $6.9 billion (up from $6.3 billion in 2024), comprising $4.1 billion in transaction revenue and $2.8 billion in subscription and services revenue, while net income fell to $1.3 billion from $2.6 billion the prior year. The filing describes the August 2025 acquisition of Deribit, the launch of U.S. perpetual-style futures and an 'Everything Exchange' strategy adding stocks, commodity futures, and prediction markets, and continued growth in USDC/stablecoin adoption. It also discusses a Data Theft Incident (disclosed via an earlier 8-K) that added $345 million in other operating expenses during 2025, and notes results remain highly sensitive to crypto asset price volatility and trading volume.",
-    "filing_summary_10q": "This Form 10-Q covers the quarterly period ended June 30, 2026, and is presented largely as structured XBRL financial data covering categories such as bank servicing revenue, subscription and circulation revenue (including stablecoin and blockchain infrastructure services), crypto asset holdings (Bitcoin, Ethereum, Solana, and payment stablecoins), convertible senior notes due 2026, and stock-based compensation. The data references customer concentration risk in both revenue from contracts with customers and accounts receivable, and includes details on the Deribit acquisition finalized in 2025 and a subsequent acquisition of GM Echo Ltd. in October 2025. No narrative discussion of quarterly results was included in the excerpt provided.",
-    "filing_summary_8k": "This Form 8-K, dated September 1, 2026, discloses under Item 5.02 that Coinbase's Board of Directors increased its size from nine to ten members and appointed Anthony Armstrong as a new director, effective immediately, who will serve on the Audit and Compliance Committee. The filing notes Armstrong will be compensated under the company's standard non-employee director program and has entered into the company's standard indemnification agreement, with no other material related-party arrangements disclosed.",
-    "moat_explanation": "The 10-K explicitly positions Coinbase as 'the most trusted crypto platform,' emphasizing its compliance infrastructure, one-to-one custody of customer assets, and educational/trust-building practices as key differentiators from competitors. This regulatory/compliance-driven trust and brand reputation, built over years of operating as a registered, audited platform in a heavily scrutinized industry, is harder for new entrants to replicate quickly, though the excerpts do not describe patents or exclusive licenses that would create a stronger legal barrier.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Revenue is significantly concentrated: Bitcoin and Ethereum trading pairs drove ~45-46% of total trading volume in 2025 and 2024, and stablecoin revenue tied to a single partner (Circle/USDC) is a large and growing share of subscription revenue",
-      "The company explicitly states operating results are highly volatile and unpredictable due to crypto asset price swings, mirroring risk described as largely outside management's control",
-      "A 'Data Theft Incident' disclosed via 8-K in May 2025 resulted in $345 million of other operating expense in 2025 for customer reimbursements and legal costs",
-      "Net income declined 51% year-over-year (from $2.6 billion to $1.3 billion) in fiscal 2025 despite higher net revenue, partly due to the Data Theft Incident and unfavorable fair-value changes on crypto investments",
-      "Subscription and services revenue is sensitive to declining interest rates, which the company flags as a risk to future revenue given multiple 2024-2025 Federal Funds Rate decreases",
-      "The 10-Q XBRL data references customer concentration risk in both revenue and accounts receivable, indicating reliance on a small number of large customers in some periods"
-    ]
-  },
+  "qualitative": null,
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001679788.json",
     "sec_filings": [
       {
-        "filed": "2026-09-02",
+        "filed": "2026-10-02",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000101/coin-20260901.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000113/coin-20260929.htm"
       },
       {
         "filed": "2026-07-30",
@@ -181,7 +165,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $49.9B",
+          "detail": "Market cap $48.3B",
           "passed": true
         },
         {
@@ -206,12 +190,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 42.5",
+          "detail": "P/E 41.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 143.6",
+          "detail": "P/E x P/B = 134.2",
           "passed": false
         }
       ],

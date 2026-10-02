@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 48.0959718640495,
+      "graham_multiple": 49.14633590810421,
       "graham_number": 24.561354405343927,
-      "graham_upside_pct": -31.60302309845745,
+      "graham_upside_pct": -32.3378666519451,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.1027757122405384,
-      "pe_ttm": 22.87261146496815
+      "pb_ratio": 2.125612875364287,
+      "pe_ttm": 23.12101910828025
     }
   },
   "industry": "REIT - Healthcare Facilities",
-  "last_updated": "2026-10-01T23:51:24Z",
+  "last_updated": "2026-10-02T22:03:37Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,18 +98,18 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 8483386839,
+  "market_cap": 8575520530,
   "metrics": {
     "book_value_per_share": 17.077427607216066,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": 48.0959718640495,
-    "graham_upside_pct": -31.60302309845745,
+    "graham_multiple": 49.14633590810421,
+    "graham_upside_pct": -32.3378666519451,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "pb_ratio": 2.1027757122405384,
-    "pe_ttm": 22.87261146496815,
+    "pb_ratio": 2.125612875364287,
+    "pe_ttm": 23.12101910828025,
     "roe_pct": 7.943389306318273,
     "shareholders_equity": 4035280000,
     "total_assets": 5148436000,
@@ -125,8 +125,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-01",
-    "close": 35.91
+    "as_of": "2026-10-02",
+    "close": 36.3
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -134,9 +134,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001590717.json",
     "sec_filings": [
       {
-        "filed": "2026-08-06",
+        "filed": "2026-10-02",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1590717/000162828026054348/ctre-20260806.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1590717/000162828026064352/ctre-20260930.htm"
       },
       {
         "filed": "2026-08-06",
@@ -156,7 +156,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $8.5B",
+          "detail": "Market cap $8.6B",
           "passed": true
         },
         {
@@ -181,12 +181,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 22.9",
+          "detail": "P/E 23.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 48.1",
+          "detail": "P/E x P/B = 49.1",
           "passed": false
         }
       ],

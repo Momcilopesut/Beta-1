@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 22.560001638316386,
+      "graham_multiple": 21.87342440586569,
       "graham_number": 164.7704463483757,
-      "graham_upside_pct": -0.1330708840683043,
+      "graham_upside_pct": 1.4221632084055804,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.3299741070180686,
-      "pe_ttm": 9.682511737089204
+      "pb_ratio": 2.2942456720174276,
+      "pe_ttm": 9.534037558685448
     }
   },
   "industry": "Auto - Dealerships",
-  "last_updated": "2026-10-01T23:38:30Z",
+  "last_updated": "2026-10-02T21:52:06Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,22 +98,22 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 5520812885,
+  "market_cap": 5436155290,
   "metrics": {
     "book_value_per_share": 70.81194572207345,
     "current_ratio": 0.8388441685016064,
     "eps_growth_cagr_3yr_pct": -11.145241287231201,
     "fcf_margin_pct": -0.7147665337261232,
     "graham_criteria_evaluated": 5,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 22.560001638316386,
-    "graham_upside_pct": -0.1330708840683043,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 21.87342440586569,
+    "graham_upside_pct": 1.4221632084055804,
     "gross_margin_pct": 17.90897312477833,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "pb_ratio": 2.3299741070180686,
-    "pe_ttm": 9.682511737089204,
+    "pb_ratio": 2.2942456720174276,
+    "pe_ttm": 9.534037558685448,
     "roe_pct": 27.72628251676562,
     "shareholders_equity": 2341100000,
     "total_assets": 14392200000
@@ -126,13 +126,12 @@
     "worries": [
       "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
       "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
-      "After paying for everything it needs to run and grow the business, it's actually spending more cash than it's bringing in.",
-      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+      "After paying for everything it needs to run and grow the business, it's actually spending more cash than it's bringing in."
     ]
   },
   "price": {
-    "as_of": "2026-10-01",
-    "close": 164.99
+    "as_of": "2026-10-02",
+    "close": 162.46
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -162,7 +161,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $5.5B",
+          "detail": "Market cap $5.4B",
           "passed": true
         },
         {
@@ -187,17 +186,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 9.7",
+          "detail": "P/E 9.5",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 22.6",
-          "passed": false
+          "detail": "P/E x P/B = 21.9",
+          "passed": true
         }
       ],
       "evaluated": 5,
-      "passed": 3,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {

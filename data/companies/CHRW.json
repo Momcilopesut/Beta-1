@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 307.40781634648124,
+      "graham_multiple": 326.0702355755202,
       "graham_number": 41.43071695936553,
-      "graham_upside_pct": -72.94585545294142,
-      "ncav_margin_pct": -102.31461425126065,
-      "pb_ratio": 9.69557106538791,
-      "pe_ttm": 31.706004140786746
+      "graham_upside_pct": -73.73147542520573,
+      "ncav_margin_pct": -102.24740062413173,
+      "pb_ratio": 9.985539169602855,
+      "pe_ttm": 32.65424430641822
     }
   },
   "industry": "Integrated Freight & Logistics",
-  "last_updated": "2026-10-01T23:33:40Z",
+  "last_updated": "2026-10-02T22:05:32Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 18051077652,
+  "market_cap": 18590936184,
   "metrics": {
     "book_value_per_share": 15.794840651180666,
     "current_ratio": 1.527837497584214,
@@ -107,21 +107,21 @@
     "eps_growth_cagr_3yr_pct": -13.256194627034546,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 307.40781634648124,
-    "graham_upside_pct": -72.94585545294142,
+    "graham_multiple": 326.0702355755202,
+    "graham_upside_pct": -73.73147542520573,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -102.31461425126065,
-    "pb_ratio": 9.69557106538791,
-    "pe_ttm": 31.706004140786746,
+    "ncav_margin_pct": -102.24740062413173,
+    "pb_ratio": 9.985539169602855,
+    "pe_ttm": 32.65424430641822,
     "reinvestment_rate_pct": 36.98860220517561,
     "roe_pct": 31.808953716501588,
     "roic_pct": 23.285838764720953,
     "shareholders_equity": 1845647000,
     "total_assets": 5058381000,
     "total_liabilities": 3212734000,
-    "value_creation_pct": 13.581523979467434
+    "value_creation_pct": 13.61269003572319
   },
   "name": "C.H. Robinson",
   "plain_analysis": {
@@ -137,10 +137,26 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-01",
-    "close": 153.14
+    "as_of": "2026-10-02",
+    "close": 157.72
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "C.H. Robinson's FY2025 10-K reports total revenues of $16.2 billion, down 8.4% from 2024, primarily due to the divestiture of its Europe Surface Transportation business plus lower ocean pricing/volume and lower fuel surcharges. Adjusted gross profits decreased slightly to $2.7 billion while operating income rose 18.8% to $795.0 million and net income rose 26.1% to $587.1 million, driven by cost reductions and headcount declines (down 11.5%). The filing describes soft freight demand, tightening North American truckload capacity late in the year, depressed global ocean/air freight pricing, and continued restructuring and cost-optimization efforts, including a Kansas City lease impairment.",
+    "filing_summary_10q": "The excerpt provided is XBRL tagging data from the Q2 2026 10-Q (covering the six months ended June 30, 2026) rather than narrative text, so it does not describe specific financial results, business developments, or management commentary for the period. It confirms the filing covers segments (NAST, Global Forwarding, Corporate/Other), ongoing 2025 Restructuring Program activity, debt facilities, and stock compensation plans, but the provided text does not support a substantive summary of results or trends.",
+    "filing_summary_8k": "This 8-K, dated July 29, 2026, furnishes (under Item 2.02) C.H. Robinson's press release and earnings conference call slides announcing financial results for the quarter ended June 30, 2026. The filing itself does not include the actual financial results text, only the cover information and exhibit list (Exhibits 99.1 and 99.2), and states this information is furnished, not filed, under the Exchange Act.",
+    "moat_explanation": "The 10-K describes a scale-based network of 75,000 customers and 450,000 contract carriers, one of the largest proprietary datasets on shipments/routings/carriers, and a proprietary Navisphere technology platform combined with century-long customer relationships and branded produce programs. These are best characterized as intangible/data and relationship advantages combined with scale rather than a classic switching-cost or network-effect moat, though the company itself states competitive advantages include scale, relationships, and technology; the industry is described as 'highly competitive and fragmented' with many alternative brokers and technology platforms, which tempers the durability of any advantage.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company describes the transportation services industry as 'highly competitive and fragmented' with many traditional and non-traditional competitors, including technology-driven matching platforms",
+      "2025 excerpts note tariffs and shifting U.S. trade policy adversely impacted Global Forwarding volumes and demand, particularly in Q2 2025",
+      "Ocean freight rates and adjusted gross profit per shipment declined significantly in 2025 due to excess vessel capacity and weak global demand",
+      "Company acknowledges risk that contracted rates could require providing transportation services at a loss if market conditions shift below agreed pricing",
+      "Multiple years of restructuring programs (2024 and 2025) with severance charges and facility impairments (e.g., Kansas City lease) indicate cost pressure and headcount reductions",
+      "Sourcing business is dependent on weather-driven produce supply and price volatility outside the company's control"
+    ]
+  },
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001043277.json",
@@ -168,7 +184,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $18.1B",
+          "detail": "Market cap $18.6B",
           "passed": true
         },
         {
@@ -193,12 +209,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 31.7",
+          "detail": "P/E 32.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 307.4",
+          "detail": "P/E x P/B = 326.1",
           "passed": false
         }
       ],

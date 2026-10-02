@@ -81,16 +81,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 33.85408785803189,
+      "graham_multiple": 31.43336326234824,
       "graham_number": 28.655700533750412,
-      "graham_upside_pct": -18.475958652203662,
+      "graham_upside_pct": -15.395038282402082,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.0225770839791455,
-      "pe_ttm": 16.738095238095237
+      "pb_ratio": 1.9489242058143288,
+      "pe_ttm": 16.128571428571426
     }
   },
   "industry": "Apparel - Footwear & Accessories",
-  "last_updated": "2026-10-01T23:26:28Z",
+  "last_updated": "2026-10-02T21:41:51Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 52015364559,
+  "market_cap": 50121206191,
   "metrics": {
     "book_value_per_share": 17.37881847788325,
     "current_ratio": 1.9608671395552721,
@@ -107,14 +107,14 @@
     "fcf_margin_pct": 4.70709944394155,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 33.85408785803189,
-    "graham_upside_pct": -18.475958652203662,
+    "graham_multiple": 31.43336326234824,
+    "graham_upside_pct": -15.395038282402082,
     "gross_margin_pct": 42.913487650329756,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "pb_ratio": 2.0225770839791455,
-    "pe_ttm": 16.738095238095237,
+    "pb_ratio": 1.9489242058143288,
+    "pe_ttm": 16.128571428571426,
     "roe_pct": 20.908173562058526,
     "shareholders_equity": 14865000000,
     "total_assets": 38410000000
@@ -133,14 +133,19 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-01",
-    "close": 35.15
+    "as_of": "2026-10-02",
+    "close": 33.87
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320187.json",
     "sec_filings": [
+      {
+        "filed": "2026-10-02",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000193/nke-20260831.htm"
+      },
       {
         "filed": "2026-10-01",
         "form": "8-K",
@@ -150,11 +155,6 @@
         "filed": "2026-07-15",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm"
-      },
-      {
-        "filed": "2026-04-01",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000037/nke-20260228.htm"
       }
     ]
   },
@@ -164,7 +164,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $52.0B",
+          "detail": "Market cap $50.1B",
           "passed": true
         },
         {
@@ -189,12 +189,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 16.7",
+          "detail": "P/E 16.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 33.9",
+          "detail": "P/E x P/B = 31.4",
           "passed": false
         }
       ],

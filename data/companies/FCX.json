@@ -84,13 +84,13 @@
       "graham_multiple": null,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -113.68114404729661,
-      "pb_ratio": 5.264156515870681,
+      "ncav_margin_pct": -113.15699138807203,
+      "pb_ratio": 5.473871758131119,
       "pe_ttm": null
     }
   },
   "industry": "Copper",
-  "last_updated": "2026-10-01T23:50:47Z",
+  "last_updated": "2026-10-02T22:04:36Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 99622908000,
+  "market_cap": 103561822400,
   "metrics": {
     "book_value_per_share": 13.160702914347375,
     "current_ratio": 2.291078252201362,
@@ -109,13 +109,13 @@
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -113.68114404729661,
-    "pb_ratio": 5.264156515870681,
+    "ncav_margin_pct": -113.15699138807203,
+    "pb_ratio": 5.473871758131119,
     "roic_pct": 17.700978811230268,
     "shareholders_equity": 18899000000,
     "total_assets": 58167000000,
     "total_liabilities": 27401000000,
-    "value_creation_pct": 8.255996572541115
+    "value_creation_pct": 8.272441483964393
   },
   "name": "Freeport-McMoRan Inc.",
   "plain_analysis": {
@@ -129,34 +129,18 @@
     "worries": []
   },
   "price": {
-    "as_of": "2026-10-01",
-    "close": 69.28
+    "as_of": "2026-10-02",
+    "close": 72.04
   },
-  "qualitative": {
-    "extraction_confidence": "whole_document_fallback",
-    "filing_summary_10k": "The FY2025 10-K excerpt provided consists largely of XBRL financial-statement note disclosures rather than narrative text, covering Freeport-McMoRan's segments (North America Copper Mines, South America Mines, Grasberg/Indonesia, Molybdenum, Atlantic Copper smelting), debt and credit facilities, pension and postretirement plans, income taxes (including disputes with Peruvian and Indonesian tax authorities), environmental and asset retirement obligations, derivative/hedging positions, and litigation including asbestos/talc claims tied to Cyprus Mines. It also references an operational incident ('mud rush') affecting the Grasberg segment and PTFI's revolving credit facility and reserve/royalty arrangements with the Indonesian government.",
-    "filing_summary_10q": "The most recent 10-Q covers the quarter and six months ended June 30, 2026, presenting results by segment (North America Copper Mines, South America Mines, Indonesia, Molybdenum, and other). It discloses a Cerro Verde-related equity transaction in May 2026, new May 2031 senior unsecured revolving credit facilities for both the parent company and Cerro Verde, outstanding debt across FCX, PTFI, and Cerro Verde entities, commodity derivative/hedging activity in copper and gold, and a subsequent-event share repurchase program disclosed as of July 2026.",
-    "filing_summary_8k": "This 8-K, dated September 1, 2026 (filed September 8, 2026), discloses under Item 8.01 that PT Freeport Indonesia (PTFI), a 48.76%-owned subsidiary of Freeport-McMoRan, amended and restated its $1.75 billion senior unsecured revolving credit facility to extend its maturity from November 2028 to September 2031; as of the report date, PTFI had $250 million outstanding under this facility, which is available for general corporate purposes.",
-    "moat_explanation": "The excerpts (mostly XBRL/financial-statement note disclosures rather than narrative business description) indicate Freeport-McMoRan operates large, capital-intensive, long-lived mining complexes (Grasberg in Indonesia via PT Freeport Indonesia, Cerro Verde and El Abra in South America, Morenci and other North America copper mines, plus Atlantic Copper smelting) with reserves and infrastructure built over decades. This scale of integrated mine/smelter/reserve assets is the type of natural barrier that limits the number of competitors able to operate at similar scale, but the provided excerpts do not include narrative business/competition discussion, so this classification rests on inference from segment and asset structure rather than explicit moat language.",
-    "moat_present": true,
-    "moat_type": "efficient_scale",
-    "red_flags": [
-      "Ongoing tax disputes and assessments from Peruvian (SUNAT) and Indonesian tax authorities affecting Cerro Verde and PT Freeport Indonesia across multiple tax years",
-      "Asbestos and talc-related litigation exposure tied to legacy Cyprus Mines Corporation, including future claims risk",
-      "A 'mud rush' incident and related asset damage (chute galleries, assets damaged beyond repair) disclosed for the Grasberg segment, indicating operational/safety disruption risk",
-      "Significant environmental and asset retirement obligations across historical smelter sites, Arizona/New Mexico/Colorado reclamation programs, and PTFI operations",
-      "PT Freeport Indonesia is only minority-owned by FCX (48.76% per the 8-K), creating structural reliance on a partially-controlled foreign subsidiary operating in a single host country",
-      "Extensive long-term debt across FCX, PTFI, and Cerro Verde entities with multiple senior notes and revolving credit facilities"
-    ]
-  },
+  "qualitative": null,
   "sector": "Basic Materials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000831259.json",
     "sec_filings": [
       {
-        "filed": "2026-09-08",
+        "filed": "2026-10-02",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000038/fcx-20260901.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000043/fcx-20261002.htm"
       },
       {
         "filed": "2026-08-06",
@@ -176,7 +160,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $99.6B",
+          "detail": "Market cap $103.6B",
           "passed": true
         },
         {

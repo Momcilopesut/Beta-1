@@ -85,12 +85,12 @@
       "graham_number": null,
       "graham_upside_pct": null,
       "ncav_margin_pct": null,
-      "pb_ratio": 5.296418477262187,
+      "pb_ratio": 5.266846807430807,
       "pe_ttm": null
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-10-01T23:55:26Z",
+  "last_updated": "2026-10-02T21:50:10Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 605279969640,
+  "market_cap": 601900489810,
   "metrics": {
     "book_value_per_share": 22.65681998413957,
     "current_ratio": 2.017038796516231,
@@ -110,12 +110,12 @@
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 1,
-    "pb_ratio": 5.296418477262187,
+    "pb_ratio": 5.266846807430807,
     "roe_pct": -0.23363463742879392,
     "roic_pct": -0.025218858170064244,
     "shareholders_equity": 114281000000,
     "total_assets": 211429000000,
-    "value_creation_pct": -9.579852375346585
+    "value_creation_pct": -9.529611959487156
   },
   "name": "Intel",
   "plain_analysis": {
@@ -132,24 +132,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-01",
-    "close": 120
+    "as_of": "2026-10-02",
+    "close": 119.33
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "The 10-K excerpts provided only list section headings (Business, Risk Factors, Management's Discussion and Analysis) with corresponding page ranges, functioning as a table of contents rather than substantive filing text. No descriptions of products, revenue drivers, risks, or financial results are included in what was provided, so a content summary cannot be given beyond noting the filing's structure.",
-    "filing_summary_10q": "The excerpt is raw XBRL tag data from a 10-Q covering a fiscal quarter ended June 27, 2026, rather than narrative text. It references reporting segments including Client Computing and Physical AI Group, Datacenter and AI, Intel Foundry, and All Other; a completed sale/disposal of the Altera business; ongoing 2024 and 2025 Restructuring Plans; issuance of multiple senior notes and credit facility activity; and government-related and joint arrangements including Department of Commerce funding, Ireland SCIP, and Arizona SCIP entities. No narrative discussion of results or business commentary was included in the excerpt provided.",
-    "filing_summary_8k": "This 8-K, dated August 10, 2026, discloses that Intel Corporation entered into an underwriting agreement with J.P. Morgan, Goldman Sachs, Morgan Stanley, and Citigroup to sell 210,526,315 shares of common stock at $95.00 per share under a shelf registration statement. The underwriters were granted a 30-day option to purchase up to an additional 31,578,947 shares, which they exercised in full on August 11, 2026. The filing also furnishes related launch and pricing press releases and a legal validity opinion as exhibits.",
-    "moat_explanation": "The provided 10-K excerpts for Business, Risk Factors, and MD&A consist only of section headings and page number references (a table of contents), with no actual descriptive text about products, market position, competitive dynamics, customer relationships, or cost structure. There is no substantive content in these excerpts to support any specific moat classification.",
-    "moat_present": false,
-    "moat_type": "none",
-    "red_flags": [
-      "The 8-K discloses a large common stock offering (over 240 million shares at $95.00/share after the underwriters' option was fully exercised), which represents material dilution to existing shareholders.",
-      "The 10-Q XBRL data references both a '2024 Restructuring Plan' and a '2025 Restructuring Plan,' suggesting the company has undertaken multiple rounds of restructuring.",
-      "The 10-Q data indicates a disposal/sale of the Altera business (equity method investee), reflecting a divestiture of a prior business unit.",
-      "The 10-Q references large government-related arrangements (Department of Commerce, Ireland SCIP, Arizona SCIP variable interest entities), indicating reliance on government funding or support structures tied to manufacturing facilities."
-    ]
-  },
+  "qualitative": null,
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000050863.json",
@@ -177,7 +163,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $605.3B",
+          "detail": "Market cap $601.9B",
           "passed": true
         },
         {
