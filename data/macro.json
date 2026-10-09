@@ -1,21 +1,21 @@
 {
   "capital_efficiency": {
-    "companies_covered": 897,
-    "cost_of_debt_pct": 3.450790772350516,
-    "cost_of_equity_pct": 10.24,
+    "companies_covered": 896,
+    "cost_of_debt_pct": 3.450355615776537,
+    "cost_of_equity_pct": 10.219999999999999,
     "coverage": {
-      "capex": 599,
-      "change_in_working_capital": 731,
-      "depreciation": 709,
+      "capex": 598,
+      "change_in_working_capital": 730,
+      "depreciation": 708,
       "interest_expense": 251,
       "invested_capital": 457,
-      "market_cap": 897,
-      "nopat": 648,
+      "market_cap": 896,
+      "nopat": 647,
       "total_debt": 534
     },
-    "expected_growth_pct": 5.211030999424294,
-    "reinvestment_rate_pct": 27.043856110839954,
-    "roic_pct": 19.26881646636022,
+    "expected_growth_pct": 5.80375218521199,
+    "reinvestment_rate_pct": 29.041579481142872,
+    "roic_pct": 19.98428559638243,
     "sentiment": {
       "expected_growth": "neutral",
       "reinvestment_rate": "neutral",
@@ -24,17 +24,17 @@
       "wacc": "neutral"
     },
     "totals": {
-      "capex": 1010443129000,
-      "change_in_working_capital": 258190740005,
-      "depreciation": 789096169764,
-      "interest_expense": 177005432000,
-      "invested_capital": 9202357447000,
-      "market_cap": 77594364354784.0,
-      "nopat": 1773185367040.8618,
-      "total_debt": 4052239052000
+      "capex": 1026073129000,
+      "change_in_working_capital": 301186740005,
+      "depreciation": 789905169764,
+      "interest_expense": 176996432000,
+      "invested_capital": 9258746447000,
+      "market_cap": 78514580585845.0,
+      "nopat": 1850294332613.391,
+      "total_debt": 4052544052000
     },
-    "value_creation_pct": 9.36577474284125,
-    "wacc_pct": 9.903041723518971
+    "value_creation_pct": 10.096552006333996,
+    "wacc_pct": 9.887733590048436
   },
   "cycle_context": {
     "description": "No stress signal is currently flashing - broad-based growth conditions have historically favored cyclical and growth-oriented sectors over defensives.",
@@ -50,32 +50,12 @@
     "note": "Historical tendencies from long-run sector-rotation research, not a prediction - every cycle differs, and this names no current event or company-specific catalyst.",
     "phase_name": "Mid-cycle expansion"
   },
-  "generated_at": "2026-10-02T21:41:14Z",
+  "generated_at": "2026-10-09T21:42:26Z",
   "regime": "Neutral/Expansion",
   "series": [
     {
-      "as_of": "2026-10-01",
+      "as_of": "2026-10-08",
       "history": [
-        {
-          "date": "2025-10-02",
-          "value": 4.23
-        },
-        {
-          "date": "2025-10-03",
-          "value": 4.24
-        },
-        {
-          "date": "2025-10-06",
-          "value": 4.22
-        },
-        {
-          "date": "2025-10-07",
-          "value": 4.2
-        },
-        {
-          "date": "2025-10-08",
-          "value": 4.2
-        },
         {
           "date": "2025-10-09",
           "value": 4.2
@@ -1055,37 +1035,37 @@
         {
           "date": "2026-10-01",
           "value": 4.06
+        },
+        {
+          "date": "2026-10-02",
+          "value": 4.04
+        },
+        {
+          "date": "2026-10-05",
+          "value": 4.05
+        },
+        {
+          "date": "2026-10-06",
+          "value": 4.06
+        },
+        {
+          "date": "2026-10-07",
+          "value": 4.07
+        },
+        {
+          "date": "2026-10-08",
+          "value": 4.14
         }
       ],
       "label": "1-Month Treasury Yield",
-      "latest_value": 4.06,
+      "latest_value": 4.14,
       "mood": null,
       "series_id": "DGS1MO",
       "source_url": "https://fred.stlouisfed.org/series/DGS1MO"
     },
     {
-      "as_of": "2026-10-01",
+      "as_of": "2026-10-08",
       "history": [
-        {
-          "date": "2025-10-02",
-          "value": 4.02
-        },
-        {
-          "date": "2025-10-03",
-          "value": 4.03
-        },
-        {
-          "date": "2025-10-06",
-          "value": 4.02
-        },
-        {
-          "date": "2025-10-07",
-          "value": 4.01
-        },
-        {
-          "date": "2025-10-08",
-          "value": 4.01
-        },
         {
           "date": "2025-10-09",
           "value": 4.03
@@ -2065,37 +2045,37 @@
         {
           "date": "2026-10-01",
           "value": 4.17
+        },
+        {
+          "date": "2026-10-02",
+          "value": 4.19
+        },
+        {
+          "date": "2026-10-05",
+          "value": 4.22
+        },
+        {
+          "date": "2026-10-06",
+          "value": 4.21
+        },
+        {
+          "date": "2026-10-07",
+          "value": 4.22
+        },
+        {
+          "date": "2026-10-08",
+          "value": 4.23
         }
       ],
       "label": "3-Month Treasury Yield",
-      "latest_value": 4.17,
+      "latest_value": 4.23,
       "mood": null,
       "series_id": "DGS3MO",
       "source_url": "https://fred.stlouisfed.org/series/DGS3MO"
     },
     {
-      "as_of": "2026-10-01",
+      "as_of": "2026-10-08",
       "history": [
-        {
-          "date": "2025-10-02",
-          "value": 3.55
-        },
-        {
-          "date": "2025-10-03",
-          "value": 3.58
-        },
-        {
-          "date": "2025-10-06",
-          "value": 3.6
-        },
-        {
-          "date": "2025-10-07",
-          "value": 3.57
-        },
-        {
-          "date": "2025-10-08",
-          "value": 3.58
-        },
         {
           "date": "2025-10-09",
           "value": 3.6
@@ -3075,37 +3055,37 @@
         {
           "date": "2026-10-01",
           "value": 4.78
+        },
+        {
+          "date": "2026-10-02",
+          "value": 4.83
+        },
+        {
+          "date": "2026-10-05",
+          "value": 4.84
+        },
+        {
+          "date": "2026-10-06",
+          "value": 4.79
+        },
+        {
+          "date": "2026-10-07",
+          "value": 4.77
+        },
+        {
+          "date": "2026-10-08",
+          "value": 4.75
         }
       ],
       "label": "2-Year Treasury Yield",
-      "latest_value": 4.78,
+      "latest_value": 4.75,
       "mood": null,
       "series_id": "DGS2",
       "source_url": "https://fred.stlouisfed.org/series/DGS2"
     },
     {
-      "as_of": "2026-10-01",
+      "as_of": "2026-10-08",
       "history": [
-        {
-          "date": "2025-10-02",
-          "value": 4.1
-        },
-        {
-          "date": "2025-10-03",
-          "value": 4.13
-        },
-        {
-          "date": "2025-10-06",
-          "value": 4.18
-        },
-        {
-          "date": "2025-10-07",
-          "value": 4.14
-        },
-        {
-          "date": "2025-10-08",
-          "value": 4.13
-        },
         {
           "date": "2025-10-09",
           "value": 4.14
@@ -4085,37 +4065,37 @@
         {
           "date": "2026-10-01",
           "value": 5.24
+        },
+        {
+          "date": "2026-10-02",
+          "value": 5.28
+        },
+        {
+          "date": "2026-10-05",
+          "value": 5.31
+        },
+        {
+          "date": "2026-10-06",
+          "value": 5.27
+        },
+        {
+          "date": "2026-10-07",
+          "value": 5.28
+        },
+        {
+          "date": "2026-10-08",
+          "value": 5.22
         }
       ],
       "label": "10-Year Treasury Yield",
-      "latest_value": 5.24,
+      "latest_value": 5.22,
       "mood": null,
       "series_id": "DGS10",
       "source_url": "https://fred.stlouisfed.org/series/DGS10"
     },
     {
-      "as_of": "2026-10-01",
+      "as_of": "2026-10-08",
       "history": [
-        {
-          "date": "2025-10-02",
-          "value": 4.69
-        },
-        {
-          "date": "2025-10-03",
-          "value": 4.71
-        },
-        {
-          "date": "2025-10-06",
-          "value": 4.76
-        },
-        {
-          "date": "2025-10-07",
-          "value": 4.73
-        },
-        {
-          "date": "2025-10-08",
-          "value": 4.72
-        },
         {
           "date": "2025-10-09",
           "value": 4.72
@@ -5095,37 +5075,37 @@
         {
           "date": "2026-10-01",
           "value": 5.61
+        },
+        {
+          "date": "2026-10-02",
+          "value": 5.63
+        },
+        {
+          "date": "2026-10-05",
+          "value": 5.66
+        },
+        {
+          "date": "2026-10-06",
+          "value": 5.64
+        },
+        {
+          "date": "2026-10-07",
+          "value": 5.67
+        },
+        {
+          "date": "2026-10-08",
+          "value": 5.6
         }
       ],
       "label": "30-Year Treasury Yield",
-      "latest_value": 5.61,
+      "latest_value": 5.6,
       "mood": null,
       "series_id": "DGS30",
       "source_url": "https://fred.stlouisfed.org/series/DGS30"
     },
     {
-      "as_of": "2026-10-02",
+      "as_of": "2026-10-09",
       "history": [
-        {
-          "date": "2025-10-03",
-          "value": 0.55
-        },
-        {
-          "date": "2025-10-06",
-          "value": 0.58
-        },
-        {
-          "date": "2025-10-07",
-          "value": 0.57
-        },
-        {
-          "date": "2025-10-08",
-          "value": 0.55
-        },
-        {
-          "date": "2025-10-09",
-          "value": 0.54
-        },
         {
           "date": "2025-10-10",
           "value": 0.53
@@ -6105,21 +6085,37 @@
         {
           "date": "2026-10-02",
           "value": 0.45
+        },
+        {
+          "date": "2026-10-05",
+          "value": 0.47
+        },
+        {
+          "date": "2026-10-06",
+          "value": 0.48
+        },
+        {
+          "date": "2026-10-07",
+          "value": 0.51
+        },
+        {
+          "date": "2026-10-08",
+          "value": 0.47
+        },
+        {
+          "date": "2026-10-09",
+          "value": 0.44
         }
       ],
       "label": "10Y-2Y Treasury Spread",
-      "latest_value": 0.45,
+      "latest_value": 0.44,
       "mood": null,
       "series_id": "T10Y2Y",
       "source_url": "https://fred.stlouisfed.org/series/T10Y2Y"
     },
     {
-      "as_of": "2026-09-26",
+      "as_of": "2026-10-03",
       "history": [
-        {
-          "date": "2025-09-27",
-          "value": 225000.0
-        },
         {
           "date": "2025-10-04",
           "value": 233000.0
@@ -6326,13 +6322,17 @@
         },
         {
           "date": "2026-09-26",
+          "value": 199000.0
+        },
+        {
+          "date": "2026-10-03",
           "value": 197000.0
         }
       ],
       "label": "Initial Jobless Claims",
       "latest_value": 197000.0,
       "mood": {
-        "detail": "Down 12.4% over the past year",
+        "detail": "Down 15.5% over the past year",
         "emoji": "\ud83d\ude42",
         "label": "Improving",
         "sentiment": "favorable"
@@ -6902,6 +6902,6 @@
     "unemployment_rising": false,
     "unemployment_trend_pct": 0.0,
     "yield_curve_inverted": false,
-    "yield_curve_value": 0.45
+    "yield_curve_value": 0.44
   }
 }

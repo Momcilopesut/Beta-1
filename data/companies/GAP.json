@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 21.98440656769515,
+      "graham_multiple": 23.41327556656172,
       "graham_number": 22.772430249137773,
-      "graham_upside_pct": 1.1658385123845931,
+      "graham_upside_pct": -1.9697363360405808,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.080265925774796,
-      "pe_ttm": 10.568075117370894
+      "pb_ratio": 2.1468048625388056,
+      "pe_ttm": 10.906103286384978
     }
   },
   "industry": "Apparel - Retail",
-  "last_updated": "2026-10-02T22:02:01Z",
+  "last_updated": "2026-10-09T21:52:40Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 8103127290,
+  "market_cap": 8362312170,
   "metrics": {
     "book_value_per_share": 10.820731965609705,
     "current_ratio": 1.7506060606060605,
@@ -106,21 +106,21 @@
     "debt_to_equity": 0.39252828203104445,
     "fcf_margin_pct": 5.3559807366913965,
     "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 21.98440656769515,
-    "graham_upside_pct": 1.1658385123845931,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 23.41327556656172,
+    "graham_upside_pct": -1.9697363360405808,
     "gross_margin_pct": 40.79135754262658,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "pb_ratio": 2.080265925774796,
-    "pe_ttm": 10.568075117370894,
+    "pb_ratio": 2.1468048625388056,
+    "pe_ttm": 10.906103286384978,
     "reinvestment_rate_pct": 62.70640991822738,
     "roe_pct": 21.468034727703238,
     "roic_pct": 30.024115914787796,
     "shareholders_equity": 3801000000,
     "total_assets": 12632000000,
-    "value_creation_pct": 20.61068962874631
+    "value_creation_pct": 20.605921242617185
   },
   "name": "Gap Inc.",
   "plain_analysis": {
@@ -132,11 +132,13 @@
       "The share of each sale it gets to keep as profit has been getting better over the last few years.",
       "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
     ],
-    "worries": []
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 22.51
+    "as_of": "2026-10-09",
+    "close": 23.23
   },
   "qualitative": null,
   "sector": "Consumer Cyclical",
@@ -166,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $8.1B",
+          "detail": "Market cap $8.4B",
           "passed": true
         },
         {
@@ -191,17 +193,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 10.6",
+          "detail": "P/E 10.9",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 22.0",
-          "passed": true
+          "detail": "P/E x P/B = 23.4",
+          "passed": false
         }
       ],
       "evaluated": 6,
-      "passed": 4,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {

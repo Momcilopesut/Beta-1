@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 292.3799953551061,
+      "graham_multiple": 332.7342433247737,
       "graham_number": 153.200795428346,
-      "graham_upside_pct": -72.25929898447362,
-      "ncav_margin_pct": -133.77197922859878,
-      "pb_ratio": 8.746093367736849,
-      "pe_ttm": 33.42978208232446
+      "graham_upside_pct": -73.99585914581492,
+      "ncav_margin_pct": -131.6578627300573,
+      "pb_ratio": 9.33015870544397,
+      "pe_ttm": 35.66222760290557
     }
   },
   "industry": "Financial - Credit Services",
-  "last_updated": "2026-10-02T21:42:20Z",
+  "last_updated": "2026-10-09T22:01:10Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 484351901360,
+  "market_cap": 516696989040,
   "metrics": {
     "book_value_per_share": 63.143620446268294,
     "current_ratio": 1.0349705649767156,
@@ -108,20 +108,20 @@
     "fcf_margin_pct": 52.328382787960116,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 292.3799953551061,
-    "graham_upside_pct": -72.25929898447362,
+    "graham_multiple": 332.7342433247737,
+    "graham_upside_pct": -73.99585914581492,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -133.77197922859878,
-    "pb_ratio": 8.746093367736849,
-    "pe_ttm": 33.42978208232446,
+    "ncav_margin_pct": -131.6578627300573,
+    "pb_ratio": 9.33015870544397,
+    "pe_ttm": 35.66222760290557,
     "reinvestment_rate_pct": -2.3776662408018128,
     "roic_pct": 94.15010352772497,
     "shareholders_equity": 7737000000,
     "total_assets": 54157000000,
     "total_liabilities": 46411000000,
-    "value_creation_pct": 84.29663231498954
+    "value_creation_pct": 84.29258456452897
   },
   "name": "Mastercard Incorporated",
   "plain_analysis": {
@@ -138,10 +138,24 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 552.26
+    "as_of": "2026-10-09",
+    "close": 589.14
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The excerpts describe Mastercard's corporate structure (Delaware incorporation, Class A/B stock), note that filings are available on its website, and outline a wide range of evolving regulatory topics (e.g., buy-now-pay-later, digital currencies, ESG disclosure rules) that could affect the company. Risk Factors describe anti-takeover provisions in the charter/bylaws and the position of Mastercard Foundation as a large, diversifying shareholder. The MD&A excerpt discusses accounting judgment areas including loss contingencies from claims/legal proceedings, income tax estimates and valuation allowances, and the acquisition method used for business combinations.",
+    "filing_summary_10q": "This excerpt consists largely of XBRL tagging data rather than narrative disclosure, covering the quarter and six months ended June 30, 2026 (with 2025 comparatives). It references two revenue categories (Payment Network; Value-Added Services and Solutions), geographic segments (North America; International Markets), various outstanding senior notes and commercial paper, a revolving credit facility, share repurchase activity, and a forecasted transaction involving BVNK Holdings Limited expected around September 30, 2026. No narrative discussion of results or business developments is included in the provided excerpt.",
+    "filing_summary_8k": "This 8-K, dated July 30, 2026, discloses under Item 2.02 that Mastercard issued an earnings release announcing its second quarter 2026 financial results, furnished as Exhibit 99.1. The filing does not include the text of the earnings release itself, only the cover disclosure and exhibit list.",
+    "moat_explanation": "The provided 10-K excerpts (Business, Risk Factors, MD&A) focus on corporate structure, anti-takeover provisions, Mastercard Foundation's stock ownership, evolving regulatory topics (e.g., buy-now-pay-later, digital currencies), and accounting policies for litigation, taxes, and business combinations. None of these sections describe the company's actual payment network scale, brand strength, or customer relationships in enough detail to support a specific moat classification under the given framework, so no durable competitive advantage can be substantiated from this text alone.",
+    "moat_present": false,
+    "moat_type": "none",
+    "red_flags": [
+      "Anti-takeover provisions (15% ownership cap, no cumulative voting, no shareholder written consent) that could limit shareholder influence over corporate actions",
+      "Mastercard Foundation holds a large voting stake (>5%) and is executing a multi-year share diversification plan that could affect corporate actions",
+      "Company acknowledges ongoing claims and legal proceedings with inherently uncertain outcomes and judgment-based loss accruals",
+      "Broad and evolving regulatory scrutiny across many areas (buy-now-pay-later, open finance, digital currencies/stablecoins, credit reporting, ESG disclosure) that the company itself flags as a source of uncertainty"
+    ]
+  },
   "sector": "Financial Services",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001141391.json",
@@ -169,7 +183,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $484.4B",
+          "detail": "Market cap $516.7B",
           "passed": true
         },
         {
@@ -194,12 +208,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 33.4",
+          "detail": "P/E 35.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 292.4",
+          "detail": "P/E x P/B = 332.7",
           "passed": false
         }
       ],

@@ -18,10 +18,10 @@
         "debt": 1853669000,
         "earnings": 373541000,
         "fiscal_year": "2022-09-30",
-        "market_return_pct": -16.67133258678611,
+        "market_return_pct": null,
         "revenue": null,
         "spending": null,
-        "stock_return_pct": 4.01141068363122
+        "stock_return_pct": null
       },
       {
         "cash": 136778000,
@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": -203.81969153675792,
+      "graham_multiple": -207.7406108406457,
       "graham_number": null,
       "graham_upside_pct": null,
-      "ncav_margin_pct": -120.36736341304834,
-      "pb_ratio": -8.18052871589498,
-      "pe_ttm": 24.91522230595328
+      "ncav_margin_pct": -120.17423987668627,
+      "pb_ratio": -8.25883910798816,
+      "pe_ttm": 25.15373021853806
     }
   },
   "industry": "Software - Application",
-  "last_updated": "2026-10-02T21:49:56Z",
+  "last_updated": "2026-10-09T21:50:34Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 14281436805,
+  "market_cap": 14418149841,
   "metrics": {
     "book_value_per_share": -80.83218370900332,
     "current_ratio": 0.8303727560158499,
@@ -107,20 +107,20 @@
     "eps_growth_cagr_3yr_pct": 23.23712626480905,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": -203.81969153675792,
+    "graham_multiple": -207.7406108406457,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -120.36736341304834,
-    "pb_ratio": -8.18052871589498,
-    "pe_ttm": 24.91522230595328,
+    "ncav_margin_pct": -120.17423987668627,
+    "pb_ratio": -8.25883910798816,
+    "pe_ttm": 25.15373021853806,
     "reinvestment_rate_pct": -51.54159397947863,
     "roe_pct": -37.344024232092856,
     "roic_pct": 96.78232537587633,
     "shareholders_equity": -1745784000,
     "total_assets": 1868133000,
     "total_liabilities": 3613917000,
-    "value_creation_pct": 88.14816074741643
+    "value_creation_pct": 88.15219162238651
   },
   "name": "Fair Isaac",
   "plain_analysis": {
@@ -136,8 +136,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 661.25
+    "as_of": "2026-10-09",
+    "close": 667.58
   },
   "qualitative": null,
   "sector": "Technology",
@@ -145,14 +145,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000814547.json",
     "sec_filings": [
       {
-        "filed": "2026-07-29",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/814547/000081454726000030/fico-20260630.htm"
+        "filed": "2026-10-06",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/814547/000119312526415732/d127042d8k.htm"
       },
       {
         "filed": "2026-07-29",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/814547/000081454726000031/fico-20260729.htm"
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/814547/000081454726000030/fico-20260630.htm"
       },
       {
         "filed": "2025-11-07",
@@ -167,7 +167,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $14.3B",
+          "detail": "Market cap $14.4B",
           "passed": true
         },
         {
@@ -192,12 +192,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.9",
+          "detail": "P/E 25.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = -203.8",
+          "detail": "P/E x P/B = -207.7",
           "passed": true
         }
       ],

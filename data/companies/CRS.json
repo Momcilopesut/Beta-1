@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 1039.4269454336104,
+      "graham_multiple": 1025.2409871679292,
       "graham_number": 57.154674945788784,
-      "graham_upside_pct": -85.28723583654111,
-      "ncav_margin_pct": -98.075526233612,
-      "pb_ratio": 8.642492428631712,
-      "pe_ttm": 120.26934984520125
+      "graham_upside_pct": -85.18579742728576,
+      "ncav_margin_pct": -98.06225778484553,
+      "pb_ratio": 8.583314036837852,
+      "pe_ttm": 119.44582043343654
     }
   },
   "industry": "Steel",
-  "last_updated": "2026-10-02T22:00:14Z",
+  "last_updated": "2026-10-09T22:04:15Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 19301365032,
+  "market_cap": 19169201336,
   "metrics": {
     "book_value_per_share": 44.94883891515344,
     "current_ratio": 3.81,
@@ -107,20 +107,20 @@
     "eps_growth_cagr_3yr_pct": 9.950890116438238,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 5,
-    "graham_multiple": 1039.4269454336104,
-    "graham_upside_pct": -85.28723583654111,
+    "graham_multiple": 1025.2409871679292,
+    "graham_upside_pct": -85.18579742728576,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -98.075526233612,
-    "pb_ratio": 8.642492428631712,
-    "pe_ttm": 120.26934984520125,
+    "ncav_margin_pct": -98.06225778484553,
+    "pb_ratio": 8.583314036837852,
+    "pe_ttm": 119.44582043343654,
     "roe_pct": 7.290357335248698,
     "roic_pct": 6.615685268618297,
     "shareholders_equity": 2227600000,
     "total_assets": 3838300000,
     "total_liabilities": 1610700000,
-    "value_creation_pct": -3.27053597022426
+    "value_creation_pct": -3.24887721532495
   },
   "name": "Carpenter Technology",
   "plain_analysis": {
@@ -135,8 +135,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 388.47
+    "as_of": "2026-10-09",
+    "close": 385.81
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -144,9 +144,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000017843.json",
     "sec_filings": [
       {
-        "filed": "2026-08-25",
+        "filed": "2026-10-08",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/17843/000001784326000038/crs-20260825.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/17843/000119312526417980/d169218d8k.htm"
       },
       {
         "filed": "2026-08-12",
@@ -166,7 +166,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $19.3B",
+          "detail": "Market cap $19.2B",
           "passed": true
         },
         {
@@ -191,12 +191,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 120.3",
+          "detail": "P/E 119.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 1039.4",
+          "detail": "P/E x P/B = 1025.2",
           "passed": false
         }
       ],

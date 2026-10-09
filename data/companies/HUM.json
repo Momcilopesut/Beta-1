@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 104.22231951013694,
+      "graham_multiple": 128.88364881520164,
       "graham_number": 180.44522092632567,
-      "graham_upside_pct": -53.53661012299782,
-      "ncav_margin_pct": -96.65216037247146,
-      "pb_ratio": 2.640713832474373,
-      "pe_ttm": 39.46747967479675
+      "graham_upside_pct": -58.217699556272564,
+      "ncav_margin_pct": -96.98944821879967,
+      "pb_ratio": 2.936566800985445,
+      "pe_ttm": 43.889227642276424
     }
   },
   "industry": "Medical - Healthcare Plans",
-  "last_updated": "2026-10-02T21:47:15Z",
+  "last_updated": "2026-10-09T22:03:31Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 46634268800,
+  "market_cap": 51758082400,
   "metrics": {
     "book_value_per_share": 147.0662951903816,
     "current_ratio": 2.00250825890126,
@@ -108,29 +108,28 @@
     "fcf_margin_pct": 0.28920903257650543,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 104.22231951013694,
-    "graham_upside_pct": -53.53661012299782,
+    "graham_multiple": 128.88364881520164,
+    "graham_upside_pct": -58.217699556272564,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -96.65216037247146,
-    "pb_ratio": 2.640713832474373,
-    "pe_ttm": 39.46747967479675,
+    "ncav_margin_pct": -96.98944821879967,
+    "pb_ratio": 2.936566800985445,
+    "pe_ttm": 43.889227642276424,
     "reinvestment_rate_pct": 150.36465493196263,
     "roe_pct": 6.728209775159994,
     "roic_pct": 8.64982050088713,
     "shareholders_equity": 17657000000,
     "total_assets": 48909000000,
     "total_liabilities": 31172000000,
-    "value_creation_pct": 0.5564568241953722
+    "value_creation_pct": 0.40108093047436455
   },
   "name": "Humana",
   "plain_analysis": {
     "positives": [
       "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
       "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
-      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
-      "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
+      "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year."
     ],
     "worries": [
       "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
@@ -138,8 +137,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 388.36
+    "as_of": "2026-10-09",
+    "close": 431.87
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -147,9 +146,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000049071.json",
     "sec_filings": [
       {
-        "filed": "2026-09-01",
+        "filed": "2026-10-09",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/49071/000004907126000052/hum-20260901.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/49071/000004907126000057/hum-20261009.htm"
       },
       {
         "filed": "2026-07-29",
@@ -169,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $46.6B",
+          "detail": "Market cap $51.8B",
           "passed": true
         },
         {
@@ -194,12 +193,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 39.5",
+          "detail": "P/E 43.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 104.2",
+          "detail": "P/E x P/B = 128.9",
           "passed": false
         }
       ],

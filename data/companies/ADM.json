@@ -81,16 +81,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 61.51306873156796,
+      "graham_multiple": 60.659683342801934,
       "graham_number": 48.655687198374835,
-      "graham_upside_pct": -39.520587696240106,
+      "graham_upside_pct": -39.096648894261065,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.7050856839204047,
-      "pe_ttm": 36.0762331838565
+      "pb_ratio": 1.6932168463443273,
+      "pe_ttm": 35.82511210762332
     }
   },
   "industry": "Agricultural Farm Products",
-  "last_updated": "2026-10-02T22:01:18Z",
+  "last_updated": "2026-10-09T21:45:27Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 38773440650,
+  "market_cap": 38503544730,
   "metrics": {
     "book_value_per_share": 47.18237960629989,
     "current_ratio": 1.3650558001433397,
@@ -107,14 +107,14 @@
     "fcf_margin_pct": 5.237389278550872,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 61.51306873156796,
-    "graham_upside_pct": -39.520587696240106,
+    "graham_multiple": 60.659683342801934,
+    "graham_upside_pct": -39.096648894261065,
     "gross_margin_pct": 6.270166564925438,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "pb_ratio": 1.7050856839204047,
-    "pe_ttm": 36.0762331838565,
+    "pb_ratio": 1.6932168463443273,
+    "pe_ttm": 35.82511210762332,
     "roe_pct": 4.740545294635004,
     "shareholders_equity": 22740000000,
     "total_assets": 52389000000
@@ -133,26 +133,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 80.45
+    "as_of": "2026-10-09",
+    "close": 79.89
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, ADM reported total revenues of $80.3 billion, down $5.3 billion from 2024, driven by lower sales volumes and prices across its Ag Services and Oilseeds and Carbohydrate Solutions segments, partially offset by growth in Nutrition. Earnings before income taxes fell 44% to $1.3 billion and total segment operating profit fell 23% to $3.2 billion, reflecting compressed margins from oversupply, trade-policy uncertainty, and logistical/weather challenges, along with impairment and restructuring charges. The filing also discusses equity earnings from affiliates including Wilmar, which included a one-time remeasurement gain and a penalty charge, and notes the effective tax rate declined to 14.5% from 21.1%.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter and six months ended June 30, 2026) consists primarily of XBRL data tags rather than narrative text, showing the company's segment structure (Ag Services and Oilseeds, Carbohydrate Solutions, Nutrition), fair value measurement categories for commodity, foreign exchange, and interest rate derivatives, and comparative period tagging against 2025. No descriptive discussion of quarterly results, drivers, or major developments was included in the excerpt provided.",
-    "filing_summary_8k": "This 8-K, dated August 6, 2026, discloses that ADM's Board of Directors accepted the resignation of director Lei Z. Schlitz, effective December 31, 2026, after she tendered her resignation due to a voluntary change in her principal employment. The filing states her departure was not the result of any disagreement with the company regarding its operations, policies, or practices, and she was asked to remain on the Board through year-end.",
-    "moat_explanation": "The Business section provided is boilerplate cross-references to the proxy statement and exhibit lists, containing no description of brand strength, patents, network effects, or switching costs. The MD&A/risk excerpts describe ADM as an agricultural commodity merchandising and processing company where revenues and costs move together with commodity prices, margins compress with supply/demand and trade-policy shifts, and results are affected by weather, logistics, and competition \u2014 this reads as a scale commodity-processing business rather than a business with a clearly durable competitive advantage as described in the excerpts.",
-    "moat_present": false,
-    "moat_type": "none",
-    "red_flags": [
-      "Earnings before income taxes fell 44% ($1.0 billion) to $1.3 billion in 2025, driven by lower pricing and execution margins",
-      "Total segment operating profit fell 23% ($1.0 billion) to $3.2 billion, led by weakness in Ag Services and Oilseeds and Carbohydrate Solutions",
-      "2025 impairments included $372 million tied to alternative protein market investments, $283 million of restructuring/exit charges, and $179 million related to previously capitalized software",
-      "Company recorded a $163 million penalty charge related to its Wilmar equity investment, and previously recorded a $461 million Wilmar impairment in 2024",
-      "Margins and volumes were negatively affected by evolving U.S. biofuel and trade policy, EU deforestation regulation delays, tariffs, and the Russia-Ukraine conflict's impact on Black Sea operations",
-      "Reliance on expiring/uncertain government incentives (e.g., transition from Blenders' Tax Credit to the 45Z Clean Fuel Production Credit) introduces policy-dependent earnings volatility"
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Defensive",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000007084.json",
@@ -180,7 +164,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $38.8B",
+          "detail": "Market cap $38.5B",
           "passed": true
         },
         {
@@ -205,12 +189,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 36.1",
+          "detail": "P/E 35.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 61.5",
+          "detail": "P/E x P/B = 60.7",
           "passed": false
         }
       ],

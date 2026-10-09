@@ -18,10 +18,10 @@
         "debt": null,
         "earnings": 774398000,
         "fiscal_year": "2022-09-30",
-        "market_return_pct": -16.67133258678611,
+        "market_return_pct": null,
         "revenue": 4201662000,
         "spending": null,
-        "stock_return_pct": 12.479293208172278
+        "stock_return_pct": null
       },
       {
         "cash": 15404000,
@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 41.26992015751834,
+      "graham_multiple": 43.661582373536426,
       "graham_number": 116.04972025140518,
-      "graham_upside_pct": -26.162931697267172,
+      "graham_upside_pct": -28.213707626249423,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.9588573161232223,
-      "pe_ttm": 21.06836461126005
+      "pb_ratio": 2.014817546125088,
+      "pe_ttm": 21.67024128686327
     }
   },
   "industry": "Regulated Gas",
-  "last_updated": "2026-10-02T22:01:42Z",
+  "last_updated": "2026-10-09T22:05:20Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,20 +98,20 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 26234788424,
+  "market_cap": 26984258425,
   "metrics": {
     "book_value_per_share": 80.23555299630266,
     "current_ratio": 0.7725549770111146,
     "eps_growth_cagr_3yr_pct": 10.031474661040264,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 41.26992015751834,
-    "graham_upside_pct": -26.162931697267172,
+    "graham_multiple": 43.661582373536426,
+    "graham_upside_pct": -28.213707626249423,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "pb_ratio": 1.9588573161232223,
-    "pe_ttm": 21.06836461126005,
+    "pb_ratio": 2.014817546125088,
+    "pe_ttm": 21.67024128686327,
     "roe_pct": 8.841092449308166,
     "shareholders_equity": 13558890000,
     "total_assets": 28249522000
@@ -128,34 +128,18 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 157.17
+    "as_of": "2026-10-09",
+    "close": 161.66
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year ended September 30, 2025, Atmos Energy reported consolidated net income of $1,198.8 million ($7.46 diluted EPS), up from $1,042.9 million in fiscal 2024, driven by rate outcomes tied to safety and reliability spending and a Texas legislative benefit. Distribution segment operating income rose 12.8% and pipeline/storage segment operating income rose 19.1%, aided by GRIP and formula rate mechanism increases. The company invested $3.6 billion in capital expenditures (87% for safety/reliability) and completed $1.8 billion in long-term debt and equity financing, ending the year with about $4.9 billion in total liquidity and a 60.3% equity capitalization.",
-    "filing_summary_10q": "The excerpt provided is limited to XBRL taxonomy tags rather than narrative text, covering the quarter and nine months ended June 30, 2026 (fiscal Q3 2026) versus the comparable prior-year periods. It references segment reporting for Distribution and Pipeline and Storage, various series of unsecured senior notes maturing between 2027 and 2056 (including notes issued or redeemed during the period, e.g., 5.45% notes due 2056 and 4.75% notes due 2032), and multiple revolving credit and commercial paper facilities. No narrative discussion of financial results, business developments, or risks is included in the excerpt, so specific quarterly performance cannot be summarized from what was provided.",
-    "filing_summary_8k": "This 8-K, dated August 4, 2026, discloses board and management changes: James H. Jeffries IV, a partner at McGuire Woods LLP (which has provided energy/regulatory advisory services to the company), was elected to the Board of Directors effective September 1, 2026. Separately, John S. McDill, Senior Vice President of Utility Operations, notified the company of his planned retirement in early 2027, and Jeff D. Martinez, current President of the Mid-Tex Division, was named his successor effective October 1, 2026, with an increase in base salary from $380,000 to $500,000. The filing also notes two news releases furnished as exhibits announcing these changes.",
-    "moat_explanation": "Atmos operates as a regulated natural gas distributor and intrastate pipeline (APT) under non-exclusive franchise agreements in eight states, with rates set by state and federal regulators to allow a reasonable return on invested capital. The capital-intensive nature of building and maintaining over 81,000 miles of distribution and transmission lines, combined with the franchise/regulatory approval process, limits the number of competing providers in each service area, consistent with an efficient-scale dynamic rather than brand, network, or switching-cost advantages.",
-    "moat_present": true,
-    "moat_type": "efficient_scale",
-    "red_flags": [
-      "Company acknowledges 'regulatory lag' risk if rate mechanisms are modified or terminated, which could delay recovery of invested capital.",
-      "Faces competition from alternative energy sources (electricity, propane) for residential/commercial customers and risk of industrial customers bypassing the system for lower-cost alternatives.",
-      "Significant capital expenditure plan (~$26 billion fiscal 2026-2030) with full recovery through rates 'not assured.'",
-      "Exposure to pipeline integrity, safety incidents (leaks, explosions) and associated liability, remediation, and regulatory penalty costs, some of which may exceed insurance coverage.",
-      "Cybersecurity and IT system risks are highlighted as potentially disrupting operations or exposing sensitive data, with no assurance current measures are sufficient.",
-      "Concentration of significant operations in Texas (Mid-Tex/APT) exposes the company to state-specific regulatory and economic conditions."
-    ]
-  },
+  "qualitative": null,
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000731802.json",
     "sec_filings": [
       {
-        "filed": "2026-08-10",
+        "filed": "2026-10-09",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/731802/000119312526341096/d138079d8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/731802/000119312526419084/d174816d8k.htm"
       },
       {
         "filed": "2026-08-05",
@@ -175,7 +159,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $26.2B",
+          "detail": "Market cap $27.0B",
           "passed": true
         },
         {
@@ -200,12 +184,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 21.1",
+          "detail": "P/E 21.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 41.3",
+          "detail": "P/E x P/B = 43.7",
           "passed": false
         }
       ],

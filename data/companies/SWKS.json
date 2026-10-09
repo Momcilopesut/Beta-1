@@ -18,10 +18,10 @@
         "debt": 499200000,
         "earnings": 1275200000,
         "fiscal_year": "2022-09-30",
-        "market_return_pct": -16.67133258678611,
+        "market_return_pct": null,
         "revenue": 5485500000,
         "spending": null,
-        "stock_return_pct": -46.60279291126558
+        "stock_return_pct": null
       },
       {
         "cash": 718800000,
@@ -81,16 +81,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 61.35469746129984,
+      "graham_multiple": 49.467680097223536,
       "graham_number": 51.49197250196455,
-      "graham_upside_pct": -39.44258202756139,
-      "ncav_margin_pct": -92.8321886940591,
-      "pb_ratio": 2.222421124083306,
-      "pe_ttm": 27.607142857142858
+      "graham_upside_pct": -32.557992793759595,
+      "ncav_margin_pct": -92.01730196012895,
+      "pb_ratio": 1.9955527792986052,
+      "pe_ttm": 24.788961038961038
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-10-02T21:50:41Z",
+  "last_updated": "2026-10-09T21:51:10Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 12794700653,
+  "market_cap": 11488596906,
   "metrics": {
     "book_value_per_share": 38.26007549990004,
     "current_ratio": 2.3254232164449817,
@@ -107,21 +107,21 @@
     "fcf_margin_pct": 27.05718270571827,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 61.35469746129984,
-    "graham_upside_pct": -39.44258202756139,
+    "graham_multiple": 49.467680097223536,
+    "graham_upside_pct": -32.557992793759595,
     "gross_margin_pct": 41.15833516846509,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -92.8321886940591,
-    "pb_ratio": 2.222421124083306,
-    "pe_ttm": 27.607142857142858,
+    "ncav_margin_pct": -92.01730196012895,
+    "pb_ratio": 1.9955527792986052,
+    "pe_ttm": 24.788961038961038,
     "roe_pct": 8.287158465199493,
     "roic_pct": 8.889040126159308,
     "shareholders_equity": 5757100000,
     "total_assets": 7917000000,
     "total_liabilities": 2159900000,
-    "value_creation_pct": -1.127330154343337
+    "value_creation_pct": -1.0837986488893367
   },
   "name": "Skyworks Solutions",
   "plain_analysis": {
@@ -140,8 +140,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 85.03
+    "as_of": "2026-10-09",
+    "close": 76.35
   },
   "qualitative": null,
   "sector": "Technology",
@@ -149,9 +149,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000004127.json",
     "sec_filings": [
       {
-        "filed": "2026-09-30",
+        "filed": "2026-10-07",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/4127/000110465926112129/tm2626657d1_8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/4127/000110465926114359/tm2626934d2_8k.htm"
       },
       {
         "filed": "2026-07-28",
@@ -171,7 +171,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $12.8B",
+          "detail": "Market cap $11.5B",
           "passed": true
         },
         {
@@ -196,12 +196,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 27.6",
+          "detail": "P/E 24.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 61.4",
+          "detail": "P/E x P/B = 49.5",
           "passed": false
         }
       ],

@@ -18,10 +18,10 @@
         "debt": null,
         "earnings": 1509000000,
         "fiscal_year": "2022-09-30",
-        "market_return_pct": -16.67133258678611,
+        "market_return_pct": null,
         "revenue": 11308000000,
         "spending": null,
-        "stock_return_pct": 5.825658599271791
+        "stock_return_pct": null
       },
       {
         "cash": 9313000000,
@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 37.38824126634785,
+      "graham_multiple": 37.46863335084588,
       "graham_number": 122.7319604170238,
-      "graham_upside_pct": -22.42465051701928,
+      "graham_upside_pct": -22.50791740306617,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.434099519900024,
-      "pe_ttm": 15.36019417475728
+      "pb_ratio": 2.4367150114516516,
+      "pe_ttm": 15.376699029126213
     }
   },
   "industry": "Asset Management",
-  "last_updated": "2026-10-02T21:46:30Z",
+  "last_updated": "2026-10-09T21:47:39Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,20 +98,20 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 30392141000,
+  "market_cap": 30405588000,
   "metrics": {
     "book_value_per_share": 64.9973424285044,
     "eps_growth_cagr_3yr_pct": 13.848488040155704,
     "fcf_margin_pct": 14.115133232780291,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 3,
-    "graham_multiple": 37.38824126634785,
-    "graham_upside_pct": -22.42465051701928,
+    "graham_multiple": 37.46863335084588,
+    "graham_upside_pct": -22.50791740306617,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
-    "pb_ratio": 2.434099519900024,
-    "pe_ttm": 15.36019417475728,
+    "pb_ratio": 2.4367150114516516,
+    "pe_ttm": 15.376699029126213,
     "roe_pct": 17.075901783571943,
     "shareholders_equity": 12503000000,
     "total_assets": 88230000000,
@@ -128,8 +128,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 158.21
+    "as_of": "2026-10-09",
+    "close": 158.38
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -189,7 +189,7 @@
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 37.4",
+          "detail": "P/E x P/B = 37.5",
           "passed": false
         }
       ],

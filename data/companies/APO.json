@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 59.37238471608659,
+      "graham_multiple": 64.29214339366327,
       "graham_number": 70.1907768824799,
-      "graham_upside_pct": -38.43994309552719,
+      "graham_upside_pct": -40.84216023389811,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.884783470681633,
-      "pe_ttm": 20.581227436823102
+      "pb_ratio": 3.0019256165267127,
+      "pe_ttm": 21.416967509025273
     }
   },
   "industry": "Asset Management",
-  "last_updated": "2026-10-02T21:45:32Z",
+  "last_updated": "2026-10-09T21:46:19Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,18 +98,18 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 65672303610,
+  "market_cap": 68339053002,
   "metrics": {
     "book_value_per_share": 39.524630239599475,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": 59.37238471608659,
-    "graham_upside_pct": -38.43994309552719,
+    "graham_multiple": 64.29214339366327,
+    "graham_upside_pct": -40.84216023389811,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "pb_ratio": 2.884783470681633,
-    "pe_ttm": 20.581227436823102,
+    "pb_ratio": 3.0019256165267127,
+    "pe_ttm": 21.416967509025273,
     "roe_pct": 14.960798594747441,
     "shareholders_equity": 23341000000,
     "total_assets": 460949000000,
@@ -125,8 +125,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 114.02
+    "as_of": "2026-10-09",
+    "close": 118.65
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -134,9 +134,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001858681.json",
     "sec_filings": [
       {
-        "filed": "2026-09-21",
+        "filed": "2026-10-05",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000051/apo-20260921.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000054/apo-20261005.htm"
       },
       {
         "filed": "2026-08-10",
@@ -156,7 +156,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $65.7B",
+          "detail": "Market cap $68.3B",
           "passed": true
         },
         {
@@ -181,12 +181,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.6",
+          "detail": "P/E 21.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 59.4",
+          "detail": "P/E x P/B = 64.3",
           "passed": false
         }
       ],

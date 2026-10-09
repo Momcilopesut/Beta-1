@@ -18,10 +18,10 @@
         "debt": 81628000,
         "earnings": 34762000,
         "fiscal_year": "2022-09-30",
-        "market_return_pct": -16.67133258678611,
+        "market_return_pct": null,
         "revenue": 2166808000,
         "spending": null,
-        "stock_return_pct": -40.932420872540625
+        "stock_return_pct": null
       },
       {
         "cash": 75770000,
@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 172.8042082683904,
+      "graham_multiple": 132.83622779261944,
       "graham_number": 122.44728422167823,
-      "graham_upside_pct": -63.9160475565279,
-      "ncav_margin_pct": -94.41244368799526,
-      "pb_ratio": 7.648727554049696,
-      "pe_ttm": 22.59254327563249
+      "graham_upside_pct": -58.84401578997102,
+      "ncav_margin_pct": -93.62704571485719,
+      "pb_ratio": 6.70610426675566,
+      "pe_ttm": 19.808255659121173
     }
   },
   "industry": "Engineering & Construction",
-  "last_updated": "2026-10-02T22:03:43Z",
+  "last_updated": "2026-10-09T21:59:39Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 13521952452,
+  "market_cap": 11855517456,
   "metrics": {
     "book_value_per_share": 44.36554938086832,
     "current_ratio": 1.7136612211648363,
@@ -107,15 +107,15 @@
     "eps_growth_cagr_3yr_pct": 118.4921375723075,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 3,
-    "graham_multiple": 172.8042082683904,
-    "graham_upside_pct": -63.9160475565279,
+    "graham_multiple": 132.83622779261944,
+    "graham_upside_pct": -58.84401578997102,
     "gross_margin_pct": 25.493256943266257,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -94.41244368799526,
-    "pb_ratio": 7.648727554049696,
-    "pe_ttm": 22.59254327563249,
+    "ncav_margin_pct": -93.62704571485719,
+    "pb_ratio": 6.70610426675566,
+    "pe_ttm": 19.808255659121173,
     "roe_pct": 34.61431860219129,
     "shareholders_equity": 883955000,
     "total_assets": 1595661000,
@@ -134,8 +134,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 339.34
+    "as_of": "2026-10-09",
+    "close": 297.52
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -143,9 +143,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001048268.json",
     "sec_filings": [
       {
-        "filed": "2026-08-11",
+        "filed": "2026-10-06",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1048268/000149315226036976/form8-k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1048268/000149315226045939/form8-k.htm"
       },
       {
         "filed": "2026-07-31",
@@ -165,7 +165,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $13.5B",
+          "detail": "Market cap $11.9B",
           "passed": true
         },
         {
@@ -190,12 +190,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 22.6",
+          "detail": "P/E 19.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 172.8",
+          "detail": "P/E x P/B = 132.8",
           "passed": false
         }
       ],

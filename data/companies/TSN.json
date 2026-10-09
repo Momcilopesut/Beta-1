@@ -18,10 +18,10 @@
         "debt": 459000000,
         "earnings": 3238000000,
         "fiscal_year": "2022-10-01",
-        "market_return_pct": -16.67133258678611,
+        "market_return_pct": null,
         "revenue": 53282000000,
         "spending": null,
-        "stock_return_pct": -15.560963114754086
+        "stock_return_pct": null
       },
       {
         "cash": 573000000,
@@ -62,7 +62,7 @@
       "debt_to_equity": 0.05026264860381532
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 51.01266284893235,
+      "book_value_per_share": 51.01266284963975,
       "shareholders_equity": 18085000000,
       "total_assets": 36658000000,
       "total_liabilities": null
@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 39.68603455865764,
-      "graham_number": 39.07113942226795,
-      "graham_upside_pct": -24.70391323517451,
+      "graham_multiple": 42.07660715071353,
+      "graham_number": 39.071139422538856,
+      "graham_upside_pct": -26.874154178291494,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.0171984190212884,
-      "pe_ttm": 39.015037593984964
+      "pb_ratio": 1.047387001880011,
+      "pe_ttm": 40.17293233082707
     }
   },
   "industry": "Agricultural Farm Products",
-  "last_updated": "2026-10-02T21:45:04Z",
+  "last_updated": "2026-10-09T21:45:52Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,9 +98,9 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 18396033408,
+  "market_cap": 18941993929,
   "metrics": {
-    "book_value_per_share": 51.01266284893235,
+    "book_value_per_share": 51.01266284963975,
     "current_ratio": 1.5520425731726404,
     "debt_to_ebitda": 0.3713235294117647,
     "debt_to_equity": 0.05026264860381532,
@@ -108,20 +108,20 @@
     "fcf_margin_pct": 2.1619735126099817,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 2,
-    "graham_multiple": 39.68603455865764,
-    "graham_upside_pct": -24.70391323517451,
+    "graham_multiple": 42.07660715071353,
+    "graham_upside_pct": -26.874154178291494,
     "gross_margin_pct": 6.542862915817123,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 2,
-    "pb_ratio": 1.0171984190212884,
-    "pe_ttm": 39.015037593984964,
+    "pb_ratio": 1.047387001880011,
+    "pe_ttm": 40.17293233082707,
     "reinvestment_rate_pct": -249.89329711902224,
     "roe_pct": 2.620956593862317,
     "roic_pct": 4.07491681785425,
     "shareholders_equity": 18085000000,
     "total_assets": 36658000000,
-    "value_creation_pct": -5.682920846381924
+    "value_creation_pct": -5.677097547107676
   },
   "name": "Tyson Foods",
   "plain_analysis": {
@@ -138,8 +138,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 51.89
+    "as_of": "2026-10-09",
+    "close": 53.43
   },
   "qualitative": null,
   "sector": "Consumer Defensive",
@@ -169,7 +169,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $18.4B",
+          "detail": "Market cap $18.9B",
           "passed": true
         },
         {
@@ -194,12 +194,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 39.0",
+          "detail": "P/E 40.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 39.7",
+          "detail": "P/E x P/B = 42.1",
           "passed": false
         }
       ],

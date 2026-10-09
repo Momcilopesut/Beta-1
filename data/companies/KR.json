@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 225.46288065706685,
+      "graham_multiple": 245.84124417726494,
       "graham_number": 18.64775336239099,
-      "graham_upside_pct": -68.40970123260887,
-      "ncav_margin_pct": -184.65268271876394,
-      "pb_ratio": 5.8819724921545475,
-      "pe_ttm": 38.33116883116883
+      "graham_upside_pct": -69.74731771189003,
+      "ncav_margin_pct": -181.068265102022,
+      "pb_ratio": 6.142042764973849,
+      "pe_ttm": 40.02597402597402
     }
   },
   "industry": "Grocery Stores",
-  "last_updated": "2026-10-02T22:01:47Z",
+  "last_updated": "2026-10-09T21:59:47Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 36164552410,
+  "market_cap": 37763561080,
   "metrics": {
     "book_value_per_share": 10.035749075456405,
     "current_ratio": 0.8010271703114645,
@@ -107,20 +107,20 @@
     "eps_growth_cagr_3yr_pct": -20.45740326595622,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 225.46288065706685,
-    "graham_upside_pct": -68.40970123260887,
+    "graham_multiple": 245.84124417726494,
+    "graham_upside_pct": -69.74731771189003,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -184.65268271876394,
-    "pb_ratio": 5.8819724921545475,
-    "pe_ttm": 38.33116883116883,
+    "ncav_margin_pct": -181.068265102022,
+    "pb_ratio": 6.142042764973849,
+    "pe_ttm": 40.02597402597402,
     "roe_pct": 17.14189303188797,
     "roic_pct": 8.732943469785576,
     "shareholders_equity": 5927000000,
     "total_assets": 49953000000,
     "total_liabilities": 44017000000,
-    "value_creation_pct": 1.6167212978355003
+    "value_creation_pct": 1.537679717986216
   },
   "name": "Kroger",
   "plain_analysis": {
@@ -136,8 +136,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 59.03
+    "as_of": "2026-10-09",
+    "close": 61.64
   },
   "qualitative": null,
   "sector": "Consumer Defensive",
@@ -145,14 +145,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000056873.json",
     "sec_filings": [
       {
+        "filed": "2026-10-05",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/56873/000110465926113599/tm2626754d1_8k.htm"
+      },
+      {
         "filed": "2026-09-18",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/56873/000110465926108926/kr-20260815x10q.htm"
-      },
-      {
-        "filed": "2026-09-11",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/56873/000110465926106890/tm2625060d1_8k.htm"
       },
       {
         "filed": "2026-03-31",
@@ -167,7 +167,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $36.2B",
+          "detail": "Market cap $37.8B",
           "passed": true
         },
         {
@@ -192,12 +192,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 38.3",
+          "detail": "P/E 40.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 225.5",
+          "detail": "P/E x P/B = 245.8",
           "passed": false
         }
       ],

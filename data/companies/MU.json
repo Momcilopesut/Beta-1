@@ -4,16 +4,6 @@
   "five_year_history": {
     "years": [
       {
-        "cash": 7763000000,
-        "debt": 155000000,
-        "earnings": 5861000000,
-        "fiscal_year": "2021-09-02",
-        "market_return_pct": null,
-        "revenue": null,
-        "spending": null,
-        "stock_return_pct": null
-      },
-      {
         "cash": 8262000000,
         "debt": 103000000,
         "earnings": 8687000000,
@@ -52,45 +42,55 @@
         "revenue": null,
         "spending": null,
         "stock_return_pct": 27.655121900177885
+      },
+      {
+        "cash": 38364000000,
+        "debt": 491000000,
+        "earnings": 84969000000,
+        "fiscal_year": "2026-09-03",
+        "market_return_pct": 19.147198421993465,
+        "revenue": null,
+        "spending": null,
+        "stock_return_pct": 685.3770491803278
       }
     ]
   },
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": 2.5179849834119086,
-      "debt_to_ebitda": 0.030901666482728175,
-      "debt_to_equity": 0.010338779654758608
+      "current_ratio": 3.313805399898115,
+      "debt_to_ebitda": 0.004511084773481069,
+      "debt_to_equity": 0.003548251889751261
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 47.95938416311505,
-      "shareholders_equity": 54165000000,
-      "total_assets": 82798000000,
-      "total_liabilities": 28633000000
+      "book_value_per_share": 122.30436721851522,
+      "shareholders_equity": 138378000000,
+      "total_assets": 195888000000,
+      "total_liabilities": 57510000000
     },
     "cash_flow": {
       "fcf_margin_pct": null,
-      "reinvestment_rate_pct": 113.15385399955122
+      "reinvestment_rate_pct": 79.65446887628173
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": -0.6929629272242499
+      "eps_growth_cagr_3yr_pct": null
     },
     "profitability": {
       "gross_margin_pct": null,
-      "roe_pct": 15.76479276285424,
-      "roic_pct": 19.14800324485867,
+      "roe_pct": 61.403546806573296,
+      "roic_pct": 84.2027960662786,
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 3174.04201627565,
-      "graham_number": 90.5000764113267,
-      "graham_upside_pct": -91.5805267133077,
-      "ncav_margin_pct": -99.9828661814747,
-      "pb_ratio": 22.412506306256624,
-      "pe_ttm": 141.61923583662715
+      "graham_multiple": 116.4728363931402,
+      "graham_number": 452.2663831697259,
+      "graham_upside_pct": -56.04797053744161,
+      "ncav_margin_pct": -97.11741917731172,
+      "pb_ratio": 8.413436277067163,
+      "pe_ttm": 13.843670119736311
     }
   },
   "industry": "Semiconductors",
-  "last_updated": "2026-10-02T22:01:31Z",
+  "last_updated": "2026-10-09T22:07:16Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,30 +98,29 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 1213970017100,
+  "market_cap": 1162142310000,
   "metrics": {
-    "book_value_per_share": 47.95938416311505,
-    "current_ratio": 2.5179849834119086,
-    "debt_to_ebitda": 0.030901666482728175,
-    "debt_to_equity": 0.010338779654758608,
-    "eps_growth_cagr_3yr_pct": -0.6929629272242499,
-    "graham_criteria_evaluated": 7,
-    "graham_criteria_passed": 3,
-    "graham_multiple": 3174.04201627565,
-    "graham_upside_pct": -91.5805267133077,
+    "book_value_per_share": 122.30436721851522,
+    "current_ratio": 3.313805399898115,
+    "debt_to_ebitda": 0.004511084773481069,
+    "debt_to_equity": 0.003548251889751261,
+    "graham_criteria_evaluated": 6,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 116.4728363931402,
+    "graham_upside_pct": -56.04797053744161,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -99.9828661814747,
-    "pb_ratio": 22.412506306256624,
-    "pe_ttm": 141.61923583662715,
-    "reinvestment_rate_pct": 113.15385399955122,
-    "roe_pct": 15.76479276285424,
-    "roic_pct": 19.14800324485867,
-    "shareholders_equity": 54165000000,
-    "total_assets": 82798000000,
-    "total_liabilities": 28633000000,
-    "value_creation_pct": 8.912724741996875
+    "ncav_margin_pct": -97.11741917731172,
+    "pb_ratio": 8.413436277067163,
+    "pe_ttm": 13.843670119736311,
+    "reinvestment_rate_pct": 79.65446887628173,
+    "roe_pct": 61.403546806573296,
+    "roic_pct": 84.2027960662786,
+    "shareholders_equity": 138378000000,
+    "total_assets": 195888000000,
+    "total_liabilities": 57510000000,
+    "value_creation_pct": 73.98711214767489
   },
   "name": "Micron Technology",
   "plain_analysis": {
@@ -133,19 +132,23 @@
       "This business makes more profit on the money it uses than that money actually costs to raise, whether borrowed or put in by investors. That's a real edge over competitors - something people call a 'moat.'"
     ],
     "worries": [
-      "The profit behind each share of stock has actually been shrinking over the last few years, not growing.",
       "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 1074.89
+    "as_of": "2026-10-09",
+    "close": 1029
   },
   "qualitative": null,
   "sector": "Technology",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000723125.json",
     "sec_filings": [
+      {
+        "filed": "2026-10-09",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm"
+      },
       {
         "filed": "2026-09-30",
         "form": "8-K",
@@ -155,11 +158,6 @@
         "filed": "2026-06-25",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm"
-      },
-      {
-        "filed": "2025-10-03",
-        "form": "10-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm"
       }
     ]
   },
@@ -169,12 +167,12 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $1214.0B",
+          "detail": "Market cap $1162.1B",
           "passed": true
         },
         {
           "criterion": "Strong financial condition (current ratio >= 2, debt <= working capital)",
-          "detail": "Current ratio 2.52, debt $0.6B vs working capital $17.4B",
+          "detail": "Current ratio 3.31, debt $0.5B vs working capital $63.6B",
           "passed": true
         },
         {
@@ -188,40 +186,40 @@
           "passed": true
         },
         {
-          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
-          "detail": "EPS 3yr CAGR -0.7%/yr",
-          "passed": false
+          "criterion": "Earnings growth",
+          "detail": "Insufficient EPS history",
+          "passed": null
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 141.6",
-          "passed": false
+          "detail": "P/E 13.8",
+          "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 3174.0",
+          "detail": "P/E x P/B = 116.5",
           "passed": false
         }
       ],
-      "evaluated": 7,
-      "passed": 3,
+      "evaluated": 6,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE 15.8%",
+          "detail": "ROE 61.4%",
           "passed": true
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
-          "detail": "Debt/equity 0.01",
+          "detail": "Debt/equity 0.00",
           "passed": true
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "1,125,000,000 shares vs. 1,118,000,000 a year earlier",
+          "detail": "1,143,000,000 shares vs. 1,125,000,000 a year earlier",
           "passed": false
         },
         {

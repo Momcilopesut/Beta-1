@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 296.40416192446196,
+      "graham_multiple": 330.01115851601617,
       "graham_number": 30.9130578951112,
-      "graham_upside_pct": -72.44825499544456,
-      "ncav_margin_pct": -109.1977487165845,
-      "pb_ratio": 8.79702191807895,
-      "pe_ttm": 33.693693693693696
+      "graham_upside_pct": -73.88879306097542,
+      "ncav_margin_pct": -108.71684606808667,
+      "pb_ratio": 9.282347815341952,
+      "pe_ttm": 35.552552552552555
     }
   },
   "industry": "Communication Equipment",
-  "last_updated": "2026-10-02T21:49:50Z",
+  "last_updated": "2026-10-09T21:50:30Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 442228969413,
+  "market_cap": 466626449989,
   "metrics": {
     "book_value_per_share": 12.754316295315276,
     "current_ratio": 0.9311258278145695,
@@ -107,21 +107,21 @@
     "eps_growth_cagr_3yr_pct": 2.746874400366228,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 296.40416192446196,
-    "graham_upside_pct": -72.44825499544456,
+    "graham_multiple": 330.01115851601617,
+    "graham_upside_pct": -73.88879306097542,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -109.1977487165845,
-    "pb_ratio": 8.79702191807895,
-    "pe_ttm": 33.693693693693696,
+    "ncav_margin_pct": -108.71684606808667,
+    "pb_ratio": 9.282347815341952,
+    "pe_ttm": 35.552552552552555,
     "reinvestment_rate_pct": -16.269112965059474,
     "roe_pct": 26.383613403599483,
     "roic_pct": 17.542409942616644,
     "shareholders_equity": 50285000000,
     "total_assets": 129637000000,
     "total_liabilities": 79352000000,
-    "value_creation_pct": 7.943449152233921
+    "value_creation_pct": 7.930737084237531
   },
   "name": "Cisco",
   "plain_analysis": {
@@ -137,8 +137,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 112.2
+    "as_of": "2026-10-09",
+    "close": 118.39
   },
   "qualitative": null,
   "sector": "Technology",
@@ -146,14 +146,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000858877.json",
     "sec_filings": [
       {
+        "filed": "2026-10-09",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000156/csco-20261007.htm"
+      },
+      {
         "filed": "2026-09-02",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/csco-20260725.htm"
-      },
-      {
-        "filed": "2026-08-12",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000106/csco-20260812.htm"
       },
       {
         "filed": "2026-05-19",
@@ -168,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $442.2B",
+          "detail": "Market cap $466.6B",
           "passed": true
         },
         {
@@ -193,12 +193,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 33.7",
+          "detail": "P/E 35.6",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 296.4",
+          "detail": "P/E x P/B = 330.0",
           "passed": false
         }
       ],

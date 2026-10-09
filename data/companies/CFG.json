@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 17.158046713882936,
+      "graham_multiple": 16.755028308939778,
       "graham_number": 73.66664436917974,
-      "graham_upside_pct": 14.513670712233386,
+      "graham_upside_pct": 15.88271884407698,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.0295361466747728,
-      "pe_ttm": 16.66580310880829
+      "pb_ratio": 1.0173731205365353,
+      "pe_ttm": 16.468911917098445
     }
   },
   "industry": "Banks - Regional",
-  "last_updated": "2026-10-02T21:45:45Z",
+  "last_updated": "2026-10-09T21:46:30Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,19 +98,19 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 27203999060,
+  "market_cap": 26882608740,
   "metrics": {
     "book_value_per_share": 62.484450116467485,
     "eps_growth_cagr_3yr_pct": -1.9905807112054585,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 17.158046713882936,
-    "graham_upside_pct": 14.513670712233386,
+    "graham_multiple": 16.755028308939778,
+    "graham_upside_pct": 15.88271884407698,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "pb_ratio": 1.0295361466747728,
-    "pe_ttm": 16.66580310880829,
+    "pb_ratio": 1.0173731205365353,
+    "pe_ttm": 16.468911917098445,
     "roe_pct": 6.957479955922027,
     "shareholders_equity": 26317000000,
     "total_assets": 226351000000,
@@ -119,15 +119,16 @@
   "name": "Citizens Financial Group",
   "plain_analysis": {
     "positives": [
-      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount."
     ],
     "worries": [
       "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 64.33
+    "as_of": "2026-10-09",
+    "close": 63.57
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -135,14 +136,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000759944.json",
     "sec_filings": [
       {
+        "filed": "2026-10-08",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/759944/000075994426000192/cfg-20261006.htm"
+      },
+      {
         "filed": "2026-08-03",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/759944/000075994426000148/cfg-20260630.htm"
-      },
-      {
-        "filed": "2026-07-31",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/759944/000119312526326411/d144911d8k.htm"
       },
       {
         "filed": "2026-02-12",
@@ -157,7 +158,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $27.2B",
+          "detail": "Market cap $26.9B",
           "passed": true
         },
         {
@@ -182,12 +183,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 16.7",
+          "detail": "P/E 16.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 17.2",
+          "detail": "P/E x P/B = 16.8",
           "passed": true
         }
       ],

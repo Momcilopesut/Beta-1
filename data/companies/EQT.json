@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 20.02562448665486,
+      "graham_multiple": 22.20542488420043,
       "graham_number": 53.17926443936859,
-      "graham_upside_pct": 5.998135218992597,
-      "ncav_margin_pct": -139.95130960122498,
-      "pb_ratio": 1.3212042465781857,
-      "pe_ttm": 15.157099697885197
+      "graham_upside_pct": 0.6611100499121508,
+      "ncav_margin_pct": -137.9397539786761,
+      "pb_ratio": 1.391254142848825,
+      "pe_ttm": 15.9607250755287
     }
   },
   "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-10-02T21:45:09Z",
+  "last_updated": "2026-10-09T21:45:56Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 31382137720,
+  "market_cap": 33049137860,
   "metrics": {
     "book_value_per_share": 37.972932746724304,
     "current_ratio": 0.7626850168682825,
@@ -108,21 +108,21 @@
     "fcf_margin_pct": 32.825748931857405,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 20.02562448665486,
-    "graham_upside_pct": 5.998135218992597,
+    "graham_multiple": 22.20542488420043,
+    "graham_upside_pct": 0.6611100499121508,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -139.95130960122498,
-    "pb_ratio": 1.3212042465781857,
-    "pe_ttm": 15.157099697885197,
+    "ncav_margin_pct": -137.9397539786761,
+    "pb_ratio": 1.391254142848825,
+    "pe_ttm": 15.9607250755287,
     "reinvestment_rate_pct": -6.09829560871846,
     "roe_pct": 8.585335455031027,
     "roic_pct": 8.072486641132919,
     "shareholders_equity": 23752677000,
     "total_assets": 41792874000,
     "total_liabilities": 14432726000,
-    "value_creation_pct": -0.12896480781892627
+    "value_creation_pct": -0.19597371246838513
   },
   "name": "EQT Corporation",
   "plain_analysis": {
@@ -137,8 +137,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 50.17
+    "as_of": "2026-10-09",
+    "close": 52.83
   },
   "qualitative": null,
   "sector": "Energy",
@@ -146,14 +146,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000033213.json",
     "sec_filings": [
       {
+        "filed": "2026-10-07",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/33213/000110465926114364/tm2627066d1_8k.htm"
+      },
+      {
         "filed": "2026-07-22",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/33213/000003321326000043/eqt-20260630.htm"
-      },
-      {
-        "filed": "2026-07-21",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/33213/000003321326000041/eqt-20260721.htm"
       },
       {
         "filed": "2026-02-18",
@@ -168,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $31.4B",
+          "detail": "Market cap $33.0B",
           "passed": true
         },
         {
@@ -193,12 +193,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 15.2",
+          "detail": "P/E 16.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 20.0",
+          "detail": "P/E x P/B = 22.2",
           "passed": true
         }
       ],

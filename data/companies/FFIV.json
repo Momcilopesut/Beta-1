@@ -18,10 +18,10 @@
         "debt": 349772000,
         "earnings": 322160000,
         "fiscal_year": "2022-09-30",
-        "market_return_pct": -16.67133258678611,
+        "market_return_pct": null,
         "revenue": 2695845000,
         "spending": null,
-        "stock_return_pct": -26.43216591267219
+        "stock_return_pct": null
       },
       {
         "cash": 797163000,
@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 275.41967755364857,
+      "graham_multiple": 307.59659985615485,
       "graham_number": 129.7740598486719,
-      "graham_upside_pct": -71.41792356429568,
+      "graham_upside_pct": -72.9541587961003,
       "ncav_margin_pct": null,
-      "pb_ratio": 7.157854363344756,
-      "pe_ttm": 38.47796610169492
+      "pb_ratio": 7.564428815002454,
+      "pe_ttm": 40.6635593220339
     }
   },
   "industry": "Software - Infrastructure",
-  "last_updated": "2026-10-02T21:49:55Z",
+  "last_updated": "2026-10-09T21:50:34Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 25616573568,
+  "market_cap": 27071624736,
   "metrics": {
     "book_value_per_share": 63.43241660868803,
     "current_ratio": 1.5619066577120777,
@@ -106,14 +106,14 @@
     "fcf_margin_pct": 29.35184153737348,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 3,
-    "graham_multiple": 275.41967755364857,
-    "graham_upside_pct": -71.41792356429568,
+    "graham_multiple": 307.59659985615485,
+    "graham_upside_pct": -72.9541587961003,
     "gross_margin_pct": 81.41306290785965,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "pb_ratio": 7.157854363344756,
-    "pe_ttm": 38.47796610169492,
+    "pb_ratio": 7.564428815002454,
+    "pe_ttm": 40.6635593220339,
     "reinvestment_rate_pct": 36.1488502227319,
     "roe_pct": 19.275617838423674,
     "shareholders_equity": 3591999000,
@@ -133,8 +133,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 454.04
+    "as_of": "2026-10-09",
+    "close": 479.83
   },
   "qualitative": null,
   "sector": "Technology",
@@ -164,7 +164,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $25.6B",
+          "detail": "Market cap $27.1B",
           "passed": true
         },
         {
@@ -189,12 +189,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 38.5",
+          "detail": "P/E 40.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 275.4",
+          "detail": "P/E x P/B = 307.6",
           "passed": false
         }
       ],

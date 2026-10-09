@@ -8,10 +8,10 @@
         "debt": 3974000000,
         "earnings": 4222000000,
         "fiscal_year": "2021-12-31",
-        "market_return_pct": 10.806270996640537,
+        "market_return_pct": null,
         "revenue": 8998000000,
         "spending": null,
-        "stock_return_pct": 0.033696979908181
+        "stock_return_pct": null
       },
       {
         "cash": 1262000000,
@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 59.64878016552793,
+      "graham_multiple": 62.85283247403635,
       "graham_number": 177.25636972301194,
-      "graham_upside_pct": -38.58273458195768,
-      "ncav_margin_pct": -117.17668837285495,
-      "pb_ratio": 3.3605528758237213,
-      "pe_ttm": 17.74969249692497
+      "graham_upside_pct": -40.168645877603474,
+      "ncav_margin_pct": -116.73315341689619,
+      "pb_ratio": 3.4496288936334003,
+      "pe_ttm": 18.220172201722015
     }
   },
   "industry": "Insurance - Brokers",
-  "last_updated": "2026-10-02T21:46:41Z",
+  "last_updated": "2026-10-09T21:47:50Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 26803770603,
+  "market_cap": 27514240944,
   "metrics": {
     "book_value_per_share": 85.88170181052647,
     "current_ratio": 1.2049414453013425,
@@ -106,20 +106,20 @@
     "eps_growth_cagr_3yr_pct": 21.88438440379885,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 59.64878016552793,
-    "graham_upside_pct": -38.58273458195768,
+    "graham_multiple": 62.85283247403635,
+    "graham_upside_pct": -40.168645877603474,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -117.17668837285495,
-    "pb_ratio": 3.3605528758237213,
-    "pe_ttm": 17.74969249692497,
+    "ncav_margin_pct": -116.73315341689619,
+    "pb_ratio": 3.4496288936334003,
+    "pe_ttm": 18.220172201722015,
     "roe_pct": 20.12286860581745,
     "roic_pct": 17.643828072921195,
     "shareholders_equity": 7976000000,
     "total_assets": 29530000000,
     "total_liabilities": 21478000000,
-    "value_creation_pct": 8.583241787723649
+    "value_creation_pct": 8.574595813510841
   },
   "name": "Willis Towers Watson",
   "plain_analysis": {
@@ -135,8 +135,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 288.61
+    "as_of": "2026-10-09",
+    "close": 296.26
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -166,7 +166,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $26.8B",
+          "detail": "Market cap $27.5B",
           "passed": true
         },
         {
@@ -191,12 +191,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 17.7",
+          "detail": "P/E 18.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 59.6",
+          "detail": "P/E x P/B = 62.9",
           "passed": false
         }
       ],

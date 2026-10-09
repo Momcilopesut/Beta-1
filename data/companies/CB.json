@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 22.420440094695042,
+      "graham_multiple": 23.83937655225704,
       "graham_number": 331.47656886165527,
-      "graham_upside_pct": 0.1772700479480432,
+      "graham_upside_pct": -2.8497746595383124,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.7400250887961821,
-      "pe_ttm": 12.8851246105919
+      "pb_ratio": 1.794241470873273,
+      "pe_ttm": 13.286604361370717
     }
   },
   "industry": "Insurance - Property & Casualty",
-  "last_updated": "2026-10-02T21:45:43Z",
+  "last_updated": "2026-10-09T21:46:28Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,19 +98,19 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 127657362000,
+  "market_cap": 131634960000,
   "metrics": {
     "book_value_per_share": 190.16392472186865,
     "eps_growth_cagr_3yr_pct": 27.499330514113176,
     "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 6,
-    "graham_multiple": 22.420440094695042,
-    "graham_upside_pct": 0.1772700479480432,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 23.83937655225704,
+    "graham_upside_pct": -2.8497746595383124,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "pb_ratio": 1.7400250887961821,
-    "pe_ttm": 12.8851246105919,
+    "pb_ratio": 1.794241470873273,
+    "pe_ttm": 13.286604361370717,
     "roe_pct": 13.97833425979907,
     "shareholders_equity": 73757000000,
     "total_assets": 272327000000,
@@ -122,11 +122,13 @@
       "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
       "The profit behind each share of stock has been growing at a healthy pace over the last few years."
     ],
-    "worries": []
+    "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
+    ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 330.89
+    "as_of": "2026-10-09",
+    "close": 341.2
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -156,7 +158,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $127.7B",
+          "detail": "Market cap $131.6B",
           "passed": true
         },
         {
@@ -181,17 +183,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 12.9",
+          "detail": "P/E 13.3",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 22.4",
-          "passed": true
+          "detail": "P/E x P/B = 23.8",
+          "passed": false
         }
       ],
       "evaluated": 6,
-      "passed": 6,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {

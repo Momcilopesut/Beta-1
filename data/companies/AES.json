@@ -81,16 +81,16 @@
       "trend": "declining"
     },
     "valuation": {
-      "graham_multiple": 30.980936422360323,
+      "graham_multiple": 31.105733623030122,
       "graham_number": 12.706373942250826,
-      "graham_upside_pct": -14.779517489934099,
+      "graham_upside_pct": -14.950642956821778,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.6181073032980553,
-      "pe_ttm": 11.833333333333334
+      "pb_ratio": 2.623375124833866,
+      "pe_ttm": 11.857142857142856
     }
   },
   "industry": "Diversified Utilities",
-  "last_updated": "2026-10-02T22:06:11Z",
+  "last_updated": "2026-10-09T21:51:21Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 10633185780,
+  "market_cap": 10654580520,
   "metrics": {
     "book_value_per_share": 5.69495374815911,
     "current_ratio": 0.7656617993405558,
@@ -106,14 +106,14 @@
     "fcf_margin_pct": -13.26739148205673,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 30.980936422360323,
-    "graham_upside_pct": -14.779517489934099,
+    "graham_multiple": 31.105733623030122,
+    "graham_upside_pct": -14.950642956821778,
     "gross_margin_pct": 18.07406196354124,
     "margin_trend_score": 20,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
-    "pb_ratio": 2.6181073032980553,
-    "pe_ttm": 11.833333333333334,
+    "pb_ratio": 2.623375124833866,
+    "pe_ttm": 11.857142857142856,
     "roe_pct": 22.39724341619493,
     "shareholders_equity": 4063000000,
     "total_assets": 51768000000
@@ -132,26 +132,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 14.91
+    "as_of": "2026-10-09",
+    "close": 14.94
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, AES reported total revenue of about $12.23 billion, roughly flat versus 2024, while net income attributable to AES fell 46% to $910 million, largely due to a prior-year gain on the sale of AES Brasil, lower Energy Infrastructure segment margins, higher day-one lease losses, and unrealized FX losses. Adjusted EBITDA rose to $2,871 million from $2,639 million, helped by new renewables projects, better hydrology, and higher utility retail rates following 2024 rate settlements at AES Indiana and AES Ohio. The filing describes a 34,740 MW generation portfolio, a 12.0 GW renewables backlog (5.7 GW under construction), continued U.S. utility rate-base growth, and asset impairments including $264 million at the Maritza plant.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists only of XBRL tag data for the quarter and six months ended June 30, 2026 (with comparative 2025 periods), without narrative text describing results or business developments. It does reference entities named 'Horizon Parent, L.P.' and 'AES Corp' as of March 1, 2026, consistent with the merger structure disclosed elsewhere, but no substantive financial or operational commentary is included in the excerpt to summarize.",
-    "filing_summary_8k": "This 8-K, dated September 17, 2026, discloses that the Public Utilities Commission of Ohio (PUCO) approved the previously announced merger of AES with Horizon Parent, L.P. and its subsidiary Horizon Merger Sub, Inc., under a Merger Agreement entered into on March 1, 2026. The PUCO approval satisfies one condition to closing, but the filing states the merger remains subject to additional regulatory approvals and customary closing conditions before AES becomes jointly owned by investment vehicles affiliated with Global Infrastructure Management, LLC, EQT Infrastructure VI, and other investors.",
-    "moat_explanation": "AES Indiana and AES Ohio operate as the sole regulated distributors of electricity in their territories, and its El Salvador utilities face 'limited competition due to significant barriers to enter the market,' reflecting regulator-granted franchise rights rather than a competitive-market advantage. The 10-K also describes a large (12.0 GW) contracted renewables backlog with long-term PPAs, but this reflects contract-based revenue visibility rather than a distinct structural cost or scale advantage.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Net income attributable to AES fell 46% ($1,679M to $910M) and net income from continuing operations fell 75%, driven by one-time gains in the prior year, impairments, and derivative/FX losses.",
-      "Asset impairment expense of $224 million in 2025, including a $264 million Maritza impairment tied to PPA expiration and write-offs of development intangibles at AES Clean Energy Development.",
-      "Company explicitly flags that U.S. renewable tax credit incentives have been 'curtailed by the passage of H.R.1 (the 2025 Act),' which it says could materially and adversely affect its U.S. renewables growth strategy.",
-      "Significant international/developing-country exposure creates risks including currency controls, expropriation, high inflation, and counterparties/governments not honoring contracts, per the Risk Factors section.",
-      "Interconnection backlogs for U.S. renewables/storage average over four years, with regulatory changes (e.g., PJM accelerated processes) that could further delay or raise costs for projects.",
-      "A pending going-private merger (disclosed in the 8-K) remains subject to additional regulatory approvals beyond the PUCO approval already obtained, introducing closing and integration uncertainty not present in the 10-K narrative."
-    ]
-  },
+  "qualitative": null,
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000874761.json",
@@ -179,7 +163,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $10.6B",
+          "detail": "Market cap $10.7B",
           "passed": true
         },
         {
@@ -204,12 +188,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 11.8",
+          "detail": "P/E 11.9",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 31.0",
+          "detail": "P/E x P/B = 31.1",
           "passed": false
         }
       ],

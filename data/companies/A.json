@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 257.61988315289506,
+      "graham_multiple": 266.16534920044865,
       "graham_number": 49.58402292149459,
-      "graham_upside_pct": -70.44700028519813,
-      "ncav_margin_pct": -102.942791677953,
-      "pb_ratio": 7.017063213784304,
-      "pe_ttm": 36.71334792122538
+      "graham_upside_pct": -70.9252826776741,
+      "ncav_margin_pct": -102.89516587150787,
+      "pb_ratio": 7.132494698288087,
+      "pe_ttm": 37.31728665207877
     }
   },
   "industry": "Medical - Diagnostics & Research",
-  "last_updated": "2026-10-02T22:05:06Z",
+  "last_updated": "2026-10-09T21:47:52Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 47383616640,
+  "market_cap": 48165953280,
   "metrics": {
     "book_value_per_share": 23.910287664277174,
     "current_ratio": 1.9573924158500213,
     "eps_growth_cagr_3yr_pct": 3.0180455204013246,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 257.61988315289506,
-    "graham_upside_pct": -70.44700028519813,
+    "graham_multiple": 266.16534920044865,
+    "graham_upside_pct": -70.9252826776741,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -102.942791677953,
-    "pb_ratio": 7.017063213784304,
-    "pe_ttm": 36.71334792122538,
+    "ncav_margin_pct": -102.89516587150787,
+    "pb_ratio": 7.132494698288087,
+    "pe_ttm": 37.31728665207877,
     "reinvestment_rate_pct": 22.487762935380307,
     "roe_pct": 19.329476338822133,
     "shareholders_equity": 6741000000,
@@ -129,25 +129,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 167.78
+    "as_of": "2026-10-09",
+    "close": 170.54
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Agilent's fiscal 2025 10-K describes a global life sciences, diagnostics and applied markets company reorganized in November 2024 into three segments: Life Sciences and Diagnostics Markets, Agilent CrossLab, and Applied Markets. Net revenue was $6,948 million in fiscal 2025, up 7% from $6,510 million in 2024 (which itself was down 5% from 2023), with growth in 2025 aided partly by the BIOVECTRA acquisition. Net income was $1,303 million in 2025 versus $1,289 million in 2024 and $1,240 million in 2023, with 2025 benefiting from tax items and 2023 affected by impairment charges tied to exiting the Resolution Bioscience business. The filing also discusses share repurchase programs, dividends, and tariff-related cost pressures the company expects to substantially mitigate in fiscal 2026.",
-    "filing_summary_10q": "The provided 10-Q excerpt consists almost entirely of XBRL taxonomy tags and context references rather than narrative text, covering the quarter ended July 31, 2026 and the nine-month period from November 2025. From the tags, it appears the filing references a business combination involving an entity called 'Biocare' around June 24, 2026, and senior notes due 2032 issued around June 25, 2026, along with standard segment (Life Sciences and Diagnostics Markets, Agilent CrossLab, Applied Markets), geographic (Americas, Europe, Asia Pacific), and end-market revenue breakdowns. No prose discussion of results, drivers, or management commentary was included in the excerpt provided, so specific financial outcomes or explanations cannot be summarized from this material.",
-    "filing_summary_8k": "This 8-K, dated September 2, 2026, discloses that Board Chairperson Boon Hwee Koh notified the company of his retirement from the Board effective September 4, 2026, after 23 years of service, stated to not be due to any disagreement with the company. The Board appointed Glenn Boehnlein, former CFO of Stryker Corporation, to fill the resulting vacancy as a Class III director effective September 4, 2026, assigning him to the Audit and Finance Committee and Compensation Committee. The company also noted it issued a September 8, 2026 press release (furnished as Exhibit 99.1) announcing these board changes.",
-    "moat_explanation": "The 10-K describes Agilent's CrossLab segment as spanning 'the entire lab with its extensive services and consumables portfolio,' built around annual instrument service and software maintenance contracts tied to an installed base of instruments, which creates recurring, sticky revenue. The specialty CDMO business (BIOVECTRA, nucleic acid solutions) operates under pharmaceutical GMP conditions and provides validated companion diagnostics tied to specific approved therapies, both of which would be costly and time-consuming for customers to re-qualify with another supplier.",
-    "moat_present": true,
-    "moat_type": "switching_costs",
-    "red_flags": [
-      "Fiscal 2024 net revenue declined 5% versus 2023, driven by pressure on customers' capital expenditure spending, particularly in the Life Sciences and Diagnostics Markets and Applied Markets segments serving the pharmaceutical market.",
-      "Recent U.S. and international tariff/trade policy changes adversely impacted costs of revenue beginning in the second half of fiscal 2025, with the company stating mitigation is not expected to be complete until fiscal 2026.",
-      "The company noted that customers receiving funding from the U.S. federal government have not seen capital spending normalize, unlike other customer segments.",
-      "Fiscal 2023 net income was impacted by asset impairment charges related to the exit of the Resolution Bioscience business.",
-      "Item 1A Risk Factors was not populated with substantive text in the provided excerpt, so specific company-acknowledged risks beyond MD&A commentary could not be reviewed."
-    ]
-  },
+  "qualitative": null,
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001090872.json",
@@ -175,7 +160,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $47.4B",
+          "detail": "Market cap $48.2B",
           "passed": true
         },
         {
@@ -200,12 +185,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 36.7",
+          "detail": "P/E 37.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 257.6",
+          "detail": "P/E x P/B = 266.2",
           "passed": false
         }
       ],

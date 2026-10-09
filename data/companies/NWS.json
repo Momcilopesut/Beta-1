@@ -62,7 +62,7 @@
       "debt_to_equity": 0.23328641801548206
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 15.575518164108159,
+      "book_value_per_share": 15.575518163962396,
       "shareholders_equity": 8526000000,
       "total_assets": 15544000000,
       "total_liabilities": null
@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 62.440690977842756,
-      "graham_number": 18.999016644374166,
-      "graham_upside_pct": -39.97151139218273,
+      "graham_multiple": 63.86922111483433,
+      "graham_number": 18.999016644285266,
+      "graham_upside_pct": -40.646620917571795,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.032035125029322,
-      "pe_ttm": 30.728155339805824
+      "pb_ratio": 2.0551483207834855,
+      "pe_ttm": 31.077669902912618
     }
   },
   "industry": "Publishing",
-  "last_updated": "2026-10-02T21:43:36Z",
+  "last_updated": "2026-10-09T21:44:34Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 17325131476,
+  "market_cap": 17522194583,
   "metrics": {
-    "book_value_per_share": 15.575518164108159,
+    "book_value_per_share": 15.575518163962396,
     "current_ratio": 1.6233248822890256,
     "debt_to_equity": 0.23328641801548206,
     "eps_growth_cagr_3yr_pct": 39.42838898148728,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 62.440690977842756,
-    "graham_upside_pct": -39.97151139218273,
+    "graham_multiple": 63.86922111483433,
+    "graham_upside_pct": -40.646620917571795,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "pb_ratio": 2.032035125029322,
-    "pe_ttm": 30.728155339805824,
+    "pb_ratio": 2.0551483207834855,
+    "pe_ttm": 31.077669902912618,
     "roe_pct": 6.720619282195636,
     "shareholders_equity": 8526000000,
     "total_assets": 15544000000
@@ -129,8 +129,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 31.65
+    "as_of": "2026-10-09",
+    "close": 32.01
   },
   "qualitative": null,
   "sector": "Communication Services",
@@ -138,9 +138,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001564708.json",
     "sec_filings": [
       {
-        "filed": "2026-10-02",
+        "filed": "2026-10-09",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1564708/000156470826000214/nws-20261001.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1564708/000156470826000219/nws-20261008.htm"
       },
       {
         "filed": "2026-08-07",
@@ -160,7 +160,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $17.3B",
+          "detail": "Market cap $17.5B",
           "passed": true
         },
         {
@@ -185,12 +185,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 30.7",
+          "detail": "P/E 31.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 62.4",
+          "detail": "P/E x P/B = 63.9",
           "passed": false
         }
       ],

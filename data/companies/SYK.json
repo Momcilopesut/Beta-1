@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 589.9460212429083,
+      "graham_multiple": 598.1133493209883,
       "graham_number": 53.78935826201678,
-      "graham_upside_pct": -80.4707699734899,
-      "ncav_margin_pct": -110.09867490502,
-      "pb_ratio": 4.7122000026663695,
-      "pe_ttm": 125.19545454545454
+      "graham_upside_pct": -80.60456558539762,
+      "ncav_margin_pct": -110.02948844008822,
+      "pb_ratio": 4.744706193005352,
+      "pe_ttm": 126.0590909090909
     }
   },
   "industry": "Medical - Devices",
-  "last_updated": "2026-10-02T21:47:34Z",
+  "last_updated": "2026-10-09T21:48:34Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 105589054678,
+  "market_cap": 106317440125,
   "metrics": {
     "book_value_per_share": 58.45040529776954,
     "current_ratio": 1.8931229150628688,
@@ -108,22 +108,22 @@
     "fcf_margin_pct": 59.72667689304142,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 589.9460212429083,
-    "graham_upside_pct": -80.4707699734899,
+    "graham_multiple": 598.1133493209883,
+    "graham_upside_pct": -80.60456558539762,
     "gross_margin_pct": 64.53772137777159,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -110.09867490502,
-    "pb_ratio": 4.7122000026663695,
-    "pe_ttm": 125.19545454545454,
+    "ncav_margin_pct": -110.02948844008822,
+    "pb_ratio": 4.744706193005352,
+    "pe_ttm": 126.0590909090909,
     "reinvestment_rate_pct": -86.10816885428596,
     "roe_pct": 3.786797502230152,
     "roic_pct": 3.6566915878189077,
     "shareholders_equity": 22420000000,
     "total_assets": 47844000000,
     "total_liabilities": 25424000000,
-    "value_creation_pct": -5.624724429023321
+    "value_creation_pct": -5.613035349050295
   },
   "name": "Stryker Corporation",
   "plain_analysis": {
@@ -139,8 +139,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 275.43
+    "as_of": "2026-10-09",
+    "close": 277.33
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -148,14 +148,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000310764.json",
     "sec_filings": [
       {
+        "filed": "2026-10-06",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/310764/000119312526414956/d84795d8k.htm"
+      },
+      {
         "filed": "2026-07-31",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/310764/000031076426000050/syk-20260630.htm"
-      },
-      {
-        "filed": "2026-07-30",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/310764/000031076426000048/syk-20260730.htm"
       },
       {
         "filed": "2026-02-11",
@@ -170,7 +170,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $105.6B",
+          "detail": "Market cap $106.3B",
           "passed": true
         },
         {
@@ -195,12 +195,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 125.2",
+          "detail": "P/E 126.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 589.9",
+          "detail": "P/E x P/B = 598.1",
           "passed": false
         }
       ],

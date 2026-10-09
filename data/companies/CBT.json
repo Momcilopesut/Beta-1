@@ -18,10 +18,10 @@
         "debt": 1096000000,
         "earnings": 209000000,
         "fiscal_year": "2022-09-30",
-        "market_return_pct": -16.67133258678611,
+        "market_return_pct": null,
         "revenue": 4321000000,
         "spending": null,
-        "stock_return_pct": 24.760788908416323
+        "stock_return_pct": null
       },
       {
         "cash": 238000000,
@@ -81,16 +81,16 @@
       "trend": "improving"
     },
     "valuation": {
-      "graham_multiple": 32.764206497333355,
+      "graham_multiple": 31.05002829189333,
       "graham_number": 63.76759766751692,
-      "graham_upside_pct": -17.131127137729806,
+      "graham_upside_pct": -14.874385706158163,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.5632296700967743,
-      "pe_ttm": 12.782392026578075
+      "pb_ratio": 2.4952766028193545,
+      "pe_ttm": 12.443521594684386
     }
   },
   "industry": "Chemicals - Specialty",
-  "last_updated": "2026-10-02T21:51:27Z",
+  "last_updated": "2026-10-09T21:51:48Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 3972266730,
+  "market_cap": 3866959074,
   "metrics": {
     "book_value_per_share": 30.020719913520185,
     "current_ratio": 1.6081504702194358,
@@ -108,14 +108,14 @@
     "fcf_margin_pct": 10.53056827363318,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 32.764206497333355,
-    "graham_upside_pct": -17.131127137729806,
+    "graham_multiple": 31.05002829189333,
+    "graham_upside_pct": -14.874385706158163,
     "gross_margin_pct": 25.31645569620253,
     "margin_trend_score": 100,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "pb_ratio": 2.5632296700967743,
-    "pe_ttm": 12.782392026578075,
+    "pb_ratio": 2.4952766028193545,
+    "pe_ttm": 12.443521594684386,
     "roe_pct": 21.35483870967742,
     "shareholders_equity": 1550000000,
     "total_assets": 3815000000
@@ -133,8 +133,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 76.95
+    "as_of": "2026-10-09",
+    "close": 74.91
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -164,7 +164,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $4.0B",
+          "detail": "Market cap $3.9B",
           "passed": true
         },
         {
@@ -189,12 +189,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 12.8",
+          "detail": "P/E 12.4",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 32.8",
+          "detail": "P/E x P/B = 31.1",
           "passed": false
         }
       ],

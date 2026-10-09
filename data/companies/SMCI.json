@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 26.566653452973913,
+      "graham_multiple": 24.387720510554523,
       "graham_number": 40.20729704536466,
-      "graham_upside_pct": -7.971396096670487,
-      "ncav_margin_pct": -57.285026301794,
-      "pb_ratio": 1.9823138076606766,
-      "pe_ttm": 13.401840490797547
+      "graham_upside_pct": -3.948167593491012,
+      "ncav_margin_pct": -55.41764928632058,
+      "pb_ratio": 1.8992825815673136,
+      "pe_ttm": 12.840490797546012
     }
   },
   "industry": "Computer Hardware",
-  "last_updated": "2026-10-02T22:00:38Z",
+  "last_updated": "2026-10-09T22:07:12Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 28261881370,
+  "market_cap": 27074869415,
   "metrics": {
     "book_value_per_share": 22.039900963792636,
     "current_ratio": 3.8723242365406323,
     "eps_growth_cagr_3yr_pct": 41.93981981419097,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 4,
-    "graham_multiple": 26.566653452973913,
-    "graham_upside_pct": -7.971396096670487,
+    "graham_multiple": 24.387720510554523,
+    "graham_upside_pct": -3.948167593491012,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -57.285026301794,
-    "pb_ratio": 1.9823138076606766,
-    "pe_ttm": 13.401840490797547,
+    "ncav_margin_pct": -55.41764928632058,
+    "pb_ratio": 1.8992825815673136,
+    "pe_ttm": 12.840490797546012,
     "reinvestment_rate_pct": 483.26217074044297,
     "roe_pct": 15.40426391827536,
     "shareholders_equity": 14479452000,
@@ -131,8 +131,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-02",
-    "close": 43.69
+    "as_of": "2026-10-09",
+    "close": 41.86
   },
   "qualitative": null,
   "sector": "Technology",
@@ -140,14 +140,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001375365.json",
     "sec_filings": [
       {
+        "filed": "2026-10-08",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000023/smci-20261007.htm"
+      },
+      {
         "filed": "2026-08-31",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm"
-      },
-      {
-        "filed": "2026-08-11",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/smci-20260811.htm"
       },
       {
         "filed": "2026-05-11",
@@ -162,7 +162,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $28.3B",
+          "detail": "Market cap $27.1B",
           "passed": true
         },
         {
@@ -187,12 +187,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 13.4",
+          "detail": "P/E 12.8",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 26.6",
+          "detail": "P/E x P/B = 24.4",
           "passed": false
         }
       ],
