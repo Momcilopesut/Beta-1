@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 176.7410524174294,
+      "graham_multiple": 173.22799101605895,
       "graham_number": 55.0111320299179,
-      "graham_upside_pct": -64.32018936962129,
-      "ncav_margin_pct": -115.5675603532566,
-      "pb_ratio": 2.3729016636663562,
-      "pe_ttm": 74.48309178743962
+      "graham_upside_pct": -63.96021224455064,
+      "ncav_margin_pct": -115.72462300357115,
+      "pb_ratio": 2.349200349864007,
+      "pe_ttm": 73.73913043478261
     }
   },
   "industry": "Medical - Diagnostics & Research",
-  "last_updated": "2026-10-09T22:08:06Z",
+  "last_updated": "2026-10-16T23:51:23Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 17200320800,
+  "market_cap": 17032487040,
   "metrics": {
     "book_value_per_share": 64.97530106737648,
     "current_ratio": 1.6824441162640114,
@@ -107,21 +107,21 @@
     "eps_growth_cagr_3yr_pct": -22.805573706383587,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 176.7410524174294,
-    "graham_upside_pct": -64.32018936962129,
+    "graham_multiple": 173.22799101605895,
+    "graham_upside_pct": -63.96021224455064,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -115.5675603532566,
-    "pb_ratio": 2.3729016636663562,
-    "pe_ttm": 74.48309178743962,
+    "ncav_margin_pct": -115.72462300357115,
+    "pb_ratio": 2.349200349864007,
+    "pe_ttm": 73.73913043478261,
     "reinvestment_rate_pct": -351.16414461087027,
     "roe_pct": 3.3267451547233517,
     "roic_pct": 3.558343310174397,
     "shareholders_equity": 7250360000,
     "total_assets": 12168411000,
     "total_liabilities": 4918051000,
-    "value_creation_pct": -5.305674797370241
+    "value_creation_pct": -5.190158626821965
   },
   "name": "Revvity",
   "plain_analysis": {
@@ -136,26 +136,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 154.18
+    "as_of": "2026-10-16",
+    "close": 152.64
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025 (ended December 28, 2025), Revvity reported revenue of $2,856.1 million, up 4% year-over-year, with growth in both the Diagnostics segment (driven by Immunodiagnostics and Reproductive Health) and Life Sciences segment (driven by Software). Consolidated gross margin declined about 104 basis points due to tariffs, unfavorable foreign exchange, and product mix shift, while operating margin declined slightly. The company repurchased $820.8 million of common stock, paid $32.8 million in dividends, and noted that its Life Sciences Solutions reporting unit's fair value exceeded its carrying value by only 10-20% in the latest goodwill impairment test.",
-    "filing_summary_10q": "This 10-Q, covering the quarter ended July 5, 2026, is presented largely as structured XBRL data rather than narrative text in the excerpt provided, so specific results and commentary cannot be summarized. The data indicates the filing covers Life Sciences and Diagnostics segment revenue by geography (Americas, Europe, Asia) and by sub-category (Life Sciences Solutions, Software, Immunodiagnostics, Reproductive Health), along with details on outstanding senior notes, a revolving credit facility, a stock repurchase program, and quarterly dividend declarations. The provided excerpts don't describe the specific financial results or narrative discussion for the quarter.",
-    "filing_summary_8k": "This Form 8-K, dated August 4, 2026, announces Revvity's financial results for the second quarter ended July 5, 2026, with the press release furnished as an exhibit. It also discloses that the company signed a definitive agreement on July 31, 2026 to sell substantially all assets of its Immunodiagnostics business in China (China IDX) for up to $200 million, subject to adjustments and closing conditions, which management believes is probable to close by the end of 2027; unaudited pro forma financial statements reflecting this probable sale are included as an exhibit.",
-    "moat_explanation": "The Business section describes an extensive portfolio of proprietary, branded assay and detection technologies (e.g., HTRF, AlphaLISA, DELFIA, LANCE Ultra), a patented CRISPR-based Pin-point base-editing platform, and licensed technologies such as CHOSOURCE with a track record of over 100 regulatory filings, all of which suggest differentiated intellectual property. However, the Risk Factors section also notes 'aggressive competition from numerous competitors' and pressure to keep innovating, indicating the moat is not unassailable.",
-    "moat_present": true,
-    "moat_type": "intangible_assets",
-    "red_flags": [
-      "Consolidated gross margin declined ~104 bps in fiscal 2025 due to tariffs, unfavorable FX, and product mix shift",
-      "Diagnostics segment operating margin fell ~194 bps partly due to China diagnostic testing policy changes",
-      "Life Sciences Solutions reporting unit's fair value exceeded carrying value by only 10-20% in the November 2025 goodwill impairment test, indicating limited cushion against future impairment",
-      "Restructuring actions in fiscal 2025 (workforce reductions, facility consolidations) affected approximately 5% of the workforce",
-      "Company acknowledges 'aggressive competition from numerous competitors' and reliance on continual new product introduction to avoid losing market share",
-      "Significant litigation matters and settlements costs of $12.2 million in fiscal 2025"
-    ]
-  },
+  "qualitative": null,
   "sector": "Healthcare",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000031791.json",
@@ -183,7 +167,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $17.2B",
+          "detail": "Market cap $17.0B",
           "passed": true
         },
         {
@@ -208,12 +192,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 74.5",
+          "detail": "P/E 73.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 176.7",
+          "detail": "P/E x P/B = 173.2",
           "passed": false
         }
       ],

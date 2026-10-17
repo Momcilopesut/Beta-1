@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 24.387720510554523,
+      "graham_multiple": 13.92422861318939,
       "graham_number": 40.20729704536466,
-      "graham_upside_pct": -3.948167593491012,
-      "ncav_margin_pct": -55.41764928632058,
-      "pb_ratio": 1.8992825815673136,
-      "pe_ttm": 12.840490797546012
+      "graham_upside_pct": 27.11760052280956,
+      "ncav_margin_pct": -40.998507718159324,
+      "pb_ratio": 1.4351244160290044,
+      "pe_ttm": 9.702453987730062
     }
   },
   "industry": "Computer Hardware",
-  "last_updated": "2026-10-09T22:07:12Z",
+  "last_updated": "2026-10-17T00:07:24Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 27074869415,
+  "market_cap": 20779802950,
   "metrics": {
     "book_value_per_share": 22.039900963792636,
     "current_ratio": 3.8723242365406323,
     "eps_growth_cagr_3yr_pct": 41.93981981419097,
     "graham_criteria_evaluated": 5,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 24.387720510554523,
-    "graham_upside_pct": -3.948167593491012,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 13.92422861318939,
+    "graham_upside_pct": 27.11760052280956,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -55.41764928632058,
-    "pb_ratio": 1.8992825815673136,
-    "pe_ttm": 12.840490797546012,
+    "ncav_margin_pct": -40.998507718159324,
+    "pb_ratio": 1.4351244160290044,
+    "pe_ttm": 9.702453987730062,
     "reinvestment_rate_pct": 483.26217074044297,
     "roe_pct": 15.40426391827536,
     "shareholders_equity": 14479452000,
@@ -124,15 +124,14 @@
     "positives": [
       "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
       "It has plenty of cash and other easy-to-sell things on hand - more than twice enough to cover the bills it owes over the next year.",
-      "The profit behind each share of stock has been growing at a healthy pace over the last few years."
+      "The profit behind each share of stock has been growing at a healthy pace over the last few years.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount."
     ],
-    "worries": [
-      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
-    ]
+    "worries": []
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 41.86
+    "as_of": "2026-10-16",
+    "close": 31.63
   },
   "qualitative": null,
   "sector": "Technology",
@@ -140,9 +139,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001375365.json",
     "sec_filings": [
       {
-        "filed": "2026-10-08",
+        "filed": "2026-10-15",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000023/smci-20261007.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000024/smci-20261014.htm"
       },
       {
         "filed": "2026-08-31",
@@ -162,7 +161,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $27.1B",
+          "detail": "Market cap $20.8B",
           "passed": true
         },
         {
@@ -187,17 +186,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 12.8",
+          "detail": "P/E 9.7",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 24.4",
-          "passed": false
+          "detail": "P/E x P/B = 13.9",
+          "passed": true
         }
       ],
       "evaluated": 5,
-      "passed": 4,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {

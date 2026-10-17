@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 40.230810817830694,
+      "graham_multiple": 33.03011761288497,
       "graham_number": 74.30592572881271,
-      "graham_upside_pct": -25.215453171484793,
-      "ncav_margin_pct": -64.05867276377109,
-      "pb_ratio": 1.6236468536584248,
-      "pe_ttm": 24.778054862842893
+      "graham_upside_pct": -17.465371844037865,
+      "ncav_margin_pct": -60.33399673229252,
+      "pb_ratio": 1.4711848453589773,
+      "pe_ttm": 22.451371571072322
     }
   },
   "industry": "Technology Distributors",
-  "last_updated": "2026-10-09T21:58:23Z",
+  "last_updated": "2026-10-17T00:03:14Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 8149912688,
+  "market_cap": 7403423936,
   "metrics": {
     "book_value_per_share": 61.19557327144175,
     "current_ratio": 1.77702989778544,
@@ -107,21 +107,21 @@
     "fcf_margin_pct": -1.2828902644017592,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 40.230810817830694,
-    "graham_upside_pct": -25.215453171484793,
+    "graham_multiple": 33.03011761288497,
+    "graham_upside_pct": -17.465371844037865,
     "gross_margin_pct": 10.42930214195994,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -64.05867276377109,
-    "pb_ratio": 1.6236468536584248,
-    "pe_ttm": 24.778054862842893,
+    "ncav_margin_pct": -60.33399673229252,
+    "pb_ratio": 1.4711848453589773,
+    "pe_ttm": 22.451371571072322,
     "roe_pct": 6.657815834057241,
     "roic_pct": 6.416969906954435,
     "shareholders_equity": 5022503000,
     "total_assets": 15425393000,
     "total_liabilities": 10402890000,
-    "value_creation_pct": -0.9133210784603163
+    "value_creation_pct": -0.6264449182924077
   },
   "name": "Avnet",
   "plain_analysis": {
@@ -138,8 +138,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 99.36
+    "as_of": "2026-10-16",
+    "close": 90.03
   },
   "qualitative": null,
   "sector": "Technology",
@@ -147,9 +147,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000008858.json",
     "sec_filings": [
       {
-        "filed": "2026-08-21",
+        "filed": "2026-10-15",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/8858/000110465926099682/tm2623221d4_8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/8858/000000885826000116/avt-20261013x8k.htm"
       },
       {
         "filed": "2026-08-14",
@@ -169,7 +169,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $8.1B",
+          "detail": "Market cap $7.4B",
           "passed": true
         },
         {
@@ -194,12 +194,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 24.8",
+          "detail": "P/E 22.5",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 40.2",
+          "detail": "P/E x P/B = 33.0",
           "passed": false
         }
       ],

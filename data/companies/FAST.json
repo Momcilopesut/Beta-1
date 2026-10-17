@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 687.550358648646,
+      "graham_multiple": 694.8856261872562,
       "graham_number": 9.180684210840484,
-      "graham_upside_pct": -81.90998185056063,
+      "graham_upside_pct": -82.0057149924726,
       "ncav_margin_pct": null,
-      "pb_ratio": 14.767091446837915,
-      "pe_ttm": 46.559633027522935
+      "pb_ratio": 14.845655283106806,
+      "pe_ttm": 46.80733944954128
     }
   },
   "industry": "Industrial - Distribution",
-  "last_updated": "2026-10-09T21:49:04Z",
+  "last_updated": "2026-10-17T00:08:34Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 58235625000,
+  "market_cap": 58545450000,
   "metrics": {
     "book_value_per_share": 3.4366957218828036,
     "current_ratio": 4.852012297372834,
@@ -108,20 +108,20 @@
     "fcf_margin_pct": 12.811413938174502,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 687.550358648646,
-    "graham_upside_pct": -81.90998185056063,
+    "graham_multiple": 694.8856261872562,
+    "graham_upside_pct": -82.0057149924726,
     "gross_margin_pct": 45.011889518931774,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 3,
-    "pb_ratio": 14.767091446837915,
-    "pe_ttm": 46.559633027522935,
+    "pb_ratio": 14.845655283106806,
+    "pe_ttm": 46.80733944954128,
     "reinvestment_rate_pct": 23.654966270558685,
     "roe_pct": 31.90993001318592,
     "roic_pct": 33.20144136759416,
     "shareholders_equity": 3943600000,
     "total_assets": 5052900000,
-    "value_creation_pct": 23.003331126314187
+    "value_creation_pct": 23.12295986625916
   },
   "name": "Fastenal",
   "plain_analysis": {
@@ -139,8 +139,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 50.75
+    "as_of": "2026-10-16",
+    "close": 51.02
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -148,14 +148,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000815556.json",
     "sec_filings": [
       {
+        "filed": "2026-10-14",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/815556/000081555626000046/fast-20261014.htm"
+      },
+      {
         "filed": "2026-07-16",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/815556/000081555626000041/fast-20260630.htm"
-      },
-      {
-        "filed": "2026-07-14",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/815556/000081555626000037/fast-20260714.htm"
       },
       {
         "filed": "2026-02-05",
@@ -170,7 +170,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $58.2B",
+          "detail": "Market cap $58.5B",
           "passed": true
         },
         {
@@ -195,12 +195,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 46.6",
+          "detail": "P/E 46.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 687.6",
+          "detail": "P/E x P/B = 694.9",
           "passed": false
         }
       ],

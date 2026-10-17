@@ -61,16 +61,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 91.97632905341823,
+      "graham_multiple": 101.02425385484405,
       "graham_number": 535.3489981271932,
-      "graham_upside_pct": -50.54010124565146,
+      "graham_upside_pct": -52.80690790324291,
       "ncav_margin_pct": null,
-      "pb_ratio": 3.0004750403054326,
-      "pe_ttm": 30.653922401585955
+      "pb_ratio": 3.144595641332308,
+      "pe_ttm": 32.126309827244405
     }
   },
   "industry": "Asset Management",
-  "last_updated": "2026-10-09T21:43:35Z",
+  "last_updated": "2026-10-17T00:04:32Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -78,19 +78,19 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 167765038050,
+  "market_cap": 175680590024,
   "metrics": {
     "book_value_per_share": 360.73954472549735,
     "eps_growth_cagr_3yr_pct": 1.2979656452193788,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": 91.97632905341823,
-    "graham_upside_pct": -50.54010124565146,
+    "graham_multiple": 101.02425385484405,
+    "graham_upside_pct": -52.80690790324291,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "pb_ratio": 3.0004750403054326,
-    "pe_ttm": 30.653922401585955,
+    "pb_ratio": 3.144595641332308,
+    "pe_ttm": 32.126309827244405,
     "roe_pct": 9.935943315201833,
     "shareholders_equity": 55888000000,
     "total_assets": 169998000000,
@@ -106,8 +106,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 1082.39
+    "as_of": "2026-10-16",
+    "close": 1134.38
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -115,14 +115,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0002012383.json",
     "sec_filings": [
       {
+        "filed": "2026-10-14",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526420979/blk-20261014.htm"
+      },
+      {
         "filed": "2026-08-06",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526337177/blk-20260630.htm"
-      },
-      {
-        "filed": "2026-07-15",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526304013/blk-20260715.htm"
       },
       {
         "filed": "2026-02-25",
@@ -137,7 +137,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $167.8B",
+          "detail": "Market cap $175.7B",
           "passed": true
         },
         {
@@ -162,12 +162,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 30.7",
+          "detail": "P/E 32.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 92.0",
+          "detail": "P/E x P/B = 101.0",
           "passed": false
         }
       ],

@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 21.977040625059445,
+      "graham_multiple": 23.896637128530745,
       "graham_number": 73.35752328227545,
-      "graham_upside_pct": 1.1827907341730364,
+      "graham_upside_pct": -2.9662390446091838,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.3246850694001349,
-      "pe_ttm": 16.590389016018307
+      "pb_ratio": 1.3813267758158647,
+      "pe_ttm": 17.299771167048053
     }
   },
   "industry": "Regulated Gas",
-  "last_updated": "2026-10-09T21:59:13Z",
+  "last_updated": "2026-10-17T00:04:13Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,26 +98,26 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 4550281250,
+  "market_cap": 4751934012,
   "metrics": {
     "book_value_per_share": 54.729989545991195,
     "current_ratio": 0.5978909272269362,
     "debt_to_equity": 0.757447335458645,
     "eps_growth_cagr_3yr_pct": 2.315262927082684,
     "graham_criteria_evaluated": 7,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 21.977040625059445,
-    "graham_upside_pct": 1.1827907341730364,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 23.896637128530745,
+    "graham_upside_pct": -2.9662390446091838,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
-    "pb_ratio": 1.3246850694001349,
-    "pe_ttm": 16.590389016018307,
+    "pb_ratio": 1.3813267758158647,
+    "pe_ttm": 17.299771167048053,
     "roe_pct": 7.680655604465306,
     "roic_pct": 6.230367989843014,
     "shareholders_equity": 3440123000,
     "total_assets": 8853084000,
-    "value_creation_pct": -1.8447913005881205
+    "value_creation_pct": -1.8260734894728845
   },
   "name": "One Gas",
   "plain_analysis": {
@@ -127,12 +127,13 @@
     ],
     "worries": [
       "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth.",
       "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 72.5
+    "as_of": "2026-10-16",
+    "close": 75.6
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -162,7 +163,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $4.6B",
+          "detail": "Market cap $4.8B",
           "passed": true
         },
         {
@@ -187,17 +188,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 16.6",
+          "detail": "P/E 17.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 22.0",
-          "passed": true
+          "detail": "P/E x P/B = 23.9",
+          "passed": false
         }
       ],
       "evaluated": 7,
-      "passed": 4,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {

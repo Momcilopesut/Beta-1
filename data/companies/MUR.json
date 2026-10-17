@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 523.8927660514654,
+      "graham_multiple": 610.0625424793832,
       "graham_number": 8.015978129404235,
-      "graham_upside_pct": -79.27616822801386,
-      "ncav_margin_pct": -168.14333436209915,
-      "pb_ratio": 1.0835424323711798,
-      "pe_ttm": 483.5
+      "graham_upside_pct": -80.79545249304208,
+      "ncav_margin_pct": -163.14768023780536,
+      "pb_ratio": 1.1692621801233984,
+      "pe_ttm": 521.75
     }
   },
   "industry": "Oil & Gas Exploration & Production",
-  "last_updated": "2026-10-09T21:53:44Z",
+  "last_updated": "2026-10-17T00:10:50Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 5544778000,
+  "market_cap": 5983411302,
   "metrics": {
     "book_value_per_share": 35.69772520615946,
     "current_ratio": 0.7684900197506654,
     "eps_growth_cagr_3yr_pct": -45.71164766810186,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 2,
-    "graham_multiple": 523.8927660514654,
-    "graham_upside_pct": -79.27616822801386,
+    "graham_multiple": 610.0625424793832,
+    "graham_upside_pct": -80.79545249304208,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 1,
     "munger_quality_passed": 0,
-    "ncav_margin_pct": -168.14333436209915,
-    "pb_ratio": 1.0835424323711798,
-    "pe_ttm": 483.5,
+    "ncav_margin_pct": -163.14768023780536,
+    "pb_ratio": 1.1692621801233984,
+    "pe_ttm": 521.75,
     "roe_pct": 0.23249543800968275,
     "shareholders_equity": 5118380000,
     "total_assets": 9832626000,
@@ -130,8 +130,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 38.68
+    "as_of": "2026-10-16",
+    "close": 41.74
   },
   "qualitative": null,
   "sector": "Energy",
@@ -139,9 +139,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000717423.json",
     "sec_filings": [
       {
-        "filed": "2026-09-08",
+        "filed": "2026-10-13",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/717423/000095010326013671/dp253091_8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/717423/000162828026065580/mur-20261012.htm"
       },
       {
         "filed": "2026-08-05",
@@ -161,7 +161,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $5.5B",
+          "detail": "Market cap $6.0B",
           "passed": true
         },
         {
@@ -186,12 +186,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 483.5",
+          "detail": "P/E 521.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 523.9",
+          "detail": "P/E x P/B = 610.1",
           "passed": false
         }
       ],

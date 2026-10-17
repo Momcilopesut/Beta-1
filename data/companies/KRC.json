@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 10.846004716930135,
+      "graham_multiple": 11.21645417157591,
       "graham_number": 49.330661638532064,
-      "graham_upside_pct": 44.031128871626464,
+      "graham_upside_pct": 41.632677687430565,
       "ncav_margin_pct": null,
-      "pb_ratio": 0.7346782757161434,
-      "pe_ttm": 14.76293103448276
+      "pb_ratio": 0.7471195428669569,
+      "pe_ttm": 15.01293103448276
     }
   },
   "industry": "REIT - Office",
-  "last_updated": "2026-10-09T21:58:06Z",
+  "last_updated": "2026-10-17T00:02:53Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,19 +98,19 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 3983582839,
+  "market_cap": 4051042052,
   "metrics": {
     "book_value_per_share": 46.61904554971913,
     "eps_growth_cagr_3yr_pct": 5.602431893081117,
     "graham_criteria_evaluated": 6,
-    "graham_criteria_passed": 6,
-    "graham_multiple": 10.846004716930135,
-    "graham_upside_pct": 44.031128871626464,
+    "graham_criteria_passed": 5,
+    "graham_multiple": 11.21645417157591,
+    "graham_upside_pct": 41.632677687430565,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 1,
     "munger_quality_passed": 0,
-    "pb_ratio": 0.7346782757161434,
-    "pe_ttm": 14.76293103448276,
+    "pb_ratio": 0.7471195428669569,
+    "pe_ttm": 15.01293103448276,
     "shareholders_equity": 5420807000,
     "total_assets": 10915076000,
     "total_liabilities": 5277333000
@@ -124,8 +124,8 @@
     "worries": []
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 34.25
+    "as_of": "2026-10-16",
+    "close": 34.83
   },
   "qualitative": null,
   "sector": "Real Estate",
@@ -155,7 +155,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $4.0B",
+          "detail": "Market cap $4.1B",
           "passed": true
         },
         {
@@ -180,17 +180,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 14.8",
-          "passed": true
+          "detail": "P/E 15.0",
+          "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 10.8",
+          "detail": "P/E x P/B = 11.2",
           "passed": true
         }
       ],
       "evaluated": 6,
-      "passed": 6,
+      "passed": 5,
       "total": 7
     },
     "munger_quality": {

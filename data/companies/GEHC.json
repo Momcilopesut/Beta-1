@@ -71,16 +71,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 41.62944162198212,
+      "graham_multiple": 46.621387340117906,
       "graham_number": 48.330430760621425,
-      "graham_upside_pct": -26.4824600538159,
-      "ncav_margin_pct": -146.16683205253597,
-      "pb_ratio": 2.8812588892610074,
-      "pe_ttm": 14.448351648351649
+      "graham_upside_pct": -30.52978185910388,
+      "ncav_margin_pct": -143.6252341402,
+      "pb_ratio": 3.04912048868099,
+      "pe_ttm": 15.290109890109889
     }
   },
   "industry": "Medical - Devices",
-  "last_updated": "2026-10-09T21:48:12Z",
+  "last_updated": "2026-10-16T23:51:02Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -88,29 +88,29 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 29693854206,
+  "market_cap": 31423812552,
   "metrics": {
     "book_value_per_share": 22.816415506786047,
     "current_ratio": 1.3729818780889622,
     "debt_to_equity": 0.9631949128047018,
     "eps_growth_cagr_3yr_pct": 2.5414958580236346,
     "graham_criteria_evaluated": 7,
-    "graham_criteria_passed": 4,
-    "graham_multiple": 41.62944162198212,
-    "graham_upside_pct": -26.4824600538159,
+    "graham_criteria_passed": 3,
+    "graham_multiple": 46.621387340117906,
+    "graham_upside_pct": -30.52978185910388,
     "gross_margin_pct": 39.99030303030303,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 4,
     "munger_quality_passed": 4,
-    "ncav_margin_pct": -146.16683205253597,
-    "pb_ratio": 2.8812588892610074,
-    "pe_ttm": 14.448351648351649,
+    "ncav_margin_pct": -143.6252341402,
+    "pb_ratio": 3.04912048868099,
+    "pe_ttm": 15.290109890109889,
     "roe_pct": 20.07900568455535,
     "roic_pct": 13.536320221897777,
     "shareholders_equity": 10379000000,
     "total_assets": 36906000000,
     "total_liabilities": 26307000000,
-    "value_creation_pct": 5.890448243172644
+    "value_creation_pct": 5.873976409188692
   },
   "name": "GE HealthCare",
   "plain_analysis": {
@@ -124,8 +124,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 65.74
+    "as_of": "2026-10-16",
+    "close": 69.57
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -155,7 +155,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $29.7B",
+          "detail": "Market cap $31.4B",
           "passed": true
         },
         {
@@ -180,17 +180,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 14.4",
-          "passed": true
+          "detail": "P/E 15.3",
+          "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 41.6",
+          "detail": "P/E x P/B = 46.6",
           "passed": false
         }
       ],
       "evaluated": 7,
-      "passed": 4,
+      "passed": 3,
       "total": 7
     },
     "munger_quality": {

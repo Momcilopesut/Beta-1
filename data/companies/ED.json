@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 30.408030693937835,
+      "graham_multiple": 34.0414149078898,
       "graham_number": 91.2667310547732,
-      "graham_upside_pct": -13.980460834332508,
+      "graham_upside_pct": -18.700578073424907,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.6164118106862337,
-      "pe_ttm": 18.81205673758865
+      "pb_ratio": 1.710258151438611,
+      "pe_ttm": 19.904255319148938
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-10-09T21:44:00Z",
+  "last_updated": "2026-10-17T00:13:55Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 39101033000,
+  "market_cap": 41371177800,
   "metrics": {
     "book_value_per_share": 65.63921353368245,
     "current_ratio": 1.0205624433020866,
@@ -106,18 +106,18 @@
     "eps_growth_cagr_3yr_pct": 6.569042175811535,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 30.408030693937835,
-    "graham_upside_pct": -13.980460834332508,
+    "graham_multiple": 34.0414149078898,
+    "graham_upside_pct": -18.700578073424907,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 0,
-    "pb_ratio": 1.6164118106862337,
-    "pe_ttm": 18.81205673758865,
+    "pb_ratio": 1.710258151438611,
+    "pe_ttm": 19.904255319148938,
     "roe_pct": 8.362959900785448,
     "roic_pct": 4.727459163266786,
     "shareholders_equity": 24190000000,
     "total_assets": 74603000000,
-    "value_creation_pct": -2.9305375786842704
+    "value_creation_pct": -2.9432151047930466
   },
   "name": "Consolidated Edison Inc.",
   "plain_analysis": {
@@ -130,10 +130,25 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 106.1
+    "as_of": "2026-10-16",
+    "close": 112.26
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "whole_document_fallback",
+    "filing_summary_10k": "The provided 10-K excerpt for fiscal year 2025 consists almost entirely of XBRL data tags (covering debt instruments/debentures, tax-exempt debt, property categories such as electric transmission, gas transmission, steam plant, and equity-method investments including Mountain Valley Pipeline and New York Transco) rather than narrative text. It confirms Consolidated Edison, Inc. and its regulated utility subsidiary Consolidated Edison Company of New York, Inc. (CECONY) report electricity, gas, steam and non-utility revenue lines, and reference multi-year electric and gas rate plans running through 2028. No further narrative detail on business developments or financial results is available in the excerpt provided.",
+    "filing_summary_10q": "The provided 10-Q excerpt, covering the quarter and six months ended June 30, 2026, is also composed mainly of XBRL tags rather than narrative disclosure. It references a subsequent event in which Rockland Electric Company entered a new electric rate plan with the New Jersey Board of Public Utilities effective July 2026, tracks routine and major-event storm costs for Rockland Electric, and reflects continued equity-method activity in the Mountain Valley Pipeline joint venture during the first half of 2026. Detailed financial results and management discussion are not present in the excerpt provided.",
+    "filing_summary_8k": "The 8-K, dated September 4, 2026, discloses that CECONY, the New York State Department of Public Service, and other parties entered into a Joint Proposal for a three-year CECONY steam rate plan covering November 2026 through October 2029, subject to NYSPSC approval. The proposal specifies base rate increases, capital expenditure levels, an authorized 9.5% return on common equity, a 48% common equity ratio, and various reconciliation and adjustment mechanisms, and it also notes an ongoing NYSDPS audit of CECONY's income tax accounting with any resulting adjustment to be trued up with customers.",
+    "moat_explanation": "The excerpts (largely XBRL tags rather than narrative prose) show Consolidated Edison operating as a rate-regulated electric, gas and steam utility subject to NYSPSC (and NJ Board of Public Utilities) oversight, with multi-year rate plans, authorized rates of return on equity (e.g., 9.5% in the CECONY steam Joint Proposal), and defined rate bases and equity ratios. This regulated, franchise-based distribution model is consistent with an efficient-scale moat, since duplicating electric/gas/steam distribution infrastructure in a service territory is generally uneconomic, limiting competition to the incumbent utility. However, the 10-K excerpt provided contains almost no narrative business/risk-factor discussion (mostly XBRL taxonomy tags), so this read rests on structural inferences from the rate-plan and asset-category tags rather than explicit qualitative discussion.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "The 8-K discloses an ongoing NYSDPS 'focused operations audit' investigating CECONY's income tax accounting, with any ordered adjustment to be refunded to or collected from customers",
+      "The proposed steam rate Joint Proposal includes potential negative revenue adjustments (penalties) of $4.3-$4.7 million per year if service, reliability, safety or other performance targets are not met",
+      "The rate plan and its financial terms are subject to approval by the NYSPSC and are not yet finalized",
+      "The 10-Q excerpt references storm cost categories (routine, major event, non-major) for Rockland Electric Company, indicating recurring weather-related cost exposure",
+      "The provided 10-K and 10-Q excerpts consist almost entirely of XBRL data tags rather than descriptive text, limiting the ability to identify additional risks that may be discussed in the full filings"
+    ]
+  },
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001047862.json",
@@ -161,7 +176,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $39.1B",
+          "detail": "Market cap $41.4B",
           "passed": true
         },
         {
@@ -186,12 +201,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 18.8",
+          "detail": "P/E 19.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 30.4",
+          "detail": "P/E x P/B = 34.0",
           "passed": false
         }
       ],

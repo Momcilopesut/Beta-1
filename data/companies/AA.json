@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 17.363097233456163,
+      "graham_multiple": 16.75140987654372,
       "graham_number": 48.038574469859725,
-      "graham_upside_pct": 13.835484525733937,
-      "ncav_margin_pct": -140.10064281187658,
-      "pb_ratio": 1.7980268936067163,
-      "pe_ttm": 9.65675057208238
+      "graham_upside_pct": 15.895233944173032,
+      "ncav_margin_pct": -140.82622742246542,
+      "pb_ratio": 1.7660714393364547,
+      "pe_ttm": 9.48512585812357
     }
   },
   "industry": "Aluminum",
-  "last_updated": "2026-10-09T21:51:43Z",
+  "last_updated": "2026-10-16T23:55:32Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 11136959800,
+  "market_cap": 10939028050,
   "metrics": {
     "book_value_per_share": 23.470171747737183,
     "current_ratio": 1.4388318863456986,
@@ -106,14 +106,14 @@
     "fcf_margin_pct": 4.4189852700491,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 17.363097233456163,
-    "graham_upside_pct": 13.835484525733937,
+    "graham_multiple": 16.75140987654372,
+    "graham_upside_pct": 15.895233944173032,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -140.10064281187658,
-    "pb_ratio": 1.7980268936067163,
-    "pe_ttm": 9.65675057208238,
+    "ncav_margin_pct": -140.82622742246542,
+    "pb_ratio": 1.7660714393364547,
+    "pe_ttm": 9.48512585812357,
     "roe_pct": 18.67936712948014,
     "shareholders_equity": 6194000000,
     "total_assets": 16129000000,
@@ -123,13 +123,14 @@
   "plain_analysis": {
     "positives": [
       "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
-      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth."
+      "It hasn't borrowed too much money - what it owes is less than what the business itself is worth.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount."
     ],
     "worries": []
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 42.2
+    "as_of": "2026-10-16",
+    "close": 41.45
   },
   "qualitative": null,
   "sector": "Basic Materials",
@@ -137,9 +138,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001675149.json",
     "sec_filings": [
       {
-        "filed": "2026-09-23",
+        "filed": "2026-10-15",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1675149/000119312526399499/aa-20260923.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1675149/000119312526422891/aa-20261015.htm"
       },
       {
         "filed": "2026-07-30",
@@ -159,7 +160,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $11.1B",
+          "detail": "Market cap $10.9B",
           "passed": true
         },
         {
@@ -184,12 +185,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 9.7",
+          "detail": "P/E 9.5",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 17.4",
+          "detail": "P/E x P/B = 16.8",
           "passed": true
         }
       ],

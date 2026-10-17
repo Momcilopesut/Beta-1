@@ -62,7 +62,7 @@
       "debt_to_equity": 0.009120204292576154
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 157.70824178553843,
+      "book_value_per_share": 160.50054310067796,
       "shareholders_equity": 32894000000,
       "total_assets": 143708000000,
       "total_liabilities": 110814000000
@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 31.432857258730447,
-      "graham_number": 311.9833074444684,
-      "graham_upside_pct": -15.394357303195017,
+      "graham_multiple": 34.46686681099631,
+      "graham_number": 314.73309754164865,
+      "graham_upside_pct": -19.20390780365338,
       "ncav_margin_pct": null,
-      "pb_ratio": 2.3381783718155287,
-      "pe_ttm": 13.443310244258111
+      "pb_ratio": 2.427032285838755,
+      "pe_ttm": 14.201239518775065
     }
   },
   "industry": "Insurance - Property & Casualty",
-  "last_updated": "2026-10-09T21:47:46Z",
+  "last_updated": "2026-10-17T00:13:46Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,20 +98,20 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 76912039363,
+  "market_cap": 81248314070,
   "metrics": {
-    "book_value_per_share": 157.70824178553843,
+    "book_value_per_share": 160.50054310067796,
     "debt_to_equity": 0.009120204292576154,
     "eps_growth_cagr_3yr_pct": 32.58155699339016,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 5,
-    "graham_multiple": 31.432857258730447,
-    "graham_upside_pct": -15.394357303195017,
+    "graham_multiple": 34.46686681099631,
+    "graham_upside_pct": -19.20390780365338,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "pb_ratio": 2.3381783718155287,
-    "pe_ttm": 13.443310244258111,
+    "pb_ratio": 2.427032285838755,
+    "pe_ttm": 14.201239518775065,
     "roe_pct": 19.115948197239618,
     "shareholders_equity": 32894000000,
     "total_assets": 143708000000,
@@ -129,8 +129,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 368.75
+    "as_of": "2026-10-16",
+    "close": 389.54
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -138,14 +138,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000086312.json",
     "sec_filings": [
       {
-        "filed": "2026-08-07",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/86312/000110465926092716/tm2622405d1_8k.htm"
+        "filed": "2026-10-16",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/86312/000008631226000181/trv-20260930.htm"
       },
       {
-        "filed": "2026-07-17",
-        "form": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/86312/000008631226000145/trv-20260630.htm"
+        "filed": "2026-10-16",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/86312/000008631226000180/trv-20261016.htm"
       },
       {
         "filed": "2026-02-12",
@@ -160,7 +160,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $76.9B",
+          "detail": "Market cap $81.2B",
           "passed": true
         },
         {
@@ -185,12 +185,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 13.4",
+          "detail": "P/E 14.2",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 31.4",
+          "detail": "P/E x P/B = 34.5",
           "passed": false
         }
       ],

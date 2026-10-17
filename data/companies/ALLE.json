@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 125.17711659481398,
+      "graham_multiple": 135.46217281477965,
       "graham_number": 63.798074268669005,
-      "graham_upside_pct": -57.60361890705143,
-      "ncav_margin_pct": -113.7875409104622,
-      "pb_ratio": 6.188980246314568,
-      "pe_ttm": 20.2258064516129
+      "graham_upside_pct": -59.244873981941346,
+      "ncav_margin_pct": -113.25379555517026,
+      "pb_ratio": 6.438217489088799,
+      "pe_ttm": 21.04032258064516
     }
   },
   "industry": "Security & Protection Services",
-  "last_updated": "2026-10-09T21:48:45Z",
+  "last_updated": "2026-10-17T00:07:00Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 12796337664,
+  "market_cap": 13311660672,
   "metrics": {
     "book_value_per_share": 24.314183275929548,
     "current_ratio": 1.842467566851999,
@@ -107,20 +107,20 @@
     "eps_growth_cagr_3yr_pct": 12.754839878198432,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 125.17711659481398,
-    "graham_upside_pct": -57.60361890705143,
+    "graham_multiple": 135.46217281477965,
+    "graham_upside_pct": -59.244873981941346,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -113.7875409104622,
-    "pb_ratio": 6.188980246314568,
-    "pe_ttm": 20.2258064516129,
+    "ncav_margin_pct": -113.25379555517026,
+    "pb_ratio": 6.438217489088799,
+    "pe_ttm": 21.04032258064516,
     "roe_pct": 31.13755078351712,
     "roic_pct": 19.50772498662635,
     "shareholders_equity": 2067600000,
     "total_assets": 5223700000,
     "total_liabilities": 3156100000,
-    "value_creation_pct": 10.117263355665282
+    "value_creation_pct": 10.193769854697642
   },
   "name": "Allegion",
   "plain_analysis": {
@@ -136,10 +136,26 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 150.48
+    "as_of": "2026-10-16",
+    "close": 156.54
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "For fiscal year 2025, Allegion reported net revenues of $4,067.3 million, up 7.8% from 2024, driven by pricing, acquisitions, volume growth and favorable currency movements. Operating income rose to $859.5 million (21.1% margin) from $780.7 million (20.7%), and net earnings increased to $643.8 million from $597.5 million. The company completed several acquisitions in 2025 (including ELATEC for a total of ~$631.6 million in aggregate consideration), amended its revolving credit facility to $1.0 billion, paid $175.3 million in dividends, and repurchased approximately $80.0 million of shares; the effective tax rate rose to 16.2% from 14.5%.",
+    "filing_summary_10q": "For the quarter ended June 30, 2026, Allegion reported net revenues of $1,151.5 million (up from $1,022.0 million a year earlier) and net earnings of $184.6 million (up from $159.7 million). For the six months ended June 30, 2026, net revenues were $2,185.1 million and net earnings were $322.7 million, compared to $1,963.9 million and $307.9 million in the prior-year period. The balance sheet shows total assets of $5,360.8 million and total equity of $2,118.6 million as of June 30, 2026, with cash flow statements showing continued acquisition spending, share repurchases of $160.6 million, and dividend payments of $94.0 million during the six-month period.",
+    "filing_summary_8k": "This 8-K, dated September 2, 2026, discloses that Timothy P. Eckersley, President, International and Senior Vice President, will step down and retire from Allegion effective December 31, 2026. The Board appointed Serge Zappone, currently Vice President and General Manager of Allegion APAC, to succeed him as President, International and Senior Vice President, effective January 1, 2027, reporting to CEO John H. Stone. The company issued a press release on September 8, 2026 announcing these leadership changes, attached as an exhibit to the filing.",
+    "moat_explanation": "Allegion holds a portfolio of long-established security product brands (CISA, Interflex, LCN, Schlage, SimonsVoss, Von Duprin, AXA, Gainsborough) sold across commercial, institutional and residential markets, plus a permitted-use brand license from Stanley Black & Decker (Stanley Access Technologies), suggesting brand-based intangible value. Segment operating margins (27.9% Americas) are notably higher than International (9.0%), consistent with stronger brand/scale position in its core North American market, though the excerpts do not describe patents, licensing barriers, or other specifics that would support a broader or stronger moat claim.",
+    "moat_present": true,
+    "moat_type": "intangible_assets",
+    "red_flags": [
+      "Company sources approximately 20-25% of COGS from Mexico and faces ongoing US tariff actions on imports, with uncertain future mitigation and potential demand impact.",
+      "Allegion International segment operating margin (9.0%) is much lower than Allegion Americas (27.9%), indicating weaker competitive/profitability position internationally.",
+      "Company discloses involvement in various litigation, claims and administrative proceedings including environmental, asbestos-related and product liability matters.",
+      "Complex global tax structure with transfer pricing risk, uncertain tax positions ($54.8 million unrecognized tax benefits), and exposure to OECD global minimum tax reforms that could materially increase effective tax rate.",
+      "Incorporation in Ireland creates legal/governance differences and takeover-deterrent provisions that could limit shareholder recourse or acquisition premiums.",
+      "Recent acquisition activity (~$631.6 million in 2025) increased debt and reduced cash on hand, contributing to higher net cash used in investing activities and lower interest income."
+    ]
+  },
   "sector": "Industrials",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001579241.json",
@@ -167,7 +183,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $12.8B",
+          "detail": "Market cap $13.3B",
           "passed": true
         },
         {
@@ -192,12 +208,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 20.2",
+          "detail": "P/E 21.0",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 125.2",
+          "detail": "P/E x P/B = 135.5",
           "passed": false
         }
       ],

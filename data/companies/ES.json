@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 22.033682480694726,
+      "graham_multiple": 22.790961386261184,
       "graham_number": 66.42190819015917,
-      "graham_upside_pct": 1.0526520464919642,
+      "graham_upside_pct": -0.6403766788942741,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.5285804368167948,
-      "pe_ttm": 14.41447368421053
+      "pb_ratio": 1.5546265358466866,
+      "pe_ttm": 14.660087719298245
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-10-09T21:51:29Z",
+  "last_updated": "2026-10-16T23:55:16Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 24719740043,
+  "market_cap": 25180707305,
   "metrics": {
     "book_value_per_share": 43.000681165905796,
     "current_ratio": 0.6502117176742509,
@@ -107,14 +107,14 @@
     "eps_growth_cagr_3yr_pct": 4.032716713858986,
     "fcf_margin_pct": -0.33288689566674967,
     "graham_criteria_evaluated": 7,
-    "graham_criteria_passed": 5,
-    "graham_multiple": 22.033682480694726,
-    "graham_upside_pct": 1.0526520464919642,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 22.790961386261184,
+    "graham_upside_pct": -0.6403766788942741,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "pb_ratio": 1.5285804368167948,
-    "pe_ttm": 14.41447368421053,
+    "pb_ratio": 1.5546265358466866,
+    "pe_ttm": 14.660087719298245,
     "shareholders_equity": 16197271000,
     "total_assets": 63786711000
   },
@@ -125,12 +125,13 @@
     ],
     "worries": [
       "It might not have enough cash or easy-to-sell things on hand to cover the bills it owes soon.",
-      "After paying for everything it needs to run and grow the business, it's actually spending more cash than it's bringing in."
+      "After paying for everything it needs to run and grow the business, it's actually spending more cash than it's bringing in.",
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth."
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 65.73
+    "as_of": "2026-10-16",
+    "close": 66.85
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -160,7 +161,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $24.7B",
+          "detail": "Market cap $25.2B",
           "passed": true
         },
         {
@@ -185,17 +186,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 14.4",
+          "detail": "P/E 14.7",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 22.0",
-          "passed": true
+          "detail": "P/E x P/B = 22.8",
+          "passed": false
         }
       ],
       "evaluated": 7,
-      "passed": 5,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {

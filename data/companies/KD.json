@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 30.110171650000005,
+      "graham_multiple": 38.05775213855149,
       "graham_number": 10.157165058861692,
-      "graham_upside_pct": -13.556042052240924,
-      "ncav_margin_pct": -323.92276668328026,
-      "pb_ratio": 2.1781826300000002,
-      "pe_ttm": 13.823529411764707
+      "graham_upside_pct": -23.110029834506506,
+      "ncav_margin_pct": -299.17430041851196,
+      "pb_ratio": 2.4488334078553193,
+      "pe_ttm": 15.541176470588237
     }
   },
   "industry": "Information Technology Services",
-  "last_updated": "2026-10-09T21:58:42Z",
+  "last_updated": "2026-10-17T00:13:56Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 2591077194,
+  "market_cap": 2877379347,
   "metrics": {
     "book_value_per_share": 5.394405335056776,
     "current_ratio": 0.8764864436340574,
     "debt_to_equity": 4.851063829787234,
     "graham_criteria_evaluated": 4,
-    "graham_criteria_passed": 2,
-    "graham_multiple": 30.110171650000005,
-    "graham_upside_pct": -13.556042052240924,
+    "graham_criteria_passed": 1,
+    "graham_multiple": 38.05775213855149,
+    "graham_upside_pct": -23.110029834506506,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -323.92276668328026,
-    "pb_ratio": 2.1781826300000002,
-    "pe_ttm": 13.823529411764707,
+    "ncav_margin_pct": -299.17430041851196,
+    "pb_ratio": 2.4488334078553193,
+    "pe_ttm": 15.541176470588237,
     "shareholders_equity": 1175000000,
     "total_assets": 12551000000,
     "total_liabilities": 11259000000
@@ -129,8 +129,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 11.75
+    "as_of": "2026-10-16",
+    "close": 13.21
   },
   "qualitative": null,
   "sector": "Technology",
@@ -160,7 +160,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $2.6B",
+          "detail": "Market cap $2.9B",
           "passed": true
         },
         {
@@ -185,17 +185,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 13.8",
-          "passed": true
+          "detail": "P/E 15.5",
+          "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 30.1",
+          "detail": "P/E x P/B = 38.1",
           "passed": false
         }
       ],
       "evaluated": 4,
-      "passed": 2,
+      "passed": 1,
       "total": 7
     },
     "munger_quality": {

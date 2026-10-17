@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 17.8587748791357,
+      "graham_multiple": 15.88476711144168,
       "graham_number": 60.97126265816024,
-      "graham_upside_pct": 12.244592522386306,
+      "graham_upside_pct": 19.014762167011998,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.252612891927596,
-      "pe_ttm": 14.257217847769029
+      "pb_ratio": 1.1813578507630842,
+      "pe_ttm": 13.446194225721785
     }
   },
   "industry": "Banks - Diversified",
-  "last_updated": "2026-10-09T21:46:21Z",
+  "last_updated": "2026-10-16T23:49:27Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,19 +98,19 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 385486768800,
+  "market_cap": 358238582500,
   "metrics": {
     "book_value_per_share": 43.365352815752296,
     "eps_growth_cagr_3yr_pct": 6.09903426261329,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 5,
-    "graham_multiple": 17.8587748791357,
-    "graham_upside_pct": 12.244592522386306,
+    "graham_multiple": 15.88476711144168,
+    "graham_upside_pct": 19.014762167011998,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "pb_ratio": 1.252612891927596,
-    "pe_ttm": 14.257217847769029,
+    "pb_ratio": 1.1813578507630842,
+    "pe_ttm": 13.446194225721785,
     "roe_pct": 10.060908248500377,
     "shareholders_equity": 303243000000,
     "total_assets": 3411738000000,
@@ -119,13 +119,14 @@
   "name": "Bank of America",
   "plain_analysis": {
     "positives": [
-      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes.",
+      "Using simple math based on its profit and what it owns, the stock looks priced well below what the business is roughly worth - a real discount."
     ],
     "worries": []
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 54.32
+    "as_of": "2026-10-16",
+    "close": 51.23
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -133,14 +134,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000070858.json",
     "sec_filings": [
       {
+        "filed": "2026-10-14",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085826000481/bac-20261014.htm"
+      },
+      {
         "filed": "2026-07-31",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085826000394/bac-20260630.htm"
-      },
-      {
-        "filed": "2026-07-24",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085826000364/bac-20260723.htm"
       },
       {
         "filed": "2026-02-25",
@@ -155,7 +156,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $385.5B",
+          "detail": "Market cap $358.2B",
           "passed": true
         },
         {
@@ -180,12 +181,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 14.3",
+          "detail": "P/E 13.4",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 17.9",
+          "detail": "P/E x P/B = 15.9",
           "passed": true
         }
       ],

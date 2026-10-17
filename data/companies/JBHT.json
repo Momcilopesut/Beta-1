@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 226.24028845653277,
+      "graham_multiple": 225.2939248883334,
       "graham_number": 72.29938019445534,
-      "graham_upside_pct": -68.46402329475035,
-      "ncav_margin_pct": -112.80891655895569,
-      "pb_ratio": 6.039390060865308,
-      "pe_ttm": 37.46078431372549
+      "graham_upside_pct": -68.39785811939186,
+      "ncav_margin_pct": -112.8357907610201,
+      "pb_ratio": 6.026745433676897,
+      "pe_ttm": 37.38235294117647
     }
   },
   "industry": "Integrated Freight & Logistics",
-  "last_updated": "2026-10-09T21:49:21Z",
+  "last_updated": "2026-10-16T23:52:21Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 21530929974,
+  "market_cap": 21485850822,
   "metrics": {
     "book_value_per_share": 37.96078704794772,
     "current_ratio": 0.8288918295103245,
@@ -107,21 +107,21 @@
     "eps_growth_cagr_3yr_pct": -12.736907999542591,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 3,
-    "graham_multiple": 226.24028845653277,
-    "graham_upside_pct": -68.46402329475035,
+    "graham_multiple": 225.2939248883334,
+    "graham_upside_pct": -68.39785811939186,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -112.80891655895569,
-    "pb_ratio": 6.039390060865308,
-    "pe_ttm": 37.46078431372549,
+    "ncav_margin_pct": -112.8357907610201,
+    "pb_ratio": 6.026745433676897,
+    "pe_ttm": 37.38235294117647,
     "reinvestment_rate_pct": -62.63133798128224,
     "roe_pct": 16.78170366204452,
     "roic_pct": 15.104988431694375,
     "shareholders_equity": 3565085000,
     "total_assets": 7927155000,
     "total_liabilities": 4362070000,
-    "value_creation_pct": 5.236506629270012
+    "value_creation_pct": 5.353082949732578
   },
   "name": "J.B. Hunt",
   "plain_analysis": {
@@ -138,8 +138,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 229.26
+    "as_of": "2026-10-16",
+    "close": 228.78
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -147,14 +147,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000728535.json",
     "sec_filings": [
       {
+        "filed": "2026-10-15",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/728535/000143774926032715/jbht20261014_8k.htm"
+      },
+      {
         "filed": "2026-07-24",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/728535/000143774926024397/jbht20260630_10q.htm"
-      },
-      {
-        "filed": "2026-07-15",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/728535/000143774926023629/jbht20260714_8k.htm"
       },
       {
         "filed": "2026-02-24",
@@ -194,12 +194,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 37.5",
+          "detail": "P/E 37.4",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 226.2",
+          "detail": "P/E x P/B = 225.3",
           "passed": false
         }
       ],

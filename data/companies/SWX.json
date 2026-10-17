@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 21.295952856197776,
+      "graham_multiple": 23.00444123621466,
       "graham_number": 86.48588390858158,
-      "graham_upside_pct": 2.78807215186782,
+      "graham_upside_pct": -1.1024769484487345,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.5388565886104406,
-      "pe_ttm": 13.838815789473685
+      "pb_ratio": 1.5993939704538036,
+      "pe_ttm": 14.383223684210527
     }
   },
   "industry": "Regulated Gas",
-  "last_updated": "2026-10-09T21:59:16Z",
+  "last_updated": "2026-10-17T00:11:42Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 6089621814,
+  "market_cap": 6335389845,
   "metrics": {
     "book_value_per_share": 54.676959908250375,
     "current_ratio": 1.2819599568984985,
@@ -106,19 +106,19 @@
     "debt_to_equity": 0.8856113638595559,
     "eps_growth_cagr_3yr_pct": 30.116238259058868,
     "graham_criteria_evaluated": 7,
-    "graham_criteria_passed": 5,
-    "graham_multiple": 21.295952856197776,
-    "graham_upside_pct": 2.78807215186782,
+    "graham_criteria_passed": 4,
+    "graham_multiple": 23.00444123621466,
+    "graham_upside_pct": -1.1024769484487345,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "pb_ratio": 1.5388565886104406,
-    "pe_ttm": 13.838815789473685,
+    "pb_ratio": 1.5993939704538036,
+    "pe_ttm": 14.383223684210527,
     "roe_pct": 11.103579569308572,
     "roic_pct": 4.879792229089665,
     "shareholders_equity": 3961119000,
     "total_assets": 10429477000,
-    "value_creation_pct": -1.6047159471127745
+    "value_creation_pct": -1.6207487873276127
   },
   "name": "Southwest Gas Corp",
   "plain_analysis": {
@@ -128,12 +128,13 @@
       "The profit behind each share of stock has been growing at a healthy pace over the last few years."
     ],
     "worries": [
+      "Using simple math based on its profit and what it owns, the stock looks priced above what the business is roughly worth - you'd be paying more than the simple math says it's worth.",
       "This business makes less profit on the money it uses than that money actually costs to raise. That usually means competitors aren't held back from doing the same thing it does - no real moat protecting it."
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 84.14
+    "as_of": "2026-10-16",
+    "close": 87.45
   },
   "qualitative": null,
   "sector": "Utilities",
@@ -163,7 +164,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $6.1B",
+          "detail": "Market cap $6.3B",
           "passed": true
         },
         {
@@ -188,17 +189,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 13.8",
+          "detail": "P/E 14.4",
           "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 21.3",
-          "passed": true
+          "detail": "P/E x P/B = 23.0",
+          "passed": false
         }
       ],
       "evaluated": 7,
-      "passed": 5,
+      "passed": 4,
       "total": 7
     },
     "munger_quality": {

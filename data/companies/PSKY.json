@@ -1,31 +1,52 @@
 {
-  "_errors": {
-    "sec_cik": "No CIK found for ticker PSKY"
+  "_errors": {},
+  "cik": "0002041610",
+  "five_year_history": {
+    "years": [
+      {
+        "cash": 2661000000,
+        "debt": null,
+        "earnings": -35000000,
+        "fiscal_year": "2025-08-06",
+        "market_return_pct": 7.968195468195456,
+        "revenue": 16622000000,
+        "spending": null,
+        "stock_return_pct": 16.438356164383556
+      },
+      {
+        "cash": 3274000000,
+        "debt": null,
+        "earnings": -586000000,
+        "fiscal_year": "2025-12-31",
+        "market_return_pct": 7.765732165997659,
+        "revenue": 12269000000,
+        "spending": null,
+        "stock_return_pct": 12.605042016806722
+      }
+    ]
   },
-  "cik": null,
-  "five_year_history": null,
   "fundamentals": {
     "balance_sheet": {
-      "current_ratio": null,
+      "current_ratio": 1.2567223322954997,
       "debt_to_ebitda": null,
       "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": null,
-      "shareholders_equity": null,
-      "total_assets": null,
+      "book_value_per_share": 10.911038831049098,
+      "shareholders_equity": 11693000000,
+      "total_assets": 43342000000,
       "total_liabilities": null
     },
     "cash_flow": {
-      "fcf_margin_pct": null,
-      "reinvestment_rate_pct": null
+      "fcf_margin_pct": 2.632651397831934,
+      "reinvestment_rate_pct": 710.2076291646547
     },
     "growth": {
-      "eps_growth_cagr_3yr_pct": null
+      "eps_growth_cagr_3yr_pct": -19.60570472224994
     },
     "profitability": {
       "gross_margin_pct": null,
-      "roe_pct": null,
+      "roe_pct": -5.011545369024203,
       "roic_pct": null,
       "trend": "stable"
     },
@@ -34,12 +55,12 @@
       "graham_number": null,
       "graham_upside_pct": null,
       "ncav_margin_pct": null,
-      "pb_ratio": null,
+      "pb_ratio": 0.8395167629624561,
       "pe_ttm": null
     }
   },
   "industry": "Entertainment",
-  "last_updated": "2026-10-09T21:44:37Z",
+  "last_updated": "2026-10-16T23:47:32Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -49,26 +70,55 @@
   },
   "market_cap": 10631974250,
   "metrics": {
-    "graham_criteria_evaluated": 1,
-    "graham_criteria_passed": 1,
+    "book_value_per_share": 10.911038831049098,
+    "current_ratio": 1.2567223322954997,
+    "eps_growth_cagr_3yr_pct": -19.60570472224994,
+    "fcf_margin_pct": 2.632651397831934,
+    "graham_criteria_evaluated": 4,
+    "graham_criteria_passed": 2,
     "margin_trend_score": 60,
-    "munger_quality_evaluated": 0,
-    "munger_quality_passed": 0
+    "munger_quality_evaluated": 2,
+    "munger_quality_passed": 0,
+    "pb_ratio": 0.8395167629624561,
+    "reinvestment_rate_pct": 710.2076291646547,
+    "roe_pct": -5.011545369024203,
+    "shareholders_equity": 11693000000,
+    "total_assets": 43342000000
   },
   "name": "Paramount Skydance Corporation",
   "plain_analysis": {
-    "positives": [],
-    "worries": []
+    "positives": [
+      "If this company sold everything it owns and paid off everything it owes, there would be real money left over. It owns more than it owes."
+    ],
+    "worries": [
+      "The profit behind each share of stock has actually been shrinking over the last few years, not growing."
+    ]
   },
   "price": {
-    "as_of": "2026-10-05",
-    "close": 9.78
+    "as_of": "2026-10-12",
+    "close": 9.16
   },
   "qualitative": null,
   "sector": "Communication Services",
   "sources": {
-    "sec_companyfacts_url": null,
-    "sec_filings": []
+    "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0002041610.json",
+    "sec_filings": [
+      {
+        "filed": "2026-10-16",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2041610/000110465926116333/tm2626659d15_8k.htm"
+      },
+      {
+        "filed": "2026-08-04",
+        "form": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/2041610/000204161026000054/psky-20260630.htm"
+      },
+      {
+        "filed": "2026-02-25",
+        "form": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2041610/000204161026000011/psky-20251231.htm"
+      }
+    ]
   },
   "ticker": "PSKY",
   "value_investing": {
@@ -85,19 +135,19 @@
           "passed": null
         },
         {
-          "criterion": "Earnings stability",
-          "detail": "No annual net income data available",
-          "passed": null
+          "criterion": "Earnings stability (positive net income every year)",
+          "detail": "Positive in 0/4 available years",
+          "passed": false
         },
         {
-          "criterion": "Dividend record",
-          "detail": "Dividend data unavailable",
-          "passed": null
+          "criterion": "Currently pays a dividend (a longer uninterrupted record can't be verified from this data)",
+          "detail": "Most recent year dividends paid: yes",
+          "passed": true
         },
         {
-          "criterion": "Earnings growth",
-          "detail": "Insufficient EPS history",
-          "passed": null
+          "criterion": "Earnings growth (>= ~2.9%/yr average pace)",
+          "detail": "EPS 3yr CAGR -19.6%/yr",
+          "passed": false
         },
         {
           "criterion": "Moderate P/E",
@@ -110,16 +160,16 @@
           "passed": null
         }
       ],
-      "evaluated": 1,
-      "passed": 1,
+      "evaluated": 4,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {
       "criteria": [
         {
           "criterion": "Strong return on equity (>= 15%)",
-          "detail": "ROE unavailable",
-          "passed": null
+          "detail": "ROE -5.0%",
+          "passed": false
         },
         {
           "criterion": "Not overloaded with debt (debt/equity <= 1.0)",
@@ -128,8 +178,8 @@
         },
         {
           "criterion": "Not diluting shareholders (share count flat or falling)",
-          "detail": "Fewer than 2 years of share-count data",
-          "passed": null
+          "detail": "1,102,000,000 shares vs. 674,000,000 a year earlier",
+          "passed": false
         },
         {
           "criterion": "Margins stable or improving (not declining)",
@@ -137,7 +187,7 @@
           "passed": null
         }
       ],
-      "evaluated": 0,
+      "evaluated": 2,
       "passed": 0,
       "total": 4
     }

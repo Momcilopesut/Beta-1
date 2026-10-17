@@ -62,7 +62,7 @@
       "debt_to_equity": null
     },
     "balance_sheet_basics": {
-      "book_value_per_share": 7.458897363217886,
+      "book_value_per_share": 8.37917844271736,
       "shareholders_equity": 4745238000,
       "total_assets": 5492132000,
       "total_liabilities": 746894000
@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 100.65215564740905,
-      "graham_number": 10.117972440670389,
-      "graham_upside_pct": -52.719754950138366,
-      "ncav_margin_pct": -79.36852284844969,
-      "pb_ratio": 2.8690567731270806,
-      "pe_ttm": 35.08196721311475
+      "graham_multiple": 93.91900455881019,
+      "graham_number": 10.724002243859134,
+      "graham_upside_pct": -51.054302857785785,
+      "ncav_margin_pct": -77.36249667419342,
+      "pb_ratio": 2.614814823408225,
+      "pe_ttm": 35.91803278688525
     }
   },
   "industry": "Internet Content & Information",
-  "last_updated": "2026-10-09T22:04:10Z",
+  "last_updated": "2026-10-17T00:08:15Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 13614357224,
+  "market_cap": 12407918663,
   "metrics": {
-    "book_value_per_share": 7.458897363217886,
+    "book_value_per_share": 8.37917844271736,
     "current_ratio": 7.638975837481444,
     "fcf_margin_pct": 29.65319971471661,
     "graham_criteria_evaluated": 4,
     "graham_criteria_passed": 1,
-    "graham_multiple": 100.65215564740905,
-    "graham_upside_pct": -52.719754950138366,
+    "graham_multiple": 93.91900455881019,
+    "graham_upside_pct": -51.054302857785785,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -79.36852284844969,
-    "pb_ratio": 2.8690567731270806,
-    "pe_ttm": 35.08196721311475,
+    "ncav_margin_pct": -77.36249667419342,
+    "pb_ratio": 2.614814823408225,
+    "pe_ttm": 35.91803278688525,
     "reinvestment_rate_pct": 3.6495179710137173,
     "roe_pct": 8.784701631403946,
     "shareholders_equity": 4745238000,
@@ -131,8 +131,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 21.4
+    "as_of": "2026-10-16",
+    "close": 21.91
   },
   "qualitative": null,
   "sector": "Communication Services",
@@ -140,9 +140,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001506293.json",
     "sec_filings": [
       {
-        "filed": "2026-10-05",
+        "filed": "2026-10-15",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1506293/000150629326000139/pins-20261001.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1506293/000150629326000143/pins-20261015.htm"
       },
       {
         "filed": "2026-08-04",
@@ -162,7 +162,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $13.6B",
+          "detail": "Market cap $12.4B",
           "passed": true
         },
         {
@@ -187,12 +187,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 35.1",
+          "detail": "P/E 35.9",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 100.7",
+          "detail": "P/E x P/B = 93.9",
           "passed": false
         }
       ],

@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 81.66284682426328,
+      "graham_multiple": 79.03494640425686,
       "graham_number": 37.5358088894447,
-      "graham_upside_pct": -47.509706489379525,
-      "ncav_margin_pct": -113.50508749769384,
-      "pb_ratio": 5.401555942927777,
-      "pe_ttm": 15.118393234672304
+      "graham_upside_pct": -46.64419489773318,
+      "ncav_margin_pct": -113.72777266467786,
+      "pb_ratio": 5.313934562787988,
+      "pe_ttm": 14.873150105708243
     }
   },
   "industry": "Software - Application",
-  "last_updated": "2026-10-09T21:49:47Z",
+  "last_updated": "2026-10-16T23:52:59Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 145565685420,
+  "market_cap": 143694096000,
   "metrics": {
     "book_value_per_share": 13.238778003146964,
     "current_ratio": 1.1357954545454545,
@@ -106,22 +106,22 @@
     "debt_to_equity": 0.3890758477866943,
     "fcf_margin_pct": 18.768864025222523,
     "graham_criteria_evaluated": 5,
-    "graham_criteria_passed": 1,
-    "graham_multiple": 81.66284682426328,
-    "graham_upside_pct": -47.509706489379525,
+    "graham_criteria_passed": 2,
+    "graham_multiple": 79.03494640425686,
+    "graham_upside_pct": -46.64419489773318,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -113.50508749769384,
-    "pb_ratio": 5.401555942927777,
-    "pe_ttm": 15.118393234672304,
+    "ncav_margin_pct": -113.72777266467786,
+    "pb_ratio": 5.313934562787988,
+    "pe_ttm": 14.873150105708243,
     "reinvestment_rate_pct": 5.351871658511695,
     "roe_pct": 37.17687955327096,
     "roic_pct": 31.962806806203886,
     "shareholders_equity": 27041000000,
     "total_assets": 61802000000,
     "total_liabilities": 33719000000,
-    "value_creation_pct": 22.431684398233415
+    "value_creation_pct": 22.551858025936617
   },
   "name": "Uber",
   "plain_analysis": {
@@ -137,8 +137,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 71.51
+    "as_of": "2026-10-16",
+    "close": 70.35
   },
   "qualitative": null,
   "sector": "Technology",
@@ -168,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $145.6B",
+          "detail": "Market cap $143.7B",
           "passed": true
         },
         {
@@ -193,17 +193,17 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 15.1",
-          "passed": false
+          "detail": "P/E 14.9",
+          "passed": true
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 81.7",
+          "detail": "P/E x P/B = 79.0",
           "passed": false
         }
       ],
       "evaluated": 5,
-      "passed": 1,
+      "passed": 2,
       "total": 7
     },
     "munger_quality": {

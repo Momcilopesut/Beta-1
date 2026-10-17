@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 30.259163999507024,
+      "graham_multiple": 35.32152857740551,
       "graham_number": 197.83949810198098,
-      "graham_upside_pct": -13.76912430720439,
+      "graham_upside_pct": -20.187389824922953,
       "ncav_margin_pct": null,
-      "pb_ratio": 1.8952368333387781,
-      "pe_ttm": 15.965901183020183
+      "pb_ratio": 2.0476454964390722,
+      "pe_ttm": 17.24982602644398
     }
   },
   "industry": "Insurance - Property & Casualty",
-  "last_updated": "2026-10-09T21:46:16Z",
+  "last_updated": "2026-10-16T23:49:21Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,20 +98,20 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 59060100030,
+  "market_cap": 62678441040,
   "metrics": {
     "book_value_per_share": 121.0561107530928,
     "eps_growth_cagr_3yr_pct": 89.55042867919542,
     "fcf_margin_pct": 56.97319112136062,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 30.259163999507024,
-    "graham_upside_pct": -13.76912430720439,
+    "graham_multiple": 35.32152857740551,
+    "graham_upside_pct": -20.187389824922953,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 1,
     "munger_quality_passed": 1,
-    "pb_ratio": 1.8952368333387781,
-    "pe_ttm": 15.965901183020183,
+    "pb_ratio": 2.0476454964390722,
+    "pe_ttm": 17.24982602644398,
     "roe_pct": 33.590329957530216,
     "shareholders_equity": 30610000000,
     "total_assets": 119758000000,
@@ -129,8 +129,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 229.43
+    "as_of": "2026-10-16",
+    "close": 247.88
   },
   "qualitative": null,
   "sector": "Financial Services",
@@ -138,9 +138,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000899051.json",
     "sec_filings": [
       {
-        "filed": "2026-09-17",
+        "filed": "2026-10-15",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/899051/000089905126000135/all-20260917.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/899051/000089905126000150/all-20261015.htm"
       },
       {
         "filed": "2026-08-05",
@@ -160,7 +160,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $59.1B",
+          "detail": "Market cap $62.7B",
           "passed": true
         },
         {
@@ -185,12 +185,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 16.0",
+          "detail": "P/E 17.2",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 30.3",
+          "detail": "P/E x P/B = 35.3",
           "passed": false
         }
       ],

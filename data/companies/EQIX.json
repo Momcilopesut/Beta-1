@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 533.3092003110194,
+      "graham_multiple": 492.4586525406519,
       "graham_number": 210.75334604460036,
-      "graham_upside_pct": -79.45993937541661,
-      "ncav_margin_pct": -120.58214944664314,
-      "pb_ratio": 7.151954657894885,
-      "pe_ttm": 74.56831395348837
+      "graham_upside_pct": -78.62498772342235,
+      "ncav_margin_pct": -121.41881200554032,
+      "pb_ratio": 6.872584696402939,
+      "pe_ttm": 71.65552325581396
     }
   },
   "industry": "REIT - Specialty",
-  "last_updated": "2026-10-09T22:02:14Z",
+  "last_updated": "2026-10-16T23:46:54Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 101243070137,
+  "market_cap": 97288308962,
   "metrics": {
     "book_value_per_share": 143.46567464145693,
     "current_ratio": 1.3164654508091447,
@@ -107,20 +107,20 @@
     "eps_growth_cagr_3yr_pct": 21.50878828113374,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 533.3092003110194,
-    "graham_upside_pct": -79.45993937541661,
+    "graham_multiple": 492.4586525406519,
+    "graham_upside_pct": -78.62498772342235,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -120.58214944664314,
-    "pb_ratio": 7.151954657894885,
-    "pe_ttm": 74.56831395348837,
+    "ncav_margin_pct": -121.41881200554032,
+    "pb_ratio": 6.872584696402939,
+    "pe_ttm": 71.65552325581396,
     "roe_pct": 9.536592257699915,
     "roic_pct": 12.033258518669658,
     "shareholders_equity": 14156000000,
     "total_assets": 40141000000,
     "total_liabilities": 25963000000,
-    "value_creation_pct": 1.942725185202363
+    "value_creation_pct": 2.0663375137059976
   },
   "name": "Equinix Inc.",
   "plain_analysis": {
@@ -135,26 +135,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 1026.06
+    "as_of": "2026-10-16",
+    "close": 985.98
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Equinix's 2025 10-K describes a global data center and interconnection platform with 280 data centers across 77 markets, 13,716 employees, and over 10,500 customers, with no single customer exceeding 10% of revenue. Total 2025 revenue was $9,217 million, up 5% year-over-year, driven by growth across the Americas, EMEA, and Asia-Pacific segments, with recurring revenues comprising over 90% of total revenue. The company opened 16 new data centers in 2025, raised $4.4 billion in capital including senior notes issuances, and completed an acquisition of three data centers in the Philippines. The filing also discusses REIT tax status, rising power and supply chain costs, and impairment and restructuring charges recorded during the year.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL tagging data for items such as debt instruments (senior notes across multiple currencies and maturities), interest rate and cross-currency hedges, joint venture interests, and fair value measurements of money market funds and time deposits. No narrative discussion of quarterly operating results, revenue, or business developments was included in the excerpt provided, so a substantive summary of period results cannot be given based on this material.",
-    "filing_summary_8k": "This Form 8-K, dated August 6, 2026, discloses that Equinix, Inc. and its subsidiary Equinix Europe 2 Financing Corporation LLC issued new senior notes: $850 million of 5.000% notes due 2029, $850 million of 5.250% notes due 2031 (issued by the Europe 2 Finco subsidiary and guaranteed by Equinix), $650 million of 5.500% notes due 2033, and $650 million of 5.800% notes due 2036. The filing details the terms of these notes, including interest rates, maturity dates, redemption provisions, ranking as unsecured senior obligations, and change-of-control repurchase requirements, along with references to the governing indentures and supplemental indentures.",
-    "moat_explanation": "The 10-K explicitly describes a network effect: as more customers colocate at Equinix's data centers, it becomes more valuable for their suppliers and partners to also colocate and interconnect there, and the company cites over 500,000 interconnections and a large, diverse ecosystem across 280 data centers in 77 markets as evidence of this dynamic. The filing also notes a highly fragmented competitive market with cloud, telecom, and colocation providers, suggesting the ecosystem/interconnection density (rather than cost or patents) is the primary differentiator described in the excerpts.",
-    "moat_present": true,
-    "moat_type": "network_effects",
-    "red_flags": [
-      "Company states it is experiencing rising costs to procure power, supply chain issues, and anticipates chip shortages tied to AI demand that could affect customers and its own operations.",
-      "Filing discloses past cybersecurity attacks and security incidents, including instances where threat actors gained unauthorized access to systems and data.",
-      "Customer concentration is moderate: the 50 largest customers accounted for approximately 36% of recurring revenues in 2025.",
-      "Power availability and cost volatility are flagged as risks that could limit expansion and increase operating costs, including reliance on third parties/landlords for power infrastructure at leased facilities.",
-      "Company recorded restructuring charges, transaction costs, and $68 million of impairment charges in 2025 tied to long-lived assets no longer intended to be held long-term.",
-      "Geopolitical tensions, tariffs, and regulatory uncertainty are cited as factors that could disrupt global operations and supply chains."
-    ]
-  },
+  "qualitative": null,
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001101239.json",
@@ -182,7 +166,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $101.2B",
+          "detail": "Market cap $97.3B",
           "passed": true
         },
         {
@@ -207,12 +191,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 74.6",
+          "detail": "P/E 71.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 533.3",
+          "detail": "P/E x P/B = 492.5",
           "passed": false
         }
       ],

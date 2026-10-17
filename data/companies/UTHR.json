@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 65.42652988347157,
+      "graham_multiple": 61.66035839841829,
       "graham_number": 322.0425168310011,
-      "graham_upside_pct": -41.35725165143108,
-      "ncav_margin_pct": -87.6083965029844,
-      "pb_ratio": 3.319220486840844,
-      "pe_ttm": 19.711414213926776
+      "graham_upside_pct": -39.59286524028341,
+      "ncav_margin_pct": -87.23556989716934,
+      "pb_ratio": 3.222271880589611,
+      "pe_ttm": 19.1356783919598
     }
   },
   "industry": "Biotechnology",
-  "last_updated": "2026-10-09T21:56:18Z",
+  "last_updated": "2026-10-17T00:00:18Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,21 +98,21 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 23310029772,
+  "market_cap": 22865885186,
   "metrics": {
     "book_value_per_share": 165.44848472018126,
     "current_ratio": 6.604530859793079,
     "eps_growth_cagr_3yr_pct": 22.922094305318176,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 3,
-    "graham_multiple": 65.42652988347157,
-    "graham_upside_pct": -41.35725165143108,
+    "graham_multiple": 61.66035839841829,
+    "graham_upside_pct": -39.59286524028341,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -87.6083965029844,
-    "pb_ratio": 3.319220486840844,
-    "pe_ttm": 19.711414213926776,
+    "ncav_margin_pct": -87.23556989716934,
+    "pb_ratio": 3.222271880589611,
+    "pe_ttm": 19.1356783919598,
     "reinvestment_rate_pct": 37.942510936340504,
     "roe_pct": 18.808658155068912,
     "shareholders_equity": 7096200000,
@@ -131,8 +131,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 549.16
+    "as_of": "2026-10-16",
+    "close": 533.12
   },
   "qualitative": null,
   "sector": "Healthcare",
@@ -140,9 +140,9 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001082554.json",
     "sec_filings": [
       {
-        "filed": "2026-09-08",
+        "filed": "2026-10-14",
         "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1082554/000110465926105953/tm2624887d1_8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1082554/000110465926115723/tm2627546d1_8k.htm"
       },
       {
         "filed": "2026-08-05",
@@ -162,7 +162,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $23.3B",
+          "detail": "Market cap $22.9B",
           "passed": true
         },
         {
@@ -187,12 +187,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 19.7",
+          "detail": "P/E 19.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 65.4",
+          "detail": "P/E x P/B = 61.7",
           "passed": false
         }
       ],

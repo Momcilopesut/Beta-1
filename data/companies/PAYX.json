@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 210.7243433386507,
+      "graham_multiple": 242.87171103882827,
       "graham_number": 33.97689730817915,
-      "graham_upside_pct": -67.32362251569614,
-      "ncav_margin_pct": -110.33666229405613,
-      "pb_ratio": 9.910002297807289,
-      "pe_ttm": 21.263803680981596
+      "graham_upside_pct": -69.56293352308596,
+      "ncav_margin_pct": -109.62829118817483,
+      "pb_ratio": 10.63909940858076,
+      "pe_ttm": 22.828220858895705
     }
   },
   "industry": "Staffing & Employment Services",
-  "last_updated": "2026-10-09T21:49:33Z",
+  "last_updated": "2026-10-16T23:52:40Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 36983903783,
+  "market_cap": 39738047400,
   "metrics": {
     "book_value_per_share": 10.492429454129075,
     "current_ratio": 1.2591439347425664,
@@ -108,21 +108,21 @@
     "fcf_margin_pct": 35.65417690417691,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 210.7243433386507,
-    "graham_upside_pct": -67.32362251569614,
+    "graham_multiple": 242.87171103882827,
+    "graham_upside_pct": -69.56293352308596,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 2,
-    "ncav_margin_pct": -110.33666229405613,
-    "pb_ratio": 9.910002297807289,
-    "pe_ttm": 21.263803680981596,
+    "ncav_margin_pct": -109.62829118817483,
+    "pb_ratio": 10.63909940858076,
+    "pe_ttm": 22.828220858895705,
     "reinvestment_rate_pct": -20.668098367290312,
     "roe_pct": 47.123236325667314,
     "roic_pct": 26.546239072822754,
     "shareholders_equity": 3735100000,
     "total_assets": 16174500000,
     "total_liabilities": 12439400000,
-    "value_creation_pct": 17.447166799340096
+    "value_creation_pct": 17.48512598455051
   },
   "name": "Paychex",
   "plain_analysis": {
@@ -137,8 +137,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 103.98
+    "as_of": "2026-10-16",
+    "close": 111.63
   },
   "qualitative": null,
   "sector": "Industrials",
@@ -146,14 +146,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000723531.json",
     "sec_filings": [
       {
+        "filed": "2026-10-16",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/723531/000072353126000008/payx-20261015.htm"
+      },
+      {
         "filed": "2026-09-24",
         "form": "10-Q",
         "url": "https://www.sec.gov/Archives/edgar/data/723531/000072353126000006/payx-20260831.htm"
-      },
-      {
-        "filed": "2026-09-23",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/723531/000072353126000004/payx-20260923.htm"
       },
       {
         "filed": "2026-07-17",
@@ -168,7 +168,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $37.0B",
+          "detail": "Market cap $39.7B",
           "passed": true
         },
         {
@@ -193,12 +193,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 21.3",
+          "detail": "P/E 22.8",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 210.7",
+          "detail": "P/E x P/B = 242.9",
           "passed": false
         }
       ],

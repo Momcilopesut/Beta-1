@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 59.28851479781132,
+      "graham_multiple": 66.38310482376353,
       "graham_number": 53.08380759607815,
-      "graham_upside_pct": -38.39641685496326,
-      "ncav_margin_pct": -209.05549355335032,
-      "pb_ratio": 2.6971217129792313,
-      "pe_ttm": 21.982142857142858
+      "graham_upside_pct": -41.78130336030034,
+      "ncav_margin_pct": -203.06330203435178,
+      "pb_ratio": 2.8539347544324745,
+      "pe_ttm": 23.260204081632654
     }
   },
   "industry": "Regulated Electric",
-  "last_updated": "2026-10-09T21:43:56Z",
+  "last_updated": "2026-10-17T00:06:59Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 99126521200,
+  "market_cap": 104889824800,
   "metrics": {
     "book_value_per_share": 31.948873343508446,
     "current_ratio": 0.646435338702037,
@@ -106,14 +106,14 @@
     "fcf_margin_pct": -9.93130985009982,
     "graham_criteria_evaluated": 6,
     "graham_criteria_passed": 4,
-    "graham_multiple": 59.28851479781132,
-    "graham_upside_pct": -38.39641685496326,
+    "graham_multiple": 66.38310482376353,
+    "graham_upside_pct": -41.78130336030034,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 0,
-    "ncav_margin_pct": -209.05549355335032,
-    "pb_ratio": 2.6971217129792313,
-    "pe_ttm": 21.982142857142858,
+    "ncav_margin_pct": -203.06330203435178,
+    "pb_ratio": 2.8539347544324745,
+    "pe_ttm": 23.260204081632654,
     "reinvestment_rate_pct": 99.28660603404855,
     "roe_pct": 12.05297645490893,
     "shareholders_equity": 36016000000,
@@ -132,10 +132,26 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 86.17
+    "as_of": "2026-10-16",
+    "close": 91.18
   },
-  "qualitative": null,
+  "qualitative": {
+    "extraction_confidence": "section_match",
+    "filing_summary_10k": "The 10-K describes Southern Company as a holding company for vertically integrated electric utilities in Alabama, Georgia, and Mississippi, a wholesale generator (Southern Power), and a natural gas distribution business (Southern Company Gas) serving Illinois, Georgia, Virginia, and Tennessee. It discusses rate plans (e.g., Alabama Power rates stable through 2027, Georgia Power's ARP extended through 2028), rising capital expenditures tied to projected data-center and large-load demand growth, and various regulatory, environmental, and tax-legislation matters (including the OBBB's effect on renewable tax incentives) affecting future costs and recovery.",
+    "filing_summary_10q": "The excerpt provided for the most recent 10-Q consists only of XBRL taxonomy tags and entity/date identifiers (covering the quarter and six months ended June 30, 2026, for Southern Company and its subsidiaries Alabama Power, Georgia Power, Mississippi Power, Southern Power, and Southern Company Gas) rather than narrative text. No descriptive discussion of results, financial condition, or business developments was included in the excerpt, so a substantive summary of the quarter's results cannot be provided from this material.",
+    "filing_summary_8k": "This 8-K discloses that on August 6, 2026, Southern Company issued $833.75 million of Series 2026A 2.125% Convertible Senior Notes due 2027 and $1,897.5 million of Series 2026B 3.50% Convertible Senior Notes due 2029, sold to initial purchasers under Rule 144A/Section 4(a)(2) exemptions. The filing outlines conversion terms, conversion rates and prices, redemption/repurchase provisions upon a fundamental change, and states the shares issuable upon conversion have not been registered under the Securities Act.",
+    "moat_explanation": "The excerpts describe Southern Company's core businesses as vertically integrated, state-regulated electric utilities (Alabama Power, Georgia Power, Mississippi Power) and regulated natural gas distribution utilities serving defined territories under state PSC and FERC oversight, which is the classic structure of a regulated monopoly where only one provider efficiently serves a given service area. This reflects an efficient-scale dynamic (regulated franchise territories limiting competition) rather than brand, network effects, or switching costs, though the filing does not claim any patent or brand-based advantage.",
+    "moat_present": true,
+    "moat_type": "efficient_scale",
+    "red_flags": [
+      "Company acknowledges a period of rising costs and increased capital expenditures that could increase resistance from regulators to authorizing full cost recovery",
+      "Disclosed disallowances at Nicor Gas noted in rate proceedings",
+      "Significant and potentially material environmental compliance costs (CCR ARO updates, GHG rules) with no assurance of full rate recovery",
+      "Company states it is 'extremely challenging' to meet its 2030 GHG emissions reduction goal due to projected load growth",
+      "Heavy reliance on projected large-load/data-center demand growth (~9 GW of new contracts) to justify major capital investment, with revenue adequacy dependent on contract terms being honored",
+      "Ongoing regulatory/legal uncertainty around the SEEM market platform and pending FERC compliance filings/appeals, and unresolved impact of the OBBB on renewable tax credits"
+    ]
+  },
   "sector": "Utilities",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000092122.json",
@@ -163,7 +179,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $99.1B",
+          "detail": "Market cap $104.9B",
           "passed": true
         },
         {
@@ -188,12 +204,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 22.0",
+          "detail": "P/E 23.3",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 59.3",
+          "detail": "P/E x P/B = 66.4",
           "passed": false
         }
       ],

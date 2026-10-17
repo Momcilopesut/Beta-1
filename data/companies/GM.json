@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 30.04866604842481,
+      "graham_multiple": 30.948813811322733,
       "graham_number": 71.58823990523864,
-      "graham_upside_pct": -13.467617665612675,
-      "ncav_margin_pct": -250.63595682684146,
-      "pb_ratio": 1.1877086664855447,
-      "pe_ttm": 25.299694189602448
+      "graham_upside_pct": -14.735302637876796,
+      "ncav_margin_pct": -248.42916517728196,
+      "pb_ratio": 1.205367093413832,
+      "pe_ttm": 25.67584097859327
     }
   },
   "industry": "Auto - Manufacturers",
-  "last_updated": "2026-10-09T22:04:22Z",
+  "last_updated": "2026-10-16T23:47:58Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "medium"
     }
   },
-  "market_cap": 74825275987,
+  "market_cap": 73670869920,
   "metrics": {
     "book_value_per_share": 69.6551286813456,
     "current_ratio": 1.165252512266718,
@@ -106,14 +106,14 @@
     "fcf_margin_pct": 9.493079089174625,
     "graham_criteria_evaluated": 5,
     "graham_criteria_passed": 2,
-    "graham_multiple": 30.04866604842481,
-    "graham_upside_pct": -13.467617665612675,
+    "graham_multiple": 30.948813811322733,
+    "graham_upside_pct": -14.735302637876796,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 2,
     "munger_quality_passed": 1,
-    "ncav_margin_pct": -250.63595682684146,
-    "pb_ratio": 1.1877086664855447,
-    "pe_ttm": 25.299694189602448,
+    "ncav_margin_pct": -248.42916517728196,
+    "pb_ratio": 1.205367093413832,
+    "pe_ttm": 25.67584097859327,
     "reinvestment_rate_pct": 18.04472996474195,
     "roe_pct": 4.412703087419624,
     "shareholders_equity": 61119000000,
@@ -131,26 +131,10 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 82.73
+    "as_of": "2026-10-16",
+    "close": 83.96
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "For fiscal year 2025, GM reported total net sales and revenue of $185.0 billion, down 1.3% from 2024, with GMNA revenue down 2.0% amid decreased wholesale volumes offset partly by favorable pricing and mix. The company recorded $7.9 billion in GMNA charges related to EV capacity and manufacturing footprint realignment following slowing EV demand tied to policy changes, plus tariff-related cost impacts of $3.1 billion for the year. GM Financial revenue grew 7.5% to $17.1 billion, while Automotive China JVs posted an equity loss of $0.3 billion amid competitive pressure. Effective tax rate was 10.8% (18.9% adjusted), and the company issued 2026 guidance of $11.00-$13.00 diluted EPS.",
-    "filing_summary_10q": "The provided excerpt for the most recent 10-Q (covering the quarter ended June 30, 2026) consists primarily of XBRL structured data tags rather than narrative text, identifying reporting periods, segments (GMNA, GMI, Corporate, GM Financial), revenue categories (Vehicles and Parts, Used Vehicles, Services and Other), and financing receivable credit-quality breakdowns (FICO bands, past-due categories) for GM Financial's consumer and commercial portfolios. No descriptive discussion of quarterly financial results, business developments, or management commentary is present in the excerpt to summarize.",
-    "filing_summary_8k": "On August 7, 2026, General Motors and its subsidiary General Motors LLC entered into a Master IPU Agreement with Procura Auto Parts LLC, establishing a supply-chain financing program in which a paying agent advances funds to GM suppliers to acquire and hold inventory, funded by a bank syndicate including JPMorgan Chase and Banco Santander. The program has a maximum facility limit of $4.5 billion, a twelve-month availability period, and GM will pay interest at SOFR plus 1.55% along with a ticking fee on unused capacity; the filing notes the arrangement will be accounted for as a product financing arrangement with IPUs reflected as unsecured debt on GM's balance sheet.",
-    "moat_explanation": "The excerpts describe GM as competing on product mix (trucks/SUVs) and cost discipline within a highly competitive, commoditized industry, but do not describe a structural advantage that competitors cannot replicate. The MD&A explicitly notes intense competition from domestic rivals in China causing equity losses, margin pressure from tariffs and material costs, and EV-related restructuring charges of $7.9 billion, all of which point to competitive vulnerability rather than a durable moat.",
-    "moat_present": false,
-    "moat_type": "none",
-    "red_flags": [
-      "EV strategic realignment charges of $7.9 billion in GMNA for 2025, with additional material charges expected in 2026 due to ongoing supplier negotiations",
-      "Tariff impacts to EBIT-adjusted of $3.1 billion in 2025, with an estimated $3.0-4.0 billion impact expected in 2026 amid a 'highly dynamic' and evolving trade/tariff environment",
-      "Automotive China JVs reported equity losses of $0.3 billion in 2025 (following a much larger $4.4 billion loss in 2024) due to intense competition from domestic Chinese competitors and ongoing restructuring",
-      "Increased warranty-related costs and campaigns of $1.3 billion in 2025, alongside a $0.5 billion charge related to legal matters tied to the former OnStar Smart Driver program",
-      "Company faces various product liability, warranty, emissions, privacy, stockholder, and labor litigation, plus governmental investigations, per the Risk Factors section",
-      "Pension funding requirements could increase significantly due to market performance, declining interest rates, or regulatory changes, per disclosed risk factors"
-    ]
-  },
+  "qualitative": null,
   "sector": "Consumer Cyclical",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001467858.json",
@@ -178,7 +162,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $74.8B",
+          "detail": "Market cap $73.7B",
           "passed": true
         },
         {
@@ -203,12 +187,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 25.3",
+          "detail": "P/E 25.7",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 30.0",
+          "detail": "P/E x P/B = 30.9",
           "passed": false
         }
       ],

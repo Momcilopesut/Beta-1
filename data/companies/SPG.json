@@ -86,11 +86,11 @@
       "graham_upside_pct": null,
       "ncav_margin_pct": null,
       "pb_ratio": null,
-      "pe_ttm": 21.328342245989305
+      "pe_ttm": 21.972192513368984
     }
   },
   "industry": "REIT - Retail",
-  "last_updated": "2026-10-09T22:00:47Z",
+  "last_updated": "2026-10-16T23:46:58Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "high"
     }
   },
-  "market_cap": 64668316440,
+  "market_cap": 66470423242,
   "metrics": {
     "eps_growth_cagr_3yr_pct": 94.53718622429857,
     "graham_criteria_evaluated": 3,
@@ -106,7 +106,7 @@
     "margin_trend_score": 60,
     "munger_quality_evaluated": 1,
     "munger_quality_passed": 1,
-    "pe_ttm": 21.328342245989305,
+    "pe_ttm": 21.972192513368984,
     "shareholders_equity": 5208268000,
     "total_assets": 40606466000,
     "total_liabilities": 33901073000
@@ -120,25 +120,10 @@
     "worries": []
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 199.42
+    "as_of": "2026-10-16",
+    "close": 205.44
   },
-  "qualitative": {
-    "extraction_confidence": "section_match",
-    "filing_summary_10k": "Simon Property Group's 10-K for fiscal year 2025 describes it as a REIT owning or holding interests in 212 U.S. income-producing properties (malls, Premium Outlets, Mills, and other retail) plus 42 international properties, along with a 22.2% stake in Klepierre and other platform investments. During 2025 the company completed the TRG Acquisition (acquiring the remaining 12% of Taubman Realty Group), recognized a $2.9 billion non-cash remeasurement gain, and reported diluted EPS of $14.17 versus $7.26 in 2024, with portfolio NOI up 4.7% and U.S. Malls/Premium Outlets occupancy at 96.4%. The filing also details financing activity including new senior unsecured notes issuances, credit facility draws/repayments, and various property acquisitions and dispositions during the year.",
-    "filing_summary_10q": "The excerpt provided for the most recent 10-Q (period ended June 30, 2026) consists primarily of XBRL tagging metadata and structured data tags rather than narrative text, so it does not contain readable discussion of the quarter's business or financial results. It references items such as debt facilities, interest rate swaps, equity method investments (including Klepierre, Catalyst Brands, Rue Gilt Groupe, and Jamestown), a stock repurchase program, and subsequent dividend declarations, but no substantive narrative summary can be drawn from this excerpt.",
-    "filing_summary_8k": "This 8-K, dated August 10, 2026, discloses that Simon Property Group issued a press release reporting earnings and other financial/operating results for the quarter ended June 30, 2026, furnished as Exhibit 99.1. It also incorporates supplemental financial and operating information under Regulation FD (Item 7.01) and notes that no financial statements are included in the filing itself; the report is signed by CFO Brian J. McDade.",
-    "moat_explanation": "The 10-K describes Simon as owning or holding interests in a large, high-quality portfolio of 212 U.S. properties plus 42 international properties, with high occupancy (96.4%) and rising base minimum rents, reflecting a scale of premier real estate that is difficult to replicate given the limited number of viable sites for such large-format retail destinations. The excerpts also note economies of scale in operating expenses and access to large, diversified capital markets (multi-billion dollar credit facilities and investment-grade ratings) that support the ongoing investment needed to maintain and redevelop this footprint, consistent with an efficient-scale moat in a mature retail real estate market rather than a market with unlimited new entrants.",
-    "moat_present": true,
-    "moat_type": "efficient_scale",
-    "red_flags": [
-      "The company acknowledges reliance on tenant financial health and bankruptcy risk, noting it must assess collectability of receivables when tenants seek bankruptcy reorganization.",
-      "Results were significantly influenced by non-recurring, non-cash gains (e.g., $2.9 billion gain from TRG remeasurement) and one-time transactions (ABG sale, SPARC/Catalyst restructuring), which the company itself flags as affecting comparability of earnings.",
-      "The company disclosed a net pre-tax loss in 2025 related to restructuring activities within Catalyst and reduction in carrying value of certain equity instruments, indicating volatility in its non-core retail brand investments.",
-      "Increased interest expense and a rising effective borrowing rate (3.87% vs 3.62%) reflect exposure to higher financing costs as debt matures and is refinanced.",
-      "The company depends on maintaining investment-grade credit ratings to access capital on favorable terms, and states it cannot assure it will maintain such ratings in the future."
-    ]
-  },
+  "qualitative": null,
   "sector": "Real Estate",
   "sources": {
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001063761.json",
@@ -166,7 +151,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $64.7B",
+          "detail": "Market cap $66.5B",
           "passed": true
         },
         {
@@ -191,7 +176,7 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 21.3",
+          "detail": "P/E 22.0",
           "passed": false
         },
         {

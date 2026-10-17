@@ -81,16 +81,16 @@
       "trend": "stable"
     },
     "valuation": {
-      "graham_multiple": 147.8587938957926,
+      "graham_multiple": 164.16304178916715,
       "graham_number": 58.99369948740933,
-      "graham_upside_pct": -60.99074291647866,
-      "ncav_margin_pct": -113.086446010407,
-      "pb_ratio": 6.47242753150927,
-      "pe_ttm": 22.84441087613293
+      "graham_upside_pct": -62.9785381315285,
+      "ncav_margin_pct": -112.41959981270067,
+      "pb_ratio": 6.819951908655705,
+      "pe_ttm": 24.070996978851962
     }
   },
   "industry": "Household & Personal Products",
-  "last_updated": "2026-10-09T21:43:07Z",
+  "last_updated": "2026-10-16T23:45:57Z",
   "macro_context": {
     "regime": "Neutral/Expansion",
     "sector_sensitivity": {
@@ -98,7 +98,7 @@
       "rate_sensitivity": "low"
     }
   },
-  "market_cap": 359505307543,
+  "market_cap": 370024926025,
   "metrics": {
     "book_value_per_share": 23.36526739987083,
     "current_ratio": 0.6773143122964801,
@@ -108,14 +108,14 @@
     "fcf_margin_pct": 17.403943377148636,
     "graham_criteria_evaluated": 7,
     "graham_criteria_passed": 4,
-    "graham_multiple": 147.8587938957926,
-    "graham_upside_pct": -60.99074291647866,
+    "graham_multiple": 164.16304178916715,
+    "graham_upside_pct": -62.9785381315285,
     "margin_trend_score": 60,
     "munger_quality_evaluated": 3,
     "munger_quality_passed": 3,
-    "ncav_margin_pct": -113.086446010407,
-    "pb_ratio": 6.47242753150927,
-    "pe_ttm": 22.84441087613293,
+    "ncav_margin_pct": -112.41959981270067,
+    "pb_ratio": 6.819951908655705,
+    "pe_ttm": 24.070996978851962,
     "reinvestment_rate_pct": -3.6495732628542834,
     "roe_pct": 29.544659461250944,
     "shareholders_equity": 54311000000,
@@ -135,8 +135,8 @@
     ]
   },
   "price": {
-    "as_of": "2026-10-09",
-    "close": 151.23
+    "as_of": "2026-10-16",
+    "close": 159.35
   },
   "qualitative": null,
   "sector": "Consumer Defensive",
@@ -144,14 +144,14 @@
     "sec_companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000080424.json",
     "sec_filings": [
       {
+        "filed": "2026-10-16",
+        "form": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000245/pg-20261016.htm"
+      },
+      {
         "filed": "2026-08-04",
         "form": "10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm"
-      },
-      {
-        "filed": "2026-07-29",
-        "form": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000097/pg-20260729.htm"
       },
       {
         "filed": "2026-04-24",
@@ -166,7 +166,7 @@
       "criteria": [
         {
           "criterion": "Adequate size (market cap >= $2B)",
-          "detail": "Market cap $359.5B",
+          "detail": "Market cap $370.0B",
           "passed": true
         },
         {
@@ -191,12 +191,12 @@
         },
         {
           "criterion": "Moderate P/E (<= 15)",
-          "detail": "P/E 22.8",
+          "detail": "P/E 24.1",
           "passed": false
         },
         {
           "criterion": "Moderate P/E x P/B (<= 22.5)",
-          "detail": "P/E x P/B = 147.9",
+          "detail": "P/E x P/B = 164.2",
           "passed": false
         }
       ],
