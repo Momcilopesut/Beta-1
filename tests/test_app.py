@@ -55,10 +55,17 @@ def _wait_until_idle_or_done(client, max_wait_seconds: float = 2.0) -> dict:
 # --- Static serving ---
 
 
-def test_index_serves_site_index_html(client):
+def test_index_redirects_to_site_index_html(client):
+    # A real redirect, not index.html's bytes served at "/" directly -
+    # otherwise the page's own relative asset links (css/styles.css,
+    # js/app.js) would resolve against "/" instead of "/site/" and 404.
     resp = client.get("/")
-    assert resp.status_code == 200
-    assert b"Top Performers" in resp.data
+    assert resp.status_code == 302
+    assert resp.headers["Location"] == "/site/index.html"
+
+    followed = client.get("/", follow_redirects=True)
+    assert followed.status_code == 200
+    assert b"Top Performers" in followed.data
 
 
 def test_static_serves_repo_files(client):

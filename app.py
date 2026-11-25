@@ -29,7 +29,7 @@ import webbrowser
 from pathlib import Path
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, redirect, request
 
 load_dotenv()
 
@@ -187,7 +187,13 @@ def api_refresh_status():
 
 @app.route("/")
 def index():
-    return send_from_directory(REPO_ROOT / "site", "index.html")
+    # A redirect, not serving index.html's bytes at "/" directly - the
+    # page's own relative links (css/styles.css, js/app.js) resolve
+    # against whatever URL path the browser actually sees, so they only
+    # resolve to /site/css/... if the browser is actually AT /site/... .
+    # (vercel.json used the same redirect, not a content-serve, for the
+    # same reason.)
+    return redirect("/site/index.html")
 
 
 def _open_browser(url: str, delay_seconds: float = 1.0) -> None:
