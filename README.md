@@ -44,11 +44,12 @@ Start LM Studio, load a model, and start its local server (the "Developer" tab -
 python app.py
 ```
 
-This opens `http://127.0.0.1:5050/` in your browser automatically. Type a ticker and
-hit "Look up." A few flags:
+This opens a real app window (no address bar, no browser tabs - via
+[pywebview](https://pywebview.flowrl.com)), backed by a Flask server on
+`http://127.0.0.1:5050/`. Type a ticker and hit "Look up." A few flags:
 
 ```bash
-python app.py --no-browser     # don't auto-open a browser tab
+python app.py --browser        # open in your default browser instead (fallback)
 python app.py --port 8080      # use a different port
 ```
 

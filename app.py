@@ -1,12 +1,16 @@
 """Desktop entry point: run this project entirely from your own computer.
 
-    python app.py              # start the local server, open it in your browser
-    python app.py --no-browser
+    python app.py              # start the local server, open it in its own app window
+    python app.py --browser    # open in your default browser instead (fallback)
     python app.py --port 8080
 
 Search a ticker; it scrapes free price (Stooq) and news (RSS) data for
 it, asks your local LM Studio model to summarize it, and shows the
 result - no cloud APIs, no API keys, nothing but your own machine.
+
+The default (pywebview) opens a real app window - no address bar, no
+browser tabs - backed by the same Flask server either way; --browser is
+only there as a fallback if pywebview doesn't work on your system.
 """
 
 import argparse
@@ -73,21 +77,43 @@ def _open_browser(url: str, delay_seconds: float = 1.0) -> None:
         logger.info("Couldn't auto-open a browser; open %s yourself.", url)
 
 
+def _run_flask(host: str, port: int) -> None:
+    app.run(host=host, port=port, debug=False, use_reloader=False)
+
+
 def parse_args(argv=None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--host", default="127.0.0.1", help="Bind address (default: 127.0.0.1, local-only)")
     parser.add_argument("--port", type=int, default=DEFAULT_PORT)
-    parser.add_argument("--no-browser", action="store_true", help="Don't auto-open a browser tab on startup")
+    parser.add_argument(
+        "--browser",
+        action="store_true",
+        help="Open in your default browser instead of a native app window (fallback if pywebview doesn't work on your system)",
+    )
     return parser.parse_args(argv)
 
 
 def main(argv=None) -> int:
     args = parse_args(argv)
     url = f"http://{args.host}:{args.port}/"
-    logger.info("Serving at %s", url)
-    if not args.no_browser:
+
+    if args.browser:
+        logger.info("Serving at %s", url)
         threading.Thread(target=_open_browser, args=(url,), daemon=True).start()
-    app.run(host=args.host, port=args.port, debug=False)
+        app.run(host=args.host, port=args.port, debug=False)
+        return 0
+
+    # pywebview's GUI event loop has to own the main thread (required on
+    # macOS), so Flask runs in a background thread instead here, unlike
+    # the --browser path above where app.run() itself blocks the main
+    # thread as usual.
+    threading.Thread(target=_run_flask, args=(args.host, args.port), daemon=True).start()
+    time.sleep(0.5)  # give Flask a moment to actually start listening before pointing a window at it
+
+    import webview
+
+    webview.create_window("Stock Lookup", url, width=820, height=760)
+    webview.start()
     return 0
 
 

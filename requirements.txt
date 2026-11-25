@@ -1,6 +1,9 @@
 requests>=2.31
 flask>=3.0
 python-dotenv>=1.0
+# Opens app.py's UI as a real app window (no browser tabs/address bar)
+# instead of a browser tab - see app.py's --browser flag for the fallback.
+pywebview>=5.0
 # RSS/Atom parsing for scraper.py's news fetch - handles the real-world
 # inconsistency of feed XML (namespaces, missing fields, encodings) far
 # more robustly than hand-rolled XML parsing would.
