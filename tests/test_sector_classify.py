@@ -90,6 +90,14 @@ def test_fetch_sector_wraps_network_errors():
             fetch_sector("AAPL")
 
 
+def test_fetch_sector_returns_empty_on_404_without_raising():
+    not_found = MagicMock(status_code=404)
+    with patch("sector_classify._session.get", side_effect=_crumb_aware_get(not_found)):
+        result = fetch_sector("WRB-PH")
+
+    assert result == {"sector": None, "industry": None}
+
+
 def test_fetch_sector_refreshes_crumb_once_on_401_then_succeeds():
     profile_response = _mock_response(_profile_payload("Technology", "Software"))
     unauthorized = MagicMock(status_code=401)

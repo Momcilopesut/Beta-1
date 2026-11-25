@@ -88,6 +88,15 @@ def fetch_sector(ticker: str) -> dict:
             # one ticker before giving up on it.
             crumb = _refresh_crumb()
             resp = _request_quote_summary(ticker, crumb)
+        if resp.status_code == 404:
+            # SEC's bulk file includes preferred shares, rights, and other
+            # non-common-stock tickers under the same CIK as a real
+            # company (e.g. "BA-PA", "CELG-RI") - Yahoo has no profile for
+            # most of these under that exact symbol. That's a real,
+            # permanent answer ("no data"), not a failure worth retrying
+            # forever.
+            logger.debug("No Yahoo profile for %s (404) - treating as no data", ticker)
+            return {"sector": None, "industry": None}
         resp.raise_for_status()
         payload = resp.json()
     except (requests.RequestException, ValueError) as exc:
