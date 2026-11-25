@@ -409,6 +409,38 @@ included, only ever runs for that week's per-sector finalists. Every company
 (finalist or not) still gets its latest 10-K/10-Q/8-K listed with a direct SEC link
 on its own page — it's just the AI summary of each that's finalists-only.
 
+## Local generation with LM Studio (optional, manual)
+
+`QUALITATIVE_PROVIDER=lmstudio` swaps the one AI call above (moat read + the three
+filing summaries) from Anthropic's API to a model running locally in
+[LM Studio](https://lmstudio.ai) — zero API spend, no rate limit, run as many times
+as you want. Nothing else changes: the exact same prompt and JSON schema go to
+whichever provider is configured, and every number on the page (price, P/E, assets,
+etc.) still comes from FMP/SEC EDGAR/Stooq exactly as today — this only replaces the
+filing-text reasoning step.
+
+Setup:
+
+1. In LM Studio, load a model and start its local server (the "Developer" tab →
+   Start Server; default `http://localhost:1234`).
+2. In `.env`: `QUALITATIVE_PROVIDER=lmstudio`. Override `LMSTUDIO_BASE_URL` /
+   `LMSTUDIO_MODEL` if your server isn't on the default port or needs a specific
+   model identifier (check LM Studio's own server tab for the exact string it
+   expects). `LMSTUDIO_TIMEOUT_SECONDS` (default 300) and `LMSTUDIO_JSON_MODE`
+   (default on; set to `0` if your server rejects the `response_format` field)
+   are the two other knobs — see `.env.example`.
+3. Run the pipeline locally as usual, e.g. `python -m pipeline.main --tickers GFS
+   --dry-run`.
+
+**This is local-only and manual.** LM Studio runs on your own machine; the automated
+weekly screen (GitHub Actions) and the Vercel on-demand lookup both run in the
+cloud and have no network path to it, so they always use the Anthropic provider no
+matter what's set here — this is for a run you kick off yourself. A local model has
+no code-verified grounding guarantee either (same caveat as the Anthropic path, see
+`qualitative_schema.py`) and, being smaller, is more likely to drift from the exact
+JSON shape asked for; a malformed response fails that one ticker's qualitative layer
+only (same graceful degradation as an Anthropic error), not the whole run.
+
 ## Macro Overview
 
 The macro page (`site/macro.html`) tracks 16 FRED series across the indicators that

@@ -70,3 +70,26 @@ summary is not a place to restate the moat classification, and the moat \
 read must not lean on facts that only appear in the 10-Q/8-K excerpts \
 (those are for filing_summary_10q/8k only, not moat reasoning).
 """
+
+# Local LM Studio models don't get Anthropic's structured-output
+# enforcement (no equivalent of client.messages.parse(output_format=...)),
+# so the exact JSON shape has to be spelled out in the prompt itself.
+# Appended only on the QUALITATIVE_PROVIDER=lmstudio path (see
+# qualitative_client.py) so the Anthropic path's system prompt - and its
+# prompt-cache key - are untouched.
+LOCAL_JSON_RESPONSE_INSTRUCTIONS = """\
+Respond with ONE JSON object only - no prose before or after it, no \
+markdown code fences, no explanation. It must have exactly these keys:
+
+{
+  "moat_present": true or false,
+  "moat_type": one of "network_effects", "cost_advantage", \
+"intangible_assets", "switching_costs", "efficient_scale", "none",
+  "moat_explanation": a string, at most 1000 characters,
+  "red_flags": a list of strings, at most 6 items (an empty list is fine),
+  "extraction_confidence": "section_match" or "whole_document_fallback",
+  "filing_summary_10k": a string (at most 800 characters) or null,
+  "filing_summary_10q": a string (at most 800 characters) or null,
+  "filing_summary_8k": a string (at most 800 characters) or null
+}
+"""
