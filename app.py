@@ -15,13 +15,22 @@ only there as a fallback if pywebview doesn't work on your system.
 
 import argparse
 import logging
+import sys
 import threading
 import time
 import webbrowser
+from pathlib import Path
 
 from dotenv import load_dotenv
 from flask import Flask, jsonify, render_template, request
 
+# A packaged .app's working directory when double-clicked from Finder
+# isn't predictable, so config lives at a fixed path in the user's home
+# directory - checked first, then a local .env (for `python app.py` from
+# the project folder during development) for anything not already set.
+# load_dotenv() never overrides an already-set variable by default, so
+# this order is safe either way.
+load_dotenv(Path.home() / ".stocklookup.env")
 load_dotenv()
 
 import scraper  # noqa: E402
@@ -32,7 +41,12 @@ logger = logging.getLogger(__name__)
 
 DEFAULT_PORT = 5050
 
-app = Flask(__name__)
+# Inside a PyInstaller .app bundle, bundled data files (templates/,
+# static/ - see build_app.sh/app.spec) live under sys._MEIPASS, not next
+# to this script - Flask's own defaults assume the latter, so point it at
+# the right folder either way.
+_BASE_DIR = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent))
+app = Flask(__name__, template_folder=str(_BASE_DIR / "templates"), static_folder=str(_BASE_DIR / "static"))
 
 
 def _valid_ticker(ticker: str) -> bool:

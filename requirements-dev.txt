@@ -1,2 +1,5 @@
 -r requirements.txt
 pytest>=8.0
+# Only needed to build the double-clickable .app bundle (see build_app.sh) -
+# not needed to just run `python app.py` or the test suite.
+pyinstaller>=6.0

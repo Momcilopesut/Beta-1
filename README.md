@@ -56,6 +56,23 @@ python app.py --port 8080      # use a different port
 Binds to `127.0.0.1` only by default - not your network, no login of any kind, since
 this is a personal tool, not something meant to be reachable from anywhere else.
 
+## Package as a Mac app (optional)
+
+```bash
+./build_app.sh
+```
+
+Builds `dist/Stock Lookup.app` (via PyInstaller - `app.spec`) - a real, double-click
+app bundle, no terminal needed after this. Drag it into `/Applications`, or leave it
+in `dist/`. **First launch:** since it isn't signed by Apple, Gatekeeper will block a
+plain double-click - right-click the app -> **Open** once (or approve it in **System
+Settings -> Privacy & Security**) to get past that; every launch after is normal.
+
+Config for the packaged app lives at `~/.stocklookup.env` (copy `.env.example`
+there) rather than a local `.env` - a double-clicked app's working directory isn't
+predictable the way running `python app.py` from this folder is, so the packaged app
+always checks that fixed path first.
+
 ## Local development
 
 ```bash
