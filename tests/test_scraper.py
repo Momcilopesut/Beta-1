@@ -102,6 +102,24 @@ def test_fetch_price_raises_if_challenge_persists_after_solving():
             fetch_price("AAPL")
 
 
+def test_fetch_price_gives_up_solving_challenge_after_time_limit_instead_of_hanging():
+    """A higher difficulty than previously seen (Stooq could raise it at
+    any time) must never hang this call - or the single-threaded Flask
+    dev server behind it - indefinitely. Mocking time.monotonic to jump
+    straight past _MAX_CHALLENGE_SECONDS proves the bailout fires on the
+    very first iteration, regardless of how long solving would otherwise
+    take - no need to actually burn 20 real seconds in this test."""
+    high_difficulty_html = _CHALLENGE_HTML.replace("d=1", "d=20")
+    clock = iter([0.0, 100.0])  # started=0.0, first in-loop check already reads 100.0s elapsed
+
+    with (
+        patch("scraper._session.get", return_value=_mock_response(high_difficulty_html)),
+        patch("scraper.time.monotonic", side_effect=lambda: next(clock)),
+    ):
+        with pytest.raises(ScraperError):
+            fetch_price("AAPL")
+
+
 def test_fetch_price_raises_if_verify_post_fails():
     with (
         patch("scraper._session.get", return_value=_mock_response(_CHALLENGE_HTML)),

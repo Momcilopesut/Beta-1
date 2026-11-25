@@ -23,10 +23,21 @@ come back empty, that's surfaced as a plain empty list, not a crash.
 import csv
 import hashlib
 import io
+import logging
 import re
+import time
 
 import feedparser
 import requests
+
+logger = logging.getLogger(__name__)
+
+# A hard wall-clock cap on the proof-of-work loop below - without this,
+# an unexpectedly high difficulty (Stooq could raise it at any time,
+# e.g. in response to a client it's seen hit this endpoint a lot) would
+# hang this call, and the single-threaded Flask dev server behind it,
+# indefinitely instead of failing with a clear error.
+_MAX_CHALLENGE_SECONDS = 20.0
 
 _BROWSER_HEADERS = {
     "User-Agent": (
@@ -58,18 +69,32 @@ def _solve_stooq_challenge(challenge_html: str) -> bool:
     """Finds n such that sha256(challenge + n) has `difficulty` leading
     hex-zero characters, then POSTs {c: challenge, n: n} to /__verify -
     exactly what the challenge page's own inline <script> does, computed
-    here instead. Returns True if a challenge was found and accepted."""
+    here instead. Returns True if a challenge was found, solved within
+    _MAX_CHALLENGE_SECONDS, and accepted; False otherwise (including a
+    difficulty too high to solve in time) - never hangs indefinitely."""
     challenge_match = _CHALLENGE_PATTERN.search(challenge_html)
     difficulty_match = _DIFFICULTY_PATTERN.search(challenge_html)
     if not challenge_match or not difficulty_match:
         return False
 
     challenge = challenge_match.group(1)
-    target_prefix = "0" * int(difficulty_match.group(1))
+    difficulty = int(difficulty_match.group(1))
+    target_prefix = "0" * difficulty
+    logger.info("Solving Stooq's proof-of-work challenge (difficulty=%d)…", difficulty)
 
+    started = time.monotonic()
     n = 0
     while not hashlib.sha256(f"{challenge}{n}".encode()).hexdigest().startswith(target_prefix):
+        if time.monotonic() - started > _MAX_CHALLENGE_SECONDS:
+            logger.warning(
+                "Gave up solving Stooq's challenge after %.1fs (%d attempts, difficulty=%d)",
+                _MAX_CHALLENGE_SECONDS,
+                n,
+                difficulty,
+            )
+            return False
         n += 1
+    logger.info("Solved Stooq's challenge in %.1fs (%d attempts)", time.monotonic() - started, n)
 
     try:
         resp = _session.post("https://stooq.com/__verify", data={"c": challenge, "n": str(n)}, timeout=10)

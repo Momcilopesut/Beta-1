@@ -77,3 +77,14 @@ a wall - replicate the algorithm server-side instead of reaching for a browser.
 Save the heavier tools for when the page genuinely requires rendering (real
 CAPTCHAs, or a check that depends on browser-only APIs/behavior a script can't
 replicate).
+
+**Follow-up incident, same feature:** the first version of
+`_solve_stooq_challenge` had no upper bound on its brute-force loop - a fixed
+difficulty was assumed. On a real run the loop hung with no error and no log
+output, blocking the single-threaded Flask dev server from answering *any*
+request (including an unrelated `curl` to `/api/lookup` made in a separate
+terminal) until manually killed. Any CPU-bound "solve a puzzle" loop like this
+one needs a wall-clock cap (`_MAX_CHALLENGE_SECONDS`, currently 20s) that gives
+up and raises a normal, catchable error instead of trusting the difficulty will
+always be small - the source serving the puzzle can raise its own difficulty at
+any time, for any reason, with no warning.
