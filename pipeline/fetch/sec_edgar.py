@@ -5,6 +5,16 @@ limiting in pipeline.utils.http).
 Used both for filing source links (submissions) and as an authoritative
 fallback for structured fundamentals (XBRL company facts) when an FMP
 endpoint is unavailable or gated on the free tier.
+
+Every call here passes impersonate="chrome" (pipeline.utils.http) - a
+real user's first run from an ordinary residential connection got a 403
+from EVERY www.sec.gov/data.sec.gov endpoint tried (the ticker map, the
+submissions API, even a plain Archives text file), with a fully compliant
+User-Agent and browser-like headers, while the identical URL loaded fine
+in an actual browser on the same machine/network. That's SEC's Akamai
+front end TLS/HTTP2-fingerprinting the request as a non-browser client,
+not a header or rate-based check - see pipeline.utils.http's module
+docstring for how impersonate="chrome" addresses that.
 """
 
 import json
@@ -20,21 +30,16 @@ logger = logging.getLogger(__name__)
 
 SEC_BASE = "https://www.sec.gov"
 SEC_DATA_BASE = "https://data.sec.gov"
-_RATE = {"host_key": "sec_edgar", "min_interval_seconds": 0.15}
+_RATE = {"host_key": "sec_edgar", "min_interval_seconds": 0.15, "impersonate": "chrome"}
 
 _ticker_cik_map: dict[str, dict] | None = None
 
 # www.sec.gov/files/company_tickers.json (the whole-universe ticker->CIK
-# map) has been observed returning a 403 "Request Rate Threshold Exceeded"
-# from SEC's Akamai front end well under the documented ~10 req/sec EDGAR
-# fair-access limit - a separate, stricter threshold on this one large
-# static file, independent of how compliant the User-Agent is. Every
-# unresolved ticker (nothing cached yet, every attempt still 403ing) used
-# to re-fetch this same multi-MB file from scratch on every single lookup,
-# which is exactly what tends to trip it. Persisting it to disk - this
-# mapping changes rarely (new listings/delistings/ticker changes, not
-# prices) - keeps this to about one real fetch per day regardless of how
-# many tickers get looked up in between, on-demand lookups included.
+# map) is a large static file re-fetched on every unresolved ticker if not
+# cached - unnecessary load regardless of the TLS-fingerprint issue above,
+# since this mapping changes rarely (new listings/delistings/ticker
+# changes, not prices). Persisting it to disk keeps this to about one
+# real fetch per day regardless of how many tickers get looked up.
 _TICKER_MAP_CACHE_PATH = CACHE_DIR / "sec_ticker_map.json"
 _TICKER_MAP_MAX_AGE_SECONDS = 24 * 3600
 

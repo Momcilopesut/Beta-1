@@ -181,19 +181,24 @@ you pass it.
   10-K and a foreign private issuer's 20-F as "annual report" forms (e.g.
   GlobalFoundries, which never files a 10-K at all) - a lookup for a ticker that only
   has 20-Fs would otherwise synthesize empty statement rows and cascade to a
-  near-blank Key Metrics Reference on its page. Resolving a ticker to its SEC CIK
+  near-blank Key Metrics Reference on its page.
+
+  **Every request to `www.sec.gov`/`data.sec.gov` goes through `curl_cffi`
+  (`impersonate="chrome"`), not plain `requests`.** A real user's machine got a 403
+  "Request Rate Threshold Exceeded" from SEC's Akamai front end on every endpoint
+  tried - well under the ~10 req/sec limit above, with a fully compliant
+  User-Agent and browser-like headers - while the identical URL loaded fine in an
+  actual browser on the same machine. That's TLS/HTTP2 fingerprinting (Akamai
+  recognizing a real browser's TLS handshake vs. `requests`/curl's own
+  distinguishable one), not a rate or header problem, so a compliant
+  `SEC_EDGAR_USER_AGENT` alone won't fix a 403 here - `curl_cffi` impersonating an
+  actual browser's handshake does. Separately, resolving a ticker to its SEC CIK
   (`cik_for_ticker`) reads a whole-universe mapping file,
-  `www.sec.gov/files/company_tickers.json`, that's been observed returning 403
-  "Request Rate Threshold Exceeded" well under the ~10 req/sec limit above - a
-  separate, stricter block on this one large static file specifically, seen in
-  practice from an ordinary home connection. It's cached to disk
-  (`data/.cache/sec_ticker_map.json`, refreshed once a day) rather than re-fetched on
-  every lookup, both because re-fetching it per-lookup is what tends to trip that
-  block and because the mapping itself changes rarely; a live fetch that fails still
-  falls back to a stale cached copy rather than failing every ticker lookup outright.
-  If you hit this 403 on a totally fresh checkout (no cache yet to fall back to),
-  wait a few minutes before retrying rather than searching repeatedly - each attempt
-  while blocked is one more request toward whatever reset this threshold.
+  `www.sec.gov/files/company_tickers.json`, that's cached to disk
+  (`data/.cache/sec_ticker_map.json`, refreshed once a day) rather than re-fetched
+  on every lookup - this mapping changes rarely, so there's no freshness reason to
+  re-fetch it that often regardless of the fingerprinting issue; a live fetch that
+  fails still falls back to a stale cached copy rather than failing every lookup.
 - **Stooq** (`pipeline/fetch/stooq.py`) — free price history, no API key. This used to
   be blocked almost entirely when this pipeline ran on GitHub Actions' shared runners
   (95%+ request failure in a real 906-company run - HTTP 404 escalating to connection

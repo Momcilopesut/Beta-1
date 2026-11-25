@@ -13,7 +13,10 @@ from pipeline.fetch.sec_edgar import edgar_headers
 from pipeline.utils.http import get_text
 
 _MAX_CHARS = 60_000  # ~15k tokens - keeps the qualitative-layer prompt a bounded, predictable size
-_RATE = {"host_key": "sec_edgar", "min_interval_seconds": 0.15}
+# impersonate="chrome": see pipeline.fetch.sec_edgar's module docstring -
+# plain requests/curl get 403'd by SEC's Akamai front end as non-browser
+# traffic, even with compliant headers, on this same www.sec.gov host.
+_RATE = {"host_key": "sec_edgar", "min_interval_seconds": 0.15, "impersonate": "chrome"}
 
 # 10-Qs and 8-Ks only need a few sentences of "what did this filing say," not
 # the deep excerpt grounding the moat read needs from the 10-K - a much

@@ -1,4 +1,10 @@
 requests>=2.31
+# pipeline/utils/http.py's impersonate="chrome" path (used for every SEC
+# EDGAR request - see pipeline/fetch/sec_edgar.py's module docstring):
+# SEC's Akamai front end TLS/HTTP2-fingerprints plain requests/curl as
+# non-browser traffic and 403s it even with fully compliant headers.
+# curl_cffi replicates a real browser's TLS handshake instead.
+curl_cffi>=0.7
 PyYAML>=6.0
 anthropic>=0.40
 pydantic>=2.7

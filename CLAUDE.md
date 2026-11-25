@@ -58,31 +58,42 @@ from a home connection instead. Anything in this file referring to
 `api/lookup.py`, a scheduled/cloud run, or FMP as the default path is
 describing history, not the current architecture.
 
-## Addendum (2026-11): www.sec.gov/files/company_tickers.json gets rate-blocked separately from the documented EDGAR limit
+## Addendum (2026-11): SEC's Akamai front end TLS-fingerprints plain requests/curl as non-browser traffic
 
-**Incident:** First real-machine run of `app.py` (a user's own Mac, not CI) hit a
-403 "Request Rate Threshold Exceeded" from SEC's Akamai front end on
-`cik_for_ticker`'s whole-universe ticker map fetch - on the very first on-demand
-lookup, with a compliant User-Agent, nowhere near EDGAR's documented ~10 req/sec
-fair-access limit. This is a separate, stricter Akamai-level threshold specific to
-this one large static file, not fixable by User-Agent compliance or the existing
-per-host rate limiter. Because `_load_ticker_map()` only cached the result
-in-memory (never persisted), every failed lookup re-fetched the same multi-MB file
-from scratch, which is exactly the kind of repeated hit that trips this threshold -
-a self-amplifying loop for anyone running this for real.
+**Incident:** First real-machine run of `app.py` (a user's own Mac, not CI) got a
+403 "Request Rate Threshold Exceeded" from SEC's Akamai front end on *every*
+www.sec.gov/data.sec.gov endpoint tried - the ticker map, the submissions API,
+even a plain Archives text file - with a fully compliant User-Agent and
+browser-like headers (`Accept`, `Accept-Language`, etc. added and still 403'd).
+The same exact URLs loaded fine in an actual browser on the same machine, same
+network, same minute. Diagnosis went through several wrong turns before this:
+first assumed it was the documented ~10 req/sec EDGAR fair-access limit (ruled
+out - way under it); then assumed it was a stricter Akamai threshold specific to
+the one large `company_tickers.json` static file (ruled out - `data.sec.gov`'s
+small per-company submissions API 403'd too); then confirmed definitively with
+`curl_cffi.requests.get(url, impersonate="chrome")` returning 200 on the exact
+URL plain `requests`/curl had just 403'd. That's TLS/HTTP2 fingerprinting:
+Akamai distinguishing a real browser's TLS handshake from `requests`/urllib3's
+(or curl's) own distinguishable one, independent of headers or request volume.
 
-**Fixed** by persisting the ticker map to disk
-(`pipeline/fetch/sec_edgar.py::_TICKER_MAP_CACHE_PATH`,
-`data/.cache/sec_ticker_map.json`), refreshed once every 24h, with a stale-cache
-fallback when a live fetch fails. This mapping changes rarely, so there was no
-real freshness reason to re-fetch it every lookup anyway.
+**Fixed** by adding `impersonate` support to `pipeline/utils/http.py` (routes
+through `curl_cffi` instead of plain `requests` when set) and setting
+`impersonate: "chrome"` on every SEC EDGAR call (`pipeline/fetch/sec_edgar.py`
+and `pipeline/fetch/filing_text.py`'s shared `_RATE` dict). FMP/FRED/Stooq
+haven't shown this problem, so they're untouched - plain `requests`, no
+behavior change. The ticker-map disk-caching fix below is still worth keeping
+(re-fetching a large rarely-changing file on every lookup is wasteful
+regardless), but it was NOT the actual fix for this 403 - don't re-attribute
+this incident to "just a rate/caching problem" the way the first pass at it did.
 
-**Lesson for any other SEC EDGAR endpoint:** don't assume "under 10 req/sec" is
-the only limit in play, especially for a single large static file rather than a
-per-company API call - if something 403s well under that budget, check whether
-it's actually a separate front-end (Akamai) threshold before concluding the
-User-Agent or the per-host rate limiter needs tuning, and prefer caching a
-rarely-changing payload to disk over re-fetching it defensively.
+**Lesson for any future SEC EDGAR (or similar gov/enterprise-WAF-fronted) 403
+that survives a compliant User-Agent and full browser-like headers:** test
+whether a real browser can load the exact same URL from the exact same
+machine/network before assuming it's rate- or header-based. If the browser
+succeeds and `curl`/`requests` don't, it's almost certainly TLS/HTTP2
+fingerprinting (Akamai, Cloudflare, and similar WAFs all do this) - confirm
+with `curl_cffi.requests.get(url, impersonate="chrome")` before building a
+caching/backoff fix that won't actually address the real cause.
 
 ## Known, intentionally-deferred gap (as of 2026-10)
 
