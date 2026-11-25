@@ -19,6 +19,17 @@ real user: plain `requests`/curl 403, curl_cffi with impersonate="chrome"
 200, same machine, same minute. FMP/FRED/Stooq haven't shown this problem,
 so they're left on plain `requests` - impersonate defaults to None (no
 behavior change) everywhere else.
+
+When impersonating, a caller's own `headers` are NOT forwarded - a Chrome
+TLS handshake paired with a non-browser header set (e.g. an identifying
+User-Agent) still got 403'd in practice, so curl_cffi's own
+internally-consistent browser header set is left alone instead. Worth
+being explicit about the tradeoff this implies: SEC's own EDGAR API
+documentation asks automated callers to self-identify via User-Agent;
+fully impersonating a browser goes against that spirit, and is only done
+here because SEC's current front end was observed blocking a compliant,
+self-identified request outright regardless, leaving no way to reach
+this public, free, unauthenticated data over HTTP otherwise.
 """
 
 import logging
@@ -81,9 +92,15 @@ def _get_with_retry(
     for attempt in range(max_retries):
         try:
             if impersonate:
-                response = curl_requests.get(
-                    url, params=params, headers=headers, timeout=timeout, impersonate=impersonate
-                )
+                # Deliberately NOT passing our own `headers` (e.g.
+                # edgar_headers()'s identifying User-Agent) here - curl_cffi's
+                # impersonate presets set a full, internally-consistent
+                # browser header set matched to that TLS fingerprint,
+                # and merging our own User-Agent on top of it was observed
+                # still getting 403'd: a TLS handshake that looks like Chrome
+                # but a header set that doesn't is its own, possibly even
+                # more obvious tell than an honest non-browser signature.
+                response = curl_requests.get(url, params=params, timeout=timeout, impersonate=impersonate)
             else:
                 response = requests.get(url, params=params, headers=headers, timeout=timeout)
             if response.status_code == 429 or response.status_code >= 500:

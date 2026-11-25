@@ -46,6 +46,23 @@ def test_get_json_uses_curl_cffi_when_impersonating():
     assert mock_curl_get.call_args.kwargs["impersonate"] == "chrome"
 
 
+def test_curl_cffi_call_omits_custom_headers_so_the_browser_fingerprint_stays_consistent():
+    """A caller's own headers (e.g. edgar_headers()'s identifying
+    User-Agent) must NOT be forwarded to curl_cffi - merging them on top
+    of an impersonated Chrome TLS handshake produces a fingerprint/header
+    mismatch that was observed still getting 403'd in practice; curl_cffi's
+    own impersonate preset already sets a complete, internally-consistent
+    browser header set on its own."""
+    with patch("pipeline.utils.http.curl_requests.get", return_value=_ok_response({})) as mock_curl_get:
+        get_json(
+            "https://www.sec.gov/files/company_tickers.json",
+            headers={"User-Agent": "Beta1-Watchlist/1.0 (contact via GitHub repo issues)"},
+            impersonate="chrome",
+        )
+
+    assert "headers" not in mock_curl_get.call_args.kwargs
+
+
 def test_get_json_retries_curl_cffi_failures_then_raises_http_error():
     with (
         patch("pipeline.utils.http.curl_requests.get", side_effect=RuntimeError("boom")) as mock_curl_get,
