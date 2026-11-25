@@ -7,6 +7,7 @@ import pytest
 import requests
 
 import db
+import sector_classify
 from sector_classify import SectorFetchError, classify_pending, fetch_sector
 
 
@@ -18,6 +19,30 @@ def temp_db(tmp_path, monkeypatch):
 @pytest.fixture(autouse=True)
 def no_sleep(monkeypatch):
     monkeypatch.setattr("sector_classify.time.sleep", lambda _: None)
+
+
+@pytest.fixture(autouse=True)
+def reset_crumb(monkeypatch):
+    # _crumb is cached at module scope across calls (intentionally, in
+    # real use) - reset it per test so tests don't leak state into each other.
+    monkeypatch.setattr(sector_classify, "_crumb", None)
+
+
+def _crumb_aware_get(profile_response: MagicMock, crumb: str = "testcrumb"):
+    """A fake for _session.get that handles the cookie-seed + getcrumb
+    handshake fetch_sector does before its real quoteSummary request."""
+
+    def fake_get(url, timeout=None, **kwargs):
+        response = MagicMock()
+        response.raise_for_status.return_value = None
+        if "fc.yahoo.com" in url:
+            return response
+        if "getcrumb" in url:
+            response.text = crumb
+            return response
+        return profile_response
+
+    return fake_get
 
 
 def _seed_company(cik: int, ticker: str) -> None:
@@ -44,14 +69,16 @@ def _profile_payload(sector: str | None, industry: str | None) -> dict:
 
 
 def test_fetch_sector_parses_profile():
-    with patch("sector_classify._session.get", return_value=_mock_response(_profile_payload("Technology", "Software"))):
+    profile_response = _mock_response(_profile_payload("Technology", "Software"))
+    with patch("sector_classify._session.get", side_effect=_crumb_aware_get(profile_response)):
         result = fetch_sector("AAPL")
 
     assert result == {"sector": "Technology", "industry": "Software"}
 
 
 def test_fetch_sector_handles_missing_profile():
-    with patch("sector_classify._session.get", return_value=_mock_response({"quoteSummary": {"result": []}})):
+    profile_response = _mock_response({"quoteSummary": {"result": []}})
+    with patch("sector_classify._session.get", side_effect=_crumb_aware_get(profile_response)):
         result = fetch_sector("NOSUCH")
 
     assert result == {"sector": None, "industry": None}
@@ -61,6 +88,31 @@ def test_fetch_sector_wraps_network_errors():
     with patch("sector_classify._session.get", side_effect=requests.ConnectionError("no route")):
         with pytest.raises(SectorFetchError):
             fetch_sector("AAPL")
+
+
+def test_fetch_sector_refreshes_crumb_once_on_401_then_succeeds():
+    profile_response = _mock_response(_profile_payload("Technology", "Software"))
+    unauthorized = MagicMock(status_code=401)
+    calls = {"quote_summary": 0}
+
+    def fake_get(url, timeout=None, **kwargs):
+        if "fc.yahoo.com" in url:
+            ok = MagicMock()
+            ok.raise_for_status.return_value = None
+            return ok
+        if "getcrumb" in url:
+            ok = MagicMock()
+            ok.raise_for_status.return_value = None
+            ok.text = "testcrumb"
+            return ok
+        calls["quote_summary"] += 1
+        return unauthorized if calls["quote_summary"] == 1 else profile_response
+
+    with patch("sector_classify._session.get", side_effect=fake_get):
+        result = fetch_sector("AAPL")
+
+    assert result == {"sector": "Technology", "industry": "Software"}
+    assert calls["quote_summary"] == 2
 
 
 def test_classify_pending_stores_results_and_marks_done():

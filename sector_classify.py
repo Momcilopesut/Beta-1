@@ -40,9 +40,38 @@ _BROWSER_HEADERS = {
 _session = requests.Session()
 _session.headers.update(_BROWSER_HEADERS)
 
+# Unlike scraper.py's v8/finance/chart (no auth needed), Yahoo's
+# quoteSummary endpoint requires a "crumb" token tied to a session cookie -
+# a real requirement for every caller (Yahoo's own site does the same
+# handshake), not anti-bot blocking, confirmed by the 401 on a plain
+# request. Seed cookies from fc.yahoo.com, then exchange them for a crumb;
+# cached module-wide since it stays valid across many calls, refreshed on
+# demand if a request ever 401s with it.
+_crumb: str | None = None
+
 
 class SectorFetchError(Exception):
     pass
+
+
+def _refresh_crumb() -> str:
+    global _crumb
+    _session.get("https://fc.yahoo.com", timeout=10)
+    resp = _session.get("https://query1.finance.yahoo.com/v1/test/getcrumb", timeout=10)
+    resp.raise_for_status()
+    crumb = resp.text.strip()
+    if not crumb:
+        raise SectorFetchError("Yahoo returned an empty crumb")
+    _crumb = crumb
+    return crumb
+
+
+def _request_quote_summary(ticker: str, crumb: str) -> requests.Response:
+    return _session.get(
+        f"https://query1.finance.yahoo.com/v10/finance/quoteSummary/{ticker}",
+        params={"modules": "assetProfile", "crumb": crumb},
+        timeout=10,
+    )
 
 
 def fetch_sector(ticker: str) -> dict:
@@ -50,12 +79,15 @@ def fetch_sector(ticker: str) -> dict:
     Finance's quoteSummary endpoint for one ticker. A ticker Yahoo has no
     profile for (delisted, wrong symbol, etc.) comes back as both None,
     same degrade-gracefully pattern as scraper.py's fetch_price."""
+    global _crumb
     try:
-        resp = _session.get(
-            f"https://query1.finance.yahoo.com/v10/finance/quoteSummary/{ticker}",
-            params={"modules": "assetProfile"},
-            timeout=10,
-        )
+        crumb = _crumb or _refresh_crumb()
+        resp = _request_quote_summary(ticker, crumb)
+        if resp.status_code == 401:
+            # Crumb/cookie expired mid-run - refresh once and retry this
+            # one ticker before giving up on it.
+            crumb = _refresh_crumb()
+            resp = _request_quote_summary(ticker, crumb)
         resp.raise_for_status()
         payload = resp.json()
     except (requests.RequestException, ValueError) as exc:
