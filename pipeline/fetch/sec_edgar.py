@@ -7,16 +7,36 @@ fallback for structured fundamentals (XBRL company facts) when an FMP
 endpoint is unavailable or gated on the free tier.
 """
 
+import json
+import logging
 import os
+import time
 from typing import Any
 
 from pipeline.utils.http import get_json
+from pipeline.utils.paths import CACHE_DIR
+
+logger = logging.getLogger(__name__)
 
 SEC_BASE = "https://www.sec.gov"
 SEC_DATA_BASE = "https://data.sec.gov"
 _RATE = {"host_key": "sec_edgar", "min_interval_seconds": 0.15}
 
 _ticker_cik_map: dict[str, dict] | None = None
+
+# www.sec.gov/files/company_tickers.json (the whole-universe ticker->CIK
+# map) has been observed returning a 403 "Request Rate Threshold Exceeded"
+# from SEC's Akamai front end well under the documented ~10 req/sec EDGAR
+# fair-access limit - a separate, stricter threshold on this one large
+# static file, independent of how compliant the User-Agent is. Every
+# unresolved ticker (nothing cached yet, every attempt still 403ing) used
+# to re-fetch this same multi-MB file from scratch on every single lookup,
+# which is exactly what tends to trip it. Persisting it to disk - this
+# mapping changes rarely (new listings/delistings/ticker changes, not
+# prices) - keeps this to about one real fetch per day regardless of how
+# many tickers get looked up in between, on-demand lookups included.
+_TICKER_MAP_CACHE_PATH = CACHE_DIR / "sec_ticker_map.json"
+_TICKER_MAP_MAX_AGE_SECONDS = 24 * 3600
 
 
 def edgar_headers() -> dict:
@@ -27,11 +47,51 @@ def edgar_headers() -> dict:
     return {"User-Agent": ua}
 
 
+def _read_ticker_map_cache(max_age_seconds: float | None) -> dict[str, dict] | None:
+    """max_age_seconds=None accepts a cached copy of any age - used as a
+    last resort when a live fetch just failed, since a stale mapping is
+    still far better than none at all for resolving a ticker."""
+    try:
+        with open(_TICKER_MAP_CACHE_PATH, "r", encoding="utf-8") as f:
+            payload = json.load(f)
+    except (OSError, ValueError):
+        return None
+    if max_age_seconds is not None and time.time() - payload.get("fetched_at", 0) > max_age_seconds:
+        return None
+    return payload.get("map")
+
+
+def _write_ticker_map_cache(ticker_map: dict[str, dict]) -> None:
+    try:
+        _TICKER_MAP_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with open(_TICKER_MAP_CACHE_PATH, "w", encoding="utf-8") as f:
+            json.dump({"fetched_at": time.time(), "map": ticker_map}, f)
+    except OSError:
+        pass  # best-effort - a failed write just means the next run re-fetches, not a crash
+
+
 def _load_ticker_map() -> dict[str, dict]:
     global _ticker_cik_map
-    if _ticker_cik_map is None:
+    if _ticker_cik_map is not None:
+        return _ticker_cik_map
+
+    fresh = _read_ticker_map_cache(_TICKER_MAP_MAX_AGE_SECONDS)
+    if fresh is not None:
+        _ticker_cik_map = fresh
+        return _ticker_cik_map
+
+    try:
         raw = get_json(f"{SEC_BASE}/files/company_tickers.json", headers=edgar_headers(), **_RATE)
-        _ticker_cik_map = {row["ticker"].upper(): row for row in raw.values()}
+    except Exception:
+        stale = _read_ticker_map_cache(max_age_seconds=None)
+        if stale is not None:
+            logger.warning("Live ticker map fetch failed; using a stale cached copy instead")
+            _ticker_cik_map = stale
+            return _ticker_cik_map
+        raise
+
+    _ticker_cik_map = {row["ticker"].upper(): row for row in raw.values()}
+    _write_ticker_map_cache(_ticker_cik_map)
     return _ticker_cik_map
 
 

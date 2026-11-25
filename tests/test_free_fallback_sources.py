@@ -2,7 +2,11 @@
 Stooq price history, and the end-to-end scoring result when FMP is
 completely unavailable (the scenario this chain exists for)."""
 
+import json
+import time
 from unittest.mock import patch
+
+import pytest
 
 from pipeline.fetch import sec_edgar, stooq
 from pipeline.scoring.fundamentals import build_metrics
@@ -135,6 +139,81 @@ def test_cik_for_ticker_falls_back_to_hyphen_for_dot_tickers():
         assert sec_edgar.cik_for_ticker("BRK.B") == "0001067983"
         assert sec_edgar.cik_for_ticker("AAPL") == "0000320193"
         assert sec_edgar.cik_for_ticker("NOSUCHTICKER") is None
+
+
+# --- _load_ticker_map's on-disk persistence (pipeline.fetch.sec_edgar) ---
+# In practice, www.sec.gov/files/company_tickers.json has been seen
+# returning 403 "Request Rate Threshold Exceeded" well under EDGAR's
+# documented ~10 req/sec fair-access limit - a separate, stricter
+# threshold on this one large static file. Re-fetching it from scratch on
+# every unresolved ticker lookup (nothing cached yet, every attempt still
+# 403ing) is exactly what tends to trip it, so it's persisted to disk
+# instead of just the in-memory module-level cache.
+
+
+@pytest.fixture
+def _ticker_map_cache(tmp_path, monkeypatch):
+    """Points the module's cache file at a throwaway path and resets its
+    in-memory singleton before and after each test, so these tests can't
+    leak into each other or into a real ~/.../data/.cache/ file."""
+    cache_path = tmp_path / "sec_ticker_map.json"
+    monkeypatch.setattr(sec_edgar, "_TICKER_MAP_CACHE_PATH", cache_path)
+    monkeypatch.setattr(sec_edgar, "_ticker_cik_map", None)
+    yield cache_path
+    monkeypatch.setattr(sec_edgar, "_ticker_cik_map", None)
+
+
+def test_load_ticker_map_fetches_and_persists_to_disk(_ticker_map_cache):
+    raw = {"0": {"ticker": "AAPL", "cik_str": 320193}}
+    with patch("pipeline.fetch.sec_edgar.get_json", return_value=raw) as mock_get_json:
+        result = sec_edgar._load_ticker_map()
+
+    assert result == {"AAPL": {"ticker": "AAPL", "cik_str": 320193}}
+    mock_get_json.assert_called_once()
+    assert _ticker_map_cache.exists()
+    persisted = json.loads(_ticker_map_cache.read_text())
+    assert persisted["map"] == result
+
+
+def test_load_ticker_map_uses_fresh_disk_cache_without_refetching(_ticker_map_cache):
+    cached_map = {"AAPL": {"ticker": "AAPL", "cik_str": 320193}}
+    _ticker_map_cache.write_text(json.dumps({"fetched_at": time.time(), "map": cached_map}))
+
+    with patch("pipeline.fetch.sec_edgar.get_json") as mock_get_json:
+        result = sec_edgar._load_ticker_map()
+
+    assert result == cached_map
+    mock_get_json.assert_not_called()
+
+
+def test_load_ticker_map_ignores_stale_disk_cache_and_refetches(_ticker_map_cache):
+    stale_map = {"OLD": {"ticker": "OLD", "cik_str": 1}}
+    two_days_ago = time.time() - 2 * 24 * 3600
+    _ticker_map_cache.write_text(json.dumps({"fetched_at": two_days_ago, "map": stale_map}))
+
+    fresh_raw = {"0": {"ticker": "NEW", "cik_str": 2}}
+    with patch("pipeline.fetch.sec_edgar.get_json", return_value=fresh_raw) as mock_get_json:
+        result = sec_edgar._load_ticker_map()
+
+    mock_get_json.assert_called_once()
+    assert result == {"NEW": {"ticker": "NEW", "cik_str": 2}}
+
+
+def test_load_ticker_map_falls_back_to_stale_cache_on_fetch_failure(_ticker_map_cache):
+    stale_map = {"AAPL": {"ticker": "AAPL", "cik_str": 320193}}
+    two_days_ago = time.time() - 2 * 24 * 3600
+    _ticker_map_cache.write_text(json.dumps({"fetched_at": two_days_ago, "map": stale_map}))
+
+    with patch("pipeline.fetch.sec_edgar.get_json", side_effect=HttpError("403 Request Rate Threshold Exceeded")):
+        result = sec_edgar._load_ticker_map()
+
+    assert result == stale_map
+
+
+def test_load_ticker_map_raises_when_fetch_fails_and_no_cache_exists(_ticker_map_cache):
+    with patch("pipeline.fetch.sec_edgar.get_json", side_effect=HttpError("403 Request Rate Threshold Exceeded")):
+        with pytest.raises(HttpError):
+            sec_edgar._load_ticker_map()
 
 
 def test_stooq_parses_csv_into_fmp_compatible_rows():

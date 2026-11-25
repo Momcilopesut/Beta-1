@@ -58,6 +58,32 @@ from a home connection instead. Anything in this file referring to
 `api/lookup.py`, a scheduled/cloud run, or FMP as the default path is
 describing history, not the current architecture.
 
+## Addendum (2026-11): www.sec.gov/files/company_tickers.json gets rate-blocked separately from the documented EDGAR limit
+
+**Incident:** First real-machine run of `app.py` (a user's own Mac, not CI) hit a
+403 "Request Rate Threshold Exceeded" from SEC's Akamai front end on
+`cik_for_ticker`'s whole-universe ticker map fetch - on the very first on-demand
+lookup, with a compliant User-Agent, nowhere near EDGAR's documented ~10 req/sec
+fair-access limit. This is a separate, stricter Akamai-level threshold specific to
+this one large static file, not fixable by User-Agent compliance or the existing
+per-host rate limiter. Because `_load_ticker_map()` only cached the result
+in-memory (never persisted), every failed lookup re-fetched the same multi-MB file
+from scratch, which is exactly the kind of repeated hit that trips this threshold -
+a self-amplifying loop for anyone running this for real.
+
+**Fixed** by persisting the ticker map to disk
+(`pipeline/fetch/sec_edgar.py::_TICKER_MAP_CACHE_PATH`,
+`data/.cache/sec_ticker_map.json`), refreshed once every 24h, with a stale-cache
+fallback when a live fetch fails. This mapping changes rarely, so there was no
+real freshness reason to re-fetch it every lookup anyway.
+
+**Lesson for any other SEC EDGAR endpoint:** don't assume "under 10 req/sec" is
+the only limit in play, especially for a single large static file rather than a
+per-company API call - if something 403s well under that budget, check whether
+it's actually a separate front-end (Akamai) threshold before concluding the
+User-Agent or the per-host rate limiter needs tuning, and prefer caching a
+rarely-changing payload to disk over re-fetching it defensively.
+
 ## Known, intentionally-deferred gap (as of 2026-10)
 
 `pipeline/fetch/sec_edgar.py::latest_filings_by_form()`'s default form

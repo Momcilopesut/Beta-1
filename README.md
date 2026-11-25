@@ -181,7 +181,19 @@ you pass it.
   10-K and a foreign private issuer's 20-F as "annual report" forms (e.g.
   GlobalFoundries, which never files a 10-K at all) - a lookup for a ticker that only
   has 20-Fs would otherwise synthesize empty statement rows and cascade to a
-  near-blank Key Metrics Reference on its page.
+  near-blank Key Metrics Reference on its page. Resolving a ticker to its SEC CIK
+  (`cik_for_ticker`) reads a whole-universe mapping file,
+  `www.sec.gov/files/company_tickers.json`, that's been observed returning 403
+  "Request Rate Threshold Exceeded" well under the ~10 req/sec limit above - a
+  separate, stricter block on this one large static file specifically, seen in
+  practice from an ordinary home connection. It's cached to disk
+  (`data/.cache/sec_ticker_map.json`, refreshed once a day) rather than re-fetched on
+  every lookup, both because re-fetching it per-lookup is what tends to trip that
+  block and because the mapping itself changes rarely; a live fetch that fails still
+  falls back to a stale cached copy rather than failing every ticker lookup outright.
+  If you hit this 403 on a totally fresh checkout (no cache yet to fall back to),
+  wait a few minutes before retrying rather than searching repeatedly - each attempt
+  while blocked is one more request toward whatever reset this threshold.
 - **Stooq** (`pipeline/fetch/stooq.py`) — free price history, no API key. This used to
   be blocked almost entirely when this pipeline ran on GitHub Actions' shared runners
   (95%+ request failure in a real 906-company run - HTTP 404 escalating to connection
