@@ -1,0 +1,76 @@
+:root {
+  --fg: #1a1a1a;
+  --bg: #fff;
+  --muted: #666;
+  --border: #ddd;
+  --accent: #2563eb;
+  --up: #16a34a;
+  --down: #dc2626;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e5e5e5;
+    --bg: #111;
+    --muted: #999;
+    --border: #333;
+    --accent: #60a5fa;
+    --up: #4ade80;
+    --down: #f87171;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+header h1 { margin: 0 0 0.25rem; font-size: 1.4rem; }
+.meta { color: var(--muted); font-size: 0.85rem; margin: 0; }
+
+main { max-width: 640px; margin: 0 auto; padding: 1.5rem 1rem; }
+
+#search-form { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+#ticker-input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 1rem;
+}
+#search-form button {
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+#search-form button:hover { opacity: 0.9; }
+
+.status { color: var(--muted); font-size: 0.85rem; min-height: 1.2em; }
+
+.price { font-size: 1.1rem; }
+.price .up { color: var(--up); }
+.price .down { color: var(--down); }
+
+.summary { background: rgba(37, 99, 235, 0.08); border-radius: 8px; padding: 0.75rem 1rem; }
+.summary.muted { background: none; border: 1px dashed var(--border); color: var(--muted); }
+
+.news-list { list-style: none; margin: 0; padding: 0; }
+.news-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+.news-list li:last-child { border-bottom: none; }
+.news-list a { color: var(--fg); text-decoration: none; }
+.news-list a:hover { color: var(--accent); }
+.news-list .meta { display: block; color: var(--muted); font-size: 0.75rem; margin-top: 0.15rem; }
+.muted { color: var(--muted); }

@@ -1,0 +1,80 @@
+"""Tests for llm_client.py's LM Studio integration - network mocked."""
+
+import json
+from unittest.mock import MagicMock, patch
+
+import pytest
+
+from llm_client import LlmError, summarize
+
+_PRICE = {"close": 150.0, "as_of": "2026-01-02", "change_pct": 2.5}
+_NEWS = [{"title": "Company beats earnings expectations", "link": "https://example.com", "published": "today"}]
+
+
+def _lmstudio_response(body) -> MagicMock:
+    content = body if isinstance(body, str) else json.dumps(body)
+    response = MagicMock()
+    response.raise_for_status.return_value = None
+    response.json.return_value = {"choices": [{"message": {"content": content}}]}
+    return response
+
+
+def test_summarize_parses_clean_json_response():
+    with patch("llm_client.requests.post", return_value=_lmstudio_response({"summary": "Shares rose on strong earnings."})):
+        result = summarize("AAPL", _PRICE, _NEWS)
+
+    assert result == "Shares rose on strong earnings."
+
+
+def test_summarize_strips_markdown_code_fences():
+    fenced = '```json\n{"summary": "Fenced summary."}\n```'
+    with patch("llm_client.requests.post", return_value=_lmstudio_response(fenced)):
+        result = summarize("AAPL", _PRICE, _NEWS)
+
+    assert result == "Fenced summary."
+
+
+def test_summarize_recovers_json_surrounded_by_stray_prose():
+    chatty = 'Sure thing:\n{"summary": "Chatty summary."}\nHope that helps!'
+    with patch("llm_client.requests.post", return_value=_lmstudio_response(chatty)):
+        result = summarize("AAPL", _PRICE, _NEWS)
+
+    assert result == "Chatty summary."
+
+
+def test_summarize_raises_llm_error_on_malformed_json():
+    with patch("llm_client.requests.post", return_value=_lmstudio_response("not json at all")):
+        with pytest.raises(LlmError):
+            summarize("AAPL", _PRICE, _NEWS)
+
+
+def test_summarize_raises_llm_error_when_summary_field_missing():
+    with patch("llm_client.requests.post", return_value=_lmstudio_response({"not_summary": "x"})):
+        with pytest.raises(LlmError):
+            summarize("AAPL", _PRICE, _NEWS)
+
+
+def test_summarize_raises_llm_error_on_connection_failure():
+    with patch("llm_client.requests.post", side_effect=ConnectionError("no server on localhost:1234")):
+        with pytest.raises(LlmError):
+            summarize("AAPL", _PRICE, _NEWS)
+
+
+def test_summarize_includes_ticker_and_headlines_in_prompt():
+    with patch("llm_client.requests.post", return_value=_lmstudio_response({"summary": "x"})) as mock_post:
+        summarize("AAPL", _PRICE, _NEWS)
+
+    sent_messages = mock_post.call_args.kwargs["json"]["messages"]
+    user_content = sent_messages[1]["content"]
+    assert "AAPL" in user_content
+    assert "Company beats earnings expectations" in user_content
+
+
+def test_summarize_handles_missing_price_data_gracefully():
+    no_price = {"close": None, "as_of": None, "change_pct": None}
+    with patch("llm_client.requests.post", return_value=_lmstudio_response({"summary": "No price data."})) as mock_post:
+        result = summarize("ZZZZ", no_price, [])
+
+    assert result == "No price data."
+    user_content = mock_post.call_args.kwargs["json"]["messages"][1]["content"]
+    assert "no price data available" in user_content

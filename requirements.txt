@@ -1,22 +1,7 @@
 requests>=2.31
-# pipeline/utils/http.py's impersonate="chrome" path (used for every SEC
-# EDGAR request - see pipeline/fetch/sec_edgar.py's module docstring):
-# SEC's Akamai front end TLS/HTTP2-fingerprints plain requests/curl as
-# non-browser traffic and 403s it even with fully compliant headers.
-# curl_cffi replicates a real browser's TLS handshake instead.
-curl_cffi>=0.7
-PyYAML>=6.0
-anthropic>=0.40
-pydantic>=2.7
-# HTML->text extraction for 10-K/10-Q filing text (pipeline/fetch/filing_text.py) -
-# only used by the qualitative layer, uses the pure-Python html.parser backend
-# so no compiled lxml/lxml-html-clean dependency is required.
-beautifulsoup4>=4.12
-# flask is only needed by app.py (the local server - on-demand lookup +
-# full-screen refresh, see README's "Running the app") - not by the batch
-# pipeline/CLI itself.
 flask>=3.0
-# app.py loads .env itself (it's the normal way anyone now runs this, not
-# just a dev convenience) - the CLI (pipeline/main.py run directly) still
-# expects real exported env vars, same as always.
 python-dotenv>=1.0
+# RSS/Atom parsing for scraper.py's news fetch - handles the real-world
+# inconsistency of feed XML (namespaces, missing fields, encodings) far
+# more robustly than hand-rolled XML parsing would.
+feedparser>=6.0
