@@ -1,6 +1,5 @@
 """Tests for scraper.py - pure parsing logic, network calls mocked."""
 
-import hashlib
 from unittest.mock import MagicMock, patch
 
 import pytest
@@ -8,34 +7,25 @@ import requests
 
 from scraper import ScraperError, fetch_news, fetch_price
 
-_SAMPLE_CSV = "Date,Open,High,Low,Close,Volume\n2026-01-01,100,101,99,100,1000\n2026-01-02,100,106,99,105,1200\n"
 
-# A low difficulty (d=1) so the test's own proof-of-work loop finishes
-# instantly - the real page uses a higher one, but the algorithm being
-# verified is identical either way.
-_CHALLENGE_HTML = (
-    '<!DOCTYPE html><html><body><noscript>enable JS</noscript><script>'
-    '(async()=>{const c="test-challenge-value",d=1,t="0".repeat(d),e=new TextEncoder;'
-    "let n=0;while(1){const h=await crypto.subtle.digest(\"SHA-256\",e.encode(c+n))"
-    ",x=Array.from(new Uint8Array(h)).map(b=>b.toString(16).padStart(2,\"0\")).join(\"\");"
-    'if(x.startsWith(t))break;n++}const r=await fetch("/__verify",{method:"POST",'
-    'headers:{"Content-Type":"application/x-www-form-urlencoded"},'
-    'body:"c="+encodeURIComponent(c)+"&n="+n,credentials:"same-origin"});'
-    "if(r.ok)location.reload()})();"
-    "</script></body></html>"
-)
-
-
-def _mock_response(text: str, ok: bool = True) -> MagicMock:
+def _mock_response(json_payload=None, text: str | None = None) -> MagicMock:
     response = MagicMock()
-    response.text = text
-    response.ok = ok
     response.raise_for_status.return_value = None
+    if json_payload is not None:
+        response.json.return_value = json_payload
+    if text is not None:
+        response.text = text
     return response
 
 
+def _chart_payload(timestamps: list[int], closes: list[float | None]) -> dict:
+    return {"chart": {"result": [{"timestamp": timestamps, "indicators": {"quote": [{"close": closes}]}}]}}
+
+
 def test_fetch_price_parses_latest_close_and_change_pct():
-    with patch("scraper._session.get", return_value=_mock_response(_SAMPLE_CSV)):
+    # 2026-01-01 and 2026-01-02 at midnight UTC.
+    payload = _chart_payload([1767225600, 1767312000], [100.0, 105.0])
+    with patch("scraper._session.get", return_value=_mock_response(json_payload=payload)):
         result = fetch_price("AAPL")
 
     assert result["close"] == 105.0
@@ -43,20 +33,40 @@ def test_fetch_price_parses_latest_close_and_change_pct():
     assert result["change_pct"] == pytest.approx(5.0)
 
 
-def test_fetch_price_handles_no_data_response():
-    with patch("scraper._session.get", return_value=_mock_response("No data")):
+def test_fetch_price_skips_null_closes_from_a_still_trading_session():
+    """Yahoo's chart API pads today's close with null until the market
+    actually closes - these must be filtered out, not treated as a real
+    (zero) price or as the latest value."""
+    payload = _chart_payload([1767225600, 1767312000, 1767398400], [100.0, 105.0, None])
+    with patch("scraper._session.get", return_value=_mock_response(json_payload=payload)):
+        result = fetch_price("AAPL")
+
+    assert result["close"] == 105.0
+    assert result["as_of"] == "2026-01-02"
+
+
+def test_fetch_price_single_close_has_no_change_pct():
+    payload = _chart_payload([1767312000], [105.0])
+    with patch("scraper._session.get", return_value=_mock_response(json_payload=payload)):
+        result = fetch_price("AAPL")
+
+    assert result["close"] == 105.0
+    assert result["change_pct"] is None
+
+
+def test_fetch_price_handles_ticker_with_no_data():
+    empty_payload = {"chart": {"result": [{"timestamp": [], "indicators": {"quote": [{"close": []}]}}]}}
+    with patch("scraper._session.get", return_value=_mock_response(json_payload=empty_payload)):
         result = fetch_price("NOSUCHTICKER")
 
     assert result == {"close": None, "as_of": None, "change_pct": None}
 
 
-def test_fetch_price_single_row_has_no_change_pct():
-    single_row = "Date,Open,High,Low,Close,Volume\n2026-01-02,100,106,99,105,1200\n"
-    with patch("scraper._session.get", return_value=_mock_response(single_row)):
+def test_fetch_price_handles_unexpected_response_shape():
+    with patch("scraper._session.get", return_value=_mock_response(json_payload={"chart": {"result": None}})):
         result = fetch_price("AAPL")
 
-    assert result["close"] == 105.0
-    assert result["change_pct"] is None
+    assert result == {"close": None, "as_of": None, "change_pct": None}
 
 
 def test_fetch_price_wraps_network_errors():
@@ -65,73 +75,11 @@ def test_fetch_price_wraps_network_errors():
             fetch_price("AAPL")
 
 
-# --- Stooq's client-side proof-of-work challenge (see scraper.py's module
-# docstring) - a real anti-bot gate observed in practice, fully solvable
-# without a browser since the algorithm is visible in the page itself. ---
-
-
-def test_fetch_price_solves_challenge_then_retries_and_succeeds():
-    responses = [_mock_response(_CHALLENGE_HTML), _mock_response(_SAMPLE_CSV)]
-
-    def fake_get(url, params=None, timeout=None):
-        return responses.pop(0)
-
-    verify_calls = []
-
-    def fake_post(url, data=None, timeout=None):
-        verify_calls.append(data)
-        return _mock_response("", ok=True)
-
-    with patch("scraper._session.get", side_effect=fake_get), patch("scraper._session.post", side_effect=fake_post):
-        result = fetch_price("AAPL")
-
-    assert result["close"] == 105.0
-    assert len(verify_calls) == 1
-    assert verify_calls[0]["c"] == "test-challenge-value"
-    # The posted answer must actually solve the puzzle, not just be any value.
-    n = verify_calls[0]["n"]
-    assert hashlib.sha256(f"test-challenge-value{n}".encode()).hexdigest().startswith("0")
-
-
-def test_fetch_price_raises_if_challenge_persists_after_solving():
-    with (
-        patch("scraper._session.get", return_value=_mock_response(_CHALLENGE_HTML)),
-        patch("scraper._session.post", return_value=_mock_response("", ok=True)),
-    ):
-        with pytest.raises(ScraperError):
-            fetch_price("AAPL")
-
-
-def test_fetch_price_gives_up_solving_challenge_after_time_limit_instead_of_hanging():
-    """A higher difficulty than previously seen (Stooq could raise it at
-    any time) must never hang this call - or the single-threaded Flask
-    dev server behind it - indefinitely. Mocking time.monotonic to jump
-    straight past _MAX_CHALLENGE_SECONDS proves the bailout fires on the
-    very first iteration, regardless of how long solving would otherwise
-    take - no need to actually burn 20 real seconds in this test."""
-    high_difficulty_html = _CHALLENGE_HTML.replace("d=1", "d=20")
-    clock = iter([0.0, 100.0])  # started=0.0, first in-loop check already reads 100.0s elapsed
-
-    with (
-        patch("scraper._session.get", return_value=_mock_response(high_difficulty_html)),
-        patch("scraper.time.monotonic", side_effect=lambda: next(clock)),
-    ):
-        with pytest.raises(ScraperError):
-            fetch_price("AAPL")
-
-
-def test_fetch_price_raises_if_verify_post_fails():
-    with (
-        patch("scraper._session.get", return_value=_mock_response(_CHALLENGE_HTML)),
-        patch("scraper._session.post", return_value=_mock_response("", ok=False)),
-    ):
-        with pytest.raises(ScraperError):
-            fetch_price("AAPL")
-
-
-def test_fetch_price_raises_if_challenge_page_has_no_extractable_puzzle():
-    broken_challenge = '<html><script>crypto.subtle.digest fetch("/__verify")</script></html>'
-    with patch("scraper._session.get", return_value=_mock_response(broken_challenge)):
+def test_fetch_price_wraps_non_json_responses():
+    bad_response = MagicMock()
+    bad_response.raise_for_status.return_value = None
+    bad_response.json.side_effect = ValueError("not JSON")
+    with patch("scraper._session.get", return_value=bad_response):
         with pytest.raises(ScraperError):
             fetch_price("AAPL")
 

@@ -88,3 +88,20 @@ one needs a wall-clock cap (`_MAX_CHALLENGE_SECONDS`, currently 20s) that gives
 up and raises a normal, catchable error instead of trusting the difficulty will
 always be small - the source serving the puzzle can raise its own difficulty at
 any time, for any reason, with no warning.
+
+**Resolution: Stooq was dropped entirely, not fixed further.** Even after
+solving the puzzle correctly, the actual data request started coming back with
+a flat "Access denied" - and critically, the *exact same URL in an actual
+browser, on the same connection, got the same denial*. That's the signal that
+ends the "find a cleverer workaround" loop: once a real browser is denied too,
+there is no client-side fix left to try, scripted or not - continuing to probe
+the same endpoint would have just kept adding failed attempts against
+whatever's blocking it. `scraper.py::fetch_price` now uses Yahoo Finance's
+`v8/finance/chart` JSON endpoint instead (the same one most free stock-data
+tools use); `_solve_stooq_challenge` and the proof-of-work code above no
+longer exist in this codebase - the lessons above are kept as general guidance
+for a *different* future scrape target, not as a description of current code.
+If Yahoo's endpoint ever shows the same "even a real browser gets denied"
+symptom, apply the same test (real browser, same connection, same URL) before
+spending time on a workaround - and if confirmed, switch sources again rather
+than escalating tooling against a site-level block.

@@ -12,14 +12,14 @@ from whatever it's given and can be wrong too.
 ## How it works
 
 ```
-your ticker  →  scraper.py (Stooq price + RSS news)  →  llm_client.py (your local LM Studio model)  →  app.py (Flask)  →  your browser
+your ticker  →  scraper.py (Yahoo Finance chart data + RSS news)  →  llm_client.py (your local LM Studio model)  →  app.py (Flask)  →  your browser
 ```
 
-- **Price** (`scraper.py::fetch_price`) — Stooq's free daily CSV endpoint, no API key.
-  Stooq has been seen gating that endpoint behind a client-side proof-of-work
-  challenge instead of real data; `scraper.py` solves it in plain Python (the
-  algorithm's right there in the page, no browser needed) rather than switching
-  sources - see its module docstring and `CLAUDE.md` for the story.
+- **Price** (`scraper.py::fetch_price`) — Yahoo Finance's free chart JSON endpoint, no
+  API key. Stooq's CSV endpoint was tried first and abandoned after it started
+  denying access even to a real browser on the same connection - see `CLAUDE.md`
+  for that story and why that specific symptom means "switch sources," not "try
+  harder."
 - **News** (`scraper.py::fetch_news`) — Yahoo Finance's per-ticker RSS feed, falling
   back to a Google News RSS search if that one's empty. RSS feeds are built for
   automated readers, which matters: this project's earlier attempt to fetch SEC
