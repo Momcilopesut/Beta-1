@@ -77,6 +77,39 @@ there) rather than a local `.env` - a double-clicked app's working directory isn
 predictable the way running `python app.py` from this folder is, so the packaged app
 always checks that fixed path first.
 
+## Building the market-wide company directory (new, in progress)
+
+This project is growing beyond one-ticker-at-a-time lookups into a local database
+covering the whole market, sector by sector - starting with Technology. This part
+is a set of standalone scripts, separate from the live app above, meant to be run
+once in a while (not on every app launch) and left running in the background since
+there's no rush:
+
+```bash
+cp .env.example .env   # if you haven't already - set SEC_CONTACT_EMAIL in it
+python3 directory.py          # pulls the full NYSE/Nasdaq company list from SEC (fast, one request)
+python3 sector_classify.py --limit 20   # test on a small batch first
+python3 sector_classify.py              # then the rest - thousands of requests, so this takes a while
+python3 list_sector.py Technology       # see what's been tagged so far
+```
+
+- `directory.py` — the company/ticker/CIK universe, from SEC EDGAR's bulk file.
+- `sector_classify.py` — tags every company with its sector/industry (via Yahoo
+  Finance), one at a time. Every sector gets tagged here, not just Technology - this
+  only has to run once, and later sectors are then just a database query
+  (`list_sector.py "Healthcare"`, etc.) instead of a new batch job.
+- Both are safe to stop (Ctrl+C) and re-run - progress is saved per company as it
+  happens, not just at the end.
+- The database lives at `~/.stocklookup/market.db`, outside the repo (it'll grow
+  into real data over time, and a packaged `.app`'s working directory isn't
+  predictable - same reasoning as `~/.stocklookup.env`).
+- SEC requires a real, reachable contact (name + email) in the request header for
+  every call to their servers - that's `SEC_CONTACT_EMAIL` in `.env`/`~/.stocklookup.env`.
+  It's sent to SEC, nowhere else, and is never committed to this repo.
+
+Next steps planned on top of this (not built yet): pulling each company's actual
+10-K/10-Q filings for the past 5 years, and summarizing them with the local LLM.
+
 ## Local development
 
 ```bash
