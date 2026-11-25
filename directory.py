@@ -17,13 +17,8 @@ curl_cffi workaround.
 """
 
 import logging
-from pathlib import Path
 
 import requests
-from dotenv import load_dotenv
-
-load_dotenv(Path.home() / ".stocklookup.env")
-load_dotenv()
 
 import db
 import sec_client

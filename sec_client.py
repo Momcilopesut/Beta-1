@@ -5,8 +5,13 @@ a real, reachable contact in the User-Agent on every single request.
 """
 
 import os
+from pathlib import Path
 
 import requests
+from dotenv import load_dotenv
+
+load_dotenv(Path.home() / ".stocklookup.env")
+load_dotenv()
 
 
 class SecConfigError(Exception):
