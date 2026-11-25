@@ -91,32 +91,54 @@ def _fake_feed(entries: list[dict]) -> dict:
     return {"entries": entries}
 
 
+def _mock_feed_fetch_response(content: bytes = b"<rss></rss>") -> MagicMock:
+    response = MagicMock()
+    response.raise_for_status.return_value = None
+    response.content = content
+    return response
+
+
 def test_fetch_news_uses_yahoo_feed_when_it_has_entries():
     yahoo_entries = [{"title": "Yahoo headline", "link": "https://example.com/1", "published": "today"}]
-    with patch("scraper.feedparser.parse", return_value=_fake_feed(yahoo_entries)) as mock_parse:
+    with (
+        patch("scraper._session.get", return_value=_mock_feed_fetch_response()) as mock_get,
+        patch("scraper.feedparser.parse", return_value=_fake_feed(yahoo_entries)),
+    ):
         result = fetch_news("AAPL")
 
     assert result == [{"title": "Yahoo headline", "link": "https://example.com/1", "published": "today", "source": None}]
-    mock_parse.assert_called_once()
-    assert "feeds.finance.yahoo.com" in mock_parse.call_args[0][0]
+    mock_get.assert_called_once()
+    assert "feeds.finance.yahoo.com" in mock_get.call_args[0][0]
 
 
 def test_fetch_news_falls_back_to_google_when_yahoo_is_empty():
     google_entries = [{"title": "Google headline", "link": "https://example.com/2", "published": "today"}]
 
-    def fake_parse(url, agent=None):
-        if "feeds.finance.yahoo.com" in url:
-            return _fake_feed([])
-        return _fake_feed(google_entries)
+    def fake_get(url, timeout=None):
+        content = b"yahoo-body" if "feeds.finance.yahoo.com" in url else b"google-body"
+        return _mock_feed_fetch_response(content)
 
-    with patch("scraper.feedparser.parse", side_effect=fake_parse):
+    def fake_parse(content):
+        return _fake_feed([]) if content == b"yahoo-body" else _fake_feed(google_entries)
+
+    with patch("scraper._session.get", side_effect=fake_get), patch("scraper.feedparser.parse", side_effect=fake_parse):
         result = fetch_news("AAPL")
 
     assert result[0]["title"] == "Google headline"
 
 
-def test_fetch_news_returns_empty_list_when_every_source_fails():
-    with patch("scraper.feedparser.parse", side_effect=RuntimeError("feed server down")):
+def test_fetch_news_returns_empty_list_when_fetch_fails_for_every_source():
+    with patch("scraper._session.get", side_effect=requests.ConnectionError("no route")):
+        result = fetch_news("AAPL")
+
+    assert result == []
+
+
+def test_fetch_news_returns_empty_list_when_parsing_finds_nothing():
+    with (
+        patch("scraper._session.get", return_value=_mock_feed_fetch_response()),
+        patch("scraper.feedparser.parse", return_value=_fake_feed([])),
+    ):
         result = fetch_news("AAPL")
 
     assert result == []
@@ -124,7 +146,10 @@ def test_fetch_news_returns_empty_list_when_every_source_fails():
 
 def test_fetch_news_respects_limit():
     many_entries = [{"title": f"Headline {i}", "link": "https://example.com", "published": None} for i in range(20)]
-    with patch("scraper.feedparser.parse", return_value=_fake_feed(many_entries)):
+    with (
+        patch("scraper._session.get", return_value=_mock_feed_fetch_response()),
+        patch("scraper.feedparser.parse", return_value=_fake_feed(many_entries)),
+    ):
         result = fetch_news("AAPL", limit=3)
 
     assert len(result) == 3

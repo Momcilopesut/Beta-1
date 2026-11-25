@@ -14,9 +14,14 @@ browser" problem the way SEC EDGAR's was.
 
 News: Yahoo Finance's per-ticker RSS feed, falling back to a Google News
 RSS search if that's empty or unavailable. RSS is explicitly built for
-automated readers, so it hasn't shown either of the above problems.
-Neither feed is guaranteed to stay at this exact URL forever; if both
-come back empty, that's surfaced as a plain empty list, not a crash.
+automated readers, so it hasn't shown either of the above anti-bot
+problems - the one real issue hit here was a local one: feedparser
+fetching a feed URL itself goes through Python's stdlib urllib, which
+on a real machine failed SSL certificate verification even though
+`requests` (used for price/LLM calls) worked fine - see _parse_feed()
+for why. Neither feed is guaranteed to stay at this exact URL forever;
+if both come back empty, that's surfaced as a plain empty list, not a
+crash.
 """
 
 import logging
@@ -80,27 +85,34 @@ def fetch_price(ticker: str) -> dict:
 
 
 def _parse_feed(url: str, limit: int) -> list[dict]:
+    # feedparser can fetch a URL itself, but that path goes through
+    # Python's stdlib urllib, with its own (separately configured) SSL
+    # context - on a real machine that came back SSL_CERTIFICATE_VERIFY_
+    # FAILED ("unable to get local issuer certificate") even though
+    # `requests` (used for price/LLM calls) worked fine, since `requests`
+    # bundles its own CA bundle via certifi and doesn't depend on the
+    # system/Python install having one configured. Fetching with
+    # `requests` first and handing feedparser the raw bytes to parse only
+    # - never a URL - sidesteps that split entirely.
     try:
-        parsed = feedparser.parse(url, agent=_BROWSER_HEADERS["User-Agent"])
-    except Exception as exc:  # noqa: BLE001 - a feed fetch/parse failure just means "try the next source"
+        resp = _session.get(url, timeout=10)
+        resp.raise_for_status()
+    except requests.RequestException as exc:
         logger.warning("Feed fetch failed for %s: %s", url, exc)
         return []
 
+    parsed = feedparser.parse(resp.content)
     entries = parsed.get("entries") or []
     if not entries:
-        # feedparser rarely raises even on a real failure (a 404, a feed
-        # that's been taken down, a malformed response) - it just comes
-        # back with no entries and, usually, a non-exception explanation
-        # in bozo_exception/status. Logging that here is the only way to
-        # tell "genuinely no news right now" apart from "this feed is
-        # dead" after the fact - fetch_price's own empty-result logging
-        # had the same gap until a real lookup showed why it mattered.
-        logger.warning(
-            "Feed returned no entries for %s (status=%s, bozo_exception=%s)",
-            url,
-            parsed.get("status"),
-            parsed.get("bozo_exception"),
-        )
+        # feedparser rarely raises even on a real parse failure (a
+        # malformed or unexpected response body) - it just comes back
+        # with no entries and, usually, a non-exception explanation in
+        # bozo_exception. Logging that here is the only way to tell
+        # "genuinely no news right now" apart from "this response wasn't
+        # a usable feed" after the fact - fetch_price's own empty-result
+        # logging had the same gap until a real lookup showed why it
+        # mattered.
+        logger.warning("Feed parsed to no entries for %s (bozo_exception=%s)", url, parsed.get("bozo_exception"))
 
     out = []
     for entry in entries[:limit]:

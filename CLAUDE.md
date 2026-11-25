@@ -105,3 +105,29 @@ If Yahoo's endpoint ever shows the same "even a real browser gets denied"
 symptom, apply the same test (real browser, same connection, same URL) before
 spending time on a workaround - and if confirmed, switch sources again rather
 than escalating tooling against a site-level block.
+
+## Lesson: not every network failure is the remote site's fault - check which HTTP client is actually making the call
+
+**Incident:** `fetch_news()`'s RSS feeds (`scraper.py::_parse_feed`) came back
+empty with no error visible anywhere, on the same real machine where the price
+fetch (via `requests`) worked fine. Adding logging (see the lesson above about
+always logging an unexpected empty result) revealed the real cause:
+`SSL: CERTIFICATE_VERIFY_FAILED: unable to get local issuer certificate`.
+`feedparser.parse(url)` fetches the URL itself through Python's stdlib
+`urllib`, which uses the system/Python installation's own default SSL
+context - on this machine, that context had no usable CA bundle configured.
+`requests` never hit this because it bundles its own CA bundle via `certifi`
+and doesn't depend on the system of being configured correctly at all.
+
+**Fix:** have `requests` (`_session.get`) fetch the feed content, and pass
+`feedparser.parse()` the raw bytes instead of a URL - feedparser then only
+parses, never fetches, so every network call in this app now goes through the
+one HTTP client already known to work reliably on this machine.
+
+**Lesson:** when two pieces of code hit the same kind of resource (both are
+"just fetching a URL") but only one fails, don't assume the site itself is at
+fault - check whether they're actually using the same underlying HTTP client.
+A library that does its own networking under the hood (feedparser, or any
+other pre-`requests`-era or stdlib-based library) can have a completely
+different, separately-configured network/SSL stack from the rest of the app,
+even when it looks like "just another web request" from the outside.
