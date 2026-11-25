@@ -48,8 +48,32 @@ User-Agent and full browser-like headers:**
    else - a caching or backoff fix won't address TLS fingerprinting.
 3. If that confirms it, use `curl_cffi` for that call and let it set its own
    headers - don't merge a custom User-Agent or other identifying header on top of
-   an impersonated handshake.
+   an impersonated handshake. `curl_cffi` is NOT currently a dependency of this
+   app (it was removed in the project reset above along with the code that needed
+   it) - add it to `requirements.txt` if this ever comes up again here.
 4. This app currently uses RSS feeds for news specifically *because* RSS is built
    for automated readers and doesn't hit this problem - prefer a source like that
    over scraping a site's HTML pages when one exists, rather than reaching for
    TLS impersonation as the first move.
+
+## Lesson: a 403/challenge page isn't always unsolvable - check if it's a real, computable puzzle first
+
+**Incident:** Stooq's free daily-CSV price endpoint (`scraper.py::fetch_price`)
+was observed, on a real user's machine, returning an HTML page instead of CSV -
+a client-side proof-of-work challenge: find `n` such that `sha256(challenge + n)`
+has a given number of leading hex-zero characters, then POST `{c: challenge, n}`
+to `/__verify` before the real content is served. Unlike SEC EDGAR's TLS
+fingerprinting above, this is NOT "look like a browser" - it's a literal puzzle
+with a literal answer, fully visible in the page's own inline `<script>`. Fixed by
+replicating that exact algorithm in Python (`scraper.py::_solve_stooq_challenge`)
+and reusing a `requests.Session()` so the verification cookie persists across
+later lookups in the same run, rather than switching to a different price source.
+
+**Lesson:** before concluding a scrape target needs a heavier workaround (TLS
+impersonation, a browser automation tool, or abandoning the source entirely), read
+what the blocking page actually contains. A "please enable JavaScript" page with
+an inline script computing a hash and POSTing the result is a solvable puzzle, not
+a wall - replicate the algorithm server-side instead of reaching for a browser.
+Save the heavier tools for when the page genuinely requires rendering (real
+CAPTCHAs, or a check that depends on browser-only APIs/behavior a script can't
+replicate).
