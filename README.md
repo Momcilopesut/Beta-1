@@ -107,8 +107,30 @@ python3 list_sector.py Technology       # see what's been tagged so far
   every call to their servers - that's `SEC_CONTACT_EMAIL` in `.env`/`~/.stocklookup.env`.
   It's sent to SEC, nowhere else, and is never committed to this repo.
 
-Next steps planned on top of this (not built yet): pulling each company's actual
-10-K/10-Q filings for the past 5 years, and summarizing them with the local LLM.
+## Building the filing index (Phase 2, new, in progress)
+
+Once a sector is classified above, this pulls each of its companies' actual
+10-K/10-Q filings from the past 5 years - metadata only (dates, accession
+numbers, which document to fetch) via SEC EDGAR's per-company submissions API,
+not the filing text itself yet:
+
+```bash
+python3 build_filings.py --limit 5     # test on a small batch first
+python3 build_filings.py               # then the rest of Technology
+python3 list_filings.py AAPL           # see what's been indexed for one ticker
+```
+
+- `filings.py` — fetches and filters one company's filing history to 10-K/10-Q
+  within the last 5 years (`fetch_filings(cik)`).
+- `build_filings.py` — drives that across every company in a sector
+  (`--sector`, default Technology), same resumable pattern as
+  `sector_classify.py`: stop (Ctrl+C) and re-run anytime, progress is saved per
+  company as it happens.
+- `sec_client.py` — the shared SEC-compliant session (`SEC_CONTACT_EMAIL`
+  header) both `directory.py` and `filings.py` use.
+
+Next step planned on top of this (not built yet): fetching and summarizing the
+actual filing documents with the local LLM.
 
 ## Local development
 

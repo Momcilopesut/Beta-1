@@ -7,8 +7,8 @@ import pytest
 import requests
 
 import db
-import directory
 from directory import DirectoryError, build_directory, fetch_sec_companies
+from sec_client import SecConfigError
 
 
 @pytest.fixture(autouse=True)
@@ -50,7 +50,7 @@ def test_fetch_sec_companies_keeps_only_nyse_and_nasdaq():
 
 def test_fetch_sec_companies_requires_contact_email(monkeypatch):
     monkeypatch.delenv("SEC_CONTACT_EMAIL", raising=False)
-    with pytest.raises(DirectoryError):
+    with pytest.raises(SecConfigError):
         fetch_sec_companies()
 
 

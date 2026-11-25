@@ -17,7 +17,6 @@ curl_cffi workaround.
 """
 
 import logging
-import os
 from pathlib import Path
 
 import requests
@@ -27,6 +26,7 @@ load_dotenv(Path.home() / ".stocklookup.env")
 load_dotenv()
 
 import db
+import sec_client
 
 logger = logging.getLogger(__name__)
 
@@ -38,24 +38,11 @@ class DirectoryError(Exception):
     pass
 
 
-def _sec_session() -> requests.Session:
-    contact = os.environ.get("SEC_CONTACT_EMAIL", "").strip()
-    if not contact:
-        raise DirectoryError(
-            "SEC_CONTACT_EMAIL is not set. SEC requires a real, reachable "
-            "contact in the User-Agent for every request to their servers - "
-            'set it in ~/.stocklookup.env, e.g.:\n  SEC_CONTACT_EMAIL="Your Name your@email.com"'
-        )
-    session = requests.Session()
-    session.headers.update({"User-Agent": f"stock-hub-personal-project ({contact})"})
-    return session
-
-
 def fetch_sec_companies() -> list[dict]:
     """Downloads SEC's bulk ticker/exchange file and returns every row
     listed on NYSE or Nasdaq, as {"cik", "ticker", "name", "exchange"}."""
     try:
-        resp = _sec_session().get(_TICKERS_URL, timeout=30)
+        resp = sec_client.get_session().get(_TICKERS_URL, timeout=30)
         resp.raise_for_status()
         payload = resp.json()
     except (requests.RequestException, ValueError) as exc:
