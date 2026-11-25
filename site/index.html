@@ -10,7 +10,11 @@
 <body>
   <header class="page-header">
     <h1>Top Performers by Sector</h1>
-    <nav><a href="macro.html">Macro Overview</a> · <a href="filings-digest.html">Filings Digest</a></nav>
+    <nav>
+      <a href="macro.html">Macro Overview</a> · <a href="filings-digest.html">Filings Digest</a>
+      <button id="refresh-btn" type="button" class="refresh-btn">Refresh Data</button>
+      <span id="refresh-status" class="refresh-status" role="status"></span>
+    </nav>
   </header>
   <main>
     <p class="meta">Each sector's 5 best price performers over 5 timeframes - weekly, monthly, quarterly, annual, and

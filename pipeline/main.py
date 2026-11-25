@@ -7,26 +7,31 @@ still gets the full fundamentals scoring on its own detail page; it just
 doesn't gate or influence which tickers surface on the screen itself.
 
 Usage:
-  python -m pipeline.main                         # full screen over the whole universe
+  python -m pipeline.main                         # full screen, free sources only (SEC EDGAR + Stooq)
   python -m pipeline.main --tickers AAPL,MSFT      # run over a subset
-  python -m pipeline.main --dry-run                # write to data/ locally, no commit (commit is CI's job)
+  python -m pipeline.main --dry-run                # write to data/ locally, no commit
   python -m pipeline.main --skip-ai                 # fetch + score only, no Anthropic spend
+  python -m pipeline.main --use-fmp                 # also use FMP for price/quote/profile (needs FMP_API_KEY)
 
-Two phases (see run_full). Originally designed to gate BOTH the paid
-Anthropic call and FMP's request budget the same way - a small, bounded
-finalist subset, never the whole universe - but Stooq (the free price
-source phase 1 was meant to lean on instead of FMP) turned out to be
-blocked from GitHub Actions runners in practice (see pipeline.fetch.stooq's
-module docstring), so only the AI gating held up at full-universe scale:
+Normally run via app.py (see README's "Running the app" section), which
+calls run_full() directly from your own machine rather than this CLI - the
+flags above exist for manual/scripted runs and for the test suite.
+
+Free by default: --use-fmp is off unless passed, so both phases below run
+entirely on free, no-key sources (SEC EDGAR XBRL for statements, Stooq for
+price history, the watchlist's own configured sector) - this is what makes
+running everything from your own machine, with no paid API, work. Stooq
+specifically was found to be blocked wholesale from GitHub Actions runners
+in a real run (see pipeline.fetch.stooq's module docstring: every request
+failed, 404s escalating to timeouts, regardless of a browser User-Agent) -
+that block is tied to GitHub's shared runner IP ranges, not to Stooq
+itself, so it doesn't apply when this runs from a home connection instead.
+Pass --use-fmp to use FMP for price/quote/profile precision instead (needs
+FMP_API_KEY) - still supported, just no longer the default.
+
+Two phases (see run_full):
   1. Fetch + score every company (fetch_and_score_company + finalize_company
-     with skip_ai=True) over the WHOLE universe - no Anthropic spend.
-     Statements come from SEC EDGAR XBRL, sector from the watchlist's own
-     configured value where FMP's profile doesn't have it (see
-     pipeline.scoring.fundamentals's fallback chain); price/quote/profile
-     currently come from FMP for every company, not just finalists (use_fmp=
-     True in both phases - the free-tier-budget design this pipeline was
-     meant to have for price data is unfinished, tracked as known follow-up
-     work, not solved - see pipeline.fetch.fmp's module docstring). Price
+     with skip_ai=True) over the WHOLE universe - no Anthropic spend. Price
      returns come straight from that history
      (pipeline.scoring.performance.compute_returns), so this alone is enough
      to rank and select each window's top performers per sector
@@ -34,9 +39,11 @@ module docstring), so only the AI gating held up at full-universe scale:
   2. Enrichment (skip_ai=False) of just the selected finalists: Buffett's
      10-K moat read plus short neutral summaries of the latest 10-K/10-Q/
      8-K - the only place Anthropic budget gets spent, and still gated to
-     a small, bounded subset. Every company (finalist or not) still gets
-     its latest 10-K/10-Q/8-K listed with a direct SEC link - it's the AI
-     summary of each filing that's finalists-only.
+     a small, bounded subset (see README's "Local generation with LM
+     Studio" to run this step at zero API spend too). Every company
+     (finalist or not) still gets its latest 10-K/10-Q/8-K listed with a
+     direct SEC link - it's the AI summary of each filing that's
+     finalists-only.
 """
 
 import argparse
@@ -65,6 +72,12 @@ def parse_args(argv=None):
     parser.add_argument(
         "--skip-ai", action="store_true", help="Fetch + score only, skip the Anthropic moat-read call"
     )
+    parser.add_argument(
+        "--use-fmp",
+        action="store_true",
+        help="Also use FMP for price/quote/profile data (needs FMP_API_KEY). "
+        "Off by default - free sources (SEC EDGAR + Stooq) cover the same fields.",
+    )
     return parser.parse_args(argv)
 
 
@@ -85,17 +98,28 @@ def fetch_macro() -> tuple[dict, dict]:
     return macro_data, regime_info
 
 
-def fetch_benchmark() -> list[dict]:
+def fetch_benchmark(use_fmp: bool = False) -> list[dict]:
     """SPY's own daily price history - the "stock market average" the 5-year
     history charts compare every company's own yearly return against
     (pipeline.scoring.history). Fetched once per run/request, not once per
     company, since every company is compared to the same market. Falls back
-    to an empty list (never crashes the run) if the fetch fails - the
-    history builder already treats missing price data as None, not 0."""
+    to an empty list (never crashes the run) if every source fails - the
+    history builder already treats missing price data as None, not 0.
+
+    use_fmp=False (the default) goes straight to Stooq - SPY's own daily
+    close history is exactly what Stooq already serves for every company's
+    price fallback, no reason to need an FMP key just for the benchmark
+    line. use_fmp=True tries FMP first and only falls back to Stooq if that
+    fails, matching fetch_and_score_company's own use_fmp behavior."""
+    if use_fmp:
+        try:
+            return normalize_price_rows(fmp.fetch_benchmark_prices())
+        except Exception:
+            logger.warning("FMP benchmark (SPY) fetch failed, falling back to Stooq")
     try:
-        return normalize_price_rows(fmp.fetch_benchmark_prices())
-    except Exception:
-        logger.warning("Benchmark (SPY) price fetch failed; 5-year history will skip market comparison")
+        return stooq.fetch_daily_prices("SPY")
+    except stooq.StooqError:
+        logger.warning("Benchmark (SPY) price fetch failed from every source; 5-year history will skip market comparison")
         return []
 
 
@@ -174,17 +198,15 @@ def build_filings_digest(entries: list[dict], generated_at: str) -> dict:
 
 
 def fetch_and_score_company(
-    company_cfg: dict, regime_info: dict, benchmark_prices: list[dict] | None = None, use_fmp: bool = True
+    company_cfg: dict, regime_info: dict, benchmark_prices: list[dict] | None = None, use_fmp: bool = False
 ) -> dict:
-    """Fetch + score one company. use_fmp=False skips FMP entirely -
-    fundamentals.py falls back to free sources (SEC EDGAR XBRL, Stooq, the
-    watchlist's own configured sector) for every field FMP would otherwise
-    supply, so this still produces a complete, fully-scored company_doc,
-    just without FMP's live-quote precision or website link for that run.
-    run_full currently passes use_fmp=True in both phases (Stooq's free
-    price history is unreliable from GitHub Actions in practice - see
-    module docstring), but the flag itself still works standalone, e.g. for
-    a from-scratch run against free sources only."""
+    """Fetch + score one company. use_fmp=False (the default) skips FMP
+    entirely - fundamentals.py falls back to free sources (SEC EDGAR XBRL,
+    Stooq, the watchlist's own configured sector) for every field FMP would
+    otherwise supply, so this still produces a complete, fully-scored
+    company_doc, just without FMP's live-quote precision or website link.
+    use_fmp=True opts back into FMP for that extra precision, at the cost
+    of needing FMP_API_KEY and its free-tier request budget."""
     ticker = company_cfg["ticker"]
     logger.info("Processing %s", ticker)
 
@@ -388,7 +410,7 @@ def _process_company(
     benchmark_prices: list[dict],
     skip_ai: bool,
     out_dir,
-    use_fmp: bool = True,
+    use_fmp: bool = False,
     risk_free_rate_pct: float | None = None,
     ce_cfg: dict | None = None,
 ) -> tuple[dict | None, bool, dict, dict | None, dict | None]:
@@ -397,7 +419,8 @@ def _process_company(
     finalist pass (skip_ai=False) - the same work either way, just whether
     finalize_company spends the Anthropic call (see module docstring - only
     the AI call is still gated to the small finalist subset; use_fmp is
-    True in both phases in practice). Returns (summary, qualitative_failed,
+    passed through from run_full's --use-fmp flag, off by default).
+    Returns (summary, qualitative_failed,
     errors, company_doc, capital_efficiency_inputs); summary/company_doc/
     capital_efficiency_inputs
     are None if fetching or finalizing failed outright for this ticker
@@ -442,7 +465,7 @@ def run_full(args) -> int:
 
     generated_at = writer.now_iso()
     sources_status = {
-        "fmp": "ok",
+        "fmp": "ok" if args.use_fmp else "skipped",
         "sec_edgar": "ok",
         "stooq": "ok",
         "fred": "ok",
@@ -458,7 +481,7 @@ def run_full(args) -> int:
         macro_data, regime_info = {}, {"regime": "Neutral/Expansion", "signals": {}}
         sources_status["fred"] = "failed"
 
-    benchmark_prices = fetch_benchmark()
+    benchmark_prices = fetch_benchmark(use_fmp=args.use_fmp)
 
     out_dir = writer.output_dir(args.dry_run)
     macro_doc = build_macro_doc(macro_data, regime_info, generated_at)
@@ -489,11 +512,9 @@ def run_full(args) -> int:
     # page, including its quantitative Moat Signal (needs no AI call, so
     # unlike the old AI moat read this isn't finalist-gated); only the AI
     # filing summaries are missing until (if) it becomes a finalist below.
-    # use_fmp=True here too: Stooq (the free price source this was
-    # designed to lean on for the whole universe) turned out to be blocked
-    # from GitHub Actions runners in practice - see pipeline.fetch.stooq's
-    # module docstring - so FMP is back to covering price for every company,
-    # not just finalists, until a working free alternative exists.
+    # use_fmp follows --use-fmp (off by default - free sources cover every
+    # company at this scale when run from a non-cloud IP, see module
+    # docstring).
     summaries = []
     capital_efficiency_inputs = []
     for company_cfg in companies:
@@ -503,7 +524,7 @@ def run_full(args) -> int:
             benchmark_prices,
             skip_ai=True,
             out_dir=out_dir,
-            use_fmp=True,
+            use_fmp=args.use_fmp,
             risk_free_rate_pct=risk_free_rate_pct,
             ce_cfg=ce_cfg,
         )
@@ -540,7 +561,7 @@ def run_full(args) -> int:
                 benchmark_prices,
                 skip_ai=False,
                 out_dir=out_dir,
-                use_fmp=True,
+                use_fmp=args.use_fmp,
                 risk_free_rate_pct=risk_free_rate_pct,
                 ce_cfg=ce_cfg,
             )

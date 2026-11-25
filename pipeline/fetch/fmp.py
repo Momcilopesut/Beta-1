@@ -1,4 +1,6 @@
-"""Financial Modeling Prep client (API key required).
+"""Financial Modeling Prep client (API key required) - optional, off by
+default (pipeline/main.py's --use-fmp flag; see README's "Data source
+limits and free backup chain").
 
 Deliberately lean: FMP's free tier caps out around 250 requests/day, which
 can't sustain a large tracked universe if every company pulls FMP's full
@@ -9,19 +11,13 @@ everything FMP would otherwise supply, so FMP here is reserved for what
 only it provides: live price/quote and profile (company name/sector/
 website precision, when available).
 
-pipeline.main was originally designed to call this only during phase 2's
-finalist enrichment, leaving Stooq to cover price for the whole screening
-universe for free - see run_full's module docstring. In practice Stooq
-turned out to be blocked from GitHub Actions runners (see
-pipeline.fetch.stooq's module docstring: every request failed on a real
-run, 404s escalating to connection timeouts, regardless of a browser
-User-Agent), so FMP is back to being called for every company, not just
-finalists, until a working free price source is found. That means this
-pipeline currently depends on an active paid/free-trial FMP plan to cover
-its whole tracked universe - the ~250/day free-tier budget this module's
-lean endpoint set was designed for does NOT currently hold at the scale
-this pipeline runs at (500+ companies/week). Tracked as known follow-up
-work, not solved.
+Originally called for every company in both of run_full's phases because
+Stooq, meant to cover price for free instead, turned out to be blocked
+from GitHub Actions' shared runner IPs (see pipeline.fetch.stooq's module
+docstring) - a cloud-specific block, not a Stooq limitation, that doesn't
+apply once this pipeline runs from your own computer instead (see
+README's "Running the app"). --use-fmp now opts back into FMP for its
+extra precision; without it, free sources cover the whole universe.
 
 Each endpoint is fetched independently and failures are captured per-call
 rather than aborting the whole ticker.
@@ -96,10 +92,10 @@ def fetch_company(ticker: str) -> dict:
     The 3 endpoint calls are independent, so they run concurrently rather
     than one-at-a-time - on a degraded account (each failing call retries 3x
     with backoff before giving up) that's the difference between ~10-25s and
-    ~single-call-latency per ticker, which matters for the on-demand lookup
-    endpoint (api/lookup.py) far more than for the batch pipeline, though
-    both benefit. pipeline.utils.http's per-host rate limiting is
-    lock-protected so this stays polite to FMP.
+    ~single-call-latency per ticker, which matters for app.py's on-demand
+    lookup route far more than for the batch pipeline, though both benefit.
+    pipeline.utils.http's per-host rate limiting is lock-protected so this
+    stays polite to FMP.
 
     Returns {<call_name>: <payload or None>, "_errors": {<call_name>: str}}.
     """

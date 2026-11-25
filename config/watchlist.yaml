@@ -1,18 +1,18 @@
 # The screening universe: companies scanned every week by the pipeline
 # (pipeline/main.py's two-phase screen-then-enrich flow - see README's
 # "Weekly Screener" section). Fully user-editable: add/remove tickers here,
-# then re-run the pipeline (locally with --dry-run, or via the "Run
-# workflow" button on weekly-screen.yml). Sector is a display fallback; the
-# pipeline prefers the sector reported by FMP's /profile endpoint when
-# available and only falls back to this value if that call fails.
+# then re-run via "Refresh Data" / `python app.py --refresh-now` (see
+# README's "Running the app" section). Sector is a display fallback; the
+# pipeline prefers the sector reported by FMP's /profile endpoint (only
+# fetched with --use-fmp) when available and only falls back to this value
+# otherwise.
 #
 # Originally an 8-per-sector curated set (still the first block below).
 # Being expanded in staged tranches toward full S&P 1500 coverage (S&P 500 +
 # S&P 400 MidCap + S&P 600 SmallCap) so most searched tickers are already
 # tracked - see README's "Weekly Screener" section. Each tranche is its own
 # commit, only added once the previous one is confirmed to actually
-# complete a real weekly-screen.yml run within GitHub Actions' time/API
-# rate limits. Source for the S&P 500/400/600 constituent lists: GICS
+# complete a real full-universe run. Source for the S&P 500/400/600 constituent lists: GICS
 # sector, mapped to this file's existing Morningstar-style sector names
 # (Consumer Discretionary -> Consumer Cyclical, Consumer Staples -> Consumer
 # Defensive, Health Care -> Healthcare, Financials -> Financial Services,

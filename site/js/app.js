@@ -31,6 +31,7 @@ async function main() {
   // depend on this page's own performance-screen data at all, and a slow
   // or failed fetch shouldn't leave the search box inert in the meantime.
   wireSearch();
+  wireRefreshButton();
   try {
     const [picks, watchlist] = await Promise.all([
       fetchJSON("../data/performance_picks.json"),
@@ -57,6 +58,66 @@ async function main() {
 
 function renderNoPicksYet() {
   return `<p class="status">No sector had a company with enough price history to rank yet. Check back after the pipeline's next run, or search for any ticker above.</p>`;
+}
+
+// "Refresh Data" button: POSTs to app.py's /api/refresh (see README's
+// "Running the app") and polls /api/refresh/status until it finishes, then
+// reloads the page so the new data actually shows. Fails quietly - not a
+// crash - when /api/refresh doesn't exist at all, e.g. the site is being
+// served by scripts/dev_server.sh instead of app.py.
+function wireRefreshButton() {
+  const button = document.getElementById("refresh-btn");
+  const statusEl = document.getElementById("refresh-status");
+  if (!button || !statusEl) return;
+
+  let polling = null;
+
+  function poll() {
+    fetch("/api/refresh/status")
+      .then((res) => res.json())
+      .then((state) => {
+        if (state.status === "running") {
+          statusEl.textContent = "Refreshing… this can take a while.";
+          return;
+        }
+        clearInterval(polling);
+        polling = null;
+        button.disabled = false;
+        if (state.status === "done") {
+          statusEl.textContent = "Done - reloading…";
+          window.location.reload();
+        } else if (state.status === "error") {
+          statusEl.textContent = `Refresh failed: ${state.message || "see the terminal running app.py"}`;
+        } else {
+          statusEl.textContent = "";
+        }
+      })
+      .catch(() => {
+        clearInterval(polling);
+        polling = null;
+        button.disabled = false;
+        statusEl.textContent = "Lost contact with the local server.";
+      });
+  }
+
+  button.addEventListener("click", () => {
+    button.disabled = true;
+    statusEl.textContent = "Starting…";
+    fetch("/api/refresh", { method: "POST" })
+      .then((res) => {
+        if (res.status === 409) {
+          statusEl.textContent = "A refresh is already running.";
+          polling = setInterval(poll, 3000);
+          return;
+        }
+        if (!res.ok) throw new Error(`refresh returned ${res.status}`);
+        polling = setInterval(poll, 3000);
+      })
+      .catch(() => {
+        button.disabled = false;
+        statusEl.textContent = 'Live refresh isn\'t available from this server - run "python app.py" instead.';
+      });
+  });
 }
 
 // Typeahead suggestion box: as you type, a dropdown of up to 8 ranked

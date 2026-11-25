@@ -1,18 +1,20 @@
 # Weekly Stock Screener
 
-This tool's primary purpose is a **weekly screen**: every Friday after the US market
-closes, it scans a curated universe of companies and surfaces each sector's 5 best
-price performers over five timeframes — weekly, monthly, quarterly, annual, and
-5-year. This ranking is pure price return, deliberately independent of any
-fundamentals check. Every company also gets its own full value-investing analysis on
-its own detail page, asking one question three ways: **does this company own more
-than it owes, is it a well-run business, and is the price fair for that?** — a
-scheduled pipeline fetches company
-fundamentals (Financial Modeling Prep + SEC EDGAR) and macroeconomic indicators (FRED)
-and runs every company through a transparent, balance-sheet-first scoring model, basic
-arithmetic, not growth projections or opaque composites, it just doesn't gate or
-influence which tickers surface on the screen itself. The result is published as a
-static site.
+This tool's primary purpose is a **weekly screen**: it scans a curated universe of
+companies and surfaces each sector's 5 best price performers over five timeframes —
+weekly, monthly, quarterly, annual, and 5-year. This ranking is pure price return,
+deliberately independent of any fundamentals check. Every company also gets its own
+full value-investing analysis on its own detail page, asking one question three ways:
+**does this company own more than it owes, is it a well-run business, and is the
+price fair for that?** — a pipeline fetches company fundamentals (free by default:
+SEC EDGAR + Stooq) and macroeconomic indicators (FRED) and runs every company through
+a transparent, balance-sheet-first scoring model, basic arithmetic, not growth
+projections or opaque composites, it just doesn't gate or influence which tickers
+surface on the screen itself.
+
+**Runs entirely on your own computer** (see "Running the app" below) - there's no
+cloud automation, no hosted backend, and no third-party deployment to set up. Start
+it, it serves the site and refreshes its own data, all from your machine.
 
 **This is not financial advice.** Every score is an automated estimate based on
 public data and may contain errors or delays.
@@ -20,15 +22,16 @@ public data and may contain errors or delays.
 ## How it works
 
 ```
-config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → AI-enrich finalists)  →  data/*.json  →  site/ (static, no build step)
+config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → AI-enrich finalists)  →  data/*.json  →  site/ (served by app.py, no build step)
 ```
 
 - **Weekly Screener** (see the dedicated section below): the program's primary purpose.
   Every company in the screening universe gets its price return computed over 5
   timeframes; each sector's top 5 performers per timeframe become the site's homepage.
-- **Data sources**: [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs)
-  (fundamentals, prices), [SEC EDGAR](https://www.sec.gov/edgar/sec-api-documentation)
-  (filings + XBRL fundamentals fallback), [FRED](https://fred.stlouisfed.org/docs/api/fred/)
+- **Data sources**: [SEC EDGAR](https://www.sec.gov/edgar/sec-api-documentation)
+  (filings + XBRL fundamentals) and [Stooq](https://stooq.com) (price history) by
+  default - both free, no API key; [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs)
+  is an optional opt-in (`--use-fmp`) for extra precision; [FRED](https://fred.stlouisfed.org/docs/api/fred/)
   (16 series spanning yields, inflation, the labor market, GDP, and more — see "Macro
   Overview" below).
 - **Assets vs. Liabilities** (see the dedicated section below): the company's actual
@@ -67,13 +70,12 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
   highlighted still jumps straight to a single exact tracked match, or to the ticker as
   typed if it isn't tracked (see "On-demand lookup" below). Every company page also
   links to its own investor-facing corporate site (from FMP's profile data, when
-  available) and lists its latest 10-K/10-Q/8-K with a direct SEC link each.
-- **On-demand lookup** (`api/lookup.py`, optional): searching a ticker outside the
-  screening universe immediately runs a live analysis through the exact same pipeline
-  code, no extra click - the search *is* the request. Backed by a small Python server
-  function on Vercel; this repo ships with a working deployment already wired in as a
-  fallback, so it works from GitHub Pages too with zero setup (see "On-demand lookup
-  deployment" below). The static site works fully without this — it's an opt-in extra.
+  `--use-fmp` is set) and lists its latest 10-K/10-Q/8-K with a direct SEC link each.
+- **On-demand lookup**: searching a ticker outside the screening universe immediately
+  runs a live analysis through the exact same pipeline code, no extra click - the
+  search *is* the request. Served by `app.py`'s own `/api/lookup` route, same-origin,
+  on your own machine (see "Running the app" below) - no separate deployment, no
+  configuration, no cross-origin setup.
 - **Moat Deep-Dives** (see the dedicated section below): a hand-written, one-off
   reverse-engineering + Munger-style inversion analysis for a specific company, done
   on request rather than automatically — separate from, and complementary to, the
@@ -81,31 +83,26 @@ config/watchlist.yaml (screening universe)  →  pipeline (screen → rank → A
 
 ## Weekly Screener
 
-The program's primary purpose: every Friday at 21:30 UTC (`.github/workflows/
-weekly-screen.yml`) — genuinely "after the ~4pm ET close" year-round regardless of
-DST — the pipeline runs a two-phase screen over `config/watchlist.yaml`'s curated
-universe (906 companies as of this writing - the original 88-company core, every S&P
-500 constituent, and every S&P 400 MidCap constituent not already tracked, added in
-two staged tranches so each could be validated against a real run before the next
-landed), ranking purely by price return, not by any fundamentals check. A further
-tranche adding the S&P 600 SmallCap constituents (toward full S&P 1500 coverage) was
-evaluated and deliberately held off for now - the universe already requires an active
-paid/free-trial FMP plan to run reliably (see "Data source limits and free backup
-chain" below), and doubling it again would roughly double that weekly request volume
-and the run's GitHub Actions time before that tradeoff is settled:
+The program's primary purpose: run `python app.py --refresh-now` (or click "Refresh
+Data" on the site, see "Running the app" below) and the pipeline runs a two-phase
+screen over `config/watchlist.yaml`'s curated universe (906 companies as of this
+writing - the original 88-company core, every S&P 500 constituent, and every S&P 400
+MidCap constituent not already tracked, added in two staged tranches so each could be
+validated against a real run before the next landed), ranking purely by price return,
+not by any fundamentals check. A further tranche adding the S&P 600 SmallCap
+constituents (toward full S&P 1500 coverage) is tracked as separate, pending follow-up
+work, independent of the data-source questions this section used to describe:
 
 1. **Cheap screen, whole universe** (`pipeline/main.py::run_full`, phase 1) — every
    company gets fetched and scored (full fundamentals scoring included, for its own
    detail page - including its quantitative Moat Signal, see "Moat Signal" below,
    which needs no AI call so it's available here too), with the AI qualitative
    (10-K filing-summary/moat-classification) layer skipped entirely.
-   Fundamentals lean on SEC EDGAR XBRL where possible; price/quote/profile currently
-   come from FMP for every company in this phase, not just finalists - the free-tier
-   design this pipeline was meant to have here is unfinished (see "Data source limits
-   and free backup chain" below), so a paid or free-trial FMP plan is currently
-   required to run the whole universe reliably. Each company's price return over 5
-   lookback windows (`pipeline/scoring/performance.py::compute_returns`) comes
-   straight from price history already fetched for it - no extra API calls.
+   Fundamentals and price history come from free sources (SEC EDGAR XBRL + Stooq) by
+   default - see "Data source limits and free backup chain" below. Each company's
+   price return over 5 lookback windows
+   (`pipeline/scoring/performance.py::compute_returns`) comes straight from price
+   history already fetched for it - no extra API calls.
 2. **Rank + select** (`pipeline/scoring/performance.py::select_top_performers`) —
    within each sector, companies are ranked by price return, independently for each of
    5 windows: weekly (7 days), monthly (30 days), quarterly (91 days), annual (365
@@ -137,15 +134,18 @@ to test the two-phase flow on a small subset before running the real thing.
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt
-cp .env.example .env   # fill in your API keys
+cp .env.example .env   # fill in whichever keys you actually need - see .env.example's own comments
 ```
 
-Run the pipeline:
+For actually running the app day to day, see "Running the app" below - that's
+`python app.py`. The CLI below is for scripted/manual pipeline runs and is what the
+test suite exercises directly:
 
 ```bash
 python -m pipeline.main --tickers AAPL,MSFT --dry-run   # writes to data/.dry-run/, doesn't touch tracked data/
 python -m pipeline.main --skip-ai                        # cheap screen only, no Anthropic spend, no finalist enrichment
-python -m pipeline.main                                   # full weekly screen over the whole universe, writes data/
+python -m pipeline.main                                   # full weekly screen over the whole universe, writes data/ (free sources only)
+python -m pipeline.main --use-fmp                         # same, but also use FMP for price/quote/profile (needs FMP_API_KEY)
 ```
 
 Run the tests (pure functions + fixtures, no network, no API keys needed):
@@ -154,7 +154,8 @@ Run the tests (pure functions + fixtures, no network, no API keys needed):
 pytest
 ```
 
-Preview the site:
+Preview the site without the backend (static files only - no on-demand lookup, no
+refresh button; use `python app.py` instead for those):
 
 ```bash
 ./scripts/dev_server.sh
@@ -163,23 +164,12 @@ Preview the site:
 
 `data/` currently holds synthetic sample data (see `scripts/generate_sample_data.py`)
 so the site is browsable before you've run the pipeline for real — running
-`python -m pipeline.main` with real API keys overwrites it.
+`python app.py --refresh-now` (or `python -m pipeline.main`) overwrites it.
 
 ## Data source limits and free backup chain
 
-FMP's free tier caps out around 250 requests/day - nowhere near enough to run FMP's
-full statement/ratio set (or even just its price/quote endpoints) against a
-several-hundred-company universe every week. `pipeline/fetch/fmp.py::fetch_company`
-used to also pull ratios, key metrics, and all three financial statements directly
-from FMP; every one of those already has a complete fallback formula computed locally
-from SEC EDGAR's raw statement data (see `pipeline/scoring/fundamentals.py`), so those
-calls were pure request-budget cost with no accuracy benefit and have been dropped -
-FMP is reserved for the one thing only it reliably provides at this pipeline's scale:
-live price/quote and profile data.
-
-**This was designed to be free-tier sustainable, and currently isn't.** The plan was
-free, no-key sources covering the whole tracked universe, with FMP's budget reserved
-for just the small finalist subset phase 2 enriches:
+Free by default, no API key needed for the numbers: `--use-fmp` is opt-in, off unless
+you pass it.
 
 - **SEC EDGAR XBRL** (`pipeline/fetch/sec_edgar.py::xbrl_fundamentals`) — synthesizes
   income statement, balance sheet, and cash flow rows directly from official filings,
@@ -187,35 +177,26 @@ for just the small finalist subset phase 2 enriches:
   assets/liabilities/equity figures, ratios, the value-investing checklists) works
   unchanged regardless of which source populated it. Free, no API key, no documented
   daily cap (just a ~10 req/sec fair-use guideline this pipeline stays well under).
-  This part of the plan works fine - zero failures across a real 906-company run.
-  Recognizes both a domestic filer's 10-K and a foreign private issuer's 20-F as
-  "annual report" forms (e.g. GlobalFoundries, which never files a 10-K at all) - an
-  on-demand lookup for a ticker that only has 20-Fs would otherwise synthesize empty
-  statement rows and cascade to a near-blank Key Metrics Reference on its page.
-- **Stooq** (`pipeline/fetch/stooq.py`) — was meant to be the free price history
-  source covering phase 1's whole scanned universe. **In practice it's blocked from
-  GitHub Actions runners almost entirely** - a real run against 906 companies saw 95%+
-  of requests fail (HTTP 404 escalating to connection timeouts, regardless of a
-  browser User-Agent), leaving the whole weekly screen with no price data and empty
-  performance picks. `pipeline.main.fetch_and_score_company`'s `use_fmp` flag still
-  exists and works (set it `False` to skip FMP and rely on free sources only, e.g. for
-  local testing without a key), but `run_full` currently passes `use_fmp=True` in
-  *both* phases - FMP covers price/quote/profile for the whole universe, not just
-  finalists, because Stooq can't be trusted to.
-
-**What this means in practice:** the weekly screen currently requires an active FMP
-plan (paid or free-trial) with enough daily quota for the whole tracked universe (900+
-requests/week at present) - the free tier alone won't cover it. `data/meta.json`'s
-`sources_status.fmp` reads `"degraded"` when FMP calls fail outright (missing key,
-`402 Payment Required`, etc.), and per-company `_errors` include the real HTTP status
-so an invalid-key problem is distinguishable from a plan-limit problem at a glance;
-`sources_status.stooq` reports the free fallback's own (currently poor) health. Fixing
-this for real needs either a different free price-history provider that isn't blocked
-from GitHub Actions, or a design that spreads FMP's request volume across multiple
-runs per week to stay inside its free-tier budget - tracked as known follow-up work,
-not solved. In the meantime, the on-demand search (see "On-demand lookup" above)
-already uses FMP per-lookup rather than per-universe, so its budget stays naturally
-bounded regardless of this.
+  Zero failures across a real 906-company run. Recognizes both a domestic filer's
+  10-K and a foreign private issuer's 20-F as "annual report" forms (e.g.
+  GlobalFoundries, which never files a 10-K at all) - a lookup for a ticker that only
+  has 20-Fs would otherwise synthesize empty statement rows and cascade to a
+  near-blank Key Metrics Reference on its page.
+- **Stooq** (`pipeline/fetch/stooq.py`) — free price history, no API key. This used to
+  be blocked almost entirely when this pipeline ran on GitHub Actions' shared runners
+  (95%+ request failure in a real 906-company run - HTTP 404 escalating to connection
+  timeouts, regardless of a browser User-Agent) - that block is tied to GitHub's
+  runner IP ranges specifically, not to Stooq itself, so it doesn't apply running this
+  from your own computer instead (see "Running the app" below). If you do see Stooq
+  failures from your own connection, `data/meta.json`'s `sources_status.stooq` and
+  each company's own `_errors.stooq` will say so.
+- **FMP** (`pipeline/fetch/fmp.py`) — optional, `--use-fmp`, needs `FMP_API_KEY`.
+  Used only for the fields above don't fully replace at the free tier: live
+  quote/profile precision and the IR website link. Its free tier caps out around 250
+  requests/day, nowhere near enough for this pipeline's ~900-company universe, so
+  without a paid plan expect `sources_status.fmp` to read `"degraded"` partway
+  through a full-universe `--use-fmp` run - normal, and the free-source fallback
+  covers the gap either way.
 
 ## Assets vs. Liabilities
 
@@ -432,14 +413,13 @@ Setup:
 3. Run the pipeline locally as usual, e.g. `python -m pipeline.main --tickers GFS
    --dry-run`.
 
-**This is local-only and manual.** LM Studio runs on your own machine; the automated
-weekly screen (GitHub Actions) and the Vercel on-demand lookup both run in the
-cloud and have no network path to it, so they always use the Anthropic provider no
-matter what's set here — this is for a run you kick off yourself. A local model has
-no code-verified grounding guarantee either (same caveat as the Anthropic path, see
-`qualitative_schema.py`) and, being smaller, is more likely to drift from the exact
-JSON shape asked for; a malformed response fails that one ticker's qualitative layer
-only (same graceful degradation as an Anthropic error), not the whole run.
+Everything in this app now runs on your own machine already (see "Running the app"
+below), so this is just a choice of which provider handles that one AI call - set it
+once in `.env` and both `app.py` and the `pipeline.main` CLI pick it up. A local model
+has no code-verified grounding guarantee either (same caveat as the Anthropic path,
+see `qualitative_schema.py`) and, being smaller, is more likely to drift from the
+exact JSON shape asked for; a malformed response fails that one ticker's qualitative
+layer only (same graceful degradation as an Anthropic error), not the whole run.
 
 ## Macro Overview
 
@@ -546,106 +526,56 @@ the per-company view already covers the same explanations in context.
   used by the Market Capital Efficiency WACC estimate, plus its ROIC/Expected
   Growth color-band thresholds (see "Macro Overview" above).
 
-## Deployment
+## Running the app
 
-`.github/workflows/weekly-screen.yml` runs the pipeline on a schedule (Fridays at
-21:30 UTC by default — see the cron comment in that file), commits updated
-`data/*.json`, and deploys `site/` + `data/` to GitHub Pages. It can also be triggered
-manually from the Actions tab (`workflow_dispatch`), optionally with a `dry_run` flag
-or a specific `tickers` list (handy for testing the two-phase screen on a small subset
-before running it over the whole universe).
+Everything - serving the site, on-demand ticker lookup, and refreshing the weekly
+screen - runs from one process on your own computer, started with:
 
-One-time setup required in the repo's GitHub settings:
+```bash
+python app.py
+```
 
-1. **Settings → Pages → Source: GitHub Actions.**
-2. **Settings → Secrets and variables → Actions**, add secrets `FMP_API_KEY`,
-   `FRED_API_KEY`, `ANTHROPIC_API_KEY`, and a repo **variable**
-   `SEC_EDGAR_USER_AGENT` (a descriptive contact string SEC EDGAR requires on every
-   request — do not put a personal email in a public repo's variables/logs).
+This opens `http://127.0.0.1:5050/` in your browser automatically (bound to
+localhost only - not your network; there's no login or access control of any kind,
+by design, since nothing here is meant to be reachable from anywhere else). A few
+flags:
 
-Once deployed, the dashboard lives at `<pages-url>/site/index.html` (the Pages root
-redirects there automatically).
+```bash
+python app.py --refresh-now      # run the full screen first (progress prints to this terminal), then serve
+python app.py --no-browser       # don't auto-open a browser tab
+python app.py --port 8080        # use a different port
+python app.py --host 0.0.0.0     # expose it on your network too - only if you actually want that
+```
 
-`.github/workflows/tests.yml` runs `pytest` on every push/PR — no secrets or network
-required.
+Three things app.py does that used to be split across GitHub Actions and a separately
+deployed Vercel function (both retired - see this file's git history if you need the
+old setup):
 
-## On-demand lookup deployment (optional)
+- **Serves the site**: `site/` and `data/` at the same relative layout
+  `scripts/dev_server.sh` always used, so every `../data/...` fetch in `site/js/*.js`
+  resolves the same way it always has.
+- **On-demand lookup** (`/api/lookup`, same-origin): searching a ticker outside the
+  screening universe runs the full pipeline for it, right then - qualitative (10-K
+  moat reasoning plus 10-K/10-Q/8-K summaries, or your own local LM Studio model, see
+  "Local generation with LM Studio" above) and the complete fundamentals scoring,
+  identical to a tracked company. A real 10-K fetch plus one AI call takes real time
+  for a single request - the site shows an elapsed counter while it works, since a
+  wait past "a few seconds" is expected here, not a sign something's stuck. Results
+  are cached in `data/qualitative_cache/` exactly like a tracked company's, so
+  searching the same ad-hoc ticker again reuses the AI read instead of re-running it.
+- **Refresh Data button** (homepage header) / `/api/refresh`: runs the same two-phase
+  weekly screen `.github/workflows/weekly-screen.yml` used to run on a schedule, now
+  on demand, in a background thread (the button polls `/api/refresh/status` and
+  reloads the page when it's done). Only one refresh runs at a time; a second request
+  while one is already running gets `409 Already running` instead of queuing or
+  stomping on it. There's no built-in scheduler - run it whenever you want fresh data
+  (the button, `--refresh-now`, or your own OS scheduler, e.g. cron or Task Scheduler,
+  calling `python app.py --refresh-now --no-browser` on whatever cadence you like).
 
-Searching a ticker that isn't tracked immediately runs a live analysis via
-`api/lookup.py`, a small Flask app deployed as a [Vercel](https://vercel.com) Python
-serverless function — GitHub Pages can't run server code, so this needs a deployment
-that can. Skipping this section is fine; the rest of the site works without it, and an
-untracked search will just say live lookup isn't configured.
+Since this only ever talks to itself on localhost, there's no CORS, search-key, or
+cross-origin configuration to set up - the config that used to matter for the Vercel
+deployment (`SEARCH_API_KEY`, `vercel.json`'s timeout settings, GitHub Pages secrets)
+no longer applies.
 
-**This repo already has a working Vercel deployment wired in as a built-in fallback,
-so search works out of the box from GitHub Pages too — no setup required to use it.**
-`site/js/shared.js::lookupTicker` tries, in order: (1) same-origin `/api/lookup` — the
-zero-config path when the whole repo is deployed to one Vercel project (recommended
-setup below); (2) `DEFAULT_API_BASE` in `shared.js`, a specific always-on Vercel
-deployment of this repo, tried automatically with no prompt at all when (1) 404s (e.g.
-because you're on GitHub Pages, which can't run `/api/lookup` itself); (3) only if
-*both* of those fail does it fall back to the older manual flow, prompting for a
-separately-hosted API's URL. If you fork this repo to deploy your own copy, replace
-`DEFAULT_API_BASE` with your own Vercel URL (or clear it to `""` to disable step 2 and
-get the manual prompt instead).
-
-**Deploying the whole repo to one Vercel project is still worth doing anyway** — it
-gives you a single URL with the site and search on the same origin (no cross-origin
-request at all for step 1 above), and lets you set your own `SEARCH_API_KEY` rather
-than relying on the shared fallback deployment's budget.
-
-This runs the **full pipeline** for that one ticker, right then — qualitative (10-K
-moat reasoning plus 10-K/10-Q/8-K summaries) and the complete fundamentals scoring,
-identical to a tracked company, using FMP as the primary price/profile source (the
-same reliable path finalists get during the weekly screen's phase 2 - see "Data source
-limits and free backup chain"). It's a real 10-K (plus 10-Q/8-K, when found) fetch plus
-one Claude call for a single request, which takes real time - the site shows an elapsed
-counter while it works, since a wait past "a few seconds" is expected here, not a sign
-something's stuck.
-
-**Timeout headroom (required setup, not just a troubleshooting tip):** `vercel.json`
-sets `maxDuration: 300` (5 minutes) - safely above what a real lookup needs, but past
-what a Vercel Hobby (free) plan allows *by default* (60s). Enable **Fluid Compute**
-(Vercel project → **Settings → Functions** → toggle it on) before your first deploy -
-it's free and raises Hobby's ceiling to 300s to match. Skip this and the deploy will
-either fail or silently cap at 60s, and most real lookups (10-K fetch + a Claude call)
-won't reliably finish in that window. If you still see timeouts after enabling it,
-`?ai=0` skips the AI-read 10-K filing summaries/moat classification (the slowest step,
-at the cost of that layer showing as not evaluated) as a fallback - the quantitative
-Moat Signal (see "Moat Signal" above) needs no AI call, so it's computed either way. A
-Pro plan raises the ceiling further if you have one, but isn't required.
-
-**Why it's gated:** every live lookup spends real FMP/Anthropic API budget (it runs
-the full pipeline for one ticker, right then). Left open with no key, anyone who
-finds the URL could run up your usage. Set `SEARCH_API_KEY` to require a shared
-secret; if you leave it unset, the endpoint is open to anyone with the URL — only
-reasonable for a private deployment you don't share.
-
-**Setup (deploy the whole repo — this replaces GitHub Pages as your main URL):**
-
-1. Create a free [Vercel](https://vercel.com) account and import this repository as a
-   new project (Vercel auto-detects `api/lookup.py` as a Python serverless function,
-   serves everything else — `site/`, `data/`, etc. — as plain static files, and reads
-   `vercel.json` for the function's config and the `/` → `/site/index.html` redirect —
-   no build settings to change, no framework preset needed).
-2. Before deploying, enable **Fluid Compute** (project **Settings → Functions**) so
-   `vercel.json`'s `maxDuration: 300` actually takes effect instead of failing or
-   silently capping at 60s.
-3. In the Vercel project's **Settings → Environment Variables**, add the same keys as
-   the GitHub Actions secrets (these are separate stores — copy the values over):
-   `FMP_API_KEY`, `FRED_API_KEY`, `ANTHROPIC_API_KEY`, `SEC_EDGAR_USER_AGENT`, plus a
-   new `SEARCH_API_KEY` (any string you choose — this is the shared secret from above;
-   leave it unset for a private deployment you're not sharing the URL to).
-4. Deploy. Note the resulting URL (e.g. `https://your-project.vercel.app`) — this is
-   now your main site, replacing the GitHub Pages one.
-5. On the live site, search for a ticker that isn't tracked — **if you left
-   `SEARCH_API_KEY` unset, this just works immediately**, no prompt at all
-   (`lookupTicker` calls same-origin `/api/lookup`, which now genuinely exists on this
-   domain). If you did set `SEARCH_API_KEY`, the first same-origin attempt gets a 401
-   and falls back to the older prompt flow once — enter this exact same
-   `https://your-project.vercel.app` URL and your `SEARCH_API_KEY` value when asked,
-   and it's remembered (with the key, sent as a header) for every search after that.
-
-Local dev: `python api/lookup.py` runs a dev server at `http://localhost:5328`; point
-`lookupApiBase` (see `site/js/shared.js`) at that instead of a Vercel URL to test
-end-to-end without deploying.
+`.github/workflows/tests.yml` still runs `pytest` on every push/PR — no secrets or
+network required; that part of CI hasn't changed.

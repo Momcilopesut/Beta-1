@@ -15,10 +15,12 @@ GlobalFoundries (GFS) and every other foreign private issuer files Form
 rows for them - cascading into a near-totally-blank Key Metrics Reference
 for any such ticker. Nobody caught it before shipping because the tracked
 watchlist (`data/companies/*.json`) only contains domestic 10-K filers;
-the gap only surfaced on an arbitrary on-demand lookup
-(`api/lookup.py`), which the weekly pipeline run and its tests never
-exercise. Fixed in `pipeline/fetch/sec_edgar.py::_ANNUAL_REPORT_FORMS`
-(now accepts both `10-K` and `20-F`).
+the gap only surfaced on an arbitrary on-demand lookup (at the time,
+`api/lookup.py`, a Vercel function - since retired, see the 2026-11
+addendum below; the same on-demand route now lives in `app.py`), which
+the weekly pipeline run and its tests never exercise. Fixed in
+`pipeline/fetch/sec_edgar.py::_ANNUAL_REPORT_FORMS` (now accepts both
+`10-K` and `20-F`).
 
 Before dropping, consolidating, or re-scoping ANY fetch source (FMP, SEC
 EDGAR, Stooq, FRED, ...) in favor of a fallback - or narrowing what a
@@ -40,6 +42,21 @@ fallback matches on (a form type, a field name, a unit) - do this:
 4. Add a regression test with a concrete edge-case fixture before
    shipping - don't just eyeball one real-world ticker in a browser and
    call it done.
+
+## Addendum (2026-11): moved to a local-only desktop app
+
+GitHub Actions' scheduled weekly screen and the Vercel on-demand lookup
+function (`api/lookup.py`, `vercel.json`) were both retired in favor of
+`app.py` - a single local Flask app the user runs on their own computer
+(`python app.py`), which serves the site, answers on-demand lookups at
+`/api/lookup`, and runs full refreshes on demand at `/api/refresh` (see
+README's "Running the app"). `pipeline/main.py`'s `--use-fmp` flag is now
+off by default - free sources (SEC EDGAR + Stooq) cover the whole
+universe, and Stooq's GitHub-Actions-runner block (see
+`pipeline/fetch/stooq.py`'s module docstring) doesn't apply when running
+from a home connection instead. Anything in this file referring to
+`api/lookup.py`, a scheduled/cloud run, or FMP as the default path is
+describing history, not the current architecture.
 
 ## Known, intentionally-deferred gap (as of 2026-10)
 

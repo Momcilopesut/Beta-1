@@ -153,6 +153,20 @@ main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
 }
 .live-lookup-button:hover { opacity: 0.9; }
 
+.refresh-btn {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: none;
+  color: var(--accent);
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+.refresh-btn:hover { opacity: 0.85; }
+.refresh-btn:disabled { opacity: 0.5; cursor: default; }
+.refresh-status { color: var(--muted); font-size: 0.8rem; margin-left: 0.4rem; }
+
 .on-demand-banner {
   background: rgba(217, 119, 6, 0.12);
   color: var(--cautious);

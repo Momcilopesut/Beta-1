@@ -1,10 +1,10 @@
 """Minimal HTTP GET helper with per-host rate limiting and retry/backoff.
 
-Used both by the sequential batch pipeline and by the on-demand lookup
-endpoint (api/lookup.py), which fires a single ticker's per-source fetches
-concurrently across threads to keep latency down - so the rate-limit
-bookkeeping below is lock-protected even though nothing in the batch
-pipeline itself needs that.
+Used both by the sequential batch pipeline and by app.py's on-demand lookup
+route, which fires a single ticker's per-source fetches concurrently
+across threads to keep latency down - so the rate-limit bookkeeping below
+is lock-protected even though nothing in the batch pipeline itself needs
+that.
 """
 
 import logging
@@ -31,7 +31,7 @@ def _reserve_slot(host_key: str, min_interval_seconds: float) -> float:
     scheduled min_interval_seconds apart regardless of how long any given
     request takes, which - unlike timing spacing off when the previous
     request *finished* - stays correct when multiple threads reserve slots
-    for the same host_key concurrently (see api/lookup.py)."""
+    for the same host_key concurrently (see app.py's /api/lookup route)."""
     with _rate_limit_lock:
         now = time.monotonic()
         earliest = max(now, _last_request_at[host_key] + min_interval_seconds)

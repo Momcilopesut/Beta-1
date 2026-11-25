@@ -6,6 +6,11 @@ pydantic>=2.7
 # only used by the qualitative layer, uses the pure-Python html.parser backend
 # so no compiled lxml/lxml-html-clean dependency is required.
 beautifulsoup4>=4.12
-# flask is only needed by api/lookup.py (the on-demand lookup endpoint,
-# deployed to Vercel) - not by the batch pipeline itself.
+# flask is only needed by app.py (the local server - on-demand lookup +
+# full-screen refresh, see README's "Running the app") - not by the batch
+# pipeline/CLI itself.
 flask>=3.0
+# app.py loads .env itself (it's the normal way anyone now runs this, not
+# just a dev convenience) - the CLI (pipeline/main.py run directly) still
+# expects real exported env vars, same as always.
+python-dotenv>=1.0
