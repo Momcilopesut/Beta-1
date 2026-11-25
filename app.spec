@@ -52,6 +52,10 @@ coll = COLLECT(
 app = BUNDLE(
     coll,
     name="Stock Lookup.app",
-    icon=None,
+    # Built from icon_source/icon.png - see icon_source/README.md for how
+    # to (re)generate icon_source/icon.icns on a Mac (sips/iconutil aren't
+    # available in this Linux dev sandbox, so that conversion step has to
+    # happen on your own machine).
+    icon="icon_source/icon.icns",
     bundle_identifier=None,
 )
