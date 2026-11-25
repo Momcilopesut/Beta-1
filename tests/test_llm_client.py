@@ -5,7 +5,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from llm_client import LlmError, summarize
+from llm_client import LlmError, summarize, summarize_filing
 
 _PRICE = {"close": 150.0, "as_of": "2026-01-02", "change_pct": 2.5}
 _NEWS = [{"title": "Company beats earnings expectations", "link": "https://example.com", "published": "today"}]
@@ -78,3 +78,54 @@ def test_summarize_handles_missing_price_data_gracefully():
     assert result == "No price data."
     user_content = mock_post.call_args.kwargs["json"]["messages"][1]["content"]
     assert "no price data available" in user_content
+
+
+# --- Filing summaries ---
+
+_SECTIONS = {"Management's Discussion and Analysis": "Revenue grew 10% year over year."}
+
+
+def test_summarize_filing_parses_clean_json_response():
+    with patch("llm_client.requests.post", return_value=_lmstudio_response({"summary": "Revenue grew."})):
+        result = summarize_filing("AMD", "10-K", _SECTIONS)
+
+    assert result == "Revenue grew."
+
+
+def test_summarize_filing_raises_when_no_sections_extracted():
+    with pytest.raises(LlmError):
+        summarize_filing("AMD", "10-K", {})
+
+
+def test_summarize_filing_raises_llm_error_when_summary_field_missing():
+    with patch("llm_client.requests.post", return_value=_lmstudio_response({"not_summary": "x"})):
+        with pytest.raises(LlmError):
+            summarize_filing("AMD", "10-K", _SECTIONS)
+
+
+def test_summarize_filing_raises_llm_error_on_connection_failure():
+    with patch("llm_client.requests.post", side_effect=ConnectionError("no server on localhost:1234")):
+        with pytest.raises(LlmError):
+            summarize_filing("AMD", "10-K", _SECTIONS)
+
+
+def test_summarize_filing_includes_ticker_form_and_section_titles_in_prompt():
+    with patch("llm_client.requests.post", return_value=_lmstudio_response({"summary": "x"})) as mock_post:
+        summarize_filing("AMD", "10-K", _SECTIONS)
+
+    user_content = mock_post.call_args.kwargs["json"]["messages"][1]["content"]
+    assert "AMD" in user_content
+    assert "10-K" in user_content
+    assert "Management's Discussion and Analysis" in user_content
+    assert "Revenue grew 10% year over year." in user_content
+
+
+def test_summarize_filing_truncates_oversized_sections(monkeypatch):
+    monkeypatch.setattr("llm_client.MAX_SECTION_CHARS", 50)
+    long_section = {"Risk Factors": "x" * 500}
+    with patch("llm_client.requests.post", return_value=_lmstudio_response({"summary": "x"})) as mock_post:
+        summarize_filing("AMD", "10-K", long_section)
+
+    user_content = mock_post.call_args.kwargs["json"]["messages"][1]["content"]
+    assert "x" * 500 not in user_content
+    assert "[truncated for length]" in user_content

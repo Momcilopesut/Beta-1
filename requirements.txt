@@ -8,3 +8,7 @@ pywebview>=5.0
 # inconsistency of feed XML (namespaces, missing fields, encodings) far
 # more robustly than hand-rolled XML parsing would.
 feedparser>=6.0
+# HTML-to-text extraction for filing_text.py (SEC filing documents are
+# large HTML files) - used with the stdlib html.parser backend, no lxml
+# needed.
+beautifulsoup4>=4.12

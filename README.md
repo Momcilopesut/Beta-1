@@ -129,8 +129,40 @@ python3 list_filings.py AAPL           # see what's been indexed for one ticker
 - `sec_client.py` — the shared SEC-compliant session (`SEC_CONTACT_EMAIL`
   header) both `directory.py` and `filings.py` use.
 
-Next step planned on top of this (not built yet): fetching and summarizing the
-actual filing documents with the local LLM.
+## Summarizing filings with your local LLM (Phase 3, new, in progress)
+
+Once a sector has a filing index (above), this fetches each filing's actual
+document, extracts the most analysis-relevant prose (Management's Discussion
+and Analysis, and Risk Factors where available), and summarizes it with your
+local LM Studio model:
+
+```bash
+python3 build_summaries.py --limit 5    # test on a small batch first - this calls your local model, so it's worth watching once
+python3 build_summaries.py              # then the rest of Technology
+python3 list_summaries.py AMD           # see what's been summarized for one ticker
+```
+
+- `filing_text.py` — fetches one filing's document and extracts MD&A/Risk
+  Factors as plain text. Full 10-Ks are HTML files far bigger than any local
+  model's context window, so this doesn't summarize the whole document - just
+  these two sections, using the Item-number headers every 10-K/10-Q is
+  required to have. The one real wrinkle: every filing's own table of
+  contents repeats these same headings near the top as links to the real
+  section - `extract_section()`'s docstring explains the heuristic used to
+  tell those apart from the real thing.
+- `llm_client.py::summarize_filing` — same LM Studio integration `summarize()`
+  already used for price/news, extended for filing text. `LMSTUDIO_MAX_SECTION_CHARS`
+  caps how much of a section gets sent per filing, in case a section is still
+  too large for your model's context window even after extraction.
+- `build_summaries.py` — drives both across every stored filing in a sector,
+  same resumable pattern as the earlier steps. This one runs your local model
+  once per filing, so expect it to be slower per-item than the SEC/Yahoo-only
+  steps - how much slower depends entirely on your model and machine.
+
+This is the newest, least-tested part of the build-out - the section-extraction
+heuristic is validated against synthetic test documents, not real SEC filings
+yet, so the first real run is worth checking by eye (`list_summaries.py`)
+before trusting it at scale.
 
 ## Local development
 

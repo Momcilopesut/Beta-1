@@ -37,6 +37,14 @@ CREATE TABLE IF NOT EXISTS filings (
     PRIMARY KEY (cik, accession_number)
 );
 CREATE INDEX IF NOT EXISTS idx_filings_cik_form ON filings(cik, form);
+
+CREATE TABLE IF NOT EXISTS filing_summaries (
+    cik INTEGER NOT NULL,
+    accession_number TEXT NOT NULL,
+    summary TEXT,
+    status TEXT NOT NULL DEFAULT 'pending',
+    PRIMARY KEY (cik, accession_number)
+);
 """
 
 # Columns added after the first release of this table - CREATE TABLE IF NOT

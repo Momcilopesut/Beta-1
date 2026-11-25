@@ -32,6 +32,31 @@ markdown code fences, no explanation. It must have exactly this key:
 {"summary": "<2-4 sentence plain-language summary>"}
 """
 
+FILING_SYSTEM_PROMPT = """\
+You are a plain-language financial summarizer for a personal stock research \
+tool. You're given extracted sections of a company's SEC filing (10-K annual \
+report or 10-Q quarterly report) - its Management's Discussion and Analysis, \
+and where available, its Risk Factors. Write a short, neutral summary - 4 to \
+8 sentences - covering how the business performed and why, per management's \
+own discussion, and the most significant risks the company itself flagged, if \
+risk factors were given. Ground your summary ONLY in the text given to you \
+below. Do not invent facts, figures, or forward-looking claims beyond what's \
+stated, and do not use any outside knowledge about the company. If a section \
+is missing, summarize from what was given and don't mention the absence.
+
+Respond with ONE JSON object only - no prose before or after it, no \
+markdown code fences, no explanation. It must have exactly this key:
+
+{"summary": "<4-8 sentence plain-language summary>"}
+"""
+
+# A full MD&A + Risk Factors pair can still be large enough to blow past a
+# local model's context window even after section extraction - this is a
+# blunt safety cap, not a smart summarization step, so truncation (when it
+# happens) is from the end of each section and clearly marked, not silently
+# dropped.
+MAX_SECTION_CHARS = int(os.environ.get("LMSTUDIO_MAX_SECTION_CHARS", "16000"))
+
 
 class LlmError(Exception):
     pass
@@ -66,23 +91,20 @@ def _format_price_line(price: dict) -> str:
     return line
 
 
-def summarize(ticker: str, price: dict, news: list[dict]) -> str:
-    """Returns a short plain-language summary string. Raises LlmError if
-    LM Studio isn't reachable or returns something unusable - callers
-    should degrade gracefully (show the raw price/news without a
-    summary), never let this one step crash the whole lookup."""
+def _chat_completion(system_prompt: str, user_content: str) -> dict:
+    """POSTs one chat completion to LM Studio and returns the parsed JSON
+    object from the model's response content. Raises on any failure
+    (connection, bad JSON, missing field) - callers wrap this in their
+    own LlmError with context-specific messaging."""
     base_url = os.environ.get("LMSTUDIO_BASE_URL", DEFAULT_BASE_URL).rstrip("/")
     model = os.environ.get("LMSTUDIO_MODEL", DEFAULT_MODEL)
     timeout = float(os.environ.get("LMSTUDIO_TIMEOUT_SECONDS", DEFAULT_TIMEOUT_SECONDS))
     json_mode = os.environ.get("LMSTUDIO_JSON_MODE", "1") != "0"
 
-    headlines = "\n".join(f"- {n['title']}" for n in news if n.get("title")) or "(no recent headlines found)"
-    user_content = f"Ticker: {ticker}\n\n{_format_price_line(price)}\n\nRecent headlines:\n{headlines}"
-
     payload = {
         "model": model,
         "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_content},
         ],
         "temperature": 0.3,
@@ -90,14 +112,51 @@ def summarize(ticker: str, price: dict, news: list[dict]) -> str:
     if json_mode:
         payload["response_format"] = {"type": "json_object"}
 
+    response = requests.post(f"{base_url}/chat/completions", json=payload, timeout=timeout)
+    response.raise_for_status()
+    content = response.json()["choices"][0]["message"]["content"]
+    return _extract_json_object(content)
+
+
+def summarize(ticker: str, price: dict, news: list[dict]) -> str:
+    """Returns a short plain-language summary string. Raises LlmError if
+    LM Studio isn't reachable or returns something unusable - callers
+    should degrade gracefully (show the raw price/news without a
+    summary), never let this one step crash the whole lookup."""
+    headlines = "\n".join(f"- {n['title']}" for n in news if n.get("title")) or "(no recent headlines found)"
+    user_content = f"Ticker: {ticker}\n\n{_format_price_line(price)}\n\nRecent headlines:\n{headlines}"
+
     try:
-        response = requests.post(f"{base_url}/chat/completions", json=payload, timeout=timeout)
-        response.raise_for_status()
-        content = response.json()["choices"][0]["message"]["content"]
-        parsed = _extract_json_object(content)
+        parsed = _chat_completion(SYSTEM_PROMPT, user_content)
         summary = parsed.get("summary")
         if not isinstance(summary, str) or not summary.strip():
             raise ValueError("model response had no usable 'summary' field")
         return summary.strip()
     except Exception as exc:  # noqa: BLE001 - connection error, bad JSON, missing field, ...
         raise LlmError(f"Local LLM summary failed for {ticker}: {exc}") from exc
+
+
+def _truncate(text: str, max_chars: int) -> str:
+    if len(text) <= max_chars:
+        return text
+    return text[:max_chars].rstrip() + "\n...[truncated for length]"
+
+
+def summarize_filing(ticker: str, form: str, sections: dict[str, str]) -> str:
+    """sections is e.g. {"Management's Discussion and Analysis": "...",
+    "Risk Factors": "..."} - whichever filing_text.py could extract.
+    Raises LlmError the same way summarize() does."""
+    if not sections:
+        raise LlmError(f"No extractable sections for {ticker} {form} - nothing to summarize")
+
+    body = "\n\n".join(f"=== {title} ===\n{_truncate(text, MAX_SECTION_CHARS)}" for title, text in sections.items())
+    user_content = f"Ticker: {ticker}\nForm: {form}\n\n{body}"
+
+    try:
+        parsed = _chat_completion(FILING_SYSTEM_PROMPT, user_content)
+        summary = parsed.get("summary")
+        if not isinstance(summary, str) or not summary.strip():
+            raise ValueError("model response had no usable 'summary' field")
+        return summary.strip()
+    except Exception as exc:  # noqa: BLE001 - connection error, bad JSON, missing field, ...
+        raise LlmError(f"Local LLM filing summary failed for {ticker} {form}: {exc}") from exc
