@@ -19,10 +19,13 @@ Neither feed is guaranteed to stay at this exact URL forever; if both
 come back empty, that's surfaced as a plain empty list, not a crash.
 """
 
+import logging
 from datetime import datetime, timezone
 
 import feedparser
 import requests
+
+logger = logging.getLogger(__name__)
 
 _BROWSER_HEADERS = {
     "User-Agent": (
@@ -79,9 +82,26 @@ def fetch_price(ticker: str) -> dict:
 def _parse_feed(url: str, limit: int) -> list[dict]:
     try:
         parsed = feedparser.parse(url, agent=_BROWSER_HEADERS["User-Agent"])
-    except Exception:  # noqa: BLE001 - a feed fetch/parse failure just means "try the next source"
+    except Exception as exc:  # noqa: BLE001 - a feed fetch/parse failure just means "try the next source"
+        logger.warning("Feed fetch failed for %s: %s", url, exc)
         return []
+
     entries = parsed.get("entries") or []
+    if not entries:
+        # feedparser rarely raises even on a real failure (a 404, a feed
+        # that's been taken down, a malformed response) - it just comes
+        # back with no entries and, usually, a non-exception explanation
+        # in bozo_exception/status. Logging that here is the only way to
+        # tell "genuinely no news right now" apart from "this feed is
+        # dead" after the fact - fetch_price's own empty-result logging
+        # had the same gap until a real lookup showed why it mattered.
+        logger.warning(
+            "Feed returned no entries for %s (status=%s, bozo_exception=%s)",
+            url,
+            parsed.get("status"),
+            parsed.get("bozo_exception"),
+        )
+
     out = []
     for entry in entries[:limit]:
         source = entry.get("source")
