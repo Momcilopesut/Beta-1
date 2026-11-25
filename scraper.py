@@ -140,6 +140,13 @@ def fetch_price(ticker: str) -> dict:
         except (KeyError, ValueError, TypeError):
             continue
     if not closes:
+        # Not the plain "no data" case above, and not a challenge page
+        # either (_fetch_stooq_csv already handles that) - something else
+        # unexpected came back. Logging a preview here, rather than
+        # silently returning the same "empty" result as a genuine
+        # no-data response, is the only way to tell those two cases
+        # apart after the fact.
+        logger.warning("Stooq response for %s had no parseable close prices; started with: %r", ticker, text[:200])
         return empty
 
     as_of, close = closes[-1]
