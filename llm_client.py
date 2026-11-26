@@ -113,7 +113,14 @@ def _chat_completion(system_prompt: str, user_content: str) -> dict:
         payload["response_format"] = {"type": "json_object"}
 
     response = requests.post(f"{base_url}/chat/completions", json=payload, timeout=timeout)
-    response.raise_for_status()
+    try:
+        response.raise_for_status()
+    except requests.HTTPError as exc:
+        # requests' default message is just "400 Bad Request for url: ..." -
+        # LM Studio/llama.cpp server errors (wrong context length, bad
+        # request shape, etc.) explain the real cause in the response body,
+        # which is worth surfacing rather than guessing at.
+        raise requests.HTTPError(f"{exc} - response body: {response.text[:2000]}", response=response) from exc
     content = response.json()["choices"][0]["message"]["content"]
     return _extract_json_object(content)
 

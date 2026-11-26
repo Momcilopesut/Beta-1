@@ -54,6 +54,18 @@ def test_summarize_raises_llm_error_when_summary_field_missing():
             summarize("AAPL", _PRICE, _NEWS)
 
 
+def test_summarize_includes_response_body_in_error_on_400():
+    response = MagicMock()
+    response.status_code = 400
+    response.text = '{"error": "This model\'s maximum context length is 4096 tokens"}'
+    import requests
+
+    response.raise_for_status.side_effect = requests.HTTPError("400 Client Error: Bad Request for url: x", response=response)
+    with patch("llm_client.requests.post", return_value=response):
+        with pytest.raises(LlmError, match="maximum context length"):
+            summarize("AAPL", _PRICE, _NEWS)
+
+
 def test_summarize_raises_llm_error_on_connection_failure():
     with patch("llm_client.requests.post", side_effect=ConnectionError("no server on localhost:1234")):
         with pytest.raises(LlmError):
