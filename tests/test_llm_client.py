@@ -5,7 +5,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from llm_client import LlmError, summarize, summarize_filing
+from llm_client import LlmError, ModelCrashedError, summarize, summarize_filing
 
 _PRICE = {"close": 150.0, "as_of": "2026-01-02", "change_pct": 2.5}
 _NEWS = [{"title": "Company beats earnings expectations", "link": "https://example.com", "published": "today"}]
@@ -157,6 +157,20 @@ def test_summarize_filing_gives_up_after_hitting_the_floor(monkeypatch):
     with patch("llm_client._chat_completion", side_effect=RuntimeError("greater than the context length")):
         with pytest.raises(LlmError, match="context length"):
             summarize_filing("AMD", "10-K", {"Risk Factors": "x" * 5000})
+
+
+def test_summarize_filing_raises_model_crashed_error_without_retrying():
+    response = MagicMock()
+    response.status_code = 400
+    response.text = '{"error":"The model has crashed without additional information. (Exit code: null)"}'
+    import requests
+
+    response.raise_for_status.side_effect = requests.HTTPError("400 Client Error: Bad Request for url: x", response=response)
+    with patch("llm_client.requests.post", return_value=response) as mock_post:
+        with pytest.raises(ModelCrashedError):
+            summarize_filing("AMD", "10-K", _SECTIONS)
+
+    mock_post.assert_called_once()  # no retry attempt for this kind of failure
 
 
 def test_summarize_filing_does_not_retry_unrelated_errors():

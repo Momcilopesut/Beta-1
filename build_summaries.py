@@ -80,6 +80,18 @@ def build_for_sector(sector: str, limit: int | None = None) -> dict:
                 )
                 counts["done"] += 1
                 logger.info("  %s %s (%s): done", row["ticker"], row["form"], row["accession_number"])
+            except llm_client.ModelCrashedError as exc:
+                # The model process itself has died - every remaining
+                # filing would fail identically, so stopping now (rather
+                # than marking thousands of filings as individually
+                # "errored" for no real reason) and leaving them pending
+                # is the right move. Reload the model in LM Studio, then
+                # just re-run this script to pick back up here.
+                logger.error(
+                    "Stopping this run: %s. Reload the model in LM Studio, then re-run this script - it'll pick up where it left off.",
+                    exc,
+                )
+                return counts
             except (filing_text.FilingTextError, llm_client.LlmError) as exc:
                 logger.warning("Marking %s %s as error (will retry next run): %s", row["ticker"], row["accession_number"], exc)
                 conn.execute(

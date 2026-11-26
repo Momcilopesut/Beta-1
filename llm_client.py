@@ -65,6 +65,15 @@ class LlmError(Exception):
     pass
 
 
+class ModelCrashedError(LlmError):
+    """LM Studio's own model process has died (e.g. a GPU-level crash in
+    its backend) - every request will keep failing identically until the
+    model is reloaded in LM Studio. Worth telling apart from an ordinary
+    per-item failure so a batch driver (build_summaries.py) can stop
+    cleanly instead of burning through its whole queue marking everything
+    else as individually errored for no reason."""
+
+
 def _extract_json_object(text: str) -> dict:
     """Local models routinely wrap JSON in markdown fences, or add a
     stray sentence before/after it despite being told not to - try a
@@ -123,7 +132,10 @@ def _chat_completion(system_prompt: str, user_content: str) -> dict:
         # LM Studio/llama.cpp server errors (wrong context length, bad
         # request shape, etc.) explain the real cause in the response body,
         # which is worth surfacing rather than guessing at.
-        raise requests.HTTPError(f"{exc} - response body: {response.text[:2000]}", response=response) from exc
+        body = response.text[:2000]
+        if "model has crashed" in body.lower() or "model crashed" in body.lower():
+            raise ModelCrashedError(f"LM Studio's model has crashed - reload it in LM Studio before retrying. {exc} - response body: {body}") from exc
+        raise requests.HTTPError(f"{exc} - response body: {body}", response=response) from exc
     content = response.json()["choices"][0]["message"]["content"]
     return _extract_json_object(content)
 
@@ -191,6 +203,11 @@ def summarize_filing(ticker: str, form: str, sections: dict[str, str]) -> str:
             if not isinstance(summary, str) or not summary.strip():
                 raise ValueError("model response had no usable 'summary' field")
             return summary.strip()
+        except ModelCrashedError:
+            # Shrinking the input won't fix a crashed model process - let
+            # this propagate immediately so the caller can stop the batch
+            # instead of retrying into the same dead server.
+            raise
         except Exception as exc:  # noqa: BLE001 - connection error, bad JSON, missing field, ...
             last_exc = exc
             if _is_context_length_error(exc) and max_chars > _MIN_SECTION_CHARS:

@@ -8,7 +8,7 @@ import pytest
 import db
 from build_summaries import build_for_sector
 from filing_text import FilingTextError
-from llm_client import LlmError
+from llm_client import LlmError, ModelCrashedError
 
 
 @pytest.fixture(autouse=True)
@@ -143,6 +143,29 @@ def test_build_for_sector_skips_already_done_rows():
 
     mock_fetch.assert_not_called()
     assert counts == {"done": 0, "errored": 0}
+
+
+def test_build_for_sector_stops_the_whole_batch_on_model_crash():
+    _seed_company_with_filing(1, "AMD", "A1")
+    _seed_company_with_filing(2, "MSFT", "A2")
+
+    with (
+        patch("build_summaries.filing_text.fetch_filing_text", return_value="raw text"),
+        patch("build_summaries.filing_text.extract_sections_for_form", return_value={"x": "y"}),
+        patch("build_summaries.llm_client.summarize_filing", side_effect=ModelCrashedError("model has crashed")),
+    ):
+        counts = build_for_sector("Technology")
+
+    # Neither row should be marked "error" - the model being down isn't a
+    # per-filing failure, so both should stay untouched (pending) for the
+    # next run to pick up once the model is reloaded.
+    assert counts == {"done": 0, "errored": 0}
+    conn = db.get_connection()
+    try:
+        rows = conn.execute("SELECT * FROM filing_summaries").fetchall()
+    finally:
+        conn.close()
+    assert rows == []
 
 
 def test_build_for_sector_respects_limit():
