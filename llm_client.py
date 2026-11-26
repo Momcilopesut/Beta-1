@@ -149,7 +149,14 @@ def _chat_completion(system_prompt: str, user_content: str) -> dict:
             raise ModelCrashedError(f"The local LLM server's backend appears to have crashed - reload the model before retrying. {exc} - response body: {body}") from exc
         raise requests.HTTPError(f"{exc} - response body: {body}", response=response) from exc
     content = response.json()["choices"][0]["message"]["content"]
-    return _extract_json_object(content)
+    try:
+        return _extract_json_object(content)
+    except (json.JSONDecodeError, ValueError) as exc:
+        # The bare JSONDecodeError message ("Expecting value: line 1
+        # column 1 (char 0)") gives no hint whether the model returned
+        # something malformed, chatty, or outright empty - showing the
+        # actual content is the only way to tell those apart.
+        raise ValueError(f"model response wasn't valid JSON ({exc}) - raw content: {content[:1000]!r}") from exc
 
 
 def summarize(ticker: str, price: dict, news: list[dict]) -> str:

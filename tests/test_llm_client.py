@@ -48,6 +48,18 @@ def test_summarize_raises_llm_error_on_malformed_json():
             summarize("AAPL", _PRICE, _NEWS)
 
 
+def test_summarize_includes_raw_model_content_when_json_parsing_fails():
+    with patch("llm_client.requests.post", return_value=_lmstudio_response("not json at all")):
+        with pytest.raises(LlmError, match="not json at all"):
+            summarize("AAPL", _PRICE, _NEWS)
+
+
+def test_summarize_includes_raw_model_content_when_response_is_empty():
+    with patch("llm_client.requests.post", return_value=_lmstudio_response("")):
+        with pytest.raises(LlmError, match="raw content"):
+            summarize("AAPL", _PRICE, _NEWS)
+
+
 def test_summarize_raises_llm_error_when_summary_field_missing():
     with patch("llm_client.requests.post", return_value=_lmstudio_response({"not_summary": "x"})):
         with pytest.raises(LlmError):
