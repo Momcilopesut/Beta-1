@@ -6,9 +6,12 @@ http://localhost:1234).
 """
 
 import json
+import logging
 import os
 
 import requests
+
+logger = logging.getLogger(__name__)
 
 DEFAULT_BASE_URL = "http://localhost:1234/v1"
 DEFAULT_MODEL = "local-model"
@@ -149,21 +152,49 @@ def _truncate(text: str, max_chars: int) -> str:
     return text[:max_chars].rstrip() + "\n...[truncated for length]"
 
 
+# Floor for the adaptive-shrink retry below - under this, there's not
+# enough text left for a meaningful summary, so it's better to fail
+# clearly than keep retrying forever.
+_MIN_SECTION_CHARS = 1000
+
+
+def _is_context_length_error(exc: Exception) -> bool:
+    # LM Studio/llama.cpp server errors say this almost verbatim
+    # ("...is greater than the context length...") - a plain substring
+    # check is more robust than trying to parse a specific JSON shape
+    # that could differ across server versions/backends.
+    return "context length" in str(exc).lower()
+
+
 def summarize_filing(ticker: str, form: str, sections: dict[str, str]) -> str:
     """sections is e.g. {"Management's Discussion and Analysis": "...",
     "Risk Factors": "..."} - whichever filing_text.py could extract.
-    Raises LlmError the same way summarize() does."""
+    Raises LlmError the same way summarize() does.
+
+    MAX_SECTION_CHARS is a starting point, not a guarantee - models have
+    wildly different context windows, and there's no reliable way to know
+    the loaded model's limit in advance. If the server reports a context-
+    length error, this halves the per-section budget and retries, down to
+    _MIN_SECTION_CHARS, rather than failing on the first filing that
+    happens to be larger than whatever fixed cap was guessed up front."""
     if not sections:
         raise LlmError(f"No extractable sections for {ticker} {form} - nothing to summarize")
 
-    body = "\n\n".join(f"=== {title} ===\n{_truncate(text, MAX_SECTION_CHARS)}" for title, text in sections.items())
-    user_content = f"Ticker: {ticker}\nForm: {form}\n\n{body}"
-
-    try:
-        parsed = _chat_completion(FILING_SYSTEM_PROMPT, user_content)
-        summary = parsed.get("summary")
-        if not isinstance(summary, str) or not summary.strip():
-            raise ValueError("model response had no usable 'summary' field")
-        return summary.strip()
-    except Exception as exc:  # noqa: BLE001 - connection error, bad JSON, missing field, ...
-        raise LlmError(f"Local LLM filing summary failed for {ticker} {form}: {exc}") from exc
+    max_chars = MAX_SECTION_CHARS
+    last_exc: Exception | None = None
+    while True:
+        body = "\n\n".join(f"=== {title} ===\n{_truncate(text, max_chars)}" for title, text in sections.items())
+        user_content = f"Ticker: {ticker}\nForm: {form}\n\n{body}"
+        try:
+            parsed = _chat_completion(FILING_SYSTEM_PROMPT, user_content)
+            summary = parsed.get("summary")
+            if not isinstance(summary, str) or not summary.strip():
+                raise ValueError("model response had no usable 'summary' field")
+            return summary.strip()
+        except Exception as exc:  # noqa: BLE001 - connection error, bad JSON, missing field, ...
+            last_exc = exc
+            if _is_context_length_error(exc) and max_chars > _MIN_SECTION_CHARS:
+                max_chars = max(max_chars // 2, _MIN_SECTION_CHARS)
+                logger.info("Context length exceeded for %s %s - retrying with max_chars=%d", ticker, form, max_chars)
+                continue
+            raise LlmError(f"Local LLM filing summary failed for {ticker} {form}: {exc}") from exc

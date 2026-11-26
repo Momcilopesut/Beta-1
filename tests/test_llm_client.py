@@ -132,6 +132,41 @@ def test_summarize_filing_includes_ticker_form_and_section_titles_in_prompt():
     assert "Revenue grew 10% year over year." in user_content
 
 
+def test_summarize_filing_retries_with_smaller_budget_on_context_length_error(monkeypatch):
+    monkeypatch.setattr("llm_client.MAX_SECTION_CHARS", 1000)
+    monkeypatch.setattr("llm_client._MIN_SECTION_CHARS", 100)
+    calls = []
+
+    def fake_chat_completion(system_prompt, user_content):
+        calls.append(len(user_content))
+        if len(calls) < 3:
+            raise RuntimeError("the number of tokens to keep is greater than the context length")
+        return {"summary": "Shrunk enough."}
+
+    with patch("llm_client._chat_completion", side_effect=fake_chat_completion):
+        result = summarize_filing("AMD", "10-K", {"Risk Factors": "x" * 5000})
+
+    assert result == "Shrunk enough."
+    assert len(calls) == 3
+    assert calls[0] > calls[1] > calls[2]
+
+
+def test_summarize_filing_gives_up_after_hitting_the_floor(monkeypatch):
+    monkeypatch.setattr("llm_client.MAX_SECTION_CHARS", 1000)
+    monkeypatch.setattr("llm_client._MIN_SECTION_CHARS", 100)
+    with patch("llm_client._chat_completion", side_effect=RuntimeError("greater than the context length")):
+        with pytest.raises(LlmError, match="context length"):
+            summarize_filing("AMD", "10-K", {"Risk Factors": "x" * 5000})
+
+
+def test_summarize_filing_does_not_retry_unrelated_errors():
+    with patch("llm_client._chat_completion", side_effect=ConnectionError("no server on localhost:1234")) as mock_chat:
+        with pytest.raises(LlmError):
+            summarize_filing("AMD", "10-K", _SECTIONS)
+
+    mock_chat.assert_called_once()
+
+
 def test_summarize_filing_truncates_oversized_sections(monkeypatch):
     monkeypatch.setattr("llm_client.MAX_SECTION_CHARS", 50)
     long_section = {"Risk Factors": "x" * 500}
