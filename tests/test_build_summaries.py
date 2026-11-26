@@ -6,7 +6,7 @@ from unittest.mock import patch
 import pytest
 
 import db
-from build_summaries import build_for_sector
+from build_summaries import build_for_sector, summarize_one
 from filing_text import FilingTextError
 from llm_client import LlmError, ModelCrashedError
 
@@ -143,6 +143,43 @@ def test_build_for_sector_skips_already_done_rows():
 
     mock_fetch.assert_not_called()
     assert counts == {"done": 0, "errored": 0}
+
+
+def test_summarize_one_recovers_from_a_transient_model_crash(monkeypatch):
+    monkeypatch.setattr("build_summaries._CRASH_RETRY_ATTEMPTS", 3)
+    row = {"cik": 1, "accession_number": "A1", "form": "10-K", "primary_document": "doc.htm", "ticker": "AMD"}
+    calls = []
+
+    def fake_summarize_filing(ticker, form, sections):
+        calls.append(1)
+        if len(calls) < 2:
+            raise ModelCrashedError("backend crashed")
+        return "Revenue grew."
+
+    with (
+        patch("build_summaries.filing_text.fetch_filing_text", return_value="raw text"),
+        patch("build_summaries.filing_text.extract_sections_for_form", return_value={"x": "y"}),
+        patch("build_summaries.llm_client.summarize_filing", side_effect=fake_summarize_filing),
+    ):
+        result = summarize_one(row)
+
+    assert result == "Revenue grew."
+    assert len(calls) == 2
+
+
+def test_summarize_one_gives_up_after_exhausting_crash_retries(monkeypatch):
+    monkeypatch.setattr("build_summaries._CRASH_RETRY_ATTEMPTS", 2)
+    row = {"cik": 1, "accession_number": "A1", "form": "10-K", "primary_document": "doc.htm", "ticker": "AMD"}
+
+    with (
+        patch("build_summaries.filing_text.fetch_filing_text", return_value="raw text"),
+        patch("build_summaries.filing_text.extract_sections_for_form", return_value={"x": "y"}),
+        patch("build_summaries.llm_client.summarize_filing", side_effect=ModelCrashedError("backend crashed")) as mock_summarize,
+    ):
+        with pytest.raises(ModelCrashedError):
+            summarize_one(row)
+
+    assert mock_summarize.call_count == 2
 
 
 def test_build_for_sector_stops_the_whole_batch_on_model_crash():

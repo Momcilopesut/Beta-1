@@ -30,6 +30,14 @@ logger = logging.getLogger(__name__)
 
 _FETCH_DELAY_SECONDS = float(os.environ.get("FILINGS_FETCH_DELAY_SECONDS", "0.3"))
 
+# LM Studio's local server auto-reloads a crashed model on its next
+# request (observed directly in a real run) - so a crash is often
+# recoverable on its own within a short wait, not something that needs a
+# human to manually reload it every time. Retry a few times with a
+# cooldown before giving up and stopping the whole batch.
+_CRASH_RETRY_ATTEMPTS = int(os.environ.get("MODEL_CRASH_RETRY_ATTEMPTS", "3"))
+_CRASH_COOLDOWN_SECONDS = float(os.environ.get("MODEL_CRASH_COOLDOWN_SECONDS", "60"))
+
 _SELECT_PENDING = """
 SELECT f.cik, f.accession_number, f.form, f.primary_document, c.ticker
 FROM filings f
@@ -52,10 +60,30 @@ ON CONFLICT(cik, accession_number) DO UPDATE SET
 def summarize_one(row) -> str:
     """Fetches, extracts, and summarizes one filing. Raises on any
     failure - callers mark the row 'error' and move on, same
-    degrade-one-item-at-a-time pattern as the rest of this build-out."""
+    degrade-one-item-at-a-time pattern as the rest of this build-out.
+
+    A crashed backend gets a few cooldown-and-retry attempts here first,
+    since LM Studio often auto-reloads the model on its next request once
+    it notices the old one died - only once those are exhausted does
+    llm_client.ModelCrashedError propagate up to stop the whole batch."""
     text = filing_text.fetch_filing_text(row["cik"], row["accession_number"], row["primary_document"])
     sections = filing_text.extract_sections_for_form(text, row["form"])
-    return llm_client.summarize_filing(row["ticker"], row["form"], sections)
+
+    for attempt in range(1, _CRASH_RETRY_ATTEMPTS + 1):
+        try:
+            return llm_client.summarize_filing(row["ticker"], row["form"], sections)
+        except llm_client.ModelCrashedError as exc:
+            if attempt >= _CRASH_RETRY_ATTEMPTS:
+                raise
+            logger.warning(
+                "LM Studio backend crash for %s (attempt %d/%d) - waiting %ds for it to recover: %s",
+                row["ticker"],
+                attempt,
+                _CRASH_RETRY_ATTEMPTS,
+                _CRASH_COOLDOWN_SECONDS,
+                exc,
+            )
+            time.sleep(_CRASH_COOLDOWN_SECONDS)
 
 
 def build_for_sector(sector: str, limit: int | None = None) -> dict:
