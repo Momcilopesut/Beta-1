@@ -64,6 +64,13 @@ markdown code fences, no explanation. It must have exactly this key:
 # dropped.
 MAX_SECTION_CHARS = int(os.environ.get("LLM_MAX_SECTION_CHARS", "16000"))
 
+# Minimum length (in characters) of a non-JSON response before it's
+# accepted as a plain-text summary instead of an error - see
+# _chat_completion's fallback below. Just a garbage filter, not real
+# validation: long enough that a bare "{" or an empty string still fails
+# clearly, short enough that any real sentence-length answer passes.
+_MIN_PLAIN_TEXT_FALLBACK_CHARS = 20
+
 
 class LlmError(Exception):
     pass
@@ -152,6 +159,17 @@ def _chat_completion(system_prompt: str, user_content: str) -> dict:
     try:
         return _extract_json_object(content)
     except (json.JSONDecodeError, ValueError) as exc:
+        # A real run (Qwen via Ollama, JSON mode off) showed the model
+        # sometimes just writes the answer directly instead of wrapping
+        # it in the requested {"summary": ...} JSON - that's a format
+        # miss, not a content failure, and the prose itself is still a
+        # perfectly usable answer. Only fall back to this for something
+        # substantial, so a near-empty/garbage response (a bare "{", or
+        # truly nothing) still fails clearly instead of being "summarized"
+        # as itself.
+        plain = content.strip()
+        if len(plain) >= _MIN_PLAIN_TEXT_FALLBACK_CHARS:
+            return {"summary": plain}
         # The bare JSONDecodeError message ("Expecting value: line 1
         # column 1 (char 0)") gives no hint whether the model returned
         # something malformed, chatty, or outright empty - showing the

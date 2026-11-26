@@ -60,6 +60,23 @@ def test_summarize_includes_raw_model_content_when_response_is_empty():
             summarize("AAPL", _PRICE, _NEWS)
 
 
+def test_summarize_accepts_substantial_plain_text_when_model_skips_json():
+    # A real run (Qwen via Ollama, JSON mode off) showed the model just
+    # writing the answer directly instead of wrapping it in JSON - that's
+    # a format miss, not a failure, as long as there's real content there.
+    plain_text = "Shares rose sharply after the company beat earnings expectations and raised guidance for the next quarter."
+    with patch("llm_client.requests.post", return_value=_lmstudio_response(plain_text)):
+        result = summarize("AAPL", _PRICE, _NEWS)
+
+    assert result == plain_text
+
+
+def test_summarize_still_rejects_near_empty_non_json_garbage():
+    with patch("llm_client.requests.post", return_value=_lmstudio_response("{")):
+        with pytest.raises(LlmError, match="raw content"):
+            summarize("AAPL", _PRICE, _NEWS)
+
+
 def test_summarize_raises_llm_error_when_summary_field_missing():
     with patch("llm_client.requests.post", return_value=_lmstudio_response({"not_summary": "x"})):
         with pytest.raises(LlmError):
