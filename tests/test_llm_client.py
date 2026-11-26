@@ -199,6 +199,23 @@ def test_summarize_filing_raises_model_crashed_error_without_retrying():
     mock_post.assert_called_once()  # no retry attempt for this kind of failure
 
 
+def test_summarize_filing_raises_model_crashed_error_on_compute_error():
+    # A real run hit this exact phrasing after several filings succeeded -
+    # distinct from the "model has crashed" message, but the same kind of
+    # "every subsequent request fails instantly" backend death.
+    response = MagicMock()
+    response.status_code = 400
+    response.text = '{"error":"Engine protocol predict stream returned an error: {\\"code\\":500,\\"message\\":\\"Compute error.\\",\\"type\\":\\"server_error\\"}"}'
+    import requests
+
+    response.raise_for_status.side_effect = requests.HTTPError("400 Client Error: Bad Request for url: x", response=response)
+    with patch("llm_client.requests.post", return_value=response) as mock_post:
+        with pytest.raises(ModelCrashedError):
+            summarize_filing("AMD", "10-K", _SECTIONS)
+
+    mock_post.assert_called_once()
+
+
 def test_summarize_filing_does_not_retry_unrelated_errors():
     with patch("llm_client._chat_completion", side_effect=ConnectionError("no server on localhost:1234")) as mock_chat:
         with pytest.raises(LlmError):

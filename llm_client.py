@@ -133,8 +133,18 @@ def _chat_completion(system_prompt: str, user_content: str) -> dict:
         # request shape, etc.) explain the real cause in the response body,
         # which is worth surfacing rather than guessing at.
         body = response.text[:2000]
-        if "model has crashed" in body.lower() or "model crashed" in body.lower():
-            raise ModelCrashedError(f"LM Studio's model has crashed - reload it in LM Studio before retrying. {exc} - response body: {body}") from exc
+        body_lower = body.lower()
+        # Different ways LM Studio's backend has been observed to die
+        # entirely (confirmed by every subsequent request failing near-
+        # instantly instead of after real inference time): an outright
+        # crash message, or a generic engine-level "Compute error" /
+        # server_error that - unlike a content-specific failure - repeats
+        # on every single filing afterward regardless of what's in it.
+        crash_markers = ("model has crashed", "model crashed", "compute error")
+        if any(marker in body_lower for marker in crash_markers):
+            raise ModelCrashedError(
+                f"LM Studio's backend appears to have crashed - reload the model in LM Studio before retrying. {exc} - response body: {body}"
+            ) from exc
         raise requests.HTTPError(f"{exc} - response body: {body}", response=response) from exc
     content = response.json()["choices"][0]["message"]["content"]
     return _extract_json_object(content)
