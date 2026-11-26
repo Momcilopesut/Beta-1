@@ -30,8 +30,8 @@ logger = logging.getLogger(__name__)
 
 _FETCH_DELAY_SECONDS = float(os.environ.get("FILINGS_FETCH_DELAY_SECONDS", "0.3"))
 
-# LM Studio's local server auto-reloads a crashed model on its next
-# request (observed directly in a real run) - so a crash is often
+# Local LLM servers (observed directly with LM Studio) can auto-reload a
+# crashed model on their next request - so a crash is often
 # recoverable on its own within a short wait, not something that needs a
 # human to manually reload it every time. Retry a few times with a
 # cooldown before giving up and stopping the whole batch.
@@ -63,9 +63,10 @@ def summarize_one(row) -> str:
     degrade-one-item-at-a-time pattern as the rest of this build-out.
 
     A crashed backend gets a few cooldown-and-retry attempts here first,
-    since LM Studio often auto-reloads the model on its next request once
-    it notices the old one died - only once those are exhausted does
-    llm_client.ModelCrashedError propagate up to stop the whole batch."""
+    since a local LLM server often auto-reloads the model on its next
+    request once it notices the old one died - only once those are
+    exhausted does llm_client.ModelCrashedError propagate up to stop the
+    whole batch."""
     text = filing_text.fetch_filing_text(row["cik"], row["accession_number"], row["primary_document"])
     sections = filing_text.extract_sections_for_form(text, row["form"])
 
@@ -76,7 +77,7 @@ def summarize_one(row) -> str:
             if attempt >= _CRASH_RETRY_ATTEMPTS:
                 raise
             logger.warning(
-                "LM Studio backend crash for %s (attempt %d/%d) - waiting %ds for it to recover: %s",
+                "Local LLM backend crash for %s (attempt %d/%d) - waiting %ds for it to recover: %s",
                 row["ticker"],
                 attempt,
                 _CRASH_RETRY_ATTEMPTS,
@@ -113,10 +114,10 @@ def build_for_sector(sector: str, limit: int | None = None) -> dict:
                 # filing would fail identically, so stopping now (rather
                 # than marking thousands of filings as individually
                 # "errored" for no real reason) and leaving them pending
-                # is the right move. Reload the model in LM Studio, then
-                # just re-run this script to pick back up here.
+                # is the right move. Reload the model in your local LLM
+                # server, then just re-run this script to pick back up.
                 logger.error(
-                    "Stopping this run: %s. Reload the model in LM Studio, then re-run this script - it'll pick up where it left off.",
+                    "Stopping this run: %s. Reload the model in your local LLM server, then re-run this script - it'll pick up where it left off.",
                     exc,
                 )
                 return counts

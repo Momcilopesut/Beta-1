@@ -1,8 +1,12 @@
-"""Local LLM client (LM Studio) - turns scraped price + news data into a
-short, plain-language summary. No cloud AI call, no API key: everything
-runs on your own machine through LM Studio's local OpenAI-compatible
-server (its "Developer" tab -> Start Server; default
-http://localhost:1234).
+"""Local LLM client - turns scraped price + news data (and, for filings,
+extracted MD&A/Risk Factors text) into short, plain-language summaries.
+No cloud AI call, no API key: everything runs on your own machine through
+any OpenAI-compatible local server. Originally built against LM Studio;
+moved to Ollama (http://localhost:11434) after LM Studio's local server
+proved unstable under sustained batch load across two different models -
+see CLAUDE.md. Either works unchanged, since both speak the same
+/v1/chat/completions API - just point LLM_BASE_URL/LLM_MODEL at whichever
+one you're running.
 """
 
 import json
@@ -13,7 +17,7 @@ import requests
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_BASE_URL = "http://localhost:1234/v1"
+DEFAULT_BASE_URL = "http://localhost:11434/v1"
 DEFAULT_MODEL = "local-model"
 DEFAULT_TIMEOUT_SECONDS = 120
 
@@ -58,7 +62,7 @@ markdown code fences, no explanation. It must have exactly this key:
 # blunt safety cap, not a smart summarization step, so truncation (when it
 # happens) is from the end of each section and clearly marked, not silently
 # dropped.
-MAX_SECTION_CHARS = int(os.environ.get("LMSTUDIO_MAX_SECTION_CHARS", "16000"))
+MAX_SECTION_CHARS = int(os.environ.get("LLM_MAX_SECTION_CHARS", "16000"))
 
 
 class LlmError(Exception):
@@ -66,12 +70,12 @@ class LlmError(Exception):
 
 
 class ModelCrashedError(LlmError):
-    """LM Studio's own model process has died (e.g. a GPU-level crash in
-    its backend) - every request will keep failing identically until the
-    model is reloaded in LM Studio. Worth telling apart from an ordinary
-    per-item failure so a batch driver (build_summaries.py) can stop
-    cleanly instead of burning through its whole queue marking everything
-    else as individually errored for no reason."""
+    """The local server's model process has died (e.g. a GPU-level crash
+    in its backend) - every request will keep failing identically until
+    the model is reloaded. Worth telling apart from an ordinary per-item
+    failure so a batch driver (build_summaries.py) can stop cleanly
+    instead of burning through its whole queue marking everything else as
+    individually errored for no reason."""
 
 
 def _extract_json_object(text: str) -> dict:
@@ -104,14 +108,14 @@ def _format_price_line(price: dict) -> str:
 
 
 def _chat_completion(system_prompt: str, user_content: str) -> dict:
-    """POSTs one chat completion to LM Studio and returns the parsed JSON
-    object from the model's response content. Raises on any failure
-    (connection, bad JSON, missing field) - callers wrap this in their
-    own LlmError with context-specific messaging."""
-    base_url = os.environ.get("LMSTUDIO_BASE_URL", DEFAULT_BASE_URL).rstrip("/")
-    model = os.environ.get("LMSTUDIO_MODEL", DEFAULT_MODEL)
-    timeout = float(os.environ.get("LMSTUDIO_TIMEOUT_SECONDS", DEFAULT_TIMEOUT_SECONDS))
-    json_mode = os.environ.get("LMSTUDIO_JSON_MODE", "1") != "0"
+    """POSTs one chat completion to the local LLM server and returns the
+    parsed JSON object from the model's response content. Raises on any
+    failure (connection, bad JSON, missing field) - callers wrap this in
+    their own LlmError with context-specific messaging."""
+    base_url = os.environ.get("LLM_BASE_URL", DEFAULT_BASE_URL).rstrip("/")
+    model = os.environ.get("LLM_MODEL", DEFAULT_MODEL)
+    timeout = float(os.environ.get("LLM_TIMEOUT_SECONDS", DEFAULT_TIMEOUT_SECONDS))
+    json_mode = os.environ.get("LLM_JSON_MODE", "1") != "0"
 
     payload = {
         "model": model,
@@ -129,12 +133,12 @@ def _chat_completion(system_prompt: str, user_content: str) -> dict:
         response.raise_for_status()
     except requests.HTTPError as exc:
         # requests' default message is just "400 Bad Request for url: ..." -
-        # LM Studio/llama.cpp server errors (wrong context length, bad
-        # request shape, etc.) explain the real cause in the response body,
-        # which is worth surfacing rather than guessing at.
+        # local LLM server errors (wrong context length, bad request
+        # shape, etc.) explain the real cause in the response body, which
+        # is worth surfacing rather than guessing at.
         body = response.text[:2000]
         body_lower = body.lower()
-        # Different ways LM Studio's backend has been observed to die
+        # Different ways a local LLM backend has been observed to die
         # entirely (confirmed by every subsequent request failing near-
         # instantly instead of after real inference time): an outright
         # crash message, or a generic engine-level "Compute error" /
@@ -142,9 +146,7 @@ def _chat_completion(system_prompt: str, user_content: str) -> dict:
         # on every single filing afterward regardless of what's in it.
         crash_markers = ("model has crashed", "model crashed", "compute error")
         if any(marker in body_lower for marker in crash_markers):
-            raise ModelCrashedError(
-                f"LM Studio's backend appears to have crashed - reload the model in LM Studio before retrying. {exc} - response body: {body}"
-            ) from exc
+            raise ModelCrashedError(f"The local LLM server's backend appears to have crashed - reload the model before retrying. {exc} - response body: {body}") from exc
         raise requests.HTTPError(f"{exc} - response body: {body}", response=response) from exc
     content = response.json()["choices"][0]["message"]["content"]
     return _extract_json_object(content)
@@ -152,8 +154,8 @@ def _chat_completion(system_prompt: str, user_content: str) -> dict:
 
 def summarize(ticker: str, price: dict, news: list[dict]) -> str:
     """Returns a short plain-language summary string. Raises LlmError if
-    LM Studio isn't reachable or returns something unusable - callers
-    should degrade gracefully (show the raw price/news without a
+    the local LLM server isn't reachable or returns something unusable -
+    callers should degrade gracefully (show the raw price/news without a
     summary), never let this one step crash the whole lookup."""
     headlines = "\n".join(f"- {n['title']}" for n in news if n.get("title")) or "(no recent headlines found)"
     user_content = f"Ticker: {ticker}\n\n{_format_price_line(price)}\n\nRecent headlines:\n{headlines}"
@@ -181,7 +183,7 @@ _MIN_SECTION_CHARS = 1000
 
 
 def _is_context_length_error(exc: Exception) -> bool:
-    # Different LM Studio backends phrase this differently - MLX/llama.cpp
+    # Different local LLM backends phrase this differently - MLX/llama.cpp
     # say "...is greater than the context length...", while a real run
     # against Qwen hit "exceeds the available context size (8192
     # tokens)" with error type "exceed_context_size_error" instead. A

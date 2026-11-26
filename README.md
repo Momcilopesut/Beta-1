@@ -2,8 +2,9 @@
 
 A small personal tool that runs entirely on your own computer: search a ticker, and
 it scrapes free price and news data for it, hands that to a local LLM (via
-[LM Studio](https://lmstudio.ai)) to summarize, and shows you the result. No cloud
-APIs, no API keys, no subscriptions - everything happens on your machine.
+[Ollama](https://ollama.com) - [LM Studio](https://lmstudio.ai) also works, same
+OpenAI-compatible API) to summarize, and shows you the result. No cloud APIs, no
+API keys, no subscriptions - everything happens on your machine.
 
 **This is not financial advice.** Price/news data comes from free public sources
 and may be delayed, incomplete, or wrong; the summary is written by a local model
@@ -12,7 +13,7 @@ from whatever it's given and can be wrong too.
 ## How it works
 
 ```
-your ticker  →  scraper.py (Yahoo Finance chart data + RSS news)  →  llm_client.py (your local LM Studio model)  →  app.py (Flask)  →  your browser
+your ticker  →  scraper.py (Yahoo Finance chart data + RSS news)  →  llm_client.py (your local LLM, via Ollama/LM Studio)  →  app.py (Flask)  →  your browser
 ```
 
 - **Price** (`scraper.py::fetch_price`) — Yahoo Finance's free chart JSON endpoint, no
@@ -27,9 +28,13 @@ your ticker  →  scraper.py (Yahoo Finance chart data + RSS news)  →  llm_cli
   at the TLS level (see `CLAUDE.md` for the full story) - RSS sidesteps that
   entirely rather than needing a workaround for it.
 - **Summary** (`llm_client.py::summarize`) — sends the scraped price + headlines to
-  your local LM Studio server and asks for a short, grounded summary. Never invents
-  facts beyond what it was given; if LM Studio isn't running or returns something
+  your local LLM server and asks for a short, grounded summary. Never invents
+  facts beyond what it was given; if the server isn't running or returns something
   unusable, the lookup still succeeds, just without a summary (never a crash).
+  Originally built against LM Studio; switched to Ollama after LM Studio's local
+  server proved unstable under sustained batch load (see `CLAUDE.md`) - both speak
+  the same API, so either works, just point `LLM_BASE_URL`/`LLM_MODEL` at whichever
+  one you're running.
 - **App** (`app.py`) — one Flask process serves the page and the `/api/lookup`
   endpoint that ties the above together.
 
@@ -38,11 +43,20 @@ your ticker  →  scraper.py (Yahoo Finance chart data + RSS news)  →  llm_cli
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env   # adjust if your LM Studio setup differs from the defaults
+cp .env.example .env   # adjust if your local LLM setup differs from the defaults
 ```
 
-Start LM Studio, load a model, and start its local server (the "Developer" tab ->
-**Start Server**; default `http://localhost:1234`). Then:
+Install [Ollama](https://ollama.com), pull a model, and make sure it's running
+(defaults to `http://localhost:11434`):
+
+```bash
+ollama pull qwen2.5:7b
+ollama serve   # if it isn't already running as a background service
+```
+
+(LM Studio works too - load a model and start its local server from the
+"Developer" tab, then set `LLM_BASE_URL=http://localhost:1234/v1` in `.env`.)
+Then:
 
 ```bash
 python app.py
@@ -134,7 +148,7 @@ python3 list_filings.py AAPL           # see what's been indexed for one ticker
 Once a sector has a filing index (above), this fetches each filing's actual
 document, extracts the most analysis-relevant prose (Management's Discussion
 and Analysis, and Risk Factors where available), and summarizes it with your
-local LM Studio model:
+local LLM:
 
 ```bash
 python3 build_summaries.py --limit 5    # test on a small batch first - this calls your local model, so it's worth watching once
@@ -150,14 +164,18 @@ python3 list_summaries.py AMD           # see what's been summarized for one tic
   contents repeats these same headings near the top as links to the real
   section - `extract_section()`'s docstring explains the heuristic used to
   tell those apart from the real thing.
-- `llm_client.py::summarize_filing` — same LM Studio integration `summarize()`
-  already used for price/news, extended for filing text. `LMSTUDIO_MAX_SECTION_CHARS`
-  caps how much of a section gets sent per filing, in case a section is still
-  too large for your model's context window even after extraction.
+- `llm_client.py::summarize_filing` — same local LLM integration `summarize()`
+  already used for price/news, extended for filing text. `LLM_MAX_SECTION_CHARS`
+  caps how much of a section gets sent per filing (auto-shrinks further and
+  retries if the model reports a context-length error), in case a section is
+  still too large for your model's context window even after extraction.
 - `build_summaries.py` — drives both across every stored filing in a sector,
   same resumable pattern as the earlier steps. This one runs your local model
   once per filing, so expect it to be slower per-item than the SEC/Yahoo-only
-  steps - how much slower depends entirely on your model and machine.
+  steps - how much slower depends entirely on your model and machine. If the
+  local LLM server's backend crashes mid-run, it automatically waits and
+  retries a few times (`MODEL_CRASH_RETRY_ATTEMPTS`/`MODEL_CRASH_COOLDOWN_SECONDS`)
+  before stopping the batch for you to check on manually.
 
 This is the newest, least-tested part of the build-out - the section-extraction
 heuristic is validated against synthetic test documents, not real SEC filings
@@ -171,8 +189,8 @@ pip install -r requirements-dev.txt
 pytest
 ```
 
-Every test mocks the network (Stooq/RSS/LM Studio) - no live scraping, no LM Studio
-server, and no API keys needed to run the suite.
+Every test mocks the network (Stooq/RSS/local LLM) - no live scraping, no local
+LLM server, and no API keys needed to run the suite.
 
 ## Known limitations (v1, deliberately kept small)
 

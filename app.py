@@ -4,9 +4,9 @@
     python app.py --browser    # open in your default browser instead (fallback)
     python app.py --port 8080
 
-Search a ticker; it scrapes free price (Stooq) and news (RSS) data for
-it, asks your local LM Studio model to summarize it, and shows the
-result - no cloud APIs, no API keys, nothing but your own machine.
+Search a ticker; it scrapes free price (Yahoo Finance) and news (RSS) data
+for it, asks your local LLM (Ollama/LM Studio) to summarize it, and shows
+the result - no cloud APIs, no API keys, nothing but your own machine.
 
 The default (pywebview) opens a real app window - no address bar, no
 browser tabs - backed by the same Flask server either way; --browser is
