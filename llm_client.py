@@ -171,11 +171,15 @@ _MIN_SECTION_CHARS = 1000
 
 
 def _is_context_length_error(exc: Exception) -> bool:
-    # LM Studio/llama.cpp server errors say this almost verbatim
-    # ("...is greater than the context length...") - a plain substring
-    # check is more robust than trying to parse a specific JSON shape
-    # that could differ across server versions/backends.
-    return "context length" in str(exc).lower()
+    # Different LM Studio backends phrase this differently - MLX/llama.cpp
+    # say "...is greater than the context length...", while a real run
+    # against Qwen hit "exceeds the available context size (8192
+    # tokens)" with error type "exceed_context_size_error" instead. A
+    # plain substring check covering both is more robust than trying to
+    # parse one specific JSON shape that clearly isn't consistent across
+    # backends/server versions.
+    text = str(exc).lower()
+    return "context length" in text or "context size" in text or "exceed_context_size" in text
 
 
 def summarize_filing(ticker: str, form: str, sections: dict[str, str]) -> str:

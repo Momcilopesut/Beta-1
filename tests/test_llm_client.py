@@ -151,6 +151,32 @@ def test_summarize_filing_retries_with_smaller_budget_on_context_length_error(mo
     assert calls[0] > calls[1] > calls[2]
 
 
+def test_summarize_filing_retries_on_exceed_context_size_phrasing(monkeypatch):
+    # A real run against Qwen via LM Studio phrased this differently
+    # ("exceeds the available context size ... exceed_context_size_error")
+    # than the MLX/llama.cpp phrasing the other retry test covers - both
+    # need to trigger the same shrink-and-retry behavior.
+    monkeypatch.setattr("llm_client.MAX_SECTION_CHARS", 1000)
+    monkeypatch.setattr("llm_client._MIN_SECTION_CHARS", 100)
+    calls = []
+
+    def fake_chat_completion(system_prompt, user_content):
+        calls.append(len(user_content))
+        if len(calls) < 2:
+            raise RuntimeError(
+                'Engine protocol predict request returned 400: {"error":{"code":400,'
+                '"message":"request (8447 tokens) exceeds the available context size (8192 tokens), try increasing it",'
+                '"type":"exceed_context_size_error","n_prompt_tokens":8447,"n_ctx":8192}}'
+            )
+        return {"summary": "Shrunk enough."}
+
+    with patch("llm_client._chat_completion", side_effect=fake_chat_completion):
+        result = summarize_filing("AMD", "10-K", {"Risk Factors": "x" * 5000})
+
+    assert result == "Shrunk enough."
+    assert len(calls) == 2
+
+
 def test_summarize_filing_gives_up_after_hitting_the_floor(monkeypatch):
     monkeypatch.setattr("llm_client.MAX_SECTION_CHARS", 1000)
     monkeypatch.setattr("llm_client._MIN_SECTION_CHARS", 100)
